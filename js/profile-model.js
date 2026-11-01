@@ -184,10 +184,14 @@
   function isValidBackup(bundle) {
     if(!bundle||bundle.schemaVersion!==1||bundle.kind!=="c10-playground-backup"||
        !validateProfile(bundle.profile)||!bundle.subjectData||typeof bundle.subjectData!=="object")return false;
-    const expectedSubjects=["science","mathematics","english","social-science","hindi"];
-    if(!expectedSubjects.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject)))return false;
+    const legacySubjects=["science","mathematics","english","social-science","hindi"],banksByClass={"3":["class-3-mathematics","class-3-english"],"6":["class-6-science","class-6-mathematics","class-6-english","class-6-social-science","class-6-science-sof","class-6-mathematics-sof","class-6-english-sof"],"10":legacySubjects};
+    const expected=banksByClass[String(bundle.profile.classLevel)]||legacySubjects,provided=Object.keys(bundle.subjectData);
+    const hasCurrent=expected.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject));
+    const legacyOnly=legacySubjects.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject))&&provided.every(subject=>legacySubjects.includes(subject));
+    if(!hasCurrent&&!legacyOnly)return false;
+    const allowed=new Set([...legacySubjects,...banksByClass["3"],...banksByClass["6"]]);
     for(const [subject,data] of Object.entries(bundle.subjectData)){
-      if(!/^(science|mathematics|english|social-science|hindi)$/.test(subject)||!data||typeof data!=="object")return false;
+      if(!allowed.has(subject)||!data||typeof data!=="object")return false;
       if(data.progress && (!Array.isArray(data.progress.missed)||!Array.isArray(data.progress.attempts)||
          !Number.isFinite(data.progress.answered)||!Number.isFinite(data.progress.correct)))return false;
       if(data.ledger && (!Array.isArray(data.ledger.attempts)||!Array.isArray(data.ledger.answerRecords)||
