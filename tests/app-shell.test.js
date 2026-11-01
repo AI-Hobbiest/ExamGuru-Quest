@@ -16,6 +16,8 @@ const parentDashboard=fs.readFileSync("js/parent-dashboard.js","utf8");
 const pageAccess=fs.readFileSync("js/page-access.js","utf8");
 assert.ok(parentPage.includes("./js/parent-dashboard.js")&&parentPage.includes("./js/student-auth.js"),"parent workspace loads family identity and dashboard code");
 assert.ok(parentDashboard.includes("getLinkedChildren")&&parentDashboard.includes("studentId"),"parent dashboard reads only linked children using student-specific IDs");
+assert.ok(parentPage.includes('id="childDetail"')&&parentDashboard.includes("showDetail"),"parent Level 2 provides an individual child progress view");
+assert.ok(parentDashboard.includes("Subject performance")&&parentDashboard.includes("Chapter progress")&&parentDashboard.includes("Learning insights"),"parent Level 2 includes subject, chapter and insight sections");
 assert.ok(pageAccess.includes('session.role==="parent"')&&pageAccess.includes('"./parent.html"'),"student-only routes redirect parent accounts to family workspace");
 
 
