@@ -3,6 +3,8 @@
   "use strict";
   const links=[
     {label:"Sign in",icon:"🔐",href:"./index.html",page:"index.html",auth:"guest"},
+    {section:"FAMILY",auth:"parent"},
+    {label:"Family dashboard",icon:"👨‍👩‍👧‍👦",href:"./parent.html",page:"parent.html",auth:"parent"},
     {section:"LEARN",auth:"student"},
     {label:"Dashboard",icon:"🏡",href:"./dashboard.html",page:"dashboard.html",auth:"student"},
     {label:"All subjects",icon:"📚",href:"./dashboard.html#subjects",page:"dashboard.html",hash:"#subjects",auth:"student"},
@@ -38,7 +40,7 @@
     try{
       if(window.C10StudentAuth&&window.C10StudentAuth.currentUser)return window.C10StudentAuth.currentUser();
       const value=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");
-      return value&&typeof value.username==="string"?{username:value.username,role:"student",classId:String(value.classId||"10")}:null;
+      return value&&typeof value.username==="string"?{...value,username:value.username,role:value.role==="parent"?"parent":"student",classId:String(value.classId||"10")}:null;
     }catch(_){return null;}
   }
   async function authState(){
@@ -51,9 +53,11 @@
         const result=await window.C10Api.currentUser();
         if(result&&result.user&&result.user.role==="admin")return {role:"admin",username:result.user.githubLogin||result.user.username||""};
         if(result&&result.user&&result.user.role==="student")return {role:"student",username:result.user.username||"",classId:String(result.user.classId||"10")};
+        if(result&&result.user&&result.user.role==="parent")return {role:"parent",username:result.user.username||"",displayName:result.user.displayName||result.user.username||""};
       }catch(_){}
     }
     const student=readStaticStudent();
+    if(student&&student.role==="parent")return {role:"parent",username:student.username,displayName:student.displayName||student.username};
     return student?{role:"student",username:student.username,classId:String(student.classId||"10")}: {role:"guest",username:""};
   }
   async function configuredSubjects(classId){
@@ -109,7 +113,7 @@
     const brandCopy=node("div","c10-brand-copy");brandCopy.append(node("div","c10-brand-title","ExamGuru Quest"),node("div","c10-brand-sub","Learn · Practise · Level up"));brand.appendChild(brandCopy);sidebarTop.appendChild(brand);
     const identity=node("div","c10-user-card");
     identity.append(node("div","c10-user-name",auth.role==="guest"?"Welcome, learner":(auth.username||"Student")));
-    identity.append(node("div","c10-user-class",auth.role==="admin"?"Administrator":auth.role==="student"?"Class "+String(auth.classId||"10"):"Sign in to begin"));
+    identity.append(node("div","c10-user-class",auth.role==="admin"?"Administrator":auth.role==="student"?"Class "+String(auth.classId||"10"):auth.role==="parent"?"Parent / Guardian":"Sign in to begin"));
     sidebarTop.appendChild(identity);sidebar.appendChild(sidebarTop);
     const list=node("nav","c10-nav-list");list.setAttribute("aria-label","Learning and account");
     links.forEach(item=>{
@@ -142,7 +146,7 @@
     const mobileBar=node("div","c10-mobilebar"),toggle=node("button","c10-menu-toggle","☰");
     toggle.type="button";toggle.setAttribute("aria-label","Open navigation menu");toggle.setAttribute("aria-controls","c10Sidebar");toggle.setAttribute("aria-expanded","false");
     toggle.addEventListener("click",()=>sidebar.classList.contains("open")?closeMenu():openMenu());
-    const mobileCopy=node("div","");mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":"Class "+String(auth.classId||"10"))));mobileBar.append(toggle,mobileCopy);
+    const mobileCopy=node("div","");mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":auth.role==="parent"?"Parent":"Class "+String(auth.classId||"10"))));mobileBar.append(toggle,mobileCopy);
     const scrim=node("button","c10-nav-scrim");scrim.type="button";scrim.setAttribute("aria-label","Close navigation menu");scrim.addEventListener("click",closeMenu);
     document.body.prepend(sidebar);document.body.prepend(mobileBar);document.body.prepend(scrim);document.body.classList.add("c10-shell-ready");
     if(subjectConfig)applyConfiguredSubjectVisibility(subjectConfig);
