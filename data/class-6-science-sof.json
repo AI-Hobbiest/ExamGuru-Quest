@@ -4957,658 +4957,709 @@
   },
   {
     "chapter_no": 8,
-    "title": "Electricity & Magnets",
-    "key": "sof-nso-electricity-magnets",
+    "title": "Measurement of Length and Motion",
+    "key": "sof-iso-measurement-of-length-and-motion",
+    "section": "Science",
     "questions": [
       {
-        "id": "c6nsoq071",
-        "question": "What is needed to make a simple electric circuit work?",
+        "id": "c6nsoq351",
+        "question": "Which SI unit is used for measuring length?",
         "options": [
-          "A broken wire only",
-          "A plastic loop with no cell",
-          "A magnet alone",
-          "A closed conducting path with a cell and component"
-        ],
-        "answer": 3,
-        "explanation": "Current flows in a complete circuit with a source of electrical energy.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq072",
-        "question": "Which material is an electrical insulator?",
-        "options": [
-          "Copper",
-          "Aluminium",
-          "Rubber",
-          "Iron"
-        ],
-        "answer": 2,
-        "explanation": "Rubber resists the flow of electric current.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq073",
-        "question": "What happens when a switch opens a simple circuit?",
-        "options": [
-          "The cell becomes larger",
-          "The current stops flowing",
-          "The wire becomes magnetic forever",
-          "The bulb must get brighter"
+          "Litre",
+          "Metre",
+          "Kilogram",
+          "Second"
         ],
         "answer": 1,
-        "explanation": "An open circuit interrupts the conducting path.",
-        "difficulty": "Easy"
+        "explanation": "The metre is the SI base unit of length.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq074",
-        "question": "Which poles of two magnets attract each other?",
+        "id": "c6nsoq352",
+        "question": "Which unit is most suitable for measuring a pencil?",
         "options": [
-          "Unlike poles",
-          "Like poles",
-          "Two north poles",
-          "Two south poles"
+          "Centimetre",
+          "Kilometre",
+          "Litre",
+          "Tonne"
         ],
         "answer": 0,
-        "explanation": "North and south poles attract; like poles repel.",
-        "difficulty": "Easy"
+        "explanation": "A pencil is conveniently measured in centimetres.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq075",
-        "question": "Where is a bar magnet's magnetic effect strongest?",
+        "id": "c6nsoq353",
+        "question": "Which instrument measures the time taken by a runner?",
         "options": [
-          "At the exact middle only",
-          "Equally nowhere",
-          "Only outside the magnet",
-          "Near its poles"
+          "Metre scale",
+          "Thermometer",
+          "Measuring cylinder",
+          "Stopwatch"
         ],
         "answer": 3,
-        "explanation": "Magnetic forces are strongest near the poles.",
-        "difficulty": "Medium"
+        "explanation": "A stopwatch measures time intervals.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq076",
-        "question": "Which item can act as a temporary magnet when wrapped with wire carrying current?",
+        "id": "c6nsoq354",
+        "question": "A car moves along a straight road. Which type of motion is this?",
         "options": [
-          "Wooden stick",
-          "Plastic straw",
-          "Iron nail",
-          "Glass rod"
+          "Circular motion",
+          "Oscillatory motion",
+          "Rectilinear motion",
+          "Random rotation"
         ],
         "answer": 2,
-        "explanation": "An electric current in a coil can magnetise an iron nail temporarily.",
-        "difficulty": "Medium"
+        "explanation": "Motion along a straight line is rectilinear.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq077",
-        "question": "Which safety action is correct around electrical appliances?",
+        "id": "c6nsoq355",
+        "question": "The hands of a clock show which type of motion around the dial?",
         "options": [
-          "Touch bare wires to test current",
-          "Keep hands dry when touching switches",
-          "Use damaged cords",
-          "Put metal objects into sockets"
+          "Rectilinear motion",
+          "Circular motion",
+          "Random motion",
+          "Only translational motion"
         ],
         "answer": 1,
-        "explanation": "Dry hands and intact insulation reduce electric-shock risk.",
-        "difficulty": "Easy"
+        "explanation": "The tip of a clock hand moves along a circular path.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq078",
-        "question": "In a circuit diagram, why are symbols used?",
+        "id": "c6nsoq356",
+        "question": "A swing moving to and fro shows:",
         "options": [
-          "To represent components clearly and consistently",
-          "To decorate the page",
-          "To make wires carry more current",
-          "To replace all safety rules"
+          "Oscillatory motion",
+          "Rectilinear motion only",
+          "Circular motion only",
+          "No motion"
         ],
         "answer": 0,
-        "explanation": "Standard symbols make circuit diagrams easier to read.",
-        "difficulty": "Medium"
+        "explanation": "A swing moves repeatedly about a central position.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq079",
-        "question": "A bulb does not glow in a circuit. Which is a sensible first check?",
+        "id": "c6nsoq357",
+        "question": "Which unit is suitable for the distance between two cities?",
         "options": [
-          "Pour water onto the cell",
-          "Remove every wire and leave it disconnected",
-          "Assume the bulb is too bright",
-          "Check whether the circuit is closed and connections are secure"
+          "Millimetre",
+          "Centimetre",
+          "Gram",
+          "Kilometre"
         ],
         "answer": 3,
-        "explanation": "Loose connections or an open switch can stop current.",
-        "difficulty": "Easy"
+        "explanation": "Long distances are expressed in kilometres.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq080",
-        "question": "Which statement about a freely suspended bar magnet is correct?",
+        "id": "c6nsoq358",
+        "question": "How many centimetres are there in one metre?",
         "options": [
-          "It always points east–west",
-          "It points towards the nearest light source",
-          "It tends to align roughly north–south",
-          "It loses all magnetism immediately"
+          "10",
+          "1,000",
+          "100",
+          "10,000"
         ],
         "answer": 2,
-        "explanation": "Earth's magnetic field makes a freely suspended magnet align roughly north–south.",
-        "difficulty": "Medium"
+        "explanation": "One metre equals 100 centimetres.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq359",
+        "question": "What is 2.5 m in centimetres?",
+        "options": [
+          "25 cm",
+          "250 cm",
+          "205 cm",
+          "2,500 cm"
+        ],
+        "answer": 1,
+        "explanation": "2.5×100=250 cm.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq360",
+        "question": "Why align the zero mark of a ruler with one end of an object?",
+        "options": [
+          "So the reading gives the object's actual length",
+          "To make the object longer",
+          "To avoid using units",
+          "To change the ruler scale"
+        ],
+        "answer": 0,
+        "explanation": "Starting at zero gives a direct length reading.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq361",
+        "question": "A pencil begins at 1.5 cm and ends at 8.2 cm on a ruler. What is its length?",
+        "options": [
+          "8.2 cm",
+          "9.7 cm",
+          "7.7 cm",
+          "6.7 cm"
+        ],
+        "answer": 3,
+        "explanation": "8.2−1.5=6.7 cm.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq362",
+        "question": "Which tool can measure a curved line on a map?",
+        "options": [
+          "Thermometer",
+          "Compass needle only",
+          "Thread placed along the curve, then measured with a ruler",
+          "Weighing scale"
+        ],
+        "answer": 2,
+        "explanation": "A thread follows the curve and can be straightened.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq363",
+        "question": "A person walks 120 m in 60 s. What is the average speed?",
+        "options": [
+          "1 m/s",
+          "2 m/s",
+          "3 m/s",
+          "4 m/s"
+        ],
+        "answer": 1,
+        "explanation": "120÷60=2 m/s.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq364",
+        "question": "Convert 3 kilometres into metres.",
+        "options": [
+          "3,000 m",
+          "300 m",
+          "30,000 m",
+          "30 m"
+        ],
+        "answer": 0,
+        "explanation": "1 km=1,000 m.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq365",
+        "question": "A metre scale is damaged at its zero end. How can an object still be measured?",
+        "options": [
+          "Guess the length",
+          "Use the broken end as zero",
+          "Change centimetres to kilograms",
+          "Subtract its starting reading from its ending reading"
+        ],
+        "answer": 3,
+        "explanation": "Length is the difference between the end readings.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq366",
+        "question": "A student measures a table as 120 cm. What is this in metres?",
+        "options": [
+          "12 m",
+          "0.12 m",
+          "1.2 m",
+          "120 m"
+        ],
+        "answer": 2,
+        "explanation": "120÷100=1.2 m.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq367",
+        "question": "A cyclist completes one full lap of a circular track. What is the path?",
+        "options": [
+          "Straight",
+          "Circular",
+          "At rest",
+          "Vertical"
+        ],
+        "answer": 1,
+        "explanation": "A lap around a circular track is circular motion.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq368",
+        "question": "Which example shows periodic motion?",
+        "options": [
+          "A pendulum making repeated swings",
+          "A stone falling once",
+          "A car stopping",
+          "A book sliding once"
+        ],
+        "answer": 0,
+        "explanation": "Periodic motion repeats at regular intervals.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq369",
+        "question": "Why repeat a length measurement?",
+        "options": [
+          "To make the object grow",
+          "To change the unit",
+          "To guarantee a whole number",
+          "To check for reading errors and improve reliability"
+        ],
+        "answer": 3,
+        "explanation": "Repeated measurements help identify mistakes.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq370",
+        "question": "A bus travels 150 km in 3 hours at constant speed. How far in one hour?",
+        "options": [
+          "30 km",
+          "45 km",
+          "50 km",
+          "75 km"
+        ],
+        "answer": 2,
+        "explanation": "150÷3=50 km.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq371",
+        "question": "A runner covers 400 m in 80 s. Find average speed.",
+        "options": [
+          "4 m/s",
+          "5 m/s",
+          "6 m/s",
+          "8 m/s"
+        ],
+        "answer": 1,
+        "explanation": "400÷80=5 m/s.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq372",
+        "question": "Which quantities are needed to calculate average speed?",
+        "options": [
+          "Distance travelled and time taken",
+          "Mass and volume",
+          "Temperature and mass",
+          "Length and colour"
+        ],
+        "answer": 0,
+        "explanation": "Average speed is distance divided by time.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq373",
+        "question": "A toy car moves 2 m each second for three seconds. Its motion is:",
+        "options": [
+          "At rest",
+          "Circular",
+          "Increasing in speed",
+          "Uniform over these intervals"
+        ],
+        "answer": 3,
+        "explanation": "Equal distances in equal time intervals indicate uniform motion.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq374",
+        "question": "A bus covers 30 km in half an hour. Average speed?",
+        "options": [
+          "15 km/h",
+          "30 km/h",
+          "60 km/h",
+          "90 km/h"
+        ],
+        "answer": 2,
+        "explanation": "30÷0.5=60 km/h.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq375",
+        "question": "Which is non-uniform motion?",
+        "options": [
+          "A conveyor belt moving steadily",
+          "A car in traffic with frequent speed changes",
+          "A clock hand moving steadily",
+          "A train at constant speed"
+        ],
+        "answer": 1,
+        "explanation": "Its speed changes during the journey.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq376",
+        "question": "A measuring tape is more suitable than a short ruler for measuring:",
+        "options": [
+          "The length of a classroom",
+          "Thickness of a coin",
+          "Diameter of a pea",
+          "Length of rice grain"
+        ],
+        "answer": 0,
+        "explanation": "A tape is long and flexible.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq377",
+        "question": "Convert 1.25 m into millimetres.",
+        "options": [
+          "125 mm",
+          "12,500 mm",
+          "1,025 mm",
+          "1,250 mm"
+        ],
+        "answer": 3,
+        "explanation": "1 m=1,000 mm.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq378",
+        "question": "Which instrument can measure a coin's thickness accurately?",
+        "options": [
+          "A kilometre marker",
+          "A stopwatch",
+          "A vernier caliper or micrometer",
+          "A thermometer"
+        ],
+        "answer": 2,
+        "explanation": "These instruments measure small dimensions precisely.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq379",
+        "question": "A car travels 90 km in 1.5 hours. Find its average speed.",
+        "options": [
+          "45 km/h",
+          "60 km/h",
+          "75 km/h",
+          "135 km/h"
+        ],
+        "answer": 1,
+        "explanation": "90÷1.5=60 km/h.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq380",
+        "question": "A curved wire is measured with thread. What is important?",
+        "options": [
+          "Keep each part aligned without gaps or overlaps",
+          "Stretch the wire strongly",
+          "Ignore the bends",
+          "Measure only endpoints directly"
+        ],
+        "answer": 0,
+        "explanation": "Accurate tracing avoids missing or double-counting sections.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq381",
-        "question": "Which material is a good conductor used in electrical wires? (practice case 2)",
+        "question": "A person walks 2 km east and then 2 km west. Total distance?",
         "options": [
-          "Rubber",
-          "Dry wood",
-          "Plastic",
-          "Copper"
+          "0 km",
+          "2 km",
+          "−4 km",
+          "4 km"
         ],
         "answer": 3,
-        "explanation": "Copper conducts electricity well.",
-        "difficulty": "Easy"
+        "explanation": "Distance adds both parts of the journey.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq382",
-        "question": "What must be true for a simple bulb circuit to glow? (practice case 3)",
+        "question": "For the same journey, what is the person's displacement?",
         "options": [
-          "All wires are plastic",
-          "The cell is disconnected",
-          "There is a complete conducting path",
-          "The circuit has a gap"
+          "2 km east",
+          "4 km west",
+          "Zero",
+          "4 km"
         ],
         "answer": 2,
-        "explanation": "A closed conducting path allows current to flow.",
-        "difficulty": "Medium"
+        "explanation": "The final position is the starting position.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq383",
-        "question": "Which material commonly insulates electrical wires? (practice case 4)",
+        "question": "A bicycle wheel spins while the bicycle moves forward. The wheel shows:",
         "options": [
-          "Aluminium",
-          "Plastic",
-          "Copper",
-          "Iron"
+          "Only rectilinear motion",
+          "Rotational and translational motion",
+          "Only oscillatory motion",
+          "No motion"
         ],
         "answer": 1,
-        "explanation": "Plastic is an electrical insulator.",
-        "difficulty": "Medium"
+        "explanation": "The wheel spins and its centre moves forward.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq384",
-        "question": "What happens when two north poles of magnets are brought together? (practice case 5)",
+        "question": "A second hand completes one full revolution in 60 seconds. Its time period is:",
         "options": [
-          "They repel",
-          "They attract",
-          "They lose magnetism instantly",
-          "They become cells"
+          "60 seconds",
+          "1 second",
+          "12 seconds",
+          "24 seconds"
         ],
         "answer": 0,
-        "explanation": "Like magnetic poles repel.",
-        "difficulty": "Medium"
+        "explanation": "One complete cycle takes 60 seconds.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq385",
-        "question": "Which component opens or closes a circuit? (practice case 6)",
+        "question": "A pendulum makes 20 oscillations in 40 seconds. Its time period is:",
         "options": [
-          "Bulb glass",
-          "Cell label",
-          "Plastic sleeve alone",
-          "Switch"
+          "0.5 second",
+          "20 seconds",
+          "40 seconds",
+          "2 seconds"
         ],
         "answer": 3,
-        "explanation": "A switch opens or closes the circuit.",
-        "difficulty": "Medium"
+        "explanation": "40÷20=2 seconds.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq386",
-        "question": "A bulb does not glow. What should be checked first? (practice case 7)",
+        "question": "A runner's speed is 4 m/s. How far in 15 seconds?",
         "options": [
-          "Remove every wire",
-          "Replace wire with string",
-          "Switch, connections and cell",
-          "Pour water into the bulb"
+          "19 m",
+          "45 m",
+          "60 m",
+          "75 m"
         ],
         "answer": 2,
-        "explanation": "An open switch or loose connection can stop current.",
-        "difficulty": "Hard"
+        "explanation": "4×15=60 m.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq387",
-        "question": "Where is a bar magnet's magnetic effect usually strongest? (practice case 8)",
+        "question": "Convert 72 km/h into m/s.",
         "options": [
-          "Only on its label",
-          "Near its poles",
-          "Only at its centre",
-          "Equally strong everywhere"
+          "10 m/s",
+          "20 m/s",
+          "18 m/s",
+          "25 m/s"
         ],
         "answer": 1,
-        "explanation": "Magnetic effect is strongest near the poles.",
-        "difficulty": "Easy"
+        "explanation": "72,000 m÷3,600 s=20 m/s.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq388",
-        "question": "Which object is attracted to a magnet? (practice case 9)",
+        "question": "A train covers 600 m in 30 s. How long for 1,000 m at the same speed?",
         "options": [
-          "An iron nail",
-          "Wooden pencil",
-          "Glass marble",
-          "Plastic ruler"
+          "50 seconds",
+          "40 seconds",
+          "60 seconds",
+          "80 seconds"
         ],
         "answer": 0,
-        "explanation": "Iron is magnetic.",
-        "difficulty": "Medium"
+        "explanation": "Speed=20 m/s; 1,000÷20=50 s.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq389",
-        "question": "Which material is a good conductor used in electrical wires? (practice case 10)",
+        "question": "Why may two students get different table lengths if one starts at the ruler's edge and one at zero?",
         "options": [
-          "Rubber",
-          "Dry wood",
-          "Plastic",
-          "Copper"
+          "The table changes length",
+          "The unit changes",
+          "The ruler measures mass",
+          "The ruler's edge may not coincide with its zero mark"
         ],
         "answer": 3,
-        "explanation": "Copper conducts electricity well.",
-        "difficulty": "Medium"
+        "explanation": "A damaged or offset zero introduces zero error.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq390",
-        "question": "What must be true for a simple bulb circuit to glow? (practice case 11)",
+        "question": "Which event has the greatest duration?",
         "options": [
-          "All wires are plastic",
-          "The cell is disconnected",
-          "There is a complete conducting path",
-          "The circuit has a gap"
+          "A race lasting 90 seconds",
+          "A song lasting 4 minutes",
+          "A journey lasting 2.5 hours",
+          "A blink lasting 0.2 seconds"
         ],
         "answer": 2,
-        "explanation": "A closed conducting path allows current to flow.",
-        "difficulty": "Medium"
+        "explanation": "2.5 hours is longer than the other durations.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq391",
-        "question": "Which material commonly insulates electrical wires? (practice case 12)",
+        "question": "An object travels 5 m every second. How far in 12 seconds at the same speed?",
         "options": [
-          "Aluminium",
-          "Plastic",
-          "Copper",
-          "Iron"
+          "17 m",
+          "60 m",
+          "50 m",
+          "72 m"
         ],
         "answer": 1,
-        "explanation": "Plastic is an electrical insulator.",
-        "difficulty": "Medium"
+        "explanation": "5×12=60 m.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq392",
-        "question": "What happens when two north poles of magnets are brought together? (practice case 13)",
+        "question": "A bus covers 20 km in 30 minutes and 30 km in the next 30 minutes. Average speed?",
         "options": [
-          "They repel",
-          "They attract",
-          "They lose magnetism instantly",
-          "They become cells"
+          "50 km/h",
+          "25 km/h",
+          "30 km/h",
+          "60 km/h"
         ],
         "answer": 0,
-        "explanation": "Like magnetic poles repel.",
-        "difficulty": "Hard"
+        "explanation": "Total 50 km in one hour.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq393",
-        "question": "Which component opens or closes a circuit? (practice case 14)",
+        "question": "A toy completes one circular revolution in 10 seconds. Its time period is:",
         "options": [
-          "Bulb glass",
-          "Cell label",
-          "Plastic sleeve alone",
-          "Switch"
+          "5 seconds",
+          "20 seconds",
+          "1 second",
+          "10 seconds"
         ],
         "answer": 3,
-        "explanation": "A switch opens or closes the circuit.",
-        "difficulty": "Easy"
+        "explanation": "One full round takes 10 seconds.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
         "id": "c6nsoq394",
-        "question": "A bulb does not glow. What should be checked first? (practice case 15)",
+        "question": "How can the curved edge of a leaf be measured?",
         "options": [
-          "Remove every wire",
-          "Replace wire with string",
-          "Switch, connections and cell",
-          "Pour water into the bulb"
+          "Measure only the straight distance between tips",
+          "Use a thermometer",
+          "Trace it with thread and then measure the thread",
+          "Estimate by eye"
         ],
         "answer": 2,
-        "explanation": "An open switch or loose connection can stop current.",
-        "difficulty": "Medium"
+        "explanation": "Thread follows the curve and can be measured straight.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
         "id": "c6nsoq395",
-        "question": "Where is a bar magnet's magnetic effect usually strongest? (practice case 16)",
+        "question": "A car travels 40 km in 40 minutes. Average speed in km/h?",
         "options": [
-          "Only on its label",
-          "Near its poles",
-          "Only at its centre",
-          "Equally strong everywhere"
+          "40 km/h",
+          "60 km/h",
+          "50 km/h",
+          "80 km/h"
         ],
         "answer": 1,
-        "explanation": "Magnetic effect is strongest near the poles.",
-        "difficulty": "Medium"
+        "explanation": "40 minutes is 2/3 hour; 40÷(2/3)=60 km/h.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
         "id": "c6nsoq396",
-        "question": "Which object is attracted to a magnet? (practice case 17)",
+        "question": "A person travels 3 km in 30 minutes then 2 km in 30 minutes. Average speed?",
         "options": [
-          "An iron nail",
-          "Wooden pencil",
-          "Glass marble",
-          "Plastic ruler"
+          "5 km/h",
+          "2.5 km/h",
+          "3 km/h",
+          "6 km/h"
         ],
         "answer": 0,
-        "explanation": "Iron is magnetic.",
-        "difficulty": "Medium"
+        "explanation": "5 km in one hour.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6nsoq397",
-        "question": "Which material is a good conductor used in electrical wires? (practice case 18)",
+        "question": "A walkway carries a person 120 m in 60 s. The person advances 180 m relative to the ground in that time. Walking contribution relative to walkway?",
         "options": [
-          "Rubber",
-          "Dry wood",
-          "Plastic",
-          "Copper"
+          "120 m",
+          "180 m",
+          "300 m",
+          "60 m in 60 s"
         ],
         "answer": 3,
-        "explanation": "Copper conducts electricity well.",
-        "difficulty": "Medium"
+        "explanation": "180−120=60 m relative to the walkway.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6nsoq398",
-        "question": "What must be true for a simple bulb circuit to glow? (practice case 19)",
+        "question": "An object starts at 1.2 cm and ends at 7.6 cm on a scale. Find its length.",
         "options": [
-          "All wires are plastic",
-          "The cell is disconnected",
-          "There is a complete conducting path",
-          "The circuit has a gap"
+          "7.6 cm",
+          "8.8 cm",
+          "6.4 cm",
+          "5.2 cm"
         ],
         "answer": 2,
-        "explanation": "A closed conducting path allows current to flow.",
-        "difficulty": "Hard"
+        "explanation": "7.6−1.2=6.4 cm.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6nsoq399",
-        "question": "Which material commonly insulates electrical wires? (practice case 20)",
+        "question": "A runner covers 100 m in 12.5 s. Time for 240 m at the same speed?",
         "options": [
-          "Aluminium",
-          "Plastic",
-          "Copper",
-          "Iron"
+          "24 seconds",
+          "30 seconds",
+          "25 seconds",
+          "36 seconds"
         ],
         "answer": 1,
-        "explanation": "Plastic is an electrical insulator.",
-        "difficulty": "Easy"
+        "explanation": "Speed=8 m/s; 240÷8=30 s.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6nsoq400",
-        "question": "What happens when two north poles of magnets are brought together? (practice case 21)",
+        "question": "Two cyclists travel at 5 m/s and 6 m/s for 20 s. How much farther does the faster cyclist travel?",
         "options": [
-          "They repel",
-          "They attract",
-          "They lose magnetism instantly",
-          "They become cells"
+          "20 m",
+          "5 m",
+          "10 m",
+          "120 m"
         ],
         "answer": 0,
-        "explanation": "Like magnetic poles repel.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq401",
-        "question": "Which component opens or closes a circuit? (practice case 22)",
-        "options": [
-          "Bulb glass",
-          "Cell label",
-          "Plastic sleeve alone",
-          "Switch"
-        ],
-        "answer": 3,
-        "explanation": "A switch opens or closes the circuit.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq402",
-        "question": "A bulb does not glow. What should be checked first? (practice case 23)",
-        "options": [
-          "Remove every wire",
-          "Replace wire with string",
-          "Switch, connections and cell",
-          "Pour water into the bulb"
-        ],
-        "answer": 2,
-        "explanation": "An open switch or loose connection can stop current.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq403",
-        "question": "Where is a bar magnet's magnetic effect usually strongest? (practice case 24)",
-        "options": [
-          "Only on its label",
-          "Near its poles",
-          "Only at its centre",
-          "Equally strong everywhere"
-        ],
-        "answer": 1,
-        "explanation": "Magnetic effect is strongest near the poles.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq404",
-        "question": "Which object is attracted to a magnet? (practice case 25)",
-        "options": [
-          "An iron nail",
-          "Wooden pencil",
-          "Glass marble",
-          "Plastic ruler"
-        ],
-        "answer": 0,
-        "explanation": "Iron is magnetic.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq405",
-        "question": "Which material is a good conductor used in electrical wires? (practice case 26)",
-        "options": [
-          "Rubber",
-          "Dry wood",
-          "Plastic",
-          "Copper"
-        ],
-        "answer": 3,
-        "explanation": "Copper conducts electricity well.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq406",
-        "question": "What must be true for a simple bulb circuit to glow? (practice case 27)",
-        "options": [
-          "All wires are plastic",
-          "The cell is disconnected",
-          "There is a complete conducting path",
-          "The circuit has a gap"
-        ],
-        "answer": 2,
-        "explanation": "A closed conducting path allows current to flow.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq407",
-        "question": "Which material commonly insulates electrical wires? (practice case 28)",
-        "options": [
-          "Aluminium",
-          "Plastic",
-          "Copper",
-          "Iron"
-        ],
-        "answer": 1,
-        "explanation": "Plastic is an electrical insulator.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq408",
-        "question": "What happens when two north poles of magnets are brought together? (practice case 29)",
-        "options": [
-          "They repel",
-          "They attract",
-          "They lose magnetism instantly",
-          "They become cells"
-        ],
-        "answer": 0,
-        "explanation": "Like magnetic poles repel.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq409",
-        "question": "Which component opens or closes a circuit? (practice case 30)",
-        "options": [
-          "Bulb glass",
-          "Cell label",
-          "Plastic sleeve alone",
-          "Switch"
-        ],
-        "answer": 3,
-        "explanation": "A switch opens or closes the circuit.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq410",
-        "question": "A bulb does not glow. What should be checked first? (practice case 31)",
-        "options": [
-          "Remove every wire",
-          "Replace wire with string",
-          "Switch, connections and cell",
-          "Pour water into the bulb"
-        ],
-        "answer": 2,
-        "explanation": "An open switch or loose connection can stop current.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq411",
-        "question": "Where is a bar magnet's magnetic effect usually strongest? (practice case 32)",
-        "options": [
-          "Only on its label",
-          "Near its poles",
-          "Only at its centre",
-          "Equally strong everywhere"
-        ],
-        "answer": 1,
-        "explanation": "Magnetic effect is strongest near the poles.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq412",
-        "question": "Which object is attracted to a magnet? (practice case 33)",
-        "options": [
-          "An iron nail",
-          "Wooden pencil",
-          "Glass marble",
-          "Plastic ruler"
-        ],
-        "answer": 0,
-        "explanation": "Iron is magnetic.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq413",
-        "question": "Which material is a good conductor used in electrical wires? (practice case 34)",
-        "options": [
-          "Rubber",
-          "Dry wood",
-          "Plastic",
-          "Copper"
-        ],
-        "answer": 3,
-        "explanation": "Copper conducts electricity well.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq414",
-        "question": "What must be true for a simple bulb circuit to glow? (practice case 35)",
-        "options": [
-          "All wires are plastic",
-          "The cell is disconnected",
-          "There is a complete conducting path",
-          "The circuit has a gap"
-        ],
-        "answer": 2,
-        "explanation": "A closed conducting path allows current to flow.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq415",
-        "question": "Which material commonly insulates electrical wires? (practice case 36)",
-        "options": [
-          "Aluminium",
-          "Plastic",
-          "Copper",
-          "Iron"
-        ],
-        "answer": 1,
-        "explanation": "Plastic is an electrical insulator.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq416",
-        "question": "What happens when two north poles of magnets are brought together? (practice case 37)",
-        "options": [
-          "They repel",
-          "They attract",
-          "They lose magnetism instantly",
-          "They become cells"
-        ],
-        "answer": 0,
-        "explanation": "Like magnetic poles repel.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq417",
-        "question": "Which component opens or closes a circuit? (practice case 38)",
-        "options": [
-          "Bulb glass",
-          "Cell label",
-          "Plastic sleeve alone",
-          "Switch"
-        ],
-        "answer": 3,
-        "explanation": "A switch opens or closes the circuit.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq418",
-        "question": "A bulb does not glow. What should be checked first? (practice case 39)",
-        "options": [
-          "Remove every wire",
-          "Replace wire with string",
-          "Switch, connections and cell",
-          "Pour water into the bulb"
-        ],
-        "answer": 2,
-        "explanation": "An open switch or loose connection can stop current.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq419",
-        "question": "Where is a bar magnet's magnetic effect usually strongest? (practice case 40)",
-        "options": [
-          "Only on its label",
-          "Near its poles",
-          "Only at its centre",
-          "Equally strong everywhere"
-        ],
-        "answer": 1,
-        "explanation": "Magnetic effect is strongest near the poles.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq420",
-        "question": "Which object is attracted to a magnet? (practice case 41)",
-        "options": [
-          "An iron nail",
-          "Wooden pencil",
-          "Glass marble",
-          "Plastic ruler"
-        ],
-        "answer": 0,
-        "explanation": "Iron is magnetic.",
-        "difficulty": "Medium"
+        "explanation": "Their speed difference is 1 m/s; over 20 s the distance difference is 20 m.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   },
