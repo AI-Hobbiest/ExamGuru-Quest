@@ -25,10 +25,11 @@
         return;
       }
       if(!window.C10StudentAuth)throw new Error("Student sign-in is unavailable. Please reload the page.");
-      await window.C10StudentAuth.login(username.value,password.value);
+      const result=await window.C10StudentAuth.login(username.value,password.value);
       password.value="";
-      say("Signed in. Opening your dashboard…","success");
-      location.assign("./dashboard.html");
+      const destination=result.account&&result.account.role==="parent"?"./parent.html":"./dashboard.html";
+      say("Signed in. Opening your workspace…","success");
+      location.assign(destination);
     }catch(error){say(error&&error.message?error.message:"Unable to sign in. Check your username and password.","error");}
     finally{submit.disabled=false;submit.innerHTML='Sign in to ExamGuru <span aria-hidden="true">→</span>';}
   });
