@@ -5,17 +5,6 @@
   "defaultIterations": 600000,
   "accounts": [
     {
-      "username": "jp10",
-      "classId": "10",
-      "salt": "De23V+YpY0nhSEwD5coJbg==",
-      "passwordHash": "LilaKIx2Ggufq35TQFBq95wJR/U9FAy02Edi0fPYlbM=",
-      "iterations": 600000,
-      "active": true,
-      "createdAt": "2026-10-26T11:47:23.935Z",
-      "updatedAt": "2026-10-26T12:00:00.000Z",
-      "studentId": "student-jp10"
-    },
-    {
       "username": "c6pilot",
       "classId": "6",
       "salt": "gGtsyJ7BVz1r3lHELBEJEw==",
@@ -27,15 +16,27 @@
       "studentId": "student-c6pilot"
     },
     {
-      "username": "srivatsav",
-      "classId": "6",
-      "salt": "PZXmf0B3oaFRV6uwpHQ6LA==",
-      "passwordHash": "+PU2/FqmVZO8w3Ceusf/fr3QxTzwSLZPlUgb1ZXBf7E=",
+      "username": "hamsini",
+      "studentId": "student-hamsini",
+      "displayName": "Hamsini",
+      "classId": "3",
+      "salt": "QIdMF70FPb7MmanYEjrRLg==",
+      "passwordHash": "jvIn9roEV90+8NNQ9M55t56B5splW7W/CEQkv7zgLw4=",
       "iterations": 600000,
       "active": true,
-      "createdAt": "2026-10-27T12:59:00.000Z",
-      "updatedAt": "2026-10-30T20:37:00+04:00",
-      "studentId": "student-srivatsav"
+      "createdAt": "2026-11-01T11:20:00.000Z",
+      "updatedAt": "2026-11-01T11:20:00.000Z"
+    },
+    {
+      "username": "jp10",
+      "classId": "10",
+      "salt": "De23V+YpY0nhSEwD5coJbg==",
+      "passwordHash": "LilaKIx2Ggufq35TQFBq95wJR/U9FAy02Edi0fPYlbM=",
+      "iterations": 600000,
+      "active": true,
+      "createdAt": "2026-10-26T11:47:23.935Z",
+      "updatedAt": "2026-10-26T12:00:00.000Z",
+      "studentId": "student-jp10"
     },
     {
       "username": "sonaakshi",
@@ -47,6 +48,17 @@
       "createdAt": "2026-10-27T12:59:00.000Z",
       "updatedAt": "2026-10-27T12:59:00.000Z",
       "studentId": "student-sonaakshi"
+    },
+    {
+      "username": "srivatsav",
+      "classId": "6",
+      "salt": "PZXmf0B3oaFRV6uwpHQ6LA==",
+      "passwordHash": "+PU2/FqmVZO8w3Ceusf/fr3QxTzwSLZPlUgb1ZXBf7E=",
+      "iterations": 600000,
+      "active": true,
+      "createdAt": "2026-10-27T12:59:00.000Z",
+      "updatedAt": "2026-10-30T20:37:00+04:00",
+      "studentId": "student-srivatsav"
     }
   ]
 }
