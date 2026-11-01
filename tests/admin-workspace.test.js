@@ -87,9 +87,13 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
  assert.equal(elements.statQuestions.textContent,"6","published question summary counts actual bank records from available class-specific banks");
  assert.equal(elements.statClasses.textContent,"8","class catalogue loaded, including Class 3");
  assert.ok(elements.questionBankInventoryStatus.textContent.includes("6 questions counted across 3 available primary banks"),"question-bank inventory dynamically totals available JSON banks");
- assert.equal(elements.questionBankInventory.children[0].children[1].children.length,11,"inventory lists all ten supported bank files and a total row");
- assert.equal(elements.questionBankInventory.children[0].children[1].children[8].children[0].textContent,"Class 6 · English","Class 6 English appears in the Admin inventory");
- assert.equal(elements.questionBankInventory.children[0].children[1].children[9].children[0].textContent,"Class 6 · Social Science","Class 6 Social Science appears in the Admin inventory");
+ assert.equal(elements.questionBankInventory.children[0].children[1].children.length,15,"inventory lists all fourteen supported bank files and a total row");
+ assert.equal(elements.questionBankInventory.children[0].children[1].children[6].children[0].textContent,"Class 3 · English","Class 3 English appears in the Admin inventory");
+  assert.equal(elements.questionBankInventory.children[0].children[1].children[9].children[0].textContent,"Class 6 · English","Class 6 English appears in the Admin inventory");
+ assert.equal(elements.questionBankInventory.children[0].children[1].children[10].children[0].textContent,"Class 6 · Social Science","Class 6 Social Science appears in the Admin inventory");
+  assert.equal(elements.questionBankInventory.children[0].children[1].children[11].children[0].textContent,"Class 6 · Science SOF","Class 6 Science SOF appears in the Admin inventory");
+  assert.equal(elements.questionBankInventory.children[0].children[1].children[12].children[0].textContent,"Class 6 · Mathematics SOF","Class 6 Mathematics SOF appears in the Admin inventory");
+  assert.equal(elements.questionBankInventory.children[0].children[1].children[13].children[0].textContent,"Class 6 · English SOF","Class 6 English SOF appears in the Admin inventory");
  assert.ok(elements.questionList.children.length===2,"questions render in the Admin editor");
 
  // Switching class filters the subject choices and loads the class-specific path.
