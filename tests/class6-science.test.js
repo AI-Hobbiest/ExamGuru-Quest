@@ -150,20 +150,47 @@ assert.ok(engine.includes('"mathematics-sof": { title:"Mathematics - SOF"'),"SOF
 
 
 const sofScienceBank=JSON.parse(fs.readFileSync("data/class-6-science-sof.json","utf8"));
-assert.equal(sofScienceBank.length,10,"Class 6 SOF NSO bank has ten topic sets");
-assert.equal(sofScienceBank.reduce((sum,chapter)=>sum+chapter.questions.length,0),500,"Class 6 SOF NSO bank contains 500 original practice MCQs");
-const sofScienceIds=new Set(),sofSciencePrompts=new Set();
+const expectedIsoTopics=[
+  "The Wonderful World of Science","Food and Its Components","Materials Around Us",
+  "A Journey through States of Water","Methods of Separation","The Living World and Its Diversity",
+  "Exploring Magnets","Measurement of Length and Motion","Temperature and Its Measurement",
+  "Beyond Earth","Natural Resources","Verbal and Non-Verbal Reasoning"
+];
+assert.deepEqual(sofScienceBank.map(chapter=>chapter.title),expectedIsoTopics,"Class 6 ISO bank follows the 2026-27 science syllabus plus a separate reasoning group");
+assert.equal(sofScienceBank.length,12,"Class 6 SOF ISO bank has twelve topic groups");
+assert.equal(sofScienceBank.reduce((sum,chapter)=>sum+chapter.questions.length,0),600,"Class 6 SOF ISO bank contains 600 MCQs");
+const sofScienceIds=new Set(),sofSciencePrompts=new Set(),sofScienceTemplates=new Set();
+const normalizeIsoStem=value=>String(value).toLowerCase().replace(/[−–]/g,"-").replace(/\b\d[\d,]*(?:\.\d+)?\b/g,"#").replace(/\s+/g," ").replace(/[“”‘’"]/g,"").trim();
 for(const chapter of sofScienceBank){
-  assert.ok(chapter.title&&chapter.questions.length===50,"each SOF Science topic has fifty questions");
+  assert.equal(chapter.questions.length,50,"each ISO topic has fifty questions");
+  assert.ok(chapter.title&&chapter.questions.length>0,"each ISO topic has questions");
+  const difficultyCounts=["Easy","Medium","Hard","Challenge"].map(level=>[level,chapter.questions.filter(q=>q.difficulty===level).length]);
+  assert.deepEqual(difficultyCounts,[["Easy",5],["Medium",17],["Hard",20],["Challenge",8]],"each ISO group has more Hard/Challenge than Easy");
   for(const question of chapter.questions){
-    assert.ok(question.id&&question.question&&question.explanation,"SOF Science question has ID, prompt and explanation");
-    assert.ok(!sofScienceIds.has(question.id),"SOF Science question IDs are unique");sofScienceIds.add(question.id);
-    assert.equal(question.options.length,4,"SOF Science MCQs have four options");
-    assert.equal(new Set(question.options).size,4,"SOF Science options are distinct");
-    assert.ok(Number.isInteger(question.answer)&&question.answer>=0&&question.answer<4,"SOF Science answer index is valid");
-    assert.ok(!sofSciencePrompts.has(question.question),"SOF Science prompts are unique");sofSciencePrompts.add(question.question);
+    assert.ok(question&&question.id&&question.question&&question.explanation,"ISO question has ID, prompt and explanation");
+    assert.ok(!sofScienceIds.has(question.id),"ISO question IDs are unique");sofScienceIds.add(question.id);
+    assert.ok(Array.isArray(question.options)&&question.options.length===4,"ISO MCQs have four options");
+    assert.equal(new Set(question.options).size,4,"ISO options are distinct");
+    assert.ok(Number.isInteger(question.answer)&&question.answer>=0&&question.answer<4,"ISO answer index is valid");
+    assert.ok(!sofSciencePrompts.has(question.question),"ISO prompts are unique");sofSciencePrompts.add(question.question);
+    const template=normalizeIsoStem(question.question);
+    assert.ok(!sofScienceTemplates.has(template),"ISO question templates do not repeat after numeric values are normalised");
+    sofScienceTemplates.add(template);
+    assert.ok(["Easy","Medium","Hard","Challenge"].includes(question.difficulty),"ISO difficulty is controlled");
+    assert.ok(["Science","Achievers Section","Logical Reasoning"].includes(question.section),"ISO section tag is controlled");
   }
 }
+assert.equal(sofScienceIds.size,600,"all ISO question IDs are unique across the bank");
+const allIsoQuestions=sofScienceBank.flatMap(chapter=>chapter.questions);
+const isoDifficultyTotals=["Easy","Medium","Hard","Challenge"].map(level=>[level,allIsoQuestions.filter(q=>q.difficulty===level).length]);
+assert.deepEqual(isoDifficultyTotals,[["Easy",60],["Medium",204],["Hard",240],["Challenge",96]],"overall ISO difficulty balance is controlled");
+const isoSectionCounts=allIsoQuestions.reduce((counts,q)=>(counts[q.section]=(counts[q.section]||0)+1,counts),{});
+assert.equal(isoSectionCounts["Science"],500,"ISO science pool has 500 questions");
+assert.equal(isoSectionCounts["Achievers Section"],50,"ISO Achievers pool has 50 higher-order questions");
+assert.equal(isoSectionCounts["Logical Reasoning"],50,"ISO reasoning pool has 50 questions");
+assert.ok(sofScienceBank.slice(0,10).every(chapter=>chapter.questions.slice(45).every(q=>q.section==="Achievers Section")),"the science chapters reserve five questions each for Achievers");
+assert.ok(sofScienceBank[10].questions.every(q=>q.section==="Science"),"Natural Resources questions remain in the science pool");
+assert.ok(sofScienceBank[11].questions.every(q=>q.section==="Logical Reasoning"),"reasoning group is separately section-tagged");
 const normalizedSofScience=context.window.C10QuestionBank.normalize(sofScienceBank,"class-6-science-sof");
 assert.equal(normalizedSofScience.flatMap(chapter=>chapter.questions).length,500,"SOF Science bank normalizes through shared engine");
 assert.equal(new Set(normalizedSofScience.flatMap(chapter=>chapter.questions).map(question=>question.questionKey)).size,500,"SOF Science question keys are unique");
