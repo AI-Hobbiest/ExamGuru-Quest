@@ -1,78 +1,25 @@
-/* Parent Family Level 1: local family overview with XP, level, streak and recent activity. */
+/* Parent Family Module — Level 2: child progress, subject performance and learning insights. */
 (() => {
-  "use strict";
-  const $=id=>document.getElementById(id);
-  const SUBJECTS={science:"Science",mathematics:"Mathematics",english:"English","social-science":"Social Science",hindi:"Hindi",
-    "science-sof":"Science · SOF","mathematics-sof":"Mathematics · SOF","english-sof":"English · SOF"};
-  function node(tag,className,text){const e=document.createElement(tag);if(className)e.className=className;if(text!==undefined)e.textContent=String(text);return e;}
-  function subjectIds(classId){
-    if(String(classId)==="6")return ["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"];
-    if(String(classId)==="3")return ["mathematics"];
-    return ["science","mathematics","english","social-science","hindi"];
-  }
-  function readLedger(studentId,bankId){
-    return window.C10Storage.createLocalStore({
-      kind:"test-attempt-ledger",recordId:bankId,studentId,
-      defaults:()=>({attempts:[],activeAttempt:null,answerRecords:[]}),
-      validate:v=>!!v&&Array.isArray(v.attempts)&&Array.isArray(v.answerRecords)&&(v.activeAttempt===null||typeof v.activeAttempt==="object")
-    }).load();
-  }
-  function attemptsFor(student){
-    const attempts=[];
-    subjectIds(student.classId).forEach(subject=>{
-      const bankId=String(student.classId)==="10"?subject:"class-"+student.classId+"-"+subject;
-      const ledger=readLedger(student.studentId,bankId);
-      (ledger.attempts||[]).forEach(attempt=>attempts.push({...attempt,subjectId:attempt.subjectId||subject,subjectTitle:SUBJECTS[attempt.subjectId||subject]||subject}));
-    });
-    return attempts.filter(a=>["submitted","timed-out"].includes(a.status)&&Number(a.maxScore)>0)
-      .sort((a,b)=>String(b.submittedAt||b.startedAt).localeCompare(String(a.submittedAt||a.startedAt)));
-  }
-  function summarize(student){
-    const attempts=attemptsFor(student);
-    const summary=window.C10Gamification&&window.C10Gamification.calculate
-      ?window.C10Gamification.calculate(attempts):{attempts:attempts.length,xp:0,level:{level:1,title:"Curious Starter",emoji:"🌱"},streak:{current:0},allTimeAverage:null};
-    return {...summary,recent:attempts.slice(0,3)};
-  }
-  function metric(value,label){const box=node("div","family-metric");box.append(node("strong","",value),node("span","",label));return box;}
-  function formatWhen(value){
-    if(!value)return "Recently";
-    const date=new Date(value);if(Number.isNaN(date.getTime()))return "Recently";
-    return date.toLocaleDateString(undefined,{day:"numeric",month:"short"});
-  }
-  function renderCard(student){
-    const summary=summarize(student),card=node("article","family-card");
-    card.append(node("h2","",student.displayName||student.username),node("div","class-tag",student.username+" · Class "+student.classId));
-    const level=node("div","family-level");
-    const left=node("div","");left.append(node("strong","",(summary.level.emoji||"🏅")+" Level "+summary.level.level),node("span","",summary.level.title||"Learning journey"));
-    level.append(left,node("strong","",summary.xp+" XP"));card.appendChild(level);
-    const metrics=node("div","family-metrics");
-    metrics.append(metric(summary.attempts,"Completed tests"),metric(summary.allTimeAverage===null?"—":summary.allTimeAverage+"%","Average accuracy"),metric(summary.streak.current+" day"+(summary.streak.current===1?"":"s"),"Current streak"),metric(summary.activeSubjects||0,"Subjects practised"));
-    card.appendChild(metrics);
-    const recent=node("section","family-recent");recent.appendChild(node("h3","","Recent activity"));
-    const activity=node("div","family-activity");
-    if(summary.recent.length){
-      summary.recent.forEach(attempt=>{
-        const row=node("div","family-activity-item");
-        row.append(node("span","",attempt.subjectTitle+" · "+attempt.score+"/"+attempt.maxScore),node("strong","",formatWhen(attempt.submittedAt||attempt.startedAt)));
-        activity.appendChild(row);
-      });
-    }else activity.appendChild(node("div","family-empty-activity","No completed practice has been recorded for this child on this device yet."));
-    recent.appendChild(activity);card.appendChild(recent);
-    return card;
-  }
-  async function init(){
-    try{
-      const parent=await window.C10StudentAuth.restoreSession();
-      if(!parent||parent.role!=="parent"){location.replace("./index.html");return;}
-      $("parentGreeting").textContent="Welcome, "+(parent.displayName||parent.username);
-      const children=await window.C10StudentAuth.getLinkedChildren(),grid=$("familyChildrenGrid");grid.innerHTML="";
-      if(!children.length){
-        $("parentStatus").textContent="No children are currently linked to this parent account. Please ask the administrator to configure family access.";
-        grid.appendChild(node("div","family-empty","Your family dashboard is ready. Once the administrator links student accounts to this parent, their learning summaries will appear here."));return;
-      }
-      children.forEach(student=>grid.appendChild(renderCard(student)));
-      $("parentStatus").textContent=children.length+" linked child"+(children.length===1?"":"ren")+" · Level, XP, streak and activity are read locally from this device.";
-    }catch(error){$("parentStatus").textContent=error.message||"Unable to load family information.";}
-  }
-  init();
+"use strict";
+const $=id=>document.getElementById(id);
+const SUBJECTS={science:"Science",mathematics:"Mathematics",english:"English","social-science":"Social Science",hindi:"Hindi","science-sof":"Science · SOF","mathematics-sof":"Mathematics · SOF","english-sof":"English · SOF"};
+let childrenCache=[];
+function node(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=String(text);return e;}
+function subjectIds(c){return String(c)==="6"?["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"]:String(c)==="3"?["mathematics"]:["science","mathematics","english","social-science","hindi"];}
+function ledger(studentId,bankId){return window.C10Storage.createLocalStore({kind:"test-attempt-ledger",recordId:bankId,studentId,defaults:()=>({attempts:[],activeAttempt:null,answerRecords:[]}),validate:v=>!!v&&Array.isArray(v.attempts)}).load();}
+function attemptsFor(s){const a=[];subjectIds(s.classId).forEach(subject=>{const id=String(s.classId)==="10"?subject:"class-"+s.classId+"-"+subject;(ledger(s.studentId,id).attempts||[]).forEach(x=>a.push({...x,subjectId:x.subjectId||subject,subjectTitle:SUBJECTS[x.subjectId||subject]||subject}));});return a.filter(x=>["submitted","timed-out"].includes(x.status)&&Number(x.maxScore)>0).sort((a,b)=>String(b.submittedAt||b.startedAt).localeCompare(String(a.submittedAt||a.startedAt)));}
+function summary(s){const attempts=attemptsFor(s);const g=window.C10Gamification&&window.C10Gamification.calculate?window.C10Gamification.calculate(attempts):{attempts:attempts.length,xp:0,level:{level:1,title:"Curious Starter",emoji:"🌱"},streak:{current:0},allTimeAverage:null,subjectStats:[]};return {...g,recent:attempts.slice(0,3),allAttempts:attempts};}
+function metric(v,l){const b=node("div","family-metric");b.append(node("strong","",v),node("span","",l));return b;}
+function when(v){const d=new Date(v);return !v||Number.isNaN(d.getTime())?"Recently":d.toLocaleDateString(undefined,{day:"numeric",month:"short"});}
+function card(s){const z=summary(s),c=node("article","family-card");c.tabIndex=0;c.setAttribute("role","button");c.setAttribute("aria-label","View detailed progress for "+(s.displayName||s.username));c.append(node("h2","",s.displayName||s.username),node("div","class-tag",s.username+" · Class "+s.classId));const level=node("div","family-level"),left=node("div","");left.append(node("strong","",(z.level.emoji||"🏅")+" Level "+z.level.level),node("span","",z.level.title||"Learning journey"));level.append(left,node("strong","",z.xp+" XP"));c.appendChild(level);const m=node("div","family-metrics");m.append(metric(z.attempts,"Completed tests"),metric(z.allTimeAverage===null?"—":z.allTimeAverage+"%","Average accuracy"),metric(z.streak.current+" day"+(z.streak.current===1?"":"s"),"Current streak"),metric(z.activeSubjects||0,"Subjects practised"));c.appendChild(m);const r=node("section","family-recent");r.appendChild(node("h3","","Recent activity"));const list=node("div","family-activity");if(z.recent.length)z.recent.forEach(a=>{const row=node("div","family-activity-item");row.append(node("span","",a.subjectTitle+" · "+a.score+"/"+a.maxScore),node("strong","",when(a.submittedAt||a.startedAt)));list.appendChild(row);});else list.appendChild(node("div","family-empty-activity","No completed practice has been recorded for this child on this device yet."));r.appendChild(list);c.appendChild(r);const hint=node("div","family-latest","View detailed progress →");c.appendChild(hint);const open=()=>showDetail(s);c.addEventListener("click",open);c.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});return c;}
+function subjectRows(z){const wrap=node("div","subject-progress");const rows=(z.subjectStats||[]).filter(x=>x.tests>0);if(!rows.length)return null;rows.sort((a,b)=>b.accuracy-a.accuracy).forEach(x=>{const row=node("div","subject-row");row.append(node("strong","",(x.emoji||"📘")+" "+x.title));const track=node("div","progress-track"),fill=node("div","progress-fill");fill.style.width=Math.max(3,x.accuracy)+"%";track.appendChild(fill);row.append(track,node("span","subject-score",x.accuracy+"% · "+x.tests+" test"+(x.tests===1?"":"s")));wrap.appendChild(row);});return wrap;}
+function chapterRows(attempts){const map=new Map();attempts.forEach(a=>{const chapters=Array.isArray(a.chapterIds)?a.chapterIds:(a.chapterId?[a.chapterId]:(a.chapterName?[a.chapterName]:[]));chapters.forEach(ch=>{const key=String(ch),old=map.get(key)||{tests:0,total:0,correct:0};old.tests++;old.total+=Number(a.maxScore)||0;old.correct+=Number(a.score)||0;map.set(key,old);});});return [...map.entries()].map(([name,v])=>({name,...v,accuracy:v.total?Math.round(v.correct/v.total*100):0})).sort((a,b)=>b.tests-a.tests);}
+function insight(title,text){const x=node("div","insight");x.append(node("h4","",title),node("p","",text));return x;}
+function showDetail(s){const z=summary(s),box=$("childDetail");box.hidden=false;box.innerHTML="";const head=node("div","detail-head"),title=node("div","");title.append(node("h2","",(s.displayName||s.username)+"'s learning progress"),node("p","","Class "+s.classId+" · A closer look at performance recorded on this device."));const close=node("button","detail-close","Close");close.type="button";close.addEventListener("click",()=>{box.hidden=true;});head.append(title,close);box.appendChild(head);
+const sec=node("section","detail-section");sec.appendChild(node("h3","","Subject performance"));const subjects=subjectRows(z);if(subjects)sec.appendChild(subjects);else sec.appendChild(node("div","detail-empty","Subject performance will appear after completed tests are recorded."));box.appendChild(sec);
+const active=(z.subjectStats||[]).filter(x=>x.tests>0).sort((a,b)=>b.accuracy-a.accuracy),ins=node("section","detail-section");ins.appendChild(node("h3","","Learning insights"));const grid=node("div","insight-grid");if(active.length){const best=active[0],needs=active.length>1?active[active.length-1]:null;grid.append(insight("Strength",best.title+" is currently the strongest practised subject at "+best.accuracy+"% accuracy."));grid.append(insight("Focus area",needs?needs.title+" has the lowest current accuracy at "+needs.accuracy+"%. A little targeted revision could help.":"Complete more subjects to identify a meaningful focus area."));}else grid.append(insight("Getting started","Complete a few tests to unlock personalised strengths and focus areas."));ins.appendChild(grid);box.appendChild(ins);
+const chapters=chapterRows(z.allAttempts),chap=node("section","detail-section");chap.appendChild(node("h3","","Chapter progress"));if(chapters.length){const list=node("div","chapter-list");chapters.forEach(x=>{const row=node("div","chapter-row");row.append(node("span","",x.name),node("strong","",x.accuracy+"% · "+x.tests+" test"+(x.tests===1?"":"s")));list.appendChild(row);});chap.appendChild(list);}else chap.appendChild(node("div","detail-empty","Chapter-level progress will appear when quizzes record chapter information. Existing subject-level history remains available above."));box.appendChild(chap);
+box.scrollIntoView({behavior:"smooth",block:"start"});}
+async function init(){try{const parent=await window.C10StudentAuth.restoreSession();if(!parent||parent.role!=="parent"){location.replace("./index.html");return;}$("parentGreeting").textContent="Welcome, "+(parent.displayName||parent.username);childrenCache=await window.C10StudentAuth.getLinkedChildren();const grid=$("familyChildrenGrid");grid.innerHTML="";if(!childrenCache.length){$("parentStatus").textContent="No children are currently linked to this parent account.";grid.appendChild(node("div","family-empty","Your family dashboard is ready. Once student accounts are linked, their learning summaries will appear here."));return;}childrenCache.forEach(s=>grid.appendChild(card(s)));$("parentStatus").textContent=childrenCache.length+" linked child"+(childrenCache.length===1?"":"ren")+" · Select a child to view subject and chapter progress.";}catch(e){$("parentStatus").textContent=e.message||"Unable to load family information.";}}
+init();
 })();
