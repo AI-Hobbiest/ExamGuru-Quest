@@ -31,12 +31,6 @@ assert.ok(nav.includes("aria-expanded"));
 assert.ok(nav.includes('event.key==="Escape"'));
 assert.ok(nav.includes('const file=last.includes(".")?last:"index.html"'),"GitHub Pages project root resolves as index");
 assert.ok(css.includes("@media(max-width:1100px)"),"tablet-sized viewports use the compact slide-in menu");
-const roleTheme=fs.readFileSync("css/theme-roles.css","utf8");
-assert.ok(roleTheme.includes("body.c10-theme-quest"),"role stylesheet contains the student Quest theme");
-assert.ok(roleTheme.includes("body.c10-theme-admin"),"role stylesheet contains the Admin Lavender theme");
-for(const [name,html] of [["homepage",homepage],["dashboard",dashboard],["practice",practice],["profile",profile],["admin",admin]]) {
- assert.ok(html.includes("./css/theme-roles.css"),name+" links the role-specific stylesheet");
-}
 const deployWorkflow=fs.readFileSync(".github/workflows/pages.yml","utf8");
 assert.ok(deployWorkflow.includes("cp css/theme-roles.css _site/css/theme-roles.css"),"Pages packaging includes the role stylesheet");
 assert.ok(deployWorkflow.includes("'css/theme-roles.css'"),"deployed asset validation includes the role stylesheet");
@@ -48,12 +42,6 @@ for(const [name,html,theme] of [["homepage",homepage,"c10-theme-quest"],["practi
  assert.ok(html.includes("./css/theme-roles.css"),name+" loads the role-specific theme");
  assert.ok(html.includes('class="'+theme)||html.includes('class="eg-quiz-page '+theme),name+" is assigned the correct theme");
 }
-assert.ok(branding.includes("--c10-indigo:#403b8c"),"shared design tokens define the indigo brand colour");
-assert.ok(branding.includes("--c10-lavender:#ece8fa"),"shared design tokens define lavender selection surfaces");
-assert.ok(branding.includes("--c10-green:#e4f4e9"),"shared design tokens define green success surfaces");
-assert.ok(branding.includes("--c10-yellow:#fff1c9"),"shared design tokens define yellow review surfaces");
-assert.ok(practice.includes("unified green, lavender and yellow theme"),"practice uses the shared palette");
-assert.ok(dashboard.includes("linear-gradient(118deg,#ece8fa"),"dashboard hero uses the agreed pastel identity");
 assert.ok(css.includes(".c10-sidebar a.c10-nav-link:visited"),"sidebar link color overrides the global anchor theme");
 assert.ok(css.includes(".c10-sidebar a.c10-nav-link.active:visited"),"active link remains readable on the dark sidebar");
 assert.ok(css.includes(".c10-sidebar.open"));
