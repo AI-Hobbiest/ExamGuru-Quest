@@ -15,8 +15,8 @@
 .parent-hero p{margin:0;color:#5e6680;line-height:1.6}
 .parent-status{margin:18px 0;color:#626b84;font-size:.9rem}
 .family-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px;margin-top:18px}
-.family-card{background:#fff;border:1px solid #e0e4ef;border-radius:18px;padding:20px;box-shadow:0 10px 25px rgba(37,43,82,.06)}
-.family-card h2{margin:0 0 4px;font-size:1.2rem;color:#292b58}
+.family-card{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;background:#fff;border:1px solid #e0e4ef;border-radius:18px;padding:20px;box-shadow:0 10px 25px rgba(37,43,82,.06)}
+.family-card:hover{transform:translateY(-2px);box-shadow:0 15px 32px rgba(37,43,82,.1)}.family-card:focus{outline:3px solid rgba(124,110,199,.28);outline-offset:3px}.family-card h2{margin:0 0 4px;font-size:1.2rem;color:#292b58}
 .family-level{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 6px;padding:12px;border-radius:14px;background:linear-gradient(135deg,#f0edfb,#eaf7f0)}
 .family-level strong{font-size:1.05rem;color:#34336f}.family-level span{font-size:.76rem;color:#626b84;font-weight:700}
 .family-recent{margin-top:12px;padding-top:12px;border-top:1px solid #ebeaf1}.family-recent h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:#626b84;margin:0 0 8px}
@@ -28,7 +28,7 @@
 .family-metric span{display:block;font-size:.75rem;color:#6c7185;margin-top:3px}
 .family-latest{border-top:1px solid #ebeaf1;padding-top:12px;color:#626b84;font-size:.83rem;line-height:1.6}
 .family-empty{padding:22px;border:1px dashed #c9c8d9;border-radius:16px;color:#626b84;background:#fff}
-.family-note{font-size:.8rem;color:#73788b;margin-top:20px;line-height:1.6}
+.child-detail{margin-top:26px;padding:22px;border-radius:20px;background:#fff;border:1px solid #e0e4ef;box-shadow:0 10px 25px rgba(37,43,82,.06)}.child-detail[hidden]{display:none}.detail-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;border-bottom:1px solid #ebeaf1;padding-bottom:14px}.detail-head h2{margin:0;color:#292b58}.detail-head p{margin:5px 0 0;color:#687089}.detail-close{border:1px solid #ddd8ef;background:#f7f5fd;color:#403d78;border-radius:10px;padding:8px 12px;font-weight:800;cursor:pointer}.detail-section{margin-top:20px}.detail-section h3{margin:0 0 10px;color:#36366f;font-size:1rem}.subject-progress{display:grid;gap:10px}.subject-row{display:grid;grid-template-columns:minmax(100px,1.2fr) 2fr auto;gap:12px;align-items:center;padding:11px;border-radius:12px;background:#f7f7fb}.subject-row strong{font-size:.88rem;color:#36366f}.progress-track{height:9px;border-radius:999px;background:#e7e8f0;overflow:hidden}.progress-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#8fcfb1,#8f83cf)}.subject-score{font-size:.8rem;color:#5d647b;font-weight:800}.insight-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.insight{padding:14px;border-radius:14px;background:#f7f5fd}.insight h4{margin:0 0 7px;color:#413e78;font-size:.88rem}.insight p{margin:0;color:#626b84;font-size:.83rem;line-height:1.5}.chapter-list{display:grid;gap:8px}.chapter-row{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border:1px solid #ecebf2;border-radius:11px;font-size:.83rem;color:#535b72}.detail-empty{padding:16px;border:1px dashed #c9c8d9;border-radius:12px;color:#73788b;font-size:.84rem}.family-note{font-size:.8rem;color:#73788b;margin-top:20px;line-height:1.6}
 </style>
 </head>
 <body class="c10-theme-quest">
@@ -44,6 +44,7 @@
   </section>
   <p id="parentStatus" class="parent-status" role="status" aria-live="polite">Loading linked children…</p>
   <section id="familyChildrenGrid" class="family-grid" aria-label="Linked children"></section>
+  <section id="childDetail" class="child-detail" hidden aria-live="polite"></section>
   <p class="family-note">Progress shown here is stored on this browser/device only. Children should sign in with their own username to practise. Family access and parent–child links are maintained by the administrator. This local-first version does not synchronise history between devices.</p>
 </main>
 <script src="./js/student-auth.js"></script>
