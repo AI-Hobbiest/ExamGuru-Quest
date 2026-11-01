@@ -5665,658 +5665,709 @@
   },
   {
     "chapter_no": 9,
-    "title": "Logical Reasoning",
-    "key": "sof-imo-logical-reasoning",
+    "title": "Symmetry",
+    "key": "sof-imo-symmetry",
+    "section": "IMO Syllabus Topic",
     "questions": [
       {
-        "id": "c6imoq009",
-        "question": "Mira faces north and turns right twice. Which direction is she facing?",
+        "id": "c6imoq401",
+        "question": "How many lines of symmetry does a non-square rectangle have?",
         "options": [
-          "South",
-          "East",
-          "West",
-          "North"
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "answer": 1,
+        "explanation": "Its two axes pass through the midpoints of opposite sides.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq402",
+        "question": "How many lines of symmetry does an equilateral triangle have?",
+        "options": [
+          "3",
+          "1",
+          "2",
+          "4"
         ],
         "answer": 0,
-        "explanation": "North → East → South.",
-        "difficulty": "Easy"
+        "explanation": "Each line joins a vertex to the midpoint of the opposite side.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq019",
-        "question": "If today is Tuesday, what day will it be 10 days later?",
+        "id": "c6imoq403",
+        "question": "Which capital letter has a vertical line of symmetry in standard block form?",
         "options": [
-          "Thursday",
-          "Saturday",
-          "Friday",
-          "Sunday"
+          "F",
+          "G",
+          "R",
+          "A"
+        ],
+        "answer": 3,
+        "explanation": "The two sloping sides of A mirror each other.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq404",
+        "question": "A square is reflected in its vertical middle line. Where does its top-left corner move?",
+        "options": [
+          "Bottom-left corner",
+          "Bottom-right corner",
+          "Top-right corner",
+          "It stays in place"
         ],
         "answer": 2,
-        "explanation": "Seven days later is Tuesday; three more days is Friday.",
-        "difficulty": "Easy"
+        "explanation": "A vertical reflection swaps left and right.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq029",
-        "question": "Which does not belong: 2, 4, 8, 10, 16?",
+        "id": "c6imoq405",
+        "question": "How many lines of symmetry does a regular pentagon have?",
         "options": [
-          "10",
+          "4",
+          "5",
+          "6",
+          "10"
+        ],
+        "answer": 1,
+        "explanation": "A regular polygon has as many reflection axes as sides.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq406",
+        "question": "Which shape has exactly one line of symmetry?",
+        "options": [
+          "An isosceles triangle that is not equilateral",
+          "A scalene triangle",
+          "A non-square rectangle",
+          "A regular hexagon"
+        ],
+        "answer": 0,
+        "explanation": "Its axis passes through the apex and midpoint of the base.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq407",
+        "question": "A figure has rotational symmetry of order 4. What is its smallest matching turn?",
+        "options": [
+          "45°",
+          "120°",
+          "180°",
+          "90°"
+        ],
+        "answer": 3,
+        "explanation": "360°÷4=90°.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq408",
+        "question": "How many lines of symmetry does a circle have?",
+        "options": [
+          "1",
           "2",
+          "Infinitely many",
+          "360"
+        ],
+        "answer": 2,
+        "explanation": "Every diameter is a line of symmetry.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq409",
+        "question": "Which shape has exactly 6 lines of symmetry?",
+        "options": [
+          "A non-square rectangle",
+          "A regular hexagon",
+          "A regular pentagon",
+          "A scalene triangle"
+        ],
+        "answer": 1,
+        "explanation": "A regular hexagon has six reflection axes.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq410",
+        "question": "A shape is reflected across a horizontal line. A point 3 cm above the line moves where?",
+        "options": [
+          "3 cm below the line",
+          "3 cm above the line",
+          "Onto the line",
+          "6 cm sideways"
+        ],
+        "answer": 0,
+        "explanation": "Reflection preserves perpendicular distance on the opposite side.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq411",
+        "question": "Which triangle has no line of symmetry?",
+        "options": [
+          "An equilateral triangle",
+          "An isosceles triangle",
+          "A right isosceles triangle",
+          "A scalene triangle"
+        ],
+        "answer": 3,
+        "explanation": "All side lengths and angles differ.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq412",
+        "question": "A shape has two perpendicular lines of symmetry. Which rotation must also map it onto itself?",
+        "options": [
+          "A quarter-turn (90°)",
+          "A one-third turn (120°)",
+          "A half-turn (180°)",
+          "A 45° turn"
+        ],
+        "answer": 2,
+        "explanation": "Two perpendicular reflections compose to a 180° rotation.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq413",
+        "question": "A butterfly's wings mirror each other. Where is its line of symmetry?",
+        "options": [
+          "Across the wing tips",
+          "Along its body",
+          "Around its outline",
+          "Along one wing"
+        ],
+        "answer": 1,
+        "explanation": "The body divides matching left and right halves.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq414",
+        "question": "Which shape has exactly four lines of symmetry?",
+        "options": [
+          "A square",
+          "A non-square rectangle",
+          "A non-square rhombus",
+          "A kite"
+        ],
+        "answer": 0,
+        "explanation": "A square has two midlines and two diagonals.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq415",
+        "question": "A design repeats every 60° around its centre. What is its rotational order?",
+        "options": [
+          "4",
+          "5",
           "8",
+          "6"
+        ],
+        "answer": 3,
+        "explanation": "360°÷60°=6.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq416",
+        "question": "A point (2,5) is reflected across x=4. Find its image.",
+        "options": [
+          "(2,3)",
+          "(4,5)",
+          "(6,5)",
+          "(6,4)"
+        ],
+        "answer": 2,
+        "explanation": "It is 2 units left of x=4; its image is 2 units right.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq417",
+        "question": "A non-square rectangle is rotated about its centre. What is its rotational symmetry order?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "answer": 1,
+        "explanation": "It matches after 180° but not after 90°.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq418",
+        "question": "How many lines of symmetry does a regular octagon have?",
+        "options": [
+          "8",
+          "4",
+          "6",
           "16"
         ],
         "answer": 0,
-        "explanation": "The others are powers of 2; 10 is not.",
-        "difficulty": "Easy"
+        "explanation": "A regular n-gon has n reflection axes.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq039",
-        "question": "A is taller than B; B is taller than C. Who is shortest?",
+        "id": "c6imoq419",
+        "question": "An arrow pointing upward is reflected across a horizontal line. Which way does its image point?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "Cannot tell"
+          "Upward",
+          "Left",
+          "Right",
+          "Downward"
+        ],
+        "answer": 3,
+        "explanation": "A horizontal reflection reverses vertical direction.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq420",
+        "question": "Which pair must have the same number of symmetry lines?",
+        "options": [
+          "A square and a rectangle",
+          "A circle and a regular pentagon",
+          "Two equilateral triangles",
+          "A kite and a rhombus"
         ],
         "answer": 2,
-        "explanation": "A > B > C, so C is shortest.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq049",
-        "question": "A code changes CAT to DBU by moving each letter forward one step. How is DOG coded?",
-        "options": [
-          "EPH",
-          "EPG",
-          "COF",
-          "FQI"
-        ],
-        "answer": 0,
-        "explanation": "D→E, O→P, G→H.",
-        "difficulty": "Challenge"
-      },
-      {
-        "id": "c6imoq059",
-        "question": "What is next in A, C, F, J, O, __?",
-        "options": [
-          "T",
-          "V",
-          "U",
-          "W"
-        ],
-        "answer": 2,
-        "explanation": "The jumps are +2, +3, +4, +5, then +6.",
-        "difficulty": "Challenge"
-      },
-      {
-        "id": "c6imoq069",
-        "question": "A clock shows 3:00. What is the smaller angle between its hands?",
-        "options": [
-          "90°",
-          "60°",
-          "120°",
-          "180°"
-        ],
-        "answer": 0,
-        "explanation": "Three hour marks × 30° = 90°.",
-        "difficulty": "Challenge"
-      },
-      {
-        "id": "c6imoq079",
-        "question": "If every square is a rectangle, which must be true?",
-        "options": [
-          "Every rectangle is a square",
-          "A square has three sides",
-          "A square has four right angles",
-          "A square has no equal sides"
-        ],
-        "answer": 2,
-        "explanation": "A square has four right angles.",
-        "difficulty": "Challenge"
-      },
-      {
-        "id": "c6imoq089",
-        "question": "5 machines make 5 toys in 5 minutes. How long do 10 identical machines take to make 10 toys?",
-        "options": [
-          "5 minutes",
-          "10 minutes",
-          "2.5 minutes",
-          "15 minutes"
-        ],
-        "answer": 0,
-        "explanation": "Each machine makes one toy in five minutes.",
-        "difficulty": "Challenge"
-      },
-      {
-        "id": "c6imoq099",
-        "question": "Which number is even, greater than 20 and less than 26?",
-        "options": [
-          "21",
-          "23",
-          "24",
-          "27"
-        ],
-        "answer": 2,
-        "explanation": "24 is even and between 20 and 26.",
-        "difficulty": "Challenge"
+        "explanation": "Every equilateral triangle has three symmetry axes.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq421",
-        "question": "Complete the number sequence: 14, 16, 18, __.",
+        "question": "Reflect (−3,2) across the x-axis. What are the image coordinates?",
         "options": [
-          "18",
-          "22",
-          "21",
-          "20"
+          "(3,2)",
+          "(−3,−2)",
+          "(3,−2)",
+          "(−2,−3)"
         ],
-        "answer": 3,
-        "explanation": "Each term increases by 2; the next term is 18 + 2 = 20.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "Only the y-coordinate changes sign.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq422",
-        "question": "Complete the number sequence: 15, 18, 21, __.",
+        "question": "Five identical spokes are equally spaced around a centre. What is the angle between neighbouring spokes?",
         "options": [
-          "27",
-          "25",
-          "24",
-          "21"
+          "72°",
+          "60°",
+          "90°",
+          "108°"
         ],
-        "answer": 2,
-        "explanation": "Each term increases by 3; the next term is 21 + 3 = 24.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "360°÷5=72°.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq423",
-        "question": "Complete the number sequence: 16, 20, 24, __.",
+        "question": "A regular hexagon is rotated 180°. How many vertices land on original vertex positions?",
         "options": [
-          "29",
-          "28",
-          "24",
-          "32"
+          "3",
+          "4",
+          "5",
+          "6"
         ],
-        "answer": 1,
-        "explanation": "Each term increases by 4; the next term is 24 + 4 = 28.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "Each vertex maps to its opposite vertex.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq424",
-        "question": "Complete the number sequence: 17, 22, 27, __.",
+        "question": "A non-square rectangle has rotational symmetry of which order?",
         "options": [
-          "32",
-          "27",
-          "37",
-          "33"
+          "1",
+          "3",
+          "2",
+          "4"
         ],
-        "answer": 0,
-        "explanation": "Each term increases by 5; the next term is 27 + 5 = 32.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "The matching turns are 0° and 180°.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq425",
-        "question": "Complete the number sequence: 18, 24, 30, __.",
+        "question": "Two reflections in perpendicular axes are equivalent to:",
         "options": [
-          "30",
-          "42",
-          "37",
-          "36"
+          "A 90° rotation",
+          "A 180° rotation",
+          "A translation",
+          "A reflection in a diagonal"
         ],
-        "answer": 3,
-        "explanation": "Each term increases by 6; the next term is 30 + 6 = 36.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "The composition of perpendicular reflections is a half-turn.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq426",
-        "question": "Complete the number sequence: 19, 26, 33, __.",
+        "question": "A pattern repeats after a 45° turn. How many identical orientations fit around a full turn?",
         "options": [
-          "47",
-          "41",
-          "40",
-          "33"
+          "8",
+          "6",
+          "7",
+          "9"
         ],
-        "answer": 2,
-        "explanation": "Each term increases by 7; the next term is 33 + 7 = 40.",
-        "difficulty": "Hard"
+        "answer": 0,
+        "explanation": "360°÷45°=8.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq427",
-        "question": "Complete the number sequence: 20, 28, 36, __.",
+        "question": "Reflect (−4,7) in the line y=x. Find the image.",
         "options": [
-          "45",
-          "44",
-          "36",
-          "52"
+          "(−7,4)",
+          "(4,−7)",
+          "(−4,−7)",
+          "(7,−4)"
         ],
-        "answer": 1,
-        "explanation": "Each term increases by 8; the next term is 36 + 8 = 44.",
-        "difficulty": "Easy"
+        "answer": 3,
+        "explanation": "Reflection in y=x swaps coordinates.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq428",
-        "question": "Complete the number sequence: 21, 30, 39, __.",
+        "question": "A point (5,−2) is reflected across y=1. What is the image?",
         "options": [
-          "48",
-          "39",
-          "57",
-          "49"
+          "(5,2)",
+          "(−5,4)",
+          "(5,4)",
+          "(5,−4)"
         ],
-        "answer": 0,
-        "explanation": "Each term increases by 9; the next term is 39 + 9 = 48.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "The point is 3 units below y=1; image is 3 units above.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq429",
-        "question": "Complete the number sequence: 22, 32, 42, __.",
+        "question": "How many symmetry axes does a regular 12-sided polygon have?",
         "options": [
-          "42",
-          "62",
-          "53",
-          "52"
+          "6",
+          "12",
+          "10",
+          "24"
         ],
-        "answer": 3,
-        "explanation": "Each term increases by 10; the next term is 42 + 10 = 52.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "A regular n-gon has n axes.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq430",
-        "question": "Complete the number sequence: 23, 34, 45, __.",
+        "question": "A shape matches itself after 90° rotation. What is the minimum possible rotational order?",
         "options": [
-          "67",
-          "57",
-          "56",
-          "45"
+          "4",
+          "2",
+          "3",
+          "8"
         ],
-        "answer": 2,
-        "explanation": "Each term increases by 11; the next term is 45 + 11 = 56.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "At least four equal quarter-turn positions fit in 360°.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq431",
-        "question": "Complete the number sequence: 24, 36, 48, __.",
+        "question": "Reflecting a motif in a vertical axis and then translating it preserves which property?",
         "options": [
-          "61",
-          "60",
-          "48",
-          "72"
+          "Its original orientation",
+          "Its original position",
+          "Its handedness",
+          "Lengths and angles"
         ],
-        "answer": 1,
-        "explanation": "Each term increases by 12; the next term is 48 + 12 = 60.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "Reflection and translation are rigid motions.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq432",
-        "question": "Complete the number sequence: 25, 27, 29, __.",
+        "question": "A square is reflected first in its vertical centre line and then in its horizontal centre line. What single movement is equivalent?",
         "options": [
-          "31",
-          "29",
-          "33",
-          "32"
+          "A 90° rotation",
+          "A translation",
+          "A 180° rotation",
+          "A diagonal reflection"
         ],
-        "answer": 0,
-        "explanation": "Each term increases by 2; the next term is 29 + 2 = 31.",
-        "difficulty": "Hard"
+        "answer": 2,
+        "explanation": "Two perpendicular reflections compose to a half-turn.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq433",
-        "question": "Complete the number sequence: 26, 29, 32, __.",
+        "question": "Which capital letter has no line of symmetry in standard block form?",
         "options": [
-          "32",
-          "38",
-          "36",
-          "35"
+          "H",
+          "F",
+          "O",
+          "X"
         ],
-        "answer": 3,
-        "explanation": "Each term increases by 3; the next term is 32 + 3 = 35.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "F has no mirror line; H, O and X do.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq434",
-        "question": "Complete the number sequence: 27, 31, 35, __.",
+        "question": "A point is 4 units left of a vertical mirror line. Where is its image?",
         "options": [
-          "43",
-          "40",
-          "39",
-          "35"
+          "4 units right of the line",
+          "2 units right",
+          "6 units right",
+          "8 units right"
         ],
-        "answer": 2,
-        "explanation": "Each term increases by 4; the next term is 35 + 4 = 39.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "Perpendicular distance is preserved.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq435",
-        "question": "Complete the number sequence: 28, 33, 38, __.",
+        "question": "A pattern has smallest matching turn 120°. Find its rotational order.",
         "options": [
-          "44",
-          "43",
-          "38",
-          "48"
+          "2",
+          "4",
+          "6",
+          "3"
         ],
-        "answer": 1,
-        "explanation": "Each term increases by 5; the next term is 38 + 5 = 43.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "360°÷120°=3.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq436",
-        "question": "Complete the number sequence: 29, 35, 41, __.",
+        "question": "Reflect point (3,6) across x=1 and then across x=5. Find its final coordinates.",
         "options": [
-          "47",
-          "41",
-          "53",
-          "48"
+          "(7,6)",
+          "(−5,6)",
+          "(11,6)",
+          "(3,−6)"
         ],
-        "answer": 0,
-        "explanation": "Each term increases by 6; the next term is 41 + 6 = 47.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "Two parallel reflections translate it 2×4=8 units right.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq437",
-        "question": "Complete the number sequence: 30, 37, 44, __.",
+        "question": "A folded sheet has a hole 2 cm left of the vertical fold and 3 cm above its bottom. Where is the matching hole after unfolding?",
         "options": [
-          "44",
-          "58",
-          "52",
-          "51"
+          "2 cm left and 3 cm below",
+          "2 cm right of the fold and 3 cm above the bottom",
+          "3 cm right and 2 cm above",
+          "On the fold"
         ],
-        "answer": 3,
-        "explanation": "Each term increases by 7; the next term is 44 + 7 = 51.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "Unfolding reflects the hole across the fold line.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq438",
-        "question": "Complete the number sequence: 31, 39, 47, __.",
+        "question": "A figure has 4-fold rotational symmetry. Which set of turns maps it onto itself?",
         "options": [
-          "63",
-          "56",
-          "55",
-          "47"
+          "0°, 90°, 180°, 270°",
+          "0°, 60°, 120°, 180°",
+          "0°, 45°, 90°, 135°",
+          "0°, 120°, 240°, 360°"
         ],
-        "answer": 2,
-        "explanation": "Each term increases by 8; the next term is 47 + 8 = 55.",
-        "difficulty": "Hard"
+        "answer": 0,
+        "explanation": "Multiples of 90° give matching positions.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq439",
-        "question": "Complete the number sequence: 32, 41, 50, __.",
+        "question": "What is the image of point (−6,−2) after reflection in the y-axis?",
         "options": [
-          "60",
-          "59",
-          "50",
-          "68"
+          "(−6,2)",
+          "(6,2)",
+          "(−2,−6)",
+          "(6,−2)"
         ],
-        "answer": 1,
-        "explanation": "Each term increases by 9; the next term is 50 + 9 = 59.",
-        "difficulty": "Easy"
+        "answer": 3,
+        "explanation": "Reflection in y-axis changes the sign of x only.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq440",
-        "question": "Complete the number sequence: 33, 43, 53, __.",
+        "question": "A regular 9-sided polygon is turned through 40°. What happens?",
         "options": [
-          "63",
-          "53",
-          "73",
-          "64"
+          "It turns halfway",
+          "It matches only after 80°",
+          "It matches its original position",
+          "It does not match until 360°"
         ],
-        "answer": 0,
-        "explanation": "Each term increases by 10; the next term is 53 + 10 = 63.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "360°÷9=40°.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq441",
-        "question": "Complete the number sequence: 34, 45, 56, __.",
+        "question": "Reflecting across two parallel mirror lines 5 cm apart has what combined effect?",
         "options": [
-          "56",
-          "78",
-          "68",
-          "67"
+          "A 180° rotation",
+          "A translation of 10 cm",
+          "A reflection",
+          "No movement"
         ],
-        "answer": 3,
-        "explanation": "Each term increases by 11; the next term is 56 + 11 = 67.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "Two parallel reflections translate by twice the separation.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq442",
-        "question": "Complete the number sequence: 35, 47, 59, __.",
+        "question": "A point (4,−1) is reflected in the origin. What is the image?",
         "options": [
-          "83",
-          "72",
-          "71",
-          "59"
+          "(−4,1)",
+          "(4,1)",
+          "(−4,−1)",
+          "(1,−4)"
         ],
-        "answer": 2,
-        "explanation": "Each term increases by 12; the next term is 59 + 12 = 71.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "A half-turn about the origin changes both signs.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq443",
-        "question": "Complete the number sequence: 36, 38, 40, __.",
+        "question": "A design has 3-fold rotational symmetry and one mirror axis. How many mirror axes are implied?",
         "options": [
-          "43",
-          "42",
-          "40",
-          "44"
+          "1",
+          "2",
+          "6",
+          "3"
         ],
-        "answer": 1,
-        "explanation": "Each term increases by 2; the next term is 40 + 2 = 42.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "Rotating the mirror axis by 120° and 240° gives three axes.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq444",
-        "question": "Complete the number sequence: 37, 40, 43, __.",
+        "question": "A square grid is reflected across the main diagonal. Where does cell row 2, column 1 move?",
         "options": [
-          "46",
-          "43",
-          "49",
-          "47"
+          "Row 2, column 4",
+          "Row 3, column 1",
+          "Row 1, column 2",
+          "Row 4, column 2"
         ],
-        "answer": 0,
-        "explanation": "Each term increases by 3; the next term is 43 + 3 = 46.",
-        "difficulty": "Hard"
+        "answer": 2,
+        "explanation": "Reflection in the main diagonal swaps row and column.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq445",
-        "question": "Complete the number sequence: 38, 42, 46, __.",
+        "question": "A pattern has rotational symmetry but no reflection symmetry. What does this show?",
         "options": [
-          "46",
-          "54",
-          "51",
-          "50"
+          "Every rotation is a reflection",
+          "Rotational symmetry does not require mirror symmetry",
+          "It must be a regular polygon",
+          "It has no symmetry"
         ],
-        "answer": 3,
-        "explanation": "Each term increases by 4; the next term is 46 + 4 = 50.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "A design can match after turns without matching in a mirror.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq446",
-        "question": "Complete the number sequence: 39, 44, 49, __.",
+        "question": "Uniformly enlarging a square preserves which property?",
         "options": [
-          "59",
-          "55",
-          "54",
-          "49"
+          "Its four lines of symmetry",
+          "Only its area",
+          "No symmetry",
+          "Exactly one line"
         ],
-        "answer": 2,
-        "explanation": "Each term increases by 5; the next term is 49 + 5 = 54.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "A similar enlargement preserves the square's shape and symmetry axes.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq447",
-        "question": "Complete the number sequence: 40, 46, 52, __.",
+        "question": "A pattern repeats after 72° turns. Which turn does not necessarily map it onto itself?",
         "options": [
-          "59",
-          "58",
-          "52",
-          "64"
+          "144°",
+          "216°",
+          "288°",
+          "60°"
         ],
-        "answer": 1,
-        "explanation": "Each term increases by 6; the next term is 52 + 6 = 58.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "Multiples of 72° match; 60° is not one.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq448",
-        "question": "Complete the number sequence: 41, 48, 55, __.",
+        "question": "A point (−2,5) is reflected in y=0 and then in x=0. What is the final point?",
         "options": [
-          "62",
-          "55",
-          "69",
-          "63"
+          "(−2,−5)",
+          "(2,5)",
+          "(2,−5)",
+          "(5,−2)"
         ],
-        "answer": 0,
-        "explanation": "Each term increases by 7; the next term is 55 + 7 = 62.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "The first reflection changes y; the second changes x.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq449",
-        "question": "Complete the number sequence: 42, 50, 58, __.",
+        "question": "A regular 8-point star has arms equally spaced around the centre. Find the angle between adjacent arms.",
         "options": [
-          "58",
-          "74",
-          "67",
-          "66"
+          "30°",
+          "45°",
+          "60°",
+          "90°"
         ],
-        "answer": 3,
-        "explanation": "Each term increases by 8; the next term is 58 + 8 = 66.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "360°÷8=45°.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq450",
-        "question": "Complete the number sequence: 43, 52, 61, __.",
+        "question": "A shape has 6-fold rotational symmetry. What is its smallest matching turn?",
         "options": [
-          "79",
-          "71",
-          "70",
-          "61"
-        ],
-        "answer": 2,
-        "explanation": "Each term increases by 9; the next term is 61 + 9 = 70.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq451",
-        "question": "Complete the number sequence: 44, 54, 64, __.",
-        "options": [
-          "75",
-          "74",
-          "64",
-          "84"
-        ],
-        "answer": 1,
-        "explanation": "Each term increases by 10; the next term is 64 + 10 = 74.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq452",
-        "question": "Complete the number sequence: 45, 56, 67, __.",
-        "options": [
-          "78",
-          "67",
-          "89",
-          "79"
+          "60°",
+          "30°",
+          "45°",
+          "90°"
         ],
         "answer": 0,
-        "explanation": "Each term increases by 11; the next term is 67 + 11 = 78.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq453",
-        "question": "Complete the number sequence: 46, 58, 70, __.",
-        "options": [
-          "70",
-          "94",
-          "83",
-          "82"
-        ],
-        "answer": 3,
-        "explanation": "Each term increases by 12; the next term is 70 + 12 = 82.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq454",
-        "question": "Complete the number sequence: 47, 49, 51, __.",
-        "options": [
-          "55",
-          "54",
-          "53",
-          "51"
-        ],
-        "answer": 2,
-        "explanation": "Each term increases by 2; the next term is 51 + 2 = 53.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq455",
-        "question": "Complete the number sequence: 48, 51, 54, __.",
-        "options": [
-          "58",
-          "57",
-          "54",
-          "60"
-        ],
-        "answer": 1,
-        "explanation": "Each term increases by 3; the next term is 54 + 3 = 57.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq456",
-        "question": "Complete the number sequence: 49, 53, 57, __.",
-        "options": [
-          "61",
-          "57",
-          "65",
-          "62"
-        ],
-        "answer": 0,
-        "explanation": "Each term increases by 4; the next term is 57 + 4 = 61.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq457",
-        "question": "Complete the number sequence: 50, 55, 60, __.",
-        "options": [
-          "60",
-          "70",
-          "66",
-          "65"
-        ],
-        "answer": 3,
-        "explanation": "Each term increases by 5; the next term is 60 + 5 = 65.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq458",
-        "question": "Complete the number sequence: 51, 57, 63, __.",
-        "options": [
-          "75",
-          "70",
-          "69",
-          "63"
-        ],
-        "answer": 2,
-        "explanation": "Each term increases by 6; the next term is 63 + 6 = 69.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq459",
-        "question": "Complete the number sequence: 52, 59, 66, __.",
-        "options": [
-          "74",
-          "73",
-          "66",
-          "80"
-        ],
-        "answer": 1,
-        "explanation": "Each term increases by 7; the next term is 66 + 7 = 73.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq460",
-        "question": "Complete the number sequence: 53, 61, 69, __.",
-        "options": [
-          "77",
-          "69",
-          "85",
-          "78"
-        ],
-        "answer": 0,
-        "explanation": "Each term increases by 8; the next term is 69 + 8 = 77.",
-        "difficulty": "Medium"
+        "explanation": "360°÷6=60°.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   },
