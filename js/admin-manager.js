@@ -5,10 +5,13 @@
 (() => {
   "use strict";
   const $ = id => document.getElementById(id);
-  const SUBJECTS = {
-    science:"Science",mathematics:"Mathematics",english:"English",
-    "social-science":"Social Science",hindi:"Hindi"
+  const SUBJECTS={science:"Science",mathematics:"Mathematics",english:"English","social-science":"Social Science",hindi:"Hindi","science-sof":"Science · SOF","mathematics-sof":"Mathematics · SOF","english-sof":"English · SOF"};
+  const REPORT_BANKS_BY_CLASS={
+    "3":[{id:"class-3-mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"class-3-english",subjectId:"english",title:"English"}],
+    "6":[{id:"class-6-science",subjectId:"science",title:"Science"},{id:"class-6-mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"class-6-english",subjectId:"english",title:"English"},{id:"class-6-social-science",subjectId:"social-science",title:"Social Science"},{id:"class-6-science-sof",subjectId:"science-sof",title:"Science · SOF"},{id:"class-6-mathematics-sof",subjectId:"mathematics-sof",title:"Mathematics · SOF"},{id:"class-6-english-sof",subjectId:"english-sof",title:"English · SOF"}],
+    "10":[{id:"science",subjectId:"science",title:"Science"},{id:"mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"english",subjectId:"english",title:"English"},{id:"social-science",subjectId:"social-science",title:"Social Science"},{id:"hindi",subjectId:"hindi",title:"Hindi"}]
   };
+  const reportBanksForClass=id=>REPORT_BANKS_BY_CLASS[String(id)]||REPORT_BANKS_BY_CLASS["10"];
   const EMPTY_CLASSES={schemaVersion:1,kind:"class-catalog",classes:[]};
   const EMPTY_MANIFEST={schemaVersion:1,kind:"knowledge-base-manifest",resources:[]};
   let classCatalog=structuredCloneSafe(EMPTY_CLASSES);
@@ -35,7 +38,10 @@
     {classId:"6",classLabel:"Class 6",subject:"science",path:"class-6-science.json",label:"Class 6 · Science"},
     {classId:"6",classLabel:"Class 6",subject:"mathematics",path:"class-6-mathematics.json",label:"Class 6 · Mathematics"},
     {classId:"6",classLabel:"Class 6",subject:"english",path:"class-6-english.json",label:"Class 6 · English"},
-    {classId:"6",classLabel:"Class 6",subject:"social-science",path:"class-6-social-science.json",label:"Class 6 · Social Science"}
+    {classId:"6",classLabel:"Class 6",subject:"social-science",path:"class-6-social-science.json",label:"Class 6 · Social Science"},
+    {classId:"6",classLabel:"Class 6",subject:"science-sof",path:"class-6-science-sof.json",label:"Class 6 · Science SOF"},
+    {classId:"6",classLabel:"Class 6",subject:"mathematics-sof",path:"class-6-mathematics-sof.json",label:"Class 6 · Mathematics SOF"},
+    {classId:"6",classLabel:"Class 6",subject:"english-sof",path:"class-6-english-sof.json",label:"Class 6 · English SOF"}
   ];
 
   function structuredCloneSafe(value){return JSON.parse(JSON.stringify(value));}
@@ -537,15 +543,13 @@
 
   // STUDENTS, REPORTS AND LEADERBOARDS (uploaded backups only)
   function completedAttempts(record,subject=""){
-    const subjects=subject?[subject]:Object.keys(SUBJECTS),rows=[];
-    subjects.forEach(id=>{
-      const data=record.backup.subjectData[id],ledger=data&&data.ledger;
+    const entries=reportBanksForClass(record.backup.profile.classLevel).filter(entry=>!subject||entry.subjectId===subject),rows=[];
+    entries.forEach(entry=>{
+      const data=record.backup.subjectData[entry.id]||record.backup.subjectData[entry.subjectId],ledger=data&&data.ledger;
       (ledger&&Array.isArray(ledger.attempts)?ledger.attempts:[]).forEach(attempt=>{
         if(!["submitted","timed-out"].includes(attempt.status)||Number(attempt.maxScore)<=0)return;
-        const score=Number(attempt.score??attempt.correctCount);
-        const max=Number(attempt.maxScore);
-        if(!Number.isFinite(score)||!Number.isFinite(max)||max<=0)return;
-        rows.push({...attempt,subjectId:id,subjectTitle:SUBJECTS[id]||id,percentage:Math.round(score/max*100)});
+        const score=Number(attempt.score??attempt.correctCount),max=Number(attempt.maxScore);if(!Number.isFinite(score)||!Number.isFinite(max)||max<=0)return;
+        rows.push({...attempt,subjectId:entry.subjectId,subjectTitle:entry.title,percentage:Math.round(score/max*100)});
       });
     });
     return rows.sort((a,b)=>String(b.submittedAt||b.startedAt).localeCompare(String(a.submittedAt||a.startedAt)));
