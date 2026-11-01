@@ -19,7 +19,7 @@ for (const [i, chapter] of bank.entries()) {
   assert.ok(chapter.key && chapter.section, "chapter metadata is present");
   assert.equal(chapter.questions.length, 10, chapter.title + " has 10 questions in the initial bank");
   for (const q of chapter.questions) {
-    assert.match(q.id, /^c3e\\d{2}q\\d{3}$/);
+    assert.match(q.id, /^c3e\d{2}q\d{3}$/);
     assert.ok(!ids.has(q.id), "question IDs are unique");
     ids.add(q.id);
     const stem = q.question.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
