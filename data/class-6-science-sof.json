@@ -2833,658 +2833,709 @@
   },
   {
     "chapter_no": 5,
-    "title": "Materials & Separation",
-    "key": "sof-nso-materials-separation",
+    "title": "Methods of Separation",
+    "key": "sof-iso-methods-of-separation",
+    "section": "Science",
     "questions": [
       {
-        "id": "c6nsoq041",
-        "question": "Which material is attracted to a magnet?",
+        "id": "c6nsoq201",
+        "question": "Which method separates stones from rice when the stones are visible and large?",
         "options": [
-          "Iron",
-          "Wood",
-          "Glass",
-          "Rubber"
+          "Filtration",
+          "Handpicking",
+          "Evaporation",
+          "Condensation"
         ],
-        "answer": 0,
-        "explanation": "Iron is a magnetic material.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "Handpicking removes visible unwanted particles.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq042",
-        "question": "Which method separates insoluble sand from water?",
+        "id": "c6nsoq202",
+        "question": "Which method separates husk from heavier grains using moving air?",
+        "options": [
+          "Winnowing",
+          "Sieving",
+          "Filtration",
+          "Churning"
+        ],
+        "answer": 0,
+        "explanation": "Lighter husk is carried away while grains fall.",
+        "difficulty": "Easy",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq203",
+        "question": "How should sand be separated from water?",
         "options": [
           "Evaporation only",
           "Magnetic separation",
-          "Churning",
-          "Filtration"
+          "Winnowing",
+          "Sedimentation followed by decantation"
         ],
         "answer": 3,
-        "explanation": "Filter paper traps sand while water passes through.",
-        "difficulty": "Easy"
+        "explanation": "Sand settles; clearer water is poured off.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq043",
-        "question": "How can salt be recovered from salt solution?",
+        "id": "c6nsoq204",
+        "question": "Which method removes tea leaves from brewed tea?",
         "options": [
-          "Use a magnet",
-          "Filter out dissolved salt",
-          "Evaporate the water",
-          "Pick salt grains by hand"
+          "Winnowing",
+          "Handpicking",
+          "Filtration",
+          "Threshing"
         ],
         "answer": 2,
-        "explanation": "Evaporation removes water and leaves salt behind.",
-        "difficulty": "Easy"
+        "explanation": "A strainer lets liquid through and retains leaves.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq044",
-        "question": "Which object is translucent?",
+        "id": "c6nsoq205",
+        "question": "Which process obtains salt from seawater?",
         "options": [
-          "Clear window glass",
-          "Frosted glass",
-          "Wooden plank",
-          "Metal sheet"
+          "Sieving",
+          "Evaporation",
+          "Handpicking",
+          "Magnetic separation"
         ],
         "answer": 1,
-        "explanation": "Translucent materials let some light through but do not form a clear image.",
-        "difficulty": "Medium"
+        "explanation": "Water evaporates, leaving salt.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq045",
-        "question": "Which material is a good conductor of electricity?",
+        "id": "c6nsoq206",
+        "question": "A mixture contains iron filings and sand. Which tool is useful?",
         "options": [
-          "Copper",
-          "Rubber",
-          "Dry wood",
-          "Plastic"
+          "A magnet",
+          "A sieve",
+          "Filter paper",
+          "Thermometer"
         ],
         "answer": 0,
-        "explanation": "Copper is a metal and conducts electricity well.",
-        "difficulty": "Easy"
+        "explanation": "Iron is attracted to a magnet.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq046",
-        "question": "Which property makes aluminium useful for making cooking foil?",
+        "id": "c6nsoq207",
+        "question": "Which method separates flour from larger bran particles?",
         "options": [
-          "It dissolves quickly in water",
-          "It is attracted strongly to magnets",
-          "It is transparent",
-          "It can be rolled into thin sheets"
+          "Decantation",
+          "Evaporation",
+          "Churning",
+          "Sieving"
         ],
         "answer": 3,
-        "explanation": "Malleability allows aluminium to be made into thin sheets.",
-        "difficulty": "Medium"
+        "explanation": "Flour passes through mesh; larger particles remain.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq047",
-        "question": "A mixture contains iron filings and sand. Which is the simplest way to separate them?",
+        "id": "c6nsoq208",
+        "question": "Which process loosens grains from harvested stalks?",
         "options": [
-          "Add more sand",
-          "Filter through cloth",
-          "Use a magnet",
-          "Freeze the mixture"
+          "Winnowing",
+          "Filtration",
+          "Threshing",
+          "Evaporation"
         ],
         "answer": 2,
-        "explanation": "A magnet attracts the iron filings but not the sand.",
-        "difficulty": "Easy"
+        "explanation": "Threshing separates grain from stalks.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq048",
-        "question": "Which substance dissolves readily in water?",
+        "id": "c6nsoq209",
+        "question": "Why is filter paper used in filtration?",
         "options": [
-          "Chalk powder",
-          "Sugar",
+          "It dissolves the solid",
+          "Its pores let liquid pass but retain insoluble solids",
+          "It attracts dissolved substances",
+          "It heats the liquid"
+        ],
+        "answer": 1,
+        "explanation": "Filter paper retains suspended insoluble particles.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq210",
+        "question": "Which method separates butter from curd?",
+        "options": [
+          "Churning",
+          "Sieving",
+          "Winnowing",
+          "Sedimentation"
+        ],
+        "answer": 0,
+        "explanation": "Churning helps butter separate from curd.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq211",
+        "question": "A mixture has pebbles, sand and water. Which sequence is sensible?",
+        "options": [
+          "Evaporate everything first",
+          "Use a magnet for all three",
+          "Winnow the wet mixture",
+          "Remove pebbles by sieving, then filter sand from water"
+        ],
+        "answer": 3,
+        "explanation": "Sieving removes pebbles; filtration separates sand from water.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq212",
+        "question": "Why is sedimentation useful before decantation?",
+        "options": [
+          "It dissolves the solid",
+          "It turns water into vapour",
+          "It lets heavier insoluble particles settle",
+          "It attracts particles"
+        ],
+        "answer": 2,
+        "explanation": "Settling makes the upper liquid clearer.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq213",
+        "question": "Salt and sand are stirred into water. Which sequence separates both?",
+        "options": [
+          "Use a magnet, then sieve",
+          "Filter out sand, then evaporate the filtrate",
+          "Winnow, then decant",
+          "Churn, then handpick"
+        ],
+        "answer": 1,
+        "explanation": "Sand is filtered; dissolved salt is recovered by evaporation.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq214",
+        "question": "Which mixture is best separated by a sieve?",
+        "options": [
+          "Lentils mixed with small stones",
+          "Salt dissolved in water",
+          "Ink mixed with water",
+          "Sugar dissolved in tea"
+        ],
+        "answer": 0,
+        "explanation": "Different particle sizes allow sieving.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq215",
+        "question": "Which method depends mainly on particle size?",
+        "options": [
+          "Winnowing",
+          "Sedimentation",
+          "Decantation",
+          "Sieving"
+        ],
+        "answer": 3,
+        "explanation": "Sieving separates particles by mesh size.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq216",
+        "question": "Alum is added to muddy water before standing. Why?",
+        "options": [
+          "It dissolves all the mud",
+          "It makes the water boil",
+          "It helps fine suspended particles clump and settle",
+          "It attracts plastic"
+        ],
+        "answer": 2,
+        "explanation": "Alum assists fine particles to form heavier clumps.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq217",
+        "question": "A student filters muddy water. What remains on the paper?",
+        "options": [
+          "Dissolved salt",
+          "Insoluble mud particles",
+          "Pure water vapour",
+          "Air only"
+        ],
+        "answer": 1,
+        "explanation": "Filter paper retains insoluble particles.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq218",
+        "question": "How can oil and water be separated in a simple classroom set-up?",
+        "options": [
+          "Let layers form, then carefully decant one layer",
+          "Evaporate both together",
+          "Use a magnet",
+          "Sieve the mixture"
+        ],
+        "answer": 0,
+        "explanation": "Oil and water are immiscible and form layers.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq219",
+        "question": "Why cannot ordinary filtration remove dissolved salt from water?",
+        "options": [
+          "Salt is magnetic",
+          "Salt evaporates instantly",
+          "Filter paper produces salt",
+          "Salt passes through the filter with the water"
+        ],
+        "answer": 3,
+        "explanation": "Dissolved particles travel with the liquid.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq220",
+        "question": "What condition helps winnowing?",
+        "options": [
+          "Still air in a closed room",
+          "Heavy rain",
+          "A steady breeze or moving air",
+          "A submerged basket"
+        ],
+        "answer": 2,
+        "explanation": "Moving air carries away lighter husk.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq221",
+        "question": "A mixture has metal pins and rice grains. Which property enables separation?",
+        "options": [
+          "Rice dissolves in water",
+          "The pins are attracted by a magnet",
+          "Pins evaporate faster",
+          "Rice is transparent"
+        ],
+        "answer": 1,
+        "explanation": "Magnetic pins can be removed from rice.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq222",
+        "question": "Fine clay remains suspended in muddy water. What can be added to help it settle?",
+        "options": [
+          "A small amount of alum",
+          "More clay",
           "Cooking oil",
-          "Sand"
-        ],
-        "answer": 1,
-        "explanation": "Sugar dissolves in water to form a solution.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq049",
-        "question": "Which is an example of an irreversible change?",
-        "options": [
-          "Burning paper",
-          "Melting ice",
-          "Freezing water",
-          "Dissolving sugar in water"
+          "Sugar"
         ],
         "answer": 0,
-        "explanation": "Burning creates new substances and cannot be reversed simply.",
-        "difficulty": "Medium"
+        "explanation": "Alum helps fine suspended particles clump and settle.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq050",
-        "question": "Which pair is correctly matched with a separation method?",
+        "id": "c6nsoq223",
+        "question": "Which process should be done before winnowing harvested grain?",
         "options": [
-          "Salt from salt solution — sieving",
-          "Iron filings from sand — evaporation",
-          "Oil from water — magnetism",
-          "Tea leaves from tea — filtration"
+          "Filtration",
+          "Evaporation",
+          "Churning",
+          "Threshing"
         ],
         "answer": 3,
-        "explanation": "A strainer or filter separates solid tea leaves from liquid tea.",
-        "difficulty": "Medium"
+        "explanation": "Threshing loosens grains first.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq261",
-        "question": "Which method separates tea leaves from tea? (practice case 2)",
+        "id": "c6nsoq224",
+        "question": "In filtration, the liquid that passes through the filter is called:",
         "options": [
+          "Residue",
+          "Sediment",
+          "Filtrate",
+          "Solute"
+        ],
+        "answer": 2,
+        "explanation": "The collected liquid is the filtrate.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq225",
+        "question": "In filtration, the solid left on the filter paper is called:",
+        "options": [
+          "Filtrate",
+          "Residue",
+          "Solvent",
+          "Condensate"
+        ],
+        "answer": 1,
+        "explanation": "The retained solid is the residue.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq226",
+        "question": "A mixture contains salt, sand and iron filings. What is the best first step?",
+        "options": [
+          "Use a magnet to remove iron filings",
+          "Add water and decant everything",
+          "Winnow the mixture",
+          "Churn the dry mixture"
+        ],
+        "answer": 0,
+        "explanation": "A magnet removes iron without affecting salt or sand.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq227",
+        "question": "After removing iron from salt-sand mixture, how can the remaining solids be separated?",
+        "options": [
+          "Winnow and thresh",
+          "Use a magnet again",
+          "Churn until salt floats",
+          "Dissolve salt in water, filter sand, then evaporate"
+        ],
+        "answer": 3,
+        "explanation": "Salt dissolves; sand does not. Filter and evaporate.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq228",
+        "question": "Why does decantation work after sedimentation?",
+        "options": [
+          "The solid evaporates",
+          "The liquid becomes magnetic",
+          "The settled solid stays behind while clearer liquid is poured off",
+          "The mixture turns to gas"
+        ],
+        "answer": 2,
+        "explanation": "Careful pouring separates the upper liquid from settled particles.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq229",
+        "question": "How can mixed pulses of different sizes be sorted?",
+        "options": [
+          "A magnet",
+          "Sieves with suitable mesh sizes",
+          "Filter paper",
+          "A thermometer"
+        ],
+        "answer": 1,
+        "explanation": "Mesh sizes separate particles by size.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq230",
+        "question": "Which methods are used in traditional wheat processing?",
+        "options": [
+          "Threshing followed by winnowing",
+          "Filtration followed by evaporation",
+          "Churning followed by sieving",
+          "Condensation followed by decantation"
+        ],
+        "answer": 0,
+        "explanation": "Threshing loosens grains; winnowing removes lighter chaff.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq231",
+        "question": "A student filters sugar dissolved in water. What passes through?",
+        "options": [
+          "Pure sugar crystals",
+          "Undissolved sugar only",
+          "Filter paper",
+          "Sugar solution"
+        ],
+        "answer": 3,
+        "explanation": "Dissolved sugar passes through with water.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq232",
+        "question": "Why can evaporation recover a dissolved solid?",
+        "options": [
+          "The solid becomes magnetic",
+          "The solvent turns into a filter",
+          "The solvent becomes vapour while the solid remains",
+          "The solid becomes lighter than air"
+        ],
+        "answer": 2,
+        "explanation": "Evaporation removes solvent and leaves dissolved material.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq233",
+        "question": "Chalk powder is mixed with water and filtered. What is collected below?",
+        "options": [
+          "All the chalk powder",
+          "Water with most chalk retained on the paper",
+          "Only air",
+          "Dry chalk crystals"
+        ],
+        "answer": 1,
+        "explanation": "Insoluble chalk is held back; water passes through.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq234",
+        "question": "What is the main use of a funnel during filtration?",
+        "options": [
+          "It guides the mixture into the filter without spilling",
+          "It dissolves the residue",
+          "It measures temperature",
+          "It attracts iron"
+        ],
+        "answer": 0,
+        "explanation": "The funnel supports the filter and directs liquid.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq235",
+        "question": "Which method can recover both water and salt from salt water?",
+        "options": [
+          "Handpicking",
+          "Winnowing",
+          "Sieving",
+          "Distillation"
+        ],
+        "answer": 3,
+        "explanation": "Distillation evaporates water and condenses it for collection.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq236",
+        "question": "During distillation of salt water, what is collected in the receiver?",
+        "options": [
+          "Salt crystals",
+          "Sand",
+          "Condensed water",
+          "Filter residue"
+        ],
+        "answer": 2,
+        "explanation": "Water vapour cools and condenses into liquid.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq237",
+        "question": "Which mixture cannot be separated by ordinary filtration alone?",
+        "options": [
+          "Sand in water",
+          "Sugar dissolved in water",
+          "Tea leaves in tea",
+          "Chalk powder in water"
+        ],
+        "answer": 1,
+        "explanation": "Dissolved sugar passes through with water.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq238",
+        "question": "Why pour slowly along a glass rod during decantation?",
+        "options": [
+          "To reduce disturbance of the settled sediment",
+          "To make sediment dissolve",
+          "To increase temperature",
+          "To attract particles"
+        ],
+        "answer": 0,
+        "explanation": "A guided pour helps keep settled particles behind.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq239",
+        "question": "Salt and sawdust are mixed with water. What is likely?",
+        "options": [
+          "Both dissolve",
+          "Salt floats and sawdust sinks",
+          "Neither changes",
+          "Salt dissolves; sawdust usually floats"
+        ],
+        "answer": 3,
+        "explanation": "Salt is soluble; sawdust is insoluble and usually less dense.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq240",
+        "question": "How can salt be recovered from salt water containing sawdust?",
+        "options": [
+          "Use a magnet only",
+          "Winnow the wet mixture",
+          "Remove sawdust, then evaporate the salt solution",
+          "Filter and discard the filtrate"
+        ],
+        "answer": 2,
+        "explanation": "Remove sawdust, then evaporate water to leave salt.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq241",
+        "question": "Which method mainly uses magnetic properties?",
+        "options": [
+          "Decantation",
           "Magnetic separation",
-          "Evaporation only",
-          "Sieving with a large mesh",
+          "Evaporation",
+          "Sieving"
+        ],
+        "answer": 1,
+        "explanation": "A magnet attracts selected magnetic materials.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq242",
+        "question": "Why can winnowing separate chaff from grain?",
+        "options": [
+          "Lighter chaff is carried farther by moving air",
+          "Grains dissolve while chaff does not",
+          "Chaff is magnetic",
+          "Grains evaporate faster"
+        ],
+        "answer": 0,
+        "explanation": "The method uses differences in how air carries particles.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq243",
+        "question": "Which process removes mud but not dissolved salt from muddy salt water?",
+        "options": [
+          "Evaporation",
+          "Magnetic separation",
+          "Winnowing",
           "Filtration"
         ],
         "answer": 3,
-        "explanation": "A strainer filters solid tea leaves from liquid tea.",
-        "difficulty": "Easy"
+        "explanation": "Mud is insoluble and retained; dissolved salt passes through.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq262",
-        "question": "Which method can separate iron filings from sand? (practice case 3)",
+        "id": "c6nsoq244",
+        "question": "In a salt-water solution, salt is the:",
         "options": [
-          "Sieving only",
-          "Hand-warming",
-          "Magnetic separation",
-          "Condensation"
+          "Solvent",
+          "Residue",
+          "Solute",
+          "Filter"
         ],
         "answer": 2,
-        "explanation": "Iron is attracted to a magnet; sand is not.",
-        "difficulty": "Medium"
+        "explanation": "The solute is the substance dissolved in a solvent.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq263",
-        "question": "Salt dissolved uniformly in water forms what? (practice case 4)",
+        "id": "c6nsoq245",
+        "question": "A dish of salt water is heated until all water evaporates. What remains?",
         "options": [
-          "An insoluble residue",
-          "A solution",
-          "A pure element",
-          "A gas"
+          "Pure water",
+          "Salt",
+          "Only water vapour in the dish",
+          "No material"
         ],
         "answer": 1,
-        "explanation": "A solution is a uniform mixture of solute and solvent.",
-        "difficulty": "Medium"
+        "explanation": "The dissolved salt remains as a solid.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq264",
-        "question": "Why does filtration separate sand from water? (practice case 5)",
+        "id": "c6nsoq246",
+        "question": "Iron filings, sand and salt are mixed with water after magnetic removal. What remains on the filter paper?",
         "options": [
-          "The filter traps sand while water passes through",
-          "Sand evaporates first",
-          "Water is magnetic",
-          "The filter changes sand into salt"
-        ],
-        "answer": 0,
-        "explanation": "Filtration retains insoluble particles while liquid passes through.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq265",
-        "question": "What remains when salt water is evaporated completely? (practice case 6)",
-        "options": [
-          "Only oxygen",
+          "Sand",
+          "Salt solution",
           "Iron filings",
-          "Fresh water",
-          "Salt"
-        ],
-        "answer": 3,
-        "explanation": "Water evaporates and dissolved salt remains.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq266",
-        "question": "Which tool separates pebbles from fine sand? (practice case 7)",
-        "options": [
-          "Stopwatch",
-          "Balance only",
-          "Sieve",
-          "Thermometer"
-        ],
-        "answer": 2,
-        "explanation": "Sieving separates solids by particle size.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq267",
-        "question": "Mud settles at the bottom of water left still for 8 minutes. What is this called? (practice case 8)",
-        "options": [
-          "Magnetisation",
-          "Sedimentation",
-          "Condensation",
-          "Melting"
-        ],
-        "answer": 1,
-        "explanation": "Sedimentation is the settling of suspended particles.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq268",
-        "question": "Pouring clear liquid away from settled mud is called... (practice case 9)",
-        "options": [
-          "Decantation",
-          "Churning",
-          "Magnetic separation",
-          "Combustion"
+          "Water vapour"
         ],
         "answer": 0,
-        "explanation": "Decantation pours off liquid without disturbing settled solids.",
-        "difficulty": "Medium"
+        "explanation": "Salt dissolves and passes through; sand is insoluble.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq269",
-        "question": "Which method separates tea leaves from tea? (practice case 10)",
+        "id": "c6nsoq247",
+        "question": "Two liquids do not mix and form layers. Which method can separate them?",
         "options": [
-          "Magnetic separation",
-          "Evaporation only",
-          "Sieving with a large mesh",
-          "Filtration"
+          "Sieving",
+          "Winnowing",
+          "Handpicking",
+          "Careful decantation of the layers"
         ],
         "answer": 3,
-        "explanation": "A strainer filters solid tea leaves from liquid tea.",
-        "difficulty": "Medium"
+        "explanation": "Immiscible liquids form layers that can be poured apart.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq270",
-        "question": "Which method can separate iron filings from sand? (practice case 11)",
+        "id": "c6nsoq248",
+        "question": "If filter pores are larger than particles in a suspension, what may happen?",
         "options": [
-          "Sieving only",
-          "Hand-warming",
-          "Magnetic separation",
-          "Condensation"
+          "All liquid is held back",
+          "Particles dissolve automatically",
+          "Some particles may pass through with the liquid",
+          "Paper becomes magnetic"
         ],
         "answer": 2,
-        "explanation": "Iron is attracted to a magnet; sand is not.",
-        "difficulty": "Medium"
+        "explanation": "The filter must retain particles to separate them.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq271",
-        "question": "Salt dissolved uniformly in water forms what? (practice case 12)",
+        "id": "c6nsoq249",
+        "question": "Why is simple evaporation not best when we need to collect both salt and pure water?",
         "options": [
-          "An insoluble residue",
-          "A solution",
-          "A pure element",
-          "A gas"
+          "Salt changes to iron",
+          "The water escapes as vapour and is not collected",
+          "Water cannot evaporate",
+          "Salt dissolves into air"
         ],
         "answer": 1,
-        "explanation": "A solution is a uniform mixture of solute and solvent.",
-        "difficulty": "Medium"
+        "explanation": "Distillation is used to collect the evaporated solvent.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq272",
-        "question": "Why does filtration separate sand from water? (practice case 13)",
+        "id": "c6nsoq250",
+        "question": "A mixture of dry sand and salt is to be separated with the least loss of both. Which sequence is appropriate?",
         "options": [
-          "The filter traps sand while water passes through",
-          "Sand evaporates first",
-          "Water is magnetic",
-          "The filter changes sand into salt"
+          "Dissolve salt, filter sand, then evaporate the filtrate",
+          "Heat the dry mixture until both melt",
+          "Use only a sieve",
+          "Use winnowing then a magnet"
         ],
         "answer": 0,
-        "explanation": "Filtration retains insoluble particles while liquid passes through.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq273",
-        "question": "What remains when salt water is evaporated completely? (practice case 14)",
-        "options": [
-          "Only oxygen",
-          "Iron filings",
-          "Fresh water",
-          "Salt"
-        ],
-        "answer": 3,
-        "explanation": "Water evaporates and dissolved salt remains.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq274",
-        "question": "Which tool separates pebbles from fine sand? (practice case 15)",
-        "options": [
-          "Stopwatch",
-          "Balance only",
-          "Sieve",
-          "Thermometer"
-        ],
-        "answer": 2,
-        "explanation": "Sieving separates solids by particle size.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq275",
-        "question": "Mud settles at the bottom of water left still for 16 minutes. What is this called? (practice case 16)",
-        "options": [
-          "Magnetisation",
-          "Sedimentation",
-          "Condensation",
-          "Melting"
-        ],
-        "answer": 1,
-        "explanation": "Sedimentation is the settling of suspended particles.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq276",
-        "question": "Pouring clear liquid away from settled mud is called... (practice case 17)",
-        "options": [
-          "Decantation",
-          "Churning",
-          "Magnetic separation",
-          "Combustion"
-        ],
-        "answer": 0,
-        "explanation": "Decantation pours off liquid without disturbing settled solids.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq277",
-        "question": "Which method separates tea leaves from tea? (practice case 18)",
-        "options": [
-          "Magnetic separation",
-          "Evaporation only",
-          "Sieving with a large mesh",
-          "Filtration"
-        ],
-        "answer": 3,
-        "explanation": "A strainer filters solid tea leaves from liquid tea.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq278",
-        "question": "Which method can separate iron filings from sand? (practice case 19)",
-        "options": [
-          "Sieving only",
-          "Hand-warming",
-          "Magnetic separation",
-          "Condensation"
-        ],
-        "answer": 2,
-        "explanation": "Iron is attracted to a magnet; sand is not.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq279",
-        "question": "Salt dissolved uniformly in water forms what? (practice case 20)",
-        "options": [
-          "An insoluble residue",
-          "A solution",
-          "A pure element",
-          "A gas"
-        ],
-        "answer": 1,
-        "explanation": "A solution is a uniform mixture of solute and solvent.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq280",
-        "question": "Why does filtration separate sand from water? (practice case 21)",
-        "options": [
-          "The filter traps sand while water passes through",
-          "Sand evaporates first",
-          "Water is magnetic",
-          "The filter changes sand into salt"
-        ],
-        "answer": 0,
-        "explanation": "Filtration retains insoluble particles while liquid passes through.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq281",
-        "question": "What remains when salt water is evaporated completely? (practice case 22)",
-        "options": [
-          "Only oxygen",
-          "Iron filings",
-          "Fresh water",
-          "Salt"
-        ],
-        "answer": 3,
-        "explanation": "Water evaporates and dissolved salt remains.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq282",
-        "question": "Which tool separates pebbles from fine sand? (practice case 23)",
-        "options": [
-          "Stopwatch",
-          "Balance only",
-          "Sieve",
-          "Thermometer"
-        ],
-        "answer": 2,
-        "explanation": "Sieving separates solids by particle size.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq283",
-        "question": "Mud settles at the bottom of water left still for 24 minutes. What is this called? (practice case 24)",
-        "options": [
-          "Magnetisation",
-          "Sedimentation",
-          "Condensation",
-          "Melting"
-        ],
-        "answer": 1,
-        "explanation": "Sedimentation is the settling of suspended particles.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq284",
-        "question": "Pouring clear liquid away from settled mud is called... (practice case 25)",
-        "options": [
-          "Decantation",
-          "Churning",
-          "Magnetic separation",
-          "Combustion"
-        ],
-        "answer": 0,
-        "explanation": "Decantation pours off liquid without disturbing settled solids.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq285",
-        "question": "Which method separates tea leaves from tea? (practice case 26)",
-        "options": [
-          "Magnetic separation",
-          "Evaporation only",
-          "Sieving with a large mesh",
-          "Filtration"
-        ],
-        "answer": 3,
-        "explanation": "A strainer filters solid tea leaves from liquid tea.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq286",
-        "question": "Which method can separate iron filings from sand? (practice case 27)",
-        "options": [
-          "Sieving only",
-          "Hand-warming",
-          "Magnetic separation",
-          "Condensation"
-        ],
-        "answer": 2,
-        "explanation": "Iron is attracted to a magnet; sand is not.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq287",
-        "question": "Salt dissolved uniformly in water forms what? (practice case 28)",
-        "options": [
-          "An insoluble residue",
-          "A solution",
-          "A pure element",
-          "A gas"
-        ],
-        "answer": 1,
-        "explanation": "A solution is a uniform mixture of solute and solvent.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq288",
-        "question": "Why does filtration separate sand from water? (practice case 29)",
-        "options": [
-          "The filter traps sand while water passes through",
-          "Sand evaporates first",
-          "Water is magnetic",
-          "The filter changes sand into salt"
-        ],
-        "answer": 0,
-        "explanation": "Filtration retains insoluble particles while liquid passes through.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq289",
-        "question": "What remains when salt water is evaporated completely? (practice case 30)",
-        "options": [
-          "Only oxygen",
-          "Iron filings",
-          "Fresh water",
-          "Salt"
-        ],
-        "answer": 3,
-        "explanation": "Water evaporates and dissolved salt remains.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq290",
-        "question": "Which tool separates pebbles from fine sand? (practice case 31)",
-        "options": [
-          "Stopwatch",
-          "Balance only",
-          "Sieve",
-          "Thermometer"
-        ],
-        "answer": 2,
-        "explanation": "Sieving separates solids by particle size.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq291",
-        "question": "Mud settles at the bottom of water left still for 32 minutes. What is this called? (practice case 32)",
-        "options": [
-          "Magnetisation",
-          "Sedimentation",
-          "Condensation",
-          "Melting"
-        ],
-        "answer": 1,
-        "explanation": "Sedimentation is the settling of suspended particles.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq292",
-        "question": "Pouring clear liquid away from settled mud is called... (practice case 33)",
-        "options": [
-          "Decantation",
-          "Churning",
-          "Magnetic separation",
-          "Combustion"
-        ],
-        "answer": 0,
-        "explanation": "Decantation pours off liquid without disturbing settled solids.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq293",
-        "question": "Which method separates tea leaves from tea? (practice case 34)",
-        "options": [
-          "Magnetic separation",
-          "Evaporation only",
-          "Sieving with a large mesh",
-          "Filtration"
-        ],
-        "answer": 3,
-        "explanation": "A strainer filters solid tea leaves from liquid tea.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq294",
-        "question": "Which method can separate iron filings from sand? (practice case 35)",
-        "options": [
-          "Sieving only",
-          "Hand-warming",
-          "Magnetic separation",
-          "Condensation"
-        ],
-        "answer": 2,
-        "explanation": "Iron is attracted to a magnet; sand is not.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq295",
-        "question": "Salt dissolved uniformly in water forms what? (practice case 36)",
-        "options": [
-          "An insoluble residue",
-          "A solution",
-          "A pure element",
-          "A gas"
-        ],
-        "answer": 1,
-        "explanation": "A solution is a uniform mixture of solute and solvent.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq296",
-        "question": "Why does filtration separate sand from water? (practice case 37)",
-        "options": [
-          "The filter traps sand while water passes through",
-          "Sand evaporates first",
-          "Water is magnetic",
-          "The filter changes sand into salt"
-        ],
-        "answer": 0,
-        "explanation": "Filtration retains insoluble particles while liquid passes through.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq297",
-        "question": "What remains when salt water is evaporated completely? (practice case 38)",
-        "options": [
-          "Only oxygen",
-          "Iron filings",
-          "Fresh water",
-          "Salt"
-        ],
-        "answer": 3,
-        "explanation": "Water evaporates and dissolved salt remains.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq298",
-        "question": "Which tool separates pebbles from fine sand? (practice case 39)",
-        "options": [
-          "Stopwatch",
-          "Balance only",
-          "Sieve",
-          "Thermometer"
-        ],
-        "answer": 2,
-        "explanation": "Sieving separates solids by particle size.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq299",
-        "question": "Mud settles at the bottom of water left still for 40 minutes. What is this called? (practice case 40)",
-        "options": [
-          "Magnetisation",
-          "Sedimentation",
-          "Condensation",
-          "Melting"
-        ],
-        "answer": 1,
-        "explanation": "Sedimentation is the settling of suspended particles.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq300",
-        "question": "Pouring clear liquid away from settled mud is called... (practice case 41)",
-        "options": [
-          "Decantation",
-          "Churning",
-          "Magnetic separation",
-          "Combustion"
-        ],
-        "answer": 0,
-        "explanation": "Decantation pours off liquid without disturbing settled solids.",
-        "difficulty": "Medium"
+        "explanation": "Salt dissolves in water; sand is retained by filtration; evaporation recovers salt.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   },
