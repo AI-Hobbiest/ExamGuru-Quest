@@ -12,9 +12,10 @@ const manager = fs.readFileSync("js/profile-manager.js", "utf8");
 assert.equal(database.kind, "c10-student-accounts");
 assert.equal(database.schemaVersion, 1);
 assert.equal(database.kdf, "PBKDF2-SHA-256");
-// Keep the two original pilot accounts plus the newly approved Class 6 and Class 10 student accounts.
-assert.equal(database.accounts.length, 4, "publish the two original and two new pilot accounts");
+// Keep the four existing student accounts and the newly added Class 3 account.
+assert.equal(database.accounts.length, 5, "preserve existing student accounts and add Hamsini");
 const expectedAccounts = [
+  ["hamsini", "3"],
   ["jp10", "10"],
   ["c6pilot", "6"],
   ["srivatsav", "6"],
@@ -52,4 +53,4 @@ assert.ok(workflow.includes("cp js/static-account-admin.js _site/js/static-accou
 assert.ok(workflow.includes("cp js/family-access-admin.js _site/js/family-access-admin.js"));
 assert.ok(workflow.includes("cp js/parent-dashboard.js _site/js/parent-dashboard.js"));
 assert.ok(workflow.includes("parent.html _site/parent.html"));
-console.log("Static account and Family Mode contract tests passed: stable student IDs, salted PBKDF2 hashes, parent relationship file, Admin mapping controls, local-only login and Pages assets.");
+console.log("Static account and Family Mode contract tests passed: five student accounts, stable student IDs, salted PBKDF2 hashes, parent relationship file, Admin mapping controls, local-only login and Pages assets.");
