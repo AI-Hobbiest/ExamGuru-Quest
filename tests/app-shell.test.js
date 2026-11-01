@@ -2,7 +2,7 @@
 const assert=require("node:assert/strict");
 const fs=require("node:fs");
 const branding=fs.readFileSync("css/branding.css","utf8");
-const roleTheme=fs.readFileSync("css/theme-roles.css","utf8");
+const roleTheme=fs.readFileSync("css/theme-roles-v2.css","utf8");
 const nav=fs.readFileSync("js/app-shell.js","utf8");
 const css=fs.readFileSync("css/app-shell.css","utf8");
 const dashboard=fs.readFileSync("dashboard.html","utf8");
@@ -32,14 +32,14 @@ assert.ok(nav.includes('event.key==="Escape"'));
 assert.ok(nav.includes('const file=last.includes(".")?last:"index.html"'),"GitHub Pages project root resolves as index");
 assert.ok(css.includes("@media(max-width:1100px)"),"tablet-sized viewports use the compact slide-in menu");
 const deployWorkflow=fs.readFileSync(".github/workflows/pages.yml","utf8");
-assert.ok(deployWorkflow.includes("cp css/theme-roles.css _site/css/theme-roles.css"),"Pages packaging includes the role stylesheet");
-assert.ok(deployWorkflow.includes("'css/theme-roles.css'"),"deployed asset validation includes the role stylesheet");
+assert.ok(deployWorkflow.includes("cp css/theme-roles-v2.css _site/css/theme-roles-v2.css"),"Pages packaging includes the role stylesheet");
+assert.ok(deployWorkflow.includes("'css/theme-roles-v2.css'"),"deployed asset validation includes the role stylesheet");
 assert.ok(roleTheme.includes("body.c10-theme-quest"),"student-facing pages have a dedicated Quest theme");
 assert.ok(roleTheme.includes("body.c10-theme-admin"),"Admin Workspace has a dedicated Lavender theme");
 assert.ok(roleTheme.includes("#f0a82e"),"Quest quiz primary action uses the yellow-orange accent");
 assert.ok(roleTheme.includes("#e4f4e7")&&roleTheme.includes("#eee9ff")&&roleTheme.includes("#fff0c8"),"Quest palette includes green, lavender and yellow");
 for(const [name,html,theme] of [["homepage",homepage,"c10-theme-quest"],["practice",practice,"c10-theme-quest"],["profile",profile,"c10-theme-quest"],["dashboard",dashboard,"c10-theme-quest"],["admin",admin,"c10-theme-admin"]]){
- assert.ok(html.includes("./css/theme-roles.css?v=20261101"),name+" loads the versioned role-specific theme");
+ assert.ok(html.includes("./css/theme-roles-v2.css?v=quest2?v=20261101"),name+" loads the versioned role-specific theme");
  assert.ok(html.includes('class="'+theme)||html.includes('class="eg-quiz-page '+theme),name+" is assigned the correct theme");
 }
 assert.ok(css.includes(".c10-sidebar a.c10-nav-link:visited"),"sidebar link color overrides the global anchor theme");
