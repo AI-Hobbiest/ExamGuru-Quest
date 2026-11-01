@@ -1871,7 +1871,7 @@
       },
       {
         "id": "c6nsoq133",
-        "question": "Which pair is correctly matched?",
+        "question": "Choose the accurate association between a material and one of its properties.",
         "options": [
           "Glass — absorbent",
           "Copper — electrical insulator",
@@ -8481,15 +8481,15 @@
       },
       {
         "id": "c6nsoq600",
-        "question": "A code moves each letter three places backwards. Decode KHOOR.",
+        "question": "Meera is Arun's mother. Ravi is Meera's father. How is Ravi related to Arun?",
         "options": [
-          "GDKKN",
-          "HELLO",
-          "IFMMP",
-          "JGN NQ"
+          "Maternal grandfather",
+          "Paternal grandfather",
+          "Maternal uncle",
+          "Older brother"
         ],
-        "answer": 1,
-        "explanation": "K→H, H→E, O→L, O→L and R→O.",
+        "answer": 0,
+        "explanation": "Ravi is the father of Arun's mother, so he is Arun's maternal grandfather.",
         "difficulty": "Challenge",
         "section": "Logical Reasoning"
       }
