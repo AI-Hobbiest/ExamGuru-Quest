@@ -122,7 +122,7 @@
       const classId = $("staticAccountClass").value;
       if (!classOptions.some(item=>item.id===classId)) throw new Error("Choose an active class for this student.");
       const password = makeTemporaryPassword(), salt = randomBytes(16);
-      database.accounts.push({ username, classId, salt: base64(salt), passwordHash: await hashPassword(password, salt),
+      database.accounts.push({ username, studentId: "student-" + username.replace(/[^a-z0-9_-]/g, "-"), classId, salt: base64(salt), passwordHash: await hashPassword(password, salt),
         iterations: ITERATIONS, active: true, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() });
       database.accounts.sort((a,b)=>a.username.localeCompare(b.username));
       dirty = true; render(); downloadDatabase(); showPassword(password); $("staticAccountUsername").value = "";
