@@ -74,7 +74,7 @@
     const ownerId = options.studentId != null ? String(options.studentId) : activeStudentScope();
     const recordId = ownerId ? ownerId + "::" + requestedRecordId : requestedRecordId;
     const storageKey = ROOT_KEY + encodeURIComponent(kind) + ":" + encodeURIComponent(recordId);
-    const legacyKey = options.legacyKey || null;
+    const legacyKey = ownerId ? null : (options.legacyKey || null);
     const defaults = typeof options.defaults === "function" ? options.defaults : () => clone(options.defaults || {});
     const validate = typeof options.validate === "function" ? options.validate : () => true;
     let currentData = clone(defaults());
