@@ -78,7 +78,7 @@
       {id:"perfect",title:"Perfect Focus",emoji:"💯",description:"Score 100% on a test",earned:perfect},
       {id:"accuracy-ace",title:"Accuracy Ace",emoji:"🎯",description:"Score 90% or higher on 5 tests",earned:strongCount>=5},
       {id:"explorer",title:"Subject Explorer",emoji:"🧭",description:"Practise 3 different subjects",earned:subjects.length>=3},
-      {id:"well-rounded",title:"All-Round Learner",emoji:"🌈",description:"Practise all 5 subjects",earned:subjects.length>=5},
+      {id:"well-rounded",title:"All-Round Learner",emoji:"🌈",description:"Practise 5 different subjects or learning tracks",earned:subjects.length>=5},
       {id:"streak-three",title:"Three-Day Spark",emoji:"📅",description:"Practise on 3 consecutive days",earned:streak.best>=3},
       {id:"streak-five",title:"Five-Day Streak",emoji:"🚀",description:"Practise on 5 consecutive days",earned:streak.best>=5},
       {id:"level-five",title:"Knowledge Ranger",emoji:"🗺️",description:"Reach Level 5",earned:levelFor(xp).level>=5},
