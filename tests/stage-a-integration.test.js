@@ -21,6 +21,7 @@ const ids=["class-6-science","class-6-mathematics","class-6-english","class-6-so
 assert.equal(pm.isValidBackup({schemaVersion:1,kind:"c10-playground-backup",profile,subjectData:Object.fromEntries(ids.map(id=>[id,empty]))}),true);
 assert.equal(pm.isValidBackup({schemaVersion:1,kind:"c10-playground-backup",profile,subjectData:Object.fromEntries(["science","mathematics","english","social-science","hindi"].map(id=>[id,empty]))}),true);
 assert.ok(read("js/quiz-engine.js").includes('"3":["mathematics","english"]'));
+assert.ok(read("js/admin-manager.js").includes('path:"class-3-english.json"'));
 assert.ok(read("js/dashboard-manager.js").includes('? ["mathematics","english"]'));
 for(const id of ids)assert.ok(read("js/profile-manager.js").includes(id));
 assert.match(read("profile.html"),/id="exportBtn" type="button">Export JSON backup/);
