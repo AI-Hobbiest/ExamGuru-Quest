@@ -31,6 +31,15 @@ assert.ok(nav.includes("aria-expanded"));
 assert.ok(nav.includes('event.key==="Escape"'));
 assert.ok(nav.includes('const file=last.includes(".")?last:"index.html"'),"GitHub Pages project root resolves as index");
 assert.ok(css.includes("@media(max-width:1100px)"),"tablet-sized viewports use the compact slide-in menu");
+const roleTheme=fs.readFileSync("css/theme-roles.css","utf8");
+assert.ok(roleTheme.includes("body.c10-theme-quest"),"role stylesheet contains the student Quest theme");
+assert.ok(roleTheme.includes("body.c10-theme-admin"),"role stylesheet contains the Admin Lavender theme");
+for(const [name,html] of [["homepage",homepage],["dashboard",dashboard],["practice",practice],["profile",profile],["admin",admin]]) {
+ assert.ok(html.includes("./css/theme-roles.css"),name+" links the role-specific stylesheet");
+}
+const deployWorkflow=fs.readFileSync(".github/workflows/pages.yml","utf8");
+assert.ok(deployWorkflow.includes("cp css/theme-roles.css _site/css/theme-roles.css"),"Pages packaging includes the role stylesheet");
+assert.ok(deployWorkflow.includes("'css/theme-roles.css'"),"deployed asset validation includes the role stylesheet");
 assert.ok(roleTheme.includes("body.c10-theme-quest"),"student-facing pages have a dedicated Quest theme");
 assert.ok(roleTheme.includes("body.c10-theme-admin"),"Admin Workspace has a dedicated Lavender theme");
 assert.ok(roleTheme.includes("#f0a82e"),"Quest quiz primary action uses the yellow-orange accent");
