@@ -2,12 +2,14 @@
 const assert=require("node:assert/strict");
 const fs=require("node:fs");
 const branding=fs.readFileSync("css/branding.css","utf8");
+const roleTheme=fs.readFileSync("css/theme-roles.css","utf8");
 const nav=fs.readFileSync("js/app-shell.js","utf8");
 const css=fs.readFileSync("css/app-shell.css","utf8");
 const dashboard=fs.readFileSync("dashboard.html","utf8");
 const homepage=fs.readFileSync("index.html","utf8");
 const practice=fs.readFileSync("practice.html","utf8");
 const profile=fs.readFileSync("profile.html","utf8");
+const admin=fs.readFileSync("admin.html","utf8");
 const science=fs.readFileSync("science.html","utf8");
 
 assert.ok(nav.includes('href:"./dashboard.html"'));
@@ -29,6 +31,14 @@ assert.ok(nav.includes("aria-expanded"));
 assert.ok(nav.includes('event.key==="Escape"'));
 assert.ok(nav.includes('const file=last.includes(".")?last:"index.html"'),"GitHub Pages project root resolves as index");
 assert.ok(css.includes("@media(max-width:1100px)"),"tablet-sized viewports use the compact slide-in menu");
+assert.ok(roleTheme.includes("body.c10-theme-quest"),"student-facing pages have a dedicated Quest theme");
+assert.ok(roleTheme.includes("body.c10-theme-admin"),"Admin Workspace has a dedicated Lavender theme");
+assert.ok(roleTheme.includes("#f0a82e"),"Quest quiz primary action uses the yellow-orange accent");
+assert.ok(roleTheme.includes("#e4f4e7")&&roleTheme.includes("#eee9ff")&&roleTheme.includes("#fff0c8"),"Quest palette includes green, lavender and yellow");
+for(const [name,html,theme] of [["homepage",homepage,"c10-theme-quest"],["practice",practice,"c10-theme-quest"],["profile",profile,"c10-theme-quest"],["dashboard",dashboard,"c10-theme-quest"],["admin",admin,"c10-theme-admin"]]){
+ assert.ok(html.includes("./css/theme-roles.css"),name+" loads the role-specific theme");
+ assert.ok(html.includes('class="'+theme),name+" is assigned the correct theme");
+}
 assert.ok(branding.includes("--c10-indigo:#403b8c"),"shared design tokens define the indigo brand colour");
 assert.ok(branding.includes("--c10-lavender:#ece8fa"),"shared design tokens define lavender selection surfaces");
 assert.ok(branding.includes("--c10-green:#e4f4e9"),"shared design tokens define green success surfaces");
