@@ -60,6 +60,39 @@ function makeContext(seed = {}) {
   assert.equal(importedTarget.load().answered, 0);
 }
 
+// Family Mode: account ownership is part of the local-storage key.
+{
+  const seeded = makeContext({ ["c10playground_v1_science"]: JSON.stringify({ missed:["legacy"], answered:1, correct:0, attempts:[] }) });
+  let activeUser = { role:"student", username:"kid.one", studentId:"student-kid-one" };
+  const auth = { currentUser:()=>activeUser };
+  seeded.context.C10StudentAuth = auth;
+  seeded.context.window.C10StudentAuth = auth;
+  vm.runInContext(read("js/storage.js"), seeded.context);
+  const makeProgress = options => seeded.context.window.C10Storage.createLocalStore({
+    kind:"subject-progress",recordId:"science",legacyKey:"c10playground_v1_science",
+    defaults:()=>({missed:[],answered:0,correct:0,attempts:[]}),
+    validate:v=>!!v&&Array.isArray(v.missed)&&Number.isFinite(v.answered)&&Number.isFinite(v.correct)&&Array.isArray(v.attempts),
+    ...(options||{})
+  });
+  const kidOne=makeProgress();
+  kidOne.save({missed:["kid-one"],answered:1,correct:1,attempts:[]});
+  assert.ok(kidOne.storageKey.includes("student-kid-one::science"),"student one gets a stable isolated storage namespace");
+  activeUser={role:"student",username:"kid.two",studentId:"student-kid-two"};
+  const kidTwo=makeProgress();
+  assert.ok(kidTwo.storageKey.includes("student-kid-two::science"),"student two gets a separate storage namespace");
+  assert.equal(kidTwo.load().answered,0,"student two cannot read student one's progress");
+  kidTwo.save({missed:["kid-two"],answered:2,correct:1,attempts:[]});
+  activeUser={role:"student",username:"kid.one",studentId:"student-kid-one"};
+  assert.deepEqual(Array.from(makeProgress().load().missed),["kid-one"],"switching back restores student one's own progress");
+  assert.ok(seeded.values.has("c10playground_v1_science"),"unscoped legacy progress is preserved and not silently assigned to the first student");
+  const parentRead=seeded.context.window.C10Storage.createLocalStore({
+    kind:"subject-progress",recordId:"science",studentId:"student-kid-two",
+    defaults:()=>({missed:[],answered:0,correct:0,attempts:[]}),
+    validate:v=>!!v&&Array.isArray(v.missed)&&Number.isFinite(v.answered)&&Number.isFinite(v.correct)&&Array.isArray(v.attempts)
+  });
+  assert.deepEqual(Array.from(parentRead.load().missed),["kid-two"],"a parent view can explicitly read a linked student's local records");
+}
+
 // Normalizer: preserves the correct answer through option shuffling and assigns stable question IDs.
 {
   const seeded = makeContext();
