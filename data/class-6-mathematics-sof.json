@@ -2833,658 +2833,709 @@
   },
   {
     "chapter_no": 5,
-    "title": "Decimals",
-    "key": "sof-imo-decimals",
+    "title": "Prime Time",
+    "key": "sof-imo-prime-time",
+    "section": "IMO Syllabus Topic",
     "questions": [
       {
-        "id": "c6imoq005",
-        "question": "What is 2 + 0.10?",
+        "id": "c6imoq201",
+        "question": "Which is a prime number?",
         "options": [
-          "2.10",
-          "2.20",
-          "2.00",
-          "3.10"
+          "47",
+          "49",
+          "51",
+          "57"
         ],
         "answer": 0,
-        "explanation": "Adding the decimal to 2 gives 2.10.",
-        "difficulty": "Medium"
+        "explanation": "47 has no divisor 2, 3 or 5.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq015",
-        "question": "What is 3 + 0.27?",
+        "id": "c6imoq202",
+        "question": "How many distinct prime factors does 84 have?",
         "options": [
-          "3.37",
-          "3.17",
-          "3.27",
-          "4.27"
-        ],
-        "answer": 2,
-        "explanation": "Adding the decimal to 3 gives 3.27.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq025",
-        "question": "What is 4 + 0.34?",
-        "options": [
-          "4.34",
-          "4.44",
-          "4.24",
-          "5.34"
-        ],
-        "answer": 0,
-        "explanation": "Adding the decimal to 4 gives 4.34.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq035",
-        "question": "What is 5 + 0.41?",
-        "options": [
-          "5.51",
-          "5.31",
-          "5.41",
-          "6.41"
-        ],
-        "answer": 2,
-        "explanation": "Adding the decimal to 5 gives 5.41.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq045",
-        "question": "What is 6 + 0.58?",
-        "options": [
-          "6.58",
-          "6.68",
-          "6.48",
-          "7.58"
-        ],
-        "answer": 0,
-        "explanation": "Adding the decimal to 6 gives 6.58.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq055",
-        "question": "What is 7 + 0.65?",
-        "options": [
-          "7.75",
-          "7.55",
-          "7.65",
-          "8.65"
-        ],
-        "answer": 2,
-        "explanation": "Adding the decimal to 7 gives 7.65.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq065",
-        "question": "What is 8 + 0.72?",
-        "options": [
-          "8.72",
-          "8.82",
-          "8.62",
-          "9.72"
-        ],
-        "answer": 0,
-        "explanation": "Adding the decimal to 8 gives 8.72.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq075",
-        "question": "What is 9 + 0.89?",
-        "options": [
-          "9.99",
-          "9.79",
-          "9.89",
-          "10.89"
-        ],
-        "answer": 2,
-        "explanation": "Adding the decimal to 9 gives 9.89.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq085",
-        "question": "What is 10 + 0.16?",
-        "options": [
-          "10.16",
-          "10.26",
-          "10.06",
-          "11.16"
-        ],
-        "answer": 0,
-        "explanation": "Adding the decimal to 10 gives 10.16.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq095",
-        "question": "What is 11 + 0.23?",
-        "options": [
-          "11.33",
-          "11.13",
-          "11.23",
-          "12.23"
-        ],
-        "answer": 2,
-        "explanation": "Adding the decimal to 11 gives 11.23.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq261",
-        "question": "Calculate 1.3 + 0.05.",
-        "options": [
-          "1.45",
-          "1.25",
-          "2.35",
-          "1.35"
+          "2",
+          "4",
+          "5",
+          "3"
         ],
         "answer": 3,
-        "explanation": "Align decimal points: 1.30 + 0.05 = 1.35.",
-        "difficulty": "Easy"
+        "explanation": "84=2²×3×7.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq262",
-        "question": "What is 14 ÷ 10?",
+        "id": "c6imoq203",
+        "question": "Find HCF of 36 and 60.",
         "options": [
-          "0.14",
-          "140.0",
-          "1.4",
-          "14"
+          "6",
+          "18",
+          "12",
+          "24"
         ],
         "answer": 2,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 1.4.",
-        "difficulty": "Medium"
+        "explanation": "The highest common factor is 12.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq263",
-        "question": "Calculate 1.5 + 0.07.",
+        "id": "c6imoq204",
+        "question": "Find LCM of 8 and 12.",
         "options": [
-          "2.57",
-          "1.57",
-          "1.67",
-          "1.47"
-        ],
-        "answer": 1,
-        "explanation": "Align decimal points: 1.50 + 0.07 = 1.57.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq264",
-        "question": "What is 16 ÷ 10?",
-        "options": [
-          "1.6",
           "16",
-          "0.16",
-          "160.0"
-        ],
-        "answer": 0,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 1.6.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq265",
-        "question": "Calculate 1.7 + 0.09.",
-        "options": [
-          "1.89",
-          "1.69",
-          "2.79",
-          "1.79"
-        ],
-        "answer": 3,
-        "explanation": "Align decimal points: 1.70 + 0.09 = 1.79.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq266",
-        "question": "What is 18 ÷ 10?",
-        "options": [
-          "0.18",
-          "180.0",
-          "1.8",
-          "18"
-        ],
-        "answer": 2,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 1.8.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq267",
-        "question": "Calculate 1.9 + 0.11.",
-        "options": [
-          "3.01",
-          "2.01",
-          "2.11",
-          "1.91"
-        ],
-        "answer": 1,
-        "explanation": "Align decimal points: 1.90 + 0.11 = 2.01.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq268",
-        "question": "What is 20 ÷ 10?",
-        "options": [
-          "2.0",
-          "20",
-          "0.20",
-          "200.0"
-        ],
-        "answer": 0,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 2.0.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq269",
-        "question": "Calculate 2.1 + 0.13.",
-        "options": [
-          "2.33",
-          "2.13",
-          "3.23",
-          "2.23"
-        ],
-        "answer": 3,
-        "explanation": "Align decimal points: 2.10 + 0.13 = 2.23.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq270",
-        "question": "What is 22 ÷ 10?",
-        "options": [
-          "0.22",
-          "220.0",
-          "2.2",
-          "22"
-        ],
-        "answer": 2,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 2.2.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq271",
-        "question": "Calculate 2.3 + 0.06.",
-        "options": [
-          "3.36",
-          "2.36",
-          "2.46",
-          "2.26"
-        ],
-        "answer": 1,
-        "explanation": "Align decimal points: 2.30 + 0.06 = 2.36.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq272",
-        "question": "What is 24 ÷ 10?",
-        "options": [
-          "2.4",
           "24",
-          "0.24",
-          "240.0"
-        ],
-        "answer": 0,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 2.4.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq273",
-        "question": "Calculate 2.5 + 0.08.",
-        "options": [
-          "2.68",
-          "2.48",
-          "3.58",
-          "2.58"
-        ],
-        "answer": 3,
-        "explanation": "Align decimal points: 2.50 + 0.08 = 2.58.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq274",
-        "question": "What is 26 ÷ 10?",
-        "options": [
-          "0.26",
-          "260.0",
-          "2.6",
-          "26"
-        ],
-        "answer": 2,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 2.6.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq275",
-        "question": "Calculate 2.7 + 0.10.",
-        "options": [
-          "3.80",
-          "2.80",
-          "2.90",
-          "2.70"
+          "20",
+          "48"
         ],
         "answer": 1,
-        "explanation": "Align decimal points: 2.70 + 0.10 = 2.80.",
-        "difficulty": "Medium"
+        "explanation": "24 is the least common multiple.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq276",
-        "question": "What is 28 ÷ 10?",
+        "id": "c6imoq205",
+        "question": "Which number is composite?",
         "options": [
-          "2.8",
-          "28",
-          "0.28",
-          "280.0"
+          "91",
+          "83",
+          "89",
+          "97"
         ],
         "answer": 0,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 2.8.",
-        "difficulty": "Medium"
+        "explanation": "91=7×13.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq277",
-        "question": "Calculate 2.9 + 0.12.",
+        "id": "c6imoq206",
+        "question": "How many primes lie between 20 and 40?",
         "options": [
-          "3.12",
-          "2.92",
-          "4.02",
-          "3.02"
+          "3",
+          "5",
+          "6",
+          "4"
         ],
         "answer": 3,
-        "explanation": "Align decimal points: 2.90 + 0.12 = 3.02.",
-        "difficulty": "Medium"
+        "explanation": "They are 23,29,31,37.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq278",
-        "question": "What is 30 ÷ 10?",
+        "id": "c6imoq207",
+        "question": "Bells ring every 12 and 18 minutes. When next together?",
         "options": [
-          "0.30",
-          "300.0",
-          "3.0",
-          "30"
+          "24",
+          "30",
+          "36 minutes",
+          "54"
         ],
         "answer": 2,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 3.0.",
-        "difficulty": "Hard"
+        "explanation": "LCM(12,18)=36.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq279",
-        "question": "Calculate 3.1 + 0.05.",
+        "id": "c6imoq208",
+        "question": "Prime factorise 90.",
         "options": [
-          "4.15",
-          "3.15",
-          "3.25",
-          "3.05"
+          "2²×3×5",
+          "2×3²×5",
+          "3²×10",
+          "2×5²×3"
         ],
         "answer": 1,
-        "explanation": "Align decimal points: 3.10 + 0.05 = 3.15.",
-        "difficulty": "Easy"
+        "explanation": "90=9×10=3²×2×5.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq280",
-        "question": "What is 32 ÷ 10?",
+        "id": "c6imoq209",
+        "question": "A number has exactly three factors. It must be:",
         "options": [
-          "3.2",
-          "32",
-          "0.32",
-          "320.0"
+          "The square of a prime",
+          "A prime",
+          "A cube of any whole number",
+          "An even number"
         ],
         "answer": 0,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 3.2.",
-        "difficulty": "Medium"
+        "explanation": "p² has factors 1,p,p².",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq281",
-        "question": "Calculate 3.3 + 0.07.",
+        "id": "c6imoq210",
+        "question": "Find least number divisible by 6,8,15.",
         "options": [
-          "3.47",
-          "3.27",
-          "4.37",
-          "3.37"
+          "60",
+          "90",
+          "240",
+          "120"
         ],
         "answer": 3,
-        "explanation": "Align decimal points: 3.30 + 0.07 = 3.37.",
-        "difficulty": "Medium"
+        "explanation": "LCM=2³×3×5=120.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq282",
-        "question": "What is 34 ÷ 10?",
+        "id": "c6imoq211",
+        "question": "Which pair is co-prime?",
         "options": [
-          "0.34",
-          "340.0",
-          "3.4",
-          "34"
+          "14 and 21",
+          "18 and 27",
+          "14 and 25",
+          "35 and 49"
         ],
         "answer": 2,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 3.4.",
-        "difficulty": "Medium"
+        "explanation": "Their only common factor is 1.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq283",
-        "question": "Calculate 3.5 + 0.09.",
+        "id": "c6imoq212",
+        "question": "A number divisible by 4 and 9 must be divisible by:",
         "options": [
-          "4.59",
-          "3.59",
-          "3.69",
-          "3.49"
-        ],
-        "answer": 1,
-        "explanation": "Align decimal points: 3.50 + 0.09 = 3.59.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq284",
-        "question": "What is 36 ÷ 10?",
-        "options": [
-          "3.6",
+          "13",
           "36",
-          "0.36",
-          "360.0"
-        ],
-        "answer": 0,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 3.6.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq285",
-        "question": "Calculate 3.7 + 0.11.",
-        "options": [
-          "3.91",
-          "3.71",
-          "4.81",
-          "3.81"
-        ],
-        "answer": 3,
-        "explanation": "Align decimal points: 3.70 + 0.11 = 3.81.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq286",
-        "question": "What is 38 ÷ 10?",
-        "options": [
-          "0.38",
-          "380.0",
-          "3.8",
-          "38"
-        ],
-        "answer": 2,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 3.8.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq287",
-        "question": "Calculate 3.9 + 0.13.",
-        "options": [
-          "5.03",
-          "4.03",
-          "4.13",
-          "3.93"
+          "18 only",
+          "It must be odd"
         ],
         "answer": 1,
-        "explanation": "Align decimal points: 3.90 + 0.13 = 4.03.",
-        "difficulty": "Medium"
+        "explanation": "4 and 9 are coprime, so 36 divides it.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq288",
-        "question": "What is 40 ÷ 10?",
+        "id": "c6imoq213",
+        "question": "Prime factors of 143 are:",
         "options": [
-          "4.0",
-          "40",
-          "0.40",
-          "400.0"
+          "11 and 13",
+          "7 and 19",
+          "3 and 47",
+          "5 and 29"
         ],
         "answer": 0,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 4.0.",
-        "difficulty": "Medium"
+        "explanation": "143=11×13.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq289",
-        "question": "Calculate 4.1 + 0.06.",
+        "id": "c6imoq214",
+        "question": "How many positive factors does 24 have?",
         "options": [
-          "4.26",
-          "4.06",
-          "5.16",
-          "4.16"
+          "6",
+          "7",
+          "10",
+          "8"
         ],
         "answer": 3,
-        "explanation": "Align decimal points: 4.10 + 0.06 = 4.16.",
-        "difficulty": "Medium"
+        "explanation": "Factors: 1,2,3,4,6,8,12,24.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq290",
-        "question": "What is 42 ÷ 10?",
+        "id": "c6imoq215",
+        "question": "Lights flash every 20 and 30 minutes. Both flash at 8:00. Next together?",
         "options": [
-          "0.42",
-          "420.0",
-          "4.2",
-          "42"
+          "8:40",
+          "8:50",
+          "9:00",
+          "9:20"
         ],
         "answer": 2,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 4.2.",
-        "difficulty": "Hard"
+        "explanation": "LCM=60 minutes.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq291",
-        "question": "Calculate 4.3 + 0.08.",
+        "id": "c6imoq216",
+        "question": "Which digit makes 6,43□ divisible by 3?",
         "options": [
-          "5.38",
-          "4.38",
-          "4.48",
-          "4.28"
+          "1",
+          "2",
+          "3",
+          "5"
         ],
         "answer": 1,
-        "explanation": "Align decimal points: 4.30 + 0.08 = 4.38.",
-        "difficulty": "Easy"
+        "explanation": "The digit sum becomes 15.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq292",
-        "question": "What is 44 ÷ 10?",
+        "id": "c6imoq217",
+        "question": "A prime between 50 and 60 has digit sum 8. What is it?",
         "options": [
-          "4.4",
-          "44",
-          "0.44",
-          "440.0"
+          "53",
+          "55",
+          "56",
+          "59"
         ],
         "answer": 0,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 4.4.",
-        "difficulty": "Medium"
+        "explanation": "53 is prime and 5+3=8.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq293",
-        "question": "Calculate 4.5 + 0.10.",
+        "id": "c6imoq218",
+        "question": "Greatest number dividing 72 and 120 exactly?",
         "options": [
-          "4.70",
-          "4.50",
-          "5.60",
-          "4.60"
+          "12",
+          "18",
+          "36",
+          "24"
         ],
         "answer": 3,
-        "explanation": "Align decimal points: 4.50 + 0.10 = 4.60.",
-        "difficulty": "Medium"
+        "explanation": "HCF(72,120)=24.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq294",
-        "question": "What is 46 ÷ 10?",
+        "id": "c6imoq219",
+        "question": "Compute 2³×3×5².",
         "options": [
-          "0.46",
-          "460.0",
-          "4.6",
-          "46"
+          "300",
+          "480",
+          "600",
+          "750"
         ],
         "answer": 2,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 4.6.",
-        "difficulty": "Medium"
+        "explanation": "8×3×25=600.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq295",
-        "question": "Calculate 4.7 + 0.12.",
+        "id": "c6imoq220",
+        "question": "Two numbers have HCF 6 and LCM 180. One is 30. Find the other.",
         "options": [
-          "5.82",
-          "4.82",
-          "4.92",
-          "4.72"
+          "24",
+          "36",
+          "42",
+          "60"
         ],
         "answer": 1,
-        "explanation": "Align decimal points: 4.70 + 0.12 = 4.82.",
-        "difficulty": "Medium"
+        "explanation": "Product=HCF×LCM; other=1080÷30=36.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq296",
-        "question": "What is 48 ÷ 10?",
+        "id": "c6imoq221",
+        "question": "Which has an odd number of factors?",
         "options": [
-          "4.8",
+          "49",
+          "45",
           "48",
-          "0.48",
-          "480.0"
-        ],
-        "answer": 0,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 4.8.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq297",
-        "question": "Calculate 4.9 + 0.05.",
-        "options": [
-          "5.05",
-          "4.85",
-          "5.95",
-          "4.95"
-        ],
-        "answer": 3,
-        "explanation": "Align decimal points: 4.90 + 0.05 = 4.95.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq298",
-        "question": "What is 50 ÷ 10?",
-        "options": [
-          "0.50",
-          "500.0",
-          "5.0",
           "50"
         ],
-        "answer": 2,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 5.0.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "49=7², so it has 1,7,49.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq299",
-        "question": "Calculate 5.1 + 0.07.",
+        "id": "c6imoq222",
+        "question": "Smallest number to add to 1,000 to make a multiple of 7?",
         "options": [
-          "6.17",
-          "5.17",
-          "5.27",
-          "5.07"
+          "2",
+          "3",
+          "5",
+          "1"
+        ],
+        "answer": 3,
+        "explanation": "1,001=7×143.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq223",
+        "question": "96 red and 72 blue beads are split into identical bags. Greatest number of bags?",
+        "options": [
+          "12",
+          "18",
+          "24",
+          "36"
+        ],
+        "answer": 2,
+        "explanation": "HCF(96,72)=24.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq224",
+        "question": "Which statement about primes greater than 2 is true?",
+        "options": [
+          "Divisible by 3",
+          "They are odd",
+          "Digit sum is prime",
+          "Have 3 factors"
         ],
         "answer": 1,
-        "explanation": "Align decimal points: 5.10 + 0.07 = 5.17.",
-        "difficulty": "Medium"
+        "explanation": "Every even integer greater than 2 is composite.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq300",
-        "question": "What is 52 ÷ 10?",
+        "id": "c6imoq225",
+        "question": "How many multiples of 9 lie from 100 to 200 inclusive?",
         "options": [
-          "5.2",
-          "52",
-          "0.52",
-          "520.0"
+          "11",
+          "10",
+          "12",
+          "13"
         ],
         "answer": 0,
-        "explanation": "Dividing by 10 moves the decimal point one place left, giving 5.2.",
-        "difficulty": "Medium"
+        "explanation": "108,117,…,198: 11 terms.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq226",
+        "question": "Smallest three-digit number divisible by 2,3,5?",
+        "options": [
+          "105",
+          "110",
+          "135",
+          "120"
+        ],
+        "answer": 3,
+        "explanation": "It must be a multiple of 30; first is 120.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq227",
+        "question": "A two-digit multiple of 7 has digit sum 9. Find it.",
+        "options": [
+          "54",
+          "72",
+          "63",
+          "81"
+        ],
+        "answer": 2,
+        "explanation": "63=7×9 and 6+3=9.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq228",
+        "question": "If 3 and 5 are both factors of n, which must be a factor?",
+        "options": [
+          "8",
+          "15",
+          "10",
+          "18"
+        ],
+        "answer": 1,
+        "explanation": "3 and 5 are coprime.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq229",
+        "question": "HCF of 48,72,120 is:",
+        "options": [
+          "24",
+          "12",
+          "18",
+          "36"
+        ],
+        "answer": 0,
+        "explanation": "24 is the greatest common divisor.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq230",
+        "question": "LCM of 9 and which number is 45?",
+        "options": [
+          "12",
+          "18",
+          "21",
+          "15"
+        ],
+        "answer": 3,
+        "explanation": "LCM(9,15)=45.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq231",
+        "question": "Between 40 and 60, divisible by 6 and 8?",
+        "options": [
+          "42",
+          "54",
+          "48",
+          "56"
+        ],
+        "answer": 2,
+        "explanation": "Only 48 is a multiple of 24 in the interval.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq232",
+        "question": "Smallest prime factor of 221?",
+        "options": [
+          "11",
+          "13",
+          "17",
+          "19"
+        ],
+        "answer": 1,
+        "explanation": "221=13×17.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq233",
+        "question": "How many factors does 2²×7 have?",
+        "options": [
+          "6",
+          "4",
+          "5",
+          "8"
+        ],
+        "answer": 0,
+        "explanation": "(2+1)(1+1)=6.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq234",
+        "question": "84 tulips and 126 daffodils are placed in equal-size rows, one type per row. Largest row size?",
+        "options": [
+          "21",
+          "28",
+          "63",
+          "42"
+        ],
+        "answer": 3,
+        "explanation": "HCF(84,126)=42.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq235",
+        "question": "Which number is divisible by 11?",
+        "options": [
+          "5,146",
+          "5,147",
+          "5,148",
+          "5,149"
+        ],
+        "answer": 2,
+        "explanation": "Alternating digit sum difference is zero.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq236",
+        "question": "Traffic lights flash every 24 and 40 seconds. Both at 10:00:00. Next together?",
+        "options": [
+          "10:01:20",
+          "10:02:00",
+          "10:01:40",
+          "10:02:40"
+        ],
+        "answer": 1,
+        "explanation": "LCM=120 seconds.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq237",
+        "question": "Product of two numbers is 1,536 and HCF 8. Their LCM?",
+        "options": [
+          "192",
+          "128",
+          "184",
+          "256"
+        ],
+        "answer": 0,
+        "explanation": "LCM=1536÷8=192.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq238",
+        "question": "How many distinct prime divisors does 210 have?",
+        "options": [
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        "answer": 3,
+        "explanation": "210=2×3×5×7.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq239",
+        "question": "Which has exactly 9 positive factors?",
+        "options": [
+          "2²×3",
+          "2×3²",
+          "2⁸",
+          "2²×5"
+        ],
+        "answer": 2,
+        "explanation": "Exponent 8 gives 9 factors.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq240",
+        "question": "Find LCM of 14,21,35.",
+        "options": [
+          "105",
+          "210",
+          "140",
+          "420"
+        ],
+        "answer": 1,
+        "explanation": "2×3×5×7=210.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq241",
+        "question": "Least number greater than 1 giving remainder 1 on division by 2,3,4,5?",
+        "options": [
+          "61",
+          "41",
+          "51",
+          "121"
+        ],
+        "answer": 0,
+        "explanation": "LCM=60; add 1.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq242",
+        "question": "156 apples and 204 oranges are packed in the largest possible number of identical boxes using all fruit. Number of boxes?",
+        "options": [
+          "6",
+          "18",
+          "24",
+          "12"
+        ],
+        "answer": 3,
+        "explanation": "HCF(156,204)=12.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq243",
+        "question": "Between 40 and 60, which number has exactly three positive factors?",
+        "options": [
+          "45",
+          "51",
+          "49",
+          "55"
+        ],
+        "answer": 2,
+        "explanation": "49=7², so its factors are 1,7,49.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq244",
+        "question": "Find the LCM of 45 and 75. Then convert it to minutes and hours.",
+        "options": [
+          "180 minutes (3 h)",
+          "225 minutes (3 h 45 min)",
+          "200 minutes (3 h 20 min)",
+          "250 minutes (4 h 10 min)"
+        ],
+        "answer": 1,
+        "explanation": "45=3²×5 and 75=3×5²; LCM=3²×5²=225 minutes.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq245",
+        "question": "When 2,3,4,5 are divisors, a number gives remainders 1,2,3,4 respectively. Find the least such number greater than 1.",
+        "options": [
+          "59",
+          "29",
+          "39",
+          "119"
+        ],
+        "answer": 0,
+        "explanation": "59 is one less than 60 and satisfies all four remainder conditions.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq246",
+        "question": "Largest square tile for a 420 cm by 300 cm floor?",
+        "options": [
+          "30",
+          "40",
+          "70",
+          "60 cm"
+        ],
+        "answer": 3,
+        "explanation": "HCF(420,300)=60.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq247",
+        "question": "A number is divisible by 12 and 15, and less than 200. How many positive possibilities?",
+        "options": [
+          "4",
+          "5",
+          "3",
+          "6"
+        ],
+        "answer": 2,
+        "explanation": "Multiples of 60 below 200 are 60,120,180.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq248",
+        "question": "Which pair of consecutive primes has product 77?",
+        "options": [
+          "5 and 13",
+          "7 and 11",
+          "11 and 13",
+          "3 and 29"
+        ],
+        "answer": 1,
+        "explanation": "7 and 11 are consecutive primes and 7×11=77.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq249",
+        "question": "The prime factorisation of a number is 2²×3²×5. How many positive divisors does it have?",
+        "options": [
+          "18",
+          "17",
+          "24",
+          "30"
+        ],
+        "answer": 0,
+        "explanation": "(2+1)(2+1)(1+1)=18.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq250",
+        "question": "Two numbers have product 3,360 and HCF 8. Find their LCM.",
+        "options": [
+          "400",
+          "424",
+          "480",
+          "420"
+        ],
+        "answer": 3,
+        "explanation": "LCM=3,360÷8=420.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   },
