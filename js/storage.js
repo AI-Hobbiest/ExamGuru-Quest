@@ -48,12 +48,31 @@
     return "local-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 14);
   }
 
+  function activeStudentScope() {
+    try {
+      if (globalThis.C10StudentAuth && typeof globalThis.C10StudentAuth.currentUser === "function") {
+        const user = globalThis.C10StudentAuth.currentUser();
+        if (user && user.role === "student" && user.studentId) return String(user.studentId);
+      }
+    } catch (_) {}
+    try {
+      const user = JSON.parse(globalThis.sessionStorage.getItem("c10playground_static_student_v1") || "null");
+      if (user && (!user.role || user.role === "student")) {
+        const id = user.studentId || (user.username ? "student-" + String(user.username).toLowerCase().replace(/[^a-z0-9_-]/g, "-") : "");
+        if (id) return String(id);
+      }
+    } catch (_) {}
+    return "";
+  }
+
   function createLocalStore(options) {
     if (!options || !options.kind || !options.recordId) {
       throw new TypeError("C10Storage.createLocalStore needs kind and recordId.");
     }
     const kind = String(options.kind);
-    const recordId = String(options.recordId);
+    const requestedRecordId = String(options.recordId);
+    const ownerId = options.studentId != null ? String(options.studentId) : activeStudentScope();
+    const recordId = ownerId ? ownerId + "::" + requestedRecordId : requestedRecordId;
     const storageKey = ROOT_KEY + encodeURIComponent(kind) + ":" + encodeURIComponent(recordId);
     const legacyKey = options.legacyKey || null;
     const defaults = typeof options.defaults === "function" ? options.defaults : () => clone(options.defaults || {});
