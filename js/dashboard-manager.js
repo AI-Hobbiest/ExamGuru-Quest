@@ -10,21 +10,45 @@
     validate:value=>!!value&&typeof value.profileId==="string"
   });
   const profile=window.C10ProfileModel.normalizeProfile(profileStore.load(),"");
-  function loadLedger(subject){
+  function loadLedger(recordId){
     return window.C10Storage.createLocalStore({
-      kind:"test-attempt-ledger",recordId:subject,
+      kind:"test-attempt-ledger",recordId,
       defaults:()=>({attempts:[],activeAttempt:null,answerRecords:[]}),
       validate:value=>!!value&&Array.isArray(value.attempts)&&Array.isArray(value.answerRecords)&&
         (value.activeAttempt===null||typeof value.activeAttempt==="object")
     }).load();
   }
+  function currentClassId(){
+    try{
+      const student=window.C10StudentAuth&&window.C10StudentAuth.currentUser?window.C10StudentAuth.currentUser():null;
+      if(student&&student.classId)return String(student.classId);
+    }catch(_){}
+    try{
+      const saved=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");
+      if(saved&&saved.classId)return String(saved.classId);
+    }catch(_){}
+    return "10";
+  }
+  function ledgerEntries(){
+    const classId=currentClassId();
+    const subjectIds=classId==="6"
+      ? ["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"]
+      : classId==="3"
+        ? ["mathematics"]
+        : Object.keys(SUBJECTS);
+    return subjectIds.map(subject=>({
+      subject,
+      subjectTitle:SUBJECTS[subject]||subject,
+      recordId:classId==="10"?subject:"class-"+classId+"-"+subject
+    }));
+  }
   function getAttempts(){
     const result=[];
-    for(const [subject,subjectTitle] of Object.entries(SUBJECTS)){
-      const ledger=loadLedger(subject);
+    for(const entry of ledgerEntries()){
+      const ledger=loadLedger(entry.recordId);
       for(const attempt of ledger.attempts||[]){
         if(attempt.profileId&&profile.profileId&&attempt.profileId!==profile.profileId)continue;
-        result.push({...attempt,subjectId:attempt.subjectId||subject,subjectTitle});
+        result.push({...attempt,subjectId:attempt.subjectId||entry.subject,subjectTitle:entry.subjectTitle});
       }
     }
     return result.sort((a,b)=>String(a.submittedAt||a.startedAt).localeCompare(String(b.submittedAt||b.startedAt)));
