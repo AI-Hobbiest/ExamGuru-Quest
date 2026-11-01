@@ -153,3 +153,24 @@ header{position:relative;padding-right:max(140px,calc((100vw - 1100px)/2))!impor
 .c10-header-signout:hover{background:rgba(255,255,255,.22)}
 .c10-header-signout:disabled{opacity:.6;cursor:wait}
 @media(max-width:520px){header{padding-top:66px!important;padding-right:18px!important}.c10-header-signout{top:14px;right:18px;padding:7px 11px;font-size:.78rem}}
+
+/* ExamGuru Quest unified identity: indigo-led with functional green, lavender and yellow accents. */
+:root{color-scheme:light;--c10-indigo:#403b8c;--c10-indigo-deep:#25285a;--c10-lavender:#ece8fa;--c10-lavender-strong:#d9d0f3;--c10-green:#e4f4e9;--c10-green-strong:#2c8054;--c10-yellow:#fff1c9;--c10-yellow-strong:#8c6417;--c10-ink:#252b46;--c10-muted:#66708a;--c10-bg:#f6f8fc;--c10-card:#fff;--c10-primary:#5c50b2;--c10-primary-deep:#403b8c;--c10-coral:#d8a541;--c10-mint:#bfe5cb;--c10-line:#e0e4ef;--c10-gold:#f2d27e}
+html{background:var(--c10-bg)}
+body{color:var(--c10-ink)!important;background:radial-gradient(ellipse at 2% 0%,rgba(221,242,228,.62),transparent 31rem),radial-gradient(ellipse at 98% 0%,rgba(232,226,248,.68),transparent 34rem),var(--c10-bg)!important}
+header{color:var(--c10-ink)!important;background:linear-gradient(112deg,#eeebfa 0%,#fbfbfe 54%,#edf6ef 100%)!important;border-bottom:1px solid #e2e4ef;box-shadow:0 7px 23px rgba(38,43,87,.045)}
+header h1,header h2{color:var(--c10-indigo-deep)!important}header p{color:#626b84!important}header a,header a:visited{color:var(--c10-indigo)!important}header .eyebrow{color:#5d5793!important;opacity:1}
+.wrap,main{color:var(--c10-ink)}.muted,footer,.stat span,.topic span,.microcopy,.status{color:var(--c10-muted)!important}
+.card,.panel,.quiz,.stat,.topic,main>.note{border-color:var(--c10-line)!important;box-shadow:0 9px 26px rgba(37,43,82,.055)!important}.card,.panel,.quiz,.stat{border-radius:18px!important}
+.card{background:#fff;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.card:hover{transform:translateY(-2px);border-color:#c9c1e9!important;box-shadow:0 13px 30px rgba(37,43,82,.095)!important}
+.btn,button.btn{color:#fff!important;background:linear-gradient(115deg,#403b8c,#6559bd)!important;box-shadow:0 6px 16px rgba(64,59,140,.17);transition:transform .15s ease,box-shadow .15s ease,filter .15s ease}.btn:hover,button.btn:hover{filter:saturate(1.05);transform:translateY(-1px);box-shadow:0 9px 20px rgba(64,59,140,.22)}
+.btn.secondary,button.secondary{color:#403b8c!important;background:#efecfa!important;border:1px solid #ded8f1!important;box-shadow:none!important}
+.mode button{border-color:var(--c10-line)!important;background:#fff!important;color:#424a65!important}.mode button.active{border-color:#b8addf!important;color:#403b8c!important;background:#ece8fa!important}
+.chip{color:#286b49!important;background:#e4f4e9!important}.pill{color:#403b8c!important;background:#ece8fa!important}
+.progress{background:#e4e7f0!important}.progress i{background:linear-gradient(90deg,#5c50b2,#8b7bd0,#79b88f)!important}
+.opt{border-color:var(--c10-line)!important;color:var(--c10-ink)!important}.opt.selected{border-color:#988bd0!important;background:#f0edfb!important;color:#302b70!important}.opt.correct{border-color:#9acdad!important;background:#eaf7ee!important;color:#286b49!important}.opt.wrong{border-color:#e8b0b2!important;background:#fff0f0!important;color:#873f47!important}.letter{color:#403b8c!important;background:#ece8fa!important}
+.score{border-color:#cfe8d6!important;background:#f8fcf9}.hint{border-color:#e4d9af!important;background:#fff8e5!important;color:#69531d!important}.note{border-left-color:#dfb84e!important;background:#fff6da!important;color:#68521d!important}
+select,input,textarea{border-color:#d8deeb!important;border-radius:11px!important;color:var(--c10-ink)}a:not(.btn){color:var(--c10-primary-deep)}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid rgba(92,80,178,.48)!important;outline-offset:3px}
+.c10-header-signout{border:1px solid rgba(64,59,140,.2)!important;background:rgba(255,255,255,.68)!important;color:#403b8c!important;backdrop-filter:blur(8px)}.c10-header-signout:hover{background:#fff!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}

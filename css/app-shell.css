@@ -60,3 +60,16 @@ body.c10-shell-ready{padding-left:var(--c10-sidebar-width)}
 .c10-user-name{font-size:.82rem;font-weight:850;color:#fff;overflow-wrap:anywhere;line-height:1.35}
 .c10-user-class{font-size:.72rem;color:#cfc9ff;margin-top:4px;font-weight:700}
 .c10-mobile-title{font-weight:900}
+
+/* Student portal shell: light botanical-lavender surfaces with indigo navigation. */
+:root{--c10-shell-bg:#edf3ef;--c10-shell-line:rgba(64,59,140,.13);--c10-shell-text:#303653}
+.c10-sidebar{background:linear-gradient(180deg,#edf6ef 0%,#f3f1fb 58%,#eeeafa 100%)!important;color:#28304c!important;box-shadow:7px 0 26px rgba(38,45,83,.08)!important;border-right:1px solid #dfe5e8}
+.c10-brand{border-bottom-color:rgba(64,59,140,.13)!important}.c10-brand-title{color:#25285a!important}.c10-brand-sub{color:#6e7090!important}.c10-nav-label{color:#68628f!important}
+.c10-sidebar a.c10-nav-link,.c10-sidebar a.c10-nav-link:visited{color:#3d4560!important}
+.c10-sidebar a.c10-nav-link:hover,.c10-sidebar a.c10-nav-link:focus-visible{background:rgba(255,255,255,.78)!important;border-color:rgba(64,59,140,.13)!important;color:#2e3268!important}
+.c10-sidebar a.c10-nav-link.active,.c10-sidebar a.c10-nav-link.active:visited{background:linear-gradient(100deg,#e6f3e9 0%,#eae5f8 100%)!important;border-color:#d5d0eb!important;color:#39347f!important;box-shadow:inset 3px 0 0 #6659b2}
+.c10-nav-divider{background:rgba(64,59,140,.13)!important}.c10-sidebar-bottom{color:#70738d!important}
+.c10-sidebar-top{background:linear-gradient(180deg,#edf6ef 0%,#f2effb 100%)!important}.c10-user-card{border-color:rgba(64,59,140,.15)!important;background:rgba(255,255,255,.68)!important}.c10-user-name{color:#2d3156!important}.c10-user-class{color:#6b6593!important}
+.c10-mobilebar{background:linear-gradient(100deg,#ece8fa,#f8f7fc 60%,#eaf4ed)!important;color:#292d58!important;border-bottom:1px solid #e0e2ed;box-shadow:0 5px 18px rgba(38,43,87,.08)!important}
+.c10-mobile-title{color:#292d58!important}.c10-mobile-sub{color:#6c6b8c!important}.c10-menu-toggle{border-color:rgba(64,59,140,.18)!important;background:rgba(255,255,255,.75)!important;color:#403b8c!important}.c10-nav-scrim.visible{background:rgba(34,35,69,.32)!important}
+.c10-sidebar{scrollbar-color:rgba(105,94,170,.35) transparent}.c10-sidebar::-webkit-scrollbar-thumb{background:rgba(105,94,170,.3);background-clip:padding-box}.c10-sidebar::-webkit-scrollbar-thumb:hover{background:rgba(105,94,170,.55);background-clip:padding-box}

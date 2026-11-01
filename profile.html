@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#211b48">
+<meta name="theme-color" content="#ece8fa">
 <meta name="description" content="Manage your C10 Playground learner profile and local test history.">
 <title>My Profile & Test History | C10 Playground</title>
 <link rel="stylesheet" href="./css/branding.css"><link rel="stylesheet" href="./css/app-shell.css">
@@ -43,6 +43,13 @@ hr.soft{border:0;border-top:1px solid var(--c10-line);margin:20px 0}
 #studentAccountPanel{display:none!important}
 button:disabled,.btn:disabled{opacity:.46!important;cursor:not-allowed!important;filter:grayscale(.3);transform:none!important;box-shadow:none!important}
 .profile-wrap{max-width:1040px}
+
+/* Profile forms and history use the same high-contrast ExamGuru surfaces. */
+.profile-card{background:#fff!important;border-color:#e0e4ef!important;box-shadow:0 10px 28px rgba(37,43,82,.055)!important}
+.field input,.field select{border-color:#d8deeb!important;color:#252b46!important}.field input[readonly]{background:#efecfa!important;color:#403b8c!important}
+.notice{border-color:#eadcae!important;background:#fff7df!important;color:#69531d!important}
+.summary-tile:nth-child(1){background:#f0ecfb!important}.summary-tile:nth-child(2){background:#eaf6ee!important}.summary-tile:nth-child(3){background:#fff6dd!important}
+.summary-tile strong,.history-score strong{color:#403b8c!important}.small-pill{background:#ece8fa!important;color:#403b8c!important}.history-row{background:#fff!important;border-color:#e0e4ef!important}
 </style>
 </head>
 <body>

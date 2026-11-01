@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#211b48">
+<meta name="theme-color" content="#ece8fa">
 <meta name="description" content="Track your learning level, XP, achievements and practice progress in ExamGuru Quest.">
 <title>Learning Dashboard | ExamGuru Quest</title>
 <link rel="stylesheet" href="./css/branding.css"><link rel="stylesheet" href="./css/app-shell.css">
@@ -49,6 +49,18 @@
 @media(max-width:900px){.dash-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.badge-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:620px){.dash-charts{grid-template-columns:1fr}.dash-hero-grid{grid-template-columns:minmax(0,1fr) 78px;gap:10px;align-items:start}.level-orb{width:76px;height:76px;flex-basis:76px;border-radius:22px;align-self:start;margin-top:2px}.level-orb strong{font-size:1.8rem}.level-orb span{font-size:.6rem}.dash-hero p{font-size:.88rem}.badge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.subject-bar-row{grid-template-columns:minmax(82px,.75fr) minmax(0,1.5fr) 38px}}
 @media(max-width:390px){.dash-hero-grid{grid-template-columns:minmax(0,1fr) 64px;gap:8px;align-items:start}.level-orb{position:relative;grid-column:2;grid-row:1;right:auto;top:auto;width:64px;height:64px;flex-basis:64px;justify-self:end;align-self:start;border-radius:18px;margin:0}.dash-hero-grid>div:first-child{grid-column:1;grid-row:1;min-width:0}.dash-hero h1{max-width:none;font-size:1.5rem}.dash-stat{padding:12px}.badge-grid{gap:7px}}
+
+/* Unified ExamGuru palette for the learning dashboard and XP surfaces. */
+.dash-hero{color:#252b46!important;background:linear-gradient(118deg,#ece8fa 0%,#f7f6fc 54%,#e7f4ea 100%)!important;border:1px solid #ddd8ee;box-shadow:0 13px 32px rgba(45,46,91,.09)!important}
+.dash-kicker{color:#5a4f98!important}.dash-hero h1{color:#25285a!important}.dash-hero p{color:#626b84!important}
+.level-orb{color:#342f76!important;background:linear-gradient(145deg,#e3ddf7,#f4f1fc)!important;border:1px solid #cbc1e9!important;box-shadow:0 8px 18px rgba(64,59,140,.11)}
+.level-orb strong{color:#2f2d70!important}.level-orb span{color:#645a9a!important}
+.xp-line{color:#393d60!important}.xp-track{background:#e0e7e2!important}.xp-track i{background:linear-gradient(90deg,#75b88d 0%,#8a7ac7 68%,#edc45e 100%)!important}
+.dash-stat:nth-child(1){background:linear-gradient(145deg,#f0ecfb,#fff)!important}.dash-stat:nth-child(2){background:linear-gradient(145deg,#eaf6ee,#fff)!important}.dash-stat:nth-child(3){background:linear-gradient(145deg,#fff6dd,#fff)!important}.dash-stat:nth-child(4){background:linear-gradient(145deg,#f1effb,#fff)!important}.dash-stat strong{color:#292e55!important}
+.dash-panel,.subject-launch{background:#fff!important;border-color:#e0e4ef!important;box-shadow:0 8px 24px rgba(39,45,82,.045)!important}.dash-panel h2,.dash-panel h3,.subject-launch h2{color:#292e55!important}
+.dash-tag{background:#ece8fa!important;color:#403b8c!important}.trend-value,.subject-percent{color:#51469c!important}.trend-track,.week-track{background:#edf0f6!important}.trend-bar{background:linear-gradient(180deg,#9285ca,#5d50ad)!important}.week-fill{background:linear-gradient(180deg,#8fc49e,#5b9d75)!important}.subject-track{background:#edf0f6!important}.subject-fill{background:linear-gradient(90deg,#6558b2,#8e82ce,#75b88e)!important}
+.achievement.earned{border-color:#cfe6d6!important;background:linear-gradient(155deg,#eaf6ed,#fff)!important}.achievement.locked{background:#fafaff!important}
+.subject-launch-card:nth-child(3n+1){background:linear-gradient(150deg,#f0ecfb,#fff)!important}.subject-launch-card:nth-child(3n+2){background:linear-gradient(150deg,#eaf6ee,#fff)!important}.subject-launch-card:nth-child(3n){background:linear-gradient(150deg,#fff6dd,#fff)!important}.subject-launch-card:hover{border-color:#bdb4df!important}
 </style>
 </head>
 <body>
