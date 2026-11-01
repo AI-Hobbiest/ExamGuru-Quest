@@ -37,7 +37,7 @@ assert.ok(roleTheme.includes("#f0a82e"),"Quest quiz primary action uses the yell
 assert.ok(roleTheme.includes("#e4f4e7")&&roleTheme.includes("#eee9ff")&&roleTheme.includes("#fff0c8"),"Quest palette includes green, lavender and yellow");
 for(const [name,html,theme] of [["homepage",homepage,"c10-theme-quest"],["practice",practice,"c10-theme-quest"],["profile",profile,"c10-theme-quest"],["dashboard",dashboard,"c10-theme-quest"],["admin",admin,"c10-theme-admin"]]){
  assert.ok(html.includes("./css/theme-roles.css"),name+" loads the role-specific theme");
- assert.ok(html.includes('class="'+theme),name+" is assigned the correct theme");
+ assert.ok(html.includes('class="'+theme)||html.includes('class="eg-quiz-page '+theme),name+" is assigned the correct theme");
 }
 assert.ok(branding.includes("--c10-indigo:#403b8c"),"shared design tokens define the indigo brand colour");
 assert.ok(branding.includes("--c10-lavender:#ece8fa"),"shared design tokens define lavender selection surfaces");
