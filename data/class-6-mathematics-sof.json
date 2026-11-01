@@ -7078,5 +7078,713 @@
         "section": "Achievers Section"
       }
     ]
+  },
+  {
+    "chapter_no": 11,
+    "title": "Verbal and Non-Verbal Reasoning",
+    "key": "sof-imo-logical-reasoning",
+    "section": "Logical Reasoning",
+    "questions": [
+      {
+        "id": "c6imoq501",
+        "question": "Next letter: A,C,F,J,O,__?",
+        "options": [
+          "T",
+          "V",
+          "W",
+          "U"
+        ],
+        "answer": 3,
+        "explanation": "Jumps are +2,+3,+4,+5,+6.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq502",
+        "question": "Odd one out: 16,25,36,48,64.",
+        "options": [
+          "16",
+          "36",
+          "48",
+          "64"
+        ],
+        "answer": 2,
+        "explanation": "The others are perfect squares.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq503",
+        "question": "CAT becomes DBU. Code DOG.",
+        "options": [
+          "EOG",
+          "EPH",
+          "DPH",
+          "FQH"
+        ],
+        "answer": 1,
+        "explanation": "Each letter moves one place forward.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq504",
+        "question": "Face north, turn right, left, left. Final direction?",
+        "options": [
+          "West",
+          "North",
+          "East",
+          "South"
+        ],
+        "answer": 0,
+        "explanation": "North→East→North→West.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq505",
+        "question": "Dictionary order plane, plank, plant, plate. Third?",
+        "options": [
+          "plane",
+          "plank",
+          "plate",
+          "plant"
+        ],
+        "answer": 3,
+        "explanation": "Order is plane, plank, plant, plate.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq506",
+        "question": "A is taller than B. C is shorter than B. D is taller than A. Who is tallest?",
+        "options": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "answer": 2,
+        "explanation": "D>A>B>C.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq507",
+        "question": "Bird:nest :: bee:__?",
+        "options": [
+          "Web",
+          "Hive",
+          "Stable",
+          "Burrow"
+        ],
+        "answer": 1,
+        "explanation": "A hive houses a bee colony.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq508",
+        "question": "45 days after Wednesday is which day?",
+        "options": [
+          "Saturday",
+          "Friday",
+          "Sunday",
+          "Monday"
+        ],
+        "answer": 0,
+        "explanation": "45 mod 7=3; Wednesday plus 3 is Saturday.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq509",
+        "question": "Smaller angle at 3:00?",
+        "options": [
+          "60°",
+          "75°",
+          "120°",
+          "90°"
+        ],
+        "answer": 3,
+        "explanation": "Three hour marks are 90°.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq510",
+        "question": "Mira is 8th left and 13th right. Total people?",
+        "options": [
+          "19",
+          "21",
+          "20",
+          "22"
+        ],
+        "answer": 2,
+        "explanation": "8+13−1=20.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq511",
+        "question": "4:16 :: 7:__?",
+        "options": [
+          "14",
+          "49",
+          "21",
+          "28"
+        ],
+        "answer": 1,
+        "explanation": "The second number is the square of the first.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq512",
+        "question": "Next pair: AZ,BY,CX,DW,__?",
+        "options": [
+          "EV",
+          "EU",
+          "FV",
+          "EX"
+        ],
+        "answer": 0,
+        "explanation": "First letters advance, second letters retreat.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq513",
+        "question": "Red, blue, green counters. Minimum draws to guarantee a pair of same colour?",
+        "options": [
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        "answer": 3,
+        "explanation": "First three could be one of each; fourth repeats.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq514",
+        "question": "Walk 5 east,5 north,5 west,2 south. Final position?",
+        "options": [
+          "3 m south",
+          "5 m north",
+          "3 m north",
+          "Start"
+        ],
+        "answer": 2,
+        "explanation": "East-west cancel; northward net is 3 m.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq515",
+        "question": "All Bloops are Razzies; all Razzies are Lazzies. Must be true?",
+        "options": [
+          "All Lazzies are Bloops",
+          "All Bloops are Lazzies",
+          "No Bloop is a Lazzy",
+          "Some Razzies are not Bloops"
+        ],
+        "answer": 1,
+        "explanation": "The subset relation is transitive.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq516",
+        "question": "3:8,5:12,7:16,9:__?",
+        "options": [
+          "20",
+          "18",
+          "19",
+          "22"
+        ],
+        "answer": 0,
+        "explanation": "Output equals twice input plus 2.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq517",
+        "question": "Reverse MAP then advance every letter one place. Code?",
+        "options": [
+          "NBQ",
+          "QBM",
+          "PBN",
+          "QBN"
+        ],
+        "answer": 3,
+        "explanation": "MAP→PAM→QBN.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq518",
+        "question": "Triangle,square,pentagon,hexagon,__?",
+        "options": [
+          "Octagon",
+          "Nonagon",
+          "Heptagon",
+          "Decagon"
+        ],
+        "answer": 2,
+        "explanation": "The number of sides rises by one.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq519",
+        "question": "P is Q's brother; Q is R's mother. P is R's:",
+        "options": [
+          "Father",
+          "Maternal uncle",
+          "Brother",
+          "Grandfather"
+        ],
+        "answer": 1,
+        "explanation": "He is the brother of R's mother.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq520",
+        "question": "Train 09:35 to 12:08. Duration?",
+        "options": [
+          "2 h 33 min",
+          "2 h 23 min",
+          "2 h 43 min",
+          "3 h 33 min"
+        ],
+        "answer": 0,
+        "explanation": "2 h 25 min to noon plus 8 minutes.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq521",
+        "question": "If A and R each have one enclosed region in block capitals, which count is shared?",
+        "options": [
+          "Zero",
+          "Two",
+          "Three",
+          "One"
+        ],
+        "answer": 3,
+        "explanation": "Both contain one enclosed space.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq522",
+        "question": "Odd number between 20 and 30 with digit sum 7?",
+        "options": [
+          "23",
+          "27",
+          "25",
+          "29"
+        ],
+        "answer": 2,
+        "explanation": "Only 25 fits.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq523",
+        "question": "If Jan 1 is Monday in a non-leap year, Feb 1 is:",
+        "options": [
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "answer": 1,
+        "explanation": "31 days later is 3 weekdays later.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq524",
+        "question": "All labels on Apples, Oranges, Mixed boxes are wrong. Which box to sample once?",
+        "options": [
+          "The box labelled Mixed",
+          "Apples",
+          "Oranges",
+          "Any box"
+        ],
+        "answer": 0,
+        "explanation": "It must contain only one fruit type, identifying the others by elimination.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq525",
+        "question": "A runner in 4th overtakes the 2nd runner. New position?",
+        "options": [
+          "First",
+          "Third",
+          "Fourth",
+          "Second"
+        ],
+        "answer": 3,
+        "explanation": "The runner takes the second runner's place.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq526",
+        "question": "Rows are 2,3,5; 4,6,10; 6,9,__ . Missing?",
+        "options": [
+          "12",
+          "14",
+          "15",
+          "18"
+        ],
+        "answer": 2,
+        "explanation": "Third entry is the sum of first two.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq527",
+        "question": "Alphabet-position code 19-21-14 spells:",
+        "options": [
+          "RUN",
+          "SUN",
+          "FUN",
+          "SON"
+        ],
+        "answer": 1,
+        "explanation": "19=S,21=U,14=N.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq528",
+        "question": "A 3×3×3 cube is painted outside and cut up. How many small cubes have exactly two painted faces?",
+        "options": [
+          "12",
+          "8",
+          "6",
+          "18"
+        ],
+        "answer": 0,
+        "explanation": "There are 12 edge-centre cubes.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq529",
+        "question": "Next number: 2,6,12,20,__?",
+        "options": [
+          "28",
+          "32",
+          "36",
+          "30"
+        ],
+        "answer": 3,
+        "explanation": "Terms follow n(n+1).",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq530",
+        "question": "SOUTH becomes TPVUI. NORTH becomes:",
+        "options": [
+          "OPSTI",
+          "MPSUI",
+          "OPSUI",
+          "OPRUI"
+        ],
+        "answer": 2,
+        "explanation": "Each letter advances one place.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq531",
+        "question": "A is north of B, C east of B, D south of C. D is ___ of B.",
+        "options": [
+          "North-east",
+          "South-east",
+          "South-west",
+          "North-west"
+        ],
+        "answer": 1,
+        "explanation": "D is east and south of B.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq532",
+        "question": "A sits immediately left of B; C immediately right of B. Who cannot be far right?",
+        "options": [
+          "B",
+          "A",
+          "C",
+          "E"
+        ],
+        "answer": 0,
+        "explanation": "C must immediately follow B.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq533",
+        "question": "A 31-day month begins Tuesday. Its last day is:",
+        "options": [
+          "Wednesday",
+          "Friday",
+          "Saturday",
+          "Thursday"
+        ],
+        "answer": 3,
+        "explanation": "The 31st is 30 days after day 1; 30 mod 7=2.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq534",
+        "question": "Read 2,5,8,11,14 backwards. Second number?",
+        "options": [
+          "8",
+          "14",
+          "11",
+          "5"
+        ],
+        "answer": 2,
+        "explanation": "Backwards:14,11,8,5,2.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq535",
+        "question": "A farmer has 17 sheep; all but 9 run away. Remain?",
+        "options": [
+          "8",
+          "9",
+          "17",
+          "26"
+        ],
+        "answer": 1,
+        "explanation": "All but 9 means 9 stay.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq536",
+        "question": "Yesterday was two days before Friday. Tomorrow is:",
+        "options": [
+          "Friday",
+          "Thursday",
+          "Saturday",
+          "Sunday"
+        ],
+        "answer": 0,
+        "explanation": "Yesterday was Wednesday; today Thursday.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq537",
+        "question": "Same rule as 2,4,8?",
+        "options": [
+          "3,5,8",
+          "4,8,10",
+          "5,10,15",
+          "3,6,12"
+        ],
+        "answer": 3,
+        "explanation": "Each term doubles.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq538",
+        "question": "Face south-west and turn 90° clockwise. Direction?",
+        "options": [
+          "South-east",
+          "North-east",
+          "North-west",
+          "West"
+        ],
+        "answer": 2,
+        "explanation": "A quarter-turn clockwise reaches northwest.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq539",
+        "question": "Opposite alphabet code A↔Z, B↔Y. BAD becomes:",
+        "options": [
+          "XZW",
+          "YZW",
+          "YZX",
+          "ZYW"
+        ],
+        "answer": 1,
+        "explanation": "B→Y, A→Z, D→W.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq540",
+        "question": "Apples:pears=3:5; 40 fruits. Pears?",
+        "options": [
+          "25",
+          "15",
+          "20",
+          "30"
+        ],
+        "answer": 0,
+        "explanation": "8 ratio parts equal 40; pears are 5 parts.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq541",
+        "question": "A 3×3 grid has how many 1×1 squares?",
+        "options": [
+          "6",
+          "8",
+          "12",
+          "9"
+        ],
+        "answer": 3,
+        "explanation": "Three rows times three columns.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq542",
+        "question": "100 days after Monday is:",
+        "options": [
+          "Tuesday",
+          "Thursday",
+          "Wednesday",
+          "Friday"
+        ],
+        "answer": 2,
+        "explanation": "100 mod 7=2.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq543",
+        "question": "Turns repeat left,right,right. 20th turn?",
+        "options": [
+          "Left",
+          "Right",
+          "Straight",
+          "Cannot tell"
+        ],
+        "answer": 1,
+        "explanation": "20 mod 3=2; second in the pattern is right.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq544",
+        "question": "M taller than K; K taller than L; N shorter than L. Second tallest?",
+        "options": [
+          "K",
+          "L",
+          "M",
+          "N"
+        ],
+        "answer": 0,
+        "explanation": "Order M>K>L>N.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq545",
+        "question": "Add 2 to each alphabet position. ACE becomes:",
+        "options": [
+          "1-3-5",
+          "2-4-6",
+          "4-6-8",
+          "3-5-7"
+        ],
+        "answer": 3,
+        "explanation": "A=1→3,C=3→5,E=5→7.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq546",
+        "question": "Facing pages sum to 61. Pages?",
+        "options": [
+          "29 and 32",
+          "28 and 33",
+          "30 and 31",
+          "31 and 32"
+        ],
+        "answer": 2,
+        "explanation": "Facing pages are consecutive.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq547",
+        "question": "Next: 4,9,19,39,79,__?",
+        "options": [
+          "149",
+          "159",
+          "157",
+          "161"
+        ],
+        "answer": 1,
+        "explanation": "Double and add one each time.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq548",
+        "question": "A painted 3×3×3 cube is cut into unit cubes. How many have no paint?",
+        "options": [
+          "1",
+          "0",
+          "4",
+          "8"
+        ],
+        "answer": 0,
+        "explanation": "Only the centre cube is unpainted.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq549",
+        "question": "Travel 3 km north, 4 km east, 3 km south. Distance from start?",
+        "options": [
+          "3 km",
+          "5 km",
+          "10 km",
+          "4 km"
+        ],
+        "answer": 3,
+        "explanation": "North and south cancel; 4 km east remains.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6imoq550",
+        "question": "64:8 :: 121:__?",
+        "options": [
+          "10",
+          "12",
+          "11",
+          "13"
+        ],
+        "answer": 2,
+        "explanation": "8 is √64; 11 is √121.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      }
+    ]
   }
 ]
