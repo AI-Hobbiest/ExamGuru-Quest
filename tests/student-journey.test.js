@@ -20,6 +20,7 @@ const database = {
   defaultIterations: iterations,
   accounts: [
     { username, studentId: "student-learner.demo", classId: "10", active: true, salt: salt.toString("base64"), passwordHash, iterations },
+    { username: "learner.second", studentId: "student-second-kid", classId: "6", active: true, salt: salt.toString("base64"), passwordHash, iterations },
     { username: "inactive.demo", classId: "9", active: false, salt: salt.toString("base64"), passwordHash, iterations }
   ]
 };
@@ -33,8 +34,10 @@ const familyDatabase = {
   ],
   parentStudentLinks: [
     { parentId: "parent-a", studentId: "student-learner.demo", active: true },
+    { parentId: "parent-a", studentId: "student-second-kid", active: true },
     { parentId: "parent-a", studentId: "student-inactive.demo", active: true },
-    { parentId: "parent-b", studentId: "student-learner.demo", active: true }
+    { parentId: "parent-b", studentId: "student-learner.demo", active: true },
+    { parentId: "parent-b", studentId: "student-second-kid", active: true }
   ]
 };
 const sessionValues = new Map();
@@ -77,13 +80,13 @@ const auth = context.window.C10StudentAuth;
   assert.equal(parentLogin.account.role, "parent", "parent account signs in with a distinct parent role");
   assert.equal(parentLogin.account.parentId, "parent-a", "parent session has a stable parent ID");
   const linked = await auth.getLinkedChildren();
-  assert.deepEqual(JSON.parse(JSON.stringify(linked.map(item => item.studentId))), ["student-learner.demo"],
-    "parent sees only active linked student accounts");
+  assert.deepEqual(JSON.parse(JSON.stringify(linked.map(item => item.studentId))), ["student-learner.demo","student-second-kid"],
+    "one parent can see multiple active linked students, excluding inactive students");
   auth.logout();
   const secondParentLogin = await auth.login("parent.second", parentPassword);
   assert.equal(secondParentLogin.account.role, "parent");
-  assert.deepEqual(JSON.parse(JSON.stringify((await auth.getLinkedChildren()).map(item => item.studentId))), ["student-learner.demo"],
-    "the same student may be linked to multiple parents");
+  assert.deepEqual(JSON.parse(JSON.stringify((await auth.getLinkedChildren()).map(item => item.studentId))), ["student-learner.demo","student-second-kid"],
+    "two parents can both be linked to the same two children");
   auth.logout();
   console.log("Student and Family journey checks passed: student sign-in, PBKDF2 verification, stable student ID, session restore, wrong-password and inactive-account rejection, parent sign-in, parent role, linked-child filtering, many-to-many access and sign-out. Quiz completion, refresh recovery and result persistence are covered by quiz-engine.test.js.");
 })().catch(error => { console.error(error); process.exitCode = 1; });
