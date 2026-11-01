@@ -6373,658 +6373,709 @@
   },
   {
     "chapter_no": 10,
-    "title": "Everyday Mathematics",
-    "key": "sof-imo-everyday-mathematics",
+    "title": "The Other Side of Zero",
+    "key": "sof-imo-the-other-side-of-zero",
+    "section": "IMO Syllabus Topic",
     "questions": [
       {
-        "id": "c6imoq010",
-        "question": "A child buys 3 pens at ₹10 each and pays ₹50. How much change is due?",
+        "id": "c6imoq451",
+        "question": "Which integer is 5 units left of −2 on a number line?",
         "options": [
-          "₹25",
-          "₹30",
-          "₹20",
-          "₹40"
+          "−3",
+          "3",
+          "7",
+          "−7"
+        ],
+        "answer": 3,
+        "explanation": "−2−5=−7.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq452",
+        "question": "Which is the greatest integer?",
+        "options": [
+          "−8",
+          "−5",
+          "−3",
+          "−11"
         ],
         "answer": 2,
-        "explanation": "Cost = 3 × ₹10 = ₹30; change = ₹50 − ₹30 = ₹20.",
-        "difficulty": "Medium"
+        "explanation": "The negative integer nearest zero is greatest.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq020",
-        "question": "A child buys 4 pens at ₹12 each and pays ₹68. How much change is due?",
+        "id": "c6imoq453",
+        "question": "Temperature rises from −6°C to 4°C. How many degrees did it rise?",
         "options": [
-          "₹20",
-          "₹25",
-          "₹48",
-          "₹56"
+          "2°C",
+          "10°C",
+          "8°C",
+          "12°C"
+        ],
+        "answer": 1,
+        "explanation": "4−(−6)=10.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq454",
+        "question": "Evaluate −7+12.",
+        "options": [
+          "5",
+          "−5",
+          "19",
+          "−19"
         ],
         "answer": 0,
-        "explanation": "Cost = 4 × ₹12 = ₹48; change = ₹68 − ₹48 = ₹20.",
-        "difficulty": "Medium"
+        "explanation": "Moving 12 units right from −7 reaches 5.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq030",
-        "question": "A child buys 5 pens at ₹14 each and pays ₹90. How much change is due?",
+        "id": "c6imoq455",
+        "question": "Which comparison is true?",
         "options": [
-          "₹25",
-          "₹70",
-          "₹20",
-          "₹76"
+          "−9 > −4",
+          "−9 = −4",
+          "−4 < −12",
+          "−9 < −4"
+        ],
+        "answer": 3,
+        "explanation": "−9 lies to the left of −4.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq456",
+        "question": "A diver is 18 m below sea level and rises 7 m. New position?",
+        "options": [
+          "−25 m",
+          "11 m",
+          "−11 m",
+          "−7 m"
         ],
         "answer": 2,
-        "explanation": "Cost = 5 × ₹14 = ₹70; change = ₹90 − ₹70 = ₹20.",
-        "difficulty": "Medium"
+        "explanation": "−18+7=−11.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq040",
-        "question": "A child buys 6 pens at ₹16 each and pays ₹116. How much change is due?",
+        "id": "c6imoq457",
+        "question": "Find −15−(−8).",
         "options": [
-          "₹20",
-          "₹25",
-          "₹96",
-          "₹100"
+          "−23",
+          "−7",
+          "7",
+          "−3"
+        ],
+        "answer": 1,
+        "explanation": "Subtracting a negative gives −15+8=−7.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq458",
+        "question": "A lift starts at floor −2, rises 8 floors, then descends 5. Where does it finish?",
+        "options": [
+          "Floor 1",
+          "Floor −1",
+          "Floor 3",
+          "Floor 5"
         ],
         "answer": 0,
-        "explanation": "Cost = 6 × ₹16 = ₹96; change = ₹116 − ₹96 = ₹20.",
-        "difficulty": "Medium"
+        "explanation": "−2+8−5=1.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq050",
-        "question": "A child buys 7 pens at ₹18 each and pays ₹146. How much change is due?",
+        "id": "c6imoq459",
+        "question": "Which pair sums to zero?",
         "options": [
-          "₹25",
-          "₹126",
-          "₹20",
-          "₹128"
+          "−13 and 0",
+          "−13 and 12",
+          "13 and 13",
+          "−13 and 13"
+        ],
+        "answer": 3,
+        "explanation": "A number and its additive inverse sum to zero.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq460",
+        "question": "Evaluate (−4)×(−6).",
+        "options": [
+          "−24",
+          "10",
+          "24",
+          "−10"
         ],
         "answer": 2,
-        "explanation": "Cost = 7 × ₹18 = ₹126; change = ₹146 − ₹126 = ₹20.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq060",
-        "question": "A child buys 3 pens at ₹20 each and pays ₹80. How much change is due?",
-        "options": [
-          "₹20",
-          "₹25",
-          "₹60",
-          "NaN"
-        ],
-        "answer": 0,
-        "explanation": "Cost = 3 × ₹20 = ₹60; change = ₹80 − ₹60 = ₹20.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq070",
-        "question": "A child buys 4 pens at ₹22 each and pays ₹108. How much change is due?",
-        "options": [
-          "₹25",
-          "₹88",
-          "₹20",
-          "₹86"
-        ],
-        "answer": 2,
-        "explanation": "Cost = 4 × ₹22 = ₹88; change = ₹108 − ₹88 = ₹20.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq080",
-        "question": "A child buys 5 pens at ₹24 each and pays ₹140. How much change is due?",
-        "options": [
-          "₹20",
-          "₹25",
-          "₹120",
-          "₹116"
-        ],
-        "answer": 0,
-        "explanation": "Cost = 5 × ₹24 = ₹120; change = ₹140 − ₹120 = ₹20.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq090",
-        "question": "A child buys 6 pens at ₹26 each and pays ₹176. How much change is due?",
-        "options": [
-          "₹25",
-          "₹156",
-          "₹20",
-          "₹150"
-        ],
-        "answer": 2,
-        "explanation": "Cost = 6 × ₹26 = ₹156; change = ₹176 − ₹156 = ₹20.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq100",
-        "question": "A child buys 7 pens at ₹28 each and pays ₹216. How much change is due?",
-        "options": [
-          "₹20",
-          "₹25",
-          "₹196",
-          "₹188"
-        ],
-        "answer": 0,
-        "explanation": "Cost = 7 × ₹28 = ₹196; change = ₹216 − ₹196 = ₹20.",
-        "difficulty": "Medium"
+        "explanation": "The product of two negative numbers is positive.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq461",
-        "question": "Convert 13 kg into grams.",
+        "question": "A freezer at −3°C cools by 8°C. New temperature?",
         "options": [
-          "1300",
-          "130",
-          "130000",
-          "13000"
+          "5°C",
+          "−11°C",
+          "−5°C",
+          "11°C"
         ],
-        "answer": 3,
-        "explanation": "1 kg = 1,000 g, so 13 kg = 13000 g.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "−3−8=−11.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq462",
-        "question": "A ticket costs AED 14. What is the cost of 6 tickets?",
+        "question": "Arrange −2,−9,0,−5 in ascending order.",
         "options": [
-          "98",
-          "70",
-          "84",
-          "20"
+          "−9, −5, −2, 0",
+          "−9, −2, −5, 0",
+          "0, −2, −5, −9",
+          "−5, −9, −2, 0"
         ],
-        "answer": 2,
-        "explanation": "Total cost = AED 14 × 6 = AED 84.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "More negative integers are smaller.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq463",
-        "question": "Convert 15 kg into grams.",
+        "question": "A submarine at −40 m rises 15 m then descends 9 m. Final depth?",
         "options": [
-          "150000",
-          "15000",
-          "1500",
-          "150"
+          "−64 m",
+          "−46 m",
+          "−16 m",
+          "−34 m"
         ],
-        "answer": 1,
-        "explanation": "1 kg = 1,000 g, so 15 kg = 15000 g.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "−40+15−9=−34.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq464",
-        "question": "A ticket costs AED 16. What is the cost of 8 tickets?",
+        "question": "Find the distance between −7 and 5 on a number line.",
         "options": [
-          "128",
-          "24",
-          "144",
-          "112"
+          "2",
+          "10",
+          "12",
+          "−12"
         ],
-        "answer": 0,
-        "explanation": "Total cost = AED 16 × 8 = AED 128.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "|5−(−7)|=12.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq465",
-        "question": "Convert 17 kg into grams.",
+        "question": "Evaluate −18÷3.",
         "options": [
-          "1700",
-          "170",
-          "170000",
-          "17000"
+          "6",
+          "−6",
+          "−15",
+          "15"
         ],
-        "answer": 3,
-        "explanation": "1 kg = 1,000 g, so 17 kg = 17000 g.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "A negative divided by a positive is negative.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq466",
-        "question": "A ticket costs AED 18. What is the cost of 10 tickets?",
+        "question": "An account is −₹250. A deposit of ₹400 is made. New balance?",
         "options": [
-          "198",
-          "162",
-          "180",
-          "28"
+          "₹150",
+          "−₹650",
+          "−₹150",
+          "₹650"
         ],
-        "answer": 2,
-        "explanation": "Total cost = AED 18 × 10 = AED 180.",
-        "difficulty": "Hard"
+        "answer": 0,
+        "explanation": "−250+400=150.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq467",
-        "question": "Convert 19 kg into grams.",
+        "question": "Which expression has the smallest value?",
         "options": [
-          "190000",
-          "19000",
-          "1900",
-          "190"
+          "−8+5",
+          "5−8",
+          "−8×0",
+          "−8−5"
         ],
-        "answer": 1,
-        "explanation": "1 kg = 1,000 g, so 19 kg = 19000 g.",
-        "difficulty": "Easy"
+        "answer": 3,
+        "explanation": "The values are −13,−3,−3,0.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq468",
-        "question": "A ticket costs AED 20. What is the cost of 12 tickets?",
+        "question": "Point A is −6 and B is 4. Find their midpoint coordinate.",
         "options": [
-          "240",
-          "32",
-          "260",
-          "220"
+          "−2",
+          "0",
+          "−1",
+          "1"
         ],
-        "answer": 0,
-        "explanation": "Total cost = AED 20 × 12 = AED 240.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "(−6+4)÷2=−1.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq469",
-        "question": "Convert 21 kg into grams.",
+        "question": "A city is 12°C below zero; it warms 7°C then 9°C. Final temperature?",
         "options": [
-          "2100",
-          "210",
-          "210000",
-          "21000"
+          "−2°C",
+          "4°C",
+          "2°C",
+          "8°C"
         ],
-        "answer": 3,
-        "explanation": "1 kg = 1,000 g, so 21 kg = 21000 g.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "−12+7+9=4.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq470",
-        "question": "A ticket costs AED 22. What is the cost of 5 tickets?",
+        "question": "Evaluate 6−(−9)+(−4).",
         "options": [
-          "132",
-          "88",
-          "110",
-          "27"
+          "11",
+          "1",
+          "−7",
+          "19"
         ],
-        "answer": 2,
-        "explanation": "Total cost = AED 22 × 5 = AED 110.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "6+9−4=11.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq471",
-        "question": "Convert 23 kg into grams.",
+        "question": "Three integers multiply to a negative number. How many could be negative?",
         "options": [
-          "230000",
-          "23000",
-          "2300",
-          "230"
+          "Only 2",
+          "Exactly 2",
+          "None",
+          "1 or 3"
         ],
-        "answer": 1,
-        "explanation": "1 kg = 1,000 g, so 23 kg = 23000 g.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "An odd number of negative factors gives a negative product.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq472",
-        "question": "A ticket costs AED 24. What is the cost of 7 tickets?",
+        "question": "A hiker is at 250 m and descends 430 m. New elevation?",
         "options": [
-          "168",
-          "31",
-          "192",
-          "144"
+          "180 m",
+          "−680 m",
+          "−180 m",
+          "680 m"
         ],
-        "answer": 0,
-        "explanation": "Total cost = AED 24 × 7 = AED 168.",
-        "difficulty": "Hard"
+        "answer": 2,
+        "explanation": "250−430=−180.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq473",
-        "question": "Convert 25 kg into grams.",
+        "question": "Find the integer 4 less than the additive inverse of −9.",
         "options": [
-          "2500",
-          "250",
-          "250000",
-          "25000"
+          "−5",
+          "5",
+          "13",
+          "−13"
         ],
-        "answer": 3,
-        "explanation": "1 kg = 1,000 g, so 25 kg = 25000 g.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "The additive inverse is 9; 9−4=5.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq474",
-        "question": "A ticket costs AED 26. What is the cost of 9 tickets?",
+        "question": "Evaluate −3×5+4×(−2).",
         "options": [
-          "260",
-          "208",
-          "234",
-          "35"
+          "−23",
+          "−7",
+          "7",
+          "23"
         ],
-        "answer": 2,
-        "explanation": "Total cost = AED 26 × 9 = AED 234.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "−15−8=−23.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq475",
-        "question": "Convert 27 kg into grams.",
+        "question": "A freezer at −18°C warms 5°C then cools 12°C. Final temperature?",
         "options": [
-          "270000",
-          "27000",
-          "2700",
-          "270"
+          "−15°C",
+          "−21°C",
+          "−31°C",
+          "−25°C"
         ],
-        "answer": 1,
-        "explanation": "1 kg = 1,000 g, so 27 kg = 27000 g.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "−18+5−12=−25.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq476",
-        "question": "A ticket costs AED 28. What is the cost of 11 tickets?",
+        "question": "What is the absolute value of −27?",
         "options": [
-          "308",
-          "39",
-          "336",
-          "280"
+          "−27",
+          "0",
+          "27",
+          "−1"
         ],
-        "answer": 0,
-        "explanation": "Total cost = AED 28 × 11 = AED 308.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "Absolute value is distance from zero.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq477",
-        "question": "Convert 29 kg into grams.",
+        "question": "The difference between two integers is 9. The smaller is −4. Find the larger.",
         "options": [
-          "2900",
-          "290",
-          "290000",
-          "29000"
+          "−13",
+          "5",
+          "−5",
+          "13"
         ],
-        "answer": 3,
-        "explanation": "1 kg = 1,000 g, so 29 kg = 29000 g.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "x−(−4)=9, so x=5.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq478",
-        "question": "A ticket costs AED 30. What is the cost of 13 tickets?",
+        "question": "A number is 6 units from zero and lies left of −2. Which is it?",
         "options": [
-          "420",
-          "360",
-          "390",
-          "43"
+          "−6",
+          "6",
+          "−2",
+          "−8"
         ],
-        "answer": 2,
-        "explanation": "Total cost = AED 30 × 13 = AED 390.",
-        "difficulty": "Hard"
+        "answer": 0,
+        "explanation": "Only −6 is 6 units from zero and left of −2.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq479",
-        "question": "Convert 31 kg into grams.",
+        "question": "Evaluate −36÷(−4)−13.",
         "options": [
-          "310000",
-          "31000",
-          "3100",
-          "310"
+          "−22",
+          "4",
+          "22",
+          "−4"
         ],
-        "answer": 1,
-        "explanation": "1 kg = 1,000 g, so 31 kg = 31000 g.",
-        "difficulty": "Easy"
+        "answer": 3,
+        "explanation": "9−13=−4.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq480",
-        "question": "A ticket costs AED 32. What is the cost of 6 tickets?",
+        "question": "A lift starts at −3, goes up 7, down 4, then up 2. Final floor?",
         "options": [
-          "192",
-          "38",
-          "224",
-          "160"
+          "−2",
+          "0",
+          "2",
+          "4"
         ],
-        "answer": 0,
-        "explanation": "Total cost = AED 32 × 6 = AED 192.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "−3+7−4+2=2.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq481",
-        "question": "Convert 33 kg into grams.",
+        "question": "Which comparison is correct?",
         "options": [
-          "3300",
-          "330",
-          "330000",
-          "33000"
+          "−2.5 > −2",
+          "−2.5 < −2",
+          "−2.5 = −2",
+          "−2 < −3"
         ],
-        "answer": 3,
-        "explanation": "1 kg = 1,000 g, so 33 kg = 33000 g.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "−2.5 is farther left than −2.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq482",
-        "question": "A ticket costs AED 34. What is the cost of 8 tickets?",
+        "question": "Three consecutive integers sum to −24. Find the middle.",
         "options": [
-          "306",
-          "238",
-          "272",
-          "42"
+          "−8",
+          "−9",
+          "−7",
+          "−6"
         ],
-        "answer": 2,
-        "explanation": "Total cost = AED 34 × 8 = AED 272.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "The middle is their mean: −24÷3=−8.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq483",
-        "question": "Convert 35 kg into grams.",
+        "question": "Temperature changes by −4,+9,−6,+3°C. Net change?",
         "options": [
-          "350000",
-          "35000",
-          "3500",
-          "350"
+          "−2°C",
+          "+4°C",
+          "−4°C",
+          "+2°C"
         ],
-        "answer": 1,
-        "explanation": "1 kg = 1,000 g, so 35 kg = 35000 g.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "−4+9−6+3=2.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq484",
-        "question": "A ticket costs AED 36. What is the cost of 10 tickets?",
+        "question": "A player loses 12 points, gains 18, then loses 9. Final score change?",
         "options": [
-          "360",
-          "46",
-          "396",
-          "324"
+          "+3",
+          "−39",
+          "−3",
+          "+9"
         ],
-        "answer": 0,
-        "explanation": "Total cost = AED 36 × 10 = AED 360.",
-        "difficulty": "Hard"
+        "answer": 2,
+        "explanation": "−12+18−9=−3.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq485",
-        "question": "Convert 37 kg into grams.",
+        "question": "Which expression equals zero?",
         "options": [
-          "3700",
-          "370",
-          "370000",
-          "37000"
+          "−14−6+8",
+          "−14+6+8",
+          "14−6−8",
+          "−14+6−7"
         ],
-        "answer": 3,
-        "explanation": "1 kg = 1,000 g, so 37 kg = 37000 g.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "−14+6+8=0.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq486",
-        "question": "A ticket costs AED 38. What is the cost of 12 tickets?",
+        "question": "Start at −5 and move 7 steps right, each step 2 units. Where do you land?",
         "options": [
-          "494",
-          "418",
-          "456",
-          "50"
+          "9",
+          "7",
+          "−9",
+          "11"
         ],
-        "answer": 2,
-        "explanation": "Total cost = AED 38 × 12 = AED 456.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "−5+14=9.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq487",
-        "question": "Convert 39 kg into grams.",
+        "question": "Which division gives −7?",
         "options": [
-          "390000",
-          "39000",
-          "3900",
-          "390"
+          "−56÷(−8)",
+          "56÷(−8)",
+          "49÷(−7)",
+          "−56÷8"
         ],
-        "answer": 1,
-        "explanation": "1 kg = 1,000 g, so 39 kg = 39000 g.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "−56÷8=−7; other negative quotients evaluate to 7 or −8.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq488",
-        "question": "A ticket costs AED 40. What is the cost of 5 tickets?",
+        "question": "A reading is 35°C below freezing. What signed value represents it?",
         "options": [
-          "200",
-          "45",
-          "240",
-          "160"
+          "35°C",
+          "0°C",
+          "−35°C",
+          "−70°C"
         ],
-        "answer": 0,
-        "explanation": "Total cost = AED 40 × 5 = AED 200.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "Below zero is negative.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq489",
-        "question": "Convert 41 kg into grams.",
+        "question": "Evaluate −5−[3−(−4)].",
         "options": [
-          "4100",
-          "410",
-          "410000",
-          "41000"
+          "−2",
+          "−12",
+          "2",
+          "12"
         ],
-        "answer": 3,
-        "explanation": "1 kg = 1,000 g, so 41 kg = 41000 g.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "Inside bracket is 7; −5−7=−12.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq490",
-        "question": "A ticket costs AED 42. What is the cost of 7 tickets?",
+        "question": "Two integers sum to −3 and their difference is 11. Find the greater integer.",
         "options": [
-          "336",
-          "252",
-          "294",
-          "49"
+          "4",
+          "−7",
+          "7",
+          "8"
         ],
-        "answer": 2,
-        "explanation": "Total cost = AED 42 × 7 = AED 294.",
-        "difficulty": "Hard"
+        "answer": 0,
+        "explanation": "a+b=−3 and a−b=11; adding gives 2a=8.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq491",
-        "question": "Convert 43 kg into grams.",
+        "question": "A balance changes from −₹75 to +₹125. What is the total change?",
         "options": [
-          "430000",
-          "43000",
-          "4300",
-          "430"
+          "₹50",
+          "₹125",
+          "₹150",
+          "₹200"
         ],
-        "answer": 1,
-        "explanation": "1 kg = 1,000 g, so 43 kg = 43000 g.",
-        "difficulty": "Easy"
+        "answer": 3,
+        "explanation": "125−(−75)=200.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq492",
-        "question": "A ticket costs AED 44. What is the cost of 9 tickets?",
+        "question": "Which is farther from zero: −19 or 16?",
         "options": [
-          "396",
-          "53",
-          "440",
-          "352"
+          "16",
+          "They are equally far",
+          "−19",
+          "Cannot compare"
         ],
-        "answer": 0,
-        "explanation": "Total cost = AED 44 × 9 = AED 396.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "Their distances are 19 and 16.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq493",
-        "question": "Convert 45 kg into grams.",
+        "question": "Evaluate (−2)³+3².",
         "options": [
-          "4500",
-          "450",
-          "450000",
-          "45000"
+          "−17",
+          "1",
+          "17",
+          "−1"
         ],
-        "answer": 3,
-        "explanation": "1 kg = 1,000 g, so 45 kg = 45000 g.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "−8+9=1.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq494",
-        "question": "A ticket costs AED 46. What is the cost of 11 tickets?",
+        "question": "A submarine at −120 m rises to −45 m, then dives 70 m. Final position?",
         "options": [
-          "552",
-          "460",
-          "506",
-          "57"
+          "−115 m",
+          "−95 m",
+          "−25 m",
+          "−235 m"
         ],
-        "answer": 2,
-        "explanation": "Total cost = AED 46 × 11 = AED 506.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "−120+75−70=−115.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq495",
-        "question": "Convert 47 kg into grams.",
+        "question": "Temperature at midnight is −4°C. By 6 a.m. it is three times as far below zero. What is it?",
         "options": [
-          "470000",
-          "47000",
-          "4700",
-          "470"
+          "12°C",
+          "−7°C",
+          "−1°C",
+          "−12°C"
         ],
-        "answer": 1,
-        "explanation": "1 kg = 1,000 g, so 47 kg = 47000 g.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "Three times −4 is −12.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq496",
-        "question": "A ticket costs AED 48. What is the cost of 13 tickets?",
+        "question": "Two integers have product 48 and sum −14. Which pair?",
         "options": [
-          "624",
-          "61",
-          "672",
-          "576"
+          "6 and 8",
+          "−4 and −12",
+          "−6 and −8",
+          "−3 and −16"
         ],
-        "answer": 0,
-        "explanation": "Total cost = AED 48 × 13 = AED 624.",
-        "difficulty": "Hard"
+        "answer": 2,
+        "explanation": "−6×−8=48 and their sum is −14.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq497",
-        "question": "Convert 49 kg into grams.",
+        "question": "Starting at −8, what integer must be added to reach −21?",
         "options": [
-          "4900",
-          "490",
-          "490000",
-          "49000"
+          "13",
+          "−13",
+          "−29",
+          "29"
         ],
-        "answer": 3,
-        "explanation": "1 kg = 1,000 g, so 49 kg = 49000 g.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "−8+x=−21 gives x=−13.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq498",
-        "question": "A ticket costs AED 50. What is the cost of 6 tickets?",
+        "question": "Find the difference between the greatest and smallest of −12,5,−3,−17.",
         "options": [
-          "350",
-          "250",
-          "300",
-          "56"
+          "22",
+          "14",
+          "19",
+          "24"
         ],
-        "answer": 2,
-        "explanation": "Total cost = AED 50 × 6 = AED 300.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "5−(−17)=22.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq499",
-        "question": "Convert 51 kg into grams.",
+        "question": "A number line shows A at −7 and B at 5. Which integer is exactly halfway?",
         "options": [
-          "510000",
-          "51000",
-          "5100",
-          "510"
+          "−2",
+          "0",
+          "1",
+          "−1"
         ],
-        "answer": 1,
-        "explanation": "1 kg = 1,000 g, so 51 kg = 51000 g.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "(−7+5)÷2=−1.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq500",
-        "question": "A ticket costs AED 52. What is the cost of 8 tickets?",
+        "question": "The product of two integers is −72. One is 9. Find the other.",
         "options": [
-          "416",
-          "60",
-          "468",
-          "364"
+          "8",
+          "−9",
+          "−8",
+          "−7"
         ],
-        "answer": 0,
-        "explanation": "Total cost = AED 52 × 8 = AED 416.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "−72÷9=−8.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   }
