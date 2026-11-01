@@ -1417,658 +1417,709 @@
   },
   {
     "chapter_no": 3,
-    "title": "Factors and Multiples",
-    "key": "sof-imo-factors-and-multiples",
+    "title": "Number Play",
+    "key": "sof-imo-number-play",
+    "section": "IMO Syllabus Topic",
     "questions": [
       {
-        "id": "c6imoq003",
-        "question": "What is the greatest common factor of 12 and 18?",
+        "id": "c6imoq101",
+        "question": "What is the value of 7 in 5,372,418?",
         "options": [
-          "6",
-          "7",
-          "5",
-          "8"
-        ],
-        "answer": 0,
-        "explanation": "The greatest common factor of 12 and 18 is 6.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq013",
-        "question": "What is the greatest common factor of 14 and 21?",
-        "options": [
-          "8",
-          "6",
-          "7",
-          "9"
+          "7,000",
+          "700,000",
+          "70,000",
+          "700"
         ],
         "answer": 2,
-        "explanation": "The greatest common factor of 14 and 21 is 7.",
-        "difficulty": "Medium"
+        "explanation": "The digit 7 is in the ten-thousands place.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq023",
-        "question": "What is the greatest common factor of 16 and 24?",
+        "id": "c6imoq102",
+        "question": "Using 2,0,5,8,1 once each, form the greatest five-digit number.",
         "options": [
-          "8",
-          "9",
-          "7",
-          "10"
-        ],
-        "answer": 0,
-        "explanation": "The greatest common factor of 16 and 24 is 8.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq033",
-        "question": "What is the greatest common factor of 18 and 27?",
-        "options": [
-          "10",
-          "8",
-          "9",
-          "11"
-        ],
-        "answer": 2,
-        "explanation": "The greatest common factor of 18 and 27 is 9.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq043",
-        "question": "What is the greatest common factor of 20 and 30?",
-        "options": [
-          "10",
-          "11",
-          "9",
-          "12"
-        ],
-        "answer": 0,
-        "explanation": "The greatest common factor of 20 and 30 is 10.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq053",
-        "question": "What is the greatest common factor of 22 and 33?",
-        "options": [
-          "12",
-          "10",
-          "11",
-          "13"
-        ],
-        "answer": 2,
-        "explanation": "The greatest common factor of 22 and 33 is 11.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq063",
-        "question": "What is the greatest common factor of 24 and 36?",
-        "options": [
-          "12",
-          "13",
-          "11",
-          "14"
-        ],
-        "answer": 0,
-        "explanation": "The greatest common factor of 24 and 36 is 12.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq073",
-        "question": "What is the greatest common factor of 26 and 39?",
-        "options": [
-          "14",
-          "12",
-          "13",
-          "15"
-        ],
-        "answer": 2,
-        "explanation": "The greatest common factor of 26 and 39 is 13.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq083",
-        "question": "What is the greatest common factor of 28 and 42?",
-        "options": [
-          "14",
-          "15",
-          "13",
-          "16"
-        ],
-        "answer": 0,
-        "explanation": "The greatest common factor of 28 and 42 is 14.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq093",
-        "question": "What is the greatest common factor of 30 and 45?",
-        "options": [
-          "16",
-          "14",
-          "15",
-          "17"
-        ],
-        "answer": 2,
-        "explanation": "The greatest common factor of 30 and 45 is 15.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq181",
-        "question": "Find the HCF of 32 and 12.",
-        "options": [
-          "12",
-          "3",
-          "6",
-          "4"
-        ],
-        "answer": 3,
-        "explanation": "The greatest common factor of 32 and 12 is 4.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq182",
-        "question": "Find the LCM of 17 and 7.",
-        "options": [
-          "126",
-          "132",
-          "119",
-          "7"
-        ],
-        "answer": 2,
-        "explanation": "The least common multiple of 17 and 7 is 119.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq183",
-        "question": "Find the HCF of 36 and 16.",
-        "options": [
-          "6",
-          "4",
-          "16",
-          "3"
+          "85,201",
+          "85,210",
+          "82,510",
+          "81,520"
         ],
         "answer": 1,
-        "explanation": "The greatest common factor of 36 and 16 is 4.",
-        "difficulty": "Medium"
+        "explanation": "Put non-zero digits in descending order, then zero.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq184",
-        "question": "Find the LCM of 19 and 9.",
+        "id": "c6imoq103",
+        "question": "Which number rounds to 4,700 to the nearest hundred?",
         "options": [
-          "171",
-          "9",
-          "180",
-          "184"
+          "4,749",
+          "4,650",
+          "4,751",
+          "4,799"
         ],
         "answer": 0,
-        "explanation": "The least common multiple of 19 and 9 is 171.",
-        "difficulty": "Medium"
+        "explanation": "4,749 is the largest value that rounds down to 4,700.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq185",
-        "question": "Find the HCF of 40 and 20.",
+        "id": "c6imoq104",
+        "question": "Find the difference between 9,631 and 1,369.",
         "options": [
-          "11",
-          "22",
-          "33",
-          "20"
+          "8,361",
+          "8,691",
+          "7,962",
+          "8,262"
         ],
         "answer": 3,
-        "explanation": "The greatest common factor of 40 and 20 is 20.",
-        "difficulty": "Medium"
+        "explanation": "9,631−1,369=8,262.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq186",
-        "question": "Find the LCM of 21 and 11.",
+        "id": "c6imoq105",
+        "question": "A three-digit number has digit sum 15, its tens digit is twice its hundreds digit, and its units digit is 3. Find it.",
         "options": [
-          "242",
-          "244",
-          "231",
-          "11"
+          "573",
+          "753",
+          "483",
+          "633"
         ],
         "answer": 2,
-        "explanation": "The least common multiple of 21 and 11 is 231.",
-        "difficulty": "Hard"
+        "explanation": "h+2h+3=15 gives h=4; the digits are 4,8,3.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq187",
-        "question": "Find the HCF of 44 and 24.",
+        "id": "c6imoq106",
+        "question": "Which number is divisible by both 3 and 5?",
         "options": [
-          "6",
-          "4",
-          "24",
-          "3"
+          "4,212",
+          "4,215",
+          "4,218",
+          "4,221"
         ],
         "answer": 1,
-        "explanation": "The greatest common factor of 44 and 24 is 4.",
-        "difficulty": "Easy"
+        "explanation": "It ends in 5 and its digit sum 12 is divisible by 3.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq188",
-        "question": "Find the LCM of 23 and 13.",
+        "id": "c6imoq107",
+        "question": "A school has 18 boxes with 24 pencils each. How many pencils?",
         "options": [
-          "299",
-          "13",
-          "312",
-          "325"
-        ],
-        "answer": 0,
-        "explanation": "The least common multiple of 23 and 13 is 299.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq189",
-        "question": "Find the HCF of 48 and 28.",
-        "options": [
-          "28",
-          "3",
-          "6",
-          "4"
-        ],
-        "answer": 3,
-        "explanation": "The greatest common factor of 48 and 28 is 4.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq190",
-        "question": "Find the LCM of 25 and 6.",
-        "options": [
-          "156",
-          "163",
-          "150",
-          "6"
-        ],
-        "answer": 2,
-        "explanation": "The least common multiple of 25 and 6 is 150.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq191",
-        "question": "Find the HCF of 52 and 14.",
-        "options": [
-          "15",
-          "2",
-          "14",
-          "4"
-        ],
-        "answer": 1,
-        "explanation": "The greatest common factor of 52 and 14 is 2.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq192",
-        "question": "Find the LCM of 27 and 8.",
-        "options": [
-          "216",
-          "8",
-          "224",
-          "229"
-        ],
-        "answer": 0,
-        "explanation": "The least common multiple of 27 and 8 is 216.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq193",
-        "question": "Find the HCF of 56 and 18.",
-        "options": [
-          "18",
-          "4",
-          "15",
-          "2"
-        ],
-        "answer": 3,
-        "explanation": "The greatest common factor of 56 and 18 is 2.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq194",
-        "question": "Find the LCM of 29 and 10.",
-        "options": [
-          "300",
-          "303",
-          "290",
-          "10"
-        ],
-        "answer": 2,
-        "explanation": "The least common multiple of 29 and 10 is 290.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq195",
-        "question": "Find the HCF of 60 and 22.",
-        "options": [
-          "15",
-          "2",
-          "22",
-          "4"
-        ],
-        "answer": 1,
-        "explanation": "The greatest common factor of 60 and 22 is 2.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq196",
-        "question": "Find the LCM of 31 and 12.",
-        "options": [
-          "372",
-          "12",
-          "384",
-          "385"
-        ],
-        "answer": 0,
-        "explanation": "The least common multiple of 31 and 12 is 372.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq197",
-        "question": "Find the HCF of 64 and 26.",
-        "options": [
-          "26",
-          "4",
-          "15",
-          "2"
-        ],
-        "answer": 3,
-        "explanation": "The greatest common factor of 64 and 26 is 2.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq198",
-        "question": "Find the LCM of 33 and 14.",
-        "options": [
-          "476",
-          "475",
-          "462",
-          "14"
-        ],
-        "answer": 2,
-        "explanation": "The least common multiple of 33 and 14 is 462.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq199",
-        "question": "Find the HCF of 68 and 12.",
-        "options": [
-          "6",
-          "4",
-          "12",
-          "3"
-        ],
-        "answer": 1,
-        "explanation": "The greatest common factor of 68 and 12 is 4.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq200",
-        "question": "Find the LCM of 35 and 7.",
-        "options": [
-          "35",
-          "245",
-          "7",
-          "42"
-        ],
-        "answer": 0,
-        "explanation": "The least common multiple of 35 and 7 is 35.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq201",
-        "question": "Find the HCF of 72 and 16.",
-        "options": [
-          "16",
-          "5",
-          "10",
-          "8"
-        ],
-        "answer": 3,
-        "explanation": "The greatest common factor of 72 and 16 is 8.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq202",
-        "question": "Find the LCM of 37 and 9.",
-        "options": [
-          "342",
-          "346",
-          "333",
-          "9"
-        ],
-        "answer": 2,
-        "explanation": "The least common multiple of 37 and 9 is 333.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq203",
-        "question": "Find the HCF of 76 and 20.",
-        "options": [
-          "6",
-          "4",
-          "20",
-          "3"
-        ],
-        "answer": 1,
-        "explanation": "The greatest common factor of 76 and 20 is 4.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq204",
-        "question": "Find the LCM of 39 and 11.",
-        "options": [
-          "429",
-          "11",
-          "440",
+          "432",
+          "412",
+          "422",
           "442"
         ],
         "answer": 0,
-        "explanation": "The least common multiple of 39 and 11 is 429.",
-        "difficulty": "Hard"
+        "explanation": "18×24=18×20+18×4=432.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq205",
-        "question": "Find the HCF of 80 and 24.",
+        "id": "c6imoq108",
+        "question": "What must be added to 3,487 to make it divisible by 9?",
         "options": [
-          "24",
-          "5",
-          "10",
-          "8"
-        ],
-        "answer": 3,
-        "explanation": "The greatest common factor of 80 and 24 is 8.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq206",
-        "question": "Find the LCM of 41 and 13.",
-        "options": [
-          "546",
-          "559",
-          "533",
-          "13"
-        ],
-        "answer": 2,
-        "explanation": "The least common multiple of 41 and 13 is 533.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq207",
-        "question": "Find the HCF of 84 and 28.",
-        "options": [
-          "41",
-          "28",
-          "15",
-          "30"
-        ],
-        "answer": 1,
-        "explanation": "The greatest common factor of 84 and 28 is 28.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq208",
-        "question": "Find the LCM of 43 and 6.",
-        "options": [
-          "258",
-          "6",
-          "264",
-          "271"
-        ],
-        "answer": 0,
-        "explanation": "The least common multiple of 43 and 6 is 258.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq209",
-        "question": "Find the HCF of 88 and 14.",
-        "options": [
-          "14",
-          "4",
-          "15",
-          "2"
-        ],
-        "answer": 3,
-        "explanation": "The greatest common factor of 88 and 14 is 2.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq210",
-        "question": "Find the LCM of 45 and 8.",
-        "options": [
-          "368",
-          "373",
-          "360",
-          "8"
-        ],
-        "answer": 2,
-        "explanation": "The least common multiple of 45 and 8 is 360.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq211",
-        "question": "Find the HCF of 92 and 18.",
-        "options": [
-          "15",
           "2",
-          "18",
-          "4"
+          "4",
+          "7",
+          "5"
+        ],
+        "answer": 3,
+        "explanation": "The digit sum 22 becomes 27 after adding 5.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq109",
+        "question": "A number leaves remainder 4 when divided by 7. Which could it be?",
+        "options": [
+          "58",
+          "59",
+          "60",
+          "61"
+        ],
+        "answer": 2,
+        "explanation": "60=7×8+4.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq110",
+        "question": "How many integers lie strictly between 2,345 and 2,360?",
+        "options": [
+          "13",
+          "14",
+          "15",
+          "16"
         ],
         "answer": 1,
-        "explanation": "The greatest common factor of 92 and 18 is 2.",
-        "difficulty": "Easy"
+        "explanation": "2,346 through 2,359 gives 14 integers.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq212",
-        "question": "Find the LCM of 47 and 10.",
+        "id": "c6imoq111",
+        "question": "In 6,04,08,021, what is the place value of 4?",
         "options": [
-          "470",
-          "10",
-          "480",
-          "483"
+          "4,00,000",
+          "40,000",
+          "4,000",
+          "4,000,000"
         ],
         "answer": 0,
-        "explanation": "The least common multiple of 47 and 10 is 470.",
-        "difficulty": "Medium"
+        "explanation": "The digit 4 occupies the lakh place.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq213",
-        "question": "Find the HCF of 96 and 22.",
+        "id": "c6imoq112",
+        "question": "Which statement about zero is always true?",
+        "options": [
+          "Division by zero is always zero",
+          "Zero is the smallest positive integer",
+          "Multiplying by zero leaves the number unchanged",
+          "Adding zero leaves a number unchanged"
+        ],
+        "answer": 3,
+        "explanation": "Zero is the additive identity.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq113",
+        "question": "A two-digit number has tens digit 2 and is four times the sum of its digits. Find it.",
+        "options": [
+          "26",
+          "28",
+          "24",
+          "42"
+        ],
+        "answer": 2,
+        "explanation": "20+u=4(2+u) gives u=4.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq114",
+        "question": "Arrange 0.407, 0.47, 0.704 and 0.74 in ascending order.",
+        "options": [
+          "0.47, 0.407, 0.74, 0.704",
+          "0.407, 0.47, 0.704, 0.74",
+          "0.704, 0.74, 0.407, 0.47",
+          "0.407, 0.704, 0.47, 0.74"
+        ],
+        "answer": 1,
+        "explanation": "Compare to three decimal places: 0.407<0.470<0.704<0.740.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq115",
+        "question": "What is 9,999 more than 45,678?",
+        "options": [
+          "55,677",
+          "55,667",
+          "54,677",
+          "56,677"
+        ],
+        "answer": 0,
+        "explanation": "45,678+10,000−1=55,677.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq116",
+        "question": "Three consecutive integers sum to 96. Find the largest.",
+        "options": [
+          "31",
+          "32",
+          "34",
+          "33"
+        ],
+        "answer": 3,
+        "explanation": "The middle integer is 32; largest is 33.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq117",
+        "question": "A six-digit number has 4 in hundred-thousands, 2 in thousands and zeros elsewhere. What is it?",
+        "options": [
+          "420,000",
+          "402,100",
+          "402,000",
+          "400,200"
+        ],
+        "answer": 2,
+        "explanation": "400,000+2,000=402,000.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq118",
+        "question": "A number divided by 8 gives quotient 37 and remainder 5. Find it.",
+        "options": [
+          "296",
+          "301",
+          "302",
+          "309"
+        ],
+        "answer": 1,
+        "explanation": "8×37+5=301.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq119",
+        "question": "A value rises by 25%, then falls by 20%. Compared with its start it is:",
+        "options": [
+          "Unchanged",
+          "5% greater",
+          "5% smaller",
+          "10% greater"
+        ],
+        "answer": 0,
+        "explanation": "1.25×0.8=1, so it returns to its original value.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq120",
+        "question": "Find the smallest four-digit multiple of 12.",
+        "options": [
+          "1,002",
+          "1,012",
+          "1,020",
+          "1,008"
+        ],
+        "answer": 3,
+        "explanation": "12×84=1,008.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq121",
+        "question": "384 students are seated in rows of 16. How many rows?",
         "options": [
           "22",
-          "4",
-          "15",
-          "2"
-        ],
-        "answer": 3,
-        "explanation": "The greatest common factor of 96 and 22 is 2.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq214",
-        "question": "Find the LCM of 49 and 12.",
-        "options": [
-          "600",
-          "601",
-          "588",
-          "12"
+          "23",
+          "24",
+          "26"
         ],
         "answer": 2,
-        "explanation": "The least common multiple of 49 and 12 is 588.",
-        "difficulty": "Medium"
+        "explanation": "384÷16=24.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq215",
-        "question": "Find the HCF of 100 and 26.",
+        "id": "c6imoq122",
+        "question": "Multiply 14 by 6, subtract 17, then double. Find the result.",
         "options": [
-          "15",
-          "2",
-          "26",
-          "4"
+          "118",
+          "134",
+          "126",
+          "142"
         ],
         "answer": 1,
-        "explanation": "The greatest common factor of 100 and 26 is 2.",
-        "difficulty": "Medium"
+        "explanation": "14×6=84; 84−17=67; double=134.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq216",
-        "question": "Find the LCM of 51 and 14.",
+        "id": "c6imoq123",
+        "question": "Four digits add to 23. Three are 4,5,6,7. Find the missing digit.",
         "options": [
-          "714",
-          "14",
-          "728",
-          "727"
-        ],
-        "answer": 0,
-        "explanation": "The least common multiple of 51 and 14 is 714.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq217",
-        "question": "Find the HCF of 104 and 12.",
-        "options": [
-          "12",
-          "3",
-          "6",
-          "4"
-        ],
-        "answer": 3,
-        "explanation": "The greatest common factor of 104 and 12 is 4.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq218",
-        "question": "Find the LCM of 53 and 7.",
-        "options": [
-          "378",
-          "384",
-          "371",
-          "7"
-        ],
-        "answer": 2,
-        "explanation": "The least common multiple of 53 and 7 is 371.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq219",
-        "question": "Find the HCF of 108 and 16.",
-        "options": [
-          "6",
-          "4",
-          "16",
+          "1",
+          "0",
+          "2",
           "3"
         ],
-        "answer": 1,
-        "explanation": "The greatest common factor of 108 and 16 is 4.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "23−22=1.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq220",
-        "question": "Find the LCM of 55 and 9.",
+        "id": "c6imoq124",
+        "question": "A hall has 27 rows with 34 seats each. 719 seats are occupied. How many are empty?",
         "options": [
-          "495",
-          "9",
-          "504",
-          "508"
+          "189",
+          "209",
+          "219",
+          "199"
+        ],
+        "answer": 3,
+        "explanation": "27×34=918; 918−719=199.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq125",
+        "question": "Which is the least three-digit multiple of both 6 and 9?",
+        "options": [
+          "102",
+          "114",
+          "108",
+          "126"
+        ],
+        "answer": 2,
+        "explanation": "The LCM is 18; the first three-digit multiple is 108.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq126",
+        "question": "A water tank holds 2,400 L and is 3/8 full. How much water is in it?",
+        "options": [
+          "800 L",
+          "900 L",
+          "1,000 L",
+          "1,200 L"
+        ],
+        "answer": 1,
+        "explanation": "2,400×3/8=900.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq127",
+        "question": "How many four-digit numbers can be formed from 1,2,3,4 without repetition?",
+        "options": [
+          "24",
+          "12",
+          "16",
+          "48"
         ],
         "answer": 0,
-        "explanation": "The least common multiple of 55 and 9 is 495.",
-        "difficulty": "Medium"
+        "explanation": "4×3×2×1=24.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq128",
+        "question": "Which smallest positive number leaves remainder 2 when divided by 5 and remainder 1 when divided by 3?",
+        "options": [
+          "8",
+          "11",
+          "12",
+          "7"
+        ],
+        "answer": 3,
+        "explanation": "7 mod 5=2 and 7 mod 3=1.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq129",
+        "question": "Estimate 398×51 by rounding to the nearest hundred and ten.",
+        "options": [
+          "15,000",
+          "18,000",
+          "20,000",
+          "25,000"
+        ],
+        "answer": 2,
+        "explanation": "400×50=20,000.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq130",
+        "question": "A number is 3,000 less than the smallest six-digit number. Find it.",
+        "options": [
+          "96,000",
+          "97,000",
+          "98,000",
+          "99,000"
+        ],
+        "answer": 1,
+        "explanation": "100,000−3,000=97,000.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq131",
+        "question": "A number has distinct prime factors 2,3,5 and is below 100. Which could it be?",
+        "options": [
+          "90",
+          "60",
+          "75",
+          "84"
+        ],
+        "answer": 0,
+        "explanation": "90=2×3²×5.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq132",
+        "question": "A display shows 5 hundred-thousands, 12 ten-thousands and 7 hundreds. Find the value.",
+        "options": [
+          "512,700",
+          "627,000",
+          "620,070",
+          "620,700"
+        ],
+        "answer": 3,
+        "explanation": "500,000+120,000+700=620,700.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq133",
+        "question": "24 markers cost ₹168. What is the cost of 15 markers at the same rate?",
+        "options": [
+          "₹98",
+          "₹110",
+          "₹105",
+          "₹115"
+        ],
+        "answer": 2,
+        "explanation": "Each marker costs ₹7; 15 cost ₹105.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq134",
+        "question": "A two-digit number has digit sum 11. Reversing its digits makes it 27 greater. Find it.",
+        "options": [
+          "38",
+          "47",
+          "56",
+          "65"
+        ],
+        "answer": 1,
+        "explanation": "The digit difference is 3 and the sum is 11, giving 4 and 7.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq135",
+        "question": "Seven times a number minus 19 equals 100. Find the number.",
+        "options": [
+          "17",
+          "15",
+          "16",
+          "18"
+        ],
+        "answer": 0,
+        "explanation": "7n−19=100 gives n=17.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq136",
+        "question": "What is the least number greater than 60 that leaves remainder 3 when divided by 4, 5 and 6?",
+        "options": [
+          "43",
+          "53",
+          "123",
+          "63"
+        ],
+        "answer": 3,
+        "explanation": "The LCM is 60; 60+3=63.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq137",
+        "question": "15% of 240 equals:",
+        "options": [
+          "24",
+          "32",
+          "36",
+          "40"
+        ],
+        "answer": 2,
+        "explanation": "10% is 24 and 5% is 12; total 36.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq138",
+        "question": "The sum of four consecutive even integers is 116. Find the largest.",
+        "options": [
+          "28",
+          "32",
+          "30",
+          "34"
+        ],
+        "answer": 1,
+        "explanation": "They are 26,28,30,32.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq139",
+        "question": "A four-digit number is divisible by 9 and 10, and lies between 500 and 600. How many such numbers are there?",
+        "options": [
+          "1",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 0,
+        "explanation": "Only 540 is a multiple of 90 in this interval.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq140",
+        "question": "A digit is placed in 57□. How many digits make the number divisible by 3?",
+        "options": [
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        "answer": 3,
+        "explanation": "The digit sum is 12+d; d can be 0,3,6,9.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq141",
+        "question": "A number leaves remainder 2 when divided by 5 and remainder 3 when divided by 7. What is the least positive such number?",
+        "options": [
+          "12",
+          "22",
+          "17",
+          "32"
+        ],
+        "answer": 2,
+        "explanation": "17=5×3+2 and 17=7×2+3.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq142",
+        "question": "Two whole numbers have product 144 and sum 25. Which pair fits?",
+        "options": [
+          "8 and 18",
+          "9 and 16",
+          "10 and 14",
+          "6 and 24"
+        ],
+        "answer": 1,
+        "explanation": "9×16=144 and 9+16=25.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq143",
+        "question": "A class collects 1,248 bottle caps and packs 24 per bag. How many full bags?",
+        "options": [
+          "52",
+          "48",
+          "50",
+          "54"
+        ],
+        "answer": 0,
+        "explanation": "1,248÷24=52.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq144",
+        "question": "Which is the greatest four-digit number divisible by 9 and ending in 5?",
+        "options": [
+          "9,975",
+          "9,995",
+          "9,955",
+          "9,945"
+        ],
+        "answer": 3,
+        "explanation": "9,945 has digit sum 27 and is divisible by 9; the other greater numbers have digit sums not divisible by 9.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq145",
+        "question": "A number divisible by 12 and 15 is less than 200. How many positive possibilities are there?",
+        "options": [
+          "4",
+          "5",
+          "3",
+          "6"
+        ],
+        "answer": 2,
+        "explanation": "Multiples of 60 below 200 are 60, 120 and 180.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq146",
+        "question": "A balance moves from −₹75 to +₹125. What is the total change?",
+        "options": [
+          "₹50",
+          "₹200",
+          "₹125",
+          "₹150"
+        ],
+        "answer": 1,
+        "explanation": "125−(−75)=200.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq147",
+        "question": "The sum of four consecutive integers is 110. What is the greatest?",
+        "options": [
+          "29",
+          "27",
+          "28",
+          "30"
+        ],
+        "answer": 0,
+        "explanation": "The integers are 26,27,28,29.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq148",
+        "question": "A three-digit number is divisible by 6 and 9. What is the smallest possible number?",
+        "options": [
+          "102",
+          "114",
+          "126",
+          "108"
+        ],
+        "answer": 3,
+        "explanation": "It must be a multiple of 18; 108 is the first three-digit multiple.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq149",
+        "question": "A six-digit number has digits 4,0,8,2,0,5 in descending place order. Write it.",
+        "options": [
+          "480,205",
+          "408,025",
+          "408,205",
+          "480,025"
+        ],
+        "answer": 2,
+        "explanation": "Reading the place values gives 408,205.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq150",
+        "question": "Using digits 3,4,7 exactly once, what is the greatest even three-digit number?",
+        "options": [
+          "374",
+          "734",
+          "743",
+          "347"
+        ],
+        "answer": 1,
+        "explanation": "An even number must end in 4; arrange 7 and 3 in descending order at the front.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   },
