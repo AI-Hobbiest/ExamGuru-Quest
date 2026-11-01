@@ -232,6 +232,32 @@
           <div id="familyLinksTable" class="admin-table-wrap"></div>
         </section>
 
+        <section class="admin-content" id="familyAccessPanel" style="border:1px solid var(--c10-line);border-radius:14px;padding:14px;margin:18px 0">
+          <h3>Family access · parent accounts and child links</h3>
+          <p class="admin-muted">Create parent logins and map each parent to one or more student accounts. A student may be linked to more than one parent. Exported family relationships must be published to GitHub to take effect.</p>
+          <div class="admin-notice"><strong>Local MVP privacy limit:</strong> <code>family-access.json</code> is public in this repository. Use aliases rather than full legal names, and classroom-only passwords. This is not production-grade authentication or confidential family data storage.</div>
+          <h4>Create parent account</h4>
+          <div class="admin-form-grid">
+            <div class="admin-field"><label for="parentAccountDisplayName">Display name / alias</label><input id="parentAccountDisplayName" maxlength="60" placeholder="e.g. Parent A"></div>
+            <div class="admin-field"><label for="parentAccountUsername">Parent username</label><input id="parentAccountUsername" maxlength="32" minlength="3" pattern="[A-Za-z0-9._-]{3,32}" autocomplete="off" autocapitalize="none" placeholder="e.g. parent_a"></div>
+          </div>
+          <div class="admin-actions"><button class="admin-btn" id="createParentAccountBtn" type="button">Create parent login &amp; export</button><button class="admin-btn secondary" id="reloadFamilyAccessBtn" type="button">Reload published family file</button></div>
+          <div id="parentTempPasswordBox" hidden>
+            <p><strong>Temporary parent password — share privately.</strong></p>
+            <textarea id="parentTempPassword" rows="2" readonly></textarea>
+            <div class="admin-actions"><button class="admin-btn secondary" id="copyParentTempPasswordBtn" type="button">Copy temporary password</button></div>
+          </div>
+          <hr class="admin-rule">
+          <h4>Map parents to students</h4>
+          <div class="admin-form-grid">
+            <div class="admin-field"><label for="familyParentSelect">Parent account</label><select id="familyParentSelect"><option value="">Load parent accounts first</option></select></div>
+            <div class="admin-field"><label for="familyChildrenSelect">Linked children (select multiple)</label><select id="familyChildrenSelect" multiple size="6" aria-describedby="familyLinksHelp"></select><span class="admin-inline-help" id="familyLinksHelp">Use Ctrl (Windows) or Command (Mac) to select multiple children. A student can be linked to several parent accounts.</span></div>
+          </div>
+          <div class="admin-actions"><button class="admin-btn" id="saveFamilyLinksBtn" type="button">Save relationships &amp; export</button><button class="admin-btn secondary" id="downloadFamilyAccessBtn" type="button">Download family-access.json</button></div>
+          <div id="familyAccessStatus" class="admin-status" role="status">Loading parent accounts and student mappings…</div>
+          <div id="familyLinksTable" class="admin-table-wrap"></div>
+        </section>
+
         <h2>Student profile management and progress reports</h2>
         <section class="admin-content" style="border:1px solid var(--c10-line);border-radius:14px;padding:14px" hidden>
           <h3>Central student accounts · live (deferred)</h3>
@@ -358,6 +384,7 @@
 <script src="./js/profile-model.js"></script>
 <script src="./js/admin-manager.js"></script>
 <script src="./js/static-account-admin.js"></script>
+<script src="./js/family-access-admin.js"></script>
 <script src="./js/family-access-admin.js"></script>
 <script src="./js/app-shell.js"></script>
 </body>
