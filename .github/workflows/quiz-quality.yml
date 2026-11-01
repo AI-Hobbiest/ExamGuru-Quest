@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Validate session timing and summary model
         run: node tests/session-model.test.js
+      - name: Validate Stage A LMS integrations
+        run: node tests/stage-a-integration.test.js
       - name: Validate quiz timers, navigation and result flow
         run: node tests/quiz-engine.test.js
       - name: Validate responsive portal and dashboard shell
