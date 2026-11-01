@@ -25,7 +25,7 @@ function readActiveStudent(){
 const activeStudent = readActiveStudent();
 const classId = String(activeStudent && activeStudent.classId || "10");
 const bankId = classId === "10" ? subject : "class-" + classId + "-" + subject;
-const CLASS_SUBJECTS = { "3":["mathematics"], "6":["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"], "10":["science","mathematics","english","social-science","hindi"] };
+const CLASS_SUBJECTS = { "3":["mathematics","english"], "6":["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"], "10":["science","mathematics","english","social-science","hindi"] };
 const config = SUBJECTS[subject];
 let chapters=[], mode="learn", session=[], index=0, picked=null, answers=[], lastMissed=[];
 let currentAttempt=null, completedAttempt=null, clockHandle=null, ledger;
