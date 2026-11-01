@@ -1,658 +1,709 @@
 [
   {
     "chapter_no": 1,
-    "title": "Patterns and Number Sense",
-    "key": "sof-imo-patterns-and-number-sense",
+    "title": "Patterns in Mathematics",
+    "key": "sof-imo-patterns-in-mathematics",
+    "section": "IMO Syllabus Topic",
     "questions": [
       {
         "id": "c6imoq001",
-        "question": "What number comes next: 7, 11, 15, 19, __?",
+        "question": "A sequence begins 3, 8, 15, 24, 35. Which term follows?",
         "options": [
-          "23",
-          "21",
-          "25",
-          "27"
+          "48",
+          "46",
+          "47",
+          "50"
         ],
         "answer": 0,
-        "explanation": "The sequence increases by 4 each time.",
-        "difficulty": "Easy"
+        "explanation": "The gaps are 5, 7, 9, 11; the next gap is 13.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq002",
+        "question": "A design has 2, 6, 18, 54 tiles in successive stages. How many tiles are in stage 5?",
+        "options": [
+          "108",
+          "144",
+          "216",
+          "162"
+        ],
+        "answer": 3,
+        "explanation": "Each stage triples the preceding count: 54×3=162.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq003",
+        "question": "Which is the first square number greater than 150?",
+        "options": [
+          "144",
+          "156",
+          "169",
+          "196"
+        ],
+        "answer": 2,
+        "explanation": "12²=144 and 13²=169.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq004",
+        "question": "The sequence 4, 7, 13, 22, 34 grows by increasing gaps. What is next?",
+        "options": [
+          "46",
+          "49",
+          "48",
+          "52"
+        ],
+        "answer": 1,
+        "explanation": "Add 3, 6, 9, 12, then 15.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq005",
+        "question": "A dot design has 2, 5, 10, 17, 26 dots. How many are in the sixth design?",
+        "options": [
+          "37",
+          "35",
+          "36",
+          "40"
+        ],
+        "answer": 0,
+        "explanation": "The differences are consecutive odd numbers: +3,+5,+7,+9,+11.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq006",
+        "question": "In 1, 2, 6, 24, __, 720, what belongs in the blank?",
+        "options": [
+          "96",
+          "144",
+          "240",
+          "120"
+        ],
+        "answer": 3,
+        "explanation": "Multiply successively by 2, 3, 4, 5 and 6.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq007",
+        "question": "A number machine doubles its input and adds 7. Which input gives 41?",
+        "options": [
+          "16",
+          "18",
+          "17",
+          "24"
+        ],
+        "answer": 2,
+        "explanation": "2n+7=41, so n=17.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq008",
+        "question": "Which rule generates 2, 5, 11, 23, 47?",
+        "options": [
+          "Add 3, then 6, then 12",
+          "Double, then add 1",
+          "Triple, then subtract 1",
+          "Add 2 each time"
+        ],
+        "answer": 1,
+        "explanation": "Each term is twice the preceding term plus one.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq009",
+        "question": "A staircase has 1, 3, 6 and 10 blocks in its first four rows. How many in row 5?",
+        "options": [
+          "15",
+          "14",
+          "16",
+          "20"
+        ],
+        "answer": 0,
+        "explanation": "The next triangular number is 10+5=15.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq010",
+        "question": "Which formula gives 5, 9, 13, 17, … at term n?",
+        "options": [
+          "5n−1",
+          "4n−1",
+          "n+4",
+          "4n+1"
+        ],
+        "answer": 3,
+        "explanation": "The first term is 5 and the common difference is 4.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq011",
-        "question": "What number comes next: 10, 14, 18, 22, __?",
+        "question": "The repeating pattern is ▲, ●, ●, ■. Which symbol is in position 23?",
         "options": [
-          "24",
-          "28",
-          "26",
-          "30"
+          "▲",
+          "■",
+          "●",
+          "No symbol"
         ],
         "answer": 2,
-        "explanation": "The sequence increases by 4 each time.",
-        "difficulty": "Easy"
+        "explanation": "23 leaves remainder 3 on division by 4, so choose the third symbol.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq012",
+        "question": "The sequence 1, 3, 6, 10, 15 adds consecutive integers. Find its eighth term.",
+        "options": [
+          "28",
+          "36",
+          "32",
+          "40"
+        ],
+        "answer": 1,
+        "explanation": "The seventh term is 28; add 8 to get 36.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq013",
+        "question": "A pattern changes 6→13→27→55. What comes next?",
+        "options": [
+          "111",
+          "109",
+          "113",
+          "115"
+        ],
+        "answer": 0,
+        "explanation": "Double and add one: 55×2+1=111.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq014",
+        "question": "A strip has 4, 7, 10, 13 sections in stages. How many in stage 12?",
+        "options": [
+          "34",
+          "36",
+          "40",
+          "37"
+        ],
+        "answer": 3,
+        "explanation": "Start at 4 and add 3 eleven times: 4+33=37.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq015",
+        "question": "Which does not belong: 8, 27, 64, 100, 125?",
+        "options": [
+          "8",
+          "27",
+          "100",
+          "125"
+        ],
+        "answer": 2,
+        "explanation": "The others are perfect cubes.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq016",
+        "question": "Starting at 2, alternate ×2 and +3: 2, 4, 7, 14, 17, __. What is next?",
+        "options": [
+          "20",
+          "34",
+          "31",
+          "37"
+        ],
+        "answer": 1,
+        "explanation": "The next operation is ×2, giving 34.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq017",
+        "question": "A sequence follows n²+n+5. What is its seventh term?",
+        "options": [
+          "61",
+          "55",
+          "59",
+          "63"
+        ],
+        "answer": 0,
+        "explanation": "7²+7+5=61.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq018",
+        "question": "A row of joined squares uses 4, 7, 10 matchsticks for 1, 2, 3 squares. How many for 9?",
+        "options": [
+          "27",
+          "31",
+          "36",
+          "28"
+        ],
+        "answer": 3,
+        "explanation": "The first needs 4; each additional square adds 3: 4+8×3=28.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq019",
+        "question": "What follows 100, 96, 88, 76, 60?",
+        "options": [
+          "44",
+          "48",
+          "40",
+          "52"
+        ],
+        "answer": 2,
+        "explanation": "Subtract 4, 8, 12, 16, then 20.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq020",
+        "question": "In 1, 1, 2, 3, 5, 8, … each term is the sum of the previous two. Find term 9.",
+        "options": [
+          "21",
+          "34",
+          "29",
+          "55"
+        ],
+        "answer": 1,
+        "explanation": "The next terms are 13, 21 and 34.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq021",
-        "question": "What number comes next: 13, 17, 21, 25, __?",
+        "question": "A machine adds 4, multiplies by 3, then subtracts 2. Its output is 43. What was its input?",
         "options": [
-          "29",
-          "27",
-          "31",
-          "33"
+          "11",
+          "9",
+          "12",
+          "13"
         ],
         "answer": 0,
-        "explanation": "The sequence increases by 4 each time.",
-        "difficulty": "Easy"
+        "explanation": "Reverse: 43+2=45; 45÷3=15; 15−4=11.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq022",
+        "question": "Square perimeters in a pattern are 4, 8, 12, 16, … units. Which stage has perimeter 52?",
+        "options": [
+          "12",
+          "14",
+          "15",
+          "13"
+        ],
+        "answer": 3,
+        "explanation": "Perimeter is 4n; 52÷4=13.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq023",
+        "question": "Subtract 1, then 2, then 3, then 4 from 30. What is term 6 if 30 is term 1?",
+        "options": [
+          "16",
+          "17",
+          "15",
+          "18"
+        ],
+        "answer": 2,
+        "explanation": "30,29,27,24,20,15.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq024",
+        "question": "Which pair completes 2, 6, 12, 20, 30, __, __?",
+        "options": [
+          "40, 54",
+          "42, 56",
+          "41, 55",
+          "44, 60"
+        ],
+        "answer": 1,
+        "explanation": "Terms are n(n+1); next are 6×7 and 7×8.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq025",
+        "question": "A sequence starts at 5 and increases by 4. Which term equals 81?",
+        "options": [
+          "20th",
+          "19th",
+          "21st",
+          "22nd"
+        ],
+        "answer": 0,
+        "explanation": "5+4(n−1)=81 gives n=20.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq026",
+        "question": "An alternating sequence is 3, 10, 5, 12, 7, 14, … What are the next two terms?",
+        "options": [
+          "8, 15",
+          "9, 15",
+          "11, 16",
+          "9, 16"
+        ],
+        "answer": 3,
+        "explanation": "Odd positions rise 3,5,7,9; even positions 10,12,14,16.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq027",
+        "question": "Starting at 1, add the next odd number at each stage. What is the sixth square number?",
+        "options": [
+          "35",
+          "42",
+          "36",
+          "49"
+        ],
+        "answer": 2,
+        "explanation": "1+3+5+7+9+11=36.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq028",
+        "question": "The sequence 2, 3, 5, 8, 12, 17 adds 1,2,3,4,5. Find term 10.",
+        "options": [
+          "42",
+          "47",
+          "45",
+          "52"
+        ],
+        "answer": 1,
+        "explanation": "Continue with +6,+7,+8,+9 to reach 47.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq029",
+        "question": "A rule maps 1→4, 2→9, 3→16, 4→25. What does it map 8 to?",
+        "options": [
+          "81",
+          "64",
+          "72",
+          "100"
+        ],
+        "answer": 0,
+        "explanation": "The output is (input+1)²; 9²=81.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq030",
+        "question": "A row of hexagons needs 6 sticks for one, then 5 extra per attached hexagon. How many for 7?",
+        "options": [
+          "35",
+          "40",
+          "42",
+          "36"
+        ],
+        "answer": 3,
+        "explanation": "6+6×5=36.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq031",
-        "question": "What number comes next: 16, 20, 24, 28, __?",
+        "question": "Visitors follow 120, 135, 165, 210, … where the increases rise by 15. What is next?",
         "options": [
-          "30",
-          "34",
+          "255",
+          "260",
+          "270",
+          "285"
+        ],
+        "answer": 2,
+        "explanation": "The increments are 15,30,45; next is 60.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq032",
+        "question": "A square-tile design has n² tiles. How many extra tiles are added from design 8 to design 9?",
+        "options": [
+          "15",
+          "17",
+          "16",
+          "18"
+        ],
+        "answer": 1,
+        "explanation": "9²−8²=81−64=17.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq033",
+        "question": "A pattern repeats +5, then ×2, starting at 3. What is the sixth term?",
+        "options": [
+          "47",
+          "37",
+          "42",
+          "52"
+        ],
+        "answer": 0,
+        "explanation": "3,8,16,21,42,47.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq034",
+        "question": "Which is the next term after 5, 9, 17, 33, 65?",
+        "options": [
+          "127",
+          "130",
+          "131",
+          "129"
+        ],
+        "answer": 3,
+        "explanation": "Each term doubles and subtracts one: 65×2−1=129.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq035",
+        "question": "A sequence follows double-and-add-3: 2, 7, 17, 37, 77. Find next.",
+        "options": [
+          "147",
+          "152",
+          "157",
+          "160"
+        ],
+        "answer": 2,
+        "explanation": "77×2+3=157.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq036",
+        "question": "Eight people each shake hands once with every other person. How many handshakes occur?",
+        "options": [
+          "24",
+          "28",
           "32",
           "36"
         ],
-        "answer": 2,
-        "explanation": "The sequence increases by 4 each time.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq041",
-        "question": "What number comes next: 19, 23, 27, 31, __?",
-        "options": [
-          "35",
-          "33",
-          "37",
-          "39"
-        ],
-        "answer": 0,
-        "explanation": "The sequence increases by 4 each time.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq051",
-        "question": "What number comes next: 22, 26, 30, 34, __?",
-        "options": [
-          "36",
-          "40",
-          "38",
-          "42"
-        ],
-        "answer": 2,
-        "explanation": "The sequence increases by 4 each time.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq061",
-        "question": "What number comes next: 25, 29, 33, 37, __?",
-        "options": [
-          "41",
-          "39",
-          "43",
-          "45"
-        ],
-        "answer": 0,
-        "explanation": "The sequence increases by 4 each time.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq071",
-        "question": "What number comes next: 28, 32, 36, 40, __?",
-        "options": [
-          "42",
-          "46",
-          "44",
-          "48"
-        ],
-        "answer": 2,
-        "explanation": "The sequence increases by 4 each time.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq081",
-        "question": "What number comes next: 31, 35, 39, 43, __?",
-        "options": [
-          "47",
-          "45",
-          "49",
-          "51"
-        ],
-        "answer": 0,
-        "explanation": "The sequence increases by 4 each time.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq091",
-        "question": "What number comes next: 34, 38, 42, 46, __?",
-        "options": [
-          "48",
-          "52",
-          "50",
-          "54"
-        ],
-        "answer": 2,
-        "explanation": "The sequence increases by 4 each time.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq101",
-        "question": "A number pattern starts 33, 35, 37, 39. What is the next term?",
-        "options": [
-          "39",
-          "43",
-          "54",
-          "41"
-        ],
-        "answer": 3,
-        "explanation": "Add 2 each time: 39 + 2 = 41.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq102",
-        "question": "A number pattern starts 36, 39, 42, 45. What is the next term?",
-        "options": [
-          "51",
-          "50",
-          "48",
-          "45"
-        ],
-        "answer": 2,
-        "explanation": "Add 3 each time: 45 + 3 = 48.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq103",
-        "question": "A number pattern starts 39, 43, 47, 51. What is the next term?",
-        "options": [
-          "57",
-          "55",
-          "51",
-          "59"
-        ],
         "answer": 1,
-        "explanation": "Add 4 each time: 51 + 4 = 55.",
-        "difficulty": "Medium"
+        "explanation": "There are 8×7÷2 distinct pairs.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq104",
-        "question": "A number pattern starts 42, 47, 52, 57. What is the next term?",
+        "id": "c6imoq037",
+        "question": "A pattern uses 1, 3, 7, 15, 31 squares. What is next?",
         "options": [
-          "62",
-          "57",
-          "67",
+          "63",
+          "47",
+          "61",
           "64"
         ],
         "answer": 0,
-        "explanation": "Add 5 each time: 57 + 5 = 62.",
-        "difficulty": "Medium"
+        "explanation": "Double the previous count and add one.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq105",
-        "question": "A number pattern starts 45, 51, 57, 63. What is the next term?",
+        "id": "c6imoq038",
+        "question": "An input-output table has 2→7, 4→13, 6→19 and 9→28. Which rule fits?",
         "options": [
-          "63",
-          "75",
-          "71",
-          "69"
+          "2n+3",
+          "n+5",
+          "4n−1",
+          "3n+1"
         ],
         "answer": 3,
-        "explanation": "Add 6 each time: 63 + 6 = 69.",
-        "difficulty": "Medium"
+        "explanation": "Three times each input plus one gives each output.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq106",
-        "question": "A number pattern starts 48, 55, 62, 69. What is the next term?",
+        "id": "c6imoq039",
+        "question": "A pattern starts with 1 square and adds 4, then 8, then 12 squares. How many after these three additions?",
         "options": [
-          "83",
-          "78",
-          "76",
-          "69"
+          "21",
+          "24",
+          "25",
+          "29"
         ],
         "answer": 2,
-        "explanation": "Add 7 each time: 69 + 7 = 76.",
-        "difficulty": "Hard"
+        "explanation": "1+4+8+12=25.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq107",
-        "question": "A number pattern starts 51, 59, 67, 75. What is the next term?",
+        "id": "c6imoq040",
+        "question": "Which term is missing: 4, 9, 19, 39, __, 159?",
         "options": [
-          "85",
-          "83",
-          "75",
-          "91"
+          "69",
+          "79",
+          "78",
+          "89"
         ],
         "answer": 1,
-        "explanation": "Add 8 each time: 75 + 8 = 83.",
-        "difficulty": "Easy"
+        "explanation": "Each term is twice the previous plus one.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq108",
-        "question": "A number pattern starts 54, 63, 72, 81. What is the next term?",
+        "id": "c6imoq041",
+        "question": "A sequence decreases by 2, 4, 8, 16, … from 90. What is its sixth term?",
         "options": [
-          "90",
-          "81",
-          "99",
-          "92"
+          "28",
+          "30",
+          "32",
+          "34"
         ],
         "answer": 0,
-        "explanation": "Add 9 each time: 81 + 9 = 90.",
-        "difficulty": "Medium"
+        "explanation": "90−2−4−8−16−32=28.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq109",
-        "question": "A number pattern starts 57, 67, 77, 87. What is the next term?",
+        "id": "c6imoq042",
+        "question": "A design has rows of 3, 6, 9, … dots. How many dots are in the first 8 rows altogether?",
         "options": [
-          "87",
-          "107",
-          "99",
-          "97"
-        ],
-        "answer": 3,
-        "explanation": "Add 10 each time: 87 + 10 = 97.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq110",
-        "question": "A number pattern starts 60, 71, 82, 93. What is the next term?",
-        "options": [
-          "115",
-          "106",
-          "104",
-          "93"
-        ],
-        "answer": 2,
-        "explanation": "Add 11 each time: 93 + 11 = 104.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq111",
-        "question": "A number pattern starts 63, 75, 87, 99. What is the next term?",
-        "options": [
-          "113",
-          "111",
-          "99",
-          "123"
-        ],
-        "answer": 1,
-        "explanation": "Add 12 each time: 99 + 12 = 111.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq112",
-        "question": "A number pattern starts 66, 68, 70, 72. What is the next term?",
-        "options": [
-          "74",
-          "72",
-          "76",
-          "87"
-        ],
-        "answer": 0,
-        "explanation": "Add 2 each time: 72 + 2 = 74.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq113",
-        "question": "A number pattern starts 69, 72, 75, 78. What is the next term?",
-        "options": [
-          "78",
-          "84",
-          "83",
-          "81"
-        ],
-        "answer": 3,
-        "explanation": "Add 3 each time: 78 + 3 = 81.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq114",
-        "question": "A number pattern starts 72, 76, 80, 84. What is the next term?",
-        "options": [
-          "92",
-          "90",
-          "88",
-          "84"
-        ],
-        "answer": 2,
-        "explanation": "Add 4 each time: 84 + 4 = 88.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq115",
-        "question": "A number pattern starts 75, 80, 85, 90. What is the next term?",
-        "options": [
-          "97",
-          "95",
-          "90",
-          "100"
-        ],
-        "answer": 1,
-        "explanation": "Add 5 each time: 90 + 5 = 95.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq116",
-        "question": "A number pattern starts 78, 84, 90, 96. What is the next term?",
-        "options": [
-          "102",
           "96",
-          "108",
-          "104"
-        ],
-        "answer": 0,
-        "explanation": "Add 6 each time: 96 + 6 = 102.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq117",
-        "question": "A number pattern starts 81, 88, 95, 102. What is the next term?",
-        "options": [
-          "102",
-          "116",
-          "111",
-          "109"
-        ],
-        "answer": 3,
-        "explanation": "Add 7 each time: 102 + 7 = 109.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq118",
-        "question": "A number pattern starts 84, 92, 100, 108. What is the next term?",
-        "options": [
-          "124",
-          "118",
-          "116",
+          "104",
+          "120",
           "108"
         ],
-        "answer": 2,
-        "explanation": "Add 8 each time: 108 + 8 = 116.",
-        "difficulty": "Hard"
+        "answer": 3,
+        "explanation": "3(1+2+…+8)=3×36=108.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq119",
-        "question": "A number pattern starts 87, 96, 105, 114. What is the next term?",
+        "id": "c6imoq043",
+        "question": "For input 9, square the number and add its predecessor. What is the output?",
         "options": [
-          "125",
-          "123",
-          "114",
-          "132"
+          "81",
+          "90",
+          "89",
+          "99"
+        ],
+        "answer": 2,
+        "explanation": "9²+8=89.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq044",
+        "question": "A pattern alternates square numbers at odd positions and even numbers at even positions. What is term 7?",
+        "options": [
+          "14",
+          "16",
+          "25",
+          "36"
         ],
         "answer": 1,
-        "explanation": "Add 9 each time: 114 + 9 = 123.",
-        "difficulty": "Easy"
+        "explanation": "Odd positions are 1²,2²,3²,4²; term 7 is 4²=16.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6imoq120",
-        "question": "A number pattern starts 90, 100, 110, 120. What is the next term?",
+        "id": "c6imoq045",
+        "question": "Reverse the rule ×2+1 from 95. What value came immediately before it?",
         "options": [
-          "130",
-          "120",
-          "140",
-          "132"
+          "47",
+          "46",
+          "48",
+          "49"
         ],
         "answer": 0,
-        "explanation": "Add 10 each time: 120 + 10 = 130.",
-        "difficulty": "Medium"
+        "explanation": "(95−1)÷2=47.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6imoq121",
-        "question": "A number pattern starts 93, 104, 115, 126. What is the next term?",
+        "id": "c6imoq046",
+        "question": "A dot pattern has 2,3,5,8,12,17 dots. How many dots are in picture 9?",
         "options": [
-          "126",
-          "148",
-          "139",
-          "137"
+          "35",
+          "39",
+          "42",
+          "38"
         ],
         "answer": 3,
-        "explanation": "Add 11 each time: 126 + 11 = 137.",
-        "difficulty": "Medium"
+        "explanation": "Continue by adding 6, 7 and 8: 23,30,38.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6imoq122",
-        "question": "A number pattern starts 96, 108, 120, 132. What is the next term?",
+        "id": "c6imoq047",
+        "question": "An arithmetic sequence has third term 14 and ninth term 38. What is its common difference?",
         "options": [
-          "156",
-          "146",
-          "144",
-          "132"
+          "3",
+          "5",
+          "4",
+          "6"
         ],
         "answer": 2,
-        "explanation": "Add 12 each time: 132 + 12 = 144.",
-        "difficulty": "Medium"
+        "explanation": "Six steps separate terms 3 and 9; (38−14)÷6=4.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6imoq123",
-        "question": "A number pattern starts 99, 101, 103, 105. What is the next term?",
+        "id": "c6imoq048",
+        "question": "A sequence follows n²−n+2. Find term 7.",
         "options": [
-          "120",
-          "107",
-          "105",
-          "109"
+          "42",
+          "44",
+          "48",
+          "50"
         ],
         "answer": 1,
-        "explanation": "Add 2 each time: 105 + 2 = 107.",
-        "difficulty": "Medium"
+        "explanation": "49−7+2=44.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6imoq124",
-        "question": "A number pattern starts 102, 105, 108, 111. What is the next term?",
+        "id": "c6imoq049",
+        "question": "A sequence is generated by n³+n². What is term 6?",
         "options": [
-          "114",
-          "111",
-          "117",
-          "116"
+          "252",
+          "216",
+          "240",
+          "258"
         ],
         "answer": 0,
-        "explanation": "Add 3 each time: 111 + 3 = 114.",
-        "difficulty": "Hard"
+        "explanation": "6³+6²=216+36=252.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6imoq125",
-        "question": "A number pattern starts 105, 109, 113, 117. What is the next term?",
+        "id": "c6imoq050",
+        "question": "The sequence 5, 9, 17, 33, 65 follows which rule?",
         "options": [
-          "117",
-          "125",
-          "123",
-          "121"
+          "Double the term, then add 1",
+          "Add 4 each time",
+          "Square the term",
+          "Double the term, then subtract 1"
         ],
         "answer": 3,
-        "explanation": "Add 4 each time: 117 + 4 = 121.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq126",
-        "question": "A number pattern starts 108, 113, 118, 123. What is the next term?",
-        "options": [
-          "133",
-          "130",
-          "128",
-          "123"
-        ],
-        "answer": 2,
-        "explanation": "Add 5 each time: 123 + 5 = 128.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq127",
-        "question": "A number pattern starts 111, 117, 123, 129. What is the next term?",
-        "options": [
-          "137",
-          "135",
-          "129",
-          "141"
-        ],
-        "answer": 1,
-        "explanation": "Add 6 each time: 129 + 6 = 135.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq128",
-        "question": "A number pattern starts 114, 121, 128, 135. What is the next term?",
-        "options": [
-          "142",
-          "135",
-          "149",
-          "144"
-        ],
-        "answer": 0,
-        "explanation": "Add 7 each time: 135 + 7 = 142.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq129",
-        "question": "A number pattern starts 117, 125, 133, 141. What is the next term?",
-        "options": [
-          "141",
-          "157",
-          "151",
-          "149"
-        ],
-        "answer": 3,
-        "explanation": "Add 8 each time: 141 + 8 = 149.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq130",
-        "question": "A number pattern starts 120, 129, 138, 147. What is the next term?",
-        "options": [
-          "165",
-          "158",
-          "156",
-          "147"
-        ],
-        "answer": 2,
-        "explanation": "Add 9 each time: 147 + 9 = 156.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq131",
-        "question": "A number pattern starts 123, 133, 143, 153. What is the next term?",
-        "options": [
-          "165",
-          "163",
-          "153",
-          "173"
-        ],
-        "answer": 1,
-        "explanation": "Add 10 each time: 153 + 10 = 163.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq132",
-        "question": "A number pattern starts 126, 137, 148, 159. What is the next term?",
-        "options": [
-          "170",
-          "159",
-          "181",
-          "172"
-        ],
-        "answer": 0,
-        "explanation": "Add 11 each time: 159 + 11 = 170.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq133",
-        "question": "A number pattern starts 129, 141, 153, 165. What is the next term?",
-        "options": [
-          "165",
-          "189",
-          "179",
-          "177"
-        ],
-        "answer": 3,
-        "explanation": "Add 12 each time: 165 + 12 = 177.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq134",
-        "question": "A number pattern starts 132, 134, 136, 138. What is the next term?",
-        "options": [
-          "142",
-          "153",
-          "140",
-          "138"
-        ],
-        "answer": 2,
-        "explanation": "Add 2 each time: 138 + 2 = 140.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq135",
-        "question": "A number pattern starts 135, 138, 141, 144. What is the next term?",
-        "options": [
-          "149",
-          "147",
-          "144",
-          "150"
-        ],
-        "answer": 1,
-        "explanation": "Add 3 each time: 144 + 3 = 147.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq136",
-        "question": "A number pattern starts 138, 142, 146, 150. What is the next term?",
-        "options": [
-          "154",
-          "150",
-          "158",
-          "156"
-        ],
-        "answer": 0,
-        "explanation": "Add 4 each time: 150 + 4 = 154.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq137",
-        "question": "A number pattern starts 141, 146, 151, 156. What is the next term?",
-        "options": [
-          "156",
-          "166",
-          "163",
-          "161"
-        ],
-        "answer": 3,
-        "explanation": "Add 5 each time: 156 + 5 = 161.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq138",
-        "question": "A number pattern starts 144, 150, 156, 162. What is the next term?",
-        "options": [
-          "174",
-          "170",
-          "168",
-          "162"
-        ],
-        "answer": 2,
-        "explanation": "Add 6 each time: 162 + 6 = 168.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq139",
-        "question": "A number pattern starts 147, 154, 161, 168. What is the next term?",
-        "options": [
-          "177",
-          "175",
-          "168",
-          "182"
-        ],
-        "answer": 1,
-        "explanation": "Add 7 each time: 168 + 7 = 175.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq140",
-        "question": "A number pattern starts 150, 158, 166, 174. What is the next term?",
-        "options": [
-          "182",
-          "174",
-          "190",
-          "184"
-        ],
-        "answer": 0,
-        "explanation": "Add 8 each time: 174 + 8 = 182.",
-        "difficulty": "Medium"
+        "explanation": "5×2−1=9 and the same rule continues to 129.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   },
