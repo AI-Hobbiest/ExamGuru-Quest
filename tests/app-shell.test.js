@@ -11,11 +11,20 @@ const practice=fs.readFileSync("practice.html","utf8");
 const profile=fs.readFileSync("profile.html","utf8");
 const admin=fs.readFileSync("admin.html","utf8");
 const science=fs.readFileSync("science.html","utf8");
+const parentPage=fs.readFileSync("parent.html","utf8");
+const parentDashboard=fs.readFileSync("js/parent-dashboard.js","utf8");
+const pageAccess=fs.readFileSync("js/page-access.js","utf8");
+assert.ok(parentHtml.includes("./js/parent-dashboard.js")&&parentHtml.includes("./js/student-auth.js"),"parent workspace loads family identity and dashboard code");
+assert.ok(parentDashboard.includes("getLinkedChildren")&&parentDashboard.includes("studentId"),"parent dashboard reads only linked children using student-specific IDs");
+assert.ok(pageAccess.includes('session.role==="parent"')&&pageAccess.includes('"./parent.html"'),"student-only routes redirect parent accounts to family workspace");
+
 
 assert.ok(nav.includes('href:"./dashboard.html"'));
 assert.ok(nav.includes('href:"./dashboard.html#rewards"'));
 assert.ok(nav.includes('auth:"guest"'),"guest navigation is separated from student navigation");
 assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
+assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"'),"parent navigation is isolated to the family role");
+assert.ok(nav.includes('role==="parent"'),"parent sessions are recognised by the shared navigation shell");
 assert.ok(nav.includes('c10playground_static_student_v1'),"navigation detects the current student session");
 assert.ok(nav.includes('Sign out'),"authenticated navigation provides sign-out");
 assert.ok(nav.includes('href:"./profile.html#profile"'));
