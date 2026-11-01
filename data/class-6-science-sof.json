@@ -6373,658 +6373,709 @@
   },
   {
     "chapter_no": 10,
-    "title": "Olympiad Reasoning & Applied Science",
-    "key": "sof-nso-olympiad-reasoning-applied-science",
+    "title": "Beyond Earth",
+    "key": "sof-iso-beyond-earth",
+    "section": "Science",
     "questions": [
       {
-        "id": "c6nsoq091",
-        "question": "A student observes that a metal spoon feels colder than a wooden spoon in the same room. What best explains this?",
+        "id": "c6nsoq451",
+        "question": "Which object is at the centre of our solar system?",
         "options": [
-          "Metal is always at a lower temperature",
-          "Metal conducts heat away from the hand faster",
-          "Wood produces cold",
-          "The spoons contain ice"
-        ],
-        "answer": 1,
-        "explanation": "Metal conducts heat more readily, so it draws heat from the hand faster.",
-        "difficulty": "Challenge"
-      },
-      {
-        "id": "c6nsoq092",
-        "question": "A shadow is shortest around noon on a sunny day because",
-        "options": [
-          "The Sun is relatively high in the sky",
-          "The Sun turns off at noon",
-          "Objects become transparent",
-          "Earth stops rotating"
-        ],
-        "answer": 0,
-        "explanation": "A higher Sun angle produces a shorter shadow.",
-        "difficulty": "Challenge"
-      },
-      {
-        "id": "c6nsoq093",
-        "question": "Four seedlings receive equal water, soil and light, but one gets no light. Which comparison best tests light's effect?",
-        "options": [
-          "Give each seedling different soil and water",
-          "Change the seed type every day",
-          "Measure only the colour of the pots",
-          "Compare the growth of the seedling kept without light with the others"
+          "Earth",
+          "The Moon",
+          "Jupiter",
+          "The Sun"
         ],
         "answer": 3,
-        "explanation": "Keeping other factors similar makes the light comparison fair.",
-        "difficulty": "Challenge"
+        "explanation": "The planets orbit the Sun.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq094",
-        "question": "A mixture contains rice grains, iron pins and salt. Which sequence is most suitable to separate all three?",
+        "id": "c6nsoq452",
+        "question": "Which planet is known as the Red Planet?",
         "options": [
-          "Filter once and collect everything together",
-          "Use only a magnet to remove all three",
-          "Use a magnet for pins, sieve rice, then dissolve and evaporate salt solution",
-          "Freeze the mixture and shake it"
+          "Venus",
+          "Neptune",
+          "Mars",
+          "Mercury"
         ],
         "answer": 2,
-        "explanation": "Magnetism separates iron, size can separate rice, and evaporation can recover dissolved salt.",
-        "difficulty": "Challenge"
+        "explanation": "Iron-rich dust gives Mars a reddish appearance.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq095",
-        "question": "A toy car travels 12 m in 4 s and then 12 m in 2 s. During which part is it faster?",
+        "id": "c6nsoq453",
+        "question": "Which planet is the largest in our solar system?",
         "options": [
-          "The first part",
-          "The second part",
-          "Both have equal speed",
-          "It is stationary in both parts"
+          "Earth",
+          "Jupiter",
+          "Mars",
+          "Mercury"
         ],
         "answer": 1,
-        "explanation": "The first speed is 3 m/s and the second is 6 m/s.",
-        "difficulty": "Challenge"
+        "explanation": "Jupiter is the largest planet.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq096",
-        "question": "A student sees a plant bend towards a window. This response is called",
+        "id": "c6nsoq454",
+        "question": "Which object is Earth's natural satellite?",
         "options": [
-          "Phototropism",
-          "Digestion",
-          "Evaporation",
-          "Condensation"
+          "The Moon",
+          "The Sun",
+          "Mars",
+          "Venus"
         ],
         "answer": 0,
-        "explanation": "Phototropism is plant growth in response to light direction.",
-        "difficulty": "Challenge"
+        "explanation": "The Moon orbits Earth.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq097",
-        "question": "A torch beam is aimed at a wall. An opaque book is placed in the beam. What appears on the wall?",
+        "id": "c6nsoq455",
+        "question": "Why does the Moon appear bright at night?",
         "options": [
-          "A new light source",
-          "A sound wave",
-          "A magnetic pole",
-          "A dark shadow where light is blocked"
+          "It produces its own light",
+          "It is made of glowing gas",
+          "It is lit by Earth's core",
+          "It reflects sunlight"
         ],
         "answer": 3,
-        "explanation": "The book blocks light from reaching part of the wall.",
-        "difficulty": "Easy"
+        "explanation": "The Moon reflects sunlight.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq098",
-        "question": "A compass needle changes direction near a bar magnet because",
+        "id": "c6nsoq456",
+        "question": "Which planet is closest to the Sun?",
         "options": [
-          "The magnet changes the air into water",
-          "The compass measures temperature",
-          "The magnet exerts a magnetic force on the needle",
-          "The needle is attracted by sunlight"
+          "Venus",
+          "Earth",
+          "Mercury",
+          "Mars"
         ],
         "answer": 2,
-        "explanation": "A compass needle is magnetic and responds to nearby magnetic fields.",
-        "difficulty": "Medium"
+        "explanation": "Mercury is the innermost planet.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq099",
-        "question": "A student wants to compare how quickly sugar dissolves in cold and warm water. Which is the fairest setup?",
+        "id": "c6nsoq457",
+        "question": "Which planet has prominent rings visible through a telescope?",
         "options": [
-          "Use more sugar in the cold water",
-          "Use equal water volumes and sugar amounts, changing only water temperature",
-          "Stir only the warm water",
-          "Use different cups with unknown volumes"
+          "Mercury",
+          "Saturn",
+          "Earth",
+          "Mars"
         ],
         "answer": 1,
-        "explanation": "Changing only temperature allows a fair comparison of dissolving rate.",
-        "difficulty": "Challenge"
+        "explanation": "Saturn has an extensive ring system.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq100",
-        "question": "Which conclusion is best after one seed fails to germinate?",
+        "id": "c6nsoq458",
+        "question": "What causes day and night on Earth?",
         "options": [
-          "One failure alone does not prove that the seed type can never germinate",
-          "All seeds of this type are dead",
-          "Water is never needed by seeds",
-          "The seed has become an animal"
+          "Earth's rotation on its axis",
+          "Earth's revolution around the Sun",
+          "The Moon's phases",
+          "The Sun moving around Earth"
         ],
         "answer": 0,
-        "explanation": "A single result is not enough; check conditions and repeat with more seeds.",
-        "difficulty": "Challenge"
+        "explanation": "Earth rotates once in about 24 hours.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq459",
+        "question": "What causes Earth's yearly movement around the Sun?",
+        "options": [
+          "Earth's daily rotation",
+          "The Moon's phases",
+          "The Sun's rotation",
+          "Earth's revolution"
+        ],
+        "answer": 3,
+        "explanation": "Earth completes one revolution in about one year.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq460",
+        "question": "Which star is closest to Earth?",
+        "options": [
+          "Sirius",
+          "Polaris",
+          "The Sun",
+          "Alpha Centauri"
+        ],
+        "answer": 2,
+        "explanation": "The Sun is our nearest star.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq461",
-        "question": "A student compares 2 seedlings under two light levels. Which plan is fairest? (practice case 2)",
+        "question": "Why do stars appear to twinkle when viewed from Earth?",
         "options": [
-          "Change light, water and soil together",
-          "Use different plant species",
-          "Measure only the tallest after selection",
-          "Keep water, soil and pot size the same"
+          "Stars switch on and off",
+          "Their light is affected by Earth's moving atmosphere",
+          "The Moon blocks each star repeatedly",
+          "Stars move in circles around Earth"
         ],
-        "answer": 3,
-        "explanation": "A fair test changes light while controlling other relevant factors.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "Atmospheric turbulence changes their apparent brightness and position.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq462",
-        "question": "A mixture contains iron, sand and salt. Which sequence separates all three? (practice case 3)",
+        "question": "A group of stars forming a recognisable pattern is called a:",
         "options": [
-          "Thermometer only",
-          "Add more sand",
-          "Magnet, dissolve in water, filter, evaporate",
-          "Sieve only"
+          "Constellation",
+          "Planetary ring",
+          "Galaxy cluster only",
+          "Satellite"
         ],
-        "answer": 2,
-        "explanation": "A magnet removes iron; filtration separates sand and evaporation recovers salt.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "A constellation is a recognised pattern of stars.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq463",
-        "question": "Metal and wood spoons are both at 19°C. Why can metal feel colder? (practice case 4)",
+        "question": "Which planet is often called Earth's twin because of its similar size?",
         "options": [
-          "It contains cold air permanently",
-          "It conducts heat away from the hand faster",
-          "It is always colder",
-          "It creates coldness"
+          "Jupiter",
+          "Saturn",
+          "Uranus",
+          "Venus"
         ],
-        "answer": 1,
-        "explanation": "Metal generally conducts heat away from skin faster than wood.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "Venus is close to Earth in size, though its environment differs.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq464",
-        "question": "A plant bends toward a window after 5 days. What is this growth response called? (practice case 5)",
+        "question": "Which planet is farthest from the Sun among the eight recognised planets?",
         "options": [
-          "Phototropism",
-          "Sedimentation",
-          "Condensation",
-          "Magnetism"
+          "Uranus",
+          "Saturn",
+          "Neptune",
+          "Jupiter"
         ],
-        "answer": 0,
-        "explanation": "Phototropism is growth in response to light direction.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "Neptune is the outermost recognised planet.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq465",
-        "question": "A drum sounds louder when struck harder. What changes most directly? (practice case 6)",
+        "question": "Why does the Sun look much larger than other stars?",
         "options": [
-          "The drum stops vibrating",
-          "Sound no longer needs a medium",
-          "Light wavelength changes",
-          "Vibration amplitude increases"
+          "It is the only star",
+          "It is much closer to Earth",
+          "It is smaller but brighter",
+          "Other stars do not emit light"
         ],
-        "answer": 3,
-        "explanation": "Greater vibration amplitude generally produces louder sound.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "The Sun is our nearest star.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq466",
-        "question": "A bulb glows when a switch closes the circuit. What does this show? (practice case 7)",
+        "question": "Which object is mostly made of ice, dust and rock and may form a tail near the Sun?",
         "options": [
-          "The switch creates sunlight",
-          "The bulb needs no energy",
-          "The circuit needs a complete conducting path",
-          "Current flows through a gap"
+          "Comet",
+          "Asteroid",
+          "Moon",
+          "Artificial satellite"
         ],
-        "answer": 2,
-        "explanation": "Closing the switch completes the path for current.",
-        "difficulty": "Hard"
+        "answer": 0,
+        "explanation": "Solar heating releases gas and dust from a comet.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq467",
-        "question": "A student records 8 repeated readings. What is the best practice? (practice case 8)",
+        "question": "Where are most asteroids in our solar system found?",
         "options": [
-          "Choose an unrelated value",
-          "Record all readings and summarise them honestly",
-          "Delete unexpected results",
-          "Change the object to fit a prediction"
+          "Between Earth and the Moon",
+          "Inside the Sun",
+          "Beyond Neptune only",
+          "In the asteroid belt between Mars and Jupiter"
         ],
-        "answer": 1,
-        "explanation": "Keeping all measurements supports reliable conclusions.",
-        "difficulty": "Easy"
+        "answer": 3,
+        "explanation": "The main asteroid belt lies between Mars and Jupiter.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq468",
-        "question": "Which action reduces energy use while maintaining electrical safety? (practice case 9)",
+        "question": "A small space rock burns brightly as it enters Earth's atmosphere. The visible streak is called a:",
         "options": [
-          "Switch off unused lights and use efficient bulbs",
-          "Overload sockets",
-          "Block ventilation",
-          "Leave appliances running"
+          "Comet",
+          "Asteroid belt",
+          "Meteor",
+          "Satellite"
         ],
-        "answer": 0,
-        "explanation": "Efficient lighting and switching off unused lights reduce energy use safely.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "A meteor is the light produced by a meteoroid entering the atmosphere.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq469",
-        "question": "A student compares 10 seedlings under two light levels. Which plan is fairest? (practice case 10)",
+        "question": "Which statement about planets is correct?",
         "options": [
-          "Change light, water and soil together",
-          "Use different plant species",
-          "Measure only the tallest after selection",
-          "Keep water, soil and pot size the same"
+          "They make their own visible light like stars",
+          "They reflect light from the Sun",
+          "They remain fixed in space",
+          "They all have the same size"
         ],
-        "answer": 3,
-        "explanation": "A fair test changes light while controlling other relevant factors.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "Planets are seen mainly by reflected sunlight.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq470",
-        "question": "A mixture contains iron, sand and salt. Which sequence separates all three? (practice case 11)",
+        "question": "Why does the Moon's shape appear to change during a month?",
         "options": [
-          "Thermometer only",
-          "Add more sand",
-          "Magnet, dissolve in water, filter, evaporate",
-          "Sieve only"
+          "We see different portions of its sunlit half as it orbits Earth",
+          "The Moon changes its actual shape",
+          "Earth's shadow covers it every night",
+          "The Moon produces different amounts of light"
         ],
-        "answer": 2,
-        "explanation": "A magnet removes iron; filtration separates sand and evaporation recovers salt.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "Phases depend on the Sun-Earth-Moon positions.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq471",
-        "question": "Metal and wood spoons are both at 27°C. Why can metal feel colder? (practice case 12)",
+        "question": "Which phase occurs when the Moon is between Earth and the Sun, with its sunlit side mostly facing away from Earth?",
         "options": [
-          "It contains cold air permanently",
-          "It conducts heat away from the hand faster",
-          "It is always colder",
-          "It creates coldness"
+          "Full Moon",
+          "First quarter",
+          "Last quarter",
+          "New Moon"
         ],
-        "answer": 1,
-        "explanation": "Metal generally conducts heat away from skin faster than wood.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "At new moon the near side is mostly unlit from Earth's view.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq472",
-        "question": "A plant bends toward a window after 13 days. What is this growth response called? (practice case 13)",
+        "question": "When does a full Moon occur?",
         "options": [
-          "Phototropism",
-          "Sedimentation",
-          "Condensation",
-          "Magnetism"
+          "When the Moon is between Earth and the Sun",
+          "When the Moon disappears forever",
+          "When the side facing Earth is almost fully illuminated",
+          "When Earth stops rotating"
         ],
-        "answer": 0,
-        "explanation": "Phototropism is growth in response to light direction.",
-        "difficulty": "Hard"
+        "answer": 2,
+        "explanation": "At full moon the near side is almost fully sunlit.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq473",
-        "question": "A drum sounds louder when struck harder. What changes most directly? (practice case 14)",
+        "question": "Which movement of Earth makes the Sun appear to move across the sky each day?",
         "options": [
-          "The drum stops vibrating",
-          "Sound no longer needs a medium",
-          "Light wavelength changes",
-          "Vibration amplitude increases"
+          "Earth's revolution around the Sun",
+          "Earth's rotation",
+          "The Moon orbiting Earth",
+          "The Sun orbiting the Moon"
         ],
-        "answer": 3,
-        "explanation": "Greater vibration amplitude generally produces louder sound.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "Earth's rotation causes the apparent daily motion of the Sun.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq474",
-        "question": "A bulb glows when a switch closes the circuit. What does this show? (practice case 15)",
+        "question": "Why are seasons opposite in the Northern and Southern Hemispheres?",
         "options": [
-          "The switch creates sunlight",
-          "The bulb needs no energy",
-          "The circuit needs a complete conducting path",
-          "Current flows through a gap"
+          "Earth's tilted axis makes each hemisphere receive different sunlight during the year",
+          "Earth moves closer to the Sun in one hemisphere",
+          "The Moon blocks sunlight from one half",
+          "The Sun changes its temperature each month"
         ],
-        "answer": 2,
-        "explanation": "Closing the switch completes the path for current.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "Axial tilt changes the angle and duration of sunlight.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq475",
-        "question": "A student records 16 repeated readings. What is the best practice? (practice case 16)",
+        "question": "Which planet is famous for a Great Red Spot, a very large storm?",
         "options": [
-          "Choose an unrelated value",
-          "Record all readings and summarise them honestly",
-          "Delete unexpected results",
-          "Change the object to fit a prediction"
+          "Mars",
+          "Earth",
+          "Mercury",
+          "Jupiter"
         ],
-        "answer": 1,
-        "explanation": "Keeping all measurements supports reliable conclusions.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "Jupiter's Great Red Spot is a giant storm.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq476",
-        "question": "Which action reduces energy use while maintaining electrical safety? (practice case 17)",
+        "question": "Which object is an artificial satellite?",
         "options": [
-          "Switch off unused lights and use efficient bulbs",
-          "Overload sockets",
-          "Block ventilation",
-          "Leave appliances running"
+          "The Moon",
+          "Europa",
+          "A communication satellite placed in orbit by people",
+          "Phobos"
         ],
-        "answer": 0,
-        "explanation": "Efficient lighting and switching off unused lights reduce energy use safely.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "Artificial satellites are human-made objects sent into orbit.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq477",
-        "question": "A student compares 18 seedlings under two light levels. Which plan is fairest? (practice case 18)",
+        "question": "What keeps planets moving in orbit around the Sun?",
         "options": [
-          "Change light, water and soil together",
-          "Use different plant species",
-          "Measure only the tallest after selection",
-          "Keep water, soil and pot size the same"
+          "Magnetic attraction from Earth",
+          "The Sun's gravitational attraction",
+          "Wind in space",
+          "Light pressure alone"
         ],
-        "answer": 3,
-        "explanation": "A fair test changes light while controlling other relevant factors.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "Gravity provides the force that keeps planets in orbit.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq478",
-        "question": "A mixture contains iron, sand and salt. Which sequence separates all three? (practice case 19)",
+        "question": "Why is there no sound travelling through the vacuum of space in the usual way?",
         "options": [
-          "Thermometer only",
-          "Add more sand",
-          "Magnet, dissolve in water, filter, evaporate",
-          "Sieve only"
+          "Sound needs a material medium to carry vibrations",
+          "Space is too bright",
+          "Gravity stops all vibrations",
+          "Stars absorb sound"
         ],
-        "answer": 2,
-        "explanation": "A magnet removes iron; filtration separates sand and evaporation recovers salt.",
-        "difficulty": "Hard"
+        "answer": 0,
+        "explanation": "Sound is a mechanical wave and needs a medium.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq479",
-        "question": "Metal and wood spoons are both at 35°C. Why can metal feel colder? (practice case 20)",
+        "question": "Which planet rotates on its side compared with most other planets?",
         "options": [
-          "It contains cold air permanently",
-          "It conducts heat away from the hand faster",
-          "It is always colder",
-          "It creates coldness"
+          "Mercury",
+          "Earth",
+          "Mars",
+          "Uranus"
         ],
-        "answer": 1,
-        "explanation": "Metal generally conducts heat away from skin faster than wood.",
-        "difficulty": "Easy"
+        "answer": 3,
+        "explanation": "Uranus has an extreme axial tilt.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq480",
-        "question": "A plant bends toward a window after 21 days. What is this growth response called? (practice case 21)",
+        "question": "Which planet is known for a thick, hot atmosphere and runaway greenhouse effect?",
         "options": [
-          "Phototropism",
-          "Sedimentation",
-          "Condensation",
-          "Magnetism"
+          "Mars",
+          "Neptune",
+          "Venus",
+          "Mercury"
         ],
-        "answer": 0,
-        "explanation": "Phototropism is growth in response to light direction.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "Venus has a dense carbon-dioxide atmosphere and extreme surface heat.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq481",
-        "question": "A drum sounds louder when struck harder. What changes most directly? (practice case 22)",
+        "question": "Which statement best describes a light-year?",
         "options": [
-          "The drum stops vibrating",
-          "Sound no longer needs a medium",
-          "Light wavelength changes",
-          "Vibration amplitude increases"
+          "A unit of time",
+          "A unit of distance",
+          "A planet's year",
+          "The time sunlight takes to reach Earth"
         ],
-        "answer": 3,
-        "explanation": "Greater vibration amplitude generally produces louder sound.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "A light-year is the distance light travels in one year.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq482",
-        "question": "A bulb glows when a switch closes the circuit. What does this show? (practice case 23)",
+        "question": "Why do astronauts in orbit appear to float?",
         "options": [
-          "The switch creates sunlight",
-          "The bulb needs no energy",
-          "The circuit needs a complete conducting path",
-          "Current flows through a gap"
+          "They and their spacecraft are falling around Earth together",
+          "There is no gravity in space",
+          "Their mass becomes zero",
+          "The spacecraft is outside Earth's pull"
         ],
-        "answer": 2,
-        "explanation": "Closing the switch completes the path for current.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "Orbiting objects experience continuous free fall.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq483",
-        "question": "A student records 24 repeated readings. What is the best practice? (practice case 24)",
+        "question": "What is a lunar eclipse?",
         "options": [
-          "Choose an unrelated value",
-          "Record all readings and summarise them honestly",
-          "Delete unexpected results",
-          "Change the object to fit a prediction"
+          "The Moon's shadow falls on Earth",
+          "The Sun moves behind Mars",
+          "The Moon stops reflecting light permanently",
+          "Earth's shadow falls on the Moon"
         ],
-        "answer": 1,
-        "explanation": "Keeping all measurements supports reliable conclusions.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "A lunar eclipse occurs when Earth lies between Sun and Moon.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq484",
-        "question": "Which action reduces energy use while maintaining electrical safety? (practice case 25)",
+        "question": "What is a solar eclipse?",
         "options": [
-          "Switch off unused lights and use efficient bulbs",
-          "Overload sockets",
-          "Block ventilation",
-          "Leave appliances running"
+          "Earth comes between the Sun and Moon",
+          "Mars blocks the Sun",
+          "The Moon comes between the Sun and Earth and blocks sunlight from part of Earth",
+          "The Sun stops shining"
         ],
-        "answer": 0,
-        "explanation": "Efficient lighting and switching off unused lights reduce energy use safely.",
-        "difficulty": "Hard"
+        "answer": 2,
+        "explanation": "A solar eclipse occurs when the Moon's shadow falls on Earth.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq485",
-        "question": "A student compares 26 seedlings under two light levels. Which plan is fairest? (practice case 26)",
+        "question": "Why is it unsafe to look directly at the Sun during a solar eclipse?",
         "options": [
-          "Change light, water and soil together",
-          "Use different plant species",
-          "Measure only the tallest after selection",
-          "Keep water, soil and pot size the same"
+          "The Sun's light becomes harmless",
+          "Intense sunlight can damage the eyes",
+          "The Moon emits ultraviolet rays",
+          "The Sun becomes closer to Earth"
         ],
-        "answer": 3,
-        "explanation": "A fair test changes light while controlling other relevant factors.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "Direct solar viewing can injure the retina.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq486",
-        "question": "A mixture contains iron, sand and salt. Which sequence separates all three? (practice case 27)",
+        "question": "Which planet has the shortest year because it orbits closest to the Sun?",
         "options": [
-          "Thermometer only",
-          "Add more sand",
-          "Magnet, dissolve in water, filter, evaporate",
-          "Sieve only"
+          "Mercury",
+          "Neptune",
+          "Saturn",
+          "Jupiter"
         ],
-        "answer": 2,
-        "explanation": "A magnet removes iron; filtration separates sand and evaporation recovers salt.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "Mercury completes its orbit in about 88 Earth days.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq487",
-        "question": "Metal and wood spoons are both at 43°C. Why can metal feel colder? (practice case 28)",
+        "question": "Why does the same side of the Moon mostly face Earth?",
         "options": [
-          "It contains cold air permanently",
-          "It conducts heat away from the hand faster",
-          "It is always colder",
-          "It creates coldness"
+          "The Moon does not rotate",
+          "Earth's gravity stops its orbit",
+          "The Sun pulls only one side",
+          "The Moon rotates once in about the same time it takes to orbit Earth"
         ],
-        "answer": 1,
-        "explanation": "Metal generally conducts heat away from skin faster than wood.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "The Moon is tidally locked to Earth.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq488",
-        "question": "A plant bends toward a window after 29 days. What is this growth response called? (practice case 29)",
+        "question": "Which object is a dwarf planet in the outer solar system?",
         "options": [
-          "Phototropism",
-          "Sedimentation",
-          "Condensation",
-          "Magnetism"
+          "Jupiter",
+          "Venus",
+          "Pluto",
+          "Earth"
         ],
-        "answer": 0,
-        "explanation": "Phototropism is growth in response to light direction.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "Pluto is classified as a dwarf planet.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq489",
-        "question": "A drum sounds louder when struck harder. What changes most directly? (practice case 30)",
+        "question": "Which planet has a blue appearance partly because methane absorbs red light?",
         "options": [
-          "The drum stops vibrating",
-          "Sound no longer needs a medium",
-          "Light wavelength changes",
-          "Vibration amplitude increases"
+          "Mercury",
+          "Neptune",
+          "Mars",
+          "Venus"
         ],
-        "answer": 3,
-        "explanation": "Greater vibration amplitude generally produces louder sound.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "Methane absorbs red wavelengths, contributing to Neptune's blue appearance.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq490",
-        "question": "A bulb glows when a switch closes the circuit. What does this show? (practice case 31)",
+        "question": "The Sun's energy reaches Earth mainly by:",
         "options": [
-          "The switch creates sunlight",
-          "The bulb needs no energy",
-          "The circuit needs a complete conducting path",
-          "Current flows through a gap"
+          "Radiation",
+          "Conduction through space",
+          "Convection through a solid bridge",
+          "Sound waves"
         ],
-        "answer": 2,
-        "explanation": "Closing the switch completes the path for current.",
-        "difficulty": "Hard"
+        "answer": 0,
+        "explanation": "Radiation can travel through the vacuum of space.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq491",
-        "question": "A student records 32 repeated readings. What is the best practice? (practice case 32)",
+        "question": "The Moon takes about how long to orbit Earth relative to distant stars?",
         "options": [
-          "Choose an unrelated value",
-          "Record all readings and summarise them honestly",
-          "Delete unexpected results",
-          "Change the object to fit a prediction"
+          "24 hours",
+          "7 days",
+          "365 days",
+          "27 days"
         ],
-        "answer": 1,
-        "explanation": "Keeping all measurements supports reliable conclusions.",
-        "difficulty": "Easy"
+        "answer": 3,
+        "explanation": "The sidereal orbital period is about 27.3 days.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq492",
-        "question": "Which action reduces energy use while maintaining electrical safety? (practice case 33)",
+        "question": "Why do different constellations become visible in different seasons?",
         "options": [
-          "Switch off unused lights and use efficient bulbs",
-          "Overload sockets",
-          "Block ventilation",
-          "Leave appliances running"
+          "Stars change places every day",
+          "The Sun switches constellations off",
+          "Earth's position in its orbit changes which direction the night side faces",
+          "The Moon creates new stars"
         ],
-        "answer": 0,
-        "explanation": "Efficient lighting and switching off unused lights reduce energy use safely.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "Earth faces different directions in space through the year.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq493",
-        "question": "A student compares 34 seedlings under two light levels. Which plan is fairest? (practice case 34)",
+        "question": "A spacecraft travels away from Earth. Which force becomes weaker with increasing distance, all else equal?",
         "options": [
-          "Change light, water and soil together",
-          "Use different plant species",
-          "Measure only the tallest after selection",
-          "Keep water, soil and pot size the same"
+          "The spacecraft's mass",
+          "Earth's gravitational pull",
+          "The speed of light",
+          "The Sun's energy output"
         ],
-        "answer": 3,
-        "explanation": "A fair test changes light while controlling other relevant factors.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "Gravitational attraction decreases with distance.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
         "id": "c6nsoq494",
-        "question": "A mixture contains iron, sand and salt. Which sequence separates all three? (practice case 35)",
+        "question": "Why do planets not usually collide as they orbit the Sun?",
         "options": [
-          "Thermometer only",
-          "Add more sand",
-          "Magnet, dissolve in water, filter, evaporate",
-          "Sieve only"
+          "They follow separate paths with large distances between their orbits",
+          "There is no gravity in space",
+          "Planets are fixed to invisible strings",
+          "The Sun pushes all planets outward equally"
         ],
-        "answer": 2,
-        "explanation": "A magnet removes iron; filtration separates sand and evaporation recovers salt.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "Stable orbits and large separations prevent routine collisions.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
         "id": "c6nsoq495",
-        "question": "Metal and wood spoons are both at 51°C. Why can metal feel colder? (practice case 36)",
+        "question": "Which is a natural satellite of Mars?",
         "options": [
-          "It contains cold air permanently",
-          "It conducts heat away from the hand faster",
-          "It is always colder",
-          "It creates coldness"
+          "Titan",
+          "Europa",
+          "Ganymede",
+          "Phobos"
         ],
-        "answer": 1,
-        "explanation": "Metal generally conducts heat away from skin faster than wood.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "Phobos is one of Mars's two small moons.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
         "id": "c6nsoq496",
-        "question": "A plant bends toward a window after 37 days. What is this growth response called? (practice case 37)",
+        "question": "What makes the Sun appear to rise in the east and set in the west?",
         "options": [
-          "Phototropism",
-          "Sedimentation",
-          "Condensation",
-          "Magnetism"
+          "The Sun orbits Earth once daily",
+          "The Moon pushes the Sun",
+          "Earth rotates from west to east",
+          "Earth revolves around the Sun each day"
         ],
-        "answer": 0,
-        "explanation": "Phototropism is growth in response to light direction.",
-        "difficulty": "Hard"
+        "answer": 2,
+        "explanation": "Earth's rotation makes the Sun appear to move east to west.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6nsoq497",
-        "question": "A drum sounds louder when struck harder. What changes most directly? (practice case 38)",
+        "question": "Which planet has a day longer than its year?",
         "options": [
-          "The drum stops vibrating",
-          "Sound no longer needs a medium",
-          "Light wavelength changes",
-          "Vibration amplitude increases"
+          "Earth",
+          "Venus",
+          "Jupiter",
+          "Mars"
         ],
-        "answer": 3,
-        "explanation": "Greater vibration amplitude generally produces louder sound.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "Venus rotates very slowly; one rotation takes longer than one orbit.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6nsoq498",
-        "question": "A bulb glows when a switch closes the circuit. What does this show? (practice case 39)",
+        "question": "Why does a lunar eclipse not happen at every full Moon?",
         "options": [
-          "The switch creates sunlight",
-          "The bulb needs no energy",
-          "The circuit needs a complete conducting path",
-          "Current flows through a gap"
+          "The Moon's orbit is tilted relative to Earth's orbital plane",
+          "The Moon is too small",
+          "Earth has no shadow",
+          "The Sun shines through the Moon"
         ],
-        "answer": 2,
-        "explanation": "Closing the switch completes the path for current.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "The alignment for an eclipse occurs only near an orbital node.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6nsoq499",
-        "question": "A student records 40 repeated readings. What is the best practice? (practice case 40)",
+        "question": "Which statement explains why regular Moon phases are not caused by Earth's shadow?",
         "options": [
-          "Choose an unrelated value",
-          "Record all readings and summarise them honestly",
-          "Delete unexpected results",
-          "Change the object to fit a prediction"
+          "The Moon has no surface",
+          "The Moon is always dark",
+          "The Sun does not illuminate the Moon",
+          "Earth's shadow causes lunar eclipses, not the monthly phases"
         ],
-        "answer": 1,
-        "explanation": "Keeping all measurements supports reliable conclusions.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "Regular phases result from the changing view of the sunlit half.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6nsoq500",
-        "question": "Which action reduces energy use while maintaining electrical safety? (practice case 41)",
+        "question": "Why does a comet's tail usually point away from the Sun?",
         "options": [
-          "Switch off unused lights and use efficient bulbs",
-          "Overload sockets",
-          "Block ventilation",
-          "Leave appliances running"
+          "The tail always points behind the comet's path",
+          "Earth's gravity pulls it away",
+          "Solar wind and sunlight push gas and dust away from the Sun",
+          "The comet's tail is a shadow"
         ],
-        "answer": 0,
-        "explanation": "Efficient lighting and switching off unused lights reduce energy use safely.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "Solar wind and radiation pressure push tail material generally away from the Sun.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   }
