@@ -17,7 +17,10 @@
     {id:"mathematics",title:"Mathematics",emoji:"📐"},
     {id:"english",title:"English",emoji:"📖"},
     {id:"social-science",title:"Social Science",emoji:"🌍"},
-    {id:"hindi",title:"Hindi",emoji:"📝"}
+    {id:"hindi",title:"Hindi",emoji:"📝"},
+    {id:"science-sof",title:"Science · SOF",emoji:"🏆"},
+    {id:"mathematics-sof",title:"Mathematics · SOF",emoji:"🏆"},
+    {id:"english-sof",title:"English · SOF",emoji:"🏆"}
   ];
   const dateKey = value => {
     const date=new Date(value);
