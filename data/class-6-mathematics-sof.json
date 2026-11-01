@@ -7773,15 +7773,15 @@
       },
       {
         "id": "c6imoq550",
-        "question": "64:8 :: 121:__?",
+        "question": "A tray has 3 red, 2 blue and 4 green counters. Without looking, what is the smallest number of counters to draw to guarantee that at least three are the same colour?",
         "options": [
-          "10",
-          "12",
-          "11",
-          "13"
+          "7",
+          "6",
+          "8",
+          "9"
         ],
-        "answer": 2,
-        "explanation": "8 is √64; 11 is √121.",
+        "answer": 0,
+        "explanation": "In the worst case, six draws could be two of each colour. The seventh draw must make three of one colour.",
         "difficulty": "Challenge",
         "section": "Logical Reasoning"
       }
