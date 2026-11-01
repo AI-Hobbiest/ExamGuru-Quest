@@ -208,7 +208,7 @@
 
         <section class="admin-content" id="familyAccessPanel" style="border:1px solid var(--c10-line);border-radius:14px;padding:14px;margin:18px 0">
           <h3>Family access · parent accounts and child links</h3>
-          <p class="admin-muted">Create parent logins and map each parent to one or more student accounts. A student may be linked to more than one parent. Exported family relationships must be published to GitHub to take effect.</p>
+          <p class="admin-muted">Create parent logins and map each parent to one or more student accounts. A student may be linked to more than one parent. After publishing the exported file, parents sign in from the main ExamGuru home page using this username/password form; their account opens the Family Dashboard.</p>
           <div class="admin-notice"><strong>Local MVP privacy limit:</strong> <code>family-access.json</code> is public in this repository. Use aliases rather than full legal names, and classroom-only passwords. This is not production-grade authentication or confidential family data storage.</div>
           <h4>Create parent account</h4>
           <div class="admin-form-grid">
@@ -232,31 +232,7 @@
           <div id="familyLinksTable" class="admin-table-wrap"></div>
         </section>
 
-        <section class="admin-content" id="familyAccessPanel" style="border:1px solid var(--c10-line);border-radius:14px;padding:14px;margin:18px 0">
-          <h3>Family access · parent accounts and child links</h3>
-          <p class="admin-muted">Create parent logins and map each parent to one or more student accounts. A student may be linked to more than one parent. Exported family relationships must be published to GitHub to take effect.</p>
-          <div class="admin-notice"><strong>Local MVP privacy limit:</strong> <code>family-access.json</code> is public in this repository. Use aliases rather than full legal names, and classroom-only passwords. This is not production-grade authentication or confidential family data storage.</div>
-          <h4>Create parent account</h4>
-          <div class="admin-form-grid">
-            <div class="admin-field"><label for="parentAccountDisplayName">Display name / alias</label><input id="parentAccountDisplayName" maxlength="60" placeholder="e.g. Parent A"></div>
-            <div class="admin-field"><label for="parentAccountUsername">Parent username</label><input id="parentAccountUsername" maxlength="32" minlength="3" pattern="[A-Za-z0-9._-]{3,32}" autocomplete="off" autocapitalize="none" placeholder="e.g. parent_a"></div>
-          </div>
-          <div class="admin-actions"><button class="admin-btn" id="createParentAccountBtn" type="button">Create parent login &amp; export</button><button class="admin-btn secondary" id="reloadFamilyAccessBtn" type="button">Reload published family file</button></div>
-          <div id="parentTempPasswordBox" hidden>
-            <p><strong>Temporary parent password — share privately.</strong></p>
-            <textarea id="parentTempPassword" rows="2" readonly></textarea>
-            <div class="admin-actions"><button class="admin-btn secondary" id="copyParentTempPasswordBtn" type="button">Copy temporary password</button></div>
-          </div>
-          <hr class="admin-rule">
-          <h4>Map parents to students</h4>
-          <div class="admin-form-grid">
-            <div class="admin-field"><label for="familyParentSelect">Parent account</label><select id="familyParentSelect"><option value="">Load parent accounts first</option></select></div>
-            <div class="admin-field"><label for="familyChildrenSelect">Linked children (select multiple)</label><select id="familyChildrenSelect" multiple size="6" aria-describedby="familyLinksHelp"></select><span class="admin-inline-help" id="familyLinksHelp">Use Ctrl (Windows) or Command (Mac) to select multiple children. A student can be linked to several parent accounts.</span></div>
-          </div>
-          <div class="admin-actions"><button class="admin-btn" id="saveFamilyLinksBtn" type="button">Save relationships &amp; export</button><button class="admin-btn secondary" id="downloadFamilyAccessBtn" type="button">Download family-access.json</button></div>
-          <div id="familyAccessStatus" class="admin-status" role="status">Loading parent accounts and student mappings…</div>
-          <div id="familyLinksTable" class="admin-table-wrap"></div>
-        </section>
+        
 
         <h2>Student profile management and progress reports</h2>
         <section class="admin-content" style="border:1px solid var(--c10-line);border-radius:14px;padding:14px" hidden>
@@ -284,7 +260,7 @@
           <h3>Live progress report (deferred)</h3>
           <div class="admin-form-grid">
             <div class="admin-field"><label for="liveProgressClass">Class filter</label><select id="liveProgressClass"><option value="">All classes</option></select></div>
-            <div class="admin-field"><label for="liveProgressSubject">Subject filter</label><select id="liveProgressSubject"><option value="">All subjects</option><option value="science">Science</option><option value="mathematics">Mathematics</option><option value="english">English</option><option value="social-science">Social Science</option><option value="hindi">Hindi</option></select></div>
+            <div class="admin-field"><label for="liveProgressSubject">Subject filter</label><select id="liveProgressSubject"><option value="">All subjects</option><option value="science">Science</option><option value="mathematics">Mathematics</option><option value="english">English</option><option value="social-science">Social Science</option><option value="hindi">Hindi</option><option value="science-sof">Science · SOF</option><option value="mathematics-sof">Mathematics · SOF</option><option value="english-sof">English · SOF</option></select></div>
           </div>
           <div class="admin-actions"><button class="admin-btn secondary" id="refreshLiveProgressBtn" type="button">Refresh live report</button><button class="admin-btn secondary" id="exportLiveProgressBtn" type="button">Download live CSV</button></div>
           <div id="liveProgressStatus" class="admin-status" role="status">Sign in and configure the API to retrieve central progress records.</div>
@@ -306,7 +282,7 @@
           <h3>Live class / subject leaderboard (deferred)</h3>
           <div class="admin-form-grid">
             <div class="admin-field"><label for="liveLeaderClass">Class filter</label><select id="liveLeaderClass"><option value="">All classes</option></select></div>
-            <div class="admin-field"><label for="liveLeaderSubject">Subject filter</label><select id="liveLeaderSubject"><option value="">Overall</option><option value="science">Science</option><option value="mathematics">Mathematics</option><option value="english">English</option><option value="social-science">Social Science</option><option value="hindi">Hindi</option></select></div>
+            <div class="admin-field"><label for="liveLeaderSubject">Subject filter</label><select id="liveLeaderSubject"><option value="">Overall</option><option value="science">Science</option><option value="mathematics">Mathematics</option><option value="english">English</option><option value="social-science">Social Science</option><option value="hindi">Hindi</option><option value="science-sof">Science · SOF</option><option value="mathematics-sof">Mathematics · SOF</option><option value="english-sof">English · SOF</option></select></div>
           </div>
           <div class="admin-actions"><button class="admin-btn secondary" id="refreshLiveLeaderboardBtn" type="button">Refresh live leaderboard</button><button class="admin-btn secondary" id="exportLiveLeaderboardBtn" type="button">Download live leaderboard CSV</button></div>
           <div id="liveLeaderboardStatus" class="admin-status" role="status">Sign in and configure the API to retrieve live rankings.</div>
@@ -314,7 +290,7 @@
         </section>
         <div class="admin-form-grid">
           <div class="admin-field"><label for="leaderClass">Class filter</label><select id="leaderClass"><option value="">All imported classes</option></select></div>
-          <div class="admin-field"><label for="leaderSubject">Subject</label><select id="leaderSubject"><option value="">Overall</option><option value="science">Science</option><option value="mathematics">Mathematics</option><option value="english">English</option><option value="social-science">Social Science</option><option value="hindi">Hindi</option></select></div>
+          <div class="admin-field"><label for="leaderSubject">Subject</label><select id="leaderSubject"><option value="">Overall</option><option value="science">Science</option><option value="mathematics">Mathematics</option><option value="english">English</option><option value="social-science">Social Science</option><option value="hindi">Hindi</option><option value="science-sof">Science · SOF</option><option value="mathematics-sof">Mathematics · SOF</option><option value="english-sof">English · SOF</option></select></div>
         </div>
         <div id="leaderboardStatus" class="admin-status" role="status">Import student backups to calculate rankings.</div>
         <div id="leaderboardTable" class="admin-table-wrap"></div>
