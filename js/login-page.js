@@ -13,7 +13,7 @@
   const say=(message,type="")=>{status.textContent=message;status.className="login-status"+(type?" "+type:"");};
   function hasStudentSession(){try{return !!JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null")?.username;}catch(_){return false;}}
   if(hasStudentSession()&&window.C10StudentAuth){
-    window.C10StudentAuth.restoreSession().then(account=>{if(account)location.replace("./dashboard.html");});
+    window.C10StudentAuth.restoreSession().then(account=>{if(account)location.replace(account.role==="parent"?"./parent.html":"./dashboard.html");});
   }
   form.addEventListener("submit",async event=>{
     event.preventDefault();
