@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ece8fa">
+<title>Family Dashboard | ExamGuru Quest</title>
+<link rel="stylesheet" href="./css/branding.css">
+<link rel="stylesheet" href="./css/app-shell.css">
+<link rel="stylesheet" href="./css/theme-roles-v2.css?v=quest2">
+<style>
+.parent-page{max-width:1120px;margin:0 auto;padding:30px 22px 60px}
+.parent-hero{padding:26px;border-radius:22px;background:linear-gradient(135deg,#f0edfb,#eaf7f0);border:1px solid #dedbef}
+.parent-hero h1{margin:0 0 8px;color:#292b58;font-size:clamp(1.7rem,4vw,2.4rem)}
+.parent-hero p{margin:0;color:#5e6680;line-height:1.6}
+.parent-status{margin:18px 0;color:#626b84;font-size:.9rem}
+.family-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px;margin-top:18px}
+.family-card{background:#fff;border:1px solid #e0e4ef;border-radius:18px;padding:20px;box-shadow:0 10px 25px rgba(37,43,82,.06)}
+.family-card h2{margin:0 0 4px;font-size:1.2rem;color:#292b58}
+.family-card .class-tag{color:#626b84;font-size:.84rem}
+.family-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+.family-metric{background:#f5f4fb;border-radius:12px;padding:12px}
+.family-metric strong{display:block;font-size:1.25rem;color:#36366f}
+.family-metric span{display:block;font-size:.75rem;color:#6c7185;margin-top:3px}
+.family-latest{border-top:1px solid #ebeaf1;padding-top:12px;color:#626b84;font-size:.83rem;line-height:1.6}
+.family-empty{padding:22px;border:1px dashed #c9c8d9;border-radius:16px;color:#626b84;background:#fff}
+.family-note{font-size:.8rem;color:#73788b;margin-top:20px;line-height:1.6}
+</style>
+</head>
+<body class="c10-theme-quest">
+<header style="padding:18px max(18px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:15px">
+  <strong>ExamGuru <span style="color:#8fcfb1">●</span></strong>
+  <span class="brand-signature" style="margin:0">Family workspace</span>
+</header>
+<main class="parent-page">
+  <section class="parent-hero">
+    <p style="font-weight:850;letter-spacing:.08em;text-transform:uppercase;font-size:.72rem;margin-bottom:8px">Parent / Guardian</p>
+    <h1 id="parentGreeting">Family learning dashboard</h1>
+    <p>View the learning activity of children linked to this parent account. Each child keeps a separate learning history and XP record.</p>
+  </section>
+  <p id="parentStatus" class="parent-status" role="status" aria-live="polite">Loading linked children…</p>
+  <section id="familyChildrenGrid" class="family-grid" aria-label="Linked children"></section>
+  <p class="family-note">Progress shown here is stored on this browser/device only. Children should sign in with their own username to practise. Family access and parent–child links are maintained by the administrator. This local-first version does not synchronise history between devices.</p>
+</main>
+<script src="./js/student-auth.js"></script>
+<script src="./js/storage.js"></script>
+<script src="./js/parent-dashboard.js"></script>
+<script src="./js/app-shell.js"></script>
+</body>
+</html>
