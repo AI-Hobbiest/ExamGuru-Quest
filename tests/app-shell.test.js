@@ -39,7 +39,7 @@ assert.ok(roleTheme.includes("body.c10-theme-admin"),"Admin Workspace has a dedi
 assert.ok(roleTheme.includes("#f0a82e"),"Quest quiz primary action uses the yellow-orange accent");
 assert.ok(roleTheme.includes("#e4f4e7")&&roleTheme.includes("#eee9ff")&&roleTheme.includes("#fff0c8"),"Quest palette includes green, lavender and yellow");
 for(const [name,html,theme] of [["homepage",homepage,"c10-theme-quest"],["practice",practice,"c10-theme-quest"],["profile",profile,"c10-theme-quest"],["dashboard",dashboard,"c10-theme-quest"],["admin",admin,"c10-theme-admin"]]){
- assert.ok(html.includes("./css/theme-roles.css"),name+" loads the role-specific theme");
+ assert.ok(html.includes("./css/theme-roles.css?v=20261101"),name+" loads the versioned role-specific theme");
  assert.ok(html.includes('class="'+theme)||html.includes('class="eg-quiz-page '+theme),name+" is assigned the correct theme");
 }
 assert.ok(css.includes(".c10-sidebar a.c10-nav-link:visited"),"sidebar link color overrides the global anchor theme");
