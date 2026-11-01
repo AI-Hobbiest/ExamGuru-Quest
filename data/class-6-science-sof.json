@@ -3541,658 +3541,709 @@
   },
   {
     "chapter_no": 6,
-    "title": "Motion & Measurement",
-    "key": "sof-nso-motion-measurement",
+    "title": "The Living World and Its Diversity",
+    "key": "sof-iso-living-world-and-its-diversity",
+    "section": "Science",
     "questions": [
       {
-        "id": "c6nsoq051",
-        "question": "Which is the SI unit of length?",
+        "id": "c6nsoq251",
+        "question": "Which feature is shared by all living organisms?",
         "options": [
-          "Kilogram",
-          "Metre",
-          "Second",
-          "Litre"
-        ],
-        "answer": 1,
-        "explanation": "The SI base unit for length is the metre.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq052",
-        "question": "A cyclist travels 60 metres in 10 seconds. What is the average speed?",
-        "options": [
-          "6 m/s",
-          "10 m/s",
-          "50 m/s",
-          "600 m/s"
-        ],
-        "answer": 0,
-        "explanation": "Speed = distance ÷ time = 60 ÷ 10 = 6 m/s.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq053",
-        "question": "Which motion repeats at regular intervals?",
-        "options": [
-          "Random motion",
-          "Only straight-line motion",
-          "Motionless state",
-          "Periodic motion"
-        ],
-        "answer": 3,
-        "explanation": "Periodic motion repeats after equal time intervals.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq054",
-        "question": "Which instrument measures time intervals in a race?",
-        "options": [
-          "Thermometer",
-          "Barometer",
-          "Stopwatch",
-          "Measuring cylinder"
+          "They all walk from place to place",
+          "They all have leaves",
+          "They carry out life processes",
+          "They all make their own food"
         ],
         "answer": 2,
-        "explanation": "A stopwatch measures elapsed time.",
-        "difficulty": "Easy"
+        "explanation": "Living organisms carry out processes such as nutrition, growth and reproduction.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq055",
-        "question": "A car moves along a straight road. This is an example of",
+        "id": "c6nsoq252",
+        "question": "Which organism is a vertebrate?",
         "options": [
-          "Circular motion",
-          "Rectilinear motion",
-          "Rotational motion only",
-          "No motion"
+          "Earthworm",
+          "Frog",
+          "Snail",
+          "Butterfly"
         ],
         "answer": 1,
-        "explanation": "Rectilinear motion occurs along a straight line.",
-        "difficulty": "Easy"
+        "explanation": "A frog has a backbone.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq056",
-        "question": "The tip of a clock's second hand moves in what path?",
+        "id": "c6nsoq253",
+        "question": "Which organism is an invertebrate?",
         "options": [
-          "Circle",
-          "Straight line",
-          "Square",
-          "Zigzag"
+          "Earthworm",
+          "Fish",
+          "Lizard",
+          "Pigeon"
         ],
         "answer": 0,
-        "explanation": "The hand rotates around the clock's centre, tracing a circle.",
-        "difficulty": "Easy"
+        "explanation": "An earthworm has no backbone.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq057",
-        "question": "If the same distance is covered in less time, average speed is",
+        "id": "c6nsoq254",
+        "question": "Which plant is a climber?",
         "options": [
-          "Smaller",
-          "Always zero",
-          "Unchanged in every case",
-          "Greater"
+          "Pumpkin",
+          "Mint",
+          "Mango",
+          "Pea plant"
         ],
         "answer": 3,
-        "explanation": "Speed increases when distance stays fixed and time decreases.",
-        "difficulty": "Medium"
+        "explanation": "Pea plants use support to climb.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq058",
-        "question": "Which reading is most suitable for a room's temperature?",
+        "id": "c6nsoq255",
+        "question": "Why do cactus leaves often appear as spines?",
         "options": [
-          "28 kg",
-          "28 cm",
-          "28 °C",
-          "28 mL"
+          "They absorb all sunlight",
+          "They help the cactus swim",
+          "They help reduce water loss",
+          "They make food faster than roots"
         ],
         "answer": 2,
-        "explanation": "Temperature is measured in degrees Celsius in everyday settings.",
-        "difficulty": "Easy"
+        "explanation": "Spines reduce exposed leaf surface and water loss.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq059",
-        "question": "Why should the eye be level with the liquid surface when reading a measuring cylinder?",
+        "id": "c6nsoq256",
+        "question": "Which plant part usually absorbs water and minerals from soil?",
         "options": [
-          "To make the liquid warmer",
-          "To reduce parallax error",
-          "To increase the volume",
-          "To change the liquid's colour"
+          "Flowers",
+          "Roots",
+          "Fruits",
+          "Petals"
         ],
         "answer": 1,
-        "explanation": "Eye-level reading reduces parallax error.",
-        "difficulty": "Medium"
+        "explanation": "Roots absorb water and mineral nutrients.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq060",
-        "question": "A runner completes one full lap of a circular track and returns to the start. What is the displacement?",
+        "id": "c6nsoq257",
+        "question": "A plant with a weak stem that spreads along the ground is called a:",
         "options": [
-          "Zero",
-          "Equal to the track circumference",
-          "Always one metre",
-          "Twice the circumference"
+          "Creeper",
+          "Tree",
+          "Shrub",
+          "Climber"
         ],
         "answer": 0,
-        "explanation": "Displacement is zero when the final position equals the initial position.",
-        "difficulty": "Medium"
+        "explanation": "Creepers have weak stems and spread along the ground.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq301",
-        "question": "A cart travels 20 m in 2 s. What is its average speed in m/s? (practice case 2)",
+        "id": "c6nsoq258",
+        "question": "Which feature helps a fish move efficiently through water?",
         "options": [
-          "40.00",
-          "0.10",
-          "22",
-          "10.00"
+          "Broad flat feet",
+          "Dry scales that absorb water",
+          "Feathers",
+          "A streamlined body"
         ],
         "answer": 3,
-        "explanation": "Average speed = distance ÷ time = 20 ÷ 2 = 10.00 m/s.",
-        "difficulty": "Easy"
+        "explanation": "A streamlined body reduces resistance while swimming.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq302",
-        "question": "Convert 5 metres into centimetres. (practice case 3)",
+        "id": "c6nsoq259",
+        "question": "Which animal is adapted to live in both water and on land?",
         "options": [
-          "5",
-          "5000",
-          "500",
-          "50"
+          "Camel",
+          "Pigeon",
+          "Frog",
+          "Earthworm"
         ],
         "answer": 2,
-        "explanation": "1 m = 100 cm, so 5 m = 500 cm.",
-        "difficulty": "Medium"
+        "explanation": "A frog is an amphibian.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq303",
-        "question": "Which example shows periodic motion? (practice case 4)",
+        "id": "c6nsoq260",
+        "question": "Which characteristic distinguishes vertebrates from invertebrates?",
         "options": [
-          "A cup on a shelf",
-          "A swing moving back and forth regularly",
-          "A book resting on a desk",
-          "A stone lying still"
+          "Presence of legs",
+          "Presence of a backbone",
+          "Ability to move",
+          "Need for food"
         ],
         "answer": 1,
-        "explanation": "Periodic motion repeats at regular intervals.",
-        "difficulty": "Medium"
+        "explanation": "Vertebrates possess a backbone; invertebrates do not.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq304",
-        "question": "Which instrument measures elapsed time for a moving ball? (practice case 5)",
+        "id": "c6nsoq261",
+        "question": "Which plant is commonly called a herb?",
         "options": [
-          "Stopwatch",
-          "Thermometer",
-          "Balance",
-          "Measuring cylinder"
+          "Coriander",
+          "Neem tree",
+          "Rose shrub",
+          "Mango tree"
         ],
         "answer": 0,
-        "explanation": "A stopwatch measures elapsed time.",
-        "difficulty": "Medium"
+        "explanation": "Coriander has a soft green stem.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq305",
-        "question": "Which unit is suitable for measuring classroom length? (practice case 6)",
+        "id": "c6nsoq262",
+        "question": "A plant with a hard woody stem branching near the base is commonly a:",
         "options": [
-          "Millilitres",
-          "Kilograms",
-          "Degrees Celsius",
-          "Metres"
+          "Herb",
+          "Creeper",
+          "Aquatic plant",
+          "Shrub"
         ],
         "answer": 3,
-        "explanation": "Metres are appropriate for room length.",
-        "difficulty": "Medium"
+        "explanation": "Shrubs are shorter woody plants with branches near the base.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq306",
-        "question": "Why measure distance over a fixed 7-second interval when comparing motion? (practice case 7)",
+        "id": "c6nsoq263",
+        "question": "Which root system is commonly found in wheat?",
         "options": [
-          "To make time irrelevant",
-          "To guarantee identical results",
-          "To make comparisons fair",
-          "To remove the need to measure distance"
+          "Taproot",
+          "Prop roots only",
+          "Fibrous roots",
+          "No roots"
         ],
         "answer": 2,
-        "explanation": "A fixed interval makes measurements comparable.",
-        "difficulty": "Hard"
+        "explanation": "Wheat usually has fibrous roots.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq307",
-        "question": "A runner covers 40 m in 9 s. Which calculation gives average speed? (practice case 8)",
+        "id": "c6nsoq264",
+        "question": "Which leaf venation is commonly found in mango?",
         "options": [
-          "40 + 9",
-          "40 ÷ 9",
-          "9 ÷ 40",
-          "40 × 9"
+          "Parallel venation",
+          "Reticulate venation",
+          "No veins",
+          "Circular venation"
         ],
         "answer": 1,
-        "explanation": "Average speed is distance divided by time.",
-        "difficulty": "Easy"
+        "explanation": "Mango leaves commonly show net-like veins.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq308",
-        "question": "Which quantity describes how far an object moves per unit time? (practice case 9)",
+        "id": "c6nsoq265",
+        "question": "A camel's long eyelashes and closable nostrils help mainly by:",
         "options": [
-          "Speed",
-          "Mass",
-          "Temperature",
-          "Volume"
+          "Keeping blowing sand out",
+          "Helping it breathe underwater",
+          "Cooling its feet",
+          "Making it run faster"
         ],
         "answer": 0,
-        "explanation": "Speed is distance travelled per unit time.",
-        "difficulty": "Medium"
+        "explanation": "These features protect eyes and nose in sandy conditions.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq309",
-        "question": "A cart travels 100 m in 3 s. What is its average speed in m/s? (practice case 10)",
+        "id": "c6nsoq266",
+        "question": "Why do many desert plants have thick, fleshy stems?",
         "options": [
-          "300.00",
-          "0.03",
-          "103",
-          "33.33"
+          "To attract fish",
+          "To make the plant lighter than air",
+          "To absorb oxygen from rocks",
+          "To store water"
         ],
         "answer": 3,
-        "explanation": "Average speed = distance ÷ time = 100 ÷ 3 = 33.33 m/s.",
-        "difficulty": "Medium"
+        "explanation": "Succulent stems store water for dry periods.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq310",
-        "question": "Convert 13 metres into centimetres. (practice case 11)",
+        "id": "c6nsoq267",
+        "question": "Which habitat is most suitable for a polar bear?",
         "options": [
-          "13",
-          "13000",
-          "1300",
-          "130"
+          "Tropical rainforest",
+          "Hot desert",
+          "The Arctic region",
+          "Coral reef"
         ],
         "answer": 2,
-        "explanation": "1 m = 100 cm, so 13 m = 1300 cm.",
-        "difficulty": "Medium"
+        "explanation": "Polar bears are adapted to the cold Arctic.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq311",
-        "question": "Which example shows periodic motion? (practice case 12)",
+        "id": "c6nsoq268",
+        "question": "Which body covering helps many birds keep warm and supports flight?",
         "options": [
-          "A cup on a shelf",
-          "A swing moving back and forth regularly",
-          "A book resting on a desk",
-          "A stone lying still"
+          "Scales only",
+          "Feathers",
+          "Moist skin",
+          "Shell"
         ],
         "answer": 1,
-        "explanation": "Periodic motion repeats at regular intervals.",
-        "difficulty": "Medium"
+        "explanation": "Feathers provide insulation and help with flight.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq312",
-        "question": "Which instrument measures elapsed time for a moving ball? (practice case 13)",
+        "id": "c6nsoq269",
+        "question": "Which animal group has jointed legs and an external skeleton?",
         "options": [
-          "Stopwatch",
-          "Thermometer",
-          "Balance",
-          "Measuring cylinder"
+          "Arthropods",
+          "Mammals",
+          "Amphibians",
+          "Worms"
         ],
         "answer": 0,
-        "explanation": "A stopwatch measures elapsed time.",
-        "difficulty": "Hard"
+        "explanation": "Arthropods have jointed appendages and an exoskeleton.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq313",
-        "question": "Which unit is suitable for measuring classroom length? (practice case 14)",
+        "id": "c6nsoq270",
+        "question": "Which pair contains only mammals?",
         "options": [
-          "Millilitres",
-          "Kilograms",
-          "Degrees Celsius",
-          "Metres"
+          "Penguin and bat",
+          "Frog and dolphin",
+          "Lizard and whale",
+          "Dolphin and bat"
         ],
         "answer": 3,
-        "explanation": "Metres are appropriate for room length.",
-        "difficulty": "Easy"
+        "explanation": "Dolphins and bats are mammals and feed their young with milk.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq314",
-        "question": "Why measure distance over a fixed 15-second interval when comparing motion? (practice case 15)",
+        "id": "c6nsoq271",
+        "question": "Which animal breathes mainly through gills in water?",
         "options": [
-          "To make time irrelevant",
-          "To guarantee identical results",
-          "To make comparisons fair",
-          "To remove the need to measure distance"
+          "Earthworm",
+          "Pigeon",
+          "Fish",
+          "Camel"
         ],
         "answer": 2,
-        "explanation": "A fixed interval makes measurements comparable.",
-        "difficulty": "Medium"
+        "explanation": "Fish use gills to take oxygen from water.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq315",
-        "question": "A runner covers 80 m in 3 s. Which calculation gives average speed? (practice case 16)",
+        "id": "c6nsoq272",
+        "question": "Which feature helps a duck move on water?",
         "options": [
-          "80 + 3",
-          "80 ÷ 3",
-          "3 ÷ 80",
-          "80 × 3"
+          "Claws for digging",
+          "Webbed feet",
+          "A long sticky tongue",
+          "A thick layer of scales"
         ],
         "answer": 1,
-        "explanation": "Average speed is distance divided by time.",
-        "difficulty": "Medium"
+        "explanation": "Webbed feet push against water while swimming.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq316",
-        "question": "Which quantity describes how far an object moves per unit time? (practice case 17)",
+        "id": "c6nsoq273",
+        "question": "Which statement about habitat is correct?",
         "options": [
-          "Speed",
-          "Mass",
-          "Temperature",
-          "Volume"
+          "A habitat provides an organism with suitable conditions and resources",
+          "A habitat is only an animal's shelter",
+          "All organisms have the same habitat",
+          "A habitat never changes"
         ],
         "answer": 0,
-        "explanation": "Speed is distance travelled per unit time.",
-        "difficulty": "Medium"
+        "explanation": "Habitats provide food, water, shelter and suitable conditions.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq317",
-        "question": "A cart travels 180 m in 4 s. What is its average speed in m/s? (practice case 18)",
+        "id": "c6nsoq274",
+        "question": "Which is a non-living component of a forest habitat?",
         "options": [
-          "720.00",
-          "0.02",
-          "184",
-          "45.00"
+          "Fungus",
+          "Deer",
+          "Grass",
+          "Sunlight"
         ],
         "answer": 3,
-        "explanation": "Average speed = distance ÷ time = 180 ÷ 4 = 45.00 m/s.",
-        "difficulty": "Medium"
+        "explanation": "Sunlight is abiotic; the others are living.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq318",
-        "question": "Convert 21 metres into centimetres. (practice case 19)",
+        "id": "c6nsoq275",
+        "question": "Why are organisms grouped into categories?",
         "options": [
-          "21",
-          "21000",
-          "2100",
-          "210"
+          "To show all organisms are identical",
+          "To stop organisms reproducing",
+          "To make similarities and differences easier to study",
+          "To decide which organisms are useful"
         ],
         "answer": 2,
-        "explanation": "1 m = 100 cm, so 21 m = 2100 cm.",
-        "difficulty": "Hard"
+        "explanation": "Classification organises the diversity of living things.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq319",
-        "question": "Which example shows periodic motion? (practice case 20)",
+        "id": "c6nsoq276",
+        "question": "A plant has one main root with smaller side roots. This is a:",
         "options": [
-          "A cup on a shelf",
-          "A swing moving back and forth regularly",
-          "A book resting on a desk",
-          "A stone lying still"
+          "Fibrous root system",
+          "Taproot system",
+          "Aerial root only",
+          "Stem system"
         ],
         "answer": 1,
-        "explanation": "Periodic motion repeats at regular intervals.",
-        "difficulty": "Easy"
+        "explanation": "A taproot has one main root with lateral branches.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq320",
-        "question": "Which instrument measures elapsed time for a moving ball? (practice case 21)",
+        "id": "c6nsoq277",
+        "question": "Which is an adaptation in some aquatic plants?",
         "options": [
-          "Stopwatch",
-          "Thermometer",
-          "Balance",
-          "Measuring cylinder"
+          "Air spaces that help the plant float",
+          "A thick fur coat",
+          "A camel's hump",
+          "A bird's hollow bones"
         ],
         "answer": 0,
-        "explanation": "A stopwatch measures elapsed time.",
-        "difficulty": "Medium"
+        "explanation": "Air spaces can provide buoyancy.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq321",
-        "question": "Which unit is suitable for measuring classroom length? (practice case 22)",
+        "id": "c6nsoq278",
+        "question": "A polar animal has thick fur and a layer of fat. How do these help?",
         "options": [
-          "Millilitres",
-          "Kilograms",
-          "Degrees Celsius",
-          "Metres"
+          "They increase water loss",
+          "They help it climb trees",
+          "They allow it to photosynthesise",
+          "They reduce heat loss"
         ],
         "answer": 3,
-        "explanation": "Metres are appropriate for room length.",
-        "difficulty": "Medium"
+        "explanation": "Fur and fat insulate the animal.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq322",
-        "question": "Why measure distance over a fixed 23-second interval when comparing motion? (practice case 23)",
+        "id": "c6nsoq279",
+        "question": "A bird has a hooked beak and sharp claws. What food is it likely adapted to obtain?",
         "options": [
-          "To make time irrelevant",
-          "To guarantee identical results",
-          "To make comparisons fair",
-          "To remove the need to measure distance"
+          "Nectar only",
+          "Grass only",
+          "Meat",
+          "Plankton only"
         ],
         "answer": 2,
-        "explanation": "A fixed interval makes measurements comparable.",
-        "difficulty": "Medium"
+        "explanation": "Hooked beaks and sharp claws help catch and tear prey.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq323",
-        "question": "A runner covers 120 m in 4 s. Which calculation gives average speed? (practice case 24)",
+        "id": "c6nsoq280",
+        "question": "Which organism is a producer in a pond ecosystem?",
         "options": [
-          "120 + 4",
-          "120 ÷ 4",
-          "4 ÷ 120",
-          "120 × 4"
+          "Small fish",
+          "Algae",
+          "Frog",
+          "Water beetle"
         ],
         "answer": 1,
-        "explanation": "Average speed is distance divided by time.",
-        "difficulty": "Medium"
+        "explanation": "Algae photosynthesise and make food.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq324",
-        "question": "Which quantity describes how far an object moves per unit time? (practice case 25)",
+        "id": "c6nsoq281",
+        "question": "Why do fungi not belong to the plant group?",
         "options": [
-          "Speed",
-          "Mass",
-          "Temperature",
-          "Volume"
+          "They do not make their own food by photosynthesis",
+          "They have no cells",
+          "They are always animals",
+          "They cannot grow"
         ],
         "answer": 0,
-        "explanation": "Speed is distance travelled per unit time.",
-        "difficulty": "Hard"
+        "explanation": "Fungi obtain nutrients from organic matter and lack chlorophyll.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq325",
-        "question": "A cart travels 260 m in 5 s. What is its average speed in m/s? (practice case 26)",
+        "id": "c6nsoq282",
+        "question": "Which animal is an amphibian?",
         "options": [
-          "1300.00",
-          "0.02",
-          "265",
-          "52.00"
+          "Snake",
+          "Pigeon",
+          "Shark",
+          "Salamander"
         ],
         "answer": 3,
-        "explanation": "Average speed = distance ÷ time = 260 ÷ 5 = 52.00 m/s.",
-        "difficulty": "Easy"
+        "explanation": "Salamanders are amphibians.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq326",
-        "question": "Convert 29 metres into centimetres. (practice case 27)",
+        "id": "c6nsoq283",
+        "question": "A bat flies, but it is not a bird. Which feature identifies it as a mammal?",
         "options": [
-          "29",
-          "29000",
-          "2900",
-          "290"
+          "It has feathers",
+          "It has a beak",
+          "It feeds its young with milk",
+          "It has wings"
         ],
         "answer": 2,
-        "explanation": "1 m = 100 cm, so 29 m = 2900 cm.",
-        "difficulty": "Medium"
+        "explanation": "Mammals feed their young milk.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq327",
-        "question": "Which example shows periodic motion? (practice case 28)",
+        "id": "c6nsoq284",
+        "question": "Which plant is most likely a creeper?",
         "options": [
-          "A cup on a shelf",
-          "A swing moving back and forth regularly",
-          "A book resting on a desk",
-          "A stone lying still"
+          "Pea",
+          "Pumpkin",
+          "Grapevine",
+          "Money plant"
         ],
         "answer": 1,
-        "explanation": "Periodic motion repeats at regular intervals.",
-        "difficulty": "Medium"
+        "explanation": "Pumpkin has a weak stem that spreads along the ground.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq328",
-        "question": "Which instrument measures elapsed time for a moving ball? (practice case 29)",
+        "id": "c6nsoq285",
+        "question": "A plant has parallel leaf venation. Which root type is commonly associated?",
         "options": [
-          "Stopwatch",
-          "Thermometer",
-          "Balance",
-          "Measuring cylinder"
+          "Fibrous roots",
+          "Taproot",
+          "No roots",
+          "A single woody root"
         ],
         "answer": 0,
-        "explanation": "A stopwatch measures elapsed time.",
-        "difficulty": "Medium"
+        "explanation": "Parallel venation is commonly associated with fibrous-rooted plants.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq329",
-        "question": "Which unit is suitable for measuring classroom length? (practice case 30)",
+        "id": "c6nsoq286",
+        "question": "Which statement about growth is most accurate?",
         "options": [
-          "Millilitres",
-          "Kilograms",
-          "Degrees Celsius",
-          "Metres"
+          "Only animals grow",
+          "All non-living things grow like organisms",
+          "Growth always means becoming taller",
+          "Living organisms grow and develop during their life cycle"
         ],
         "answer": 3,
-        "explanation": "Metres are appropriate for room length.",
-        "difficulty": "Medium"
+        "explanation": "Living organisms show growth and development.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq330",
-        "question": "Why measure distance over a fixed 31-second interval when comparing motion? (practice case 31)",
+        "id": "c6nsoq287",
+        "question": "Why is a polar bear's fur an adaptation?",
         "options": [
-          "To make time irrelevant",
-          "To guarantee identical results",
-          "To make comparisons fair",
-          "To remove the need to measure distance"
+          "It helps it make food",
+          "It allows breathing underwater",
+          "It helps the animal remain warm in a cold habitat",
+          "It removes the need for food"
         ],
         "answer": 2,
-        "explanation": "A fixed interval makes measurements comparable.",
-        "difficulty": "Hard"
+        "explanation": "Fur provides insulation.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq331",
-        "question": "A runner covers 160 m in 5 s. Which calculation gives average speed? (practice case 32)",
+        "id": "c6nsoq288",
+        "question": "Which pair shows an organism and a suitable habitat?",
         "options": [
-          "160 + 5",
-          "160 ÷ 5",
-          "5 ÷ 160",
-          "160 × 5"
+          "Camel — ocean",
+          "Lotus — pond",
+          "Polar bear — hot desert",
+          "Cactus — deep sea"
         ],
         "answer": 1,
-        "explanation": "Average speed is distance divided by time.",
-        "difficulty": "Easy"
+        "explanation": "Lotus is an aquatic plant.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq332",
-        "question": "Which quantity describes how far an object moves per unit time? (practice case 33)",
+        "id": "c6nsoq289",
+        "question": "An animal has six legs, three body regions and antennae. Which group?",
         "options": [
-          "Speed",
-          "Mass",
-          "Temperature",
-          "Volume"
+          "Insects",
+          "Arachnids",
+          "Molluscs",
+          "Fish"
         ],
         "answer": 0,
-        "explanation": "Speed is distance travelled per unit time.",
-        "difficulty": "Medium"
+        "explanation": "Insects have three body regions and six legs.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq333",
-        "question": "A cart travels 340 m in 6 s. What is its average speed in m/s? (practice case 34)",
+        "id": "c6nsoq290",
+        "question": "Which feature is common to spiders but not insects?",
         "options": [
-          "2040.00",
-          "0.02",
-          "346",
-          "56.67"
+          "Three pairs of legs",
+          "Three body regions",
+          "One pair of antennae",
+          "Four pairs of walking legs"
         ],
         "answer": 3,
-        "explanation": "Average speed = distance ÷ time = 340 ÷ 6 = 56.67 m/s.",
-        "difficulty": "Medium"
+        "explanation": "Spiders are arachnids with eight legs.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq334",
-        "question": "Convert 37 metres into centimetres. (practice case 35)",
+        "id": "c6nsoq291",
+        "question": "A plant grows on another plant for support but does not take food from it. It is an:",
         "options": [
-          "37",
-          "37000",
-          "3700",
-          "370"
+          "Parasite",
+          "Decomposer",
+          "Epiphyte",
+          "Predator"
         ],
         "answer": 2,
-        "explanation": "1 m = 100 cm, so 37 m = 3700 cm.",
-        "difficulty": "Medium"
+        "explanation": "Epiphytes use another plant for support but make their own food.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq335",
-        "question": "Which example shows periodic motion? (practice case 36)",
+        "id": "c6nsoq292",
+        "question": "Dodder takes nutrients from a host plant. This relationship is:",
         "options": [
-          "A cup on a shelf",
-          "A swing moving back and forth regularly",
-          "A book resting on a desk",
-          "A stone lying still"
+          "Mutualism",
+          "Parasitism",
+          "Pollination",
+          "Decomposition"
         ],
         "answer": 1,
-        "explanation": "Periodic motion repeats at regular intervals.",
-        "difficulty": "Medium"
+        "explanation": "The parasite benefits while the host is harmed.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq336",
-        "question": "Which instrument measures elapsed time for a moving ball? (practice case 37)",
+        "id": "c6nsoq293",
+        "question": "Which is useful for identifying an organism in a classification key?",
         "options": [
-          "Stopwatch",
-          "Thermometer",
-          "Balance",
-          "Measuring cylinder"
+          "An observable feature such as number of legs",
+          "Its favourite colour as guessed",
+          "Its name in a story",
+          "Its price"
         ],
         "answer": 0,
-        "explanation": "A stopwatch measures elapsed time.",
-        "difficulty": "Hard"
+        "explanation": "Classification keys use observable features.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq337",
-        "question": "Which unit is suitable for measuring classroom length? (practice case 38)",
+        "id": "c6nsoq294",
+        "question": "A pond dries for part of the year. Which feature helps some organisms survive?",
         "options": [
-          "Millilitres",
-          "Kilograms",
-          "Degrees Celsius",
-          "Metres"
+          "Permanent need for flowing water",
+          "Inability to reproduce",
+          "Larger body size only",
+          "Seeds or dormant stages that remain inactive"
         ],
         "answer": 3,
-        "explanation": "Metres are appropriate for room length.",
-        "difficulty": "Easy"
+        "explanation": "Dormant stages can survive unfavourable conditions.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq338",
-        "question": "Why measure distance over a fixed 39-second interval when comparing motion? (practice case 39)",
+        "id": "c6nsoq295",
+        "question": "A plant has tendrils coiling around a support. What is their advantage?",
         "options": [
-          "To make time irrelevant",
-          "To guarantee identical results",
-          "To make comparisons fair",
-          "To remove the need to measure distance"
+          "They absorb minerals from rocks",
+          "They become roots underground",
+          "They help a weak stem climb towards light",
+          "They trap fish"
         ],
         "answer": 2,
-        "explanation": "A fixed interval makes measurements comparable.",
-        "difficulty": "Medium"
+        "explanation": "Tendrils support climbing stems.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq339",
-        "question": "A runner covers 200 m in 6 s. Which calculation gives average speed? (practice case 40)",
+        "id": "c6nsoq296",
+        "question": "Why do polar bears and camels have different body features?",
         "options": [
-          "200 + 6",
-          "200 ÷ 6",
-          "6 ÷ 200",
-          "200 × 6"
+          "They belong to different kingdoms",
+          "They are adapted to different environmental conditions",
+          "One is non-living",
+          "All animals choose their body shape"
         ],
         "answer": 1,
-        "explanation": "Average speed is distance divided by time.",
-        "difficulty": "Medium"
+        "explanation": "Adaptations improve survival in particular habitats.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq340",
-        "question": "Which quantity describes how far an object moves per unit time? (practice case 41)",
+        "id": "c6nsoq297",
+        "question": "Which organism is most likely a decomposer?",
         "options": [
-          "Speed",
-          "Mass",
-          "Temperature",
-          "Volume"
+          "Mushroom",
+          "Grass",
+          "Deer",
+          "Eagle"
         ],
         "answer": 0,
-        "explanation": "Speed is distance travelled per unit time.",
-        "difficulty": "Medium"
+        "explanation": "Fungi break down dead organic matter.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6nsoq298",
+        "question": "An animal has a backbone, breathes with lungs and has dry scales. Which group?",
+        "options": [
+          "Fish",
+          "Amphibians",
+          "Molluscs",
+          "Reptiles"
+        ],
+        "answer": 3,
+        "explanation": "Many reptiles have dry scales and breathe with lungs.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6nsoq299",
+        "question": "A plant lacks green pigment and grows on dead wood. Which nutrition mode is likely?",
+        "options": [
+          "Photosynthesis",
+          "Hunting",
+          "Saprotrophic nutrition",
+          "Filter feeding"
+        ],
+        "answer": 2,
+        "explanation": "Some fungi obtain nutrients by decomposing dead organic matter.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6nsoq300",
+        "question": "Why classify organisms using several features rather than only body colour?",
+        "options": [
+          "Colour is always invisible",
+          "Many unrelated organisms can share a colour",
+          "Body colour never varies",
+          "All organisms have the same colour"
+        ],
+        "answer": 1,
+        "explanation": "Several observable features give more reliable grouping.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   },
