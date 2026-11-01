@@ -14,7 +14,7 @@ const science=fs.readFileSync("science.html","utf8");
 const parentPage=fs.readFileSync("parent.html","utf8");
 const parentDashboard=fs.readFileSync("js/parent-dashboard.js","utf8");
 const pageAccess=fs.readFileSync("js/page-access.js","utf8");
-assert.ok(parentHtml.includes("./js/parent-dashboard.js")&&parentHtml.includes("./js/student-auth.js"),"parent workspace loads family identity and dashboard code");
+assert.ok(parentPage.includes("./js/parent-dashboard.js")&&parentPage.includes("./js/student-auth.js"),"parent workspace loads family identity and dashboard code");
 assert.ok(parentDashboard.includes("getLinkedChildren")&&parentDashboard.includes("studentId"),"parent dashboard reads only linked children using student-specific IDs");
 assert.ok(pageAccess.includes('session.role==="parent"')&&pageAccess.includes('"./parent.html"'),"student-only routes redirect parent accounts to family workspace");
 
