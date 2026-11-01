@@ -192,8 +192,8 @@ assert.ok(sofScienceBank.slice(0,5).every(chapter=>chapter.questions[45].section
 assert.ok(sofScienceBank.slice(5,11).every(chapter=>chapter.questions.slice(45).every(q=>q.section==="Achievers Section")),"the remaining six science topics reserve five questions each for Achievers");
 assert.ok(sofScienceBank[11].questions.every(q=>q.section==="Logical Reasoning"),"reasoning group is separately section-tagged");
 const normalizedSofScience=context.window.C10QuestionBank.normalize(sofScienceBank,"class-6-science-sof");
-assert.equal(normalizedSofScience.flatMap(chapter=>chapter.questions).length,500,"SOF Science bank normalizes through shared engine");
-assert.equal(new Set(normalizedSofScience.flatMap(chapter=>chapter.questions).map(question=>question.questionKey)).size,500,"SOF Science question keys are unique");
+assert.equal(normalizedSofScience.flatMap(chapter=>chapter.questions).length,600,"SOF Science bank normalizes through shared engine");
+assert.equal(new Set(normalizedSofScience.flatMap(chapter=>chapter.questions).map(question=>question.questionKey)).size,600,"SOF Science question keys are unique");
 assert.ok(engine.includes('"science-sof": { title:"Science - SOF"'),"SOF Science has its own named subject entry");
 
 const languageFiller = /For a language note connected|correct plural of friend|the chapter’s main idea/i;
