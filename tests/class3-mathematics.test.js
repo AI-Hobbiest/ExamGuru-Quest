@@ -74,12 +74,13 @@ assert.ok(fairNormalizedStems.size >= 75, "Surajkund Fair exercises varied quest
 
 const catalogue = JSON.parse(fs.readFileSync("data/classes.json", "utf8"));
 const class3 = catalogue.classes.find(item => String(item.classId) === "3");
-assert.ok(class3 && class3.active && class3.subjects.includes("mathematics"), "Class 3 Mathematics appears in the catalogue");
+assert.ok(class3 && class3.active && class3.subjects.includes("mathematics") && class3.subjects.includes("english"), "Class 3 Mathematics and English appear in the catalogue");
 const admin = fs.readFileSync("js/admin-manager.js", "utf8");
 assert.ok(admin.includes('path:"class-3-mathematics.json"'), "Admin Question Banks lists the Class 3 Mathematics bank");
+assert.ok(admin.includes('path:"class-3-english.json"'), "Admin Question Banks lists the Class 3 English bank");
 const engine = fs.readFileSync("js/quiz-engine.js", "utf8");
 assert.ok(engine.includes('const bankId = classId === "10" ? subject : "class-" + classId + "-" + subject'), "non-Class-10 classes use their own bank files");
-assert.ok(engine.includes('"3":["mathematics"]'), "Class 3 only exposes Mathematics until more banks are published");
+assert.ok(engine.includes('"3":["mathematics","english"]'), "Class 3 exposes both published Mathematics and English banks");
 assert.ok(engine.includes('if(!(CLASS_SUBJECTS[classId]||[]).includes(subject))'), "unpublished subject links are blocked rather than falling through to Class 10");
 
 const dashboard = fs.readFileSync("dashboard.html", "utf8");
