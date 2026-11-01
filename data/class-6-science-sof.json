@@ -7786,5 +7786,713 @@
         "section": "Science"
       }
     ]
+  },
+  {
+    "chapter_no": 12,
+    "title": "Verbal and Non-Verbal Reasoning",
+    "key": "sof-iso-logical-reasoning",
+    "section": "Logical Reasoning",
+    "questions": [
+      {
+        "id": "c6nsoq551",
+        "question": "Continue the letter sequence A, C, F, J, O, __.",
+        "options": [
+          "T",
+          "V",
+          "U",
+          "W"
+        ],
+        "answer": 2,
+        "explanation": "The alphabet jumps increase by one: +2,+3,+4,+5, then +6.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq552",
+        "question": "Which number does not belong with 16, 25, 36 and 48?",
+        "options": [
+          "16",
+          "48",
+          "25",
+          "36"
+        ],
+        "answer": 1,
+        "explanation": "16, 25 and 36 are perfect squares; 48 is not.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq553",
+        "question": "If each letter is replaced by the next letter, how is MAP written?",
+        "options": [
+          "NBQ",
+          "MBQ",
+          "NBR",
+          "OBQ"
+        ],
+        "answer": 0,
+        "explanation": "M→N, A→B and P→Q.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq554",
+        "question": "A hiker faces east, turns left, then turns right twice. Which direction does the hiker face?",
+        "options": [
+          "North",
+          "East",
+          "West",
+          "South"
+        ],
+        "answer": 3,
+        "explanation": "East→North→East→South.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq555",
+        "question": "Arrange these words in dictionary order: crane, craft, crash, crate. Which comes second?",
+        "options": [
+          "crane",
+          "crash",
+          "craft",
+          "crate"
+        ],
+        "answer": 2,
+        "explanation": "After 'cra', compare the next letters: n, f, s, t; craft comes second.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq556",
+        "question": "M is taller than N. P is shorter than N. Q is taller than M. Who is shortest?",
+        "options": [
+          "M",
+          "P",
+          "N",
+          "Q"
+        ],
+        "answer": 1,
+        "explanation": "The order is Q>M>N>P.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq557",
+        "question": "Complete the relationship: Book is to reading as fork is to __.",
+        "options": [
+          "Eating",
+          "Writing",
+          "Sleeping",
+          "Measuring"
+        ],
+        "answer": 0,
+        "explanation": "A book is used for reading; a fork is used for eating.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq558",
+        "question": "If today is Tuesday, what day will it be 50 days later?",
+        "options": [
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Wednesday"
+        ],
+        "answer": 3,
+        "explanation": "50 leaves remainder 1 on division by 7; Tuesday plus one day is Wednesday.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq559",
+        "question": "At 4:00, what is the smaller angle between the clock hands?",
+        "options": [
+          "90°",
+          "100°",
+          "120°",
+          "150°"
+        ],
+        "answer": 2,
+        "explanation": "Each hour mark is 30°; four intervals make 120°.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq560",
+        "question": "Rina is 9th from the front and 12th from the back of a queue. How many people are in the queue?",
+        "options": [
+          "19",
+          "20",
+          "21",
+          "22"
+        ],
+        "answer": 1,
+        "explanation": "9+12−1=20.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq561",
+        "question": "Which pair follows the same rule as 5 becomes 25?",
+        "options": [
+          "8 becomes 64",
+          "8 becomes 13",
+          "8 becomes 40",
+          "8 becomes 16"
+        ],
+        "answer": 0,
+        "explanation": "The output is the square of the input.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq562",
+        "question": "Find the missing pair: AZ, BY, CX, DW, __.",
+        "options": [
+          "EU",
+          "FV",
+          "EX",
+          "EV"
+        ],
+        "answer": 3,
+        "explanation": "The first letter moves forward; the second moves backwards.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq563",
+        "question": "A box contains only red, blue and yellow counters. What is the minimum number drawn to guarantee two counters of the same colour?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2,
+        "explanation": "In the worst case, the first three are one of each colour; the fourth repeats.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq564",
+        "question": "A person walks 6 m north, 4 m east, then 6 m south. Where are they from the starting point?",
+        "options": [
+          "4 m west",
+          "4 m east",
+          "6 m north",
+          "At the start"
+        ],
+        "answer": 1,
+        "explanation": "The north and south movements cancel.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq565",
+        "question": "All Zibs are Nors. All Nors are Pels. Which statement must be true?",
+        "options": [
+          "All Zibs are Pels",
+          "All Pels are Zibs",
+          "No Zib is a Pel",
+          "Some Pels are not Nors"
+        ],
+        "answer": 0,
+        "explanation": "The subset relationship is transitive.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq566",
+        "question": "Complete the number link: 4 maps to 13, 6 maps to 19, 8 maps to 25. What does 10 map to?",
+        "options": [
+          "29",
+          "30",
+          "32",
+          "31"
+        ],
+        "answer": 3,
+        "explanation": "The rule is multiply by 3 and add 1.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq567",
+        "question": "Reverse the letters of STAR and move each one forward by one alphabet place. What code results?",
+        "options": [
+          "TARS",
+          "SBUS",
+          "SBUT",
+          "SBUU"
+        ],
+        "answer": 2,
+        "explanation": "STAR reversed is RATS; advance each letter to SBU T.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq568",
+        "question": "Which polygon follows a hexagon in the sequence triangle, square, pentagon, hexagon?",
+        "options": [
+          "Octagon",
+          "Heptagon",
+          "Nonagon",
+          "Decagon"
+        ],
+        "answer": 1,
+        "explanation": "The number of sides increases by one.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq569",
+        "question": "A is the sister of B. B is the father of C. How is A related to C?",
+        "options": [
+          "Paternal aunt",
+          "Mother",
+          "Sister",
+          "Grandmother"
+        ],
+        "answer": 0,
+        "explanation": "A is the sister of C's father.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq570",
+        "question": "A film begins at 14:35 and ends at 16:12. What is its duration?",
+        "options": [
+          "1 hour 27 minutes",
+          "1 hour 47 minutes",
+          "2 hours 37 minutes",
+          "1 hour 37 minutes"
+        ],
+        "answer": 3,
+        "explanation": "14:35 to 15:35 is 1 hour; then 37 minutes.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq571",
+        "question": "Which word cannot be formed from the letters in TRIANGLE?",
+        "options": [
+          "TANGLE",
+          "ALERT",
+          "TRAINER",
+          "LINEAR"
+        ],
+        "answer": 2,
+        "explanation": "TRIANGLE has no second R, while TRAINER uses two Rs.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq572",
+        "question": "A two-digit number is odd, greater than 40 and less than 50. Its digits add to 11. Which number is it?",
+        "options": [
+          "43",
+          "47",
+          "45",
+          "49"
+        ],
+        "answer": 1,
+        "explanation": "47 is odd, lies between 40 and 50, and 4+7=11.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq573",
+        "question": "If the first day of a non-leap year is Thursday, what day is the first day of February?",
+        "options": [
+          "Sunday",
+          "Saturday",
+          "Monday",
+          "Tuesday"
+        ],
+        "answer": 0,
+        "explanation": "January has 31 days; 31 mod 7=3, so Thursday plus 3 is Sunday.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq574",
+        "question": "Three jars are labelled Tea, Coffee and Mixed, and every label is wrong. Which jar should be sampled first to identify all contents?",
+        "options": [
+          "The jar labelled Tea",
+          "The jar labelled Coffee",
+          "Any jar gives the same information",
+          "The jar labelled Mixed"
+        ],
+        "answer": 3,
+        "explanation": "The jar labelled Mixed cannot contain a mixture, so one sample identifies its actual single content.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq575",
+        "question": "A runner moves from fifth place to third place by overtaking two runners. How many runners are now ahead?",
+        "options": [
+          "1",
+          "3",
+          "2",
+          "4"
+        ],
+        "answer": 2,
+        "explanation": "Third place means exactly two runners are ahead.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq576",
+        "question": "Find the missing value: 3, 7, 15, 31, __.",
+        "options": [
+          "47",
+          "63",
+          "61",
+          "64"
+        ],
+        "answer": 1,
+        "explanation": "Each value is double the previous one plus one.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq577",
+        "question": "Using A=1, B=2 and so on, what word is represented by 3-1-20?",
+        "options": [
+          "CAT",
+          "CAR",
+          "CAN",
+          "CUT"
+        ],
+        "answer": 0,
+        "explanation": "3=C, 1=A and 20=T.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq578",
+        "question": "A cube is painted on all six faces and cut into 64 equal small cubes. How many small cubes have exactly three painted faces?",
+        "options": [
+          "4",
+          "6",
+          "12",
+          "8"
+        ],
+        "answer": 3,
+        "explanation": "Only the eight corner cubes have three painted faces.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq579",
+        "question": "Which value completes 1, 4, 9, 16, 25, __?",
+        "options": [
+          "30",
+          "35",
+          "36",
+          "49"
+        ],
+        "answer": 2,
+        "explanation": "These are consecutive square numbers.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq580",
+        "question": "If EAST is coded as FBTU by moving each letter one place forward, how is WEST coded?",
+        "options": [
+          "XFTV",
+          "XFTU",
+          "WFTU",
+          "YFTU"
+        ],
+        "answer": 1,
+        "explanation": "W→X, E→F, S→T, T→U.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq581",
+        "question": "Town A is west of Town B. Town C is south of A. In which direction is C from B?",
+        "options": [
+          "South-west",
+          "South-east",
+          "North-west",
+          "North-east"
+        ],
+        "answer": 0,
+        "explanation": "C is both west and south of B.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq582",
+        "question": "Five people sit in a row. J is immediately before K, and L is immediately after K. Who must sit between J and L?",
+        "options": [
+          "J",
+          "L",
+          "A person outside the row",
+          "K"
+        ],
+        "answer": 3,
+        "explanation": "The order is J-K-L.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq583",
+        "question": "A sequence is read backwards: 5, 10, 15, 20, 25. What is the middle number?",
+        "options": [
+          "10",
+          "20",
+          "15",
+          "25"
+        ],
+        "answer": 2,
+        "explanation": "The middle term remains 15 when the order is reversed.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq584",
+        "question": "A basket contains 14 mangoes. All except 5 are removed. How many remain?",
+        "options": [
+          "9",
+          "5",
+          "14",
+          "19"
+        ],
+        "answer": 1,
+        "explanation": "All except 5 means 5 remain.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq585",
+        "question": "Tomorrow is three days after Monday. What day is today?",
+        "options": [
+          "Wednesday",
+          "Tuesday",
+          "Thursday",
+          "Friday"
+        ],
+        "answer": 0,
+        "explanation": "Three days after Monday is Thursday, so today is Wednesday.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq586",
+        "question": "Which set follows the same pattern as 3, 9, 27?",
+        "options": [
+          "4, 8, 16",
+          "4, 9, 16",
+          "4, 16, 64",
+          "4, 12, 36"
+        ],
+        "answer": 3,
+        "explanation": "Each term is multiplied by 3.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq587",
+        "question": "A person faces north-west and makes a half-turn. Which direction do they face?",
+        "options": [
+          "North-east",
+          "South-west",
+          "South-east",
+          "West"
+        ],
+        "answer": 2,
+        "explanation": "A half-turn points in the opposite direction.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq588",
+        "question": "In a code, A is paired with Z, B with Y, C with X. What is the code for DOG?",
+        "options": [
+          "WLG",
+          "WLT",
+          "XLS",
+          "VKS"
+        ],
+        "answer": 1,
+        "explanation": "D→W, O→L and G→T are opposite alphabet positions.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq589",
+        "question": "The ratio of red to blue beads is 2:3. There are 25 beads altogether. How many are blue?",
+        "options": [
+          "15",
+          "10",
+          "12",
+          "18"
+        ],
+        "answer": 0,
+        "explanation": "Five parts equal 25, so blue is 3×5=15.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq590",
+        "question": "How many squares of all sizes are there in a 2 by 2 square grid?",
+        "options": [
+          "4",
+          "6",
+          "8",
+          "5"
+        ],
+        "answer": 3,
+        "explanation": "There are four 1×1 squares and one 2×2 square.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq591",
+        "question": "What day is 75 days after Friday?",
+        "options": [
+          "Saturday",
+          "Sunday",
+          "Wednesday",
+          "Monday"
+        ],
+        "answer": 2,
+        "explanation": "75 leaves remainder 5 on division by 7; Friday plus five days is Wednesday.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq592",
+        "question": "A repeated pattern is circle, square, triangle, triangle. Which shape is in position 14?",
+        "options": [
+          "Circle",
+          "Square",
+          "Triangle",
+          "Pentagon"
+        ],
+        "answer": 1,
+        "explanation": "Position 14 has remainder 2 in a four-shape cycle, so it is the second shape.",
+        "difficulty": "Hard",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq593",
+        "question": "Four children are different heights. A is taller than B, C is taller than A, and D is shorter than B. Who is second tallest?",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": 0,
+        "explanation": "The order is C>A>B>D.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq594",
+        "question": "Each letter is replaced by the letter two places later. What does DOG become?",
+        "options": [
+          "EPH",
+          "FQH",
+          "EPI",
+          "FQI"
+        ],
+        "answer": 3,
+        "explanation": "D→F, O→Q and G→I.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq595",
+        "question": "Two facing pages in a book are consecutive even and odd numbers whose sum is 103. What are they?",
+        "options": [
+          "49 and 54",
+          "50 and 53",
+          "51 and 52",
+          "52 and 53"
+        ],
+        "answer": 2,
+        "explanation": "Consecutive integers that total 103 are 51 and 52.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq596",
+        "question": "What number follows 2, 5, 11, 23, 47?",
+        "options": [
+          "93",
+          "95",
+          "94",
+          "96"
+        ],
+        "answer": 1,
+        "explanation": "Double each term and add one.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq597",
+        "question": "A large cube is painted on all faces and cut into 125 equal cubes. How many small cubes have exactly one painted face?",
+        "options": [
+          "54",
+          "36",
+          "48",
+          "60"
+        ],
+        "answer": 0,
+        "explanation": "For a 5×5×5 cube, six faces each have (5−2)²=9 inner face cubes; total 54.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq598",
+        "question": "A person travels 5 km east, 12 km north and then 5 km west. How far are they from the start?",
+        "options": [
+          "5 km",
+          "17 km",
+          "22 km",
+          "12 km"
+        ],
+        "answer": 3,
+        "explanation": "East and west cancel; 12 km north remains.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq599",
+        "question": "A code moves each letter three places backwards. Decode KHOOR.",
+        "options": [
+          "GDKKN",
+          "IFMMP",
+          "HELLO",
+          "JGNNQ"
+        ],
+        "answer": 2,
+        "explanation": "K→H, H→E, O→L, O→L and R→O.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      },
+      {
+        "id": "c6nsoq600",
+        "question": "A code moves each letter three places backwards. Decode KHOOR.",
+        "options": [
+          "GDKKN",
+          "HELLO",
+          "IFMMP",
+          "JGN NQ"
+        ],
+        "answer": 1,
+        "explanation": "K→H, H→E, O→L, O→L and R→O.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning"
+      }
+    ]
   }
 ]
