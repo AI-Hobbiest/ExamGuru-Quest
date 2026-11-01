@@ -2,7 +2,8 @@
 (() => {
   "use strict";
   const SUBJECTS={
-    science:"Science",mathematics:"Mathematics",english:"English","social-science":"Social Science",hindi:"Hindi"
+    science:"Science",mathematics:"Mathematics",english:"English","social-science":"Social Science",hindi:"Hindi",
+    "science-sof":"Science · SOF","mathematics-sof":"Mathematics · SOF","english-sof":"English · SOF"
   };
   const $=id=>document.getElementById(id);
   const profileStore=window.C10Storage.createLocalStore({
@@ -34,8 +35,8 @@
     const subjectIds=classId==="6"
       ? ["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"]
       : classId==="3"
-        ? ["mathematics"]
-        : Object.keys(SUBJECTS);
+        ? ["mathematics","english"]
+        : ["science","mathematics","english","social-science","hindi"];
     return subjectIds.map(subject=>({
       subject,
       subjectTitle:SUBJECTS[subject]||subject,
