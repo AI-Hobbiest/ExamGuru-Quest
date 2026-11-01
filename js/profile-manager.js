@@ -1,13 +1,19 @@
 /* Local profile, test history, and portable JSON backup/restore. */
 (() => {
   "use strict";
-  const SUBJECTS = {
-    science:"Science",
-    mathematics:"Mathematics",
-    english:"English",
-    "social-science":"Social Science",
-    hindi:"Hindi"
+  const BANKS_BY_CLASS = {
+    "3":[{id:"class-3-mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"class-3-english",subjectId:"english",title:"English"}],
+    "6":[
+      {id:"class-6-science",subjectId:"science",title:"Science"},{id:"class-6-mathematics",subjectId:"mathematics",title:"Mathematics"},
+      {id:"class-6-english",subjectId:"english",title:"English"},{id:"class-6-social-science",subjectId:"social-science",title:"Social Science"},
+      {id:"class-6-science-sof",subjectId:"science-sof",title:"Science · SOF"},{id:"class-6-mathematics-sof",subjectId:"mathematics-sof",title:"Mathematics · SOF"},{id:"class-6-english-sof",subjectId:"english-sof",title:"English · SOF"}
+    ],
+    "10":[{id:"science",subjectId:"science",title:"Science"},{id:"mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"english",subjectId:"english",title:"English"},{id:"social-science",subjectId:"social-science",title:"Social Science"},{id:"hindi",subjectId:"hindi",title:"Hindi"}]
   };
+  const LEGACY_SUBJECTS=["science","mathematics","english","social-science","hindi"];
+  const SUBJECT_TITLES=Object.fromEntries(Object.values(BANKS_BY_CLASS).flat().map(entry=>[entry.id,entry.title]));
+  const bankEntriesForClass=classId=>BANKS_BY_CLASS[String(classId)]||BANKS_BY_CLASS["10"];
+  const currentClassId=()=>String((localAccount&&localAccount.classId)||(remoteUser&&remoteUser.classId)||profile.classLevel||"10");
   const $ = id => document.getElementById(id);
   const clone = value => JSON.parse(JSON.stringify(value));
   const now = () => new Date().toISOString();
@@ -29,7 +35,7 @@
   function subjectStore(kind,subject){
     if(kind==="subject-progress"){
       return window.C10Storage.createLocalStore({
-        kind,recordId:subject,legacyKey:"c10playground_v1_"+subject,
+        kind,recordId:subject,legacyKey:String(subject).startsWith("class-")?subject:"c10playground_v1_"+subject,
         defaults:()=>({missed:[],answered:0,correct:0,attempts:[]}),
         validate:value=>!!value&&Array.isArray(value.missed)&&Number.isFinite(value.answered)&&
           Number.isFinite(value.correct)&&Array.isArray(value.attempts)
@@ -137,21 +143,13 @@
   }
 
   function readLedgers(){
-    const rows=[];
-    for(const [subject,title] of Object.entries(SUBJECTS)){
-      const ledger=subjectStore("test-attempt-ledger",subject).load();
-      for(const attempt of ledger.attempts||[]){
-        if(attempt.profileId && attempt.profileId!==profile.profileId)continue;
-        rows.push({...attempt,subjectId:attempt.subjectId||subject,subjectTitle:title});
-      }
+    const rows=[],entries=bankEntriesForClass(currentClassId());
+    for(const entry of entries){
+      const ledger=subjectStore("test-attempt-ledger",entry.id).load();
+      for(const attempt of ledger.attempts||[]){if(attempt.profileId&&attempt.profileId!==profile.profileId)continue;rows.push({...attempt,subjectId:attempt.subjectId||entry.subjectId,subjectTitle:entry.title});}
     }
     const seen=new Set(rows.map(row=>String(row.attemptId||"")));
-    for(const attempt of remoteAttempts){
-      if(seen.has(String(attempt.attemptId)))continue;
-      const title=SUBJECTS[attempt.subjectId]||attempt.subjectId||"Practice";
-      rows.push({...attempt,subjectId:attempt.subjectId,subjectTitle:title,correctCount:attempt.score,questionCount:attempt.maxScore});
-      seen.add(String(attempt.attemptId));
-    }
+    for(const attempt of remoteAttempts){if(seen.has(String(attempt.attemptId)))continue;const entry=entries.find(item=>item.subjectId===attempt.subjectId),title=(entry&&entry.title)||SUBJECT_TITLES[attempt.subjectId]||attempt.subjectId||"Practice";rows.push({...attempt,subjectId:attempt.subjectId,subjectTitle:title,correctCount:attempt.score,questionCount:attempt.maxScore});seen.add(String(attempt.attemptId));}
     return rows.sort((a,b)=>String(b.submittedAt||b.startedAt).localeCompare(String(a.submittedAt||a.startedAt)));
   }
 
@@ -225,10 +223,10 @@
       rows.push([formatDate(attempt.submittedAt||attempt.startedAt),attempt.subjectTitle,modeLabel(attempt),attempt.status||"Completed",attempt.score??"",attempt.maxScore??"",Number(attempt.maxScore)>0?pct+"%":"—",formatDuration(attempt.durationSeconds)]);
     });
     rows.push([],["Question-level response history"],["Subject","Attempt ID","Question ID","Selected answer","Correct answer","Status","Correct?","Time spent (seconds)"]);
-    for(const [subject,title] of Object.entries(SUBJECTS)){
-      const ledger=subjectStore("test-attempt-ledger",subject).load();
+    for(const entry of bankEntriesForClass(currentClassId())){
+      const ledger=subjectStore("test-attempt-ledger",entry.id).load();
       const visibleAttemptIds=new Set((ledger.attempts||[]).filter(attempt=>!attempt.profileId||attempt.profileId===profile.profileId).map(attempt=>String(attempt.attemptId)));
-      (ledger.answerRecords||[]).filter(answer=>visibleAttemptIds.has(String(answer.attemptId))).forEach(answer=>rows.push([title,answer.attemptId||"",answer.questionId||"",answer.selectedOptionText||"",answer.correctOptionText||"",answer.status||"",answer.isCorrect===true?"Yes":answer.isCorrect===false?"No":"—",answer.timeSpentSeconds||0]));
+      (ledger.answerRecords||[]).filter(answer=>visibleAttemptIds.has(String(answer.attemptId))).forEach(answer=>rows.push([entry.title,answer.attemptId||"",answer.questionId||"",answer.selectedOptionText||"",answer.correctOptionText||"",answer.status||"",answer.isCorrect===true?"Yes":answer.isCorrect===false?"No":"—",answer.timeSpentSeconds||0]));
     }
     return rows;
   }
@@ -243,26 +241,14 @@
     win.document.open();win.document.write(html);win.document.close();
   }
   function makeBackup(){
-    const subjectData={};
-    for(const subject of Object.keys(SUBJECTS)){
-      subjectData[subject]={
-        progress:subjectStore("subject-progress",subject).load(),
-        ledger:subjectStore("test-attempt-ledger",subject).load()
-      };
-    }
+    const entries=bankEntriesForClass(currentClassId()),subjectData={};
+    for(const entry of entries)subjectData[entry.id]={progress:subjectStore("subject-progress",entry.id).load(),ledger:subjectStore("test-attempt-ledger",entry.id).load()};
     for(const attempt of remoteAttempts){
-      const ledger=subjectData[attempt.subjectId]&&subjectData[attempt.subjectId].ledger;
+      const entry=entries.find(item=>item.subjectId===attempt.subjectId),ledger=entry&&subjectData[entry.id]&&subjectData[entry.id].ledger;
       if(!ledger||ledger.attempts.some(item=>String(item.attemptId)===String(attempt.attemptId)))continue;
-      ledger.attempts.push({
-        schemaVersion:1,kind:"test-attempt",attemptId:attempt.attemptId,profileId:profile.profileId,
-        subjectId:attempt.subjectId,mode:attempt.mode,source:{type:"central-sync",sourceId:attempt.subjectId},
-        questionBankVersion:"central-v1",status:attempt.status,startedAt:attempt.startedAt,
-        submittedAt:attempt.submittedAt,durationSeconds:attempt.durationSeconds,timeLimitSeconds:null,
-        score:attempt.score,maxScore:attempt.maxScore,correctCount:attempt.score,questionCount:attempt.maxScore,
-        answeredCount:0,skippedCount:0,unansweredCount:0,questionIds:attempt.payload&&attempt.payload.questionIds||[],answerRecordIds:[]
-      });
+      ledger.attempts.push({schemaVersion:1,kind:"test-attempt",attemptId:attempt.attemptId,profileId:profile.profileId,subjectId:attempt.subjectId,mode:attempt.mode,source:{type:"central-sync",sourceId:attempt.subjectId},questionBankVersion:"central-v1",status:attempt.status,startedAt:attempt.startedAt,submittedAt:attempt.submittedAt,durationSeconds:attempt.durationSeconds,timeLimitSeconds:null,score:attempt.score,maxScore:attempt.maxScore,correctCount:attempt.score,questionCount:attempt.maxScore,answeredCount:0,skippedCount:0,unansweredCount:0,questionIds:attempt.payload&&attempt.payload.questionIds||[],answerRecordIds:[]});
     }
-    for(const subject of Object.keys(SUBJECTS))subjectData[subject].ledger.attempts.sort((a,b)=>String(b.submittedAt||"").localeCompare(String(a.submittedAt||"")));
+    for(const entry of entries)subjectData[entry.id].ledger.attempts.sort((a,b)=>String(b.submittedAt||"").localeCompare(String(a.submittedAt||"")));
     return {schemaVersion:1,kind:"c10-playground-backup",exportedAt:now(),profile:clone(profile),subjectData};
   }
 
@@ -290,18 +276,13 @@
       if(!window.C10ProfileModel.isValidBackup(bundle)){
         throw new Error("This file is not a supported C10 Playground version 1 backup, or its profile/history structure is invalid.");
       }
-      const missingSubjects=Object.keys(SUBJECTS).filter(subject=>!bundle.subjectData[subject]);
-      if(missingSubjects.length)throw new Error("The backup is missing subject records: "+missingSubjects.join(", ")+".");
-      if(!confirm("Import this backup and replace the profile and local progress/history for all supported subjects on this device? Export your current data first if you need to keep it."))return;
-
+      const entries=bankEntriesForClass(bundle.profile.classLevel),legacyBackup=LEGACY_SUBJECTS.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject));
+      if(!entries.every(entry=>bundle.subjectData[entry.id])&&!legacyBackup)throw new Error("The backup is missing one or more class-specific subject records.");
+      if(!confirm("Import this backup and replace the local profile and progress/history for the supported subjects in this class on this device? Export your current data first if you need to keep it."))return;
       profile=window.C10ProfileModel.normalizeProfile(bundle.profile,bundle.profile.profileId);
-      if(!window.C10ProfileModel.validateProfile(profile))throw new Error("The profile fields in this backup are incomplete.");
-      profileStore.save(profile);
-      for(const subject of Object.keys(SUBJECTS)){
-        const data=bundle.subjectData[subject];
-        if(!data.progress||!data.ledger)throw new Error("Missing progress or history for "+SUBJECTS[subject]+".");
-        subjectStore("subject-progress",subject).save(data.progress);
-        subjectStore("test-attempt-ledger",subject).save(data.ledger);
+      if(!window.C10ProfileModel.validateProfile(profile))throw new Error("The profile fields in this backup are incomplete.");profileStore.save(profile);
+      for(const entry of entries){const data=bundle.subjectData[entry.id]||bundle.subjectData[entry.subjectId]||{progress:{missed:[],answered:0,correct:0,attempts:[]},ledger:{attempts:[],activeAttempt:null,answerRecords:[]}};
+        if(!data.progress||!data.ledger)throw new Error("Missing progress or history for "+entry.title+".");subjectStore("subject-progress",entry.id).save(data.progress);subjectStore("test-attempt-ledger",entry.id).save(data.ledger);
       }
       renderForm();renderHistory();
       setStatus("Backup imported successfully. This device now uses Student ID "+profile.studentId+".");
