@@ -1731,7 +1731,7 @@
       },
       {
         "id": "c6nsoq123",
-        "question": "Which material conducts electricity but is not a good heat conductor compared with metals?",
+        "question": "Which non-metal can conduct electricity and is used in some electrodes?",
         "options": [
           "Copper",
           "Graphite",
@@ -1739,7 +1739,7 @@
           "Silver"
         ],
         "answer": 1,
-        "explanation": "Graphite conducts electricity but is not a good thermal conductor.",
+        "explanation": "Graphite is a form of carbon that conducts electricity, even though it is a non-metal.",
         "difficulty": "Hard",
         "section": "Science"
       },
@@ -1829,15 +1829,15 @@
       },
       {
         "id": "c6nsoq130",
-        "question": "An object sinks in water but floats in cooking oil. What does this tell us?",
+        "question": "An object floats in water but sinks in cooking oil. What does this tell us?",
         "options": [
           "It has no density",
           "It dissolves in both liquids",
-          "Its density is greater than water but less than the oil",
+          "Its density is less than water but greater than the oil",
           "It is necessarily magnetic"
         ],
         "answer": 2,
-        "explanation": "Floating depends on relative density.",
+        "explanation": "Cooking oil is generally less dense than water; the object's density lies between the two liquids, so it floats in water but sinks in oil.",
         "difficulty": "Hard",
         "section": "Science"
       },
@@ -3469,7 +3469,7 @@
       },
       {
         "id": "c6nsoq246",
-        "question": "Iron filings, sand and salt are mixed with water after magnetic removal. What remains on the filter paper?",
+        "question": "After iron filings are removed magnetically, a mixture of sand and salt is stirred into water. What remains on the filter paper?",
         "options": [
           "Sand",
           "Salt solution",
@@ -3477,7 +3477,7 @@
           "Water vapour"
         ],
         "answer": 0,
-        "explanation": "Salt dissolves and passes through; sand is insoluble.",
+        "explanation": "Salt dissolves and passes through with the water; insoluble sand is retained on the filter paper.",
         "difficulty": "Challenge",
         "section": "Science"
       },
@@ -4219,7 +4219,7 @@
       },
       {
         "id": "c6nsoq299",
-        "question": "A plant lacks green pigment and grows on dead wood. Which nutrition mode is likely?",
+        "question": "An organism lacks chlorophyll and grows on dead wood. Which nutrition mode is likely?",
         "options": [
           "Photosynthesis",
           "Hunting",
@@ -5607,15 +5607,15 @@
       },
       {
         "id": "c6nsoq397",
-        "question": "A walkway carries a person 120 m in 60 s. The person advances 180 m relative to the ground in that time. Walking contribution relative to walkway?",
+        "question": "A moving walkway carries a person 120 m in 60 s. The person walks in the same direction and moves 180 m relative to the ground in that time. How far does the person walk relative to the walkway?",
         "options": [
           "120 m",
           "180 m",
           "300 m",
-          "60 m in 60 s"
+          "60 m"
         ],
         "answer": 3,
-        "explanation": "180−120=60 m relative to the walkway.",
+        "explanation": "The walkway carries the person 120 m; the additional distance from walking is 180−120=60 m relative to the walkway.",
         "difficulty": "Challenge",
         "section": "Achievers Section"
       },
@@ -7023,7 +7023,7 @@
       },
       {
         "id": "c6nsoq497",
-        "question": "Which planet has a day longer than its year?",
+        "question": "Which planet has a sidereal rotation period (one rotation relative to distant stars) longer than its orbital year?",
         "options": [
           "Earth",
           "Venus",
@@ -7031,7 +7031,7 @@
           "Mars"
         ],
         "answer": 1,
-        "explanation": "Venus rotates very slowly; one rotation takes longer than one orbit.",
+        "explanation": "Venus takes about 243 Earth days to rotate once relative to distant stars but about 225 days to orbit the Sun.",
         "difficulty": "Challenge",
         "section": "Achievers Section"
       },
@@ -7409,15 +7409,15 @@
       },
       {
         "id": "c6nsoq524",
-        "question": "Which resource is most directly needed to make paper?",
+        "question": "Which statement best describes a rock?",
         "options": [
-          "Copper ore",
-          "Wood pulp",
-          "Natural gas only",
-          "Iron filings"
+          "A man-made metal alloy",
+          "A naturally occurring solid made of one or more minerals",
+          "A liquid fossil fuel",
+          "A living part of soil"
         ],
         "answer": 1,
-        "explanation": "Paper is commonly made from plant fibres such as wood pulp.",
+        "explanation": "Rocks are naturally occurring solid materials made of one or more minerals.",
         "difficulty": "Hard",
         "section": "Science"
       },
@@ -7703,15 +7703,15 @@
       },
       {
         "id": "c6nsoq545",
-        "question": "Which natural event can rapidly renew some soil nutrients and also damage habitats?",
+        "question": "Which rock is commonly used for building and countertops and is made mainly of quartz, feldspar and mica?",
         "options": [
-          "A flood depositing nutrient-rich sediment",
-          "A plastic bag burning",
-          "A petrol leak",
-          "A metal can rusting"
+          "Marble",
+          "Granite",
+          "Coal",
+          "Chalk"
         ],
-        "answer": 0,
-        "explanation": "Floods can deposit fertile sediment but may also damage ecosystems.",
+        "answer": 1,
+        "explanation": "Granite is an igneous rock commonly composed mainly of quartz, feldspar and mica.",
         "difficulty": "Challenge",
         "section": "Science"
       },
@@ -8027,7 +8027,7 @@
           "SBUU"
         ],
         "answer": 2,
-        "explanation": "STAR reversed is RATS; advance each letter to SBU T.",
+        "explanation": "STAR reversed is RATS; moving each letter one place forward gives S-B-U-T (SBUT).",
         "difficulty": "Medium",
         "section": "Logical Reasoning"
       },
