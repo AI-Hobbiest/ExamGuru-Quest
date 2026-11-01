@@ -106,24 +106,46 @@ assert.ok(engine.includes('fetch("./data/"+bankId+".json"'),"the shared engine l
 
 
 const sofBank=JSON.parse(fs.readFileSync("data/class-6-mathematics-sof.json","utf8"));
-assert.equal(sofBank.length,10,"Class 6 SOF IMO bank has ten topic sets");
-assert.equal(sofBank.reduce((sum,chapter)=>sum+chapter.questions.length,0),500,"Class 6 SOF IMO bank contains 500 original practice MCQs");
-for(const chapter of sofBank)assert.equal(chapter.questions.length,50,"each SOF IMO topic has 50 questions");
-const sofIds=new Set(),sofPrompts=new Set();
+const expectedSofTopics=[
+  "Patterns in Mathematics","Lines and Angles","Number Play","Data Handling and Presentation","Prime Time",
+  "Perimeter and Area","Fractions","Playing with Constructions","Symmetry","The Other Side of Zero",
+  "Verbal and Non-Verbal Reasoning"
+];
+assert.deepEqual(sofBank.map(chapter=>chapter.title),expectedSofTopics,"Class 6 IMO bank follows the current ten-topic syllabus plus a separate reasoning bank");
+assert.equal(sofBank.length,11,"Class 6 SOF IMO bank has eleven question groups");
+assert.equal(sofBank.reduce((sum,chapter)=>sum+chapter.questions.length,0),550,"Class 6 SOF IMO bank contains 550 practice MCQs");
+const sofIds=new Set(),sofPrompts=new Set(),sofTemplates=new Set();
+const normalizeSofStem=value=>String(value).toLowerCase().replace(/[−–]/g,"-").replace(/\\b\\d[\\d,]*(?:\\.\\d+)?\\b/g,"#").replace(/\\s+/g," ").replace(/[“”‘’"]/g,"").trim();
 for(const chapter of sofBank){
+  assert.equal(chapter.questions.length,50,"each SOF IMO group has 50 questions");
   assert.ok(chapter.title&&chapter.questions.length>0,"each SOF topic has questions");
+  const difficultyCounts=["Easy","Medium","Hard","Challenge"].map(level=>[level,chapter.questions.filter(q=>q&&q.difficulty===level).length]);
+  assert.deepEqual(difficultyCounts,[["Easy",5],["Medium",17],["Hard",20],["Challenge",8]],"each topic has more Hard/Challenge than Easy questions");
   for(const question of chapter.questions){
-    assert.ok(question.id&&question.question&&question.explanation,"SOF question has ID, prompt and explanation");
+    assert.ok(question&&question.id&&question.question&&question.explanation,"SOF question has ID, prompt and explanation");
     assert.ok(!sofIds.has(question.id),"SOF question IDs are unique");sofIds.add(question.id);
-    assert.equal(question.options.length,4,"SOF MCQs have four options");
+    assert.ok(Array.isArray(question.options)&&question.options.length===4,"SOF MCQs have four options");
     assert.equal(new Set(question.options).size,4,"SOF MCQ options are distinct");
     assert.ok(Number.isInteger(question.answer)&&question.answer>=0&&question.answer<4,"SOF answer index is valid");
     assert.ok(!sofPrompts.has(question.question),"SOF prompts are unique");sofPrompts.add(question.question);
+    const template=normalizeSofStem(question.question);
+    assert.ok(!sofTemplates.has(template),"SOF question templates do not repeat after numeric values are normalised");
+    sofTemplates.add(template);
   }
 }
+assert.equal(sofIds.size,550,"all SOF question IDs are unique across the whole bank");
+const sofDifficultyTotals=["Easy","Medium","Hard","Challenge"].map(level=>[level,sofBank.flatMap(c=>c.questions).filter(q=>q.difficulty===level).length]);
+assert.deepEqual(sofDifficultyTotals,[["Easy",55],["Medium",187],["Hard",220],["Challenge",88]],"overall SOF bank difficulty balance is controlled");
+const sofQuestions=sofBank.flatMap(chapter=>chapter.questions);
+const sofSectionCounts=sofQuestions.reduce((counts,q)=>(counts[q.section]=(counts[q.section]||0)+1,counts),{});
+assert.equal(sofSectionCounts["Logical Reasoning"],50,"separate verbal/non-verbal reasoning pool is present");
+assert.equal(sofSectionCounts["Mathematical Reasoning"],300,"math reasoning pool is present");
+assert.equal(sofSectionCounts["Everyday Mathematics"],120,"everyday mathematics pool is present");
+assert.equal(sofSectionCounts["Achievers Section"],80,"higher-order Achievers pool is present");
+assert.ok(sofBank[10].questions.every(q=>q.section==="Logical Reasoning"),"all questions in the separate reasoning group are section-tagged correctly");
 const normalizedSof=context.window.C10QuestionBank.normalize(sofBank,"class-6-mathematics-sof");
-assert.equal(normalizedSof.flatMap(chapter=>chapter.questions).length,500,"SOF bank normalizes through shared engine");
-assert.equal(new Set(normalizedSof.flatMap(chapter=>chapter.questions).map(question=>question.questionKey)).size,500,"SOF question keys are unique");
+assert.equal(normalizedSof.flatMap(chapter=>chapter.questions).length,550,"SOF bank normalizes through shared engine");
+assert.equal(new Set(normalizedSof.flatMap(chapter=>chapter.questions).map(question=>question.questionKey)).size,550,"SOF question keys are unique");
 assert.ok(engine.includes('"mathematics-sof": { title:"Mathematics - SOF"'),"SOF has its own named subject entry");
 
 
