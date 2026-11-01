@@ -3,6 +3,83 @@
   "kind": "c10-family-access",
   "kdf": "PBKDF2-SHA-256",
   "defaultIterations": 600000,
-  "parents": [],
-  "parentStudentLinks": []
+  "parents": [
+    {
+      "parentId": "parent-jayaprakash",
+      "username": "jayaprakash",
+      "displayName": "Jayaprakash",
+      "salt": "6tGNSNGduNSS62qMgzVeMA==",
+      "passwordHash": "LjsEpWVrg+UfcTg0kGscAaknr4wT0n0I2ZhPbJDekro=",
+      "iterations": 600000,
+      "active": true,
+      "createdAt": "2026-11-01T11:20:00.000Z",
+      "updatedAt": "2026-11-01T11:20:00.000Z"
+    },
+    {
+      "parentId": "parent-sathya",
+      "username": "sathya",
+      "displayName": "Sathya",
+      "salt": "9QLfPY2SF85daIXCGxXHVA==",
+      "passwordHash": "pf71FeEaPoQeQqskmMHmCkSt7vgcDfQxvQq1OZdqWIw=",
+      "iterations": 600000,
+      "active": true,
+      "createdAt": "2026-11-01T11:20:00.000Z",
+      "updatedAt": "2026-11-01T11:20:00.000Z"
+    },
+    {
+      "parentId": "parent-shrutika",
+      "username": "shrutika",
+      "displayName": "Shrutika",
+      "salt": "Qa3taoEi3XQSztNa4iWAwA==",
+      "passwordHash": "xWfsMJfBlGRJWl7zVL9wLVdVgxULn/YxK6lhCGoomP8=",
+      "iterations": 600000,
+      "active": true,
+      "createdAt": "2026-11-01T11:20:00.000Z",
+      "updatedAt": "2026-11-01T11:20:00.000Z"
+    }
+  ],
+  "parentStudentLinks": [
+    {
+      "parentId": "parent-shrutika",
+      "studentId": "student-srivatsav",
+      "relationship": "parent/guardian",
+      "active": true,
+      "createdAt": "2026-11-01T11:20:00.000Z"
+    },
+    {
+      "parentId": "parent-shrutika",
+      "studentId": "student-hamsini",
+      "relationship": "parent/guardian",
+      "active": true,
+      "createdAt": "2026-11-01T11:20:00.000Z"
+    },
+    {
+      "parentId": "parent-jayaprakash",
+      "studentId": "student-srivatsav",
+      "relationship": "parent/guardian",
+      "active": true,
+      "createdAt": "2026-11-01T11:20:00.000Z"
+    },
+    {
+      "parentId": "parent-jayaprakash",
+      "studentId": "student-hamsini",
+      "relationship": "parent/guardian",
+      "active": true,
+      "createdAt": "2026-11-01T11:20:00.000Z"
+    },
+    {
+      "parentId": "parent-jayaprakash",
+      "studentId": "student-sonaakshi",
+      "relationship": "parent/guardian",
+      "active": true,
+      "createdAt": "2026-11-01T11:20:00.000Z"
+    },
+    {
+      "parentId": "parent-sathya",
+      "studentId": "student-sonaakshi",
+      "relationship": "parent/guardian",
+      "active": true,
+      "createdAt": "2026-11-01T11:20:00.000Z"
+    }
+  ]
 }
