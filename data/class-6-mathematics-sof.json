@@ -4957,658 +4957,709 @@
   },
   {
     "chapter_no": 8,
-    "title": "Data Handling",
-    "key": "sof-imo-data-handling",
+    "title": "Playing with Constructions",
+    "key": "sof-imo-playing-with-constructions",
+    "section": "IMO Syllabus Topic",
     "questions": [
       {
-        "id": "c6imoq008",
-        "question": "A data set contains 2, 4, 6. What is the mean?",
+        "id": "c6imoq351",
+        "question": "Which tool draws a circle with a fixed radius?",
         "options": [
-          "5",
-          "3",
-          "4",
-          "6"
+          "Protractor",
+          "Set square",
+          "Compass",
+          "Ruler"
         ],
         "answer": 2,
-        "explanation": "Mean = (2 + 4 + 6) ÷ 3 = 4.",
-        "difficulty": "Medium"
+        "explanation": "A compass keeps a constant distance from its fixed point.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq018",
-        "question": "A data set contains 3, 5, 7. What is the mean?",
+        "id": "c6imoq352",
+        "question": "What angle is formed by perpendicular lines?",
         "options": [
-          "5",
-          "6",
-          "4",
-          "7"
+          "45°",
+          "90°",
+          "60°",
+          "180°"
+        ],
+        "answer": 1,
+        "explanation": "Perpendicular lines meet at a right angle.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq353",
+        "question": "A segment is 7.4 cm long. Which tool measures it most directly?",
+        "options": [
+          "A ruler marked in millimetres",
+          "Compass alone",
+          "Protractor",
+          "Unmarked set square"
         ],
         "answer": 0,
-        "explanation": "Mean = (3 + 5 + 7) ÷ 3 = 5.",
-        "difficulty": "Medium"
+        "explanation": "A millimetre scale measures segment length.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq028",
-        "question": "A data set contains 4, 6, 8. What is the mean?",
+        "id": "c6imoq354",
+        "question": "A circle has radius 3 cm. What is its diameter?",
         "options": [
-          "7",
-          "5",
-          "6",
-          "8"
+          "3 cm",
+          "9 cm",
+          "12 cm",
+          "6 cm"
+        ],
+        "answer": 3,
+        "explanation": "Diameter is twice the radius.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq355",
+        "question": "Which construction passes through a segment's midpoint at right angles?",
+        "options": [
+          "Angle bisector",
+          "Parallel line",
+          "Perpendicular bisector",
+          "Median"
         ],
         "answer": 2,
-        "explanation": "Mean = (4 + 6 + 8) ÷ 3 = 6.",
-        "difficulty": "Medium"
+        "explanation": "It bisects the segment and is perpendicular to it.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq038",
-        "question": "A data set contains 5, 7, 9. What is the mean?",
+        "id": "c6imoq356",
+        "question": "An angle is 65°. Find its supplement.",
         "options": [
-          "7",
-          "8",
-          "6",
-          "9"
+          "25°",
+          "115°",
+          "105°",
+          "125°"
+        ],
+        "answer": 1,
+        "explanation": "180−65=115°.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq357",
+        "question": "A circle has radius 4.5 cm. What compass opening draws it?",
+        "options": [
+          "4.5 cm",
+          "2.25 cm",
+          "9 cm",
+          "18 cm"
         ],
         "answer": 0,
-        "explanation": "Mean = (5 + 7 + 9) ÷ 3 = 7.",
-        "difficulty": "Medium"
+        "explanation": "The compass opening equals the radius.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq048",
-        "question": "A data set contains 6, 8, 10. What is the mean?",
+        "id": "c6imoq358",
+        "question": "How do you construct the perpendicular bisector of AB?",
         "options": [
-          "9",
-          "7",
-          "8",
-          "10"
+          "Draw a parallel line",
+          "Draw one circle centred at A",
+          "Bisect angle A",
+          "Draw equal-radius arcs from A and B and join their intersections"
+        ],
+        "answer": 3,
+        "explanation": "The arc intersections are equidistant from A and B.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq359",
+        "question": "A 6 cm segment is bisected. Find each half.",
+        "options": [
+          "2 cm",
+          "4 cm",
+          "3 cm",
+          "6 cm"
         ],
         "answer": 2,
-        "explanation": "Mean = (6 + 8 + 10) ÷ 3 = 8.",
-        "difficulty": "Medium"
+        "explanation": "6÷2=3 cm.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq058",
-        "question": "A data set contains 7, 9, 11. What is the mean?",
+        "id": "c6imoq360",
+        "question": "Which tools construct a 60° angle without reading a protractor?",
         "options": [
-          "9",
-          "10",
-          "8",
-          "11"
+          "Divider only",
+          "Compass and ruler",
+          "Set square only",
+          "Tape measure"
+        ],
+        "answer": 1,
+        "explanation": "Equal-radius arcs form an equilateral triangle and 60° angles.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq361",
+        "question": "Two points A and B lie on a circle with centre O. What is true about OA and OB?",
+        "options": [
+          "They are equal",
+          "OA is twice OB",
+          "OA is half OB",
+          "They are perpendicular"
         ],
         "answer": 0,
-        "explanation": "Mean = (7 + 9 + 11) ÷ 3 = 9.",
-        "difficulty": "Medium"
+        "explanation": "Both are radii of the same circle.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq068",
-        "question": "A data set contains 8, 10, 12. What is the mean?",
+        "id": "c6imoq362",
+        "question": "A 9.6 cm segment is divided into four equal parts. Length of each?",
         "options": [
-          "11",
-          "9",
-          "10",
-          "12"
+          "2.2 cm",
+          "2.6 cm",
+          "3.4 cm",
+          "2.4 cm"
+        ],
+        "answer": 3,
+        "explanation": "9.6÷4=2.4 cm.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq363",
+        "question": "Which construction guarantees all three triangle sides are equal?",
+        "options": [
+          "Any freehand triangle",
+          "A triangle with one 60° angle",
+          "Constructing three equal-radius sides with a compass",
+          "A right triangle"
         ],
         "answer": 2,
-        "explanation": "Mean = (8 + 10 + 12) ÷ 3 = 10.",
-        "difficulty": "Medium"
+        "explanation": "Equal side lengths define an equilateral triangle.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq078",
-        "question": "A data set contains 9, 11, 13. What is the mean?",
+        "id": "c6imoq364",
+        "question": "An angle bisector divides 86°. Find both angles.",
         "options": [
-          "11",
-          "12",
-          "10",
-          "13"
+          "40° and 46°",
+          "43° and 43°",
+          "42° and 44°",
+          "86° and 0°"
+        ],
+        "answer": 1,
+        "explanation": "86÷2=43°.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq365",
+        "question": "The protractor baseline aligns with a ray; the other ray reads 132°. What is the angle?",
+        "options": [
+          "132°",
+          "48°",
+          "138°",
+          "312°"
         ],
         "answer": 0,
-        "explanation": "Mean = (9 + 11 + 13) ÷ 3 = 11.",
-        "difficulty": "Medium"
+        "explanation": "Read from zero on the aligned baseline.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq088",
-        "question": "A data set contains 10, 12, 14. What is the mean?",
+        "id": "c6imoq366",
+        "question": "Two circles of radius 5 cm have centres 12 cm apart. Gap between nearest points?",
         "options": [
-          "13",
-          "11",
-          "12",
-          "14"
+          "5 cm",
+          "7 cm",
+          "17 cm",
+          "2 cm"
+        ],
+        "answer": 3,
+        "explanation": "12−5−5=2 cm.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq367",
+        "question": "Which tools help test whether two drawn lines are parallel?",
+        "options": [
+          "Compass alone",
+          "Protractor alone",
+          "A ruler and set square",
+          "Divider"
         ],
         "answer": 2,
-        "explanation": "Mean = (10 + 12 + 14) ÷ 3 = 12.",
-        "difficulty": "Medium"
+        "explanation": "A set square can slide along a ruler to compare direction and spacing.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq098",
-        "question": "A data set contains 11, 13, 15. What is the mean?",
+        "id": "c6imoq368",
+        "question": "When copying a segment with a compass, what must stay fixed?",
         "options": [
-          "13",
-          "14",
-          "12",
-          "15"
+          "Paper orientation",
+          "The compass opening",
+          "Ruler length",
+          "Compass needle colour"
+        ],
+        "answer": 1,
+        "explanation": "The fixed opening transfers the same distance.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq369",
+        "question": "A circle's diameter is 11 cm. Find its radius.",
+        "options": [
+          "5.5 cm",
+          "11 cm",
+          "22 cm",
+          "2.75 cm"
         ],
         "answer": 0,
-        "explanation": "Mean = (11 + 13 + 15) ÷ 3 = 13.",
-        "difficulty": "Medium"
+        "explanation": "Radius is half the diameter.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq370",
+        "question": "What is the locus of points exactly 3 cm from O?",
+        "options": [
+          "A square",
+          "Two parallel lines",
+          "A 3 cm segment",
+          "A circle centred at O with radius 3 cm"
+        ],
+        "answer": 3,
+        "explanation": "All points at fixed distance from O form a circle.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq371",
+        "question": "A 5 cm segment is extended by 3.5 cm. Find its length.",
+        "options": [
+          "7.5 cm",
+          "8 cm",
+          "8.5 cm",
+          "9 cm"
+        ],
+        "answer": 2,
+        "explanation": "5+3.5=8.5 cm.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq372",
+        "question": "An angle measures 132°. What type is it?",
+        "options": [
+          "Acute",
+          "Obtuse",
+          "Right",
+          "Reflex"
+        ],
+        "answer": 1,
+        "explanation": "It is greater than 90° and less than 180°.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq373",
+        "question": "An equilateral triangle has perimeter 27 cm. Find one side.",
+        "options": [
+          "9 cm",
+          "6 cm",
+          "12 cm",
+          "18 cm"
+        ],
+        "answer": 0,
+        "explanation": "27÷3=9 cm.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq374",
+        "question": "A copied 10 cm segment has its midpoint marked. Distance to either endpoint?",
+        "options": [
+          "2 cm",
+          "4 cm",
+          "10 cm",
+          "5 cm"
+        ],
+        "answer": 3,
+        "explanation": "The midpoint is halfway along the segment.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq375",
+        "question": "When copying an angle with compass and ruler, what is transferred from the original arc?",
+        "options": [
+          "The angle name",
+          "Only the baseline length",
+          "The arc radius and the distance between its two intersection points",
+          "The protractor reading"
+        ],
+        "answer": 2,
+        "explanation": "These two measures reproduce the same opening.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq376",
+        "question": "A 12 cm segment is divided in ratio 1:2. Find the parts.",
+        "options": [
+          "3 cm and 9 cm",
+          "4 cm and 8 cm",
+          "5 cm and 7 cm",
+          "6 cm and 6 cm"
+        ],
+        "answer": 1,
+        "explanation": "Three ratio parts equal 12 cm; one part is 4 cm.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq377",
+        "question": "A compass point slips while drawing. Which property may fail?",
+        "options": [
+          "All points may no longer be the same distance from the centre",
+          "The circle becomes a triangle",
+          "Radius becomes diameter",
+          "Centre moves to circumference"
+        ],
+        "answer": 0,
+        "explanation": "A fixed point is needed for constant radius.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq378",
+        "question": "Which set contains all points equidistant from A and B?",
+        "options": [
+          "A circle centred at A only",
+          "A line parallel to AB",
+          "An angle bisector",
+          "The perpendicular bisector of AB"
+        ],
+        "answer": 3,
+        "explanation": "Every point on the perpendicular bisector is equally distant from A and B.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq379",
+        "question": "Two circles have radii 3 cm and 4 cm. Difference between their circumferences in terms of π?",
+        "options": [
+          "π cm",
+          "4π cm",
+          "2π cm",
+          "7π cm"
+        ],
+        "answer": 2,
+        "explanation": "2π(4−3)=2π cm.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
+      },
+      {
+        "id": "c6imoq380",
+        "question": "A 7 cm segment is copied twice end-to-end after the original. Total length of three copies?",
+        "options": [
+          "14 cm",
+          "21 cm",
+          "18 cm",
+          "28 cm"
+        ],
+        "answer": 1,
+        "explanation": "3×7=21 cm.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
         "id": "c6imoq381",
-        "question": "Find the mean of 11, 13, 15, 17.",
+        "question": "Why must equal arcs' radius exceed half the distance AB to construct a perpendicular bisector?",
         "options": [
-          "15",
-          "13",
-          "17",
-          "14"
+          "So the arcs intersect at two points",
+          "So the arcs never meet",
+          "So AB becomes a diameter",
+          "To draw a full circle"
         ],
-        "answer": 3,
-        "explanation": "Mean = (11 + 13 + 15 + 17) ÷ 4 = 14.",
-        "difficulty": "Easy"
+        "answer": 0,
+        "explanation": "If radius is greater than half AB, two intersections exist.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq382",
-        "question": "Find the range of 12, 15, 19, 14.",
+        "question": "A copied 120° angle is correct when what property is preserved?",
         "options": [
-          "9",
-          "19",
-          "7",
-          "5"
+          "Equal ray lengths only",
+          "Two perpendicular rays",
+          "Parallel rays",
+          "The same opening between the two rays"
         ],
-        "answer": 2,
-        "explanation": "Range = largest − smallest = 19 − 12 = 7.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "An angle depends on the opening, not ray length.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq383",
-        "question": "Find the mean of 13, 15, 17, 19.",
+        "question": "A circle has radius 2.8 cm. A chord through its centre is how long?",
         "options": [
-          "19",
-          "16",
-          "17",
-          "15"
+          "2.8 cm",
+          "4.8 cm",
+          "5.6 cm",
+          "8.4 cm"
         ],
-        "answer": 1,
-        "explanation": "Mean = (13 + 15 + 17 + 19) ÷ 4 = 16.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "A chord through the centre is a diameter: 2×2.8.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq384",
-        "question": "Find the range of 14, 17, 21, 16.",
+        "question": "Which statement about a perpendicular bisector is true?",
         "options": [
-          "7",
-          "5",
-          "9",
-          "21"
+          "It passes through an endpoint",
+          "Each point on it is equally distant from the two endpoints",
+          "It is parallel to the segment",
+          "It divides the segment into three parts"
         ],
-        "answer": 0,
-        "explanation": "Range = largest − smallest = 21 − 14 = 7.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "Equal distance from the endpoints defines it.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq385",
-        "question": "Find the mean of 15, 17, 19, 21.",
+        "question": "A 75° angle is adjacent to 25° on a straight line. Find the remaining angle.",
         "options": [
-          "19",
-          "17",
-          "21",
-          "18"
+          "80°",
+          "70°",
+          "90°",
+          "100°"
         ],
-        "answer": 3,
-        "explanation": "Mean = (15 + 17 + 19 + 21) ÷ 4 = 18.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "180−75−25=80°.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq386",
-        "question": "Find the range of 16, 19, 23, 18.",
+        "question": "A 13 cm segment has a circle centred at one endpoint with radius 5 cm. How far from the other endpoint is the circle's intersection on the segment?",
         "options": [
-          "9",
-          "23",
-          "7",
-          "5"
+          "5 cm",
+          "13 cm",
+          "18 cm",
+          "8 cm"
         ],
-        "answer": 2,
-        "explanation": "Range = largest − smallest = 23 − 16 = 7.",
-        "difficulty": "Hard"
+        "answer": 3,
+        "explanation": "13−5=8 cm.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq387",
-        "question": "Find the mean of 17, 19, 21, 23.",
+        "question": "Equal-radius arcs are drawn from A and B and meet at P. Which equality follows?",
         "options": [
-          "23",
-          "20",
-          "21",
-          "19"
+          "PA=2PB",
+          "PA is perpendicular to PB",
+          "PA=PB",
+          "PA+PB=AB"
         ],
-        "answer": 1,
-        "explanation": "Mean = (17 + 19 + 21 + 23) ÷ 4 = 20.",
-        "difficulty": "Easy"
+        "answer": 2,
+        "explanation": "P is at the same radius from both arc centres.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq388",
-        "question": "Find the range of 18, 21, 25, 20.",
+        "question": "A protractor's baseline is 10° away from the initial ray. What is the likely result?",
         "options": [
-          "7",
-          "5",
-          "9",
-          "25"
+          "The reading doubles",
+          "The measured angle may be wrong by 10°",
+          "It remains exact",
+          "It becomes 90°"
         ],
-        "answer": 0,
-        "explanation": "Range = largest − smallest = 25 − 18 = 7.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "The baseline must align with the starting ray.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq389",
-        "question": "Find the mean of 19, 21, 23, 25.",
+        "question": "A 14 cm segment is divided into seven equal parts. How many internal marks are needed?",
         "options": [
-          "23",
-          "21",
-          "25",
-          "22"
+          "6",
+          "7",
+          "8",
+          "14"
         ],
-        "answer": 3,
-        "explanation": "Mean = (19 + 21 + 23 + 25) ÷ 4 = 22.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "Seven intervals need six internal dividing points.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq390",
-        "question": "Find the range of 20, 23, 27, 22.",
+        "question": "A compass has maximum opening 5 cm. What radius is obtained after reducing it by 1 cm?",
         "options": [
-          "9",
-          "27",
-          "7",
-          "5"
+          "3 cm",
+          "5 cm",
+          "6 cm",
+          "4 cm"
         ],
-        "answer": 2,
-        "explanation": "Range = largest − smallest = 27 − 20 = 7.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "5−1=4 cm.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq391",
-        "question": "Find the mean of 21, 23, 25, 27.",
+        "question": "When copying an angle, why is the arc drawn from the vertex?",
         "options": [
-          "27",
-          "24",
-          "25",
-          "23"
+          "It measures area",
+          "It makes the rays perpendicular",
+          "It marks equal distances from the vertex along both rays",
+          "It finds a midpoint"
         ],
-        "answer": 1,
-        "explanation": "Mean = (21 + 23 + 25 + 27) ÷ 4 = 24.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "The intersection points on the arc preserve the angle opening.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq392",
-        "question": "Find the range of 22, 25, 29, 24.",
+        "question": "A 9 cm segment is copied with a compass set to 8.5 cm. How much shorter is the copy?",
         "options": [
-          "7",
-          "5",
-          "9",
-          "29"
+          "0.4 cm",
+          "0.5 cm",
+          "1 cm",
+          "1.5 cm"
         ],
-        "answer": 0,
-        "explanation": "Range = largest − smallest = 29 − 22 = 7.",
-        "difficulty": "Hard"
+        "answer": 1,
+        "explanation": "9−8.5=0.5 cm.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
         "id": "c6imoq393",
-        "question": "Find the mean of 23, 25, 27, 29.",
+        "question": "Two circles have equal radii 6 cm and centres 10 cm apart. How many intersections?",
         "options": [
-          "27",
-          "25",
-          "29",
-          "26"
+          "2",
+          "0",
+          "1",
+          "Infinite"
         ],
-        "answer": 3,
-        "explanation": "Mean = (23 + 25 + 27 + 29) ÷ 4 = 26.",
-        "difficulty": "Easy"
+        "answer": 0,
+        "explanation": "Distance is less than sum 12 and greater than difference 0.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq394",
-        "question": "Find the range of 24, 27, 31, 26.",
+        "question": "A 90° angle is bisected twice. Find each final angle.",
         "options": [
-          "9",
-          "31",
-          "7",
-          "5"
+          "30°",
+          "45°",
+          "15°",
+          "22.5°"
         ],
-        "answer": 2,
-        "explanation": "Range = largest − smallest = 31 − 24 = 7.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "90÷2÷2=22.5°.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq395",
-        "question": "Find the mean of 25, 27, 29, 31.",
+        "question": "P is 5 cm from both A and B. Which construction locates its possible positions?",
         "options": [
-          "31",
-          "28",
-          "29",
-          "27"
+          "Only midpoint of AB",
+          "A line parallel to AB",
+          "Intersections of circles radius 5 cm centred at A and B",
+          "The whole circle centred at A"
         ],
-        "answer": 1,
-        "explanation": "Mean = (25 + 27 + 29 + 31) ÷ 4 = 28.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "P must lie on both circles.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq396",
-        "question": "Find the range of 26, 29, 33, 28.",
+        "question": "A 150° angle is split into three equal parts. Find each.",
         "options": [
-          "7",
-          "5",
-          "9",
-          "33"
+          "45°",
+          "50°",
+          "60°",
+          "75°"
         ],
-        "answer": 0,
-        "explanation": "Range = largest − smallest = 33 − 26 = 7.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "150÷3=50°.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq397",
-        "question": "Find the mean of 27, 29, 31, 33.",
+        "question": "A ruler is marked in millimetres. Smallest marked unit?",
         "options": [
-          "31",
-          "29",
-          "33",
-          "30"
+          "1 mm",
+          "0.1 mm",
+          "1 cm",
+          "1 m"
         ],
-        "answer": 3,
-        "explanation": "Mean = (27 + 29 + 31 + 33) ÷ 4 = 30.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "One millimetre is the smallest mark.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq398",
-        "question": "Find the range of 28, 31, 35, 30.",
+        "question": "Two parallel lines are 4 cm apart. What is the shortest distance between them?",
         "options": [
-          "9",
-          "35",
-          "7",
-          "5"
+          "8 cm",
+          "2 cm",
+          "It varies",
+          "4 cm"
         ],
-        "answer": 2,
-        "explanation": "Range = largest − smallest = 35 − 28 = 7.",
-        "difficulty": "Hard"
+        "answer": 3,
+        "explanation": "The perpendicular distance is constant.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq399",
-        "question": "Find the mean of 29, 31, 33, 35.",
+        "question": "A circle is drawn with radius 5 cm. A second circle has twice the first circle's diameter. What is its radius?",
         "options": [
-          "35",
-          "32",
-          "33",
-          "31"
+          "5 cm",
+          "15 cm",
+          "10 cm",
+          "20 cm"
         ],
-        "answer": 1,
-        "explanation": "Mean = (29 + 31 + 33 + 35) ÷ 4 = 32.",
-        "difficulty": "Easy"
+        "answer": 2,
+        "explanation": "Original diameter is 10 cm; doubled diameter is 20 cm, so radius is 10 cm.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6imoq400",
-        "question": "Find the range of 30, 33, 37, 32.",
+        "question": "A compass is set to 6.2 cm. If its opening is shortened by 1.7 cm, what is the new radius?",
         "options": [
-          "7",
-          "5",
-          "9",
-          "37"
-        ],
-        "answer": 0,
-        "explanation": "Range = largest − smallest = 37 − 30 = 7.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq401",
-        "question": "Find the mean of 31, 33, 35, 37.",
-        "options": [
-          "35",
-          "33",
-          "37",
-          "34"
-        ],
-        "answer": 3,
-        "explanation": "Mean = (31 + 33 + 35 + 37) ÷ 4 = 34.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq402",
-        "question": "Find the range of 32, 35, 39, 34.",
-        "options": [
-          "9",
-          "39",
-          "7",
-          "5"
-        ],
-        "answer": 2,
-        "explanation": "Range = largest − smallest = 39 − 32 = 7.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq403",
-        "question": "Find the mean of 33, 35, 37, 39.",
-        "options": [
-          "39",
-          "36",
-          "37",
-          "35"
+          "4.2 cm",
+          "4.5 cm",
+          "5.5 cm",
+          "7.9 cm"
         ],
         "answer": 1,
-        "explanation": "Mean = (33 + 35 + 37 + 39) ÷ 4 = 36.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq404",
-        "question": "Find the range of 34, 37, 41, 36.",
-        "options": [
-          "7",
-          "5",
-          "9",
-          "41"
-        ],
-        "answer": 0,
-        "explanation": "Range = largest − smallest = 41 − 34 = 7.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq405",
-        "question": "Find the mean of 35, 37, 39, 41.",
-        "options": [
-          "39",
-          "37",
-          "41",
-          "38"
-        ],
-        "answer": 3,
-        "explanation": "Mean = (35 + 37 + 39 + 41) ÷ 4 = 38.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq406",
-        "question": "Find the range of 36, 39, 43, 38.",
-        "options": [
-          "9",
-          "43",
-          "7",
-          "5"
-        ],
-        "answer": 2,
-        "explanation": "Range = largest − smallest = 43 − 36 = 7.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq407",
-        "question": "Find the mean of 37, 39, 41, 43.",
-        "options": [
-          "43",
-          "40",
-          "41",
-          "39"
-        ],
-        "answer": 1,
-        "explanation": "Mean = (37 + 39 + 41 + 43) ÷ 4 = 40.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq408",
-        "question": "Find the range of 38, 41, 45, 40.",
-        "options": [
-          "7",
-          "5",
-          "9",
-          "45"
-        ],
-        "answer": 0,
-        "explanation": "Range = largest − smallest = 45 − 38 = 7.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq409",
-        "question": "Find the mean of 39, 41, 43, 45.",
-        "options": [
-          "43",
-          "41",
-          "45",
-          "42"
-        ],
-        "answer": 3,
-        "explanation": "Mean = (39 + 41 + 43 + 45) ÷ 4 = 42.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq410",
-        "question": "Find the range of 40, 43, 47, 42.",
-        "options": [
-          "9",
-          "47",
-          "7",
-          "5"
-        ],
-        "answer": 2,
-        "explanation": "Range = largest − smallest = 47 − 40 = 7.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq411",
-        "question": "Find the mean of 41, 43, 45, 47.",
-        "options": [
-          "47",
-          "44",
-          "45",
-          "43"
-        ],
-        "answer": 1,
-        "explanation": "Mean = (41 + 43 + 45 + 47) ÷ 4 = 44.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq412",
-        "question": "Find the range of 42, 45, 49, 44.",
-        "options": [
-          "7",
-          "5",
-          "9",
-          "49"
-        ],
-        "answer": 0,
-        "explanation": "Range = largest − smallest = 49 − 42 = 7.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq413",
-        "question": "Find the mean of 43, 45, 47, 49.",
-        "options": [
-          "47",
-          "45",
-          "49",
-          "46"
-        ],
-        "answer": 3,
-        "explanation": "Mean = (43 + 45 + 47 + 49) ÷ 4 = 46.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq414",
-        "question": "Find the range of 44, 47, 51, 46.",
-        "options": [
-          "9",
-          "51",
-          "7",
-          "5"
-        ],
-        "answer": 2,
-        "explanation": "Range = largest − smallest = 51 − 44 = 7.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq415",
-        "question": "Find the mean of 45, 47, 49, 51.",
-        "options": [
-          "51",
-          "48",
-          "49",
-          "47"
-        ],
-        "answer": 1,
-        "explanation": "Mean = (45 + 47 + 49 + 51) ÷ 4 = 48.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq416",
-        "question": "Find the range of 46, 49, 53, 48.",
-        "options": [
-          "7",
-          "5",
-          "9",
-          "53"
-        ],
-        "answer": 0,
-        "explanation": "Range = largest − smallest = 53 − 46 = 7.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6imoq417",
-        "question": "Find the mean of 47, 49, 51, 53.",
-        "options": [
-          "51",
-          "49",
-          "53",
-          "50"
-        ],
-        "answer": 3,
-        "explanation": "Mean = (47 + 49 + 51 + 53) ÷ 4 = 50.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq418",
-        "question": "Find the range of 48, 51, 55, 50.",
-        "options": [
-          "9",
-          "55",
-          "7",
-          "5"
-        ],
-        "answer": 2,
-        "explanation": "Range = largest − smallest = 55 − 48 = 7.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq419",
-        "question": "Find the mean of 49, 51, 53, 55.",
-        "options": [
-          "55",
-          "52",
-          "53",
-          "51"
-        ],
-        "answer": 1,
-        "explanation": "Mean = (49 + 51 + 53 + 55) ÷ 4 = 52.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq420",
-        "question": "Find the range of 50, 53, 57, 52.",
-        "options": [
-          "7",
-          "5",
-          "9",
-          "57"
-        ],
-        "answer": 0,
-        "explanation": "Range = largest − smallest = 57 − 50 = 7.",
-        "difficulty": "Medium"
+        "explanation": "6.2−1.7=4.5 cm.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   },
