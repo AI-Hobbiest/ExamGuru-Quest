@@ -1417,658 +1417,709 @@
   },
   {
     "chapter_no": 3,
-    "title": "Animals & Human Body",
-    "key": "sof-nso-animals-human-body",
+    "title": "Materials Around Us",
+    "key": "sof-iso-materials-around-us",
+    "section": "Science",
     "questions": [
       {
-        "id": "c6nsoq021",
-        "question": "Which organ pumps blood around the human body?",
+        "id": "c6nsoq101",
+        "question": "Which material is transparent?",
         "options": [
-          "Lungs",
-          "Stomach",
-          "Heart",
-          "Kidneys"
+          "Wood",
+          "Cardboard",
+          "Brick",
+          "Clear glass"
+        ],
+        "answer": 3,
+        "explanation": "Transparent materials allow most light to pass through clearly.",
+        "difficulty": "Easy",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq102",
+        "question": "Which property makes rubber useful for elastic bands?",
+        "options": [
+          "It dissolves in water",
+          "It is transparent",
+          "It can stretch and return towards its original shape",
+          "It attracts iron"
         ],
         "answer": 2,
-        "explanation": "The heart pumps blood through blood vessels.",
-        "difficulty": "Easy"
+        "explanation": "Rubber is elastic.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq022",
-        "question": "Which body system helps us breathe?",
+        "id": "c6nsoq103",
+        "question": "Which object is made from a good electrical conductor?",
         "options": [
-          "Digestive system",
-          "Respiratory system",
-          "Skeletal system",
-          "Excretory system"
+          "Rubber glove",
+          "Copper wire",
+          "Plastic ruler",
+          "Dry wooden stick"
         ],
         "answer": 1,
-        "explanation": "The respiratory system includes airways and lungs.",
-        "difficulty": "Easy"
+        "explanation": "Copper allows electric current to pass through readily.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq023",
-        "question": "Which part of the skeleton protects the brain?",
+        "id": "c6nsoq104",
+        "question": "Which material is generally opaque?",
         "options": [
-          "Skull",
-          "Rib cage",
-          "Pelvis",
-          "Spine"
+          "Wood",
+          "Clear glass",
+          "Clean air",
+          "Clear water in a thin layer"
         ],
         "answer": 0,
-        "explanation": "The skull surrounds and protects the brain.",
-        "difficulty": "Easy"
+        "explanation": "Wood does not allow light to pass through.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq024",
-        "question": "Which animal is a herbivore?",
+        "id": "c6nsoq105",
+        "question": "Which material is attracted strongly by a magnet?",
         "options": [
-          "Tiger",
-          "Eagle",
-          "Crocodile",
-          "Deer"
+          "Plastic",
+          "Glass",
+          "Cotton",
+          "Iron"
         ],
         "answer": 3,
-        "explanation": "Herbivores feed mainly on plants; deer eat leaves and grasses.",
-        "difficulty": "Easy"
+        "explanation": "Iron is magnetic.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq025",
-        "question": "Which adaptation helps a fish breathe underwater?",
+        "id": "c6nsoq106",
+        "question": "A material that allows some light through but not a clear image is:",
         "options": [
-          "Lungs only",
-          "Feathers",
-          "Gills",
-          "Moist skin only"
+          "Transparent",
+          "Opaque",
+          "Translucent",
+          "Magnetic"
         ],
         "answer": 2,
-        "explanation": "Gills extract dissolved oxygen from water.",
-        "difficulty": "Easy"
+        "explanation": "Translucent materials scatter light.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq026",
-        "question": "Which is an example of a vertebrate?",
+        "id": "c6nsoq107",
+        "question": "Which property makes cotton useful for towels?",
         "options": [
-          "Earthworm",
-          "Frog",
-          "Snail",
-          "Butterfly"
+          "It is magnetic",
+          "It absorbs water",
+          "It is waterproof",
+          "It is transparent"
         ],
         "answer": 1,
-        "explanation": "Vertebrates have a backbone; frogs are amphibian vertebrates.",
-        "difficulty": "Easy"
+        "explanation": "Cotton fibres absorb water.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq027",
-        "question": "What is the main function of the small intestine?",
+        "id": "c6nsoq108",
+        "question": "Which item is suitable for a window because it is transparent and rigid?",
         "options": [
-          "Absorb digested nutrients",
-          "Pump blood",
-          "Exchange gases with air",
-          "Filter sound"
+          "Glass pane",
+          "Cardboard sheet",
+          "Cotton cloth",
+          "Rubber mat"
         ],
         "answer": 0,
-        "explanation": "Most nutrient absorption occurs in the small intestine.",
-        "difficulty": "Medium"
+        "explanation": "Glass is rigid and allows light through.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq028",
-        "question": "Which joint allows the arm to move in many directions at the shoulder?",
+        "id": "c6nsoq109",
+        "question": "Why is aluminium often used to make cooking vessels?",
         "options": [
-          "Hinge joint",
-          "Fixed joint",
-          "Pivot joint only",
-          "Ball-and-socket joint"
+          "It is a poor heat conductor",
+          "It dissolves in food",
+          "It is a strong magnet",
+          "It conducts heat and is relatively light"
         ],
         "answer": 3,
-        "explanation": "The shoulder's ball-and-socket joint allows movement in several directions.",
-        "difficulty": "Medium"
+        "explanation": "Aluminium transfers heat well and is lightweight.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq029",
-        "question": "Which relationship is correctly matched?",
+        "id": "c6nsoq110",
+        "question": "Which object is most likely to float on water?",
         "options": [
-          "Lion and deer — both benefit",
-          "Tick and dog — neither is affected",
-          "Bee and flowering plant — mutual benefit",
-          "Cactus and desert — both are animals"
+          "An iron nail",
+          "A glass marble",
+          "A dry wooden block",
+          "A steel spoon"
         ],
         "answer": 2,
-        "explanation": "Bees gain nectar or pollen while helping pollinate flowers.",
-        "difficulty": "Medium"
+        "explanation": "Wood is generally less dense than water.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq030",
-        "question": "Why do mammals feed milk to their young?",
+        "id": "c6nsoq111",
+        "question": "A sponge changes shape when squeezed and partly regains it after release. Which property is shown?",
         "options": [
-          "Milk helps them breathe underwater",
-          "Milk provides nourishment",
-          "Milk replaces their skeleton",
-          "Milk makes them plants"
+          "Solubility",
+          "Elasticity",
+          "Transparency",
+          "Magnetism"
         ],
         "answer": 1,
-        "explanation": "Mammalian mothers produce milk to nourish their young.",
-        "difficulty": "Easy"
+        "explanation": "The sponge deforms and partly returns to its shape.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq181",
-        "question": "Which organ pumps blood around the body? (practice case 2)",
+        "id": "c6nsoq112",
+        "question": "Which pair consists of good thermal insulators?",
         "options": [
-          "Lungs",
-          "Stomach",
-          "Brain",
-          "Heart"
-        ],
-        "answer": 3,
-        "explanation": "The heart pumps blood.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq182",
-        "question": "Which organs exchange oxygen and carbon dioxide with the air? (practice case 3)",
-        "options": [
-          "Stomach",
-          "Bones",
-          "Lungs",
-          "Kidneys"
-        ],
-        "answer": 2,
-        "explanation": "The lungs are the main organs of gas exchange.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq183",
-        "question": "Which organ mixes food with digestive juices? (practice case 4)",
-        "options": [
-          "Skull",
-          "Stomach",
-          "Heart",
-          "Lungs"
-        ],
-        "answer": 1,
-        "explanation": "The stomach mixes food with digestive juices.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq184",
-        "question": "Where are most digested nutrients absorbed? (practice case 5)",
-        "options": [
-          "Small intestine",
-          "Trachea",
-          "Heart",
-          "Skull"
+          "Wood and plastic",
+          "Copper and aluminium",
+          "Iron and steel",
+          "Silver and copper"
         ],
         "answer": 0,
-        "explanation": "Most nutrient absorption occurs in the small intestine.",
-        "difficulty": "Medium"
+        "explanation": "Wood and many plastics transfer heat slowly.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq185",
-        "question": "Which structure protects the brain? (practice case 6)",
+        "id": "c6nsoq113",
+        "question": "A material breaks easily when hit and does not bend first. It is:",
         "options": [
-          "Rib cage",
-          "Pelvis",
-          "Kneecap",
-          "Skull"
+          "Elastic",
+          "Ductile",
+          "Transparent",
+          "Brittle"
         ],
         "answer": 3,
-        "explanation": "The skull surrounds and protects the brain.",
-        "difficulty": "Medium"
+        "explanation": "Brittle materials fracture with little bending.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq186",
-        "question": "A tadpole develops into an adult frog. What is this change called? (practice case 7)",
+        "id": "c6nsoq114",
+        "question": "Which material is used to cover electrical wires?",
         "options": [
-          "Pollination",
+          "Copper",
+          "Aluminium",
+          "Plastic",
+          "Iron"
+        ],
+        "answer": 2,
+        "explanation": "Plastic is an electrical insulator.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq115",
+        "question": "Which observation shows a material is soluble in water?",
+        "options": [
+          "It remains as large pieces at the bottom",
+          "It forms a uniform solution when stirred",
+          "It is attracted to a magnet",
+          "It floats without mixing"
+        ],
+        "answer": 1,
+        "explanation": "A soluble substance forms a uniform mixture.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq116",
+        "question": "Sand is stirred into water and left undisturbed. What happens?",
+        "options": [
+          "Sand settles at the bottom",
+          "Sand disappears completely",
+          "Water becomes a gas",
+          "Sand turns magnetic"
+        ],
+        "answer": 0,
+        "explanation": "Sand is insoluble and settles under gravity.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq117",
+        "question": "Which substance is both hard and transparent?",
+        "options": [
+          "Cotton",
+          "Rubber",
+          "Paper",
+          "Glass"
+        ],
+        "answer": 3,
+        "explanation": "Glass is hard and can transmit light clearly.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq118",
+        "question": "A steel spoon feels colder than a wooden spoon in the same room. Why?",
+        "options": [
+          "Steel is always below room temperature",
+          "Wood produces heat",
+          "Steel transfers heat from the hand faster",
+          "The spoon's mass changes its temperature"
+        ],
+        "answer": 2,
+        "explanation": "Steel is a better thermal conductor than wood.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq119",
+        "question": "A raincoat material should be:",
+        "options": [
+          "Highly absorbent",
+          "Waterproof",
+          "Soluble in water",
+          "Porous to liquid water"
+        ],
+        "answer": 1,
+        "explanation": "A raincoat should prevent water passing through.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq120",
+        "question": "A container should show the water level without opening it. Which property is useful?",
+        "options": [
+          "Transparency",
           "Magnetism",
-          "Metamorphosis",
-          "Condensation"
-        ],
-        "answer": 2,
-        "explanation": "Metamorphosis is a major change in body form during development.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq187",
-        "question": "Which structure helps a fish obtain dissolved oxygen? (practice case 8)",
-        "options": [
-          "Fins alone",
-          "Gills",
-          "Feathers",
-          "Fur"
-        ],
-        "answer": 1,
-        "explanation": "Gills extract dissolved oxygen from water.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq188",
-        "question": "Which feature is characteristic of mammals such as humans and camels? (practice case 9)",
-        "options": [
-          "Females produce milk for their young",
-          "All lay hard-shelled eggs",
-          "All have gills",
-          "All live only in water"
+          "Hardness alone",
+          "Elasticity"
         ],
         "answer": 0,
-        "explanation": "Milk production is a defining mammalian characteristic.",
-        "difficulty": "Medium"
+        "explanation": "A transparent container lets the water level be seen.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq189",
-        "question": "Which organ pumps blood around the body? (practice case 10)",
+        "id": "c6nsoq121",
+        "question": "A wax piece floats in water. What can be inferred?",
         "options": [
-          "Lungs",
-          "Stomach",
-          "Brain",
-          "Heart"
+          "It must dissolve in water",
+          "It is a metal",
+          "It has no mass",
+          "Its average density is less than water"
         ],
         "answer": 3,
-        "explanation": "The heart pumps blood.",
-        "difficulty": "Medium"
+        "explanation": "Objects less dense than water generally float.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq190",
-        "question": "Which organs exchange oxygen and carbon dioxide with the air? (practice case 11)",
+        "id": "c6nsoq122",
+        "question": "Which material is suitable for a hot pan handle?",
         "options": [
-          "Stomach",
-          "Bones",
-          "Lungs",
-          "Kidneys"
+          "Copper",
+          "Iron",
+          "Wood",
+          "Aluminium"
         ],
         "answer": 2,
-        "explanation": "The lungs are the main organs of gas exchange.",
-        "difficulty": "Medium"
+        "explanation": "Wood is a poor heat conductor.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq191",
-        "question": "Which organ mixes food with digestive juices? (practice case 12)",
+        "id": "c6nsoq123",
+        "question": "Which material conducts electricity but is not a good heat conductor compared with metals?",
         "options": [
-          "Skull",
-          "Stomach",
-          "Heart",
-          "Lungs"
+          "Copper",
+          "Graphite",
+          "Aluminium",
+          "Silver"
         ],
         "answer": 1,
-        "explanation": "The stomach mixes food with digestive juices.",
-        "difficulty": "Medium"
+        "explanation": "Graphite conducts electricity but is not a good thermal conductor.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq192",
-        "question": "Where are most digested nutrients absorbed? (practice case 13)",
+        "id": "c6nsoq124",
+        "question": "Why are pan bodies often metal but handles wood or plastic?",
         "options": [
-          "Small intestine",
-          "Trachea",
-          "Heart",
-          "Skull"
+          "Metal conducts heat; wood and plastic insulate",
+          "Metal is transparent; wood is magnetic",
+          "Wood conducts heat faster",
+          "Plastic cooks food without heat"
         ],
         "answer": 0,
-        "explanation": "Most nutrient absorption occurs in the small intestine.",
-        "difficulty": "Hard"
+        "explanation": "The vessel transfers heat while the handle reduces heat transfer to the hand.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq193",
-        "question": "Which structure protects the brain? (practice case 14)",
+        "id": "c6nsoq125",
+        "question": "Which material is most likely translucent?",
         "options": [
-          "Rib cage",
-          "Pelvis",
-          "Kneecap",
-          "Skull"
+          "Clear window glass",
+          "Opaque plywood",
+          "Metal sheet",
+          "Frosted glass"
         ],
         "answer": 3,
-        "explanation": "The skull surrounds and protects the brain.",
-        "difficulty": "Easy"
+        "explanation": "Frosted glass passes light but blurs objects behind it.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq194",
-        "question": "A tadpole develops into an adult frog. What is this change called? (practice case 15)",
+        "id": "c6nsoq126",
+        "question": "A student compares four powders for solubility. Which method is fair?",
         "options": [
-          "Pollination",
-          "Magnetism",
-          "Metamorphosis",
-          "Condensation"
+          "Use different amounts of each powder",
+          "Heat only one sample",
+          "Use equal masses, equal water volumes and equal stirring time",
+          "Use different water volumes"
         ],
         "answer": 2,
-        "explanation": "Metamorphosis is a major change in body form during development.",
-        "difficulty": "Medium"
+        "explanation": "Keep conditions controlled to compare dissolving fairly.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq195",
-        "question": "Which structure helps a fish obtain dissolved oxygen? (practice case 16)",
+        "id": "c6nsoq127",
+        "question": "Which object is made from a ductile material?",
         "options": [
-          "Fins alone",
-          "Gills",
-          "Feathers",
-          "Fur"
+          "A chalk stick",
+          "A copper wire",
+          "A glass cup",
+          "A dry leaf"
         ],
         "answer": 1,
-        "explanation": "Gills extract dissolved oxygen from water.",
-        "difficulty": "Medium"
+        "explanation": "Ductile materials can be drawn into wires.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq196",
-        "question": "Which feature is characteristic of mammals such as humans and camels? (practice case 17)",
+        "id": "c6nsoq128",
+        "question": "A material can be hammered into thin sheets. It shows:",
         "options": [
-          "Females produce milk for their young",
-          "All lay hard-shelled eggs",
-          "All have gills",
-          "All live only in water"
+          "Malleability",
+          "Brittleness",
+          "Solubility",
+          "Transparency"
         ],
         "answer": 0,
-        "explanation": "Milk production is a defining mammalian characteristic.",
-        "difficulty": "Medium"
+        "explanation": "Malleable materials can be shaped into sheets.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq197",
-        "question": "Which organ pumps blood around the body? (practice case 18)",
+        "id": "c6nsoq129",
+        "question": "A plastic bottle stores water because plastic is generally:",
         "options": [
-          "Lungs",
-          "Stomach",
-          "Brain",
-          "Heart"
+          "A strong magnet",
+          "A good electrical conductor",
+          "Soluble in water",
+          "Light, waterproof and does not rust"
         ],
         "answer": 3,
-        "explanation": "The heart pumps blood.",
-        "difficulty": "Medium"
+        "explanation": "Common plastics are lightweight and water-resistant.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq198",
-        "question": "Which organs exchange oxygen and carbon dioxide with the air? (practice case 19)",
+        "id": "c6nsoq130",
+        "question": "An object sinks in water but floats in cooking oil. What does this tell us?",
         "options": [
-          "Stomach",
-          "Bones",
-          "Lungs",
-          "Kidneys"
+          "It has no density",
+          "It dissolves in both liquids",
+          "Its density is greater than water but less than the oil",
+          "It is necessarily magnetic"
         ],
         "answer": 2,
-        "explanation": "The lungs are the main organs of gas exchange.",
-        "difficulty": "Hard"
+        "explanation": "Floating depends on relative density.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq199",
-        "question": "Which organ mixes food with digestive juices? (practice case 20)",
+        "id": "c6nsoq131",
+        "question": "A material is not attracted to a magnet. Which conclusion is safest?",
         "options": [
-          "Skull",
-          "Stomach",
-          "Heart",
-          "Lungs"
+          "It contains no metal atoms",
+          "It is not attracted to this magnet in this test",
+          "It is transparent",
+          "It must be a liquid"
         ],
         "answer": 1,
-        "explanation": "The stomach mixes food with digestive juices.",
-        "difficulty": "Easy"
+        "explanation": "A negative magnet test does not prove absence of all metals.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq200",
-        "question": "Where are most digested nutrients absorbed? (practice case 21)",
+        "id": "c6nsoq132",
+        "question": "Why can a metal spoon's handle become hot when left in hot soup?",
         "options": [
-          "Small intestine",
-          "Trachea",
-          "Heart",
-          "Skull"
+          "Heat travels along the spoon",
+          "Metal dissolves immediately",
+          "Metal blocks all heat",
+          "The spoon becomes transparent"
         ],
         "answer": 0,
-        "explanation": "Most nutrient absorption occurs in the small intestine.",
-        "difficulty": "Medium"
+        "explanation": "Metals conduct heat along their length.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq201",
-        "question": "Which structure protects the brain? (practice case 22)",
+        "id": "c6nsoq133",
+        "question": "Which pair is correctly matched?",
         "options": [
-          "Rib cage",
-          "Pelvis",
-          "Kneecap",
-          "Skull"
+          "Glass — absorbent",
+          "Copper — electrical insulator",
+          "Cotton — magnetic",
+          "Rubber — elastic"
         ],
         "answer": 3,
-        "explanation": "The skull surrounds and protects the brain.",
-        "difficulty": "Medium"
+        "explanation": "Rubber can stretch and return towards its shape.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq202",
-        "question": "A tadpole develops into an adult frog. What is this change called? (practice case 23)",
+        "id": "c6nsoq134",
+        "question": "Which fabric absorbs water and allows air to pass through?",
         "options": [
-          "Pollination",
-          "Magnetism",
-          "Metamorphosis",
-          "Condensation"
+          "Polythene sheet",
+          "Aluminium foil",
+          "Cotton",
+          "Glass pane"
         ],
         "answer": 2,
-        "explanation": "Metamorphosis is a major change in body form during development.",
-        "difficulty": "Medium"
+        "explanation": "Cotton is absorbent and breathable.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq203",
-        "question": "Which structure helps a fish obtain dissolved oxygen? (practice case 24)",
+        "id": "c6nsoq135",
+        "question": "A sharp image forms through a sheet onto a screen. What does this suggest?",
         "options": [
-          "Fins alone",
-          "Gills",
-          "Feathers",
-          "Fur"
+          "It absorbs all light",
+          "The sheet transmits light with little scattering",
+          "It is opaque",
+          "It emits light"
         ],
         "answer": 1,
-        "explanation": "Gills extract dissolved oxygen from water.",
-        "difficulty": "Medium"
+        "explanation": "A clear image requires light to pass with little scattering.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq204",
-        "question": "Which feature is characteristic of mammals such as humans and camels? (practice case 25)",
+        "id": "c6nsoq136",
+        "question": "How should absorbency of two cloth samples be compared?",
         "options": [
-          "Females produce milk for their young",
-          "All lay hard-shelled eggs",
-          "All have gills",
-          "All live only in water"
+          "Measure water absorbed under the same conditions",
+          "Compare their colours",
+          "Weigh them only after drying",
+          "Compare their prices"
         ],
         "answer": 0,
-        "explanation": "Milk production is a defining mammalian characteristic.",
-        "difficulty": "Hard"
+        "explanation": "Water uptake is measured consistently.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq205",
-        "question": "Which organ pumps blood around the body? (practice case 26)",
+        "id": "c6nsoq137",
+        "question": "A material is stiff, strong and corrosion-resistant. A suitable use is:",
         "options": [
-          "Lungs",
-          "Stomach",
-          "Brain",
-          "Heart"
+          "A soft towel",
+          "A transparent window",
+          "A sponge",
+          "A treated steel bridge support"
         ],
         "answer": 3,
-        "explanation": "The heart pumps blood.",
-        "difficulty": "Easy"
+        "explanation": "Steel is strong; treatment helps limit corrosion.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq206",
-        "question": "Which organs exchange oxygen and carbon dioxide with the air? (practice case 27)",
+        "id": "c6nsoq138",
+        "question": "Why is a glass tumbler unsuitable as a hammer?",
         "options": [
-          "Stomach",
-          "Bones",
-          "Lungs",
-          "Kidneys"
+          "Glass is elastic",
+          "Glass is magnetic",
+          "Glass is brittle and can shatter on impact",
+          "Glass dissolves in air"
         ],
         "answer": 2,
-        "explanation": "The lungs are the main organs of gas exchange.",
-        "difficulty": "Medium"
+        "explanation": "Brittle materials can break under sudden impact.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq207",
-        "question": "Which organ mixes food with digestive juices? (practice case 28)",
+        "id": "c6nsoq139",
+        "question": "Two equal-size blocks have different masses. Which statement is correct?",
         "options": [
-          "Skull",
-          "Stomach",
-          "Heart",
-          "Lungs"
+          "They must have equal density",
+          "The heavier block has greater density",
+          "The lighter block has greater volume",
+          "Mass and density are unrelated"
         ],
         "answer": 1,
-        "explanation": "The stomach mixes food with digestive juices.",
-        "difficulty": "Medium"
+        "explanation": "At equal volume, greater mass means greater density.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq208",
-        "question": "Where are most digested nutrients absorbed? (practice case 29)",
+        "id": "c6nsoq140",
+        "question": "An object floats partly above water. What happens if it is pushed fully under and released?",
         "options": [
-          "Small intestine",
-          "Trachea",
-          "Heart",
-          "Skull"
+          "It tends to rise towards the surface",
+          "It remains at the bottom",
+          "It dissolves",
+          "Its mass becomes zero"
         ],
         "answer": 0,
-        "explanation": "Most nutrient absorption occurs in the small intestine.",
-        "difficulty": "Medium"
+        "explanation": "Upthrust exceeds its weight until it rises.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq209",
-        "question": "Which structure protects the brain? (practice case 30)",
+        "id": "c6nsoq141",
+        "question": "A transparent liquid looks clear. Does that prove it is safe to drink?",
         "options": [
-          "Rib cage",
-          "Pelvis",
-          "Kneecap",
-          "Skull"
+          "Yes, all clear liquids are safe",
+          "Yes, if it has no colour",
+          "No, every transparent liquid is poisonous",
+          "No; appearance alone cannot establish safety"
         ],
         "answer": 3,
-        "explanation": "The skull surrounds and protects the brain.",
-        "difficulty": "Medium"
+        "explanation": "Harmful substances can be colourless.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq210",
-        "question": "A tadpole develops into an adult frog. What is this change called? (practice case 31)",
+        "id": "c6nsoq142",
+        "question": "Which combination is best for an umbrella canopy?",
         "options": [
-          "Pollination",
-          "Magnetism",
-          "Metamorphosis",
-          "Condensation"
+          "Absorbent, brittle and heavy",
+          "Soluble and transparent only",
+          "Waterproof, light and flexible",
+          "Magnetic and rough"
         ],
         "answer": 2,
-        "explanation": "Metamorphosis is a major change in body form during development.",
-        "difficulty": "Hard"
+        "explanation": "The canopy should repel water while remaining light and flexible.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq211",
-        "question": "Which structure helps a fish obtain dissolved oxygen? (practice case 32)",
+        "id": "c6nsoq143",
+        "question": "A metal block and wood block have equal volumes; metal has twice the mass. Which has twice the density?",
         "options": [
-          "Fins alone",
-          "Gills",
-          "Feathers",
-          "Fur"
+          "The wooden block",
+          "The metal block",
+          "Both have equal density",
+          "Density cannot be compared"
         ],
         "answer": 1,
-        "explanation": "Gills extract dissolved oxygen from water.",
-        "difficulty": "Easy"
+        "explanation": "Density is mass divided by volume.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq212",
-        "question": "Which feature is characteristic of mammals such as humans and camels? (practice case 33)",
+        "id": "c6nsoq144",
+        "question": "Which object is opaque and magnetic?",
         "options": [
-          "Females produce milk for their young",
-          "All lay hard-shelled eggs",
-          "All have gills",
-          "All live only in water"
+          "Iron sheet",
+          "Clear glass",
+          "Cotton cloth",
+          "Plastic film"
         ],
         "answer": 0,
-        "explanation": "Milk production is a defining mammalian characteristic.",
-        "difficulty": "Medium"
+        "explanation": "Iron is opaque and attracted to a magnet.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq213",
-        "question": "Which organ pumps blood around the body? (practice case 34)",
+        "id": "c6nsoq145",
+        "question": "Why do plastic containers have recycling identification symbols?",
         "options": [
-          "Lungs",
-          "Stomach",
-          "Brain",
-          "Heart"
+          "They show plastic dissolves in water",
+          "They prove suitability for every food",
+          "They mean the container is magnetic",
+          "They help identify plastic types for sorting"
         ],
         "answer": 3,
-        "explanation": "The heart pumps blood.",
-        "difficulty": "Medium"
+        "explanation": "Identification codes support sorting for recycling.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq214",
-        "question": "Which organs exchange oxygen and carbon dioxide with the air? (practice case 35)",
+        "id": "c6nsoq146",
+        "question": "Salt dissolves in water but can be recovered by evaporation. What does this show?",
         "options": [
-          "Stomach",
-          "Bones",
-          "Lungs",
-          "Kidneys"
+          "Salt changes into water",
+          "Salt becomes magnetic",
+          "Dissolving does not destroy the salt",
+          "Salt is insoluble"
         ],
         "answer": 2,
-        "explanation": "The lungs are the main organs of gas exchange.",
-        "difficulty": "Medium"
+        "explanation": "Evaporation removes water and leaves salt behind.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq215",
-        "question": "Which organ mixes food with digestive juices? (practice case 36)",
+        "id": "c6nsoq147",
+        "question": "What property is most important for a saucepan base to heat efficiently?",
         "options": [
-          "Skull",
-          "Stomach",
-          "Heart",
-          "Lungs"
+          "High transparency",
+          "Good thermal conductivity",
+          "High absorbency",
+          "Electrical insulation"
         ],
         "answer": 1,
-        "explanation": "The stomach mixes food with digestive juices.",
-        "difficulty": "Medium"
+        "explanation": "A good thermal conductor transfers heat efficiently.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq216",
-        "question": "Where are most digested nutrients absorbed? (practice case 37)",
+        "id": "c6nsoq148",
+        "question": "A material bends without breaking and returns to its shape. Which property is shown?",
         "options": [
-          "Small intestine",
-          "Trachea",
-          "Heart",
-          "Skull"
+          "Elasticity",
+          "Brittleness",
+          "Solubility",
+          "Opacity"
         ],
         "answer": 0,
-        "explanation": "Most nutrient absorption occurs in the small intestine.",
-        "difficulty": "Hard"
+        "explanation": "Elastic materials recover their shape after deformation.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq217",
-        "question": "Which structure protects the brain? (practice case 38)",
+        "id": "c6nsoq149",
+        "question": "Two equal-size cubes are put in water. Cube A floats higher than B. What is most likely?",
         "options": [
-          "Rib cage",
-          "Pelvis",
-          "Kneecap",
-          "Skull"
+          "Cube A has greater mass than B",
+          "Cube B has no matter",
+          "Both must have identical density",
+          "Cube A has lower average density than B"
         ],
         "answer": 3,
-        "explanation": "The skull surrounds and protects the brain.",
-        "difficulty": "Easy"
+        "explanation": "A less-dense object displaces less water to balance its weight.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq218",
-        "question": "A tadpole develops into an adult frog. What is this change called? (practice case 39)",
+        "id": "c6nsoq150",
+        "question": "A metal spoon and a wooden spoon have equal size. Which is likely to warm a cold hand faster when held?",
         "options": [
-          "Pollination",
-          "Magnetism",
-          "Metamorphosis",
-          "Condensation"
+          "The wooden spoon",
+          "Both always transfer heat equally",
+          "The metal spoon",
+          "Neither can transfer heat"
         ],
         "answer": 2,
-        "explanation": "Metamorphosis is a major change in body form during development.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq219",
-        "question": "Which structure helps a fish obtain dissolved oxygen? (practice case 40)",
-        "options": [
-          "Fins alone",
-          "Gills",
-          "Feathers",
-          "Fur"
-        ],
-        "answer": 1,
-        "explanation": "Gills extract dissolved oxygen from water.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq220",
-        "question": "Which feature is characteristic of mammals such as humans and camels? (practice case 41)",
-        "options": [
-          "Females produce milk for their young",
-          "All lay hard-shelled eggs",
-          "All have gills",
-          "All live only in water"
-        ],
-        "answer": 0,
-        "explanation": "Milk production is a defining mammalian characteristic.",
-        "difficulty": "Medium"
+        "explanation": "Metal conducts heat more rapidly.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   },
