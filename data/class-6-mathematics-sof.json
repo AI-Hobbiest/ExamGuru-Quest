@@ -3541,658 +3541,709 @@
   },
   {
     "chapter_no": 6,
-    "title": "Geometry",
-    "key": "sof-imo-geometry",
+    "title": "Perimeter and Area",
+    "key": "sof-imo-perimeter-and-area",
+    "section": "IMO Syllabus Topic",
     "questions": [
       {
-        "id": "c6imoq006",
-        "question": "What is the complement of an angle of 20°?",
+        "id": "c6imoq251",
+        "question": "A rectangle is 17 cm long and 9 cm wide. Find its perimeter.",
         "options": [
-          "160°",
-          "20°",
-          "70°",
-          "110°"
-        ],
-        "answer": 2,
-        "explanation": "Complement = 90° − 20° = 70°.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq016",
-        "question": "What is the complement of an angle of 27°?",
-        "options": [
-          "63°",
-          "153°",
-          "27°",
-          "117°"
-        ],
-        "answer": 0,
-        "explanation": "Complement = 90° − 27° = 63°.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq026",
-        "question": "What is the complement of an angle of 34°?",
-        "options": [
-          "146°",
-          "34°",
-          "56°",
-          "124°"
-        ],
-        "answer": 2,
-        "explanation": "Complement = 90° − 34° = 56°.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq036",
-        "question": "What is the complement of an angle of 41°?",
-        "options": [
-          "49°",
-          "139°",
-          "41°",
-          "131°"
-        ],
-        "answer": 0,
-        "explanation": "Complement = 90° − 41° = 49°.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq046",
-        "question": "What is the complement of an angle of 48°?",
-        "options": [
-          "132°",
-          "48°",
-          "42°",
-          "138°"
-        ],
-        "answer": 2,
-        "explanation": "Complement = 90° − 48° = 42°.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq056",
-        "question": "What is the complement of an angle of 55°?",
-        "options": [
-          "35°",
-          "125°",
-          "55°",
-          "145°"
-        ],
-        "answer": 0,
-        "explanation": "Complement = 90° − 55° = 35°.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq066",
-        "question": "What is the complement of an angle of 62°?",
-        "options": [
-          "118°",
-          "62°",
-          "28°",
-          "152°"
-        ],
-        "answer": 2,
-        "explanation": "Complement = 90° − 62° = 28°.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq076",
-        "question": "What is the complement of an angle of 69°?",
-        "options": [
-          "21°",
-          "111°",
-          "69°",
-          "159°"
-        ],
-        "answer": 0,
-        "explanation": "Complement = 90° − 69° = 21°.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq086",
-        "question": "What is the complement of an angle of 76°?",
-        "options": [
-          "104°",
-          "76°",
-          "14°",
-          "166°"
-        ],
-        "answer": 2,
-        "explanation": "Complement = 90° − 76° = 14°.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq096",
-        "question": "What is the complement of an angle of 83°?",
-        "options": [
-          "7°",
-          "97°",
-          "83°",
-          "173°"
-        ],
-        "answer": 0,
-        "explanation": "Complement = 90° − 83° = 7°.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq301",
-        "question": "An angle measures 20°. Which type of angle is it?",
-        "options": [
-          "Right",
-          "Obtuse",
-          "Straight",
-          "Acute"
-        ],
-        "answer": 3,
-        "explanation": "20° is less than 90°, so it is acute.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6imoq302",
-        "question": "A triangle has angles 12° and 24°. Find the third angle.",
-        "options": [
-          "156",
-          "36",
-          "144",
-          "168"
-        ],
-        "answer": 2,
-        "explanation": "Triangle angles total 180°: 180 − 12 − 24 = 144°.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6imoq303",
-        "question": "An angle measures 26°. Which type of angle is it?",
-        "options": [
-          "Straight",
-          "Acute",
-          "Right",
-          "Obtuse"
+          "26 cm",
+          "52 cm",
+          "46 cm",
+          "54 cm"
         ],
         "answer": 1,
-        "explanation": "26° is less than 90°, so it is acute.",
-        "difficulty": "Medium"
+        "explanation": "2×(17+9)=52 cm.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq304",
-        "question": "A triangle has angles 14° and 26°. Find the third angle.",
+        "id": "c6imoq252",
+        "question": "A square has perimeter 76 cm. What is its area?",
         "options": [
-          "140",
-          "166",
-          "154",
-          "40"
+          "361 cm²",
+          "324 cm²",
+          "380 cm²",
+          "400 cm²"
         ],
         "answer": 0,
-        "explanation": "Triangle angles total 180°: 180 − 14 − 26 = 140°.",
-        "difficulty": "Medium"
+        "explanation": "Side=19 cm; area=19²=361 cm².",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq305",
-        "question": "An angle measures 32°. Which type of angle is it?",
+        "id": "c6imoq253",
+        "question": "A rectangle has area 180 cm² and length 15 cm. Find its width.",
         "options": [
-          "Right",
-          "Obtuse",
-          "Straight",
-          "Acute"
+          "10 cm",
+          "13 cm",
+          "15 cm",
+          "12 cm"
         ],
         "answer": 3,
-        "explanation": "32° is less than 90°, so it is acute.",
-        "difficulty": "Medium"
+        "explanation": "180÷15=12 cm.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq306",
-        "question": "A triangle has angles 16° and 28°. Find the third angle.",
+        "id": "c6imoq254",
+        "question": "A 24 m by 18 m garden is fenced, leaving a 3 m gate opening. How much fence is needed?",
         "options": [
-          "152",
-          "44",
-          "136",
-          "164"
+          "78 m",
+          "84 m",
+          "81 m",
+          "87 m"
         ],
         "answer": 2,
-        "explanation": "Triangle angles total 180°: 180 − 16 − 28 = 136°.",
-        "difficulty": "Hard"
+        "explanation": "Perimeter=84 m; subtract 3 m.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq307",
-        "question": "An angle measures 38°. Which type of angle is it?",
+        "id": "c6imoq255",
+        "question": "A rectangle's length is twice its width and its perimeter is 54 cm. Find its area.",
         "options": [
-          "Straight",
-          "Acute",
-          "Right",
-          "Obtuse"
+          "144 cm²",
+          "162 cm²",
+          "180 cm²",
+          "216 cm²"
         ],
         "answer": 1,
-        "explanation": "38° is less than 90°, so it is acute.",
-        "difficulty": "Easy"
+        "explanation": "3w=27, so w=9 and l=18; area=162.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq308",
-        "question": "A triangle has angles 18° and 30°. Find the third angle.",
+        "id": "c6imoq256",
+        "question": "A 10 cm square is cut into four equal smaller squares. Find the sum of their perimeters.",
         "options": [
-          "132",
-          "162",
-          "150",
-          "48"
+          "80 cm",
+          "40 cm",
+          "60 cm",
+          "100 cm"
         ],
         "answer": 0,
-        "explanation": "Triangle angles total 180°: 180 − 18 − 30 = 132°.",
-        "difficulty": "Medium"
+        "explanation": "Each small square has side 5 and perimeter 20; total 80.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq309",
-        "question": "An angle measures 44°. Which type of angle is it?",
+        "id": "c6imoq257",
+        "question": "A 2 m path runs outside a 12 m by 8 m pond. Find the path area.",
         "options": [
-          "Right",
-          "Obtuse",
-          "Straight",
-          "Acute"
+          "80 m²",
+          "88 m²",
+          "112 m²",
+          "96 m²"
         ],
         "answer": 3,
-        "explanation": "44° is less than 90°, so it is acute.",
-        "difficulty": "Medium"
+        "explanation": "Outer dimensions 16×12; 192−96=96.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq310",
-        "question": "A triangle has angles 20° and 23°. Find the third angle.",
+        "id": "c6imoq258",
+        "question": "A 12 cm by 8 cm rectangle and a square have equal perimeter. Find the square's area.",
         "options": [
-          "157",
-          "43",
-          "137",
-          "160"
+          "80 cm²",
+          "96 cm²",
+          "100 cm²",
+          "120 cm²"
         ],
         "answer": 2,
-        "explanation": "Triangle angles total 180°: 180 − 20 − 23 = 137°.",
-        "difficulty": "Medium"
+        "explanation": "Rectangle perimeter=40; square side=10; area=100.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq311",
-        "question": "An angle measures 50°. Which type of angle is it?",
+        "id": "c6imoq259",
+        "question": "A floor is 6.4 m by 3.5 m. Find its area.",
         "options": [
-          "Straight",
-          "Acute",
-          "Right",
-          "Obtuse"
+          "19.9 m²",
+          "22.4 m²",
+          "21.4 m²",
+          "24.5 m²"
         ],
         "answer": 1,
-        "explanation": "50° is less than 90°, so it is acute.",
-        "difficulty": "Medium"
+        "explanation": "6.4×3.5=22.4.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq312",
-        "question": "A triangle has angles 22° and 25°. Find the third angle.",
+        "id": "c6imoq260",
+        "question": "How many 20 cm square tiles cover a 4 m by 3 m floor?",
         "options": [
-          "133",
-          "158",
-          "155",
-          "47"
+          "300",
+          "250",
+          "280",
+          "320"
         ],
         "answer": 0,
-        "explanation": "Triangle angles total 180°: 180 − 22 − 25 = 133°.",
-        "difficulty": "Hard"
+        "explanation": "400÷20=20 tiles along; 300÷20=15 across; 20×15=300.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq313",
-        "question": "An angle measures 56°. Which type of angle is it?",
+        "id": "c6imoq261",
+        "question": "A wire 88 cm long is bent into a square. Find each side.",
         "options": [
-          "Right",
-          "Obtuse",
-          "Straight",
-          "Acute"
+          "20 cm",
+          "24 cm",
+          "44 cm",
+          "22 cm"
         ],
         "answer": 3,
-        "explanation": "56° is less than 90°, so it is acute.",
-        "difficulty": "Easy"
+        "explanation": "88÷4=22 cm.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq314",
-        "question": "A triangle has angles 24° and 27°. Find the third angle.",
+        "id": "c6imoq262",
+        "question": "A rectangle's area doubles while its length remains unchanged. What happens to the width?",
         "options": [
-          "153",
-          "51",
-          "129",
-          "156"
+          "It halves",
+          "It increases by 2 cm",
+          "It doubles",
+          "It stays unchanged"
         ],
         "answer": 2,
-        "explanation": "Triangle angles total 180°: 180 − 24 − 27 = 129°.",
-        "difficulty": "Medium"
+        "explanation": "Area=length×width.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq315",
-        "question": "An angle measures 62°. Which type of angle is it?",
+        "id": "c6imoq263",
+        "question": "A 30 m by 20 m field has a 2 m path along its 30 m side inside. Find the grass area.",
         "options": [
-          "Straight",
-          "Acute",
-          "Right",
-          "Obtuse"
+          "520 m²",
+          "540 m²",
+          "560 m²",
+          "580 m²"
         ],
         "answer": 1,
-        "explanation": "62° is less than 90°, so it is acute.",
-        "difficulty": "Medium"
+        "explanation": "600−(30×2)=540 m².",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq316",
-        "question": "A triangle has angles 26° and 29°. Find the third angle.",
+        "id": "c6imoq264",
+        "question": "A rectangle has perimeter 64 cm. Its length is 6 cm greater than width. Find width.",
         "options": [
-          "125",
-          "154",
-          "151",
-          "55"
+          "13 cm",
+          "12 cm",
+          "14 cm",
+          "16 cm"
         ],
         "answer": 0,
-        "explanation": "Triangle angles total 180°: 180 − 26 − 29 = 125°.",
-        "difficulty": "Medium"
+        "explanation": "L+W=32 and L=W+6, so W=13.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq317",
-        "question": "An angle measures 68°. Which type of angle is it?",
+        "id": "c6imoq265",
+        "question": "A square has area 144 cm². Find its perimeter.",
         "options": [
-          "Right",
-          "Obtuse",
-          "Straight",
-          "Acute"
+          "36 cm",
+          "42 cm",
+          "56 cm",
+          "48 cm"
         ],
         "answer": 3,
-        "explanation": "68° is less than 90°, so it is acute.",
-        "difficulty": "Medium"
+        "explanation": "Side=12; perimeter=48.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq318",
-        "question": "A triangle has angles 28° and 31°. Find the third angle.",
+        "id": "c6imoq266",
+        "question": "A 16 cm by 12 cm rectangle is split into two equal rectangles parallel to its 16 cm side. Find each piece's perimeter.",
         "options": [
-          "149",
-          "59",
-          "121",
-          "152"
+          "36 cm",
+          "40 cm",
+          "44 cm",
+          "48 cm"
         ],
         "answer": 2,
-        "explanation": "Triangle angles total 180°: 180 − 28 − 31 = 121°.",
-        "difficulty": "Hard"
+        "explanation": "Each is 16×6; perimeter=44.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq319",
-        "question": "An angle measures 74°. Which type of angle is it?",
+        "id": "c6imoq267",
+        "question": "A photo is 18 cm by 12 cm. A 2 cm border is added outside all around. Find the outer area.",
         "options": [
-          "Straight",
-          "Acute",
-          "Right",
-          "Obtuse"
+          "280 cm²",
+          "352 cm²",
+          "308 cm²",
+          "324 cm²"
         ],
         "answer": 1,
-        "explanation": "74° is less than 90°, so it is acute.",
-        "difficulty": "Easy"
+        "explanation": "Outer dimensions are 22×16; area=352.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq320",
-        "question": "A triangle has angles 30° and 24°. Find the third angle.",
+        "id": "c6imoq268",
+        "question": "A 25 m by 16 m courtyard is paved with 1 m² slabs. How many slabs are needed?",
         "options": [
-          "126",
-          "150",
-          "156",
-          "54"
+          "400",
+          "360",
+          "390",
+          "420"
         ],
         "answer": 0,
-        "explanation": "Triangle angles total 180°: 180 − 30 − 24 = 126°.",
-        "difficulty": "Medium"
+        "explanation": "25×16=400.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq321",
-        "question": "An angle measures 80°. Which type of angle is it?",
+        "id": "c6imoq269",
+        "question": "A rectangle has perimeter 50 cm. Which integer side lengths give the greatest area?",
         "options": [
-          "Right",
-          "Obtuse",
-          "Straight",
-          "Acute"
+          "15 cm and 10 cm",
+          "16 cm and 9 cm",
+          "18 cm and 7 cm",
+          "13 cm and 12 cm"
         ],
         "answer": 3,
-        "explanation": "80° is less than 90°, so it is acute.",
-        "difficulty": "Medium"
+        "explanation": "The side sum is 25; the closest integer pair gives greatest product.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq322",
-        "question": "A triangle has angles 32° and 26°. Find the third angle.",
+        "id": "c6imoq270",
+        "question": "A 14 cm by 10 cm wire rectangle is reshaped into an equilateral triangle. Find each side.",
         "options": [
-          "154",
-          "58",
-          "122",
-          "148"
+          "14 cm",
+          "18 cm",
+          "16 cm",
+          "20 cm"
         ],
         "answer": 2,
-        "explanation": "Triangle angles total 180°: 180 − 32 − 26 = 122°.",
-        "difficulty": "Medium"
+        "explanation": "Wire length=48 cm; each side=16 cm.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq323",
-        "question": "An angle measures 86°. Which type of angle is it?",
+        "id": "c6imoq271",
+        "question": "A 9 m by 7 m rectangle is joined to a 4 m by 7 m rectangle along a full 7 m side. Find the perimeter.",
         "options": [
-          "Straight",
-          "Acute",
-          "Right",
-          "Obtuse"
+          "48 m",
+          "40 m",
+          "50 m",
+          "54 m"
         ],
         "answer": 1,
-        "explanation": "86° is less than 90°, so it is acute.",
-        "difficulty": "Medium"
+        "explanation": "The combined rectangle is 13×7; perimeter=40.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq324",
-        "question": "A triangle has angles 34° and 28°. Find the third angle.",
+        "id": "c6imoq272",
+        "question": "A square garden has side 18 m. A 1 m wide strip lies inside all four edges. Find the lawn area.",
         "options": [
-          "118",
-          "146",
-          "152",
-          "62"
+          "256 m²",
+          "240 m²",
+          "272 m²",
+          "289 m²"
         ],
         "answer": 0,
-        "explanation": "Triangle angles total 180°: 180 − 34 − 28 = 118°.",
-        "difficulty": "Hard"
+        "explanation": "Inner side=16 m; area=256.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq325",
-        "question": "An angle measures 92°. Which type of angle is it?",
+        "id": "c6imoq273",
+        "question": "A 40 cm by 25 cm sheet has four 5 cm squares cut from its corners. Find remaining area.",
         "options": [
-          "Acute",
-          "Right",
-          "Straight",
-          "Obtuse"
+          "875 cm²",
+          "925 cm²",
+          "975 cm²",
+          "900 cm²"
         ],
         "answer": 3,
-        "explanation": "92° is between 90° and 180°, so it is obtuse.",
-        "difficulty": "Easy"
+        "explanation": "Original area=1000; remove 4×25=100.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq326",
-        "question": "A triangle has angles 36° and 30°. Find the third angle.",
+        "id": "c6imoq274",
+        "question": "A pool has perimeter 70 m and length 20 m. Find area.",
         "options": [
-          "150",
-          "66",
-          "114",
-          "144"
+          "250 m²",
+          "350 m²",
+          "300 m²",
+          "400 m²"
         ],
         "answer": 2,
-        "explanation": "Triangle angles total 180°: 180 − 36 − 30 = 114°.",
-        "difficulty": "Medium"
+        "explanation": "L+W=35 so W=15; area=300.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq327",
-        "question": "An angle measures 98°. Which type of angle is it?",
+        "id": "c6imoq275",
+        "question": "Both dimensions of a 12 cm by 9 cm rectangle are tripled. By what factor does area change?",
         "options": [
-          "Straight",
-          "Obtuse",
-          "Acute",
-          "Right"
+          "3",
+          "9",
+          "6",
+          "12"
         ],
         "answer": 1,
-        "explanation": "98° is between 90° and 180°, so it is obtuse.",
-        "difficulty": "Medium"
+        "explanation": "Area scale factor=3×3=9.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq328",
-        "question": "A triangle has angles 38° and 23°. Find the third angle.",
+        "id": "c6imoq276",
+        "question": "A field is 15 m wide and 4 m less than twice as long as it is wide. Find perimeter.",
         "options": [
-          "119",
-          "142",
-          "157",
-          "61"
+          "82 m",
+          "78 m",
+          "86 m",
+          "90 m"
         ],
         "answer": 0,
-        "explanation": "Triangle angles total 180°: 180 − 38 − 23 = 119°.",
-        "difficulty": "Medium"
+        "explanation": "Length=26; perimeter=2×41=82.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq329",
-        "question": "An angle measures 104°. Which type of angle is it?",
+        "id": "c6imoq277",
+        "question": "A square has area 196 cm². A rectangle has the same area and width 7 cm. Find its length.",
         "options": [
-          "Acute",
-          "Right",
-          "Straight",
-          "Obtuse"
+          "21 cm",
+          "24 cm",
+          "32 cm",
+          "28 cm"
         ],
         "answer": 3,
-        "explanation": "104° is between 90° and 180°, so it is obtuse.",
-        "difficulty": "Medium"
+        "explanation": "196÷7=28.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq330",
-        "question": "A triangle has angles 40° and 25°. Find the third angle.",
+        "id": "c6imoq278",
+        "question": "A 20 cm by 14 cm rectangle is tiled by 1 cm squares. How many unit squares touch the outside boundary?",
         "options": [
-          "155",
-          "65",
-          "115",
-          "140"
+          "60",
+          "62",
+          "64",
+          "68"
         ],
         "answer": 2,
-        "explanation": "Triangle angles total 180°: 180 − 40 − 25 = 115°.",
-        "difficulty": "Hard"
+        "explanation": "Boundary count=2×20+2×14−4=64.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq331",
-        "question": "An angle measures 110°. Which type of angle is it?",
+        "id": "c6imoq279",
+        "question": "A 32 m by 21 m plot has posts exactly 5 m apart around its boundary. Is this possible?",
         "options": [
-          "Straight",
-          "Obtuse",
-          "Acute",
-          "Right"
+          "Yes, 20 posts",
+          "No, because 106 is not divisible by 5",
+          "Yes, 21 posts",
+          "Yes, 22 posts"
         ],
         "answer": 1,
-        "explanation": "110° is between 90° and 180°, so it is obtuse.",
-        "difficulty": "Easy"
+        "explanation": "Perimeter=106 m, not a multiple of 5.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq332",
-        "question": "A triangle has angles 42° and 27°. Find the third angle.",
+        "id": "c6imoq280",
+        "question": "A square and rectangle have equal area. Square side is 12 cm; rectangle width is 9 cm. Find rectangle length.",
         "options": [
-          "111",
-          "138",
-          "153",
-          "69"
+          "16 cm",
+          "12 cm",
+          "14 cm",
+          "18 cm"
         ],
         "answer": 0,
-        "explanation": "Triangle angles total 180°: 180 − 42 − 27 = 111°.",
-        "difficulty": "Medium"
+        "explanation": "144÷9=16.",
+        "difficulty": "Hard",
+        "section": "Mathematical Reasoning"
       },
       {
-        "id": "c6imoq333",
-        "question": "An angle measures 116°. Which type of angle is it?",
+        "id": "c6imoq281",
+        "question": "A 15 m by 10 m garden has a 1 m path along its 15 m side inside. Remaining area?",
         "options": [
-          "Acute",
-          "Right",
-          "Straight",
-          "Obtuse"
+          "140 m²",
+          "130 m²",
+          "125 m²",
+          "135 m²"
         ],
         "answer": 3,
-        "explanation": "116° is between 90° and 180°, so it is obtuse.",
-        "difficulty": "Medium"
+        "explanation": "150−15=135.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq334",
-        "question": "A triangle has angles 44° and 29°. Find the third angle.",
+        "id": "c6imoq282",
+        "question": "A rectangle has area 240 cm² and perimeter 64 cm. What are its dimensions?",
         "options": [
-          "151",
-          "73",
-          "107",
-          "136"
+          "18 cm by 14 cm",
+          "24 cm by 8 cm",
+          "20 cm by 12 cm",
+          "16 cm by 14 cm"
         ],
         "answer": 2,
-        "explanation": "Triangle angles total 180°: 180 − 44 − 29 = 107°.",
-        "difficulty": "Medium"
+        "explanation": "The sides sum to 32 and product to 240.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq335",
-        "question": "An angle measures 122°. Which type of angle is it?",
+        "id": "c6imoq283",
+        "question": "A 6 cm by 4 cm rectangle is tiled with unit squares. How many lie on its outer edge?",
         "options": [
-          "Straight",
-          "Obtuse",
-          "Acute",
-          "Right"
+          "12",
+          "16",
+          "18",
+          "20"
         ],
         "answer": 1,
-        "explanation": "122° is between 90° and 180°, so it is obtuse.",
-        "difficulty": "Medium"
+        "explanation": "2×6+2×4−4=16.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq336",
-        "question": "A triangle has angles 46° and 31°. Find the third angle.",
+        "id": "c6imoq284",
+        "question": "A runner completes one lap around a 75 m by 45 m park. Distance?",
         "options": [
-          "103",
-          "134",
-          "149",
-          "77"
+          "240 m",
+          "220 m",
+          "230 m",
+          "250 m"
         ],
         "answer": 0,
-        "explanation": "Triangle angles total 180°: 180 − 46 − 31 = 103°.",
-        "difficulty": "Hard"
+        "explanation": "Perimeter=2×120=240 m.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq337",
-        "question": "An angle measures 128°. Which type of angle is it?",
+        "id": "c6imoq285",
+        "question": "A square's side increases by 20%. By what percentage does its area increase?",
         "options": [
-          "Acute",
-          "Right",
-          "Straight",
-          "Obtuse"
+          "20%",
+          "40%",
+          "48%",
+          "44%"
         ],
         "answer": 3,
-        "explanation": "128° is between 90° and 180°, so it is obtuse.",
-        "difficulty": "Easy"
+        "explanation": "1.2²=1.44; increase 44%.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq338",
-        "question": "A triangle has angles 48° and 24°. Find the third angle.",
+        "id": "c6imoq286",
+        "question": "A rectangle has perimeter 90 cm. Its length is 5 cm more than width. Find area.",
         "options": [
-          "156",
-          "72",
-          "108",
-          "132"
+          "475 cm²",
+          "525 cm²",
+          "500 cm²",
+          "550 cm²"
         ],
         "answer": 2,
-        "explanation": "Triangle angles total 180°: 180 − 48 − 24 = 108°.",
-        "difficulty": "Medium"
+        "explanation": "L+W=45 and L=W+5; sides 25 and 20.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq339",
-        "question": "An angle measures 134°. Which type of angle is it?",
+        "id": "c6imoq287",
+        "question": "A rectangle has perimeter 64 cm and area 240 cm². Which dimensions satisfy both?",
         "options": [
-          "Straight",
-          "Obtuse",
-          "Acute",
-          "Right"
+          "18 cm by 16 cm",
+          "20 cm by 12 cm",
+          "24 cm by 10 cm",
+          "16 cm by 14 cm"
         ],
         "answer": 1,
-        "explanation": "134° is between 90° and 180°, so it is obtuse.",
-        "difficulty": "Medium"
+        "explanation": "20+12=32 and 20×12=240.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
       },
       {
-        "id": "c6imoq340",
-        "question": "A triangle has angles 50° and 26°. Find the third angle.",
+        "id": "c6imoq288",
+        "question": "A 2 m border is outside a square playground of side 25 m. Find border area.",
         "options": [
-          "104",
-          "130",
-          "154",
-          "76"
+          "216 m²",
+          "200 m²",
+          "208 m²",
+          "225 m²"
         ],
         "answer": 0,
-        "explanation": "Triangle angles total 180°: 180 − 50 − 26 = 104°.",
-        "difficulty": "Medium"
+        "explanation": "Outer side=29; 29²−25²=216.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq289",
+        "question": "A rectangle's length and width are in ratio 5:3; perimeter 64 cm. Find area.",
+        "options": [
+          "192 cm²",
+          "224 cm²",
+          "256 cm²",
+          "240 cm²"
+        ],
+        "answer": 3,
+        "explanation": "Eight ratio parts=32; sides 20 and 12; area=240.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq290",
+        "question": "A 30 cm by 20 cm sheet is cut along a diagonal into two equal pieces. Find each piece's area.",
+        "options": [
+          "250 cm²",
+          "280 cm²",
+          "300 cm²",
+          "600 cm²"
+        ],
+        "answer": 2,
+        "explanation": "Half of 600 cm² is 300 cm².",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq291",
+        "question": "A courtyard is 18 m by 12 m. A 4 m square flower bed is inside. What percentage remains uncovered?",
+        "options": [
+          "88.9%",
+          "92.6% approximately",
+          "90%",
+          "95%"
+        ],
+        "answer": 1,
+        "explanation": "Uncovered=200 of 216 m²; 200/216×100≈92.6%.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq292",
+        "question": "Two rectangles each have area 48 cm². One is 12×4; the other has whole-number sides and perimeter 28. Find the other sides.",
+        "options": [
+          "8 cm by 6 cm",
+          "16 cm by 3 cm",
+          "24 cm by 2 cm",
+          "48 cm by 1 cm"
+        ],
+        "answer": 0,
+        "explanation": "8×6=48 and 2(8+6)=28.",
+        "difficulty": "Hard",
+        "section": "Everyday Mathematics"
+      },
+      {
+        "id": "c6imoq293",
+        "question": "A square frame has outer side 20 cm and inner side 16 cm. Find frame area.",
+        "options": [
+          "136 cm²",
+          "160 cm²",
+          "176 cm²",
+          "144 cm²"
+        ],
+        "answer": 3,
+        "explanation": "400−256=144.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq294",
+        "question": "A 90 m by 60 m ground is run around 5 times. Find distance.",
+        "options": [
+          "1,200 m",
+          "1,400 m",
+          "1,500 m",
+          "1,600 m"
+        ],
+        "answer": 2,
+        "explanation": "One lap=300 m; five laps=1500.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq295",
+        "question": "A square's perimeter equals a 22 cm by 14 cm rectangle's perimeter. Find square area.",
+        "options": [
+          "256 cm²",
+          "324 cm²",
+          "289 cm²",
+          "361 cm²"
+        ],
+        "answer": 1,
+        "explanation": "Rectangle perimeter=72; square side=18; area=324.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq296",
+        "question": "A 36 m by 24 m field is split into largest possible identical square plots. How many?",
+        "options": [
+          "6",
+          "4",
+          "8",
+          "12"
+        ],
+        "answer": 0,
+        "explanation": "Side=HCF(36,24)=12; plots=3×2=6.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq297",
+        "question": "A rectangular pool is 25 m by 12 m. A 1 m wide paving strip surrounds it outside. Find paving area.",
+        "options": [
+          "74 m²",
+          "76 m²",
+          "84 m²",
+          "78 m²"
+        ],
+        "answer": 3,
+        "explanation": "Outer dimensions 27×14=378 m²; pool=300; strip=78.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq298",
+        "question": "A square courtyard has side 30 m. A 2 m wide path runs inside along all four sides. Find grass area.",
+        "options": [
+          "700 m²",
+          "720 m²",
+          "676 m²",
+          "784 m²"
+        ],
+        "answer": 2,
+        "explanation": "Inner square side=26 m; area=676.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq299",
+        "question": "A rectangular poster's length is reduced by 10% and width increased by 10%. What happens to area?",
+        "options": [
+          "It increases by 1%",
+          "It decreases by 1%",
+          "It stays the same",
+          "It decreases by 10%"
+        ],
+        "answer": 1,
+        "explanation": "New area factor=0.9×1.1=0.99.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
+      },
+      {
+        "id": "c6imoq300",
+        "question": "A square of side 14 cm is cut into four equal squares. What is the total perimeter of all pieces?",
+        "options": [
+          "112 cm",
+          "56 cm",
+          "84 cm",
+          "140 cm"
+        ],
+        "answer": 0,
+        "explanation": "Each small side=7; perimeter=28; total=112.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   },
