@@ -28,7 +28,7 @@
   async function deriveHash(password,saltText,iterations){
     if(!crypto||!crypto.subtle)throw new Error("This browser does not support password verification.");
     const key=await crypto.subtle.importKey("raw",new TextEncoder().encode(password),"PBKDF2",false,["deriveBits"]);
-    const bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt:decodeBase64(saltText),iterations,hash:"SHA-256"},key,256);
+    const bits=await crypto.subtle.deriveBits({name: "PBKDF2", salt: decodeBase64(saltText), iterations, hash: "SHA-256"},key,256);
     return encodeBase64(new Uint8Array(bits));
   }
   function publicView(row,role){
