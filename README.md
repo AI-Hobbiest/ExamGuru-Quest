@@ -117,3 +117,15 @@ The practice sets are revision aids, not official CBSE publications or a guarant
 ## Class 6 expansion
 
 Class 6 is being expanded from the Science pilot into a full five-subject track. The implementation roadmap records the required curriculum inventory, class-specific question-bank approach, quality gates and pilot safety checks: [Class 6 expansion roadmap](docs/class-6-expansion-plan.md). At present, only Class 6 Science is integrated as a starter pilot (12 Curiosity chapters, 36 MCQs). Mathematics, English, Social Science and Hindi must not be advertised as ready until their textbook/edition is confirmed, their question banks are built and validated, and the shared practice engine is tested with them. Class 6 content must remain separate from Class 10 banks.
+
+## Family Mode — local-first
+
+- Students sign in directly using their own username and password. There is no student profile picker.
+- Parent accounts are managed by the administrator and sign in separately.
+- `data/family-access.json` holds parent accounts and a many-to-many `parentStudentLinks` relationship list. A parent may be linked to several students, and the same student may be linked to multiple parents.
+- The Admin Workspace's **Students & Reports → Family access** panel creates parent accounts and edits the selected parent's child links. The browser downloads an updated `family-access.json`; an authorised maintainer must publish it to GitHub Pages before the changes become active.
+- Student accounts use stable `studentId` values. `js/storage.js` namespaces local progress, attempts, XP inputs and profile records by the signed-in student's ID. The parent dashboard reads linked students' local attempt ledgers from this same device.
+- Existing legacy progress without a student owner is not automatically assigned to the first child who signs in. It remains in the old unscoped local-storage keys. Export existing backups and deliberately import the right backup under the intended student account.
+- This is a convenience login for the local-first prototype, **not secure authentication**. The repository is public: parent usernames, pseudonymous student IDs, family links, salts and password hashes are visible. Do not use full legal names, email addresses, phone numbers, sensitive family details or passwords reused elsewhere. Treat classroom-only passwords as temporary.
+- Student history remains on the browser/device where it was created. A parent can see linked children only when their local data is present on the same browser/device. No cross-device or cloud progress sync is enabled.
+- The account and relationship model uses stable IDs so the final database migration can replace file-based lookup and local persistence without changing the parent–student relationship design.
