@@ -4249,658 +4249,709 @@
   },
   {
     "chapter_no": 7,
-    "title": "Light, Shadows & Sound",
-    "key": "sof-nso-light-shadows-sound",
+    "title": "Exploring Magnets",
+    "key": "sof-iso-exploring-magnets",
+    "section": "Science",
     "questions": [
       {
-        "id": "c6nsoq061",
-        "question": "Light usually travels in which way through a uniform transparent medium?",
+        "id": "c6nsoq301",
+        "question": "Which material is strongly attracted by an ordinary bar magnet?",
         "options": [
-          "Only in circles",
-          "Only upward",
-          "In straight lines",
-          "In a zigzag path"
-        ],
-        "answer": 2,
-        "explanation": "Light travels in straight lines in a uniform medium.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq062",
-        "question": "Which object is luminous?",
-        "options": [
-          "The Moon",
-          "A lit electric bulb",
-          "A book",
-          "A mirror"
-        ],
-        "answer": 1,
-        "explanation": "A luminous object produces its own light.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq063",
-        "question": "A shadow forms when light is blocked by an",
-        "options": [
-          "Opaque object",
-          "Transparent object only",
-          "Empty space",
-          "Sound wave"
+          "Iron",
+          "Wood",
+          "Glass",
+          "Rubber"
         ],
         "answer": 0,
-        "explanation": "An opaque object blocks light and creates a shadow.",
-        "difficulty": "Easy"
+        "explanation": "Iron is a magnetic material.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq064",
-        "question": "Which surface gives the clearest regular reflection?",
+        "id": "c6nsoq302",
+        "question": "What happens when the north pole of one magnet is brought near the north pole of another?",
         "options": [
-          "Rough wall",
-          "Crushed paper",
-          "Unpolished stone",
-          "Smooth plane mirror"
+          "They attract",
+          "They melt",
+          "They lose all magnetism",
+          "They repel"
         ],
         "answer": 3,
-        "explanation": "A smooth surface reflects light in an orderly way.",
-        "difficulty": "Easy"
+        "explanation": "Like poles repel.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq065",
-        "question": "The Moon appears bright mainly because it",
+        "id": "c6nsoq303",
+        "question": "Which end of a freely suspended bar magnet points approximately towards geographic north?",
         "options": [
-          "Produces sunlight itself",
-          "Stores electricity",
-          "Reflects sunlight",
-          "Burns like a lamp"
+          "Its south-seeking pole",
+          "Both ends equally",
+          "Its north-seeking pole",
+          "The middle"
         ],
         "answer": 2,
-        "explanation": "The Moon reflects light from the Sun.",
-        "difficulty": "Easy"
+        "explanation": "The north-seeking end aligns roughly north-south with Earth's magnetic field.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq066",
-        "question": "Which is needed for a shadow to form?",
+        "id": "c6nsoq304",
+        "question": "Which object is most likely to be attracted by a magnet?",
         "options": [
-          "Only sound",
-          "Light source, opaque object and screen or surface",
-          "Only a transparent object",
-          "A magnet and iron"
+          "Plastic button",
+          "Steel paper clip",
+          "Copper coin",
+          "Wooden peg"
         ],
         "answer": 1,
-        "explanation": "A shadow appears where an opaque object blocks light from reaching a surface.",
-        "difficulty": "Medium"
+        "explanation": "Steel contains iron and is attracted to magnets.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq067",
-        "question": "Sound is produced by",
+        "id": "c6nsoq305",
+        "question": "Which device uses a magnet to show directions?",
         "options": [
-          "Vibrations",
-          "Shadows",
-          "Reflection of light only",
-          "Still objects without movement"
+          "Magnetic compass",
+          "Thermometer",
+          "Measuring cylinder",
+          "Stopwatch"
         ],
         "answer": 0,
-        "explanation": "Vibrating objects produce sound.",
-        "difficulty": "Easy"
+        "explanation": "A compass needle aligns approximately north-south.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq068",
-        "question": "Why can sound not travel through a vacuum?",
+        "id": "c6nsoq306",
+        "question": "What is the region around a magnet where it can exert magnetic force called?",
         "options": [
-          "It always travels only through water",
-          "Vacuum absorbs all light",
-          "Sound is a type of shadow",
-          "It needs a material medium to carry vibrations"
+          "Electric circuit",
+          "Shadow region",
+          "Sound wave",
+          "Magnetic field"
         ],
         "answer": 3,
-        "explanation": "Sound requires particles to transmit vibrations.",
-        "difficulty": "Medium"
+        "explanation": "A magnetic field is the region where magnetic forces act.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq069",
-        "question": "Which material is likely to absorb more sound and reduce echoes?",
+        "id": "c6nsoq307",
+        "question": "Where is the magnetic force of a bar magnet usually strongest?",
         "options": [
-          "Bare concrete wall",
-          "Metal sheet",
-          "Thick curtain",
-          "Glass pane"
+          "At the exact centre",
+          "Uniformly at every point",
+          "Near its poles",
+          "Only outside the magnet"
         ],
         "answer": 2,
-        "explanation": "Soft porous materials absorb more sound than hard smooth surfaces.",
-        "difficulty": "Medium"
+        "explanation": "Magnetic effects are strongest near the poles.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq070",
-        "question": "Which action can make a guitar string produce a sound?",
+        "id": "c6nsoq308",
+        "question": "Which pair of poles will attract?",
         "options": [
-          "Paint the string",
-          "Pluck the string so it vibrates",
-          "Hold it perfectly still",
-          "Shine a torch on it"
+          "North and north",
+          "North and south",
+          "South and south",
+          "Two north poles"
         ],
         "answer": 1,
-        "explanation": "Plucking makes the string vibrate and produce sound.",
-        "difficulty": "Easy"
+        "explanation": "Unlike magnetic poles attract.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq309",
+        "question": "Why should a compass be kept away from a strong magnet while taking a direction?",
+        "options": [
+          "The strong magnet can deflect the compass needle",
+          "The magnet makes the compass heavier",
+          "The compass needle melts",
+          "The magnet removes Earth's gravity"
+        ],
+        "answer": 0,
+        "explanation": "Nearby magnetic fields can change the needle's direction.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq310",
+        "question": "Which item is not normally attracted to a magnet?",
+        "options": [
+          "Iron nail",
+          "Steel pin",
+          "Iron filing",
+          "Aluminium foil"
+        ],
+        "answer": 3,
+        "explanation": "Aluminium is not attracted strongly by an ordinary magnet.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq311",
+        "question": "A magnet is cut into two pieces. What happens to the pieces?",
+        "options": [
+          "One piece is only north and the other only south",
+          "Both pieces lose all magnetism",
+          "Each piece has both a north and a south pole",
+          "Only one piece remains magnetic"
+        ],
+        "answer": 2,
+        "explanation": "Cutting a magnet produces smaller magnets, each with two poles.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq312",
+        "question": "What is the best way to identify the poles of an unlabelled bar magnet using a known north pole?",
+        "options": [
+          "Measure its mass",
+          "Bring the known north pole near each end and observe attraction or repulsion",
+          "Place it in water",
+          "Heat it"
+        ],
+        "answer": 1,
+        "explanation": "Repulsion confirms like poles; attraction indicates the opposite pole.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq313",
+        "question": "Why do iron filings form curved patterns around a bar magnet?",
+        "options": [
+          "They align with the magnetic field",
+          "They dissolve in the field",
+          "They become electrically charged only",
+          "They are pushed by air"
+        ],
+        "answer": 0,
+        "explanation": "Magnetic filings align along field patterns.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq314",
+        "question": "A freely pivoted compass needle turns when a bar magnet is brought close. What causes the movement?",
+        "options": [
+          "A change in room temperature",
+          "The weight of the bar magnet",
+          "Air pressure only",
+          "Interaction between the magnetic fields"
+        ],
+        "answer": 3,
+        "explanation": "The nearby magnet exerts a magnetic force on the needle.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq315",
+        "question": "Which arrangement gives the strongest attraction between two magnets?",
+        "options": [
+          "Like poles facing each other",
+          "The middle facing a pole",
+          "Opposite poles facing each other",
+          "Both magnets far apart"
+        ],
+        "answer": 2,
+        "explanation": "Unlike poles attract; the force is strongest when close together.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq316",
+        "question": "Why are magnets stored with soft iron keepers in pairs?",
+        "options": [
+          "They make the magnets heavier",
+          "The keepers help reduce loss of magnetism",
+          "They convert magnets into iron",
+          "They stop all magnetic fields"
+        ],
+        "answer": 1,
+        "explanation": "Keepers provide a closed path that helps preserve magnet strength.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq317",
+        "question": "Which action is most likely to weaken a permanent magnet?",
+        "options": [
+          "Repeated strong heating or hammering",
+          "Keeping it dry and safely stored",
+          "Using it to pick up pins",
+          "Placing it near a compass"
+        ],
+        "answer": 0,
+        "explanation": "Heating and mechanical shocks can disturb magnetic alignment.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq318",
+        "question": "A bar magnet attracts a steel pin through a sheet of paper. What does this show?",
+        "options": [
+          "Paper is magnetic",
+          "The pin is not metal",
+          "Magnetism requires direct contact",
+          "Magnetic force can act through some non-magnetic materials"
+        ],
+        "answer": 3,
+        "explanation": "A thin paper sheet does not block the magnetic field significantly.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq319",
+        "question": "A mixture contains iron filings and sawdust. Which is a suitable separation method?",
+        "options": [
+          "Use a thermometer",
+          "Evaporate the sawdust",
+          "Use a magnet to attract the iron filings",
+          "Use a compass to dissolve the iron"
+        ],
+        "answer": 2,
+        "explanation": "A magnet attracts the iron but not sawdust.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq320",
+        "question": "Which statement about the Earth's magnetic field is correct?",
+        "options": [
+          "It attracts every material equally",
+          "It causes a freely suspended compass needle to align approximately north-south",
+          "It points the compass east-west everywhere",
+          "It is produced by the Moon"
+        ],
+        "answer": 1,
+        "explanation": "A compass responds to Earth's magnetic field.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq321",
+        "question": "A north pole is brought near an unknown pole and repulsion occurs. What is the unknown pole?",
+        "options": [
+          "North",
+          "South",
+          "Neither pole",
+          "Both poles at once"
+        ],
+        "answer": 0,
+        "explanation": "Repulsion is the reliable test for identifying like poles.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq322",
+        "question": "Why is attraction alone not enough to prove that an object is a magnet?",
+        "options": [
+          "Magnets never attract iron",
+          "Attraction happens only between two magnets",
+          "Iron is always a magnet",
+          "A magnet can attract ordinary iron without the object being a magnet"
+        ],
+        "answer": 3,
+        "explanation": "Magnetic materials are attracted by magnets even when they are not magnets themselves.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq323",
+        "question": "Which test best distinguishes a magnet from an unmagnetised iron bar?",
+        "options": [
+          "Check whether it attracts iron pins",
+          "Check its colour",
+          "Test for repulsion using a known magnet",
+          "Measure its length"
+        ],
+        "answer": 2,
+        "explanation": "Repulsion is a sure sign that both objects are magnets.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq324",
+        "question": "A compass needle is placed near a current-carrying wire. Why might it deflect?",
+        "options": [
+          "The wire becomes a permanent magnet in every case",
+          "Electric current can produce a magnetic field",
+          "The compass loses its north pole",
+          "The wire cools the needle"
+        ],
+        "answer": 1,
+        "explanation": "Electric current produces a magnetic field around the wire.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq325",
+        "question": "Which of these is a temporary magnet when magnetised by contact or induction?",
+        "options": [
+          "A soft iron nail",
+          "A wooden stick",
+          "A glass rod",
+          "A rubber band"
+        ],
+        "answer": 0,
+        "explanation": "Soft iron can be magnetised and demagnetised relatively easily.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq326",
+        "question": "Why is soft iron used in the core of an electromagnet?",
+        "options": [
+          "It is permanently magnetic",
+          "It is transparent",
+          "It prevents current from flowing",
+          "It becomes strongly magnetised when current flows and loses much magnetism when current stops"
+        ],
+        "answer": 3,
+        "explanation": "Soft iron responds readily to the magnetic field of the coil.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq327",
+        "question": "A bar magnet is suspended freely and allowed to settle. It repeatedly points in nearly the same direction. What does this demonstrate?",
+        "options": [
+          "The magnet points towards the nearest tree",
+          "Gravity acts only on its north pole",
+          "A magnet aligns with Earth's magnetic field",
+          "Air always flows north"
+        ],
+        "answer": 2,
+        "explanation": "The compass-like alignment is due to Earth's magnetic field.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq328",
+        "question": "Which material is commonly used to make a permanent magnet?",
+        "options": [
+          "Soft iron only",
+          "Steel",
+          "Copper",
+          "Aluminium"
+        ],
+        "answer": 1,
+        "explanation": "Steel retains magnetism better than soft iron.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq329",
+        "question": "Which material is often used to make a temporary electromagnet core?",
+        "options": [
+          "Soft iron",
+          "Wood",
+          "Plastic",
+          "Glass"
+        ],
+        "answer": 0,
+        "explanation": "Soft iron magnetises readily and loses magnetism when the field is removed.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq330",
+        "question": "If two magnets attract when brought close, which conclusion is definitely true?",
+        "options": [
+          "Both facing poles are north",
+          "Both facing poles are south",
+          "Neither object has a pole",
+          "Opposite poles are facing each other"
+        ],
+        "answer": 3,
+        "explanation": "Unlike poles attract.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq331",
+        "question": "A magnet is moved slowly along a row of paper clips. Why may several clips hang in a chain?",
+        "options": [
+          "The clips dissolve into one another",
+          "Gravity disappears between clips",
+          "Each clip becomes temporarily magnetised by induction",
+          "The magnet becomes electrically charged"
+        ],
+        "answer": 2,
+        "explanation": "Magnetic induction can make iron or steel clips attract one another.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq332",
+        "question": "A bar magnet is placed under a sheet and iron filings are sprinkled above it. What should be done to reveal the pattern?",
+        "options": [
+          "Pour water onto the filings",
+          "Tap the sheet gently",
+          "Heat the magnet strongly",
+          "Rub the filings with a cloth"
+        ],
+        "answer": 1,
+        "explanation": "Gentle tapping lets filings move and align with the field.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq333",
+        "question": "Why do two freely suspended magnets settle in a north-south direction?",
+        "options": [
+          "They align with Earth's magnetic field",
+          "They always align with sunlight",
+          "They seek the nearest metal object",
+          "They are pulled by ocean waves"
+        ],
+        "answer": 0,
+        "explanation": "Earth behaves approximately like a large magnet.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq334",
+        "question": "A magnet picks up steel pins but not brass pins. What is the best explanation?",
+        "options": [
+          "Brass is heavier",
+          "Steel is transparent",
+          "Brass has no atoms",
+          "Steel is ferromagnetic; brass is not strongly attracted"
+        ],
+        "answer": 3,
+        "explanation": "Steel contains iron and is strongly attracted; brass is not.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq335",
+        "question": "A compass is used near a large steel cupboard. Its needle gives an unexpected direction. Why?",
+        "options": [
+          "The compass no longer has a needle",
+          "The Earth has stopped rotating",
+          "The cupboard may be magnetised or distort the local magnetic field",
+          "The cupboard blocks all gravity"
+        ],
+        "answer": 2,
+        "explanation": "Nearby magnetic materials can disturb compass readings.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq336",
+        "question": "A student stores a bar magnet with unlike poles connected by soft iron keepers. What is the purpose?",
+        "options": [
+          "To make the magnet repel everything",
+          "To help preserve the magnet's strength",
+          "To turn it into an electromagnet",
+          "To measure its magnetic field"
+        ],
+        "answer": 1,
+        "explanation": "Keepers reduce demagnetising effects during storage.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq337",
+        "question": "Which change is expected if the current through an electromagnet's coil is increased, within safe limits?",
+        "options": [
+          "Its magnetic field becomes stronger",
+          "It loses all magnetism",
+          "Its poles disappear permanently",
+          "The wire becomes non-metallic"
+        ],
+        "answer": 0,
+        "explanation": "More current generally strengthens an electromagnet's field.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq338",
+        "question": "Which change can reverse the poles of a simple electromagnet?",
+        "options": [
+          "Use a shorter table",
+          "Cool the room",
+          "Change the colour of the wire",
+          "Reverse the direction of current through its coil"
+        ],
+        "answer": 3,
+        "explanation": "Reversing current reverses the magnetic field direction.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq339",
+        "question": "Why are magnetic field lines shown closer together near the poles?",
+        "options": [
+          "The poles are farther apart",
+          "The magnet is hollow",
+          "The magnetic field is stronger there",
+          "The field is absent there"
+        ],
+        "answer": 2,
+        "explanation": "Closer field-line spacing represents greater field strength.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq340",
+        "question": "A small compass is moved around a bar magnet. What does the needle show at each position?",
+        "options": [
+          "The temperature of the magnet",
+          "The local direction of the magnetic field",
+          "The magnet's mass",
+          "The direction of gravity"
+        ],
+        "answer": 1,
+        "explanation": "A compass needle aligns with the local magnetic field direction.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq341",
-        "question": "Which material lets light pass through clearly? (practice case 2)",
+        "question": "A student says a magnet attracts every metal. Which observation disproves the statement?",
         "options": [
-          "Wood",
-          "Cardboard",
-          "Metal sheet",
-          "Clear glass"
+          "An aluminium strip is not attracted by the magnet",
+          "An iron nail is attracted",
+          "A steel pin is attracted",
+          "Iron filings move towards it"
         ],
-        "answer": 3,
-        "explanation": "Clear glass is transparent.",
-        "difficulty": "Easy"
+        "answer": 0,
+        "explanation": "Aluminium is a metal but is not attracted strongly by an ordinary magnet.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq342",
-        "question": "Which object usually forms the darkest shadow? (practice case 3)",
+        "question": "What happens when a magnet is heated strongly?",
         "options": [
-          "Clean water",
-          "Transparent plastic",
-          "An opaque object",
-          "Clear glass"
+          "Its poles become larger",
+          "It turns into copper",
+          "It becomes transparent",
+          "It may lose some or all of its magnetism"
         ],
-        "answer": 2,
-        "explanation": "Opaque materials block light.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "Strong heating can disrupt magnetic alignment.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
         "id": "c6nsoq343",
-        "question": "Why does a tree's shadow change length during the day? (practice case 4)",
+        "question": "A north pole is brought near the south pole of a compass needle. What happens?",
         "options": [
-          "The ground creates sunlight",
-          "The Sun's apparent position changes",
-          "The tree changes material",
-          "Light stops travelling in straight lines"
+          "The needle's south pole is repelled",
+          "The needle stops being magnetic",
+          "The south pole of the needle is attracted",
+          "Both poles disappear"
         ],
-        "answer": 1,
-        "explanation": "The changing angle of sunlight changes shadow length.",
-        "difficulty": "Medium"
+        "answer": 2,
+        "explanation": "Unlike poles attract.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
         "id": "c6nsoq344",
-        "question": "Which surface produces regular reflection? (practice case 5)",
+        "question": "Which statement best explains why a magnet can attract an iron nail without touching it?",
         "options": [
-          "A smooth polished mirror",
-          "Rough cloth",
-          "Crushed paper",
-          "Unpolished soil"
+          "The magnet sends out glue",
+          "Its magnetic field exerts a force at a distance",
+          "Air pushes the nail",
+          "The nail becomes weightless"
         ],
-        "answer": 0,
-        "explanation": "Smooth surfaces reflect light regularly.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "Magnetic forces can act without direct contact.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
         "id": "c6nsoq345",
-        "question": "What produces sound from a drum? (practice case 6)",
+        "question": "A student tests an unknown metal using a magnet and sees no attraction. What should be concluded?",
         "options": [
-          "The drum's colour",
-          "Its shadow",
-          "The absence of all matter",
-          "Vibrations of the drum skin"
+          "The sample is not strongly magnetic under this test",
+          "It must be copper",
+          "It is definitely not a metal",
+          "It must be a non-living thing"
         ],
-        "answer": 3,
-        "explanation": "Sound is produced by vibrations.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "Many metals are not attracted by ordinary magnets.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
         "id": "c6nsoq346",
-        "question": "Why cannot sound travel through a perfect vacuum? (practice case 7)",
+        "question": "A bar magnet is broken into three small pieces. How many poles are present in total?",
         "options": [
-          "Sound needs sunlight",
-          "Sound travels only through metal",
-          "There are no particles to transmit vibrations",
-          "A vacuum has too much air"
+          "Two",
+          "Three",
+          "Four",
+          "Six"
         ],
-        "answer": 2,
-        "explanation": "Sound needs a material medium.",
-        "difficulty": "Hard"
+        "answer": 3,
+        "explanation": "Each piece is a magnet with two poles.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6nsoq347",
-        "question": "Which object emits its own light when switched on? (practice case 8)",
+        "question": "Two identical magnets are suspended with like poles facing. What occurs?",
         "options": [
-          "White paper",
-          "A glowing electric bulb",
-          "The Moon",
-          "A mirror"
+          "They move together",
+          "They become non-magnetic",
+          "They move apart",
+          "They rotate into liquid"
         ],
-        "answer": 1,
-        "explanation": "A luminous object emits its own light.",
-        "difficulty": "Easy"
+        "answer": 2,
+        "explanation": "Like poles repel.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6nsoq348",
-        "question": "What generally happens to shadow magnification as a nearby torch moves farther away from an object and screen? (practice case 9)",
+        "question": "Why is a magnetic compass useful to navigators?",
         "options": [
-          "It generally becomes smaller",
-          "It becomes a sound wave",
-          "It must become brighter than the torch",
-          "It always vanishes instantly"
+          "It measures distance",
+          "It provides a reference direction even when landmarks are not visible",
+          "It measures air temperature",
+          "It produces electricity"
         ],
-        "answer": 0,
-        "explanation": "Moving the source farther away generally reduces magnification.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "The needle aligns with Earth's magnetic field and indicates direction.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6nsoq349",
-        "question": "Which material lets light pass through clearly? (practice case 10)",
+        "question": "A magnet attracts a paper clip through cardboard but not through a thick iron plate placed between them. What is the best explanation?",
         "options": [
-          "Wood",
-          "Cardboard",
-          "Metal sheet",
-          "Clear glass"
+          "The iron plate changes or shunts the magnetic field path",
+          "Cardboard is a stronger magnet",
+          "The paper clip loses its mass",
+          "Iron blocks all forces including gravity"
         ],
-        "answer": 3,
-        "explanation": "Clear glass is transparent.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "Iron can redirect the magnetic field and reduce the field reaching the clip.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
         "id": "c6nsoq350",
-        "question": "Which object usually forms the darkest shadow? (practice case 11)",
+        "question": "A coil with an iron nail inside attracts more pins when the current is increased. What does this indicate?",
         "options": [
-          "Clean water",
-          "Transparent plastic",
-          "An opaque object",
-          "Clear glass"
-        ],
-        "answer": 2,
-        "explanation": "Opaque materials block light.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq351",
-        "question": "Why does a tree's shadow change length during the day? (practice case 12)",
-        "options": [
-          "The ground creates sunlight",
-          "The Sun's apparent position changes",
-          "The tree changes material",
-          "Light stops travelling in straight lines"
-        ],
-        "answer": 1,
-        "explanation": "The changing angle of sunlight changes shadow length.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq352",
-        "question": "Which surface produces regular reflection? (practice case 13)",
-        "options": [
-          "A smooth polished mirror",
-          "Rough cloth",
-          "Crushed paper",
-          "Unpolished soil"
-        ],
-        "answer": 0,
-        "explanation": "Smooth surfaces reflect light regularly.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq353",
-        "question": "What produces sound from a drum? (practice case 14)",
-        "options": [
-          "The drum's colour",
-          "Its shadow",
-          "The absence of all matter",
-          "Vibrations of the drum skin"
+          "The nail has melted",
+          "The pins have become lighter",
+          "The current has stopped",
+          "The electromagnet has become stronger"
         ],
         "answer": 3,
-        "explanation": "Sound is produced by vibrations.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq354",
-        "question": "Why cannot sound travel through a perfect vacuum? (practice case 15)",
-        "options": [
-          "Sound needs sunlight",
-          "Sound travels only through metal",
-          "There are no particles to transmit vibrations",
-          "A vacuum has too much air"
-        ],
-        "answer": 2,
-        "explanation": "Sound needs a material medium.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq355",
-        "question": "Which object emits its own light when switched on? (practice case 16)",
-        "options": [
-          "White paper",
-          "A glowing electric bulb",
-          "The Moon",
-          "A mirror"
-        ],
-        "answer": 1,
-        "explanation": "A luminous object emits its own light.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq356",
-        "question": "What generally happens to shadow magnification as a nearby torch moves farther away from an object and screen? (practice case 17)",
-        "options": [
-          "It generally becomes smaller",
-          "It becomes a sound wave",
-          "It must become brighter than the torch",
-          "It always vanishes instantly"
-        ],
-        "answer": 0,
-        "explanation": "Moving the source farther away generally reduces magnification.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq357",
-        "question": "Which material lets light pass through clearly? (practice case 18)",
-        "options": [
-          "Wood",
-          "Cardboard",
-          "Metal sheet",
-          "Clear glass"
-        ],
-        "answer": 3,
-        "explanation": "Clear glass is transparent.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq358",
-        "question": "Which object usually forms the darkest shadow? (practice case 19)",
-        "options": [
-          "Clean water",
-          "Transparent plastic",
-          "An opaque object",
-          "Clear glass"
-        ],
-        "answer": 2,
-        "explanation": "Opaque materials block light.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq359",
-        "question": "Why does a tree's shadow change length during the day? (practice case 20)",
-        "options": [
-          "The ground creates sunlight",
-          "The Sun's apparent position changes",
-          "The tree changes material",
-          "Light stops travelling in straight lines"
-        ],
-        "answer": 1,
-        "explanation": "The changing angle of sunlight changes shadow length.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq360",
-        "question": "Which surface produces regular reflection? (practice case 21)",
-        "options": [
-          "A smooth polished mirror",
-          "Rough cloth",
-          "Crushed paper",
-          "Unpolished soil"
-        ],
-        "answer": 0,
-        "explanation": "Smooth surfaces reflect light regularly.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq361",
-        "question": "What produces sound from a drum? (practice case 22)",
-        "options": [
-          "The drum's colour",
-          "Its shadow",
-          "The absence of all matter",
-          "Vibrations of the drum skin"
-        ],
-        "answer": 3,
-        "explanation": "Sound is produced by vibrations.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq362",
-        "question": "Why cannot sound travel through a perfect vacuum? (practice case 23)",
-        "options": [
-          "Sound needs sunlight",
-          "Sound travels only through metal",
-          "There are no particles to transmit vibrations",
-          "A vacuum has too much air"
-        ],
-        "answer": 2,
-        "explanation": "Sound needs a material medium.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq363",
-        "question": "Which object emits its own light when switched on? (practice case 24)",
-        "options": [
-          "White paper",
-          "A glowing electric bulb",
-          "The Moon",
-          "A mirror"
-        ],
-        "answer": 1,
-        "explanation": "A luminous object emits its own light.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq364",
-        "question": "What generally happens to shadow magnification as a nearby torch moves farther away from an object and screen? (practice case 25)",
-        "options": [
-          "It generally becomes smaller",
-          "It becomes a sound wave",
-          "It must become brighter than the torch",
-          "It always vanishes instantly"
-        ],
-        "answer": 0,
-        "explanation": "Moving the source farther away generally reduces magnification.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq365",
-        "question": "Which material lets light pass through clearly? (practice case 26)",
-        "options": [
-          "Wood",
-          "Cardboard",
-          "Metal sheet",
-          "Clear glass"
-        ],
-        "answer": 3,
-        "explanation": "Clear glass is transparent.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq366",
-        "question": "Which object usually forms the darkest shadow? (practice case 27)",
-        "options": [
-          "Clean water",
-          "Transparent plastic",
-          "An opaque object",
-          "Clear glass"
-        ],
-        "answer": 2,
-        "explanation": "Opaque materials block light.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq367",
-        "question": "Why does a tree's shadow change length during the day? (practice case 28)",
-        "options": [
-          "The ground creates sunlight",
-          "The Sun's apparent position changes",
-          "The tree changes material",
-          "Light stops travelling in straight lines"
-        ],
-        "answer": 1,
-        "explanation": "The changing angle of sunlight changes shadow length.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq368",
-        "question": "Which surface produces regular reflection? (practice case 29)",
-        "options": [
-          "A smooth polished mirror",
-          "Rough cloth",
-          "Crushed paper",
-          "Unpolished soil"
-        ],
-        "answer": 0,
-        "explanation": "Smooth surfaces reflect light regularly.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq369",
-        "question": "What produces sound from a drum? (practice case 30)",
-        "options": [
-          "The drum's colour",
-          "Its shadow",
-          "The absence of all matter",
-          "Vibrations of the drum skin"
-        ],
-        "answer": 3,
-        "explanation": "Sound is produced by vibrations.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq370",
-        "question": "Why cannot sound travel through a perfect vacuum? (practice case 31)",
-        "options": [
-          "Sound needs sunlight",
-          "Sound travels only through metal",
-          "There are no particles to transmit vibrations",
-          "A vacuum has too much air"
-        ],
-        "answer": 2,
-        "explanation": "Sound needs a material medium.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq371",
-        "question": "Which object emits its own light when switched on? (practice case 32)",
-        "options": [
-          "White paper",
-          "A glowing electric bulb",
-          "The Moon",
-          "A mirror"
-        ],
-        "answer": 1,
-        "explanation": "A luminous object emits its own light.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq372",
-        "question": "What generally happens to shadow magnification as a nearby torch moves farther away from an object and screen? (practice case 33)",
-        "options": [
-          "It generally becomes smaller",
-          "It becomes a sound wave",
-          "It must become brighter than the torch",
-          "It always vanishes instantly"
-        ],
-        "answer": 0,
-        "explanation": "Moving the source farther away generally reduces magnification.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq373",
-        "question": "Which material lets light pass through clearly? (practice case 34)",
-        "options": [
-          "Wood",
-          "Cardboard",
-          "Metal sheet",
-          "Clear glass"
-        ],
-        "answer": 3,
-        "explanation": "Clear glass is transparent.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq374",
-        "question": "Which object usually forms the darkest shadow? (practice case 35)",
-        "options": [
-          "Clean water",
-          "Transparent plastic",
-          "An opaque object",
-          "Clear glass"
-        ],
-        "answer": 2,
-        "explanation": "Opaque materials block light.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq375",
-        "question": "Why does a tree's shadow change length during the day? (practice case 36)",
-        "options": [
-          "The ground creates sunlight",
-          "The Sun's apparent position changes",
-          "The tree changes material",
-          "Light stops travelling in straight lines"
-        ],
-        "answer": 1,
-        "explanation": "The changing angle of sunlight changes shadow length.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq376",
-        "question": "Which surface produces regular reflection? (practice case 37)",
-        "options": [
-          "A smooth polished mirror",
-          "Rough cloth",
-          "Crushed paper",
-          "Unpolished soil"
-        ],
-        "answer": 0,
-        "explanation": "Smooth surfaces reflect light regularly.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq377",
-        "question": "What produces sound from a drum? (practice case 38)",
-        "options": [
-          "The drum's colour",
-          "Its shadow",
-          "The absence of all matter",
-          "Vibrations of the drum skin"
-        ],
-        "answer": 3,
-        "explanation": "Sound is produced by vibrations.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq378",
-        "question": "Why cannot sound travel through a perfect vacuum? (practice case 39)",
-        "options": [
-          "Sound needs sunlight",
-          "Sound travels only through metal",
-          "There are no particles to transmit vibrations",
-          "A vacuum has too much air"
-        ],
-        "answer": 2,
-        "explanation": "Sound needs a material medium.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq379",
-        "question": "Which object emits its own light when switched on? (practice case 40)",
-        "options": [
-          "White paper",
-          "A glowing electric bulb",
-          "The Moon",
-          "A mirror"
-        ],
-        "answer": 1,
-        "explanation": "A luminous object emits its own light.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq380",
-        "question": "What generally happens to shadow magnification as a nearby torch moves farther away from an object and screen? (practice case 41)",
-        "options": [
-          "It generally becomes smaller",
-          "It becomes a sound wave",
-          "It must become brighter than the torch",
-          "It always vanishes instantly"
-        ],
-        "answer": 0,
-        "explanation": "Moving the source farther away generally reduces magnification.",
-        "difficulty": "Medium"
+        "explanation": "Increasing coil current strengthens the electromagnet's field.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   },
