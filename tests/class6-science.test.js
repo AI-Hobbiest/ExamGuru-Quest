@@ -115,7 +115,7 @@ assert.deepEqual(sofBank.map(chapter=>chapter.title),expectedSofTopics,"Class 6 
 assert.equal(sofBank.length,11,"Class 6 SOF IMO bank has eleven question groups");
 assert.equal(sofBank.reduce((sum,chapter)=>sum+chapter.questions.length,0),550,"Class 6 SOF IMO bank contains 550 practice MCQs");
 const sofIds=new Set(),sofPrompts=new Set(),sofTemplates=new Set();
-const normalizeSofStem=value=>String(value).toLowerCase().replace(/[−–]/g,"-").replace(/\\b\\d[\\d,]*(?:\\.\\d+)?\\b/g,"#").replace(/\\s+/g," ").replace(/[“”‘’"]/g,"").trim();
+const normalizeSofStem=value=>String(value).toLowerCase().replace(/[−–]/g,"-").replace(/\b\d[\d,]*(?:\.\d+)?\b/g,"#").replace(/\s+/g," ").replace(/[“”‘’"]/g,"").trim();
 for(const chapter of sofBank){
   assert.equal(chapter.questions.length,50,"each SOF IMO group has 50 questions");
   assert.ok(chapter.title&&chapter.questions.length>0,"each SOF topic has questions");
