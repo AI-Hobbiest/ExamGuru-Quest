@@ -38,6 +38,17 @@
     };
   }
 
+  function chapterBreakdown(attempt,answers){
+    const chapters=new Map();
+    attempt.questions.forEach((question,index)=>{
+      const chapterId=String(question.chapterKey||question.chapterId||"");if(!chapterId)return;
+      const chapterTitle=String(question.chapterTitle||question.chapterName||chapterId);
+      const row=chapters.get(chapterId)||{chapterId,chapterTitle,questionCount:0,answeredCount:0,correctCount:0,skippedCount:0,unansweredCount:0};row.questionCount++;
+      const answer=answers[index];if(answer&&answer.status==="answered"){row.answeredCount++;if(answer.isCorrect===true)row.correctCount++;}else if(answer&&answer.status==="skipped")row.skippedCount++;else row.unansweredCount++;
+      chapters.set(chapterId,row);
+    });
+    return [...chapters.values()].map(row=>({...row,accuracy:row.questionCount?Math.round(row.correctCount/row.questionCount*100):0}));
+  }
   function summarize(attempt, options = {}) {
     if (!attempt || !Array.isArray(attempt.questions) || !Array.isArray(attempt.answers)) {
       throw new TypeError("Attempt needs questions and answers arrays.");
@@ -87,6 +98,7 @@
       skippedCount,
       unansweredCount: answers.filter(answer => answer.status === "unanswered").length,
       questionIds: attempt.questions.map(question => String(question.questionKey || question.id)),
+      chapterResults: chapterBreakdown(attempt,answers),
       answerRecordIds: answers.map(answer => answer.answerRecordId).filter(Boolean)
     };
     return { attempt: submitted, answers };
