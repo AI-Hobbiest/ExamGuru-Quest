@@ -76,10 +76,10 @@ function makeContext(seed = {}) {
   });
   const kidOne=makeProgress();
   kidOne.save({missed:["kid-one"],answered:1,correct:1,attempts:[]});
-  assert.ok(kidOne.storageKey.includes("student-kid-one::science"),"student one gets a stable isolated storage namespace");
+  assert.ok(decodeURIComponent(kidOne.storageKey).includes("student-kid-one::science"),"student one gets a stable isolated storage namespace");
   activeUser={role:"student",username:"kid.two",studentId:"student-kid-two"};
   const kidTwo=makeProgress();
-  assert.ok(kidTwo.storageKey.includes("student-kid-two::science"),"student two gets a separate storage namespace");
+  assert.ok(decodeURIComponent(kidTwo.storageKey).includes("student-kid-two::science"),"student two gets a separate storage namespace");
   assert.equal(kidTwo.load().answered,0,"student two cannot read student one's progress");
   kidTwo.save({missed:["kid-two"],answered:2,correct:1,attempts:[]});
   activeUser={role:"student",username:"kid.one",studentId:"student-kid-one"};
