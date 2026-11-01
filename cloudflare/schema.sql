@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS student_profiles (
 CREATE TABLE IF NOT EXISTS attempts (
   attempt_id TEXT PRIMARY KEY,
   user_id TEXT NOT NULL REFERENCES users(id),
-  subject_id TEXT NOT NULL CHECK (subject_id IN ('science','mathematics','english','social-science','hindi')),
+  subject_id TEXT NOT NULL CHECK (subject_id IN ('science','mathematics','english','social-science','hindi','science-sof','mathematics-sof','english-sof')),
   mode TEXT NOT NULL,
   status TEXT NOT NULL CHECK (status IN ('submitted','timed-out')),
   started_at TEXT,
