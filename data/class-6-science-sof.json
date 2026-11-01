@@ -1,658 +1,709 @@
 [
   {
     "chapter_no": 1,
-    "title": "Scientific Method & Measurement",
-    "key": "sof-nso-scientific-method-measurement",
+    "title": "The Wonderful World of Science",
+    "key": "sof-iso-wonderful-world-of-science",
+    "section": "Science",
     "questions": [
       {
         "id": "c6nsoq001",
-        "question": "Which is the best first step when investigating why a plant is wilting?",
+        "question": "Which action best begins an investigation of why ice melts faster on one plate than another?",
         "options": [
-          "Observe the plant and gather information",
-          "Add several chemicals immediately",
-          "Assume the cause without checking",
-          "Throw the plant away"
+          "Choose a result before testing",
+          "Observe the conditions and ask a testable question",
+          "Change several conditions without recording them",
+          "Ignore the difference"
         ],
-        "answer": 0,
-        "explanation": "Careful observation helps frame a testable question.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "Scientific investigation begins with careful observation and a question.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
         "id": "c6nsoq002",
-        "question": "A student tests whether sunlight affects seedling growth. Which factor should be changed deliberately?",
+        "question": "A student wants to test whether light affects seedling growth. Which factor should be changed deliberately?",
         "options": [
-          "Type of seed in each pot",
-          "Amount of water for each pot",
-          "Size of each pot",
-          "Amount of sunlight"
+          "Amount of light received",
+          "Seed type",
+          "Pot size",
+          "Amount of water"
         ],
-        "answer": 3,
-        "explanation": "Change one variable while keeping other conditions the same.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "Change the factor being investigated and keep other relevant conditions alike.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
         "id": "c6nsoq003",
-        "question": "Which tool is most suitable for measuring the length of a pencil?",
+        "question": "Which statement is a direct observation?",
         "options": [
-          "Thermometer",
-          "Measuring cylinder",
-          "Ruler",
-          "Compass"
+          "The powder must be poisonous",
+          "The liquid is definitely unsafe",
+          "A chemical reaction always occurred",
+          "The liquid became cloudy after powder was added"
         ],
-        "answer": 2,
-        "explanation": "A ruler measures length.",
-        "difficulty": "Easy"
+        "answer": 3,
+        "explanation": "An observation describes what was seen; the other statements make conclusions.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
         "id": "c6nsoq004",
-        "question": "Which unit is appropriate for the length of a classroom?",
+        "question": "Why do scientists repeat measurements?",
         "options": [
-          "Millilitre",
-          "Metre",
-          "Gram",
-          "Degree Celsius"
+          "To force the expected answer",
+          "To make every reading identical",
+          "To check consistency and identify possible errors",
+          "To avoid recording results"
         ],
-        "answer": 1,
-        "explanation": "Room length is conveniently measured in metres.",
-        "difficulty": "Easy"
+        "answer": 2,
+        "explanation": "Repeated readings help reveal unusual values and improve confidence.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
         "id": "c6nsoq005",
-        "question": "Why should a measurement be repeated?",
+        "question": "Which is the safest way to smell a substance during a supervised school investigation?",
         "options": [
-          "To check reliability and reduce accidental error",
-          "To make the result larger",
-          "To guarantee the expected result",
-          "To avoid recording data"
+          "Put the nose directly over the container",
+          "Waft a little vapour towards the nose",
+          "Taste a drop first",
+          "Shake the container near the face"
         ],
-        "answer": 0,
-        "explanation": "Repeated measurements help identify unusual readings and improve confidence.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "Wafting reduces direct exposure; substances should never be tasted.",
+        "difficulty": "Easy",
+        "section": "Science"
       },
       {
         "id": "c6nsoq006",
-        "question": "Which statement is an observation rather than an explanation?",
+        "question": "A class records how long four paper helicopters take to fall. What is the measured quantity?",
         "options": [
-          "The plant lacks a nutrient",
-          "The soil is definitely poisonous",
-          "The plant is unhappy",
-          "The leaf has yellow patches"
+          "Time taken to fall",
+          "Colour of the paper",
+          "Name of the student",
+          "Shape of the classroom"
         ],
-        "answer": 3,
-        "explanation": "An observation records what can be seen directly.",
-        "difficulty": "Medium"
+        "answer": 0,
+        "explanation": "The recorded time is the dependent or measured variable.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq007",
-        "question": "A fair test compares two groups of plants. What should be kept the same?",
+        "question": "Which tool is most suitable for measuring the mass of a small stone?",
         "options": [
-          "Every condition including the tested one",
-          "Only the labels",
-          "All conditions except the one being tested",
-          "Nothing at all"
+          "A thermometer",
+          "A measuring cylinder",
+          "A compass",
+          "A balance"
         ],
-        "answer": 2,
-        "explanation": "A fair test changes one factor and controls the others.",
-        "difficulty": "Medium"
+        "answer": 3,
+        "explanation": "A balance measures mass.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq008",
-        "question": "Which is a testable question?",
+        "question": "A student writes, 'The plant grew 2 cm in three days.' This is best classified as:",
         "options": [
-          "Are plants beautiful?",
-          "Does the amount of water affect bean plant growth?",
-          "Is science the best subject?",
-          "Do flowers feel proud?"
+          "A guess without evidence",
+          "A scientific law",
+          "A measurement-based observation",
+          "A safety rule"
         ],
-        "answer": 1,
-        "explanation": "A testable question can be investigated through observations or experiments.",
-        "difficulty": "Easy"
+        "answer": 2,
+        "explanation": "It reports a measured change over a stated time.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq009",
-        "question": "A beaker contains 35 mL of water. Which tool measures this volume most accurately?",
+        "question": "Which question can be investigated by a fair experiment?",
         "options": [
-          "Graduated measuring cylinder",
-          "Metre ruler",
-          "Spring balance",
-          "Stopwatch"
+          "Which colour is the prettiest?",
+          "Does warmer water dissolve a fixed amount of sugar faster?",
+          "Is science more interesting than art?",
+          "Which food tastes best to everyone?"
         ],
-        "answer": 0,
-        "explanation": "A graduated cylinder is designed to measure liquid volume.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "It can be tested by controlling conditions and measuring dissolving time.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
         "id": "c6nsoq010",
-        "question": "Why should results be recorded in a table?",
+        "question": "Why should an experiment change only one main factor at a time?",
         "options": [
-          "To change the observations",
-          "To hide unexpected results",
-          "To replace the experiment",
-          "To organise and compare observations clearly"
+          "So the effect of that factor can be judged fairly",
+          "So the experiment finishes without observations",
+          "So every result is predictable",
+          "So other factors can be ignored"
         ],
-        "answer": 3,
-        "explanation": "Tables make patterns and comparisons easier to identify.",
-        "difficulty": "Easy"
+        "answer": 0,
+        "explanation": "Changing one factor while controlling others helps identify cause and effect.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq101",
-        "question": "Which instrument measures 2 cm of length? (practice case 2)",
+        "id": "c6nsoq011",
+        "question": "A group tests three materials for keeping water cool. What should be the same in every cup?",
         "options": [
-          "Balance",
-          "Thermometer",
-          "Stopwatch",
-          "Ruler"
+          "The insulation material",
+          "The final temperature",
+          "The time taken to cool",
+          "Starting water volume and temperature"
         ],
         "answer": 3,
-        "explanation": "A ruler measures length.",
-        "difficulty": "Easy"
+        "explanation": "A fair comparison keeps starting conditions and other relevant factors the same.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq102",
-        "question": "A student repeats a measurement 3 times. What improves when readings are consistent? (practice case 3)",
+        "id": "c6nsoq012",
+        "question": "Which tool measures the volume of a small amount of liquid most directly?",
         "options": [
-          "Mass",
-          "Temperature",
-          "Reliability",
-          "Colour"
+          "A spring balance",
+          "A metre scale",
+          "A measuring cylinder",
+          "A stopwatch"
         ],
         "answer": 2,
-        "explanation": "Repeated consistent readings improve reliability.",
-        "difficulty": "Medium"
+        "explanation": "A measuring cylinder is designed to measure liquid volume.",
+        "difficulty": "Medium",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq103",
-        "question": "A test changes light exposure from 4 to 5 hours. What is the independent variable? (practice case 4)",
+        "id": "c6nsoq013",
+        "question": "A student says a metal spoon feels colder than a wooden spoon kept in the same room. Which explanation is best?",
         "options": [
-          "The conclusion",
-          "Light exposure",
-          "Final plant height",
-          "The ruler"
+          "Metal must have a lower room temperature",
+          "Metal transfers heat away from the hand faster",
+          "Wood produces heat",
+          "The spoon's mass changes its temperature"
+        ],
+        "answer": 1,
+        "explanation": "Metal is a better thermal conductor, so it draws heat from the hand faster.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq014",
+        "question": "Which is an inference rather than a direct observation?",
+        "options": [
+          "The wet ground may mean it rained recently",
+          "There are water drops on the path",
+          "The path is darker near the tap",
+          "A puddle is 30 cm wide"
+        ],
+        "answer": 0,
+        "explanation": "The cause of the wet ground is inferred; the other statements describe observations.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq015",
+        "question": "A student measures a leaf as 7.2 cm, 7.1 cm and 7.2 cm. Which is a sensible reported value?",
+        "options": [
+          "Exactly 7.1 cm in every case",
+          "7.5 cm because it is the largest",
+          "21.5 cm",
+          "About 7.2 cm"
+        ],
+        "answer": 3,
+        "explanation": "The repeated values cluster around 7.2 cm.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq016",
+        "question": "Which item is a model used in science?",
+        "options": [
+          "A photograph of a real mountain",
+          "A real seed",
+          "A globe representing Earth",
+          "A glass of water"
+        ],
+        "answer": 2,
+        "explanation": "A globe is a simplified representation of Earth.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq017",
+        "question": "A student claims that all seeds germinate faster in sunlight. Which evidence would best test the claim?",
+        "options": [
+          "Ask one friend for an opinion",
+          "Compare similar seeds under controlled light and dark conditions",
+          "Observe one seed once",
+          "Choose only seeds that support the claim"
+        ],
+        "answer": 1,
+        "explanation": "A controlled comparison provides evidence about the effect of light.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq018",
+        "question": "Why is it useful to record observations in a table during an investigation?",
+        "options": [
+          "It organises results so patterns can be compared",
+          "It changes the result",
+          "It removes the need to measure",
+          "It guarantees the hypothesis is correct"
+        ],
+        "answer": 0,
+        "explanation": "Tables make data easier to compare and analyse.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq019",
+        "question": "Which conclusion is best supported if a toy car travels farther on a smooth floor than on a rough mat in repeated trials?",
+        "options": [
+          "The car always travels farther on every smooth surface",
+          "The rough mat adds energy to the car",
+          "The car's mass has become zero",
+          "The surface may affect how far the car travels"
+        ],
+        "answer": 3,
+        "explanation": "The repeated comparison supports a cautious conclusion about the tested surfaces.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq020",
+        "question": "A student tests four paper types for absorbency. What should be measured to compare them?",
+        "options": [
+          "The price of each paper",
+          "The colour of the packaging",
+          "Amount of water absorbed under the same conditions",
+          "The student's preferred paper"
+        ],
+        "answer": 2,
+        "explanation": "Absorbency is assessed by measuring water taken up using a consistent method.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq021",
+        "question": "A thermometer shows 26°C before an experiment and 31°C afterwards. What is the temperature change?",
+        "options": [
+          "A decrease of 5°C",
+          "An increase of 5°C",
+          "An increase of 57°C",
+          "No change"
+        ],
+        "answer": 1,
+        "explanation": "31−26=5°C.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq022",
+        "question": "A hypothesis is best described as:",
+        "options": [
+          "A testable possible explanation or prediction",
+          "A result that cannot be questioned",
+          "A list of apparatus only",
+          "A measurement unit"
+        ],
+        "answer": 0,
+        "explanation": "A hypothesis can be tested using observations or an experiment.",
+        "difficulty": "Medium",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq023",
+        "question": "A student pours equal volumes of water into wide and narrow dishes. Which factor is being investigated if the time to dry is recorded?",
+        "options": [
+          "Effect of water colour",
+          "Effect of water mass alone",
+          "Effect of dish material if both dishes are identical",
+          "Effect of exposed surface area on drying time"
+        ],
+        "answer": 3,
+        "explanation": "The dishes expose different surface areas while other conditions are controlled.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq024",
+        "question": "Which graph is most suitable for comparing the number of seeds that germinate in four different soil types?",
+        "options": [
+          "A map",
+          "A labelled circuit diagram",
+          "A bar graph",
+          "A flowchart of instructions"
+        ],
+        "answer": 2,
+        "explanation": "A bar graph compares quantities across categories.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq025",
+        "question": "A result differs greatly from the other repeated readings. What should the student do first?",
+        "options": [
+          "Delete it without checking",
+          "Check the procedure and repeat the measurement",
+          "Change all the other values",
+          "Report only the unusual value"
+        ],
+        "answer": 1,
+        "explanation": "An unusual result should be investigated before it is excluded.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq026",
+        "question": "A student places one ice cube on metal and another identical cube on plastic. Both start at the same temperature. Which condition must also be kept similar?",
+        "options": [
+          "Size of the ice cubes and surrounding conditions",
+          "The material of each surface",
+          "The melting time",
+          "The final amount of water"
+        ],
+        "answer": 0,
+        "explanation": "The comparison is fair when ice size and environmental conditions are controlled.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq027",
+        "question": "A fair test finds that a plant near a window grew 4 cm and one in a dark cupboard grew 1 cm. What can be concluded most carefully?",
+        "options": [
+          "All plants always need direct sunlight",
+          "Light is the only factor affecting growth",
+          "The cupboard plant was unhealthy",
+          "Under these tested conditions, the plant near the window grew more"
+        ],
+        "answer": 3,
+        "explanation": "The evidence supports only the comparison under the conditions tested.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq028",
+        "question": "Why should a measuring cylinder be read at eye level?",
+        "options": [
+          "To make the liquid warmer",
+          "To change the volume",
+          "To reduce reading error from viewing the liquid level at an angle",
+          "To avoid using units"
+        ],
+        "answer": 2,
+        "explanation": "Reading at eye level reduces parallax error.",
+        "difficulty": "Hard",
+        "section": "Science"
+      },
+      {
+        "id": "c6nsoq029",
+        "question": "A student wants to know whether the length of a paper strip affects how much weight it can hold. Which is the independent variable?",
+        "options": [
+          "Maximum load held",
+          "Length of the paper strip",
+          "Type of paper if kept the same",
+          "The recorded result"
         ],
         "answer": 1,
         "explanation": "The independent variable is the factor deliberately changed.",
-        "difficulty": "Medium"
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq104",
-        "question": "A sample has a mass of 25 g. Which quantity is measured? (practice case 5)",
+        "id": "c6nsoq030",
+        "question": "A class finds that seeds in moist soil germinate but seeds in dry soil do not. Which additional test would help check whether water is the reason?",
         "options": [
-          "Mass",
-          "Length",
-          "Time",
-          "Temperature"
+          "Repeat with similar seeds and keep temperature and other conditions the same",
+          "Change seed type and light at the same time",
+          "Use only one seed in each group and stop",
+          "Add fertiliser only to the dry soil"
         ],
         "answer": 0,
-        "explanation": "Grams are units of mass.",
-        "difficulty": "Medium"
+        "explanation": "Repeating a controlled test reduces the chance that another factor explains the result.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq105",
-        "question": "Why should a fair test change one factor at a time? (practice case 6)",
+        "id": "c6nsoq031",
+        "question": "Which observation would be strongest evidence that a new material conducts electricity?",
         "options": [
-          "To guarantee the expected result",
-          "To avoid recording data",
-          "To change all variables",
-          "To identify which factor affects the result"
+          "The material looks shiny",
+          "The material feels heavy",
+          "The material is attracted to a ruler",
+          "A complete circuit lights a bulb when the material bridges a gap"
         ],
         "answer": 3,
-        "explanation": "Controlling other factors helps identify the effect of the variable being tested.",
-        "difficulty": "Medium"
+        "explanation": "A working circuit is a direct test of electrical conductivity.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq106",
-        "question": "A student records 7, 8, 8 and 9 cm. Which value occurs most often? (practice case 7)",
+        "id": "c6nsoq032",
+        "question": "A student measures the same table with two different rulers and gets 120 cm and 121 cm. Which is the best response?",
         "options": [
-          "9",
-          "10",
-          "8",
-          "7"
+          "Add the readings to get the table length",
+          "Choose the larger number automatically",
+          "Check ruler alignment and zero marks, then repeat",
+          "Assume the table is changing length"
         ],
         "answer": 2,
-        "explanation": "8 occurs twice; the others occur once.",
-        "difficulty": "Hard"
+        "explanation": "Alignment and zero error can cause small differences.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq107",
-        "question": "Which is a direct observation of a plant measured at 8 cm? (practice case 8)",
+        "id": "c6nsoq033",
+        "question": "A class compares how far a marble rolls down ramps of different heights. Which quantity should be kept the same for a fair comparison?",
         "options": [
-          "The plant wants more light",
-          "The plant is  8 cm tall",
-          "The plant is certainly thirsty",
-          "The soil is definitely poor"
+          "The ramp height",
+          "The marble and the ramp surface",
+          "The distance rolled",
+          "The final speed"
         ],
         "answer": 1,
-        "explanation": "An observation records something seen or measured, not an untested cause.",
-        "difficulty": "Easy"
+        "explanation": "Keep the object and surface consistent while changing the ramp height.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq108",
-        "question": "A prediction about growth after 9 days should be checked by... (practice case 9)",
+        "id": "c6nsoq034",
+        "question": "A student states, 'The plant grew because it received more light.' What further evidence would strengthen this explanation?",
         "options": [
-          "collecting evidence in a controlled experiment",
-          "accepting it without testing",
-          "changing every condition at once",
-          "discarding unexpected results"
+          "Repeated trials with similar plants and controlled water, soil and temperature",
+          "A photograph of only the tallest plant",
+          "A statement from someone who likes plants",
+          "Changing light, water and soil together"
         ],
         "answer": 0,
-        "explanation": "Predictions are tested by collecting evidence.",
-        "difficulty": "Medium"
+        "explanation": "Controlled repeated trials help isolate the effect of light.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq109",
-        "question": "Which instrument measures 10 cm of length? (practice case 10)",
+        "id": "c6nsoq035",
+        "question": "A model of the solar system shows planets much closer to the Sun than they really are. What is a limitation of this model?",
         "options": [
-          "Balance",
-          "Thermometer",
-          "Stopwatch",
-          "Ruler"
+          "It cannot show that planets orbit the Sun",
+          "It proves planets are all the same size",
+          "It is the actual solar system",
+          "It does not show the true distances to scale"
         ],
         "answer": 3,
-        "explanation": "A ruler measures length.",
-        "difficulty": "Medium"
+        "explanation": "Models simplify reality and may not preserve every scale relationship.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq110",
-        "question": "A student repeats a measurement 11 times. What improves when readings are consistent? (practice case 11)",
+        "id": "c6nsoq036",
+        "question": "Which statement best explains why a scientific explanation may change over time?",
         "options": [
-          "Mass",
-          "Temperature",
-          "Reliability",
-          "Colour"
+          "Scientific ideas are chosen by voting only",
+          "Measurements are never repeated",
+          "New reliable evidence can improve or replace an earlier explanation",
+          "An explanation must remain unchanged"
         ],
         "answer": 2,
-        "explanation": "Repeated consistent readings improve reliability.",
-        "difficulty": "Medium"
+        "explanation": "Scientific knowledge develops as evidence and methods improve.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq111",
-        "question": "A test changes light exposure from 12 to 13 hours. What is the independent variable? (practice case 12)",
+        "id": "c6nsoq037",
+        "question": "A student records the shadow length every hour. Which display best shows how the length changes over time?",
         "options": [
-          "The conclusion",
-          "Light exposure",
-          "Final plant height",
-          "The ruler"
+          "A pie chart of classroom subjects",
+          "A line graph",
+          "A map of the playground",
+          "A list of unrelated materials"
         ],
         "answer": 1,
-        "explanation": "The independent variable is the factor deliberately changed.",
-        "difficulty": "Medium"
+        "explanation": "A line graph shows change across ordered time points.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq112",
-        "question": "A sample has a mass of 65 g. Which quantity is measured? (practice case 13)",
+        "id": "c6nsoq038",
+        "question": "A digital balance reads 0.0 g before an object is placed on it. Why is this check useful?",
         "options": [
-          "Mass",
-          "Length",
-          "Time",
-          "Temperature"
+          "It checks that the balance is zeroed before measuring",
+          "It warms the object",
+          "It proves the object has no mass",
+          "It changes the object's shape"
         ],
         "answer": 0,
-        "explanation": "Grams are units of mass.",
-        "difficulty": "Hard"
+        "explanation": "Zeroing avoids a systematic offset in the measurement.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq113",
-        "question": "Why should a fair test change one factor at a time? (practice case 14)",
+        "id": "c6nsoq039",
+        "question": "An experiment produces a result that does not support the hypothesis. What should the student do?",
         "options": [
-          "To guarantee the expected result",
-          "To avoid recording data",
-          "To change all variables",
-          "To identify which factor affects the result"
+          "Change the data to fit the hypothesis",
+          "Hide the result",
+          "Repeat until the preferred answer appears",
+          "Report the result honestly and reconsider the hypothesis"
         ],
         "answer": 3,
-        "explanation": "Controlling other factors helps identify the effect of the variable being tested.",
-        "difficulty": "Easy"
+        "explanation": "Evidence must be reported honestly, even when it does not support the prediction.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq114",
-        "question": "A student records 15, 16, 16 and 17 cm. Which value occurs most often? (practice case 15)",
+        "id": "c6nsoq040",
+        "question": "A student compares evaporation from two plates, one in moving air and one in still air. What should be identical?",
         "options": [
-          "17",
-          "18",
-          "16",
-          "15"
+          "Air movement",
+          "Time taken to evaporate",
+          "Water volume, plate size and starting temperature",
+          "Amount evaporated"
         ],
         "answer": 2,
-        "explanation": "16 occurs twice; the others occur once.",
-        "difficulty": "Medium"
+        "explanation": "Those starting conditions should be controlled when testing air movement.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq115",
-        "question": "Which is a direct observation of a plant measured at 16 cm? (practice case 16)",
+        "id": "c6nsoq041",
+        "question": "A class wants to test whether darker surfaces warm faster in sunlight. Which measurement would best answer the question?",
         "options": [
-          "The plant wants more light",
-          "The plant is  16 cm tall",
-          "The plant is certainly thirsty",
-          "The soil is definitely poor"
+          "Colour names only",
+          "Temperature change of each surface over the same time",
+          "Weight of each surface only",
+          "Sound produced by each surface"
         ],
         "answer": 1,
-        "explanation": "An observation records something seen or measured, not an untested cause.",
-        "difficulty": "Medium"
+        "explanation": "Temperature change directly measures warming.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq116",
-        "question": "A prediction about growth after 17 days should be checked by... (practice case 17)",
+        "id": "c6nsoq042",
+        "question": "A scientist reports an average of three readings. Why should the individual readings also be kept?",
         "options": [
-          "collecting evidence in a controlled experiment",
-          "accepting it without testing",
-          "changing every condition at once",
-          "discarding unexpected results"
+          "They show variation and allow others to check the calculation",
+          "They make the average unnecessary",
+          "They guarantee there was no error",
+          "They hide unusual measurements"
         ],
         "answer": 0,
-        "explanation": "Predictions are tested by collecting evidence.",
-        "difficulty": "Medium"
+        "explanation": "The raw data provide transparency and context for the average.",
+        "difficulty": "Hard",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq117",
-        "question": "Which instrument measures 18 cm of length? (practice case 18)",
+        "id": "c6nsoq043",
+        "question": "Two teams get different results using the same procedure. Which action is most useful?",
         "options": [
-          "Balance",
-          "Thermometer",
-          "Stopwatch",
-          "Ruler"
+          "Decide the larger value must be right",
+          "Combine the answers without checking",
+          "Stop investigating",
+          "Compare the methods, equipment and measurements, then repeat carefully"
         ],
         "answer": 3,
-        "explanation": "A ruler measures length.",
-        "difficulty": "Medium"
+        "explanation": "Checking procedure and repeating helps identify sources of difference.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq118",
-        "question": "A student repeats a measurement 19 times. What improves when readings are consistent? (practice case 19)",
+        "id": "c6nsoq044",
+        "question": "A student investigates whether different amounts of salt change the time needed for ice to melt. Which set-up is best?",
         "options": [
-          "Mass",
-          "Temperature",
-          "Reliability",
-          "Colour"
+          "Use different ice sizes and different rooms",
+          "Change salt, wind and sunlight together",
+          "Use equal ice pieces, different measured salt amounts and the same surroundings",
+          "Use unknown amounts of salt"
         ],
         "answer": 2,
-        "explanation": "Repeated consistent readings improve reliability.",
-        "difficulty": "Hard"
+        "explanation": "Only the salt amount should vary; other relevant conditions should be controlled.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq119",
-        "question": "A test changes light exposure from 20 to 21 hours. What is the independent variable? (practice case 20)",
+        "id": "c6nsoq045",
+        "question": "A class records 2, 4, 6 and 8 minutes for four trials. What is the mean time?",
         "options": [
-          "The conclusion",
-          "Light exposure",
-          "Final plant height",
-          "The ruler"
+          "4 minutes",
+          "5 minutes",
+          "6 minutes",
+          "20 minutes"
         ],
         "answer": 1,
-        "explanation": "The independent variable is the factor deliberately changed.",
-        "difficulty": "Easy"
+        "explanation": "(2+4+6+8)÷4=5.",
+        "difficulty": "Challenge",
+        "section": "Science"
       },
       {
-        "id": "c6nsoq120",
-        "question": "A sample has a mass of 105 g. Which quantity is measured? (practice case 21)",
+        "id": "c6nsoq046",
+        "question": "A student sees bubbles when vinegar is mixed with baking soda. Which conclusion is justified by this observation alone?",
         "options": [
-          "Mass",
-          "Length",
-          "Time",
-          "Temperature"
+          "A gas is being produced",
+          "The gas is definitely oxygen",
+          "The mixture is safe to drink",
+          "The container contains no liquid"
         ],
         "answer": 0,
-        "explanation": "Grams are units of mass.",
-        "difficulty": "Medium"
+        "explanation": "Bubbling indicates gas formation, but its identity needs a separate test.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq121",
-        "question": "Why should a fair test change one factor at a time? (practice case 22)",
+        "id": "c6nsoq047",
+        "question": "A fair test gives the same result when repeated by another team. What does this most strongly suggest?",
         "options": [
-          "To guarantee the expected result",
-          "To avoid recording data",
-          "To change all variables",
-          "To identify which factor affects the result"
+          "The result is true in every situation",
+          "No measurement error is possible",
+          "The hypothesis can never change",
+          "The result is reproducible under the tested conditions"
         ],
         "answer": 3,
-        "explanation": "Controlling other factors helps identify the effect of the variable being tested.",
-        "difficulty": "Medium"
+        "explanation": "Independent repetition supports reproducibility, not universal certainty.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq122",
-        "question": "A student records 23, 24, 24 and 25 cm. Which value occurs most often? (practice case 23)",
+        "id": "c6nsoq048",
+        "question": "A student finds that a metal spoon and wooden spoon are both at room temperature but feel different. Which investigation best tests the explanation?",
         "options": [
-          "25",
-          "26",
-          "24",
-          "23"
+          "Compare their colours",
+          "Weigh them only",
+          "Measure heat transfer from identical warm-water cups using each spoon",
+          "Place them in different rooms"
         ],
         "answer": 2,
-        "explanation": "24 occurs twice; the others occur once.",
-        "difficulty": "Medium"
+        "explanation": "A controlled comparison can test how quickly each material transfers heat.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq123",
-        "question": "Which is a direct observation of a plant measured at 24 cm? (practice case 24)",
+        "id": "c6nsoq049",
+        "question": "A class uses a model to explain why day and night occur. Which movement should the model show?",
         "options": [
-          "The plant wants more light",
-          "The plant is  24 cm tall",
-          "The plant is certainly thirsty",
-          "The soil is definitely poor"
+          "Earth stopping in space",
+          "Earth rotating on its axis",
+          "The Moon moving around Earth once each hour",
+          "The Sun orbiting Earth every day"
         ],
         "answer": 1,
-        "explanation": "An observation records something seen or measured, not an untested cause.",
-        "difficulty": "Medium"
+        "explanation": "Earth's rotation causes the regular day-night cycle.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       },
       {
-        "id": "c6nsoq124",
-        "question": "A prediction about growth after 25 days should be checked by... (practice case 25)",
+        "id": "c6nsoq050",
+        "question": "In a fair test, the result changes whenever two factors are changed together. Why is the cause unclear?",
         "options": [
-          "collecting evidence in a controlled experiment",
-          "accepting it without testing",
-          "changing every condition at once",
-          "discarding unexpected results"
+          "The effect of each factor cannot be separated",
+          "Both factors must have no effect",
+          "The result is always false",
+          "The measurements become units"
         ],
         "answer": 0,
-        "explanation": "Predictions are tested by collecting evidence.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq125",
-        "question": "Which instrument measures 26 cm of length? (practice case 26)",
-        "options": [
-          "Balance",
-          "Thermometer",
-          "Stopwatch",
-          "Ruler"
-        ],
-        "answer": 3,
-        "explanation": "A ruler measures length.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq126",
-        "question": "A student repeats a measurement 27 times. What improves when readings are consistent? (practice case 27)",
-        "options": [
-          "Mass",
-          "Temperature",
-          "Reliability",
-          "Colour"
-        ],
-        "answer": 2,
-        "explanation": "Repeated consistent readings improve reliability.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq127",
-        "question": "A test changes light exposure from 28 to 29 hours. What is the independent variable? (practice case 28)",
-        "options": [
-          "The conclusion",
-          "Light exposure",
-          "Final plant height",
-          "The ruler"
-        ],
-        "answer": 1,
-        "explanation": "The independent variable is the factor deliberately changed.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq128",
-        "question": "A sample has a mass of 145 g. Which quantity is measured? (practice case 29)",
-        "options": [
-          "Mass",
-          "Length",
-          "Time",
-          "Temperature"
-        ],
-        "answer": 0,
-        "explanation": "Grams are units of mass.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq129",
-        "question": "Why should a fair test change one factor at a time? (practice case 30)",
-        "options": [
-          "To guarantee the expected result",
-          "To avoid recording data",
-          "To change all variables",
-          "To identify which factor affects the result"
-        ],
-        "answer": 3,
-        "explanation": "Controlling other factors helps identify the effect of the variable being tested.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq130",
-        "question": "A student records 31, 32, 32 and 33 cm. Which value occurs most often? (practice case 31)",
-        "options": [
-          "33",
-          "34",
-          "32",
-          "31"
-        ],
-        "answer": 2,
-        "explanation": "32 occurs twice; the others occur once.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq131",
-        "question": "Which is a direct observation of a plant measured at 32 cm? (practice case 32)",
-        "options": [
-          "The plant wants more light",
-          "The plant is  32 cm tall",
-          "The plant is certainly thirsty",
-          "The soil is definitely poor"
-        ],
-        "answer": 1,
-        "explanation": "An observation records something seen or measured, not an untested cause.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq132",
-        "question": "A prediction about growth after 33 days should be checked by... (practice case 33)",
-        "options": [
-          "collecting evidence in a controlled experiment",
-          "accepting it without testing",
-          "changing every condition at once",
-          "discarding unexpected results"
-        ],
-        "answer": 0,
-        "explanation": "Predictions are tested by collecting evidence.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq133",
-        "question": "Which instrument measures 34 cm of length? (practice case 34)",
-        "options": [
-          "Balance",
-          "Thermometer",
-          "Stopwatch",
-          "Ruler"
-        ],
-        "answer": 3,
-        "explanation": "A ruler measures length.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq134",
-        "question": "A student repeats a measurement 35 times. What improves when readings are consistent? (practice case 35)",
-        "options": [
-          "Mass",
-          "Temperature",
-          "Reliability",
-          "Colour"
-        ],
-        "answer": 2,
-        "explanation": "Repeated consistent readings improve reliability.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq135",
-        "question": "A test changes light exposure from 36 to 37 hours. What is the independent variable? (practice case 36)",
-        "options": [
-          "The conclusion",
-          "Light exposure",
-          "Final plant height",
-          "The ruler"
-        ],
-        "answer": 1,
-        "explanation": "The independent variable is the factor deliberately changed.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq136",
-        "question": "A sample has a mass of 185 g. Which quantity is measured? (practice case 37)",
-        "options": [
-          "Mass",
-          "Length",
-          "Time",
-          "Temperature"
-        ],
-        "answer": 0,
-        "explanation": "Grams are units of mass.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c6nsoq137",
-        "question": "Why should a fair test change one factor at a time? (practice case 38)",
-        "options": [
-          "To guarantee the expected result",
-          "To avoid recording data",
-          "To change all variables",
-          "To identify which factor affects the result"
-        ],
-        "answer": 3,
-        "explanation": "Controlling other factors helps identify the effect of the variable being tested.",
-        "difficulty": "Easy"
-      },
-      {
-        "id": "c6nsoq138",
-        "question": "A student records 39, 40, 40 and 41 cm. Which value occurs most often? (practice case 39)",
-        "options": [
-          "41",
-          "42",
-          "40",
-          "39"
-        ],
-        "answer": 2,
-        "explanation": "40 occurs twice; the others occur once.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq139",
-        "question": "Which is a direct observation of a plant measured at 40 cm? (practice case 40)",
-        "options": [
-          "The plant wants more light",
-          "The plant is  40 cm tall",
-          "The plant is certainly thirsty",
-          "The soil is definitely poor"
-        ],
-        "answer": 1,
-        "explanation": "An observation records something seen or measured, not an untested cause.",
-        "difficulty": "Medium"
-      },
-      {
-        "id": "c6nsoq140",
-        "question": "A prediction about growth after 41 days should be checked by... (practice case 41)",
-        "options": [
-          "collecting evidence in a controlled experiment",
-          "accepting it without testing",
-          "changing every condition at once",
-          "discarding unexpected results"
-        ],
-        "answer": 0,
-        "explanation": "Predictions are tested by collecting evidence.",
-        "difficulty": "Medium"
+        "explanation": "Changing multiple variables makes it difficult to attribute the result to one cause.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section"
       }
     ]
   },
