@@ -188,8 +188,8 @@ const isoSectionCounts=allIsoQuestions.reduce((counts,q)=>(counts[q.section]=(co
 assert.equal(isoSectionCounts["Science"],500,"ISO science pool has 500 questions");
 assert.equal(isoSectionCounts["Achievers Section"],50,"ISO Achievers pool has 50 higher-order questions");
 assert.equal(isoSectionCounts["Logical Reasoning"],50,"ISO reasoning pool has 50 questions");
-assert.ok(sofScienceBank.slice(0,10).every(chapter=>chapter.questions.slice(45).every(q=>q.section==="Achievers Section")),"the science chapters reserve five questions each for Achievers");
-assert.ok(sofScienceBank[10].questions.every(q=>q.section==="Science"),"Natural Resources questions remain in the science pool");
+assert.ok(sofScienceBank.slice(0,5).every(chapter=>chapter.questions[45].section==="Science"&&chapter.questions.slice(46).every(q=>q.section==="Achievers Section")),"the first five science topics reserve four questions each for Achievers");
+assert.ok(sofScienceBank.slice(5,11).every(chapter=>chapter.questions.slice(45).every(q=>q.section==="Achievers Section")),"the remaining six science topics reserve five questions each for Achievers");
 assert.ok(sofScienceBank[11].questions.every(q=>q.section==="Logical Reasoning"),"reasoning group is separately section-tagged");
 const normalizedSofScience=context.window.C10QuestionBank.normalize(sofScienceBank,"class-6-science-sof");
 assert.equal(normalizedSofScience.flatMap(chapter=>chapter.questions).length,500,"SOF Science bank normalizes through shared engine");
