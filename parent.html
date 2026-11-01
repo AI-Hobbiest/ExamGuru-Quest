@@ -17,6 +17,10 @@
 .family-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px;margin-top:18px}
 .family-card{background:#fff;border:1px solid #e0e4ef;border-radius:18px;padding:20px;box-shadow:0 10px 25px rgba(37,43,82,.06)}
 .family-card h2{margin:0 0 4px;font-size:1.2rem;color:#292b58}
+.family-level{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 6px;padding:12px;border-radius:14px;background:linear-gradient(135deg,#f0edfb,#eaf7f0)}
+.family-level strong{font-size:1.05rem;color:#34336f}.family-level span{font-size:.76rem;color:#626b84;font-weight:700}
+.family-recent{margin-top:12px;padding-top:12px;border-top:1px solid #ebeaf1}.family-recent h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:#626b84;margin:0 0 8px}
+.family-activity{display:grid;gap:7px}.family-activity-item{display:flex;justify-content:space-between;gap:10px;font-size:.8rem;color:#515a72}.family-activity-item strong{color:#34366f}.family-empty-activity{font-size:.8rem;color:#73788b}
 .family-card .class-tag{color:#626b84;font-size:.84rem}
 .family-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
 .family-metric{background:#f5f4fb;border-radius:12px;padding:12px}
@@ -44,6 +48,7 @@
 </main>
 <script src="./js/student-auth.js"></script>
 <script src="./js/storage.js"></script>
+<script src="./js/gamification.js"></script>
 <script src="./js/parent-dashboard.js"></script>
 <script src="./js/app-shell.js"></script>
 </body>
