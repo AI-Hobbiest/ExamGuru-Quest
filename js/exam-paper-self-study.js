@@ -41,7 +41,7 @@ function makePaper(){
 function responseContent(item,i){
  let html="";
  if(item.stimulus)html+='<p>'+esc(item.stimulus)+'</p>';
- (item.images||[]).forEach(im=>html+='<img src="./'+esc(im.src).replace(/^\\.\\//,"")+'" alt="'+esc(im.alt)+'">');
+ (item.images||[]).forEach(im=>{const src=esc(im.src);html+='<img src="./'+(src.startsWith("./")?src.slice(2):src)+'" alt="'+esc(im.alt)+'">';});
  if(Array.isArray(item.parts)&&item.parts.length){
   item.parts.forEach((part,j)=>html+='<p><strong>('+String.fromCharCode(97+j)+')</strong> '+esc(part.prompt)+' ('+part.marks+' marks)</p><textarea aria-label="Answer for question '+(i+1)+' part '+(j+1)+'" data-part="'+j+'" placeholder="Your answer here…"></textarea>');
  }else{
