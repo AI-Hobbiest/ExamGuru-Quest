@@ -153,8 +153,8 @@
 
       <section class="admin-panel" id="tab-exam-papers">
         <h2>Exam Paper Studio</h2>
-        <p class="admin-muted">Blueprint-driven CBSE-style paper creation. This foundation release adds the mixed-question generator and Class 10 Science blueprint. Generation remains locked until the exact official question-level mark/type/internal-choice slot map is verified.</p>
-        <div class="admin-notice"><strong>Current profile:</strong> CBSE · Class 10 · Science (086) · 2026–27 · 80 marks · 3 hours · 39 numbered questions. Section totals are configured; the precise slot map remains under audit.</div>
+        <p class="admin-muted">Blueprint-driven CBSE-style paper creation. The audited Class 10 Science 2026–27 blueprint and bundled original mixed-question starter pool are ready for browser-side paper generation.</p>
+        <div class="admin-notice"><strong>Current profile:</strong> CBSE · Class 10 · Science (086) · 2026–27 · 80 marks · 3 hours · 39 numbered questions. Question-level marks, question forms and internal-choice positions are mapped to the official sample paper. Heredity and Evolution content is excluded in accordance with the curriculum's year-end assessment note.</div>
         <div class="admin-form-grid">
           <div class="admin-field"><label>Examination profile</label><input value="CBSE · Class 10 · Science (086) · 2026–27" readonly></div>
           <div class="admin-field"><label for="paperBlueprintState">Blueprint status</label><input id="paperBlueprintState" value="Loading…" readonly></div>
@@ -171,7 +171,7 @@
           <div class="admin-field full"><label>Approved questions by section</label><div id="paperPoolSummary" class="admin-feature-list">No local question pool imported.</div></div>
         </div>
         <hr class="admin-rule">
-        <div class="admin-actions"><button class="admin-btn" type="button" id="generatePaperBtn" disabled>Generate paper (blueprint pending)</button></div>
+        <div class="admin-actions"><button class="admin-btn" type="button" id="generatePaperBtn" disabled>Generate CBSE Science paper</button></div>
         <div id="paperStudioStatus" class="admin-status" role="status" aria-live="polite">Loading examination blueprint…</div>
         <div id="paperPreviewStatus" class="admin-muted">No paper generated in this session.</div>
         <div id="paperPreview" class="admin-feature-list"></div>

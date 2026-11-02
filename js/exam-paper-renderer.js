@@ -4,14 +4,30 @@
 const esc=v=>String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const list=x=>Array.isArray(x)?x:[];
 function partHtml(p,teacher){return'<div class="part"><strong>('+esc(p.partId||"")+')</strong> '+esc(p.prompt)+' <span class="marks">['+esc(p.marks)+']</span></div>'+(teacher&&p.answerKey?'<div class="answer"><b>Expected answer:</b> '+esc(typeof p.answerKey==="string"?p.answerKey:JSON.stringify(p.answerKey))+"</div>":"");}
+function imageHtml(images){return list(images).map(image=>'<figure class="diagram"><img src="'+esc(image.src)+'" alt="'+esc(image.alt)+'" style="max-width:100%;height:auto"><figcaption>'+esc(image.caption||image.alt)+'</figcaption></figure>').join("");}
+function teacherAnswerHtml(answerKey,markingScheme){
+ let h="";
+ if(answerKey)h+='<div class="answer"><b>Expected answer:</b><pre>'+esc(typeof answerKey==="string"?answerKey:JSON.stringify(answerKey,null,2))+"</pre></div>";
+ if(Array.isArray(markingScheme))h+='<div class="marking"><b>Marking scheme</b><ul>'+markingScheme.map(m=>"<li>"+esc(m.criterion)+" — "+esc(m.marks)+" mark(s)</li>").join("")+"</ul></div>";
+ return h;
+}
+function alternativeHtml(a,teacher){
+ let h='<div class="or">OR</div><div class="alternative">'+esc(a.prompt)+'</div>';
+ if(a.stimulus)h+='<div class="stimulus">'+esc(a.stimulus)+'</div>';
+ if(Array.isArray(a.options))h+='<ol class="options" type="A">'+a.options.map(o=>"<li>"+esc(o.text)+"</li>").join("")+'</ol>';
+ h+=imageHtml(a.images);
+ list(a.parts).forEach(p=>h+=partHtml(p,teacher));
+ if(teacher)h+=teacherAnswerHtml(a.answerKey,a.markingScheme);
+ return h;
+}
 function questionHtml(q,teacher){
  let h='<article class="question"><div class="question-heading"><b>Q'+esc(q.paperQuestionNumber)+'.</b> '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></div>';
- if(q.stimulus)h+='<div class="stimulus">'+esc(q.stimulus)+"</div>";
- if(Array.isArray(q.options))h+='<ol class="options" type="A">'+q.options.map(o=>"<li>"+esc(o.text)+"</li>").join("")+"</ol>";
- if(Array.isArray(q.images))h+=q.images.map(image=>'<figure class="diagram"><img src="'+esc(image.src)+'" alt="'+esc(image.alt)+'" style="max-width:100%;height:auto"><figcaption>'+esc(image.caption||image.alt)+'</figcaption></figure>').join("");
+ if(q.stimulus)h+='<div class="stimulus">'+esc(q.stimulus)+'</div>';
+ if(Array.isArray(q.options))h+='<ol class="options" type="A">'+q.options.map(o=>"<li>"+esc(o.text)+"</li>").join("")+'</ol>';
+ h+=imageHtml(q.images);
  list(q.parts).forEach(p=>h+=partHtml(p,teacher));
- list(q.alternatives).forEach(a=>{h+='<div class="or">OR</div><div class="alternative">'+esc(a.prompt)+"</div>";list(a.parts).forEach(p=>h+=partHtml(p,teacher));});
- if(teacher){if(q.answerKey)h+='<div class="answer"><b>Answer key:</b><pre>'+esc(typeof q.answerKey==="string"?q.answerKey:JSON.stringify(q.answerKey,null,2))+"</pre></div>";if(Array.isArray(q.markingScheme))h+='<div class="marking"><b>Marking scheme</b><ul>'+q.markingScheme.map(m=>"<li>"+esc(m.criterion)+" — "+esc(m.marks)+" mark(s)</li>").join("")+"</ul></div>";}
+ list(q.alternatives).forEach(a=>h+=alternativeHtml(a,teacher));
+ if(teacher)h+=teacherAnswerHtml(q.answerKey,q.markingScheme);
  return h+"</article>";
 }
 function buildDocumentHtml(paper,mode,baseHref){

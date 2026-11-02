@@ -47,11 +47,19 @@ function validateQuestion(q,path="question"){
   if(!q.markingScheme.every(m=>m&&text(m.criterion)&&Number.isInteger(m.marks)&&m.marks>0))e.push(path+".markingScheme has invalid entries.");
   else if(sum(q.markingScheme.map(m=>m.marks))>q.marks)e.push(path+".markingScheme exceeds question marks.");
  }
+ if(q.approvalStatus==="approved"){
+  if(q.answerKey==null)e.push(path+".answerKey is required for approved questions.");
+  if(!Array.isArray(q.markingScheme)||!q.markingScheme.length||!q.markingScheme.every(m=>m&&text(m.criterion)&&Number.isInteger(m.marks)&&m.marks>0)||sum(q.markingScheme.map(m=>Number(m.marks)||0))!==q.marks)e.push(path+".approved question markingScheme must total exactly the question marks.");
+ }
  if(q.alternatives!=null){
   if(!Array.isArray(q.alternatives))e.push(path+".alternatives must be an array.");
   else q.alternatives.forEach((a,i)=>{
    if(!obj(a)||!text(a.prompt))e.push(path+".alternatives["+i+"] needs a prompt.");
    if(a&&Array.isArray(a.parts)&&a.parts.length&&a.parts.every(p=>Number.isInteger(p.marks))&&sum(a.parts.map(p=>p.marks))!==q.marks)e.push(path+".alternatives["+i+"] parts marks must equal question marks.");
+   if(q.approvalStatus==="approved"){
+    if(!a||a.answerKey==null)e.push(path+".alternatives["+i+"] needs an answerKey.");
+    if(!a||!Array.isArray(a.markingScheme)||!a.markingScheme.length||!a.markingScheme.every(m=>m&&text(m.criterion)&&Number.isInteger(m.marks)&&m.marks>0)||sum((a&&a.markingScheme||[]).map(m=>Number(m.marks)||0))!==q.marks)e.push(path+".alternatives["+i+"] markingScheme must total exactly the question marks.");
+   }
   });
  }
  return e;
@@ -87,10 +95,22 @@ function validateBlueprint(bp){
  const slots=expandSlotPlan(bp);
  if(bp.status==="ready"){
   if(slots.length!==bp.totalQuestions)e.push("Ready blueprint must define every question slot.");
-  const totals=new Map();
-  slots.forEach(s=>{if(!ids.has(s.sectionId))e.push("Slot "+s.slotId+" has an unknown section.");if(!Number.isInteger(s.marks)||s.marks<1)e.push("Slot "+s.slotId+" needs positive marks.");if(!Array.isArray(s.allowedTypes)||!s.allowedTypes.length||!s.allowedTypes.every(t=>TYPES.includes(t)))e.push("Slot "+s.slotId+" needs supported allowedTypes.");const r=totals.get(s.sectionId)||{count:0,marks:0};r.count++;r.marks+=Number(s.marks)||0;totals.set(s.sectionId,r);});
-  sections.forEach(s=>{const r=totals.get(s.sectionId)||{count:0,marks:0};if(r.count!==s.questionCount)e.push(s.sectionId+" slot count mismatch.");if(r.marks!==s.totalMarks)e.push(s.sectionId+" slot marks mismatch.");});
+  const totals=new Map(),numbers=new Set(),units=new Map(),competencies=new Map();
+  slots.forEach(s=>{
+   if(!ids.has(s.sectionId))e.push("Slot "+s.slotId+" has an unknown section.");
+   if(!Number.isInteger(s.marks)||s.marks<1)e.push("Slot "+s.slotId+" needs positive marks.");
+   if(!Array.isArray(s.allowedTypes)||!s.allowedTypes.length||!s.allowedTypes.every(t=>TYPES.includes(t)))e.push("Slot "+s.slotId+" needs supported allowedTypes.");
+   if(s.questionNumber!=null){if(!Number.isInteger(s.questionNumber)||s.questionNumber<1||s.questionNumber>bp.totalQuestions||numbers.has(s.questionNumber))e.push("Slot question numbers must be unique integers within the paper.");numbers.add(s.questionNumber);}
+   const r=totals.get(s.sectionId)||{count:0,marks:0};r.count++;r.marks+=Number(s.marks)||0;totals.set(s.sectionId,r);
+   if(bp.unitMarkTargets){if(!text(s.unitId))e.push("Slot "+s.slotId+" needs unitId.");units.set(s.unitId,(units.get(s.unitId)||0)+s.marks);}
+   if(bp.competencyMarksTargets){if(!COMPETENCIES.includes(s.competency))e.push("Slot "+s.slotId+" needs a valid competency.");competencies.set(s.competency,(competencies.get(s.competency)||0)+s.marks);}
+  });
+  if(numbers.size&&numbers.size!==bp.totalQuestions)e.push("Ready blueprint must number every question slot.");
+  sections.forEach(s=>{const r=totals.get(s.sectionId)||{count:0,marks:0};if(r.count!==s.questionCount)e.push(s.sectionId+" slot count mismatch.");if(r.marks!==s.totalMarks)e.push(s.sectionId+" marks mismatch.");});
   if(sum(slots.map(s=>Number(s.marks)||0))!==bp.totalMarks)e.push("Slot marks do not add up to blueprint total.");
+  for(const [field,actual] of [["unitMarkTargets",units],["competencyMarksTargets",competencies]]){
+   const targets=bp[field];if(targets){if(!obj(targets)||sum(Object.values(targets).map(Number))!==bp.totalMarks)e.push(field+" must total the paper marks.");else for(const [key,value] of Object.entries(targets))if((actual.get(key)||0)!==Number(value))e.push(field+" mismatch for "+key+".");}
+  }
  }
  return{valid:e.length===0,readyForGeneration:e.length===0&&bp.status==="ready",errors:e,slots};
 }
@@ -103,6 +123,7 @@ function eligible(q,s){
  return q.approvalStatus==="approved"&&q.sectionId===s.sectionId&&q.marks===s.marks&&s.allowedTypes.includes(q.type)&&
  (!s.competency||q.competency===s.competency)&&(!s.difficulty||q.difficulty===s.difficulty)&&
  (!s.chapterIds||!s.chapterIds.length||s.chapterIds.includes(q.chapterId))&&
+ (!s.unitId||q.unitId===s.unitId)&&
  (!s.requiresInternalChoice||(Array.isArray(q.alternatives)&&q.alternatives.length>0))&&
  (!s.topicTags||!s.topicTags.length||s.topicTags.every(t=>(q.topicTags||[]).includes(t)));
 }
@@ -128,7 +149,28 @@ function validatePaper(p,bp){
  const ids=p.questions.map(q=>String(q.questionId||""));if(ids.some(x=>!x)||new Set(ids).size!==ids.length)e.push("Paper question IDs are missing or duplicated.");
  if(p.questions.length!==p.totalQuestions)e.push("Paper question count is inconsistent.");
  if(sum(p.questions.map(q=>Number(q.marks)||0))!==p.totalMarks)e.push("Paper total marks are inconsistent.");
- if(bp){if(p.blueprintId!==bp.blueprintId)e.push("Blueprint ID mismatch.");if(p.questions.length!==bp.totalQuestions)e.push("Blueprint question count mismatch.");if(p.totalMarks!==bp.totalMarks)e.push("Blueprint total marks mismatch.");(bp.sections||[]).forEach(s=>{const a=p.questions.filter(q=>q.sectionId===s.sectionId);if(a.length!==s.questionCount)e.push(s.sectionId+" question count mismatch.");if(sum(a.map(q=>Number(q.marks)||0))!==s.totalMarks)e.push(s.sectionId+" marks mismatch.");});const allowed=new Set(expandSlotPlan(bp).map(s=>s.slotId));p.questions.forEach(q=>{if(!allowed.has(q.slotId))e.push("Unknown slot "+q.slotId);});}
+ if(bp){
+  if(p.blueprintId!==bp.blueprintId)e.push("Blueprint ID mismatch.");
+  if(p.questions.length!==bp.totalQuestions)e.push("Blueprint question count mismatch.");
+  if(p.totalMarks!==bp.totalMarks)e.push("Blueprint total marks mismatch.");
+  (bp.sections||[]).forEach(s=>{const a=p.questions.filter(q=>q.sectionId===s.sectionId);if(a.length!==s.questionCount)e.push(s.sectionId+" question count mismatch.");if(sum(a.map(q=>Number(q.marks)||0))!==s.totalMarks)e.push(s.sectionId+" marks mismatch.");});
+  const slots=expandSlotPlan(bp),byId=new Map(slots.map(s=>[s.slotId,s])),seen=new Set();
+  p.questions.forEach(q=>{
+   const slot=byId.get(q.slotId);if(!slot){e.push("Unknown slot "+q.slotId);return;}
+   if(seen.has(q.slotId))e.push("Duplicate slot "+q.slotId);seen.add(q.slotId);
+   if(q.paperQuestionNumber!==slot.questionNumber)e.push("Question number mismatch for "+q.slotId+".");
+   if(q.sectionId!==slot.sectionId||q.marks!==slot.marks)e.push("Section or marks mismatch for "+q.slotId+".");
+   if(!slot.allowedTypes.includes(q.type))e.push("Question type mismatch for "+q.slotId+".");
+   if(slot.unitId&&q.unitId!==slot.unitId)e.push("Unit mismatch for "+q.slotId+".");
+   if(slot.competency&&q.competency!==slot.competency)e.push("Competency mismatch for "+q.slotId+".");
+   if(slot.requiresInternalChoice&&(!Array.isArray(q.alternatives)||!q.alternatives.length))e.push("Internal choice missing for "+q.slotId+".");
+  });
+  if(seen.size!==bp.totalQuestions)e.push("Paper does not fill every blueprint slot.");
+  for(const [field,key] of [["unitMarkTargets","unitId"],["competencyMarksTargets","competency"]]){
+   const target=bp[field];if(target){const totals=new Map();p.questions.forEach(q=>totals.set(q[key],(totals.get(q[key])||0)+q.marks));for(const [k,v] of Object.entries(target))if((totals.get(k)||0)!==Number(v))e.push("Generated paper "+field+" mismatch for "+k+".");}
+  }
+  if(bp.markDistribution){const totals=new Map();p.questions.forEach(q=>totals.set(q.marks,(totals.get(q.marks)||0)+1));for(const [marks,count] of Object.entries(bp.markDistribution))if((totals.get(Number(marks))||0)!==Number(count))e.push("Generated paper mark distribution mismatch for "+marks+" marks.");}
+ }
  return{valid:e.length===0,errors:e};
 }
 function createQuestionBankTemplate(){return{schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subjectId:"science",academicYear:"2026-27",bankVersion:"draft-1",title:"Class 10 Science mixed-question pool",questions:[{questionId:"SCI10-BIO-EXAMPLE-001",sectionId:"biology",chapterId:"life-processes",topicTags:["nutrition"],type:"short-answer",marks:2,prompt:"Replace this with an original, syllabus-eligible question.",difficulty:"medium",competency:"application",approvalStatus:"draft",markingScheme:[{criterion:"First marking point",marks:1},{criterion:"Second marking point",marks:1}],answerKey:{modelAnswer:"Replace with an accurate model answer."},source:{type:"original",reference:"Author/reviewer details"}}]};}
