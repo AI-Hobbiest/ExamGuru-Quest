@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ai-hobbiest.github.io/C10-Playground/data/contracts/v1/backup.schema.json",
-  "title": "C10 Playground Local Backup v1",
+  "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/backup.schema.json",
+  "title": "ExamGuru Quest Local Backup v1",
   "type": "object",
   "required": [
     "schemaVersion",
@@ -54,6 +54,9 @@
     },
     "learningLibrary": {
       "$ref": "#/$defs/learningLibrary"
+    },
+    "studyLibraryProgress": {
+      "$ref": "#/$defs/studyLibraryProgress"
     }
   },
   "$defs": {
@@ -131,6 +134,17 @@
         "ledger": {
           "$ref": "#/$defs/ledger"
         }
+      },
+      "additionalProperties": false
+    },
+    "studyLibraryProgress": {
+      "type": "object",
+      "required": ["schemaVersion", "kind", "completedResourceIds", "bookmarkedResourceIds"],
+      "properties": {
+        "schemaVersion": {"const": 1},
+        "kind": {"const": "study-library-progress"},
+        "completedResourceIds": {"type": "array", "items": {"type": "string"}},
+        "bookmarkedResourceIds": {"type": "array", "items": {"type": "string"}}
       },
       "additionalProperties": false
     },
