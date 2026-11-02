@@ -6513,6 +6513,1462 @@
           ]
         }
       ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q30-V2",
+      "sectionId": "physics",
+      "chapterId": "light-reflection-and-refraction",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "light-reflection-and-refraction",
+        "natural-phenomena",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which image is formed by a convex mirror for an object placed anywhere in front of it?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Virtual, erect and diminished",
+        "explanation": "A convex mirror always forms a virtual, erect and diminished image."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Real, inverted and magnified"
+        },
+        {
+          "optionId": "B",
+          "text": "Virtual, erect and diminished"
+        },
+        {
+          "optionId": "C",
+          "text": "Real, erect and same size"
+        },
+        {
+          "optionId": "D",
+          "text": "Virtual, inverted and magnified"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-PHY-Q30-V3",
+      "sectionId": "physics",
+      "chapterId": "light-reflection-and-refraction",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "light-reflection-and-refraction",
+        "natural-phenomena",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A convex lens forms a sharp image of a distant tree on a screen 20 cm away. What is approximately the focal length of the lens?",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "C. 20 cm",
+        "explanation": "For a distant object, incoming rays are nearly parallel and focus at the principal focus, so f is about 20 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "5 cm"
+        },
+        {
+          "optionId": "B",
+          "text": "10 cm"
+        },
+        {
+          "optionId": "C",
+          "text": "20 cm"
+        },
+        {
+          "optionId": "D",
+          "text": "40 cm"
+        }
+      ],
+      "correctOptionId": "C"
+    },
+    {
+      "questionId": "SCI10-PHY-Q31-V2",
+      "sectionId": "physics",
+      "chapterId": "electricity",
+      "unitId": "effects-of-current",
+      "topicTags": [
+        "electricity",
+        "effects-of-current",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A 4 Ω resistor is connected across a 12 V battery. What current flows through it?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "C. 3 A",
+        "explanation": "Ohm's law gives I = V/R = 12/4 = 3 A."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "0.33 A"
+        },
+        {
+          "optionId": "B",
+          "text": "2 A"
+        },
+        {
+          "optionId": "C",
+          "text": "3 A"
+        },
+        {
+          "optionId": "D",
+          "text": "48 A"
+        }
+      ],
+      "correctOptionId": "C"
+    },
+    {
+      "questionId": "SCI10-PHY-Q31-V3",
+      "sectionId": "physics",
+      "chapterId": "electricity",
+      "unitId": "effects-of-current",
+      "topicTags": [
+        "electricity",
+        "effects-of-current",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "An appliance is rated 100 W at 200 V. What current does it draw at its rated voltage?",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. 0.5 A",
+        "explanation": "Using P = VI, I = P/V = 100/200 = 0.5 A."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "0.25 A"
+        },
+        {
+          "optionId": "B",
+          "text": "0.5 A"
+        },
+        {
+          "optionId": "C",
+          "text": "2 A"
+        },
+        {
+          "optionId": "D",
+          "text": "20 A"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-PHY-Q32-V2",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "human-eye-and-colourful-world",
+        "natural-phenomena",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Assertion (A): Stars appear to twinkle when viewed from the Earth's surface. Reason (R): Atmospheric refraction changes because the refractive index of air layers varies.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both are true; changing atmospheric conditions cause the apparent position and brightness of a point source to fluctuate."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "assertionReason": {
+        "assertion": "Stars appear to twinkle when viewed from the Earth's surface.",
+        "reason": "Atmospheric refraction changes because the refractive index of air layers varies."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-PHY-Q32-V3",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "human-eye-and-colourful-world",
+        "natural-phenomena",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Assertion (A): The sky appears blue on a clear day. Reason (R): Air molecules scatter shorter wavelengths of visible light more strongly than longer wavelengths.",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both are true; scattering of shorter-wavelength light contributes to the blue appearance of the sky."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "assertionReason": {
+        "assertion": "The sky appears blue on a clear day.",
+        "reason": "Air molecules scatter shorter wavelengths of visible light more strongly than longer wavelengths."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-PHY-Q33-V2",
+      "sectionId": "physics",
+      "chapterId": "light-reflection-and-refraction",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "light-reflection-and-refraction",
+        "natural-phenomena",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 2,
+      "prompt": "State the two laws of refraction and define refractive index in terms of the speed of light.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "The incident ray, refracted ray and normal at the point of incidence lie in the same plane.\nFor a given pair of media, sin i/sin r is constant; the refractive index relative to vacuum is n = c/v."
+      },
+      "markingScheme": [
+        {
+          "criterion": "The incident ray, refracted ray and normal at the point of incidence lie in the same plane. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "For a given pair of media, sin i/sin r is constant; the refractive index relative to vacuum is n = c/v. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "State the first law of refraction.",
+          "marks": 1,
+          "answerKey": "The incident ray, refracted ray and normal at the point of incidence lie in the same plane."
+        },
+        {
+          "partId": "b",
+          "prompt": "State the second law and give the expression for refractive index.",
+          "marks": 1,
+          "answerKey": "For a given pair of media, sin i/sin r is constant; the refractive index relative to vacuum is n = c/v."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q33-V3",
+      "sectionId": "physics",
+      "chapterId": "light-reflection-and-refraction",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "light-reflection-and-refraction",
+        "natural-phenomena",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 2,
+      "prompt": "An object is placed between the pole and focus of a concave mirror. State where the image is formed and give its characteristics.",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "The image appears behind the mirror.\nIt is virtual, erect and magnified."
+      },
+      "markingScheme": [
+        {
+          "criterion": "The image appears behind the mirror. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It is virtual, erect and magnified. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Where does the image appear?",
+          "marks": 1,
+          "answerKey": "The image appears behind the mirror."
+        },
+        {
+          "partId": "b",
+          "prompt": "State the nature and size of the image.",
+          "marks": 1,
+          "answerKey": "It is virtual, erect and magnified."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q34-V2",
+      "sectionId": "physics",
+      "chapterId": "electricity",
+      "unitId": "effects-of-current",
+      "topicTags": [
+        "electricity",
+        "effects-of-current",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 2,
+      "prompt": "A 60 W lamp operates for 5 hours. Calculate the electrical energy used in kWh. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "60 W = 0.06 kW.\nEnergy = power × time = 0.06 kW × 5 h = 0.30 kWh."
+      },
+      "markingScheme": [
+        {
+          "criterion": "60 W = 0.06 kW. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Energy = power × time = 0.06 kW × 5 h = 0.30 kWh. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Convert the power to kilowatts.",
+          "marks": 1,
+          "answerKey": "60 W = 0.06 kW."
+        },
+        {
+          "partId": "b",
+          "prompt": "Calculate the energy consumed.",
+          "marks": 1,
+          "answerKey": "Energy = power × time = 0.06 kW × 5 h = 0.30 kWh."
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Two resistors of 4 Ω and 8 Ω are connected in series to a 12 V battery. Calculate the equivalent resistance and current.",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "Calculate the equivalent resistance.",
+              "marks": 1,
+              "answerKey": "R = 4 Ω + 8 Ω = 12 Ω."
+            },
+            {
+              "partId": "b",
+              "prompt": "Calculate the current.",
+              "marks": 1,
+              "answerKey": "I = V/R = 12 V / 12 Ω = 1 A."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "R = 4 Ω + 8 Ω = 12 Ω.\nI = V/R = 12 V / 12 Ω = 1 A."
+          },
+          "markingScheme": [
+            {
+              "criterion": "R = 4 Ω + 8 Ω = 12 Ω. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "I = V/R = 12 V / 12 Ω = 1 A. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q34-V3",
+      "sectionId": "physics",
+      "chapterId": "electricity",
+      "unitId": "effects-of-current",
+      "topicTags": [
+        "electricity",
+        "effects-of-current",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 2,
+      "prompt": "A 100 W appliance operates at 200 V. Calculate the current and energy used in half an hour. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "I = 100/200 = 0.5 A.\nE = 0.1 kW × 0.5 h = 0.05 kWh."
+      },
+      "markingScheme": [
+        {
+          "criterion": "I = 100/200 = 0.5 A. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "E = 0.1 kW × 0.5 h = 0.05 kWh. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Calculate the current using P = VI.",
+          "marks": 1,
+          "answerKey": "I = 100/200 = 0.5 A."
+        },
+        {
+          "partId": "b",
+          "prompt": "Calculate energy in kWh for 0.5 hour.",
+          "marks": 1,
+          "answerKey": "E = 0.1 kW × 0.5 h = 0.05 kWh."
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "A bulb draws 0.5 A from a 6 V battery. Find its resistance and the charge passing in 2 minutes.",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "Calculate the resistance.",
+              "marks": 1,
+              "answerKey": "R = V/I = 6/0.5 = 12 Ω."
+            },
+            {
+              "partId": "b",
+              "prompt": "Calculate the charge.",
+              "marks": 1,
+              "answerKey": "Q = It = 0.5 × 120 = 60 C."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "R = V/I = 6/0.5 = 12 Ω.\nQ = It = 0.5 × 120 = 60 C."
+          },
+          "markingScheme": [
+            {
+              "criterion": "R = V/I = 6/0.5 = 12 Ω. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Q = It = 0.5 × 120 = 60 C. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q35-V2",
+      "sectionId": "physics",
+      "chapterId": "light-reflection-and-refraction",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "light-reflection-and-refraction",
+        "natural-phenomena",
+        "numerical"
+      ],
+      "type": "numerical",
+      "marks": 3,
+      "prompt": "A convex lens forms a real image three times the height of an object placed 20 cm from the lens. Calculate image distance and focal length using the Cartesian sign convention.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "For a real inverted image, m = v/u = −3 and u = −20 cm, so v = +60 cm.\nUsing 1/f = 1/v − 1/u = 1/60 + 1/20 = 1/15 cm⁻¹.\nTherefore f = +15 cm, consistent with a convex lens."
+      },
+      "markingScheme": [
+        {
+          "criterion": "For a real inverted image, m = v/u = −3 and u = −20 cm, so v = +60 cm.",
+          "marks": 1
+        },
+        {
+          "criterion": "Using 1/f = 1/v − 1/u = 1/60 + 1/20 = 1/15 cm⁻¹.",
+          "marks": 1
+        },
+        {
+          "criterion": "Therefore f = +15 cm, consistent with a convex lens.",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q35-V3",
+      "sectionId": "physics",
+      "chapterId": "light-reflection-and-refraction",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "light-reflection-and-refraction",
+        "natural-phenomena",
+        "numerical"
+      ],
+      "type": "numerical",
+      "marks": 3,
+      "prompt": "An object is placed 30 cm in front of a concave mirror and forms a real image 60 cm in front of it. Calculate focal length and magnification.",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Using the Cartesian sign convention, u = −30 cm and v = −60 cm.\nMirror formula: 1/f = 1/v + 1/u = −1/60 − 1/30 = −1/20 cm⁻¹, so f = −20 cm.\nMagnification m = −v/u = −(−60)/(−30) = −2; the image is inverted and twice the size."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Using the Cartesian sign convention, u = −30 cm and v = −60 cm.",
+          "marks": 1
+        },
+        {
+          "criterion": "Mirror formula: 1/f = 1/v + 1/u = −1/60 − 1/30 = −1/20 cm⁻¹, so f = −20 cm.",
+          "marks": 1
+        },
+        {
+          "criterion": "Magnification m = −v/u = −(−60)/(−30) = −2; the image is inverted and twice the size.",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q36-V2",
+      "sectionId": "physics",
+      "chapterId": "magnetic-effects-of-electric-current",
+      "unitId": "effects-of-current",
+      "topicTags": [
+        "magnetic-effects-of-electric-current",
+        "effects-of-current",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "State Fleming's Left-Hand Rule and explain how it predicts the direction of force on a current-carrying conductor.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "The thumb, forefinger and middle finger of the left hand are stretched mutually perpendicular.\nThe forefinger represents magnetic field direction and the middle finger represents conventional current direction.\nThe thumb indicates the direction of force or motion."
+      },
+      "markingScheme": [
+        {
+          "criterion": "The thumb, forefinger and middle finger of the left hand are stretched mutually perpendicular. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The forefinger represents magnetic field direction and the middle finger represents conventional current direction. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The thumb indicates the direction of force or motion. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How are the three fingers placed?",
+          "marks": 1,
+          "answerKey": "The thumb, forefinger and middle finger of the left hand are stretched mutually perpendicular."
+        },
+        {
+          "partId": "b",
+          "prompt": "What do the forefinger and middle finger represent?",
+          "marks": 1,
+          "answerKey": "The forefinger represents magnetic field direction and the middle finger represents conventional current direction."
+        },
+        {
+          "partId": "c",
+          "prompt": "What does the thumb indicate?",
+          "marks": 1,
+          "answerKey": "The thumb indicates the direction of force or motion."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q36-V3",
+      "sectionId": "physics",
+      "chapterId": "magnetic-effects-of-electric-current",
+      "unitId": "effects-of-current",
+      "topicTags": [
+        "magnetic-effects-of-electric-current",
+        "effects-of-current",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Describe the magnetic field pattern around a straight current-carrying conductor and explain how field strength changes.",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "They form concentric circles around the straight conductor.\nThe Right-Hand Thumb Rule gives the direction.\nIt becomes stronger when current increases and weaker as distance from the conductor increases."
+      },
+      "markingScheme": [
+        {
+          "criterion": "They form concentric circles around the straight conductor. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The Right-Hand Thumb Rule gives the direction. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It becomes stronger when current increases and weaker as distance from the conductor increases. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What is the shape of the magnetic field lines?",
+          "marks": 1,
+          "answerKey": "They form concentric circles around the straight conductor."
+        },
+        {
+          "partId": "b",
+          "prompt": "Which rule gives the direction of this field?",
+          "marks": 1,
+          "answerKey": "The Right-Hand Thumb Rule gives the direction."
+        },
+        {
+          "partId": "c",
+          "prompt": "How does the field depend on current and distance?",
+          "marks": 1,
+          "answerKey": "It becomes stronger when current increases and weaker as distance from the conductor increases."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q37-V2",
+      "sectionId": "physics",
+      "chapterId": "electricity",
+      "unitId": "effects-of-current",
+      "topicTags": [
+        "electricity",
+        "effects-of-current",
+        "diagram-based"
+      ],
+      "type": "diagram-based",
+      "marks": 3,
+      "prompt": "Use the circuit diagram to calculate equivalent resistance, total current and current through the 6 Ω branch.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "1/R = 1/6 + 1/3 = 1/2, so R = 2 Ω.\nI = V/R = 12/2 = 6 A.\nI = V/R = 12/6 = 2 A."
+      },
+      "markingScheme": [
+        {
+          "criterion": "1/R = 1/6 + 1/3 = 1/2, so R = 2 Ω. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "I = V/R = 12/2 = 6 A. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "I = V/R = 12/6 = 2 A. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Calculate the equivalent resistance of 6 Ω and 3 Ω in parallel.",
+          "marks": 1,
+          "answerKey": "1/R = 1/6 + 1/3 = 1/2, so R = 2 Ω."
+        },
+        {
+          "partId": "b",
+          "prompt": "Calculate the total current from the 12 V battery.",
+          "marks": 1,
+          "answerKey": "I = V/R = 12/2 = 6 A."
+        },
+        {
+          "partId": "c",
+          "prompt": "Calculate the current through the 6 Ω resistor.",
+          "marks": 1,
+          "answerKey": "I = V/R = 12/6 = 2 A."
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/exam-papers/science/parallel-circuit-6-3.svg",
+          "alt": "A 12 V battery connected to 6 ohm and 3 ohm resistors in parallel",
+          "caption": "Schematic for the question"
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q37-V3",
+      "sectionId": "physics",
+      "chapterId": "electricity",
+      "unitId": "effects-of-current",
+      "topicTags": [
+        "electricity",
+        "effects-of-current",
+        "diagram-based"
+      ],
+      "type": "diagram-based",
+      "marks": 3,
+      "prompt": "Use the circuit diagram to calculate equivalent resistance, total current and current through the 12 Ω branch.",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "1/R = 1/4 + 1/12 = 1/3, so R = 3 Ω.\nI = V/R = 12/3 = 4 A.\nI = V/R = 12/12 = 1 A."
+      },
+      "markingScheme": [
+        {
+          "criterion": "1/R = 1/4 + 1/12 = 1/3, so R = 3 Ω. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "I = V/R = 12/3 = 4 A. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "I = V/R = 12/12 = 1 A. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Calculate the equivalent resistance of 4 Ω and 12 Ω in parallel.",
+          "marks": 1,
+          "answerKey": "1/R = 1/4 + 1/12 = 1/3, so R = 3 Ω."
+        },
+        {
+          "partId": "b",
+          "prompt": "Calculate the total current from the battery.",
+          "marks": 1,
+          "answerKey": "I = V/R = 12/3 = 4 A."
+        },
+        {
+          "partId": "c",
+          "prompt": "Calculate the current through the 12 Ω resistor.",
+          "marks": 1,
+          "answerKey": "I = V/R = 12/12 = 1 A."
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/exam-papers/science/parallel-circuit-4-12.svg",
+          "alt": "A 12 V battery connected to 4 ohm and 12 ohm resistors in parallel",
+          "caption": "Schematic for the question"
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q38-V2",
+      "sectionId": "physics",
+      "chapterId": "magnetic-effects-of-electric-current",
+      "unitId": "effects-of-current",
+      "topicTags": [
+        "magnetic-effects-of-electric-current",
+        "effects-of-current",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A bicycle dynamo lights a lamp as its wheel rotates. Explain the energy conversion and observations. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Rotation changes the magnetic flux linked with the coil and induces an emf.\nMechanical energy is converted into electrical energy, then into light and heat in the lamp.\nFaster rotation causes a more rapid change in magnetic flux and can increase the induced emf and current.\nThe phenomenon is electromagnetic induction."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Rotation changes the magnetic flux linked with the coil and induces an emf. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Mechanical energy is converted into electrical energy, then into light and heat in the lamp. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Faster rotation causes a more rapid change in magnetic flux and can increase the induced emf and current. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The phenomenon is electromagnetic induction. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What causes an emf to be induced in the coil?",
+          "marks": 1,
+          "answerKey": "Rotation changes the magnetic flux linked with the coil and induces an emf."
+        },
+        {
+          "partId": "b",
+          "prompt": "What energy conversion occurs?",
+          "marks": 1,
+          "answerKey": "Mechanical energy is converted into electrical energy, then into light and heat in the lamp."
+        },
+        {
+          "partId": "c",
+          "prompt": "Why does the lamp become brighter at higher speed?",
+          "marks": 1,
+          "answerKey": "Faster rotation causes a more rapid change in magnetic flux and can increase the induced emf and current."
+        },
+        {
+          "partId": "d",
+          "prompt": "Name the phenomenon used in a dynamo.",
+          "marks": 1,
+          "answerKey": "The phenomenon is electromagnetic induction."
+        }
+      ],
+      "stimulus": "A magnet rotates near a coil in a bicycle dynamo. The coil is connected to a lamp. The lamp glows more brightly when the bicycle moves faster.",
+      "alternatives": [
+        {
+          "prompt": "An electric motor rotates a fan. Explain the role of the coil, magnetic field and split-ring commutator.",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "What force acts on the current-carrying coil?",
+              "marks": 1,
+              "answerKey": "Opposite magnetic forces on the two sides of the coil produce a turning effect."
+            },
+            {
+              "partId": "b",
+              "prompt": "Which rule predicts the force direction?",
+              "marks": 1,
+              "answerKey": "Fleming's Left-Hand Rule predicts the direction of force."
+            },
+            {
+              "partId": "c",
+              "prompt": "What is the function of the split-ring commutator?",
+              "marks": 1,
+              "answerKey": "It reverses current in the coil after each half-turn so the coil continues rotating in the same direction."
+            },
+            {
+              "partId": "d",
+              "prompt": "Name the energy conversion in a motor.",
+              "marks": 1,
+              "answerKey": "Electrical energy is converted into mechanical energy."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Opposite magnetic forces on the two sides of the coil produce a turning effect.\nFleming's Left-Hand Rule predicts the direction of force.\nIt reverses current in the coil after each half-turn so the coil continues rotating in the same direction.\nElectrical energy is converted into mechanical energy."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Opposite magnetic forces on the two sides of the coil produce a turning effect. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Fleming's Left-Hand Rule predicts the direction of force. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "It reverses current in the coil after each half-turn so the coil continues rotating in the same direction. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Electrical energy is converted into mechanical energy. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q38-V3",
+      "sectionId": "physics",
+      "chapterId": "magnetic-effects-of-electric-current",
+      "unitId": "effects-of-current",
+      "topicTags": [
+        "magnetic-effects-of-electric-current",
+        "effects-of-current",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A solenoid is used as an electromagnet to lift scrap iron. Explain how its strength can be controlled. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Electric current flowing through the coil produces a magnetic field.\nIncrease the current or increase the number of turns per unit length.\nSoft iron becomes strongly magnetised and concentrates the magnetic field.\nThe electromagnet loses most of its magnetism and releases the iron objects."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Electric current flowing through the coil produces a magnetic field. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Increase the current or increase the number of turns per unit length. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Soft iron becomes strongly magnetised and concentrates the magnetic field. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The electromagnet loses most of its magnetism and releases the iron objects. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How does the solenoid produce a magnetic field?",
+          "marks": 1,
+          "answerKey": "Electric current flowing through the coil produces a magnetic field."
+        },
+        {
+          "partId": "b",
+          "prompt": "State two ways to increase the strength of the field.",
+          "marks": 1,
+          "answerKey": "Increase the current or increase the number of turns per unit length."
+        },
+        {
+          "partId": "c",
+          "prompt": "Why is a soft-iron core inserted?",
+          "marks": 1,
+          "answerKey": "Soft iron becomes strongly magnetised and concentrates the magnetic field."
+        },
+        {
+          "partId": "d",
+          "prompt": "What happens when the current is switched off?",
+          "marks": 1,
+          "answerKey": "The electromagnet loses most of its magnetism and releases the iron objects."
+        }
+      ],
+      "stimulus": "A coil of insulated wire is wound around a soft-iron core. When connected to a battery, it attracts iron objects; when the switch is opened, the attraction largely disappears.",
+      "alternatives": [
+        {
+          "prompt": "A current-carrying wire is placed in a magnetic field. Explain the force and how its direction can be reversed.",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "What happens to the wire when current flows?",
+              "marks": 1,
+              "answerKey": "The wire experiences a force due to the interaction of its magnetic field with the external field."
+            },
+            {
+              "partId": "b",
+              "prompt": "Which rule predicts the direction of force?",
+              "marks": 1,
+              "answerKey": "Fleming's Left-Hand Rule predicts the direction."
+            },
+            {
+              "partId": "c",
+              "prompt": "How can the force direction be reversed?",
+              "marks": 1,
+              "answerKey": "Reverse either the current direction or the magnetic field direction."
+            },
+            {
+              "partId": "d",
+              "prompt": "When is the force greatest for a fixed current and field?",
+              "marks": 1,
+              "answerKey": "It is greatest when the conductor is perpendicular to the magnetic field."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "The wire experiences a force due to the interaction of its magnetic field with the external field.\nFleming's Left-Hand Rule predicts the direction.\nReverse either the current direction or the magnetic field direction.\nIt is greatest when the conductor is perpendicular to the magnetic field."
+          },
+          "markingScheme": [
+            {
+              "criterion": "The wire experiences a force due to the interaction of its magnetic field with the external field. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Fleming's Left-Hand Rule predicts the direction. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Reverse either the current direction or the magnetic field direction. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "It is greatest when the conductor is perpendicular to the magnetic field. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q39-V2",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "human-eye-and-colourful-world",
+        "natural-phenomena",
+        "diagram-based"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Use the ray diagram to explain correction of hypermetropia (long-sightedness).",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Nearby objects are not seen clearly; their image would form behind the retina.\nThe eyeball may be too short or the eye lens may have insufficient converging power.\nA convex (converging) lens is used.\nIt converges rays before they enter the eye so the eye lens can focus the image on the retina.\nThe final image should form on the retina."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Nearby objects are not seen clearly; their image would form behind the retina. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The eyeball may be too short or the eye lens may have insufficient converging power. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "A convex (converging) lens is used. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It converges rays before they enter the eye so the eye lens can focus the image on the retina. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The final image should form on the retina. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What difficulty does a hypermetropic person experience?",
+          "marks": 1,
+          "answerKey": "Nearby objects are not seen clearly; their image would form behind the retina."
+        },
+        {
+          "partId": "b",
+          "prompt": "State one possible cause of hypermetropia.",
+          "marks": 1,
+          "answerKey": "The eyeball may be too short or the eye lens may have insufficient converging power."
+        },
+        {
+          "partId": "c",
+          "prompt": "Which lens corrects this defect?",
+          "marks": 1,
+          "answerKey": "A convex (converging) lens is used."
+        },
+        {
+          "partId": "d",
+          "prompt": "How does the correcting lens help?",
+          "marks": 1,
+          "answerKey": "It converges rays before they enter the eye so the eye lens can focus the image on the retina."
+        },
+        {
+          "partId": "e",
+          "prompt": "Where should the final image form?",
+          "marks": 1,
+          "answerKey": "The final image should form on the retina."
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/exam-papers/science/hypermetropia-correction.svg",
+          "alt": "Convex spectacle lens helping a hypermetropic eye focus near-object rays on the retina",
+          "caption": "Schematic for the question"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Use the prism diagram to explain dispersion of white light and identify its extreme colours.",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "Define dispersion of light.",
+              "marks": 1,
+              "answerKey": "Dispersion is the splitting of white light into its constituent colours by a prism."
+            },
+            {
+              "partId": "b",
+              "prompt": "Name the seven principal colours in order.",
+              "marks": 1,
+              "answerKey": "Violet, indigo, blue, green, yellow, orange and red (VIBGYOR)."
+            },
+            {
+              "partId": "c",
+              "prompt": "Which colour is deviated least?",
+              "marks": 1,
+              "answerKey": "Red is deviated the least."
+            },
+            {
+              "partId": "d",
+              "prompt": "Which colour is deviated most?",
+              "marks": 1,
+              "answerKey": "Violet is deviated the most."
+            },
+            {
+              "partId": "e",
+              "prompt": "Why do the colours separate?",
+              "marks": 1,
+              "answerKey": "The refractive index of glass depends on wavelength, so colours refract by different amounts."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Dispersion is the splitting of white light into its constituent colours by a prism.\nViolet, indigo, blue, green, yellow, orange and red (VIBGYOR).\nRed is deviated the least.\nViolet is deviated the most.\nThe refractive index of glass depends on wavelength, so colours refract by different amounts."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Dispersion is the splitting of white light into its constituent colours by a prism. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Violet, indigo, blue, green, yellow, orange and red (VIBGYOR). (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Red is deviated the least. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Violet is deviated the most. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "The refractive index of glass depends on wavelength, so colours refract by different amounts. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ],
+          "images": [
+            {
+              "src": "assets/exam-papers/science/prism-dispersion-spectrum.svg",
+              "alt": "White light entering a triangular prism and emerging as a spectrum",
+              "caption": "Schematic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-PHY-Q39-V3",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "human-eye-and-colourful-world",
+        "natural-phenomena",
+        "diagram-based"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Use the prism diagram to explain dispersion and the order of colours in the spectrum.",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Dispersion is the splitting of white light into its constituent colours.\nRed light deviates the least.\nViolet light deviates the most.\nThe refractive index of glass varies with wavelength, so different colours refract by different amounts.\nThe band is called a spectrum and contains the seven principal visible colours."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Dispersion is the splitting of white light into its constituent colours. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Red light deviates the least. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Violet light deviates the most. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The refractive index of glass varies with wavelength, so different colours refract by different amounts. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The band is called a spectrum and contains the seven principal visible colours. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What is dispersion?",
+          "marks": 1,
+          "answerKey": "Dispersion is the splitting of white light into its constituent colours."
+        },
+        {
+          "partId": "b",
+          "prompt": "Which colour deviates least?",
+          "marks": 1,
+          "answerKey": "Red light deviates the least."
+        },
+        {
+          "partId": "c",
+          "prompt": "Which colour deviates most?",
+          "marks": 1,
+          "answerKey": "Violet light deviates the most."
+        },
+        {
+          "partId": "d",
+          "prompt": "Why does a prism separate the colours?",
+          "marks": 1,
+          "answerKey": "The refractive index of glass varies with wavelength, so different colours refract by different amounts."
+        },
+        {
+          "partId": "e",
+          "prompt": "Name the band of colours produced.",
+          "marks": 1,
+          "answerKey": "The band is called a spectrum and contains the seven principal visible colours."
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/exam-papers/science/prism-dispersion-spectrum.svg",
+          "alt": "White light entering a triangular prism and emerging as a visible spectrum",
+          "caption": "Schematic for the question"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Use the ray diagram to explain the correction of hypermetropia.",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "Where would the image of a nearby object form in an uncorrected hypermetropic eye?",
+              "marks": 1,
+              "answerKey": "It would form behind the retina."
+            },
+            {
+              "partId": "b",
+              "prompt": "Which lens is used for correction?",
+              "marks": 1,
+              "answerKey": "A convex (converging) lens is used."
+            },
+            {
+              "partId": "c",
+              "prompt": "How does the spectacle lens modify incoming rays?",
+              "marks": 1,
+              "answerKey": "It converges the rays before they enter the eye."
+            },
+            {
+              "partId": "d",
+              "prompt": "Where is the final image focused?",
+              "marks": 1,
+              "answerKey": "The eye lens focuses the image on the retina."
+            },
+            {
+              "partId": "e",
+              "prompt": "State one possible cause of hypermetropia.",
+              "marks": 1,
+              "answerKey": "The eyeball may be too short or the eye lens may have insufficient converging power."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "It would form behind the retina.\nA convex (converging) lens is used.\nIt converges the rays before they enter the eye.\nThe eye lens focuses the image on the retina.\nThe eyeball may be too short or the eye lens may have insufficient converging power."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It would form behind the retina. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "A convex (converging) lens is used. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "It converges the rays before they enter the eye. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "The eye lens focuses the image on the retina. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "The eyeball may be too short or the eye lens may have insufficient converging power. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ],
+          "images": [
+            {
+              "src": "assets/exam-papers/science/hypermetropia-correction.svg",
+              "alt": "Convex spectacle lens correcting near vision",
+              "caption": "Schematic"
+            }
+          ]
+        }
+      ]
     }
   ],
   "generationDesign": {
