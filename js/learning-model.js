@@ -110,7 +110,7 @@
         updatedAt: timestamp
       });
       if (!mistake.firstMissedAt) mistake.firstMissedAt = timestamp;
-      if (row.status === "answered" && isCorrect === false) mistake.status = "open";
+      if (row.status === "skipped" || (row.status === "answered" && isCorrect === false)) mistake.status = "open";
     } else if (mistake && mistake.status !== "mastered") {
       data.mistakes = data.mistakes.filter(item => item.questionKey !== key);
     }
