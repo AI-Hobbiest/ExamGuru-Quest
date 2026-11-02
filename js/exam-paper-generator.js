@@ -153,6 +153,22 @@ function generatePaper(bp,bank,options={}){
  const paper={schemaVersion:1,kind:"exam-paper-snapshot",paperId:String(options.paperId||("paper-"+Math.abs(hashCode(String(options.seed||Date.now())+bp.blueprintId)).toString(36))),title:options.title||bp.title,blueprintId:bp.blueprintId,blueprintVersion:bp.version,academicYear:bp.academicYear,classId:bp.classId,subjectId:bp.subjectId,subjectCode:bp.subjectCode||null,durationMinutes:bp.durationMinutes,totalQuestions:chosen.length,totalMarks:sum(chosen.map(q=>q.marks)),seed:String(options.seed||"examguru-paper"),generatedAt:options.generatedAt||new Date().toISOString(),sourceBankVersion:bank.bankVersion,blueprintSnapshot:clone(bp),sectionResults:sections,questions:chosen};
  const pc=validatePaper(paper,bp);if(!pc.valid)throw Error("Generated paper failed validation: "+pc.errors.join(" "));return paper;
 }
+function paperFingerprint(paper){
+ if(!paper||!Array.isArray(paper.questions))return "";
+ const questions=paper.questions.slice().sort((a,b)=>Number(a.paperQuestionNumber||0)-Number(b.paperQuestionNumber||0));
+ return JSON.stringify(questions.map(q=>String(q.questionId||"")));
+}
+function generateUniquePaper(bp,bank,options={}){
+ const recent=new Set((options.recentPaperFingerprints||[]).map(String).filter(Boolean));
+ const attempts=Number.isInteger(options.uniqueSearchAttempts)&&options.uniqueSearchAttempts>0?Math.min(options.uniqueSearchAttempts,5000):250;
+ const baseSeed=String(options.seed||("examguru-paper-"+Date.now()));
+ for(let i=0;i<attempts;i++){
+  const paper=generatePaper(bp,bank,{...options,seed:baseSeed+"-"+i,recentQuestionIds:[]});
+  const fingerprint=paperFingerprint(paper);
+  if(fingerprint&&!recent.has(fingerprint)){paper.paperFingerprint=fingerprint;return paper;}
+ }
+ throw Error("Could not generate a paper combination distinct from the last 50 attempts. Review or expand the approved question pool.");
+}
 function hashCode(s){let h=0;for(let i=0;i<s.length;i++)h=((h<<5)-h+s.charCodeAt(i))|0;return h;}
 function validatePaper(p,bp){
  const e=[];if(!obj(p)||p.kind!=="exam-paper-snapshot")return{valid:false,errors:["Invalid paper snapshot."]};
@@ -185,5 +201,5 @@ function validatePaper(p,bp){
  return{valid:e.length===0,errors:e};
 }
 function createQuestionBankTemplate(){return{schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subjectId:"science",academicYear:"2026-27",bankVersion:"draft-1",title:"Class 10 Science mixed-question pool",questions:[{questionId:"SCI10-BIO-EXAMPLE-001",sectionId:"biology",chapterId:"life-processes",topicTags:["nutrition"],type:"short-answer",marks:2,prompt:"Replace this with an original, syllabus-eligible question.",difficulty:"medium",competency:"application",approvalStatus:"draft",markingScheme:[{criterion:"First marking point",marks:1},{criterion:"Second marking point",marks:1}],answerKey:{modelAnswer:"Replace with an accurate model answer."},source:{type:"original",reference:"Author/reviewer details"}}]};}
-window.C10ExamPaperGenerator=Object.freeze({schemaVersion:1,questionTypes:TYPES,difficulties:DIFFICULTIES,competencies:COMPETENCIES,validateQuestion,validateQuestionBank,validateBlueprint,expandSlotPlan,auditSlotCoverage,generatePaper,validatePaper,createQuestionBankTemplate});
+window.C10ExamPaperGenerator=Object.freeze({schemaVersion:1,questionTypes:TYPES,difficulties:DIFFICULTIES,competencies:COMPETENCIES,validateQuestion,validateQuestionBank,validateBlueprint,expandSlotPlan,auditSlotCoverage,generatePaper,paperFingerprint,generateUniquePaper,validatePaper,createQuestionBankTemplate});
 })();
