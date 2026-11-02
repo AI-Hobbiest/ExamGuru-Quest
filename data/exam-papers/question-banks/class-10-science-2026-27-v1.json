@@ -4,9 +4,9 @@
   "classId": "10",
   "subjectId": "science",
   "academicYear": "2026-27",
-  "bankVersion": "examguru-cbse-2026-27-science-v1.0",
-  "title": "ExamGuru Original Class 10 Science Paper Pool · 2026–27",
-  "questionPoolStatus": "pilot-content-review",
+  "bankVersion": "examguru-cbse-2026-27-science-v1.1",
+  "title": "ExamGuru Original Class 10 Science Paper Pool · Expanded · 2026–27",
+  "questionPoolStatus": "expanded-for-repetition-resistant-generation",
   "questions": [
     {
       "questionId": "SCI10-BIO-Q01-V1",
@@ -2661,6 +2661,1423 @@
           ]
         }
       ]
+    },
+    {
+      "questionId": "SCI10-BIO-Q01-V2",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which plant tissue conducts water and dissolved mineral ions from roots towards the leaves?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Xylem",
+        "explanation": "Xylem vessels and tracheids conduct water and dissolved minerals mainly upwards."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Phloem"
+        },
+        {
+          "optionId": "B",
+          "text": "Xylem"
+        },
+        {
+          "optionId": "C",
+          "text": "Epidermis"
+        },
+        {
+          "optionId": "D",
+          "text": "Cambium"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-BIO-Q01-V3",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A student covers most stomata on a leaf with petroleum jelly. Which process is most directly reduced?",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. Transpiration",
+        "explanation": "Stomata provide the main route for water vapour loss from leaves."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Transpiration"
+        },
+        {
+          "optionId": "B",
+          "text": "Translocation of sucrose"
+        },
+        {
+          "optionId": "C",
+          "text": "Mineral absorption by root hairs"
+        },
+        {
+          "optionId": "D",
+          "text": "Formation of chlorophyll"
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-BIO-Q02-V2",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A person has reduced activity of salivary amylase. Which food component will begin digestion less effectively in the mouth?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Starch",
+        "explanation": "Salivary amylase begins the digestion of starch in the mouth."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Proteins"
+        },
+        {
+          "optionId": "B",
+          "text": "Starch"
+        },
+        {
+          "optionId": "C",
+          "text": "Fats"
+        },
+        {
+          "optionId": "D",
+          "text": "Vitamins"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-BIO-Q02-V3",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A blockage prevents bile from entering the small intestine. Which digestive function is most directly affected?",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. Emulsification of fats",
+        "explanation": "Bile salts emulsify large fat globules into smaller droplets, helping lipase act efficiently."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Emulsification of fats"
+        },
+        {
+          "optionId": "B",
+          "text": "Digestion of starch by amylase"
+        },
+        {
+          "optionId": "C",
+          "text": "Digestion of proteins by pepsin"
+        },
+        {
+          "optionId": "D",
+          "text": "Absorption of oxygen"
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-BIO-Q03-V2",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "In a nephron, where does filtration of blood take place?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Glomerulus into Bowman's capsule",
+        "explanation": "Blood is filtered through the glomerular capillaries into Bowman's capsule."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Collecting duct"
+        },
+        {
+          "optionId": "B",
+          "text": "Glomerulus into Bowman's capsule"
+        },
+        {
+          "optionId": "C",
+          "text": "Ureter"
+        },
+        {
+          "optionId": "D",
+          "text": "Urinary bladder"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-BIO-Q03-V3",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which substance is normally reabsorbed almost completely from the filtrate in a healthy nephron?",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Glucose",
+        "explanation": "Useful glucose is normally selectively reabsorbed from the filtrate."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Urea"
+        },
+        {
+          "optionId": "B",
+          "text": "Glucose"
+        },
+        {
+          "optionId": "C",
+          "text": "Excess water"
+        },
+        {
+          "optionId": "D",
+          "text": "Creatinine"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-BIO-Q04-V2",
+      "sectionId": "biology",
+      "chapterId": "how-do-organisms-reproduce",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "how-do-organisms-reproduce",
+        "world-of-living",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "After a pollen grain lands on a compatible stigma, which structure grows towards the ovule?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Pollen tube",
+        "explanation": "The pollen tube grows through the style towards an ovule and carries the male gametes."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Root hair"
+        },
+        {
+          "optionId": "B",
+          "text": "Pollen tube"
+        },
+        {
+          "optionId": "C",
+          "text": "Seed coat"
+        },
+        {
+          "optionId": "D",
+          "text": "Sepal"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-BIO-Q04-V3",
+      "sectionId": "biology",
+      "chapterId": "how-do-organisms-reproduce",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "how-do-organisms-reproduce",
+        "world-of-living",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which event directly enables the male gamete to reach the female gamete in a flowering plant?",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. Growth of the pollen tube into the embryo sac",
+        "explanation": "The pollen tube delivers male gametes into the embryo sac where fertilisation occurs."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Growth of the pollen tube into the embryo sac"
+        },
+        {
+          "optionId": "B",
+          "text": "Opening of the anther"
+        },
+        {
+          "optionId": "C",
+          "text": "Formation of the fruit wall"
+        },
+        {
+          "optionId": "D",
+          "text": "Germination of the seed"
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-BIO-Q05-V2",
+      "sectionId": "biology",
+      "chapterId": "control-and-coordination",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "control-and-coordination",
+        "world-of-living",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which gland secretes thyroxine, a hormone involved in regulating metabolism?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Thyroid",
+        "explanation": "Thyroxine is secreted by the thyroid gland; iodine is needed for its synthesis."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Pancreas"
+        },
+        {
+          "optionId": "B",
+          "text": "Thyroid"
+        },
+        {
+          "optionId": "C",
+          "text": "Adrenal"
+        },
+        {
+          "optionId": "D",
+          "text": "Pituitary"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-BIO-Q05-V3",
+      "sectionId": "biology",
+      "chapterId": "control-and-coordination",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "control-and-coordination",
+        "world-of-living",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which hormone is released during an emergency and can increase heart rate?",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Adrenaline",
+        "explanation": "Adrenaline prepares the body for a rapid response by increasing heart rate and directing blood to muscles."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Insulin"
+        },
+        {
+          "optionId": "B",
+          "text": "Adrenaline"
+        },
+        {
+          "optionId": "C",
+          "text": "Thyroxine"
+        },
+        {
+          "optionId": "D",
+          "text": "Oestrogen"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-BIO-Q06-V2",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which component of blood contains haemoglobin and carries most oxygen?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Red blood cells",
+        "explanation": "Haemoglobin in red blood cells binds oxygen and transports it to tissues."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Platelets"
+        },
+        {
+          "optionId": "B",
+          "text": "Red blood cells"
+        },
+        {
+          "optionId": "C",
+          "text": "White blood cells"
+        },
+        {
+          "optionId": "D",
+          "text": "Plasma"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-BIO-Q06-V3",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A person has a reduced haemoglobin level. Which body function is most likely to be impaired?",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. Oxygen delivery to body tissues",
+        "explanation": "Haemoglobin is the oxygen-carrying pigment in red blood cells."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Oxygen delivery to body tissues"
+        },
+        {
+          "optionId": "B",
+          "text": "Blood clotting"
+        },
+        {
+          "optionId": "C",
+          "text": "Antibody production"
+        },
+        {
+          "optionId": "D",
+          "text": "Digestion of fats"
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-BIO-Q07-V2",
+      "sectionId": "biology",
+      "chapterId": "our-environment",
+      "unitId": "natural-resources",
+      "topicTags": [
+        "our-environment",
+        "natural-resources",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "In a food chain, an organism that feeds directly on producers is a:",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. Primary consumer",
+        "explanation": "Primary consumers obtain energy directly from producers."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Primary consumer"
+        },
+        {
+          "optionId": "B",
+          "text": "Secondary consumer"
+        },
+        {
+          "optionId": "C",
+          "text": "Top carnivore"
+        },
+        {
+          "optionId": "D",
+          "text": "Decomposer only"
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-BIO-Q07-V3",
+      "sectionId": "biology",
+      "chapterId": "our-environment",
+      "unitId": "natural-resources",
+      "topicTags": [
+        "our-environment",
+        "natural-resources",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A pesticide that does not break down easily enters a pond. Which observation best indicates biological magnification?",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Highest concentration in top-level fish",
+        "explanation": "Persistent pollutants may become more concentrated at successive trophic levels."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Equal concentration in water and every organism"
+        },
+        {
+          "optionId": "B",
+          "text": "Highest concentration in top-level fish"
+        },
+        {
+          "optionId": "C",
+          "text": "Highest concentration in algae only"
+        },
+        {
+          "optionId": "D",
+          "text": "No pesticide in consumers"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-BIO-Q08-V2",
+      "sectionId": "biology",
+      "chapterId": "our-environment",
+      "unitId": "natural-resources",
+      "topicTags": [
+        "our-environment",
+        "natural-resources",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Assertion (A): Decomposers help maintain nutrient availability in an ecosystem. Reason (R): They break down dead organisms and release simpler substances into the environment.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both statements are true and the reason explains nutrient recycling."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "assertionReason": {
+        "assertion": "Decomposers help maintain nutrient availability in an ecosystem.",
+        "reason": "They break down dead organisms and release simpler substances into the environment."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-BIO-Q08-V3",
+      "sectionId": "biology",
+      "chapterId": "our-environment",
+      "unitId": "natural-resources",
+      "topicTags": [
+        "our-environment",
+        "natural-resources",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Assertion (A): Energy available to organisms generally decreases at successive trophic levels. Reason (R): Only a small fraction of energy is transferred from one trophic level to the next.",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both statements are true; energy is used in life processes and lost as heat at each transfer."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "assertionReason": {
+        "assertion": "Energy available to organisms generally decreases at successive trophic levels.",
+        "reason": "Only a small fraction of energy is transferred from one trophic level to the next."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-BIO-Q09-V2",
+      "sectionId": "biology",
+      "chapterId": "control-and-coordination",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "control-and-coordination",
+        "world-of-living",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Assertion (A): A shoot generally bends towards a source of light. Reason (R): Cells on the shaded side elongate more than cells on the illuminated side.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both statements are true and explain positive phototropism."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "assertionReason": {
+        "assertion": "A shoot generally bends towards a source of light.",
+        "reason": "Cells on the shaded side elongate more than cells on the illuminated side."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-BIO-Q09-V3",
+      "sectionId": "biology",
+      "chapterId": "control-and-coordination",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "control-and-coordination",
+        "world-of-living",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Assertion (A): Adrenaline prepares the body for an emergency situation. Reason (R): It can increase heart rate and blood supply to skeletal muscles.",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both statements are true and the reason describes part of the fight-or-flight response."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "assertionReason": {
+        "assertion": "Adrenaline prepares the body for an emergency situation.",
+        "reason": "It can increase heart rate and blood supply to skeletal muscles."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-BIO-Q10-V2",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 2,
+      "prompt": "State two functions of pancreatic juice in digestion.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Pancreatic amylase acts on starch and breaks it into simpler sugars.\nPancreatic proteases such as trypsin digest proteins, while pancreatic lipase digests fats."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Pancreatic amylase acts on starch and breaks it into simpler sugars. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Pancreatic proteases such as trypsin digest proteins, while pancreatic lipase digests fats. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Name an enzyme in pancreatic juice that acts on starch.",
+          "marks": 1,
+          "answerKey": "Pancreatic amylase acts on starch and breaks it into simpler sugars."
+        },
+        {
+          "partId": "b",
+          "prompt": "Name enzymes in pancreatic juice that digest proteins and fats.",
+          "marks": 1,
+          "answerKey": "Pancreatic proteases such as trypsin digest proteins, while pancreatic lipase digests fats."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-BIO-Q10-V3",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 2,
+      "prompt": "Explain two ways in which bile helps digestion in the small intestine.",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Bile is produced by the liver and stored in the gall bladder.\nBile salts emulsify fats into tiny droplets, and the alkaline bile helps neutralise acidic chyme entering the small intestine."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Bile is produced by the liver and stored in the gall bladder. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Bile salts emulsify fats into tiny droplets, and the alkaline bile helps neutralise acidic chyme entering the small intestine. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Where is bile made and where is it stored?",
+          "marks": 1,
+          "answerKey": "Bile is produced by the liver and stored in the gall bladder."
+        },
+        {
+          "partId": "b",
+          "prompt": "State its two main digestive roles.",
+          "marks": 1,
+          "answerKey": "Bile salts emulsify fats into tiny droplets, and the alkaline bile helps neutralise acidic chyme entering the small intestine."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-BIO-Q11-V2",
+      "sectionId": "biology",
+      "chapterId": "control-and-coordination",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "control-and-coordination",
+        "world-of-living",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 2,
+      "prompt": "Explain how a synapse transmits a nerve impulse between two neurons. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "It triggers release of neurotransmitter molecules from synaptic vesicles.\nThe neurotransmitter diffuses across the synaptic gap and binds to receptors, initiating a new electrical impulse."
+      },
+      "markingScheme": [
+        {
+          "criterion": "It triggers release of neurotransmitter molecules from synaptic vesicles. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The neurotransmitter diffuses across the synaptic gap and binds to receptors, initiating a new electrical impulse. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What happens when an impulse reaches the axon terminal?",
+          "marks": 1,
+          "answerKey": "It triggers release of neurotransmitter molecules from synaptic vesicles."
+        },
+        {
+          "partId": "b",
+          "prompt": "How does the next neuron receive the signal?",
+          "marks": 1,
+          "answerKey": "The neurotransmitter diffuses across the synaptic gap and binds to receptors, initiating a new electrical impulse."
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Describe how insulin helps regulate blood glucose. (Internal choice: answer either this or the main question.)",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "Which organ releases insulin when blood glucose rises?",
+              "marks": 1,
+              "answerKey": "The pancreas releases insulin from beta cells."
+            },
+            {
+              "partId": "b",
+              "prompt": "How does insulin lower blood glucose?",
+              "marks": 1,
+              "answerKey": "It promotes glucose uptake by cells and conversion of excess glucose to glycogen, especially in liver and muscle."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "The pancreas releases insulin from beta cells.\nIt promotes glucose uptake by cells and conversion of excess glucose to glycogen, especially in liver and muscle."
+          },
+          "markingScheme": [
+            {
+              "criterion": "The pancreas releases insulin from beta cells. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "It promotes glucose uptake by cells and conversion of excess glucose to glycogen, especially in liver and muscle. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-BIO-Q11-V3",
+      "sectionId": "biology",
+      "chapterId": "control-and-coordination",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "control-and-coordination",
+        "world-of-living",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 2,
+      "prompt": "Explain why plant responses are generally slower than nervous responses in animals. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Many are coordinated by chemical growth regulators such as auxins.\nThey often depend on changes in growth or cell chemistry rather than rapid electrical impulses through specialised nerves."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Many are coordinated by chemical growth regulators such as auxins. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "They often depend on changes in growth or cell chemistry rather than rapid electrical impulses through specialised nerves. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How are many plant responses coordinated?",
+          "marks": 1,
+          "answerKey": "Many are coordinated by chemical growth regulators such as auxins."
+        },
+        {
+          "partId": "b",
+          "prompt": "Why are these responses usually slow?",
+          "marks": 1,
+          "answerKey": "They often depend on changes in growth or cell chemistry rather than rapid electrical impulses through specialised nerves."
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "State the role of thyroxine and explain why iodine is needed in the diet. (Internal choice: answer either this or the main question.)",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "State one major role of thyroxine.",
+              "marks": 1,
+              "answerKey": "Thyroxine helps regulate metabolism and supports normal growth and development."
+            },
+            {
+              "partId": "b",
+              "prompt": "Why is iodine important?",
+              "marks": 1,
+              "answerKey": "The thyroid gland needs iodine to synthesise thyroxine; deficiency may cause goitre."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Thyroxine helps regulate metabolism and supports normal growth and development.\nThe thyroid gland needs iodine to synthesise thyroxine; deficiency may cause goitre."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Thyroxine helps regulate metabolism and supports normal growth and development. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "The thyroid gland needs iodine to synthesise thyroxine; deficiency may cause goitre. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-BIO-Q12-V2",
+      "sectionId": "biology",
+      "chapterId": "how-do-organisms-reproduce",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "how-do-organisms-reproduce",
+        "world-of-living",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 2,
+      "prompt": "Describe two events that occur after fertilisation in a flowering plant.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "The zygote divides and develops into an embryo.\nThe ovule develops into a seed and the ovary develops into a fruit."
+      },
+      "markingScheme": [
+        {
+          "criterion": "The zygote divides and develops into an embryo. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The ovule develops into a seed and the ovary develops into a fruit. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What develops from the zygote?",
+          "marks": 1,
+          "answerKey": "The zygote divides and develops into an embryo."
+        },
+        {
+          "partId": "b",
+          "prompt": "What usually happens to the ovule and ovary?",
+          "marks": 1,
+          "answerKey": "The ovule develops into a seed and the ovary develops into a fruit."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-BIO-Q12-V3",
+      "sectionId": "biology",
+      "chapterId": "how-do-organisms-reproduce",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "how-do-organisms-reproduce",
+        "world-of-living",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 2,
+      "prompt": "Differentiate between pollination and fertilisation in a flowering plant.",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Pollination is the transfer of pollen grains from anther to stigma.\nFertilisation is the fusion of male and female gametes to form a zygote."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Pollination is the transfer of pollen grains from anther to stigma. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Fertilisation is the fusion of male and female gametes to form a zygote. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Define pollination.",
+          "marks": 1,
+          "answerKey": "Pollination is the transfer of pollen grains from anther to stigma."
+        },
+        {
+          "partId": "b",
+          "prompt": "Define fertilisation.",
+          "marks": 1,
+          "answerKey": "Fertilisation is the fusion of male and female gametes to form a zygote."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-BIO-Q13-V2",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain how water is transported from roots to leaves and how food is transported in plants.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Water enters root hairs mainly by osmosis from the soil.\nXylem transports water and minerals; transpiration pull helps draw water upwards.\nPhloem transports soluble food from sources such as leaves to sinks by translocation, which uses energy."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Water enters root hairs mainly by osmosis from the soil. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Xylem transports water and minerals; transpiration pull helps draw water upwards. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Phloem transports soluble food from sources such as leaves to sinks by translocation, which uses energy. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How do root hairs absorb water?",
+          "marks": 1,
+          "answerKey": "Water enters root hairs mainly by osmosis from the soil."
+        },
+        {
+          "partId": "b",
+          "prompt": "Which tissue transports water upwards, and what helps this movement?",
+          "marks": 1,
+          "answerKey": "Xylem transports water and minerals; transpiration pull helps draw water upwards."
+        },
+        {
+          "partId": "c",
+          "prompt": "Which tissue transports soluble food?",
+          "marks": 1,
+          "answerKey": "Phloem transports soluble food from sources such as leaves to sinks by translocation, which uses energy."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-BIO-Q13-V3",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain how alveoli are adapted for efficient gas exchange in humans.",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Gas exchange takes place across the walls of the alveoli.\nAlveoli are numerous, have thin moist walls and are surrounded by a dense capillary network.\nOxygen diffuses from alveolar air into blood, while carbon dioxide diffuses from blood into the alveoli."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Gas exchange takes place across the walls of the alveoli. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Alveoli are numerous, have thin moist walls and are surrounded by a dense capillary network. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Oxygen diffuses from alveolar air into blood, while carbon dioxide diffuses from blood into the alveoli. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Where does gas exchange take place in the lungs?",
+          "marks": 1,
+          "answerKey": "Gas exchange takes place across the walls of the alveoli."
+        },
+        {
+          "partId": "b",
+          "prompt": "State two structural adaptations of alveoli.",
+          "marks": 1,
+          "answerKey": "Alveoli are numerous, have thin moist walls and are surrounded by a dense capillary network."
+        },
+        {
+          "partId": "c",
+          "prompt": "State the directions in which oxygen and carbon dioxide diffuse.",
+          "marks": 1,
+          "answerKey": "Oxygen diffuses from alveolar air into blood, while carbon dioxide diffuses from blood into the alveoli."
+        }
+      ]
     }
-  ]
+  ],
+  "generationDesign": {
+    "minimumEligibleCandidatesPerSlot": 3,
+    "recentCompletedPapersToAvoid": 2,
+    "slotCount": 39,
+    "questionCount": 117,
+    "notes": "Each blueprint slot is being expanded to three approved candidates. Practice generation excludes IDs in the two most recent locally recorded papers."
+  }
 }
