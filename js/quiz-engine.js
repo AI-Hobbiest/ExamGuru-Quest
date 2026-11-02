@@ -30,7 +30,7 @@ const config = SUBJECTS[subject];
 let chapters=[], mode="learn", session=[], index=0, picked=null, answers=[], lastMissed=[];
 const olympiadBlueprintId="sof-iso-class-6-level-1";
 const olympiadAvailable=classId==="6"&&subject==="science-sof"&&!!window.C10OlympiadBlueprints;
-const isExamMode=()=>isExamMode()||mode==="olympiad";
+const isExamMode=()=>mode==="test"||mode==="timed"||mode==="olympiad";
 let currentAttempt=null, completedAttempt=null, clockHandle=null, ledger;
 const emptyProgress = () => ({missed:[],answered:0,correct:0,attempts:[]});
 const validProgress = value => !!value && Array.isArray(value.missed) &&
@@ -387,7 +387,10 @@ function start(){
   if(mode==="olympiad"){
     if(!olympiadAvailable){setText("modeHint","The SOF Class 6 full mock is available only in the Class 6 Science SOF bank.");return;}
     try{
-      examPlan=window.C10OlympiadBlueprints.buildPaper(chapters,olympiadBlueprintId);
+      const recentlyUsed=ledger.attempts
+        .filter(attempt=>attempt&&attempt.examBlueprintId===olympiadBlueprintId&&Array.isArray(attempt.questionIds))
+        .slice(0,3).flatMap(attempt=>attempt.questionIds);
+      examPlan=window.C10OlympiadBlueprints.buildPaper(chapters,olympiadBlueprintId,Math.random,{recentQuestionIds:recentlyUsed});
       pool=examPlan.questions;
     }catch(error){setText("modeHint","The Olympiad paper could not be assembled: "+error.message);return;}
   }else{
