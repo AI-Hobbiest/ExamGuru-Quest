@@ -8,8 +8,8 @@ const html=read("admin.html"),manager=read("js/admin-manager.js"),css=read("css/
 assert.ok(html.includes("Admin publishing:") && html.includes("trusted repository maintainer"),"GitHub repository permissions control publishing");
 assert.ok(html.includes('id="centralStudentUsername"'),"admin can assign a distinct student username");
 assert.ok(manager.includes("apiReady&&protectedTabs.has(name)&&!isAdminAuthenticated()"),"authoring and report tabs require an authenticated administrator");
-for(const section of ["overview","banks","classes","knowledge","students","leaderboard","access","operations"])assert.ok(html.includes('data-tab="'+section+'"'),"missing Admin section "+section);
-for(const item of ["id=\"bankClass\"","id=\"bankSubject\"","id=\"bankTargetTitle\"","id=\"questionList\"","id=\"imageFile\"","id=\"addClassBtn\"","id=\"resourceFile\"","id=\"studentBackups\"","id=\"exportReportBtn\"","id=\"leaderboardTable\""])assert.ok(html.includes(item),"missing Admin control "+item);
+for(const section of ["overview","banks","classes","knowledge","students","leaderboard","access","operations","exam-papers"])assert.ok(html.includes('data-tab="'+section+'"'),"missing Admin section "+section);
+for(const item of ["id=\"bankClass\"","id=\"bankSubject\"","id=\"bankTargetTitle\"","id=\"questionList\"","id=\"imageFile\"","id=\"addClassBtn\"","id=\"resourceFile\"","id=\"studentBackups\"","id=\"exportReportBtn\"","id=\"leaderboardTable\"","id=\"paperBlueprintSummary\"","id=\"paperPoolFile\"","id=\"generatePaperBtn\""])assert.ok(html.includes(item),"missing Admin control "+item);
 assert.ok(html.includes("data/student-accounts.json") && html.includes("not secure authentication"),"flat-file account limits are disclosed");
 assert.ok(html.includes("staticAccountClass") && html.includes("updateStaticAccountClassBtn") && html.includes("students cannot edit their assigned class"),"flat-file account creation and admin-only class promotion controls exist");
 assert.ok(manager.includes('username:$("centralStudentUsername").value.trim().toLowerCase()'),"student creation submits a username separately from the Student ID");

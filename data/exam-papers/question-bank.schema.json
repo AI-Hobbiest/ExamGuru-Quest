@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/exam-papers/question-bank.schema.json",
+  "title": "ExamGuru Exam Paper Question Bank v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "classId",
+    "subjectId",
+    "academicYear",
+    "bankVersion",
+    "questions"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "kind": {
+      "const": "exam-paper-question-bank"
+    },
+    "classId": {
+      "const": "10"
+    },
+    "subjectId": {
+      "const": "science"
+    },
+    "academicYear": {
+      "type": "string"
+    },
+    "bankVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "questionId",
+          "sectionId",
+          "chapterId",
+          "type",
+          "marks",
+          "prompt",
+          "difficulty",
+          "competency",
+          "approvalStatus"
+        ],
+        "properties": {
+          "questionId": {
+            "type": "string"
+          },
+          "sectionId": {
+            "enum": [
+              "biology",
+              "chemistry",
+              "physics"
+            ]
+          },
+          "chapterId": {
+            "type": "string"
+          },
+          "topicTags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "type": {
+            "enum": [
+              "mcq",
+              "assertion-reason",
+              "very-short-answer",
+              "short-answer",
+              "long-answer",
+              "case-based",
+              "numerical",
+              "diagram-based"
+            ]
+          },
+          "marks": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "stimulus": {
+            "type": "string"
+          },
+          "parts": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "optionId",
+                "text"
+              ],
+              "properties": {
+                "optionId": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "correctOptionId": {
+            "type": "string"
+          },
+          "assertionReason": {
+            "type": "object"
+          },
+          "answerKey": {},
+          "markingScheme": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "prompt"
+              ],
+              "properties": {
+                "prompt": {
+                  "type": "string"
+                },
+                "parts": {
+                  "type": "array"
+                }
+              }
+            }
+          },
+          "difficulty": {
+            "enum": [
+              "easy",
+              "medium",
+              "hard"
+            ]
+          },
+          "competency": {
+            "enum": [
+              "knowledge-understanding",
+              "application",
+              "analysis-evaluation-creation"
+            ]
+          },
+          "approvalStatus": {
+            "enum": [
+              "draft",
+              "review",
+              "approved",
+              "rejected",
+              "retired"
+            ]
+          },
+          "source": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

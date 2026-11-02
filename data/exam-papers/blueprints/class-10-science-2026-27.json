@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "kind": "exam-paper-blueprint",
+  "blueprintId": "cbse-class-10-science-086-2026-27",
+  "version": 1,
+  "title": "CBSE Class 10 Science (086) · Annual Examination 2026–27",
+  "board": "CBSE",
+  "academicYear": "2026-27",
+  "classId": "10",
+  "subjectId": "science",
+  "subjectCode": "086",
+  "status": "draft",
+  "statusReason": "The 80-mark / 3-hour / 39-question structure and section totals are recorded. The official mark/type/internal-choice slot map must be audited question-by-question before generation is enabled.",
+  "durationMinutes": 180,
+  "totalQuestions": 39,
+  "totalMarks": 80,
+  "sections": [
+    {
+      "sectionId": "biology",
+      "title": "Section A · Biology",
+      "questionNumberRange": {
+        "start": 1,
+        "end": 16
+      },
+      "questionCount": 16,
+      "totalMarks": 30
+    },
+    {
+      "sectionId": "chemistry",
+      "title": "Section B · Chemistry",
+      "questionNumberRange": {
+        "start": 17,
+        "end": 29
+      },
+      "questionCount": 13,
+      "totalMarks": 25
+    },
+    {
+      "sectionId": "physics",
+      "title": "Section C · Physics",
+      "questionNumberRange": {
+        "start": 30,
+        "end": 39
+      },
+      "questionCount": 10,
+      "totalMarks": 25
+    }
+  ],
+  "syllabusUnitWeightage": [
+    {
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "title": "Chemical Substances – Nature and Behaviour",
+      "marks": 25
+    },
+    {
+      "unitId": "world-of-living",
+      "title": "World of Living",
+      "marks": 25
+    },
+    {
+      "unitId": "natural-phenomena",
+      "title": "Natural Phenomena",
+      "marks": 12
+    },
+    {
+      "unitId": "effects-of-current",
+      "title": "Effects of Current",
+      "marks": 13
+    },
+    {
+      "unitId": "natural-resources",
+      "title": "Natural Resources",
+      "marks": 5
+    }
+  ],
+  "supportedQuestionTypes": [
+    "mcq",
+    "assertion-reason",
+    "very-short-answer",
+    "short-answer",
+    "long-answer",
+    "case-based",
+    "numerical",
+    "diagram-based"
+  ],
+  "slotPlan": [],
+  "generalInstructions": [
+    "All questions are compulsory unless an internal choice is provided.",
+    "Read the instructions and marks assigned to each question carefully.",
+    "Attempt questions in the section in which they are placed.",
+    "For questions with an internal choice, attempt only one alternative."
+  ],
+  "sources": [
+    {
+      "label": "CBSE Class X Sample Question Paper & Marking Scheme 2026–27",
+      "url": "https://cbseacademic.nic.in/SQP_CLASSX_2026-27.html",
+      "authority": "official"
+    },
+    {
+      "label": "CBSE Curriculum 2026–27",
+      "url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "authority": "official"
+    }
+  ],
+  "notes": [
+    "Section and total marks are recorded for the 2026–27 sample-paper structure.",
+    "The slotPlan is intentionally empty. Do not change status to ready until each question number, mark value, question type and internal-choice relationship has been checked against the official paper and marking scheme.",
+    "Syllabus unit weightage is independent of Biology/Chemistry/Physics section mark totals.",
+    "Existing MCQ banks are not automatically eligible until chapter/topic scope is audited against the 2026–27 syllabus."
+  ]
+}

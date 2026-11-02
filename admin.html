@@ -48,6 +48,7 @@
       <button class="admin-tab-button active" data-tab="overview" type="button"><span class="admin-tab-icon">🏠</span>Overview</button>
       <button class="admin-tab-button" data-tab="banks" type="button"><span class="admin-tab-icon">🧩</span>Question banks</button>
       <button class="admin-tab-button" data-tab="classes" type="button"><span class="admin-tab-icon">🏫</span>Classes</button>
+      <button class="admin-tab-button" data-tab="exam-papers" type="button"><span class="admin-tab-icon">📝</span>Exam Paper Studio</button>
       <button class="admin-tab-button" data-tab="knowledge" type="button"><span class="admin-tab-icon">📚</span>Knowledge base</button>
       <button class="admin-tab-button" data-tab="students" type="button"><span class="admin-tab-icon">👩‍🎓</span>Students &amp; reports</button>
       <button class="admin-tab-button" data-tab="leaderboard" type="button"><span class="admin-tab-icon">🏆</span>Leaderboards</button>
@@ -150,6 +151,33 @@
         <div id="classesTable" class="admin-table-wrap"></div>
       </section>
 
+      <section class="admin-panel" id="tab-exam-papers">
+        <h2>Exam Paper Studio</h2>
+        <p class="admin-muted">Blueprint-driven CBSE-style paper creation. This foundation release adds the mixed-question generator and Class 10 Science blueprint. Generation remains locked until the exact official question-level mark/type/internal-choice slot map is verified.</p>
+        <div class="admin-notice"><strong>Current profile:</strong> CBSE · Class 10 · Science (086) · 2026–27 · 80 marks · 3 hours · 39 numbered questions. Section totals are configured; the precise slot map remains under audit.</div>
+        <div class="admin-form-grid">
+          <div class="admin-field"><label>Examination profile</label><input value="CBSE · Class 10 · Science (086) · 2026–27" readonly></div>
+          <div class="admin-field"><label for="paperBlueprintState">Blueprint status</label><input id="paperBlueprintState" value="Loading…" readonly></div>
+          <div class="admin-field full"><label>Paper summary</label><div id="paperTotalSummary" class="admin-status">Loading blueprint…</div></div>
+        </div>
+        <div id="paperBlueprintSummary" class="admin-feature-list"></div>
+        <hr class="admin-rule">
+        <h3>Approved paper question pool</h3>
+        <p class="admin-inline-help">Import a versioned JSON question pool. Supported types include MCQ, assertion–reason, very short, short and long answer, case-based, numerical and diagram-based. Only approvalStatus = approved questions can be selected.</p>
+        <div class="admin-form-grid"><div class="admin-field full"><label for="paperPoolFile">Question-bank JSON file</label><input class="admin-file" type="file" id="paperPoolFile" accept=".json,application/json"></div></div>
+        <div class="admin-actions"><button class="admin-btn" type="button" id="importPaperPoolBtn">Import question pool to this browser</button><button class="admin-btn secondary" type="button" id="downloadPaperPoolTemplateBtn">Download JSON template</button></div>
+        <div class="admin-form-grid">
+          <div class="admin-field"><label>Question pool status</label><div id="paperPoolState" class="admin-status">No pool imported</div></div>
+          <div class="admin-field full"><label>Approved questions by section</label><div id="paperPoolSummary" class="admin-feature-list">No local question pool imported.</div></div>
+        </div>
+        <hr class="admin-rule">
+        <div class="admin-actions"><button class="admin-btn" type="button" id="generatePaperBtn" disabled>Generate paper (blueprint pending)</button></div>
+        <div id="paperStudioStatus" class="admin-status" role="status" aria-live="polite">Loading examination blueprint…</div>
+        <div id="paperPreviewStatus" class="admin-muted">No paper generated in this session.</div>
+        <div id="paperPreview" class="admin-feature-list"></div>
+        <div id="paperResultActions" class="admin-actions" hidden><button class="admin-btn secondary" type="button" id="downloadPaperJsonBtn">Download paper JSON</button><button class="admin-btn secondary" type="button" id="printStudentPaperBtn">Print student paper / Save PDF</button><button class="admin-btn secondary" type="button" id="printTeacherPaperBtn">Print teacher copy / Save PDF</button></div>
+        <div class="admin-footnote">Imported question pools and generated drafts are stored in this browser only. They are not committed to GitHub automatically. Do not import confidential examination content into this public-repository MVP.</div>
+      </section>
       <section class="admin-panel" id="tab-knowledge">
         <h2>Knowledge base and source files</h2>
         <p class="admin-muted">Track books, course notes, revision guides and visual references separately from MCQ banks. Published resources appear in the student Study Library. Add an optional class list and learner-facing description; leave classes blank to make a resource available to every class. Only publish after the file is committed at its exact path and redistribution rights are confirmed.</p>
@@ -361,6 +389,9 @@
 <script src="./js/session-model.js"></script>
 <script src="./js/profile-model.js"></script>
 <script src="./js/admin-manager.js"></script>
+<script src="./js/exam-paper-generator.js"></script>
+<script src="./js/exam-paper-renderer.js"></script>
+<script src="./js/exam-paper-studio.js"></script>
 <script src="./js/static-account-admin.js"></script>
 <script src="./js/family-access-admin.js"></script>
 <script src="./js/family-access-admin.js"></script>
