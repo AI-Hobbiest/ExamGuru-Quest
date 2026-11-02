@@ -265,7 +265,7 @@
     link.style.display="none";
     document.body.appendChild(link);link.click();link.remove();
     setTimeout(()=>URL.revokeObjectURL(url),1000);
-    setStatus("JSON backup prepared. Keep the downloaded file private; it contains profile, test history, mistakes and bookmarks.");
+    setStatus("JSON backup prepared. Keep the downloaded file private; it contains profile, test history, mistakes, bookmarks and Study Library progress.");
   }
 
   async function importBackup(event){
@@ -281,7 +281,7 @@
       }
       const entries=bankEntriesForClass(bundle.profile.classLevel),legacyBackup=LEGACY_SUBJECTS.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject));
       if(!entries.every(entry=>bundle.subjectData[entry.id])&&!legacyBackup)throw new Error("The backup is missing one or more class-specific subject records.");
-      if(!confirm("Import this backup and replace the local profile, subject history, Mistake Book and personal bookmarks for this class on this browser? A backup created before Stage C has no learning library and will clear the current one. Export your current data first if you need to keep it."))return;
+      if(!confirm("Import this backup and replace the local profile, subject history, Mistake Book, personal bookmarks and Study Library progress for this student on this browser? A backup created before Stage C has no learning library; an older backup without Study Library progress will clear those saved/completed markers. Export your current data first if you need to keep it."))return;
       profile=window.C10ProfileModel.normalizeProfile(bundle.profile,bundle.profile.profileId);
       if(!window.C10ProfileModel.validateProfile(profile))throw new Error("The profile fields in this backup are incomplete.");profileStore.save(profile);
       for(const entry of entries){const data=bundle.subjectData[entry.id]||bundle.subjectData[entry.subjectId]||{progress:{missed:[],answered:0,correct:0,attempts:[]},ledger:{attempts:[],activeAttempt:null,answerRecords:[]}};
