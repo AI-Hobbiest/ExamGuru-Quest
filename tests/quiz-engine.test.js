@@ -348,5 +348,72 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
   assert.ok(practiceHtml.includes('data-mode="olympiad"'),"practice page exposes the Olympiad mode");
   assert.ok(practiceHtml.indexOf("./js/olympiad-blueprints.js")<practiceHtml.indexOf("./js/session-model.js"),"blueprint helper loads before session model");
 
-  console.log("Quiz integration tests passed: mobile question focus and navigator, timers, autosave/recovery, review downloads, weighted SOF mock construction, section navigation and section-wise results.");
+  async function verifyAdditionalOlympiadTrack(subjectId, bankPath, blueprintId, shortName, expectedCounts) {
+    const bank = JSON.parse(fs.readFileSync(bankPath, "utf8"));
+    const env = makeEnvironment(new Map(), subjectId, "6", bank);
+    await delay();
+    const modeButton = env.modeButtons.find(button => button.dataset.mode === "olympiad");
+    assert.equal(modeButton.classList.contains("hide"), false, shortName + " full mock is visible for its Class 6 SOF bank");
+    assert.ok(modeButton.textContent.includes(shortName), shortName + " mode has a subject-specific label");
+    modeButton.click();
+    assert.equal(env.elements.overallTimerSetting.value, "3600", shortName + " forces the fixed 60-minute timer");
+    assert.equal(env.elements.questionTimerSetting.value, "off", shortName + " disables the question countdown");
+    assert.ok(env.elements.olympiadBlueprintTitle.textContent.includes(shortName), shortName + " shows its own exam blueprint title");
+    assert.ok(env.elements.olympiadBlueprintGrid.innerHTML.length > 0, shortName + " renders its section allocation");
+    env.elements.startBtn.click();
+    assert.equal(env.elements.numberPill.textContent, "Question 1 / 50", shortName + " launches a 50-question paper");
+    const ledgerRow = [...env.values.entries()].find(([key]) =>
+      key.includes("test-attempt-ledger") && key.endsWith("class-6-" + subjectId));
+    assert.ok(ledgerRow, shortName + " saves into the existing subject attempt ledger");
+    const active = JSON.parse(ledgerRow[1]).data.activeAttempt;
+    assert.equal(active.examType, "olympiad");
+    assert.equal(active.examBlueprintId, blueprintId);
+    assert.equal(active.timeLimitSeconds, 3600);
+    assert.equal(active.questionTimeLimitSeconds, null);
+    assert.equal(active.questions.length, 50);
+    assert.equal(new Set(active.questionIds).size, 50, shortName + " paper has no repeated question IDs");
+    assert.deepEqual(active.sectionBlueprint.map(section => section.questionCount), expectedCounts);
+    assert.deepEqual(active.sectionBlueprint.map(section => section.maxMarks),
+      expectedCounts.map((count, index) => index === expectedCounts.length - 1 ? 15 : count));
+
+    env.elements.mobileNavigatorBtn.click();
+    assert.equal(env.elements.questionNavigatorGrid.children.length, 50, shortName + " mobile palette lists all questions");
+    assert.equal(env.elements.navigatorSectionSummary.children.length, 4, shortName + " palette exposes four section chips");
+    env.elements.navigatorSectionSummary.children[3].click();
+    assert.equal(env.elements.numberPill.textContent, "Question 46 / 50", shortName + " section chip jumps to Achievers");
+    assert.equal(env.elements.chapterPill.textContent, "Achievers Section");
+    const achieverAnswer = active.questions[45].answer;
+    env.elements.options.children[achieverAnswer].click();
+    env.elements.submitBtn.click();
+    assert.equal(env.elements.results.classList.contains("hide"), false, shortName + " result screen opens on submission");
+    const resultRow = [...env.values.entries()].find(([key]) =>
+      key.includes("test-attempt-ledger") && key.endsWith("class-6-" + subjectId));
+    const result = JSON.parse(resultRow[1]).data.attempts[0];
+    assert.equal(result.examBlueprintId, blueprintId);
+    assert.equal(result.maxMarks, 60);
+    assert.equal(result.marksEarned, 3, shortName + " Achievers answer earns three weighted marks");
+    assert.equal(result.sectionResults.length, 4);
+    assert.equal(result.sectionResults[3].marksEarned, 3);
+    assert.equal(env.elements.scorePct.textContent, "3 / 60");
+    assert.equal(env.elements.scoreUnit.textContent, "marks");
+    assert.equal(typeof env.elements.reportExcelBtn.onclick, "function");
+    assert.equal(typeof env.elements.reportPdfBtn.onclick, "function");
+  }
+
+  await verifyAdditionalOlympiadTrack(
+    "mathematics-sof",
+    "data/class-6-mathematics-sof.json",
+    "sof-imo-class-6-level-1",
+    "IMO",
+    [15, 20, 10, 5]
+  );
+  await verifyAdditionalOlympiadTrack(
+    "english-sof",
+    "data/class-6-english-sof.json",
+    "sof-ieo-class-6-level-1",
+    "IEO",
+    [30, 10, 5, 5]
+  );
+
+  console.log("Quiz integration tests passed: mobile question focus and navigator, timers, autosave/recovery, review downloads, NSO, IMO and IEO mock construction, section navigation and section-wise results.");
 })().catch(error=>{console.error(error);process.exitCode=1;});
