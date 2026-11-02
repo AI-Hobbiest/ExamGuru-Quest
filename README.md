@@ -201,3 +201,21 @@ Class 3 Mathematics and English are routed through the shared practice engine. C
 - This is a convenience login for the local-first prototype, **not secure authentication**. The repository is public: parent usernames, pseudonymous student IDs, family links, salts and password hashes are visible. Do not use full legal names, email addresses, phone numbers, sensitive family details or passwords reused elsewhere. Treat classroom-only passwords as temporary.
 - Student history remains on the browser/device where it was created. A parent can see linked children only when their local data is present on the same browser/device. No cross-device or cloud progress sync is enabled.
 - The account and relationship model uses stable IDs so the final database migration can replace file-based lookup and local persistence without changing the parent–student relationship design.
+
+
+## Exam Paper Studio — foundation release
+
+The Admin Workspace includes the first blueprint-driven Exam Paper Studio foundation for CBSE Class 10 Science (086), academic year 2026–27. The new mixed-question data contract and browser-side generator/validator support MCQ, assertion–reason, very short answer, short answer, long answer, case-based, numerical and diagram-based questions. The new system is separate from the existing MCQ practice engine and does not change legacy bank normalisation.
+
+The versioned blueprint records the 80-mark / 3-hour / 39-question paper, its Biology (30), Chemistry (25) and Physics (25) sections, and syllabus unit weightage. Its status remains **draft** until the official sample paper's question-by-question mark/type/internal-choice slot map has been transcribed and independently checked. Generation is intentionally locked in this foundation release; the generator refuses to fill gaps by guessing. The next content step is to complete that slot audit and create/review the approved mixed-question pool.
+
+Question pools imported into the Studio are saved only in the current browser. Generated paper snapshots carry the source question content and blueprint version. Student and teacher print layouts can be saved as PDF through the browser. No generated papers, student records or confidential examination content are committed to this public repository.
+
+- Blueprint: `data/exam-papers/blueprints/class-10-science-2026-27.json`
+- Question-bank contract: `data/exam-papers/question-bank.schema.json`
+- Generator: `js/exam-paper-generator.js`
+- Renderer: `js/exam-paper-renderer.js`
+- Admin integration: `js/exam-paper-studio.js`
+- Tests: `tests/exam-paper-generator.test.js` and `tests/exam-paper-renderer.test.js`
+
+References: [CBSE Class X 2026–27 sample-paper page](https://cbseacademic.nic.in/SQP_CLASSX_2026-27.html) and [CBSE 2026–27 curriculum](https://cbseacademic.nic.in/curriculum_2027.html).
