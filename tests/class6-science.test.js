@@ -228,8 +228,8 @@ assert.deepEqual(sofEnglishSections,{
   "Achievers Section":50
 },"SOF IEO has complete official section-tagged pools for Level 1 mock assembly");
 const normalizedSofEnglish=context.window.C10QuestionBank.normalize(sofEnglishBank,"class-6-english-sof");
-assert.equal(normalizedSofEnglish.flatMap(chapter=>chapter.questions).length,500,"SOF English bank normalizes through shared engine");
-assert.equal(new Set(normalizedSofEnglish.flatMap(chapter=>chapter.questions).map(question=>question.questionKey)).size,500,"SOF English question keys are unique");
+assert.equal(normalizedSofEnglish.flatMap(chapter=>chapter.questions).length,600,"SOF English bank normalizes through shared engine");
+assert.equal(new Set(normalizedSofEnglish.flatMap(chapter=>chapter.questions).map(question=>question.questionKey)).size,600,"SOF English question keys are unique");
 assert.ok(engine.includes('"english-sof": { title:"English - SOF"'),"SOF English has its own named subject entry");
 assert.ok(engine.includes('"english","english-sof","social-science"'),"Class 6 English - SOF is included in class-subject routing");
 
