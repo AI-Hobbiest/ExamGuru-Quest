@@ -163,8 +163,10 @@
     const questions = Array.isArray(input.questions) ? input.questions : [];
     const byRef = new Map();
     questions.forEach(question => {
-      [question.questionKey, question.id, question.legacyId].filter(value => value != null)
-        .forEach(value => byRef.set(String(value), question));
+      [question.questionKey, question.id, question.legacyId,
+        question.chapter_no != null && question.id != null ? String(question.chapter_no) + ":" + String(question.id) : null,
+        question.chapter_no != null && question.legacyId != null ? String(question.chapter_no) + ":" + String(question.legacyId) : null
+      ].filter(value => value != null).forEach(value => byRef.set(String(value), question));
     });
     for (const [index, event] of (progress.attempts || []).entries()) {
       const reference = String(event.questionId || event.id || "");
