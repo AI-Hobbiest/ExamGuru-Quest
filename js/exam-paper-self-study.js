@@ -2,7 +2,12 @@
 (() => {
 "use strict";
 const $=id=>document.getElementById(id);
-let blueprint=null,bank=null,paper=null,answers={},remaining=10800,tick=null,submitted=false;
+let blueprint=null,bank=null,paper=null,answers={},remaining=10800,tick=null,submitted=false,paperHistory=[];
+const HISTORY_KEY="eg_exam_paper_history_v1",HISTORY_LIMIT=2;
+function readPaperHistory(){
+ try{const parsed=JSON.parse(localStorage.getItem(HISTORY_KEY)||"[]");if(!Array.isArray(parsed))return[];return parsed.map(item=>({paperId:String(item&&item.paperId||""),generatedAt:String(item&&item.generatedAt||""),questionIds:Array.isArray(item&&item.questionIds)?item.questionIds.map(String).filter(Boolean):[]})).filter(item=>item.questionIds.length).slice(-HISTORY_LIMIT);}catch(_){return[];}
+}
+function savePaperHistory(){try{localStorage.setItem(HISTORY_KEY,JSON.stringify(paperHistory));return true;}catch(_){return false;}}
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function status(s){$("loadStatus").textContent=s;}
 async function load(){
@@ -16,10 +21,22 @@ async function load(){
   const bc=C10ExamPaperGenerator.validateBlueprint(blueprint),qc=C10ExamPaperGenerator.validateQuestionBank(bank,{academicYear:"2026-27"});
   if(!bc.valid||!bc.readyForGeneration)throw Error("The exam blueprint is not approved for generation.");
   if(!qc.valid)throw Error(qc.errors.slice(0,4).join(" "));
-  $("startBtn").disabled=false;status("Ready. Generate a paper when you are settled and have three uninterrupted hours.");
+  const coverage=C10ExamPaperGenerator.auditSlotCoverage(blueprint,bank,3);
+  if(!coverage.valid)throw Error("Unique-paper pool is not ready: "+coverage.errors.slice(0,5).join(" "));
+  paperHistory=readPaperHistory();
+  $("startBtn").disabled=false;status("Ready: 3 or more eligible questions per slot. The next paper avoids questions from your previous two attempts in this browser.");
  }catch(e){status("Unable to prepare the paper: "+e.message);}
 }
-function makePaper(){paper=C10ExamPaperGenerator.generatePaper(blueprint,bank,{seed:"self-study-"+Date.now(),title:"CBSE Class 10 Science · Self-study Paper"});answers={};submitted=false;remaining=blueprint.durationMinutes*60;render();$("setup").classList.add("exam-hidden");$("review").classList.add("exam-hidden");$("attempt").classList.remove("exam-hidden");startTimer();window.scrollTo(0,0);}
+function makePaper(){
+ const recentQuestionIds=[...new Set(paperHistory.slice(-HISTORY_LIMIT).flatMap(item=>item.questionIds||[]))];
+ paper=C10ExamPaperGenerator.generatePaper(blueprint,bank,{seed:"self-study-"+Date.now(),title:"CBSE Class 10 Science · Self-study Paper",recentQuestionIds});
+ answers={};submitted=false;remaining=blueprint.durationMinutes*60;
+ paperHistory=[...paperHistory,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds:paper.questions.map(q=>String(q.questionId))}].slice(-HISTORY_LIMIT);
+ const historySaved=savePaperHistory();
+ render();$("setup").classList.add("exam-hidden");$("review").classList.add("exam-hidden");$("attempt").classList.remove("exam-hidden");
+ $("paperTitle").setAttribute("data-history-saved",historySaved?"true":"false");
+ startTimer();window.scrollTo(0,0);
+}
 function questionMarkup(q,i){
  let html='<article class="exam-question" data-q="'+i+'"><h3>Q'+(q.paperQuestionNumber||i+1)+'. '+esc(q.prompt)+' <span class="exam-muted">['+q.marks+' marks]</span></h3>';
  if(q.stimulus)html+='<p>'+esc(q.stimulus)+'</p>';
