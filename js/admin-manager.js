@@ -554,7 +554,16 @@
     try{
       const data=await parseJsonFile(file);
       if(!data||data.kind!=="knowledge-base-manifest"||!Array.isArray(data.resources))throw new Error("Unsupported knowledge-base manifest.");
-      if(data.resources.some(r=>!r.resourceId||!r.title||!r.path||!r.type||!/^(?!\\/)(?!.*(?:^|\\/)\\.\\.(?:\\/|$))[A-Za-z0-9._~!%()-]+(?:\\/[A-Za-z0-9._~!%()-]+)*$/.test(r.path)||r.status!==undefined&&!["draft","published"].includes(r.status)||r.classIds!==undefined&&(!Array.isArray(r.classIds)||r.classIds.some(id=>!/^[A-Za-z0-9_-]{1,20}$/.test(String(id)))))throw new Error("Every resource needs an ID, title, safe repository path and supported type; class IDs and status must be valid.");
+      const invalidResource=data.resources.some(r=>{
+        const path=String(r&&r.path||"").trim();
+        const parts=path.split("/");
+        const safePath=!!path&&!path.startsWith("/")&&!path.includes(":")&&parts.every(part=>part&&part!=="."&&part!==".."&&/^[A-Za-z0-9._~!%()-]+$/.test(part));
+        const validClasses=r.classIds===undefined||(Array.isArray(r.classIds)&&r.classIds.every(id=>/^[A-Za-z0-9_-]{1,20}$/.test(String(id))));
+        const validStatus=r.status===undefined||["draft","published"].includes(r.status);
+        const hasRights=r.status!=="published"||String(r.rightsNote||"").trim().length>0;
+        return !r.resourceId||!r.title||!r.type||!safePath||!validClasses||!validStatus||!hasRights;
+      });
+      if(invalidResource)throw new Error("Every resource needs an ID, title, type and safe repository path. Class IDs, publication status and rights notes must also be valid.");
       knowledgeManifest=data;manifestDirty=true;renderKnowledgeTable();setStatus("knowledgeStatus","Imported resource manifest as a local draft.","success");
     }catch(error){setStatus("knowledgeStatus",error.message||"Unable to import manifest.","error");}
   }
