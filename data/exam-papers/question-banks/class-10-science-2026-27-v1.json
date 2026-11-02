@@ -5867,6 +5867,368 @@
           ]
         }
       ]
+    },
+    {
+      "questionId": "SCI10-CHE-Q27-V2",
+      "sectionId": "chemistry",
+      "chapterId": "chemical-reactions-and-equations",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "chemical-reactions-and-equations",
+        "chemical-substances-nature-and-behaviour",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Write balanced equations for two reactions and identify their reaction types.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total; teacher moderation is recommended before high-stakes use.",
+      "answerKey": {
+        "modelAnswer": "2Mg + O₂ → 2MgO.\nIt is a combination reaction and also an oxidation reaction.\nZn + 2HCl → ZnCl₂ + H₂."
+      },
+      "markingScheme": [
+        {
+          "criterion": "2Mg + O₂ → 2MgO. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It is a combination reaction and also an oxidation reaction. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Zn + 2HCl → ZnCl₂ + H₂. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write the balanced equation for magnesium burning in oxygen.",
+          "marks": 1,
+          "answerKey": "2Mg + O₂ → 2MgO."
+        },
+        {
+          "partId": "b",
+          "prompt": "Classify this reaction.",
+          "marks": 1,
+          "answerKey": "It is a combination reaction and also an oxidation reaction."
+        },
+        {
+          "partId": "c",
+          "prompt": "Write the balanced equation for zinc reacting with dilute hydrochloric acid.",
+          "marks": 1,
+          "answerKey": "Zn + 2HCl → ZnCl₂ + H₂."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-CHE-Q27-V3",
+      "sectionId": "chemistry",
+      "chapterId": "chemical-reactions-and-equations",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "chemical-reactions-and-equations",
+        "chemical-substances-nature-and-behaviour",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain oxidation and reduction using oxygen transfer with reference to a redox reaction.",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total; teacher moderation is recommended before high-stakes use.",
+      "answerKey": {
+        "modelAnswer": "Oxidation is gain of oxygen.\nReduction is loss of oxygen.\nHydrogen is oxidised to water and copper(II) oxide is reduced to copper."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Oxidation is gain of oxygen. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Reduction is loss of oxygen. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Hydrogen is oxidised to water and copper(II) oxide is reduced to copper. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Define oxidation in terms of oxygen.",
+          "marks": 1,
+          "answerKey": "Oxidation is gain of oxygen."
+        },
+        {
+          "partId": "b",
+          "prompt": "Define reduction in terms of oxygen.",
+          "marks": 1,
+          "answerKey": "Reduction is loss of oxygen."
+        },
+        {
+          "partId": "c",
+          "prompt": "In CuO + H₂ → Cu + H₂O, identify what is oxidised and reduced.",
+          "marks": 1,
+          "answerKey": "Hydrogen is oxidised to water and copper(II) oxide is reduced to copper."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-CHE-Q28-V2",
+      "sectionId": "chemistry",
+      "chapterId": "metals-and-non-metals",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "metals-and-non-metals",
+        "chemical-substances-nature-and-behaviour",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A group compares the behaviour of three metals in water and dilute acid to infer their relative reactivity. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total; teacher moderation is recommended before high-stakes use.",
+      "answerKey": {
+        "modelAnswer": "Metal P is most reactive because it reacts vigorously with cold water.\nIt lies above hydrogen in the reactivity series and displaces hydrogen from the acid.\nIt lies below hydrogen in the reactivity series and cannot displace hydrogen from dilute acid.\nHydrogen burns with a characteristic pop when a burning splint is brought near it."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Metal P is most reactive because it reacts vigorously with cold water. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It lies above hydrogen in the reactivity series and displaces hydrogen from the acid. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It lies below hydrogen in the reactivity series and cannot displace hydrogen from dilute acid. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Hydrogen burns with a characteristic pop when a burning splint is brought near it. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which metal is most reactive?",
+          "marks": 1,
+          "answerKey": "Metal P is most reactive because it reacts vigorously with cold water."
+        },
+        {
+          "partId": "b",
+          "prompt": "Why does metal Q produce bubbles with dilute hydrochloric acid?",
+          "marks": 1,
+          "answerKey": "It lies above hydrogen in the reactivity series and displaces hydrogen from the acid."
+        },
+        {
+          "partId": "c",
+          "prompt": "What does the behaviour of metal R indicate?",
+          "marks": 1,
+          "answerKey": "It lies below hydrogen in the reactivity series and cannot displace hydrogen from dilute acid."
+        },
+        {
+          "partId": "d",
+          "prompt": "Name a test for the gas evolved by Q.",
+          "marks": 1,
+          "answerKey": "Hydrogen burns with a characteristic pop when a burning splint is brought near it."
+        }
+      ],
+      "stimulus": "Metal P reacts vigorously with cold water. Metal Q does not react with cold water but produces bubbles with dilute hydrochloric acid. Metal R shows no visible reaction with dilute hydrochloric acid.",
+      "alternatives": [
+        {
+          "prompt": "Explain why aluminium is used in cooking vessels and copper is used in electrical wiring. (Internal choice: answer either this or the main question.)",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "Why is aluminium suitable for cooking vessels?",
+              "marks": 1,
+              "answerKey": "Aluminium conducts heat well, has low density and forms a protective oxide layer."
+            },
+            {
+              "partId": "b",
+              "prompt": "Why is copper suitable for electrical wiring?",
+              "marks": 1,
+              "answerKey": "Copper has high electrical conductivity and is ductile, so it can be drawn into wires."
+            },
+            {
+              "partId": "c",
+              "prompt": "What does ductility mean?",
+              "marks": 1,
+              "answerKey": "Ductility is the ability of a material to be drawn into thin wires."
+            },
+            {
+              "partId": "d",
+              "prompt": "Why should a metal's properties match its use?",
+              "marks": 1,
+              "answerKey": "The material must provide the required combination of conductivity, strength, density and corrosion resistance."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Aluminium conducts heat well, has low density and forms a protective oxide layer.\nCopper has high electrical conductivity and is ductile, so it can be drawn into wires.\nDuctility is the ability of a material to be drawn into thin wires.\nThe material must provide the required combination of conductivity, strength, density and corrosion resistance."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Aluminium conducts heat well, has low density and forms a protective oxide layer. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Copper has high electrical conductivity and is ductile, so it can be drawn into wires. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Ductility is the ability of a material to be drawn into thin wires. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "The material must provide the required combination of conductivity, strength, density and corrosion resistance. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-CHE-Q28-V3",
+      "sectionId": "chemistry",
+      "chapterId": "metals-and-non-metals",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "metals-and-non-metals",
+        "chemical-substances-nature-and-behaviour",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A student observes reactions of magnesium, copper oxide and lead nitrate solution. Classify the changes. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total; teacher moderation is recommended before high-stakes use.",
+      "answerKey": {
+        "modelAnswer": "2Mg + O₂ → 2MgO.\nIt is a combination reaction and also oxidation.\nBlack copper(II) oxide changes to reddish-brown copper and water is formed.\nCuO + H₂ → Cu + H₂O."
+      },
+      "markingScheme": [
+        {
+          "criterion": "2Mg + O₂ → 2MgO. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It is a combination reaction and also oxidation. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Black copper(II) oxide changes to reddish-brown copper and water is formed. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "CuO + H₂ → Cu + H₂O. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write the balanced equation for magnesium burning in oxygen.",
+          "marks": 1,
+          "answerKey": "2Mg + O₂ → 2MgO."
+        },
+        {
+          "partId": "b",
+          "prompt": "Classify the reaction of magnesium with oxygen.",
+          "marks": 1,
+          "answerKey": "It is a combination reaction and also oxidation."
+        },
+        {
+          "partId": "c",
+          "prompt": "What happens when hydrogen reduces heated copper(II) oxide?",
+          "marks": 1,
+          "answerKey": "Black copper(II) oxide changes to reddish-brown copper and water is formed."
+        },
+        {
+          "partId": "d",
+          "prompt": "Write the balanced equation for this reduction.",
+          "marks": 1,
+          "answerKey": "CuO + H₂ → Cu + H₂O."
+        }
+      ],
+      "stimulus": "Magnesium is burned in air, hydrogen is passed over heated copper(II) oxide, and lead nitrate solution is mixed with potassium iodide solution.",
+      "alternatives": [
+        {
+          "prompt": "Carbon dioxide is passed through limewater and then in excess. Explain the observations.",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "What causes the initial milkiness?",
+              "marks": 1,
+              "answerKey": "Insoluble calcium carbonate forms."
+            },
+            {
+              "partId": "b",
+              "prompt": "Write the initial reaction equation.",
+              "marks": 1,
+              "answerKey": "Ca(OH)₂ + CO₂ → CaCO₃ + H₂O."
+            },
+            {
+              "partId": "c",
+              "prompt": "What forms when excess carbon dioxide is passed?",
+              "marks": 1,
+              "answerKey": "Soluble calcium hydrogen carbonate forms."
+            },
+            {
+              "partId": "d",
+              "prompt": "Write the further reaction equation.",
+              "marks": 1,
+              "answerKey": "CaCO₃ + CO₂ + H₂O → Ca(HCO₃)₂."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Insoluble calcium carbonate forms.\nCa(OH)₂ + CO₂ → CaCO₃ + H₂O.\nSoluble calcium hydrogen carbonate forms.\nCaCO₃ + CO₂ + H₂O → Ca(HCO₃)₂."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Insoluble calcium carbonate forms. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Soluble calcium hydrogen carbonate forms. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "CaCO₃ + CO₂ + H₂O → Ca(HCO₃)₂. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
     }
   ],
   "generationDesign": {
@@ -5874,6 +6236,6 @@
     "recentCompletedPapersToAvoid": 2,
     "slotCount": 39,
     "questionCount": 117,
-    "notes": "Each blueprint slot is being expanded to three approved candidates. Practice generation excludes IDs in the two most recent locally recorded papers."
+    "notes": "Each blueprint slot has three approved candidates. Practice generation excludes IDs in the two most recent locally recorded papers."
   }
 }
