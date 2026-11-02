@@ -51,6 +51,9 @@
         }
       },
       "additionalProperties": false
+    },
+    "learningLibrary": {
+      "$ref": "#/$defs/learningLibrary"
     }
   },
   "$defs": {
@@ -130,6 +133,113 @@
         }
       },
       "additionalProperties": false
+    },
+    "learningLibrary": {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "kind",
+        "mistakes",
+        "bookmarks",
+        "responses"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "learning-library"
+        },
+        "mistakes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "questionKey",
+              "question",
+              "subjectId"
+            ],
+            "properties": {
+              "questionKey": {
+                "type": "string"
+              },
+              "question": {
+                "type": "string"
+              },
+              "subjectId": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "open",
+                  "mastered"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "bookmarks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "questionKey",
+              "question",
+              "subjectId"
+            ],
+            "properties": {
+              "questionKey": {
+                "type": "string"
+              },
+              "question": {
+                "type": "string"
+              },
+              "subjectId": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "responses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "responseId",
+              "questionKey",
+              "subjectId",
+              "status"
+            ],
+            "properties": {
+              "responseId": {
+                "type": "string"
+              },
+              "questionKey": {
+                "type": "string"
+              },
+              "subjectId": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "answered",
+                  "skipped"
+                ]
+              },
+              "isCorrect": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
     }
   },
   "additionalProperties": false

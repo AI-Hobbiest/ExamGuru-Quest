@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Your personal Mistake Book, saved questions, topic mastery and revision recommendations.">
+<title>My Learning Hub | ExamGuru Quest</title>
+<link rel="stylesheet" href="./css/branding.css">
+<link rel="stylesheet" href="./css/app-shell.css">
+<link rel="stylesheet" href="./css/theme-roles-v2.css?v=quest2">
+<style>
+:root{color-scheme:light}
+body{margin:0;background:var(--c10-bg,#f5f6fb);color:var(--c10-ink,#25233e);font-family:var(--c10-font,Inter,system-ui,sans-serif)}
+.learning-header{padding:24px max(18px,calc((100vw - 1120px)/2));background:linear-gradient(115deg,#efedff,#f7fbff);border-bottom:1px solid #e2e3f0}
+.learning-header a{color:#51449e;text-decoration:none;font-weight:750}
+.learning-header h1{font-size:clamp(1.65rem,4vw,2.25rem);margin:16px 0 5px;color:#292655}
+.learning-header p{margin:0;color:#626982;max-width:760px;line-height:1.55}
+.learning-wrap{width:min(1120px,calc(100% - 32px));margin:22px auto 56px}
+.learning-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}
+.learning-stat,.learning-panel{background:#fff;border:1px solid #e2e5ef;border-radius:17px;box-shadow:0 6px 20px rgba(45,48,90,.045)}
+.learning-stat{padding:15px 16px}
+.learning-stat strong{display:block;font-size:1.6rem;color:#39357e;line-height:1.15}
+.learning-stat span{display:block;margin-top:5px;font-size:.78rem;color:#737b90;font-weight:700}
+.learning-panel{padding:18px;margin:16px 0}
+.learning-panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.learning-panel h2{font-size:1.12rem;margin:0;color:#2d2b58}
+.learning-help{font-size:.82rem;color:#727a90;margin:5px 0 0;line-height:1.5}
+.learning-filters{display:flex;gap:8px;flex-wrap:wrap}
+.learning-filters select{border:1px solid #d9ddeb;border-radius:10px;padding:8px 10px;background:#fff;color:#31314e;font:inherit;font-size:.83rem}
+.learning-list{display:grid;gap:10px}
+.learning-card{border:1px solid #e5e7f0;border-radius:13px;padding:14px;background:#fff}
+.learning-card-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.learning-meta{font-size:.75rem;color:#71798f;line-height:1.5}
+.learning-question{font-weight:800;line-height:1.5;margin:9px 0;color:#282747}
+.learning-explanation{font-size:.85rem;line-height:1.5;color:#555e76;margin:8px 0 0}
+.learning-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:10px 0}
+.learning-option{padding:8px 10px;border-radius:9px;background:#f5f6fa;color:#454c62;font-size:.8rem;line-height:1.4}
+.learning-option.correct{background:#e8f5ec;color:#23613b;font-weight:750}
+.learning-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.learning-actions a,.learning-actions button{display:inline-flex;align-items:center;justify-content:center;border:1px solid #d9dcef;border-radius:10px;padding:8px 11px;background:#f7f7ff;color:#48418f;text-decoration:none;font-size:.79rem;font-weight:800;cursor:pointer}
+.learning-actions button{background:#fff;color:#5c637a}
+.learning-badge{display:inline-flex;align-items:center;border-radius:99px;padding:4px 8px;background:#efedff;color:#504798;font-size:.7rem;font-weight:800}
+.learning-badge.warning{background:#fff2dc;color:#835915}
+.learning-badge.good{background:#e9f5ed;color:#27623e}
+.learning-recommendations{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.learning-recommendation{border:1px solid #e3e4f0;border-radius:13px;padding:13px;background:#fafaff}
+.learning-recommendation strong{display:block;color:#38366e;font-size:.9rem;line-height:1.35}
+.learning-recommendation p{font-size:.8rem;color:#70778c;line-height:1.45;margin:7px 0 10px}
+.learning-recommendation a{font-size:.78rem;color:#4a4495;font-weight:850;text-decoration:none}
+.topic-mastery{display:grid;gap:12px}
+.topic-row{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #edf0f5}
+.topic-row:last-child{border-bottom:0}
+.topic-title{font-weight:800;color:#333553;font-size:.88rem}
+.topic-subtitle{font-size:.75rem;color:#777e91;margin-top:3px}
+.topic-meter{height:8px;background:#e9eaf2;border-radius:99px;overflow:hidden;margin-top:7px}
+.topic-meter i{display:block;height:100%;background:linear-gradient(90deg,#8a7ac7,#79b991);border-radius:99px}
+.topic-percent{text-align:right;font-size:.9rem;font-weight:850;color:#47418c}
+.learning-empty{padding:22px 16px;text-align:center;color:#737b90;background:#fafbfe;border:1px dashed #dbe0ea;border-radius:13px;font-size:.86rem;line-height:1.55}
+.learning-footer{text-align:center;color:#7b8296;font-size:.75rem;padding:24px 12px}
+@media(max-width:760px){.learning-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.learning-recommendations{grid-template-columns:1fr}.learning-options{grid-template-columns:1fr}}
+@media(max-width:520px){.topic-row{grid-template-columns:minmax(0,1fr) 86px}.learning-stat{padding:12px}.learning-stat strong{font-size:1.35rem}.learning-panel{padding:14px}}
+</style>
+</head>
+<body class="c10-theme-quest">
+<header class="learning-header">
+  <a href="./dashboard.html">← Student dashboard</a>
+  <div class="eyebrow" style="margin-top:15px;color:#6b6798">EXAMGURU QUEST · INTELLIGENT LEARNING</div>
+  <h1>My Learning Hub</h1>
+  <p>Your learning memory in one place: questions to revisit, questions you have saved, topics you are strengthening and a suggested next step.</p>
+  <div class="brand-signature" style="margin-top:12px">Conceptualised by <strong>JP Ganathe</strong></div>
+</header>
+<main class="learning-wrap">
+  <div id="learningStatus" class="learning-help" role="status" aria-live="polite">Loading your learning history…</div>
+  <section class="learning-summary" aria-label="Learning summary">
+    <article class="learning-stat"><strong id="openMistakeCount">0</strong><span>Open mistakes</span></article>
+    <article class="learning-stat"><strong id="bookmarkCount">0</strong><span>Saved questions</span></article>
+    <article class="learning-stat"><strong id="weakTopicCount">0</strong><span>Topics to strengthen</span></article>
+    <article class="learning-stat"><strong id="masteredTopicCount">0</strong><span>Strong / mastered topics</span></article>
+  </section>
+  <section class="learning-panel" id="recommendations">
+    <div class="learning-panel-head"><div><h2>Recommended next steps</h2><p class="learning-help">Recommendations are based on your saved answers, mistakes and topic performance.</p></div></div>
+    <div id="recommendationList" class="learning-recommendations"><div class="learning-empty">Your recommendations will appear here once your history is loaded.</div></div>
+  </section>
+  <section class="learning-panel" id="mistakes">
+    <div class="learning-panel-head">
+      <div><h2>Consolidated Mistake Book</h2><p class="learning-help">Incorrect and skipped questions from your subjects, brought together for review. Mark an item mastered when you are confident with it.</p></div>
+      <div class="learning-filters"><select id="mistakeStatusFilter" aria-label="Mistake status"><option value="open">Open mistakes</option><option value="all">All mistakes</option><option value="mastered">Mastered</option></select><select id="mistakeSubjectFilter" aria-label="Mistake subject"><option value="all">All subjects</option></select></div>
+    </div>
+    <div id="mistakeList" class="learning-list"><div class="learning-empty">No mistakes recorded yet. Incorrect and skipped responses will appear here.</div></div>
+  </section>
+  <section class="learning-panel" id="bookmarks">
+    <div class="learning-panel-head"><div><h2>Personal bookmarks</h2><p class="learning-help">Your own saved questions, separate from exam-time “Mark for review”.</p></div></div>
+    <div id="bookmarkList" class="learning-list"><div class="learning-empty">You have not saved any questions yet. Use “Save question” while practising.</div></div>
+  </section>
+  <section class="learning-panel" id="mastery">
+    <div class="learning-panel-head"><div><h2>Topic mastery</h2><p class="learning-help">Mastery uses your latest recorded outcome per distinct question. Small samples are labelled as building evidence rather than mastery.</p></div></div>
+    <div id="topicMasteryList" class="topic-mastery"><div class="learning-empty">Topic mastery will build as you answer questions.</div></div>
+  </section>
+  <div class="learning-footer">Learning records and bookmarks are stored on this browser and device. Export a student backup from My Profile before changing devices.<br>Conceptualised by JP Ganathe · ExamGuru Quest</div>
+</main>
+<script src="./js/storage.js"></script>
+<script src="./js/question-bank.js"></script>
+<script src="./js/learning-model.js"></script>
+<script src="./js/profile-model.js"></script>
+<script src="./js/student-auth.js"></script>
+<script src="./js/page-access.js"></script>
+<script src="./js/learning-center.js"></script>
+<script src="./js/app-shell.js"></script>
+</body>
+</html>

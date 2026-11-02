@@ -249,7 +249,8 @@
       ledger.attempts.push({schemaVersion:1,kind:"test-attempt",attemptId:attempt.attemptId,profileId:profile.profileId,subjectId:attempt.subjectId,mode:attempt.mode,source:{type:"central-sync",sourceId:attempt.subjectId},questionBankVersion:"central-v1",status:attempt.status,startedAt:attempt.startedAt,submittedAt:attempt.submittedAt,durationSeconds:attempt.durationSeconds,timeLimitSeconds:null,score:attempt.score,maxScore:attempt.maxScore,correctCount:attempt.score,questionCount:attempt.maxScore,answeredCount:0,skippedCount:0,unansweredCount:0,questionIds:attempt.payload&&attempt.payload.questionIds||[],answerRecordIds:[]});
     }
     for(const entry of entries)subjectData[entry.id].ledger.attempts.sort((a,b)=>String(b.submittedAt||"").localeCompare(String(a.submittedAt||"")));
-    return {schemaVersion:1,kind:"c10-playground-backup",exportedAt:now(),profile:clone(profile),subjectData};
+    const learningLibrary=window.C10LearningModel.createStore(currentClassId()).load();
+    return {schemaVersion:1,kind:"c10-playground-backup",exportedAt:now(),profile:clone(profile),subjectData,learningLibrary};
   }
 
   function downloadBackup(){
@@ -262,7 +263,7 @@
     link.style.display="none";
     document.body.appendChild(link);link.click();link.remove();
     setTimeout(()=>URL.revokeObjectURL(url),1000);
-    setStatus("JSON backup prepared. Keep the downloaded file private; it contains profile and test-history data.");
+    setStatus("JSON backup prepared. Keep the downloaded file private; it contains profile, test history, mistakes and bookmarks.");
   }
 
   async function importBackup(event){
@@ -278,14 +279,18 @@
       }
       const entries=bankEntriesForClass(bundle.profile.classLevel),legacyBackup=LEGACY_SUBJECTS.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject));
       if(!entries.every(entry=>bundle.subjectData[entry.id])&&!legacyBackup)throw new Error("The backup is missing one or more class-specific subject records.");
-      if(!confirm("Import this backup and replace the local profile and progress/history for the supported subjects in this class on this device? Export your current data first if you need to keep it."))return;
+      if(!confirm("Import this backup and replace the local profile, subject history, Mistake Book and personal bookmarks for this class on this browser? A backup created before Stage C has no learning library and will clear the current one. Export your current data first if you need to keep it."))return;
       profile=window.C10ProfileModel.normalizeProfile(bundle.profile,bundle.profile.profileId);
       if(!window.C10ProfileModel.validateProfile(profile))throw new Error("The profile fields in this backup are incomplete.");profileStore.save(profile);
       for(const entry of entries){const data=bundle.subjectData[entry.id]||bundle.subjectData[entry.subjectId]||{progress:{missed:[],answered:0,correct:0,attempts:[]},ledger:{attempts:[],activeAttempt:null,answerRecords:[]}};
         if(!data.progress||!data.ledger)throw new Error("Missing progress or history for "+entry.title+".");subjectStore("subject-progress",entry.id).save(data.progress);subjectStore("test-attempt-ledger",entry.id).save(data.ledger);
       }
+      const restoredLearning=window.C10LearningModel.createStore(bundle.profile.classLevel);
+      if(bundle.learningLibrary)restoredLearning.save(bundle.learningLibrary);
+      else restoredLearning.clear();
       renderForm();renderHistory();
-      setStatus("Backup imported successfully. This device now uses Student ID "+profile.studentId+".");
+      setStatus("Backup imported successfully. This device now uses Student ID "+profile.studentId+
+        (bundle.learningLibrary?". Your Mistake Book and bookmarks were restored.":" Older backup detected; the learning library was reset."));
     }catch(error){
       setStatus(error&&error.message?error.message:"Unable to import this backup.",true);
     }

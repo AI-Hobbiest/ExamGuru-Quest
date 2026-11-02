@@ -138,7 +138,14 @@
 .section-result-card p{font-size:.78rem;color:#69728a;margin:5px 0 9px}
 .section-result-track{height:8px;background:#e9ebf2;border-radius:99px;overflow:hidden}
 .section-result-track i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8174c2,#86bf9b)}
-
+.difficulty-filter{display:grid;gap:6px;margin:14px 0}
+.difficulty-filter select{width:100%;border:1px solid var(--line);border-radius:11px;padding:11px 12px;background:#fff;color:var(--ink);font:inherit}
+.question-tools{align-items:flex-start}
+.question-tool-actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.question-tool-actions .btn{white-space:nowrap}
+.bookmark-question-btn[aria-pressed="true"]{background:#fff4d7!important;color:#805b0b!important;border-color:#e8cf91!important}
+.learning-hub-link{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:12px;padding:12px;background:#f7f6ff;text-decoration:none;color:#403b8c;font-weight:800;margin:12px 0}
+@media(max-width:620px){.question-tools{display:block}.question-tool-actions{justify-content:flex-start;margin:8px 0 12px}.question-tool-actions .btn{font-size:.76rem;padding:8px 10px}}
 </style>
 <link rel="stylesheet" href="./css/branding.css">
 <link rel="stylesheet" href="./css/app-shell.css">
@@ -164,7 +171,8 @@
 <select id="chapter" class="chapter-native-select" multiple size="6" aria-hidden="true" tabindex="-1" aria-describedby="chapterHelp"><option>Loading…</option></select>
 <p class="muted" id="chapterHelp">Tap a chapter to include or remove it. You can select several chapters for a mixed practice session.</p>
 </div>
-<label class="label">Practice mode</label><div class="mode"><button class="active" data-mode="learn">Learn</button><button data-mode="test">Test</button><button data-mode="retry">Retry missed</button><button data-mode="random">Mixed practice</button><button data-mode="timed">Timed exam</button><button id="olympiadModeBtn" class="hide" data-mode="olympiad">🏅 SOF full mock</button></div>
+<label class="label">Practice mode</label><div class="mode"><button class="active" data-mode="learn">Learn</button><button data-mode="test">Test</button><button data-mode="retry">Retry missed</button><button data-mode="bookmarks">Saved questions</button><button data-mode="adaptive">Adaptive practice</button><button data-mode="random">Mixed practice</button><button data-mode="timed">Timed exam</button><button id="olympiadModeBtn" class="hide" data-mode="olympiad">🏅 SOF full mock</button></div>
+<div class="difficulty-filter"><label class="label" for="difficultyFilter">Question difficulty</label><select id="difficultyFilter"><option value="all">All difficulty levels</option><option value="Easy">Easy</option><option value="Medium">Medium</option><option value="Hard">Hard</option><option value="Challenge">Challenge</option></select><p class="muted">Difficulty filters use the question bank’s existing labels. Some subjects have fewer questions at particular levels.</p></div>
 <div id="olympiadBlueprintPanel" class="olympiad-blueprint-panel hide" aria-live="polite">
   <h3 id="olympiadBlueprintTitle">SOF Olympiad Level 1 · Full Mock</h3>
   <p id="olympiadBlueprintDescription">50 questions · 60 minutes · 60 marks. The paper is assembled to the selected Olympiad's official section blueprint.</p>
@@ -194,7 +202,7 @@
 </details>
 <div id="lengthControl"><label class="label" for="length">Questions per session</label><select id="length"><option value="5">5 · Quick</option><option value="10" selected>10 · Standard</option><option value="20">20 · Focus</option><option value="50">50 · Deep practice</option><option value="0">All available</option></select></div>
 <div class="btnrow"><button class="btn" id="startBtn">Start practice →</button></div><div class="hint" id="modeHint">Loading the chapter bank…</div>
-<hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h2>Student space</h2><p class="muted">Manage your learner details and view completed test history.</p><div class="btnrow"><a class="btn secondary" href="./profile.html">My profile &amp; history →</a></div><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h2>My progress</h2><div class="muted" id="progressText">Scores and missed questions are saved on this device.</div><div class="btnrow"><button class="btn secondary" id="reviewBtn">Review missed</button><button class="btn secondary" id="clearBtn">Reset progress</button></div><p class="muted">Progress stays in this browser on this device. It does not sync to another phone or computer.</p>
+<hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h2>Student space</h2><p class="muted">Manage your learner details and view completed test history.</p><a class="learning-hub-link" href="./learning.html"><span>🧠 My Learning Hub</span><span>Open →</span></a><div class="btnrow"><a class="btn secondary" href="./profile.html">My profile &amp; history →</a></div><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h2>My progress</h2><div class="muted" id="progressText">Scores and missed questions are saved on this device.</div><div class="btnrow"><button class="btn secondary" id="reviewBtn">Review missed</button><button class="btn secondary" id="clearBtn">Reset progress</button></div><p class="muted">Progress stays in this browser on this device. It does not sync to another phone or computer.</p>
 </aside>
 <section class="quiz" id="quizPanel" aria-live="polite">
 <div id="status" class="muted hide"></div>
@@ -206,7 +214,7 @@
     <button class="btn secondary nav-inline-trigger" id="navigatorInlineBtn" type="button">Questions ▦</button>
   </div>
   <div class="progress"><i id="progressBar"></i></div>
-  <div class="question-tools"><p class="qtext" id="questionText"></p><button class="btn secondary mark-review-btn" id="markReviewBtn" type="button" aria-pressed="false">⚑ Mark for review</button></div>
+  <div class="question-tools"><p class="qtext" id="questionText"></p><div class="question-tool-actions"><button class="btn secondary mark-review-btn" id="markReviewBtn" type="button" aria-pressed="false">⚑ Mark for review</button><button class="btn secondary bookmark-question-btn" id="bookmarkQuestionBtn" type="button" aria-pressed="false">☆ Save question</button></div></div>
   <div id="questionMedia" class="question-media hide" aria-label="Question diagrams"></div><div class="answers" id="options"></div><div id="feedback"></div>
   <div class="foot"><span class="muted" id="sessionHint">Choose one answer.</span><div class="btnrow" style="margin:0"><button class="btn secondary" id="skipBtn">Skip</button><button class="btn secondary" id="submitBtn">Submit quiz</button><button class="btn" id="nextBtn">Next →</button></div></div>
 </div>
@@ -241,6 +249,7 @@
 <script src="./js/question-bank.js"></script>
 <script src="./js/olympiad-blueprints.js"></script>
 <script src="./js/session-model.js"></script>
+<script src="./js/learning-model.js"></script>
 <script src="./js/api-config.js"></script>
 <script src="./js/api-client.js"></script>
 <script src="./js/student-auth.js"></script>
