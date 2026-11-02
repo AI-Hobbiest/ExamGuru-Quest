@@ -250,7 +250,9 @@
     }
     for(const entry of entries)subjectData[entry.id].ledger.attempts.sort((a,b)=>String(b.submittedAt||"").localeCompare(String(a.submittedAt||"")));
     const learningLibrary=window.C10LearningModel.createStore(currentClassId()).load();
-    return {schemaVersion:1,kind:"c10-playground-backup",exportedAt:now(),profile:clone(profile),subjectData,learningLibrary};
+    const studyProgressStore=window.C10Storage.createLocalStore({kind:"study-library-progress",recordId:"resource-library",defaults:()=>({schemaVersion:1,kind:"study-library-progress",completedResourceIds:[],bookmarkedResourceIds:[]}),validate:value=>!!value&&value.schemaVersion===1&&value.kind==="study-library-progress"&&Array.isArray(value.completedResourceIds)&&Array.isArray(value.bookmarkedResourceIds)});
+    const studyLibraryProgress=studyProgressStore.load();
+    return {schemaVersion:1,kind:"c10-playground-backup",exportedAt:now(),profile:clone(profile),subjectData,learningLibrary,studyLibraryProgress};
   }
 
   function downloadBackup(){
@@ -288,9 +290,12 @@
       const restoredLearning=window.C10LearningModel.createStore(bundle.profile.classLevel);
       if(bundle.learningLibrary)restoredLearning.save(bundle.learningLibrary);
       else restoredLearning.clear();
+      const restoredStudy=window.C10Storage.createLocalStore({kind:"study-library-progress",recordId:"resource-library",defaults:()=>({schemaVersion:1,kind:"study-library-progress",completedResourceIds:[],bookmarkedResourceIds:[]}),validate:value=>!!value&&value.schemaVersion===1&&value.kind==="study-library-progress"&&Array.isArray(value.completedResourceIds)&&Array.isArray(value.bookmarkedResourceIds)});
+      if(bundle.studyLibraryProgress)restoredStudy.save(bundle.studyLibraryProgress);else restoredStudy.clear();
       renderForm();renderHistory();
       setStatus("Backup imported successfully. This device now uses Student ID "+profile.studentId+
-        (bundle.learningLibrary?". Your Mistake Book and bookmarks were restored.":" Older backup detected; the learning library was reset."));
+        (bundle.learningLibrary?". Mistake Book and bookmarks restored.":" Older backup detected; the learning library was reset.")+
+        (bundle.studyLibraryProgress?" Study Library progress restored.":" Study Library progress was not present in this older backup."));
     }catch(error){
       setStatus(error&&error.message?error.message:"Unable to import this backup.",true);
     }
