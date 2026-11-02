@@ -29,6 +29,7 @@
     {label:"Overview",icon:"🏠",href:"./admin.html#tab-overview",page:"admin.html",hash:"#tab-overview",auth:"admin"},
     {label:"Question banks",icon:"🧩",href:"./admin.html#tab-banks",page:"admin.html",hash:"#tab-banks",auth:"admin"},
     {label:"Classes & subjects",icon:"🏫",href:"./admin.html#tab-classes",page:"admin.html",hash:"#tab-classes",auth:"admin"},
+    {label:"Exam Paper Studio",icon:"📝",href:"./admin.html#tab-exam-papers",page:"admin.html",hash:"#tab-exam-papers",auth:"admin"},
     {label:"Knowledge base",icon:"📚",href:"./admin.html#tab-knowledge",page:"admin.html",hash:"#tab-knowledge",auth:"admin"},
     {label:"Students & reports",icon:"👩‍🎓",href:"./admin.html#tab-students",page:"admin.html",hash:"#tab-students",auth:"admin"},
     {label:"Leaderboards",icon:"🏆",href:"./admin.html#tab-leaderboard",page:"admin.html",hash:"#tab-leaderboard",auth:"admin"},

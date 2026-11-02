@@ -29,6 +29,7 @@ assert.ok(nav.includes('href:"./dashboard.html"'));
 assert.ok(nav.includes('href:"./dashboard.html#rewards"'));
 assert.ok(nav.includes('auth:"guest"'),"guest navigation is separated from student navigation");
 assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
+assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"'),"admin navigation exposes Exam Paper Studio directly");
 assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"'),"parent navigation is isolated to the family role");
 assert.ok(nav.includes('role==="parent"'),"parent sessions are recognised by the shared navigation shell");
 assert.ok(nav.includes('c10playground_static_student_v1'),"navigation detects the current student session");
