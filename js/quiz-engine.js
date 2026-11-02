@@ -192,6 +192,15 @@ function syncModeControls(){
   const overallCustom=$("overallTimerCustom"),overallLabel=$("overallCustomLabel");
   const questionCustom=$("questionTimerCustom"),questionLabel=$("questionCustomLabel");
   const timed=mode==="timed",olympiad=mode==="olympiad";
+  if(olympiad&&overall&&overall.dataset.olympiadForced!=="true"){
+    overall.dataset.preOlympiadValue=overall.value||"off";
+    if(question)question.dataset.preOlympiadValue=question.value||"off";
+    overall.dataset.olympiadForced="true";
+  }else if(!olympiad&&overall&&overall.dataset.olympiadForced==="true"){
+    overall.value=overall.dataset.preOlympiadValue||"off";
+    if(question)question.value=question.dataset.preOlympiadValue||"off";
+    overall.dataset.olympiadForced="false";
+  }
   if(olympiad){if(overall)overall.value="3600";if(question)question.value="off";}
   else if(timed&&overall&&overall.value==="off"){overall.value="1200";overall.dataset.timedDefault="true";}
   else if(!timed&&overall&&overall.dataset.timedDefault==="true"){overall.value="off";overall.dataset.timedDefault="false";}
