@@ -10,6 +10,7 @@ const homepage=fs.readFileSync("index.html","utf8");
 const practice=fs.readFileSync("practice.html","utf8");
 const profile=fs.readFileSync("profile.html","utf8");
 const learning=fs.readFileSync("learning.html","utf8");
+const study=fs.readFileSync("study.html","utf8");
 const admin=fs.readFileSync("admin.html","utf8");
 const science=fs.readFileSync("science.html","utf8");
 const parentPage=fs.readFileSync("parent.html","utf8");
@@ -35,6 +36,7 @@ assert.ok(nav.includes('Sign out'),"authenticated navigation provides sign-out")
 assert.ok(nav.includes('href:"./profile.html#profile"'));
 assert.ok(nav.includes('href:"./profile.html#history"'));
 assert.ok(nav.includes('href:"./profile.html#backup"'));
+assert.ok(nav.includes('href:"./study.html"'),"student navigation exposes the Study Library");
 assert.ok(nav.includes('href:"./learning.html"'),"student navigation exposes the Learning Hub");
 assert.ok(nav.includes('href:"./practice.html?subject=science"'),"Science menu opens the shared engine");
 assert.ok(homepage.includes('id="studentLoginForm"'),"landing page is the student login screen");
@@ -53,7 +55,7 @@ assert.ok(roleTheme.includes("body.c10-theme-quest"),"student-facing pages have 
 assert.ok(roleTheme.includes("body.c10-theme-admin"),"Admin Workspace has a dedicated Lavender theme");
 assert.ok(roleTheme.includes("#f0a82e"),"Quest quiz primary action uses the yellow-orange accent");
 assert.ok(roleTheme.includes("#e4f4e7")&&roleTheme.includes("#eee9ff")&&roleTheme.includes("#fff0c8"),"Quest palette includes green, lavender and yellow");
-for(const [name,html,theme] of [["homepage",homepage,"c10-theme-quest"],["practice",practice,"c10-theme-quest"],["profile",profile,"c10-theme-quest"],["dashboard",dashboard,"c10-theme-quest"],["learning",learning,"c10-theme-quest"],["admin",admin,"c10-theme-admin"]]){
+for(const [name,html,theme] of [["homepage",homepage,"c10-theme-quest"],["practice",practice,"c10-theme-quest"],["profile",profile,"c10-theme-quest"],["dashboard",dashboard,"c10-theme-quest"],["learning",learning,"c10-theme-quest"],["study",study,"c10-theme-quest"],["admin",admin,"c10-theme-admin"]]){
  assert.ok(html.includes("./css/theme-roles-v2.css?v=quest2"),name+" loads the versioned role-specific theme");
  assert.ok(html.includes('class="'+theme)||html.includes('class="eg-quiz-page '+theme),name+" is assigned the correct theme");
 }
@@ -63,7 +65,7 @@ assert.ok(css.includes(".c10-sidebar.open"));
 assert.ok(css.includes(".c10-mobilebar{display:none}"),"mobile bar is hidden on desktop");
 assert.ok(css.includes(".c10-nav-scrim.visible"));
 assert.ok(css.includes("prefers-reduced-motion"));
-for(const [name,html] of [["homepage",homepage],["practice",practice],["profile",profile],["learning",learning]]) {
+for(const [name,html] of [["homepage",homepage],["practice",practice],["profile",profile],["learning",learning],["study",study]]) {
  assert.ok(html.includes("./css/app-shell.css"),name+" links shared navigation styles");
  assert.ok(html.includes("./js/app-shell.js"),name+" loads shared navigation behavior");
 }
@@ -78,6 +80,8 @@ for(const section of ["dashboard","rewards"])assert.ok(dashboard.includes('id="'
 for(const field of ["profile","history","backup"])assert.ok(profile.includes('id="'+field+'"'));
 assert.ok(learning.includes('id="mistakes"')&&learning.includes('id="bookmarkList"')&&learning.includes('id="topicMasteryList"'),"Learning Hub exposes the Mistake Book, bookmarks and topic mastery");
 assert.ok(learning.includes("./js/learning-model.js")&&learning.includes("./js/learning-center.js"),"Learning Hub loads its data model and rendering controller");
+assert.ok(study.includes('id="studyResourceList"')&&study.includes("./js/study-model.js")&&study.includes("./js/study-library.js"),"Study Library displays published learning resources");
+assert.ok(dashboard.includes('href="./study.html"'),"dashboard links to the Study Library");
 assert.ok(nav.indexOf('href:"./learning.html"')>nav.indexOf('section:"MY LEARNING"'),"Learning Hub link is under My Learning");
 const loginScript=fs.readFileSync("js/login-page.js","utf8");
 const accessScript=fs.readFileSync("js/page-access.js","utf8");

@@ -1,18 +1,18 @@
-name = "c10-playground-api"
+name = "examguru-quest-api"
 main = "worker.js"
 compatibility_date = "2026-10-25"
 workers_dev = true
 
 [[d1_databases]]
 binding = "DB"
-database_name = "c10-playground"
+database_name = "examguru-quest"
 database_id = "REPLACE_WITH_D1_DATABASE_ID"
 
 [vars]
 # Set these values for your deployment. Never put GITHUB_CLIENT_SECRET in this file.
 FRONTEND_ORIGIN = "https://ai-hobbiest.github.io"
-FRONTEND_ADMIN_URL = "https://ai-hobbiest.github.io/C10-Playground/admin.html"
-FRONTEND_PROFILE_URL = "https://ai-hobbiest.github.io/C10-Playground/profile.html"
+FRONTEND_ADMIN_URL = "https://ai-hobbiest.github.io/ExamGuru-Quest/admin.html"
+FRONTEND_PROFILE_URL = "https://ai-hobbiest.github.io/ExamGuru-Quest/profile.html"
 API_PUBLIC_URL = "https://REPLACE_WITH_WORKER_SUBDOMAIN.workers.dev"
 # Server-side allowlist only. Add other app-authorised GitHub usernames explicitly, comma-separated.
 # GitHub collaborators are not automatically app admins.

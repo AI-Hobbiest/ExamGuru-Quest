@@ -250,7 +250,9 @@
     }
     for(const entry of entries)subjectData[entry.id].ledger.attempts.sort((a,b)=>String(b.submittedAt||"").localeCompare(String(a.submittedAt||"")));
     const learningLibrary=window.C10LearningModel.createStore(currentClassId()).load();
-    return {schemaVersion:1,kind:"c10-playground-backup",exportedAt:now(),profile:clone(profile),subjectData,learningLibrary};
+    const studyProgressStore=window.C10Storage.createLocalStore({kind:"study-library-progress",recordId:"resource-library",defaults:()=>({schemaVersion:1,kind:"study-library-progress",completedResourceIds:[],bookmarkedResourceIds:[]}),validate:value=>!!value&&value.schemaVersion===1&&value.kind==="study-library-progress"&&Array.isArray(value.completedResourceIds)&&Array.isArray(value.bookmarkedResourceIds)});
+    const studyLibraryProgress=studyProgressStore.load();
+    return {schemaVersion:1,kind:"c10-playground-backup",exportedAt:now(),profile:clone(profile),subjectData,learningLibrary,studyLibraryProgress};
   }
 
   function downloadBackup(){
@@ -263,7 +265,7 @@
     link.style.display="none";
     document.body.appendChild(link);link.click();link.remove();
     setTimeout(()=>URL.revokeObjectURL(url),1000);
-    setStatus("JSON backup prepared. Keep the downloaded file private; it contains profile, test history, mistakes and bookmarks.");
+    setStatus("JSON backup prepared. Keep the downloaded file private; it contains profile, test history, mistakes, bookmarks and Study Library progress.");
   }
 
   async function importBackup(event){
@@ -279,7 +281,7 @@
       }
       const entries=bankEntriesForClass(bundle.profile.classLevel),legacyBackup=LEGACY_SUBJECTS.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject));
       if(!entries.every(entry=>bundle.subjectData[entry.id])&&!legacyBackup)throw new Error("The backup is missing one or more class-specific subject records.");
-      if(!confirm("Import this backup and replace the local profile, subject history, Mistake Book and personal bookmarks for this class on this browser? A backup created before Stage C has no learning library and will clear the current one. Export your current data first if you need to keep it."))return;
+      if(!confirm("Import this backup and replace the local profile, subject history, Mistake Book, personal bookmarks and Study Library progress for this student on this browser? A backup created before Stage C has no learning library; an older backup without Study Library progress will clear those saved/completed markers. Export your current data first if you need to keep it."))return;
       profile=window.C10ProfileModel.normalizeProfile(bundle.profile,bundle.profile.profileId);
       if(!window.C10ProfileModel.validateProfile(profile))throw new Error("The profile fields in this backup are incomplete.");profileStore.save(profile);
       for(const entry of entries){const data=bundle.subjectData[entry.id]||bundle.subjectData[entry.subjectId]||{progress:{missed:[],answered:0,correct:0,attempts:[]},ledger:{attempts:[],activeAttempt:null,answerRecords:[]}};
@@ -288,9 +290,12 @@
       const restoredLearning=window.C10LearningModel.createStore(bundle.profile.classLevel);
       if(bundle.learningLibrary)restoredLearning.save(bundle.learningLibrary);
       else restoredLearning.clear();
+      const restoredStudy=window.C10Storage.createLocalStore({kind:"study-library-progress",recordId:"resource-library",defaults:()=>({schemaVersion:1,kind:"study-library-progress",completedResourceIds:[],bookmarkedResourceIds:[]}),validate:value=>!!value&&value.schemaVersion===1&&value.kind==="study-library-progress"&&Array.isArray(value.completedResourceIds)&&Array.isArray(value.bookmarkedResourceIds)});
+      if(bundle.studyLibraryProgress)restoredStudy.save(bundle.studyLibraryProgress);else restoredStudy.clear();
       renderForm();renderHistory();
       setStatus("Backup imported successfully. This device now uses Student ID "+profile.studentId+
-        (bundle.learningLibrary?". Your Mistake Book and bookmarks were restored.":" Older backup detected; the learning library was reset."));
+        (bundle.learningLibrary?". Mistake Book and bookmarks restored.":" Older backup detected; the learning library was reset.")+
+        (bundle.studyLibraryProgress?" Study Library progress restored.":" Study Library progress was not present in this older backup."));
     }catch(error){
       setStatus(error&&error.message?error.message:"Unable to import this backup.",true);
     }

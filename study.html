@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Study notes, reading resources and visual learning materials in ExamGuru Quest.">
+<title>Study Library | ExamGuru Quest</title>
+<link rel="stylesheet" href="./css/branding.css">
+<link rel="stylesheet" href="./css/app-shell.css">
+<link rel="stylesheet" href="./css/theme-roles-v2.css?v=quest2">
+<style>
+body{margin:0;background:#f6f8fc;color:#252b46;font-family:var(--c10-font,Inter,system-ui,sans-serif)}
+.study-hero{padding:25px max(18px,calc((100vw - 1120px)/2));background:linear-gradient(115deg,#ece8fa,#f7fbff 58%,#eaf6ee);border-bottom:1px solid #e0e4ef}
+.study-hero a{color:#51469c;text-decoration:none;font-weight:800}
+.study-hero h1{font-size:clamp(1.7rem,4vw,2.35rem);color:#292e55;margin:16px 0 5px}
+.study-hero p{max-width:760px;margin:0;color:#626b84;line-height:1.6}
+.study-wrap{width:min(1120px,calc(100% - 32px));margin:22px auto 54px}
+.study-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-bottom:16px}
+.study-stat,.study-panel{background:#fff;border:1px solid #e0e4ef;border-radius:17px;box-shadow:0 7px 22px rgba(39,45,82,.04)}
+.study-stat{padding:14px 16px}.study-stat strong{display:block;font-size:1.5rem;color:#403b8c}.study-stat span{display:block;margin-top:4px;font-size:.78rem;color:#6c748b;font-weight:700}
+.study-panel{padding:17px}
+.study-toolbar{display:grid;grid-template-columns:minmax(180px,1.5fr) repeat(3,minmax(130px,1fr));gap:9px;margin:12px 0 16px}
+.study-toolbar input,.study-toolbar select{width:100%;min-height:42px;padding:9px 11px;border:1px solid #d9deeb;border-radius:11px;background:#fff;color:#303653;font:inherit;font-size:.85rem}
+.study-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.study-card{display:flex;flex-direction:column;gap:9px;padding:15px;border:1px solid #e3e6f0;border-radius:14px;background:linear-gradient(155deg,#fff,#fbfbff);min-width:0}
+.study-card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.study-type{display:inline-flex;padding:5px 8px;border-radius:999px;background:#efedff;color:#51469c;font-size:.69rem;font-weight:850}
+.study-chip{font-size:.7rem;font-weight:800;color:#52745e;background:#eaf6ee;padding:5px 8px;border-radius:999px}
+.study-card h2{font-size:1rem;line-height:1.4;color:#292e55;margin:0}
+.study-meta{font-size:.76rem;color:#71798f;line-height:1.45}
+.study-summary-text{font-size:.83rem;color:#59647a;line-height:1.55;margin:0}
+.study-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:3px}
+.study-actions a,.study-actions button{display:inline-flex;align-items:center;justify-content:center;min-height:37px;border:1px solid #d9dcef;border-radius:10px;padding:8px 11px;background:#f4f2ff;color:#49428f;text-decoration:none;font:inherit;font-size:.77rem;font-weight:850;cursor:pointer}
+.study-actions button{background:#fff;color:#5d657b}
+.study-actions button[aria-pressed="true"]{background:#edf7f0;border-color:#c5e0ce;color:#27623e}
+.study-empty{padding:28px 18px;text-align:center;border:1px dashed #d8deea;border-radius:14px;background:#fafbff;color:#70798f;font-size:.88rem;line-height:1.6}
+.study-empty strong{display:block;color:#3a3c69;margin-bottom:5px}
+.study-footer{text-align:center;color:#7c8498;font-size:.75rem;padding:22px 12px}
+@media(max-width:760px){.study-toolbar{grid-template-columns:1fr 1fr}.study-list{grid-template-columns:1fr}}
+@media(max-width:480px){.study-summary{gap:7px}.study-stat{padding:11px}.study-stat strong{font-size:1.25rem}.study-stat span{font-size:.7rem}.study-toolbar{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="c10-theme-quest">
+<header class="study-hero">
+  <a href="./dashboard.html">← Student dashboard</a>
+  <div class="eyebrow" style="margin-top:15px;color:#6b6798">EXAMGURU QUEST · CONCEPT LEARNING</div>
+  <h1>Study Library</h1>
+  <p>Read beyond the question bank. Find your class resources, chapter notes, reading material and visual references. Mark resources as saved or completed as you work through them.</p>
+  <div class="brand-signature" style="margin-top:12px">Conceptualised by <strong>JP Ganathe</strong></div>
+</header>
+<main class="study-wrap">
+  <div id="studyStatus" class="study-meta" role="status" aria-live="polite">Loading study resources…</div>
+  <section class="study-summary" aria-label="Study progress">
+    <article class="study-stat"><strong id="studyAvailable">0</strong><span>Published resources</span></article>
+    <article class="study-stat"><strong id="studyCompleted">0</strong><span>Marked completed</span></article>
+    <article class="study-stat"><strong id="studySaved">0</strong><span>Saved for later</span></article>
+  </section>
+  <section class="study-panel">
+    <h2 style="margin:0;color:#292e55;font-size:1.08rem">Browse learning material</h2>
+    <p class="study-meta" style="margin:5px 0 0">Only resources published by the administrator for your class appear here.</p>
+    <div class="study-toolbar">
+      <input id="studySearch" type="search" placeholder="Search title, topic or notes…" aria-label="Search resources">
+      <select id="studySubject" aria-label="Filter subject"><option value="all">All subjects</option></select>
+      <select id="studyType" aria-label="Filter resource type"><option value="all">All resource types</option></select>
+      <select id="studyStatus" aria-label="Filter progress"><option value="all">All resources</option><option value="bookmarked">Saved for later</option><option value="completed">Completed</option></select>
+    </div>
+    <div id="studyResourceList" class="study-list"><div class="study-empty">Loading resources…</div></div>
+  </section>
+  <div class="study-footer">Reading progress and saved resources are stored on this browser and device. Export a student backup before changing devices.<br>Conceptualised by JP Ganathe · ExamGuru Quest</div>
+</main>
+<script src="./js/storage.js"></script>
+<script src="./js/student-auth.js"></script>
+<script src="./js/page-access.js"></script>
+<script src="./js/study-model.js"></script>
+<script src="./js/study-library.js"></script>
+<script src="./js/app-shell.js"></script>
+</body>
+</html>

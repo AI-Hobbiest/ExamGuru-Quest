@@ -152,7 +152,7 @@
 
       <section class="admin-panel" id="tab-knowledge">
         <h2>Knowledge base and source files</h2>
-        <p class="admin-muted">Track books, course notes, question-bank PDFs and image-reference PDFs. This source-file manifest is separate from the live MCQ banks; the question-bank inventory below reads published bank JSON files and calculates current totals automatically. The upcoming builder will process selectable text from digital PDFs; scanned/image-only PDFs and OCR are excluded.</p>
+        <p class="admin-muted">Track books, course notes, revision guides and visual references separately from MCQ banks. Published resources appear in the student Study Library. Add an optional class list and learner-facing description; leave classes blank to make a resource available to every class. Only publish after the file is committed at its exact path and redistribution rights are confirmed.</p>
         <div class="admin-notice"><strong>Public-repository warning:</strong> a PDF or image committed to this repository will be publicly downloadable. Only publish resources you own or are permitted to redistribute. Do not put private student data here.</div>
         <div class="admin-form-grid">
           <div class="admin-field full"><label for="resourceFile">Select resource file</label><input class="admin-file" type="file" id="resourceFile" accept=".pdf,application/pdf,image/png,image/jpeg,image/webp,.txt,.md,.json"></div>
@@ -160,6 +160,8 @@
           <div class="admin-field"><label for="resourceType">Resource type</label><select id="resourceType"><option value="textbook-pdf">Textbook PDF</option><option value="question-bank-pdf">Question-bank PDF</option><option value="image-reference-pdf">Image-reference PDF</option><option value="notes">Notes / study guide</option><option value="image-asset">Standalone image</option><option value="other">Other</option></select></div>
           <div class="admin-field"><label for="resourceSubject">Subject</label><select id="resourceSubject"><option value="">Not subject-specific</option><option>Science</option><option>Mathematics</option><option>English</option><option>Social Science</option><option>Hindi</option></select></div>
           <div class="admin-field"><label for="resourceChapter">Chapter / topic (optional)</label><input id="resourceChapter" placeholder="Chapter or unit"></div>
+          <div class="admin-field"><label for="resourceClassIds">Classes (optional)</label><input id="resourceClassIds" placeholder="e.g. 6, 10; blank = all classes"></div>
+          <div class="admin-field full"><label for="resourceSummary">Learner-facing description (optional)</label><textarea id="resourceSummary" placeholder="A short summary to help students choose this resource"></textarea></div>
           <div class="admin-field full"><label for="resourcePath">Repository path</label><input id="resourcePath" placeholder="knowledge/science/revision-notes.pdf"></div>
           <div class="admin-field full"><label for="resourceRights">Rights / source note</label><textarea id="resourceRights" placeholder="Owner, source URL, licence, permission note, or why this file may be redistributed"></textarea></div>
         </div>
