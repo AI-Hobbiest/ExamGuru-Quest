@@ -490,14 +490,17 @@
     if(!title||!path){setStatus("knowledgeStatus","A resource title and repository path are required.","error");return;}
     if(!/^(?!\/)(?!.*(?:^|\/)\.\.(?:\/|$))[A-Za-z0-9._~!%()-]+(?:\/[A-Za-z0-9._~!%()-]+)*$/.test(path)){setStatus("knowledgeStatus","Use a safe repository-relative path such as knowledge/science/chapter.pdf.","error");return;}
     if(knowledgeManifest.resources.some(r=>r.path===path)){setStatus("knowledgeStatus","That repository path already exists in the manifest.","error");return;}
+    const rawClasses=$("resourceClassIds").value.trim();
+    const classIds=rawClasses?rawClasses.split(",").map(value=>value.trim()).filter(Boolean):[];
+    if(classIds.some(id=>!/^[A-Za-z0-9_-]{1,20}$/.test(id))){setStatus("knowledgeStatus","Enter class IDs separated by commas, for example 6, 10. Leave blank for all classes.","error");return;}
     const resource={resourceId:"resource-"+Date.now().toString(36),title,type:$("resourceType").value,
-      subject:$("resourceSubject").value,chapter:$("resourceChapter").value.trim(),path,
-      rightsNote:$("resourceRights").value.trim(),mimeType:selectedResourceFile.type||"application/octet-stream",
+      subject:$("resourceSubject").value,chapter:$("resourceChapter").value.trim(),summary:$("resourceSummary").value.trim(),
+      classIds,path,rightsNote:$("resourceRights").value.trim(),mimeType:selectedResourceFile.type||"application/octet-stream",
       sizeBytes:selectedResourceFile.size,status:"draft"};
     knowledgeManifest.resources.push(resource);manifestDirty=true;
     pendingResources.push({resource,file:selectedResourceFile,previewUrl:selectedResourceUrl});
     selectedResourceFile=null;selectedResourceUrl="";$("resourceFile").value="";
-    $("resourceTitle").value="";$("resourceChapter").value="";$("resourcePath").value="";$("resourceRights").value="";
+    $("resourceTitle").value="";$("resourceChapter").value="";$("resourceClassIds").value="";$("resourceSummary").value="";$("resourcePath").value="";$("resourceRights").value="";
     renderPendingResources();renderKnowledgeTable();setStatus("knowledgeStatus","Added resource metadata to the local manifest. Download the file and manifest, then upload the file to the exact path shown.","success");
   }
   function renderPendingResources(){
@@ -516,12 +519,26 @@
     const container=$("knowledgeTable");container.innerHTML="";
     if(!knowledgeManifest.resources.length){container.appendChild(make("div","admin-empty","No knowledge resources are registered yet."));return;}
     const table=make("table","admin-table"),thead=make("thead"),hr=make("tr");
-    ["Title","Type","Subject","Repository path","Status","Actions"].forEach(x=>hr.appendChild(make("th","",x)));thead.appendChild(hr);table.appendChild(thead);
+    ["Title","Type","Subject","Classes","Repository path","Status","Actions"].forEach(x=>hr.appendChild(make("th","",x)));thead.appendChild(hr);table.appendChild(thead);
     const body=make("tbody");
     knowledgeManifest.resources.forEach(resource=>{
       const tr=make("tr");
-      tr.append(make("td","",resource.title),make("td","",resource.type),make("td","",resource.subject||"—"),make("td","",resource.path),make("td","",resource.status||"manifest"));
-      const actions=make("td");actions.appendChild(button("Remove","danger",()=>{
+      const classLabel=Array.isArray(resource.classIds)&&resource.classIds.length?resource.classIds.join(", "):"All classes";
+      const status=resource.status||"draft";
+      tr.append(make("td","",resource.title),make("td","",resource.type),make("td","",resource.subject||"—"),make("td","",classLabel),make("td","",resource.path),make("td","",status));
+      const actions=make("td");
+      actions.appendChild(button(status==="published"?"Unpublish":"Publish",status==="published"?"secondary":"",()=>{
+        if(status==="published"){
+          if(!confirm("Hide this resource from the student Study Library? The repository file will not be deleted."))return;
+          resource.status="draft";
+        }else{
+          if(!String(resource.rightsNote||"").trim()){setStatus("knowledgeStatus","Add a rights/source note before publishing this resource.","error");return;}
+          if(!confirm("Confirm the file has been committed to the exact repository path and you have permission to share it publicly with learners: "+resource.path+"?"))return;
+          resource.status="published";
+        }
+        manifestDirty=true;renderKnowledgeTable();setStatus("knowledgeStatus","Resource marked "+resource.status+". Export knowledge-base.json and publish it to make the change live.","success");
+      }));
+      actions.appendChild(button("Remove","danger",()=>{
         if(!confirm("Remove this resource entry from the local manifest? This does not delete any file already published in GitHub."))return;
         knowledgeManifest.resources=knowledgeManifest.resources.filter(x=>x.resourceId!==resource.resourceId);manifestDirty=true;
         pendingResources=pendingResources.filter(x=>x.resource.resourceId!==resource.resourceId);
@@ -537,7 +554,7 @@
     try{
       const data=await parseJsonFile(file);
       if(!data||data.kind!=="knowledge-base-manifest"||!Array.isArray(data.resources))throw new Error("Unsupported knowledge-base manifest.");
-      if(data.resources.some(r=>!r.resourceId||!r.title||!r.path||!r.type))throw new Error("Every resource needs an ID, title, type and path.");
+      if(data.resources.some(r=>!r.resourceId||!r.title||!r.path||!r.type||!/^(?!\\/)(?!.*(?:^|\\/)\\.\\.(?:\\/|$))[A-Za-z0-9._~!%()-]+(?:\\/[A-Za-z0-9._~!%()-]+)*$/.test(r.path)||r.status!==undefined&&!["draft","published"].includes(r.status)||r.classIds!==undefined&&(!Array.isArray(r.classIds)||r.classIds.some(id=>!/^[A-Za-z0-9_-]{1,20}$/.test(String(id)))))throw new Error("Every resource needs an ID, title, safe repository path and supported type; class IDs and status must be valid.");
       knowledgeManifest=data;manifestDirty=true;renderKnowledgeTable();setStatus("knowledgeStatus","Imported resource manifest as a local draft.","success");
     }catch(error){setStatus("knowledgeStatus",error.message||"Unable to import manifest.","error");}
   }
