@@ -1,0 +1,32 @@
+name: Exam paper uniqueness regression
+
+on:
+  push:
+    branches: [feat/science-50-unique-papers]
+  pull_request:
+    branches: [main]
+    paths:
+      - "data/exam-papers/**"
+      - "js/exam-paper-generator.js"
+      - "js/exam-paper-self-study.js"
+      - "tests/exam-paper-*.test.js"
+      - ".github/workflows/exam-paper-uniqueness.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  science-paper-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate generator and Science paper diversity
+        run: |
+          node tests/exam-paper-generator.test.js
+          node tests/exam-paper-release.test.js
+          node tests/exam-paper-renderer.test.js
