@@ -32,12 +32,12 @@ const paper = model.buildPaper(chapters, "sof-iso-class-6-level-1", () => 0.42);
 assert.equal(paper.totalQuestions, 50);
 assert.equal(paper.durationSeconds, 3600);
 assert.equal(paper.maxMarks, 60);
-assert.deepEqual(paper.sections.map(section => [section.id, section.questionCount, section.marksPerQuestion, section.maxMarks]), [
+assert.deepEqual(JSON.parse(JSON.stringify(paper.sections.map(section => [section.id, section.questionCount, section.marksPerQuestion, section.maxMarks]))), [
   ["logical-reasoning", 10, 1, 10],
   ["science", 35, 1, 35],
   ["achievers", 5, 3, 15]
 ]);
-assert.deepEqual(paper.sections.map(section => paper.questions.filter(question => question.examSectionId === section.id).length), [10, 35, 5]);
+assert.deepEqual(JSON.parse(JSON.stringify(paper.sections.map(section => paper.questions.filter(question => question.examSectionId === section.id).length))), [10, 35, 5]);
 assert.equal(new Set(paper.questions.map(question => question.questionKey)).size, 50, "each mock selects distinct questions");
 assert.equal(paper.questions[0].examQuestionNumber, 1);
 assert.equal(paper.questions[0].sectionQuestionNumber, 1);
