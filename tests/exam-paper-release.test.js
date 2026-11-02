@@ -30,8 +30,10 @@ for(const q of bank.questions){
 }
 const qcheck=g.validateQuestionBank(bank,{academicYear:"2026-27"});
 assert.equal(qcheck.valid,true,qcheck.errors.join("; "));
-assert.equal(bank.questions.length,39);
-assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,39);
+assert.equal(bank.questions.length,117);
+assert.equal(g.auditSlotCoverage(blueprint,bank,3).valid,true,g.auditSlotCoverage(blueprint,bank,3).errors.join("; "));
+assert.ok(g.auditSlotCoverage(blueprint,bank,3).coverage.every(slot=>slot.eligibleCount>=3));
+assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,117);
 for(const n of choiceSlots){
  const q=bank.questions.find(q=>q.questionId.includes("-Q"+String(n).padStart(2,"0")+"-"));
  assert.ok(q&&q.alternatives&&q.alternatives.length,"alternative present at Q"+n);
@@ -55,4 +57,13 @@ assert.ok(student.includes("prism-dispersion.svg"));
 assert.ok(!student.includes("Expected answer:"));
 assert.ok(teacher.includes("Expected answer:"));
 assert.ok(teacher.includes("Marking scheme"));
-console.log("Exam Paper Studio release passed: 39-question/80-mark blueprint, section/unit/competency totals, all internal choices, bank validation, complete paper assembly, diagrams, and student/teacher renderer separation.");
+const paperHistory=[];
+for(let attempt=1;attempt<=6;attempt++){
+ const recentQuestionIds=paperHistory.slice(-2).flatMap(ids=>ids);
+ const next=g.generatePaper(blueprint,bank,{seed:"release-repeat-test-"+attempt,recentQuestionIds});
+ assert.equal(g.validatePaper(next,blueprint).valid,true);
+ const ids=next.questions.map(q=>q.questionId);
+ for(const prior of paperHistory.slice(-2))assert.equal(ids.some(id=>prior.includes(id)),false,"no question may repeat within the previous two attempts");
+ paperHistory.push(ids);
+}
+console.log("Exam Paper Studio release passed: 39-question/80-mark blueprint, 117-question pool, minimum three eligible candidates per slot, six consecutive repeat-resistant papers, section/unit/competency totals, all internal choices, diagrams, and student/teacher renderer separation.");
