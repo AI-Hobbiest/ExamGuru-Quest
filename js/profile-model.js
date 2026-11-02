@@ -189,6 +189,12 @@
     const hasCurrent=expected.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject));
     const legacyOnly=legacySubjects.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject))&&provided.every(subject=>legacySubjects.includes(subject));
     if(!hasCurrent&&!legacyOnly)return false;
+    if(bundle.studyLibraryProgress!==undefined){
+      const study=bundle.studyLibraryProgress;
+      if(!study||study.schemaVersion!==1||study.kind!=="study-library-progress"||
+         !Array.isArray(study.completedResourceIds)||!study.completedResourceIds.every(id=>typeof id==="string")||
+         !Array.isArray(study.bookmarkedResourceIds)||!study.bookmarkedResourceIds.every(id=>typeof id==="string"))return false;
+    }
     if(bundle.learningLibrary!==undefined){
       const library=bundle.learningLibrary;
       if(!library||library.schemaVersion!==1||library.kind!=="learning-library"||
