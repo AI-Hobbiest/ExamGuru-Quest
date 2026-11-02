@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "exam-paper-blueprint",
   "blueprintId": "cbse-class-10-science-086-2026-27",
-  "version": 2,
+  "version": 3,
   "title": "CBSE Class 10 Science (086) · Annual Examination 2026–27",
   "board": "CBSE",
   "academicYear": "2026-27",
@@ -333,7 +333,7 @@
       "sectionId": "biology",
       "marks": 4,
       "allowedTypes": [
-        "case-based"
+        "short-answer"
       ],
       "unitId": "world-of-living",
       "chapterIds": [
@@ -349,7 +349,7 @@
       "sectionId": "biology",
       "marks": 5,
       "allowedTypes": [
-        "case-based"
+        "diagram-based"
       ],
       "unitId": "world-of-living",
       "chapterIds": [
@@ -509,7 +509,7 @@
       "sectionId": "chemistry",
       "marks": 3,
       "allowedTypes": [
-        "case-based"
+        "short-answer"
       ],
       "unitId": "chemical-substances-nature-and-behaviour",
       "chapterIds": [
@@ -717,7 +717,7 @@
       "sectionId": "physics",
       "marks": 5,
       "allowedTypes": [
-        "case-based"
+        "diagram-based"
       ],
       "unitId": "natural-phenomena",
       "chapterIds": [
@@ -759,6 +759,7 @@
     "Annual-examination unit weights of 25, 25, 12, 13 and 5 marks are enforced for every generated paper.",
     "Syllabus discrepancy: the official sample paper includes heredity-style question content, while the 2026–27 curriculum says Heredity and Evolution are formative-only and not assessed in the year-end examination. ExamGuru's pool excludes Heredity and Evolution pending clarification.",
     "The question pool contains original ExamGuru-authored practice questions, not copied CBSE sample-paper questions. The official sample paper is used for structural verification only.",
-    "Formative-only topics excluded from summative authoring include Periodic Classification of Elements; Heredity and Evolution; and Motor, Electromagnetic Induction and Electric Generator."
+    "Formative-only topics excluded from summative authoring include Periodic Classification of Elements; Heredity and Evolution; and Motor, Electromagnetic Induction and Electric Generator.",
+    "Question form is mapped to the published numbered paper: Q1–7 MCQ; Q8–9 assertion–reason; Q10–13 structured response; Q14 data/food-chain case; Q15 structured response (ExamGuru replaces the formative-only heredity item with summative syllabus content); Q16 diagram-based; Q17–23 MCQ; Q24 assertion–reason; Q25–27 structured response; Q28–29 case/experimental reasoning; Q30–31 MCQ; Q32 assertion–reason; Q33–34 structured response; Q35 numerical; Q36 structured response; Q37 circuit-diagram numerical; Q38 case-based; Q39 diagram-based."
   ]
 }
