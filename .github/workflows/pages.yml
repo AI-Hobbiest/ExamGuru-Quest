@@ -25,6 +25,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Run quiz regression tests
         run: |
+          node tests/olympiad-blueprints.test.js
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
           node tests/stage-a-integration.test.js
@@ -53,6 +54,7 @@ jobs:
           cp css/question-media.css _site/css/question-media.css
           cp js/storage.js _site/js/storage.js
           cp js/question-bank.js _site/js/question-bank.js
+          cp js/olympiad-blueprints.js _site/js/olympiad-blueprints.js
           cp js/session-model.js _site/js/session-model.js
           cp js/profile-model.js _site/js/profile-model.js
           cp js/student-auth.js _site/js/student-auth.js
@@ -352,8 +354,9 @@ jobs:
           if (!questionSchema.properties.images) throw new Error('Question-bank contract is missing optional image metadata.');
           const imageImportSchema=JSON.parse(fs.readFileSync('_site/data/contracts/v1/question-bank-import.schema.json','utf8'));
           if (!imageImportSchema.items.properties.questions.items.properties.images) throw new Error('Legacy import contract is missing optional image metadata.');
-          const sequence=['./js/storage.js','./js/question-bank.js','./js/session-model.js','./js/quiz-engine.js'].map(src=>practice.indexOf(src));
-          if (sequence.some(index=>index<0) || !(sequence[0]<sequence[1] && sequence[1]<sequence[2])) throw new Error('Practice dependencies are missing or out of order.');
+          const sequence=['./js/storage.js','./js/question-bank.js','./js/olympiad-blueprints.js','./js/session-model.js','./js/quiz-engine.js'].map(src=>practice.indexOf(src));
+          if (sequence.some(index=>index<0) || !sequence.every((index,i)=>i===0||sequence[i-1]<index)) throw new Error('Practice dependencies are missing or out of order.');
+          if (!practice.includes('data-mode="olympiad"') || !practice.includes('id="sectionResults"') || !practice.includes('id="navigatorSectionSummary"')) throw new Error('Practice page is missing Olympiad exam UI and section feedback.');
           for (const file of ['question-bank.schema.json','question-bank-import.schema.json','student-profile.schema.json','answer-record.schema.json','test-attempt.schema.json','local-store-envelope.schema.json','backup.schema.json']) {
             const schema=JSON.parse(fs.readFileSync('_site/data/contracts/v1/'+file,'utf8'));
             if (!schema.$schema || !schema.title) throw new Error('Invalid contract metadata: '+file);
