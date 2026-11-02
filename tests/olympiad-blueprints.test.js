@@ -43,6 +43,12 @@ assert.equal(paper.questions[0].examQuestionNumber, 1);
 assert.equal(paper.questions[0].sectionQuestionNumber, 1);
 assert.ok(paper.questions.filter(question => question.examSectionId === "achievers").every(question => question.marks === 3));
 assert.ok(paper.questions.filter(question => question.examSectionId !== "achievers").every(question => question.marks === 1));
+const nextPaper = model.buildPaper(chapters, "sof-iso-class-6-level-1", () => 0.42, {
+  recentQuestionIds: paper.questions.map(question => question.questionKey)
+});
+const priorIds = new Set(paper.questions.map(question => question.questionKey));
+assert.ok(nextPaper.questions.every(question => !priorIds.has(question.questionKey)),
+  "next mock avoids questions from the immediately previous paper while unseen section pools are sufficient");
 
 const answers = paper.questions.map((question, index) => ({
   status: index % 7 === 0 ? "skipped" : index % 3 === 0 ? "unanswered" : "answered",
