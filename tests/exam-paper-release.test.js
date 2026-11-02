@@ -71,6 +71,12 @@ for(let attempt=1;attempt<=50;attempt++){
 }
 assert.equal(new Set(paperFingerprints).size,50,"the Science generator must produce 50 distinct full-paper combinations");
 
+const adminStudio=fs.readFileSync("js/exam-paper-studio.js","utf8");
+assert.ok(adminStudio.includes('PAPER_HISTORY_KEY="eg_exam_paper_history_v1"'),"Admin Studio must share the self-study paper-history key");
+assert.ok(adminStudio.includes('PAPER_HISTORY_LIMIT=50'),"Admin Studio must keep a 50-paper rolling history");
+assert.ok(adminStudio.includes('generateUniquePaper'),"Admin Studio must reject exact full-paper repeats");
+assert.ok(adminStudio.includes('auditSlotCoverage(blueprint,bank,3)'),"Admin Studio must require at least three candidates per slot");
+assert.ok(adminStudio.includes('if(!savePaperHistory(nextHistory))throw Error'),"Admin Studio must not start a paper when history persistence fails");
 const selfStudy=fs.readFileSync("js/exam-paper-self-study.js","utf8");
 const practicePage=fs.readFileSync("exam-practice.html","utf8");
 assert.ok(selfStudy.includes('eg_exam_paper_history_v1'),"self-study paper history must persist locally");
