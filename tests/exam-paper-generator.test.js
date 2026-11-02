@@ -28,4 +28,29 @@ const choiceBp={...bp,totalQuestions:1,totalMarks:2,sections:[{sectionId:"biolog
 const choiceQ=q("choice","biology",2,"short-answer",{alternatives:[{prompt:"Equivalent alternative",answerKey:{modelAnswer:"Alternative answer"},markingScheme:[{criterion:"Alternative point 1",marks:1},{criterion:"Alternative point 2",marks:1}]}]});
 assert.equal(m.generatePaper(choiceBp,{...bank,questions:[choiceQ]},{seed:"choice"}).questions[0].alternatives.length,1);
 assert.throws(()=>m.generatePaper(choiceBp,{...bank,questions:[q("no-choice","biology",2,"short-answer")]},{seed:"x"}),/Question pool shortage/);
-console.log("Exam paper generator tests passed: draft guard, mixed types, deterministic unique selection, approved-only eligibility, marks, sections, internal choices and shortage guards.");
+
+const productionBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-science-2026-27-v1.json","utf8"));
+const productionCoverage=m.auditSlotCoverage(production,productionBank,3);
+assert.equal(productionCoverage.valid,true,productionCoverage.errors.join(" "));
+assert.equal(productionCoverage.slotCount,39);
+assert.equal(productionCoverage.questionCount,117);
+assert.ok(productionCoverage.coverage.every(slot=>slot.eligibleCount>=3),"every paper slot must have at least three eligible approved candidates");
+assert.equal(m.validateQuestionBank(productionBank,{academicYear:"2026-27"}).valid,true);
+const seenPapers=[];
+for(let attempt=1;attempt<=6;attempt++){
+ const recentQuestionIds=seenPapers.slice(-2).flatMap(ids=>ids);
+ const generated=m.generatePaper(production,productionBank,{seed:"science-repeat-guard-"+attempt,recentQuestionIds});
+ assert.equal(m.validatePaper(generated,production).valid,true);
+ const currentIds=generated.questions.map(question=>question.questionId);
+ assert.equal(new Set(currentIds).size,39,"a paper must not repeat a question internally");
+ for(const previousIds of seenPapers.slice(-2)){
+  assert.equal(currentIds.some(id=>previousIds.includes(id)),false,"a paper must not reuse any question from either of the previous two papers");
+ }
+ seenPapers.push(currentIds);
+}
+const selfStudySource=fs.readFileSync("js/exam-paper-self-study.js","utf8");
+assert.ok(selfStudySource.includes('eg_exam_paper_history_v1'),"self-study should persist recent paper history locally");
+assert.ok(selfStudySource.includes('auditSlotCoverage(blueprint,bank,3)'),"self-study should block generation unless each slot has at least three candidates");
+assert.ok(selfStudySource.includes('recentQuestionIds'),"self-study should pass recent question IDs to the generator");
+
+console.log("Exam paper generator tests passed: draft guard, mixed types, deterministic unique selection, approved-only eligibility, marks, sections, internal choices and shortage guards, three-candidate slot coverage and six consecutive repeat-resistant Science papers.");
