@@ -499,13 +499,13 @@
       "parts": [
         {
           "partId": "a",
-          "prompt": "Explain how bile makes the small-intestinal contents suitable for enzyme action.",
+          "prompt": "Explain how bile makes the contents of the small intestine suitable for enzyme action.",
           "marks": 1,
           "answerKey": "Bile makes acidic food entering the small intestine more alkaline, providing a suitable medium for intestinal enzymes."
         },
         {
           "partId": "b",
-          "prompt": "Explain how bile salts help the digestion of fats.",
+          "prompt": "Explain how bile salts help in the digestion of fats.",
           "marks": 1,
           "answerKey": "Bile salts emulsify large fat globules into smaller droplets, increasing the surface area for lipase."
         }
@@ -548,13 +548,13 @@
       "parts": [
         {
           "partId": "a",
-          "prompt": "Which neuron carries the impulse from skin receptors towards the spinal cord?",
+          "prompt": "Name the neuron that carries an impulse from skin receptors towards the spinal cord.",
           "marks": 1,
           "answerKey": "Skin receptors detect the stimulus and a sensory neuron carries an impulse to the spinal cord."
         },
         {
           "partId": "b",
-          "prompt": "How do relay and motor neurons complete the reflex response?",
+          "prompt": "Explain how relay and motor neurons complete the reflex response.",
           "marks": 1,
           "answerKey": "A relay neuron passes the signal to a motor neuron, which activates arm muscles to withdraw the hand."
         }
@@ -629,7 +629,7 @@
       "parts": [
         {
           "partId": "a",
-          "prompt": "Describe the change in the uterine lining after implantation.",
+          "prompt": "Describe one change in the uterine lining after implantation.",
           "marks": 1,
           "answerKey": "The uterine lining becomes thick and richly supplied with blood vessels to nourish the embryo."
         },
@@ -678,13 +678,13 @@
       "parts": [
         {
           "partId": "a",
-          "prompt": "How does the nerve signal reach a muscle cell?",
+          "prompt": "How does a nerve signal reach a muscle cell?",
           "marks": 1,
           "answerKey": "A motor neuron carries a processed impulse to the muscle and triggers signalling at the neuromuscular junction."
         },
         {
           "partId": "b",
-          "prompt": "What happens to the special proteins inside muscle cells?",
+          "prompt": "What happens to proteins inside the muscle cell during contraction?",
           "marks": 1,
           "answerKey": "Special proteins change their arrangement and muscle cells shorten, producing contraction."
         },
@@ -737,41 +737,41 @@
       "parts": [
         {
           "partId": "a",
-          "prompt": "Identify the producer in the described lake food chain.",
+          "prompt": "Calculate energy at producer level using the ten-percent law.",
           "marks": 1,
-          "answerKey": "Phytoplankton are producers and occupy the first trophic level."
+          "answerKey": "10,000 kJ. There are three transfers from producers to the fourth trophic level: 10 kJ × 10 × 10 × 10 = 10,000 kJ."
         },
         {
           "partId": "b",
-          "prompt": "Which organism is expected to have the highest pesticide concentration?",
+          "prompt": "Can the food chain support three additional trophic levels? Give a reason.",
           "marks": 1,
-          "answerKey": "Larger fish are likely to contain the highest pesticide concentration due to biological magnification."
+          "answerKey": "No. Only about 10% of energy passes to each next level, so the energy available becomes too small to support several more levels."
         },
         {
           "partId": "c",
-          "prompt": "Name and explain the process responsible for the increasing pesticide concentration.",
+          "prompt": "Which organism is expected to contain the most pesticide and why?",
           "marks": 1,
-          "answerKey": "The pesticide concentration increases along the food chain because it is persistent and accumulates in organisms."
+          "answerKey": "The large fish at the fourth trophic level, because persistent pesticide concentration increases at successive trophic levels through biological magnification."
         }
       ],
       "answerKey": {
-        "modelAnswer": "Phytoplankton are producers and occupy the first trophic level.\nLarger fish are likely to contain the highest pesticide concentration due to biological magnification.\nThe pesticide concentration increases along the food chain because it is persistent and accumulates in organisms."
+        "modelAnswer": "(a) 10,000 kJ. There are three transfers from producers to the fourth trophic level: 10 kJ × 10 × 10 × 10 = 10,000 kJ.\n(b) No. Only about 10% of energy passes to each next level, so the energy available becomes too small to support several more levels.\n(c) The large fish at the fourth trophic level, because persistent pesticide concentration increases at successive trophic levels through biological magnification."
       },
       "markingScheme": [
         {
-          "criterion": "Phytoplankton are producers and occupy the first trophic level.",
+          "criterion": "10,000 kJ. There are three transfers from producers to the fourth trophic level: 10 kJ × 10 × 10 × 10 = 10,000 kJ.",
           "marks": 1
         },
         {
-          "criterion": "Larger fish are likely to contain the highest pesticide concentration due to biological magnification.",
+          "criterion": "No. Only about 10% of energy passes to each next level, so the energy available becomes too small to support several more levels.",
           "marks": 1
         },
         {
-          "criterion": "The pesticide concentration increases along the food chain because it is persistent and accumulates in organisms.",
+          "criterion": "The large fish at the fourth trophic level, because persistent pesticide concentration increases at successive trophic levels through biological magnification.",
           "marks": 1
         }
       ],
-      "stimulus": "In a lake, phytoplankton are eaten by zooplankton, then small fish, then larger fish. A persistent pesticide enters after agricultural runoff."
+      "stimulus": "A lake food chain has four trophic levels: phytoplankton → zooplankton → small fish → large fish. The energy available at the fourth trophic level is 10 kJ. A persistent pesticide also enters the lake through agricultural runoff."
     },
     {
       "questionId": "SCI10-BIO-Q15-V1",
@@ -1491,7 +1491,7 @@
         },
         {
           "partId": "b",
-          "prompt": "Explain how tetravalency helps carbon form many compounds.",
+          "prompt": "Explain how tetravalency allows carbon to form many compounds.",
           "marks": 1,
           "answerKey": "Carbon is tetravalent and forms stable covalent bonds with many elements; silicon-silicon chains are less stable."
         }
@@ -1623,7 +1623,7 @@
       ],
       "type": "short-answer",
       "marks": 3,
-      "prompt": "Explain why an electrolyte drink conducts electricity but coconut oil does not. Give a reason for each.",
+      "prompt": "Answer the questions about electrolytes, carbon dioxide and corrosion.",
       "difficulty": "hard",
       "competency": "knowledge-understanding",
       "approvalStatus": "approved",
@@ -1635,37 +1635,37 @@
       "parts": [
         {
           "partId": "a",
-          "prompt": "What mobile particles carry charge in an electrolyte solution?",
+          "prompt": "Why does an electrolyte solution conduct electricity?",
           "marks": 1,
-          "answerKey": "An aqueous electrolyte contains mobile ions that carry electric charge."
+          "answerKey": "An electrolyte solution contains mobile ions that move towards oppositely charged electrodes and carry electric current."
         },
         {
           "partId": "b",
-          "prompt": "Why are such mobile charge carriers absent in coconut oil?",
+          "prompt": "Explain the changes observed when carbon dioxide is passed into limewater and then in excess.",
           "marks": 1,
-          "answerKey": "Coconut oil does not provide mobile ions, so it does not conduct electricity under ordinary conditions."
+          "answerKey": "Initially insoluble calcium carbonate forms and makes limewater milky. In excess carbon dioxide it forms soluble calcium hydrogen carbonate: CaCO₃ + CO₂ + H₂O → Ca(HCO₃)₂."
         },
         {
           "partId": "c",
-          "prompt": "State why the absence of mobile ions affects electrical conduction.",
+          "prompt": "Why can an iron bridge near the sea rust faster than one inland?",
           "marks": 1,
-          "answerKey": "A solution of an electrolyte can conduct because its ions move towards oppositely charged electrodes."
+          "answerKey": "Moisture and dissolved salts in sea air accelerate corrosion; oxygen and water are required for ordinary rusting."
         }
       ],
       "answerKey": {
-        "modelAnswer": "An aqueous electrolyte contains mobile ions that carry electric charge.\nCoconut oil does not provide mobile ions, so it does not conduct electricity under ordinary conditions.\nA solution of an electrolyte can conduct because its ions move towards oppositely charged electrodes."
+        "modelAnswer": "(a) An electrolyte solution contains mobile ions that move towards oppositely charged electrodes and carry electric current.\n(b) Initially insoluble calcium carbonate forms and makes limewater milky. In excess carbon dioxide it forms soluble calcium hydrogen carbonate: CaCO₃ + CO₂ + H₂O → Ca(HCO₃)₂.\n(c) Moisture and dissolved salts in sea air accelerate corrosion; oxygen and water are required for ordinary rusting."
       },
       "markingScheme": [
         {
-          "criterion": "An aqueous electrolyte contains mobile ions that carry electric charge.",
+          "criterion": "An electrolyte solution contains mobile ions that move towards oppositely charged electrodes and carry electric current.",
           "marks": 1
         },
         {
-          "criterion": "Coconut oil does not provide mobile ions, so it does not conduct electricity under ordinary conditions.",
+          "criterion": "Initially insoluble calcium carbonate forms and makes limewater milky. In excess carbon dioxide it forms soluble calcium hydrogen carbonate: CaCO₃ + CO₂ + H₂O → Ca(HCO₃)₂.",
           "marks": 1
         },
         {
-          "criterion": "A solution of an electrolyte can conduct because its ions move towards oppositely charged electrodes.",
+          "criterion": "Moisture and dissolved salts in sea air accelerate corrosion; oxygen and water are required for ordinary rusting.",
           "marks": 1
         }
       ]
@@ -1694,19 +1694,19 @@
       "parts": [
         {
           "partId": "a",
-          "prompt": "Identify the best heat conductor from the experiment's observations.",
+          "prompt": "Identify the best heat conductor from the observations.",
           "marks": 1,
           "answerKey": "The metal whose wax melts first is the best conductor of heat."
         },
         {
           "partId": "b",
-          "prompt": "Why must the rods have equal length and thickness?",
+          "prompt": "Why must the rods have equal length and cross-sectional area?",
           "marks": 1,
           "answerKey": "The rods must have equal length and cross-sectional area for a fair comparison."
         },
         {
           "partId": "c",
-          "prompt": "Explain what an earlier wax-melting time indicates.",
+          "prompt": "What does an earlier melting of wax indicate?",
           "marks": 1,
           "answerKey": "A rod made of a better conductor transfers heat faster, so wax melts sooner."
         },
@@ -1822,7 +1822,7 @@
         },
         {
           "partId": "b",
-          "prompt": "Identify the change undergone by nitrogen during ammonia formation.",
+          "prompt": "Identify the change nitrogen undergoes during ammonia formation.",
           "marks": 1,
           "answerKey": "Nitrogen is reduced when it combines with hydrogen to form ammonia."
         },
@@ -1834,7 +1834,7 @@
         },
         {
           "partId": "d",
-          "prompt": "Check and write the balanced silver chloride precipitation equation.",
+          "prompt": "Write the balanced silver chloride precipitation equation.",
           "marks": 1,
           "answerKey": "MgCl₂ + 2AgNO₃ → 2AgCl + Mg(NO₃)₂ is a balanced displacement/precipitation equation."
         },
@@ -2121,7 +2121,7 @@
         },
         {
           "partId": "b",
-          "prompt": "Write the expression for relative refractive index in terms of incidence/refraction angles and light speeds.",
+          "prompt": "Write the expression for relative refractive index in terms of angles and light speeds.",
           "marks": 1,
           "answerKey": "The relative refractive index n₂₁ = sin i / sin r = v₁ / v₂, where v₁ and v₂ are light speeds in the two media."
         }
@@ -2296,7 +2296,7 @@
         },
         {
           "partId": "c",
-          "prompt": "Describe how magnetic field strength changes with distance from the wire.",
+          "prompt": "How does magnetic field strength change with distance from the wire?",
           "marks": 1,
           "answerKey": "The field lines are concentric circles and the field becomes weaker as distance from the conductor increases."
         }
@@ -2331,7 +2331,7 @@
       ],
       "type": "diagram-based",
       "marks": 3,
-      "prompt": "Use the circuit schematic to calculate equivalent resistance, battery current and potential difference across the 4 Ω resistor.",
+      "prompt": "Refer to the circuit diagram. The 15 V battery is connected to three resistors of 2 Ω, 3 Ω and 5 Ω in series. Calculate (a) the equivalent resistance, (b) the current in the circuit and (c) the potential difference across the 3 Ω resistor.",
       "difficulty": "easy",
       "competency": "knowledge-understanding",
       "approvalStatus": "approved",
@@ -2343,37 +2343,37 @@
       "parts": [
         {
           "partId": "a",
-          "prompt": "Calculate the total resistance of the two series resistors.",
+          "prompt": "Calculate the equivalent resistance of the series combination.",
           "marks": 1,
-          "answerKey": "Equivalent resistance R = 2 Ω + 4 Ω = 6 Ω."
+          "answerKey": "R = 2 Ω + 3 Ω + 5 Ω = 10 Ω."
         },
         {
           "partId": "b",
-          "prompt": "Calculate the current supplied by the battery.",
+          "prompt": "Calculate the current supplied by the 15 V battery.",
           "marks": 1,
-          "answerKey": "Current I = V/R = 12 V / 6 Ω = 2 A."
+          "answerKey": "I = V/R = 15 V / 10 Ω = 1.5 A."
         },
         {
           "partId": "c",
-          "prompt": "Calculate the potential difference across the 4 Ω resistor.",
+          "prompt": "Calculate the potential difference across the 3 Ω resistor.",
           "marks": 1,
-          "answerKey": "Potential difference across the 4 Ω resistor is V = IR = 2 A × 4 Ω = 8 V."
+          "answerKey": "V = IR = 1.5 A × 3 Ω = 4.5 V."
         }
       ],
       "answerKey": {
-        "modelAnswer": "Equivalent resistance R = 2 Ω + 4 Ω = 6 Ω.\nCurrent I = V/R = 12 V / 6 Ω = 2 A.\nPotential difference across the 4 Ω resistor is V = IR = 2 A × 4 Ω = 8 V."
+        "modelAnswer": "(a) R = 2 Ω + 3 Ω + 5 Ω = 10 Ω.\n(b) I = V/R = 15 V / 10 Ω = 1.5 A.\n(c) V = IR = 1.5 A × 3 Ω = 4.5 V."
       },
       "markingScheme": [
         {
-          "criterion": "Equivalent resistance R = 2 Ω + 4 Ω = 6 Ω.",
+          "criterion": "R = 2 Ω + 3 Ω + 5 Ω = 10 Ω.",
           "marks": 1
         },
         {
-          "criterion": "Current I = V/R = 12 V / 6 Ω = 2 A.",
+          "criterion": "I = V/R = 15 V / 10 Ω = 1.5 A.",
           "marks": 1
         },
         {
-          "criterion": "Potential difference across the 4 Ω resistor is V = IR = 2 A × 4 Ω = 8 V.",
+          "criterion": "V = IR = 1.5 A × 3 Ω = 4.5 V.",
           "marks": 1
         }
       ],
@@ -2415,19 +2415,19 @@
         },
         {
           "partId": "b",
-          "prompt": "State the rule used to identify the north and south poles.",
+          "prompt": "Which rule identifies the north and south poles of a solenoid?",
           "marks": 1,
           "answerKey": "The poles can be identified using the Right-Hand Grip Rule."
         },
         {
           "partId": "c",
-          "prompt": "Predict the effect of increasing current on the magnetic field and bolt attraction.",
+          "prompt": "What happens to the magnetic field and bolt attraction when current increases?",
           "marks": 1,
           "answerKey": "Increasing current strengthens the magnetic field and increases the attraction on the iron bolt."
         },
         {
           "partId": "d",
-          "prompt": "How can the magnetic field be increased if the supply is fixed?",
+          "prompt": "How can the magnetic field be increased if the supply voltage is fixed?",
           "marks": 1,
           "answerKey": "With a fixed supply, increasing the number of turns per unit length can strengthen the solenoid field."
         }
@@ -2519,7 +2519,7 @@
       ],
       "type": "diagram-based",
       "marks": 5,
-      "prompt": "Use the ray schematic to explain how a lens corrects defective distant vision.",
+      "prompt": "Use the ray diagram to explain correction of defective distant vision. Answer the questions.",
       "difficulty": "hard",
       "competency": "analysis-evaluation-creation",
       "approvalStatus": "approved",
@@ -2549,7 +2549,7 @@
         },
         {
           "partId": "d",
-          "prompt": "Explain how the correcting lens changes the path of the incoming rays.",
+          "prompt": "Explain how the correcting lens changes the path of incoming rays.",
           "marks": 1,
           "answerKey": "The concave lens diverges incoming rays slightly so the eye lens can focus them on the retina."
         },
