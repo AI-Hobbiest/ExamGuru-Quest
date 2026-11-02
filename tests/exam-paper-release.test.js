@@ -52,7 +52,7 @@ assert.deepEqual(competencyMarks,blueprint.competencyMarksTargets);
 const student=r.buildDocumentHtml(paper,"student","https://ai-hobbiest.github.io/ExamGuru-Quest/");
 const teacher=r.buildDocumentHtml(paper,"teacher","https://ai-hobbiest.github.io/ExamGuru-Quest/");
 assert.ok(student.includes("Q39."));
-const imageSources=paper.questions.flatMap(q=>(q.images||[]).map(image=>image.src.replace(/^\\.\\//,"")));
+const imageSources=paper.questions.flatMap(q=>(q.images||[]).map(image=>image.src.startsWith("./")?image.src.slice(2):image.src));
 assert.equal(imageSources.length,3,"the paper should render its three diagram-based slots");
 for(const source of imageSources)assert.ok(student.includes(source),"student paper should render "+source);
 assert.ok(!student.includes("Expected answer:"));
