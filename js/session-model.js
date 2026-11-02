@@ -76,6 +76,16 @@
     const correctCount = answers.filter(answer => answer.status === "answered" && answer.isCorrect === true).length;
     const answeredCount = answers.filter(answer => answer.status === "answered").length;
     const skippedCount = answers.filter(answer => answer.status === "skipped").length;
+    const isOlympiad = attempt.examType === "olympiad" && window.C10OlympiadBlueprints;
+    const sectionResults = isOlympiad
+      ? window.C10OlympiadBlueprints.summarizeSections(attempt.questions, answers, attempt.sectionBlueprint || [])
+      : [];
+    const marksEarned = isOlympiad
+      ? sectionResults.reduce((sum, section) => sum + section.marksEarned, 0)
+      : correctCount;
+    const maxMarks = isOlympiad
+      ? sectionResults.reduce((sum, section) => sum + section.maxMarks, 0)
+      : attempt.questions.length;
     const submitted = {
       schemaVersion: 1,
       kind: "test-attempt",
@@ -83,6 +93,14 @@
       profileId: attempt.profileId,
       subjectId: attempt.subjectId,
       mode: attempt.mode,
+      examType: attempt.examType || null,
+      examTitle: attempt.examTitle || null,
+      examBlueprintId: attempt.examBlueprintId || null,
+      sectionBlueprint: Array.isArray(attempt.sectionBlueprint) ? attempt.sectionBlueprint : [],
+      sectionResults,
+      marksEarned,
+      maxMarks,
+      marksAccuracy: maxMarks ? Math.round(marksEarned / maxMarks * 100) : 0,
       source: attempt.source,
       questionBankVersion: attempt.questionBankVersion,
       status,
