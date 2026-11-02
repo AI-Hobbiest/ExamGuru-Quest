@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "kind": "exam-paper-blueprint",
   "blueprintId": "cbse-class-10-science-086-2026-27",
-  "version": 1,
+  "version": 2,
   "title": "CBSE Class 10 Science (086) · Annual Examination 2026–27",
   "board": "CBSE",
   "academicYear": "2026-27",
   "classId": "10",
   "subjectId": "science",
   "subjectCode": "086",
-  "status": "draft",
-  "statusReason": "The 80-mark / 3-hour / 39-question structure and section totals are recorded. The official mark/type/internal-choice slot map must be audited question-by-question before generation is enabled.",
+  "status": "ready",
+  "statusReason": "Question count, marks, section placement, internal-choice positions and question-form distribution have been checked against the official CBSE 2026–27 Science sample paper and marking scheme. Original ExamGuru practice items are aligned to the published summative syllabus; formative-only topics are excluded.",
   "durationMinutes": 180,
   "totalQuestions": 39,
   "totalMarks": 80,
@@ -46,6 +46,25 @@
       "totalMarks": 25
     }
   ],
+  "markDistribution": {
+    "1": 20,
+    "2": 6,
+    "3": 7,
+    "4": 3,
+    "5": 3
+  },
+  "competencyMarksTargets": {
+    "knowledge-understanding": 40,
+    "application": 24,
+    "analysis-evaluation-creation": 16
+  },
+  "unitMarkTargets": {
+    "chemical-substances-nature-and-behaviour": 25,
+    "world-of-living": 25,
+    "natural-phenomena": 12,
+    "effects-of-current": 13,
+    "natural-resources": 5
+  },
   "syllabusUnitWeightage": [
     {
       "unitId": "chemical-substances-nature-and-behaviour",
@@ -83,29 +102,663 @@
     "numerical",
     "diagram-based"
   ],
-  "slotPlan": [],
+  "slotPlan": [
+    {
+      "slotId": "q01",
+      "questionNumber": 1,
+      "sectionId": "biology",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "life-processes"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q02",
+      "questionNumber": 2,
+      "sectionId": "biology",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "life-processes"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q03",
+      "questionNumber": 3,
+      "sectionId": "biology",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "life-processes"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q04",
+      "questionNumber": 4,
+      "sectionId": "biology",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "how-do-organisms-reproduce"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q05",
+      "questionNumber": 5,
+      "sectionId": "biology",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "control-and-coordination"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q06",
+      "questionNumber": 6,
+      "sectionId": "biology",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "life-processes"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q07",
+      "questionNumber": 7,
+      "sectionId": "biology",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "natural-resources",
+      "chapterIds": [
+        "our-environment"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q08",
+      "questionNumber": 8,
+      "sectionId": "biology",
+      "marks": 1,
+      "allowedTypes": [
+        "assertion-reason"
+      ],
+      "unitId": "natural-resources",
+      "chapterIds": [
+        "our-environment"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q09",
+      "questionNumber": 9,
+      "sectionId": "biology",
+      "marks": 1,
+      "allowedTypes": [
+        "assertion-reason"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "control-and-coordination"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q10",
+      "questionNumber": 10,
+      "sectionId": "biology",
+      "marks": 2,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "life-processes"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q11",
+      "questionNumber": 11,
+      "sectionId": "biology",
+      "marks": 2,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "control-and-coordination"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": true,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q12",
+      "questionNumber": 12,
+      "sectionId": "biology",
+      "marks": 2,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "how-do-organisms-reproduce"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q13",
+      "questionNumber": 13,
+      "sectionId": "biology",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "life-processes"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q14",
+      "questionNumber": 14,
+      "sectionId": "biology",
+      "marks": 3,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "natural-resources",
+      "chapterIds": [
+        "our-environment"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q15",
+      "questionNumber": 15,
+      "sectionId": "biology",
+      "marks": 4,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "control-and-coordination"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": true,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q16",
+      "questionNumber": 16,
+      "sectionId": "biology",
+      "marks": 5,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "world-of-living",
+      "chapterIds": [
+        "life-processes"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": true,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q17",
+      "questionNumber": 17,
+      "sectionId": "chemistry",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "chemical-reactions-and-equations"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q18",
+      "questionNumber": 18,
+      "sectionId": "chemistry",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "acids-bases-and-salts"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q19",
+      "questionNumber": 19,
+      "sectionId": "chemistry",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "metals-and-non-metals"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q20",
+      "questionNumber": 20,
+      "sectionId": "chemistry",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "carbon-and-its-compounds"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q21",
+      "questionNumber": 21,
+      "sectionId": "chemistry",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "acids-bases-and-salts"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q22",
+      "questionNumber": 22,
+      "sectionId": "chemistry",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "carbon-and-its-compounds"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q23",
+      "questionNumber": 23,
+      "sectionId": "chemistry",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "chemical-reactions-and-equations"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q24",
+      "questionNumber": 24,
+      "sectionId": "chemistry",
+      "marks": 1,
+      "allowedTypes": [
+        "assertion-reason"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "metals-and-non-metals"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q25",
+      "questionNumber": 25,
+      "sectionId": "chemistry",
+      "marks": 2,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "acids-bases-and-salts"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q26",
+      "questionNumber": 26,
+      "sectionId": "chemistry",
+      "marks": 3,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "carbon-and-its-compounds"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": true,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q27",
+      "questionNumber": 27,
+      "sectionId": "chemistry",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "chemical-reactions-and-equations"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q28",
+      "questionNumber": 28,
+      "sectionId": "chemistry",
+      "marks": 4,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "metals-and-non-metals"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": true,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q29",
+      "questionNumber": 29,
+      "sectionId": "chemistry",
+      "marks": 5,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "chapterIds": [
+        "chemical-reactions-and-equations"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": true,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q30",
+      "questionNumber": 30,
+      "sectionId": "physics",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "natural-phenomena",
+      "chapterIds": [
+        "light-reflection-and-refraction"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q31",
+      "questionNumber": 31,
+      "sectionId": "physics",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "effects-of-current",
+      "chapterIds": [
+        "electricity"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q32",
+      "questionNumber": 32,
+      "sectionId": "physics",
+      "marks": 1,
+      "allowedTypes": [
+        "assertion-reason"
+      ],
+      "unitId": "natural-phenomena",
+      "chapterIds": [
+        "human-eye-and-colourful-world"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q33",
+      "questionNumber": 33,
+      "sectionId": "physics",
+      "marks": 2,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "natural-phenomena",
+      "chapterIds": [
+        "light-reflection-and-refraction"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q34",
+      "questionNumber": 34,
+      "sectionId": "physics",
+      "marks": 2,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "effects-of-current",
+      "chapterIds": [
+        "electricity"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": true,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q35",
+      "questionNumber": 35,
+      "sectionId": "physics",
+      "marks": 3,
+      "allowedTypes": [
+        "numerical"
+      ],
+      "unitId": "natural-phenomena",
+      "chapterIds": [
+        "light-reflection-and-refraction"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q36",
+      "questionNumber": 36,
+      "sectionId": "physics",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "effects-of-current",
+      "chapterIds": [
+        "magnetic-effects-of-electric-current"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q37",
+      "questionNumber": 37,
+      "sectionId": "physics",
+      "marks": 3,
+      "allowedTypes": [
+        "diagram-based"
+      ],
+      "unitId": "effects-of-current",
+      "chapterIds": [
+        "electricity"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": false,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q38",
+      "questionNumber": 38,
+      "sectionId": "physics",
+      "marks": 4,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "effects-of-current",
+      "chapterIds": [
+        "magnetic-effects-of-electric-current"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresInternalChoice": true,
+      "difficulty": "medium"
+    },
+    {
+      "slotId": "q39",
+      "questionNumber": 39,
+      "sectionId": "physics",
+      "marks": 5,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "natural-phenomena",
+      "chapterIds": [
+        "human-eye-and-colourful-world"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresInternalChoice": true,
+      "difficulty": "medium"
+    }
+  ],
   "generalInstructions": [
-    "All questions are compulsory unless an internal choice is provided.",
-    "Read the instructions and marks assigned to each question carefully.",
-    "Attempt questions in the section in which they are placed.",
-    "For questions with an internal choice, attempt only one alternative."
+    "All 39 questions are compulsory unless an internal choice is provided; attempt only one alternative.",
+    "The paper carries 80 marks and has a duration of 3 hours.",
+    "Section A covers Biology, Section B covers Chemistry and Section C covers Physics.",
+    "Read each question and its marks carefully. Show working and units for numerical answers.",
+    "Use a neat, labelled diagram wherever a question asks for one."
   ],
   "sources": [
     {
-      "label": "CBSE Class X Sample Question Paper & Marking Scheme 2026–27",
-      "url": "https://cbseacademic.nic.in/SQP_CLASSX_2026-27.html",
+      "label": "CBSE Class X Science Sample Question Paper 2026–27",
+      "url": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-SQP.pdf",
       "authority": "official"
     },
     {
-      "label": "CBSE Curriculum 2026–27",
-      "url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "label": "CBSE Class X Science Marking Scheme 2026–27",
+      "url": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-MS.pdf",
+      "authority": "official"
+    },
+    {
+      "label": "CBSE Class X Science Curriculum 2026–27",
+      "url": "https://cbseacademic.nic.in/web_material/CurriculumMain27/SecPart1/Science_SecP1_2026-27.pdf",
       "authority": "official"
     }
   ],
   "notes": [
-    "Section and total marks are recorded for the 2026–27 sample-paper structure.",
-    "The slotPlan is intentionally empty. Do not change status to ready until each question number, mark value, question type and internal-choice relationship has been checked against the official paper and marking scheme.",
-    "Syllabus unit weightage is independent of Biology/Chemistry/Physics section mark totals.",
-    "Existing MCQ banks are not automatically eligible until chapter/topic scope is audited against the 2026–27 syllabus."
+    "Section totals and numbered-question mark pattern follow the official sample paper: Biology 30, Chemistry 25, Physics 25; 20×1 mark, 6×2 marks, 7×3 marks, 3×4 marks and 3×5 marks.",
+    "Internal-choice slots are questions 11, 15, 16, 26, 28, 29, 34, 38 and 39. Alternative options carry the same total marks as the main option.",
+    "CBSE specifies aggregate theory competency weighting of 50% knowledge and understanding, 30% application, and 20% analysis/evaluation/creation. Slot-level primary competency tags are ExamGuru's allocation to meet those aggregate mark targets; CBSE does not prescribe fixed competency labels per numbered question.",
+    "Annual-examination unit weights of 25, 25, 12, 13 and 5 marks are enforced for every generated paper.",
+    "Syllabus discrepancy: the official sample paper includes heredity-style question content, while the 2026–27 curriculum says Heredity and Evolution are formative-only and not assessed in the year-end examination. ExamGuru's pool excludes Heredity and Evolution pending clarification.",
+    "The question pool contains original ExamGuru-authored practice questions, not copied CBSE sample-paper questions. The official sample paper is used for structural verification only.",
+    "Formative-only topics excluded from summative authoring include Periodic Classification of Elements; Heredity and Evolution; and Motor, Electromagnetic Induction and Electric Generator."
   ]
 }
