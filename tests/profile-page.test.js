@@ -46,7 +46,7 @@ const context={
 };
 context.globalThis=context;
 vm.createContext(context);
-for(const file of ["js/storage.js","js/profile-model.js","js/profile-manager.js"]){
+for(const file of ["js/storage.js","js/profile-model.js","js/learning-model.js","js/profile-manager.js"]){
  vm.runInContext(fs.readFileSync(file,"utf8"),context,{filename:file});
 }
 (async()=>{
@@ -77,6 +77,8 @@ for(const file of ["js/storage.js","js/profile-model.js","js/profile-manager.js"
  assert.equal(backup.profile.displayName,"Learner One");
  assert.ok(backup.subjectData.mathematics.ledger.attempts.length===1);
  assert.ok(backup.subjectData.english.progress);
+ assert.equal(backup.learningLibrary.kind,"learning-library","portable backup includes the consolidated learning library");
+ assert.ok(Array.isArray(backup.learningLibrary.mistakes)&&Array.isArray(backup.learningLibrary.bookmarks));
 
  const modified=JSON.parse(JSON.stringify(backup));
  modified.profile.displayName="Restored Learner";
