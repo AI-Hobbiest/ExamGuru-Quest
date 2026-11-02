@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+<title id="title">Parallel circuit with 4 ohm and 12 ohm resistors</title><desc id="desc">A 12 volt battery connected to 4 ohm and 12 ohm resistors in parallel.</desc>
+<rect width="760" height="420" fill="#fff"/><g stroke="#1f2937" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M145 95 H590 V320 H145 V95"/><path d="M145 188 H285 M425 188 H590"/><path d="M145 270 H285 M425 270 H590"/>
+<rect x="285" y="168" width="140" height="40" rx="4" fill="#f8fafc"/><rect x="285" y="250" width="140" height="40" rx="4" fill="#f8fafc"/>
+<path d="M125 170 V245 M105 184 V231" stroke-width="5"/>
+</g><g fill="#1f2937" font-family="Arial,sans-serif" font-size="22">
+<text x="355" y="195" text-anchor="middle">4 Ω</text><text x="355" y="277" text-anchor="middle">12 Ω</text>
+<text x="82" y="160">12 V</text><text x="360" y="60" text-anchor="middle">Parallel branches</text>
+<text x="590" y="355" text-anchor="end" font-size="17">Ideal battery and connecting wires</text>
+</g>
+</svg>
