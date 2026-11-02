@@ -249,7 +249,8 @@
       ledger.attempts.push({schemaVersion:1,kind:"test-attempt",attemptId:attempt.attemptId,profileId:profile.profileId,subjectId:attempt.subjectId,mode:attempt.mode,source:{type:"central-sync",sourceId:attempt.subjectId},questionBankVersion:"central-v1",status:attempt.status,startedAt:attempt.startedAt,submittedAt:attempt.submittedAt,durationSeconds:attempt.durationSeconds,timeLimitSeconds:null,score:attempt.score,maxScore:attempt.maxScore,correctCount:attempt.score,questionCount:attempt.maxScore,answeredCount:0,skippedCount:0,unansweredCount:0,questionIds:attempt.payload&&attempt.payload.questionIds||[],answerRecordIds:[]});
     }
     for(const entry of entries)subjectData[entry.id].ledger.attempts.sort((a,b)=>String(b.submittedAt||"").localeCompare(String(a.submittedAt||"")));
-    return {schemaVersion:1,kind:"c10-playground-backup",exportedAt:now(),profile:clone(profile),subjectData};
+    const learningLibrary=window.C10LearningModel.createStore(currentClassId()).load();
+    return {schemaVersion:1,kind:"c10-playground-backup",exportedAt:now(),profile:clone(profile),subjectData,learningLibrary};
   }
 
   function downloadBackup(){
@@ -262,7 +263,7 @@
     link.style.display="none";
     document.body.appendChild(link);link.click();link.remove();
     setTimeout(()=>URL.revokeObjectURL(url),1000);
-    setStatus("JSON backup prepared. Keep the downloaded file private; it contains profile and test-history data.");
+    setStatus("JSON backup prepared. Keep the downloaded file private; it contains profile, test history, mistakes and bookmarks.");
   }
 
   async function importBackup(event){
@@ -284,6 +285,7 @@
       for(const entry of entries){const data=bundle.subjectData[entry.id]||bundle.subjectData[entry.subjectId]||{progress:{missed:[],answered:0,correct:0,attempts:[]},ledger:{attempts:[],activeAttempt:null,answerRecords:[]}};
         if(!data.progress||!data.ledger)throw new Error("Missing progress or history for "+entry.title+".");subjectStore("subject-progress",entry.id).save(data.progress);subjectStore("test-attempt-ledger",entry.id).save(data.ledger);
       }
+      if(bundle.learningLibrary)window.C10LearningModel.createStore(bundle.profile.classLevel).save(bundle.learningLibrary);
       renderForm();renderHistory();
       setStatus("Backup imported successfully. This device now uses Student ID "+profile.studentId+".");
     }catch(error){
