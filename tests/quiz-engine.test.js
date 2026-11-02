@@ -13,7 +13,7 @@ class FakeClassList {
 class FakeElement {
   constructor(id=""){
     this.id=id;this.children=[];this.handlers={};this.classList=new FakeClassList();this.className="";
-    this.dataset={};this.disabled=false;this.hidden=false;this.open=false;this.value=id==="length"?"10":id==="overallTimerSetting"?"off":id==="questionTimerSetting"?"off":id==="overallTimerCustom"?"30":id==="questionTimerCustom"?"45":"0";
+    this.dataset={};this.disabled=false;this.hidden=false;this.open=false;this.value=id==="length"?"10":id==="overallTimerSetting"?"off":id==="questionTimerSetting"?"off":id==="overallTimerCustom"?"30":id==="questionTimerCustom"?"45":id==="difficultyFilter"?"all":"0";
     this._innerHTML="";this.textContent="";this.style={};this.attributes={};this.tagName="DIV";
   }
   set innerHTML(value){this._innerHTML=String(value);this.children=[];}
@@ -38,7 +38,7 @@ function makeEnvironment(seed = new Map(), subject = "mathematics", studentClass
   const values=new Map(seed);
   const ids=new FakeElement("mode-buttons");
   ids.children=[];
-  ["learn","test","retry","random","timed","olympiad"].forEach(mode=>{
+  ["learn","test","retry","bookmarks","adaptive","random","timed","olympiad"].forEach(mode=>{
     const button=new FakeElement("mode-"+mode);button.tagName="BUTTON";button.dataset.mode=mode;
     if(mode==="learn")button.classList.add("active");
     if(mode==="olympiad")button.classList.add("hide");
@@ -46,7 +46,7 @@ function makeEnvironment(seed = new Map(), subject = "mathematics", studentClass
   });
   const elements={};
   const allIds=[
-    "chapter","overallTimerSetting","questionTimerSetting","overallTimerCustom","questionTimerCustom","overallCustomLabel","questionCustomLabel","timingControls","timingHelp","olympiadBlueprintPanel","chapterControls","lengthControl","practiceLayout","quizPanel","questionTimerPill","sectionPill","markReviewBtn","mobilePreviousBtn","mobileNextBtn","mobileNavigatorBtn","navigatorInlineBtn","questionNavDock","questionNavigatorOverlay","questionNavigatorGrid","navigatorSummary","navigatorSectionSummary","closeQuestionNavigator","questionNavigatorBackdrop","navigatorReturnBtn","navigatorSubmitBtn","length","chapterTotal","questionTotal","overallStat","progressText","modeHint",
+    "chapter","overallTimerSetting","questionTimerSetting","overallTimerCustom","questionTimerCustom","overallCustomLabel","questionCustomLabel","timingControls","timingHelp","olympiadBlueprintPanel","chapterControls","lengthControl","difficultyFilter","bookmarkQuestionBtn","practiceLayout","quizPanel","questionTimerPill","sectionPill","markReviewBtn","mobilePreviousBtn","mobileNextBtn","mobileNavigatorBtn","navigatorInlineBtn","questionNavDock","questionNavigatorOverlay","questionNavigatorGrid","navigatorSummary","navigatorSectionSummary","closeQuestionNavigator","questionNavigatorBackdrop","navigatorReturnBtn","navigatorSubmitBtn","length","chapterTotal","questionTotal","overallStat","progressText","modeHint",
     "status","welcome","session","results","review","subjectIcon","subjectTitle","subjectSubtitle","chapterPill",
     "numberPill","difficultyPill","timerPill","progressBar","questionText","options","feedback","sessionHint",
     "nextBtn","skipBtn","submitBtn","startBtn","reviewBtn","clearBtn","againBtn","reviewAnswersBtn","reportPdfBtn","reportExcelBtn","reviewPdfBtn","reviewExcelBtn","backBtn",
@@ -85,7 +85,7 @@ function makeEnvironment(seed = new Map(), subject = "mathematics", studentClass
   };
   context.globalThis=context;
   vm.createContext(context);
-  for(const file of ["js/storage.js","js/question-bank.js","js/olympiad-blueprints.js","js/session-model.js","js/quiz-engine.js"]){
+  for(const file of ["js/storage.js","js/question-bank.js","js/olympiad-blueprints.js","js/session-model.js","js/learning-model.js","js/quiz-engine.js"]){
     vm.runInContext(fs.readFileSync(file,"utf8"),context,{filename:file});
   }
   return {context,values,elements,modeButtons:ids.children};
@@ -414,6 +414,54 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
     "IEO",
     [30, 10, 5, 5]
   );
+
+  const learner=makeEnvironment();
+  await delay();
+  learner.elements.startBtn.click();
+  learner.elements.bookmarkQuestionBtn.click();
+  let learnerLibraryRow=[...learner.values.entries()].find(([key])=>key.includes("learning-library"));
+  assert.ok(learnerLibraryRow,"practice creates the shared learning-library store");
+  let learnerLibrary=JSON.parse(learnerLibraryRow[1]).data;
+  assert.equal(learnerLibrary.bookmarks.length,1,"personal bookmark saves the current question");
+  learner.elements.bookmarkQuestionBtn.click();
+  learnerLibraryRow=[...learner.values.entries()].find(([key])=>key.includes("learning-library"));
+  learnerLibrary=JSON.parse(learnerLibraryRow[1]).data;
+  assert.equal(learnerLibrary.bookmarks.length,0,"personal bookmark can be removed from the question screen");
+  learner.elements.options.children[0].click();
+  learnerLibraryRow=[...learner.values.entries()].find(([key])=>key.includes("learning-library"));
+  learnerLibrary=JSON.parse(learnerLibraryRow[1]).data;
+  assert.equal(learnerLibrary.mistakes.length,1,"incorrect practice response enters the consolidated Mistake Book");
+  assert.equal(learnerLibrary.mistakes[0].status,"open");
+
+  const bookmarkSource=makeEnvironment();
+  await delay();
+  bookmarkSource.elements.startBtn.click();
+  bookmarkSource.elements.bookmarkQuestionBtn.click();
+  const bookmarkPractice=makeEnvironment(bookmarkSource.values);
+  await delay();
+  bookmarkPractice.modeButtons.find(button=>button.dataset.mode==="bookmarks").click();
+  bookmarkPractice.elements.startBtn.click();
+  assert.equal(bookmarkPractice.elements.numberPill.textContent,"Question 1 / 1","Saved questions mode uses only personal bookmarks");
+  assert.equal(bookmarkPractice.elements.questionText.textContent,bookmarkSource.elements.questionText.textContent,
+    "saved question can be practised again from the same device");
+
+  const adaptive=makeEnvironment();
+  await delay();
+  adaptive.modeButtons.find(button=>button.dataset.mode==="adaptive").click();
+  adaptive.elements.difficultyFilter.value="Easy";
+  adaptive.elements.startBtn.click();
+  assert.equal(adaptive.elements.numberPill.textContent,"Question 1 / 2","adaptive practice selects from the filtered difficulty pool");
+  assert.equal(adaptive.elements.difficultyPill.textContent,"Easy","difficulty filter is applied to adaptive practice");
+  const adaptiveLedger=[...adaptive.values.entries()].find(([key])=>key.includes("test-attempt-ledger")&&key.endsWith("mathematics"));
+  const adaptiveActive=JSON.parse(adaptiveLedger[1]).data.activeAttempt;
+  assert.equal(adaptiveActive.mode,"adaptive-practice","adaptive mode is recorded in the saved attempt");
+
+  const difficultyEmpty=makeEnvironment();
+  await delay();
+  difficultyEmpty.elements.difficultyFilter.value="Challenge";
+  difficultyEmpty.elements.startBtn.click();
+  assert.equal(difficultyEmpty.elements.session.classList.contains("hide"),true,
+    "difficulty selection with no matching questions does not silently substitute another level");
 
   console.log("Quiz integration tests passed: mobile question focus and navigator, timers, autosave/recovery, review downloads, NSO, IMO and IEO mock construction, section navigation and section-wise results.");
 })().catch(error=>{console.error(error);process.exitCode=1;});
