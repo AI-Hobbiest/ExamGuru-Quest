@@ -33,7 +33,7 @@
     return blueprint;
   }
 
-  function buildPaper(chapters, blueprintId, random = Math.random) {
+  function buildPaper(chapters, blueprintId, random = Math.random, options = {}) {
     const blueprint = getBlueprint(blueprintId);
     if (!Array.isArray(chapters)) throw new TypeError("A chapter array is required.");
     const allQuestions = chapters.flatMap(chapter =>
@@ -51,7 +51,10 @@
         throw new Error("Blueprint needs " + section.questionCount + " questions for " + section.title +
           ", but the bank has only " + pool.length + ".");
       }
-      const chosen = shuffle(pool, random).slice(0, section.questionCount);
+      const recentIds = new Set((options.recentQuestionIds || []).map(String));
+      const unseen = shuffle(pool.filter(question => !recentIds.has(String(question.questionKey || question.id))), random);
+      const recent = shuffle(pool.filter(question => recentIds.has(String(question.questionKey || question.id))), random);
+      const chosen = (unseen.length >= section.questionCount ? unseen : unseen.concat(recent)).slice(0, section.questionCount);
       chosen.forEach((question, questionIndex) => {
         selected.push({
           ...question,
