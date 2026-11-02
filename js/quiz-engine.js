@@ -28,8 +28,15 @@ const bankId = classId === "10" ? subject : "class-" + classId + "-" + subject;
 const CLASS_SUBJECTS = { "3":["mathematics","english"], "6":["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"], "10":["science","mathematics","english","social-science","hindi"] };
 const config = SUBJECTS[subject];
 let chapters=[], mode="learn", session=[], index=0, picked=null, answers=[], lastMissed=[];
-const olympiadBlueprintId="sof-iso-class-6-level-1";
-const olympiadAvailable=classId==="6"&&subject==="science-sof"&&!!window.C10OlympiadBlueprints;
+const OLYMPIAD_BLUEPRINT_BY_SUBJECT = {
+  "science-sof":"sof-iso-class-6-level-1",
+  "mathematics-sof":"sof-imo-class-6-level-1",
+  "english-sof":"sof-ieo-class-6-level-1"
+};
+const olympiadBlueprintId=OLYMPIAD_BLUEPRINT_BY_SUBJECT[subject]||null;
+const olympiadAvailable=classId==="6"&&!!olympiadBlueprintId&&!!window.C10OlympiadBlueprints;
+const olympiadShortName=subject==="mathematics-sof"?"IMO":subject==="english-sof"?"IEO":"ISO / NSO";
+const currentOlympiadBlueprint=()=>olympiadAvailable?window.C10OlympiadBlueprints.getBlueprint(olympiadBlueprintId):null;
 const isExamMode=()=>mode==="test"||mode==="timed"||mode==="olympiad";
 let currentAttempt=null, completedAttempt=null, clockHandle=null, ledger;
 const emptyProgress = () => ({missed:[],answered:0,correct:0,attempts:[]});
@@ -218,6 +225,17 @@ function syncModeControls(){
   if(controls){controls.classList.toggle("hide",olympiad);if(timed)controls.open=true;}
   const blueprintPanel=$("olympiadBlueprintPanel");
   if(blueprintPanel)blueprintPanel.classList.toggle("hide",!olympiad);
+  const blueprint=currentOlympiadBlueprint();
+  if(blueprint){
+    const title=$("olympiadBlueprintTitle");
+    const description=$("olympiadBlueprintDescription");
+    const grid=$("olympiadBlueprintGrid");
+    const totalQuestions=blueprint.sections.reduce((sum,section)=>sum+section.questionCount,0);
+    const totalMarks=blueprint.sections.reduce((sum,section)=>sum+section.questionCount*section.marksPerQuestion,0);
+    if(title)title.textContent=blueprint.title+" · Full Mock";
+    if(description)description.textContent=totalQuestions+" questions · "+Math.round(blueprint.durationSeconds/60)+" minutes · "+totalMarks+" marks. A fresh paper is drawn from the Class 6 SOF bank. Feedback and correct answers remain hidden until submission.";
+    if(grid)grid.innerHTML=blueprint.sections.map(section=>"<span><strong>"+section.questionCount+" × "+section.marksPerQuestion+"</strong>"+section.title+"</span>").join("");
+  }
   const chapterControls=$("chapterControls");
   if(chapterControls)chapterControls.classList.toggle("hide",olympiad);
   else ["chapterPicker","chapter","chapterHelp"].forEach(id=>{const node=$(id);if(node)node.classList.toggle("hide",olympiad);});
@@ -397,7 +415,7 @@ function start(){
   }
   let pool=[],examPlan=null;
   if(mode==="olympiad"){
-    if(!olympiadAvailable){setText("modeHint","The SOF Class 6 full mock is available only in the Class 6 Science SOF bank.");return;}
+    if(!olympiadAvailable){setText("modeHint","A SOF Class 6 full mock is not available for this subject.");return;}
     try{
       const recentlyUsed=ledger.attempts
         .filter(attempt=>attempt&&attempt.examBlueprintId===olympiadBlueprintId&&Array.isArray(attempt.questionIds))
@@ -820,14 +838,21 @@ function init(){
   if(!(CLASS_SUBJECTS[classId]||[]).includes(subject)){setText("status","The selected subject bank is not published for Class "+classId+" yet.");$("status").classList.remove("hide");return;}
   const modeButtons=Array.from(document.querySelectorAll("[data-mode]"));
   const olympiadButton=modeButtons.find(button=>button.dataset.mode==="olympiad");
-  if(olympiadButton)olympiadButton.classList.toggle("hide",!olympiadAvailable);
+  if(olympiadButton){
+    olympiadButton.classList.toggle("hide",!olympiadAvailable);
+    olympiadButton.textContent="🏅 "+olympiadShortName+" full mock";
+  }
   syncModeControls();
   modeButtons.forEach(button=>button.onclick=()=>{
     if(ledger.activeAttempt&&ledger.activeAttempt.status==="in-progress"){setText("modeHint","Finish or resume the saved session before changing mode.");return;}
     mode=button.dataset.mode;modeButtons.forEach(item=>item.classList.toggle("active",item===button));syncModeControls();
-    const hints={learn:"Learn mode explains each answer immediately.",test:"Test mode holds feedback until submission and saves answers as you go.",retry:"Retry questions previously answered incorrectly in the chosen chapter.",random:"Mixed practice draws questions across your selected chapters.",timed:"Timed exam holds feedback until submission and automatically submits when the countdown reaches zero.",olympiad:"SOF Class 6 ISO/NSO Level 1 full mock · 50 questions · 60 minutes · 60 marks. One randomised paper is assembled to the published section blueprint."};
+    const blueprint=currentOlympiadBlueprint();
+    const olympiadHint=blueprint
+      ?blueprint.title+" full mock · 50 questions · 60 minutes · 60 marks. The paper is randomised to the published section blueprint."
+      :"SOF full-mock mode is available only for supported Class 6 Olympiad tracks.";
+    const hints={learn:"Learn mode explains each answer immediately.",test:"Test mode holds feedback until submission and saves answers as you go.",retry:"Retry questions previously answered incorrectly in the chosen chapter.",random:"Mixed practice draws questions across your selected chapters.",timed:"Timed exam holds feedback until submission and automatically submits when the countdown reaches zero.",olympiad:olympiadHint};
     setText("modeHint",hints[mode]||"");
-    $("startBtn").textContent=mode==="olympiad"?"Start SOF full mock →":"Start practice →";
+    $("startBtn").textContent=mode==="olympiad"?"Start "+olympiadShortName+" full mock →":"Start practice →";
     if(mode==="timed"&&$("overallTimerSetting").value==="off")$("overallTimerSetting").value="1200";
   });
   $("startBtn").onclick=start;$("nextBtn").onclick=next;$("skipBtn").onclick=skip;
