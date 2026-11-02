@@ -58,23 +58,26 @@ for(const source of imageSources)assert.ok(student.includes(source),"student pap
 assert.ok(!student.includes("Expected answer:"));
 assert.ok(teacher.includes("Expected answer:"));
 assert.ok(teacher.includes("Marking scheme"));
-const paperHistory=[];
-for(let attempt=1;attempt<=6;attempt++){
- const recentQuestionIds=paperHistory.slice(-2).flatMap(ids=>ids);
- const next=g.generatePaper(blueprint,bank,{seed:"release-repeat-test-"+attempt,recentQuestionIds});
+const paperFingerprints=[];
+for(let attempt=1;attempt<=50;attempt++){
+ const next=g.generateUniquePaper(blueprint,bank,{seed:"release-50-unique-"+attempt,recentPaperFingerprints:paperFingerprints,uniqueSearchAttempts:500});
  assert.equal(g.validatePaper(next,blueprint).valid,true);
- const ids=next.questions.map(q=>q.questionId);
- for(const prior of paperHistory.slice(-2))assert.equal(ids.some(id=>prior.includes(id)),false,"no question may repeat within the previous two attempts");
- paperHistory.push(ids);
+ const fingerprint=g.paperFingerprint(next);
+ assert.ok(fingerprint,"each generated paper must have a stable fingerprint");
+ assert.equal(paperFingerprints.includes(fingerprint),false,"no exact paper combination may repeat within the 50-paper cycle");
+ paperFingerprints.push(fingerprint);
 }
+assert.equal(new Set(paperFingerprints).size,50,"the Science generator must produce 50 distinct full-paper combinations");
 
 const selfStudy=fs.readFileSync("js/exam-paper-self-study.js","utf8");
 const practicePage=fs.readFileSync("exam-practice.html","utf8");
 assert.ok(selfStudy.includes('eg_exam_paper_history_v1'),"self-study paper history must persist locally");
-assert.ok(selfStudy.includes('recentQuestionIds'),"recent question IDs must be excluded during generation");
+assert.ok(selfStudy.includes('HISTORY_LIMIT=50'),"self-study must retain the last 50 generated paper combinations");
+assert.ok(selfStudy.includes('generateUniquePaper'),"self-study must request a new full-paper combination");
+assert.ok(selfStudy.includes('recentPaperFingerprints'),"self-study must reject exact repeats from saved paper history");
 assert.ok(selfStudy.includes('data-choice-panel="main"')&&selfStudy.includes('data-choice-panel="alternative"'),"main and alternative answer areas must both render");
 assert.ok(selfStudy.includes('input[data-choice]'),"internal choice must be a single-select radio control");
 assert.ok(selfStudy.includes('selected.answerKey?.modelAnswer'),"review must show the selected alternative's answer key");
 assert.ok(!selfStudy.includes('type="checkbox" data-alt='),"internal choice must not allow both alternatives to be selected");
 assert.ok(practicePage.includes('id="historyStatus"'),"practice UI must explain repeat protection and storage limitations");
-console.log("Exam Paper Studio release passed: 39-question/80-mark blueprint, 117-question pool, minimum three eligible candidates per slot, six consecutive repeat-resistant papers, section/unit/competency totals, all internal choices, diagrams, and student/teacher renderer separation.");
+console.log("Exam Paper Studio release passed: 39-question/80-mark blueprint, 117-question pool, minimum three eligible candidates per slot, 50 distinct full-paper combinations, section/unit/competency totals, all internal choices, diagrams, and student/teacher renderer separation.");
