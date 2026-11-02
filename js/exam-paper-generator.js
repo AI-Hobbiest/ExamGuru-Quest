@@ -34,6 +34,15 @@ function validateQuestion(q,path="question"){
   else if(sum(q.parts.map(p=>p.marks))!==q.marks)e.push(path+".parts marks must equal question marks.");
  }
  if(q.type==="numerical"&&!obj(q.answerKey))e.push(path+".answerKey is required for numerical questions.");
+ if(q.images!=null){
+  if(!Array.isArray(q.images))e.push(path+".images must be an array.");
+  else q.images.forEach((image,i)=>{
+   const src=String(image&&image.src||"").trim(),alt=String(image&&image.alt||"").trim();
+   const relative=/^(?:\.\/)?[A-Za-z0-9._~!%()-]+(?:\/[A-Za-z0-9._~!%()-]+)*$/.test(src)&&!src.startsWith("//")&&!src.split("/").includes("..")&&!src.includes(":");
+   if(!relative||!alt)e.push(path+".images["+i+"] needs a safe relative src and descriptive alt text.");
+  });
+ }
+ if(q.type==="diagram-based"&&(!Array.isArray(q.images)||!q.images.length))e.push(path+".images is required for diagram-based questions.");
  if(Array.isArray(q.markingScheme)){
   if(!q.markingScheme.every(m=>m&&text(m.criterion)&&Number.isInteger(m.marks)&&m.marks>0))e.push(path+".markingScheme has invalid entries.");
   else if(sum(q.markingScheme.map(m=>m.marks))>q.marks)e.push(path+".markingScheme exceeds question marks.");

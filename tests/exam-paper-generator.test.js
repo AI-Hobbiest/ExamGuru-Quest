@@ -13,6 +13,10 @@ const bank={schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subject
  q("chem1","chemistry",2,"mcq",{options:[{optionId:"a",text:"A"},{optionId:"b",text:"B"}],correctOptionId:"b"}),
  q("phys1","physics",3,"numerical"),q("draft","biology",2,"short-answer",{approvalStatus:"draft"})]};
 assert.equal(m.validateQuestionBank(bank).valid,true);
+const diagramQuestion=q("diagram","physics",3,"diagram-based",{images:[{src:"./assets/questions/science/circuit.png",alt:"Simple electric circuit"}]});
+assert.equal(m.validateQuestion(diagramQuestion).length,0);
+const unsafeDiagram=q("bad-diagram","physics",3,"diagram-based",{images:[{src:"../private.png",alt:"Unsafe path"}]});
+assert.ok(m.validateQuestion(unsafeDiagram).length>0,"diagram assets must use safe relative paths");
 const paper=m.generatePaper(bp,bank,{seed:"same",generatedAt:"2026-11-02T00:00:00.000Z"});
 assert.equal(paper.totalQuestions,4);assert.equal(paper.totalMarks,10);assert.equal(m.validatePaper(paper,bp).valid,true);
 assert.deepEqual(JSON.parse(JSON.stringify(paper.sectionResults.map(s=>[s.sectionId,s.questionCount,s.totalMarks]))),[["biology",2,5],["chemistry",1,2],["physics",1,3]]);

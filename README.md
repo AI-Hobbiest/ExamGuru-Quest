@@ -205,11 +205,11 @@ Class 3 Mathematics and English are routed through the shared practice engine. C
 
 ## Exam Paper Studio — foundation release
 
-The Admin Workspace includes the first blueprint-driven Exam Paper Studio foundation for CBSE Class 10 Science (086), academic year 2026–27. The new mixed-question data contract and browser-side generator/validator support MCQ, assertion–reason, very short answer, short answer, long answer, case-based, numerical and diagram-based questions. The new system is separate from the existing MCQ practice engine and does not change legacy bank normalisation.
+The Admin Workspace includes the first blueprint-driven Exam Paper Studio foundation for CBSE Class 10 Science (086), academic year 2026–27. The new mixed-question data contract and browser-side generator/validator support MCQ, assertion–reason, very short answer, short answer, long answer, case-based, numerical and diagram-based questions, including validated relative image assets for diagram-based questions. The new system is separate from the existing MCQ practice engine and does not change legacy bank normalisation.
 
 The versioned blueprint records the 80-mark / 3-hour / 39-question paper, its Biology (30), Chemistry (25) and Physics (25) sections, and syllabus unit weightage. Its status remains **draft** until the official sample paper's question-by-question mark/type/internal-choice slot map has been transcribed and independently checked. Generation is intentionally locked in this foundation release; the generator refuses to fill gaps by guessing. The next content step is to complete that slot audit and create/review the approved mixed-question pool.
 
-Question pools imported into the Studio are saved only in the current browser. Generated paper snapshots carry the source question content and blueprint version. Student and teacher print layouts can be saved as PDF through the browser. No generated papers, student records or confidential examination content are committed to this public repository.
+Question pools and generated paper drafts imported/created in the Studio are saved in the current browser through the existing versioned C10Storage adapter. Generated paper snapshots carry the source question content and blueprint version. Student and teacher print layouts can be saved as PDF through the browser. No generated papers, student records or confidential examination content are committed to this public repository.
 
 - Blueprint: `data/exam-papers/blueprints/class-10-science-2026-27.json`
 - Question-bank contract: `data/exam-papers/question-bank.schema.json`
