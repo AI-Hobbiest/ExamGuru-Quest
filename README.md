@@ -32,7 +32,7 @@ The portal uses the **Midnight Indigo + Electric Coral + Mint** theme and the at
 | Social Science | All 22 topic sets, 100 MCQs per set | 2,200 |
 | Hindi | General grammar/comprehension and selected Course A/B literature topics; partial starter set | 254 |
 
-The English bank now contains 3,700 MCQs across all 37 topic sets, with 100 MCQs per set. The Class 6 track is available through the class-assigned student dashboard: NCERT Science (1,200 MCQs), Mathematics (1,000), English (1,600), Social Science (1,400), plus SOF Science/NSO (600), Mathematics/IMO (550) and English/IEO (500). The additional topic banks are maintained in `data/english-chapters-19-25.json`, `data/english-chapters-26-28.json`, `data/english-topics-29-33.json` and `data/english-topics-34-37.json`; all four are merged into `data/english.json` during the Pages build and checked by the deployment workflow. Hindi remains a starter set and is not yet at 100 questions per topic. Mathematics now contains 1,400 MCQs across the 14 Class 10 chapters, with compact SVG diagrams only where visuals help; the Pages workflow validates 100 MCQs per chapter and checks referenced diagram assets. The Science bank is generated from its existing compressed source during deployment. Social Science's 2,200 MCQs are maintained across four topic-override JSON files and merged into `data/social-science.json` during the Pages build. The deployment workflow checks all 22 topics and requires exactly 100 questions per topic. The Rise of Nationalism in India, Geography map skills and enrichment/project scope should be studied against the school's current assessment plan: for 2026–27, The Age of Industrialisation is periodic-assessment only, Lifelines of National Economy is map work only, and Consumer Rights is project work; the Globalisation chapter's board scope is narrower than its project themes. English prompts discuss literature themes and events without reproducing textbook passages. Social Science includes some enrichment/map/project-related topics; confirm which chapters are included in the student’s exam. Hindi literature coverage is a selection and should be matched to the student’s actual Hindi Course A or Course B syllabus.
+The English bank now contains 3,700 MCQs across all 37 topic sets, with 100 MCQs per set. The Class 6 track is available through the class-assigned student dashboard: NCERT Science (1,200 MCQs), Mathematics (1,000), English (1,600), Social Science (1,400), plus SOF Science/NSO (600), Mathematics/IMO (550) and English/IEO (600). The additional topic banks are maintained in `data/english-chapters-19-25.json`, `data/english-chapters-26-28.json`, `data/english-topics-29-33.json` and `data/english-topics-34-37.json`; all four are merged into `data/english.json` during the Pages build and checked by the deployment workflow. Hindi remains a starter set and is not yet at 100 questions per topic. Mathematics now contains 1,400 MCQs across the 14 Class 10 chapters, with compact SVG diagrams only where visuals help; the Pages workflow validates 100 MCQs per chapter and checks referenced diagram assets. The Science bank is generated from its existing compressed source during deployment. Social Science's 2,200 MCQs are maintained across four topic-override JSON files and merged into `data/social-science.json` during the Pages build. The deployment workflow checks all 22 topics and requires exactly 100 questions per topic. The Rise of Nationalism in India, Geography map skills and enrichment/project scope should be studied against the school's current assessment plan: for 2026–27, The Age of Industrialisation is periodic-assessment only, Lifelines of National Economy is map work only, and Consumer Rights is project work; the Globalisation chapter's board scope is narrower than its project themes. English prompts discuss literature themes and events without reproducing textbook passages. Social Science includes some enrichment/map/project-related topics; confirm which chapters are included in the student’s exam. Hindi literature coverage is a selection and should be matched to the student’s actual Hindi Course A or Course B syllabus.
 
 ## Admin Workspace
 
@@ -68,6 +68,36 @@ The paper has a fixed 60-minute countdown, fixed section quotas, a fresh random 
 The 600-question pool currently contains 50 Logical Reasoning, 500 Science and 50 Achievers questions. The paper engine validates the section counts and mark totals before a paper can start. The official Level 1 syllabus also calls for 60% current-class and 40% previous-class coverage, with Achievers questions from the current class. The present question records do not yet carry a verified current/previous-class syllabus tag, so that 60/40 content balance is **not automatically enforced** by the paper generator. Treat this mock as matching the exam's section/count/time/mark structure, not as a syllabus-ratio-certified paper. The question bank needs grade-level tagging and a content audit before that final compliance claim can be made.
 
 Implementation notes and checks: [docs/sof-olympiad-experience.md](docs/sof-olympiad-experience.md).
+
+### SOF Class 6 IMO and IEO Level 1 full mocks
+
+The Class 6 Mathematics/IMO and English/IEO tracks now also offer blueprint-driven full mocks. Each paper has a fixed 60-minute countdown, 50 questions and 60 marks. Students can revisit questions, change answers, mark for review, navigate by section, and submit early; the Achievers Section awards 3 marks per correct answer.
+
+**IMO blueprint**
+
+| Section | Questions | Marks each | Total |
+|---|---:|---:|---:|
+| Logical Reasoning | 15 | 1 | 15 |
+| Mathematical Reasoning | 20 | 1 | 20 |
+| Everyday Mathematics | 10 | 1 | 10 |
+| Achievers Section | 5 | 3 | 15 |
+| **Total** | **50** | — | **60** |
+
+The source bank contains 550 questions: 50 Logical Reasoning, 300 Mathematical Reasoning, 120 Everyday Mathematics and 80 Achievers questions.
+
+**IEO blueprint**
+
+| Section | Questions | Marks each | Total |
+|---|---:|---:|---:|
+| Word and Structure Knowledge | 30 | 1 | 30 |
+| Reading | 10 | 1 | 10 |
+| Spoken and Written Expression | 5 | 1 | 5 |
+| Achievers Section | 5 | 3 | 15 |
+| **Total** | **50** | — | **60** |
+
+The IEO bank now contains 600 questions across 12 topic sets. Every question is tagged to an exam section; separate 50-question pools were added for Spoken and Written Expression and Achievers, while the original questions and IDs were retained.
+
+For Level 1 IMO, SOF specifies 60% current-class and 40% previous-class syllabus coverage, with Achievers questions from the current class. Current/previous-class provenance is not yet tagged and audited in the bank, so the full mock enforces the section counts and marks but does **not** certify that syllabus split.
 
 ## Question images and diagrams
 

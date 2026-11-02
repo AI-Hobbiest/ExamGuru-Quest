@@ -1,37 +1,83 @@
-# Stage B — SOF Olympiad Examination Experience
+# Stage B — SOF Class 6 Olympiad Examination Experience
 
 ## Scope
 
-Stage B adds a full-paper examination mode for the Class 6 Science SOF bank. It is a blueprint-driven mode on top of the common quiz engine, not a separate exam application. Ordinary Learn, Test, Retry, Mixed Practice and Timed Exam modes remain available.
+Stage B provides blueprint-driven Level 1 full mocks for the three Class 6 SOF tracks already in ExamGuru Quest:
 
-The current blueprint is `sof-iso-class-6-level-1` and identifies the competition as the SOF International Science Olympiad (ISO), formerly commonly called the National Science Olympiad (NSO).
+- Science — SOF International Science Olympiad (ISO), commonly called NSO.
+- Mathematics — SOF International Mathematics Olympiad (IMO).
+- English — SOF International English Olympiad (IEO).
 
-## Paper blueprint
+The mock mode uses the shared quiz engine and saved-attempt ledger. It does not replace Learn, Test, Retry, Mixed Practice or Timed Exam.
 
-| Section | Bank field | Questions | Marks each | Section total |
+## Official Level 1 paper blueprints
+
+All three Class 6 papers contain 50 questions, run for 60 minutes and total 60 marks. The Achievers Section has five questions worth three marks each.
+
+### ISO / NSO
+
+| Section | Bank tag | Questions | Marks each | Section total |
 |---|---|---:|---:|---:|
 | Logical Reasoning | `Logical Reasoning` | 10 | 1 | 10 |
 | Science | `Science` | 35 | 1 | 35 |
 | Achievers Section | `Achievers Section` | 5 | 3 | 15 |
 | **Total** | | **50** | | **60** |
 
-The full mock has a fixed 60-minute overall timer. Question-level timers are switched off. The paper builder validates that each section pool can satisfy its quota, checks the resulting paper for duplicate question IDs, and attaches the section, section-question number and mark value to each selected question.
+Blueprint ID: `sof-iso-class-6-level-1`.
 
-The current bank contains 600 questions: 50 Logical Reasoning, 500 Science and 50 Achievers questions. Each mock selects 10, 35 and 5 respectively. Selection is random within each section. The generator prefers questions not used in the previous three completed mocks; if a section does not have enough unseen questions, it fills the remaining quota from the older pool. A question can never appear twice in the same paper.
+### IMO
 
-## Student experience
+| Section | Bank tag | Questions | Marks each | Section total |
+|---|---|---:|---:|---:|
+| Logical Reasoning | `Logical Reasoning` | 15 | 1 | 15 |
+| Mathematical Reasoning | `Mathematical Reasoning` | 20 | 1 | 20 |
+| Everyday Mathematics | `Everyday Mathematics` | 10 | 1 | 10 |
+| Achievers Section | `Achievers Section` | 5 | 3 | 15 |
+| **Total** | | **50** | | **60** |
 
-- The Olympiad mode is shown only for a Class 6 student opening the Science SOF track.
-- The chapter picker and question-count selector are hidden because the paper is fixed by the blueprint.
-- The fixed timer starts when the paper begins and submits the exam automatically at 60 minutes.
-- Correct answers and explanations are hidden during the exam.
-- The student can navigate to any question, change a saved answer, skip, and mark questions for review.
-- The question palette differentiates answered, skipped, current and marked questions, and shows section labels and section completion counts.
-- The student can submit early after confirmation. Unanswered questions are retained as unanswered.
+Blueprint ID: `sof-imo-class-6-level-1`.
 
-## Result and reports
+The 550-question bank has 50 Logical Reasoning, 300 Mathematical Reasoning, 120 Everyday Mathematics and 80 Achievers questions. Each section pool can therefore supply its paper quota without repeating a question inside a paper.
 
-The completed attempt keeps the legacy question-count score fields for dashboard compatibility and adds:
+### IEO
+
+| Section | Bank tag | Questions | Marks each | Section total |
+|---|---|---:|---:|---:|
+| Word and Structure Knowledge | `Word and Structure Knowledge` | 30 | 1 | 30 |
+| Reading | `Reading` | 10 | 1 | 10 |
+| Spoken and Written Expression | `Spoken and Written Expression` | 5 | 1 | 5 |
+| Achievers Section | `Achievers Section` | 5 | 3 | 15 |
+| **Total** | | **50** | | **60** |
+
+Blueprint ID: `sof-ieo-class-6-level-1`.
+
+The IEO bank contains 600 questions across 12 topic sets:
+
+| Section pool | Questions |
+|---|---:|
+| Word and Structure Knowledge | 446 |
+| Reading | 50 |
+| Spoken and Written Expression | 54 |
+| Achievers Section | 50 |
+| **Total** | **600** |
+
+All 500 original IEO questions and their IDs are retained. Existing questions now carry explicit exam-section tags. Four appropriate situation/function questions from the original mixed-practice topic are tagged as Spoken and Written Expression. Two new 50-question topics provide dedicated pools for Spoken and Written Expression and Achievers. These new questions use original scenarios, not copied sample-paper passages.
+
+## Shared student experience
+
+- The full-mock option is visible only when a Class 6 student opens the matching SOF Science, Mathematics or English track.
+- The chapter picker and question-count selector are hidden because each paper is fixed by its blueprint.
+- The overall timer is fixed at 60 minutes; the question-level timer is disabled.
+- Correct answers and explanations remain hidden during the exam.
+- Students can navigate to any question, change an answer, skip a question and mark questions for review.
+- The question palette shows question status and section-level progress, with direct jump-to-section controls.
+- The student can submit early after confirmation. Unanswered questions remain unanswered.
+- A paper is assembled randomly within each section, without duplicate question IDs. The builder prefers questions not used in the previous three completed mocks when each section has enough unseen questions.
+
+## Results and reports
+
+The completed attempt retains legacy question-count score fields for dashboard compatibility and adds:
+
 - exam type, title and blueprint ID;
 - a snapshot of the section blueprint;
 - weighted marks earned and maximum marks;
@@ -39,28 +85,36 @@ The completed attempt keeps the legacy question-count score fields for dashboard
 - section-wise correct, answered, skipped and unanswered counts;
 - marks earned and maximum marks for each section.
 
-The result view and PDF/Excel reports show both the overall weighted score and section-wise results. Achievers answers earn three marks; correct answers in the other two sections earn one mark. Incorrect, skipped and unanswered questions earn zero marks in this mock.
+The result view and PDF/Excel reports show the overall weighted score and section-wise performance. Correct Achievers answers earn three marks; correct answers in other sections earn one mark. Incorrect, skipped and unanswered questions earn zero marks.
 
-## Official-pattern alignment and remaining content audit
+## Official-pattern alignment and syllabus limitations
 
-The SOF Class 6 Level 1 pattern for Classes 5–10 is 50 questions in one hour: 10 Logical Reasoning questions at one mark each, 35 Science questions at one mark each and 5 Achievers questions at three marks each, for 60 marks. The Achievers section is based on higher-order-thinking questions from the Science syllabus.
+The blueprint section counts, duration and marking scheme are based on SOF's published Class 6 Level 1 IMO and IEO syllabus pages and official sample-paper/pattern material.
 
-SOF also specifies 60% current-class and 40% previous-class syllabus coverage for Level 1, and says Achievers questions are from the current-class syllabus. The existing 600 questions carry section tags but do not carry a separately audited current-class/previous-class syllabus tag. Consequently Stage B enforces the published time, section quotas and mark allocation, but **does not yet certify or automatically enforce the 60/40 curriculum split**. That needs a question-level grade-origin tagging and content audit before the paper pool can be described as fully syllabus-balanced.
+SOF specifies that Level 1 IMO papers for Classes 5–10 contain 60% current-class and 40% previous-class syllabus questions, with Achievers questions from the current class. The current IMO source records do not carry separately verified current-class/previous-class tags. The IMO mock therefore enforces the published section quotas, duration and marks but **does not certify or automatically enforce the 60/40 curriculum split**.
 
-Official reference pages:
-- [SOF ISO Class 6 syllabus and pattern](https://sofworld.org/nso/class-6/nso-syllabus/nso-syllabus-class-6)
-- [SOF pattern of questions and marking scheme](https://sofworld.org/pattern-questions-and-marking-scheme)
-- [SOF ISO Class 6 sample papers](https://sofworld.org/nso/class-6/sample-model-test-papers/nso-sample-papers-class-6)
+The NSO bank has the same known limitation: question records do not carry an audited current-class/previous-class origin tag. Its mock matches the section, count, duration and mark structure, but it is not certified as syllabus-ratio balanced.
+
+The IEO bank is explicitly tagged by the four published Level 1 exam sections. This implementation does not claim a separate grade-origin compliance audit.
+
+Official references:
+
+- [SOF IMO Class 6 syllabus and Level 1 pattern](https://sofworld.org/imo/class-6/imo-syllabus/imo-syllabus-class-6)
+- [SOF IMO Class 6 sample paper 2026–27](https://sofworld.org/download/file/fid/73716)
+- [SOF IEO Class 6 syllabus and Level 1 pattern](https://sofworld.org/ieo/class-6/ieo-syllabus/ieo-syllabus-class-6)
+- [SOF IEO Class 6 sample-paper page](https://sofworld.org/ieo/class-6/sample-model-test-papers/ieo-sample-papers-class-6)
+- [SOF pattern and marking scheme](https://sofworld.org/pattern-questions-and-marking-scheme)
 
 ## Persistence and compatibility
 
-The mock uses the existing Class 6 Science SOF `test-attempt-ledger`. Active attempts remain recoverable in the same browser, and completed attempts continue through the existing report/history path. New result metadata is additive; the existing `score`, `maxScore` and `correctCount` fields remain question-count based so older dashboard calculations are not silently reinterpreted.
+Each Olympiad mock uses the existing subject-specific `test-attempt-ledger`. Active attempts remain recoverable in the same browser, and completed attempts continue through the established report/history path. New weighted result fields are additive; the existing `score`, `maxScore` and `correctCount` fields remain question-count based so existing dashboard calculations are not silently reinterpreted.
 
-Like the other browser-first student experiences, local attempt history does not automatically synchronize between devices unless the configured student API is active. The recent-mock avoidance window is therefore based on the attempts visible in that student's current ledger.
+As with other browser-first student experiences, local attempt history does not automatically synchronize between devices unless the configured student API is active. The recent-mock avoidance window is based on the attempts visible in that student's current ledger.
 
 ## Regression coverage
 
-- `tests/olympiad-blueprints.test.js`: real-bank inventory, section quotas, marks, uniqueness, recent-paper avoidance and section scoring.
+- `tests/olympiad-blueprints.test.js`: all three bank inventories, section quotas, marks, unique questions, recent-paper avoidance, section scoring and insufficient-pool guards.
 - `tests/session-model.test.js`: additive weighted result fields without changing legacy score semantics.
-- `tests/quiz-engine.test.js`: launch flow, fixed timer, 50-question navigation, section summary chips, autosave ledger shape, weighted result rendering and report controls.
-- `.github/workflows/pages.yml` and `.github/workflows/quiz-quality.yml`: run the Olympiad checks; Pages assembles and deploys the new blueprint runtime.
+- `tests/quiz-engine.test.js`: NSO, IMO and IEO launch flows, fixed timers, 50-question papers, mobile section navigation, weighted Achievers scoring, result rendering and report controls.
+- `.github/workflows/pages.yml`: checks deployed bank inventories and the expanded 600-question IEO bank.
+- `.github/workflows/quiz-quality.yml`: runs blueprint, session-model and quiz-engine regression tests.

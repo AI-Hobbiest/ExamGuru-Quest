@@ -166,13 +166,9 @@
 </div>
 <label class="label">Practice mode</label><div class="mode"><button class="active" data-mode="learn">Learn</button><button data-mode="test">Test</button><button data-mode="retry">Retry missed</button><button data-mode="random">Mixed practice</button><button data-mode="timed">Timed exam</button><button id="olympiadModeBtn" class="hide" data-mode="olympiad">🏅 SOF full mock</button></div>
 <div id="olympiadBlueprintPanel" class="olympiad-blueprint-panel hide" aria-live="polite">
-  <h3>SOF ISO / NSO Level 1 · Full Mock</h3>
-  <p>50 questions · 60 minutes · 60 marks. A fresh randomised paper is drawn from the Class 6 Science SOF bank. Feedback and correct answers remain hidden until submission.</p>
-  <div class="olympiad-blueprint-grid">
-    <span><strong>10 × 1</strong>Logical Reasoning</span>
-    <span><strong>35 × 1</strong>Science</span>
-    <span><strong>5 × 3</strong>Achievers</span>
-  </div>
+  <h3 id="olympiadBlueprintTitle">SOF Olympiad Level 1 · Full Mock</h3>
+  <p id="olympiadBlueprintDescription">50 questions · 60 minutes · 60 marks. The paper is assembled to the selected Olympiad's official section blueprint.</p>
+  <div class="olympiad-blueprint-grid" id="olympiadBlueprintGrid"></div>
 </div>
 <details class="time-controls" id="timingControls">
   <summary>Time controls <span class="muted">· optional outside Timed Exam</span></summary>
