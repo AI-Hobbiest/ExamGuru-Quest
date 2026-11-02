@@ -115,6 +115,29 @@
 @media(max-width:760px){.eg-quiz-page header{padding:67px 18px 20px!important}.eg-quiz-page .wrap{margin-top:15px;padding-left:14px;padding-right:14px}.eg-quiz-page .topstats{gap:7px}.eg-quiz-page .topstats .stat{padding:11px 9px;border-radius:14px!important}.eg-quiz-page .topstats .stat strong{font-size:1.05rem}.eg-quiz-page .topstats .stat span{font-size:.7rem;line-height:1.25}.eg-quiz-page .quiz{border-radius:16px!important;padding:17px 15px}.eg-quiz-page .question-nav-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:390px){.eg-quiz-page .question-nav-dock{grid-template-columns:.95fr 1.15fr .95fr!important;gap:6px}.eg-quiz-page .question-nav-dock .btn{font-size:.78rem;padding:8px 5px}}
 
+
+/* SOF mock exam configuration and section feedback */
+.olympiad-blueprint-panel{margin-top:12px;padding:13px;border:1px solid #dcd5f0;border-radius:14px;background:linear-gradient(135deg,#f5f1ff,#f3faf5);color:#383466}
+.olympiad-blueprint-panel h3{font-size:.96rem;margin:0 0 6px;color:#332f70}
+.olympiad-blueprint-panel p{font-size:.8rem;line-height:1.5;margin:5px 0;color:#5e6480}
+.olympiad-blueprint-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:10px}
+.olympiad-blueprint-grid span{display:block;border:1px solid #e2e0ef;border-radius:9px;padding:8px 6px;background:#fff;text-align:center;font-size:.72rem;color:#4a4f70}
+.olympiad-blueprint-grid strong{display:block;font-size:.86rem;color:#393575}
+.section-pill{background:#e3f2e8!important;border-color:#c7e2d0!important;color:#286747!important}
+.navigator-section-summary{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}
+.navigator-section-chip{display:inline-flex;align-items:center;border:1px solid #dcd5f0;border-radius:999px;background:#f5f2fc;padding:6px 9px;color:#51498c;font-size:.72rem;font-weight:750}
+.question-nav-item.section-logical-reasoning{border-top:3px solid #8f84c7}
+.question-nav-item.section-science{border-top:3px solid #85ba9b}
+.question-nav-item.section-achievers{border-top:3px solid #dcb65b}
+.section-results{margin:18px 0 6px;text-align:left}
+.section-results h3{font-size:1.05rem;color:#332f70;margin:0 0 10px}
+.section-result-card{padding:13px;border:1px solid #e0e3ed;border-radius:13px;background:#fff;margin:9px 0}
+.section-result-card>strong{display:block;color:#36336f;font-size:.92rem}
+.section-result-marks{font-size:1.1rem;font-weight:850;color:#286747;margin-top:4px}
+.section-result-card p{font-size:.78rem;color:#69728a;margin:5px 0 9px}
+.section-result-track{height:8px;background:#e9ebf2;border-radius:99px;overflow:hidden}
+.section-result-track i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8174c2,#86bf9b)}
+
 </style>
 <link rel="stylesheet" href="./css/branding.css">
 <link rel="stylesheet" href="./css/app-shell.css">
@@ -126,7 +149,8 @@
 <main class="wrap">
 <div class="topstats"><div class="stat"><strong id="chapterTotal">—</strong><span>chapters / topics</span></div><div class="stat"><strong id="questionTotal">—</strong><span>original starter MCQs</span></div><div class="stat"><strong id="overallStat">0%</strong><span>accuracy on this device</span></div></div>
 <div class="layout" id="practiceLayout">
-<aside class="panel"><h2>Set up practice</h2><label class="label" for="chapterPickerToggle">Choose chapters / topics</label>
+<aside class="panel"><h2>Set up practice</h2><div id="chapterControls">
+<label class="label" for="chapterPickerToggle">Choose chapters / topics</label>
 <div class="chapter-picker" id="chapterPicker">
   <button class="chapter-picker-trigger" type="button" id="chapterPickerToggle" aria-expanded="false" aria-controls="chapterPickerPanel">
     <span class="chapter-picker-trigger-copy"><strong id="chapterPickerSummary">Loading chapters…</strong><small id="chapterPickerCount">Please wait</small></span><span class="chapter-picker-chevron" aria-hidden="true">⌄</span>
@@ -138,7 +162,17 @@
 </div>
 <select id="chapter" class="chapter-native-select" multiple size="6" aria-hidden="true" tabindex="-1" aria-describedby="chapterHelp"><option>Loading…</option></select>
 <p class="muted" id="chapterHelp">Tap a chapter to include or remove it. You can select several chapters for a mixed practice session.</p>
-<label class="label">Practice mode</label><div class="mode"><button class="active" data-mode="learn">Learn</button><button data-mode="test">Test</button><button data-mode="retry">Retry missed</button><button data-mode="random">Mixed practice</button><button data-mode="timed">Timed exam</button></div>
+</div>
+<label class="label">Practice mode</label><div class="mode"><button class="active" data-mode="learn">Learn</button><button data-mode="test">Test</button><button data-mode="retry">Retry missed</button><button data-mode="random">Mixed practice</button><button data-mode="timed">Timed exam</button><button id="olympiadModeBtn" class="hide" data-mode="olympiad">🏅 SOF full mock</button></div>
+<div id="olympiadBlueprintPanel" class="olympiad-blueprint-panel hide" aria-live="polite">
+  <h3>SOF ISO / NSO Level 1 · Full Mock</h3>
+  <p>50 questions · 60 minutes · 60 marks. A fresh randomised paper is drawn from the Class 6 Science SOF bank. Feedback and correct answers remain hidden until submission.</p>
+  <div class="olympiad-blueprint-grid">
+    <span><strong>10 × 1</strong>Logical Reasoning</span>
+    <span><strong>35 × 1</strong>Science</span>
+    <span><strong>5 × 3</strong>Achievers</span>
+  </div>
+</div>
 <details class="time-controls" id="timingControls">
   <summary>Time controls <span class="muted">· optional outside Timed Exam</span></summary>
   <div class="time-control-grid">
@@ -161,7 +195,7 @@
   </div>
   <p class="muted" id="timingHelp">Overall time is the hard deadline. The optional question pace guide starts when you first open a question and keeps counting while you navigate away; reaching zero never locks or skips it.</p>
 </details>
-<label class="label" for="length">Questions per session</label><select id="length"><option value="5">5 · Quick</option><option value="10" selected>10 · Standard</option><option value="20">20 · Focus</option><option value="50">50 · Deep practice</option><option value="0">All available</option></select>
+<div id="lengthControl"><label class="label" for="length">Questions per session</label><select id="length"><option value="5">5 · Quick</option><option value="10" selected>10 · Standard</option><option value="20">20 · Focus</option><option value="50">50 · Deep practice</option><option value="0">All available</option></select></div>
 <div class="btnrow"><button class="btn" id="startBtn">Start practice →</button></div><div class="hint" id="modeHint">Loading the chapter bank…</div>
 <hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h2>Student space</h2><p class="muted">Manage your learner details and view completed test history.</p><div class="btnrow"><a class="btn secondary" href="./profile.html">My profile &amp; history →</a></div><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h2>My progress</h2><div class="muted" id="progressText">Scores and missed questions are saved on this device.</div><div class="btnrow"><button class="btn secondary" id="reviewBtn">Review missed</button><button class="btn secondary" id="clearBtn">Reset progress</button></div><p class="muted">Progress stays in this browser on this device. It does not sync to another phone or computer.</p>
 </aside>
@@ -170,7 +204,7 @@
 <div id="welcome"><div class="eyebrow" style="color:#5b7285">Ready when you are</div><h2 style="font-size:1.8rem;margin-top:10px">Build understanding, one question at a time.</h2><p class="muted">Choose a chapter and start practice. Learn mode explains each answer immediately. Test mode holds feedback until the end. Retry missed brings back questions you previously answered incorrectly.</p><div class="topicgrid"><div class="topic"><strong>🧠 Learn</strong><span>Instant feedback and explanations</span></div><div class="topic"><strong>⏱️ Test</strong><span>Answer first, review afterwards</span></div><div class="topic"><strong>🔁 Retry missed</strong><span>Focus on concepts to strengthen</span></div><div class="topic"><strong>📈 Progress</strong><span>Track attempts on this device</span></div></div><div class="hint">The other subject banks are a starter set and will be expanded chapter by chapter. Check your school’s latest syllabus before exam revision.</div></div>
 <div id="session" class="hide">
   <div class="quiztop">
-    <span class="pill" id="chapterPill">Chapter</span><span class="pill" id="numberPill">Question 1 / 10</span><span class="pill" id="difficultyPill">Medium</span>
+    <span class="pill" id="chapterPill">Chapter</span><span class="pill" id="numberPill">Question 1 / 10</span><span class="pill" id="difficultyPill">Medium</span><span class="pill section-pill hide" id="sectionPill"></span>
     <span class="pill hide" id="timerPill">Elapsed · 00:00</span><span class="pill hide" id="questionTimerPill">Pace left · 00:00</span>
     <button class="btn secondary nav-inline-trigger" id="navigatorInlineBtn" type="button">Questions ▦</button>
   </div>
@@ -179,7 +213,7 @@
   <div id="questionMedia" class="question-media hide" aria-label="Question diagrams"></div><div class="answers" id="options"></div><div id="feedback"></div>
   <div class="foot"><span class="muted" id="sessionHint">Choose one answer.</span><div class="btnrow" style="margin:0"><button class="btn secondary" id="skipBtn">Skip</button><button class="btn secondary" id="submitBtn">Submit quiz</button><button class="btn" id="nextBtn">Next →</button></div></div>
 </div>
-<div id="results" class="hide"><div class="result"><div class="eyebrow" style="color:#5b7285">Session complete</div><div class="score"><div><strong id="scorePct">0%</strong><br><span>correct</span></div></div><h2 id="resultTitle">Nice work!</h2><p class="muted" id="resultCopy"></p><div class="topicgrid" id="resultStats"></div><div class="btnrow" style="justify-content:center"><button class="btn" id="againBtn">Practise again</button><button class="btn secondary" id="reviewAnswersBtn">Review answers</button><button class="btn secondary" id="reportPdfBtn">Download report · PDF</button><button class="btn secondary" id="reportExcelBtn">Download report · Excel</button></div></div></div>
+<div id="results" class="hide"><div class="result"><div class="eyebrow" style="color:#5b7285">Session complete</div><div class="score"><div><strong id="scorePct">0%</strong><br><span id="scoreUnit">correct</span></div></div><h2 id="resultTitle">Nice work!</h2><p class="muted" id="resultCopy"></p><div class="topicgrid" id="resultStats"></div><div id="sectionResults" class="section-results hide"></div><div class="btnrow" style="justify-content:center"><button class="btn" id="againBtn">Practise again</button><button class="btn secondary" id="reviewAnswersBtn">Review answers</button><button class="btn secondary" id="reportPdfBtn">Download report · PDF</button><button class="btn secondary" id="reportExcelBtn">Download report · Excel</button></div></div></div>
 <div id="review" class="hide"><div class="quiztop"><h2>Review your answers</h2><span class="pill" id="reviewPill"></span></div><div id="reviewList"></div><div class="btnrow"><button class="btn" id="backBtn">Back to results</button><button class="btn secondary" id="reviewPdfBtn">Download report · PDF</button><button class="btn secondary" id="reviewExcelBtn">Download report · Excel</button><button class="btn secondary" id="retrySetBtn">Retry missed in this session</button></div></div>
 </section></div></main>
 <div id="questionNavDock" class="question-nav-dock hide" aria-label="Question navigation">
@@ -192,6 +226,7 @@
   <section class="question-nav-sheet" role="dialog" aria-modal="true" aria-labelledby="questionNavigatorTitle">
     <div class="question-nav-handle"></div>
     <div class="question-nav-heading"><div><h2 id="questionNavigatorTitle">Question navigator</h2><p class="muted" id="navigatorSummary">0 answered</p></div><button class="btn secondary" id="closeQuestionNavigator" type="button" aria-label="Close navigator">✕</button></div>
+    <div id="navigatorSectionSummary" class="navigator-section-summary hide"></div>
     <div class="question-nav-grid" id="questionNavigatorGrid"></div>
     <div class="question-nav-legend"><span><i class="answered"></i> Answered</span><span><i class="unanswered"></i> Unanswered</span><span><i class="skipped"></i> Skipped</span><span><i class="current"></i> Current</span><span><i class="marked"></i> Marked</span><span><i class="pace-reached"></i> Pace reached</span></div>
     <div class="question-nav-actions"><button class="btn secondary" id="navigatorReturnBtn" type="button">Return to question</button><button class="btn" id="navigatorSubmitBtn" type="button">Submit quiz</button></div>
@@ -207,6 +242,7 @@
 <footer>Original practice questions for revision. Some school syllabi include additional or deleted topics; confirm the course and current syllabus with your teacher. Keep noticing what you understand and what still needs practice.<div class="brand-signature site-credit">Conceptualised by <strong>JP Ganathe</strong> · ExamGuru</div></footer>
 <script src="./js/storage.js"></script>
 <script src="./js/question-bank.js"></script>
+<script src="./js/olympiad-blueprints.js"></script>
 <script src="./js/session-model.js"></script>
 <script src="./js/api-config.js"></script>
 <script src="./js/api-client.js"></script>
