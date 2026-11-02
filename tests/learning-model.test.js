@@ -88,6 +88,7 @@ assert.ok(topics.some(item=>item.subjectId==="mathematics"&&item.chapterKey==="f
 assert.ok(topics.some(item=>item.chapterKey==="geometry"&&item.skippedCount===1));
 assert.ok(topics.every(item=>item.masteryPercent>=0&&item.masteryPercent<=100));
 const adaptivePool=[
+ question("q1","fractions","Medium"),question("q2","geometry","Hard"),
  question("a","fractions","Easy"),question("b","fractions","Medium"),
  question("c","geometry","Hard"),question("d","geometry","Challenge"),
  question("e","triangles","Hard"),question("f","triangles","Easy")
@@ -95,8 +96,8 @@ const adaptivePool=[
 const adaptive=model.adaptiveOrder(adaptivePool,library,4,()=>0.1);
 assert.equal(adaptive.length,4);
 assert.equal(new Set(adaptive.map(item=>item.questionKey)).size,4,"adaptive selection never repeats a question within one session");
-assert.ok(adaptive.some(item=>item.questionKey===question("a").questionKey)||adaptive.some(item=>item.questionKey===question("b").questionKey),
- "adaptive selection includes questions from the weak fractions topic or its recorded mistake");
+assert.ok(adaptive.some(item=>item.questionKey===question("q1").questionKey),
+ "adaptive selection prioritises the active question in the Mistake Book");
 assert.ok(model.recommendations(library).length>0);
 
 const legacyProgress={
