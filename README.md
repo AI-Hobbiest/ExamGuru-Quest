@@ -52,6 +52,23 @@ Class 10's five subjects and the class-specific Class 3 and Class 6 banks use th
 
 Science retains its existing compressed source payload so there is no manually maintained duplicate bank. During deployment, GitHub Actions validates the 14 chapter sets / 1,400 MCQs and generates the deployment copy of data/science.json, which is then consumed by the same question-bank normalizer, session ledger, local history and XP/levels/badges as the other subjects. The old science.html URL remains as a compatibility redirect to practice.html?subject=science.
 
+### SOF Class 6 ISO / NSO Olympiad full mock
+
+The Class 6 Science SOF track includes a blueprint-driven **Level 1 full mock** in addition to chapter practice. It uses the same saved-attempt engine, question palette, answer review and report downloads.
+
+| Section | Questions | Marks per question | Maximum marks |
+|---|---:|---:|---:|
+| Logical Reasoning | 10 | 1 | 10 |
+| Science | 35 | 1 | 35 |
+| Achievers Section | 5 | 3 | 15 |
+| **Total** | **50** | — | **60** |
+
+The paper has a fixed 60-minute countdown, fixed section quotas, a fresh random selection without duplicates within the paper, and no question-level timer. A paper prefers questions not used in the previous three completed mocks, while the section pool has enough unseen questions. Students can revisit and change answers before submitting or until the overall timer expires. The question navigator shows section progress. Results and PDF/Excel reports include weighted marks and section-wise scores.
+
+The 600-question pool currently contains 50 Logical Reasoning, 500 Science and 50 Achievers questions. The paper engine validates the section counts and mark totals before a paper can start. The official Level 1 syllabus also calls for 60% current-class and 40% previous-class coverage, with Achievers questions from the current class. The present question records do not yet carry a verified current/previous-class syllabus tag, so that 60/40 content balance is **not automatically enforced** by the paper generator. Treat this mock as matching the exam's section/count/time/mark structure, not as a syllabus-ratio-certified paper. The question bank needs grade-level tagging and a content audit before that final compliance claim can be made.
+
+Implementation notes and checks: [docs/sof-olympiad-experience.md](docs/sof-olympiad-experience.md).
+
 ## Question images and diagrams
 
 The shared question model now supports optional `images` metadata on each question. Each image has a source, meaningful alternative text and an optional caption. Sources may be a relative asset path (recommended for curated question banks) or a PNG/JPEG/WebP/GIF base64 data URI (useful when packaging a figure with an imported question). Text-only questions remain valid and unchanged.

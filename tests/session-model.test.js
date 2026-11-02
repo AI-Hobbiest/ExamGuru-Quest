@@ -3,9 +3,10 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const vm = require("node:vm");
 
-const context = { window: {}, Date, Math, Number, String, TypeError, JSON, Object, Array };
+const context = { window: {}, Date, Math, Number, String, TypeError, JSON, Object, Array, Set };
 context.globalThis = context;
 vm.createContext(context);
+vm.runInContext(fs.readFileSync("js/olympiad-blueprints.js", "utf8"), context);
 vm.runInContext(fs.readFileSync("js/session-model.js", "utf8"), context);
 const model = context.window.C10SessionModel;
 
@@ -62,6 +63,35 @@ assert.deepEqual(Array.from(result.attempt.questionIds), [
 ]);
 assert.throws(() => model.summarize({ questions: [], answers: [] }, { status: "in-progress" }), /Invalid final attempt status/);
 
+const olympiadQuestions = [
+  { id: "lr-1", questionKey: "sof/lr/q1", examSectionId: "logical-reasoning", marks: 1, chapterKey: "reasoning", chapterTitle: "Reasoning", options: ["A", "B"], answer: 0, optionIds: ["a", "b"], correctOptionId: "a" },
+  { id: "science-1", questionKey: "sof/science/q1", examSectionId: "science", marks: 1, chapterKey: "science", chapterTitle: "Science", options: ["A", "B"], answer: 1, optionIds: ["a", "b"], correctOptionId: "b" },
+  { id: "achievers-1", questionKey: "sof/achievers/q1", examSectionId: "achievers", marks: 3, chapterKey: "achievers", chapterTitle: "Achievers", options: ["A", "B"], answer: 0, optionIds: ["a", "b"], correctOptionId: "a" }
+];
+const olympiadSections = [
+  { id: "logical-reasoning", title: "Logical Reasoning", questionCount: 1, marksPerQuestion: 1, maxMarks: 1 },
+  { id: "science", title: "Science", questionCount: 1, marksPerQuestion: 1, maxMarks: 1 },
+  { id: "achievers", title: "Achievers Section", questionCount: 1, marksPerQuestion: 3, maxMarks: 3 }
+];
+const weighted = model.summarize({
+  attemptId: "sof-attempt", profileId: "profile-1", subjectId: "science-sof", mode: "olympiad-exam",
+  examType: "olympiad", examTitle: "SOF ISO Class 6 Level 1", examBlueprintId: "sof-iso-class-6-level-1",
+  sectionBlueprint: olympiadSections, startedAt: "2026-10-25T10:00:00.000Z",
+  questions: olympiadQuestions,
+  answers: [
+    { questionId: "sof/lr/q1", status: "answered", isCorrect: true },
+    { questionId: "sof/science/q1", status: "answered", isCorrect: false },
+    { questionId: "sof/achievers/q1", status: "answered", isCorrect: true }
+  ]
+}, { submittedAt: "2026-10-25T10:02:00.000Z" });
+assert.equal(weighted.attempt.correctCount, 2, "raw correct count remains available for existing dashboards");
+assert.equal(weighted.attempt.score, 2, "legacy question score stays backward compatible");
+assert.equal(weighted.attempt.maxScore, 3, "legacy maximum question score stays backward compatible");
+assert.equal(weighted.attempt.marksEarned, 4, "Achievers correct answer earns three marks");
+assert.equal(weighted.attempt.maxMarks, 5);
+assert.equal(weighted.attempt.marksAccuracy, 80);
+assert.deepEqual(Array.from(weighted.attempt.sectionResults.map(row => row.marksEarned)), [1, 0, 3]);
+
 const engine = fs.readFileSync("js/quiz-engine.js", "utf8");
 new Function(engine);
 assert.ok(engine.includes('finish("timed-out",false)'), "countdown auto-submits at timeout");
@@ -69,7 +99,7 @@ assert.ok(engine.includes("persistCurrentAttempt"), "in-progress sessions are pe
 assert.ok(engine.includes("restoreAttempt"), "in-progress sessions are restored");
 assert.ok(engine.includes("answerRecordIds"), "result model references answer records");
 const practice = fs.readFileSync("practice.html", "utf8");
-const scripts = ["./js/storage.js", "./js/question-bank.js", "./js/session-model.js", "./js/quiz-engine.js"].map(src => practice.indexOf(src));
+const scripts = ["./js/storage.js", "./js/question-bank.js", "./js/olympiad-blueprints.js", "./js/session-model.js", "./js/quiz-engine.js"].map(src => practice.indexOf(src));
 assert.ok(scripts.every(n => n >= 0) && scripts.every((n, i) => i === 0 || scripts[i - 1] < n), "script dependencies load in the required order");
 
 console.log("Session tests passed: timer arithmetic, countdown expiry, duration formatting, result scoring, unanswered tracking, autosave/recovery wiring, and script order.");

@@ -2,7 +2,7 @@
 "use strict";
 const SUBJECTS = {
   science: { title:"Science", icon:"🧪", subtitle:"Explore biology, chemistry and physics through concept checks, explanations and exam-style practice." },
-  "science-sof": { title:"Science - SOF", icon:"🏆", subtitle:"Class 6 SOF National Science Olympiad (NSO) practice with original science and reasoning questions." },
+  "science-sof": { title:"Science - SOF", icon:"🏆", subtitle:"Class 6 SOF International Science Olympiad (ISO), formerly NSO, with original science and reasoning questions." },
   mathematics: { title:"Mathematics", icon:"📐", subtitle:"Reason it out, work step by step, and use each mistake to sharpen the method." },
   "mathematics-sof": { title:"Mathematics - SOF", icon:"🏆", subtitle:"Class 6 SOF International Mathematics Olympiad (IMO) practice with original reasoning-focused questions." },
   english: { title:"English", icon:"📚", subtitle:"Practise reading, grammar and original questions about the prescribed literature." },
@@ -28,6 +28,9 @@ const bankId = classId === "10" ? subject : "class-" + classId + "-" + subject;
 const CLASS_SUBJECTS = { "3":["mathematics","english"], "6":["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"], "10":["science","mathematics","english","social-science","hindi"] };
 const config = SUBJECTS[subject];
 let chapters=[], mode="learn", session=[], index=0, picked=null, answers=[], lastMissed=[];
+const olympiadBlueprintId="sof-iso-class-6-level-1";
+const olympiadAvailable=classId==="6"&&subject==="science-sof"&&!!window.C10OlympiadBlueprints;
+const isExamMode=()=>mode==="test"||mode==="timed"||mode==="olympiad";
 let currentAttempt=null, completedAttempt=null, clockHandle=null, ledger;
 const emptyProgress = () => ({missed:[],answered:0,correct:0,attempts:[]});
 const validProgress = value => !!value && Array.isArray(value.missed) &&
@@ -188,24 +191,48 @@ function syncModeControls(){
   const overall=$("overallTimerSetting"),question=$("questionTimerSetting");
   const overallCustom=$("overallTimerCustom"),overallLabel=$("overallCustomLabel");
   const questionCustom=$("questionTimerCustom"),questionLabel=$("questionCustomLabel");
-  const timed=mode==="timed";
-  if(timed&&overall&&overall.value==="off"){overall.value="1200";overall.dataset.timedDefault="true";}
+  const timed=mode==="timed",olympiad=mode==="olympiad";
+  if(olympiad&&overall&&overall.dataset.olympiadForced!=="true"){
+    overall.dataset.preOlympiadValue=overall.value||"off";
+    if(question)question.dataset.preOlympiadValue=question.value||"off";
+    overall.dataset.olympiadForced="true";
+  }else if(!olympiad&&overall&&overall.dataset.olympiadForced==="true"){
+    overall.value=overall.dataset.preOlympiadValue||"off";
+    if(question)question.value=question.dataset.preOlympiadValue||"off";
+    overall.dataset.olympiadForced="false";
+  }
+  if(olympiad){if(overall)overall.value="3600";if(question)question.value="off";}
+  else if(timed&&overall&&overall.value==="off"){overall.value="1200";overall.dataset.timedDefault="true";}
   else if(!timed&&overall&&overall.dataset.timedDefault==="true"){overall.value="off";overall.dataset.timedDefault="false";}
   if(overall){
     const off=overall.querySelector&&overall.querySelector('option[value="off"]');
-    if(off)off.disabled=timed;
+    if(off)off.disabled=timed||olympiad;
+    overall.disabled=olympiad;
   }
-  if(overallCustom)overallCustom.hidden=!overall||overall.value!=="custom";
-  if(overallLabel)overallLabel.hidden=!overall||overall.value!=="custom";
-  if(questionCustom)questionCustom.hidden=!question||question.value!=="custom";
-  if(questionLabel)questionLabel.hidden=!question||question.value!=="custom";
-  const controls=$("timingControls");if(controls&&timed)controls.open=true;
+  if(question)question.disabled=olympiad;
+  if(overallCustom)overallCustom.hidden=olympiad||!overall||overall.value!=="custom";
+  if(overallLabel)overallLabel.hidden=olympiad||!overall||overall.value!=="custom";
+  if(questionCustom)questionCustom.hidden=olympiad||!question||question.value!=="custom";
+  if(questionLabel)questionLabel.hidden=olympiad||!question||question.value!=="custom";
+  const controls=$("timingControls");
+  if(controls){controls.classList.toggle("hide",olympiad);if(timed)controls.open=true;}
+  const blueprintPanel=$("olympiadBlueprintPanel");
+  if(blueprintPanel)blueprintPanel.classList.toggle("hide",!olympiad);
+  const chapterControls=$("chapterControls");
+  if(chapterControls)chapterControls.classList.toggle("hide",olympiad);
+  else ["chapterPicker","chapter","chapterHelp"].forEach(id=>{const node=$(id);if(node)node.classList.toggle("hide",olympiad);});
+  const lengthControl=$("lengthControl");
+  if(lengthControl)lengthControl.classList.toggle("hide",olympiad);
+  else {const node=$("length");if(node)node.classList.toggle("hide",olympiad);}
   const help=$("timingHelp");
-  if(help)help.textContent=timed
-    ?"Timed Exam requires an overall countdown. An optional question timer is a pace indicator; only the overall quiz deadline ends the exam."
-    :"Overall and question timers are optional. A question clock is a pace indicator and does not lock answers.";
+  if(help)help.textContent=olympiad
+    ?"SOF full-mock timing is fixed at 60 minutes. Question-level countdowns are disabled; you may revisit and change answers before submission."
+    :timed
+      ?"Timed Exam requires an overall countdown. An optional question timer is a pace indicator; only the overall quiz deadline ends the exam."
+      :"Overall and question timers are optional. A question clock is a pace indicator and does not lock answers.";
 }
 function selectedTiming(){
+  if(mode==="olympiad")return {overallTimeLimitSeconds:3600,questionTimeLimitSeconds:null};
   let overallChoice=$("overallTimerSetting").value;
   if(mode==="timed"&&overallChoice==="off"){overallChoice="1200";$("overallTimerSetting").value=overallChoice;}
   const overallTimeLimitSeconds=overallChoice==="off"?null:
@@ -268,6 +295,18 @@ function renderQuestionNavigator(){
   const skippedCount=currentAttempt.answers.filter(record=>record&&record.status==="skipped").length;
   const markedCount=(currentAttempt.markedQuestionIndexes||[]).length;
   setText("navigatorSummary",answeredCount+" answered · "+skippedCount+" skipped · "+markedCount+" marked");
+  const sectionSummary=$("navigatorSectionSummary");
+  if(sectionSummary){
+    sectionSummary.innerHTML="";
+    (currentAttempt.sectionBlueprint||[]).forEach(section=>{
+      const indexes=session.map((question,i)=>question.examSectionId===section.id?i:-1).filter(i=>i>=0);
+      const sectionAnswered=indexes.filter(i=>currentAttempt.answers[i]&&currentAttempt.answers[i].status==="answered").length;
+      const chip=document.createElement("span");chip.className="navigator-section-chip";
+      chip.textContent=section.title+" · "+sectionAnswered+"/"+section.questionCount;
+      sectionSummary.appendChild(chip);
+    });
+    sectionSummary.classList.toggle("hide",!(currentAttempt.sectionBlueprint||[]).length);
+  }
   session.forEach((question,i)=>{
     const button=document.createElement("button");button.type="button";button.className="question-nav-item";button.textContent=String(i+1);
     const paceReached=isQuestionExpired(i),record=currentAttempt.answers[i];
@@ -277,7 +316,8 @@ function renderQuestionNavigator(){
     if(i===index)button.classList.add("current");
     if(questionIsMarked(i))button.classList.add("marked");
     const stateLabel=!record||record.status==="unanswered"?"not answered":record.status==="skipped"?"skipped":"answered";
-    button.setAttribute("aria-label","Question "+(i+1)+", "+stateLabel+(paceReached?", suggested pace reached":"")+(questionIsMarked(i)?", marked for review":""));
+    if(question.examSectionId){button.classList.add("section-"+question.examSectionId);button.title=question.examSectionTitle+" · Question "+question.sectionQuestionNumber;}
+    button.setAttribute("aria-label","Question "+(i+1)+", "+stateLabel+(question.examSectionTitle?", "+question.examSectionTitle:"")+(paceReached?", suggested pace reached":"")+(questionIsMarked(i)?", marked for review":""));
     button.disabled=false;
     button.onclick=()=>{moveToQuestion(i);closeQuestionNavigator();};grid.appendChild(button);
   });
@@ -315,7 +355,7 @@ function advanceAfterQuestionTimeout(expiredIndex){
   if(nextIndex===undefined){finish("submitted",false);return;}
   moveToQuestion(nextIndex);
 }
-function buildAttempt(questionPool){
+function buildAttempt(questionPool,examPlan=null){
   const timing=selectedTiming(),startedAt=new Date().toISOString();
   const chosen=selectedChapters();
   const chapterIds=chosen.map(chapter=>String(chapter.key||chapter.chapterKey||chapter.title));
@@ -323,8 +363,13 @@ function buildAttempt(questionPool){
     schemaVersion:1,kind:"test-attempt",attemptId:window.C10Storage.createId(),profileId:localProfile.profileId,
     subjectId:subject,
     subjectIds:[subject],
-    mode:({learn:"learn",test:"test",retry:"practice",random:"mixed-practice",timed:"timed-exam"})[mode]||"learn",
-    uiMode:mode,source:{type:mode==="random"?"subject-bank":chosen.length>1?"chapter-set":"chapter-bank",sourceId:mode==="random"?subject+"-all":chapterIds.join(","),subjectIds:[subject],chapterIds},
+    mode:({learn:"learn",test:"test",retry:"practice",random:"mixed-practice",timed:"timed-exam",olympiad:"olympiad-exam"})[mode]||"learn",
+    uiMode:mode,
+    examType:examPlan?"olympiad":null,
+    examTitle:examPlan?examPlan.examTitle:null,
+    examBlueprintId:examPlan?examPlan.blueprintId:null,
+    sectionBlueprint:examPlan?clone(examPlan.sections):[],
+    source:{type:mode==="random"?"subject-bank":mode==="olympiad"?"olympiad-blueprint":chosen.length>1?"chapter-set":"chapter-bank",sourceId:mode==="random"?subject+"-all":examPlan?examPlan.blueprintId:chapterIds.join(","),subjectIds:[subject],chapterIds},
     questionBankVersion:"legacy-bank-v1",
     status:"in-progress",startedAt,submittedAt:null,durationSeconds:null,
     timeLimitSeconds:timing.overallTimeLimitSeconds,overallTimeLimitSeconds:timing.overallTimeLimitSeconds,
@@ -347,14 +392,26 @@ function start(){
   if(ledger.activeAttempt && ledger.activeAttempt.status==="in-progress"){
     setText("modeHint","You have a saved session in progress. It will resume automatically when this page loads.");return;
   }
-  let pool=currentPool();
-  if(mode==="retry"&&!pool.length){setText("modeHint","No missed questions in this chapter yet. Choose Learn mode or Mixed practice first.");return;}
-  const chosen=+$("length").value;
-  if(mode!=="retry")pool=prioritizeUnseenQuestions(pool,chosen);
-  if(chosen!==0)pool=pool.slice(0,Math.min(chosen,pool.length));
+  let pool=[],examPlan=null;
+  if(mode==="olympiad"){
+    if(!olympiadAvailable){setText("modeHint","The SOF Class 6 full mock is available only in the Class 6 Science SOF bank.");return;}
+    try{
+      const recentlyUsed=ledger.attempts
+        .filter(attempt=>attempt&&attempt.examBlueprintId===olympiadBlueprintId&&Array.isArray(attempt.questionIds))
+        .slice(0,3).flatMap(attempt=>attempt.questionIds);
+      examPlan=window.C10OlympiadBlueprints.buildPaper(chapters,olympiadBlueprintId,Math.random,{recentQuestionIds:recentlyUsed});
+      pool=examPlan.questions;
+    }catch(error){setText("modeHint","The Olympiad paper could not be assembled: "+error.message);return;}
+  }else{
+    pool=currentPool();
+    if(mode==="retry"&&!pool.length){setText("modeHint","No missed questions in this chapter yet. Choose Learn mode or Mixed practice first.");return;}
+    const chosen=+$("length").value;
+    if(mode!=="retry")pool=prioritizeUnseenQuestions(pool,chosen);
+    if(chosen!==0)pool=pool.slice(0,Math.min(chosen,pool.length));
+  }
   if(!pool.length){setText("modeHint","No questions are available for this selection.");return;}
   session=pool;index=0;picked=null;answers=Array(session.length).fill(null);
-  currentAttempt=buildAttempt(session);completedAttempt=null;
+  currentAttempt=buildAttempt(session,examPlan);completedAttempt=null;
   ledger.activeAttempt=currentAttempt;saveLedger();
   currentAttempt.questionStartedAt=new Date().toISOString();persistCurrentAttempt();
   show("session");renderQuestion();startClock();
@@ -381,6 +438,7 @@ function restoreAttempt(saved){
     if(questionLimit&&!questionPresets.includes(String(questionLimit)))$("questionTimerCustom").value=String(questionLimit);
     if(mode==="timed"&&$("overallTimerSetting").value==="off")$("overallTimerSetting").value="1200";
     syncModeControls();
+    $("startBtn").textContent=mode==="olympiad"?"Start SOF full mock →":"Start practice →";
     $("chapter").value=String(Math.max(0,chapters.findIndex(chapter=>chapter.chapterKey===session[index].chapterKey)));
     syncChapterPickerFromSelect();
     setText("status","Your saved session and answers have been restored.");$("status").classList.remove("hide");
@@ -444,9 +502,14 @@ function renderQuestion(){
   const question=session[index],previous=answers[index],locked=false;
   picked=previous?(previous.status==="skipped"?-1:previous.selected):null;
   const chapter=chapters.find(item=>item.chapter_no===question.chapter_no);
-  setText("chapterPill",chapter?chapter.title:question.chapterTitle);
+  setText("chapterPill",question.examSectionTitle||(chapter?chapter.title:question.chapterTitle));
   setText("numberPill","Question "+(index+1)+" / "+session.length);
-  setText("difficultyPill",question.difficulty||"Practice");
+  setText("difficultyPill",question.examSectionId?question.marks+" mark"+(question.marks===1?"":"s")+" · "+(question.difficulty||"SOF"):(question.difficulty||"Practice"));
+  const sectionPill=$("sectionPill");
+  if(sectionPill){
+    if(question.examSectionId){sectionPill.textContent="Section "+question.examSectionNumber+" · "+question.sectionQuestionNumber+"/"+question.sectionQuestionCount;sectionPill.classList.remove("hide");}
+    else sectionPill.classList.add("hide");
+  }
   setText("questionText",question.question);
   appendQuestionImages($("questionMedia"),question);
   $("progressBar").style.width=(index/session.length*100)+"%";
@@ -456,8 +519,8 @@ function renderQuestion(){
     const letter=document.createElement("span");letter.className="letter";letter.textContent=String.fromCharCode(65+i);
     const label=document.createElement("span");label.textContent=text;button.append(letter,label);
     if(previous&&i===previous.selected)button.classList.add("selected");
-    if(previous&&mode!=="test"&&mode!=="timed"&&i===question.answer)button.classList.add("correct");
-    if(previous&&mode!=="test"&&mode!=="timed"&&i===previous.selected&&!previous.correct)button.classList.add("wrong");
+    if(previous&&!isExamMode()&&i===question.answer)button.classList.add("correct");
+    if(previous&&!isExamMode()&&i===previous.selected&&!previous.correct)button.classList.add("wrong");
     button.disabled=locked;
     button.setAttribute("aria-pressed",String(!!previous&&i===previous.selected));
     button.onclick=()=>choose(i);
@@ -468,13 +531,13 @@ function renderQuestion(){
     const title=document.createElement("strong");title.textContent="Question time expired. ";
     const explanation=document.createElement("span");explanation.textContent=previous&&previous.status==="answered"?"Your saved answer is locked.":"This question is locked as unanswered.";
     box.append(title,explanation);$("feedback").appendChild(box);
-  }else if(previous && mode!=="test"&&mode!=="timed"){
+  }else if(previous && !isExamMode()){
     const box=document.createElement("div");box.className="feedback "+(previous.correct?"good":"bad");
     const title=document.createElement("strong");title.textContent=previous.status==="skipped"?"Skipped. ":previous.correct?"Correct! ":"Not quite. ";
     const explanation=document.createElement("span");explanation.textContent=question.explanation||"Review the idea and try a similar question.";
     box.append(title,explanation);$("feedback").appendChild(box);
   }
-  setText("sessionHint",mode==="test"||mode==="timed"?(previous?"Answer saved. You may change it until the overall quiz time expires.":"Choose an answer. You can revisit it while overall quiz time remains."):(previous?"Your answer is saved. Select another option to change it, or continue when ready.":"Choose one answer; you can change it before moving on."));
+  setText("sessionHint",isExamMode()?(previous?"Answer saved. You may change it until the overall quiz time expires.":"Choose an answer. You can revisit it while overall quiz time remains."):(previous?"Your answer is saved. Select another option to change it, or continue when ready.":"Choose one answer; you can change it before moving on."));
   $("nextBtn").disabled=false;$("nextBtn").textContent=index===session.length-1?"Submit session ✓":"Next question →";
   $("skipBtn").disabled=locked||picked!==null;$("submitBtn").textContent="Submit quiz";
   const questionTimer=$("questionTimerPill"),remaining=questionRemaining(index);
@@ -528,10 +591,10 @@ function choose(optionIndex){
     button.classList.toggle("selected",i===optionIndex);
     button.classList.remove("correct","wrong");
     button.disabled=false;
-    if(mode!=="test"&&mode!=="timed"){if(i===question.answer)button.classList.add("correct");if(i===optionIndex&&!correct)button.classList.add("wrong");}
+    if(!isExamMode()){if(i===question.answer)button.classList.add("correct");if(i===optionIndex&&!correct)button.classList.add("wrong");}
   });
   $("nextBtn").disabled=false;
-  if(mode==="test"||mode==="timed")setText("sessionHint","Answer saved. You can change it until you move to the next question.");
+  if(isExamMode())setText("sessionHint","Answer saved. You can change it until you move to the next question.");
   else{
     $("feedback").innerHTML="";
     const box=document.createElement("div");box.className="feedback "+(correct?"good":"bad");
@@ -629,24 +692,47 @@ function finish(status="submitted",askConfirmation=false,confirmationMessage){
   }
 }
 function renderResults(summary){
-  const result=summary.attempt;
+  const result=summary.attempt,olympiad=result.examType==="olympiad";
   $("progressBar").style.width="100%";
-  const pct=result.questionCount?Math.round(result.correctCount/result.questionCount*100):0;
-  setText("scorePct",pct+"%");
+  const pct=olympiad?(result.marksAccuracy||0):(result.questionCount?Math.round(result.correctCount/result.questionCount*100):0);
+  setText("scorePct",olympiad?(result.marksEarned+" / "+result.maxMarks):(pct+"%"));
+  setText("scoreUnit",olympiad?"marks":"correct");
   setText("resultTitle",result.status==="timed-out"?"Time is up":pct>=85?"Excellent work!":pct>=65?"Good progress — keep going.":"A useful practice round.");
   const statusLabel=result.status==="timed-out"?"Automatically submitted when time expired.":"Submitted and saved on this device.";
-  setText("resultCopy","You answered "+result.correctCount+" of "+result.questionCount+" questions correctly. "+statusLabel+" Review the explanations and retry concepts that need another look.");
+  setText("resultCopy",olympiad
+    ? "You earned "+result.marksEarned+" of "+result.maxMarks+" marks ("+pct+"%). "+result.correctCount+" of "+result.questionCount+" questions were correct. "+statusLabel+" Review the explanations to strengthen each section."
+    : "You answered "+result.correctCount+" of "+result.questionCount+" questions correctly. "+statusLabel+" Review the explanations and retry concepts that need another look.");
   $("resultStats").innerHTML="";
-  [["Correct",result.correctCount],["Needs review",result.questionCount-result.correctCount],["Answered",result.answeredCount],["Skipped",result.skippedCount],["Unanswered",result.unansweredCount],["Duration",window.C10SessionModel.formatDuration(result.durationSeconds)]].forEach(([label,value])=>{
+  const stats=olympiad
+    ? [["Marks earned",result.marksEarned+" / "+result.maxMarks],["Correct answers",result.correctCount+" / "+result.questionCount],["Answered",result.answeredCount],["Skipped",result.skippedCount],["Unanswered",result.unansweredCount],["Duration",window.C10SessionModel.formatDuration(result.durationSeconds)]]
+    : [["Correct",result.correctCount],["Needs review",result.questionCount-result.correctCount],["Answered",result.answeredCount],["Skipped",result.skippedCount],["Unanswered",result.unansweredCount],["Duration",window.C10SessionModel.formatDuration(result.durationSeconds)]];
+  stats.forEach(([label,value])=>{
     const box=document.createElement("div");box.className="topic";
     const strong=document.createElement("strong");strong.textContent=label;
     const span=document.createElement("span");span.textContent=value;box.append(strong,span);$("resultStats").appendChild(box);
   });
+  const sectionContainer=$("sectionResults");
+  if(sectionContainer){
+    sectionContainer.innerHTML="";
+    sectionContainer.classList.toggle("hide",!olympiad);
+    if(olympiad){
+      const heading=document.createElement("h3");heading.textContent="Section-wise performance";sectionContainer.appendChild(heading);
+      (result.sectionResults||[]).forEach(section=>{
+        const card=document.createElement("article");card.className="section-result-card";
+        const title=document.createElement("strong");title.textContent=section.sectionTitle;
+        const marks=document.createElement("div");marks.className="section-result-marks";marks.textContent=section.marksEarned+" / "+section.maxMarks+" marks";
+        const meta=document.createElement("p");meta.textContent=section.correctCount+" / "+section.questionCount+" correct · "+section.answeredCount+" answered · "+section.skippedCount+" skipped · "+section.unansweredCount+" unanswered";
+        const accuracy=document.createElement("div");accuracy.className="section-result-track";
+        const fill=document.createElement("i");fill.style.width=section.marksAccuracy+"%";accuracy.appendChild(fill);
+        card.append(title,marks,meta,accuracy);sectionContainer.appendChild(card);
+      });
+    }
+  }
 }
 function reportRows(){
   const result=completedAttempt||ledger.attempts[0]||{};
   return (answers||[]).map((answer,i)=>({
-    question:i+1,chapter:answer.question.chapterTitle||"",prompt:answer.question.question,
+    question:i+1,section:answer.question.examSectionTitle||"",marks:answer.question.marks?Number(answer.question.marks):"",chapter:answer.question.chapterTitle||"",prompt:answer.question.question,
     selected:answer.selected===null||answer.selected===undefined?"Unanswered":answer.question.options[answer.selected],
     correct:answer.question.options[answer.question.answer],
     outcome:answer.status==="unanswered"?"Unanswered":answer.status==="skipped"?"Skipped":answer.correct?"Correct":"Incorrect",
@@ -661,16 +747,25 @@ function downloadExcelXml(filename,rows){
 }
 function testReportMatrix(){
   const attempt=completedAttempt||{};
-  const pct=attempt.questionCount?Math.round((attempt.correctCount||0)/attempt.questionCount*100):0;
-  const rows=[["ExamGuru · Test report"],["Subject",config.title],["Class","Class "+classId],["Test mode",attempt.mode||mode],["Submitted",attempt.submittedAt||new Date().toISOString()],["Status",attempt.status||"submitted"],["Score",(attempt.correctCount||0)+" / "+(attempt.questionCount||0)],["Accuracy",pct+"%"],["Correct",attempt.correctCount||0],["Answered",attempt.answeredCount||0],["Skipped",attempt.skippedCount||0],["Unanswered",attempt.unansweredCount||0],["Duration",window.C10SessionModel.formatDuration(attempt.durationSeconds||0)],[],["No.","Chapter / Topic","Question","Student answer","Correct answer","Outcome","Explanation"]];
-  reportRows().forEach(row=>rows.push([row.question,row.chapter,row.prompt,row.selected,row.correct,row.outcome,row.explanation]));
+  const pct=attempt.examType==="olympiad"?(attempt.marksAccuracy||0):(attempt.questionCount?Math.round((attempt.correctCount||0)/attempt.questionCount*100):0);
+  const score=attempt.examType==="olympiad"?(attempt.marksEarned+" / "+attempt.maxMarks+" marks"):(attempt.correctCount||0)+" / "+(attempt.questionCount||0);
+  const rows=[["ExamGuru · Test report"],["Subject",config.title],["Class","Class "+classId],["Test mode",attempt.mode||mode],["Submitted",attempt.submittedAt||new Date().toISOString()],["Status",attempt.status||"submitted"],["Score",score],["Accuracy",pct+"%"],["Correct",attempt.correctCount||0],["Answered",attempt.answeredCount||0],["Skipped",attempt.skippedCount||0],["Unanswered",attempt.unansweredCount||0],["Duration",window.C10SessionModel.formatDuration(attempt.durationSeconds||0)]];
+  if(attempt.examType==="olympiad"){
+    rows.push([],["Section-wise performance"],["Section","Correct","Questions","Marks earned","Maximum marks","Marks accuracy"]);
+    (attempt.sectionResults||[]).forEach(section=>rows.push([section.sectionTitle,section.correctCount,section.questionCount,section.marksEarned,section.maxMarks,section.marksAccuracy+"%"]));
+  }
+  rows.push([],["No.","Section","Marks","Chapter / Topic","Question","Student answer","Correct answer","Outcome","Explanation"]);
+  reportRows().forEach(row=>rows.push([row.question,row.section,row.marks,row.chapter,row.prompt,row.selected,row.correct,row.outcome,row.explanation]));
   return rows;
 }
 function downloadTestReportExcel(){downloadExcelXml("examguru-test-report-"+new Date().toISOString().slice(0,10)+".xls",testReportMatrix());}
 function downloadTestReportPdf(){
   const rows=reportRows(),attempt=completedAttempt||{};
   const esc=value=>String(value==null?"":value).replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
-  const html='<!doctype html><html><head><meta charset="utf-8"><title>ExamGuru test report</title><style>body{font:12px Arial,sans-serif;color:#211b48;margin:28px}h1{margin-bottom:4px}p{color:#555}table{width:100%;border-collapse:collapse;margin-top:18px}th,td{border:1px solid #d8d3ee;padding:7px;text-align:left;vertical-align:top}th{background:#efedff}tr{break-inside:avoid}@media print{body{margin:12mm}button{display:none}}</style></head><body><h1>ExamGuru · Test report</h1><p>'+esc(config.title)+' · Class '+esc(classId)+' · '+esc(new Date(attempt.submittedAt||Date.now()).toLocaleString())+'</p><h2>Score: '+esc(attempt.correctCount||0)+' / '+esc(attempt.questionCount||0)+' ('+(attempt.questionCount?Math.round((attempt.correctCount||0)/attempt.questionCount*100):0)+'%)</h2><p>Correct: '+esc(attempt.correctCount||0)+' · Answered: '+esc(attempt.answeredCount||0)+' · Skipped: '+esc(attempt.skippedCount||0)+' · Unanswered: '+esc(attempt.unansweredCount||0)+' · Duration: '+esc(window.C10SessionModel.formatDuration(attempt.durationSeconds||0))+'</p><table><thead><tr><th>No.</th><th>Chapter / Question</th><th>Student answer</th><th>Correct answer</th><th>Result / explanation</th></tr></thead><tbody>'+rows.map(row=>'<tr><td>'+row.question+'</td><td><b>'+esc(row.chapter)+'</b><br>'+esc(row.prompt)+'</td><td>'+esc(row.selected)+'</td><td>'+esc(row.correct)+'</td><td><b>'+esc(row.outcome)+'</b><br>'+esc(row.explanation)+'</td></tr>').join("")+'</tbody></table><p>Conceptualised by JP Ganathe · ExamGuru</p><script>window.onload=()=>window.print()</script></body></html>';
+  const isOlympiad=attempt.examType==="olympiad",pct=isOlympiad?(attempt.marksAccuracy||0):(attempt.questionCount?Math.round((attempt.correctCount||0)/attempt.questionCount*100):0);
+  const score=isOlympiad?(attempt.marksEarned+" / "+attempt.maxMarks+" marks"):(attempt.correctCount||0)+" / "+(attempt.questionCount||0);
+  const sectionTable=isOlympiad?'<h2>Section-wise performance</h2><table><thead><tr><th>Section</th><th>Correct</th><th>Questions</th><th>Marks</th></tr></thead><tbody>'+(attempt.sectionResults||[]).map(section=>'<tr><td>'+esc(section.sectionTitle)+'</td><td>'+esc(section.correctCount)+'</td><td>'+esc(section.questionCount)+'</td><td>'+esc(section.marksEarned)+' / '+esc(section.maxMarks)+'</td></tr>').join("")+'</tbody></table>':'';
+  const html='<!doctype html><html><head><meta charset="utf-8"><title>ExamGuru test report</title><style>body{font:12px Arial,sans-serif;color:#211b48;margin:28px}h1{margin-bottom:4px}p{color:#555}table{width:100%;border-collapse:collapse;margin-top:18px}th,td{border:1px solid #d8d3ee;padding:7px;text-align:left;vertical-align:top}th{background:#efedff}tr{break-inside:avoid}@media print{body{margin:12mm}button{display:none}}</style></head><body><h1>ExamGuru · Test report</h1><p>'+esc(attempt.examTitle||config.title)+' · Class '+esc(classId)+' · '+esc(new Date(attempt.submittedAt||Date.now()).toLocaleString())+'</p><h2>Score: '+esc(score)+' ('+pct+'%)</h2><p>Correct: '+esc(attempt.correctCount||0)+' · Answered: '+esc(attempt.answeredCount||0)+' · Skipped: '+esc(attempt.skippedCount||0)+' · Unanswered: '+esc(attempt.unansweredCount||0)+' · Duration: '+esc(window.C10SessionModel.formatDuration(attempt.durationSeconds||0))+'</p>'+sectionTable+'<table><thead><tr><th>No.</th><th>Section / Chapter / Question</th><th>Student answer</th><th>Correct answer</th><th>Result / explanation</th></tr></thead><tbody>'+rows.map(row=>'<tr><td>'+row.question+'</td><td>'+(row.section?'<b>'+esc(row.section)+'</b> · '+esc(row.marks)+' marks':'<b>'+esc(row.chapter)+'</b>')+'<br>'+esc(row.prompt)+'</td><td>'+esc(row.selected)+'</td><td>'+esc(row.correct)+'</td><td><b>'+esc(row.outcome)+'</b><br>'+esc(row.explanation)+'</td></tr>').join("")+'</tbody></table><p>Conceptualised by JP Ganathe · ExamGuru</p><script>window.onload=()=>window.print()</script></body></html>';
   const win=window.open("","_blank");if(!win){setText("resultCopy","Your browser blocked the print window. Allow pop-ups for this site, then try PDF again.");return;}
   win.document.open();win.document.write(html);win.document.close();
 }
@@ -679,7 +774,7 @@ function showReview(){
   answers.forEach((answer,i)=>{
     if(!answer)return;
     const question=answer.question,box=document.createElement("article");box.className="topic";
-    const heading=document.createElement("strong");heading.textContent=(i+1)+". "+(question.chapterTitle||"Question")+" · "+(answer.status==="unanswered"?"Unanswered":answer.status==="skipped"?"Skipped":answer.correct?"Correct":"Review");
+    const heading=document.createElement("strong");heading.textContent=(i+1)+". "+(question.examSectionTitle||question.chapterTitle||"Question")+" · "+(answer.status==="unanswered"?"Unanswered":answer.status==="skipped"?"Skipped":answer.correct?"Correct":"Review")+(question.marks?" · "+question.marks+" mark"+(question.marks===1?"":"s"):"");
     const prompt=document.createElement("p");prompt.textContent=question.question;
     box.append(heading,prompt);
     if(Array.isArray(question.images)&&question.images.length){
@@ -720,12 +815,16 @@ function init(){
   initQuestionImageViewer();
   if(!config){setText("status","Unknown subject link.");$("status").classList.remove("hide");return;}
   if(!(CLASS_SUBJECTS[classId]||[]).includes(subject)){setText("status","The selected subject bank is not published for Class "+classId+" yet.");$("status").classList.remove("hide");return;}
+  const modeButtons=Array.from(document.querySelectorAll("[data-mode]"));
+  const olympiadButton=modeButtons.find(button=>button.dataset.mode==="olympiad");
+  if(olympiadButton)olympiadButton.classList.toggle("hide",!olympiadAvailable);
   syncModeControls();
-  document.querySelectorAll("[data-mode]").forEach(button=>button.onclick=()=>{
+  modeButtons.forEach(button=>button.onclick=()=>{
     if(ledger.activeAttempt&&ledger.activeAttempt.status==="in-progress"){setText("modeHint","Finish or resume the saved session before changing mode.");return;}
-    mode=button.dataset.mode;document.querySelectorAll("[data-mode]").forEach(item=>item.classList.toggle("active",item===button));syncModeControls();
-    const hints={learn:"Learn mode explains each answer immediately.",test:"Test mode holds feedback until submission and saves answers as you go.",retry:"Retry questions previously answered incorrectly in the chosen chapter.",random:"Mixed practice draws questions across your selected chapters.",timed:"Timed exam holds feedback until submission and automatically submits when the countdown reaches zero."};
-    setText("modeHint",hints[mode]);
+    mode=button.dataset.mode;modeButtons.forEach(item=>item.classList.toggle("active",item===button));syncModeControls();
+    const hints={learn:"Learn mode explains each answer immediately.",test:"Test mode holds feedback until submission and saves answers as you go.",retry:"Retry questions previously answered incorrectly in the chosen chapter.",random:"Mixed practice draws questions across your selected chapters.",timed:"Timed exam holds feedback until submission and automatically submits when the countdown reaches zero.",olympiad:"SOF Class 6 ISO/NSO Level 1 full mock · 50 questions · 60 minutes · 60 marks. One randomised paper is assembled to the published section blueprint."};
+    setText("modeHint",hints[mode]||"");
+    $("startBtn").textContent=mode==="olympiad"?"Start SOF full mock →":"Start practice →";
     if(mode==="timed"&&$("overallTimerSetting").value==="off")$("overallTimerSetting").value="1200";
   });
   $("startBtn").onclick=start;$("nextBtn").onclick=next;$("skipBtn").onclick=skip;
