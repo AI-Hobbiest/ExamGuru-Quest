@@ -213,10 +213,10 @@ A first original ExamGuru starter bank is bundled at `data/exam-papers/question-
 
 Syllabus guardrail: the 2026–27 curriculum note says Heredity and Evolution, Periodic Classification and Electric Effects of Electric Current are not assessed in the year-end examination, even though the sample question paper includes heredity questions (including Q6 and Q15). ExamGuru uses the published paper's structure but substitutes examinable Life Processes/Control and Coordination content and excludes the formative-only topic. The source discrepancy is documented in the blueprint.
 
-The Studio automatically loads the published starter bank when there is no local imported bank. Imported pools and generated drafts are still saved in the current browser through the versioned C10Storage adapter; they are not written to GitHub automatically. JSON export is available. Student and teacher copies can be printed or saved as PDF through the browser print dialog. The existing MCQ practice engine remains untouched.
+The Studio automatically loads the published question bank when there is no local imported bank. The Class 10 Science pool now contains 117 approved candidates for the 39 paper slots (at least three candidates per slot), with question forms, chapter, marks, competency and internal-choice requirements preserved. Student practice avoids every question ID used in the previous two papers recorded in that browser, so any three consecutive papers are question-disjoint while the pool remains complete. This recent-paper history is browser-local and does not synchronise across devices. Imported pools and generated drafts remain in the current browser through the versioned C10Storage adapter; they are not written to GitHub automatically. JSON export is available. Student and teacher copies can be printed or saved as PDF through the browser print dialog. The existing MCQ practice engine remains untouched.
 
 - Blueprint: `data/exam-papers/blueprints/class-10-science-2026-27.json`
-- Starter question pool: `data/exam-papers/question-banks/class-10-science-2026-27-v1.json`
+- Published 117-question pool: `data/exam-papers/question-banks/class-10-science-2026-27-v1.json`
 - Question-bank contract: `data/exam-papers/question-bank.schema.json`
 - Generator: `js/exam-paper-generator.js`
 - Renderer: `js/exam-paper-renderer.js`
