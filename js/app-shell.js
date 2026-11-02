@@ -19,6 +19,7 @@
     {label:"Social Science",icon:"🌍",href:"./practice.html?subject=social-science",page:"practice.html",subject:"social-science",auth:"student"},
     {label:"Hindi",icon:"📝",href:"./practice.html?subject=hindi",page:"practice.html",subject:"hindi",auth:"student"},
     {section:"MY LEARNING",auth:"student"},
+    {label:"Learning Hub",icon:"🧠",href:"./learning.html",page:"learning.html",auth:"student"},
     {label:"My profile",icon:"👤",href:"./profile.html#profile",page:"profile.html",hash:"#profile",auth:"student"},
     {label:"Test history",icon:"📈",href:"./profile.html#history",page:"profile.html",hash:"#history",auth:"student"},
     {label:"Levels & rewards",icon:"🏆",href:"./dashboard.html#rewards",page:"dashboard.html",hash:"#rewards",auth:"student"},
