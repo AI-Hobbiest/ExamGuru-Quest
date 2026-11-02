@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Validate Stage C learning model, mastery and adaptive selection
+        run: node tests/learning-model.test.js
       - name: Validate NSO, IMO and IEO blueprints and section weighting
         run: node tests/olympiad-blueprints.test.js
       - name: Validate session timing, weighted marks and summary model
