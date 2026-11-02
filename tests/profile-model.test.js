@@ -37,9 +37,11 @@ const backup={
  }
 };
 backup.learningLibrary={schemaVersion:1,kind:"learning-library",mistakes:[],bookmarks:[],responses:[]};
+backup.studyLibraryProgress={schemaVersion:1,kind:"study-library-progress",completedResourceIds:["r1"],bookmarkedResourceIds:["r2"]};
 assert.equal(model.isValidBackup(backup),true);
 assert.equal(model.isValidBackup({...backup,learningLibrary:{...backup.learningLibrary,kind:"invalid"}}),false);
-const legacyBackup=JSON.parse(JSON.stringify(backup));delete legacyBackup.learningLibrary;
+assert.equal(model.isValidBackup({...backup,studyLibraryProgress:{...backup.studyLibraryProgress,kind:"invalid"}}),false);
+const legacyBackup=JSON.parse(JSON.stringify(backup));delete legacyBackup.learningLibrary;delete legacyBackup.studyLibraryProgress;
 assert.equal(model.isValidBackup(legacyBackup),true,"older v1 backups without a learning library remain supported");
 assert.equal(model.isValidBackup({...backup,kind:"wrong-kind"}),false);
 const withoutScience=JSON.parse(JSON.stringify(backup));delete withoutScience.subjectData.science;assert.equal(model.isValidBackup(withoutScience),false);
@@ -47,6 +49,7 @@ assert.equal(model.isValidBackup({...backup,profile:{...normalized,school:""}}),
 
 const backupSchema=JSON.parse(fs.readFileSync("data/contracts/v1/backup.schema.json","utf8"));
 assert.ok(backupSchema.properties.learningLibrary,"backup contract documents the optional learning library");
+assert.ok(backupSchema.properties.studyLibraryProgress,"backup contract documents optional Study Library progress");
 const schema=JSON.parse(fs.readFileSync("data/contracts/v1/student-profile.schema.json","utf8"));
 for(const required of ["studentId","displayName","school","classLevel","city","state"])assert.ok(schema.required.includes(required));
 assert.equal(schema.properties.classLevel.pattern,"^[A-Za-z0-9_-]{1,20}$");
