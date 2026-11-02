@@ -14,7 +14,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Validate session timing and summary model
+      - name: Validate SOF Olympiad blueprint and section weighting
+        run: node tests/olympiad-blueprints.test.js
+      - name: Validate session timing, weighted marks and summary model
         run: node tests/session-model.test.js
       - name: Validate Stage A LMS integrations
         run: node tests/stage-a-integration.test.js
