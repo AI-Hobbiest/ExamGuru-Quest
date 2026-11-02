@@ -1,4 +1,4 @@
-name: Deploy C10-Playground to GitHub Pages
+name: Deploy ExamGuru Quest to GitHub Pages
 
 on:
   push:
@@ -29,6 +29,7 @@ jobs:
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
           node tests/learning-model.test.js
+          node tests/study-model.test.js
           node tests/stage-a-integration.test.js
           node tests/app-shell.test.js
       - name: Configure GitHub Pages
@@ -45,6 +46,7 @@ jobs:
           cp admin.html _site/admin.html
           cp dashboard.html _site/dashboard.html
           cp learning.html _site/learning.html
+          cp study.html _site/study.html
           cp parent.html _site/parent.html
           cp .nojekyll _site/.nojekyll
           mkdir -p _site/js _site/data _site/css _site/data/contracts/v1
@@ -60,6 +62,8 @@ jobs:
           cp js/session-model.js _site/js/session-model.js
           cp js/learning-model.js _site/js/learning-model.js
           cp js/learning-center.js _site/js/learning-center.js
+          cp js/study-model.js _site/js/study-model.js
+          cp js/study-library.js _site/js/study-library.js
           cp js/profile-model.js _site/js/profile-model.js
           cp js/student-auth.js _site/js/student-auth.js
           cp js/login-page.js _site/js/login-page.js
@@ -296,7 +300,7 @@ jobs:
             }
             console.log('Validated '+name+': '+data.length+' topics, '+questionCount+' MCQs.');
           }
-          for (const file of ['practice.html','profile.html','dashboard.html','learning.html','parent.html','admin.html','css/admin.css','js/admin-manager.js','js/student-auth.js','js/static-account-admin.js','js/family-access-admin.js','js/parent-dashboard.js','data/family-access.json','data/student-accounts.json','data/classes.json','data/knowledge-base.json','css/branding.css','css/app-shell.css','css/theme-roles.css','css/theme-roles-v2.css','css/question-media.css','js/app-shell.js','js/gamification.js','js/dashboard-manager.js','js/storage.js','js/question-bank.js','js/session-model.js','js/learning-model.js','js/learning-center.js','js/profile-model.js','js/profile-manager.js','js/quiz-engine.js','data/contracts/v1/question-bank.schema.json','data/contracts/v1/question-bank-import.schema.json','data/contracts/v1/student-profile.schema.json','data/contracts/v1/answer-record.schema.json','data/contracts/v1/test-attempt.schema.json','data/contracts/v1/local-store-envelope.schema.json','data/contracts/v1/backup.schema.json','data/science.json','data/mathematics.json','data/english.json','data/social-science.json','data/hindi.json','data/class-3-mathematics.json','data/class-6-science.json','data/class-6-mathematics.json','data/class-6-english.json','data/class-6-social-science.json','data/class-6-mathematics-sof.json','data/class-6-science-sof.json']) {
+          for (const file of ['practice.html','profile.html','dashboard.html','learning.html','study.html','parent.html','admin.html','css/admin.css','js/admin-manager.js','js/student-auth.js','js/static-account-admin.js','js/family-access-admin.js','js/parent-dashboard.js','data/family-access.json','data/student-accounts.json','data/classes.json','data/knowledge-base.json','css/branding.css','css/app-shell.css','css/theme-roles.css','css/theme-roles-v2.css','css/question-media.css','js/app-shell.js','js/gamification.js','js/dashboard-manager.js','js/storage.js','js/question-bank.js','js/session-model.js','js/learning-model.js','js/learning-center.js','js/study-model.js','js/study-library.js','js/profile-model.js','js/profile-manager.js','js/quiz-engine.js','data/contracts/v1/question-bank.schema.json','data/contracts/v1/question-bank-import.schema.json','data/contracts/v1/student-profile.schema.json','data/contracts/v1/answer-record.schema.json','data/contracts/v1/test-attempt.schema.json','data/contracts/v1/local-store-envelope.schema.json','data/contracts/v1/backup.schema.json','data/science.json','data/mathematics.json','data/english.json','data/social-science.json','data/hindi.json','data/class-3-mathematics.json','data/class-6-science.json','data/class-6-mathematics.json','data/class-6-english.json','data/class-6-social-science.json','data/class-6-mathematics-sof.json','data/class-6-science-sof.json']) {
             if (!fs.existsSync('_site/'+file)) throw new Error('Missing deployed site file: '+file);
           }
           const admin=fs.readFileSync('_site/admin.html','utf8');
@@ -325,6 +329,16 @@ jobs:
           }
           const learningScripts=['./js/storage.js','./js/question-bank.js','./js/learning-model.js','./js/profile-model.js','./js/student-auth.js','./js/page-access.js','./js/learning-center.js','./js/app-shell.js'].map(src=>learningPage.indexOf(src));
           if (learningScripts.some(index=>index<0) || !learningScripts.every((index,i)=>i===0||learningScripts[i-1]<index)) throw new Error('Learning Hub scripts are missing or out of order.');
+          const studyPage=fs.readFileSync('_site/study.html','utf8');
+          for (const required of ['id="studyResourceList"','id="studySearch"','id="studySubject"','id="studyStatus"']) {
+            if (!studyPage.includes(required)) throw new Error('Study Library control missing: '+required);
+          }
+          const studyScripts=['./js/storage.js','./js/student-auth.js','./js/page-access.js','./js/study-model.js','./js/study-library.js','./js/app-shell.js'].map(src=>studyPage.indexOf(src));
+          if (studyScripts.some(index=>index<0) || !studyScripts.every((index,i)=>i===0||studyScripts[i-1]<index)) throw new Error('Study Library scripts are missing or out of order.');
+          const studyModel=fs.readFileSync('_site/js/study-model.js','utf8');
+          for (const required of ['visibleResources','filterResources','safePath','normalizeProgress']) {
+            if (!studyModel.includes(required)) throw new Error('Study Library model capability missing: '+required);
+          }
           const learningModel=fs.readFileSync('_site/js/learning-model.js','utf8');
           for (const required of ['recordOutcome','toggleBookmark','summarizeTopics','adaptiveOrder','recommendations']) {
             if (!learningModel.includes(required)) throw new Error('Learning model capability missing: '+required);
