@@ -437,6 +437,7 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
   await delay();
   bookmarkSource.elements.startBtn.click();
   bookmarkSource.elements.bookmarkQuestionBtn.click();
+  const bookmarkedQuestionText=bookmarkSource.elements.questionText.textContent;
   bookmarkSource.elements.options.children[1].click();
   bookmarkSource.elements.nextBtn.click();
   bookmarkSource.elements.options.children[2].click();
@@ -447,7 +448,7 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
   bookmarkPractice.modeButtons.find(button=>button.dataset.mode==="bookmarks").click();
   bookmarkPractice.elements.startBtn.click();
   assert.equal(bookmarkPractice.elements.numberPill.textContent,"Question 1 / 1","Saved questions mode uses only personal bookmarks");
-  assert.equal(bookmarkPractice.elements.questionText.textContent,bookmarkSource.elements.questionText.textContent,
+  assert.equal(bookmarkPractice.elements.questionText.textContent,bookmarkedQuestionText,
     "saved question can be practised again from the same device");
 
   const adaptive=makeEnvironment();
