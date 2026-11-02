@@ -224,7 +224,7 @@
       ],
       "type": "mcq",
       "marks": 1,
-      "prompt": "Blocking both the vas deferens and the oviduct prevents which common event?",
+      "prompt": "Which part of the human brain coordinates posture, balance and precision of voluntary movements?",
       "difficulty": "medium",
       "competency": "knowledge-understanding",
       "approvalStatus": "approved",
@@ -232,33 +232,33 @@
         "type": "original",
         "reference": "Original ExamGuru practice question aligned to the CBSE Class X Science 2026-27 summative curriculum."
       },
-      "approvalNote": "Internally reviewed for syllabus fit, answer key, mark total and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "approvalNote": "Corrected to align the question with the blueprint chapter, then checked for scientific accuracy, answer key and mark total.",
       "options": [
         {
           "optionId": "A",
-          "text": "Production of hormones"
+          "text": "Cerebrum"
         },
         {
           "optionId": "B",
-          "text": "Meeting of male and female gametes"
+          "text": "Cerebellum"
         },
         {
           "optionId": "C",
-          "text": "Growth of the uterus"
+          "text": "Medulla oblongata"
         },
         {
           "optionId": "D",
-          "text": "Release of digestive enzymes"
+          "text": "Spinal cord"
         }
       ],
       "correctOptionId": "B",
       "answerKey": {
-        "modelAnswer": "B. Meeting of male and female gametes",
-        "explanation": "Both procedures prevent sperm and ovum from meeting."
+        "modelAnswer": "B. Cerebellum",
+        "explanation": "The cerebellum helps coordinate voluntary movements and maintains posture and balance."
       },
       "markingScheme": [
         {
-          "criterion": "Correct option selected: B",
+          "criterion": "Correct option selected: B (Cerebellum)",
           "marks": 1
         }
       ]
@@ -662,11 +662,12 @@
       "topicTags": [
         "life-processes",
         "world-of-living",
+        "cellular-respiration",
         "short-answer"
       ],
       "type": "short-answer",
       "marks": 3,
-      "prompt": "Explain how a nerve impulse causes a muscle to contract.",
+      "prompt": "Explain the main stages of aerobic respiration in a human cell.",
       "difficulty": "easy",
       "competency": "knowledge-understanding",
       "approvalStatus": "approved",
@@ -674,41 +675,41 @@
         "type": "original",
         "reference": "Original ExamGuru practice question aligned to the CBSE Class X Science 2026-27 summative curriculum."
       },
-      "approvalNote": "Internally reviewed for syllabus fit, answer key, mark total and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "approvalNote": "Corrected to align the question with the Life Processes chapter, then checked for scientific accuracy, answer key and mark total.",
       "parts": [
         {
           "partId": "a",
-          "prompt": "How does a nerve signal reach a muscle cell?",
+          "prompt": "Where does glucose first break down during cellular respiration, and what is formed?",
           "marks": 1,
-          "answerKey": "A motor neuron carries a processed impulse to the muscle and triggers signalling at the neuromuscular junction."
+          "answerKey": "In the cytoplasm, glucose is broken down into pyruvate, releasing a small amount of energy."
         },
         {
           "partId": "b",
-          "prompt": "What happens to proteins inside the muscle cell during contraction?",
+          "prompt": "What happens to pyruvate when oxygen is available?",
           "marks": 1,
-          "answerKey": "Special proteins change their arrangement and muscle cells shorten, producing contraction."
+          "answerKey": "In the presence of oxygen, pyruvate enters the mitochondria and is broken down into carbon dioxide and water."
         },
         {
           "partId": "c",
-          "prompt": "How does muscle shortening produce movement?",
+          "prompt": "How is the energy released during respiration made useful to the cell?",
           "marks": 1,
-          "answerKey": "The contraction moves the attached body part."
+          "answerKey": "Energy is captured in ATP molecules, which supply energy for cellular activities."
         }
       ],
       "answerKey": {
-        "modelAnswer": "A motor neuron carries a processed impulse to the muscle and triggers signalling at the neuromuscular junction.\nSpecial proteins change their arrangement and muscle cells shorten, producing contraction.\nThe contraction moves the attached body part."
+        "modelAnswer": "In the cytoplasm, glucose is broken down into pyruvate, releasing a small amount of energy.\nIn the presence of oxygen, pyruvate enters the mitochondria and is broken down into carbon dioxide and water.\nEnergy is captured in ATP molecules, which supply energy for cellular activities."
       },
       "markingScheme": [
         {
-          "criterion": "A motor neuron carries a processed impulse to the muscle and triggers signalling at the neuromuscular junction.",
+          "criterion": "In the cytoplasm, glucose is broken down into pyruvate, releasing a small amount of energy.",
           "marks": 1
         },
         {
-          "criterion": "Special proteins change their arrangement and muscle cells shorten, producing contraction.",
+          "criterion": "In the presence of oxygen, pyruvate enters the mitochondria and is broken down into carbon dioxide and water.",
           "marks": 1
         },
         {
-          "criterion": "The contraction moves the attached body part.",
+          "criterion": "Energy is captured in ATP molecules, which supply energy for cellular activities.",
           "marks": 1
         }
       ]
@@ -847,47 +848,47 @@
           "parts": [
             {
               "partId": "a",
-              "prompt": "Name the first airway through which inhaled air enters.",
+              "prompt": "Name the passage through which inhaled air normally enters the respiratory system.",
               "marks": 1,
-              "answerKey": "Numerous alveoli provide a large surface area for gas exchange."
+              "answerKey": "Air normally enters through the nostrils and nasal cavity."
             },
             {
               "partId": "b",
               "prompt": "Describe how air travels from the trachea towards the alveoli.",
               "marks": 1,
-              "answerKey": "Their walls are thin and moist and are closely surrounded by capillaries."
+              "answerKey": "The trachea divides into bronchi, which branch into smaller bronchioles that end in alveoli."
             },
             {
               "partId": "c",
               "prompt": "State where gas exchange occurs.",
               "marks": 1,
-              "answerKey": "Oxygen diffuses into blood and binds to haemoglobin in red blood cells."
+              "answerKey": "Gas exchange occurs across the thin walls of the alveoli."
             },
             {
               "partId": "d",
               "prompt": "Give two features of alveoli that make gas exchange efficient.",
               "marks": 1,
-              "answerKey": "Blood transports oxygen to tissues, where it diffuses into cells."
+              "answerKey": "Alveoli have a large surface area, thin moist walls and a rich network of blood capillaries."
             }
           ],
           "answerKey": {
-            "modelAnswer": "Numerous alveoli provide a large surface area for gas exchange.\nTheir walls are thin and moist and are closely surrounded by capillaries.\nOxygen diffuses into blood and binds to haemoglobin in red blood cells.\nBlood transports oxygen to tissues, where it diffuses into cells."
+            "modelAnswer": "Air normally enters through the nostrils and nasal cavity.\nThe trachea divides into bronchi, which branch into smaller bronchioles that end in alveoli.\nGas exchange occurs across the thin walls of the alveoli.\nAlveoli have a large surface area, thin moist walls and a rich network of blood capillaries."
           },
           "markingScheme": [
             {
-              "criterion": "Numerous alveoli provide a large surface area for gas exchange.",
+              "criterion": "Air normally enters through the nostrils and nasal cavity.",
               "marks": 1
             },
             {
-              "criterion": "Their walls are thin and moist and are closely surrounded by capillaries.",
+              "criterion": "The trachea divides into bronchi, which branch into smaller bronchioles that end in alveoli.",
               "marks": 1
             },
             {
-              "criterion": "Oxygen diffuses into blood and binds to haemoglobin in red blood cells.",
+              "criterion": "Gas exchange occurs across the thin walls of the alveoli.",
               "marks": 1
             },
             {
-              "criterion": "Blood transports oxygen to tissues, where it diffuses into cells.",
+              "criterion": "Alveoli have a large surface area, thin moist walls and a rich network of blood capillaries.",
               "marks": 1
             }
           ]
@@ -2557,11 +2558,11 @@
           "partId": "e",
           "prompt": "State the far point of a normal eye and how it relates to correction.",
           "marks": 1,
-          "answerKey": "The far point of a myopic eye is closer than infinity."
+          "answerKey": "The far point of a normal eye is at infinity; a myopic eye has a finite far point closer than infinity."
         }
       ],
       "answerKey": {
-        "modelAnswer": "The defect in which distant objects are not seen clearly is myopia (short-sightedness).\nA concave (diverging) lens is used to correct myopia.\nIn an uncorrected myopic eye, the image of a distant object forms in front of the retina.\nThe concave lens diverges incoming rays slightly so the eye lens can focus them on the retina.\nThe far point of a myopic eye is closer than infinity."
+        "modelAnswer": "The defect in which distant objects are not seen clearly is myopia (short-sightedness).\nA concave (diverging) lens is used to correct myopia.\nIn an uncorrected myopic eye, the image of a distant object forms in front of the retina.\nThe concave lens diverges incoming rays slightly so the eye lens can focus them on the retina.\nThe far point of a normal eye is at infinity; a myopic eye has a finite far point closer than infinity."
       },
       "markingScheme": [
         {
@@ -2581,7 +2582,7 @@
           "marks": 1
         },
         {
-          "criterion": "The far point of a myopic eye is closer than infinity.",
+          "criterion": "The far point of a normal eye is at infinity; a myopic eye has a finite far point closer than infinity.",
           "marks": 1
         }
       ],
