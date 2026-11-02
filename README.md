@@ -69,6 +69,22 @@ The 600-question pool currently contains 50 Logical Reasoning, 500 Science and 5
 
 Implementation notes and checks: [docs/sof-olympiad-experience.md](docs/sof-olympiad-experience.md).
 
+## Stage C — Intelligent learning
+
+The shared practice engine now builds a **consolidated Mistake Book** across the student's class subjects. Incorrect and skipped responses are collected by stable question ID. Changing an answer before the same attempt is submitted updates that attempt's response rather than creating a second mistake. A mistake from a completed earlier attempt remains in the history until the student marks it as mastered; a new incorrect or skipped response reopens it.
+
+Students can save **personal bookmarks** from the question screen. These are separate from the existing exam-time “Mark for review” flag. Saved questions can be practised later through the Saved Questions mode or managed in the [My Learning Hub](https://ai-hobbiest.github.io/C10-Playground/learning.html).
+
+**Difficulty-based practice** adds a selector for the difficulty labels already present in each bank (Easy, Medium, Hard and Challenge). It filters the available questions; it does not invent or relabel question difficulty. A subject with no questions at the chosen level returns an empty-selection message instead of silently substituting a different level.
+
+**Topic mastery** groups the latest recorded response per distinct question by subject and chapter/topic. Small samples are labelled “Building evidence”; larger samples are classified from the observed accuracy. **Adaptive practice** weights question selection towards open mistakes, weaker topics, unseen questions and a difficulty suited to the topic's current evidence. Each question is selected at most once per adaptive session.
+
+The Learning Hub also provides evidence-based **revision recommendations** from open mistakes, weaker topics and personal bookmarks. Recommendations update from the saved learning library as new responses are recorded.
+
+The library is included in the version 1 student JSON backup as an optional `learningLibrary` field. Existing backups without that field remain valid. Restoring an older backup replaces the current learning library with an empty one, and the import confirmation warns about this.
+
+**Storage boundary:** all Stage C learning data is stored locally in the current browser/device using the existing student-scoped storage boundary. It does not enable cross-device sync or add a cloud database. Export a backup before moving to another device.
+
 ### SOF Class 6 IMO and IEO Level 1 full mocks
 
 The Class 6 Mathematics/IMO and English/IEO tracks now also offer blueprint-driven full mocks. Each paper has a fixed 60-minute countdown, 50 questions and 60 marks. Students can revisit questions, change answers, mark for review, navigate by section, and submit early; the Achievers Section awards 3 marks per correct answer.
