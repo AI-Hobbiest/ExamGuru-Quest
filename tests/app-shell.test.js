@@ -14,6 +14,8 @@ const study=fs.readFileSync("study.html","utf8");
 const admin=fs.readFileSync("admin.html","utf8");
 const science=fs.readFileSync("science.html","utf8");
 const parentPage=fs.readFileSync("parent.html","utf8");
+const examPractice=fs.readFileSync("exam-practice.html","utf8");
+const examPracticeScript=fs.readFileSync("js/exam-paper-self-study.js","utf8");
 const parentDashboard=fs.readFileSync("js/parent-dashboard.js","utf8");
 const pageAccess=fs.readFileSync("js/page-access.js","utf8");
 assert.ok(parentPage.includes("./js/parent-dashboard.js")&&parentPage.includes("./js/student-auth.js"),"parent workspace loads family identity and dashboard code");
@@ -31,6 +33,8 @@ assert.ok(nav.includes('auth:"guest"'),"guest navigation is separated from stude
 assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"'),"admin navigation exposes Exam Paper Studio directly");
 assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"'),"parent navigation is isolated to the family role");
+assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"student and parent navigation expose self-study exam practice");
+assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"'),"admin navigation exposes the authoring studio");
 assert.ok(nav.includes('role==="parent"'),"parent sessions are recognised by the shared navigation shell");
 assert.ok(nav.includes('c10playground_static_student_v1'),"navigation detects the current student session");
 assert.ok(nav.includes('Sign out'),"authenticated navigation provides sign-out");
@@ -91,3 +95,6 @@ assert.ok(loginScript.includes("ADMIN_PASSWORD_SHA256") && loginScript.includes(
 assert.ok(accessScript.includes('location.replace("./index.html")'),"unsigned dashboard visits return to login");
 new Function(nav);new Function(loginScript);new Function(accessScript);
 console.log("Navigation/login tests passed: responsive sidebar, role-aware links, login form, temporary admin login, dashboard guard, subject launch cards, Science redirect, keyboard closing and profile anchors.");
+
+assert.ok(examPractice.includes("./js/exam-paper-generator.js")&&examPractice.includes("./js/exam-paper-self-study.js"),"self-study exam page loads generator and attempt controller");
+assert.ok(examPracticeScript.includes("startTimer")&&examPracticeScript.includes("submit")&&examPracticeScript.includes("eg_exam_last_result_v1"),"self-study exam supports timed attempts, submission and local result storage");
