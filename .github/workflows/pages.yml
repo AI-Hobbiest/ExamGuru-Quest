@@ -30,6 +30,7 @@ jobs:
           node tests/quiz-engine.test.js
           node tests/learning-model.test.js
           node tests/study-model.test.js
+          node tests/canonical-url.test.js
           node tests/stage-a-integration.test.js
           node tests/app-shell.test.js
       - name: Configure GitHub Pages
