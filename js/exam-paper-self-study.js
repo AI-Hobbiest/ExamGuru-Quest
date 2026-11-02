@@ -34,7 +34,7 @@ function makePaper(){
  paperHistory=[...paperHistory,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds:paper.questions.map(q=>String(q.questionId))}].slice(-HISTORY_LIMIT);
  const historySaved=savePaperHistory();
  render();$("setup").classList.add("exam-hidden");$("review").classList.add("exam-hidden");$("attempt").classList.remove("exam-hidden");
- $("paperTitle").setAttribute("data-history-saved",historySaved?"true":"false");
+ $("historyStatus").textContent=historySaved?"Repeat protection is active: this paper will be excluded from the next two generated papers in this browser.":"Your browser did not allow paper history to be saved. Repeat avoidance may not survive a page reload.";
  startTimer();window.scrollTo(0,0);
 }
 
