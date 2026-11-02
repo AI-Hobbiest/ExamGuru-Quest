@@ -301,8 +301,11 @@ function renderQuestionNavigator(){
     (currentAttempt.sectionBlueprint||[]).forEach(section=>{
       const indexes=session.map((question,i)=>question.examSectionId===section.id?i:-1).filter(i=>i>=0);
       const sectionAnswered=indexes.filter(i=>currentAttempt.answers[i]&&currentAttempt.answers[i].status==="answered").length;
-      const chip=document.createElement("span");chip.className="navigator-section-chip";
+      const chip=document.createElement("button");chip.type="button";chip.className="navigator-section-chip";
       chip.textContent=section.title+" · "+sectionAnswered+"/"+section.questionCount;
+      chip.setAttribute("aria-pressed",String(session[index]&&session[index].examSectionId===section.id));
+      chip.setAttribute("aria-label","Go to "+section.title+" section");
+      chip.onclick=()=>{if(indexes.length){moveToQuestion(indexes[0]);renderQuestionNavigator();}};
       sectionSummary.appendChild(chip);
     });
     sectionSummary.classList.toggle("hide",!(currentAttempt.sectionBlueprint||[]).length);
