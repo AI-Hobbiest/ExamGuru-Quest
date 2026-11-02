@@ -27,7 +27,10 @@ const classId = String(activeStudent && activeStudent.classId || "10");
 const bankId = classId === "10" ? subject : "class-" + classId + "-" + subject;
 const CLASS_SUBJECTS = { "3":["mathematics","english"], "6":["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"], "10":["science","mathematics","english","social-science","hindi"] };
 const config = SUBJECTS[subject];
-let chapters=[], mode="learn", session=[], index=0, picked=null, answers=[], lastMissed=[];
+const requestParams=new URLSearchParams(location.search);
+const initialCollection=requestParams.get("collection")||"";
+const initialMode=initialCollection==="mistakes"?"retry":initialCollection==="bookmarks"?"bookmarks":initialCollection==="adaptive"?"adaptive":"learn";
+let chapters=[], mode=initialMode, session=[], index=0, picked=null, answers=[], lastMissed=[];
 const OLYMPIAD_BLUEPRINT_BY_SUBJECT = {
   "science-sof":"sof-iso-class-6-level-1",
   "mathematics-sof":"sof-imo-class-6-level-1",
@@ -38,6 +41,8 @@ const olympiadAvailable=classId==="6"&&!!olympiadBlueprintId&&!!window.C10Olympi
 const olympiadShortName=subject==="mathematics-sof"?"IMO":subject==="english-sof"?"IEO":"ISO / NSO";
 const currentOlympiadBlueprint=()=>olympiadAvailable?window.C10OlympiadBlueprints.getBlueprint(olympiadBlueprintId):null;
 const isExamMode=()=>mode==="test"||mode==="timed"||mode==="olympiad";
+const learningStore=window.C10LearningModel.createStore(classId);
+let learningLibrary=learningStore.load();
 let currentAttempt=null, completedAttempt=null, clockHandle=null, ledger;
 const emptyProgress = () => ({missed:[],answered:0,correct:0,attempts:[]});
 const validProgress = value => !!value && Array.isArray(value.missed) &&
@@ -83,7 +88,7 @@ function updateStats(){
   setText("overallStat",accuracy+"%");
   setText("progressText",total+" answers recorded on this device · "+progress.correct+" correct · "+progress.missed.length+" questions in your retry list.");
 }
-function allQuestions(){return chapters.flatMap(chapter=>chapter.questions.map(question=>({...question,chapter_no:chapter.chapter_no,chapterTitle:chapter.title})));}
+function allQuestions(){return chapters.flatMap(chapter=>chapter.questions.map(question=>({...question,subjectId:subject,classId,chapter_no:chapter.chapter_no,chapterTitle:chapter.title,chapterKey:chapter.chapterKey||chapter.key||String(chapter.chapter_no)})));}
 function selectedChapterIndexes(){const select=$("chapter");if(!select.options)return chapters.map((_,i)=>i);return Array.from(select.selectedOptions||[]).map(option=>Number(option.value)).filter(Number.isInteger);}
 function selectedChapters(){return selectedChapterIndexes().map(i=>chapters[i]).filter(Boolean);}
 function updateChapterPickerSummary(){
@@ -161,6 +166,15 @@ function loadBank(data){
   remapLegacyQuestionRefs();
   $("chapter").innerHTML=chapters.map((chapter,i)=>'<option value="'+i+'" selected>'+String(chapter.chapter_no).padStart(2,"0")+' · '+chapter.title+' ('+chapter.questions.length+')</option>').join("");
   renderChapterPicker();
+  learningLibrary=learningStore.importLegacyProgress(progress,allQuestions(),{
+    classId,subjectId:subject,subjectTitle:config.title
+  });
+  const topicParam=requestParams.get("topic");
+  if(topicParam){
+    const targetIndex=chapters.findIndex(chapter=>String(chapter.chapterKey||chapter.key)===topicParam);
+    if(targetIndex>=0)Array.from($("chapter").options).forEach(option=>{option.selected=Number(option.value)===targetIndex;});
+    syncChapterPickerFromSelect();
+  }
   const total=chapters.reduce((sum,chapter)=>sum+chapter.questions.length,0);
   setText("chapterTotal",chapters.length);setText("questionTotal",total);
   setText("subjectIcon",config.icon);setText("subjectTitle",config.title+(classId==="6"?" · Class 6":"")+" Practice");
@@ -169,16 +183,31 @@ function loadBank(data){
   document.title=(classId==="6"&&subject==="science"?"Class 6 Science":config.title)+" | ExamGuru";
   setText("modeHint",chapters[0].questions.length+" questions in this chapter. Learn mode shows explanations as you go.");
   updateStats();
+  document.querySelectorAll("[data-mode]").forEach(button=>button.classList.toggle("active",button.dataset.mode===mode));
+  syncModeControls();
+  if(initialCollection==="mistakes")setText("modeHint","Your open Mistake Book questions in this subject are ready. Choose your topics and start.");
+  else if(initialCollection==="bookmarks")setText("modeHint","Your saved questions in this subject are ready to practise.");
+  else if(initialCollection==="adaptive")setText("modeHint","Adaptive practice prioritises your weakest topics, open mistakes and questions you have not tried recently.");
+  $("startBtn").textContent=mode==="adaptive"?"Start adaptive practice →":mode==="bookmarks"?"Practise saved questions →":"Start practice →";
   if(ledger.activeAttempt && ledger.activeAttempt.status==="in-progress")restoreAttempt(ledger.activeAttempt);
 }
 function currentPool(){
   const chosen=selectedChapters();
-  const selectedQuestions=chosen.flatMap(chapter=>chapter.questions);
+  let selectedQuestions=chosen.flatMap(chapter=>chapter.questions.map(question=>({
+    ...question,subjectId:subject,classId,chapter_no:chapter.chapter_no,
+    chapterTitle:chapter.title,chapterKey:chapter.chapterKey||chapter.key||String(chapter.chapter_no)
+  })));
   if(mode==="retry"){
-    const chapterKeys=new Set(chosen.map(chapter=>String(chapter.chapter_no)));
-    return shuffle(allQuestions().filter(question=>progress.missed.includes(keyFor(question))&&chapterKeys.has(String(question.chapter_no))));
+    const openKeys=new Set(learningLibrary.mistakes.filter(item=>item.subjectId===subject&&item.status!=="mastered").map(item=>item.questionKey));
+    selectedQuestions=selectedQuestions.filter(question=>
+      openKeys.has(keyFor(question))||progress.missed.includes(keyFor(question))
+    );
+  }else if(mode==="bookmarks"){
+    const savedKeys=new Set(learningLibrary.bookmarks.filter(item=>item.subjectId===subject).map(item=>item.questionKey));
+    selectedQuestions=selectedQuestions.filter(question=>savedKeys.has(keyFor(question)));
   }
-  return shuffle(selectedQuestions);
+  const difficulty=$("difficultyFilter")?$("difficultyFilter").value:"all";
+  return window.C10LearningModel.filterByDifficulty(selectedQuestions,difficulty);
 }
 function prioritizeUnseenQuestions(pool, desiredCount){
   if(mode==="retry" || !Array.isArray(ledger.attempts) || !ledger.attempts.length)return shuffle(pool);
@@ -190,6 +219,21 @@ function prioritizeUnseenQuestions(pool, desiredCount){
   const required=desiredCount===0?pool.length:Math.min(desiredCount,pool.length);
   return unseen.length>=required?unseen.concat(previouslySeen):unseen.concat(previouslySeen);
 }
+function updatePersonalBookmarkButton(question){
+  const button=$("bookmarkQuestionBtn");if(!button)return;
+  const saved=learningLibrary.bookmarks.some(item=>item.questionKey===keyFor(question));
+  button.textContent=saved?"★ Saved question":"☆ Save question";
+  button.setAttribute("aria-pressed",String(saved));
+}
+function togglePersonalBookmark(){
+  if(!session[index])return;
+  learningStore.toggleBookmark(session[index],{classId,subjectId:subject,subjectTitle:config.title});
+  learningLibrary=learningStore.load();
+  updatePersonalBookmarkButton(session[index]);
+  setText("sessionHint",learningLibrary.bookmarks.some(item=>item.questionKey===keyFor(session[index]))
+    ?"Saved to your personal bookmarks in My Learning Hub."
+    :"Removed from your personal bookmarks.");
+}
 function boundedNumber(value,min,max,fallback){
   const number=Number(value);
   return Number.isFinite(number)?Math.max(min,Math.min(max,Math.round(number))):fallback;
@@ -199,6 +243,7 @@ function syncModeControls(){
   const overallCustom=$("overallTimerCustom"),overallLabel=$("overallCustomLabel");
   const questionCustom=$("questionTimerCustom"),questionLabel=$("questionCustomLabel");
   const timed=mode==="timed",olympiad=mode==="olympiad";
+  const difficulty=$("difficultyFilter");if(difficulty)difficulty.disabled=olympiad;
   if(olympiad&&overall&&overall.dataset.olympiadForced!=="true"){
     overall.dataset.preOlympiadValue=overall.value||"off";
     if(question)question.dataset.preOlympiadValue=question.value||"off";
@@ -384,7 +429,7 @@ function buildAttempt(questionPool,examPlan=null){
     schemaVersion:1,kind:"test-attempt",attemptId:window.C10Storage.createId(),profileId:localProfile.profileId,
     subjectId:subject,
     subjectIds:[subject],
-    mode:({learn:"learn",test:"test",retry:"practice",random:"mixed-practice",timed:"timed-exam",olympiad:"olympiad-exam"})[mode]||"learn",
+    mode:({learn:"learn",test:"test",retry:"practice",bookmarks:"bookmark-practice",adaptive:"adaptive-practice",random:"mixed-practice",timed:"timed-exam",olympiad:"olympiad-exam"})[mode]||"learn",
     uiMode:mode,
     examType:examPlan?"olympiad":null,
     examTitle:examPlan?examPlan.examTitle:null,
@@ -425,9 +470,15 @@ function start(){
     }catch(error){setText("modeHint","The Olympiad paper could not be assembled: "+error.message);return;}
   }else{
     pool=currentPool();
-    if(mode==="retry"&&!pool.length){setText("modeHint","No missed questions in this chapter yet. Choose Learn mode or Mixed practice first.");return;}
+    if(!pool.length){
+      const message=mode==="retry"?"No open mistakes in the selected topics. Review your Learning Hub or choose another topic.":
+        mode==="bookmarks"?"No saved questions in the selected topics. Add bookmarks while practising, then return here.":
+        "No questions match this selection. Try another difficulty or topic.";
+      setText("modeHint",message);return;
+    }
     const chosen=+$("length").value;
-    if(mode!=="retry")pool=prioritizeUnseenQuestions(pool,chosen);
+    if(mode==="adaptive")pool=window.C10LearningModel.adaptiveOrder(pool,learningLibrary,chosen,Math.random);
+    else if(mode!=="retry"&&mode!=="bookmarks")pool=prioritizeUnseenQuestions(pool,chosen);
     if(chosen!==0)pool=pool.slice(0,Math.min(chosen,pool.length));
   }
   if(!pool.length){setText("modeHint","No questions are available for this selection.");return;}
@@ -532,6 +583,7 @@ function renderQuestion(){
     else sectionPill.classList.add("hide");
   }
   setText("questionText",question.question);
+  updatePersonalBookmarkButton(question);
   appendQuestionImages($("questionMedia"),question);
   $("progressBar").style.width=(index/session.length*100)+"%";
   $("options").innerHTML="";$("feedback").innerHTML="";
@@ -600,7 +652,11 @@ function recordSelectedAnswer(selected,status){
   progress.attempts=progress.attempts.filter(event=>!(event.attemptId===currentAttempt.attemptId&&event.questionId===id));
   progress.attempts.unshift({id,questionId:id,attemptId:currentAttempt.attemptId,selected:status==="answered"?selected:null,correct,at:now,status});
   progress.attempts=progress.attempts.slice(0,500);
-  saveProgress();persistCurrentAttempt();
+  saveProgress();
+  learningLibrary=learningStore.recordAnswer(question,{
+    classId,subjectId:subject,subjectTitle:config.title,attemptId:currentAttempt.attemptId,mode:currentAttempt.mode
+  },{status,isCorrect:status==="answered"?correct:null,at:now});
+  persistCurrentAttempt();
 }
 function choose(optionIndex){
   if(!currentAttempt||currentAttempt.status!=="in-progress")return;
@@ -837,6 +893,7 @@ function init(){
   if(!config){setText("status","Unknown subject link.");$("status").classList.remove("hide");return;}
   if(!(CLASS_SUBJECTS[classId]||[]).includes(subject)){setText("status","The selected subject bank is not published for Class "+classId+" yet.");$("status").classList.remove("hide");return;}
   const modeButtons=Array.from(document.querySelectorAll("[data-mode]"));
+  modeButtons.forEach(button=>button.classList.toggle("active",button.dataset.mode===mode));
   const olympiadButton=modeButtons.find(button=>button.dataset.mode==="olympiad");
   if(olympiadButton){
     olympiadButton.classList.toggle("hide",!olympiadAvailable);
@@ -850,9 +907,10 @@ function init(){
     const olympiadHint=blueprint
       ?blueprint.title+" full mock · 50 questions · 60 minutes · 60 marks. The paper is randomised to the published section blueprint."
       :"SOF full-mock mode is available only for supported Class 6 Olympiad tracks.";
-    const hints={learn:"Learn mode explains each answer immediately.",test:"Test mode holds feedback until submission and saves answers as you go.",retry:"Retry questions previously answered incorrectly in the chosen chapter.",random:"Mixed practice draws questions across your selected chapters.",timed:"Timed exam holds feedback until submission and automatically submits when the countdown reaches zero.",olympiad:olympiadHint};
+    const hints={learn:"Learn mode explains each answer immediately.",test:"Test mode holds feedback until submission and saves answers as you go.",retry:"Practise open mistakes from your consolidated Mistake Book, filtered to the selected topics.",bookmarks:"Practise questions you have personally saved from any session.",adaptive:"Questions are weighted towards weak topics, open mistakes, unseen questions and a suitable next difficulty.",random:"Mixed practice draws questions across your selected chapters.",timed:"Timed exam holds feedback until submission and automatically submits when the countdown reaches zero.",olympiad:olympiadHint};
     setText("modeHint",hints[mode]||"");
-    $("startBtn").textContent=mode==="olympiad"?"Start "+olympiadShortName+" full mock →":"Start practice →";
+    $("startBtn").textContent=mode==="olympiad"?"Start "+olympiadShortName+" full mock →":
+      mode==="adaptive"?"Start adaptive practice →":mode==="bookmarks"?"Practise saved questions →":"Start practice →";
     if(mode==="timed"&&$("overallTimerSetting").value==="off")$("overallTimerSetting").value="1200";
   });
   $("startBtn").onclick=start;$("nextBtn").onclick=next;$("skipBtn").onclick=skip;
@@ -862,6 +920,12 @@ function init(){
   $("closeQuestionNavigator").onclick=closeQuestionNavigator;$("questionNavigatorBackdrop").onclick=closeQuestionNavigator;
   $("navigatorReturnBtn").onclick=closeQuestionNavigator;$("navigatorSubmitBtn").onclick=()=>{closeQuestionNavigator();confirmSubmit();};
   $("markReviewBtn").onclick=toggleQuestionMarked;
+  $("bookmarkQuestionBtn").onclick=togglePersonalBookmark;
+  $("difficultyFilter").onchange=()=>{
+    const total=currentPool().length;
+    const label=$("difficultyFilter").value==="all"?"all difficulty levels":$("difficultyFilter").value+" questions";
+    setText("modeHint",total+" "+label+" available across the selected topics.");
+  };
   $("overallTimerSetting").onchange=()=>{$("overallTimerSetting").dataset.timedDefault="false";syncModeControls();};
   $("questionTimerSetting").onchange=syncModeControls;
   $("reviewBtn").onclick=reviewMissed;$("clearBtn").onclick=resetProgress;
