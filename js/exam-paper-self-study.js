@@ -3,9 +3,16 @@
 "use strict";
 const $=id=>document.getElementById(id);
 let blueprint=null,bank=null,paper=null,answers={},remaining=10800,tick=null,submitted=false,paperHistory=[];
-const HISTORY_KEY="eg_exam_paper_history_v1",HISTORY_LIMIT=2;
+const HISTORY_KEY="eg_exam_paper_history_v1",HISTORY_LIMIT=50;
 function readPaperHistory(){
- try{const parsed=JSON.parse(localStorage.getItem(HISTORY_KEY)||"[]");if(!Array.isArray(parsed))return[];return parsed.map(item=>({paperId:String(item&&item.paperId||""),generatedAt:String(item&&item.generatedAt||""),questionIds:Array.isArray(item&&item.questionIds)?item.questionIds.map(String).filter(Boolean):[]})).filter(item=>item.questionIds.length).slice(-HISTORY_LIMIT);}catch(_){return[];}
+ try{
+  const parsed=JSON.parse(localStorage.getItem(HISTORY_KEY)||"[]");
+  if(!Array.isArray(parsed))return[];
+  return parsed.map(item=>{
+   const questionIds=Array.isArray(item&&item.questionIds)?item.questionIds.map(String).filter(Boolean):[];
+   return{paperId:String(item&&item.paperId||""),generatedAt:String(item&&item.generatedAt||""),questionIds,fingerprint:String(item&&item.fingerprint||JSON.stringify(questionIds))};
+  }).filter(item=>item.questionIds.length&&item.fingerprint!=="[]").slice(-HISTORY_LIMIT);
+ }catch(_){return[];}
 }
 function savePaperHistory(){try{localStorage.setItem(HISTORY_KEY,JSON.stringify(paperHistory));return true;}catch(_){return false;}}
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -24,17 +31,24 @@ async function load(){
   const coverage=C10ExamPaperGenerator.auditSlotCoverage(blueprint,bank,3);
   if(!coverage.valid)throw Error("Unique-paper pool is not ready: "+coverage.errors.slice(0,5).join(" "));
   paperHistory=readPaperHistory();
-  $("startBtn").disabled=false;status("Ready: 3 or more eligible questions per slot. The next paper avoids questions from your previous two attempts in this browser.");
+  $("startBtn").disabled=false;status("Ready: 3 or more eligible questions per slot. Exact paper combinations are checked against the last 50 attempts saved in this browser.");
  }catch(e){status("Unable to prepare the paper: "+e.message);}
 }
 function makePaper(){
- const recentQuestionIds=[...new Set(paperHistory.slice(-HISTORY_LIMIT).flatMap(item=>item.questionIds||[]))];
- paper=C10ExamPaperGenerator.generatePaper(blueprint,bank,{seed:"self-study-"+Date.now(),title:"CBSE Class 10 Science · Self-study Paper",recentQuestionIds});
+ const previousHistory=paperHistory;
+ const recentPaperFingerprints=paperHistory.map(item=>item.fingerprint||JSON.stringify(item.questionIds||[]));
+ const seed="self-study-"+Date.now()+"-"+Math.random().toString(36).slice(2);
+ paper=C10ExamPaperGenerator.generateUniquePaper(blueprint,bank,{seed,title:"CBSE Class 10 Science · Self-study Paper",recentPaperFingerprints,uniqueSearchAttempts:500});
  answers={};submitted=false;remaining=blueprint.durationMinutes*60;
- paperHistory=[...paperHistory,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds:paper.questions.map(q=>String(q.questionId))}].slice(-HISTORY_LIMIT);
- const historySaved=savePaperHistory();
+ const questionIds=paper.questions.map(q=>String(q.questionId));
+ const fingerprint=paper.paperFingerprint||C10ExamPaperGenerator.paperFingerprint(paper);
+ paperHistory=[...paperHistory,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds,fingerprint}].slice(-HISTORY_LIMIT);
+ if(!savePaperHistory()){
+  paperHistory=previousHistory;
+  throw Error("This browser could not save the 50-paper repeat history. Enable site storage and try again; no paper was started.");
+ }
  render();$("setup").classList.add("exam-hidden");$("review").classList.add("exam-hidden");$("attempt").classList.remove("exam-hidden");
- $("historyStatus").textContent=historySaved?"Repeat protection is active: this paper will be excluded from the next two generated papers in this browser.":"Your browser did not allow paper history to be saved. Repeat avoidance may not survive a page reload.";
+ $("historyStatus").textContent="50-paper protection is active on this browser: this exact 39-question combination will not repeat within the latest 50 generated papers. Individual questions may appear in other papers. History does not sync to other devices.";
  startTimer();window.scrollTo(0,0);
 }
 
