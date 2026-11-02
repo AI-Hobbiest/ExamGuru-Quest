@@ -34,22 +34,23 @@ const subjectBank = [{
   ]
 }];
 
-function makeEnvironment(seed = new Map(), subject = "mathematics"){
+function makeEnvironment(seed = new Map(), subject = "mathematics", studentClass = "10", bankOverride = subjectBank){
   const values=new Map(seed);
   const ids=new FakeElement("mode-buttons");
   ids.children=[];
-  ["learn","test","retry","random","timed"].forEach(mode=>{
+  ["learn","test","retry","random","timed","olympiad"].forEach(mode=>{
     const button=new FakeElement("mode-"+mode);button.tagName="BUTTON";button.dataset.mode=mode;
     if(mode==="learn")button.classList.add("active");
+    if(mode==="olympiad")button.classList.add("hide");
     ids.children.push(button);
   });
   const elements={};
   const allIds=[
-    "chapter","overallTimerSetting","questionTimerSetting","overallTimerCustom","questionTimerCustom","overallCustomLabel","questionCustomLabel","timingControls","timingHelp","practiceLayout","quizPanel","questionTimerPill","markReviewBtn","mobilePreviousBtn","mobileNextBtn","mobileNavigatorBtn","navigatorInlineBtn","questionNavDock","questionNavigatorOverlay","questionNavigatorGrid","navigatorSummary","closeQuestionNavigator","questionNavigatorBackdrop","navigatorReturnBtn","navigatorSubmitBtn","length","chapterTotal","questionTotal","overallStat","progressText","modeHint",
+    "chapter","overallTimerSetting","questionTimerSetting","overallTimerCustom","questionTimerCustom","overallCustomLabel","questionCustomLabel","timingControls","timingHelp","olympiadBlueprintPanel","chapterControls","lengthControl","practiceLayout","quizPanel","questionTimerPill","sectionPill","markReviewBtn","mobilePreviousBtn","mobileNextBtn","mobileNavigatorBtn","navigatorInlineBtn","questionNavDock","questionNavigatorOverlay","questionNavigatorGrid","navigatorSummary","navigatorSectionSummary","closeQuestionNavigator","questionNavigatorBackdrop","navigatorReturnBtn","navigatorSubmitBtn","length","chapterTotal","questionTotal","overallStat","progressText","modeHint",
     "status","welcome","session","results","review","subjectIcon","subjectTitle","subjectSubtitle","chapterPill",
     "numberPill","difficultyPill","timerPill","progressBar","questionText","options","feedback","sessionHint",
     "nextBtn","skipBtn","submitBtn","startBtn","reviewBtn","clearBtn","againBtn","reviewAnswersBtn","reportPdfBtn","reportExcelBtn","reviewPdfBtn","reviewExcelBtn","backBtn",
-    "retrySetBtn","resultCopy","resultTitle","scorePct","resultStats","reviewPill","reviewList","questionMedia","imageViewer","imageViewerImage","imageViewerCaption","imageViewerClose"
+    "retrySetBtn","resultCopy","resultTitle","scorePct","scoreUnit","resultStats","sectionResults","reviewPill","reviewList","questionMedia","imageViewer","imageViewerImage","imageViewerCaption","imageViewerClose"
   ];
   allIds.forEach(id=>elements[id]=new FakeElement(id));
   ["session","results","review","status","imageViewer","questionMedia"].forEach(id=>elements[id].classList.add("hide"));
@@ -72,18 +73,19 @@ function makeEnvironment(seed = new Map(), subject = "mathematics"){
     setItem:(key,value)=>values.set(key,String(value)),
     removeItem:key=>values.delete(key)
   };
+  const sessionStorage={getItem:key=>key==="c10playground_static_student_v1"?JSON.stringify({username:"quiz-test",classId:String(studentClass)}):null};
   let uuidCounter=0;
   const context={
-    window:{addEventListener:()=>{},matchMedia:()=>({matches:true})},document,localStorage,console,Date,Math,JSON,Object,Array,Number,String,
+    window:{addEventListener:()=>{},matchMedia:()=>({matches:true})},document,localStorage,sessionStorage,console,Date,Math,JSON,Object,Array,Number,String,
     TypeError,Uint8Array,encodeURIComponent,URLSearchParams,
     location:{search:"?subject="+subject},
     crypto:{randomUUID:()=>("00000000-0000-4000-8000-"+String(++uuidCounter).padStart(12,"0"))},
-    fetch:()=>Promise.resolve({ok:true,json:()=>Promise.resolve(subjectBank)}),
+    fetch:()=>Promise.resolve({ok:true,json:()=>Promise.resolve(bankOverride)}),
     setInterval:()=>1,clearInterval:()=>{},confirm:()=>true
   };
   context.globalThis=context;
   vm.createContext(context);
-  for(const file of ["js/storage.js","js/question-bank.js","js/session-model.js","js/quiz-engine.js"]){
+  for(const file of ["js/storage.js","js/question-bank.js","js/olympiad-blueprints.js","js/session-model.js","js/quiz-engine.js"]){
     vm.runInContext(fs.readFileSync(file,"utf8"),context,{filename:file});
   }
   return {context,values,elements,modeButtons:ids.children};
@@ -285,5 +287,55 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
   assert.equal(scienceWrapped.data.activeAttempt.status,"in-progress");
   const practiceHtml=fs.readFileSync("practice.html","utf8");
   assert.ok(practiceHtml.includes(".foot .btnrow #submitBtn,.foot .btnrow #nextBtn{display:none}"),"mobile layout avoids duplicate inline and dock navigation controls");
-  console.log("Quiz integration tests passed: mobile question focus and navigator, custom overall/question timers, overall expiry plus advisory question pacing, revisit without timer reset, answer changes, review downloads, autosave/recovery and existing integration.");
+  const olympiadBank=JSON.parse(fs.readFileSync("data/class-6-science-sof.json","utf8"));
+  const olympiad=makeEnvironment(new Map(),"science-sof","6",olympiadBank);
+  await delay();
+  const olympiadButton=olympiad.modeButtons.find(button=>button.dataset.mode==="olympiad");
+  assert.equal(olympiadButton.classList.contains("hide"),false,"full-mock option is visible in Class 6 SOF Science");
+  olympiadButton.click();
+  assert.equal(olympiad.elements.chapterControls.classList.contains("hide"),true,"chapter filtering is hidden for a full blueprint exam");
+  assert.equal(olympiad.elements.lengthControl.classList.contains("hide"),true,"full-mock question count is fixed by the blueprint");
+  assert.equal(olympiad.elements.overallTimerSetting.value,"3600","SOF mock fixes its overall duration at 60 minutes");
+  assert.equal(olympiad.elements.questionTimerSetting.value,"off","question-level countdown is disabled in an Olympiad mock");
+  olympiad.elements.startBtn.click();
+  assert.equal(olympiad.elements.session.classList.contains("hide"),false,"Olympiad mock starts through the shared quiz engine");
+  assert.equal(olympiad.elements.numberPill.textContent,"Question 1 / 50","the complete 50-question paper is generated");
+  assert.equal(olympiad.elements.chapterPill.textContent,"Logical Reasoning","section label replaces chapter label during the mock");
+  assert.equal(olympiad.elements.sectionPill.classList.contains("hide"),false,"section position is shown beside question number");
+  const olympiadLedger=[...olympiad.values.entries()].find(([key])=>key.includes("test-attempt-ledger")&&key.endsWith("class-6-science-sof"));
+  assert.ok(olympiadLedger,"Olympiad attempt uses the existing Class 6 SOF ledger");
+  let olympiadActive=JSON.parse(olympiadLedger[1]).data.activeAttempt;
+  assert.equal(olympiadActive.examType,"olympiad");
+  assert.equal(olympiadActive.mode,"olympiad-exam");
+  assert.equal(olympiadActive.timeLimitSeconds,3600);
+  assert.equal(olympiadActive.questions.length,50);
+  assert.equal(new Set(olympiadActive.questionIds).size,50,"paper contains no repeated questions");
+  assert.deepEqual(olympiadActive.sectionBlueprint.map(section=>section.questionCount),[10,35,5]);
+  assert.deepEqual(olympiadActive.sectionBlueprint.map(section=>section.maxMarks),[10,35,15]);
+  olympiad.elements.mobileNavigatorBtn.click();
+  assert.equal(olympiad.elements.questionNavigatorGrid.children.length,50,"mobile question navigator lists the entire paper");
+  assert.equal(olympiad.elements.navigatorSectionSummary.children.length,3,"navigator displays section-level completion chips");
+  olympiad.elements.closeQuestionNavigator.click();
+  const firstCorrect=olympiadActive.questions[0].answer;
+  olympiad.elements.options.children[firstCorrect].click();
+  assert.equal(olympiad.elements.options.children[firstCorrect].classList.contains("selected"),true);
+  olympiad.elements.submitBtn.click();
+  assert.equal(olympiad.elements.results.classList.contains("hide"),false,"full mock can be submitted through the normal flow");
+  const olympiadResultRow=[...olympiad.values.entries()].find(([key])=>key.includes("test-attempt-ledger")&&key.endsWith("class-6-science-sof"));
+  const olympiadResult=JSON.parse(olympiadResultRow[1]).data.attempts[0];
+  assert.equal(olympiadResult.maxMarks,60);
+  assert.equal(olympiadResult.marksEarned,1,"one correct Logical Reasoning answer earns one mark");
+  assert.equal(olympiadResult.marksAccuracy,2);
+  assert.equal(olympiadResult.sectionResults.length,3);
+  assert.equal(olympiadResult.sectionResults[0].marksEarned,1);
+  assert.equal(olympiadResult.sectionResults[0].unansweredCount,9);
+  assert.equal(olympiad.elements.sectionResults.children.length,4,"result view contains heading and three section cards");
+  assert.equal(olympiad.elements.scorePct.textContent,"1 / 60","Olympiad score uses weighted marks, not raw correct-question percentage");
+  assert.equal(olympiad.elements.scoreUnit.textContent,"marks");
+  assert.equal(typeof olympiad.elements.reportExcelBtn.onclick,"function");
+  assert.equal(typeof olympiad.elements.reportPdfBtn.onclick,"function");
+  assert.ok(practiceHtml.includes('data-mode="olympiad"'),"practice page exposes the Olympiad mode");
+  assert.ok(practiceHtml.indexOf("./js/olympiad-blueprints.js")<practiceHtml.indexOf("./js/session-model.js"),"blueprint helper loads before session model");
+
+  console.log("Quiz integration tests passed: mobile question focus and navigator, timers, autosave/recovery, review downloads, weighted SOF mock construction, section navigation and section-wise results.");
 })().catch(error=>{console.error(error);process.exitCode=1;});
