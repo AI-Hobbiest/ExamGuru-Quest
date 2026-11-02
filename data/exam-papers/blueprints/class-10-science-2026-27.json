@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "exam-paper-blueprint",
   "blueprintId": "cbse-class-10-science-086-2026-27",
-  "version": 3,
+  "version": 4,
   "title": "CBSE Class 10 Science (086) · Annual Examination 2026–27",
   "board": "CBSE",
   "academicYear": "2026-27",
@@ -116,8 +116,7 @@
         "life-processes"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q02",
@@ -132,8 +131,7 @@
         "life-processes"
       ],
       "competency": "application",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q03",
@@ -148,8 +146,7 @@
         "life-processes"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q04",
@@ -164,8 +161,7 @@
         "how-do-organisms-reproduce"
       ],
       "competency": "application",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q05",
@@ -180,8 +176,7 @@
         "control-and-coordination"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q06",
@@ -196,8 +191,7 @@
         "life-processes"
       ],
       "competency": "application",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q07",
@@ -212,8 +206,7 @@
         "our-environment"
       ],
       "competency": "analysis-evaluation-creation",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q08",
@@ -228,8 +221,7 @@
         "our-environment"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q09",
@@ -244,8 +236,7 @@
         "control-and-coordination"
       ],
       "competency": "application",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q10",
@@ -260,8 +251,7 @@
         "life-processes"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q11",
@@ -276,8 +266,7 @@
         "control-and-coordination"
       ],
       "competency": "application",
-      "requiresInternalChoice": true,
-      "difficulty": "medium"
+      "requiresInternalChoice": true
     },
     {
       "slotId": "q12",
@@ -292,8 +281,7 @@
         "how-do-organisms-reproduce"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q13",
@@ -308,8 +296,7 @@
         "life-processes"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q14",
@@ -324,8 +311,7 @@
         "our-environment"
       ],
       "competency": "analysis-evaluation-creation",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q15",
@@ -340,8 +326,7 @@
         "control-and-coordination"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": true,
-      "difficulty": "medium"
+      "requiresInternalChoice": true
     },
     {
       "slotId": "q16",
@@ -356,8 +341,7 @@
         "life-processes"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": true,
-      "difficulty": "medium"
+      "requiresInternalChoice": true
     },
     {
       "slotId": "q17",
@@ -372,8 +356,7 @@
         "chemical-reactions-and-equations"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q18",
@@ -388,8 +371,7 @@
         "acids-bases-and-salts"
       ],
       "competency": "application",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q19",
@@ -404,8 +386,7 @@
         "metals-and-non-metals"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q20",
@@ -420,8 +401,7 @@
         "carbon-and-its-compounds"
       ],
       "competency": "application",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q21",
@@ -436,8 +416,7 @@
         "acids-bases-and-salts"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q22",
@@ -452,8 +431,7 @@
         "carbon-and-its-compounds"
       ],
       "competency": "application",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q23",
@@ -468,8 +446,7 @@
         "chemical-reactions-and-equations"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q24",
@@ -484,8 +461,7 @@
         "metals-and-non-metals"
       ],
       "competency": "analysis-evaluation-creation",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q25",
@@ -500,8 +476,7 @@
         "acids-bases-and-salts"
       ],
       "competency": "analysis-evaluation-creation",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q26",
@@ -516,8 +491,7 @@
         "carbon-and-its-compounds"
       ],
       "competency": "application",
-      "requiresInternalChoice": true,
-      "difficulty": "medium"
+      "requiresInternalChoice": true
     },
     {
       "slotId": "q27",
@@ -532,8 +506,7 @@
         "chemical-reactions-and-equations"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q28",
@@ -548,8 +521,7 @@
         "metals-and-non-metals"
       ],
       "competency": "application",
-      "requiresInternalChoice": true,
-      "difficulty": "medium"
+      "requiresInternalChoice": true
     },
     {
       "slotId": "q29",
@@ -564,8 +536,7 @@
         "chemical-reactions-and-equations"
       ],
       "competency": "application",
-      "requiresInternalChoice": true,
-      "difficulty": "medium"
+      "requiresInternalChoice": true
     },
     {
       "slotId": "q30",
@@ -580,8 +551,7 @@
         "light-reflection-and-refraction"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q31",
@@ -596,8 +566,7 @@
         "electricity"
       ],
       "competency": "application",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q32",
@@ -612,8 +581,7 @@
         "human-eye-and-colourful-world"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q33",
@@ -628,8 +596,7 @@
         "light-reflection-and-refraction"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q34",
@@ -644,8 +611,7 @@
         "electricity"
       ],
       "competency": "application",
-      "requiresInternalChoice": true,
-      "difficulty": "medium"
+      "requiresInternalChoice": true
     },
     {
       "slotId": "q35",
@@ -660,8 +626,7 @@
         "light-reflection-and-refraction"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q36",
@@ -676,8 +641,7 @@
         "magnetic-effects-of-electric-current"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q37",
@@ -692,8 +656,7 @@
         "electricity"
       ],
       "competency": "knowledge-understanding",
-      "requiresInternalChoice": false,
-      "difficulty": "medium"
+      "requiresInternalChoice": false
     },
     {
       "slotId": "q38",
@@ -708,8 +671,7 @@
         "magnetic-effects-of-electric-current"
       ],
       "competency": "analysis-evaluation-creation",
-      "requiresInternalChoice": true,
-      "difficulty": "medium"
+      "requiresInternalChoice": true
     },
     {
       "slotId": "q39",
@@ -724,8 +686,7 @@
         "human-eye-and-colourful-world"
       ],
       "competency": "analysis-evaluation-creation",
-      "requiresInternalChoice": true,
-      "difficulty": "medium"
+      "requiresInternalChoice": true
     }
   ],
   "generalInstructions": [
