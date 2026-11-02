@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440" role="img" aria-labelledby="title desc">
+<title id="title">Gas exchange at an alveolus</title><desc id="desc">An alveolus surrounded by a capillary. Oxygen diffuses from alveolar air into blood and carbon dioxide diffuses from blood into the alveolus.</desc>
+<rect width="760" height="440" fill="#fff"/>
+<circle cx="330" cy="215" r="130" fill="#fce7f3" stroke="#9d174d" stroke-width="5"/>
+<path d="M205 250 C120 270 115 350 190 368 C270 388 400 385 477 355 C560 323 548 260 465 238" fill="none" stroke="#b91c1c" stroke-width="26" stroke-linecap="round"/>
+<path d="M205 250 C120 270 115 350 190 368 C270 388 400 385 477 355 C560 323 548 260 465 238" fill="none" stroke="#fca5a5" stroke-width="13" stroke-linecap="round"/>
+<g stroke-width="5" stroke-linecap="round" fill="none">
+<path d="M315 80 L315 150" stroke="#2563eb"/><path d="M304 137 L315 151 L326 137" stroke="#2563eb"/>
+<path d="M365 150 L365 82" stroke="#dc2626"/><path d="M354 95 L365 81 L376 95" stroke="#dc2626"/>
+<path d="M250 200 L180 200" stroke="#dc2626"/><path d="M193 189 L179 200 L193 211" stroke="#dc2626"/>
+<path d="M430 210 L500 210" stroke="#2563eb"/><path d="M487 199 L501 210 L487 221" stroke="#2563eb"/>
+</g>
+<g fill="#1f2937" font-family="Arial,sans-serif" font-size="20">
+<text x="275" y="36">Alveolar air</text><text x="505" y="200">O₂ enters blood</text>
+<text x="34" y="200">CO₂ enters alveolus</text><text x="520" y="372">Capillary</text>
+<text x="282" y="222" font-size="18">Alveolus</text><text x="520" y="400" font-size="15">Deoxygenated blood → oxygenated blood</text>
+</g>
+</svg>
