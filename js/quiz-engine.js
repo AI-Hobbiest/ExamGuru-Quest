@@ -429,6 +429,7 @@ function restoreAttempt(saved){
     if(questionLimit&&!questionPresets.includes(String(questionLimit)))$("questionTimerCustom").value=String(questionLimit);
     if(mode==="timed"&&$("overallTimerSetting").value==="off")$("overallTimerSetting").value="1200";
     syncModeControls();
+    $("startBtn").textContent=mode==="olympiad"?"Start SOF full mock →":"Start practice →";
     $("chapter").value=String(Math.max(0,chapters.findIndex(chapter=>chapter.chapterKey===session[index].chapterKey)));
     syncChapterPickerFromSelect();
     setText("status","Your saved session and answers have been restored.");$("status").classList.remove("hide");
@@ -494,7 +495,7 @@ function renderQuestion(){
   const chapter=chapters.find(item=>item.chapter_no===question.chapter_no);
   setText("chapterPill",question.examSectionTitle||(chapter?chapter.title:question.chapterTitle));
   setText("numberPill","Question "+(index+1)+" / "+session.length);
-  setText("difficultyPill",question.examSectionId?question.marks+" mark"+(question.marks===1?"":"s"):(question.difficulty||"Practice"));
+  setText("difficultyPill",question.examSectionId?question.marks+" mark"+(question.marks===1?"":"s")+" · "+(question.difficulty||"SOF"):(question.difficulty||"Practice"));
   const sectionPill=$("sectionPill");
   if(sectionPill){
     if(question.examSectionId){sectionPill.textContent="Section "+question.examSectionNumber+" · "+question.sectionQuestionNumber+"/"+question.sectionQuestionCount;sectionPill.classList.remove("hide");}
@@ -722,7 +723,7 @@ function renderResults(summary){
 function reportRows(){
   const result=completedAttempt||ledger.attempts[0]||{};
   return (answers||[]).map((answer,i)=>({
-    question:i+1,section:answer.question.examSectionTitle||"",marks:Number(answer.question.marks)||1,chapter:answer.question.chapterTitle||"",prompt:answer.question.question,
+    question:i+1,section:answer.question.examSectionTitle||"",marks:answer.question.marks?Number(answer.question.marks):"",chapter:answer.question.chapterTitle||"",prompt:answer.question.question,
     selected:answer.selected===null||answer.selected===undefined?"Unanswered":answer.question.options[answer.selected],
     correct:answer.question.options[answer.question.answer],
     outcome:answer.status==="unanswered"?"Unanswered":answer.status==="skipped"?"Skipped":answer.correct?"Correct":"Incorrect",
@@ -755,7 +756,7 @@ function downloadTestReportPdf(){
   const isOlympiad=attempt.examType==="olympiad",pct=isOlympiad?(attempt.marksAccuracy||0):(attempt.questionCount?Math.round((attempt.correctCount||0)/attempt.questionCount*100):0);
   const score=isOlympiad?(attempt.marksEarned+" / "+attempt.maxMarks+" marks"):(attempt.correctCount||0)+" / "+(attempt.questionCount||0);
   const sectionTable=isOlympiad?'<h2>Section-wise performance</h2><table><thead><tr><th>Section</th><th>Correct</th><th>Questions</th><th>Marks</th></tr></thead><tbody>'+(attempt.sectionResults||[]).map(section=>'<tr><td>'+esc(section.sectionTitle)+'</td><td>'+esc(section.correctCount)+'</td><td>'+esc(section.questionCount)+'</td><td>'+esc(section.marksEarned)+' / '+esc(section.maxMarks)+'</td></tr>').join("")+'</tbody></table>':'';
-  const html='<!doctype html><html><head><meta charset="utf-8"><title>ExamGuru test report</title><style>body{font:12px Arial,sans-serif;color:#211b48;margin:28px}h1{margin-bottom:4px}p{color:#555}table{width:100%;border-collapse:collapse;margin-top:18px}th,td{border:1px solid #d8d3ee;padding:7px;text-align:left;vertical-align:top}th{background:#efedff}tr{break-inside:avoid}@media print{body{margin:12mm}button{display:none}}</style></head><body><h1>ExamGuru · Test report</h1><p>'+esc(attempt.examTitle||config.title)+' · Class '+esc(classId)+' · '+esc(new Date(attempt.submittedAt||Date.now()).toLocaleString())+'</p><h2>Score: '+esc(score)+' ('+pct+'%)</h2><p>Correct: '+esc(attempt.correctCount||0)+' · Answered: '+esc(attempt.answeredCount||0)+' · Skipped: '+esc(attempt.skippedCount||0)+' · Unanswered: '+esc(attempt.unansweredCount||0)+' · Duration: '+esc(window.C10SessionModel.formatDuration(attempt.durationSeconds||0))+'</p>'+sectionTable+'<table><thead><tr><th>No.</th><th>Section / Chapter / Question</th><th>Student answer</th><th>Correct answer</th><th>Result / explanation</th></tr></thead><tbody>'+rows.map(row=>'<tr><td>'+row.question+'</td><td><b>'+esc(row.section||row.chapter)+'</b> · '+esc(row.marks)+' marks<br>'+esc(row.prompt)+'</td><td>'+esc(row.selected)+'</td><td>'+esc(row.correct)+'</td><td><b>'+esc(row.outcome)+'</b><br>'+esc(row.explanation)+'</td></tr>').join("")+'</tbody></table><p>Conceptualised by JP Ganathe · ExamGuru</p><script>window.onload=()=>window.print()</script></body></html>';
+  const html='<!doctype html><html><head><meta charset="utf-8"><title>ExamGuru test report</title><style>body{font:12px Arial,sans-serif;color:#211b48;margin:28px}h1{margin-bottom:4px}p{color:#555}table{width:100%;border-collapse:collapse;margin-top:18px}th,td{border:1px solid #d8d3ee;padding:7px;text-align:left;vertical-align:top}th{background:#efedff}tr{break-inside:avoid}@media print{body{margin:12mm}button{display:none}}</style></head><body><h1>ExamGuru · Test report</h1><p>'+esc(attempt.examTitle||config.title)+' · Class '+esc(classId)+' · '+esc(new Date(attempt.submittedAt||Date.now()).toLocaleString())+'</p><h2>Score: '+esc(score)+' ('+pct+'%)</h2><p>Correct: '+esc(attempt.correctCount||0)+' · Answered: '+esc(attempt.answeredCount||0)+' · Skipped: '+esc(attempt.skippedCount||0)+' · Unanswered: '+esc(attempt.unansweredCount||0)+' · Duration: '+esc(window.C10SessionModel.formatDuration(attempt.durationSeconds||0))+'</p>'+sectionTable+'<table><thead><tr><th>No.</th><th>Section / Chapter / Question</th><th>Student answer</th><th>Correct answer</th><th>Result / explanation</th></tr></thead><tbody>'+rows.map(row=>'<tr><td>'+row.question+'</td><td>'+(row.section?'<b>'+esc(row.section)+'</b> · '+esc(row.marks)+' marks':'<b>'+esc(row.chapter)+'</b>')+'<br>'+esc(row.prompt)+'</td><td>'+esc(row.selected)+'</td><td>'+esc(row.correct)+'</td><td><b>'+esc(row.outcome)+'</b><br>'+esc(row.explanation)+'</td></tr>').join("")+'</tbody></table><p>Conceptualised by JP Ganathe · ExamGuru</p><script>window.onload=()=>window.print()</script></body></html>';
   const win=window.open("","_blank");if(!win){setText("resultCopy","Your browser blocked the print window. Allow pop-ups for this site, then try PDF again.");return;}
   win.document.open();win.document.write(html);win.document.close();
 }
