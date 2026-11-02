@@ -4,16 +4,17 @@ A mobile-friendly, non-commercial CBSE learning and MCQ practice portal for mult
 
 ## Live portal
 
-- Sign-in landing page: https://ai-hobbiest.github.io/C10-Playground/
-- Learner subject hub and dashboard (after student sign-in): https://ai-hobbiest.github.io/C10-Playground/dashboard.html
-- Learner dashboard, levels and rewards: https://ai-hobbiest.github.io/C10-Playground/dashboard.html
-- Student profile, test history and JSON backup: https://ai-hobbiest.github.io/C10-Playground/profile.html
-- Admin Workspace (local authoring and reports): https://ai-hobbiest.github.io/C10-Playground/admin.html
-- Science: https://ai-hobbiest.github.io/C10-Playground/science.html
-- Mathematics: https://ai-hobbiest.github.io/C10-Playground/practice.html?subject=mathematics
-- English: https://ai-hobbiest.github.io/C10-Playground/practice.html?subject=english
-- Social Science: https://ai-hobbiest.github.io/C10-Playground/practice.html?subject=social-science
-- Hindi Course A/B starter practice: https://ai-hobbiest.github.io/C10-Playground/practice.html?subject=hindi
+- Sign-in landing page: https://ai-hobbiest.github.io/ExamGuru-Quest/
+- Learner subject hub and dashboard (after student sign-in): https://ai-hobbiest.github.io/ExamGuru-Quest/dashboard.html
+- Learner dashboard, levels and rewards: https://ai-hobbiest.github.io/ExamGuru-Quest/dashboard.html
+- Study Library: https://ai-hobbiest.github.io/ExamGuru-Quest/study.html
+- Student profile, test history and JSON backup: https://ai-hobbiest.github.io/ExamGuru-Quest/profile.html
+- Admin Workspace (local authoring and reports): https://ai-hobbiest.github.io/ExamGuru-Quest/admin.html
+- Science: https://ai-hobbiest.github.io/ExamGuru-Quest/science.html
+- Mathematics: https://ai-hobbiest.github.io/ExamGuru-Quest/practice.html?subject=mathematics
+- English: https://ai-hobbiest.github.io/ExamGuru-Quest/practice.html?subject=english
+- Social Science: https://ai-hobbiest.github.io/ExamGuru-Quest/practice.html?subject=social-science
+- Hindi Course A/B starter practice: https://ai-hobbiest.github.io/ExamGuru-Quest/practice.html?subject=hindi
 
 ## Branding and navigation
 
@@ -36,7 +37,7 @@ The English bank now contains 3,700 MCQs across all 37 topic sets, with 100 MCQs
 
 ## Admin Workspace
 
-Open the Admin Workspace at https://ai-hobbiest.github.io/C10-Playground/admin.html. The page prepares local drafts and exports JSON. It has no in-app admin login or GitHub write token; only a trusted GitHub repository maintainer can publish changes.
+Open the Admin Workspace at https://ai-hobbiest.github.io/ExamGuru-Quest/admin.html. The page prepares local drafts and exports JSON. It has no in-app admin login or GitHub write token; only a trusted GitHub repository maintainer can publish changes.
 
 For the starter phase, students can sign in with a **username and password** from `data/student-accounts.json`. Passwords are stored as salted PBKDF2-SHA-256 hashes, never as plaintext. For this phase, student accounts use the JSON flat-file database at `data/student-accounts.json`. An administrator creates an account in the Admin Workspace, exports the updated JSON, and commits it to GitHub; the account becomes available to all students after the Pages deployment. This is a deliberate MVP limitation: GitHub Pages is static and cannot write back to the repository. Central account storage and automated account publishing are tech debt for a later Cloudflare Auth or Google OAuth phase. Do not put personal, reused or confidential passwords in this MVP.
 
@@ -69,11 +70,17 @@ The 600-question pool currently contains 50 Logical Reasoning, 500 Science and 5
 
 Implementation notes and checks: [docs/sof-olympiad-experience.md](docs/sof-olympiad-experience.md).
 
+## Stage D — Study Library foundation
+
+The student-facing Study Library turns the Admin Knowledge Base manifest into a class-aware learning-resource catalogue. Students can search and filter published notes, reading resources, question-bank PDFs and visual references; save items for later; and mark resources complete. Resources may be limited to selected class IDs or made available to all classes. Draft resources are hidden from students. The Admin Workspace requires a rights/source note and an explicit confirmation that the resource file has been committed at its repository path before the manifest entry can be marked published.
+
+Study Library saved/completed state is stored locally per student and is included in the version 1 JSON backup as optional `studyLibraryProgress`. Older backups without this field remain valid. The current `data/knowledge-base.json` manifest is empty, so the page will show an empty-state message until permitted resources are published. This is the first content-beyond-MCQs slice; structured interactive lessons and non-MCQ activities follow as later Stage D increments. Cloud sync remains deferred.
+
 ## Stage C — Intelligent learning
 
 The shared practice engine now builds a **consolidated Mistake Book** across the student's class subjects. Incorrect and skipped responses are collected by stable question ID. Changing an answer before the same attempt is submitted updates that attempt's response rather than creating a second mistake. A mistake from a completed earlier attempt remains in the history until the student marks it as mastered; a new incorrect or skipped response reopens it.
 
-Students can save **personal bookmarks** from the question screen. These are separate from the existing exam-time “Mark for review” flag. Saved questions can be practised later through the Saved Questions mode or managed in the [My Learning Hub](https://ai-hobbiest.github.io/C10-Playground/learning.html).
+Students can save **personal bookmarks** from the question screen. These are separate from the existing exam-time “Mark for review” flag. Saved questions can be practised later through the Saved Questions mode or managed in the [My Learning Hub](https://ai-hobbiest.github.io/ExamGuru-Quest/learning.html).
 
 **Difficulty-based practice** adds a selector for the difficulty labels already present in each bank (Easy, Medium, Hard and Challenge). It filters the available questions; it does not invent or relabel question difficulty. A subject with no questions at the chosen level returns an empty-selection message instead of silently substituting a different level.
 
@@ -187,7 +194,7 @@ Class 3 Mathematics and English are routed through the shared practice engine. C
 - Parent accounts are managed by the administrator and sign in separately.
 - `data/family-access.json` holds parent accounts and a many-to-many `parentStudentLinks` relationship list. A parent may be linked to several students, and the same student may be linked to multiple parents.
 - The Admin Workspace's **Students & Reports → Family access** panel creates parent accounts and edits the selected parent's child links. The browser downloads an updated `family-access.json`; an authorised maintainer must publish it to GitHub Pages before the changes become active. The generated temporary parent password is shown once in the Admin Workspace; copy it and share it privately.
-- Parents use the **same home-page sign-in form** as students: https://ai-hobbiest.github.io/C10-Playground/. Enter the parent username and temporary password. The account role is detected from `data/family-access.json`, and a successful sign-in opens `parent.html` (Family Dashboard) rather than the student dashboard. The Family Dashboard lists linked children and their locally available learning progress.
+- Parents use the **same home-page sign-in form** as students: https://ai-hobbiest.github.io/ExamGuru-Quest/. Enter the parent username and temporary password. The account role is detected from `data/family-access.json`, and a successful sign-in opens `parent.html` (Family Dashboard) rather than the student dashboard. The Family Dashboard lists linked children and their locally available learning progress.
 - Parent account records, salted password hashes and parent–student links are stored in `data/family-access.json`; student usernames and assigned classes remain in `data/student-accounts.json`. Never put plaintext passwords in either file.
 - Student accounts use stable `studentId` values. `js/storage.js` namespaces local progress, attempts, XP inputs and profile records by the signed-in student's ID. The parent dashboard reads linked students' local attempt ledgers from this same device.
 - Existing legacy progress without a student owner is not automatically assigned to the first child who signs in. It remains in the old unscoped local-storage keys and is hidden from the new student-specific views. Do not clear this browser's site data. An already-downloaded JSON backup can be imported under the intended student; a supervised legacy-data assignment/import utility is still needed for history that exists only in the old local keys.
