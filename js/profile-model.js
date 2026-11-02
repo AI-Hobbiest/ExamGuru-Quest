@@ -189,6 +189,20 @@
     const hasCurrent=expected.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject));
     const legacyOnly=legacySubjects.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject))&&provided.every(subject=>legacySubjects.includes(subject));
     if(!hasCurrent&&!legacyOnly)return false;
+    if(bundle.learningLibrary!==undefined){
+      const library=bundle.learningLibrary;
+      if(!library||library.schemaVersion!==1||library.kind!=="learning-library"||
+         !Array.isArray(library.mistakes)||!Array.isArray(library.bookmarks)||!Array.isArray(library.responses))return false;
+      for(const item of [...library.mistakes,...library.bookmarks]){
+        if(!item||typeof item.questionKey!=="string"||typeof item.question!=="string"||
+           typeof item.subjectId!=="string"||!Array.isArray(item.options)||
+           !Number.isInteger(item.answer)&&item.answer!==null)return false;
+      }
+      for(const response of library.responses){
+        if(!response||typeof response.responseId!=="string"||typeof response.questionKey!=="string"||
+           typeof response.subjectId!=="string"||!["answered","skipped"].includes(response.status))return false;
+      }
+    }
     const allowed=new Set([...legacySubjects,...banksByClass["3"],...banksByClass["6"]]);
     for(const [subject,data] of Object.entries(bundle.subjectData)){
       if(!allowed.has(subject)||!data||typeof data!=="object")return false;
