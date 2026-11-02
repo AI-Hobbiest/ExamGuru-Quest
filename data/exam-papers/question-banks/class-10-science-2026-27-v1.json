@@ -6229,6 +6229,290 @@
           ]
         }
       ]
+    },
+    {
+      "questionId": "SCI10-CHE-Q29-V2",
+      "sectionId": "chemistry",
+      "chapterId": "chemical-reactions-and-equations",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "chemical-reactions-and-equations",
+        "chemical-substances-nature-and-behaviour",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "A chemistry class investigates three reactions and records the visible changes. Interpret the results. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total; teacher moderation is recommended before high-stakes use.",
+      "answerKey": {
+        "modelAnswer": "2Mg + O₂ → 2MgO.\nIt is a combination reaction and also oxidation.\nA white precipitate of barium sulphate forms.\nBaCl₂ + Na₂SO₄ → BaSO₄ + 2NaCl.\nCopper(II) oxide, CuO, is formed."
+      },
+      "markingScheme": [
+        {
+          "criterion": "2Mg + O₂ → 2MgO. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It is a combination reaction and also oxidation. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "A white precipitate of barium sulphate forms. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "BaCl₂ + Na₂SO₄ → BaSO₄ + 2NaCl. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Copper(II) oxide, CuO, is formed. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "stimulus": "A magnesium ribbon is burned in air. Aqueous barium chloride is mixed with sodium sulphate solution. Copper powder is heated strongly in air.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write the balanced equation for magnesium burning in oxygen.",
+          "marks": 1,
+          "answerKey": "2Mg + O₂ → 2MgO."
+        },
+        {
+          "partId": "b",
+          "prompt": "Classify the magnesium reaction.",
+          "marks": 1,
+          "answerKey": "It is a combination reaction and also oxidation."
+        },
+        {
+          "partId": "c",
+          "prompt": "State the observation when barium chloride and sodium sulphate solutions are mixed.",
+          "marks": 1,
+          "answerKey": "A white precipitate of barium sulphate forms."
+        },
+        {
+          "partId": "d",
+          "prompt": "Write the balanced equation for the precipitation reaction.",
+          "marks": 1,
+          "answerKey": "BaCl₂ + Na₂SO₄ → BaSO₄ + 2NaCl."
+        },
+        {
+          "partId": "e",
+          "prompt": "Name the black product formed when copper is heated in air.",
+          "marks": 1,
+          "answerKey": "Copper(II) oxide, CuO, is formed."
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "A student studies how carbon dioxide reacts with limewater and how excess gas changes the product.",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "What observation is seen when carbon dioxide is first bubbled through limewater?",
+              "marks": 1,
+              "answerKey": "Limewater turns milky due to formation of insoluble calcium carbonate."
+            },
+            {
+              "partId": "b",
+              "prompt": "Write the equation for the initial reaction.",
+              "marks": 1,
+              "answerKey": "Ca(OH)₂ + CO₂ → CaCO₃ + H₂O."
+            },
+            {
+              "partId": "c",
+              "prompt": "What happens when excess carbon dioxide is bubbled through the mixture?",
+              "marks": 1,
+              "answerKey": "The milkiness disappears as soluble calcium hydrogen carbonate forms."
+            },
+            {
+              "partId": "d",
+              "prompt": "Write the equation for the reaction with excess carbon dioxide.",
+              "marks": 1,
+              "answerKey": "CaCO₃ + CO₂ + H₂O → Ca(HCO₃)₂."
+            },
+            {
+              "partId": "e",
+              "prompt": "Explain why the final solution becomes clear.",
+              "marks": 1,
+              "answerKey": "Calcium hydrogen carbonate is soluble in water, unlike calcium carbonate."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Limewater turns milky due to formation of insoluble calcium carbonate.\nCa(OH)₂ + CO₂ → CaCO₃ + H₂O.\nThe milkiness disappears as soluble calcium hydrogen carbonate forms.\nCaCO₃ + CO₂ + H₂O → Ca(HCO₃)₂.\nCalcium hydrogen carbonate is soluble in water, unlike calcium carbonate."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Limewater turns milky due to formation of insoluble calcium carbonate. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "The milkiness disappears as soluble calcium hydrogen carbonate forms. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "CaCO₃ + CO₂ + H₂O → Ca(HCO₃)₂. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Calcium hydrogen carbonate is soluble in water, unlike calcium carbonate. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-CHE-Q29-V3",
+      "sectionId": "chemistry",
+      "chapterId": "chemical-reactions-and-equations",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "chemical-reactions-and-equations",
+        "chemical-substances-nature-and-behaviour",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "A student compares oxidation and reduction using a metal oxide and a reactive gas. Answer the questions. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total; teacher moderation is recommended before high-stakes use.",
+      "answerKey": {
+        "modelAnswer": "The reddish-brown solid is copper metal.\nThe colourless liquid is water.\nCuO + H₂ → Cu + H₂O.\nCopper(II) oxide is reduced because it loses oxygen to form copper.\nHydrogen is oxidised because it gains oxygen to form water."
+      },
+      "markingScheme": [
+        {
+          "criterion": "The reddish-brown solid is copper metal. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The colourless liquid is water. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "CuO + H₂ → Cu + H₂O. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Copper(II) oxide is reduced because it loses oxygen to form copper. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Hydrogen is oxidised because it gains oxygen to form water. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "stimulus": "Black copper(II) oxide is heated in a stream of hydrogen. A reddish-brown solid forms and droplets of a colourless liquid appear.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Identify the reddish-brown solid.",
+          "marks": 1,
+          "answerKey": "The reddish-brown solid is copper metal."
+        },
+        {
+          "partId": "b",
+          "prompt": "Name the colourless liquid formed.",
+          "marks": 1,
+          "answerKey": "The colourless liquid is water."
+        },
+        {
+          "partId": "c",
+          "prompt": "Write the balanced chemical equation.",
+          "marks": 1,
+          "answerKey": "CuO + H₂ → Cu + H₂O."
+        },
+        {
+          "partId": "d",
+          "prompt": "Which substance is reduced? Explain briefly.",
+          "marks": 1,
+          "answerKey": "Copper(II) oxide is reduced because it loses oxygen to form copper."
+        },
+        {
+          "partId": "e",
+          "prompt": "Which substance is oxidised? Explain briefly.",
+          "marks": 1,
+          "answerKey": "Hydrogen is oxidised because it gains oxygen to form water."
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "A student adds dilute hydrochloric acid to zinc granules and tests the gas produced.",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "State the observation when zinc reacts with dilute hydrochloric acid.",
+              "marks": 1,
+              "answerKey": "Effervescence occurs as a colourless gas is evolved."
+            },
+            {
+              "partId": "b",
+              "prompt": "Name the gas and state a test.",
+              "marks": 1,
+              "answerKey": "Hydrogen is produced; it burns with a characteristic pop when tested with a burning splint."
+            },
+            {
+              "partId": "c",
+              "prompt": "Write the balanced chemical equation.",
+              "marks": 1,
+              "answerKey": "Zn + 2HCl → ZnCl₂ + H₂."
+            },
+            {
+              "partId": "d",
+              "prompt": "Classify the reaction.",
+              "marks": 1,
+              "answerKey": "It is a displacement reaction because zinc displaces hydrogen from the acid."
+            },
+            {
+              "partId": "e",
+              "prompt": "Why does zinc displace hydrogen?",
+              "marks": 1,
+              "answerKey": "Zinc is more reactive than hydrogen and is above it in the reactivity series."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Effervescence occurs as a colourless gas is evolved.\nHydrogen is produced; it burns with a characteristic pop when tested with a burning splint.\nZn + 2HCl → ZnCl₂ + H₂.\nIt is a displacement reaction because zinc displaces hydrogen from the acid.\nZinc is more reactive than hydrogen and is above it in the reactivity series."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Effervescence occurs as a colourless gas is evolved. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Hydrogen is produced; it burns with a characteristic pop when tested with a burning splint. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Zn + 2HCl → ZnCl₂ + H₂. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "It is a displacement reaction because zinc displaces hydrogen from the acid. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Zinc is more reactive than hydrogen and is above it in the reactivity series. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
     }
   ],
   "generationDesign": {
