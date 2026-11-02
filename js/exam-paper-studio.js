@@ -18,7 +18,24 @@ function createStores(){
   validate:value=>!!value&&Array.isArray(value.drafts)&&value.drafts.every(item=>item&&item.kind==="exam-paper-snapshot")
  });
 }
-function loadBank(){try{const value=bankStore.load();if(value)bank=value;}catch(_){bank=null;}}
+async function loadBank(){
+ try{
+  const local=bankStore.load();
+  if(local){bank=local;if(blueprint)drawBank();return;}
+ }catch(_){bank=null;}
+ try{
+  const response=await fetch("./data/exam-papers/question-banks/class-10-science-2026-27-v1.json",{cache:"no-store"});
+  if(!response.ok)throw Error("Published question pool HTTP "+response.status);
+  const value=await response.json();
+  const check=window.C10ExamPaperGenerator.validateQuestionBank(value,{academicYear:"2026-27"});
+  if(!check.valid)throw Error(check.errors.slice(0,8).join(" "));
+  bank=value;bankStore.save(bank);
+  if(blueprint)drawBank();
+ }catch(e){
+  bank=null;if(blueprint)drawBank();
+  setStatus("Published starter question pool could not be loaded: "+(e.message||e),"error");
+ }
+}
 function loadSavedDraft(){try{const saved=draftStore.load();if(saved.drafts.length)paper=saved.drafts[saved.drafts.length-1];}catch(_){paper=null;}}
 function saveDraft(value){const saved=draftStore.load();const drafts=(saved.drafts||[]).filter(item=>item.paperId!==value.paperId);drafts.push(value);draftStore.save({drafts:drafts.slice(-5)});}
 async function loadBlueprint(){try{const r=await fetch("./data/exam-papers/blueprints/class-10-science-2026-27.json",{cache:"no-store"});if(!r.ok)throw Error("Blueprint HTTP "+r.status);blueprint=await r.json();const check=window.C10ExamPaperGenerator.validateBlueprint(blueprint);if(!check.valid)throw Error(check.errors.join(" "));drawBlueprint();drawBank();setStatus(blueprint.status==="ready"?"Approved blueprint loaded. Import an approved pool to generate.":"Blueprint loaded. Generation is locked until the official question-by-question mark/type/internal-choice slot map is audited and approved.","warning");}catch(e){setStatus("Unable to load blueprint: "+(e.message||e),"error");}}
