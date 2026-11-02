@@ -34,6 +34,8 @@ assert.equal(bank.questions.length,117);
 assert.equal(g.auditSlotCoverage(blueprint,bank,3).valid,true,g.auditSlotCoverage(blueprint,bank,3).errors.join("; "));
 assert.ok(g.auditSlotCoverage(blueprint,bank,3).coverage.every(slot=>slot.eligibleCount>=3));
 assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,117);
+const promptKeys=bank.questions.map(q=>String(q.prompt||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim());
+assert.equal(new Set(promptKeys).size,bank.questions.length,"Science bank must not contain duplicate question stems");
 for(const n of choiceSlots){
  const q=bank.questions.find(q=>q.questionId.includes("-Q"+String(n).padStart(2,"0")+"-"));
  assert.ok(q&&q.alternatives&&q.alternatives.length,"alternative present at Q"+n);
