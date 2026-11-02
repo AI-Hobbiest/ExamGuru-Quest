@@ -127,6 +127,17 @@ function eligible(q,s){
  (!s.requiresInternalChoice||(Array.isArray(q.alternatives)&&q.alternatives.length>0))&&
  (!s.topicTags||!s.topicTags.length||s.topicTags.every(t=>(q.topicTags||[]).includes(t)));
 }
+function auditSlotCoverage(bp,bank,minimumCandidatesPerSlot=3){
+ const bc=validateBlueprint(bp),qc=validateQuestionBank(bank,{academicYear:bp&&bp.academicYear});
+ const errors=[];
+ if(!bc.valid)errors.push(...bc.errors);
+ if(!qc.valid)errors.push(...qc.errors);
+ const slots=Array.isArray(bc.slots)?bc.slots:[];
+ const coverage=slots.map(s=>({slotId:s.slotId,questionNumber:s.questionNumber,sectionId:s.sectionId,marks:s.marks,eligibleCount:Array.isArray(bank&&bank.questions)?bank.questions.filter(q=>eligible(q,s)).length:0}));
+ if(!Number.isInteger(minimumCandidatesPerSlot)||minimumCandidatesPerSlot<1)errors.push("minimumCandidatesPerSlot must be a positive integer.");
+ coverage.forEach(s=>{if(s.eligibleCount<minimumCandidatesPerSlot)errors.push("Slot "+s.slotId+" has "+s.eligibleCount+" eligible approved questions; "+minimumCandidatesPerSlot+" required.");});
+ return{valid:errors.length===0,minimumCandidatesPerSlot,slotCount:slots.length,questionCount:Array.isArray(bank&&bank.questions)?bank.questions.length:0,coverage,errors};
+}
 function generatePaper(bp,bank,options={}){
  const bc=validateBlueprint(bp);if(!bc.valid)throw Error("Invalid blueprint: "+bc.errors.join(" "));
  if(!bc.readyForGeneration)throw Error("Paper generation is locked: blueprint is not approved for generation.");
@@ -174,5 +185,5 @@ function validatePaper(p,bp){
  return{valid:e.length===0,errors:e};
 }
 function createQuestionBankTemplate(){return{schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subjectId:"science",academicYear:"2026-27",bankVersion:"draft-1",title:"Class 10 Science mixed-question pool",questions:[{questionId:"SCI10-BIO-EXAMPLE-001",sectionId:"biology",chapterId:"life-processes",topicTags:["nutrition"],type:"short-answer",marks:2,prompt:"Replace this with an original, syllabus-eligible question.",difficulty:"medium",competency:"application",approvalStatus:"draft",markingScheme:[{criterion:"First marking point",marks:1},{criterion:"Second marking point",marks:1}],answerKey:{modelAnswer:"Replace with an accurate model answer."},source:{type:"original",reference:"Author/reviewer details"}}]};}
-window.C10ExamPaperGenerator=Object.freeze({schemaVersion:1,questionTypes:TYPES,difficulties:DIFFICULTIES,competencies:COMPETENCIES,validateQuestion,validateQuestionBank,validateBlueprint,expandSlotPlan,generatePaper,validatePaper,createQuestionBankTemplate});
+window.C10ExamPaperGenerator=Object.freeze({schemaVersion:1,questionTypes:TYPES,difficulties:DIFFICULTIES,competencies:COMPETENCIES,validateQuestion,validateQuestionBank,validateBlueprint,expandSlotPlan,auditSlotCoverage,generatePaper,validatePaper,createQuestionBankTemplate});
 })();

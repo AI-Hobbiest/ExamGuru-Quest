@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440" role="img" aria-labelledby="title desc">
+<title id="title">Simplified nephron</title><desc id="desc">A simplified nephron showing the glomerulus inside Bowman's capsule, renal tubule, collecting duct and blood vessels.</desc>
+<rect width="760" height="440" fill="#fff"/><g stroke="#26364a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M95 95 C160 95 172 115 205 135" stroke="#c2413b"/><path d="M95 145 C160 145 175 150 206 157" stroke="#b45309"/>
+<ellipse cx="250" cy="150" rx="75" ry="66"/><path d="M207 150 C215 108 284 103 293 147 C302 186 238 197 216 163 C198 136 245 112 268 135 C292 160 260 183 238 162" stroke="#c2413b"/>
+<path d="M320 147 C360 147 355 210 392 211 C425 212 430 177 462 188 C495 200 487 252 455 266 C420 282 423 315 460 325 C493 334 510 302 530 310 L530 392" stroke="#2563eb"/>
+<path d="M530 310 L530 392" stroke="#2563eb"/><path d="M530 310 C560 300 583 300 612 300" stroke="#2563eb"/>
+<path d="M205 215 C175 238 170 277 205 300" stroke="#b45309" stroke-dasharray="6 7"/>
+<path d="M320 147 L342 147" stroke="#2563eb"/><path d="M334 139 L344 147 L334 155" stroke="#2563eb"/>
+<path d="M600 280 L600 394" stroke="#2563eb"/>
+</g>
+<g fill="#1f2937" font-family="Arial,sans-serif" font-size="18">
+<text x="36" y="82">Afferent arteriole</text><text x="40" y="174">Efferent arteriole</text>
+<text x="204" y="52">Bowman's capsule</text><text x="210" y="240">Glomerulus</text>
+<text x="370" y="125">Renal tubule</text><text x="425" y="360">Collecting duct</text>
+<text x="540" y="422">Urine flow</text>
+<text x="350" y="245" font-size="15" fill="#2563eb">Filtrate</text>
+</g>
+</svg>

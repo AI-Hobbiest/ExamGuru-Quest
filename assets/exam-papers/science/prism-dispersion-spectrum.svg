@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" role="img" aria-labelledby="title desc">
+<title id="title">Dispersion of white light by a prism</title><desc id="desc">A beam of white light enters a triangular glass prism and separates into a spectrum, with red deviated least and violet most.</desc>
+<rect width="800" height="420" fill="#fff"/>
+<polygon points="355,65 220,315 500,315" fill="#dbeafe" fill-opacity=".8" stroke="#2563eb" stroke-width="4"/>
+<path d="M55 190 H300" stroke="#475569" stroke-width="10" stroke-linecap="round"/>
+<g stroke-width="7" stroke-linecap="round" fill="none">
+<path d="M430 185 L740 125" stroke="#ef4444"/><path d="M430 190 L740 145" stroke="#f97316"/><path d="M430 195 L740 165" stroke="#eab308"/><path d="M430 200 L740 190" stroke="#22c55e"/><path d="M430 205 L740 215" stroke="#3b82f6"/><path d="M430 210 L740 240" stroke="#4f46e5"/><path d="M430 215 L740 265" stroke="#8b5cf6"/>
+</g>
+<g fill="#1f2937" font-family="Arial,sans-serif" font-size="20">
+<text x="42" y="158">White light</text><text x="295" y="350">Glass prism</text><text x="655" y="95">Red (least deviation)</text><text x="620" y="300">Violet (most deviation)</text>
+</g>
+</svg>

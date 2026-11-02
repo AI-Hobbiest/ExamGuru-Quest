@@ -27,6 +27,7 @@ jobs:
         run: |
           node tests/olympiad-blueprints.test.js
           node tests/exam-paper-generator.test.js
+          node tests/exam-paper-release.test.js
           node tests/exam-paper-renderer.test.js
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
@@ -315,6 +316,9 @@ jobs:
           const examPractice=fs.readFileSync('_site/exam-practice.html','utf8');
           if (!examPractice.includes('./js/exam-paper-generator.js') || !examPractice.includes('./js/exam-paper-self-study.js')) throw new Error('Exam Paper Practice page dependencies are missing.');
           if (!fs.existsSync('_site/js/exam-paper-self-study.js')) throw new Error('Exam Paper Practice controller was not packaged.');
+          for (const asset of ['nephron-filtration.svg','alveolus-gas-exchange.svg','parallel-circuit-6-3.svg','parallel-circuit-4-12.svg','hypermetropia-correction.svg','prism-dispersion-spectrum.svg']) {
+            if (!fs.existsSync('_site/assets/exam-papers/science/'+asset)) throw new Error('Science exam diagram is missing from deployment: '+asset);
+          }
           const admin=fs.readFileSync('_site/admin.html','utf8');
           for (const required of ['data-tab="banks"','data-tab="classes"','data-tab="knowledge"','data-tab="students"','data-tab="leaderboard"','data-tab="access"','data-tab="operations"']) {
             if (!admin.includes(required)) throw new Error('Admin workspace section missing: '+required);

@@ -30,8 +30,10 @@ for(const q of bank.questions){
 }
 const qcheck=g.validateQuestionBank(bank,{academicYear:"2026-27"});
 assert.equal(qcheck.valid,true,qcheck.errors.join("; "));
-assert.equal(bank.questions.length,39);
-assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,39);
+assert.equal(bank.questions.length,117);
+assert.equal(g.auditSlotCoverage(blueprint,bank,3).valid,true,g.auditSlotCoverage(blueprint,bank,3).errors.join("; "));
+assert.ok(g.auditSlotCoverage(blueprint,bank,3).coverage.every(slot=>slot.eligibleCount>=3));
+assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,117);
 for(const n of choiceSlots){
  const q=bank.questions.find(q=>q.questionId.includes("-Q"+String(n).padStart(2,"0")+"-"));
  assert.ok(q&&q.alternatives&&q.alternatives.length,"alternative present at Q"+n);
@@ -50,9 +52,29 @@ assert.deepEqual(competencyMarks,blueprint.competencyMarksTargets);
 const student=r.buildDocumentHtml(paper,"student","https://ai-hobbiest.github.io/ExamGuru-Quest/");
 const teacher=r.buildDocumentHtml(paper,"teacher","https://ai-hobbiest.github.io/ExamGuru-Quest/");
 assert.ok(student.includes("Q39."));
-assert.ok(student.includes("double-circulation-schematic.svg"));
-assert.ok(student.includes("prism-dispersion.svg"));
+const imageSources=paper.questions.flatMap(q=>(q.images||[]).map(image=>image.src.startsWith("./")?image.src.slice(2):image.src));
+assert.equal(imageSources.length,3,"the paper should render its three diagram-based slots");
+for(const source of imageSources)assert.ok(student.includes(source),"student paper should render "+source);
 assert.ok(!student.includes("Expected answer:"));
 assert.ok(teacher.includes("Expected answer:"));
 assert.ok(teacher.includes("Marking scheme"));
-console.log("Exam Paper Studio release passed: 39-question/80-mark blueprint, section/unit/competency totals, all internal choices, bank validation, complete paper assembly, diagrams, and student/teacher renderer separation.");
+const paperHistory=[];
+for(let attempt=1;attempt<=6;attempt++){
+ const recentQuestionIds=paperHistory.slice(-2).flatMap(ids=>ids);
+ const next=g.generatePaper(blueprint,bank,{seed:"release-repeat-test-"+attempt,recentQuestionIds});
+ assert.equal(g.validatePaper(next,blueprint).valid,true);
+ const ids=next.questions.map(q=>q.questionId);
+ for(const prior of paperHistory.slice(-2))assert.equal(ids.some(id=>prior.includes(id)),false,"no question may repeat within the previous two attempts");
+ paperHistory.push(ids);
+}
+
+const selfStudy=fs.readFileSync("js/exam-paper-self-study.js","utf8");
+const practicePage=fs.readFileSync("exam-practice.html","utf8");
+assert.ok(selfStudy.includes('eg_exam_paper_history_v1'),"self-study paper history must persist locally");
+assert.ok(selfStudy.includes('recentQuestionIds'),"recent question IDs must be excluded during generation");
+assert.ok(selfStudy.includes('data-choice-panel="main"')&&selfStudy.includes('data-choice-panel="alternative"'),"main and alternative answer areas must both render");
+assert.ok(selfStudy.includes('input[data-choice]'),"internal choice must be a single-select radio control");
+assert.ok(selfStudy.includes('selected.answerKey?.modelAnswer'),"review must show the selected alternative's answer key");
+assert.ok(!selfStudy.includes('type="checkbox" data-alt='),"internal choice must not allow both alternatives to be selected");
+assert.ok(practicePage.includes('id="historyStatus"'),"practice UI must explain repeat protection and storage limitations");
+console.log("Exam Paper Studio release passed: 39-question/80-mark blueprint, 117-question pool, minimum three eligible candidates per slot, six consecutive repeat-resistant papers, section/unit/competency totals, all internal choices, diagrams, and student/teacher renderer separation.");
