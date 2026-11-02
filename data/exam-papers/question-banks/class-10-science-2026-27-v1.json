@@ -4071,6 +4071,1802 @@
           "answerKey": "Oxygen diffuses from alveolar air into blood, while carbon dioxide diffuses from blood into the alveoli."
         }
       ]
+    },
+    {
+      "questionId": "SCI10-BIO-Q14-V2",
+      "sectionId": "biology",
+      "chapterId": "our-environment",
+      "unitId": "natural-resources",
+      "topicTags": [
+        "our-environment",
+        "natural-resources",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 3,
+      "prompt": "A lake receives runoff containing a persistent pesticide. Explain how the pollutant may affect organisms in its food chain.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Phytoplankton are the producers.\nA persistent pesticide can accumulate and become more concentrated at successive trophic levels through biological magnification.\nPrevent runoff through buffer vegetation and careful pesticide use, or adopt integrated pest management."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Phytoplankton are the producers. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "A persistent pesticide can accumulate and become more concentrated at successive trophic levels through biological magnification. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Prevent runoff through buffer vegetation and careful pesticide use, or adopt integrated pest management. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Identify the producers.",
+          "marks": 1,
+          "answerKey": "Phytoplankton are the producers."
+        },
+        {
+          "partId": "b",
+          "prompt": "Why may large fish contain the highest pesticide concentration?",
+          "marks": 1,
+          "answerKey": "A persistent pesticide can accumulate and become more concentrated at successive trophic levels through biological magnification."
+        },
+        {
+          "partId": "c",
+          "prompt": "Suggest one way to reduce pesticide entering the lake.",
+          "marks": 1,
+          "answerKey": "Prevent runoff through buffer vegetation and careful pesticide use, or adopt integrated pest management."
+        }
+      ],
+      "stimulus": "A lake food chain is phytoplankton → zooplankton → small fish → large fish. A persistent pesticide enters the water after nearby fields are sprayed."
+    },
+    {
+      "questionId": "SCI10-BIO-Q14-V3",
+      "sectionId": "biology",
+      "chapterId": "our-environment",
+      "unitId": "natural-resources",
+      "topicTags": [
+        "our-environment",
+        "natural-resources",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 3,
+      "prompt": "A school replaces disposable plastic plates with reusable steel plates and composts food waste. Explain the environmental benefits.",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Decomposers convert biodegradable waste into compost and return nutrients and organic matter to soil.\nRecycling conserves raw materials and reduces waste sent for disposal.\nIt reduces persistent plastic waste and the resources needed to manufacture and dispose of single-use items."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Decomposers convert biodegradable waste into compost and return nutrients and organic matter to soil. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Recycling conserves raw materials and reduces waste sent for disposal. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It reduces persistent plastic waste and the resources needed to manufacture and dispose of single-use items. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Why is composting food waste useful?",
+          "marks": 1,
+          "answerKey": "Decomposers convert biodegradable waste into compost and return nutrients and organic matter to soil."
+        },
+        {
+          "partId": "b",
+          "prompt": "State one benefit of recycling metal, glass or paper.",
+          "marks": 1,
+          "answerKey": "Recycling conserves raw materials and reduces waste sent for disposal."
+        },
+        {
+          "partId": "c",
+          "prompt": "How does replacing disposable plates reduce pollution?",
+          "marks": 1,
+          "answerKey": "It reduces persistent plastic waste and the resources needed to manufacture and dispose of single-use items."
+        }
+      ],
+      "stimulus": "Food scraps are separated for composting. Clean paper, metal and glass are recycled, while single-use plastic plates are replaced by reusable steel plates."
+    },
+    {
+      "questionId": "SCI10-BIO-Q15-V2",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "control-and-coordination",
+        "world-of-living",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 4,
+      "prompt": "Explain how a nephron forms urine and helps maintain the composition of blood. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Blood is filtered in the glomerulus and the filtrate enters Bowman's capsule.\nThey are selectively reabsorbed into the blood.\nThey remain in the filtrate in regulated amounts and pass into the collecting duct as urine.\nIt removes nitrogenous waste and helps regulate water and salt balance."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Blood is filtered in the glomerulus and the filtrate enters Bowman's capsule. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "They are selectively reabsorbed into the blood. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "They remain in the filtrate in regulated amounts and pass into the collecting duct as urine. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It removes nitrogenous waste and helps regulate water and salt balance. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Where does filtration of blood occur?",
+          "marks": 1,
+          "answerKey": "Blood is filtered in the glomerulus and the filtrate enters Bowman's capsule."
+        },
+        {
+          "partId": "b",
+          "prompt": "What happens to glucose and required salts in the tubule?",
+          "marks": 1,
+          "answerKey": "They are selectively reabsorbed into the blood."
+        },
+        {
+          "partId": "c",
+          "prompt": "What happens to excess water and urea?",
+          "marks": 1,
+          "answerKey": "They remain in the filtrate in regulated amounts and pass into the collecting duct as urine."
+        },
+        {
+          "partId": "d",
+          "prompt": "How does this process help the body?",
+          "marks": 1,
+          "answerKey": "It removes nitrogenous waste and helps regulate water and salt balance."
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the small intestine is adapted for efficient absorption of digested food. (Internal choice: answer either this or the main question.)",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "How do villi help absorption?",
+              "marks": 1,
+              "answerKey": "Numerous villi and microvilli provide a large surface area."
+            },
+            {
+              "partId": "b",
+              "prompt": "How is the diffusion distance kept short?",
+              "marks": 1,
+              "answerKey": "Each villus has a thin epithelial lining."
+            },
+            {
+              "partId": "c",
+              "prompt": "Where do absorbed nutrients enter?",
+              "marks": 1,
+              "answerKey": "Glucose and amino acids enter blood capillaries, while much of the digested fat enters lacteals."
+            },
+            {
+              "partId": "d",
+              "prompt": "How are absorbed nutrients distributed?",
+              "marks": 1,
+              "answerKey": "Blood carries absorbed nutrients to the liver and then to body tissues."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Numerous villi and microvilli provide a large surface area.\nEach villus has a thin epithelial lining.\nGlucose and amino acids enter blood capillaries, while much of the digested fat enters lacteals.\nBlood carries absorbed nutrients to the liver and then to body tissues."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Numerous villi and microvilli provide a large surface area. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Each villus has a thin epithelial lining. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Glucose and amino acids enter blood capillaries, while much of the digested fat enters lacteals. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Blood carries absorbed nutrients to the liver and then to body tissues. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-BIO-Q15-V3",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "control-and-coordination",
+        "world-of-living",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 4,
+      "prompt": "Explain how the heart maintains separate pathways for pulmonary and systemic circulation. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "The right side receives deoxygenated blood from the body and pumps it to the lungs.\nThe left side receives oxygenated blood from the lungs and pumps it to the body.\nA septum separates the right and left sides of the heart.\nIt supports efficient oxygen delivery to meet the high energy requirements of the body."
+      },
+      "markingScheme": [
+        {
+          "criterion": "The right side receives deoxygenated blood from the body and pumps it to the lungs. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The left side receives oxygenated blood from the lungs and pumps it to the body. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "A septum separates the right and left sides of the heart. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It supports efficient oxygen delivery to meet the high energy requirements of the body. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which side handles deoxygenated blood?",
+          "marks": 1,
+          "answerKey": "The right side receives deoxygenated blood from the body and pumps it to the lungs."
+        },
+        {
+          "partId": "b",
+          "prompt": "Which side handles oxygenated blood?",
+          "marks": 1,
+          "answerKey": "The left side receives oxygenated blood from the lungs and pumps it to the body."
+        },
+        {
+          "partId": "c",
+          "prompt": "What prevents the two streams from mixing?",
+          "marks": 1,
+          "answerKey": "A septum separates the right and left sides of the heart."
+        },
+        {
+          "partId": "d",
+          "prompt": "Why is separation useful in humans?",
+          "marks": 1,
+          "answerKey": "It supports efficient oxygen delivery to meet the high energy requirements of the body."
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how alveoli and blood capillaries work together in gas exchange. (Internal choice: answer either this or the main question.)",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "State two features of alveoli that favour diffusion.",
+              "marks": 1,
+              "answerKey": "Alveoli have very thin moist walls and a large combined surface area."
+            },
+            {
+              "partId": "b",
+              "prompt": "How does the capillary network help?",
+              "marks": 1,
+              "answerKey": "It brings blood close to alveolar air and carries oxygen away."
+            },
+            {
+              "partId": "c",
+              "prompt": "State the direction of diffusion of the two gases.",
+              "marks": 1,
+              "answerKey": "Oxygen diffuses into blood while carbon dioxide diffuses into alveoli."
+            },
+            {
+              "partId": "d",
+              "prompt": "Why is continuous ventilation important?",
+              "marks": 1,
+              "answerKey": "It helps maintain concentration gradients for diffusion."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Alveoli have very thin moist walls and a large combined surface area.\nIt brings blood close to alveolar air and carries oxygen away.\nOxygen diffuses into blood while carbon dioxide diffuses into alveoli.\nIt helps maintain concentration gradients for diffusion."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Alveoli have very thin moist walls and a large combined surface area. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "It brings blood close to alveolar air and carries oxygen away. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Oxygen diffuses into blood while carbon dioxide diffuses into alveoli. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "It helps maintain concentration gradients for diffusion. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-BIO-Q16-V2",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "diagram-based"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Use the nephron schematic to describe filtration, reabsorption and the route of urine.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "The glomerulus is the capillary knot where filtration begins.\nIt first collects in Bowman's capsule.\nGlucose, required salts or water is selectively reabsorbed.\nIt passes towards the renal pelvis and then into the ureter.\nIt regulates how much water and salts are retained in the body."
+      },
+      "markingScheme": [
+        {
+          "criterion": "The glomerulus is the capillary knot where filtration begins. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It first collects in Bowman's capsule. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Glucose, required salts or water is selectively reabsorbed. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It passes towards the renal pelvis and then into the ureter. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It regulates how much water and salts are retained in the body. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Name the capillary knot where filtration begins.",
+          "marks": 1,
+          "answerKey": "The glomerulus is the capillary knot where filtration begins."
+        },
+        {
+          "partId": "b",
+          "prompt": "Where does filtered fluid first collect?",
+          "marks": 1,
+          "answerKey": "It first collects in Bowman's capsule."
+        },
+        {
+          "partId": "c",
+          "prompt": "State one substance selectively reabsorbed into blood.",
+          "marks": 1,
+          "answerKey": "Glucose, required salts or water is selectively reabsorbed."
+        },
+        {
+          "partId": "d",
+          "prompt": "Where does urine pass after the collecting duct?",
+          "marks": 1,
+          "answerKey": "It passes towards the renal pelvis and then into the ureter."
+        },
+        {
+          "partId": "e",
+          "prompt": "State one homeostatic role of a nephron.",
+          "marks": 1,
+          "answerKey": "It regulates how much water and salts are retained in the body."
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/exam-papers/science/nephron-filtration.svg",
+          "alt": "Simplified nephron showing glomerulus, Bowman's capsule, renal tubule and collecting duct",
+          "caption": "Schematic for the question"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Use the alveolus schematic to describe gas exchange between air and blood.",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "Name the air sac where gas exchange takes place.",
+              "marks": 1,
+              "answerKey": "The air sac is an alveolus."
+            },
+            {
+              "partId": "b",
+              "prompt": "In which direction does oxygen diffuse?",
+              "marks": 1,
+              "answerKey": "Oxygen diffuses from alveolar air into capillary blood."
+            },
+            {
+              "partId": "c",
+              "prompt": "In which direction does carbon dioxide diffuse?",
+              "marks": 1,
+              "answerKey": "Carbon dioxide diffuses from blood into the alveolus."
+            },
+            {
+              "partId": "d",
+              "prompt": "State two features that make the exchange efficient.",
+              "marks": 1,
+              "answerKey": "The wall is thin and moist, the surface area is large and the capillary supply is rich."
+            },
+            {
+              "partId": "e",
+              "prompt": "What happens to oxygen after it enters blood?",
+              "marks": 1,
+              "answerKey": "It combines with haemoglobin in red blood cells and is transported to tissues."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "The air sac is an alveolus.\nOxygen diffuses from alveolar air into capillary blood.\nCarbon dioxide diffuses from blood into the alveolus.\nThe wall is thin and moist, the surface area is large and the capillary supply is rich.\nIt combines with haemoglobin in red blood cells and is transported to tissues."
+          },
+          "markingScheme": [
+            {
+              "criterion": "The air sac is an alveolus. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Oxygen diffuses from alveolar air into capillary blood. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Carbon dioxide diffuses from blood into the alveolus. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "The wall is thin and moist, the surface area is large and the capillary supply is rich. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "It combines with haemoglobin in red blood cells and is transported to tissues. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ],
+          "images": [
+            {
+              "src": "assets/exam-papers/science/alveolus-gas-exchange.svg",
+              "alt": "Alveolus surrounded by capillaries with arrows showing gas diffusion",
+              "caption": "Schematic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-BIO-Q16-V3",
+      "sectionId": "biology",
+      "chapterId": "life-processes",
+      "unitId": "world-of-living",
+      "topicTags": [
+        "life-processes",
+        "world-of-living",
+        "diagram-based"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Use the alveolus schematic to explain how the respiratory surface enables rapid gas exchange.",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "The wall of an alveolus is the respiratory surface.\nMillions of alveoli provide a very large total surface area.\nIt provides a short diffusion distance and allows gases to dissolve.\nBlood continually removes oxygen and brings carbon dioxide, maintaining concentration gradients.\nOxygen moves from alveolar air into blood and carbon dioxide moves from blood into alveolar air."
+      },
+      "markingScheme": [
+        {
+          "criterion": "The wall of an alveolus is the respiratory surface. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Millions of alveoli provide a very large total surface area. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "It provides a short diffusion distance and allows gases to dissolve. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Blood continually removes oxygen and brings carbon dioxide, maintaining concentration gradients. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Oxygen moves from alveolar air into blood and carbon dioxide moves from blood into alveolar air. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Identify the respiratory surface.",
+          "marks": 1,
+          "answerKey": "The wall of an alveolus is the respiratory surface."
+        },
+        {
+          "partId": "b",
+          "prompt": "How is a large exchange area provided?",
+          "marks": 1,
+          "answerKey": "Millions of alveoli provide a very large total surface area."
+        },
+        {
+          "partId": "c",
+          "prompt": "Why is the alveolar wall thin and moist?",
+          "marks": 1,
+          "answerKey": "It provides a short diffusion distance and allows gases to dissolve."
+        },
+        {
+          "partId": "d",
+          "prompt": "How does blood flow help maintain diffusion?",
+          "marks": 1,
+          "answerKey": "Blood continually removes oxygen and brings carbon dioxide, maintaining concentration gradients."
+        },
+        {
+          "partId": "e",
+          "prompt": "State the directions of gas exchange.",
+          "marks": 1,
+          "answerKey": "Oxygen moves from alveolar air into blood and carbon dioxide moves from blood into alveolar air."
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/exam-papers/science/alveolus-gas-exchange.svg",
+          "alt": "Alveolus surrounded by capillaries with oxygen and carbon dioxide diffusion arrows",
+          "caption": "Schematic for the question"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Use a nephron diagram to explain how filtration and selective reabsorption produce urine.",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "Where does ultrafiltration occur?",
+              "marks": 1,
+              "answerKey": "Ultrafiltration occurs in the glomerulus into Bowman's capsule."
+            },
+            {
+              "partId": "b",
+              "prompt": "Name two useful substances reabsorbed from filtrate.",
+              "marks": 1,
+              "answerKey": "Glucose and required salts, along with much of the water, are reabsorbed."
+            },
+            {
+              "partId": "c",
+              "prompt": "Why is selective reabsorption necessary?",
+              "marks": 1,
+              "answerKey": "It prevents loss of useful substances and returns them to blood."
+            },
+            {
+              "partId": "d",
+              "prompt": "What remains in urine?",
+              "marks": 1,
+              "answerKey": "Urea and excess water and salts remain in the filtrate."
+            },
+            {
+              "partId": "e",
+              "prompt": "Name the duct that carries urine away from a kidney.",
+              "marks": 1,
+              "answerKey": "The ureter carries urine from the kidney to the urinary bladder."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Ultrafiltration occurs in the glomerulus into Bowman's capsule.\nGlucose and required salts, along with much of the water, are reabsorbed.\nIt prevents loss of useful substances and returns them to blood.\nUrea and excess water and salts remain in the filtrate.\nThe ureter carries urine from the kidney to the urinary bladder."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Ultrafiltration occurs in the glomerulus into Bowman's capsule. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Glucose and required salts, along with much of the water, are reabsorbed. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "It prevents loss of useful substances and returns them to blood. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Urea and excess water and salts remain in the filtrate. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "The ureter carries urine from the kidney to the urinary bladder. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ],
+          "images": [
+            {
+              "src": "assets/exam-papers/science/nephron-filtration.svg",
+              "alt": "Nephron showing filtration and selective reabsorption",
+              "caption": "Schematic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-CHE-Q17-V2",
+      "sectionId": "chemistry",
+      "chapterId": "chemical-reactions-and-equations",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "chemical-reactions-and-equations",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "When copper powder is heated in air, which product forms on its surface?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Copper(II) oxide",
+        "explanation": "Copper combines with oxygen to form black copper(II) oxide."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Copper sulphate"
+        },
+        {
+          "optionId": "B",
+          "text": "Copper(II) oxide"
+        },
+        {
+          "optionId": "C",
+          "text": "Copper chloride"
+        },
+        {
+          "optionId": "D",
+          "text": "Copper carbonate"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-CHE-Q17-V3",
+      "sectionId": "chemistry",
+      "chapterId": "chemical-reactions-and-equations",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "chemical-reactions-and-equations",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which coefficient set balances H₂ + O₂ → H₂O, in the order H₂, O₂ and H₂O?",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. 2, 1, 2",
+        "explanation": "The balanced equation is 2H₂ + O₂ → 2H₂O."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "1, 1, 1"
+        },
+        {
+          "optionId": "B",
+          "text": "2, 1, 2"
+        },
+        {
+          "optionId": "C",
+          "text": "1, 2, 1"
+        },
+        {
+          "optionId": "D",
+          "text": "2, 2, 1"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-CHE-Q18-V2",
+      "sectionId": "chemistry",
+      "chapterId": "acids-bases-and-salts",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "acids-bases-and-salts",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which substance is used as an antacid to neutralise excess acid in the stomach?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. Magnesium hydroxide",
+        "explanation": "Magnesium hydroxide is a mild base used in some antacid formulations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Magnesium hydroxide"
+        },
+        {
+          "optionId": "B",
+          "text": "Concentrated hydrochloric acid"
+        },
+        {
+          "optionId": "C",
+          "text": "Sodium chloride"
+        },
+        {
+          "optionId": "D",
+          "text": "Ethanol"
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-CHE-Q18-V3",
+      "sectionId": "chemistry",
+      "chapterId": "acids-bases-and-salts",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "acids-bases-and-salts",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A solution has pH 2. Which conclusion is correct?",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. It is strongly acidic",
+        "explanation": "A pH well below 7 indicates an acidic solution; pH 2 is strongly acidic."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "It is strongly acidic"
+        },
+        {
+          "optionId": "B",
+          "text": "It is neutral"
+        },
+        {
+          "optionId": "C",
+          "text": "It is weakly alkaline"
+        },
+        {
+          "optionId": "D",
+          "text": "It contains no hydrogen ions"
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-CHE-Q19-V2",
+      "sectionId": "chemistry",
+      "chapterId": "metals-and-non-metals",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "metals-and-non-metals",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Why do ionic compounds generally have high melting points?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Strong electrostatic attraction between oppositely charged ions",
+        "explanation": "Strong electrostatic attractions in an ionic lattice require substantial energy to overcome."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Weak attraction between neutral molecules"
+        },
+        {
+          "optionId": "B",
+          "text": "Strong electrostatic attraction between oppositely charged ions"
+        },
+        {
+          "optionId": "C",
+          "text": "Free movement of electrons in the solid"
+        },
+        {
+          "optionId": "D",
+          "text": "The absence of charged particles"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-CHE-Q19-V3",
+      "sectionId": "chemistry",
+      "chapterId": "metals-and-non-metals",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "metals-and-non-metals",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which metal is commonly stored under kerosene to prevent contact with air and moisture?",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Sodium",
+        "explanation": "Sodium is highly reactive and is stored under kerosene to keep it away from air and water."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Iron"
+        },
+        {
+          "optionId": "B",
+          "text": "Sodium"
+        },
+        {
+          "optionId": "C",
+          "text": "Copper"
+        },
+        {
+          "optionId": "D",
+          "text": "Silver"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-CHE-Q20-V2",
+      "sectionId": "chemistry",
+      "chapterId": "carbon-and-its-compounds",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "carbon-and-its-compounds",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which of the following is a saturated hydrocarbon?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "C. Ethane",
+        "explanation": "Ethane has only single carbon-carbon bonds and is saturated."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Ethene"
+        },
+        {
+          "optionId": "B",
+          "text": "Ethyne"
+        },
+        {
+          "optionId": "C",
+          "text": "Ethane"
+        },
+        {
+          "optionId": "D",
+          "text": "Propene"
+        }
+      ],
+      "correctOptionId": "C"
+    },
+    {
+      "questionId": "SCI10-CHE-Q20-V3",
+      "sectionId": "chemistry",
+      "chapterId": "carbon-and-its-compounds",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "carbon-and-its-compounds",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A hydrocarbon decolourises bromine water in the absence of ultraviolet light. Which feature is likely present?",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. A carbon-carbon double bond",
+        "explanation": "An unsaturated hydrocarbon can add bromine across a carbon-carbon multiple bond."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Only carbon-carbon single bonds"
+        },
+        {
+          "optionId": "B",
+          "text": "A carbon-carbon double bond"
+        },
+        {
+          "optionId": "C",
+          "text": "Only ionic bonds"
+        },
+        {
+          "optionId": "D",
+          "text": "A metal-carbon bond"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-CHE-Q21-V2",
+      "sectionId": "chemistry",
+      "chapterId": "acids-bases-and-salts",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "acids-bases-and-salts",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which compound is commonly called baking soda?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. NaHCO₃",
+        "explanation": "Baking soda is sodium hydrogen carbonate, NaHCO₃."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Na₂CO₃·10H₂O"
+        },
+        {
+          "optionId": "B",
+          "text": "NaHCO₃"
+        },
+        {
+          "optionId": "C",
+          "text": "CaSO₄·½H₂O"
+        },
+        {
+          "optionId": "D",
+          "text": "CaOCl₂"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-CHE-Q21-V3",
+      "sectionId": "chemistry",
+      "chapterId": "acids-bases-and-salts",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "acids-bases-and-salts",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Plaster of Paris is prepared by controlled heating of which substance?",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. Gypsum",
+        "explanation": "Gypsum (calcium sulphate dihydrate) loses part of its water of crystallisation to form Plaster of Paris."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Gypsum"
+        },
+        {
+          "optionId": "B",
+          "text": "Washing soda"
+        },
+        {
+          "optionId": "C",
+          "text": "Bleaching powder"
+        },
+        {
+          "optionId": "D",
+          "text": "Baking soda"
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-CHE-Q22-V2",
+      "sectionId": "chemistry",
+      "chapterId": "carbon-and-its-compounds",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "carbon-and-its-compounds",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Why does soap form scum in hard water?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. It reacts with calcium and magnesium ions to form insoluble salts",
+        "explanation": "Calcium and magnesium ions form insoluble salts with soap, reducing lather."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "It reacts with calcium and magnesium ions to form insoluble salts"
+        },
+        {
+          "optionId": "B",
+          "text": "It evaporates immediately"
+        },
+        {
+          "optionId": "C",
+          "text": "It turns water acidic"
+        },
+        {
+          "optionId": "D",
+          "text": "It contains no hydrophobic part"
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-CHE-Q22-V3",
+      "sectionId": "chemistry",
+      "chapterId": "carbon-and-its-compounds",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "carbon-and-its-compounds",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which part of a soap molecule is hydrophilic?",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Ionic or polar head",
+        "explanation": "The ionic or polar head interacts with water; the hydrocarbon tail interacts with oily dirt."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Long hydrocarbon tail"
+        },
+        {
+          "optionId": "B",
+          "text": "Ionic or polar head"
+        },
+        {
+          "optionId": "C",
+          "text": "Both ends are non-polar"
+        },
+        {
+          "optionId": "D",
+          "text": "Neither end interacts with water"
+        }
+      ],
+      "correctOptionId": "B"
+    },
+    {
+      "questionId": "SCI10-CHE-Q23-V2",
+      "sectionId": "chemistry",
+      "chapterId": "chemical-reactions-and-equations",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "chemical-reactions-and-equations",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which equation represents thermal decomposition?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. CaCO₃ → CaO + CO₂ on heating",
+        "explanation": "Heating calcium carbonate breaks one compound into calcium oxide and carbon dioxide."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "CaCO₃ → CaO + CO₂ on heating"
+        },
+        {
+          "optionId": "B",
+          "text": "2Mg + O₂ → 2MgO"
+        },
+        {
+          "optionId": "C",
+          "text": "HCl + NaOH → NaCl + H₂O"
+        },
+        {
+          "optionId": "D",
+          "text": "Fe + CuSO₄ → FeSO₄ + Cu"
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-CHE-Q23-V3",
+      "sectionId": "chemistry",
+      "chapterId": "chemical-reactions-and-equations",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "chemical-reactions-and-equations",
+        "chemical-substances-nature-and-behaviour",
+        "mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which observation is characteristic of a precipitation reaction?",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. An insoluble solid forms when two solutions are mixed",
+        "explanation": "A precipitation reaction produces an insoluble solid from solutions."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "An insoluble solid forms when two solutions are mixed"
+        },
+        {
+          "optionId": "B",
+          "text": "A metal always melts"
+        },
+        {
+          "optionId": "C",
+          "text": "A gas must give a pop sound"
+        },
+        {
+          "optionId": "D",
+          "text": "The reactants must be gases"
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-CHE-Q24-V2",
+      "sectionId": "chemistry",
+      "chapterId": "metals-and-non-metals",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "metals-and-non-metals",
+        "chemical-substances-nature-and-behaviour",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Assertion (A): Iron displaces copper from copper sulphate solution. Reason (R): Iron is more reactive than copper.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both are true; iron is above copper in the reactivity series."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "assertionReason": {
+        "assertion": "Iron displaces copper from copper sulphate solution.",
+        "reason": "Iron is more reactive than copper."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-CHE-Q24-V3",
+      "sectionId": "chemistry",
+      "chapterId": "metals-and-non-metals",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "metals-and-non-metals",
+        "chemical-substances-nature-and-behaviour",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Assertion (A): Aluminium resists further corrosion after a thin oxide layer forms. Reason (R): The oxide layer prevents air and moisture from reaching much of the underlying metal.",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both are true and the reason explains the protective action of aluminium oxide."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "assertionReason": {
+        "assertion": "Aluminium resists further corrosion after a thin oxide layer forms.",
+        "reason": "The oxide layer prevents air and moisture from reaching much of the underlying metal."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "A"
+    },
+    {
+      "questionId": "SCI10-CHE-Q25-V2",
+      "sectionId": "chemistry",
+      "chapterId": "carbon-and-its-compounds",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "acids-bases-and-salts",
+        "chemical-substances-nature-and-behaviour",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 2,
+      "prompt": "Explain why carbon forms a very large number of compounds.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Catenation is the ability of carbon atoms to bond with one another to form chains, branches and rings.\nEach carbon forms four covalent bonds, allowing stable combinations with carbon and other elements."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Catenation is the ability of carbon atoms to bond with one another to form chains, branches and rings. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Each carbon forms four covalent bonds, allowing stable combinations with carbon and other elements. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What is catenation?",
+          "marks": 1,
+          "answerKey": "Catenation is the ability of carbon atoms to bond with one another to form chains, branches and rings."
+        },
+        {
+          "partId": "b",
+          "prompt": "How does tetravalency increase the number of possible compounds?",
+          "marks": 1,
+          "answerKey": "Each carbon forms four covalent bonds, allowing stable combinations with carbon and other elements."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-CHE-Q25-V3",
+      "sectionId": "chemistry",
+      "chapterId": "carbon-and-its-compounds",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "acids-bases-and-salts",
+        "chemical-substances-nature-and-behaviour",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 2,
+      "prompt": "State two differences between saturated and unsaturated carbon compounds.",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Saturated compounds have only carbon-carbon single bonds; unsaturated compounds contain a carbon-carbon double or triple bond.\nUnsaturated compounds generally decolourise bromine water by addition, unlike saturated compounds under the same conditions."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Saturated compounds have only carbon-carbon single bonds; unsaturated compounds contain a carbon-carbon double or triple bond. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Unsaturated compounds generally decolourise bromine water by addition, unlike saturated compounds under the same conditions. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Compare the bonds between carbon atoms.",
+          "marks": 1,
+          "answerKey": "Saturated compounds have only carbon-carbon single bonds; unsaturated compounds contain a carbon-carbon double or triple bond."
+        },
+        {
+          "partId": "b",
+          "prompt": "State one chemical test for unsaturation.",
+          "marks": 1,
+          "answerKey": "Unsaturated compounds generally decolourise bromine water by addition, unlike saturated compounds under the same conditions."
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-CHE-Q26-V2",
+      "sectionId": "chemistry",
+      "chapterId": "carbon-and-its-compounds",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "carbon-and-its-compounds",
+        "chemical-substances-nature-and-behaviour",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "A carbon compound reacts with sodium and also forms an ester with ethanoic acid. Identify its functional group and describe the reactions. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "It is ethanol, an alcohol containing the –OH functional group.\nHydrogen gas is produced.\nEthyl ethanoate and water are formed in esterification."
+      },
+      "markingScheme": [
+        {
+          "criterion": "It is ethanol, an alcohol containing the –OH functional group. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Hydrogen gas is produced. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Ethyl ethanoate and water are formed in esterification. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Identify the compound with formula C₂H₅OH.",
+          "marks": 1,
+          "answerKey": "It is ethanol, an alcohol containing the –OH functional group."
+        },
+        {
+          "partId": "b",
+          "prompt": "What gas is produced when ethanol reacts with sodium?",
+          "marks": 1,
+          "answerKey": "Hydrogen gas is produced."
+        },
+        {
+          "partId": "c",
+          "prompt": "What is formed when ethanol reacts with ethanoic acid in concentrated sulphuric acid?",
+          "marks": 1,
+          "answerKey": "Ethyl ethanoate and water are formed in esterification."
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how soap removes oily dirt from clothes. (Internal choice: answer either this or the main question.)",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "Describe the two ends of a soap molecule.",
+              "marks": 1,
+              "answerKey": "It has a hydrophobic hydrocarbon tail and a hydrophilic ionic head."
+            },
+            {
+              "partId": "b",
+              "prompt": "How does the tail interact with grease?",
+              "marks": 1,
+              "answerKey": "The non-polar tail embeds itself in oil or grease."
+            },
+            {
+              "partId": "c",
+              "prompt": "How is the dirt suspended in water?",
+              "marks": 1,
+              "answerKey": "Soap molecules form micelles around grease, allowing it to remain suspended and be rinsed away."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "It has a hydrophobic hydrocarbon tail and a hydrophilic ionic head.\nThe non-polar tail embeds itself in oil or grease.\nSoap molecules form micelles around grease, allowing it to remain suspended and be rinsed away."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It has a hydrophobic hydrocarbon tail and a hydrophilic ionic head. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "The non-polar tail embeds itself in oil or grease. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Soap molecules form micelles around grease, allowing it to remain suspended and be rinsed away. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SCI10-CHE-Q26-V3",
+      "sectionId": "chemistry",
+      "chapterId": "carbon-and-its-compounds",
+      "unitId": "chemical-substances-nature-and-behaviour",
+      "topicTags": [
+        "carbon-and-its-compounds",
+        "chemical-substances-nature-and-behaviour",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Describe the oxidation of ethanol and state the product formed under suitable oxidising conditions. (Internal choice: answer either this or the alternative.)",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru practice item aligned to the CBSE Class X Science 2026-27 summative curriculum."
+      },
+      "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Acidified potassium dichromate or alkaline potassium permanganate can oxidise ethanol.\nEthanol is oxidised to ethanoic acid under suitable conditions.\nThe orange dichromate solution changes towards green as it is reduced."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Acidified potassium dichromate or alkaline potassium permanganate can oxidise ethanol. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "Ethanol is oxidised to ethanoic acid under suitable conditions. (or equivalent scientifically correct response)",
+          "marks": 1
+        },
+        {
+          "criterion": "The orange dichromate solution changes towards green as it is reduced. (or equivalent scientifically correct response)",
+          "marks": 1
+        }
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Name one common oxidising agent used in the laboratory.",
+          "marks": 1,
+          "answerKey": "Acidified potassium dichromate or alkaline potassium permanganate can oxidise ethanol."
+        },
+        {
+          "partId": "b",
+          "prompt": "What is the main product when ethanol is strongly oxidised?",
+          "marks": 1,
+          "answerKey": "Ethanol is oxidised to ethanoic acid under suitable conditions."
+        },
+        {
+          "partId": "c",
+          "prompt": "State one observation with acidified potassium dichromate.",
+          "marks": 1,
+          "answerKey": "The orange dichromate solution changes towards green as it is reduced."
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain what happens when ethanoic acid reacts with sodium carbonate. (Internal choice: answer either this or the main question.)",
+          "parts": [
+            {
+              "partId": "a",
+              "prompt": "State the observable change.",
+              "marks": 1,
+              "answerKey": "Brisk effervescence occurs as carbon dioxide gas is released."
+            },
+            {
+              "partId": "b",
+              "prompt": "Name the salt and other products.",
+              "marks": 1,
+              "answerKey": "Sodium ethanoate, water and carbon dioxide are formed."
+            },
+            {
+              "partId": "c",
+              "prompt": "Write the balanced equation.",
+              "marks": 1,
+              "answerKey": "2CH₃COOH + Na₂CO₃ → 2CH₃COONa + H₂O + CO₂."
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Brisk effervescence occurs as carbon dioxide gas is released.\nSodium ethanoate, water and carbon dioxide are formed.\n2CH₃COOH + Na₂CO₃ → 2CH₃COONa + H₂O + CO₂."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Brisk effervescence occurs as carbon dioxide gas is released. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "Sodium ethanoate, water and carbon dioxide are formed. (or equivalent scientifically correct response)",
+              "marks": 1
+            },
+            {
+              "criterion": "2CH₃COOH + Na₂CO₃ → 2CH₃COONa + H₂O + CO₂. (or equivalent scientifically correct response)",
+              "marks": 1
+            }
+          ]
+        }
+      ]
     }
   ],
   "generationDesign": {
