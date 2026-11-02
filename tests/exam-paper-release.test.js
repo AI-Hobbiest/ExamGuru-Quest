@@ -21,11 +21,12 @@ for(const n of choiceSlots){
  assert.equal(slot.requiresInternalChoice,true,"internal-choice slot Q"+n);
 }
 for(const q of bank.questions){
- const match=q.questionId.match(/-Q(\\d+)-/);
- assert.ok(match,"question ID carries a numbered slot: "+q.questionId);
- const slot=blueprint.slotPlan.find(s=>s.questionNumber===Number(match[1]));
+ const token=q.questionId.split("-Q")[1];
+ const questionNumber=Number(token&&token.split("-")[0]);
+ assert.ok(Number.isInteger(questionNumber),"question ID carries a numbered slot: "+q.questionId);
+ const slot=blueprint.slotPlan.find(s=>s.questionNumber===questionNumber);
  assert.ok(slot,"question has a blueprint slot: "+q.questionId);
- assert.ok(slot.chapterIds.includes(q.chapterId),"question chapter matches slot Q"+match[1]);
+ assert.ok(slot.chapterIds.includes(q.chapterId),"question chapter matches slot Q"+questionNumber);
 }
 const qcheck=g.validateQuestionBank(bank,{academicYear:"2026-27"});
 assert.equal(qcheck.valid,true,qcheck.errors.join("; "));
