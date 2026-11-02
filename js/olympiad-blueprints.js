@@ -1,4 +1,4 @@
-/* Config-driven Olympiad paper blueprints and section scoring. */
+/* Config-driven Class 6 SOF Olympiad Level 1 paper blueprints and section scoring. */
 (() => {
   "use strict";
 
@@ -14,7 +14,38 @@
         { id: "logical-reasoning", title: "Logical Reasoning", sourceSection: "Logical Reasoning", questionCount: 10, marksPerQuestion: 1 },
         { id: "science", title: "Science", sourceSection: "Science", questionCount: 35, marksPerQuestion: 1 },
         { id: "achievers", title: "Achievers Section", sourceSection: "Achievers Section", questionCount: 5, marksPerQuestion: 3 }
-      ]
+      ],
+      syllabusCoverageNote: "Question records are not yet tagged with verified current-class/previous-class syllabus origin. The published 60% current-class / 40% previous-class split is not certified by this pool."
+    },
+    "sof-imo-class-6-level-1": {
+      id: "sof-imo-class-6-level-1",
+      title: "SOF International Mathematics Olympiad (IMO) · Class 6 · Level 1",
+      legacyName: "SOF IMO",
+      classId: "6",
+      subjectId: "mathematics-sof",
+      durationSeconds: 3600,
+      sections: [
+        { id: "logical-reasoning", title: "Logical Reasoning", sourceSection: "Logical Reasoning", questionCount: 15, marksPerQuestion: 1 },
+        { id: "mathematical-reasoning", title: "Mathematical Reasoning", sourceSection: "Mathematical Reasoning", questionCount: 20, marksPerQuestion: 1 },
+        { id: "everyday-mathematics", title: "Everyday Mathematics", sourceSection: "Everyday Mathematics", questionCount: 10, marksPerQuestion: 1 },
+        { id: "achievers", title: "Achievers Section", sourceSection: "Achievers Section", questionCount: 5, marksPerQuestion: 3 }
+      ],
+      syllabusCoverageNote: "SOF specifies 60% current-class and 40% previous-class syllabus coverage for Level 1, with Achievers questions from current-class syllabus. Current/previous-class origin is not yet tagged and audited in the source bank, so this mock enforces section quotas and marks but does not certify the 60/40 split."
+    },
+    "sof-ieo-class-6-level-1": {
+      id: "sof-ieo-class-6-level-1",
+      title: "SOF International English Olympiad (IEO) · Class 6 · Level 1",
+      legacyName: "SOF IEO",
+      classId: "6",
+      subjectId: "english-sof",
+      durationSeconds: 3600,
+      sections: [
+        { id: "word-structure", title: "Word and Structure Knowledge", sourceSection: "Word and Structure Knowledge", questionCount: 30, marksPerQuestion: 1 },
+        { id: "reading", title: "Reading", sourceSection: "Reading", questionCount: 10, marksPerQuestion: 1 },
+        { id: "spoken-written", title: "Spoken and Written Expression", sourceSection: "Spoken and Written Expression", questionCount: 5, marksPerQuestion: 1 },
+        { id: "achievers", title: "Achievers Section", sourceSection: "Achievers Section", questionCount: 5, marksPerQuestion: 3 }
+      ],
+      syllabusCoverageNote: "The blueprint matches the published Level 1 section counts, time and marks. The source bank is section-tagged; no additional current/previous-class syllabus-origin certification is claimed."
     }
   };
 
@@ -89,6 +120,7 @@
       durationSeconds: blueprint.durationSeconds,
       totalQuestions,
       maxMarks,
+      syllabusCoverageNote: blueprint.syllabusCoverageNote,
       sections: sectionBlueprint,
       questions: selected.map((question, index) => ({ ...question, examQuestionNumber: index + 1 }))
     };
