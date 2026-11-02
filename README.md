@@ -203,19 +203,24 @@ Class 3 Mathematics and English are routed through the shared practice engine. C
 - The account and relationship model uses stable IDs so the final database migration can replace file-based lookup and local persistence without changing the parent–student relationship design.
 
 
-## Exam Paper Studio — foundation release
+## Exam Paper Studio — first usable release
 
-The Admin Workspace includes the first blueprint-driven Exam Paper Studio foundation for CBSE Class 10 Science (086), academic year 2026–27. The new mixed-question data contract and browser-side generator/validator support MCQ, assertion–reason, very short answer, short answer, long answer, case-based, numerical and diagram-based questions, including validated relative image assets for diagram-based questions. The new system is separate from the existing MCQ practice engine and does not change legacy bank normalisation.
+The Admin Workspace includes a blueprint-driven Exam Paper Studio for CBSE Class 10 Science (086), academic year 2026–27. The versioned mixed-question model and browser-side generator/validator support MCQ, assertion–reason, structured response, case-based, numerical and diagram-based items. The engine remains separate from the existing MCQ practice engine and does not change legacy bank normalisation.
 
-The versioned blueprint records the 80-mark / 3-hour / 39-question paper, its Biology (30), Chemistry (25) and Physics (25) sections, and syllabus unit weightage. Its status remains **draft** until the official sample paper's question-by-question mark/type/internal-choice slot map has been transcribed and independently checked. Generation is intentionally locked in this foundation release; the generator refuses to fill gaps by guessing. The next content step is to complete that slot audit and create/review the approved mixed-question pool.
+The approved blueprint records 39 numbered questions, 80 marks and 180 minutes, with Biology (30), Chemistry (25) and Physics (25) sections. Its 39 question slots include the official per-question mark distribution, the nine internal-choice positions, the official annual-examination unit weights (25/25/12/13/5 marks) and the aggregate competency targets (40/24/16 marks). Generation validates the numbered slots, section totals, unit totals, competency totals, approved-only selection, unique questions, internal alternatives and answer-rubric totals.
 
-Question pools and generated paper drafts imported/created in the Studio are saved in the current browser through the existing versioned C10Storage adapter. Generated paper snapshots carry the source question content and blueprint version. Student and teacher print layouts can be saved as PDF through the browser. No generated papers, student records or confidential examination content are committed to this public repository.
+A first original ExamGuru starter bank is bundled at `data/exam-papers/question-banks/class-10-science-2026-27-v1.json`. It contains one approved item per numbered slot (39 total), with answer keys, mark-by-mark rubrics and required internal alternatives. It is sufficient to assemble one complete paper. It is **not yet a deep pool for multiple non-repeating papers**; more reviewed candidates per slot are required for that. The items are internally reviewed for syllabus fit and mark totals, but teacher moderation is recommended before high-stakes classroom use.
+
+Syllabus guardrail: the 2026–27 curriculum note says Heredity and Evolution, Periodic Classification and Electric Effects of Electric Current are not assessed in the year-end examination, even though the sample question paper includes a heredity item. ExamGuru uses the published paper's structure but substitutes examinable Life Processes/Control and Coordination content and excludes the formative-only topic. The source discrepancy is documented in the blueprint.
+
+The Studio automatically loads the published starter bank when there is no local imported bank. Imported pools and generated drafts are still saved in the current browser through the versioned C10Storage adapter; they are not written to GitHub automatically. JSON export is available. Student and teacher copies can be printed or saved as PDF through the browser print dialog. The existing MCQ practice engine remains untouched.
 
 - Blueprint: `data/exam-papers/blueprints/class-10-science-2026-27.json`
+- Starter question pool: `data/exam-papers/question-banks/class-10-science-2026-27-v1.json`
 - Question-bank contract: `data/exam-papers/question-bank.schema.json`
 - Generator: `js/exam-paper-generator.js`
 - Renderer: `js/exam-paper-renderer.js`
 - Admin integration: `js/exam-paper-studio.js`
-- Tests: `tests/exam-paper-generator.test.js` and `tests/exam-paper-renderer.test.js`
+- Release tests: `tests/exam-paper-release.test.js`, `tests/exam-paper-generator.test.js` and `tests/exam-paper-renderer.test.js`
 
-References: [CBSE Class X 2026–27 sample-paper page](https://cbseacademic.nic.in/SQP_CLASSX_2026-27.html) and [CBSE 2026–27 curriculum](https://cbseacademic.nic.in/curriculum_2027.html).
+Official references: [CBSE 2026–27 Science sample paper](https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-SQP.pdf), [CBSE 2026–27 Science marking scheme](https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-MS.pdf) and [CBSE 2026–27 Science curriculum](https://cbseacademic.nic.in/web_material/CurriculumMain27/SecPart1/Science_SecP1_2026-27.pdf).
