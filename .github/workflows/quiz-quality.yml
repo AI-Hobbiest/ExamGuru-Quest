@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Validate Exam Paper Studio blueprint engine and rendering
-        run: node tests/exam-paper-generator.test.js && node tests/exam-paper-renderer.test.js
+        run: node tests/exam-paper-generator.test.js && node tests/exam-paper-renderer.test.js && node tests/exam-paper-release.test.js
       - name: Validate Stage C learning model, mastery and adaptive selection
         run: node tests/learning-model.test.js
       - name: Validate canonical ExamGuru Quest URLs
