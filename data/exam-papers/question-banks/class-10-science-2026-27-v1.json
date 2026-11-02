@@ -5678,7 +5678,7 @@
       ],
       "type": "short-answer",
       "marks": 3,
-      "prompt": "A carbon compound reacts with sodium and also forms an ester with ethanoic acid. Identify its functional group and describe the reactions. (Internal choice: answer either this or the alternative.)",
+      "prompt": "A compound X has formula C₂H₆O, reacts with sodium metal and also forms an ester with ethanoic acid. Identify its functional group and describe the reactions. (Internal choice: answer either this or the alternative.)",
       "difficulty": "medium",
       "competency": "application",
       "approvalStatus": "approved",
@@ -5688,11 +5688,11 @@
       },
       "approvalNote": "Content checked for blueprint-slot eligibility, scientific accuracy, answer key and mark total. Teacher moderation is recommended before high-stakes school use.",
       "answerKey": {
-        "modelAnswer": "It is ethanol, an alcohol containing the –OH functional group.\nHydrogen gas is produced.\nEthyl ethanoate and water are formed in esterification."
+        "modelAnswer": "X is ethanol (C₂H₅OH), an alcohol containing the –OH functional group.\nHydrogen gas is produced.\nEthyl ethanoate and water are formed in esterification."
       },
       "markingScheme": [
         {
-          "criterion": "It is ethanol, an alcohol containing the –OH functional group. (or equivalent scientifically correct response)",
+          "criterion": "X is ethanol (C₂H₅OH), an alcohol containing the –OH functional group. (or equivalent scientifically correct response)",
           "marks": 1
         },
         {
@@ -5707,9 +5707,9 @@
       "parts": [
         {
           "partId": "a",
-          "prompt": "Identify the compound with formula C₂H₅OH.",
+          "prompt": "Identify compound X from its molecular formula.",
           "marks": 1,
-          "answerKey": "It is ethanol, an alcohol containing the –OH functional group."
+          "answerKey": "X is ethanol (C₂H₅OH), an alcohol containing the –OH functional group."
         },
         {
           "partId": "b",
