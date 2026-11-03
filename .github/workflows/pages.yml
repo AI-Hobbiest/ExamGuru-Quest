@@ -63,7 +63,6 @@ jobs:
           cp css/question-media.css _site/css/question-media.css
           cp js/storage.js _site/js/storage.js
           cp js/competency-tagger.js _site/js/competency-tagger.js
-          cp js/competency-tagger.js _site/js/competency-tagger.js
           cp js/question-bank.js _site/js/question-bank.js
           cp js/olympiad-blueprints.js _site/js/olympiad-blueprints.js
           cp js/exam-paper-generator.js _site/js/exam-paper-generator.js
