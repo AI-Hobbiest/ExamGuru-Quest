@@ -25,7 +25,7 @@
   function collectAnswers() {
     const next = {};
     assignment.questionSnapshot.forEach(q => {
-      const selected = $("testQuestions").querySelector('input[name="q-' + CSS.escape(q.questionId) + '"]:checked');
+      const selected = Array.from($("testQuestions").querySelectorAll("input[type=radio]:checked")).find(input => input.name === "q-" + q.questionId);
       next[q.questionId] = selected ? selected.value : "";
     });
     answers = next;
