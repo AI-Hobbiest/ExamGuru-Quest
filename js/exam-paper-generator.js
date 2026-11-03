@@ -67,9 +67,12 @@ function validateQuestion(q,path="question"){
 function validateQuestionBank(bank,expected={}){
  const e=[];
  if(!obj(bank)||bank.schemaVersion!==1||bank.kind!=="exam-paper-question-bank")return{valid:false,errors:["Expected exam-paper-question-bank schemaVersion 1."]};
- if(String(bank.classId)!=="10"||bank.subjectId!=="science")e.push("This release accepts Class 10 Science banks only.");
+ if(!text(String(bank.classId??"")))e.push("classId is required.");
+ if(!text(bank.subjectId)||!/^[a-z0-9]+(?:-[a-z0-9]+)*$/i.test(String(bank.subjectId)))e.push("subjectId must be a stable alphanumeric slug.");
  if(!text(bank.bankVersion))e.push("bankVersion is required.");
  if(!Array.isArray(bank.questions))e.push("questions must be an array.");
+ if(expected.classId!=null&&String(bank.classId)!==String(expected.classId))e.push("Question bank class does not match the blueprint.");
+ if(expected.subjectId&&String(bank.subjectId)!==String(expected.subjectId))e.push("Question bank subject does not match the blueprint.");
  if(expected.academicYear&&bank.academicYear!==expected.academicYear)e.push("Question bank academic year does not match.");
  if(Array.isArray(bank.questions)){
   const ids=new Set();
@@ -83,7 +86,8 @@ function expandSlotPlan(bp){
 function validateBlueprint(bp){
  const e=[];if(!obj(bp)||bp.schemaVersion!==1||bp.kind!=="exam-paper-blueprint")return{valid:false,readyForGeneration:false,errors:["Expected exam-paper-blueprint schemaVersion 1."]};
  if(!text(bp.blueprintId)||!text(bp.academicYear))e.push("Blueprint identity and academicYear are required.");
- if(String(bp.classId)!=="10"||bp.subjectId!=="science")e.push("This release supports Class 10 Science only.");
+ if(!text(String(bp.classId??"")))e.push("Blueprint classId is required.");
+ if(!text(bp.subjectId)||!/^[a-z0-9]+(?:-[a-z0-9]+)*$/i.test(String(bp.subjectId)))e.push("Blueprint subjectId must be a stable alphanumeric slug.");
  if(!Number.isInteger(bp.durationMinutes)||bp.durationMinutes<1)e.push("durationMinutes must be positive.");
  if(!Number.isInteger(bp.totalQuestions)||bp.totalQuestions<1||!Number.isInteger(bp.totalMarks)||bp.totalMarks<1)e.push("Blueprint totals must be positive integers.");
  if(!Array.isArray(bp.sections)||!bp.sections.length)e.push("Blueprint sections are required.");
@@ -128,7 +132,7 @@ function eligible(q,s){
  (!s.topicTags||!s.topicTags.length||s.topicTags.every(t=>(q.topicTags||[]).includes(t)));
 }
 function auditSlotCoverage(bp,bank,minimumCandidatesPerSlot=3){
- const bc=validateBlueprint(bp),qc=validateQuestionBank(bank,{academicYear:bp&&bp.academicYear});
+ const bc=validateBlueprint(bp),qc=validateQuestionBank(bank,{classId:bp&&bp.classId,subjectId:bp&&bp.subjectId,academicYear:bp&&bp.academicYear});
  const errors=[];
  if(!bc.valid)errors.push(...bc.errors);
  if(!qc.valid)errors.push(...qc.errors);
@@ -141,7 +145,7 @@ function auditSlotCoverage(bp,bank,minimumCandidatesPerSlot=3){
 function generatePaper(bp,bank,options={}){
  const bc=validateBlueprint(bp);if(!bc.valid)throw Error("Invalid blueprint: "+bc.errors.join(" "));
  if(!bc.readyForGeneration)throw Error("Paper generation is locked: blueprint is not approved for generation.");
- const qc=validateQuestionBank(bank,{academicYear:bp.academicYear});if(!qc.valid)throw Error("Invalid question bank: "+qc.errors.join(" "));
+ const qc=validateQuestionBank(bank,{classId:bp.classId,subjectId:bp.subjectId,academicYear:bp.academicYear});if(!qc.valid)throw Error("Invalid question bank: "+qc.errors.join(" "));
  const recent=new Set((options.recentQuestionIds||[]).map(String)),rand=seedRandom(options.seed||"examguru-paper");
  const slots=bc.slots.map((s,i)=>({...s,_position:i,_candidates:shuffle(bank.questions.filter(q=>eligible(q,s)&&!recent.has(String(q.questionId))),rand)}));
  const empty=slots.filter(s=>!s._candidates.length);if(empty.length)throw Error("Question pool shortage: "+empty.map(s=>s.slotId+" ("+s.sectionId+", "+s.marks+" marks)").join("; "));
@@ -178,6 +182,11 @@ function validatePaper(p,bp){
  if(sum(p.questions.map(q=>Number(q.marks)||0))!==p.totalMarks)e.push("Paper total marks are inconsistent.");
  if(bp){
   if(p.blueprintId!==bp.blueprintId)e.push("Blueprint ID mismatch.");
+  if(String(p.classId)!==String(bp.classId))e.push("Paper class does not match the blueprint.");
+  if(String(p.subjectId)!==String(bp.subjectId))e.push("Paper subject does not match the blueprint.");
+  if(String(p.academicYear)!==String(bp.academicYear))e.push("Paper academic year does not match the blueprint.");
+  if((p.subjectCode||null)!==(bp.subjectCode||null))e.push("Paper subject code does not match the blueprint.");
+  if(p.durationMinutes!==bp.durationMinutes)e.push("Paper duration does not match the blueprint.");
   if(p.questions.length!==bp.totalQuestions)e.push("Blueprint question count mismatch.");
   if(p.totalMarks!==bp.totalMarks)e.push("Blueprint total marks mismatch.");
   (bp.sections||[]).forEach(s=>{const a=p.questions.filter(q=>q.sectionId===s.sectionId);if(a.length!==s.questionCount)e.push(s.sectionId+" question count mismatch.");if(sum(a.map(q=>Number(q.marks)||0))!==s.totalMarks)e.push(s.sectionId+" marks mismatch.");});
@@ -200,7 +209,11 @@ function validatePaper(p,bp){
  }
  return{valid:e.length===0,errors:e};
 }
-function createQuestionBankTemplate(){return{schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subjectId:"science",academicYear:"2026-27",bankVersion:"draft-1",title:"Class 10 Science mixed-question pool",questions:[{questionId:"SCI10-BIO-EXAMPLE-001",sectionId:"biology",chapterId:"life-processes",topicTags:["nutrition"],type:"short-answer",marks:2,prompt:"Replace this with an original, syllabus-eligible question.",difficulty:"medium",competency:"application",approvalStatus:"draft",markingScheme:[{criterion:"First marking point",marks:1},{criterion:"Second marking point",marks:1}],answerKey:{modelAnswer:"Replace with an accurate model answer."},source:{type:"original",reference:"Author/reviewer details"}}]};}
+function createQuestionBankTemplate(profile={}){
+ const classId=String(profile.classId||"10"),subjectId=String(profile.subjectId||"subject"),subjectTitle=String(profile.subjectTitle||profile.subjectName||subjectId.replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase()));
+ const prefix=("C"+classId+"-"+subjectId).toUpperCase().replace(/[^A-Z0-9-]+/g,"-");
+ return{schemaVersion:1,kind:"exam-paper-question-bank",classId,subjectId,subjectCode:profile.subjectCode||null,academicYear:String(profile.academicYear||"2026-27"),bankVersion:"draft-1",title:"Class "+classId+" "+subjectTitle+" mixed-question pool",questions:[{questionId:prefix+"-EXAMPLE-001",sectionId:"section-1",chapterId:"chapter-1",topicTags:[],type:"short-answer",marks:2,prompt:"Replace this with an original, syllabus-eligible question.",difficulty:"medium",competency:"application",approvalStatus:"draft",markingScheme:[{criterion:"First marking point",marks:1},{criterion:"Second marking point",marks:1}],answerKey:{modelAnswer:"Replace with an accurate model answer."},source:{type:"original",reference:"Author/reviewer details"}}]};
+}
 
 function normalizeCompetency(value){
  const v=String(value||"").trim().toLowerCase().replace(/[_\s]+/g,"-");
@@ -232,26 +245,33 @@ function normalisePracticeDifficulty(value){
  if(v.includes("hard")||v.includes("challenging")||v.includes("difficult"))return"hard";
  return"medium";
 }
-function normalizeStem(value){return String(value||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();}
-function adaptPracticeMcqBank(practiceChapters,bp){
- if(!Array.isArray(practiceChapters))throw Error("The shared Science practice bank must be a chapter array.");
+function normalizeStem(value){return String(value||"").normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu," ").trim();}
+function adaptChapterMcqBank(practiceChapters,bp,options={}){
+ if(!Array.isArray(practiceChapters))throw Error("The optional chapter-wise practice bank must be a chapter array.");
  const blueprintCheck=validateBlueprint(bp);
- if(!blueprintCheck.valid||!blueprintCheck.readyForGeneration)throw Error("Cannot map practice MCQs until the Science blueprint is valid and ready.");
+ if(!blueprintCheck.valid||!blueprintCheck.readyForGeneration)throw Error("Cannot map practice MCQs until the selected blueprint is valid and ready.");
  const slotRows=bp.slotPlan||[];
  const chapterIds=[...new Set(slotRows.flatMap(s=>Array.isArray(s.chapterIds)?s.chapterIds:[]))];
  const questions=[],excluded={outOfSummativeScope:0,ambiguousChapter:0,invalidQuestion:0,unsupportedCompetency:0,needsReview:0},invalidReasons={missingPrompt:0,optionCount:0,emptyOptionText:0,duplicateOptionIds:0,badAnswer:0,missingExplanation:0,emptyStem:0,duplicateSourceId:0,duplicateSourceStem:0};
  const byChapter={},byCompetency={"knowledge-understanding":0,"application":0,"analysis-evaluation-creation":0};
  const usedIds=new Set(),usedStems=new Set();
  const slug=value=>String(value||"").normalize("NFKD").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+ const classToken=String(bp.classId).replace(/[^a-z0-9]+/gi,"").toUpperCase()||"CLASS";
+ const subjectToken=String(bp.subjectId).toUpperCase().replace(/[^A-Z0-9]+/g,"-");
  practiceChapters.forEach((chapter,chapterIndex)=>{
-  const rawKey=String(chapter&&(chapter.key||chapter.chapterKey)||"").trim();
+  const rawKey=String(chapter&&(chapter.key||chapter.chapterKey||chapter.chapterId)||"").trim();
   const title=String(chapter&&chapter.title||"").trim();
   const keys=[rawKey,slug(rawKey),slug(title)].filter(Boolean);
   const chapterId=chapterIds.find(id=>keys.includes(id))||chapterIds.find(id=>keys.some(key=>key.endsWith("-"+id)||key.startsWith(id+"-")));
   if(!chapterId){excluded.outOfSummativeScope+=(Array.isArray(chapter&&chapter.questions)?chapter.questions.length:0);return;}
   const related=slotRows.filter(s=>(s.chapterIds||[]).includes(chapterId));
-  const sections=[...new Set(related.map(s=>s.sectionId))],units=[...new Set(related.map(s=>s.unitId))];
-  if(sections.length!==1||units.length!==1){excluded.ambiguousChapter+=(Array.isArray(chapter.questions)?chapter.questions.length:0);return;}
+  const sections=[...new Set(related.map(s=>s.sectionId))],units=[...new Set(related.map(s=>s.unitId).filter(Boolean))];
+  if(!sections.length||sections.length>1&&!related.some(s=>s.sectionId===chapter.sectionId)||units.length>1&&!related.some(s=>s.unitId===chapter.unitId)){
+   excluded.ambiguousChapter+=(Array.isArray(chapter.questions)?chapter.questions.length:0);return;
+  }
+  const chapterSection=chapter.sectionId&&sections.includes(chapter.sectionId)?chapter.sectionId:sections.length===1?sections[0]:null;
+  const chapterUnit=chapter.unitId&&units.includes(chapter.unitId)?chapter.unitId:units.length===1?units[0]:null;
+  if(!chapterSection){excluded.ambiguousChapter+=(Array.isArray(chapter.questions)?chapter.questions.length:0);return;}
   byChapter[chapterId]=0;
   (chapter.questions||[]).forEach((q,questionIndex)=>{
    const prompt=String(q&&(q.question||q.prompt||q.text)||"").trim();
@@ -265,7 +285,8 @@ function adaptPracticeMcqBank(practiceChapters,bp){
     const a=String(q.answer).trim().toUpperCase();if(/^[A-D]$/.test(a))answer=a.charCodeAt(0)-65;
    }
    const qid=String(q&&(q.questionId??q.id)||("chapter-"+(chapterIndex+1)+"-q-"+(questionIndex+1)));
-   const id="SCI10-PRACTICE-MCQ-"+chapterId+"-"+qid.replace(/[^A-Za-z0-9._-]+/g,"-");
+   const safeQid=qid.replace(/[^A-Za-z0-9._-]+/g,"-")||("Q"+(questionIndex+1));
+   const id="EG"+classToken+"-"+subjectToken+"-PRACTICE-MCQ-"+chapterId+"-"+safeQid;
    let invalid=false;
    if(!prompt){invalidReasons.missingPrompt++;invalid=true;}
    if(opts.length!==4){invalidReasons.optionCount++;invalid=true;}
@@ -279,51 +300,60 @@ function adaptPracticeMcqBank(practiceChapters,bp){
    if(invalid){excluded.invalidQuestion++;return;}
    usedIds.add(id);usedStems.add(stem);
    const tagged=inferMcqCompetency(q);
-   if(String(q.competencyTagStatus||"") === "needs-review"){excluded.needsReview++;return;}
+   if(String(q.competencyTagStatus||"")==="needs-review"){excluded.needsReview++;return;}
    if(!COMPETENCIES.includes(tagged.competency)){excluded.unsupportedCompetency++;return;}
    const correct=opts[answer],letter=String(correct.optionId);
    const question={
-    questionId:id,sectionId:sections[0],chapterId,unitId:units[0],topicTags:["mcq","practice-bank",chapterId],
+    questionId:id,sectionId:chapterSection,chapterId,topicTags:["mcq","practice-bank",chapterId],
     type:"mcq",marks:1,prompt,difficulty:normalisePracticeDifficulty(q.difficulty),
-    competency:tagged.competency,competencyTagMethod:tagged.method,competencyTagStatus:q.competencyTagStatus||"inferred",competencyTagReason:q.competencyTagReason||"Imported from the shared subject MCQ bank with a provisional competency tag.",approvalStatus:"approved",
+    competency:tagged.competency,competencyTagMethod:tagged.method,competencyTagStatus:q.competencyTagStatus||"inferred",competencyTagReason:q.competencyTagReason||"Imported from the selected subject's chapter-wise MCQ bank with a provisional competency tag.",approvalStatus:"approved",
     options:opts,correctOptionId:correct.optionId,
     answerKey:{modelAnswer:letter+". "+correct.text,explanation:String(q.explanation||q.rationale).trim()},
     markingScheme:[{criterion:"Correct option selected: "+letter,marks:1}],
-    source:{type:"practice-bank",reference:"Existing Class 10 Science chapter-wise MCQ bank · "+title+" · "+qid}
+    source:{type:"practice-bank",reference:String(bp.title||("Class "+bp.classId+" "+bp.subjectId))+" · "+title+" · "+qid}
    };
+   if(chapterUnit)question.unitId=chapterUnit;
    if(Array.isArray(q.images)&&q.images.length)question.images=clone(q.images);
    questions.push(question);byChapter[chapterId]++;byCompetency[tagged.competency]++;
   });
  });
  return{
-  schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subjectId:"science",academicYear:bp.academicYear,
-  bankVersion:"science-practice-mcqs-v1",title:"Existing Class 10 Science chapter-wise MCQs adapted for Exam Paper Studio",
+  schemaVersion:1,kind:"exam-paper-question-bank",classId:String(bp.classId),subjectId:String(bp.subjectId),subjectCode:bp.subjectCode||null,academicYear:bp.academicYear,
+  bankVersion:String(options.bankVersion||"chapter-practice-mcqs-v1"),title:String(options.title||("Class "+bp.classId+" "+(bp.subjectTitle||bp.subjectId)+" chapter-wise practice MCQs")),
   questionPoolStatus:"shared-practice-bank-adapter",questions,
   adapterStats:{sourceChapterCount:practiceChapters.length,importedCount:questions.length,excluded,invalidReasons,byChapter,byCompetency}
  };
 }
-function mergeQuestionBanks(baseBank,practiceChapters,bp){
- const baseCheck=validateQuestionBank(baseBank,{academicYear:bp&&bp.academicYear});
+function adaptPracticeMcqBank(practiceChapters,bp,options={}){return adaptChapterMcqBank(practiceChapters,bp,options);}
+function mergeQuestionBanks(baseBank,practiceChapters,bp,options={}){
+ const expected={classId:bp&&bp.classId,subjectId:bp&&bp.subjectId,academicYear:bp&&bp.academicYear};
+ const baseCheck=validateQuestionBank(baseBank,expected);
  if(!baseCheck.valid)throw Error("Base exam-paper bank is invalid: "+baseCheck.errors.slice(0,5).join(" "));
- const adapted=adaptPracticeMcqBank(practiceChapters,bp);
+ const hasPractice=Array.isArray(practiceChapters);
+ const adapted=hasPractice?adaptChapterMcqBank(practiceChapters,bp,options):{
+  questions:[],adapterStats:{sourceChapterCount:0,importedCount:0,excluded:{},invalidReasons:{},byChapter:{},byCompetency:{}}
+ };
  const merged=clone(baseBank),ids=new Set(),stems=new Set();
  (merged.questions||[]).forEach(q=>{ids.add(String(q.questionId));stems.add(normalizeStem(q.prompt));});
  let appended=0,duplicateIds=0,duplicateStems=0;
  adapted.questions.forEach(q=>{
   if(ids.has(q.questionId)){duplicateIds++;return;}
   const stem=normalizeStem(q.prompt);
-  if(stems.has(stem)){duplicateStems++;return;}
-  ids.add(q.questionId);stems.add(stem);merged.questions.push(q);appended++;
+  if(stem&&stems.has(stem)){duplicateStems++;return;}
+  ids.add(q.questionId);if(stem)stems.add(stem);merged.questions.push(q);appended++;
  });
- merged.bankVersion=String(baseBank.bankVersion)+"+shared-science-mcqs-v1";
- merged.title=String(baseBank.title||"Class 10 Science paper pool")+" + existing chapter-wise practice MCQs";
- merged.questionPoolStatus="shared-practice-and-exam-paper-pool";
- const check=validateQuestionBank(merged,{academicYear:bp&&bp.academicYear});
- if(!check.valid)throw Error("Integrated Science question pool is invalid: "+check.errors.slice(0,8).join(" "));
- const coverage=auditSlotCoverage(bp,merged,3);
- if(!coverage.valid)throw Error("Integrated Science pool does not meet the minimum slot coverage: "+coverage.errors.slice(0,8).join(" "));
+ if(hasPractice)merged.bankVersion=String(baseBank.bankVersion)+"+chapter-practice-mcqs-v1";
+ if(appended)merged.title=String(baseBank.title||"Class "+bp.classId+" "+bp.subjectId+" paper pool")+" + chapter-wise practice MCQs";
+ merged.questionPoolStatus=appended?"shared-practice-and-exam-paper-pool":(baseBank.questionPoolStatus||"exam-paper-pool");
+ const check=validateQuestionBank(merged,expected);
+ if(!check.valid)throw Error("Integrated question pool is invalid: "+check.errors.slice(0,8).join(" "));
+ const minimum=Number.isInteger(options.minimumCandidatesPerSlot)?options.minimumCandidatesPerSlot:3;
+ const coverage=auditSlotCoverage(bp,merged,minimum);
+ if(!coverage.valid)throw Error("Question pool does not meet minimum slot coverage: "+coverage.errors.slice(0,8).join(" "));
  return{bank:merged,stats:{practiceSourceCount:adapted.questions.length,appended,duplicateIds,duplicateStems,excluded:adapted.adapterStats.excluded,invalidReasons:adapted.adapterStats.invalidReasons,byChapter:adapted.adapterStats.byChapter,byCompetency:adapted.adapterStats.byCompetency,coverage}};
 }
 
-window.C10ExamPaperGenerator=Object.freeze({schemaVersion:1,questionTypes:TYPES,difficulties:DIFFICULTIES,competencies:COMPETENCIES,validateQuestion,validateQuestionBank,validateBlueprint,expandSlotPlan,auditSlotCoverage,generatePaper,paperFingerprint,generateUniquePaper,validatePaper,createQuestionBankTemplate,normalizeCompetency,inferMcqCompetency,adaptPracticeMcqBank,mergeQuestionBanks});
+const api=Object.freeze({schemaVersion:1,questionTypes:TYPES,difficulties:DIFFICULTIES,competencies:COMPETENCIES,validateQuestion,validateQuestionBank,validateBlueprint,expandSlotPlan,auditSlotCoverage,generatePaper,paperFingerprint,generateUniquePaper,validatePaper,createQuestionBankTemplate,normalizeCompetency,inferMcqCompetency,normalizeStem,adaptChapterMcqBank,adaptPracticeMcqBank,mergeQuestionBanks});
+window.ExamPaperGenerator=api;
+window.C10ExamPaperGenerator=api;
 })();
