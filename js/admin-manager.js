@@ -156,23 +156,25 @@
         title:String(chapter.title||"").trim(),
         key:String(chapter.key||chapter.chapterKey||("chapter-"+String(Number(chapter.chapter_no||chapter.chapterNo||i+1)).padStart(2,"0"))),
         section:chapter.section||"",
-        questions:(chapter.questions||[]).map((q,j)=>({
+        questions:(chapter.questions||[]).map((q,j)=>window.C10CompetencyTagger.tagQuestion({
           ...q,id:q.id??q.questionId??("q-"+(j+1)),
           question:String(q.question||q.prompt||""),
           options:Array.isArray(q.options)?q.options.map(o=>typeof o==="string"?o:String(o.text||"")):[],
           answer:Number(q.answer),explanation:String(q.explanation||""),
           difficulty:q.difficulty||"Medium",images:Array.isArray(q.images)?q.images:[]
-        }))
+        },{subjectId:subject,section:chapter.section,chapterTitle:chapter.title,chapterId:chapter.key}))
       }));
     }
     if(data&&data.kind==="question-bank"&&data.schemaVersion===1){
       return window.C10QuestionBank.normalize(data,subject).map((chapter,i)=>({
         chapter_no:chapter.chapter_no||i+1,title:chapter.title,key:chapter.chapterKey,
         section:chapter.section||"",
-        questions:chapter.questions.map(q=>({
+        questions:chapter.questions.map(q=>window.C10CompetencyTagger.tagQuestion({
           id:q.id,question:q.question,options:q.options,answer:q.answer,
-          explanation:q.explanation,difficulty:q.difficulty,images:q.images||[]
-        }))
+          explanation:q.explanation,difficulty:q.difficulty,images:q.images||[],
+          competency:q.competency,competencyTagStatus:q.competencyTagStatus,
+          competencyTagReason:q.competencyTagReason,competencyTaggerVersion:q.competencyTaggerVersion
+        },{subjectId:subject,section:chapter.section,chapterTitle:chapter.title,chapterId:chapter.chapterKey}))
       }));
     }
     throw new Error("Unsupported bank format. Import a legacy chapter-array JSON or a C10 Playground v1 question-bank JSON.");
@@ -192,6 +194,7 @@
         if(!Array.isArray(q.options)||q.options.length<2||q.options.some(o=>!String(o||"").trim()))throw new Error(label+" needs at least two non-empty options.");
         if(!Number.isInteger(Number(q.answer))||Number(q.answer)<0||Number(q.answer)>=q.options.length)throw new Error(label+" has an invalid correct-answer index.");
         if(!String(q.explanation||"").trim())throw new Error(label+" needs an explanation.");
+        const competencyProblem=window.C10CompetencyTagger.validate(q);if(competencyProblem)throw new Error(label+": "+competencyProblem);
         q.images=window.C10QuestionBank.normalizeImages(q.images||[]);
       });
     });
@@ -251,7 +254,8 @@
     $("questionEditorTitle").textContent="Question editor · new question";
     $("qId").value="";$("qPrompt").value="";
     for(let i=0;i<4;i++)$("qOption"+i).value="";
-    $("qAnswer").value="0";$("qExplanation").value="";$("qDifficulty").value="Medium";
+    $("qAnswer").value="0";$("qExplanation").value="";$("qDifficulty").value="Medium";$("qCompetency").value="";$("qCompetencyStatus").textContent="Required for every new MCQ. Choose the thinking skill being tested.";
+    $("qCompetencyStatus").className="admin-inline-help";
     $("saveQuestionBtn").textContent="Add question to chapter draft";$("deleteQuestionBtn").disabled=true;
     renderQuestionImages();
   }
@@ -263,6 +267,10 @@
     for(let i=0;i<4;i++)$("qOption"+i).value=q.options[i]||"";
     $("qAnswer").value=String(q.answer);$("qExplanation").value=q.explanation||"";
     $("qDifficulty").value=["Easy","Medium","Hard","Unspecified"].includes(q.difficulty)?q.difficulty:"Medium";
+    const tagged=window.C10CompetencyTagger.tagQuestion(q,{subjectId:bankSubject,section:bank[selectedChapter].section,chapterTitle:bank[selectedChapter].title});
+    $("qCompetency").value=tagged.competency;
+    $("qCompetencyStatus").textContent=tagged.competencyTagStatus==="author-confirmed"?"Author-confirmed competency.":tagged.competencyTagStatus==="inferred"?"Automatically inferred from question wording. Please verify before changing or exporting.":"Provisional label — educator review required before using this tag for advanced paper selection.";
+    $("qCompetencyStatus").className="admin-inline-help"+(tagged.competencyTagStatus==="needs-review"?" warning":"");
     $("saveQuestionBtn").textContent="Save question draft";$("deleteQuestionBtn").disabled=false;
     renderQuestions();renderQuestionImages();
   }
@@ -281,8 +289,9 @@
     if(!bankLoaded||!bank[selectedChapter]){setStatus("bankStatus","Load a bank and choose a chapter first.","error");return;}
     const id=$("qId").value.trim(),prompt=$("qPrompt").value.trim();
     const options=[0,1,2,3].map(i=>$("qOption"+i).value.trim());
-    const answer=Number($("qAnswer").value),explanation=$("qExplanation").value.trim();
+    const answer=Number($("qAnswer").value),explanation=$("qExplanation").value.trim(),competency=$("qCompetency").value;
     if(!id||!prompt||options.some(v=>!v)||!explanation){setStatus("bankStatus","Complete the ID, question, all four options and explanation.","error");return;}
+    if(!window.C10CompetencyTagger.isValid(competency)){setStatus("bankStatus","Choose a competency before saving. Difficulty and competency describe different things.","error");$("qCompetency").focus();return;}
     if(!Number.isInteger(answer)||answer<0||answer>3){setStatus("bankStatus","Choose a valid correct answer.","error");return;}
     if(bank.some((chapter,ci)=>chapter.questions.some((q,qi)=>String(q.id)===id&&!(ci===selectedChapter&&qi===selectedQuestion)))){
       setStatus("bankStatus","Question IDs must be unique across this subject bank.","error");return;
@@ -290,7 +299,7 @@
     let images;
     try{images=window.C10QuestionBank.normalizeImages(selectedImages);}catch(error){setStatus("bankStatus",error.message,"error");return;}
     const existing=selectedQuestion>=0?bank[selectedChapter].questions[selectedQuestion]:null;
-    const question={...(existing||{}),id,question:prompt,options,answer,explanation,difficulty:$("qDifficulty").value,images};
+    const question={...(existing||{}),id,question:prompt,options,answer,explanation,difficulty:$("qDifficulty").value,images,competency,competencyTagStatus:"author-confirmed",competencyTagReason:"Selected by the author in the Admin Question Bank Editor.",competencyTaggerVersion:window.C10CompetencyTagger.version};
     if(selectedQuestion>=0)bank[selectedChapter].questions[selectedQuestion]=question;
     else {bank[selectedChapter].questions.push(question);selectedQuestion=bank[selectedChapter].questions.length-1;}
     validateBank(bank);renderChapters();renderQuestions();selectQuestion(selectedQuestion);
