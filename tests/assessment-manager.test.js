@@ -10,7 +10,7 @@ assert.equal(manager.bankPath("10","science"),"./data/science.json");
 assert.throws(()=>manager.bankPath("5","science"),/Classes 3, 6 and 10/);
 const chapters=[
  {key:"ch-a",title:"Chapter A",questions:[
-  {id:"q1",question:"Easy question",options:["A","B","C","D"],answer:1,difficulty:"Easy"},
+  {id:"q1",question:"Easy question",options:["A","B","C","D"],answer:1,difficulty:"Easy",competency:"application",competencyTagStatus:"inferred",competencyTagReason:"Context clue."},
   {id:"q2",question:"Hard question",options:["A","B","C","D"],answer:2,difficulty:"Hard"},
   {id:"bad",question:"Invalid answer",options:["A","B"],answer:4,difficulty:"Easy"}
  ]},
@@ -22,6 +22,8 @@ const pool=manager.buildQuestionPool(chapters,["ch-a"],"easy");
 assert.equal(pool.length,1);
 assert.equal(pool[0].questionId,"q1");
 assert.equal(pool[0].correctOptionId,"b");
+assert.equal(pool[0].competency,"application");
+assert.equal(pool[0].competencyTagStatus,"inferred");
 assert.equal(manager.buildQuestionPool(chapters,["ch-b"],"all").length,1);
 assert.equal(manager.selectQuestions(pool,10).length,1);
 const assignment=manager.createMcqAssignment({
