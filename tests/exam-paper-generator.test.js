@@ -29,6 +29,27 @@ const choiceQ=q("choice","biology",2,"short-answer",{alternatives:[{prompt:"Equi
 assert.equal(m.generatePaper(choiceBp,{...bank,questions:[choiceQ]},{seed:"choice"}).questions[0].alternatives.length,1);
 assert.throws(()=>m.generatePaper(choiceBp,{...bank,questions:[q("no-choice","biology",2,"short-answer")]},{seed:"x"}),/Question pool shortage/);
 
+// The same core generator must accept another class-10 subject without a code change.
+const mathBp={...bp,blueprintId:"math-fixture",title:"CBSE Class 10 Mathematics (041)",subjectId:"mathematics",subjectTitle:"Mathematics",subjectCode:"041",sections:[{sectionId:"algebra",title:"Algebra",questionCount:1,totalMarks:1}],totalQuestions:1,totalMarks:1,slotPlan:[{slotId:"M1",questionNumber:1,sectionId:"algebra",marks:1,allowedTypes:["mcq"],chapterIds:["linear-equations"]}]};
+const mathQuestion=q("math-q1","algebra",1,"mcq",{chapterId:"linear-equations",options:[{optionId:"A",text:"2"},{optionId:"B",text:"3"},{optionId:"C",text:"4"},{optionId:"D",text:"5"}],correctOptionId:"B"});
+const mathBank={schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subjectId:"mathematics",subjectCode:"041",academicYear:"2026-27",bankVersion:"math-test-1",questions:[mathQuestion]};
+assert.equal(m.validateBlueprint(mathBp).valid,true);
+assert.equal(m.validateQuestionBank(mathBank).valid,true);
+assert.equal(m.validateQuestionBank(mathBank,{classId:"10",subjectId:"science"}).valid,false,"a bank from another subject must not be accepted");
+const mathPaper=m.generatePaper(mathBp,mathBank,{seed:"math-subject-neutral"});
+assert.equal(mathPaper.subjectId,"mathematics");
+assert.equal(mathPaper.subjectCode,"041");
+assert.equal(mathPaper.totalMarks,1);
+assert.equal(m.validatePaper(mathPaper,mathBp).valid,true);
+const mathPractice=m.adaptChapterMcqBank([{key:"linear-equations",title:"Linear Equations",questions:[{id:"math-practice-1",question:"Solve x + 2 = 5.",options:["2","3","4","5"],answer:1,explanation:"Subtract 2 from both sides.",competency:"application"}]}],mathBp);
+assert.equal(mathPractice.subjectId,"mathematics");
+assert.equal(mathPractice.questions.length,1);
+assert.ok(mathPractice.questions[0].questionId.startsWith("EG10-MATHEMATICS-"));
+assert.ok(m.normalizeStem("प्रकाश का परावर्तन").length>0,"duplicate-stem normalisation must preserve Indic-language text");
+const mathTemplate=m.createQuestionBankTemplate({classId:"10",subjectId:"mathematics",subjectCode:"041",subjectTitle:"Mathematics"});
+assert.equal(mathTemplate.subjectId,"mathematics");
+assert.equal(mathTemplate.subjectCode,"041");
+
 const productionBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-science-2026-27-v1.json","utf8"));
 const productionCoverage=m.auditSlotCoverage(production,productionBank,3);
 assert.equal(productionCoverage.valid,true,productionCoverage.errors.join(" "));
@@ -50,10 +71,12 @@ for(let attempt=1;attempt<=6;attempt++){
 }
 const selfStudySource=fs.readFileSync("js/exam-paper-self-study.js","utf8");
 assert.ok(selfStudySource.includes('eg_exam_paper_history_v1'),"self-study should persist recent paper history locally");
-assert.ok(selfStudySource.includes("mergeQuestionBanks(baseBank,practiceChapters,blueprint)"),"self-study must merge the shared chapter-wise MCQ bank before slot-coverage validation");
+assert.ok(selfStudySource.includes("profile-registry.json"),"self-study must load exam profiles from the registry");
+assert.ok(selfStudySource.includes("mergeQuestionBanks(baseBank,practiceChapters,blueprint,{minimumCandidatesPerSlot:minimum})"),"self-study must merge an optional chapter-wise bank before profile-specific slot-coverage validation");
+assert.ok(!selfStudySource.includes("class-10-science-2026-27"),"self-study must not hardcode the Science profile");
 assert.ok(selfStudySource.includes("integrated.stats.coverage"),"self-study must validate minimum slot coverage on the integrated pool");
 assert.ok(selfStudySource.includes('HISTORY_LIMIT=50'),"self-study should keep a rolling history of 50 complete papers");
 assert.ok(selfStudySource.includes('generateUniquePaper'),"self-study should generate a previously unused full-paper combination");
 assert.ok(selfStudySource.includes('recentPaperFingerprints'),"self-study should pass recent paper fingerprints to the generator");
 
-console.log("Exam paper generator tests passed: draft guard, mixed types, deterministic unique selection, approved-only eligibility, marks, sections, internal choices and shortage guards, three-candidate slot coverage and six consecutive repeat-resistant Science papers.");
+console.log("Exam paper generator tests passed: subject-neutral blueprints/banks, Maths fixture, language-safe MCQ adapter, draft guard, deterministic unique selection, approved-only eligibility, marks, sections, internal choices, slot coverage and repeat protection.");
