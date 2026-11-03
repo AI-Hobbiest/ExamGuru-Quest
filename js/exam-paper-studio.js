@@ -16,8 +16,9 @@ function downloadJson(value,name){const url=URL.createObjectURL(new Blob([JSON.s
 function createStores(){
  if(!window.C10Storage)throw Error("Versioned browser storage adapter is unavailable.");
  const legacy=profileId===defaultProfileId;
- bankStore=window.C10Storage.createLocalStore({kind:"exam-paper-question-bank",recordId:profileId,legacyKey:legacy?"eg_exam_paper_question_bank_class10-science":null,defaults:()=>null,validate:value=>value===null||generator().validateQuestionBank(value,{classId:blueprint.classId,subjectId:blueprint.subjectId,academicYear:blueprint.academicYear}).valid});
- draftStore=window.C10Storage.createLocalStore({kind:"exam-paper-drafts",recordId:profileId,legacyKey:legacy?"eg_exam_paper_drafts_class10-science":null,defaults:()=>({drafts:[]}),validate:value=>!!value&&Array.isArray(value.drafts)&&value.drafts.every(item=>item&&item.kind==="exam-paper-snapshot")});
+ const storageProfileId=legacy?"class10-science":profileId;
+ bankStore=window.C10Storage.createLocalStore({kind:"exam-paper-question-bank",recordId:storageProfileId,defaults:()=>null,validate:value=>value===null||generator().validateQuestionBank(value,{classId:blueprint.classId,subjectId:blueprint.subjectId,academicYear:blueprint.academicYear}).valid});
+ draftStore=window.C10Storage.createLocalStore({kind:"exam-paper-drafts",recordId:storageProfileId,defaults:()=>({drafts:[]}),validate:value=>!!value&&Array.isArray(value.drafts)&&value.drafts.every(item=>item&&item.kind==="exam-paper-snapshot")});
 }
 function drawBlueprint(){
  if(!blueprint)return;
