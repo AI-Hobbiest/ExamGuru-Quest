@@ -91,6 +91,29 @@
                 },
                 "additionalProperties": false
               }
+            },
+            "competency": {
+              "type": "string",
+              "enum": [
+                "knowledge-understanding",
+                "application",
+                "analysis-evaluation-creation"
+              ]
+            },
+            "competencyTagStatus": {
+              "type": "string",
+              "enum": [
+                "author-confirmed",
+                "inferred",
+                "needs-review"
+              ]
+            },
+            "competencyTagReason": {
+              "type": "string",
+              "minLength": 1
+            },
+            "competencyTaggerVersion": {
+              "type": "string"
             }
           },
           "additionalProperties": true
