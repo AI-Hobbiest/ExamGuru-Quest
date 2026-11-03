@@ -16,19 +16,21 @@
       $("paperTitle").textContent=assignment.title;
       $("paperMeta").textContent=assignment.subjectTitle+" · Class "+assignment.classId+" · "+assignment.questionCount+" questions · "+assignment.totalMarks+" marks · "+assignment.durationMinutes+" minutes · "+assignment.deliveryMode+" delivery";
       const completed=assignment.attempts.filter(x=>x.status==="submitted");
-      if(completed.length>=assignment.attemptsAllowed)throw new Error("This paper has already been submitted the maximum allowed number of times.");
-      if(assignment.deadlineAt&&new Date(assignment.deadlineAt).getTime()<Date.now())throw new Error("The deadline for this paper has passed.");
+      const latest=completed[completed.length-1]||null;
+      if(!latest&&assignment.deadlineAt&&new Date(assignment.deadlineAt).getTime()<Date.now())throw new Error("The deadline for this paper has passed.");
       $("printQuestionPaper").hidden=assignment.deliveryMode==="online";
       $("printAnswerBooklet").hidden=assignment.deliveryMode==="online";
-      if(assignment.deliveryMode==="online"||assignment.deliveryMode==="hybrid"){
+      if(!latest&&(assignment.deliveryMode==="online"||assignment.deliveryMode==="hybrid")){
         $("startOnlinePaper").hidden=false;
         $("startOnlinePaper").href="./exam-practice.html?assignment="+encodeURIComponent(assignment.assignmentId);
       }
-      $("paperStatus").textContent=assignment.deliveryMode==="printable"
-        ?"Complete this examination by hand. Print the question paper and separate answer booklet, then submit the handwritten work to your Parent/Teacher for evaluation."
-        :assignment.deliveryMode==="hybrid"
-          ?"You may print and write the paper, or start the online examination. Scanned answer-sheet submission is not yet available."
-          :"Start the timed examination online. You may revisit questions and change answers before submitting.";
+      $("paperStatus").textContent=latest
+        ?"This examination was submitted on "+new Date(latest.submittedAt).toLocaleString()+". "+(latest.hasWrittenResponses?"Descriptive responses are awaiting manual evaluation. ":"")+"MCQ score: "+latest.mcqCorrect+" / "+latest.mcqTotal+"."
+        :assignment.deliveryMode==="printable"
+          ?"Complete this examination by hand. Print the question paper and separate answer booklet, then submit the handwritten work to your Parent/Teacher for evaluation."
+          :assignment.deliveryMode==="hybrid"
+            ?"You may print and write the paper, or start the online examination. Scanned answer-sheet submission is not yet available."
+            :"Start the timed examination online. You may revisit questions and change answers before submitting.";
       $("paperActions").hidden=false;
     }catch(e){$("paperStatus").textContent=e.message||"Unable to load assigned paper.";}
   }
