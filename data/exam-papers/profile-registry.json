@@ -28,11 +28,12 @@
       "assessmentLevel": "standard",
       "academicYear": "2026-27",
       "title": "Class 10 · Mathematics Standard (041)",
-      "description": "Draft blueprint only. Enable after shared question-bank and coverage audits pass.",
+      "description": "CBSE Class 10 Mathematics Standard paper profile; publication remains disabled pending final moderation.",
       "blueprintUrl": "./data/exam-papers/blueprints/class-10-mathematics-standard-2026-27.json",
-      "questionBankUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",
+      "questionBankUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-paper-bank-v1.json",
       "minimumCandidatesPerSlot": 3,
-      "practiceBankUrl": "./data/mathematics.json"
+      "practiceBankUrl": "./data/mathematics.json",
+      "reviewQuestionBankUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json"
     },
     {
       "profileId": "class-10-mathematics-basic-2026-27",
@@ -44,11 +45,12 @@
       "assessmentLevel": "basic",
       "academicYear": "2026-27",
       "title": "Class 10 · Mathematics Basic (241)",
-      "description": "Draft blueprint only. Enable after shared question-bank and coverage audits pass.",
+      "description": "CBSE Class 10 Mathematics Basic paper profile; publication remains disabled pending final moderation.",
       "blueprintUrl": "./data/exam-papers/blueprints/class-10-mathematics-basic-2026-27.json",
-      "questionBankUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",
+      "questionBankUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-paper-bank-v1.json",
       "minimumCandidatesPerSlot": 3,
-      "practiceBankUrl": "./data/mathematics.json"
+      "practiceBankUrl": "./data/mathematics.json",
+      "reviewQuestionBankUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json"
     }
   ]
 }
