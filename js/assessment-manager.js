@@ -1,0 +1,152 @@
+/* Local-first assessment lifecycle shared by Parent/Teacher, Student and Paper Studio.
+ * Assignments are frozen snapshots. Storage is browser-local until the cloud DB phase.
+ */
+(() => {
+  "use strict";
+  const KEY = "eg_assessment_assignments_v1";
+  const clone = value => value == null ? value : JSON.parse(JSON.stringify(value));
+  const now = () => new Date().toISOString();
+  const makeId = prefix => prefix + "-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 10);
+  function readAll() {
+    try { const rows = JSON.parse(localStorage.getItem(KEY) || "[]"); return Array.isArray(rows) ? rows : []; }
+    catch (_) { return []; }
+  }
+  function writeAll(rows) {
+    try { localStorage.setItem(KEY, JSON.stringify(rows)); return true; }
+    catch (_) { throw new Error("This browser could not save the assessment. Check site storage and retry."); }
+  }
+  function bankPath(classId, subjectId) {
+    const cls = String(classId || "");
+    if (!["3", "6", "10"].includes(cls)) throw new Error("Custom MCQ assignments currently support Classes 3, 6 and 10.");
+    const subject = String(subjectId || "");
+    const allowed = cls === "3" ? ["mathematics", "english"]
+      : cls === "6" ? ["science", "science-sof", "mathematics", "mathematics-sof", "english", "english-sof", "social-science"]
+      : ["science", "mathematics", "english", "social-science", "hindi"];
+    if (!allowed.includes(subject)) throw new Error("This subject is not available for the selected class.");
+    return "./data/" + (cls === "10" ? subject : "class-" + cls + "-" + subject) + ".json";
+  }
+  function normalizeDifficulty(value) {
+    const raw = String(value || "medium").toLowerCase();
+    if (raw.includes("challenge")) return "challenge";
+    if (raw.includes("hard")) return "hard";
+    if (raw.includes("easy")) return "easy";
+    return "medium";
+  }
+  function buildQuestionPool(chapters, selectedChapterIds, difficulty) {
+    if (!Array.isArray(chapters)) throw new TypeError("Question bank chapters must be an array.");
+    const selected = new Set((selectedChapterIds || []).map(String));
+    const filterDifficulty = difficulty && difficulty !== "all" ? normalizeDifficulty(difficulty) : "all";
+    const pool = [];
+    chapters.forEach((chapter, chapterIndex) => {
+      const chapterId = String(chapter.key || chapter.chapterId || chapter.chapter_no || chapterIndex + 1);
+      if (selected.size && !selected.has(chapterId)) return;
+      (chapter.questions || []).forEach((q, questionIndex) => {
+        const options = Array.isArray(q.options) ? q.options.map((option, index) => ({
+          optionId: String(option && option.optionId || String.fromCharCode(97 + index)),
+          text: String(option && typeof option === "object" ? option.text || "" : option || "").trim()
+        })) : [];
+        const answerIndex = Number(q.answer);
+        const correctOptionId = q.correctOptionId != null ? String(q.correctOptionId)
+          : Number.isInteger(answerIndex) && answerIndex >= 0 && answerIndex < options.length ? options[answerIndex].optionId : "";
+        if (options.length < 2 || options.some(o => !o.text) || !options.some(o => o.optionId === correctOptionId)) return;
+        const qDifficulty = normalizeDifficulty(q.difficulty);
+        if (filterDifficulty !== "all" && qDifficulty !== filterDifficulty) return;
+        const questionId = String(q.questionId || q.id || (chapterId + "-q" + (questionIndex + 1)));
+        pool.push({
+          questionId, chapterId, chapterTitle: String(chapter.title || chapterId),
+          prompt: String(q.question || q.prompt || "").trim(), options,
+          correctOptionId, explanation: String(q.explanation || ""),
+          difficulty: qDifficulty, images: Array.isArray(q.images) ? clone(q.images) : []
+        });
+      });
+    });
+    return pool.filter(q => q.prompt);
+  }
+  function selectQuestions(pool, count, random = Math.random) {
+    const rows = pool.slice();
+    for (let i = rows.length - 1; i > 0; i--) {
+      const j = Math.floor(random() * (i + 1));
+      [rows[i], rows[j]] = [rows[j], rows[i]];
+    }
+    return rows.slice(0, Math.max(0, Math.floor(Number(count) || 0)));
+  }
+  function createMcqAssignment(args) {
+    const questions = Array.isArray(args.questions) ? clone(args.questions) : [];
+    if (!String(args.studentId || "").trim()) throw new Error("A student must be selected before assigning a test.");
+    if (!questions.length || questions.some(q => !q.questionId || !q.prompt || !Array.isArray(q.options) || q.options.length < 2 || !q.options.some(o => o.optionId === q.correctOptionId))) {
+      throw new Error("The test needs valid MCQs with answer keys.");
+    }
+    const createdAt = now();
+    const assignment = {
+      schemaVersion: 1, kind: "assigned-assessment",
+      assignmentId: makeId("assignment"), assessmentId: makeId("assessment"),
+      title: String(args.title || "Custom MCQ Test").trim(),
+      studentId: String(args.studentId), studentName: String(args.studentName || ""),
+      parentId: String(args.parentId || ""), createdBy: String(args.createdBy || "parent"),
+      classId: String(args.classId), subjectId: String(args.subjectId),
+      subjectTitle: String(args.subjectTitle || args.subjectId),
+      assessmentType: "mcq-test", deliveryMode: "online",
+      status: "assigned", createdAt,
+      startsAt: args.startsAt || createdAt, deadlineAt: args.deadlineAt || null,
+      durationMinutes: Math.max(0, Math.min(240, Number(args.durationMinutes) || 0)),
+      attemptsAllowed: Math.max(1, Math.min(3, Number(args.attemptsAllowed) || 1)),
+      questionCount: questions.length, questionSnapshot: questions,
+      attempts: [], activeAttemptId: null
+    };
+    const all = readAll(); all.push(assignment); writeAll(all);
+    return clone(assignment);
+  }
+  function listForStudent(studentId) {
+    return readAll().filter(x => x.studentId === String(studentId)).sort((a,b) => String(b.createdAt).localeCompare(String(a.createdAt))).map(clone);
+  }
+  function listForParent(parentId, studentId) {
+    return readAll().filter(x => x.parentId === String(parentId) && (!studentId || x.studentId === String(studentId))).sort((a,b) => String(b.createdAt).localeCompare(String(a.createdAt))).map(clone);
+  }
+  function get(assignmentId) {
+    const row = readAll().find(x => x.assignmentId === String(assignmentId));
+    return row ? clone(row) : null;
+  }
+  function update(assignmentId, mutate) {
+    const all = readAll(), index = all.findIndex(x => x.assignmentId === String(assignmentId));
+    if (index < 0) throw new Error("Assigned test was not found in this browser.");
+    mutate(all[index]); writeAll(all); return clone(all[index]);
+  }
+  function start(assignmentId, studentId) {
+    return update(assignmentId, row => {
+      if (row.studentId !== String(studentId)) throw new Error("This test is not assigned to the signed-in student.");
+      if (row.status === "cancelled") throw new Error("This assignment has been cancelled.");
+      if (row.startsAt && new Date(row.startsAt).getTime() > Date.now()) throw new Error("This test is not available yet.");
+      if (row.deadlineAt && new Date(row.deadlineAt).getTime() < Date.now()) throw new Error("The deadline for this test has passed.");
+      const completed = row.attempts.filter(x => x.status === "submitted").length;
+      if (completed >= row.attemptsAllowed) throw new Error("The allowed number of attempts has been used.");
+      const active = row.attempts.find(x => x.attemptId === row.activeAttemptId && x.status === "in-progress");
+      if (active) return;
+      const attempt = { attemptId: makeId("attempt"), startedAt: now(), status: "in-progress", answers: {} };
+      row.attempts.push(attempt); row.activeAttemptId = attempt.attemptId; row.status = "in-progress";
+    });
+  }
+  function submit(assignmentId, studentId, answers) {
+    return update(assignmentId, row => {
+      if (row.studentId !== String(studentId)) throw new Error("This test is not assigned to the signed-in student.");
+      const attempt = row.attempts.find(x => x.attemptId === row.activeAttemptId && x.status === "in-progress");
+      if (!attempt) throw new Error("There is no active attempt to submit.");
+      const submittedAnswers = answers && typeof answers === "object" ? answers : {};
+      let correct = 0, answered = 0;
+      row.questionSnapshot.forEach(q => {
+        const selected = submittedAnswers[q.questionId] == null ? "" : String(submittedAnswers[q.questionId]);
+        if (selected) answered++;
+        if (selected && selected === q.correctOptionId) correct++;
+      });
+      attempt.answers = clone(submittedAnswers);
+      attempt.submittedAt = now(); attempt.status = "submitted";
+      attempt.correct = correct; attempt.answered = answered;
+      attempt.total = row.questionSnapshot.length;
+      attempt.scorePercent = attempt.total ? Math.round(correct / attempt.total * 100) : 0;
+      row.status = "completed"; row.activeAttemptId = null; row.updatedAt = attempt.submittedAt;
+    });
+  }
+  window.C10AssessmentManager = Object.freeze({
+    key: KEY, bankPath, buildQuestionPool, selectQuestions, createMcqAssignment,
+    listForStudent, listForParent, get, start, submit
+  });
+})();
