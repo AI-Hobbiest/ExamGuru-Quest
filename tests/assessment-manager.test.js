@@ -41,4 +41,33 @@ assert.equal(completed.attempts[0].correct,1);
 assert.equal(completed.attempts[0].scorePercent,100);
 assert.throws(()=>manager.start(assignment.assignmentId,"student-1"),/allowed number of attempts/);
 assert.throws(()=>manager.submit(assignment.assignmentId,"student-1",{}),/no active attempt/);
-console.log("Assessment manager tests passed: bank filtering, immutable snapshots, student scoping, attempt limits and MCQ scoring.");
+
+const paperSnapshot={
+ kind:"exam-paper-snapshot",paperId:"paper-1",title:"CBSE Science mock",classId:"10",
+ durationMinutes:60,totalMarks:10,totalQuestions:2,
+ blueprintSnapshot:{sections:[{sectionId:"science",title:"Science",totalMarks:10}]},
+ questions:[
+  {questionId:"paper-q1",paperQuestionNumber:1,sectionId:"science",type:"mcq",marks:2,correctOptionId:"b",prompt:"One MCQ"},
+  {questionId:"paper-q2",paperQuestionNumber:2,sectionId:"science",type:"short-answer",marks:8,prompt:"One written answer"}
+ ]
+};
+const paperAssignment=manager.createPaperAssignment({
+ studentId:"student-2",parentId:"parent-1",classId:"10",title:"CBSE Science mock",
+ subjectId:"science",subjectTitle:"Science",deliveryMode:"hybrid",paperSnapshot
+});
+assert.equal(paperAssignment.kind,"paper-assessment");
+assert.equal(manager.listForStudent("student-2").length,1);
+assert.throws(()=>manager.startPaper(paperAssignment.assignmentId,"student-1"),/not assigned/);
+const paperStarted=manager.startPaper(paperAssignment.assignmentId,"student-2");
+assert.equal(paperStarted.status,"in-progress");
+const paperSubmitted=manager.submitPaper(paperAssignment.assignmentId,"student-2",{
+  0:{optionId:"b",text:[]},1:{optionId:null,text:["Written response"]}
+});
+assert.equal(paperSubmitted.status,"completed");
+assert.equal(paperSubmitted.attempts[0].mcqCorrect,1);
+assert.equal(paperSubmitted.attempts[0].mcqTotal,1);
+assert.equal(paperSubmitted.attempts[0].hasWrittenResponses,true);
+assert.equal(paperSubmitted.attempts[0].evaluationStatus,"pending-manual-review");
+assert.throws(()=>manager.startPaper(paperAssignment.assignmentId,"student-2"),/allowed number of attempts/);
+
+console.log("Assessment manager tests passed: MCQ and full-paper assignments, frozen snapshots, student scoping, attempt limits and scoring/review state.");
