@@ -49,7 +49,8 @@ async function load(){
   }
 
   const preparedDelivery=new URLSearchParams(location.search).get("delivery")==="latest";
-  if(preparedDelivery){$("startBtn").textContent="Start prepared paper";$("startBtn").disabled=false;status("Prepared paper loaded. Sign in as the intended student and start when ready.");}
+  if(assignmentId){$("startBtn").textContent="Start assigned examination";$("startBtn").disabled=false;status("Assigned to you by your Parent/Teacher. The paper snapshot is frozen; the timer starts when you begin.");}
+  else if(preparedDelivery){$("startBtn").textContent="Start prepared paper";$("startBtn").disabled=false;status("Prepared paper loaded. Start when ready.");}
   else{$("startBtn").disabled=false;status("Ready: "+integrated.stats.appended.toLocaleString()+" existing chapter-wise MCQs are integrated with the mixed-question pool. "+coverage.coverage.filter(s=>s.eligibleCount>=3).length+" of 39 slots are covered; 50 distinct complete papers are supported.");}
  }catch(e){status("Unable to prepare the paper: "+e.message);}
 }
