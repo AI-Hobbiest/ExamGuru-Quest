@@ -174,3 +174,144 @@ select,input,textarea{border-color:#d8deeb!important;border-radius:11px!importan
 a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid rgba(92,80,178,.48)!important;outline-offset:3px}
 .c10-header-signout{border:1px solid rgba(64,59,140,.2)!important;background:rgba(255,255,255,.68)!important;color:#403b8c!important;backdrop-filter:blur(8px)}.c10-header-signout:hover{background:#fff!important}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+
+/* ExamGuru interaction system: one consistent visual language for action controls. */
+:root{
+  --eg-action-primary:#51439a;
+  --eg-action-primary-strong:#40377f;
+  --eg-action-secondary:#efecfa;
+  --eg-action-secondary-border:#dcd6f0;
+  --eg-action-focus:rgba(91,78,170,.28);
+}
+.btn,button.btn,.admin-btn,.exam-btn,.paper-btn,.test-btn,.report-button,
+.study-actions a,.study-actions button,.learning-actions a,.learning-actions button,
+.chapter-picker-actions button,.chapter-picker-trigger{
+  appearance:none;
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  gap:.5rem;
+  box-sizing:border-box;
+  min-height:42px;
+  padding:10px 15px!important;
+  border:1px solid transparent!important;
+  border-radius:12px!important;
+  font-family:inherit!important;
+  font-size:.84rem!important;
+  font-weight:800!important;
+  line-height:1.2!important;
+  letter-spacing:0!important;
+  text-decoration:none!important;
+  cursor:pointer;
+  transition:background-color .16s ease,border-color .16s ease,color .16s ease,
+    box-shadow .16s ease,transform .16s ease,filter .16s ease;
+}
+.btn:not(.secondary),button.btn:not(.secondary),
+.admin-btn:not(.secondary):not(.danger),.exam-btn:not(.secondary),
+.paper-btn:not(.secondary),.test-btn:not(.secondary),.report-button:not(.secondary),
+.study-actions a:not(.secondary),.learning-actions a:not(.secondary){
+  color:#fff!important;
+  background:linear-gradient(118deg,#51439a,#6758b7)!important;
+  border-color:#51439a!important;
+  box-shadow:0 5px 13px rgba(68,57,139,.15)!important;
+}
+.btn.secondary,button.btn.secondary,.secondary,.admin-btn.secondary,.exam-btn.secondary,
+.paper-btn.secondary,.test-btn.secondary,.report-button.secondary,
+.study-actions button,.learning-actions button,.chapter-picker-actions button,
+.chapter-picker-trigger,.learning-hub-link{
+  color:#4d438c!important;
+  background:#f0edfa!important;
+  border:1px solid #dcd6f0!important;
+  box-shadow:none!important;
+}
+.chapter-picker-trigger{
+  width:100%;
+  min-height:49px;
+  justify-content:space-between;
+  text-align:left;
+  padding:12px 14px!important;
+}
+.chapter-picker-actions button{
+  min-height:34px;
+  padding:7px 11px!important;
+  border-radius:9px!important;
+  font-size:.76rem!important;
+}
+.learning-hub-link{
+  width:100%;
+  min-height:50px;
+  justify-content:space-between!important;
+  padding:12px 14px!important;
+}
+.study-actions button[aria-pressed="true"]{
+  color:#246744!important;background:#e8f5ec!important;border-color:#b9dec4!important;
+}
+.btn:hover:not(:disabled),button.btn:hover:not(:disabled),.admin-btn:hover:not(:disabled),
+.exam-btn:hover:not(:disabled),.paper-btn:hover:not(:disabled),.test-btn:hover:not(:disabled),
+.report-button:hover:not(:disabled),.study-actions a:hover,.study-actions button:hover:not(:disabled),
+.learning-actions a:hover,.learning-actions button:hover:not(:disabled),
+.chapter-picker-actions button:hover:not(:disabled),.chapter-picker-trigger:hover,
+.learning-hub-link:hover,.subject-launch-card:hover{
+  filter:saturate(1.04);
+  transform:translateY(-1px);
+}
+.btn.secondary:hover:not(:disabled),button.secondary:hover:not(:disabled),
+.admin-btn.secondary:hover:not(:disabled),.exam-btn.secondary:hover:not(:disabled),
+.paper-btn.secondary:hover:not(:disabled),.test-btn.secondary:hover:not(:disabled),
+.report-button.secondary:hover:not(:disabled),.study-actions button:hover:not(:disabled),
+.learning-actions button:hover:not(:disabled),.chapter-picker-actions button:hover:not(:disabled),
+.chapter-picker-trigger:hover,.learning-hub-link:hover{
+  background:#e9e5f6!important;border-color:#c9c1e6!important;filter:none;
+}
+.btn:active:not(:disabled),button.btn:active:not(:disabled),.admin-btn:active:not(:disabled),
+.exam-btn:active:not(:disabled),.paper-btn:active:not(:disabled),.test-btn:active:not(:disabled),
+.report-button:active:not(:disabled),.study-actions a:active,.learning-actions a:active{
+  transform:translateY(0);
+}
+.btn:focus-visible,button.btn:focus-visible,.admin-btn:focus-visible,.exam-btn:focus-visible,
+.paper-btn:focus-visible,.test-btn:focus-visible,.report-button:focus-visible,
+.study-actions a:focus-visible,.study-actions button:focus-visible,
+.learning-actions a:focus-visible,.learning-actions button:focus-visible,
+.chapter-picker-actions button:focus-visible,.chapter-picker-trigger:focus-visible,
+.learning-hub-link:focus-visible,.subject-launch-card:focus-visible{
+  outline:3px solid var(--eg-action-focus)!important;
+  outline-offset:3px!important;
+}
+button:disabled,.btn:disabled,.admin-btn:disabled,.exam-btn:disabled,.paper-btn:disabled,
+.test-btn:disabled,.report-button:disabled,[aria-disabled="true"]{
+  opacity:.48!important;
+  cursor:not-allowed!important;
+  transform:none!important;
+  filter:grayscale(.2)!important;
+  box-shadow:none!important;
+}
+.mode button{
+  min-height:42px;
+  border-radius:11px!important;
+  padding:9px 12px;
+  font-weight:750;
+  transition:background-color .16s ease,border-color .16s ease,transform .16s ease;
+}
+.mode button:hover:not(.active):not(:disabled){
+  border-color:#c8c0e7!important;background:#f8f6fd!important;transform:translateY(-1px);
+}
+.subject-launch-card,.learning-recommendation a,.study-hero a,.learning-header a{
+  transition:color .16s ease,border-color .16s ease,box-shadow .16s ease,transform .16s ease;
+}
+.subject-launch-card:active{transform:translateY(0)}
+.learning-recommendation a,.study-hero a,.learning-header a{
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+.learning-recommendation a:hover,.study-hero a:hover,.learning-header a:hover{
+  color:#30276f!important;text-decoration-thickness:2px;
+}
+@media(prefers-reduced-motion:reduce){
+  .btn,button.btn,.admin-btn,.exam-btn,.paper-btn,.test-btn,.report-button,
+  .study-actions a,.study-actions button,.learning-actions a,.learning-actions button,
+  .chapter-picker-actions button,.chapter-picker-trigger,.subject-launch-card{
+    transition:none!important;
+  }
+}
