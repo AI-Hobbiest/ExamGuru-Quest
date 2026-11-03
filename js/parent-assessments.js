@@ -234,7 +234,7 @@
       if(!registry||registry.schemaVersion!==1||registry.kind!=="exam-paper-profile-registry"||!Array.isArray(registry.profiles))throw new Error("The shared examination profile registry is invalid.");
       defaultProfileId=String(registry.defaultProfileId||"");
       profiles=registry.profiles.filter(item=>item&&item.enabled!==false&&String(item.classId)===String(child.classId));
-      if(!profiles.length)throw new Error("No verified examination profiles are currently enabled for Class "+child.classId+".");
+      if(!profiles.length){section.remove();return;}
       profileSelect.innerHTML="";
       profiles.forEach(item=>{const option=document.createElement("option");option.value=String(item.profileId);option.textContent=String(item.title||("Class "+item.classId+" · "+item.subjectTitle));profileSelect.appendChild(option);});
       const initial=profiles.find(item=>String(item.profileId)===defaultProfileId)||profiles[0];profileSelect.value=initial.profileId;
