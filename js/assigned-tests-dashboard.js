@@ -7,6 +7,7 @@
   async function render(){
     const student=await window.C10StudentAuth.restoreSession();
     if(!student||student.role!=="student")return;
+    root.innerHTML="";
     const prepared=(()=>{try{return JSON.parse(localStorage.getItem("eg_exam_paper_delivery_v1")||"null");}catch(_){return null;}})();
     if(prepared&&String(prepared.classId)===String(student.classId)){
       const card=document.createElement("article");card.className="assigned-test-card";
@@ -17,8 +18,7 @@
       card.append(title,meta,state,link);root.appendChild(card);
     }
     const rows=window.C10AssessmentManager.listForStudent(student.studentId);
-    root.innerHTML="";
-    if(!rows.length){root.textContent="No tests have been assigned yet. Your Parent/Teacher can create a test from your recent study topics.";return;}
+    if(!rows.length&&!prepared){root.textContent="No tests have been assigned yet. Your Parent/Teacher can create a test from your recent study topics.";return;}
     rows.forEach(item=>{
       const latest=item.attempts.filter(x=>x.status==="submitted").slice(-1)[0];
       const card=document.createElement("article");card.className="assigned-test-card";
