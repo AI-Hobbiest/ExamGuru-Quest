@@ -7,6 +7,15 @@
   async function render(){
     const student=await window.C10StudentAuth.restoreSession();
     if(!student||student.role!=="student")return;
+    const prepared=(()=>{try{return JSON.parse(localStorage.getItem("eg_exam_paper_delivery_v1")||"null");}catch(_){return null;}})();
+    if(prepared&&String(prepared.classId)===String(student.classId)){
+      const card=document.createElement("article");card.className="assigned-test-card";
+      const title=document.createElement("strong");title.textContent=prepared.title||"Prepared examination paper";
+      const meta=document.createElement("p");meta.textContent="CBSE Class "+prepared.classId+" · "+prepared.totalQuestions+" questions · "+prepared.totalMarks+" marks · Prepared for this browser";
+      const state=document.createElement("span");state.className="assigned-test-state";state.textContent="Ready to attempt";
+      const link=document.createElement("a");link.className="btn";link.href="./exam-practice.html?delivery=latest";link.textContent="Start prepared paper";
+      card.append(title,meta,state,link);root.appendChild(card);
+    }
     const rows=window.C10AssessmentManager.listForStudent(student.studentId);
     root.innerHTML="";
     if(!rows.length){root.textContent="No tests have been assigned yet. Your Parent/Teacher can create a test from your recent study topics.";return;}
