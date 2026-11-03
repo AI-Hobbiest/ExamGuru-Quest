@@ -2863,6 +2863,1342 @@
         "reference": "Original ExamGuru application MCQ for CBSE Class X Mathematics 2026–27."
       },
       "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context."
+    },
+    {
+      "questionId": "M10-Q19-AR-01",
+      "sectionId": "A",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "assertion-reason",
+        "statistics"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. Both A and R are true, and R is the correct explanation of A. The class mark is the midpoint and represents the observations in the interval."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "assertionReason": {
+        "assertion": "For grouped data, the class mark is used as the representative value of a class interval when calculating the mean.",
+        "reason": "The class mark is the arithmetic mean of the lower and upper class limits."
+      }
+    },
+    {
+      "questionId": "M10-Q19-AR-02",
+      "sectionId": "A",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "assertion-reason",
+        "statistics"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "D. A is false but R is true. The assertion is false: a mean need not be an observed value. The reason gives the definition and is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "assertionReason": {
+        "assertion": "The arithmetic mean of a data set must always be one of the observations in that data set.",
+        "reason": "The arithmetic mean is obtained by dividing the sum of all observations by the number of observations."
+      }
+    },
+    {
+      "questionId": "M10-Q19-AR-03",
+      "sectionId": "A",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "assertion-reason",
+        "statistics"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "B. Both A and R are true, but R is not the correct explanation of A. Both statements are true, but the mean formula does not explain why frequencies sum to the total observations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "B",
+      "assertionReason": {
+        "assertion": "The sum of all frequencies in a grouped frequency distribution equals the total number of observations.",
+        "reason": "For grouped data, the mean is calculated using Σ(fᵢxᵢ)/Σfᵢ."
+      }
+    },
+    {
+      "questionId": "M10-Q20-AR-01",
+      "sectionId": "A",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "assertion-reason",
+        "probability"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. Both A and R are true, and R is the correct explanation of A. Favourable outcomes cannot exceed the sample space, so this definition gives probabilities from 0 to 1."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "assertionReason": {
+        "assertion": "The probability of an event lies between 0 and 1, inclusive.",
+        "reason": "For equally likely outcomes, probability is the ratio of favourable outcomes to the total number of outcomes in the sample space."
+      }
+    },
+    {
+      "questionId": "M10-Q20-AR-02",
+      "sectionId": "A",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "assertion-reason",
+        "probability"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. Both A and R are true, and R is the correct explanation of A. There are three prime outcomes among six equally likely outcomes, so the probability is 3/6 = 1/2."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "assertionReason": {
+        "assertion": "The probability of obtaining a prime number on a fair six-sided die is 1/2.",
+        "reason": "The prime outcomes on a fair six-sided die are 2, 3 and 5."
+      }
+    },
+    {
+      "questionId": "M10-Q20-AR-03",
+      "sectionId": "A",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "assertion-reason",
+        "probability"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A. Both A and R are true, and R is the correct explanation of A. The event and its complement partition the sample space, so their probabilities add to 1."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "optionId": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "optionId": "C",
+          "text": "A is true but R is false."
+        },
+        {
+          "optionId": "D",
+          "text": "A is false but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "assertionReason": {
+        "assertion": "For any event E, P(not E) = 1 − P(E).",
+        "reason": "An event and its complement are disjoint and together contain every outcome in the sample space."
+      }
+    },
+    {
+      "questionId": "M10-Q21-A",
+      "sectionId": "Q",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "very-short-answer",
+        "real-numbers"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Express 756 as a product of prime factors.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "756 = 2² × 3³ × 7."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct decomposition into prime factors (2 marks).",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Express 1,260 as a product of prime factors.",
+          "answerKey": {
+            "modelAnswer": "1,260 = 2² × 3² × 5 × 7."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct decomposition into prime factors (2 marks).",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q21-B",
+      "sectionId": "Q",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "very-short-answer",
+        "real-numbers"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the HCF of 96 and 144 using prime factorisation.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "96 = 2⁵ × 3 and 144 = 2⁴ × 3². HCF = 2⁴ × 3 = 48."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct prime factorisations (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "HCF = 48 (1 mark).",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the HCF of 84 and 126 using prime factorisation.",
+          "answerKey": {
+            "modelAnswer": "84 = 2² × 3 × 7 and 126 = 2 × 3² × 7. HCF = 2 × 3 × 7 = 42."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct prime factorisations (1 mark).",
+              "marks": 1
+            },
+            {
+              "criterion": "HCF = 42 (1 mark).",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q21-C",
+      "sectionId": "Q",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "very-short-answer",
+        "real-numbers"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the LCM of 18 and 24 using prime factorisation.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "18 = 2 × 3² and 24 = 2³ × 3. LCM = 2³ × 3² = 72."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct prime factorisations (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "LCM = 72 (1 mark).",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the LCM of 20 and 28 using prime factorisation.",
+          "answerKey": {
+            "modelAnswer": "20 = 2² × 5 and 28 = 2² × 7. LCM = 2² × 5 × 7 = 140."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct prime factorisations (1 mark).",
+              "marks": 1
+            },
+            {
+              "criterion": "LCM = 140 (1 mark).",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q22-A",
+      "sectionId": "Q",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "very-short-answer",
+        "arithmetic-progressions"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Write the nth-term formula for an arithmetic progression and identify each symbol.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "aₙ = a + (n − 1)d, where a is the first term, d is the common difference and n is the term number."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct formula (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct meaning of a, d and n (1 mark).",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Write the formula for the sum of the first n terms of an arithmetic progression and identify its symbols.",
+          "answerKey": {
+            "modelAnswer": "Sₙ = n/2 [2a + (n − 1)d], where a is the first term and d is the common difference."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct sum formula (1 mark).",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct meaning of a and d (1 mark).",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q22-B",
+      "sectionId": "Q",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "very-short-answer",
+        "arithmetic-progressions"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the common difference and the 10th term of the AP 7, 11, 15, 19, …",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "d = 4; a₁₀ = 7 + 9(4) = 43."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Common difference d = 4 (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "10th term = 43 (1 mark).",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the common difference and the 12th term of the AP 30, 25, 20, 15, …",
+          "answerKey": {
+            "modelAnswer": "d = −5; a₁₂ = 30 + 11(−5) = −25."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Common difference d = −5 (1 mark).",
+              "marks": 1
+            },
+            {
+              "criterion": "12th term = −25 (1 mark).",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q22-C",
+      "sectionId": "Q",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "very-short-answer",
+        "arithmetic-progressions"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the 15th term of the AP whose first term is 3 and common difference is 6.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "a₁₅ = 3 + 14(6) = 87."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct substitution in the nth-term formula (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "15th term = 87 (1 mark).",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the 20th term of the AP whose first term is −4 and common difference is 3.",
+          "answerKey": {
+            "modelAnswer": "a₂₀ = −4 + 19(3) = 53."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct substitution in the nth-term formula (1 mark).",
+              "marks": 1
+            },
+            {
+              "criterion": "20th term = 53 (1 mark).",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q23-A",
+      "sectionId": "Q",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "very-short-answer",
+        "circles"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Two tangents PA and PB are drawn to a circle from an external point P. State the relation between PA and PB and name the theorem.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "PA = PB. Tangents drawn to a circle from the same external point are equal in length."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct relation PA = PB (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct tangent-length theorem (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q23-B",
+      "sectionId": "Q",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "very-short-answer",
+        "circles"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A tangent touches a circle at T, whose centre is O. What is the angle between OT and the tangent? State the theorem.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "The angle is 90°. The tangent at any point of a circle is perpendicular to the radius through the point of contact."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Angle = 90° (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct tangent-radius theorem (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q23-C",
+      "sectionId": "Q",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "very-short-answer",
+        "circles"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "From an external point P, tangents PA and PB are drawn. If PA = 3x + 2 cm and PB = 5x − 6 cm, find x and the tangent length.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "PA = PB gives 3x + 2 = 5x − 6, so x = 4 and each tangent is 14 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Equate the tangent lengths and solve x = 4 (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Tangent length = 14 cm (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q24-A",
+      "sectionId": "Q",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "very-short-answer",
+        "areas-related-to-circles"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the area of a 90° sector of a circle of radius 14 cm. Use π = 22/7.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Area = (90/360) × π × 14² = 154 cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct sector-area formula and substitution (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Area = 154 cm² (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q24-B",
+      "sectionId": "Q",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "very-short-answer",
+        "areas-related-to-circles"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the circumference of a circle of radius 10 cm in terms of π.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "C = 2πr = 20π cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct circumference formula (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Circumference = 20π cm (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q24-C",
+      "sectionId": "Q",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "very-short-answer",
+        "areas-related-to-circles"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the length of a 60° arc of a circle of radius 21 cm. Use π = 22/7.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Arc length = (60/360) × 2π × 21 = 22 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct arc-length formula and substitution (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Arc length = 22 cm (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q25-A",
+      "sectionId": "Q",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "very-short-answer",
+        "surface-areas-and-volumes"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A cylindrical container has radius 7 cm and height 10 cm. Find its volume. Use π = 22/7.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "V = πr²h = (22/7) × 7² × 10 = 1,540 cm³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct volume formula and substitution (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Volume = 1,540 cm³ (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q25-B",
+      "sectionId": "Q",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "very-short-answer",
+        "surface-areas-and-volumes"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A solid sphere has radius 3 cm. Find its volume in terms of π.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "V = (4/3)πr³ = 36π cm³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct sphere-volume formula and substitution (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Volume = 36π cm³ (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q25-C",
+      "sectionId": "Q",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "very-short-answer",
+        "surface-areas-and-volumes"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A cone has radius 3 cm and height 8 cm. Find its volume in terms of π.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "V = (1/3)πr²h = (1/3)π(9)(8) = 24π cm³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct cone-volume formula and substitution (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Volume = 24π cm³ (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q26-A",
+      "sectionId": "Q",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "short-answer",
+        "real-numbers"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Prove that √2 is irrational.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Assume √2 = p/q, where p and q are coprime positive integers. Squaring gives p² = 2q², so p is even; write p = 2k. Then q² = 2k², so q is also even. This contradicts that p and q are coprime. Hence √2 is irrational."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Assume √2 = p/q in lowest terms and obtain p² = 2q² (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Deduce that p and q are both even (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "State the contradiction and conclusion (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q26-B",
+      "sectionId": "Q",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "short-answer",
+        "real-numbers"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Prove that √3 is irrational.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "Assume √3 = p/q in lowest terms. Then p² = 3q², so 3 divides p. Put p = 3k; substitution gives q² = 3k², so 3 divides q as well. This contradicts gcd(p,q) = 1. Therefore √3 is irrational."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Assume a lowest-terms fraction and obtain p² = 3q² (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Show that 3 divides both p and q (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Contradiction with coprimality; conclude irrationality (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q26-C",
+      "sectionId": "Q",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "short-answer",
+        "real-numbers"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Using the Fundamental Theorem of Arithmetic, explain why 6ⁿ cannot end in the digit 0 for any positive integer n.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "A number ending in 0 is divisible by 10 = 2 × 5, so its prime factorisation must contain a factor 5. But 6ⁿ = 2ⁿ × 3ⁿ contains only the primes 2 and 3. By uniqueness of prime factorisation, it cannot be divisible by 5 and cannot end in 0."
+      },
+      "markingScheme": [
+        {
+          "criterion": "A number ending in 0 must contain prime factor 5 (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Write 6ⁿ = 2ⁿ × 3ⁿ (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Use uniqueness of prime factorisation to conclude (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q27-A",
+      "sectionId": "Q",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "short-answer",
+        "quadratic-equations"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Solve x² − 5x + 6 = 0 by factorisation.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "x² − 5x + 6 = (x − 2)(x − 3) = 0. Therefore x = 2 or x = 3."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct factorisation (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Apply zero-product property (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Both roots x = 2 and x = 3 (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q27-B",
+      "sectionId": "Q",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "short-answer",
+        "quadratic-equations"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Find the nature of the roots of 2x² − 4x + 5 = 0 using the discriminant.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "D = b² − 4ac = (−4)² − 4(2)(5) = −24. Since D < 0, the equation has no real roots."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify a, b and c (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate D = −24 (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude that there are no real roots (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q27-C",
+      "sectionId": "Q",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "short-answer",
+        "quadratic-equations"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Find the roots of 3x² − 2x − 1 = 0 using the quadratic formula.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "x = [2 ± √(4 + 12)]/6 = [2 ± 4]/6. Thus x = 1 or x = −1/3."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct substitution in the quadratic formula (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Simplify the discriminant and square root (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain both roots 1 and −1/3 (1 mark).",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q28-A",
+      "sectionId": "Q",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "short-answer",
+        "coordinate-geometry"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Find the distance between A(−2, 3) and B(4, 11), and hence find the midpoint of AB.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "AB = √[(4 + 2)² + (11 − 3)²] = 10 units. Midpoint = ((−2 + 4)/2, (3 + 11)/2) = (1, 7)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct distance formula and substitution (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Distance = 10 units (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Midpoint = (1, 7) (1 mark).",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the distance between P(−3, 2) and Q(5, 8), and hence find the midpoint of PQ.",
+          "answerKey": {
+            "modelAnswer": "PQ = √[8² + 6²] = 10 units. Midpoint = ((−3 + 5)/2, (2 + 8)/2) = (1, 5)."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct distance formula and substitution (1 mark).",
+              "marks": 1
+            },
+            {
+              "criterion": "Distance = 10 units (1 mark).",
+              "marks": 1
+            },
+            {
+              "criterion": "Midpoint = (1, 5) (1 mark).",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q28-B",
+      "sectionId": "Q",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "short-answer",
+        "coordinate-geometry"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Find the coordinates of the point that divides A(2, −3) and B(14, 9) internally in the ratio 1:2.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "By the section formula, P = ((1×14 + 2×2)/3, (1×9 + 2×(−3))/3) = (6, 1)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State/use the internal section formula (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute coordinates and ratio correctly (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Coordinates P = (6, 1) (1 mark).",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the coordinates of the point that divides A(−4, 2) and B(8, 14) internally in the ratio 1:2.",
+          "answerKey": {
+            "modelAnswer": "P = ((1×8 + 2×(−4))/3, (1×14 + 2×2)/3) = (0, 6)."
+          },
+          "markingScheme": [
+            {
+              "criterion": "State/use the internal section formula (1 mark).",
+              "marks": 1
+            },
+            {
+              "criterion": "Substitute coordinates and ratio correctly (1 mark).",
+              "marks": 1
+            },
+            {
+              "criterion": "Coordinates P = (0, 6) (1 mark).",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "M10-Q28-C",
+      "sectionId": "Q",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "short-answer",
+        "coordinate-geometry"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "The points A(2, 3), B(6, 7) and C(10, 11) lie on a straight line. Verify this by comparing the distances AB, BC and AC.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru question authored for CBSE Class X Mathematics 2026–27 summative assessment."
+      },
+      "approvalNote": "Content checked for syllabus fit, mathematical accuracy, answer key, marking-scheme total, blueprint-slot eligibility and renderer compatibility. Teacher moderation is recommended before high-stakes school use.",
+      "answerKey": {
+        "modelAnswer": "AB = 4√2; BC = 4√2; AC = 8√2. Since AB + BC = AC, the points are collinear with B between A and C."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Calculate AB and BC correctly (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate AC correctly (1 mark).",
+          "marks": 1
+        },
+        {
+          "criterion": "Use AB + BC = AC to verify collinearity (1 mark).",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Show that A(1, 2), B(4, 6) and C(7, 10) are collinear by comparing their distances.",
+          "answerKey": {
+            "modelAnswer": "AB = 5, BC = 5 and AC = 10. Since AB + BC = AC, the points are collinear with B between A and C."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Calculate AB and BC correctly (1 mark).",
+              "marks": 1
+            },
+            {
+              "criterion": "Calculate AC correctly (1 mark).",
+              "marks": 1
+            },
+            {
+              "criterion": "Use AB + BC = AC to verify collinearity (1 mark).",
+              "marks": 1
+            }
+          ]
+        }
+      ]
     }
   ]
 }
