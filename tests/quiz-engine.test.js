@@ -136,7 +136,7 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
   assert.equal(first.elements.options.children[firstCorrectOption].classList.contains("correct"),true,"a selected correct answer retains both states");
   assert.equal(first.elements.options.children[firstCorrectOption].children[2].textContent,"Your answer · Correct","selected-correct state is explicit");
   assert.equal(first.elements.options.children[firstWrongOption].children[2].hidden,true,"previous selection badge is cleared when the learner changes an answer");
-  assert.equal(first.elements.options.children[0].classList.contains("selected"),false,"previous selection is cleared");
+  assert.equal(first.elements.options.children[firstWrongOption].classList.contains("selected"),false,"previously selected option is cleared");
   assert.equal(first.elements.options.children[1].disabled,false,"answer options stay enabled until moving on");
   first.elements.nextBtn.click();
   const ledgerEntry=[...first.values.entries()].find(([key])=>key.includes("test-attempt-ledger")&&key.endsWith("mathematics"));
