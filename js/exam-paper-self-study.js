@@ -35,29 +35,41 @@ async function load(){
   bank=integrated.bank;
   const coverage=integrated.stats.coverage;
   if(!coverage.valid)throw Error("Integrated question pool is not ready: "+coverage.errors.slice(0,5).join(" "));
-  paperHistory=readPaperHistory();
+  paperHistory=readPaperHistory();\n  if(new URLSearchParams(location.search).get("delivery")==="latest"){$("startBtn").textContent="Start prepared paper";status("A frozen paper has been prepared for this browser. Start it when the student is signed in.");}
   $("startBtn").disabled=false;status("Ready: "+integrated.stats.appended.toLocaleString()+" existing chapter-wise MCQs are integrated with the mixed-question pool. "+coverage.coverage.filter(s=>s.eligibleCount>=3).length+" of 39 slots are covered; 50 distinct complete papers are supported.");
  }catch(e){status("Unable to prepare the paper: "+e.message);}
 }
 function makePaper(){
  const previousHistory=paperHistory;
- const recentPaperFingerprints=paperHistory.map(item=>item.fingerprint||JSON.stringify(item.questionIds||[]));
- const recentMcqQuestionIds=paperHistory.slice(-2).flatMap(item=>item.mcqQuestionIds||[]);
- const seed="self-study-"+Date.now()+"-"+Math.random().toString(36).slice(2);
- paper=C10ExamPaperGenerator.generateUniquePaper(blueprint,bank,{seed,title:"CBSE Class 10 Science · Self-study Paper",recentPaperFingerprints,recentQuestionIds:recentMcqQuestionIds,uniqueSearchAttempts:500});
+ const wantsDelivered=new URLSearchParams(location.search).get("delivery")==="latest";
+ let delivered=false;
+ if(wantsDelivered){
+  try{
+   const saved=JSON.parse(localStorage.getItem("eg_exam_paper_delivery_v1")||"null");
+   const check=saved&&C10ExamPaperGenerator.validatePaper(saved,blueprint);
+   if(!saved||!check||!check.valid)throw Error("The prepared paper is missing or no longer matches the approved blueprint. Ask the Parent/Teacher to prepare it again.");
+   paper=saved;delivered=true;
+  }catch(e){throw new Error(e.message||"Unable to load the prepared paper.");}
+ }
+ if(!delivered){
+  const recentPaperFingerprints=paperHistory.map(item=>item.fingerprint||JSON.stringify(item.questionIds||[]));
+  const recentMcqQuestionIds=paperHistory.slice(-2).flatMap(item=>item.mcqQuestionIds||[]);
+  const seed="self-study-"+Date.now()+"-"+Math.random().toString(36).slice(2);
+  paper=C10ExamPaperGenerator.generateUniquePaper(blueprint,bank,{seed,title:"CBSE Class 10 Science · Self-study Paper",recentPaperFingerprints,recentQuestionIds:recentMcqQuestionIds,uniqueSearchAttempts:500});
+ }
  answers={};submitted=false;remaining=blueprint.durationMinutes*60;
  const questionIds=paper.questions.map(q=>String(q.questionId));
  const fingerprint=paper.paperFingerprint||C10ExamPaperGenerator.paperFingerprint(paper);
- paperHistory=[...paperHistory,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds,fingerprint}].slice(-HISTORY_LIMIT);
+ const alreadyRecorded=paperHistory.some(item=>item.paperId===paper.paperId||item.fingerprint===fingerprint);
+ if(!alreadyRecorded)paperHistory=[...paperHistory,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds,fingerprint,mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId))}].slice(-HISTORY_LIMIT);
  if(!savePaperHistory()){
   paperHistory=previousHistory;
   throw Error("This browser could not save the 50-paper repeat history. Enable site storage and try again; no paper was started.");
  }
  render();$("setup").classList.add("exam-hidden");$("review").classList.add("exam-hidden");$("attempt").classList.remove("exam-hidden");
- $("historyStatus").textContent="50-paper protection is active on this browser: this exact 39-question combination will not repeat within the latest 50 generated papers, and MCQs from the previous two papers are held out. Descriptive questions may recur because their approved pool is smaller. History does not sync to other devices.";
+ $("historyStatus").textContent=(delivered?"This is the frozen paper prepared by your Parent/Teacher. ":"")+"50-paper protection is active on this browser: this exact 39-question combination will not repeat within the latest 50 generated papers, and MCQs from the previous two papers are held out. Descriptive questions may recur because their approved pool is smaller. History does not sync to other devices.";
  startTimer();window.scrollTo(0,0);
 }
-
 function responseContent(item,i){
  let html="";
  if(item.stimulus)html+='<p>'+esc(item.stimulus)+'</p>';
@@ -115,7 +127,7 @@ function saveAnswers(){
 }
 function updateProgress(){const count=Object.values(answers).filter(a=>a&&(a.optionId||a.text?.some(t=>t.trim()))).length;$("progress").textContent=count+" / "+paper.questions.length+" answered";}
 function startTimer(){clearInterval(tick);tick=setInterval(()=>{remaining--;const h=String(Math.floor(remaining/3600)).padStart(2,"0"),m=String(Math.floor(remaining%3600/60)).padStart(2,"0"),s=String(remaining%60).padStart(2,"0");$("timer").textContent=h+":"+m+":"+s;if(remaining<=0){clearInterval(tick);submit(true);}},1000);}
-function submit(auto=false){if(submitted)return;saveAnswers();submitted=true;clearInterval(tick);let mcq=0,correct=0,answered=0;paper.questions.forEach((q,i)=>{const a=answers[i];if(a&&(a.optionId||a.text?.some(t=>t.trim())))answered++;if(q.type==="mcq"||q.type==="assertion-reason"){mcq++;if(a?.optionId===q.correctOptionId)correct++;}});$("attempt").classList.add("exam-hidden");$("review").classList.remove("exam-hidden");$("score").textContent=(auto?"Time is up. ":"")+"Submitted "+answered+" of "+paper.questions.length+" questions. MCQ score: "+correct+" / "+mcq+". Written answers require self-review.";const box=$("reviewAnswers");box.innerHTML="";paper.questions.forEach((q,i)=>{const d=document.createElement("div");d.className="exam-question";const selected=answers[i]?.choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;const key=selected.answerKey?.modelAnswer||selected.answerKey?.answer||selected.answerKey?.correctAnswer||"Refer to your textbook and marking points.";d.innerHTML='<h3>Q'+(i+1)+': '+esc(selected.prompt||q.prompt)+'</h3><p><strong>Your answer:</strong> '+esc(answers[i]?.optionId||answers[i]?.text?.join(" / ")||"Not attempted")+'</p><p><strong>Model answer / review:</strong> '+esc(key)+'</p>';box.appendChild(d);});try{localStorage.setItem("eg_exam_last_result_v1",JSON.stringify({paperId:paper.paperId,answers,submittedAt:new Date().toISOString(),mcqCorrect:correct,mcqTotal:mcq}));localStorage.removeItem("eg_exam_attempt_v1");}catch(_){}window.scrollTo(0,0);}
+function submit(auto=false){if(submitted)return;saveAnswers();submitted=true;clearInterval(tick);let mcq=0,correct=0,answered=0;paper.questions.forEach((q,i)=>{const a=answers[i];if(a&&(a.optionId||a.text?.some(t=>t.trim())))answered++;if(q.type==="mcq"||q.type==="assertion-reason"){mcq++;if(a?.optionId===q.correctOptionId)correct++;}});$("attempt").classList.add("exam-hidden");$("review").classList.remove("exam-hidden");$("score").textContent=(auto?"Time is up. ":"")+"Submitted "+answered+" of "+paper.questions.length+" questions. MCQ score: "+correct+" / "+mcq+". Written answers require self-review.";const box=$("reviewAnswers");box.innerHTML="";paper.questions.forEach((q,i)=>{const d=document.createElement("div");d.className="exam-question";const selected=answers[i]?.choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;const key=selected.answerKey?.modelAnswer||selected.answerKey?.answer||selected.answerKey?.correctAnswer||"Refer to your textbook and marking points.";d.innerHTML='<h3>Q'+(i+1)+': '+esc(selected.prompt||q.prompt)+'</h3><p><strong>Your answer:</strong> '+esc(answers[i]?.optionId||answers[i]?.text?.join(" / ")||"Not attempted")+'</p><p><strong>Model answer / review:</strong> '+esc(key)+'</p>';box.appendChild(d);});try{localStorage.setItem("eg_exam_last_result_v1",JSON.stringify({paperId:paper.paperId,answers,submittedAt:new Date().toISOString(),mcqCorrect:correct,mcqTotal:mcq}));localStorage.removeItem("eg_exam_attempt_v1");const queued=JSON.parse(localStorage.getItem("eg_exam_paper_delivery_v1")||"null");if(queued&&queued.paperId===paper.paperId)localStorage.removeItem("eg_exam_paper_delivery_v1");}catch(_){}window.scrollTo(0,0);}
 $("startBtn").addEventListener("click",()=>{try{makePaper();}catch(e){status("Cannot generate this paper: "+e.message);}});
 $("submitBtn").addEventListener("click",()=>{if(confirm("Submit your paper now? You cannot change answers after submission."))submit(false);});
 $("printBtn").addEventListener("click",()=>window.print());
