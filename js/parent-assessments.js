@@ -168,92 +168,117 @@
     return section;
   }
   function addPaperBuilder(child){
-    if(String(child.classId)!=="10")return null;
     const section=node("section","detail-section parent-paper-builder");
-    section.append(node("h3","","Create & assign a CBSE examination paper"),node("p","assignment-help","Generate the approved Class 10 Science (086) 2026–27 paper using the same Paper Studio engine and question pool. Assign it as a handwritten PDF paper, online exam or hybrid assessment."));
+    const registryUrl="./data/exam-papers/profile-registry.json";
+    const generator=()=>window.ExamPaperGenerator||window.C10ExamPaperGenerator;
+    const renderer=()=>window.ExamPaperRenderer||window.C10ExamPaperRenderer;
+    const safePath=value=>typeof value==="string"&&value.startsWith("./data/")&&!value.split("/").includes("..");
+    const historyKey=profileId=>profileId===defaultProfileId?"eg_exam_paper_history_v1":"eg_exam_paper_history_v1_"+String(profileId).replace(/[^a-z0-9_-]/gi,"_");
+    let registry=null,profiles=[],profile=null,blueprint=null,bank=null,paper=null,assignment=null,defaultProfileId="";
+    section.append(node("h3","","Create & assign an examination paper"),node("p","assignment-help","Choose an approved examination profile for this child, generate a paper using its verified blueprint and question pool, then assign the frozen paper as a handwritten PDF, online exam or hybrid assessment."));
+    const profileSelect=document.createElement("select");
     const delivery=document.createElement("select");
     [["printable","Printable · handwritten answer booklet (recommended)"],["online","Online · interactive examination"],["hybrid","Hybrid · printable + online"]].forEach(([value,label])=>{const option=document.createElement("option");option.value=value;option.textContent=label;delivery.appendChild(option);});
     const due=document.createElement("input");due.type="datetime-local";
-    const status=node("p","assignment-status-note","Loading approved blueprint and integrated question pool…");
-    const generate=node("button","report-button","Generate & assign CBSE Science paper");generate.type="button";generate.disabled=true;
+    const status=node("p","assignment-status-note","Loading enabled examination profiles…");
+    const generate=node("button","report-button","Generate & assign examination paper");generate.type="button";generate.disabled=true;
     const actions=node("div","report-actions");
     const printQuestion=node("button","report-button secondary","Question paper · Save PDF");printQuestion.type="button";
     const printBooklet=node("button","report-button secondary","Handwritten answer booklet · Save PDF");printBooklet.type="button";
     const printEvaluator=node("button","report-button secondary","Evaluator copy");printEvaluator.type="button";
     const openAssignment=node("a","report-button secondary","Open student assignment");openAssignment.hidden=true;openAssignment.href="#";
     actions.append(printQuestion,printBooklet,printEvaluator,openAssignment);
-    section.append(addField("Delivery mode",delivery),addField("Due date (optional)",due),generate,status,actions);
-    let blueprint=null,bank=null,paper=null,assignment=null;
+    section.append(addField("Examination profile",profileSelect),addField("Delivery mode",delivery),addField("Due date (optional)",due),generate,status,actions);
     const updateActions=()=>{
       actions.hidden=!paper;
       printQuestion.hidden=delivery.value==="online";
       printBooklet.hidden=delivery.value==="online";
       printEvaluator.hidden=delivery.value==="online";
     };
-    delivery.addEventListener("change",updateActions);
-    Promise.all([
-      fetch("./data/exam-papers/blueprints/class-10-science-2026-27.json",{cache:"no-store"}),
-      fetch("./data/exam-papers/question-banks/class-10-science-2026-27-v1.json",{cache:"no-store"}),
-      fetch("./data/science.json",{cache:"no-store"})
-    ]).then(async responses=>{
-      if(responses.some(r=>!r.ok))throw new Error("Approved CBSE blueprint or question pool is not available.");
-      blueprint=await responses[0].json();
-      const base=await responses[1].json(),practice=await responses[2].json();
-      const bc=window.C10ExamPaperGenerator.validateBlueprint(blueprint);
-      const qc=window.C10ExamPaperGenerator.validateQuestionBank(base,{academicYear:"2026-27"});
-      if(!bc.valid||!bc.readyForGeneration)throw new Error("The CBSE blueprint is not approved for generation.");
-      if(!qc.valid)throw new Error(qc.errors.slice(0,5).join(" "));
-      const integrated=window.C10ExamPaperGenerator.mergeQuestionBanks(base,practice,blueprint);
-      bank=integrated.bank;
-      const coverage=window.C10ExamPaperGenerator.auditSlotCoverage(blueprint,bank,3);
-      if(!coverage.valid)throw new Error("The integrated question pool needs at least three eligible candidates in one or more question slots.");
-      generate.disabled=false;
-      status.textContent="Ready · "+bank.questions.length.toLocaleString()+" approved pool records · 39 questions · 80 marks · 180 minutes.";
-    }).catch(e=>{status.textContent=e.message||"Unable to load Paper Studio.";});
     function readHistory(){
-      try{const rows=JSON.parse(localStorage.getItem("eg_exam_paper_history_v1")||"[]");return Array.isArray(rows)?rows:[];}catch(_){return[];}
+      try{const rows=JSON.parse(localStorage.getItem(historyKey(profile.profileId))||"[]");return Array.isArray(rows)?rows:[];}catch(_){return[];}
     }
-    function writeHistory(row){
-      const rows=[...readHistory(),row].slice(-50);
-      localStorage.setItem("eg_exam_paper_history_v1",JSON.stringify(rows));
+    function writeHistory(rows,row){
+      localStorage.setItem(historyKey(profile.profileId),JSON.stringify([...rows,row].slice(-50)));
     }
+    async function loadProfile(selected){
+      profile=selected;blueprint=null;bank=null;paper=null;assignment=null;actions.hidden=true;openAssignment.hidden=true;generate.disabled=true;
+      status.textContent="Loading "+profile.title+" blueprint and question pool…";
+      if(!safePath(profile.blueprintUrl)||!safePath(profile.questionBankUrl)||(profile.practiceBankUrl&&!safePath(profile.practiceBankUrl)))throw new Error("The selected profile contains an unsafe data path.");
+      const responses=await Promise.all([fetch(profile.blueprintUrl,{cache:"no-store"}),fetch(profile.questionBankUrl,{cache:"no-store"}),profile.practiceBankUrl?fetch(profile.practiceBankUrl,{cache:"no-store"}):Promise.resolve(null)]);
+      if(!responses[0].ok||!responses[1].ok||(responses[2]&&!responses[2].ok))throw new Error("The selected profile blueprint or question bank is unavailable.");
+      blueprint=await responses[0].json();blueprint.subjectTitle=blueprint.subjectTitle||profile.subjectTitle||blueprint.subjectId;
+      const base=await responses[1].json(),practice=responses[2]?await responses[2].json():null,g=generator();
+      if(String(blueprint.classId)!==String(profile.classId)||String(blueprint.subjectId)!==String(profile.subjectId))throw new Error("Profile metadata does not match the selected blueprint.");
+      if(String(blueprint.classId)!==String(child.classId))throw new Error("This examination profile does not match the selected child's class.");
+      if(profile.subjectCode&&String(blueprint.subjectCode||"")!==String(profile.subjectCode))throw new Error("Profile subject code does not match its blueprint.");
+      if(profile.academicYear&&String(blueprint.academicYear)!==String(profile.academicYear))throw new Error("Profile academic year does not match its blueprint.");
+      const bc=g.validateBlueprint(blueprint),qc=g.validateQuestionBank(base,{classId:blueprint.classId,subjectId:blueprint.subjectId,academicYear:blueprint.academicYear});
+      if(!bc.valid||!bc.readyForGeneration)throw new Error("The selected blueprint is not approved for generation: "+bc.errors.slice(0,4).join(" "));
+      if(!qc.valid)throw new Error("The selected question pool is invalid: "+qc.errors.slice(0,5).join(" "));
+      const integrated=g.mergeQuestionBanks(base,practice,blueprint,{minimumCandidatesPerSlot:profile.minimumCandidatesPerSlot||3});
+      bank=integrated.bank;
+      const coverage=g.auditSlotCoverage(blueprint,bank,profile.minimumCandidatesPerSlot||3);
+      if(!coverage.valid)throw new Error("The integrated question pool does not meet minimum candidate coverage: "+coverage.errors.slice(0,4).join(" "));
+      generate.disabled=false;
+      status.textContent="Ready · "+profile.title+" · "+bank.questions.length.toLocaleString()+" approved pool records · "+blueprint.totalQuestions+" questions · "+blueprint.totalMarks+" marks · "+blueprint.durationMinutes+" minutes.";
+    }
+    profileSelect.addEventListener("change",()=>{
+      const selected=profiles.find(item=>String(item.profileId)===profileSelect.value);if(!selected)return;
+      loadProfile(selected).catch(e=>{generate.disabled=true;status.textContent=e.message||"Unable to load examination profile.";});
+    });
+    delivery.addEventListener("change",updateActions);
+    Promise.resolve().then(async()=>{
+      const response=await fetch(registryUrl,{cache:"no-store"});if(!response.ok)throw new Error("The shared examination profile registry is unavailable.");
+      registry=await response.json();
+      if(!registry||registry.schemaVersion!==1||registry.kind!=="exam-paper-profile-registry"||!Array.isArray(registry.profiles))throw new Error("The shared examination profile registry is invalid.");
+      defaultProfileId=String(registry.defaultProfileId||"");
+      profiles=registry.profiles.filter(item=>item&&item.enabled!==false&&String(item.classId)===String(child.classId));
+      if(!profiles.length)throw new Error("No verified examination profiles are currently enabled for Class "+child.classId+".");
+      profileSelect.innerHTML="";
+      profiles.forEach(item=>{const option=document.createElement("option");option.value=String(item.profileId);option.textContent=String(item.title||("Class "+item.classId+" · "+item.subjectTitle));profileSelect.appendChild(option);});
+      const initial=profiles.find(item=>String(item.profileId)===defaultProfileId)||profiles[0];profileSelect.value=initial.profileId;
+      await loadProfile(initial);
+    }).catch(e=>{status.textContent=e.message||"Unable to load the examination profile registry.";});
     generate.addEventListener("click",()=>{
       try{
-        if(!blueprint||!bank)throw new Error("The approved paper pool has not finished loading.");
-        const rows=readHistory(),recentMcqs=rows.slice(-2).flatMap(x=>x.mcqQuestionIds||[]);
-        paper=window.C10ExamPaperGenerator.generateUniquePaper(blueprint,bank,{
-          seed:"parent-paper-"+Date.now()+"-"+Math.random().toString(36).slice(2),
-          title:"CBSE Class 10 Science · "+(child.displayName||child.username),
+        if(!profile||!blueprint||!bank)throw new Error("The selected approved paper pool has not finished loading.");
+        const g=generator(),rows=readHistory(),recentMcqs=rows.slice(-2).flatMap(x=>x.mcqQuestionIds||[]);
+        paper=g.generateUniquePaper(blueprint,bank,{
+          seed:"parent-paper-"+profile.profileId+"-"+Date.now()+"-"+Math.random().toString(36).slice(2),
+          title:profile.title+" · "+(child.displayName||child.username),
           recentPaperFingerprints:rows.map(x=>x.fingerprint||JSON.stringify(x.questionIds||[])),
           recentQuestionIds:recentMcqs,uniqueSearchAttempts:500
         });
         paper.deliveryMode=delivery.value;
         const dueAt=due.value?new Date(due.value).toISOString():null;
         const ids=paper.questions.map(q=>String(q.questionId));
-        const fingerprint=paper.paperFingerprint||window.C10ExamPaperGenerator.paperFingerprint(paper);
-        writeHistory({paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds:ids,
-          mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId)),fingerprint});
+        const fingerprint=paper.paperFingerprint||g.paperFingerprint(paper);
+        const nextHistory=[...rows,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds:ids,
+          mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId)),fingerprint}].slice(-50);
+        writeHistory(rows,nextHistory[nextHistory.length-1]);
         try{
           assignment=window.C10AssessmentManager.createPaperAssignment({
             studentId:child.studentId,studentName:child.displayName||child.username,
             parentId:parent.parentId,createdBy:parent.username,
-            title:paper.title,subjectId:"science",subjectTitle:"Science (086)",
+            title:paper.title,subjectId:profile.subjectId,subjectTitle:profile.subjectTitle||blueprint.subjectTitle||profile.subjectId,
+            examProfileId:profile.profileId,subjectCode:profile.subjectCode||blueprint.subjectCode||null,academicYear:profile.academicYear||blueprint.academicYear,
             paperSnapshot:paper,deliveryMode:delivery.value,deadlineAt:dueAt
           });
         }catch(error){
-          localStorage.setItem("eg_exam_paper_history_v1",JSON.stringify(rows));
+          localStorage.setItem(historyKey(profile.profileId),JSON.stringify(rows));
           throw error;
         }
         openAssignment.href="./assigned-paper.html?id="+encodeURIComponent(assignment.assignmentId);
         openAssignment.hidden=false;updateActions();
-        status.textContent="Paper assigned to "+(child.displayName||child.username)+". The paper and delivery choice are frozen. Print the question paper and answer booklet below, or open the assignment on the student's dashboard.";
+        status.textContent="Paper assigned to "+(child.displayName||child.username)+". "+profile.title+" is frozen with its blueprint and delivery choice. Print the question paper and answer booklet below, or open the assignment on the student's dashboard.";
         const listing=section.parentNode.querySelector(".parent-assigned-tests");
         if(listing)listing.replaceWith(assignedPanel(child));
       }catch(e){status.textContent=e.message||"Unable to generate and assign the paper.";}
     });
-    printQuestion.addEventListener("click",()=>{if(paper)try{window.C10ExamPaperRenderer.printPaper(paper,"student");}catch(e){status.textContent=e.message||String(e);}});
-    printBooklet.addEventListener("click",()=>{if(paper)try{window.C10ExamPaperRenderer.printAnswerBooklet(paper);}catch(e){status.textContent=e.message||String(e);}});
-    printEvaluator.addEventListener("click",()=>{if(paper)try{window.C10ExamPaperRenderer.printPaper(paper,"teacher");}catch(e){status.textContent=e.message||String(e);}});
+    printQuestion.addEventListener("click",()=>{if(paper)try{renderer().printPaper(paper,"student");}catch(e){status.textContent=e.message||String(e);}});
+    printBooklet.addEventListener("click",()=>{if(paper)try{renderer().printAnswerBooklet(paper);}catch(e){status.textContent=e.message||String(e);}});
+    printEvaluator.addEventListener("click",()=>{if(paper)try{renderer().printPaper(paper,"teacher");}catch(e){status.textContent=e.message||String(e);}});
     updateActions();
     return section;
   }
