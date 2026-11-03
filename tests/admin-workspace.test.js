@@ -43,7 +43,7 @@ class FakeElement{
  dispatch(type){for(const h of this.handlers[type]||[])h({target:this});}
 }
 const ids=[
-"statQuestions","statClasses","statStudents","bankClass","bankTargetTitle","bankTargetPath","bankTargetStatus","bankChapterTotal","bankQuestionTotal","bankDraftState","questionBankInventoryStatus","questionBankInventory","overviewStatus","centralStudentUsername","bankSubject","loadBankBtn","chooseBankBtn","bankFile","bankStatus","bankChapter","newChapterTitle","addChapterBtn","renameChapterBtn","deleteChapterBtn","questionList","newQuestionBtn","questionEditorTitle","qId","qDifficulty","qPrompt","qOption0","qOption1","qOption2","qOption3","qAnswer","qExplanation","imageFile","imagePath","imageAlt","imageCaption","addImageBtn","questionImageList","pendingAssets","saveQuestionBtn","exportBankBtn","deleteQuestionBtn","classId","classLabel","addClassBtn","exportClassesBtn","reloadClassesBtn","classesStatus","classesTable","resourceFile","resourceTitle","resourceType","resourceSubject","resourceChapter","resourcePath","resourceRights","addResourceBtn","exportManifestBtn","importManifestBtn","manifestFile","knowledgeStatus","pendingResources","knowledgeTable","studentBackups","clearStudentsBtn","exportReportBtn","studentStatus","studentsTable","leaderClass","leaderSubject","leaderboardStatus","leaderboardTable","exportLeaderboardBtn","profileEditorModal","closeProfileEditor","editStudentName","editStudentClass","editStudentSchool","editStudentCity","editStudentState","saveStudentProfileBtn","downloadStudentBackupBtn","studentEditStatus"
+"statQuestions","statClasses","statStudents","bankClass","bankTargetTitle","bankTargetPath","bankTargetStatus","bankChapterTotal","bankQuestionTotal","bankDraftState","questionBankInventoryStatus","questionBankInventory","overviewStatus","centralStudentUsername","bankSubject","loadBankBtn","chooseBankBtn","bankFile","bankStatus","bankChapter","newChapterTitle","addChapterBtn","renameChapterBtn","deleteChapterBtn","questionList","newQuestionBtn","questionEditorTitle","qId","qDifficulty","qCompetency","qCompetencyStatus","qPrompt","qOption0","qOption1","qOption2","qOption3","qAnswer","qExplanation","imageFile","imagePath","imageAlt","imageCaption","addImageBtn","questionImageList","pendingAssets","saveQuestionBtn","exportBankBtn","deleteQuestionBtn","classId","classLabel","addClassBtn","exportClassesBtn","reloadClassesBtn","classesStatus","classesTable","resourceFile","resourceTitle","resourceType","resourceSubject","resourceChapter","resourcePath","resourceRights","addResourceBtn","exportManifestBtn","importManifestBtn","manifestFile","knowledgeStatus","pendingResources","knowledgeTable","studentBackups","clearStudentsBtn","exportReportBtn","studentStatus","studentsTable","leaderClass","leaderSubject","leaderboardStatus","leaderboardTable","exportLeaderboardBtn","profileEditorModal","closeProfileEditor","editStudentName","editStudentClass","editStudentSchool","editStudentCity","editStudentState","saveStudentProfileBtn","downloadStudentBackupBtn","studentEditStatus"
 ];
 const elements={};ids.forEach(id=>elements[id]=new FakeElement(id));
 elements.bankSubject.value="science";elements.bankChapter.value="0";
@@ -78,7 +78,7 @@ const context={
 };
 context.globalThis=context;
 vm.createContext(context);
-for(const file of ["js/question-bank.js","js/profile-model.js"])vm.runInContext(read(file),context,{filename:file});
+for(const file of ["js/competency-tagger.js","js/question-bank.js","js/profile-model.js"])vm.runInContext(read(file),context,{filename:file});
 vm.runInContext(manager,context,{filename:"js/admin-manager.js"});
 const delay=()=>new Promise(resolve=>setImmediate(resolve));
 
@@ -116,11 +116,17 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
  elements.qOption0.value="Sirius";elements.qOption1.value="Sun";elements.qOption2.value="Vega";elements.qOption3.value="Polaris";
  elements.qAnswer.value="1";elements.qExplanation.value="The Sun is the closest star to Earth.";
  elements.saveQuestionBtn.click();
+ assert.ok(elements.bankStatus.textContent.includes("Choose a competency"),"Admin Editor blocks MCQ save until the author selects a competency");
+ elements.qCompetency.value="knowledge-understanding";
+ elements.saveQuestionBtn.click();
  assert.ok(elements.bankStatus.textContent.includes("draft"),"saving a question marks a local draft");
  elements.exportBankBtn.click();
  const exportedBank=JSON.parse(await context.lastBlob.text());
  assert.equal(exportedBank[0].questions.length,3);
  assert.equal(exportedBank[0].questions[2].question,"Which star is closest to Earth?");
+ assert.equal(exportedBank[0].questions[2].competency,"knowledge-understanding");
+ assert.equal(exportedBank[0].questions[2].competencyTagStatus,"author-confirmed");
+ assert.ok(exportedBank[0].questions[2].competencyTagReason);
 
  // Add a new class and make sure it is included in the export.
  elements.classId.value="5";elements.classLabel.value="Class 5";elements.addClassBtn.click();

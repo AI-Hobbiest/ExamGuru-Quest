@@ -47,7 +47,7 @@ const exam=examContext.window.C10ExamPaperGenerator;
 const blueprint=JSON.parse(fs.readFileSync("data/exam-papers/blueprints/class-10-science-2026-27.json","utf8"));
 const dedicated=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-science-2026-27-v1.json","utf8"));
 const integrated=exam.mergeQuestionBanks(dedicated,bank,blueprint);
-assert.ok(integrated.stats.appended>=600,"the shared Science practice bank should contribute at least 600 distinct summative MCQs");
+assert.ok(integrated.stats.appended>=450,"the shared Science practice bank should contribute at least 450 distinct summative MCQs with competency tags above the review threshold");
 assert.ok(integrated.stats.excluded.invalidQuestion>0&&integrated.stats.invalidReasons.duplicateSourceStem===integrated.stats.excluded.invalidQuestion,"repeated practice-bank stems should be filtered as duplicates, not reported as malformed questions");
 assert.ok(Object.entries(integrated.stats.invalidReasons).filter(([key])=>key!=="duplicateSourceStem").every(([,count])=>count===0),"valid source MCQs must not be rejected for invalid content metadata");
 assert.ok(integrated.stats.excluded.outOfSummativeScope>0,"chapters outside the summative blueprint must be excluded explicitly");
@@ -56,6 +56,8 @@ assert.equal(new Set(integrated.bank.questions.map(q=>q.questionId)).size,integr
 const imported=integrated.bank.questions.filter(q=>q.source&&q.source.type==="practice-bank");
 assert.equal(imported.length,integrated.stats.appended,"every imported MCQ must retain practice-bank provenance");
 assert.ok(imported.every(q=>q.type==="mcq"&&q.marks===1&&q.options.length===4&&q.answerKey&&q.markingScheme.length===1));
+assert.ok(imported.every(q=>q.competencyTagStatus==="inferred"||q.competencyTagStatus==="author-confirmed"),"Exam Paper Studio must not use unreviewed low-confidence practice MCQs");
+assert.ok(imported.every(q=>q.competencyTagReason),"integrated MCQs must retain a reason for their competency label");
 assert.equal(new Set(integrated.bank.questions.map(q=>String(q.prompt).toLowerCase().replace(/[^a-z0-9]+/g," ").trim())).size,integrated.bank.questions.length,"the merged pool must not contain duplicate stems");
 const mcqSlots=blueprint.slotPlan.filter(slot=>slot.allowedTypes.includes("mcq"));
 assert.equal(mcqSlots.length,16,"the blueprint currently has 16 MCQ slots");
@@ -76,5 +78,5 @@ for(let attempt=1;attempt<=50;attempt++){
  paperHistory.push({mcqQuestionIds});
 }
 assert.equal(new Set(paperFingerprints).size,50);
-console.log("Science integration passed: 14 chapter sets / 1,400 practice MCQs; "+integrated.stats.appended+" existing MCQs reused in Exam Paper Studio; "+imported.length+" carry traceable source IDs; "+mcqCoverage.length+" MCQ slots have 3+ eligible candidates; 50 distinct integrated papers generated. MCQ slot coverage: "+mcqCoverage.map(x=>x.questionNumber+":"+x.eligibleCount).join(", ")+".");
+console.log("Science integration passed: 14 chapter sets / 1,400 practice MCQs; "+integrated.stats.appended+" competency-tagged existing MCQs reused (needs educator review: "+integrated.stats.excluded.needsReview+"); "+imported.length+" carry traceable source IDs; "+mcqCoverage.length+" MCQ slots have 3+ eligible candidates; 50 distinct integrated papers generated. MCQ slot coverage: "+mcqCoverage.map(x=>x.questionNumber+":"+x.eligibleCount).join(", ")+".");
 

@@ -41,7 +41,11 @@
           explanation: question.explanation,
           difficulty: question.difficulty,
           questionId: question.questionId,
-          images: question.images || []
+          images: question.images || [],
+          competency:question.competency,
+          competencyTagStatus:question.competencyTagStatus,
+          competencyTagReason:question.competencyTagReason,
+          competencyTaggerVersion:question.competencyTaggerVersion
         }))
       }));
     }

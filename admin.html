@@ -113,6 +113,7 @@
             <div class="admin-form-grid">
               <div class="admin-field"><label for="qId">Question ID</label><input id="qId" placeholder="e.g. science-light-001"></div>
               <div class="admin-field"><label for="qDifficulty">Difficulty</label><select id="qDifficulty"><option>Easy</option><option selected>Medium</option><option>Hard</option><option>Unspecified</option></select></div>
+              <div class="admin-field full"><label for="qCompetency">Cognitive competency <span aria-hidden="true">*</span></label><select id="qCompetency" required><option value="">Choose the thinking skill tested</option><option value="knowledge-understanding">Knowledge &amp; Understanding</option><option value="application">Application</option><option value="analysis-evaluation-creation">Analysis / Evaluation / Creation</option></select><p id="qCompetencyStatus" class="admin-inline-help">Required for every new MCQ. Competency is the thinking skill needed to answer; difficulty is how challenging the question is.</p></div>
               <div class="admin-field full"><label for="qPrompt">Question text</label><textarea id="qPrompt" placeholder="Write the question clearly."></textarea></div>
               <div class="admin-field"><label for="qOption0">Option A</label><input id="qOption0"></div>
               <div class="admin-field"><label for="qOption1">Option B</label><input id="qOption1"></div>
@@ -386,6 +387,7 @@
   </div>
 </div>
 <script src="./js/storage.js"></script>
+<script src="./js/competency-tagger.js"></script>
 <script src="./js/question-bank.js"></script>
 <script src="./js/session-model.js"></script>
 <script src="./js/profile-model.js"></script>

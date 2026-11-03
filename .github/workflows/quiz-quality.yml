@@ -22,6 +22,8 @@ jobs:
         run: node tests/build-science-bank-fixture.js
       - name: Validate existing Science MCQs in Exam Paper Studio
         run: node tests/science-integration.test.js
+      - name: Validate the shared MCQ competency taxonomy and authoring gate
+        run: node tests/mcq-competency.test.js && node tests/admin-workspace.test.js
       - name: Validate Stage C learning model, mastery and adaptive selection
         run: node tests/learning-model.test.js
       - name: Validate canonical ExamGuru Quest URLs
