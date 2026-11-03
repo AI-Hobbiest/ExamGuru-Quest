@@ -53,7 +53,13 @@
     const subject=document.createElement("select");
     const allowed=subjectIds(child.classId);
     allowed.forEach(id=>{const option=document.createElement("option");option.value=id;option.textContent=SUBJECTS[id]||id;subject.appendChild(option);});
-    const topics=node("div","assignment-topics","Loading topics…");
+    const topics=node("div","assignment-topics","Loading chapters…");
+    const topicSearch=document.createElement("input");topicSearch.type="search";topicSearch.placeholder="Search chapters…";topicSearch.setAttribute("aria-label","Search chapters");
+    const topicTools=node("div","assignment-topic-tools");
+    const selectVisible=node("button","report-button secondary","Select all");selectVisible.type="button";
+    const clearTopics=node("button","report-button secondary","Clear");clearTopics.type="button";
+    const topicCount=node("span","assignment-topic-count","0 selected");
+    topicTools.append(selectVisible,clearTopics,topicCount);
     const count=document.createElement("input");count.type="number";count.min="1";count.max="50";count.value="10";
     const difficulty=document.createElement("select");
     [["all","Mixed (all levels)"],["easy","Easy"],["medium","Medium"],["hard","Hard"],["challenge","Challenge"]].forEach(([v,t])=>{const o=document.createElement("option");o.value=v;o.textContent=t;difficulty.appendChild(o);});
@@ -64,7 +70,10 @@
       addField("Question count",count),addField("Difficulty",difficulty),
       addField("Time limit in minutes (0 = untimed)",duration),addField("Due date (optional)",due)
     );
-    const topicWrap=node("div","assignment-field");topicWrap.append(node("span","","Chapters / topics"),topics);
+    const topicWrap=node("div","assignment-field assignment-topic-picker");
+    const topicHeading=node("div","assignment-topic-heading");
+    topicHeading.append(node("span","","Chapters / topics"),node("span","assignment-topic-hint","Choose one or more"));
+    topicWrap.append(topicHeading,topicTools,topicSearch,topics);
     const latest=node("button","report-button secondary","Use latest study session");latest.type="button";
     const titleWrap=addField("Test title (optional)",title);
     const status=node("p","assignment-status-note","Loading the selected question bank…");
@@ -80,16 +89,41 @@
       (latestAttempt.chapterIds||latestAttempt.selectedChapterIds||[]).forEach(id=>ids.add(String(id)));
       return [...ids];
     }
+    function updateTopicPicker(){
+      const rows=[...topics.querySelectorAll(".assignment-topic")];
+      const selected=rows.filter(row=>row.querySelector("input")?.checked).length;
+      topicCount.textContent=selected+" of "+rows.length+" selected";
+      const query=topicSearch.value.trim().toLocaleLowerCase();
+      rows.forEach(row=>{row.hidden=!!query&&!row.dataset.search.includes(query);});
+      selectVisible.textContent=query?"Select matches":"Select all";
+    }
     function drawTopics(selected){
       topics.innerHTML="";
       (bank||[]).forEach((chapter,index)=>{
         const key=String(chapter.key||chapter.chapterId||chapter.chapter_no||index+1);
+        const title=String(chapter.title||chapter.chapterTitle||("Chapter "+(index+1)));
         const row=node("label","assignment-topic"),box=document.createElement("input");
         box.type="checkbox";box.value=key;box.checked=Array.isArray(selected)?selected.includes(key):false;
-        row.append(box,node("span","",chapter.title||key));topics.appendChild(row);
+        const label=node("span","",title);
+        row.dataset.search=(title+" "+key).toLocaleLowerCase();
+        box.addEventListener("change",updateTopicPicker);
+        row.append(box,label);topics.appendChild(row);
       });
-      if(!bank||!bank.length)topics.textContent="No topics found in this question bank.";
+      if(!bank||!bank.length)topics.textContent="No chapters found in this question bank.";
+      updateTopicPicker();
     }
+    topicSearch.addEventListener("input",updateTopicPicker);
+    selectVisible.addEventListener("click",()=>{
+      const query=topicSearch.value.trim().toLocaleLowerCase();
+      topics.querySelectorAll(".assignment-topic").forEach(row=>{
+        if(!query||!row.hidden)row.querySelector("input").checked=true;
+      });
+      updateTopicPicker();
+    });
+    clearTopics.addEventListener("click",()=>{
+      topics.querySelectorAll('input[type="checkbox"]').forEach(box=>{box.checked=false;});
+      updateTopicPicker();
+    });
     async function loadBank(preselected){
       bank=null;topics.textContent="Loading topics…";status.textContent="Loading "+(SUBJECTS[subject.value]||subject.value)+" question bank…";
       try{
