@@ -56,7 +56,11 @@
           questionId, chapterId, chapterTitle: String(chapter.title || chapterId),
           prompt: String(q.question || q.prompt || "").trim(), options,
           correctOptionId, explanation: String(q.explanation || ""),
-          difficulty: qDifficulty, images: Array.isArray(q.images) ? clone(q.images) : []
+          difficulty: qDifficulty, competency: q.competency || null,
+          competencyTagStatus: q.competencyTagStatus || null,
+          competencyTagReason: q.competencyTagReason || null,
+          competencyTaggerVersion: q.competencyTaggerVersion || null,
+          images: Array.isArray(q.images) ? clone(q.images) : []
         });
       });
     });
