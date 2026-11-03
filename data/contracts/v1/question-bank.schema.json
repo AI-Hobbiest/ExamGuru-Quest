@@ -75,7 +75,10 @@
                 "prompt",
                 "options",
                 "correctOptionId",
-                "explanation"
+                "explanation",
+                "competency",
+                "competencyTagStatus",
+                "competencyTagReason"
               ],
               "properties": {
                 "questionId": {
@@ -171,6 +174,34 @@
                     },
                     "additionalProperties": false
                   }
+                },
+                "competency": {
+                  "type": "string",
+                  "enum": [
+                    "knowledge-understanding",
+                    "application",
+                    "analysis-evaluation-creation"
+                  ]
+                },
+                "competencyTagStatus": {
+                  "type": "string",
+                  "enum": [
+                    "author-confirmed",
+                    "inferred",
+                    "needs-review"
+                  ]
+                },
+                "competencyTagReason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "competencyTaggerVersion": {
+                  "type": "string"
+                },
+                "competencyConfidence": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
                 }
               },
               "additionalProperties": false
