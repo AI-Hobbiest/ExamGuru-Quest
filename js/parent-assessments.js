@@ -8,14 +8,39 @@
   const esc = value => String(value==null?"":value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   let parent=null, children=[];
   function assignedPanel(child){
-    const section=node("section","detail-section parent-assigned-tests");section.appendChild(node("h3","","Assigned tests"));
+    const section=node("section","detail-section parent-assigned-tests");section.appendChild(node("h3","","Assigned tests & examinations"));
     const items=window.C10AssessmentManager.listForStudent(child.studentId);
     if(!items.length){section.appendChild(node("div","detail-empty","No tests assigned to this child on this browser yet."));return section;}
     const list=node("div","assignment-list");
     items.forEach(item=>{
       const row=node("article","assignment-row"),copy=node("div",""),latest=item.attempts.filter(x=>x.status==="submitted").slice(-1)[0];
       copy.append(node("strong","",item.title),node("p","",item.subjectTitle+" · "+item.questionCount+(item.kind==="paper-assessment"?" questions · "+item.totalMarks+" marks":" MCQs")+(item.deadlineAt?" · Due "+new Date(item.deadlineAt).toLocaleString():" · No deadline")));
-      row.append(copy,node("span","assignment-status",latest?(item.kind==="paper-assessment"?"Submitted · awaiting evaluation":"Completed · "+latest.scorePercent+"%"):item.status==="in-progress"?"In progress":"Assigned"));list.appendChild(row);
+      if(item.kind==="paper-assessment"&&latest&&latest.evaluationStatus==="evaluated"){
+        row.append(copy,node("span","assignment-status","Evaluated · "+latest.manualScore+"/"+latest.maxScore+" marks"));
+        const feedback=node("p","assignment-help",latest.manualFeedback||"No feedback added.");copy.appendChild(feedback);
+      }else if(item.kind==="paper-assessment"){
+        const status=node("span","assignment-status",latest?"Submitted · awaiting manual evaluation":item.status==="in-progress"?"Online attempt in progress":"Assigned · awaiting handwritten submission");
+        row.append(copy,status);
+        const form=node("div","paper-evaluation-form");
+        const score=document.createElement("input");score.type="number";score.min="0";score.max=String(item.totalMarks);score.step="0.5";score.placeholder="Marks / "+item.totalMarks;
+        const feedback=document.createElement("textarea");feedback.rows=2;feedback.maxLength=2000;feedback.placeholder="Feedback for the student (optional)";
+        const save=node("button","report-button secondary","Record paper result");save.type="button";
+        const allowed=item.deliveryMode!=="online"||!!latest;
+        score.disabled=feedback.disabled=save.disabled=!allowed;
+        if(!allowed)form.append(node("p","assignment-help","The student must submit the online attempt before manual evaluation."));
+        save.addEventListener("click",()=>{
+          try{
+            const updated=window.C10AssessmentManager.recordPaperEvaluation(item.assignmentId,parent.parentId,score.value,feedback.value);
+            const replacement=assignedPanel(child);section.replaceWith(replacement);
+            const message=node("p","assignment-status-note","Result recorded: "+updated.attempts.slice(-1)[0].manualScore+"/"+updated.totalMarks+" marks.");
+            replacement.appendChild(message);
+          }catch(e){form.appendChild(node("p","assignment-status-note",e.message||"Unable to record evaluation."));}
+        });
+        form.append(score,feedback,save);row.append(form);
+      }else{
+        row.append(copy,node("span","assignment-status",latest?"Completed · "+latest.scorePercent+"%":item.status==="in-progress"?"In progress":"Assigned"));
+      }
+      list.appendChild(row);
     });
     section.appendChild(list);return section;
   }
