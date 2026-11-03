@@ -1,12 +1,22 @@
-/* Student/parent-facing timed exam practice. */
+/* Subject-neutral student/parent-facing timed exam practice. */
 (() => {
 "use strict";
 const $=id=>document.getElementById(id);
-let blueprint=null,bank=null,paper=null,answers={},remaining=10800,tick=null,submitted=false,paperHistory=[],assignedPaper=null,currentStudent=null,resumeAttempt=null;
-const HISTORY_KEY="eg_exam_paper_history_v1",HISTORY_LIMIT=50;
+let profile=null,profileId="",defaultProfileId="",blueprint=null,bank=null,paper=null,answers={},remaining=0,tick=null,submitted=false,paperHistory=[],assignedPaper=null,currentStudent=null,resumeAttempt=null;
+const HISTORY_KEY="eg_exam_paper_history_v1",HISTORY_LIMIT=50,PROFILE_REGISTRY_URL="./data/exam-papers/profile-registry.json";
+function storageKey(base){
+ if(!profileId||profileId===defaultProfileId)return base;
+ return base+"_"+profileId.replace(/[^a-z0-9_-]/gi,"_");
+}
+function subjectTitle(){
+ return String(profile&&profile.subjectTitle||blueprint&&(blueprint.subjectTitle||blueprint.subjectName)||blueprint&&blueprint.subjectId||"");
+}
+function paperDisplayTitle(){
+ return String(profile&&profile.title||("Class "+blueprint.classId+" · "+subjectTitle()+(blueprint.subjectCode?" ("+blueprint.subjectCode+")":"")));
+}
 function readPaperHistory(){
  try{
-  const parsed=JSON.parse(localStorage.getItem(HISTORY_KEY)||"[]");
+  const parsed=JSON.parse(localStorage.getItem(storageKey(HISTORY_KEY))||"[]");
   if(!Array.isArray(parsed))return[];
   return parsed.map(item=>{
    const questionIds=Array.isArray(item&&item.questionIds)?item.questionIds.map(String).filter(Boolean):[];
@@ -15,26 +25,74 @@ function readPaperHistory(){
   }).filter(item=>item.questionIds.length&&item.fingerprint!=="[]").slice(-HISTORY_LIMIT);
  }catch(_){return[];}
 }
-function savePaperHistory(){try{localStorage.setItem(HISTORY_KEY,JSON.stringify(paperHistory));return true;}catch(_){return false;}}
+function savePaperHistory(){try{localStorage.setItem(storageKey(HISTORY_KEY),JSON.stringify(paperHistory));return true;}catch(_){return false;}}
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function status(s){$("loadStatus").textContent=s;}
+function populateProfileSelector(profiles){
+ const wrap=$("profileSelectWrap"),select=$("profileSelect");
+ if(!wrap||!select)return;
+ const available=profiles.filter(item=>item&&item.enabled!==false);
+ if(available.length<2){wrap.hidden=true;return;}
+ select.innerHTML="";
+ available.forEach(item=>{
+  const option=document.createElement("option");
+  option.value=String(item.profileId);
+  option.textContent=String(item.title||("Class "+item.classId+" · "+(item.subjectTitle||item.subjectId)));
+  select.appendChild(option);
+ });
+ select.value=profileId;
+ wrap.hidden=false;
+ select.addEventListener("change",()=>{
+  const next=new URL(window.location.href);
+  next.searchParams.set("profile",select.value);
+  window.location.href=next.toString();
+ },{once:true});
+}
+function renderProfileMeta(){
+ $("profileTitle").textContent=paperDisplayTitle();
+ $("profileDescription").textContent=String(profile.description||"Timed CBSE-style examination practice with a profile-specific blueprint and approved question pool.");
+ const meta=$("profileMeta");meta.innerHTML="";
+ const hours=blueprint.durationMinutes/60;
+ const duration=Number.isInteger(hours)?hours+" hour"+(hours===1?"":"s"):blueprint.durationMinutes+" minutes";
+ [blueprint.totalMarks+" marks",duration,blueprint.totalQuestions+" questions",blueprint.academicYear].forEach(value=>{
+  const span=document.createElement("span");span.textContent=value;meta.appendChild(span);
+ });
+}
 async function load(){
  try{
+  const registryResponse=await fetch(PROFILE_REGISTRY_URL,{cache:"no-store"});
+  if(!registryResponse.ok)throw Error("The exam profile registry is unavailable.");
+  const registry=await registryResponse.json();
+  if(!registry||registry.schemaVersion!==1||registry.kind!=="exam-paper-profile-registry"||!Array.isArray(registry.profiles))throw Error("The exam profile registry is invalid.");
+  defaultProfileId=String(registry.defaultProfileId||"");
+  const available=registry.profiles.filter(item=>item&&item.enabled!==false);
+  const requested=new URLSearchParams(location.search).get("profile")||defaultProfileId;
+  profile=available.find(item=>String(item.profileId)===requested);
+  if(!profile)throw Error("The selected exam profile is not available. Choose an enabled profile from the Exam Practice page.");
+  profileId=String(profile.profileId);
+  populateProfileSelector(available);
+  const safePath=value=>typeof value==="string"&&value.startsWith("./data/")&&!value.split("/").includes("..");
+  if(!safePath(profile.blueprintUrl)||!safePath(profile.questionBankUrl)||(profile.practiceBankUrl&&!safePath(profile.practiceBankUrl)))throw Error("The selected profile contains an unsafe data path.");
   const [b,q,practice]=await Promise.all([
-   fetch("./data/exam-papers/blueprints/class-10-science-2026-27.json",{cache:"no-store"}),
-   fetch("./data/exam-papers/question-banks/class-10-science-2026-27-v1.json",{cache:"no-store"}),
-   fetch("./data/science.json",{cache:"no-store"})
+   fetch(profile.blueprintUrl,{cache:"no-store"}),
+   fetch(profile.questionBankUrl,{cache:"no-store"}),
+   profile.practiceBankUrl?fetch(profile.practiceBankUrl,{cache:"no-store"}):Promise.resolve(null)
   ]);
-  if(!b.ok||!q.ok||!practice.ok)throw Error("The published CBSE blueprint, mixed-question pool or shared chapter-wise Science MCQ bank is unavailable.");
+  if(!b.ok||!q.ok||(practice&&!practice.ok))throw Error("The selected profile's blueprint or question bank is unavailable.");
   blueprint=await b.json();
-  const baseBank=await q.json(),practiceChapters=await practice.json();
-  const bc=C10ExamPaperGenerator.validateBlueprint(blueprint),qc=C10ExamPaperGenerator.validateQuestionBank(baseBank,{academicYear:"2026-27"});
-  if(!bc.valid||!bc.readyForGeneration)throw Error("The exam blueprint is not approved for generation.");
+  const baseBank=await q.json(),practiceChapters=practice?await practice.json():null;
+  if(String(blueprint.classId)!==String(profile.classId)||String(blueprint.subjectId)!==String(profile.subjectId))throw Error("The selected profile does not match its blueprint class and subject.");
+  if(profile.subjectCode&&String(blueprint.subjectCode||"")!==String(profile.subjectCode))throw Error("The selected profile subject code does not match its blueprint.");
+  if(profile.academicYear&&String(blueprint.academicYear)!==String(profile.academicYear))throw Error("The selected profile academic year does not match its blueprint.");
+  const bc=ExamPaperGenerator.validateBlueprint(blueprint),qc=ExamPaperGenerator.validateQuestionBank(baseBank,{classId:blueprint.classId,subjectId:blueprint.subjectId,academicYear:blueprint.academicYear});
+  if(!bc.valid||!bc.readyForGeneration)throw Error("The exam blueprint is not approved for generation: "+bc.errors.slice(0,4).join(" "));
   if(!qc.valid)throw Error(qc.errors.slice(0,4).join(" "));
-  const integrated=C10ExamPaperGenerator.mergeQuestionBanks(baseBank,practiceChapters,blueprint);
+  const minimum=Number.isInteger(profile.minimumCandidatesPerSlot)?profile.minimumCandidatesPerSlot:3;
+  const integrated=ExamPaperGenerator.mergeQuestionBanks(baseBank,practiceChapters,blueprint,{minimumCandidatesPerSlot:minimum});
   bank=integrated.bank;
   const coverage=integrated.stats.coverage;
-  if(!coverage.valid)throw Error("Integrated question pool is not ready: "+coverage.errors.slice(0,5).join(" "));
+  if(!coverage.valid)throw Error("The selected question pool is not ready: "+coverage.errors.slice(0,5).join(" "));
+  renderProfileMeta();
   paperHistory=readPaperHistory();
   currentStudent=window.C10StudentAuth?await window.C10StudentAuth.restoreSession():null;
   const assignmentId=new URLSearchParams(location.search).get("assignment");
@@ -43,16 +101,20 @@ async function load(){
    assignedPaper=window.C10AssessmentManager.get(assignmentId);
    if(!assignedPaper||assignedPaper.kind!=="paper-assessment"||assignedPaper.studentId!==currentStudent.studentId)throw Error("This paper is not assigned to the signed-in student.");
    if(assignedPaper.deliveryMode==="printable")throw Error("This assignment is for handwritten completion. Open it from Assigned Tests to print the paper and answer booklet.");
-   const frozen=window.C10ExamPaperGenerator.validatePaper(assignedPaper.paperSnapshot,blueprint);
+   const frozen=ExamPaperGenerator.validatePaper(assignedPaper.paperSnapshot,blueprint);
    if(!frozen.valid)throw Error("Assigned paper validation failed: "+frozen.errors.slice(0,3).join(" "));
-   try{const saved=JSON.parse(localStorage.getItem("eg_exam_attempt_v1")||"null");if(saved&&saved.paperId===assignedPaper.paperSnapshot.paperId)resumeAttempt=saved;}catch(_){}
+   try{const saved=JSON.parse(localStorage.getItem(storageKey("eg_exam_attempt_v1"))||"null");if(saved&&saved.paperId===assignedPaper.paperSnapshot.paperId)resumeAttempt=saved;}catch(_){}
    $("startBtn").textContent="Start assigned examination";
   }
-
-  const preparedDelivery=new URLSearchParams(location.search).get("delivery")==="latest";
-  if(assignmentId){$("startBtn").textContent="Start assigned examination";$("startBtn").disabled=false;status("Assigned to you by your Parent/Teacher. The paper snapshot is frozen; the timer starts when you begin.");}
+  const assignment=!!assignmentId,preparedDelivery=new URLSearchParams(location.search).get("delivery")==="latest";
+  if(assignment){$("startBtn").textContent="Start assigned examination";$("startBtn").disabled=false;status("Assigned to you by your Parent/Teacher. The paper snapshot is frozen; the timer starts when you begin.");}
   else if(preparedDelivery){$("startBtn").textContent="Start prepared paper";$("startBtn").disabled=false;status("Prepared paper loaded. Start when ready.");}
-  else{$("startBtn").disabled=false;status("Ready: "+integrated.stats.appended.toLocaleString()+" existing chapter-wise MCQs are integrated with the mixed-question pool. "+coverage.coverage.filter(s=>s.eligibleCount>=3).length+" of 39 slots are covered; 50 distinct complete papers are supported.");}
+  else{
+   $("startBtn").disabled=false;
+   const adapted=integrated.stats.appended;
+   const covered=coverage.coverage.filter(s=>s.eligibleCount>=minimum).length;
+   status("Ready: "+blueprint.totalQuestions+" questions · "+blueprint.totalMarks+" marks. "+(adapted?adapted.toLocaleString()+" chapter-wise practice MCQs have been integrated. ":"")+covered+" of "+coverage.slotCount+" paper slots meet the minimum of "+minimum+" eligible questions.");
+  }
  }catch(e){status("Unable to prepare the paper: "+e.message);}
 }
 function makePaper(){
@@ -64,37 +126,37 @@ function makePaper(){
   assignedPaper=window.C10AssessmentManager.startPaper(assignedPaper.assignmentId,currentStudent.studentId);
   paper=assignedPaper.paperSnapshot;
   const active=assignedPaper.attempts.find(item=>item.attemptId===assignedPaper.activeAttemptId);
-  if(active&&active.startedAt){const deadline=new Date(active.startedAt).getTime()+blueprint.durationMinutes*60000;remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));}
+  if(active&&active.startedAt){const deadline=new Date(active.startedAt).getTime()+paper.durationMinutes*60000;remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));}
   if(resumeAttempt&&Number.isFinite(Number(resumeAttempt.remaining)))remaining=Math.min(remaining,Number(resumeAttempt.remaining));
   delivered=true;
  }
  if(!assignedPaper&&wantsDelivered){
   try{
-   const saved=JSON.parse(localStorage.getItem("eg_exam_paper_delivery_v1")||"null");
-   const check=saved&&C10ExamPaperGenerator.validatePaper(saved,blueprint);
-   if(!saved||!check||!check.valid)throw Error("The prepared paper is missing or no longer matches the approved blueprint. Ask the Parent/Teacher to prepare it again.");
+   const saved=JSON.parse(localStorage.getItem(storageKey("eg_exam_paper_delivery_v1"))||"null");
+   const check=saved&&ExamPaperGenerator.validatePaper(saved,blueprint);
+   if(!saved||!check||!check.valid)throw Error("The prepared paper is missing or no longer matches the selected approved blueprint. Ask the Parent/Teacher to prepare it again.");
    paper=saved;delivered=true;
   }catch(e){throw new Error(e.message||"Unable to load the prepared paper.");}
  }
  if(!delivered){
   const recentPaperFingerprints=paperHistory.map(item=>item.fingerprint||JSON.stringify(item.questionIds||[]));
   const recentMcqQuestionIds=paperHistory.slice(-2).flatMap(item=>item.mcqQuestionIds||[]);
-  const seed="self-study-"+Date.now()+"-"+Math.random().toString(36).slice(2);
-  paper=C10ExamPaperGenerator.generateUniquePaper(blueprint,bank,{seed,title:"CBSE Class 10 Science · Self-study Paper",recentPaperFingerprints,recentQuestionIds:recentMcqQuestionIds,uniqueSearchAttempts:500});
+  const seed="self-study-"+profileId+"-"+Date.now()+"-"+Math.random().toString(36).slice(2);
+  paper=ExamPaperGenerator.generateUniquePaper(blueprint,bank,{seed,title:"CBSE "+paperDisplayTitle()+" · Self-study Paper",recentPaperFingerprints,recentQuestionIds:recentMcqQuestionIds,uniqueSearchAttempts:500});
  }
- const assignedRemaining=assignedPaper?remaining:blueprint.durationMinutes*60;
+ const assignedRemaining=assignedPaper?remaining:paper.durationMinutes*60;
  answers=resumeAttempt&&resumeAttempt.paperId===paper.paperId?JSON.parse(JSON.stringify(resumeAttempt.answers||{})):{};
  submitted=false;remaining=assignedRemaining;
  const questionIds=paper.questions.map(q=>String(q.questionId));
- const fingerprint=paper.paperFingerprint||C10ExamPaperGenerator.paperFingerprint(paper);
+ const fingerprint=paper.paperFingerprint||ExamPaperGenerator.paperFingerprint(paper);
  const alreadyRecorded=paperHistory.some(item=>item.paperId===paper.paperId||item.fingerprint===fingerprint);
  if(!alreadyRecorded)paperHistory=[...paperHistory,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds,fingerprint,mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId))}].slice(-HISTORY_LIMIT);
  if(!savePaperHistory()){
   paperHistory=previousHistory;
-  throw Error("This browser could not save the 50-paper repeat history. Enable site storage and try again; no paper was started.");
+  throw Error("This browser could not save the 50-paper repeat history for this profile. Enable site storage and try again; no paper was started.");
  }
  render();$("setup").classList.add("exam-hidden");$("review").classList.add("exam-hidden");$("attempt").classList.remove("exam-hidden");
- $("historyStatus").textContent=(delivered?"This is the frozen paper prepared by your Parent/Teacher. ":"")+"50-paper protection is active on this browser: this exact 39-question combination will not repeat within the latest 50 generated papers, and MCQs from the previous two papers are held out. Descriptive questions may recur because their approved pool is smaller. History does not sync to other devices.";
+ $("historyStatus").textContent=(delivered?"This is the frozen paper prepared by your Parent/Teacher. ":"")+"50-paper repeat protection is active for this profile on this browser. This exact "+paper.totalQuestions+"-question combination will not repeat within the latest 50 generated papers; MCQs from the previous two papers are held out where applicable. Descriptive questions may recur when their approved pool is smaller. History is profile-specific and does not sync to other devices.";
  startTimer();window.scrollTo(0,0);
 }
 function responseContent(item,i){
@@ -158,11 +220,11 @@ function saveAnswers(){
   answers[i]={optionId:radio?.value||null,text:textareas,choice,alternative:choice==="alternative"?0:null};
  });
  updateProgress();
- try{localStorage.setItem("eg_exam_attempt_v1",JSON.stringify({paperId:paper.paperId,answers,remaining}));}catch(_){}
+ try{localStorage.setItem(storageKey("eg_exam_attempt_v1"),JSON.stringify({paperId:paper.paperId,answers,remaining}));}catch(_){}
 }
 function updateProgress(){const count=Object.values(answers).filter(a=>a&&(a.optionId||a.text?.some(t=>t.trim()))).length;$("progress").textContent=count+" / "+paper.questions.length+" answered";}
 function startTimer(){clearInterval(tick);tick=setInterval(()=>{remaining--;const h=String(Math.floor(remaining/3600)).padStart(2,"0"),m=String(Math.floor(remaining%3600/60)).padStart(2,"0"),s=String(remaining%60).padStart(2,"0");$("timer").textContent=h+":"+m+":"+s;if(remaining<=0){clearInterval(tick);submit(true);}},1000);}
-function submit(auto=false){if(submitted)return;saveAnswers();submitted=true;clearInterval(tick);let mcq=0,correct=0,answered=0;paper.questions.forEach((q,i)=>{const a=answers[i];if(a&&(a.optionId||a.text?.some(t=>t.trim())))answered++;if(q.type==="mcq"||q.type==="assertion-reason"){mcq++;if(a?.optionId===q.correctOptionId)correct++;}});$("attempt").classList.add("exam-hidden");$("review").classList.remove("exam-hidden");$("score").textContent=(auto?"Time is up. ":"")+"Submitted "+answered+" of "+paper.questions.length+" questions. MCQ score: "+correct+" / "+mcq+". Written answers require self-review.";const box=$("reviewAnswers");box.innerHTML="";paper.questions.forEach((q,i)=>{const d=document.createElement("div");d.className="exam-question";const selected=answers[i]?.choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;const key=selected.answerKey?.modelAnswer||selected.answerKey?.answer||selected.answerKey?.correctAnswer||"Refer to your textbook and marking points.";d.innerHTML='<h3>Q'+(i+1)+': '+esc(selected.prompt||q.prompt)+'</h3><p><strong>Your answer:</strong> '+esc(answers[i]?.optionId||answers[i]?.text?.join(" / ")||"Not attempted")+'</p><p><strong>Model answer / review:</strong> '+esc(key)+'</p>';box.appendChild(d);});try{localStorage.setItem("eg_exam_last_result_v1",JSON.stringify({paperId:paper.paperId,answers,submittedAt:new Date().toISOString(),mcqCorrect:correct,mcqTotal:mcq}));localStorage.removeItem("eg_exam_attempt_v1");const queued=JSON.parse(localStorage.getItem("eg_exam_paper_delivery_v1")||"null");if(queued&&queued.paperId===paper.paperId)localStorage.removeItem("eg_exam_paper_delivery_v1");if(assignedPaper&&currentStudent)window.C10AssessmentManager.submitPaper(assignedPaper.assignmentId,currentStudent.studentId,answers);}catch(e){status(e.message||"Answers were saved, but assignment submission needs attention.");}window.scrollTo(0,0);}
+function submit(auto=false){if(submitted)return;saveAnswers();submitted=true;clearInterval(tick);let mcq=0,correct=0,answered=0;paper.questions.forEach((q,i)=>{const a=answers[i];if(a&&(a.optionId||a.text?.some(t=>t.trim())))answered++;if(q.type==="mcq"||q.type==="assertion-reason"){mcq++;if(a?.optionId===q.correctOptionId)correct++;}});$("attempt").classList.add("exam-hidden");$("review").classList.remove("exam-hidden");$("score").textContent=(auto?"Time is up. ":"")+"Submitted "+answered+" of "+paper.questions.length+" questions. MCQ score: "+correct+" / "+mcq+". Written answers require self-review.";const box=$("reviewAnswers");box.innerHTML="";paper.questions.forEach((q,i)=>{const d=document.createElement("div");d.className="exam-question";const selected=answers[i]?.choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;const key=selected.answerKey?.modelAnswer||selected.answerKey?.answer||selected.answerKey?.correctAnswer||"Refer to your textbook and marking points.";d.innerHTML='<h3>Q'+(i+1)+': '+esc(selected.prompt||q.prompt)+'</h3><p><strong>Your answer:</strong> '+esc(answers[i]?.optionId||answers[i]?.text?.join(" / ")||"Not attempted")+'</p><p><strong>Model answer / review:</strong> '+esc(key)+'</p>';box.appendChild(d);});try{localStorage.setItem(storageKey("eg_exam_last_result_v1"),JSON.stringify({paperId:paper.paperId,answers,submittedAt:new Date().toISOString(),mcqCorrect:correct,mcqTotal:mcq}));localStorage.removeItem(storageKey("eg_exam_attempt_v1"));const queued=JSON.parse(localStorage.getItem(storageKey("eg_exam_paper_delivery_v1"))||"null");if(queued&&queued.paperId===paper.paperId)localStorage.removeItem(storageKey("eg_exam_paper_delivery_v1"));if(assignedPaper&&currentStudent)window.C10AssessmentManager.submitPaper(assignedPaper.assignmentId,currentStudent.studentId,answers);}catch(e){status(e.message||"Answers were saved, but assignment submission needs attention.");}window.scrollTo(0,0);}
 $("startBtn").addEventListener("click",()=>{try{makePaper();}catch(e){status("Cannot generate this paper: "+e.message);}});
 $("submitBtn").addEventListener("click",()=>{if(confirm("Submit your paper now? You cannot change answers after submission."))submit(false);});
 $("printBtn").addEventListener("click",()=>window.print());
