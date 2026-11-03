@@ -321,7 +321,7 @@ function mergeQuestionBanks(baseBank,practiceChapters,bp){
  if(!check.valid)throw Error("Integrated Science question pool is invalid: "+check.errors.slice(0,8).join(" "));
  const coverage=auditSlotCoverage(bp,merged,3);
  if(!coverage.valid)throw Error("Integrated Science pool does not meet the minimum slot coverage: "+coverage.errors.slice(0,8).join(" "));
- return{bank:merged,stats:{practiceSourceCount:adapted.questions.length,appended,duplicateIds,duplicateStems,excluded:adapted.adapterStats.excluded,byChapter:adapted.adapterStats.byChapter,byCompetency:adapted.adapterStats.byCompetency,coverage}};
+ return{bank:merged,stats:{practiceSourceCount:adapted.questions.length,appended,duplicateIds,duplicateStems,excluded:adapted.adapterStats.excluded,invalidReasons:adapted.adapterStats.invalidReasons,byChapter:adapted.adapterStats.byChapter,byCompetency:adapted.adapterStats.byCompetency,coverage}};
 }
 
 window.C10ExamPaperGenerator=Object.freeze({schemaVersion:1,questionTypes:TYPES,difficulties:DIFFICULTIES,competencies:COMPETENCIES,validateQuestion,validateQuestionBank,validateBlueprint,expandSlotPlan,auditSlotCoverage,generatePaper,paperFingerprint,generateUniquePaper,validatePaper,createQuestionBankTemplate,normalizeCompetency,inferMcqCompetency,adaptPracticeMcqBank,mergeQuestionBanks});
