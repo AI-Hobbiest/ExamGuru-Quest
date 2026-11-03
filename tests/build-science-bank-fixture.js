@@ -1,6 +1,7 @@
 "use strict";
 const fs=require("node:fs");
 const zlib=require("node:zlib");
+const tagger=require("../js/competency-tagger.js");
 const output="_site/data/science.json";
 fs.mkdirSync("_site/data",{recursive:true});
 if(fs.existsSync("data/science.json")){
@@ -28,13 +29,13 @@ if(fs.existsSync("data/science.json")){
     if(/^[A-D]$/.test(letter))answer=letter.charCodeAt(0)-65;
     else answer=Array.isArray(options)?options.findIndex(option=>String(option).trim()===rawAnswer.trim()):-1;
    }
-   return{
+   return tagger.tagQuestion({
     id:question.id??question.questionId??questionIndex+1,
     question:question.question||question.prompt||question.text,
     options,answer,
     explanation:question.explanation||question.rationale||"Review the related concept in your textbook, then try this question again.",
     difficulty:question.difficulty||"Medium"
-   };
+   },{subjectId:"science",chapterTitle:chapter.title,chapterId:chapter.key||chapter.chapterKey});
   })
  }));
  for(const chapter of sharedChapters){
