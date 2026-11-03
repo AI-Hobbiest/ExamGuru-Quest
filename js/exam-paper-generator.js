@@ -278,13 +278,14 @@ function adaptPracticeMcqBank(practiceChapters,bp){
    if(usedStems.has(stem)){invalidReasons.duplicateSourceStem++;invalid=true;}
    if(invalid){excluded.invalidQuestion++;return;}
    const tagged=inferMcqCompetency(q);
+   if(String(q.competencyTagStatus||"") === "needs-review"){excluded.needsReview++;return;}
    if(!COMPETENCIES.includes(tagged.competency)){excluded.unsupportedCompetency++;return;}
    usedIds.add(id);usedStems.add(stem);
    const correct=opts[answer],letter=String(correct.optionId);
    const question={
     questionId:id,sectionId:sections[0],chapterId,unitId:units[0],topicTags:["mcq","practice-bank",chapterId],
     type:"mcq",marks:1,prompt,difficulty:normalisePracticeDifficulty(q.difficulty),
-    competency:tagged.competency,competencyTagMethod:tagged.method,approvalStatus:"approved",
+    competency:tagged.competency,competencyTagMethod:tagged.method,competencyTagStatus:q.competencyTagStatus||"inferred",competencyTagReason:q.competencyTagReason||"Imported from the shared subject MCQ bank with a provisional competency tag.",approvalStatus:"approved",
     options:opts,correctOptionId:correct.optionId,
     answerKey:{modelAnswer:letter+". "+correct.text,explanation:String(q.explanation||q.rationale).trim()},
     markingScheme:[{criterion:"Correct option selected: "+letter,marks:1}],
