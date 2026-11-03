@@ -58,6 +58,12 @@ const paperAssignment=manager.createPaperAssignment({
  subjectId:"science",subjectTitle:"Science",deliveryMode:"hybrid",paperSnapshot
 });
 assert.equal(paperAssignment.kind,"paper-assessment");
+const mathPaperAssignment=manager.createPaperAssignment({
+ studentId:"student-4",parentId:"parent-1",deliveryMode:"online",
+ paperSnapshot:{...paperSnapshot,paperId:"paper-math-1",subjectId:"mathematics",subjectTitle:"Mathematics",subjectCode:"041",blueprintSnapshot:{subjectTitle:"Mathematics",subjectCode:"041",sections:[{sectionId:"science",title:"Mathematics",totalMarks:10}]}}
+});
+assert.equal(mathPaperAssignment.subjectId,"mathematics","assignment subject should default to the frozen paper's subject");
+assert.equal(mathPaperAssignment.subjectTitle,"Mathematics","assignment title should default to the frozen paper's subject label");
 assert.equal(manager.listForStudent("student-2").length,1);
 assert.throws(()=>manager.startPaper(paperAssignment.assignmentId,"student-1"),/not assigned/);
 const paperStarted=manager.startPaper(paperAssignment.assignmentId,"student-2");
