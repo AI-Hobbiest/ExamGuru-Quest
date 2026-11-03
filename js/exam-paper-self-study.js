@@ -10,7 +10,8 @@ function readPaperHistory(){
   if(!Array.isArray(parsed))return[];
   return parsed.map(item=>{
    const questionIds=Array.isArray(item&&item.questionIds)?item.questionIds.map(String).filter(Boolean):[];
-   return{paperId:String(item&&item.paperId||""),generatedAt:String(item&&item.generatedAt||""),questionIds,fingerprint:String(item&&item.fingerprint||JSON.stringify(questionIds))};
+   const mcqQuestionIds=Array.isArray(item&&item.mcqQuestionIds)?item.mcqQuestionIds.map(String).filter(Boolean):[];
+   return{paperId:String(item&&item.paperId||""),generatedAt:String(item&&item.generatedAt||""),questionIds,mcqQuestionIds,fingerprint:String(item&&item.fingerprint||JSON.stringify(questionIds))};
   }).filter(item=>item.questionIds.length&&item.fingerprint!=="[]").slice(-HISTORY_LIMIT);
  }catch(_){return[];}
 }
@@ -41,8 +42,9 @@ async function load(){
 function makePaper(){
  const previousHistory=paperHistory;
  const recentPaperFingerprints=paperHistory.map(item=>item.fingerprint||JSON.stringify(item.questionIds||[]));
+ const recentMcqQuestionIds=paperHistory.slice(-2).flatMap(item=>item.mcqQuestionIds||[]);
  const seed="self-study-"+Date.now()+"-"+Math.random().toString(36).slice(2);
- paper=C10ExamPaperGenerator.generateUniquePaper(blueprint,bank,{seed,title:"CBSE Class 10 Science · Self-study Paper",recentPaperFingerprints,uniqueSearchAttempts:500});
+ paper=C10ExamPaperGenerator.generateUniquePaper(blueprint,bank,{seed,title:"CBSE Class 10 Science · Self-study Paper",recentPaperFingerprints,recentQuestionIds:recentMcqQuestionIds,uniqueSearchAttempts:500});
  answers={};submitted=false;remaining=blueprint.durationMinutes*60;
  const questionIds=paper.questions.map(q=>String(q.questionId));
  const fingerprint=paper.paperFingerprint||C10ExamPaperGenerator.paperFingerprint(paper);
@@ -52,7 +54,7 @@ function makePaper(){
   throw Error("This browser could not save the 50-paper repeat history. Enable site storage and try again; no paper was started.");
  }
  render();$("setup").classList.add("exam-hidden");$("review").classList.add("exam-hidden");$("attempt").classList.remove("exam-hidden");
- $("historyStatus").textContent="50-paper protection is active on this browser: this exact 39-question combination will not repeat within the latest 50 generated papers. Individual questions may appear in other papers. History does not sync to other devices.";
+ $("historyStatus").textContent="50-paper protection is active on this browser: this exact 39-question combination will not repeat within the latest 50 generated papers, and MCQs from the previous two papers are held out. Descriptive questions may recur because their approved pool is smaller. History does not sync to other devices.";
  startTimer();window.scrollTo(0,0);
 }
 

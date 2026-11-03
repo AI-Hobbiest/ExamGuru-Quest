@@ -62,7 +62,8 @@ function readPaperHistory(){
   if(!Array.isArray(value))return[];
   return value.map(item=>{
    const questionIds=Array.isArray(item&&item.questionIds)?item.questionIds.map(String).filter(Boolean):[];
-   return{paperId:String(item&&item.paperId||""),generatedAt:String(item&&item.generatedAt||""),questionIds,fingerprint:String(item&&item.fingerprint||JSON.stringify(questionIds))};
+   const mcqQuestionIds=Array.isArray(item&&item.mcqQuestionIds)?item.mcqQuestionIds.map(String).filter(Boolean):[];
+   return{paperId:String(item&&item.paperId||""),generatedAt:String(item&&item.generatedAt||""),questionIds,mcqQuestionIds,fingerprint:String(item&&item.fingerprint||JSON.stringify(questionIds))};
   }).filter(item=>item.questionIds.length&&item.fingerprint!=="[]").slice(-PAPER_HISTORY_LIMIT);
  }catch(_){return[];}
 }
@@ -76,19 +77,22 @@ function generate(){
   if(!coverage.valid)throw Error("A 50-paper pool needs at least three eligible approved questions in every slot. "+coverage.errors.slice(0,5).join(" "));
   const previousHistory=readPaperHistory();
   const recentPaperFingerprints=previousHistory.map(item=>item.fingerprint);
+  const recentMcqQuestionIds=previousHistory.slice(-2).flatMap(item=>item.mcqQuestionIds||[]);
   const candidate=window.C10ExamPaperGenerator.generateUniquePaper(blueprint,bank,{
    seed:"admin-science-"+Date.now()+"-"+Math.random().toString(36).slice(2),
    title:"CBSE Class 10 Science Practice Paper",
    recentPaperFingerprints,
+   recentQuestionIds:recentMcqQuestionIds,
    uniqueSearchAttempts:500
   });
   const questionIds=candidate.questions.map(q=>String(q.questionId));
   const fingerprint=candidate.paperFingerprint||window.C10ExamPaperGenerator.paperFingerprint(candidate);
-  const nextHistory=[...previousHistory,{paperId:candidate.paperId,generatedAt:candidate.generatedAt,questionIds,fingerprint}].slice(-PAPER_HISTORY_LIMIT);
+  const mcqQuestionIds=candidate.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId));
+  const nextHistory=[...previousHistory,{paperId:candidate.paperId,generatedAt:candidate.generatedAt,questionIds,mcqQuestionIds,fingerprint}].slice(-PAPER_HISTORY_LIMIT);
   if(!savePaperHistory(nextHistory))throw Error("This browser could not save the 50-paper repeat history. Enable site storage and try again; no paper was started.");
   paper=candidate;
   saveDraft(paper);showPaper(paper);
-  setStatus("Paper generated. Exact combinations used in the previous 50 Student or Admin papers on this browser are excluded.","success");
+  setStatus("Paper generated. Exact combinations from the previous 50 papers are excluded, and MCQs used in the previous two papers are held out on this browser.","success");
  }catch(e){setStatus(e.message||"Generation failed.","error");}
 }
 function init(){if(!$("tab-exam-papers"))return;createStores();$("importPaperPoolBtn").addEventListener("click",importBank);$("downloadPaperPoolTemplateBtn").addEventListener("click",()=>downloadJson(window.C10ExamPaperGenerator.createQuestionBankTemplate(),"class-10-science-paper-question-bank-template.json"));$("generatePaperBtn").addEventListener("click",generate);$("downloadPaperJsonBtn").addEventListener("click",()=>{if(paper)downloadJson(paper,"class-10-science-paper-"+paper.paperId+".json");});$("printStudentPaperBtn").addEventListener("click",()=>{if(paper)try{window.C10ExamPaperRenderer.printPaper(paper,"student");}catch(e){setStatus(e.message||String(e),"error");}});$("printTeacherPaperBtn").addEventListener("click",()=>{if(paper)try{window.C10ExamPaperRenderer.printPaper(paper,"teacher");}catch(e){setStatus(e.message||String(e),"error");}});loadBank();loadSavedDraft();loadBlueprint();}
