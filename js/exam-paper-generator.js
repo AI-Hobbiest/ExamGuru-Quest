@@ -163,7 +163,7 @@ function generateUniquePaper(bp,bank,options={}){
  const attempts=Number.isInteger(options.uniqueSearchAttempts)&&options.uniqueSearchAttempts>0?Math.min(options.uniqueSearchAttempts,5000):250;
  const baseSeed=String(options.seed||("examguru-paper-"+Date.now()));
  for(let i=0;i<attempts;i++){
-  const paper=generatePaper(bp,bank,{...options,seed:baseSeed+"-"+i,recentQuestionIds:[]});
+  const paper=generatePaper(bp,bank,{...options,seed:baseSeed+"-"+i,recentQuestionIds:Array.isArray(options.recentQuestionIds)?options.recentQuestionIds:[]});
   const fingerprint=paperFingerprint(paper);
   if(fingerprint&&!recent.has(fingerprint)){paper.paperFingerprint=fingerprint;return paper;}
  }
