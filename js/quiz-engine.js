@@ -590,10 +590,21 @@ function renderQuestion(){
   question.options.forEach((text,i)=>{
     const button=document.createElement("button");button.className="opt";
     const letter=document.createElement("span");letter.className="letter";letter.textContent=String.fromCharCode(65+i);
-    const label=document.createElement("span");label.textContent=text;button.append(letter,label);
+    const label=document.createElement("span");label.className="option-copy";label.textContent=text;
+    const stateTag=document.createElement("span");stateTag.className="answer-state";stateTag.hidden=true;
+    button.append(letter,label,stateTag);
+    const revealed=!!previous&&!isExamMode();
     if(previous&&i===previous.selected)button.classList.add("selected");
-    if(previous&&!isExamMode()&&i===question.answer)button.classList.add("correct");
-    if(previous&&!isExamMode()&&i===previous.selected&&!previous.correct)button.classList.add("wrong");
+    if(revealed&&i===question.answer){
+      button.classList.add("correct");
+      stateTag.textContent=i===previous.selected?"Your answer · Correct":"Correct answer";
+      stateTag.hidden=false;
+    }
+    if(revealed&&i===previous.selected&&!previous.correct){
+      button.classList.add("wrong");
+      stateTag.textContent="Your answer";
+      stateTag.hidden=false;
+    }
     button.disabled=locked;
     button.setAttribute("aria-pressed",String(!!previous&&i===previous.selected));
     button.onclick=()=>choose(i);
@@ -668,7 +679,18 @@ function choose(optionIndex){
     button.classList.toggle("selected",i===optionIndex);
     button.classList.remove("correct","wrong");
     button.disabled=false;
-    if(!isExamMode()){if(i===question.answer)button.classList.add("correct");if(i===optionIndex&&!correct)button.classList.add("wrong");}
+    const stateTag=button.children[2];
+    if(stateTag){stateTag.textContent="";stateTag.hidden=true;}
+    if(!isExamMode()){
+      if(i===question.answer){
+        button.classList.add("correct");
+        if(stateTag){stateTag.textContent=i===optionIndex?"Your answer · Correct":"Correct answer";stateTag.hidden=false;}
+      }
+      if(i===optionIndex&&!correct){
+        button.classList.add("wrong");
+        if(stateTag){stateTag.textContent="Your answer";stateTag.hidden=false;}
+      }
+    }
   });
   $("nextBtn").disabled=false;
   if(isExamMode())setText("sessionHint","Answer saved. You can change it until you move to the next question.");
