@@ -57,6 +57,9 @@ function renderProfileMeta(){
  [blueprint.totalMarks+" marks",duration,blueprint.totalQuestions+" questions",blueprint.academicYear].forEach(value=>{
   const span=document.createElement("span");span.textContent=value;meta.appendChild(span);
  });
+ $("progress").textContent="0 / "+blueprint.totalQuestions+" answered";
+ const totalSeconds=blueprint.durationMinutes*60,h=String(Math.floor(totalSeconds/3600)).padStart(2,"0"),m=String(Math.floor(totalSeconds%3600/60)).padStart(2,"0"),s=String(totalSeconds%60).padStart(2,"0");
+ $("timer").textContent=h+":"+m+":"+s;
 }
 async function load(){
  try{
@@ -80,6 +83,7 @@ async function load(){
   ]);
   if(!b.ok||!q.ok||(practice&&!practice.ok))throw Error("The selected profile's blueprint or question bank is unavailable.");
   blueprint=await b.json();
+  blueprint.subjectTitle=blueprint.subjectTitle||profile.subjectTitle||blueprint.subjectName||blueprint.subjectId;
   const baseBank=await q.json(),practiceChapters=practice?await practice.json():null;
   if(String(blueprint.classId)!==String(profile.classId)||String(blueprint.subjectId)!==String(profile.subjectId))throw Error("The selected profile does not match its blueprint class and subject.");
   if(profile.subjectCode&&String(blueprint.subjectCode||"")!==String(profile.subjectCode))throw Error("The selected profile subject code does not match its blueprint.");
