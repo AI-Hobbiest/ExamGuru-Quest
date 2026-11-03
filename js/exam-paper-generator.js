@@ -32,6 +32,24 @@ function validateQuestion(q,path="question"){
   if(ids.some(x=>!x)||new Set(ids).size!==ids.length)e.push(path+".parts need unique IDs.");
   if(!q.parts.every(p=>p&&text(p.prompt)&&Number.isInteger(p.marks)&&p.marks>0))e.push(path+".parts need prompts and positive integer marks.");
   else if(sum(q.parts.map(p=>p.marks))!==q.marks)e.push(path+".parts marks must equal question marks.");
+  q.parts.forEach((part,partIndex)=>{
+   if(part&&part.alternatives!=null){
+    const alternativesPath=path+".parts["+partIndex+"].alternatives";
+    if(!Array.isArray(part.alternatives)||!part.alternatives.length)e.push(alternativesPath+" must be a non-empty array.");
+    else part.alternatives.forEach((alternative,alternativeIndex)=>{
+     const itemPath=alternativesPath+"["+alternativeIndex+"]";
+     if(!obj(alternative)||!text(alternative.prompt))e.push(itemPath+" needs a prompt.");
+     if(q.approvalStatus==="approved"){
+      if(!alternative||alternative.answerKey==null)e.push(itemPath+" needs an answerKey.");
+      const scheme=alternative&&alternative.markingScheme;
+      if(!Array.isArray(scheme)||!scheme.length||!scheme.every(m=>m&&text(m.criterion)&&Number.isInteger(m.marks)&&m.marks>0)||sum((scheme||[]).map(m=>Number(m.marks)||0))!==Number(part.marks))e.push(itemPath+" markingScheme must total exactly the part marks.");
+     }
+    });
+   }
+  });
+ }
+ if(q.assessmentLevels!=null){
+  if(!Array.isArray(q.assessmentLevels)||!q.assessmentLevels.length||!q.assessmentLevels.every(level=>text(level))||new Set(q.assessmentLevels).size!==q.assessmentLevels.length)e.push(path+".assessmentLevels must be a non-empty list of unique labels.");
  }
  if(q.type==="numerical"&&!obj(q.answerKey))e.push(path+".answerKey is required for numerical questions.");
  if(q.images!=null){
@@ -81,7 +99,7 @@ function validateQuestionBank(bank,expected={}){
  return{valid:e.length===0,errors:e};
 }
 function expandSlotPlan(bp){
- const out=[];(bp.slotPlan||[]).forEach((r,i)=>{for(let n=0;n<Number(r.count||1);n++)out.push({...clone(r),slotId:r.count>1?String(r.slotId)+"-"+(n+1):String(r.slotId||"slot-"+(i+1)),count:undefined});});return out;
+ const out=[];(bp.slotPlan||[]).forEach((r,i)=>{for(let n=0;n<Number(r.count||1);n++)out.push({...clone(r),slotId:r.count>1?String(r.slotId)+"-"+(n+1):String(r.slotId||"slot-"+(i+1)),assessmentLevel:r.assessmentLevel||bp.assessmentLevel||null,count:undefined});});return out;
 }
 function validateBlueprint(bp){
  const e=[];if(!obj(bp)||bp.schemaVersion!==1||bp.kind!=="exam-paper-blueprint")return{valid:false,readyForGeneration:false,errors:["Expected exam-paper-blueprint schemaVersion 1."]};
@@ -124,11 +142,15 @@ function seedRandom(seed){
 }
 function shuffle(a,r){const x=a.slice();for(let i=x.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[x[i],x[j]]=[x[j],x[i]];}return x;}
 function eligible(q,s){
+ const requiredPartMarks=Array.isArray(s.requiresPartInternalChoiceMarks)?s.requiresPartInternalChoiceMarks:[];
+ const hasRequiredPartChoices=requiredPartMarks.every(m=>Array.isArray(q.parts)&&q.parts.some(part=>Number(part.marks)===Number(m)&&Array.isArray(part.alternatives)&&part.alternatives.length>0));
  return q.approvalStatus==="approved"&&q.sectionId===s.sectionId&&q.marks===s.marks&&s.allowedTypes.includes(q.type)&&
  (!s.competency||q.competency===s.competency)&&(!s.difficulty||q.difficulty===s.difficulty)&&
  (!s.chapterIds||!s.chapterIds.length||s.chapterIds.includes(q.chapterId))&&
  (!s.unitId||q.unitId===s.unitId)&&
+ (!s.assessmentLevel||!Array.isArray(q.assessmentLevels)||q.assessmentLevels.includes(s.assessmentLevel))&&
  (!s.requiresInternalChoice||(Array.isArray(q.alternatives)&&q.alternatives.length>0))&&
+ hasRequiredPartChoices&&
  (!s.topicTags||!s.topicTags.length||s.topicTags.every(t=>(q.topicTags||[]).includes(t)));
 }
 function auditSlotCoverage(bp,bank,minimumCandidatesPerSlot=3){
@@ -200,6 +222,8 @@ function validatePaper(p,bp){
    if(slot.unitId&&q.unitId!==slot.unitId)e.push("Unit mismatch for "+q.slotId+".");
    if(slot.competency&&q.competency!==slot.competency)e.push("Competency mismatch for "+q.slotId+".");
    if(slot.requiresInternalChoice&&(!Array.isArray(q.alternatives)||!q.alternatives.length))e.push("Internal choice missing for "+q.slotId+".");
+   if(Array.isArray(slot.requiresPartInternalChoiceMarks))slot.requiresPartInternalChoiceMarks.forEach(m=>{if(!Array.isArray(q.parts)||!q.parts.some(part=>Number(part.marks)===Number(m)&&Array.isArray(part.alternatives)&&part.alternatives.length>0))e.push("Part-level internal choice missing for "+q.slotId+" ("+m+" marks).");});
+   if(slot.assessmentLevel&&Array.isArray(q.assessmentLevels)&&!q.assessmentLevels.includes(slot.assessmentLevel))e.push("Assessment-level mismatch for "+q.slotId+".");
   });
   if(seen.size!==bp.totalQuestions)e.push("Paper does not fill every blueprint slot.");
   for(const [field,key] of [["unitMarkTargets","unitId"],["competencyMarksTargets","competency"]]){

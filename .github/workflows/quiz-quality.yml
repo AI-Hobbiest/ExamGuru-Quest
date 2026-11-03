@@ -19,7 +19,7 @@ jobs:
       - name: Check assessment and Paper Studio workflow script syntax
         run: for file in js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js js/app-shell.js; do node --check "$file"; done
       - name: Validate audited Science paper blueprint, generation and rendering
-        run: node tests/assessment-manager.test.js && node tests/exam-paper-generator.test.js && node tests/exam-paper-renderer.test.js && node tests/exam-paper-release.test.js
+        run: node tests/assessment-manager.test.js && node tests/exam-paper-generator.test.js && node tests/mathematics-blueprints.test.js && node tests/exam-paper-renderer.test.js && node tests/exam-paper-release.test.js
       - name: Build shared Science bank from the maintained source
         run: node tests/build-science-bank-fixture.js
       - name: Validate existing Science MCQs in Exam Paper Studio
