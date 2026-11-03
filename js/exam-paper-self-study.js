@@ -35,8 +35,10 @@ async function load(){
   bank=integrated.bank;
   const coverage=integrated.stats.coverage;
   if(!coverage.valid)throw Error("Integrated question pool is not ready: "+coverage.errors.slice(0,5).join(" "));
-  paperHistory=readPaperHistory();\n  if(new URLSearchParams(location.search).get("delivery")==="latest"){$("startBtn").textContent="Start prepared paper";status("A frozen paper has been prepared for this browser. Start it when the student is signed in.");}
-  $("startBtn").disabled=false;status("Ready: "+integrated.stats.appended.toLocaleString()+" existing chapter-wise MCQs are integrated with the mixed-question pool. "+coverage.coverage.filter(s=>s.eligibleCount>=3).length+" of 39 slots are covered; 50 distinct complete papers are supported.");
+  paperHistory=readPaperHistory();
+  const preparedDelivery=new URLSearchParams(location.search).get("delivery")==="latest";
+  if(preparedDelivery){$("startBtn").textContent="Start prepared paper";$("startBtn").disabled=false;status("Prepared paper loaded. Sign in as the intended student and start when ready.");}
+  else{$("startBtn").disabled=false;status("Ready: "+integrated.stats.appended.toLocaleString()+" existing chapter-wise MCQs are integrated with the mixed-question pool. "+coverage.coverage.filter(s=>s.eligibleCount>=3).length+" of 39 slots are covered; 50 distinct complete papers are supported.");}
  }catch(e){status("Unable to prepare the paper: "+e.message);}
 }
 function makePaper(){
