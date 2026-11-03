@@ -60,4 +60,4 @@ for(const profile of profiles){
 }
 const bySection=bank.questions.reduce((a,q)=>(a[q.sectionId]=(a[q.sectionId]||0)+1,a),{});
 assert.deepEqual(bySection,{A:65,B:15,C:24,D:18,E:18});
-console.log("Mathematics bank tests passed: 137 approved candidates, all question types, all 14 chapters, Standard and Basic coverage (3+ per slot), and 50 distinct validated 80-mark papers per level.");
+console.log("Mathematics bank tests passed: 140 approved candidates, all question types, all 14 chapters, Standard and Basic coverage (3+ per slot), and 50 distinct validated 80-mark papers per level.");
