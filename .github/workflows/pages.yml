@@ -30,7 +30,7 @@ jobs:
           node tests/exam-paper-release.test.js
           node tests/exam-paper-renderer.test.js
           node tests/assessment-manager.test.js
-          node --check js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js
+          for file in js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js; do node --check "$file"; done
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
           node tests/learning-model.test.js
