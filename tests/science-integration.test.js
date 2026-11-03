@@ -56,6 +56,8 @@ assert.equal(new Set(integrated.bank.questions.map(q=>q.questionId)).size,integr
 const imported=integrated.bank.questions.filter(q=>q.source&&q.source.type==="practice-bank");
 assert.equal(imported.length,integrated.stats.appended,"every imported MCQ must retain practice-bank provenance");
 assert.ok(imported.every(q=>q.type==="mcq"&&q.marks===1&&q.options.length===4&&q.answerKey&&q.markingScheme.length===1));
+assert.ok(imported.every(q=>q.competencyTagStatus==="inferred"||q.competencyTagStatus==="author-confirmed"),"Exam Paper Studio must not use unreviewed low-confidence practice MCQs");
+assert.ok(imported.every(q=>q.competencyTagReason),"integrated MCQs must retain a reason for their competency label");
 assert.equal(new Set(integrated.bank.questions.map(q=>String(q.prompt).toLowerCase().replace(/[^a-z0-9]+/g," ").trim())).size,integrated.bank.questions.length,"the merged pool must not contain duplicate stems");
 const mcqSlots=blueprint.slotPlan.filter(slot=>slot.allowedTypes.includes("mcq"));
 assert.equal(mcqSlots.length,16,"the blueprint currently has 16 MCQ slots");
