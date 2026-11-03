@@ -70,4 +70,23 @@ assert.equal(paperSubmitted.attempts[0].hasWrittenResponses,true);
 assert.equal(paperSubmitted.attempts[0].evaluationStatus,"pending-manual-review");
 assert.throws(()=>manager.startPaper(paperAssignment.assignmentId,"student-2"),/allowed number of attempts/);
 
-console.log("Assessment manager tests passed: MCQ and full-paper assignments, frozen snapshots, student scoping, attempt limits and scoring/review state.");
+assert.throws(()=>manager.recordPaperEvaluation(paperAssignment.assignmentId,"parent-2",7,""),/not authorised/);
+assert.throws(()=>manager.recordPaperEvaluation(paperAssignment.assignmentId,"parent-1",11,""),/Enter marks/);
+const evaluated=manager.recordPaperEvaluation(paperAssignment.assignmentId,"parent-1",7,"Good method; improve the final explanation.");
+assert.equal(evaluated.status,"evaluated");
+assert.equal(evaluated.attempts[0].manualScore,7);
+assert.equal(evaluated.attempts[0].maxScore,10);
+assert.equal(evaluated.attempts[0].evaluationStatus,"evaluated");
+assert.match(evaluated.attempts[0].manualFeedback,/Good method/);
+const printable=manager.createPaperAssignment({
+ studentId:"student-3",parentId:"parent-1",classId:"10",title:"Handwritten Science",
+ subjectId:"science",subjectTitle:"Science",deliveryMode:"printable",paperSnapshot:{...paperSnapshot,paperId:"paper-2"}
+});
+assert.throws(()=>manager.startPaper(printable.assignmentId,"student-3"),/handwritten/);
+const offlineEvaluated=manager.recordPaperEvaluation(printable.assignmentId,"parent-1",8,"Strong written responses.");
+assert.equal(offlineEvaluated.status,"evaluated");
+assert.equal(offlineEvaluated.attempts[0].completionMode,"handwritten-offline");
+assert.equal(offlineEvaluated.attempts[0].manualScore,8);
+
+
+console.log("Assessment manager tests passed: MCQ and full-paper assignments, frozen snapshots, student scoping, attempt limits, auto-score and manual evaluation.");
