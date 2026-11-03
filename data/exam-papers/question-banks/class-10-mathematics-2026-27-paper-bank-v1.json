@@ -9,7 +9,7 @@
   "title": "ExamGuru Class 10 Mathematics Standard/Basic approved paper pool · 2026–27",
   "questionPoolStatus": "curated-approved-paper-pool",
   "minimumCandidatesPerSlot": 3,
-  "questionCount": 99,
+  "questionCount": 117,
   "reviewPoolUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",
   "questions": [
     {
@@ -5170,6 +5170,1182 @@
         }
       ],
       "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q32-SHARED-V1",
+      "sectionId": "D",
+      "chapterId": "pair-of-linear-equations-in-two-variables",
+      "unitId": "algebra",
+      "topicTags": [
+        "pair-of-linear-equations-in-two-variables",
+        "algebra",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "At a school event, 50 tickets were sold. An adult ticket cost ₹120 and a child ticket cost ₹80. The total collection was ₹5,200. Form a pair of linear equations and find the numbers of adult and child tickets sold.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Let x and y be adult and child tickets. x + y = 50 and 120x + 80y = 5200. Substituting y = 50 − x gives 40x = 1200, so x = 30 and y = 20."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Define variables and form x + y = 50",
+          "marks": 1
+        },
+        {
+          "criterion": "Form 120x + 80y = 5200",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute one equation into the other",
+          "marks": 1
+        },
+        {
+          "criterion": "Solve to obtain x = 30",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain y = 20 and state both numbers",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q32-SHARED-V2",
+      "sectionId": "D",
+      "chapterId": "pair-of-linear-equations-in-two-variables",
+      "unitId": "algebra",
+      "topicTags": [
+        "pair-of-linear-equations-in-two-variables",
+        "algebra",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A cinema sold 80 tickets. Adult tickets cost ₹70 and student tickets cost ₹40. The total revenue was ₹4,400. Find how many of each type were sold.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Let a and s be adult and student tickets. a + s = 80 and 70a + 40s = 4400. Substituting s = 80 − a gives 30a = 1200, so a = 40 and s = 40."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Define variables and form a + s = 80",
+          "marks": 1
+        },
+        {
+          "criterion": "Form 70a + 40s = 4400",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute s = 80 − a",
+          "marks": 1
+        },
+        {
+          "criterion": "Solve a = 40",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain s = 40",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q32-SHARED-V3",
+      "sectionId": "D",
+      "chapterId": "pair-of-linear-equations-in-two-variables",
+      "unitId": "algebra",
+      "topicTags": [
+        "pair-of-linear-equations-in-two-variables",
+        "algebra",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "The sum of the digits of a two-digit number is 11. The number is 27 greater than the number formed by reversing its digits. Find the original number.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Let x be the tens digit and y the units digit. x + y = 11. Also 10x + y − (10y + x) = 27, so x − y = 3. Solving gives x = 7, y = 4; the number is 74."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Define tens and units digits; form x + y = 11",
+          "marks": 1
+        },
+        {
+          "criterion": "Form the reversed-number difference equation",
+          "marks": 1
+        },
+        {
+          "criterion": "Simplify to x − y = 3",
+          "marks": 1
+        },
+        {
+          "criterion": "Solve x = 7 and y = 4",
+          "marks": 1
+        },
+        {
+          "criterion": "State the original number 74",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q33-STANDARD-V1",
+      "sectionId": "D",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "algebra",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A savings plan deposits ₹12 in the first week and increases the deposit by ₹5 each week. Find the deposit in week 17 and the total deposited in the first 17 weeks.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "a = 12, d = 5. a₁₇ = 12 + 16×5 = ₹92. S₁₇ = 17/2[2(12)+16(5)] = 17/2×104 = ₹884."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify a = 12, d = 5 and n = 17",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate the 17th deposit as ₹92",
+          "marks": 1
+        },
+        {
+          "criterion": "Use the AP sum formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute a, d and n correctly",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain total ₹884",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q33-STANDARD-V2",
+      "sectionId": "D",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "algebra",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A theatre has 15 seats in the first row and each next row has 2 more seats than the previous row. Find the seats in row 20 and the total seats in the first 20 rows.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "a = 15, d = 2. a₂₀ = 15 + 19×2 = 53. S₂₀ = 20/2[2(15)+19(2)] = 10×68 = 680 seats."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify a = 15 and d = 2",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate the 20th row as 53 seats",
+          "marks": 1
+        },
+        {
+          "criterion": "Write the AP sum formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute values correctly",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 680 seats",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q33-STANDARD-V3",
+      "sectionId": "D",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "algebra",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A charity collects ₹100 on day one and increases the collection by ₹20 each day. Find the collection on day 15 and the total collected in 15 days.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "a = 100, d = 20. a₁₅ = 100 + 14×20 = ₹380. S₁₅ = 15/2[2(100)+14(20)] = 15/2×480 = ₹3,600."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify a = 100 and d = 20",
+          "marks": 1
+        },
+        {
+          "criterion": "Find day 15 collection ₹380",
+          "marks": 1
+        },
+        {
+          "criterion": "Apply the AP sum formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute values correctly",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain total ₹3,600",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q33-BASIC-V1",
+      "sectionId": "D",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "algebra",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "For the AP 4, 9, 14, 19, …, find the 20th term and the sum of the first 20 terms.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "a = 4, d = 5. a₂₀ = 4 + 19×5 = 99. S₂₀ = 20/2[2(4)+19(5)] = 10×103 = 1030."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify a = 4 and d = 5",
+          "marks": 1
+        },
+        {
+          "criterion": "Find a₂₀ = 99",
+          "marks": 1
+        },
+        {
+          "criterion": "Write the sum formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute values",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain S₂₀ = 1030",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q33-BASIC-V2",
+      "sectionId": "D",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "algebra",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "An AP has first term 7 and common difference 3. Find its 25th term and the sum of its first 25 terms.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "a₂₅ = 7 + 24×3 = 79. S₂₅ = 25/2[2(7)+24(3)] = 25/2×86 = 1075."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify a, d and n",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate the 25th term as 79",
+          "marks": 1
+        },
+        {
+          "criterion": "Use the AP sum formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute values",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain S₂₅ = 1075",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q33-BASIC-V3",
+      "sectionId": "D",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "algebra",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "The nth term of an AP is aₙ = 6 + (n − 1)4. Find the first term, common difference and 15th term.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Comparing with aₙ = a + (n − 1)d gives a = 6 and d = 4. a₁₅ = 6 + 14×4 = 62."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify first term a = 6",
+          "marks": 1
+        },
+        {
+          "criterion": "Identify common difference d = 4",
+          "marks": 1
+        },
+        {
+          "criterion": "Write the 15th-term expression",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute n = 15",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 62",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q34-STANDARD-V1",
+      "sectionId": "D",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Prove that the ratio of the areas of two similar triangles is equal to the square of the ratio of their corresponding sides. Hence find the area ratio if corresponding sides are 3:5.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "For similar triangles, corresponding altitudes are in the same ratio as corresponding sides. Using area = ½×base×height, the area ratio is the product of two equal side ratios, so it is the square of the side ratio. Thus 3²:5² = 9:25."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use similarity to establish proportional corresponding sides and altitudes",
+          "marks": 1
+        },
+        {
+          "criterion": "Express the area ratio using base × altitude",
+          "marks": 1
+        },
+        {
+          "criterion": "Derive the square of the side ratio",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute 3:5",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 9:25",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Two similar triangles have corresponding sides in ratio 4:7. If the smaller area is 48 cm², find the larger area.",
+          "answerKey": {
+            "modelAnswer": "Area ratio = 4²:7² = 16:49. If 16 parts = 48 cm², one part = 3 cm²; larger area = 49×3 = 147 cm²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Square the side ratio to get 16:49",
+              "marks": 1
+            },
+            {
+              "criterion": "Relate 16 parts to 48 cm²",
+              "marks": 1
+            },
+            {
+              "criterion": "Find one part as 3 cm²",
+              "marks": 1
+            },
+            {
+              "criterion": "Multiply by 49",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 147 cm²",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q34-STANDARD-V2",
+      "sectionId": "D",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "In ΔABC, DE ∥ BC. Prove that ΔADE ~ ΔABC and hence show that AD/AB = AE/AC = DE/BC.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "Since DE ∥ BC, alternate interior angles give ∠ADE = ∠ABC and ∠AED = ∠ACB. ∠A is common. Thus ΔADE ~ ΔABC by AA, so corresponding sides are proportional."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use parallel lines to establish one pair of equal angles",
+          "marks": 1
+        },
+        {
+          "criterion": "Establish the second pair of equal angles",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude AA similarity",
+          "marks": 1
+        },
+        {
+          "criterion": "Identify corresponding sides correctly",
+          "marks": 1
+        },
+        {
+          "criterion": "Write the proportionality result",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "In ΔABC, D and E lie on AB and AC. If AD/DB = AE/EC, prove that DE ∥ BC.",
+          "answerKey": {
+            "modelAnswer": "Given AD/DB = AE/EC. By the converse of the Basic Proportionality Theorem, DE is parallel to BC."
+          },
+          "markingScheme": [
+            {
+              "criterion": "State the given equal ratios",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify the two sides being divided",
+              "marks": 1
+            },
+            {
+              "criterion": "State the converse of BPT",
+              "marks": 1
+            },
+            {
+              "criterion": "Apply it to the two sides",
+              "marks": 1
+            },
+            {
+              "criterion": "Conclude DE ∥ BC",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q34-STANDARD-V3",
+      "sectionId": "D",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Two similar triangles have perimeters 36 cm and 60 cm. If a corresponding side of the smaller triangle is 9 cm, find the corresponding larger side and their area ratio.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "Perimeter ratio = 36:60 = 3:5, equal to the corresponding-side ratio. Larger side = 9×5/3 = 15 cm. Area ratio = 3²:5² = 9:25."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Simplify perimeter ratio to 3:5",
+          "marks": 1
+        },
+        {
+          "criterion": "Use the ratio to calculate the larger side",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 15 cm",
+          "marks": 1
+        },
+        {
+          "criterion": "Square the ratio for areas",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 9:25",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "The areas of two similar triangles are 25 cm² and 49 cm². Find the ratio of their corresponding sides.",
+          "answerKey": {
+            "modelAnswer": "The side ratio is the square root of the area ratio: √25:√49 = 5:7."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Write area ratio 25:49",
+              "marks": 1
+            },
+            {
+              "criterion": "Use the square relationship",
+              "marks": 1
+            },
+            {
+              "criterion": "Take square roots",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain side ratio 5:7",
+              "marks": 1
+            },
+            {
+              "criterion": "State the result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q34-BASIC-V1",
+      "sectionId": "D",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "State the AA similarity criterion and explain why two triangles with two pairs of equal corresponding angles are similar.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "If two angles of one triangle equal two angles of another, the third angles are also equal because the angle sum is 180°. Thus the triangles are similar by AA."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State the two equal corresponding angles",
+          "marks": 1
+        },
+        {
+          "criterion": "Use the 180° angle sum to infer the third pair",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude similarity by AA",
+          "marks": 1
+        },
+        {
+          "criterion": "State corresponding angles are equal",
+          "marks": 1
+        },
+        {
+          "criterion": "State corresponding sides are proportional",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "State the SSS similarity criterion. Show that triangles with sides 3, 4, 5 cm and 6, 8, 10 cm are similar.",
+          "answerKey": {
+            "modelAnswer": "3/6 = 4/8 = 5/10 = 1/2. Hence the triangles are similar by SSS."
+          },
+          "markingScheme": [
+            {
+              "criterion": "State proportional-side condition",
+              "marks": 1
+            },
+            {
+              "criterion": "Write the three side ratios",
+              "marks": 1
+            },
+            {
+              "criterion": "Show all are 1/2",
+              "marks": 1
+            },
+            {
+              "criterion": "Apply SSS similarity",
+              "marks": 1
+            },
+            {
+              "criterion": "State that the triangles are similar",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q34-BASIC-V2",
+      "sectionId": "D",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "State the Basic Proportionality Theorem. If DE ∥ BC in ΔABC, write the relation between AD, DB, AE and EC.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "A line drawn parallel to one side of a triangle divides the other two sides in the same ratio. Therefore AD/DB = AE/EC."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State the parallel-line condition",
+          "marks": 1
+        },
+        {
+          "criterion": "State that it divides the other sides",
+          "marks": 1
+        },
+        {
+          "criterion": "Write AD/DB = AE/EC",
+          "marks": 1
+        },
+        {
+          "criterion": "Use the correct corresponding segments",
+          "marks": 1
+        },
+        {
+          "criterion": "State the theorem clearly",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "State the converse of the Basic Proportionality Theorem and write its conclusion for AD/DB = AE/EC.",
+          "answerKey": {
+            "modelAnswer": "If a line divides two sides of a triangle in the same ratio, it is parallel to the third side. Thus DE ∥ BC."
+          },
+          "markingScheme": [
+            {
+              "criterion": "State equal-ratio condition",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify the two sides",
+              "marks": 1
+            },
+            {
+              "criterion": "State converse of BPT",
+              "marks": 1
+            },
+            {
+              "criterion": "Apply it to the triangle",
+              "marks": 1
+            },
+            {
+              "criterion": "Conclude DE ∥ BC",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q34-BASIC-V3",
+      "sectionId": "D",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "If ΔABC ~ ΔPQR and AB/PQ = 2/3, write the ratios of the other corresponding sides and the ratio of their perimeters.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "BC/QR = AC/PR = 2/3. The ratio of their perimeters is also 2/3."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify corresponding vertices",
+          "marks": 1
+        },
+        {
+          "criterion": "Write AB/PQ = 2/3",
+          "marks": 1
+        },
+        {
+          "criterion": "Write BC/QR = 2/3",
+          "marks": 1
+        },
+        {
+          "criterion": "Write AC/PR = 2/3",
+          "marks": 1
+        },
+        {
+          "criterion": "State perimeter ratio 2/3",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "If the corresponding sides of two similar triangles are in ratio 5:8, write their area ratio.",
+          "answerKey": {
+            "modelAnswer": "Area ratio = 5²:8² = 25:64."
+          },
+          "markingScheme": [
+            {
+              "criterion": "State square relationship",
+              "marks": 1
+            },
+            {
+              "criterion": "Square 5",
+              "marks": 1
+            },
+            {
+              "criterion": "Square 8",
+              "marks": 1
+            },
+            {
+              "criterion": "Write 25:64",
+              "marks": 1
+            },
+            {
+              "criterion": "State the ratio",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q35-SHARED-V1",
+      "sectionId": "D",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "For an acute angle θ, prove that (sec θ − tan θ)(sec θ + tan θ) = 1.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "The left side is sec²θ − tan²θ. Using sec²θ = 1 + tan²θ gives 1."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Expand using difference of squares",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain sec²θ − tan²θ",
+          "marks": 1
+        },
+        {
+          "criterion": "State the identity sec²θ − tan²θ = 1",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute the identity",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude the required result",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "For an acute angle θ, prove that (1 − sin θ)(1 + sin θ) = cos²θ.",
+          "answerKey": {
+            "modelAnswer": "The left side is 1 − sin²θ. Using sin²θ + cos²θ = 1 gives cos²θ."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Apply difference of squares",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 1 − sin²θ",
+              "marks": 1
+            },
+            {
+              "criterion": "Use the Pythagorean identity",
+              "marks": 1
+            },
+            {
+              "criterion": "Replace with cos²θ",
+              "marks": 1
+            },
+            {
+              "criterion": "Conclude the identity",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q35-SHARED-V2",
+      "sectionId": "D",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Verify the claim that (1 + tan²θ)cos²θ = 1 for an acute angle θ.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "1 + tan²θ = sec²θ = 1/cos²θ. Therefore (1 + tan²θ)cos²θ = 1."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State 1 + tan²θ = sec²θ",
+          "marks": 1
+        },
+        {
+          "criterion": "Write sec²θ = 1/cos²θ",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute into the expression",
+          "marks": 1
+        },
+        {
+          "criterion": "Cancel cos²θ",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 1",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Prove that (sec θ + tan θ)(1 − sin θ) = cos θ for acute θ.",
+          "answerKey": {
+            "modelAnswer": "sec θ + tan θ = (1 + sin θ)/cos θ. Multiplying by (1 − sin θ) gives (1 − sin²θ)/cos θ = cos θ."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Rewrite sec θ + tan θ over cos θ",
+              "marks": 1
+            },
+            {
+              "criterion": "Multiply by (1 − sin θ)",
+              "marks": 1
+            },
+            {
+              "criterion": "Use difference of squares",
+              "marks": 1
+            },
+            {
+              "criterion": "Use 1 − sin²θ = cos²θ",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain cos θ",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q35-SHARED-V3",
+      "sectionId": "D",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "long-answer"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Given sin θ = 3/5 for an acute angle, evaluate whether tan θ and sin θ/(1 − cos θ) are equal.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "cos θ = 4/5. tan θ = 3/4, while sin θ/(1 − cos θ) = (3/5)/(1/5) = 3. They are not equal."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Find cos θ = 4/5",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate tan θ = 3/4",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate the second expression as 3",
+          "marks": 1
+        },
+        {
+          "criterion": "Compare the values",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude they are not equal",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Test the claim sin θ + cos θ = 1 at θ = 45°.",
+          "answerKey": {
+            "modelAnswer": "At 45°, sin θ + cos θ = 1/√2 + 1/√2 = √2 ≠ 1, so the claim is false."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Use sin 45° = 1/√2",
+              "marks": 1
+            },
+            {
+              "criterion": "Use cos 45° = 1/√2",
+              "marks": 1
+            },
+            {
+              "criterion": "Add the values",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain √2",
+              "marks": 1
+            },
+            {
+              "criterion": "Conclude the claim is false",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; model answer and step-wise marking points checked.",
       "source": {
         "type": "original",
         "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
