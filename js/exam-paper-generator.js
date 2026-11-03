@@ -239,7 +239,7 @@ function adaptPracticeMcqBank(practiceChapters,bp){
  if(!blueprintCheck.valid||!blueprintCheck.readyForGeneration)throw Error("Cannot map practice MCQs until the Science blueprint is valid and ready.");
  const slotRows=bp.slotPlan||[];
  const chapterIds=[...new Set(slotRows.flatMap(s=>Array.isArray(s.chapterIds)?s.chapterIds:[]))];
- const questions=[],excluded={outOfSummativeScope:0,ambiguousChapter:0,invalidQuestion:0,unsupportedCompetency:0},invalidReasons={missingPrompt:0,optionCount:0,emptyOptionText:0,duplicateOptionIds:0,badAnswer:0,missingExplanation:0,emptyStem:0,duplicateSourceId:0,duplicateSourceStem:0};
+ const questions=[],excluded={outOfSummativeScope:0,ambiguousChapter:0,invalidQuestion:0,unsupportedCompetency:0,needsReview:0},invalidReasons={missingPrompt:0,optionCount:0,emptyOptionText:0,duplicateOptionIds:0,badAnswer:0,missingExplanation:0,emptyStem:0,duplicateSourceId:0,duplicateSourceStem:0};
  const byChapter={},byCompetency={"knowledge-understanding":0,"application":0,"analysis-evaluation-creation":0};
  const usedIds=new Set(),usedStems=new Set();
  const slug=value=>String(value||"").normalize("NFKD").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
@@ -277,10 +277,10 @@ function adaptPracticeMcqBank(practiceChapters,bp){
    if(usedIds.has(id)){invalidReasons.duplicateSourceId++;invalid=true;}
    if(usedStems.has(stem)){invalidReasons.duplicateSourceStem++;invalid=true;}
    if(invalid){excluded.invalidQuestion++;return;}
+   usedIds.add(id);usedStems.add(stem);
    const tagged=inferMcqCompetency(q);
    if(String(q.competencyTagStatus||"") === "needs-review"){excluded.needsReview++;return;}
    if(!COMPETENCIES.includes(tagged.competency)){excluded.unsupportedCompetency++;return;}
-   usedIds.add(id);usedStems.add(stem);
    const correct=opts[answer],letter=String(correct.optionId);
    const question={
     questionId:id,sectionId:sections[0],chapterId,unitId:units[0],topicTags:["mcq","practice-bank",chapterId],
