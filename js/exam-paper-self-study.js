@@ -82,7 +82,9 @@ function makePaper(){
   const seed="self-study-"+Date.now()+"-"+Math.random().toString(36).slice(2);
   paper=C10ExamPaperGenerator.generateUniquePaper(blueprint,bank,{seed,title:"CBSE Class 10 Science · Self-study Paper",recentPaperFingerprints,recentQuestionIds:recentMcqQuestionIds,uniqueSearchAttempts:500});
  }
- answers=resumeAttempt&&resumeAttempt.paperId===paper.paperId?JSON.parse(JSON.stringify(resumeAttempt.answers||{})):{};submitted=false;remaining=blueprint.durationMinutes*60;
+ const assignedRemaining=assignedPaper?remaining:blueprint.durationMinutes*60;
+ answers=resumeAttempt&&resumeAttempt.paperId===paper.paperId?JSON.parse(JSON.stringify(resumeAttempt.answers||{})):{};
+ submitted=false;remaining=assignedRemaining;
  const questionIds=paper.questions.map(q=>String(q.questionId));
  const fingerprint=paper.paperFingerprint||C10ExamPaperGenerator.paperFingerprint(paper);
  const alreadyRecorded=paperHistory.some(item=>item.paperId===paper.paperId||item.fingerprint===fingerprint);
