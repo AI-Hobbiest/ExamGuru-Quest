@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "kind": "exam-paper-content-audit",
+  "auditId": "class-10-mathematics-paper-pool-audit-2026-27-v1",
+  "sourcePools": [
+    "data/mathematics.json",
+    "data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json"
+  ],
+  "approvedPaperPool": "data/exam-papers/question-banks/class-10-mathematics-2026-27-paper-bank-v1.json",
+  "summary": {
+    "approvedCandidateQuestions": 135,
+    "minimumCandidatesPerSlot": 3,
+    "standardProfileSlots": 38,
+    "basicProfileSlots": 38,
+    "selectedSourceMcqs": 54,
+    "originalAssertionReason": 6,
+    "originalWrittenAndCaseBased": 75,
+    "caseStudyCount": 18,
+    "caseStudyPartChoiceCount": 18,
+    "internalChoiceQuestionCount": 18,
+    "uniqueQuestionIds": 135,
+    "allApproved": true
+  },
+  "checks": {
+    "structuralValidation": "Tested by the shared ExamPaperGenerator.validateQuestionBank",
+    "answerAndMarkingScheme": "All curated items have answer keys and mark schemes whose marks equal the paper slot; assertion-reason keys, numeric worked steps, alternatives and case-study part marks are included.",
+    "slotCoverage": "Regression test runs auditSlotCoverage independently for Standard and Basic with minimum 3 approved candidates per slot.",
+    "paperGeneration": "Regression test generates 50 distinct complete papers per profile and validates every generated paper.",
+    "assessmentLevel": "Shared questions are tagged for both profiles; seven profile-specific competency differences have separate candidate groups."
+  },
+  "limitations": [
+    "The larger 1,394-item imported MCQ review pool remains outside the approved paper pool until its answer keys, duplication, syllabus scope and competency tags receive item-level review.",
+    "The 50-paper regression proves structural generation and combinatorial uniqueness; it does not replace teacher moderation of every generated paper.",
+    "Standard and Basic profile publication remains disabled until final CBSE sample-paper/marking-scheme reconciliation and content moderation are complete."
+  ],
+  "countsByType": {
+    "mcq": 54,
+    "assertion-reason": 6,
+    "very-short-answer": 15,
+    "short-answer": 24,
+    "long-answer": 18,
+    "case-based": 18
+  }
+}
