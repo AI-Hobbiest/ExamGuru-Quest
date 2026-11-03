@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#ece8fa">
-<meta name="description" content="Timed CBSE Class 10 Science self-study examination practice.">
+<meta name="description" content="Timed, subject-specific CBSE examination practice across verified exam profiles.">
 <title>Exam Paper Practice | ExamGuru Quest</title>
 <link rel="stylesheet" href="./css/branding.css?v=controls1">
 <link rel="stylesheet" href="./css/app-shell.css">
@@ -21,8 +21,9 @@
 <main class="exam-wrap">
 <section class="exam-hero"><div class="exam-kicker">EXAMGURU QUEST · SELF STUDY</div><h1>Exam Paper Practice</h1><p>Attempt a timed CBSE-style paper, save your answers in this browser, and review your work after submission.</p></section>
 <section class="exam-card" id="setup">
-<h2>Class 10 · Science (086)</h2><div class="exam-meta"><span>80 marks</span><span>3 hours</span><span>39 questions</span><span>Academic year 2026–27</span></div>
-<p class="exam-muted">This is the currently supported exam-paper profile. More classes and subjects will be added after their blueprints and question pools are verified.</p>
+<div id="profileSelectWrap" hidden><label for="profileSelect">Exam profile</label> <select id="profileSelect" class="exam-btn secondary" aria-label="Choose exam profile"></select></div>
+<h2 id="profileTitle">Loading exam profile…</h2><div id="profileMeta" class="exam-meta"></div>
+<p id="profileDescription" class="exam-muted">Preparing the selected exam profile.</p>
 <div id="loadStatus" class="exam-muted" role="status">Loading approved blueprint and question pool…</div>
 <div class="exam-actions"><button class="exam-btn" id="startBtn" disabled>Generate & start paper</button></div>
 </section>
