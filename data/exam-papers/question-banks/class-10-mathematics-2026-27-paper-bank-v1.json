@@ -9,7 +9,7 @@
   "title": "ExamGuru Class 10 Mathematics Standard/Basic approved paper pool · 2026–27",
   "questionPoolStatus": "curated-approved-paper-pool",
   "minimumCandidatesPerSlot": 3,
-  "questionCount": 117,
+  "questionCount": 135,
   "reviewPoolUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",
   "questions": [
     {
@@ -6349,6 +6349,1824 @@
       "source": {
         "type": "original",
         "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q36-STANDARD-V1",
+      "sectionId": "E",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "geometry",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "Tangents PA and PB are drawn from an external point P to a circle with centre O. OP = 13 cm and radius OA = 5 cm.",
+      "stimulus": "A circular park has centre O. From a point P outside the park, two straight paths PA and PB touch the circular boundary at A and B. OP is 13 cm and the radius is 5 cm.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "State the angle between OA and tangent PA.",
+          "marks": 1,
+          "answerKey": "90°.",
+          "markingScheme": [
+            {
+              "criterion": "90°",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What is the relationship between PA and PB?",
+          "marks": 1,
+          "answerKey": "PA = PB because tangents from the same external point are equal.",
+          "markingScheme": [
+            {
+              "criterion": "PA = PB",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Calculate the length of PA.",
+          "marks": 2,
+          "answerKey": "OA ⟂ PA, so OP² = OA² + PA². PA = √(13² − 5²) = 12 cm.",
+          "markingScheme": [
+            {
+              "criterion": "Use the right triangle and Pythagoras",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain PA = 12 cm",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "If OP = 10 cm and the radius is 6 cm, find the tangent length.",
+              "answerKey": "PA = √(10² − 6²) = 8 cm.",
+              "markingScheme": [
+                {
+                  "criterion": "Apply Pythagoras",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain 8 cm",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) 90°.\n(b) PA = PB because tangents from the same external point are equal.\n(c) OA ⟂ PA, so OP² = OA² + PA². PA = √(13² − 5²) = 12 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q36-STANDARD-V2",
+      "sectionId": "E",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "geometry",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "Two tangents from P touch a circular garden at A and B. OP = 25 m and the garden's radius is 7 m.",
+      "stimulus": "The garden is circular with centre O. Two straight footpaths from an observation point P touch the garden boundary at A and B. OP is 25 m and OA is 7 m.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Name the theorem relating OA and PA.",
+          "marks": 1,
+          "answerKey": "The radius at the point of contact is perpendicular to the tangent.",
+          "markingScheme": [
+            {
+              "criterion": "Radius–tangent perpendicularity theorem",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Compare the lengths PA and PB.",
+          "marks": 1,
+          "answerKey": "PA = PB.",
+          "markingScheme": [
+            {
+              "criterion": "PA = PB",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Find the length of each path.",
+          "marks": 2,
+          "answerKey": "PA = √(25² − 7²) = √576 = 24 m.",
+          "markingScheme": [
+            {
+              "criterion": "Apply Pythagoras in right triangle OAP",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 24 m",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "If OP = 17 m and the radius is 8 m, find the tangent length.",
+              "answerKey": "PA = √(17² − 8²) = √225 = 15 m.",
+              "markingScheme": [
+                {
+                  "criterion": "Apply Pythagoras",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain 15 m",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) The radius at the point of contact is perpendicular to the tangent.\n(b) PA = PB.\n(c) PA = √(25² − 7²) = √576 = 24 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q36-STANDARD-V3",
+      "sectionId": "E",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "geometry",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "Two tangents from P touch a circle at A and B. The angle between the tangents is 60°.",
+      "stimulus": "A circular plaza has centre O. Two tangents PA and PB are drawn from an external point P, and ∠APB = 60°.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "State the angle between OA and PA.",
+          "marks": 1,
+          "answerKey": "90°.",
+          "markingScheme": [
+            {
+              "criterion": "90°",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "State whether PA and PB are equal, with a reason.",
+          "marks": 1,
+          "answerKey": "Yes. Tangents from the same external point are equal.",
+          "markingScheme": [
+            {
+              "criterion": "PA = PB with the equal tangents theorem",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Find the central angle ∠AOB.",
+          "marks": 2,
+          "answerKey": "In quadrilateral OAPB, angles at A and B are 90° each and at P is 60°. Thus ∠AOB = 360° − 90° − 90° − 60° = 120°.",
+          "markingScheme": [
+            {
+              "criterion": "Use the two right angles at A and B",
+              "marks": 1
+            },
+            {
+              "criterion": "Use the quadrilateral angle sum to obtain 120°",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "If the angle between the two tangents is 80°, find ∠AOB.",
+              "answerKey": "∠AOB = 360° − 90° − 90° − 80° = 100°.",
+              "markingScheme": [
+                {
+                  "criterion": "Use the two right angles",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain central angle 100°",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) 90°.\n(b) Yes. Tangents from the same external point are equal.\n(c) In quadrilateral OAPB, angles at A and B are 90° each and at P is 60°. Thus ∠AOB = 360° − 90° − 90° − 60° = 120°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q36-BASIC-V1",
+      "sectionId": "E",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "geometry",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "Two tangents PA and PB are drawn from P to a circle with centre O. OP = 13 cm and the radius is 5 cm.",
+      "stimulus": "A circle has centre O and radius 5 cm. P is an external point 13 cm from O, and PA and PB are tangents.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What is the angle between OA and PA?",
+          "marks": 1,
+          "answerKey": "90°.",
+          "markingScheme": [
+            {
+              "criterion": "90°",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Write the relation between PA and PB.",
+          "marks": 1,
+          "answerKey": "PA = PB.",
+          "markingScheme": [
+            {
+              "criterion": "PA = PB",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Find PA.",
+          "marks": 2,
+          "answerKey": "PA = √(13² − 5²) = 12 cm.",
+          "markingScheme": [
+            {
+              "criterion": "Apply Pythagoras",
+              "marks": 1
+            },
+            {
+              "criterion": "Find PA = 12 cm",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "If OP = 10 cm and the radius is 6 cm, find PA.",
+              "answerKey": "PA = √(100 − 36) = 8 cm.",
+              "markingScheme": [
+                {
+                  "criterion": "Apply Pythagoras",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Find PA = 8 cm",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) 90°.\n(b) PA = PB.\n(c) PA = √(13² − 5²) = 12 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q36-BASIC-V2",
+      "sectionId": "E",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "geometry",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "From an external point P, tangents touch a circle at A and B. OP = 17 cm and the radius is 8 cm.",
+      "stimulus": "A circular fountain has centre O. The distance OP from the centre to a point outside the fountain is 17 m; its radius is 8 m.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which segment is perpendicular to tangent PA at A?",
+          "marks": 1,
+          "answerKey": "OA.",
+          "markingScheme": [
+            {
+              "criterion": "OA",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Write the equality relating the two tangent lengths.",
+          "marks": 1,
+          "answerKey": "PA = PB.",
+          "markingScheme": [
+            {
+              "criterion": "PA = PB",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Calculate the tangent length PA.",
+          "marks": 2,
+          "answerKey": "PA = √(17² − 8²) = √225 = 15 m.",
+          "markingScheme": [
+            {
+              "criterion": "Use Pythagoras",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 15 m",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "If OP = 25 m and radius = 7 m, calculate the tangent length.",
+              "answerKey": "PA = √(25² − 7²) = √576 = 24 m.",
+              "markingScheme": [
+                {
+                  "criterion": "Use Pythagoras",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain 24 m",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) OA.\n(b) PA = PB.\n(c) PA = √(17² − 8²) = √225 = 15 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q36-BASIC-V3",
+      "sectionId": "E",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "geometry",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "Tangents PA and PB are drawn from the same external point P. Their lengths are 3x + 2 and 5x − 8.",
+      "stimulus": "A student measures two tangent segments from an external point P to a circle and represents their lengths as 3x + 2 and 5x − 8.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "State the theorem that compares the two tangent lengths.",
+          "marks": 1,
+          "answerKey": "Tangents drawn from the same external point to a circle are equal.",
+          "markingScheme": [
+            {
+              "criterion": "Equal tangents theorem",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Write the equation that follows.",
+          "marks": 1,
+          "answerKey": "3x + 2 = 5x − 8.",
+          "markingScheme": [
+            {
+              "criterion": "3x + 2 = 5x − 8",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Find x and the common tangent length.",
+          "marks": 2,
+          "answerKey": "3x + 2 = 5x − 8 gives x = 5. Substitution gives both lengths as 17 units.",
+          "markingScheme": [
+            {
+              "criterion": "Solve to find x = 5",
+              "marks": 1
+            },
+            {
+              "criterion": "Substitute to obtain the common length 17",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "If the tangent lengths are 4x − 1 and 2x + 7, find x and their common length.",
+              "answerKey": "4x − 1 = 2x + 7 gives x = 4; the common length is 15 units.",
+              "markingScheme": [
+                {
+                  "criterion": "Solve to find x = 4",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Substitute to obtain 15 units",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Tangents drawn from the same external point to a circle are equal.\n(b) 3x + 2 = 5x − 8.\n(c) 3x + 2 = 5x − 8 gives x = 5. Substitution gives both lengths as 17 units."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q37-STANDARD-V1",
+      "sectionId": "E",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mensuration",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A model set contains a cylinder, a cone and a sphere. Use the stated dimensions to answer the questions.",
+      "stimulus": "Cylinder P has radius 3 cm and height 5 cm. Cone Q has radius 3 cm and height 12 cm. Sphere R has radius 3 cm.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write the formula for the volume of a cylinder.",
+          "marks": 1,
+          "answerKey": "V = πr²h.",
+          "markingScheme": [
+            {
+              "criterion": "V = πr²h",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Write the formula for the volume of a cone.",
+          "marks": 1,
+          "answerKey": "V = (1/3)πr²h.",
+          "markingScheme": [
+            {
+              "criterion": "V = (1/3)πr²h",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Calculate the volume of cylinder P.",
+          "marks": 2,
+          "answerKey": "V = π × 3² × 5 = 45π cm³.",
+          "markingScheme": [
+            {
+              "criterion": "Substitute r = 3 and h = 5",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 45π cm³",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "Calculate the volume of cone Q.",
+              "answerKey": "V = (1/3)π × 3² × 12 = 36π cm³.",
+              "markingScheme": [
+                {
+                  "criterion": "Use the cone volume formula",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain 36π cm³",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) V = πr²h.\n(b) V = (1/3)πr²h.\n(c) V = π × 3² × 5 = 45π cm³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q37-STANDARD-V2",
+      "sectionId": "E",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mensuration",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A geometry model uses a sphere and a cylinder. Students compare their surface-area and volume formulae.",
+      "stimulus": "The sphere has radius 4 cm. The cylinder has radius 2 cm and height 7 cm.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "State the total surface area formula for a sphere.",
+          "marks": 1,
+          "answerKey": "TSA = 4πr².",
+          "markingScheme": [
+            {
+              "criterion": "4πr²",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "State the curved surface area formula for a cylinder.",
+          "marks": 1,
+          "answerKey": "CSA = 2πrh.",
+          "markingScheme": [
+            {
+              "criterion": "2πrh",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Find the volume of the sphere.",
+          "marks": 2,
+          "answerKey": "V = (4/3)π × 4³ = (256/3)π cm³.",
+          "markingScheme": [
+            {
+              "criterion": "Use V = (4/3)πr³",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain (256/3)π cm³",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "Find the curved surface area of the cylinder.",
+              "answerKey": "CSA = 2π × 2 × 7 = 28π cm².",
+              "markingScheme": [
+                {
+                  "criterion": "Use CSA = 2πrh",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain 28π cm²",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) TSA = 4πr².\n(b) CSA = 2πrh.\n(c) V = (4/3)π × 4³ = (256/3)π cm³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q37-STANDARD-V3",
+      "sectionId": "E",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mensuration",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A right circular cone is compared with a cylinder that has the same base radius and height.",
+      "stimulus": "Both the cone and cylinder have base radius 5 cm and vertical height 9 cm.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write the volume formula for a cylinder.",
+          "marks": 1,
+          "answerKey": "V = πr²h.",
+          "markingScheme": [
+            {
+              "criterion": "V = πr²h",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What fraction of the cylinder's volume is the cone's volume when both have the same base and height?",
+          "marks": 1,
+          "answerKey": "One-third.",
+          "markingScheme": [
+            {
+              "criterion": "1/3",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Calculate the cone's volume.",
+          "marks": 2,
+          "answerKey": "V = (1/3)π × 5² × 9 = 75π cm³.",
+          "markingScheme": [
+            {
+              "criterion": "Substitute radius and height",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 75π cm³",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "Calculate the cylinder's volume with the same dimensions.",
+              "answerKey": "V = π × 5² × 9 = 225π cm³.",
+              "markingScheme": [
+                {
+                  "criterion": "Use V = πr²h",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain 225π cm³",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) V = πr²h.\n(b) One-third.\n(c) V = (1/3)π × 5² × 9 = 75π cm³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q37-BASIC-V1",
+      "sectionId": "E",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mensuration",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A cylindrical water tank has radius 2 m and height 3.5 m. Use π = 22/7.",
+      "stimulus": "A housing society plans to fill a cylindrical tank. Its internal radius is 2 m and its height is 3.5 m.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which formula gives the volume of the tank?",
+          "marks": 1,
+          "answerKey": "V = πr²h.",
+          "markingScheme": [
+            {
+              "criterion": "V = πr²h",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the area of the circular base.",
+          "marks": 1,
+          "answerKey": "πr² = (22/7) × 4 = 88/7 m².",
+          "markingScheme": [
+            {
+              "criterion": "Calculate 88/7 m²",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Calculate the tank's capacity in cubic metres.",
+          "marks": 2,
+          "answerKey": "V = (22/7) × 2² × 3.5 = 44 m³.",
+          "markingScheme": [
+            {
+              "criterion": "Substitute r = 2 and h = 3.5",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 44 m³",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "If the tank's height is doubled while its radius stays the same, find its new capacity.",
+              "answerKey": "The volume doubles, so the new capacity is 88 m³.",
+              "markingScheme": [
+                {
+                  "criterion": "Recognise volume is proportional to height",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain 88 m³",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) V = πr²h.\n(b) πr² = (22/7) × 4 = 88/7 m².\n(c) V = (22/7) × 2² × 3.5 = 44 m³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q37-BASIC-V2",
+      "sectionId": "E",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mensuration",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A conical paper cup has radius 3 cm and height 8 cm. Use π = 3.14.",
+      "stimulus": "A vendor uses identical conical paper cups. Each cup has radius 3 cm and vertical height 8 cm.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write the volume formula for a cone.",
+          "marks": 1,
+          "answerKey": "V = (1/3)πr²h.",
+          "markingScheme": [
+            {
+              "criterion": "V = (1/3)πr²h",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Calculate r² for this cup.",
+          "marks": 1,
+          "answerKey": "r² = 3² = 9 cm².",
+          "markingScheme": [
+            {
+              "criterion": "9 cm²",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Find the volume of one cup.",
+          "marks": 2,
+          "answerKey": "V = (1/3) × 3.14 × 9 × 8 = 75.36 cm³.",
+          "markingScheme": [
+            {
+              "criterion": "Substitute into the cone volume formula",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 75.36 cm³",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "Find the volume of two such cups.",
+              "answerKey": "2 × 75.36 = 150.72 cm³.",
+              "markingScheme": [
+                {
+                  "criterion": "Use volume of one cup",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain 150.72 cm³",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) V = (1/3)πr²h.\n(b) r² = 3² = 9 cm².\n(c) V = (1/3) × 3.14 × 9 × 8 = 75.36 cm³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q37-BASIC-V3",
+      "sectionId": "E",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mensuration",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A spherical ball has radius 3.5 cm. Use π = 22/7.",
+      "stimulus": "A sports shop stores identical solid spherical balls, each with radius 3.5 cm.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write the formula for the surface area of a sphere.",
+          "marks": 1,
+          "answerKey": "TSA = 4πr².",
+          "markingScheme": [
+            {
+              "criterion": "4πr²",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Write the formula for the volume of a sphere.",
+          "marks": 1,
+          "answerKey": "V = (4/3)πr³.",
+          "markingScheme": [
+            {
+              "criterion": "(4/3)πr³",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Calculate the surface area of one ball.",
+          "marks": 2,
+          "answerKey": "TSA = 4 × (22/7) × (3.5)² = 154 cm².",
+          "markingScheme": [
+            {
+              "criterion": "Substitute r = 3.5 cm",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 154 cm²",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "If the radius is doubled, by what factor does the sphere's volume change?",
+              "answerKey": "Volume scales with the cube of the radius; the new volume is 2³ = 8 times.",
+              "markingScheme": [
+                {
+                  "criterion": "State cubic scaling of volume",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain factor 8",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) TSA = 4πr².\n(b) V = (4/3)πr³.\n(c) TSA = 4 × (22/7) × (3.5)² = 154 cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q38-STANDARD-V1",
+      "sectionId": "E",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "probability",
+        "statistics-and-probability",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A counter is drawn at random from a box containing red, blue and green counters.",
+      "stimulus": "The box contains 5 red, 3 blue and 2 green counters. One counter is selected at random.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the total number of counters.",
+          "marks": 1,
+          "answerKey": "5 + 3 + 2 = 10.",
+          "markingScheme": [
+            {
+              "criterion": "10",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the probability of selecting a blue counter.",
+          "marks": 1,
+          "answerKey": "P(blue) = 3/10.",
+          "markingScheme": [
+            {
+              "criterion": "3/10",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Find the probability of not selecting a green counter and explain the complement relationship.",
+          "marks": 2,
+          "answerKey": "P(not green) = 1 − 2/10 = 8/10 = 4/5. Green and not green are complementary events.",
+          "markingScheme": [
+            {
+              "criterion": "Use P(not green) = 1 − P(green)",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 4/5 and identify the complement",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "Find the probability of selecting a red or a blue counter.",
+              "answerKey": "P(red or blue) = (5 + 3)/10 = 4/5.",
+              "markingScheme": [
+                {
+                  "criterion": "Count red and blue counters",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain 4/5",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) 5 + 3 + 2 = 10.\n(b) P(blue) = 3/10.\n(c) P(not green) = 1 − 2/10 = 8/10 = 4/5. Green and not green are complementary events."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q38-STANDARD-V2",
+      "sectionId": "E",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "probability",
+        "statistics-and-probability",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A fair die is rolled once and its result is recorded.",
+      "stimulus": "The equally likely sample space is {1, 2, 3, 4, 5, 6}.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many outcomes are in the sample space?",
+          "marks": 1,
+          "answerKey": "Six.",
+          "markingScheme": [
+            {
+              "criterion": "6",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the probability of obtaining a prime number.",
+          "marks": 1,
+          "answerKey": "The prime outcomes are 2, 3 and 5, so P = 3/6 = 1/2.",
+          "markingScheme": [
+            {
+              "criterion": "1/2",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Compare the probability of obtaining a number greater than 4 with the probability of obtaining an even number.",
+          "marks": 2,
+          "answerKey": "P(>4) = 2/6 = 1/3. P(even) = 3/6 = 1/2. An even number is more likely.",
+          "markingScheme": [
+            {
+              "criterion": "Calculate P(>4) = 1/3",
+              "marks": 1
+            },
+            {
+              "criterion": "Calculate P(even) = 1/2 and compare",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "Find the probability of obtaining a number less than 7 and identify the event.",
+              "answerKey": "Every outcome is less than 7, so P = 6/6 = 1; it is a sure event.",
+              "markingScheme": [
+                {
+                  "criterion": "Identify all outcomes as favourable",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain probability 1 and identify a sure event",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Six.\n(b) The prime outcomes are 2, 3 and 5, so P = 3/6 = 1/2.\n(c) P(>4) = 2/6 = 1/3. P(even) = 3/6 = 1/2. An even number is more likely."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q38-STANDARD-V3",
+      "sectionId": "E",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "probability",
+        "statistics-and-probability",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "Two fair coins are tossed simultaneously and the ordered outcomes are recorded.",
+      "stimulus": "The equally likely outcomes are HH, HT, TH and TT.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many outcomes are possible?",
+          "marks": 1,
+          "answerKey": "Four.",
+          "markingScheme": [
+            {
+              "criterion": "4",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the probability of getting exactly one head.",
+          "marks": 1,
+          "answerKey": "HT and TH are favourable, so P = 2/4 = 1/2.",
+          "markingScheme": [
+            {
+              "criterion": "1/2",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Compare the probability of getting at least one head with the probability of getting two tails.",
+          "marks": 2,
+          "answerKey": "P(at least one head) = 3/4. P(two tails) = 1/4. At least one head is more likely.",
+          "markingScheme": [
+            {
+              "criterion": "Count three outcomes with at least one head",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 3/4 and compare with 1/4",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "Find the probability of getting two heads or two tails.",
+              "answerKey": "The favourable outcomes are HH and TT, so P = 2/4 = 1/2.",
+              "markingScheme": [
+                {
+                  "criterion": "Identify HH and TT",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain probability 1/2",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Four.\n(b) HT and TH are favourable, so P = 2/4 = 1/2.\n(c) P(at least one head) = 3/4. P(two tails) = 1/4. At least one head is more likely."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q38-BASIC-V1",
+      "sectionId": "E",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "probability",
+        "statistics-and-probability",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A bag contains 5 red, 3 blue and 2 green counters. One counter is selected at random.",
+      "stimulus": "There are 10 counters in total, and every counter is equally likely to be selected.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many counters are in the bag?",
+          "marks": 1,
+          "answerKey": "10.",
+          "markingScheme": [
+            {
+              "criterion": "10",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the probability of selecting a red counter.",
+          "marks": 1,
+          "answerKey": "5/10 = 1/2.",
+          "markingScheme": [
+            {
+              "criterion": "1/2",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Find the probability of selecting a counter that is not green.",
+          "marks": 2,
+          "answerKey": "There are 8 counters that are not green. Probability = 8/10 = 4/5.",
+          "markingScheme": [
+            {
+              "criterion": "Count 8 non-green counters",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 4/5",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "Find the probability of selecting a green counter.",
+              "answerKey": "There are 2 green counters out of 10, so probability = 1/5.",
+              "markingScheme": [
+                {
+                  "criterion": "Count 2 green counters",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain 1/5",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) 10.\n(b) 5/10 = 1/2.\n(c) There are 8 counters that are not green. Probability = 8/10 = 4/5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q38-BASIC-V2",
+      "sectionId": "E",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "probability",
+        "statistics-and-probability",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A fair die is rolled once.",
+      "stimulus": "The possible outcomes are 1, 2, 3, 4, 5 and 6, all equally likely.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What is the probability of an impossible event?",
+          "marks": 1,
+          "answerKey": "0.",
+          "markingScheme": [
+            {
+              "criterion": "0",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the probability of getting 6.",
+          "marks": 1,
+          "answerKey": "1/6.",
+          "markingScheme": [
+            {
+              "criterion": "1/6",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Find the probability of getting an even number.",
+          "marks": 2,
+          "answerKey": "The favourable outcomes are 2, 4 and 6. Probability = 3/6 = 1/2.",
+          "markingScheme": [
+            {
+              "criterion": "List the three even outcomes",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain 1/2",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "Find the probability of getting a number greater than 4.",
+              "answerKey": "The favourable outcomes are 5 and 6, so probability = 2/6 = 1/3.",
+              "markingScheme": [
+                {
+                  "criterion": "Identify 5 and 6 as favourable",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain 1/3",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) 0.\n(b) 1/6.\n(c) The favourable outcomes are 2, 4 and 6. Probability = 3/6 = 1/2."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
+      }
+    },
+    {
+      "questionId": "MATH10-Q38-BASIC-V3",
+      "sectionId": "E",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "probability",
+        "statistics-and-probability",
+        "case-based"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "prompt": "A coin is tossed twice. All possible ordered outcomes are equally likely.",
+      "stimulus": "The sample space is HH, HT, TH and TT.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many outcomes are possible?",
+          "marks": 1,
+          "answerKey": "4.",
+          "markingScheme": [
+            {
+              "criterion": "4",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the probability of getting two tails.",
+          "marks": 1,
+          "answerKey": "Only TT is favourable, so probability = 1/4.",
+          "markingScheme": [
+            {
+              "criterion": "1/4",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "prompt": "Find the probability of getting at least one head.",
+          "marks": 2,
+          "answerKey": "HH, HT and TH contain at least one head. Probability = 3/4.",
+          "markingScheme": [
+            {
+              "criterion": "Identify three favourable outcomes",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain probability 3/4",
+              "marks": 1
+            }
+          ],
+          "alternatives": [
+            {
+              "prompt": "Find the probability of getting exactly one head.",
+              "answerKey": "HT and TH are favourable, so probability = 2/4 = 1/2.",
+              "markingScheme": [
+                {
+                  "criterion": "Identify HT and TH",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Obtain 1/2",
+                  "marks": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) 4.\n(b) Only TT is favourable, so probability = 1/4.\n(c) HH, HT and TH contain at least one head. Probability = 3/4."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part (a)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part (b)",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to the 2-mark part (c)",
+          "marks": 2
+        }
+      ],
+      "approvalNote": "Original ExamGuru case study; subpart marks total four and the 2-mark subpart has a mark-matched internal alternative.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics case-based item aligned to the summative syllabus."
       }
     }
   ]
