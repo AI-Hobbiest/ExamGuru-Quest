@@ -14,8 +14,8 @@
     const list=node("div","assignment-list");
     items.forEach(item=>{
       const row=node("article","assignment-row"),copy=node("div",""),latest=item.attempts.filter(x=>x.status==="submitted").slice(-1)[0];
-      copy.append(node("strong","",item.title),node("p","",item.subjectTitle+" · "+item.questionCount+" MCQs · "+(item.deadlineAt?"Due "+new Date(item.deadlineAt).toLocaleString():"No deadline")));
-      row.append(copy,node("span","assignment-status",latest?"Completed · "+latest.scorePercent+"%":item.status==="in-progress"?"In progress":"Assigned"));list.appendChild(row);
+      copy.append(node("strong","",item.title),node("p","",item.subjectTitle+" · "+item.questionCount+(item.kind==="paper-assessment"?" questions · "+item.totalMarks+" marks":" MCQs")+(item.deadlineAt?" · Due "+new Date(item.deadlineAt).toLocaleString():" · No deadline")));
+      row.append(copy,node("span","assignment-status",latest?(item.kind==="paper-assessment"?"Submitted · awaiting evaluation":"Completed · "+latest.scorePercent+"%"):item.status==="in-progress"?"In progress":"Assigned"));list.appendChild(row);
     });
     section.appendChild(list);return section;
   }
@@ -106,102 +106,6 @@
       }catch(e){status.textContent=e.message||"Unable to create the assignment.";}
     });
     loadBank(latestAttempt?latestTopicIds(subject.value):[]);
-    return section;
-  }
-  function assignedPanel(child){
-    const section=node("section","detail-section parent-assigned-tests");section.appendChild(node("h3","","Assigned tests"));
-    const items=window.C10AssessmentManager.listForStudent(child.studentId);
-    if(!items.length){section.appendChild(node("div","detail-empty","No tests assigned to this child on this browser yet."));return section;}
-    const list=node("div","assignment-list");
-    items.forEach(item=>{
-      const row=node("article","assignment-row"),copy=node("div",""),latest=item.attempts.filter(x=>x.status==="submitted").slice(-1)[0];
-      copy.append(node("strong","",item.title),node("p","",item.subjectTitle+" · "+item.questionCount+" MCQs · "+(item.deadlineAt?"Due "+new Date(item.deadlineAt).toLocaleString():"No deadline")));
-      row.append(copy,node("span","assignment-status",latest?"Completed · "+latest.scorePercent+"%":item.status==="in-progress"?"In progress":"Assigned"));list.appendChild(row);
-    });
-    section.appendChild(list);return section;
-  }
-  function addPaperBuilder(child){
-    if(String(child.classId)!=="10")return null;
-    const section=node("section","detail-section parent-paper-builder");
-    section.append(node("h3","","Create & assign a CBSE examination paper"),node("p","assignment-help","Generate the approved Class 10 Science (086) 2026–27 paper using the same Paper Studio engine and question pool. Assign it as a handwritten PDF paper, online exam or hybrid assessment."));
-    const delivery=document.createElement("select");
-    [["printable","Printable · handwritten answer booklet (recommended)"],["online","Online · interactive examination"],["hybrid","Hybrid · printable + online"]].forEach(([value,label])=>{const option=document.createElement("option");option.value=value;option.textContent=label;delivery.appendChild(option);});
-    const due=document.createElement("input");due.type="datetime-local";
-    const status=node("p","assignment-status-note","Loading approved blueprint and integrated question pool…");
-    const generate=node("button","report-button","Generate & assign CBSE Science paper");generate.type="button";generate.disabled=true;
-    const actions=node("div","report-actions");
-    const printQuestion=node("button","report-button secondary","Question paper PDF");printQuestion.type="button";
-    const printBooklet=node("button","report-button secondary","Answer booklet PDF");printBooklet.type="button";
-    const printEvaluator=node("button","report-button secondary","Evaluator copy");printEvaluator.type="button";
-    const openAssignment=node("a","report-button secondary","Open student assignment");openAssignment.hidden=true;openAssignment.href="#";
-    actions.append(printQuestion,printBooklet,printEvaluator,openAssignment);
-    section.append(addField("Delivery mode",delivery),addField("Due date (optional)",due),generate,status,actions);
-    let blueprint=null,bank=null,paper=null,assignment=null;
-    const updateActions=()=>{
-      actions.hidden=!paper;
-      printQuestion.hidden=delivery.value==="online";
-      printBooklet.hidden=delivery.value==="online";
-      printEvaluator.hidden=delivery.value==="online";
-    };
-    delivery.addEventListener("change",updateActions);
-    Promise.all([
-      fetch("./data/exam-papers/blueprints/class-10-science-2026-27.json",{cache:"no-store"}),
-      fetch("./data/exam-papers/question-banks/class-10-science-2026-27-v1.json",{cache:"no-store"}),
-      fetch("./data/science.json",{cache:"no-store"})
-    ]).then(async responses=>{
-      if(responses.some(r=>!r.ok))throw new Error("Approved CBSE blueprint or question pool is not available.");
-      blueprint=await responses[0].json();
-      const base=await responses[1].json(),practice=await responses[2].json();
-      const bc=window.C10ExamPaperGenerator.validateBlueprint(blueprint);
-      const qc=window.C10ExamPaperGenerator.validateQuestionBank(base,{academicYear:"2026-27"});
-      if(!bc.valid||!bc.readyForGeneration)throw new Error("The CBSE blueprint is not approved for generation.");
-      if(!qc.valid)throw new Error(qc.errors.slice(0,5).join(" "));
-      const integrated=window.C10ExamPaperGenerator.mergeQuestionBanks(base,practice,blueprint);
-      bank=integrated.bank;
-      const coverage=window.C10ExamPaperGenerator.auditSlotCoverage(blueprint,bank,3);
-      if(!coverage.valid)throw new Error("The integrated question pool is short of at least three eligible candidates in one or more slots.");
-      generate.disabled=false;
-      status.textContent="Ready · "+bank.questions.length.toLocaleString()+" approved pool records · 39 questions · 80 marks · 180 minutes.";
-    }).catch(e=>{status.textContent=e.message||"Unable to load Paper Studio.";});
-    function history(){
-      try{const rows=JSON.parse(localStorage.getItem("eg_exam_paper_history_v1")||"[]");return Array.isArray(rows)?rows:[];}catch(_){return[];}
-    }
-    function saveHistory(row){
-      const rows=[...history(),row].slice(-50);
-      localStorage.setItem("eg_exam_paper_history_v1",JSON.stringify(rows));
-    }
-    generate.addEventListener("click",()=>{
-      try{
-        if(!blueprint||!bank)throw new Error("The approved paper pool has not finished loading.");
-        const rows=history(),recentMcqs=rows.slice(-2).flatMap(x=>x.mcqQuestionIds||[]);
-        paper=window.C10ExamPaperGenerator.generateUniquePaper(blueprint,bank,{
-          seed:"parent-paper-"+Date.now()+"-"+Math.random().toString(36).slice(2),
-          title:"CBSE Class 10 Science · "+(child.displayName||child.username),
-          recentPaperFingerprints:rows.map(x=>x.fingerprint||JSON.stringify(x.questionIds||[])),
-          recentQuestionIds:recentMcqs,uniqueSearchAttempts:500
-        });
-        paper.deliveryMode=delivery.value;
-        const dueAt=due.value?new Date(due.value).toISOString():null;
-        assignment=window.C10AssessmentManager.createPaperAssignment({
-          studentId:child.studentId,studentName:child.displayName||child.username,
-          parentId:parent.parentId,createdBy:parent.username,
-          title:paper.title,subjectId:"science",subjectTitle:"Science (086)",
-          paperSnapshot:paper,deliveryMode:delivery.value,deadlineAt:dueAt
-        });
-        const ids=paper.questions.map(q=>String(q.questionId));
-        const fingerprint=paper.paperFingerprint||window.C10ExamPaperGenerator.paperFingerprint(paper);
-        saveHistory({paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds:ids,
-          mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId)),fingerprint});
-        openAssignment.href="./assigned-paper.html?id="+encodeURIComponent(assignment.assignmentId);
-        openAssignment.hidden=false;
-        updateActions();
-        status.textContent="Paper assigned to "+(child.displayName||child.username)+". The question snapshot and delivery mode are frozen. "+(delivery.value==="printable"?"Print the question paper and answer booklet below; the student can access both from Assigned Tests on this browser.":"The student can open the assigned paper from Assigned Tests on this browser.");
-      }catch(e){status.textContent=e.message||"Unable to generate and assign the paper.";}
-    });
-    printQuestion.addEventListener("click",()=>{if(paper)try{window.C10ExamPaperRenderer.printPaper(paper,"student");}catch(e){status.textContent=e.message||String(e);}});
-    printBooklet.addEventListener("click",()=>{if(paper)try{window.C10ExamPaperRenderer.printAnswerBooklet(paper);}catch(e){status.textContent=e.message||String(e);}});
-    printEvaluator.addEventListener("click",()=>{if(paper)try{window.C10ExamPaperRenderer.printPaper(paper,"teacher");}catch(e){status.textContent=e.message||String(e);}});
-    updateActions();
     return section;
   }
   function enhanceDetail(){
