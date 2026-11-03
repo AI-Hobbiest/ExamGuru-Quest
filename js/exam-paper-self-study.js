@@ -19,19 +19,23 @@ const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 function status(s){$("loadStatus").textContent=s;}
 async function load(){
  try{
-  const [b,q]=await Promise.all([
+  const [b,q,practice]=await Promise.all([
    fetch("./data/exam-papers/blueprints/class-10-science-2026-27.json",{cache:"no-store"}),
-   fetch("./data/exam-papers/question-banks/class-10-science-2026-27-v1.json",{cache:"no-store"})
+   fetch("./data/exam-papers/question-banks/class-10-science-2026-27-v1.json",{cache:"no-store"}),
+   fetch("./data/science.json",{cache:"no-store"})
   ]);
-  if(!b.ok||!q.ok)throw Error("The published exam blueprint or question pool is unavailable.");
-  blueprint=await b.json();bank=await q.json();
-  const bc=C10ExamPaperGenerator.validateBlueprint(blueprint),qc=C10ExamPaperGenerator.validateQuestionBank(bank,{academicYear:"2026-27"});
+  if(!b.ok||!q.ok||!practice.ok)throw Error("The published CBSE blueprint, mixed-question pool or shared chapter-wise Science MCQ bank is unavailable.");
+  blueprint=await b.json();
+  const baseBank=await q.json(),practiceChapters=await practice.json();
+  const bc=C10ExamPaperGenerator.validateBlueprint(blueprint),qc=C10ExamPaperGenerator.validateQuestionBank(baseBank,{academicYear:"2026-27"});
   if(!bc.valid||!bc.readyForGeneration)throw Error("The exam blueprint is not approved for generation.");
   if(!qc.valid)throw Error(qc.errors.slice(0,4).join(" "));
-  const coverage=C10ExamPaperGenerator.auditSlotCoverage(blueprint,bank,3);
-  if(!coverage.valid)throw Error("Unique-paper pool is not ready: "+coverage.errors.slice(0,5).join(" "));
+  const integrated=C10ExamPaperGenerator.mergeQuestionBanks(baseBank,practiceChapters,blueprint);
+  bank=integrated.bank;
+  const coverage=integrated.stats.coverage;
+  if(!coverage.valid)throw Error("Integrated question pool is not ready: "+coverage.errors.slice(0,5).join(" "));
   paperHistory=readPaperHistory();
-  $("startBtn").disabled=false;status("Ready: 3 or more eligible questions per slot. Exact paper combinations are checked against the last 50 attempts saved in this browser.");
+  $("startBtn").disabled=false;status("Ready: "+integrated.stats.appended.toLocaleString()+" existing chapter-wise MCQs are integrated with the mixed-question pool. "+coverage.coverage.filter(s=>s.eligibleCount>=3).length+" of 39 slots are covered; 50 distinct complete papers are supported.");
  }catch(e){status("Unable to prepare the paper: "+e.message);}
 }
 function makePaper(){

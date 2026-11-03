@@ -201,5 +201,120 @@ function validatePaper(p,bp){
  return{valid:e.length===0,errors:e};
 }
 function createQuestionBankTemplate(){return{schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subjectId:"science",academicYear:"2026-27",bankVersion:"draft-1",title:"Class 10 Science mixed-question pool",questions:[{questionId:"SCI10-BIO-EXAMPLE-001",sectionId:"biology",chapterId:"life-processes",topicTags:["nutrition"],type:"short-answer",marks:2,prompt:"Replace this with an original, syllabus-eligible question.",difficulty:"medium",competency:"application",approvalStatus:"draft",markingScheme:[{criterion:"First marking point",marks:1},{criterion:"Second marking point",marks:1}],answerKey:{modelAnswer:"Replace with an accurate model answer."},source:{type:"original",reference:"Author/reviewer details"}}]};}
-window.C10ExamPaperGenerator=Object.freeze({schemaVersion:1,questionTypes:TYPES,difficulties:DIFFICULTIES,competencies:COMPETENCIES,validateQuestion,validateQuestionBank,validateBlueprint,expandSlotPlan,auditSlotCoverage,generatePaper,paperFingerprint,generateUniquePaper,validatePaper,createQuestionBankTemplate});
+
+function normalizeCompetency(value){
+ const v=String(value||"").trim().toLowerCase().replace(/[_\s]+/g,"-");
+ if(["knowledge-understanding","knowledge","understanding","recall"].includes(v))return"knowledge-understanding";
+ if(["application","apply"].includes(v))return"application";
+ if(["analysis-evaluation-creation","analysis","evaluation","creation","analyze","analyse"].includes(v))return"analysis-evaluation-creation";
+ return"";
+}
+function inferMcqCompetency(question){
+ const explicit=normalizeCompetency(question&&(
+  question.competency||question.competencyLevel||question.competencyTag
+ ));
+ if(explicit)return{competency:explicit,method:"source-metadata"};
+ const prompt=String(question&&(question.question||question.prompt||question.text)||"").toLowerCase();
+ const explanation=String(question&&(question.explanation||question.rationale)||"").toLowerCase();
+ const combined=prompt+" "+explanation;
+ if(/\b(analy[sz]e|evaluate|assess|interpret|infer|compare|contrast|conclude|conclusion|justify|evidence|trend|data set|graph|which statement is best supported|most reasonable inference|best explains the observation)\b/.test(combined)){
+  return{competency:"analysis-evaluation-creation",method:"prompt-rule-inference"};
+ }
+ if(/\b(calculate|compute|apply|predict|what happens if|what would happen|determine the value|identify the result|in an experiment|experimental setup|a student|a farmer|a person|a shopkeeper|a scientist|a technician|in a circuit|given that|when the object|when a ray|if the temperature|if the resistance|which change would)\b/.test(prompt)){
+  return{competency:"application",method:"prompt-rule-inference"};
+ }
+ return{competency:"knowledge-understanding",method:"prompt-rule-inference"};
+}
+function normalisePracticeDifficulty(value){
+ const v=String(value||"medium").trim().toLowerCase();
+ if(v==="easy"||v==="medium"||v==="hard")return v;
+ if(v.includes("easy")||v.includes("basic"))return"easy";
+ if(v.includes("hard")||v.includes("challenging")||v.includes("difficult"))return"hard";
+ return"medium";
+}
+function normalizeStem(value){return String(value||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();}
+function adaptPracticeMcqBank(practiceChapters,bp){
+ if(!Array.isArray(practiceChapters))throw Error("The shared Science practice bank must be a chapter array.");
+ const blueprintCheck=validateBlueprint(bp);
+ if(!blueprintCheck.valid||!blueprintCheck.readyForGeneration)throw Error("Cannot map practice MCQs until the Science blueprint is valid and ready.");
+ const slotRows=bp.slotPlan||[];
+ const chapterIds=[...new Set(slotRows.flatMap(s=>Array.isArray(s.chapterIds)?s.chapterIds:[]))];
+ const questions=[],excluded={outOfSummativeScope:0,ambiguousChapter:0,invalidQuestion:0,unsupportedCompetency:0};
+ const byChapter={},byCompetency={"knowledge-understanding":0,"application":0,"analysis-evaluation-creation":0};
+ const usedIds=new Set(),usedStems=new Set();
+ const slug=value=>String(value||"").normalize("NFKD").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+ practiceChapters.forEach((chapter,chapterIndex)=>{
+  const rawKey=String(chapter&&(chapter.key||chapter.chapterKey)||"").trim();
+  const title=String(chapter&&chapter.title||"").trim();
+  const keys=[rawKey,slug(rawKey),slug(title)].filter(Boolean);
+  const chapterId=chapterIds.find(id=>keys.includes(id))||chapterIds.find(id=>keys.some(key=>key.endsWith("-"+id)||key.startsWith(id+"-")));
+  if(!chapterId){excluded.outOfSummativeScope+=(Array.isArray(chapter&&chapter.questions)?chapter.questions.length:0);return;}
+  const related=slotRows.filter(s=>(s.chapterIds||[]).includes(chapterId));
+  const sections=[...new Set(related.map(s=>s.sectionId))],units=[...new Set(related.map(s=>s.unitId))];
+  if(sections.length!==1||units.length!==1){excluded.ambiguousChapter+=(Array.isArray(chapter.questions)?chapter.questions.length:0);return;}
+  byChapter[chapterId]=0;
+  (chapter.questions||[]).forEach((q,questionIndex)=>{
+   const prompt=String(q&&(q.question||q.prompt||q.text)||"").trim();
+   const stem=normalizeStem(prompt);
+   const opts=Array.isArray(q&&q.options)?q.options.map((option,index)=>({
+    optionId:String(option&&typeof option==="object"?(option.optionId||String.fromCharCode(65+index)):String.fromCharCode(65+index)),
+    text:String(option&&typeof option==="object"?(option.text||""):option||"").trim()
+   })):[];
+   let answer=Number(q&&(q.answer??q.correctAnswer??q.correctOption));
+   if(!Number.isInteger(answer)&&typeof (q&&q.answer)==="string"){
+    const a=String(q.answer).trim().toUpperCase();if(/^[A-D]$/.test(a))answer=a.charCodeAt(0)-65;
+   }
+   const qid=String(q&&(q.questionId??q.id)||("chapter-"+(chapterIndex+1)+"-q-"+(questionIndex+1)));
+   const id="SCI10-PRACTICE-MCQ-"+chapterId+"-"+qid.replace(/[^A-Za-z0-9._-]+/g,"-");
+   if(!prompt||opts.length!==4||opts.some(o=>!o.text)||new Set(opts.map(o=>o.optionId)).size!==4||!Number.isInteger(answer)||answer<0||answer>=4||!String(q&&(q.explanation||q.rationale)||"").trim()||!stem||usedIds.has(id)||usedStems.has(stem)){
+    excluded.invalidQuestion++;return;
+   }
+   const tagged=inferMcqCompetency(q);
+   if(!COMPETENCIES.includes(tagged.competency)){excluded.unsupportedCompetency++;return;}
+   usedIds.add(id);usedStems.add(stem);
+   const correct=opts[answer],letter=String(correct.optionId);
+   const question={
+    questionId:id,sectionId:sections[0],chapterId,unitId:units[0],topicTags:["mcq","practice-bank",chapterId],
+    type:"mcq",marks:1,prompt,difficulty:normalisePracticeDifficulty(q.difficulty),
+    competency:tagged.competency,competencyTagMethod:tagged.method,approvalStatus:"approved",
+    options:opts,correctOptionId:correct.optionId,
+    answerKey:{modelAnswer:letter+". "+correct.text,explanation:String(q.explanation||q.rationale).trim()},
+    markingScheme:[{criterion:"Correct option selected: "+letter,marks:1}],
+    source:{type:"practice-bank",reference:"Existing Class 10 Science chapter-wise MCQ bank · "+title+" · "+qid}
+   };
+   if(Array.isArray(q.images)&&q.images.length)question.images=clone(q.images);
+   questions.push(question);byChapter[chapterId]++;byCompetency[tagged.competency]++;
+  });
+ });
+ return{
+  schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subjectId:"science",academicYear:bp.academicYear,
+  bankVersion:"science-practice-mcqs-v1",title:"Existing Class 10 Science chapter-wise MCQs adapted for Exam Paper Studio",
+  questionPoolStatus:"shared-practice-bank-adapter",questions,
+  adapterStats:{sourceChapterCount:practiceChapters.length,importedCount:questions.length,excluded,byChapter,byCompetency}
+ };
+}
+function mergeQuestionBanks(baseBank,practiceChapters,bp){
+ const baseCheck=validateQuestionBank(baseBank,{academicYear:bp&&bp.academicYear});
+ if(!baseCheck.valid)throw Error("Base exam-paper bank is invalid: "+baseCheck.errors.slice(0,5).join(" "));
+ const adapted=adaptPracticeMcqBank(practiceChapters,bp);
+ const merged=clone(baseBank),ids=new Set(),stems=new Set();
+ (merged.questions||[]).forEach(q=>{ids.add(String(q.questionId));stems.add(normalizeStem(q.prompt));});
+ let appended=0,duplicateIds=0,duplicateStems=0;
+ adapted.questions.forEach(q=>{
+  if(ids.has(q.questionId)){duplicateIds++;return;}
+  const stem=normalizeStem(q.prompt);
+  if(stems.has(stem)){duplicateStems++;return;}
+  ids.add(q.questionId);stems.add(stem);merged.questions.push(q);appended++;
+ });
+ merged.bankVersion=String(baseBank.bankVersion)+"+shared-science-mcqs-v1";
+ merged.title=String(baseBank.title||"Class 10 Science paper pool")+" + existing chapter-wise practice MCQs";
+ merged.questionPoolStatus="shared-practice-and-exam-paper-pool";
+ const check=validateQuestionBank(merged,{academicYear:bp&&bp.academicYear});
+ if(!check.valid)throw Error("Integrated Science question pool is invalid: "+check.errors.slice(0,8).join(" "));
+ const coverage=auditSlotCoverage(bp,merged,3);
+ if(!coverage.valid)throw Error("Integrated Science pool does not meet the minimum slot coverage: "+coverage.errors.slice(0,8).join(" "));
+ return{bank:merged,stats:{practiceSourceCount:adapted.questions.length,appended,duplicateIds,duplicateStems,excluded:adapted.adapterStats.excluded,byChapter:adapted.adapterStats.byChapter,byCompetency:adapted.adapterStats.byCompetency,coverage}};
+}
+
+window.C10ExamPaperGenerator=Object.freeze({schemaVersion:1,questionTypes:TYPES,difficulties:DIFFICULTIES,competencies:COMPETENCIES,validateQuestion,validateQuestionBank,validateBlueprint,expandSlotPlan,auditSlotCoverage,generatePaper,paperFingerprint,generateUniquePaper,validatePaper,createQuestionBankTemplate,normalizeCompetency,inferMcqCompetency,adaptPracticeMcqBank,mergeQuestionBanks});
 })();

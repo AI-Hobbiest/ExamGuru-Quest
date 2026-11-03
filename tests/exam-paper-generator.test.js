@@ -50,7 +50,8 @@ for(let attempt=1;attempt<=6;attempt++){
 }
 const selfStudySource=fs.readFileSync("js/exam-paper-self-study.js","utf8");
 assert.ok(selfStudySource.includes('eg_exam_paper_history_v1'),"self-study should persist recent paper history locally");
-assert.ok(selfStudySource.includes('auditSlotCoverage(blueprint,bank,3)'),"self-study should block generation unless each slot has at least three candidates");
+assert.ok(selfStudySource.includes("mergeQuestionBanks(baseBank,practiceChapters,blueprint)"),"self-study must merge the shared chapter-wise MCQ bank before slot-coverage validation");
+assert.ok(selfStudySource.includes("integrated.stats.coverage"),"self-study must validate minimum slot coverage on the integrated pool");
 assert.ok(selfStudySource.includes('HISTORY_LIMIT=50'),"self-study should keep a rolling history of 50 complete papers");
 assert.ok(selfStudySource.includes('generateUniquePaper'),"self-study should generate a previously unused full-paper combination");
 assert.ok(selfStudySource.includes('recentPaperFingerprints'),"self-study should pass recent paper fingerprints to the generator");
