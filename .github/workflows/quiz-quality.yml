@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Validate audited Science paper blueprint, generation and rendering
-        run: node tests/exam-paper-generator.test.js && node tests/exam-paper-renderer.test.js && node tests/exam-paper-release.test.js
+        run: node tests/assessment-manager.test.js && node tests/exam-paper-generator.test.js && node tests/exam-paper-renderer.test.js && node tests/exam-paper-release.test.js
       - name: Build shared Science bank from the maintained source
         run: node tests/build-science-bank-fixture.js
       - name: Validate existing Science MCQs in Exam Paper Studio
