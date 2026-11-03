@@ -61,6 +61,7 @@ function printAnswerBooklet(paper){
  if(!opened)throw Error("Print window blocked. Allow pop-ups for ExamGuru and retry.");
  return{url,mode:"booklet"};
 }
-\nfunction printPaper(paper,mode){const url=URL.createObjectURL(new Blob([buildDocumentHtml(paper,mode,document.baseURI)],{type:"text/html;charset=utf-8"}));const opened=window.open(url,"_blank");if(!opened)throw Error("Print window blocked. Allow pop-ups for ExamGuru and retry.");return{url,mode:mode||"student"};}
+
+function printPaper(paper,mode){const url=URL.createObjectURL(new Blob([buildDocumentHtml(paper,mode,document.baseURI)],{type:"text/html;charset=utf-8"}));const opened=window.open(url,"_blank");if(!opened)throw Error("Print window blocked. Allow pop-ups for ExamGuru and retry.");return{url,mode:mode||"student"};}
 window.C10ExamPaperRenderer=Object.freeze({escapeHtml:esc,buildDocumentHtml,buildAnswerBookletHtml,printPaper,printAnswerBooklet});
 })();
