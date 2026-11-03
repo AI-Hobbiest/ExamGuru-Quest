@@ -141,8 +141,23 @@
       const attempt = row.attempts.find(x => x.attemptId === row.activeAttemptId && x.status === "in-progress");
       if (!attempt) throw new Error("There is no active paper attempt to submit.");
       attempt.answers = clone(answers || {}); attempt.submittedAt = now(); attempt.status = "submitted";
-      attempt.evaluationStatus = "pending-manual-review";
-      attempt.manualReviewNote = "Descriptive answers require handwritten or teacher evaluation. MCQ scoring remains available in the examination review.";
+      const questions = row.paperSnapshot.questions || [];
+      let mcqTotal = 0, mcqCorrect = 0, answered = 0;
+      questions.forEach((question,index) => {
+        if (question.type === "mcq" || question.type === "assertion-reason") {
+          mcqTotal++;
+          const response = attempt.answers[index];
+          if (response && response.optionId) answered++;
+          if (response && response.optionId === question.correctOptionId) mcqCorrect++;
+        } else {
+          const response = attempt.answers[index];
+          if (response && (response.optionId || (response.text || []).some(value => String(value || "").trim()))) answered++;
+        }
+      });
+      attempt.answered = answered; attempt.mcqCorrect = mcqCorrect; attempt.mcqTotal = mcqTotal;
+      attempt.hasWrittenResponses = questions.some(question => !["mcq","assertion-reason"].includes(question.type));
+      attempt.evaluationStatus = attempt.hasWrittenResponses ? "pending-manual-review" : "auto-scored";
+      attempt.manualReviewNote = attempt.hasWrittenResponses ? "Descriptive answers require handwritten or teacher evaluation." : null;
       row.status = "completed"; row.activeAttemptId = null; row.updatedAt = attempt.submittedAt;
     });
   }
