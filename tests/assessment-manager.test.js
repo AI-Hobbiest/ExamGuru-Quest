@@ -55,9 +55,12 @@ const paperSnapshot={
 };
 const paperAssignment=manager.createPaperAssignment({
  studentId:"student-2",parentId:"parent-1",classId:"10",title:"CBSE Science mock",
- subjectId:"science",subjectTitle:"Science",deliveryMode:"hybrid",paperSnapshot
+ subjectId:"science",subjectTitle:"Science",examProfileId:"class-10-science-2026-27",subjectCode:"086",academicYear:"2026-27",deliveryMode:"hybrid",paperSnapshot
 });
 assert.equal(paperAssignment.kind,"paper-assessment");
+assert.equal(paperAssignment.examProfileId,"class-10-science-2026-27","paper assignment retains the originating examination profile");
+assert.equal(paperAssignment.subjectCode,"086","paper assignment retains its subject code");
+assert.equal(paperAssignment.academicYear,"2026-27","paper assignment retains its academic year");
 const mathPaperAssignment=manager.createPaperAssignment({
  studentId:"student-4",parentId:"parent-1",deliveryMode:"online",
  paperSnapshot:{...paperSnapshot,paperId:"paper-math-1",subjectId:"mathematics",subjectTitle:"Mathematics",subjectCode:"041",blueprintSnapshot:{subjectTitle:"Mathematics",subjectCode:"041",sections:[{sectionId:"science",title:"Mathematics",totalMarks:10}]}}
