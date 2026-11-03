@@ -25,7 +25,7 @@
       const latest=item.attempts.filter(x=>x.status==="submitted").slice(-1)[0];
       const isPaper=item.kind==="paper-assessment";
       const meta=document.createElement("p");meta.textContent=item.subjectTitle+" · "+item.questionCount+(isPaper?" questions · "+item.totalMarks+" marks":" MCQs")+" · "+(item.durationMinutes?item.durationMinutes+" min":"Untimed")+" · "+(item.deadlineAt?"Due "+new Date(item.deadlineAt).toLocaleDateString():"No deadline");
-      const state=document.createElement("span");state.className="assigned-test-state";state.textContent=latest?(isPaper?"Submitted · pending evaluation": "Completed · "+latest.scorePercent+"%"):item.status==="in-progress"?"In progress":"Assigned";
+      const state=document.createElement("span");state.className="assigned-test-state";state.textContent=latest?(isPaper?(latest.evaluationStatus==="evaluated"?"Evaluated · "+latest.manualScore+"/"+latest.maxScore+" marks":"Submitted · pending evaluation"):"Completed · "+latest.scorePercent+"%"):item.status==="in-progress"?"In progress":"Assigned";
       const link=document.createElement("a");link.className="btn";link.href=(isPaper?"./assigned-paper.html?id=":"./assigned-test.html?id=")+encodeURIComponent(item.assignmentId);link.textContent=latest&&item.attempts.filter(x=>x.status==="submitted").length>=item.attemptsAllowed?"View status":isPaper?"Open paper":"Open test";
       card.append(title,meta,state,link);root.appendChild(card);
     });
