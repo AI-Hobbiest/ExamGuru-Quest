@@ -14,14 +14,14 @@ const profiles=[
 assert.equal(bank.classId,"10");
 assert.equal(bank.subjectId,"mathematics");
 assert.equal(bank.academicYear,"2026-27");
-assert.equal(bank.questions.length,137);
+assert.equal(bank.questions.length,140);
 const bankAudit=engine.validateQuestionBank(bank,{classId:"10",subjectId:"mathematics",academicYear:"2026-27"}); assert.equal(bankAudit.valid,true,bankAudit.errors.join(" | "));
 assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,bank.questions.length);
 const typeCounts=bank.questions.reduce((a,q)=>(a[q.type]=(a[q.type]||0)+1,a),{});
-assert.deepEqual(typeCounts,{"mcq":56,"assertion-reason":6,"very-short-answer":15,"short-answer":27,"long-answer":15,"case-based":18});
-assert.equal(bank.questions.filter(q=>q.source&&q.source.type==="practice-bank").length,51);
+assert.deepEqual(typeCounts,{"mcq":59,"assertion-reason":6,"very-short-answer":15,"short-answer":24,"long-answer":18,"case-based":18});
+assert.equal(bank.questions.filter(q=>q.source&&q.source.type==="practice-bank").length,54);
 assert.equal(new Set(bank.questions.filter(q=>q.type==="mcq").map(q=>q.chapterId)).size,14);
-assert.ok(bank.questions.filter(q=>q.approvalStatus==="approved").length===137);
+assert.ok(bank.questions.filter(q=>q.approvalStatus==="approved").length===140);
 for(const q of bank.questions){
  assert.equal(engine.validateQuestion(q).length,0,q.questionId+": "+engine.validateQuestion(q).join(" "));
  if(q.assessmentLevels)assert.ok(q.assessmentLevels.every(x=>["standard","basic"].includes(x)));
@@ -59,5 +59,5 @@ for(const profile of profiles){
  assert.equal(new Set(fingerprints).size,50,profile.level+" must generate 50 distinct complete papers");
 }
 const bySection=bank.questions.reduce((a,q)=>(a[q.sectionId]=(a[q.sectionId]||0)+1,a),{});
-assert.deepEqual(bySection,{A:62,B:15,C:24,D:18,E:18});
+assert.deepEqual(bySection,{A:65,B:15,C:24,D:18,E:18});
 console.log("Mathematics bank tests passed: 137 approved candidates, all question types, all 14 chapters, Standard and Basic coverage (3+ per slot), and 50 distinct validated 80-mark papers per level.");
