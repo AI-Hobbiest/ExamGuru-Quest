@@ -48,6 +48,23 @@
 .paper-evaluation-form textarea{resize:vertical}
 @media(max-width:600px){.paper-evaluation-form{grid-template-columns:1fr}}
 @media(max-width:600px){.assignment-options,.assignment-topics{grid-template-columns:1fr}.assignment-row{align-items:flex-start;flex-direction:column}}
+
+/* Parent MCQ chapter picker: compact, searchable and predictable on desktop/mobile. */
+.assignment-topic-picker{min-width:0}
+.assignment-topic-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.assignment-topic-hint{font-size:.74rem;font-weight:600;color:#7b8095}
+.assignment-topic-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.assignment-topic-tools .report-button{padding:7px 11px;font-size:.76rem}
+.assignment-topic-count{margin-left:auto;font-size:.76rem;font-weight:800;color:#5140a6}
+.assignment-topic-picker>input[type="search"]{width:100%;min-width:0;min-height:40px;border:1px solid #d9d8e7;border-radius:9px;padding:9px 11px;background:#fff;color:#303653;font:inherit;font-size:.84rem;box-sizing:border-box}
+.assignment-topics{display:grid;grid-template-columns:minmax(0,1fr);gap:5px;max-height:260px;overflow-y:auto;overscroll-behavior:contain;padding:8px;border:1px solid #e1e0eb;border-radius:11px;background:#fff}
+.assignment-topic{display:flex;gap:10px;align-items:center;min-width:0;padding:9px 10px;border:1px solid transparent;border-radius:8px;background:#f8f8fc;font-size:.82rem;font-weight:600;color:#454b68;cursor:pointer}
+.assignment-topic:hover{background:#f1effa;border-color:#e0dcf2}
+.assignment-topic[hidden]{display:none}
+.assignment-topic input{flex:0 0 auto;width:17px;height:17px;margin:0;accent-color:#5143a8}
+.assignment-topic span{min-width:0;overflow-wrap:anywhere;line-height:1.35}
+@media(max-width:600px){.assignment-topic-tools{gap:6px}.assignment-topic-count{width:100%;margin-left:0}.assignment-topics{max-height:240px}}
+
 </style>
 </head>
 <body class="c10-theme-quest">
