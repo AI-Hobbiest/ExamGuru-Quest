@@ -113,6 +113,8 @@
       parentId: String(args.parentId || ""), createdBy: String(args.createdBy || "parent"),
       classId: String(paper.classId), subjectId: String(args.subjectId || paper.subjectId || ""),
       subjectTitle: String(args.subjectTitle || paper.subjectTitle || paper.blueprintSnapshot?.subjectTitle || paper.subjectId || "Exam"),
+      examProfileId: String(args.examProfileId || ""), subjectCode: String(args.subjectCode || paper.subjectCode || ""),
+      academicYear: String(args.academicYear || paper.academicYear || ""),
       assessmentType: "blueprint-paper", deliveryMode: ["online","printable","hybrid"].includes(args.deliveryMode) ? args.deliveryMode : "printable",
       status: "assigned", createdAt, startsAt: args.startsAt || createdAt, deadlineAt: args.deadlineAt || null,
       attemptsAllowed: Math.max(1, Math.min(3, Number(args.attemptsAllowed) || 1)),
