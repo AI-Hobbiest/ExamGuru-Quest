@@ -28,7 +28,7 @@
         $("startOnlinePaper").href="./exam-practice.html?assignment="+encodeURIComponent(assignment.assignmentId);
       }
       $("paperStatus").textContent=latest
-        ?"This examination was submitted on "+new Date(latest.submittedAt).toLocaleString()+". "+(latest.hasWrittenResponses?"Descriptive responses are awaiting manual evaluation. ":"")+"MCQ score: "+latest.mcqCorrect+" / "+latest.mcqTotal+"."
+        ?(latest.evaluationStatus==="evaluated"?"Your paper has been evaluated: "+latest.manualScore+"/"+latest.maxScore+" marks. "+(latest.manualFeedback||""):"This examination was submitted on "+new Date(latest.submittedAt).toLocaleString()+". "+(latest.hasWrittenResponses?"Descriptive responses are awaiting manual evaluation. ":"")+"MCQ score: "+latest.mcqCorrect+" / "+latest.mcqTotal+".")
         :assignment.deliveryMode==="printable"
           ?"Complete this examination by hand. Print the question paper and separate answer booklet, then submit the handwritten work to your Parent/Teacher for evaluation."
           :assignment.deliveryMode==="hybrid"
