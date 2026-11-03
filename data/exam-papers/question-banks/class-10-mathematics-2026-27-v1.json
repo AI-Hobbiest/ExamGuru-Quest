@@ -1,0 +1,2868 @@
+{
+  "schemaVersion": 1,
+  "kind": "exam-paper-question-bank",
+  "classId": "10",
+  "subjectId": "mathematics",
+  "academicYear": "2026-27",
+  "bankVersion": "examguru-cbse-2026-27-mathematics-v1.0",
+  "title": "ExamGuru Class 10 Mathematics Standard & Basic shared examination pool · 2026–27",
+  "questionPoolStatus": "draft-review-required",
+  "questions": [
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-real-numbers-SRC-1",
+      "sectionId": "A",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "real-numbers"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The HCF of 135 and 225 is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "15"
+        },
+        {
+          "optionId": "B",
+          "text": "25"
+        },
+        {
+          "optionId": "C",
+          "text": "45"
+        },
+        {
+          "optionId": "D",
+          "text": "75"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 45",
+        "explanation": "135 = 3³ × 5 and 225 = 3² × 5². Taking the common primes with the smaller exponents gives HCF = 3² × 5 = 45."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Real Numbers · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-real-numbers-SRC-2",
+      "sectionId": "A",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "real-numbers"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which is the prime factorisation of 360?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "2³ × 3² × 5"
+        },
+        {
+          "optionId": "B",
+          "text": "2² × 3³ × 5"
+        },
+        {
+          "optionId": "C",
+          "text": "2³ × 3 × 5²"
+        },
+        {
+          "optionId": "D",
+          "text": "2 × 3² × 5²"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 2³ × 3² × 5",
+        "explanation": "360 = 8 × 9 × 5 = 2³ × 3² × 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Real Numbers · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-real-numbers-SRC-4",
+      "sectionId": "A",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "real-numbers"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "If HCF(a,b) = 18 and LCM(a,b) = 540, then ab equals:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "558"
+        },
+        {
+          "optionId": "B",
+          "text": "972"
+        },
+        {
+          "optionId": "C",
+          "text": "9,720"
+        },
+        {
+          "optionId": "D",
+          "text": "30"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 9,720",
+        "explanation": "For two positive integers, HCF × LCM = product; 18 × 540 = 9,720."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Real Numbers · MCQ #4"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-polynomials-SRC-1",
+      "sectionId": "A",
+      "chapterId": "polynomials",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "polynomials"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The zeroes of x² − 5x + 6 are:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "1 and 6"
+        },
+        {
+          "optionId": "B",
+          "text": "−2 and −3"
+        },
+        {
+          "optionId": "C",
+          "text": "2 and 3"
+        },
+        {
+          "optionId": "D",
+          "text": "−2 and 3"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 2 and 3",
+        "explanation": "x² − 5x + 6 = (x − 2)(x − 3)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Polynomials · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-polynomials-SRC-2",
+      "sectionId": "A",
+      "chapterId": "polynomials",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "polynomials"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "For ax² + bx + c, the sum of zeroes is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "c/a"
+        },
+        {
+          "optionId": "B",
+          "text": "−b/a"
+        },
+        {
+          "optionId": "C",
+          "text": "b/a"
+        },
+        {
+          "optionId": "D",
+          "text": "−c/a"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. −b/a",
+        "explanation": "The sum of the roots of a quadratic is −b/a."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Polynomials · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-polynomials-SRC-3",
+      "sectionId": "A",
+      "chapterId": "polynomials",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "polynomials"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A quadratic polynomial has zeroes 4 and −1. A monic polynomial with these zeroes is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "x² − 3x − 4"
+        },
+        {
+          "optionId": "B",
+          "text": "x² + 3x − 4"
+        },
+        {
+          "optionId": "C",
+          "text": "x² − 4x + 1"
+        },
+        {
+          "optionId": "D",
+          "text": "x² + 4x − 1"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. x² − 3x − 4",
+        "explanation": "Sum = 3 and product = −4, giving x² − 3x − 4."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Polynomials · MCQ #3"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-pair-of-linear-equations-in-two-variables-SRC-1",
+      "sectionId": "A",
+      "chapterId": "pair-of-linear-equations-in-two-variables",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "pair-of-linear-equations-in-two-variables"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The equations 2x + y = 7 and x − y = 2 have solution:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "x=2, y=3"
+        },
+        {
+          "optionId": "B",
+          "text": "x=3, y=1"
+        },
+        {
+          "optionId": "C",
+          "text": "x=1, y=5"
+        },
+        {
+          "optionId": "D",
+          "text": "x=4, y=−1"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. x=3, y=1",
+        "explanation": "Adding gives 3x = 9, so x = 3 and y = 1."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Pair of Linear Equations in Two Variables · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-pair-of-linear-equations-in-two-variables-SRC-2",
+      "sectionId": "A",
+      "chapterId": "pair-of-linear-equations-in-two-variables",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "pair-of-linear-equations-in-two-variables"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Two lines have a unique intersection when:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "a₁/a₂ = b₁/b₂"
+        },
+        {
+          "optionId": "B",
+          "text": "a₁/a₂ = c₁/c₂"
+        },
+        {
+          "optionId": "C",
+          "text": "a₁/a₂ ≠ b₁/b₂"
+        },
+        {
+          "optionId": "D",
+          "text": "All coefficient ratios are equal"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. a₁/a₂ ≠ b₁/b₂",
+        "explanation": "Different coefficient ratios for x and y indicate intersecting lines."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Pair of Linear Equations in Two Variables · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-pair-of-linear-equations-in-two-variables-SRC-3",
+      "sectionId": "A",
+      "chapterId": "pair-of-linear-equations-in-two-variables",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "pair-of-linear-equations-in-two-variables"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The system 2x + 4y = 8 and x + 2y = 4 has:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "No solution"
+        },
+        {
+          "optionId": "B",
+          "text": "Exactly one solution"
+        },
+        {
+          "optionId": "C",
+          "text": "Infinitely many solutions"
+        },
+        {
+          "optionId": "D",
+          "text": "Only x = 0"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. Infinitely many solutions",
+        "explanation": "The second equation is exactly half of the first, so both represent the same line."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Pair of Linear Equations in Two Variables · MCQ #3"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-quadratic-equations-SRC-1",
+      "sectionId": "A",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "quadratic-equations"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The discriminant of ax² + bx + c is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "b² − 4ac"
+        },
+        {
+          "optionId": "B",
+          "text": "b² + 4ac"
+        },
+        {
+          "optionId": "C",
+          "text": "4ac − b"
+        },
+        {
+          "optionId": "D",
+          "text": "a² − 4bc"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. b² − 4ac",
+        "explanation": "The discriminant is D = b² − 4ac."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Quadratic Equations · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-quadratic-equations-SRC-2",
+      "sectionId": "A",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "quadratic-equations"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "If the discriminant is zero, the roots are:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Distinct real roots"
+        },
+        {
+          "optionId": "B",
+          "text": "Equal real roots"
+        },
+        {
+          "optionId": "C",
+          "text": "Non-real roots"
+        },
+        {
+          "optionId": "D",
+          "text": "Always zero"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. Equal real roots",
+        "explanation": "D = 0 gives two equal real roots."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Quadratic Equations · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-quadratic-equations-SRC-3",
+      "sectionId": "A",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "quadratic-equations"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The roots of x² − 7x + 12 = 0 are:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "2 and 6"
+        },
+        {
+          "optionId": "B",
+          "text": "−3 and −4"
+        },
+        {
+          "optionId": "C",
+          "text": "3 and 4"
+        },
+        {
+          "optionId": "D",
+          "text": "−3 and 4"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 3 and 4",
+        "explanation": "Factor as (x − 3)(x − 4) = 0."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Quadratic Equations · MCQ #3"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-arithmetic-progressions-SRC-1",
+      "sectionId": "A",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "arithmetic-progressions"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The nth term of an AP with first term a and common difference d is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "a + nd"
+        },
+        {
+          "optionId": "B",
+          "text": "a + (n−1)d"
+        },
+        {
+          "optionId": "C",
+          "text": "adⁿ"
+        },
+        {
+          "optionId": "D",
+          "text": "a(n−1)+d"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. a + (n−1)d",
+        "explanation": "The first term is a; moving to term n adds d exactly n−1 times."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Arithmetic Progressions · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-arithmetic-progressions-SRC-2",
+      "sectionId": "A",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "arithmetic-progressions"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The 10th term of 3, 7, 11, 15, … is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "35"
+        },
+        {
+          "optionId": "B",
+          "text": "39"
+        },
+        {
+          "optionId": "C",
+          "text": "40"
+        },
+        {
+          "optionId": "D",
+          "text": "43"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 39",
+        "explanation": "a₁₀ = 3 + 9×4 = 39."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Arithmetic Progressions · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-arithmetic-progressions-SRC-3",
+      "sectionId": "A",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "arithmetic-progressions"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The common difference of 18, 13, 8, 3, … is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "5"
+        },
+        {
+          "optionId": "B",
+          "text": "−5"
+        },
+        {
+          "optionId": "C",
+          "text": "−3"
+        },
+        {
+          "optionId": "D",
+          "text": "−8"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. −5",
+        "explanation": "Each term decreases by 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Arithmetic Progressions · MCQ #3"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-triangles-SRC-1",
+      "sectionId": "A",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "triangles"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "If DE ∥ BC in ΔABC, which ratio is guaranteed by the Basic Proportionality Theorem?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "AD/AB = EC/AE"
+        },
+        {
+          "optionId": "B",
+          "text": "AD/DB = AE/EC"
+        },
+        {
+          "optionId": "C",
+          "text": "AD/DB = AC/AE"
+        },
+        {
+          "optionId": "D",
+          "text": "AB/DB = AC/EC"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. AD/DB = AE/EC",
+        "explanation": "A line parallel to one side divides the other two sides in the same ratio."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Triangles · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-triangles-SRC-2",
+      "sectionId": "A",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "triangles"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which is a valid similarity criterion for triangles?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "SSS with equal side ratios"
+        },
+        {
+          "optionId": "B",
+          "text": "One equal angle only"
+        },
+        {
+          "optionId": "C",
+          "text": "Any two sides equal"
+        },
+        {
+          "optionId": "D",
+          "text": "Equal perimeters only"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. SSS with equal side ratios",
+        "explanation": "SSS similarity holds when all corresponding side ratios are equal."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Triangles · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-triangles-SRC-3",
+      "sectionId": "A",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "triangles"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which condition proves two triangles similar by the AA criterion?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "One side pair is equal"
+        },
+        {
+          "optionId": "B",
+          "text": "Their areas are equal"
+        },
+        {
+          "optionId": "C",
+          "text": "Two pairs of corresponding angles are equal"
+        },
+        {
+          "optionId": "D",
+          "text": "One angle is equal but no other condition is known"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. Two pairs of corresponding angles are equal",
+        "explanation": "Two equal pairs of corresponding angles establish AA similarity."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Triangles · MCQ #3"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-coordinate-geometry-SRC-1",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "coordinate-geometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The distance between (0,0) and (3,4) is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "5"
+        },
+        {
+          "optionId": "B",
+          "text": "6"
+        },
+        {
+          "optionId": "C",
+          "text": "7"
+        },
+        {
+          "optionId": "D",
+          "text": "12"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 5",
+        "explanation": "Distance = √(3² + 4²) = 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-coordinate-geometry-SRC-2",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "coordinate-geometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The midpoint of (2, −1) and (6, 5) is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "(4,2)"
+        },
+        {
+          "optionId": "B",
+          "text": "(8,4)"
+        },
+        {
+          "optionId": "C",
+          "text": "(2,4)"
+        },
+        {
+          "optionId": "D",
+          "text": "(4,3)"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. (4,2)",
+        "explanation": "Average the x-coordinates and y-coordinates separately."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-coordinate-geometry-SRC-4",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "coordinate-geometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A point that divides the segment joining (0,0) and (6,0) internally in ratio 1:2 is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "(2,0)"
+        },
+        {
+          "optionId": "B",
+          "text": "(3,0)"
+        },
+        {
+          "optionId": "C",
+          "text": "(4,0)"
+        },
+        {
+          "optionId": "D",
+          "text": "(1,0)"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. (2,0)",
+        "explanation": "Section formula gives (1×6 + 2×0)/(1+2) = 2 for x and 0 for y."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · MCQ #4"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-coordinate-geometry-SRC-7",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "coordinate-geometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The point (−5, 0) lies on the:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "x-axis"
+        },
+        {
+          "optionId": "B",
+          "text": "y-axis"
+        },
+        {
+          "optionId": "C",
+          "text": "first quadrant"
+        },
+        {
+          "optionId": "D",
+          "text": "fourth quadrant"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. x-axis",
+        "explanation": "Any point with y-coordinate zero lies on the x-axis."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · MCQ #7"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-coordinate-geometry-SRC-10",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "coordinate-geometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "P divides A(-5, -4) and B(-1, -2) internally in the ratio 1:1 (AP:PB). Find P.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "(-2, -3)"
+        },
+        {
+          "optionId": "B",
+          "text": "(-3, -4)"
+        },
+        {
+          "optionId": "C",
+          "text": "(-3, -2)"
+        },
+        {
+          "optionId": "D",
+          "text": "(-3, -3)"
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D. (-3, -3)",
+        "explanation": "Section formula gives P=(1x₂+1x₁, 1y₂+1y₁)/(1+1)=(-3, -3)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: D",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · MCQ #10"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-coordinate-geometry-SRC-11",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "coordinate-geometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "For A(-5, 3) and B(-2, 7), the square of their distance is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "25"
+        },
+        {
+          "optionId": "B",
+          "text": "7"
+        },
+        {
+          "optionId": "C",
+          "text": "49"
+        },
+        {
+          "optionId": "D",
+          "text": "26"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 25",
+        "explanation": "Distance squared=(x₂−x₁)²+(y₂−y₁)²=9+16=25."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · MCQ #11"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-coordinate-geometry-SRC-15",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "coordinate-geometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The point (-10, 2) lies in which quadrant?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Second quadrant"
+        },
+        {
+          "optionId": "B",
+          "text": "Third quadrant"
+        },
+        {
+          "optionId": "C",
+          "text": "Fourth quadrant"
+        },
+        {
+          "optionId": "D",
+          "text": "On an axis"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. Second quadrant",
+        "explanation": "Since y is positive and x is negative, it lies in the second quadrant."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · MCQ #15"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-coordinate-geometry-SRC-17",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "coordinate-geometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "P divides A(-4, -2) and B(14, 16) internally in the ratio 2:4 (AP:PB). Find P.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "(3, 4)"
+        },
+        {
+          "optionId": "B",
+          "text": "(2, 3)"
+        },
+        {
+          "optionId": "C",
+          "text": "(2, 4)"
+        },
+        {
+          "optionId": "D",
+          "text": "(5, 7)"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. (2, 4)",
+        "explanation": "Section formula gives P=(2x₂+4x₁, 2y₂+4y₁)/(2+4)=(2, 4)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · MCQ #17"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-coordinate-geometry-SRC-24",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "coordinate-geometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "P divides A(-3, 0) and B(17, 10) internally in the ratio 3:2 (AP:PB). Find P.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "(9, 5)"
+        },
+        {
+          "optionId": "B",
+          "text": "(9, 6)"
+        },
+        {
+          "optionId": "C",
+          "text": "(7, 5)"
+        },
+        {
+          "optionId": "D",
+          "text": "(10, 6)"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. (9, 6)",
+        "explanation": "Section formula gives P=(3x₂+2x₁, 3y₂+2y₁)/(3+2)=(9, 6)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · MCQ #24"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-introduction-to-trigonometry-SRC-1",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "introduction-to-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "In a right triangle, sin θ equals:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Adjacent/hypotenuse"
+        },
+        {
+          "optionId": "B",
+          "text": "Opposite/hypotenuse"
+        },
+        {
+          "optionId": "C",
+          "text": "Opposite/adjacent"
+        },
+        {
+          "optionId": "D",
+          "text": "Hypotenuse/opposite"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. Opposite/hypotenuse",
+        "explanation": "Sine is opposite side divided by hypotenuse."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-introduction-to-trigonometry-SRC-2",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "introduction-to-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "If sin θ = 3/5 for an acute angle, then cos θ is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "4/5"
+        },
+        {
+          "optionId": "B",
+          "text": "3/4"
+        },
+        {
+          "optionId": "C",
+          "text": "5/4"
+        },
+        {
+          "optionId": "D",
+          "text": "2/5"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 4/5",
+        "explanation": "The 3-4-5 triangle gives adjacent side 4 and hypotenuse 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-introduction-to-trigonometry-SRC-3",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "introduction-to-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "For an acute angle θ in a right triangle, tan θ is equal to:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "sin θ / cos θ"
+        },
+        {
+          "optionId": "B",
+          "text": "cos θ / sin θ"
+        },
+        {
+          "optionId": "C",
+          "text": "1 / sin θ"
+        },
+        {
+          "optionId": "D",
+          "text": "1 / cos θ"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. sin θ / cos θ",
+        "explanation": "tan θ = opposite/adjacent, and sin θ/cos θ = (opposite/hypotenuse)/(adjacent/hypotenuse) = opposite/adjacent."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · MCQ #3"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-introduction-to-trigonometry-SRC-4",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "introduction-to-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The value of sin 30° is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "0"
+        },
+        {
+          "optionId": "B",
+          "text": "1/2"
+        },
+        {
+          "optionId": "C",
+          "text": "√3/2"
+        },
+        {
+          "optionId": "D",
+          "text": "1"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 1/2",
+        "explanation": "sin 30° = 1/2."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · MCQ #4"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-introduction-to-trigonometry-SRC-5",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "introduction-to-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The value of tan 45° is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "0"
+        },
+        {
+          "optionId": "B",
+          "text": "1/√3"
+        },
+        {
+          "optionId": "C",
+          "text": "1"
+        },
+        {
+          "optionId": "D",
+          "text": "√3"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 1",
+        "explanation": "At 45°, opposite and adjacent legs are equal."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · MCQ #5"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-introduction-to-trigonometry-SRC-6",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "introduction-to-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "If sec θ = 13/12 for acute θ, then tan θ is:",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "5/12"
+        },
+        {
+          "optionId": "B",
+          "text": "12/5"
+        },
+        {
+          "optionId": "C",
+          "text": "13/5"
+        },
+        {
+          "optionId": "D",
+          "text": "5/13"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 5/12",
+        "explanation": "cos θ = 12/13, so the right triangle has opposite 5, adjacent 12, hypotenuse 13."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · MCQ #6"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-introduction-to-trigonometry-SRC-8",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "introduction-to-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "If tan θ = 3/4 for acute θ, sin θ is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "3/5"
+        },
+        {
+          "optionId": "B",
+          "text": "4/5"
+        },
+        {
+          "optionId": "C",
+          "text": "3/4"
+        },
+        {
+          "optionId": "D",
+          "text": "4/3"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 3/5",
+        "explanation": "Opposite:adjacent = 3:4, so hypotenuse is 5 and sin θ = 3/5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · MCQ #8"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-introduction-to-trigonometry-SRC-13",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "introduction-to-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Evaluate sin30° + cos60°.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "2"
+        },
+        {
+          "optionId": "B",
+          "text": "1"
+        },
+        {
+          "optionId": "C",
+          "text": "√3"
+        },
+        {
+          "optionId": "D",
+          "text": "1/2"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 1",
+        "explanation": "Use the exact standard-angle values for sine, cosine and tangent."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · MCQ #13"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-introduction-to-trigonometry-SRC-15",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "introduction-to-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The value of sin 45° is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "1/2"
+        },
+        {
+          "optionId": "B",
+          "text": "√3/2"
+        },
+        {
+          "optionId": "C",
+          "text": "2/√2"
+        },
+        {
+          "optionId": "D",
+          "text": "1/√2"
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D. 1/√2",
+        "explanation": "From standard trigonometric values, sin 45° = 1/√2."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: D",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · MCQ #15"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-circles-SRC-1",
+      "sectionId": "A",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "circles"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A tangent to a circle is perpendicular to the radius at the:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Centre only"
+        },
+        {
+          "optionId": "B",
+          "text": "Point of contact"
+        },
+        {
+          "optionId": "C",
+          "text": "Any point on tangent"
+        },
+        {
+          "optionId": "D",
+          "text": "Endpoint farthest from the circle"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. Point of contact",
+        "explanation": "The radius drawn to the point of contact makes a 90° angle with the tangent."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Circles · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-circles-SRC-2",
+      "sectionId": "A",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "circles"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The number of tangents from an external point to a circle is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Zero"
+        },
+        {
+          "optionId": "B",
+          "text": "One"
+        },
+        {
+          "optionId": "C",
+          "text": "Two"
+        },
+        {
+          "optionId": "D",
+          "text": "Infinitely many"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. Two",
+        "explanation": "Two tangents can be drawn from a point outside a circle."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Circles · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-circles-SRC-3",
+      "sectionId": "A",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "circles"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Tangents PA and PB are drawn from an external point P. Which is true?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "PA > PB"
+        },
+        {
+          "optionId": "B",
+          "text": "PA < PB"
+        },
+        {
+          "optionId": "C",
+          "text": "PA = PB"
+        },
+        {
+          "optionId": "D",
+          "text": "PA + PB = radius"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. PA = PB",
+        "explanation": "Tangents drawn from the same external point have equal lengths."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Circles · MCQ #3"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-areas-related-to-circles-SRC-1",
+      "sectionId": "A",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "areas-related-to-circles"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The area of a circle of radius r is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "2πr"
+        },
+        {
+          "optionId": "B",
+          "text": "πr²"
+        },
+        {
+          "optionId": "C",
+          "text": "πd"
+        },
+        {
+          "optionId": "D",
+          "text": "πr²/2"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. πr²",
+        "explanation": "Area = πr²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Areas Related to Circles · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-areas-related-to-circles-SRC-2",
+      "sectionId": "A",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "areas-related-to-circles"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The circumference of a circle with radius 7 cm is (use π = 22/7):",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "22 cm"
+        },
+        {
+          "optionId": "B",
+          "text": "44 cm"
+        },
+        {
+          "optionId": "C",
+          "text": "77 cm"
+        },
+        {
+          "optionId": "D",
+          "text": "154 cm"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 44 cm",
+        "explanation": "Circumference = 2πr = 44 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Areas Related to Circles · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-areas-related-to-circles-SRC-3",
+      "sectionId": "A",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "areas-related-to-circles"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The area of a 90° sector of a circle of radius 4 cm is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "4π cm²"
+        },
+        {
+          "optionId": "B",
+          "text": "8π cm²"
+        },
+        {
+          "optionId": "C",
+          "text": "16π cm²"
+        },
+        {
+          "optionId": "D",
+          "text": "2π cm²"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 4π cm²",
+        "explanation": "Sector area=(θ/360°)πr²=(90/360)π(4)²=4π cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Areas Related to Circles · MCQ #3"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-surface-areas-and-volumes-SRC-1",
+      "sectionId": "A",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "surface-areas-and-volumes"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The volume of a cylinder of radius r and height h is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "πrh"
+        },
+        {
+          "optionId": "B",
+          "text": "2πrh"
+        },
+        {
+          "optionId": "C",
+          "text": "πr²h"
+        },
+        {
+          "optionId": "D",
+          "text": "4πr²"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. πr²h",
+        "explanation": "Volume = base area × height = πr²h."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Surface Areas and Volumes · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-surface-areas-and-volumes-SRC-2",
+      "sectionId": "A",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "surface-areas-and-volumes"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The volume of a cone is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "πr²h"
+        },
+        {
+          "optionId": "B",
+          "text": "⅓πr²h"
+        },
+        {
+          "optionId": "C",
+          "text": "2πrh"
+        },
+        {
+          "optionId": "D",
+          "text": "4/3πr³"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. ⅓πr²h",
+        "explanation": "A cone occupies one-third the volume of a cylinder with the same base and height."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Surface Areas and Volumes · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-surface-areas-and-volumes-SRC-3",
+      "sectionId": "A",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "surface-areas-and-volumes"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The volume of a sphere of radius 3 cm is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "9π cm³"
+        },
+        {
+          "optionId": "B",
+          "text": "18π cm³"
+        },
+        {
+          "optionId": "C",
+          "text": "27π cm³"
+        },
+        {
+          "optionId": "D",
+          "text": "36π cm³"
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D. 36π cm³",
+        "explanation": "V = 4/3πr³ = 4/3π×27 = 36π cm³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: D",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Surface Areas and Volumes · MCQ #3"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-statistics-SRC-1",
+      "sectionId": "A",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "statistics"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The mean of 4, 6, 8, 10 is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "6"
+        },
+        {
+          "optionId": "B",
+          "text": "7"
+        },
+        {
+          "optionId": "C",
+          "text": "8"
+        },
+        {
+          "optionId": "D",
+          "text": "9"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 7",
+        "explanation": "Mean = (4+6+8+10)/4 = 7."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Statistics · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-statistics-SRC-2",
+      "sectionId": "A",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "statistics"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The median of 3, 5, 8, 11, 20 is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "5"
+        },
+        {
+          "optionId": "B",
+          "text": "8"
+        },
+        {
+          "optionId": "C",
+          "text": "11"
+        },
+        {
+          "optionId": "D",
+          "text": "9.4"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 8",
+        "explanation": "With five ordered values, the middle (third) value is 8."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Statistics · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-statistics-SRC-3",
+      "sectionId": "A",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "statistics"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The mode of 2, 3, 3, 4, 5, 3, 6 is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "2"
+        },
+        {
+          "optionId": "B",
+          "text": "3"
+        },
+        {
+          "optionId": "C",
+          "text": "4"
+        },
+        {
+          "optionId": "D",
+          "text": "6"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 3",
+        "explanation": "The value 3 occurs most frequently."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Statistics · MCQ #3"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-probability-SRC-1",
+      "sectionId": "A",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "probability"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The probability of an impossible event is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "0"
+        },
+        {
+          "optionId": "B",
+          "text": "1/2"
+        },
+        {
+          "optionId": "C",
+          "text": "1"
+        },
+        {
+          "optionId": "D",
+          "text": "−1"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 0",
+        "explanation": "An impossible event has probability zero."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Probability · MCQ #1"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-probability-SRC-2",
+      "sectionId": "A",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "probability"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A fair die is rolled. The probability of getting an even number is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "1/6"
+        },
+        {
+          "optionId": "B",
+          "text": "1/3"
+        },
+        {
+          "optionId": "C",
+          "text": "1/2"
+        },
+        {
+          "optionId": "D",
+          "text": "2/3"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 1/2",
+        "explanation": "The even outcomes are 2, 4 and 6: 3/6 = 1/2."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Probability · MCQ #2"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-probability-SRC-3",
+      "sectionId": "A",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "probability"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A coin is tossed once. The probability of heads is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "0"
+        },
+        {
+          "optionId": "B",
+          "text": "1/4"
+        },
+        {
+          "optionId": "C",
+          "text": "1/2"
+        },
+        {
+          "optionId": "D",
+          "text": "1"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 1/2",
+        "explanation": "For a fair coin, heads and tails are equally likely."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Probability · MCQ #3"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, correct option, explanation, option uniqueness and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "M10-Q13-APP-01",
+      "sectionId": "A",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "cbse-objective",
+        "some-applications-of-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A vertical pole casts a 12 m shadow when the Sun’s angle of elevation is 45°. What is the pole’s height?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "6 m"
+        },
+        {
+          "optionId": "B",
+          "text": "12 m"
+        },
+        {
+          "optionId": "C",
+          "text": "12√3 m"
+        },
+        {
+          "optionId": "D",
+          "text": "24 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 12 m",
+        "explanation": "tan 45° = height/12 = 1, so the height is 12 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru application MCQ for CBSE Class X Mathematics 2026–27."
+      },
+      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context."
+    },
+    {
+      "questionId": "M10-Q13-APP-02",
+      "sectionId": "A",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "cbse-objective",
+        "some-applications-of-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "From the top of a 30 m cliff, the angle of depression of a boat is 30°. What is the boat’s horizontal distance from the foot of the cliff?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "10√3 m"
+        },
+        {
+          "optionId": "B",
+          "text": "30 m"
+        },
+        {
+          "optionId": "C",
+          "text": "30√3 m"
+        },
+        {
+          "optionId": "D",
+          "text": "60 m"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 30√3 m",
+        "explanation": "The angle of depression equals the angle of elevation. tan 30° = 30/d, hence d = 30√3 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru application MCQ for CBSE Class X Mathematics 2026–27."
+      },
+      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context."
+    },
+    {
+      "questionId": "M10-Q13-APP-03",
+      "sectionId": "A",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "cbse-objective",
+        "some-applications-of-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Two points on the same straight line observe a tower. The nearer point is 20 m closer than the farther point. Their angles of elevation are 60° and 30° respectively. What is the tower’s height?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "10 m"
+        },
+        {
+          "optionId": "B",
+          "text": "10√3 m"
+        },
+        {
+          "optionId": "C",
+          "text": "20√3 m"
+        },
+        {
+          "optionId": "D",
+          "text": "30 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 10√3 m",
+        "explanation": "Let the nearer distance be x and height h. h=x√3 and h=(x+20)/√3. Thus 3x=x+20, x=10 and h=10√3 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru application MCQ for CBSE Class X Mathematics 2026–27."
+      },
+      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context."
+    },
+    {
+      "questionId": "M10-Q13-APP-04",
+      "sectionId": "A",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "cbse-objective",
+        "some-applications-of-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A person on a 24 m rooftop observes a car on level ground at an angle of depression of 45°. What is the horizontal distance to the car?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "12 m"
+        },
+        {
+          "optionId": "B",
+          "text": "24 m"
+        },
+        {
+          "optionId": "C",
+          "text": "24√3 m"
+        },
+        {
+          "optionId": "D",
+          "text": "48 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 24 m",
+        "explanation": "tan 45° = 24/d, so d = 24 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru application MCQ for CBSE Class X Mathematics 2026–27."
+      },
+      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context."
+    },
+    {
+      "questionId": "M10-Q13-APP-05",
+      "sectionId": "A",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "mcq",
+        "cbse-objective",
+        "some-applications-of-trigonometry"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A kite string of length 40 m is taut and makes an angle of 30° with the horizontal. Ignoring the holder’s height, how high is the kite?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "20 m"
+        },
+        {
+          "optionId": "B",
+          "text": "20√3 m"
+        },
+        {
+          "optionId": "C",
+          "text": "40√3 m"
+        },
+        {
+          "optionId": "D",
+          "text": "10 m"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 20 m",
+        "explanation": "The string is the hypotenuse, so height = 40 sin 30° = 20 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru application MCQ for CBSE Class X Mathematics 2026–27."
+      },
+      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context."
+    }
+  ]
+}
