@@ -9,7 +9,7 @@
   let parent=null, children=[];
   function assignedPanel(child){
     const section=node("section","detail-section parent-assigned-tests");section.appendChild(node("h3","","Assigned tests & examinations"));
-    const items=window.C10AssessmentManager.listForStudent(child.studentId);
+    const items=window.C10AssessmentManager.listForParent(parent.parentId,child.studentId);
     if(!items.length){section.appendChild(node("div","detail-empty","No tests assigned to this child on this browser yet."));return section;}
     const list=node("div","assignment-list");
     items.forEach(item=>{
