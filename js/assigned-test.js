@@ -50,6 +50,13 @@
       if(!assignment||assignment.studentId!==student.studentId){showStatus("This assigned test is not available to the signed-in student.","error");return;}
       $("testTitle").textContent=assignment.title;
       $("testMeta").textContent=assignment.subjectTitle+" · Class "+assignment.classId+" · "+assignment.questionCount+" questions";
+      const completed=assignment.attempts.filter(x=>x.status==="submitted");
+      if(completed.length>=assignment.attemptsAllowed){
+        const latest=completed[completed.length-1];$("testSetup").hidden=true;$("testResult").hidden=false;
+        $("testResultSummary").textContent="You have already submitted this test. Score: "+latest.correct+"/"+latest.total+" ("+latest.scorePercent+"%).";
+        $("testResultNote").textContent="The Parent/Teacher can see this result on the same browser.";
+        return;
+      }
       if(assignment.deadlineAt&&new Date(assignment.deadlineAt).getTime()<Date.now()){showStatus("The deadline for this test has passed.","error");return;}
       $("startAssignedTest").disabled=false;
       showStatus("Assigned by your Parent/Teacher. Your answers will be submitted for automatic MCQ scoring.");
