@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "kind": "exam-paper-content-audit",
+  "auditId": "class-10-mathematics-mcq-import-2026-27-v1",
+  "source": "data/mathematics.json",
+  "targetBank": "data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",
+  "summary": {
+    "sourceQuestions": 1400,
+    "importedQuestions": 1394,
+    "exactDuplicateStemsExcluded": 6,
+    "structuralInvalidExcluded": 0,
+    "outOfScopeExcluded": 0,
+    "chapterCount": 14,
+    "allImportedStatus": "review",
+    "allImportedAssessmentLevels": [
+      "standard",
+      "basic"
+    ]
+  },
+  "structuralChecks": {
+    "promptPresent": true,
+    "exactlyFourOptions": true,
+    "distinctOptions": true,
+    "answerIndexValid": true,
+    "explanationPresent": true,
+    "stableQuestionIds": true,
+    "duplicateNormalizedPromptsRemoved": true
+  },
+  "contentChecks": {
+    "syllabusAlignment": "inherited from existing Class 10 CBSE-aligned Mathematics chapter bank; chapter scope mapped against both draft blueprints",
+    "answerKeyAccuracy": "not independently verified across all items; remains review status",
+    "competencyTags": "provisional rule inference; all marked needs-review",
+    "difficultyTags": "inherited from source bank; requires spot audit"
+  },
+  "duplicateExamples": [
+    {
+      "chapter": "Polynomials",
+      "sourceId": 66,
+      "stem": "For p(x)=x² − 5x + (6), the product of its zeroes is:"
+    },
+    {
+      "chapter": "Polynomials",
+      "sourceId": 79,
+      "stem": "For p(x) = x² − 5x − 6, the sum of its zeroes is:"
+    },
+    {
+      "chapter": "Polynomials",
+      "sourceId": 85,
+      "stem": "If α+β=5 and αβ=6, which monic quadratic has zeroes α and β?"
+    },
+    {
+      "chapter": "Quadratic Equations",
+      "sourceId": 72,
+      "stem": "The real roots of x² − 5x − 6=0 are:"
+    },
+    {
+      "chapter": "Introduction to Trigonometry",
+      "sourceId": 73,
+      "stem": "Evaluate sin30° × cos60°."
+    },
+    {
+      "chapter": "Introduction to Trigonometry",
+      "sourceId": 85,
+      "stem": "Evaluate sin60° / cos60°."
+    }
+  ],
+  "byChapter": {
+    "real-numbers": {
+      "source": 100,
+      "imported": 100,
+      "duplicates": 0
+    },
+    "polynomials": {
+      "source": 100,
+      "imported": 97,
+      "duplicates": 3
+    },
+    "pair-of-linear-equations-in-two-variables": {
+      "source": 100,
+      "imported": 100,
+      "duplicates": 0
+    },
+    "quadratic-equations": {
+      "source": 100,
+      "imported": 99,
+      "duplicates": 1
+    },
+    "arithmetic-progressions": {
+      "source": 100,
+      "imported": 100,
+      "duplicates": 0
+    },
+    "triangles": {
+      "source": 100,
+      "imported": 100,
+      "duplicates": 0
+    },
+    "coordinate-geometry": {
+      "source": 100,
+      "imported": 100,
+      "duplicates": 0
+    },
+    "introduction-to-trigonometry": {
+      "source": 100,
+      "imported": 98,
+      "duplicates": 2
+    },
+    "some-applications-of-trigonometry": {
+      "source": 100,
+      "imported": 100,
+      "duplicates": 0
+    },
+    "circles": {
+      "source": 100,
+      "imported": 100,
+      "duplicates": 0
+    },
+    "areas-related-to-circles": {
+      "source": 100,
+      "imported": 100,
+      "duplicates": 0
+    },
+    "surface-areas-and-volumes": {
+      "source": 100,
+      "imported": 100,
+      "duplicates": 0
+    },
+    "statistics": {
+      "source": 100,
+      "imported": 100,
+      "duplicates": 0
+    },
+    "probability": {
+      "source": 100,
+      "imported": 100,
+      "duplicates": 0
+    }
+  },
+  "notes": [
+    "The existing chapter bank is used as an input source, not treated as automatically approved for summative paper generation.",
+    "MCQs are limited to 1-mark MCQ slots. They are not repurposed as assertion-reason or written-response items.",
+    "Imported questions remain approvalStatus=review and competencyTagStatus=needs-review. They are intentionally ineligible for paper generation until content and competency review is completed.",
+    "Standard and Basic use the same shared pool. Any later level-specific restriction must be explicit in assessmentLevels."
+  ]
+}
