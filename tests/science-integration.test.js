@@ -47,6 +47,7 @@ const exam=examContext.window.C10ExamPaperGenerator;
 const blueprint=JSON.parse(fs.readFileSync("data/exam-papers/blueprints/class-10-science-2026-27.json","utf8"));
 const dedicated=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-science-2026-27-v1.json","utf8"));
 const integrated=exam.mergeQuestionBanks(dedicated,bank,blueprint);
+console.log("Science competency integration stats: "+JSON.stringify(integrated.stats));
 assert.ok(integrated.stats.appended>=600,"the shared Science practice bank should contribute at least 600 distinct summative MCQs");
 assert.ok(integrated.stats.excluded.invalidQuestion>0&&integrated.stats.invalidReasons.duplicateSourceStem===integrated.stats.excluded.invalidQuestion,"repeated practice-bank stems should be filtered as duplicates, not reported as malformed questions");
 assert.ok(Object.entries(integrated.stats.invalidReasons).filter(([key])=>key!=="duplicateSourceStem").every(([,count])=>count===0),"valid source MCQs must not be rejected for invalid content metadata");
