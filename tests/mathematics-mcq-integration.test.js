@@ -30,7 +30,7 @@ for(const profile of profiles){
  assert.ok(adapted.questions.length>=1290,profile.level+" imported "+adapted.questions.length+" questions; adapter audit: "+JSON.stringify(adapted.adapterStats));
  assert.equal(adapted.adapterStats.sourceChapterCount,14);
  assert.equal(adapted.adapterStats.excluded.ambiguousChapter,0,"written-answer and case slots must not make MCQ chapters ambiguous");
- assert.equal(adapted.adapterStats.excluded.outOfSummativeScope,0,"all prescribed Mathematics chapters must map to an eligible Section A MCQ slot");
+ assert.equal(adapted.adapterStats.excluded.outOfSummativeScope,0,"out-of-scope adapter candidates: "+JSON.stringify({excluded:adapted.adapterStats.excluded,byChapter:adapted.adapterStats.byChapter,sourceKeys:source.map(ch=>ch.key)}));
  assert.equal(adapted.adapterStats.excluded.unsupportedCompetency,0);
  assert.equal(adapted.adapterStats.excluded.needsReview,0);
  assert.deepEqual(Object.keys(adapted.adapterStats.byChapter).sort(),expectedChapters.slice().sort());
