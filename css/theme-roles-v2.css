@@ -281,3 +281,95 @@ body.c10-theme-admin .admin-hero p{color:#6e6786!important}
 body.c10-theme-admin .admin-btn:not(.danger){
   background:linear-gradient(115deg,#6655ad,#8271c1)!important;color:#fff!important;
 }
+
+
+/* Final interaction layer: consistent actions, with the sidebar navigation deliberately untouched. */
+body.c10-theme-quest :is(.btn,.admin-btn:not(.secondary):not(.danger),.exam-btn:not(.secondary),
+.paper-btn:not(.secondary),.test-btn:not(.secondary),.report-button:not(.secondary),
+.study-actions a:not(.secondary),.learning-actions a:not(.secondary)){
+  color:#fff!important;
+  background:linear-gradient(118deg,#51439a,#6758b7)!important;
+  border:1px solid #51439a!important;
+  box-shadow:0 5px 13px rgba(68,57,139,.15)!important;
+}
+body.c10-theme-quest :is(.btn.secondary,.admin-btn.secondary,.exam-btn.secondary,.paper-btn.secondary,
+.test-btn.secondary,.report-button.secondary,.study-actions button,.learning-actions button,
+.chapter-picker-actions button,.chapter-picker-trigger,.learning-hub-link){
+  color:#4d438c!important;
+  background:#f0edfa!important;
+  border:1px solid #dcd6f0!important;
+  box-shadow:none!important;
+}
+body.c10-theme-quest :is(.btn,.admin-btn,.exam-btn,.paper-btn,.test-btn,.report-button,
+.study-actions a,.study-actions button,.learning-actions a,.learning-actions button,
+.chapter-picker-actions button,.chapter-picker-trigger,.learning-hub-link){
+  border-radius:12px!important;
+  font-family:inherit!important;
+  font-weight:800!important;
+  letter-spacing:0!important;
+  text-decoration:none!important;
+}
+body.c10-theme-quest :is(.btn,.admin-btn,.exam-btn,.paper-btn,.test-btn,.report-button,
+.study-actions a,.study-actions button,.learning-actions a,.learning-actions button,
+.chapter-picker-actions button,.chapter-picker-trigger,.learning-hub-link):focus-visible{
+  outline:3px solid rgba(91,78,170,.28)!important;outline-offset:3px!important;
+}
+body.c10-theme-quest :is(.btn,.admin-btn,.exam-btn,.paper-btn,.test-btn,.report-button,
+.study-actions a,.learning-actions a,.subject-launch-card,.learning-hub-link):hover:not(:disabled){
+  filter:saturate(1.04);transform:translateY(-1px);
+}
+body.c10-theme-quest .mode button{
+  min-height:42px;border-radius:11px!important;font-weight:750;
+  transition:background-color .16s ease,border-color .16s ease,transform .16s ease;
+}
+body.c10-theme-quest .mode button:hover:not(.active):not(:disabled){
+  border-color:#c8c0e7!important;background:#f8f6fd!important;transform:translateY(-1px);
+}
+body.c10-theme-admin .admin-btn:not(.secondary):not(.danger){
+  min-height:42px;border-radius:12px!important;
+  background:linear-gradient(118deg,#6655ad,#8271c1)!important;
+  border:1px solid #6655ad!important;color:#fff!important;
+  box-shadow:0 5px 13px rgba(76,62,132,.16)!important;
+}
+body.c10-theme-admin .admin-btn.secondary{
+  min-height:42px;border-radius:12px!important;
+  background:#f0edfa!important;border:1px solid #dcd6f0!important;
+  color:#4d438c!important;box-shadow:none!important;
+}
+
+/* Learn mode: chosen answer, correct answer and wrong answer must never collapse to one colour. */
+body.c10-theme-quest.eg-quiz-page .opt.selected:not(.correct):not(.wrong){
+  background:#eee9ff!important;border-color:#8d80c8!important;color:#443b83!important;
+  box-shadow:0 0 0 2px rgba(81,67,154,.12)!important;
+}
+body.c10-theme-quest.eg-quiz-page .opt.correct{
+  background:#e5f5e9!important;border-color:#91cba0!important;color:#286b49!important;
+}
+body.c10-theme-quest.eg-quiz-page .opt.wrong,
+body.c10-theme-quest.eg-quiz-page .opt.selected.wrong{
+  background:#fff0f0!important;border-color:#e1a0a5!important;color:#873f47!important;
+  box-shadow:0 0 0 2px rgba(175,65,78,.08)!important;
+}
+body.c10-theme-quest.eg-quiz-page .opt.correct.selected{
+  background:#e3f3e7!important;border-color:#57976a!important;color:#245f40!important;
+  box-shadow:0 0 0 3px rgba(81,67,154,.24)!important;
+}
+body.c10-theme-quest.eg-quiz-page .opt .option-copy{flex:1;min-width:0}
+body.c10-theme-quest.eg-quiz-page .opt .answer-state{
+  flex:0 0 auto;max-width:48%;margin-left:auto;padding:5px 8px;
+  border-radius:999px;background:#dff1e4;border:1px solid #c0dfc8;
+  color:#286b49;font-size:.68rem;line-height:1.15;font-weight:850;
+  text-align:center;white-space:normal;
+}
+body.c10-theme-quest.eg-quiz-page .opt.selected .answer-state{
+  background:#e9e4f8;border-color:#d2c8ed;color:#4d438c;
+}
+body.c10-theme-quest.eg-quiz-page .opt.wrong .answer-state{
+  background:#fde6e7;border-color:#efc2c5;color:#873f47;
+}
+body.c10-theme-quest.eg-quiz-page .opt .answer-state[hidden]{display:none!important}
+@media(max-width:520px){
+  body.c10-theme-quest.eg-quiz-page .opt{flex-wrap:wrap;align-items:center}
+  body.c10-theme-quest.eg-quiz-page .opt .option-copy{flex:1 1 calc(100% - 42px)}
+  body.c10-theme-quest.eg-quiz-page .opt .answer-state{margin-left:39px;max-width:calc(100% - 42px)}
+}
