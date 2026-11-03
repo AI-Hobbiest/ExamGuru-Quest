@@ -9,7 +9,7 @@
   "title": "ExamGuru Class 10 Mathematics Standard/Basic approved paper pool · 2026–27",
   "questionPoolStatus": "curated-approved-paper-pool",
   "minimumCandidatesPerSlot": 3,
-  "questionCount": 75,
+  "questionCount": 99,
   "reviewPoolUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",
   "questions": [
     {
@@ -4018,6 +4018,1158 @@
         }
       ],
       "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q26-SHARED-V1",
+      "sectionId": "C",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "number-systems",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Prove that √2 is irrational.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Assume √2 = p/q in lowest terms. Squaring gives p² = 2q², so p is even. Put p = 2k; then q² = 2k², so q is even too. This contradicts gcd(p,q) = 1. Hence √2 is irrational."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Assume √2 = p/q in lowest terms and square",
+          "marks": 1
+        },
+        {
+          "criterion": "Show p is even and then q is even",
+          "marks": 1
+        },
+        {
+          "criterion": "Reach the contradiction to coprimality",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q26-SHARED-V2",
+      "sectionId": "C",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "number-systems",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Prove that √3 is irrational.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Assume √3 = p/q in lowest terms. Then p² = 3q², so 3 divides p. Write p = 3k; substitution gives q² = 3k², so 3 divides q. This contradicts coprimality. Therefore √3 is irrational."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Assume √3 = p/q in lowest terms",
+          "marks": 1
+        },
+        {
+          "criterion": "Show 3 divides p and then q",
+          "marks": 1
+        },
+        {
+          "criterion": "Reach the contradiction to coprimality",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q26-SHARED-V3",
+      "sectionId": "C",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "number-systems",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Prove that √5 is irrational.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Assume √5 = p/q in lowest terms. Then p² = 5q², so 5 divides p. Write p = 5k; substitution gives q² = 5k², so 5 divides q. This contradicts coprimality. Hence √5 is irrational."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Assume √5 = p/q in lowest terms",
+          "marks": 1
+        },
+        {
+          "criterion": "Show 5 divides p and then q",
+          "marks": 1
+        },
+        {
+          "criterion": "Reach the contradiction to coprimality",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q27-SHARED-V1",
+      "sectionId": "C",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "quadratic-equations",
+        "algebra",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Solve x² − 7x + 12 = 0 by factorisation.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "x² − 7x + 12 = (x − 3)(x − 4) = 0. Therefore x = 3 or x = 4."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Factorise the quadratic correctly",
+          "marks": 1
+        },
+        {
+          "criterion": "Set each factor equal to zero",
+          "marks": 1
+        },
+        {
+          "criterion": "Give both roots x = 3 and x = 4",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q27-SHARED-V2",
+      "sectionId": "C",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "quadratic-equations",
+        "algebra",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Solve 2x² − 5x − 3 = 0 by factorisation.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "2x² − 5x − 3 = (2x + 1)(x − 3) = 0. Therefore x = −1/2 or x = 3."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Factorise as (2x + 1)(x − 3)",
+          "marks": 1
+        },
+        {
+          "criterion": "Set both factors equal to zero",
+          "marks": 1
+        },
+        {
+          "criterion": "Give both roots",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q27-SHARED-V3",
+      "sectionId": "C",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "quadratic-equations",
+        "algebra",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Find the nature of the roots of x² − 4x + 4 = 0 and state the roots.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "D = (−4)² − 4(1)(4) = 0, so the roots are real and equal. Since (x − 2)² = 0, both roots are 2."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Calculate D = 0",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude roots are real and equal",
+          "marks": 1
+        },
+        {
+          "criterion": "State the repeated root x = 2",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q28-SHARED-V1",
+      "sectionId": "C",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "coordinate-geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "For A(−2, 5) and B(6, −3), find the midpoint and the length AB.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Midpoint = (2, 1). Distance = √[(8)² + (−8)²] = 8√2 units."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Calculate midpoint (2, 1)",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute coordinate differences into distance formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 8√2 units",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "A(2, −3) and B(14, 9) are divided internally by P in the ratio 1:2. Find P.",
+          "answerKey": {
+            "modelAnswer": "P = ((14 + 2×2)/3, (9 + 2×(−3))/3) = (6, 1)."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Write the section formula",
+              "marks": 1
+            },
+            {
+              "criterion": "Calculate x-coordinate 6",
+              "marks": 1
+            },
+            {
+              "criterion": "Calculate y-coordinate 1 and state P = (6, 1)",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q28-SHARED-V2",
+      "sectionId": "C",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "coordinate-geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Find the distance and midpoint of P(−3, 4) and Q(5, −2).",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Distance = √[8² + (−6)²] = 10 units. Midpoint = (1, 1)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use the distance formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain distance 10 units",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain midpoint (1, 1)",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the midpoint of A(−4, 3) and B(2, 11), and state its y-coordinate.",
+          "answerKey": {
+            "modelAnswer": "Midpoint = (−1, 7); its y-coordinate is 7."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Use the midpoint formula",
+              "marks": 1
+            },
+            {
+              "criterion": "Calculate x-coordinate −1",
+              "marks": 1
+            },
+            {
+              "criterion": "Calculate y-coordinate 7",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q28-SHARED-V3",
+      "sectionId": "C",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "coordinate-geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Find the coordinates of the point dividing A(−3, 2) and B(9, 8) internally in the ratio 1:2.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "P = ((1×9 + 2×(−3))/3, (1×8 + 2×2)/3) = (1, 4)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the ratio 1:2",
+          "marks": 1
+        },
+        {
+          "criterion": "Apply the section formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain P = (1, 4)",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the distance and midpoint of (−1, 2) and (5, 10).",
+          "answerKey": {
+            "modelAnswer": "Distance = √(6² + 8²) = 10; midpoint = (2, 6)."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Use the distance formula",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain distance 10 units",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain midpoint (2, 6)",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q31-SHARED-V1",
+      "sectionId": "C",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "statistics",
+        "statistics-and-probability",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Find the mean of grouped data with classes 0–10, 10–20, 20–30 and frequencies 2, 3, 5.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Class marks are 5, 15, 25. Σf = 10 and Σfx = 180. Mean = 180/10 = 18."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Find the class marks",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate Σfx = 180 and Σf = 10",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain mean 18",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the mean of 4, 6, 8, 10 and 12.",
+          "answerKey": {
+            "modelAnswer": "Mean = (4+6+8+10+12)/5 = 8."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Add the observations",
+              "marks": 1
+            },
+            {
+              "criterion": "Divide by 5",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain mean 8",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q31-SHARED-V2",
+      "sectionId": "C",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "statistics",
+        "statistics-and-probability",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "The frequencies of five consecutive classes are 3, 5, 8, 6 and 4. Find the total frequency and modal class position.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Total frequency = 26. The third class is modal because its frequency 8 is greatest."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Add frequencies to obtain 26",
+          "marks": 1
+        },
+        {
+          "criterion": "Identify greatest frequency 8",
+          "marks": 1
+        },
+        {
+          "criterion": "State that the third class is modal",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "A grouped distribution has frequencies 4, 7, 10, 6 and 3. Identify the modal class position and total frequency.",
+          "answerKey": {
+            "modelAnswer": "The third class is modal; total frequency = 30."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identify the third class as modal",
+              "marks": 1
+            },
+            {
+              "criterion": "Add the frequencies",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain total frequency 30",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q31-SHARED-V3",
+      "sectionId": "C",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "statistics",
+        "statistics-and-probability",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "For 5, 7, 7, 8, 9, 10, 10, 10, 12, find the median and mode.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "There are 9 observations. The 5th value is 9, so median = 9. The most frequent value is 10, so mode = 10."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Count 9 observations and locate the 5th",
+          "marks": 1
+        },
+        {
+          "criterion": "State median = 9",
+          "marks": 1
+        },
+        {
+          "criterion": "State mode = 10",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "For the ordered observations 2, 4, 5, 6, 6, 8, 9, find the median and mode.",
+          "answerKey": {
+            "modelAnswer": "The 4th value is 6, so median = 6. The mode is also 6."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Locate the 4th observation",
+              "marks": 1
+            },
+            {
+              "criterion": "State median = 6",
+              "marks": 1
+            },
+            {
+              "criterion": "State mode = 6",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q29-STANDARD-V1",
+      "sectionId": "C",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "In ΔABC, DE ∥ BC. If AD = 3 cm, DB = 2 cm and AE = 6 cm, find EC.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "By BPT, AD/DB = AE/EC. Thus 3/2 = 6/EC, so EC = 4 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State the BPT ratio",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute 3/2 = 6/EC",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain EC = 4 cm",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q29-STANDARD-V2",
+      "sectionId": "C",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "In ΔABC, DE ∥ BC. If AD = 4 cm, DB = 6 cm and AC = 15 cm, find AE.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "By BPT, AE:EC = AD:DB = 2:3. Since AC = 15 cm, AE = (2/5)×15 = 6 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use BPT to obtain AE:EC = 2:3",
+          "marks": 1
+        },
+        {
+          "criterion": "Use AE + EC = 15",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain AE = 6 cm",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q29-STANDARD-V3",
+      "sectionId": "C",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "In ΔPQR, ST ∥ QR. If PS = 5 cm, SQ = 3 cm and PT = 10 cm, find TR.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "By BPT, PS/SQ = PT/TR. Thus 5/3 = 10/TR, giving TR = 6 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Apply BPT to corresponding segments",
+          "marks": 1
+        },
+        {
+          "criterion": "Form 5/3 = 10/TR",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain TR = 6 cm",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q29-BASIC-V1",
+      "sectionId": "C",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "State the AA similarity criterion and explain why two triangles with two pairs of equal corresponding angles are similar.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "If two angles of one triangle equal two angles of another, the third angles are also equal because the angle sum is 180°. The triangles are similar by AA."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State the two equal corresponding angles",
+          "marks": 1
+        },
+        {
+          "criterion": "Use the angle sum to infer the third pair",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude similarity by AA",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q29-BASIC-V2",
+      "sectionId": "C",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "State the SSS similarity criterion. Show that triangles with sides 3, 4, 5 cm and 6, 8, 10 cm are similar.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "The corresponding side ratios are 3/6 = 4/8 = 5/10 = 1/2. Hence the triangles are similar by SSS."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State proportional-side condition",
+          "marks": 1
+        },
+        {
+          "criterion": "Write the three side ratios",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude similarity by SSS",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q29-BASIC-V3",
+      "sectionId": "C",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "If ΔABC ~ ΔPQR and AB/PQ = 3/5, write the ratios of the other corresponding sides and of the perimeters.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "BC/QR = AC/PR = 3/5. The ratio of the perimeters is also 3/5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the corresponding side pairs",
+          "marks": 1
+        },
+        {
+          "criterion": "Write both other side ratios as 3/5",
+          "marks": 1
+        },
+        {
+          "criterion": "State perimeter ratio 3/5",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q30-STANDARD-V1",
+      "sectionId": "C",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "From a point on level ground 20 m from a tower, the angle of elevation is 45°. Find the tower's height, ignoring eye height.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "tan 45° = h/20 = 1, so h = 20 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Set up tan 45° = h/20",
+          "marks": 1
+        },
+        {
+          "criterion": "Use tan 45° = 1",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain h = 20 m",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q30-STANDARD-V2",
+      "sectionId": "C",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "A pole casts a 12 m shadow when the sun's angle of elevation is 30°. Find the pole's height.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "tan 30° = h/12, so h = 12/√3 = 4√3 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Relate height and shadow using tangent",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute tan 30° = 1/√3",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain h = 4√3 m",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q30-STANDARD-V3",
+      "sectionId": "C",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "A 10 m ladder makes an angle of 60° with the level ground. Find the vertical height reached.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "h = 10 sin 60° = 10 × √3/2 = 5√3 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the opposite side and hypotenuse",
+          "marks": 1
+        },
+        {
+          "criterion": "Use sin 60° = √3/2",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain height 5√3 m",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q30-BASIC-V1",
+      "sectionId": "C",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "A student claims that moving farther from a fixed tower makes its angle of elevation larger. Evaluate the claim using tan θ = height/distance.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "The claim is incorrect. For fixed height h, increasing the distance d decreases h/d, so the acute angle θ decreases."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State that the claim is incorrect",
+          "marks": 1
+        },
+        {
+          "criterion": "Explain that h/d decreases as d increases",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude that angle of elevation decreases",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q30-BASIC-V2",
+      "sectionId": "C",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Two observers view the same tower from level ground. A is 10 m away and B is 20 m away. Compare their angles of elevation.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "For tower height h, tan θA = h/10 and tan θB = h/20. Thus tan θA > tan θB, so θA > θB."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Write both tangent ratios",
+          "marks": 1
+        },
+        {
+          "criterion": "Compare h/10 and h/20",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude θA > θB",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q30-BASIC-V3",
+      "sectionId": "C",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "A learner uses sin θ = height/horizontal distance for an angle of elevation. Identify the error and state the correct ratio.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "The learner has confused sine with tangent. The correct ratio is tan θ = opposite/adjacent = height/horizontal distance."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the misuse of sine",
+          "marks": 1
+        },
+        {
+          "criterion": "State that tangent is opposite/adjacent",
+          "marks": 1
+        },
+        {
+          "criterion": "Write tan θ = height/distance",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
       "source": {
         "type": "original",
         "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
