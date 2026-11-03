@@ -11,7 +11,10 @@
       assignment=window.C10AssessmentManager.get(id);
       if(!assignment||assignment.kind!=="paper-assessment"||assignment.studentId!==student.studentId)throw new Error("This paper is not assigned to the signed-in student.");
       const paper=assignment.paperSnapshot;
-      const valid=window.C10ExamPaperGenerator.validatePaper(paper, paper.blueprintSnapshot);
+      const blueprintResponse=await fetch("./data/exam-papers/blueprints/class-10-science-2026-27.json",{cache:"no-store"});
+      if(!blueprintResponse.ok)throw new Error("The approved blueprint is unavailable for validation.");
+      const blueprint=await blueprintResponse.json();
+      const valid=window.C10ExamPaperGenerator.validatePaper(paper,blueprint);
       if(!valid.valid)throw new Error("The frozen paper failed validation: "+valid.errors.slice(0,3).join(" "));
       $("paperTitle").textContent=assignment.title;
       $("paperMeta").textContent=assignment.subjectTitle+" · Class "+assignment.classId+" · "+assignment.questionCount+" questions · "+assignment.totalMarks+" marks · "+assignment.durationMinutes+" minutes · "+assignment.deliveryMode+" delivery";
