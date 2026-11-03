@@ -219,8 +219,7 @@ jobs:
           const encoded = fs.readFileSync('_site/science-payload/part-01.txt','utf8').trim()
             + Array.from({length:16},(_,i)=>fs.readFileSync('_site/science-payload/part-'+String(i+2).padStart(2,'0')+'.txt','utf8').trim()).join('');
           const html = zlib.gunzipSync(Buffer.from(encoded,'base64')).toString('utf8');
-          const match = html.match(/const EMBEDDED_CHAPTERS = (\[[\s\S]*?\]);\s*
-let chapters/);
+          const match = html.match(/const EMBEDDED_CHAPTERS = (\[[\s\S]*?\]);\s*\nlet chapters/);
           if (!match) throw new Error('Embedded chapter data was not found.');
           const chapters = JSON.parse(match[1]);
           const count = chapters.reduce((sum,chapter)=>sum+chapter.questions.length,0);
