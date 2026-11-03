@@ -7,7 +7,7 @@ const PAPER_HISTORY_KEY="eg_exam_paper_history_v1",PAPER_HISTORY_LIMIT=50;
 function setStatus(message,tone){const n=$("paperStudioStatus");if(n){n.textContent=message;n.className="admin-status"+(tone?" "+tone:"");}}
 function downloadJson(value,name){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)+"\n"],{type:"application/json"}));const a=document.createElement("a");a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function drawBlueprint(){if(!blueprint)return;const target=$("paperBlueprintSummary");target.innerHTML="";blueprint.sections.forEach(s=>{const box=document.createElement("div");box.className="admin-feature";const h=document.createElement("strong");h.textContent=s.title+" · "+s.totalMarks+" marks";const p=document.createElement("p");p.textContent="Questions "+s.questionNumberRange.start+"–"+s.questionNumberRange.end+" · "+s.questionCount+" numbered questions";box.append(h,p);target.appendChild(box);});$("paperBlueprintState").value=blueprint.status==="ready"?"Approved for generation":"Draft · slot audit pending";$("paperTotalSummary").textContent=blueprint.totalQuestions+" questions · "+blueprint.totalMarks+" marks · "+(blueprint.durationMinutes/60)+" hours";$("generatePaperBtn").disabled=blueprint.status!=="ready"||!bank;}
-function drawBank(){const n=$("paperPoolSummary");n.innerHTML="";if(!bank){n.textContent="No local question pool imported. Download the JSON template, add reviewed questions and import it here.";$("paperPoolState").textContent="No pool imported";$("generatePaperBtn").disabled=true;return;}let total=0;blueprint.sections.forEach(s=>{const count=bank.questions.filter(q=>q.sectionId===s.sectionId&&q.approvalStatus==="approved").length;total+=count;const box=document.createElement("div");box.className="admin-feature";const h=document.createElement("strong");h.textContent=s.title;const p=document.createElement("p");p.textContent=count+" approved question(s) available";box.append(h,p);n.appendChild(box);});$("paperPoolState").textContent=total+" approved / "+bank.questions.length+" total";$("generatePaperBtn").disabled=!blueprint||blueprint.status!=="ready";}
+function drawBank(){const n=$("paperPoolSummary");n.innerHTML="";if(!bank){n.textContent="The published mixed-question pool or shared Science practice bank is unavailable.";$("paperPoolState").textContent="Integrated pool unavailable";$("generatePaperBtn").disabled=true;return;}let total=0;blueprint.sections.forEach(s=>{const count=bank.questions.filter(q=>q.sectionId===s.sectionId&&q.approvalStatus==="approved").length;total+=count;const box=document.createElement("div");box.className="admin-feature";const h=document.createElement("strong");h.textContent=s.title;const p=document.createElement("p");p.textContent=count+" approved question(s) available";box.append(h,p);n.appendChild(box);});const mcqs=bank.questions.filter(q=>q.type==="mcq"&&q.approvalStatus==="approved").length;const shared=bankIntegrationStats?.appended||0;$("paperPoolState").textContent=total+" approved / "+bank.questions.length+" total · "+mcqs+" MCQs ("+shared+" from shared practice bank)";$("generatePaperBtn").disabled=!blueprint||blueprint.status!=="ready";}
 function createStores(){
  if(!window.C10Storage)throw Error("Versioned browser storage adapter is unavailable.");
  bankStore=window.C10Storage.createLocalStore({
@@ -19,28 +19,42 @@ function createStores(){
   validate:value=>!!value&&Array.isArray(value.drafts)&&value.drafts.every(item=>item&&item.kind==="exam-paper-snapshot")
  });
 }
+let sourceBank=null,practiceChapters=null,bankIntegrationStats=null;
+function assembleIntegratedBank(){
+ if(!sourceBank||!practiceChapters||!blueprint)return;
+ const integrated=window.C10ExamPaperGenerator.mergeQuestionBanks(sourceBank,practiceChapters,blueprint);
+ bank=integrated.bank;bankIntegrationStats=integrated.stats;
+ drawBank();
+}
 async function loadBank(){
  try{
-  const local=bankStore.load();
-  if(local){bank=local;if(blueprint)drawBank();return;}
- }catch(_){bank=null;}
- try{
-  const response=await fetch("./data/exam-papers/question-banks/class-10-science-2026-27-v1.json",{cache:"no-store"});
-  if(!response.ok)throw Error("Published question pool HTTP "+response.status);
-  const value=await response.json();
-  const check=window.C10ExamPaperGenerator.validateQuestionBank(value,{academicYear:"2026-27"});
+  const [baseResponse,practiceResponse,blueprintResponse]=await Promise.all([
+   fetch("./data/exam-papers/question-banks/class-10-science-2026-27-v1.json",{cache:"no-store"}),
+   fetch("./data/science.json",{cache:"no-store"}),
+   fetch("./data/exam-papers/blueprints/class-10-science-2026-27.json",{cache:"no-store"})
+  ]);
+  if(!baseResponse.ok)throw Error("Published mixed-question pool HTTP "+baseResponse.status);
+  if(!practiceResponse.ok)throw Error("Shared chapter-wise Science MCQ bank HTTP "+practiceResponse.status);
+  if(!blueprintResponse.ok)throw Error("CBSE Science blueprint HTTP "+blueprintResponse.status);
+  const publishedBase=await baseResponse.json();
+  practiceChapters=await practiceResponse.json();
+  if(!blueprint)blueprint=await blueprintResponse.json();
+  sourceBank=bankStore.load()||publishedBase;
+  const check=window.C10ExamPaperGenerator.validateQuestionBank(sourceBank,{academicYear:"2026-27"});
   if(!check.valid)throw Error(check.errors.slice(0,8).join(" "));
-  bank=value;bankStore.save(bank);
-  if(blueprint)drawBank();
+  if(!bankStore.load())bankStore.save(sourceBank);
+  assembleIntegratedBank();
+  const sharedCount=bankIntegrationStats.appended;
+  setStatus("Integrated pool ready: "+sharedCount.toLocaleString()+" existing chapter-wise MCQs joined with the dedicated exam-paper questions. No MCQs were regenerated.", "success");
  }catch(e){
-  bank=null;if(blueprint)drawBank();
-  setStatus("Published starter question pool could not be loaded: "+(e.message||e),"error");
+  bank=null;bankIntegrationStats=null;if(blueprint)drawBank();
+  setStatus("Integrated Science question pool could not be loaded: "+(e.message||e),"error");
  }
 }
 function loadSavedDraft(){try{const saved=draftStore.load();if(saved.drafts.length)paper=saved.drafts[saved.drafts.length-1];}catch(_){paper=null;}}
 function saveDraft(value){const saved=draftStore.load();const drafts=(saved.drafts||[]).filter(item=>item.paperId!==value.paperId);drafts.push(value);draftStore.save({drafts:drafts.slice(-5)});}
 async function loadBlueprint(){try{const r=await fetch("./data/exam-papers/blueprints/class-10-science-2026-27.json",{cache:"no-store"});if(!r.ok)throw Error("Blueprint HTTP "+r.status);blueprint=await r.json();const check=window.C10ExamPaperGenerator.validateBlueprint(blueprint);if(!check.valid)throw Error(check.errors.join(" "));drawBlueprint();drawBank();setStatus(blueprint.status==="ready"?"Approved blueprint loaded. Import an approved pool to generate.":"Blueprint loaded. Generation is locked until the official question-by-question mark/type/internal-choice slot map is audited and approved.","warning");}catch(e){setStatus("Unable to load blueprint: "+(e.message||e),"error");}}
-async function importBank(){const file=$("paperPoolFile").files&&$("paperPoolFile").files[0];if(!file){setStatus("Choose a question-bank JSON file first.","error");return;}try{const value=JSON.parse(await file.text());const check=window.C10ExamPaperGenerator.validateQuestionBank(value,{academicYear:"2026-27"});if(!check.valid)throw Error(check.errors.slice(0,8).join(" "));bank=value;bankStore.save(bank);paper=null;$("paperResultActions").hidden=true;drawBank();setStatus("Imported "+bank.questions.length+" question records. Only approvalStatus=approved questions are eligible.","success");}catch(e){setStatus("Question-bank import failed: "+(e.message||e),"error");}}
+async function importBank(){const file=$("paperPoolFile").files&&$("paperPoolFile").files[0];if(!file){setStatus("Choose a question-bank JSON file first.","error");return;}try{const value=JSON.parse(await file.text());const check=window.C10ExamPaperGenerator.validateQuestionBank(value,{academicYear:"2026-27"});if(!check.valid)throw Error(check.errors.slice(0,8).join(" "));sourceBank=value;bankStore.save(sourceBank);assembleIntegratedBank();paper=null;$("paperResultActions").hidden=true;setStatus("Imported "+sourceBank.questions.length+" mixed-question records and retained the shared chapter-wise MCQ integration ("+(bankIntegrationStats?.appended||0).toLocaleString()+" MCQs).","success");}catch(e){setStatus("Question-bank import failed: "+(e.message||e),"error");}}
 function showPaper(p){const n=$("paperPreview");n.innerHTML="";const h=document.createElement("h3");h.textContent=p.title;const meta=document.createElement("p");meta.textContent=p.totalQuestions+" questions · "+p.totalMarks+" marks";n.append(h,meta);p.sectionResults.forEach(s=>{const d=document.createElement("div");d.className="admin-feature";d.textContent=s.title+": "+s.questionCount+" questions / "+s.totalMarks+" marks";n.appendChild(d);});$("paperPreviewStatus").textContent="Validated draft snapshot. Question content and blueprint version are frozen."; $("paperResultActions").hidden=false;}
 function readPaperHistory(){
  try{
