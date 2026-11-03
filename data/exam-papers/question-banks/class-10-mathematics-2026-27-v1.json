@@ -5118,10 +5118,10 @@
       "chapterId": "pair-of-linear-equations-in-two-variables",
       "unitId": "algebra",
       "topicTags": [
-        "short-answer",
+        "long-answer",
         "pair-of-linear-equations-in-two-variables"
       ],
-      "type": "short-answer",
+      "type": "long-answer",
       "marks": 5,
       "prompt": "The sum of the ages of a parent and child is 50 years. Five years ago, the parent was four times as old as the child. Find their present ages.",
       "difficulty": "medium",
@@ -5160,10 +5160,10 @@
       "chapterId": "pair-of-linear-equations-in-two-variables",
       "unitId": "algebra",
       "topicTags": [
-        "short-answer",
+        "long-answer",
         "pair-of-linear-equations-in-two-variables"
       ],
-      "type": "short-answer",
+      "type": "long-answer",
       "marks": 5,
       "prompt": "At a school function, 2 adult tickets and 3 student tickets cost ₹390, while 3 adult tickets and 2 student tickets cost ₹410. Find the cost of one adult ticket and one student ticket.",
       "difficulty": "medium",
@@ -5202,10 +5202,10 @@
       "chapterId": "pair-of-linear-equations-in-two-variables",
       "unitId": "algebra",
       "topicTags": [
-        "short-answer",
+        "long-answer",
         "pair-of-linear-equations-in-two-variables"
       ],
-      "type": "short-answer",
+      "type": "long-answer",
       "marks": 5,
       "prompt": "The numerator of a fraction is 3 less than its denominator. If 2 is added to both numerator and denominator, the fraction becomes 3/4. Find the original fraction.",
       "difficulty": "medium",
@@ -8067,6 +8067,159 @@
         }
       ],
       "sectionId": "E"
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-arithmetic-progressions-SRC-4",
+      "sectionId": "A",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "arithmetic-progressions"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The sum of the first n terms of an AP is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "n(a+d)"
+        },
+        {
+          "optionId": "B",
+          "text": "n/2[2a+(n−1)d]"
+        },
+        {
+          "optionId": "C",
+          "text": "a+(n−1)d"
+        },
+        {
+          "optionId": "D",
+          "text": "nd/2"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. n/2[2a+(n−1)d]",
+        "explanation": "This is the standard AP sum formula."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Arithmetic Progressions · MCQ #4"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, exact answer, explanation, distinct options and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-arithmetic-progressions-SRC-5",
+      "sectionId": "A",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "arithmetic-progressions"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The sum of the first 20 positive integers is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "200"
+        },
+        {
+          "optionId": "B",
+          "text": "210"
+        },
+        {
+          "optionId": "C",
+          "text": "220"
+        },
+        {
+          "optionId": "D",
+          "text": "400"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 210",
+        "explanation": "S₂₀ = 20×21/2 = 210."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Arithmetic Progressions · MCQ #5"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, exact answer, explanation, distinct options and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
+    },
+    {
+      "questionId": "EG10-MATHEMATICS-MCQ-arithmetic-progressions-SRC-6",
+      "sectionId": "A",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "mcq",
+        "practice-bank",
+        "arithmetic-progressions"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "An AP has a = 5 and d = 3. Which term equals 32?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "options": [
+        {
+          "optionId": "A",
+          "text": "8th"
+        },
+        {
+          "optionId": "B",
+          "text": "9th"
+        },
+        {
+          "optionId": "C",
+          "text": "10th"
+        },
+        {
+          "optionId": "D",
+          "text": "11th"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 10th",
+        "explanation": "5 + (n−1)3 = 32 gives n−1 = 9, so n = 10."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Arithmetic Progressions · MCQ #6"
+      },
+      "approvalNote": "Individually checked for Class X syllabus fit, exact answer, explanation, distinct options and one-mark objective-paper eligibility. Teacher moderation is recommended before high-stakes school use."
     }
   ]
 }
