@@ -28,6 +28,7 @@ jobs:
           node tests/olympiad-blueprints.test.js
           node tests/exam-paper-generator.test.js
           node tests/mathematics-blueprints.test.js
+          node tests/mathematics-question-bank.test.js
           node tests/mathematics-mcq-integration.test.js
           node tests/exam-paper-release.test.js
           node tests/exam-paper-renderer.test.js
