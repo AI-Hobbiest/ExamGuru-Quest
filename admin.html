@@ -154,7 +154,7 @@
 
       <section class="admin-panel" id="tab-exam-papers">
         <h2>Exam Paper Studio</h2>
-        <p class="admin-muted">Blueprint-driven CBSE-style paper creation. The audited Class 10 Science 2026–27 blueprint and bundled original mixed-question starter pool are ready for browser-side paper generation.</p>
+        <p class="admin-muted">Blueprint-driven CBSE-style paper creation. The audited Class 10 Science 2026–27 blueprint automatically combines the existing chapter-wise Science MCQs with the mixed-question paper pool. No separate MCQ upload or regeneration is needed.</p>
         <div class="admin-notice"><strong>Current profile:</strong> CBSE · Class 10 · Science (086) · 2026–27 · 80 marks · 3 hours · 39 numbered questions. Question-level marks, question forms and internal-choice positions are mapped to the official sample paper. Heredity and Evolution content is excluded in accordance with the curriculum's year-end assessment note.</div>
         <div class="admin-form-grid">
           <div class="admin-field"><label>Examination profile</label><input value="CBSE · Class 10 · Science (086) · 2026–27" readonly></div>
@@ -165,7 +165,7 @@
         <hr class="admin-rule">
         <h3>Approved paper question pool</h3>
         <p class="admin-inline-help">Import a versioned JSON question pool. Supported types include MCQ, assertion–reason, very short, short and long answer, case-based, numerical and diagram-based. Only approvalStatus = approved questions can be selected.</p>
-        <div class="admin-form-grid"><div class="admin-field full"><label for="paperPoolFile">Question-bank JSON file</label><input class="admin-file" type="file" id="paperPoolFile" accept=".json,application/json"></div></div>
+        <div class="admin-form-grid"><div class="admin-field full"><label for="paperPoolFile">Supplementary mixed-question bank (optional JSON import)</label><input class="admin-file" type="file" id="paperPoolFile" accept=".json,application/json"></div></div>
         <div class="admin-actions"><button class="admin-btn" type="button" id="importPaperPoolBtn">Import question pool to this browser</button><button class="admin-btn secondary" type="button" id="downloadPaperPoolTemplateBtn">Download JSON template</button></div>
         <div class="admin-form-grid">
           <div class="admin-field"><label>Question pool status</label><div id="paperPoolState" class="admin-status">No pool imported</div></div>
