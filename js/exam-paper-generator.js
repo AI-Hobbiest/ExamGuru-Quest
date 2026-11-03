@@ -289,12 +289,14 @@ function adaptChapterMcqBank(practiceChapters,bp,options={}){
   const chapterId=chapterIds.find(id=>keys.includes(id))||chapterIds.find(id=>keys.some(key=>key.endsWith("-"+id)||key.startsWith(id+"-")));
   if(!chapterId){excluded.outOfSummativeScope+=(Array.isArray(chapter&&chapter.questions)?chapter.questions.length:0);return;}
   const related=slotRows.filter(s=>(s.chapterIds||[]).includes(chapterId));
-  // Chapter-wise MCQs belong only in eligible one-mark MCQ slots. Written-answer
-  // and case-study slots in the same chapter must not make this mapping ambiguous.
+  // Prefer one-mark MCQ slots when available. If a syllabus chapter has no
+  // dedicated MCQ slot, retain its established section mapping so the shared
+  // practice bank remains usable without treating its questions as paper slots.
   const mcqRelated=related.filter(s=>Number(s.marks)===1&&Array.isArray(s.allowedTypes)&&s.allowedTypes.includes("mcq"));
-  if(!mcqRelated.length){excluded.outOfSummativeScope+=(Array.isArray(chapter&&chapter.questions)?chapter.questions.length:0);return;}
-  const sections=[...new Set(mcqRelated.map(s=>s.sectionId))],units=[...new Set(mcqRelated.map(s=>s.unitId).filter(Boolean))];
-  if(sections.length>1&&!mcqRelated.some(s=>s.sectionId===chapter.sectionId)||units.length>1&&!mcqRelated.some(s=>s.unitId===chapter.unitId)){
+  const mappingSlots=mcqRelated.length?mcqRelated:related;
+  if(!mappingSlots.length){excluded.outOfSummativeScope+=(Array.isArray(chapter&&chapter.questions)?chapter.questions.length:0);return;}
+  const sections=[...new Set(mappingSlots.map(s=>s.sectionId))],units=[...new Set(mappingSlots.map(s=>s.unitId).filter(Boolean))];
+  if(sections.length>1&&!mappingSlots.some(s=>s.sectionId===chapter.sectionId)||units.length>1&&!mappingSlots.some(s=>s.unitId===chapter.unitId)){
    excluded.ambiguousChapter+=(Array.isArray(chapter.questions)?chapter.questions.length:0);return;
   }
   const chapterSection=chapter.sectionId&&sections.includes(chapter.sectionId)?chapter.sectionId:sections.length===1?sections[0]:null;
