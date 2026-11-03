@@ -15,7 +15,7 @@ assert.equal(bank.classId,"10");
 assert.equal(bank.subjectId,"mathematics");
 assert.equal(bank.academicYear,"2026-27");
 assert.equal(bank.questions.length,137);
-const bankAudit=engine.validateQuestionBank(bank,{classId:"10",subjectId:"mathematics",academicYear:"2026-27"});\nassert.equal(bankAudit.valid,true,bankAudit.errors.join(" | "));
+const bankAudit=engine.validateQuestionBank(bank,{classId:"10",subjectId:"mathematics",academicYear:"2026-27"}); assert.equal(bankAudit.valid,true,bankAudit.errors.join(" | "));
 assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,bank.questions.length);
 const typeCounts=bank.questions.reduce((a,q)=>(a[q.type]=(a[q.type]||0)+1,a),{});
 assert.deepEqual(typeCounts,{"mcq":56,"assertion-reason":6,"very-short-answer":15,"short-answer":27,"long-answer":15,"case-based":18});
