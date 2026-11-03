@@ -74,10 +74,10 @@
     const topicHeading=node("div","assignment-topic-heading");
     topicHeading.append(node("span","","Chapters / topics"),node("span","assignment-topic-hint","Choose one or more"));
     topicWrap.append(topicHeading,topicTools,topicSearch,topics);
-    const latest=node("button","report-button secondary","Use latest study session");latest.type="button";
+    const latest=node("button","report-button secondary assignment-latest-btn","Use latest study session");latest.type="button";
     const titleWrap=addField("Test title (optional)",title);
     const status=node("p","assignment-status-note","Loading the selected question bank…");
-    const create=node("button","report-button","Create & assign test");create.type="button";
+    const create=node("button","report-button assignment-create-btn","Create & assign test");create.type="button";
     section.append(addField("Subject / question bank",subject),topicWrap,latest,grid,titleWrap,create,status);
     let bank=null,latestAttempt=null;
     const attempts=(detail&&detail.allAttempts||[]).slice().sort((a,b)=>String(b.submittedAt||b.startedAt).localeCompare(String(a.submittedAt||a.startedAt)));
