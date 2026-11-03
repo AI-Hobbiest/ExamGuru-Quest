@@ -1,0 +1,727 @@
+{
+  "schemaVersion": 1,
+  "kind": "exam-paper-blueprint",
+  "blueprintId": "cbse-class-10-mathematics-standard-041-2026-27",
+  "version": 1,
+  "title": "CBSE Class 10 Mathematics (Standard) · Annual Examination 2026–27",
+  "board": "CBSE",
+  "academicYear": "2026-27",
+  "classId": "10",
+  "subjectId": "mathematics",
+  "subjectTitle": "Mathematics (Standard)",
+  "subjectCode": "041",
+  "assessmentLevel": "standard",
+  "status": "draft",
+  "statusReason": "Draft blueprint created from the published 2026–27 CBSE Class X Mathematics sample-paper structure and curriculum weightages. Generation remains disabled until a shared question bank is authored, independently checked, and passes per-slot coverage, answer-key, marking-scheme and assessment-level audits.",
+  "durationMinutes": 180,
+  "totalQuestions": 38,
+  "totalMarks": 80,
+  "sections": [
+    {
+      "sectionId": "A",
+      "title": "Section A · Objective",
+      "questionNumberRange": {
+        "start": 1,
+        "end": 20
+      },
+      "questionCount": 20,
+      "totalMarks": 20
+    },
+    {
+      "sectionId": "B",
+      "title": "Section B · Very Short Answer",
+      "questionNumberRange": {
+        "start": 21,
+        "end": 25
+      },
+      "questionCount": 5,
+      "totalMarks": 10
+    },
+    {
+      "sectionId": "C",
+      "title": "Section C · Short Answer",
+      "questionNumberRange": {
+        "start": 26,
+        "end": 31
+      },
+      "questionCount": 6,
+      "totalMarks": 18
+    },
+    {
+      "sectionId": "D",
+      "title": "Section D · Long Answer",
+      "questionNumberRange": {
+        "start": 32,
+        "end": 35
+      },
+      "questionCount": 4,
+      "totalMarks": 20
+    },
+    {
+      "sectionId": "E",
+      "title": "Section E · Case Study",
+      "questionNumberRange": {
+        "start": 36,
+        "end": 38
+      },
+      "questionCount": 3,
+      "totalMarks": 12
+    }
+  ],
+  "markDistribution": {
+    "1": 20,
+    "2": 5,
+    "3": 6,
+    "4": 3,
+    "5": 4
+  },
+  "competencyMarksTargets": {
+    "knowledge-understanding": 43,
+    "application": 19,
+    "analysis-evaluation-creation": 18
+  },
+  "unitMarkTargets": {
+    "number-systems": 6,
+    "algebra": 20,
+    "coordinate-geometry": 6,
+    "geometry": 15,
+    "trigonometry": 12,
+    "mensuration": 10,
+    "statistics-and-probability": 11
+  },
+  "syllabusUnitWeightage": [
+    {
+      "unitId": "number-systems",
+      "title": "Number Systems",
+      "marks": 6
+    },
+    {
+      "unitId": "algebra",
+      "title": "Algebra",
+      "marks": 20
+    },
+    {
+      "unitId": "coordinate-geometry",
+      "title": "Coordinate Geometry",
+      "marks": 6
+    },
+    {
+      "unitId": "geometry",
+      "title": "Geometry",
+      "marks": 15
+    },
+    {
+      "unitId": "trigonometry",
+      "title": "Trigonometry",
+      "marks": 12
+    },
+    {
+      "unitId": "mensuration",
+      "title": "Mensuration",
+      "marks": 10
+    },
+    {
+      "unitId": "statistics-and-probability",
+      "title": "Statistics and Probability",
+      "marks": 11
+    }
+  ],
+  "supportedQuestionTypes": [
+    "mcq",
+    "assertion-reason",
+    "very-short-answer",
+    "short-answer",
+    "long-answer",
+    "case-based",
+    "numerical",
+    "diagram-based"
+  ],
+  "slotPlan": [
+    {
+      "slotId": "q01",
+      "questionNumber": 1,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "number-systems",
+      "chapterIds": [
+        "real-numbers"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q02",
+      "questionNumber": 2,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "algebra",
+      "chapterIds": [
+        "polynomials"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q03",
+      "questionNumber": 3,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "algebra",
+      "chapterIds": [
+        "pair-of-linear-equations-in-two-variables"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q04",
+      "questionNumber": 4,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "algebra",
+      "chapterIds": [
+        "quadratic-equations"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q05",
+      "questionNumber": 5,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "algebra",
+      "chapterIds": [
+        "arithmetic-progressions"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q06",
+      "questionNumber": 6,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "algebra",
+      "chapterIds": [
+        "polynomials"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q07",
+      "questionNumber": 7,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "coordinate-geometry",
+      "chapterIds": [
+        "coordinate-geometry"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q08",
+      "questionNumber": 8,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "coordinate-geometry",
+      "chapterIds": [
+        "coordinate-geometry"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q09",
+      "questionNumber": 9,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "coordinate-geometry",
+      "chapterIds": [
+        "coordinate-geometry"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q10",
+      "questionNumber": 10,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "geometry",
+      "chapterIds": [
+        "triangles"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q11",
+      "questionNumber": 11,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "trigonometry",
+      "chapterIds": [
+        "introduction-to-trigonometry"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q12",
+      "questionNumber": 12,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "trigonometry",
+      "chapterIds": [
+        "introduction-to-trigonometry"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q13",
+      "questionNumber": 13,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "trigonometry",
+      "chapterIds": [
+        "some-applications-of-trigonometry"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q14",
+      "questionNumber": 14,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "trigonometry",
+      "chapterIds": [
+        "introduction-to-trigonometry"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q15",
+      "questionNumber": 15,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "mensuration",
+      "chapterIds": [
+        "areas-related-to-circles"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q16",
+      "questionNumber": 16,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "mensuration",
+      "chapterIds": [
+        "surface-areas-and-volumes"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q17",
+      "questionNumber": 17,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "statistics-and-probability",
+      "chapterIds": [
+        "statistics"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q18",
+      "questionNumber": 18,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "statistics-and-probability",
+      "chapterIds": [
+        "probability"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q19",
+      "questionNumber": 19,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "assertion-reason"
+      ],
+      "unitId": "statistics-and-probability",
+      "chapterIds": [
+        "statistics"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q20",
+      "questionNumber": 20,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "assertion-reason"
+      ],
+      "unitId": "statistics-and-probability",
+      "chapterIds": [
+        "probability"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q21",
+      "questionNumber": 21,
+      "sectionId": "B",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "number-systems",
+      "chapterIds": [
+        "real-numbers"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": true
+    },
+    {
+      "slotId": "q22",
+      "questionNumber": 22,
+      "sectionId": "B",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "algebra",
+      "chapterIds": [
+        "arithmetic-progressions"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": true
+    },
+    {
+      "slotId": "q23",
+      "questionNumber": 23,
+      "sectionId": "B",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "geometry",
+      "chapterIds": [
+        "circles"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q24",
+      "questionNumber": 24,
+      "sectionId": "B",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "mensuration",
+      "chapterIds": [
+        "areas-related-to-circles"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q25",
+      "questionNumber": 25,
+      "sectionId": "B",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "mensuration",
+      "chapterIds": [
+        "surface-areas-and-volumes"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q26",
+      "questionNumber": 26,
+      "sectionId": "C",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "number-systems",
+      "chapterIds": [
+        "real-numbers"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q27",
+      "questionNumber": 27,
+      "sectionId": "C",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "algebra",
+      "chapterIds": [
+        "quadratic-equations"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q28",
+      "questionNumber": 28,
+      "sectionId": "C",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "coordinate-geometry",
+      "chapterIds": [
+        "coordinate-geometry"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": true
+    },
+    {
+      "slotId": "q29",
+      "questionNumber": 29,
+      "sectionId": "C",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "geometry",
+      "chapterIds": [
+        "triangles"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q30",
+      "questionNumber": 30,
+      "sectionId": "C",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "trigonometry",
+      "chapterIds": [
+        "some-applications-of-trigonometry"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q31",
+      "questionNumber": 31,
+      "sectionId": "C",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "statistics-and-probability",
+      "chapterIds": [
+        "statistics"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresInternalChoice": true
+    },
+    {
+      "slotId": "q32",
+      "questionNumber": 32,
+      "sectionId": "D",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "unitId": "algebra",
+      "chapterIds": [
+        "pair-of-linear-equations-in-two-variables"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q33",
+      "questionNumber": 33,
+      "sectionId": "D",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "unitId": "algebra",
+      "chapterIds": [
+        "arithmetic-progressions"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q34",
+      "questionNumber": 34,
+      "sectionId": "D",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "unitId": "geometry",
+      "chapterIds": [
+        "triangles"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresInternalChoice": true
+    },
+    {
+      "slotId": "q35",
+      "questionNumber": 35,
+      "sectionId": "D",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "unitId": "trigonometry",
+      "chapterIds": [
+        "some-applications-of-trigonometry"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresInternalChoice": true
+    },
+    {
+      "slotId": "q36",
+      "questionNumber": 36,
+      "sectionId": "E",
+      "marks": 4,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "geometry",
+      "chapterIds": [
+        "circles"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresPartInternalChoiceMarks": [
+        2
+      ]
+    },
+    {
+      "slotId": "q37",
+      "questionNumber": 37,
+      "sectionId": "E",
+      "marks": 4,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "mensuration",
+      "chapterIds": [
+        "surface-areas-and-volumes"
+      ],
+      "competency": "knowledge-understanding",
+      "requiresPartInternalChoiceMarks": [
+        2
+      ]
+    },
+    {
+      "slotId": "q38",
+      "questionNumber": 38,
+      "sectionId": "E",
+      "marks": 4,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "statistics-and-probability",
+      "chapterIds": [
+        "probability"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresPartInternalChoiceMarks": [
+        2
+      ]
+    }
+  ],
+  "generalInstructions": [
+    "All 38 questions are compulsory. There is no overall choice.",
+    "The paper carries 80 marks and has a duration of 3 hours.",
+    "Section A contains 18 multiple-choice questions and 2 assertion–reason questions of 1 mark each.",
+    "Section B contains five very short-answer questions of 2 marks each; internal choice is provided in two questions.",
+    "Section C contains six short-answer questions of 3 marks each; internal choice is provided in two questions.",
+    "Section D contains four long-answer questions of 5 marks each; internal choice is provided in two questions.",
+    "Section E contains three case-study questions of 4 marks each, with subparts carrying 1, 1 and 2 marks. Each 2-mark subpart has an internal choice.",
+    "Use π = 22/7 wherever required unless stated otherwise. Calculators are not allowed.",
+    "Draw neat and labelled figures wherever required. Show working and state units for mensuration and application problems."
+  ],
+  "sources": [
+    {
+      "label": "CBSE Class X Mathematics (Standard) Sample Question Paper 2026–27",
+      "url": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/MathsStandard-SQP.pdf",
+      "authority": "official"
+    },
+    {
+      "label": "CBSE Class X Mathematics (Standard) Marking Scheme 2026–27",
+      "url": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/MathsStandard-MS.pdf",
+      "authority": "official"
+    },
+    {
+      "label": "CBSE Curriculum 2026–27 portal",
+      "url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "authority": "official"
+    }
+  ],
+  "notes": [
+    "Question count, section pattern, duration, marks and internal-choice locations follow the CBSE Class X Mathematics sample-paper pattern.",
+    "CBSE syllabus unit weightages are marks out of 80: Number Systems 6; Algebra 20; Coordinate Geometry 6; Geometry 15; Trigonometry 12; Mensuration 10; Statistics and Probability 11.",
+    "Question-to-unit and chapter-to-slot assignments are ExamGuru's coverage plan. They are not official CBSE question-number or chapter-wise weightage prescriptions.",
+    "All 14 prescribed NCERT chapters are represented in the blueprint slot plan.",
+    "Standard cognitive targets: 43 marks Knowledge and Understanding, 19 Applying, 18 Analysing/Evaluating/Creating.",
+    "Basic cognitive targets: 60 marks Knowledge and Understanding, 12 Applying, 8 Analysing/Evaluating/Creating.",
+    "Standard and Basic share the same syllabus and question-bank path. Individual questions may declare assessmentLevels to restrict them to one or both profiles.",
+    "Section E part-level internal choice is represented through requiresPartInternalChoiceMarks and the shared question renderer, not as a whole-question alternative.",
+    "Do not enable either profile until the shared bank contains sufficient approved questions for every eligibility group and both levels pass separate coverage and quality checks."
+  ]
+}

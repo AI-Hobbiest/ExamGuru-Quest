@@ -50,6 +50,33 @@ const mathTemplate=m.createQuestionBankTemplate({classId:"10",subjectId:"mathema
 assert.equal(mathTemplate.subjectId,"mathematics");
 assert.equal(mathTemplate.subjectCode,"041");
 
+
+// Part-level internal choice and assessment-profile filtering are shared engine features.
+const levelBp={schemaVersion:1,kind:"exam-paper-blueprint",blueprintId:"level-fixture",version:1,title:"Level fixture",academicYear:"2026-27",classId:"10",subjectId:"mathematics",subjectCode:"041",assessmentLevel:"standard",durationMinutes:180,totalQuestions:1,totalMarks:4,status:"ready",sections:[{sectionId:"E",title:"Section E",questionCount:1,totalMarks:4}],slotPlan:[{slotId:"E1",questionNumber:1,sectionId:"E",marks:4,allowedTypes:["case-based"],unitId:"geometry",chapterIds:["circles"],requiresPartInternalChoiceMarks:[2]}]};
+function partChoiceQuestion(id,assessmentLevels=["standard"]){
+ return q(id,"E",4,"case-based",{chapterId:"circles",unitId:"geometry",assessmentLevels,stimulus:"A circular park has a walking path around it.",parts:[
+  {partId:"a",prompt:"State the relevant formula.",marks:1,answerKey:"Formula."},
+  {partId:"b",prompt:"Give a relevant observation.",marks:1,answerKey:"Observation."},
+  {partId:"c",prompt:"Find the area of the path.",marks:2,answerKey:"Area difference.",markingScheme:[{criterion:"Correct method and substitution",marks:1},{criterion:"Correct result with unit",marks:1}],alternatives:[{prompt:"Calculate the area using the other given radius.",answerKey:"Use the alternate radius and subtract areas.",markingScheme:[{criterion:"Correct alternate method",marks:1},{criterion:"Correct result with unit",marks:1}]}]}
+ ]});
+}
+const partChoiceBank={schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subjectId:"mathematics",academicYear:"2026-27",bankVersion:"part-choice-test",questions:[
+ partChoiceQuestion("standard-1"),partChoiceQuestion("standard-2"),partChoiceQuestion("standard-3"),partChoiceQuestion("basic-only",["basic"])
+]};
+assert.equal(m.validateBlueprint(levelBp).valid,true);
+assert.equal(m.validateQuestion(partChoiceQuestion("part-choice")).length,0,"part-level alternatives need valid answer keys and mark schemes");
+const missingPartChoice=partChoiceQuestion("missing-choice");
+missingPartChoice.parts[2].alternatives=[];
+assert.ok(m.validateQuestion(missingPartChoice).length>0,"part alternatives cannot be empty");
+const partCoverage=m.auditSlotCoverage(levelBp,partChoiceBank,3);
+assert.equal(partCoverage.valid,true,partCoverage.errors.join(" "));
+const partPaper=m.generatePaper(levelBp,partChoiceBank,{seed:"part-choice"});
+assert.equal(m.validatePaper(partPaper,levelBp).valid,true);
+assert.equal(partPaper.questions[0].parts[2].alternatives.length,1);
+const basicBpForFilter={...levelBp,assessmentLevel:"basic",slotPlan:levelBp.slotPlan.map(slot=>({...slot,assessmentLevel:"basic"}))};
+assert.equal(m.auditSlotCoverage(basicBpForFilter,partChoiceBank,1).valid,true,"level-tagged bank should allow Basic-only candidates for a Basic profile");
+assert.equal(partCoverage.coverage[0].eligibleCount,3,"Standard coverage must exclude questions tagged only for Basic");
+
 const productionBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-science-2026-27-v1.json","utf8"));
 const productionCoverage=m.auditSlotCoverage(production,productionBank,3);
 assert.equal(productionCoverage.valid,true,productionCoverage.errors.join(" "));

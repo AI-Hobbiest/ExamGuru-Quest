@@ -3,7 +3,15 @@
 "use strict";
 const esc=v=>String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const list=x=>Array.isArray(x)?x:[];
-function partHtml(p,teacher){return'<div class="part"><strong>('+esc(p.partId||"")+')</strong> '+esc(p.prompt)+' <span class="marks">['+esc(p.marks)+']</span></div>'+(teacher&&p.answerKey?'<div class="answer"><b>Expected answer:</b> '+esc(typeof p.answerKey==="string"?p.answerKey:JSON.stringify(p.answerKey))+"</div>":"");}
+function partHtml(p,teacher){
+ let h='<div class="part"><strong>('+esc(p.partId||"")+')</strong> '+esc(p.prompt)+' <span class="marks">['+esc(p.marks)+']</span></div>';
+ list(p.alternatives).forEach(a=>{
+  h+='<div class="or">OR</div><div class="part-alternative">'+esc(a.prompt)+' <span class="marks">['+esc(p.marks)+' marks]</span></div>';
+  if(teacher)h+=teacherAnswerHtml(a.answerKey,a.markingScheme);
+ });
+ if(teacher&&p.answerKey)h+='<div class="answer"><b>Expected answer:</b> '+esc(typeof p.answerKey==="string"?p.answerKey:JSON.stringify(p.answerKey))+"</div>";
+ return h;
+}
 function imageHtml(images){return list(images).map(image=>'<figure class="diagram"><img src="'+esc(image.src)+'" alt="'+esc(image.alt)+'" style="max-width:100%;height:auto"><figcaption>'+esc(image.caption||image.alt)+'</figcaption></figure>').join("");}
 function teacherAnswerHtml(answerKey,markingScheme){
  let h="";
@@ -53,15 +61,18 @@ function buildAnswerBookletHtml(paper,baseHref){
  if(!paper||paper.kind!=="exam-paper-snapshot"||!Array.isArray(paper.questions))throw new TypeError("Valid paper snapshot required.");
  const sections=(paper.blueprintSnapshot.sections||[]).map(section=>{
   const questions=paper.questions.filter(q=>q.sectionId===section.sectionId).map(q=>{
-   const count=Math.max(4,Math.min(24,Number(q.marks||1)*3));
-   const lines=Array.from({length:count},()=>'<div class="answer-line"></div>').join("");
-   const choice=q.alternatives&&q.alternatives.length?'<p class="choice-note">Answer either the main question or the internal-choice question, not both.</p>':"";
-   return'<article class="answer-space"><h3>Q'+esc(q.paperQuestionNumber)+'. '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></h3>'+choice+lines+'</article>';
+   const linesFor=marks=>Array.from({length:Math.max(3,Math.min(18,Number(marks||1)*3))},()=>'<div class="answer-line"></div>').join("");
+   const questionChoice=q.alternatives&&q.alternatives.length?'<p class="choice-note">Answer either the main question or the internal-choice question, not both.</p>':"";
+   const responseSpace=Array.isArray(q.parts)&&q.parts.length?q.parts.map(part=>{
+    const partChoice=Array.isArray(part.alternatives)&&part.alternatives.length?'<p class="choice-note">Choose either the main or alternative version of this subpart.</p>':"";
+    return'<div class="answer-part"><b>('+esc(part.partId||"")+')</b> '+esc(part.prompt)+' <span class="marks">['+esc(part.marks)+' marks]</span></div>'+partChoice+linesFor(part.marks);
+   }).join(""):linesFor(q.marks);
+   return'<article class="answer-space"><h3>Q'+esc(q.paperQuestionNumber)+'. '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></h3>'+questionChoice+responseSpace+'</article>';
   }).join("");
   return'<section><h2>'+esc(section.title)+' · '+esc(section.totalMarks)+' marks</h2>'+questions+'</section>';
  }).join("");
  return'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(paper.title)+' · Answer Booklet</title>'+(baseHref?'<base href="'+esc(baseHref)+'">':"")+'<style>'+
- 'body{font:11pt Arial,sans-serif;color:#171717;max-width:850px;margin:28px auto;padding:0 24px;line-height:1.4}h1{text-align:center;font-size:19pt;margin:0 0 6px}h2{font-size:14pt;border-bottom:1px solid #777;padding:6px 0;margin:23px 0 12px}.student-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 22px}.student-fields span{border-bottom:1px solid #555;padding:5px 0}.instructions{border:1px solid #999;padding:10px;margin:12px 0 18px}.answer-space{break-inside:avoid;margin:0 0 22px}.answer-space h3{font-size:11pt;margin:12px 0 7px}.marks{float:right}.choice-note{font-size:9pt;color:#555;font-style:italic;margin:4px 0 8px}.answer-line{height:25px;border-bottom:1px solid #b8b8b8}.footer{border-top:1px solid #777;margin-top:28px;padding-top:8px;text-align:center}@media print{body{margin:0 auto;padding:0 12mm;max-width:none}h2{break-after:avoid}.answer-space{break-inside:avoid}}</style></head><body><h1>'+esc(paper.title)+' · Answer Booklet</h1><p style="text-align:center">Class '+esc(paper.classId)+' · '+esc(paper.academicYear)+' · Maximum Marks '+esc(paper.totalMarks)+'</p><div class="student-fields"><span>Student Name:</span><span>Roll No.:</span><span>School:</span><span>Date:</span></div><div class="instructions"><b>Instructions</b><p>Write the question number clearly. Use the space provided for each answer. For internal-choice questions, answer only one option. Attach extra sheets with your name and question number if required.</p></div>'+sections+'<div class="footer">End of Answer Booklet</div></body></html>';
+ 'body{font:11pt Arial,sans-serif;color:#171717;max-width:850px;margin:28px auto;padding:0 24px;line-height:1.4}h1{text-align:center;font-size:19pt;margin:0 0 6px}h2{font-size:14pt;border-bottom:1px solid #777;padding:6px 0;margin:23px 0 12px}.student-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 22px}.student-fields span{border-bottom:1px solid #555;padding:5px 0}.instructions{border:1px solid #999;padding:10px;margin:12px 0 18px}.answer-space{break-inside:avoid;margin:0 0 22px}.answer-space h3{font-size:11pt;margin:12px 0 7px}.marks{float:right}.choice-note{font-size:9pt;color:#555;font-style:italic;margin:4px 0 8px}.answer-part{font-weight:600;margin:10px 0 2px}.answer-line{height:25px;border-bottom:1px solid #b8b8b8}.footer{border-top:1px solid #777;margin-top:28px;padding-top:8px;text-align:center}@media print{body{margin:0 auto;padding:0 12mm;max-width:none}h2{break-after:avoid}.answer-space{break-inside:avoid}}</style></head><body><h1>'+esc(paper.title)+' · Answer Booklet</h1><p style="text-align:center">Class '+esc(paper.classId)+' · '+esc(paper.academicYear)+' · Maximum Marks '+esc(paper.totalMarks)+'</p><div class="student-fields"><span>Student Name:</span><span>Roll No.:</span><span>School:</span><span>Date:</span></div><div class="instructions"><b>Instructions</b><p>Write the question number clearly. Use the space provided for each answer. For internal-choice questions, answer only one option. Attach extra sheets with your name and question number if required.</p></div>'+sections+'<div class="footer">End of Answer Booklet</div></body></html>';
 }
 function printAnswerBooklet(paper){
  const url=URL.createObjectURL(new Blob([buildAnswerBookletHtml(paper,document.baseURI)],{type:"text/html;charset=utf-8"}));
