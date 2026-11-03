@@ -28,7 +28,8 @@ jobs:
           node tests/olympiad-blueprints.test.js
           node tests/exam-paper-generator.test.js
           node tests/exam-paper-release.test.js
-          node tests/exam-paper-renderer.test.js\n          node tests/assessment-manager.test.js
+          node tests/exam-paper-renderer.test.js
+          node tests/assessment-manager.test.js
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
           node tests/learning-model.test.js
@@ -52,7 +53,8 @@ jobs:
           cp learning.html _site/learning.html
           cp study.html _site/study.html
           cp parent.html _site/parent.html
-          cp exam-practice.html _site/exam-practice.html\n          cp assigned-test.html _site/assigned-test.html
+          cp exam-practice.html _site/exam-practice.html
+          cp assigned-test.html _site/assigned-test.html
           cp .nojekyll _site/.nojekyll
           mkdir -p _site/js _site/data _site/css _site/data/contracts/v1
           cp css/branding.css _site/css/branding.css
@@ -67,7 +69,11 @@ jobs:
           cp js/olympiad-blueprints.js _site/js/olympiad-blueprints.js
           cp js/exam-paper-generator.js _site/js/exam-paper-generator.js
           cp js/exam-paper-renderer.js _site/js/exam-paper-renderer.js
-          cp js/exam-paper-studio.js _site/js/exam-paper-studio.js\n          cp js/assessment-manager.js _site/js/assessment-manager.js\n          cp js/assigned-test.js _site/js/assigned-test.js\n          cp js/assigned-tests-dashboard.js _site/js/assigned-tests-dashboard.js\n          cp js/parent-assessments.js _site/js/parent-assessments.js
+          cp js/exam-paper-studio.js _site/js/exam-paper-studio.js
+          cp js/assessment-manager.js _site/js/assessment-manager.js
+          cp js/assigned-test.js _site/js/assigned-test.js
+          cp js/assigned-tests-dashboard.js _site/js/assigned-tests-dashboard.js
+          cp js/parent-assessments.js _site/js/parent-assessments.js
           cp js/exam-paper-self-study.js _site/js/exam-paper-self-study.js
           cp js/session-model.js _site/js/session-model.js
           cp js/learning-model.js _site/js/learning-model.js
@@ -210,7 +216,8 @@ jobs:
           const encoded = fs.readFileSync('_site/science-payload/part-01.txt','utf8').trim()
             + Array.from({length:16},(_,i)=>fs.readFileSync('_site/science-payload/part-'+String(i+2).padStart(2,'0')+'.txt','utf8').trim()).join('');
           const html = zlib.gunzipSync(Buffer.from(encoded,'base64')).toString('utf8');
-          const match = html.match(/const EMBEDDED_CHAPTERS = (\[[\s\S]*?\]);\s*\nlet chapters/);
+          const match = html.match(/const EMBEDDED_CHAPTERS = (\[[\s\S]*?\]);\s*
+let chapters/);
           if (!match) throw new Error('Embedded chapter data was not found.');
           const chapters = JSON.parse(match[1]);
           const count = chapters.reduce((sum,chapter)=>sum+chapter.questions.length,0);
