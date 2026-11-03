@@ -65,7 +65,7 @@ assert.equal(afterEvaluation.length,2);
 const evaluated=afterEvaluation.find(x=>x.assignmentId===mixed.assignmentId);
 assert.equal(evaluated.score,7);
 assert.equal(evaluated.maxScore,10);
-assert.equal(evaluated.accuracyCount,1);
+assert.equal(evaluated.accuracyCount,1.4);
 assert.equal(evaluated.accuracyTotal,2);
 assert.equal(evaluated.assessmentTitle,"Science written mock");
 
@@ -103,7 +103,7 @@ const stats=gamificationContext.window.C10Gamification.calculate(finalRows,new D
 assert.equal(stats.attempts,3);
 assert.ok(stats.xp>0);
 assert.ok(stats.subjectStats.some(x=>x.id==="science-sof"&&x.tests===1&&x.accuracy===50));
-assert.ok(stats.subjectStats.some(x=>x.id==="science"&&x.tests===2));
+assert.ok(stats.subjectStats.some(x=>x.id==="science"&&x.tests===2&&x.accuracy===60));
 assert.ok(stats.last10.some(x=>x.label.includes("Assigned Science revision")));
 
 const dashboard=fs.readFileSync("js/dashboard-manager.js","utf8");

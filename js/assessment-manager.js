@@ -300,17 +300,18 @@
           const score = Number(attempt.manualScore);
           const maximum = Number(attempt.maxScore || assignment.totalMarks);
           if (!Number.isFinite(score) || !Number.isFinite(maximum) || maximum <= 0) return;
-          const equivalentCorrect = Math.round(Math.max(0, Math.min(1, score / maximum)) * questionCount);
+          const equivalentCorrect = Math.max(0, Math.min(questionCount, score / maximum * questionCount));
+          const xpCorrectCount = Math.round(equivalentCorrect);
           result.push({
             ...base,
             score,
             maxScore: maximum,
-            correctCount: equivalentCorrect,
+            correctCount: xpCorrectCount,
             questionCount,
             answeredCount: attempt.answered == null
               ? (attempt.completionMode === "handwritten-offline" ? questionCount : 0)
               : Number(attempt.answered),
-            xpCorrectCount: equivalentCorrect,
+            xpCorrectCount,
             accuracyCount: equivalentCorrect,
             accuracyTotal: questionCount,
             evaluationStatus: "evaluated",
