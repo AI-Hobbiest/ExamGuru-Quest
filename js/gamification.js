@@ -37,7 +37,7 @@
   const accuracy = attempt => Number(attempt.maxScore)>0 ? Math.max(0,Math.min(100,Math.round(Number(attempt.score||0)/Number(attempt.maxScore)*100))) : 0;
   function xpFor(attempt){
     if(!completed(attempt))return 0;
-    const correct=Math.max(0,Math.floor(Number(attempt.correctCount??attempt.score)||0));
+    const correct=Math.max(0,Math.floor(Number(attempt.xpCorrectCount??attempt.correctCount??attempt.score)||0));
     const percent=accuracy(attempt);
     return 10 + correct*2 + (percent>=70?5:0) + (percent>=90?10:0);
   }
@@ -98,8 +98,8 @@
     const subjectIds=[...new Set(attempts.map(attempt=>attempt.subjectId).filter(Boolean))];
     const subjects=SUBJECTS.map(subject=>{
       const matching=attempts.filter(attempt=>attempt.subjectId===subject.id);
-      const totalQuestions=matching.reduce((sum,attempt)=>sum+Number(attempt.answeredCount??attempt.questionCount??attempt.maxScore??0),0);
-      const correct=matching.reduce((sum,attempt)=>sum+Number(attempt.correctCount??attempt.score??0),0);
+      const totalQuestions=matching.reduce((sum,attempt)=>sum+Number(attempt.accuracyTotal??attempt.answeredCount??attempt.questionCount??attempt.maxScore??0),0);
+      const correct=matching.reduce((sum,attempt)=>sum+Number(attempt.accuracyCount??attempt.correctCount??attempt.score??0),0);
       return {...subject,tests:matching.length,questionCount:totalQuestions,correct,
         accuracy:totalQuestions?Math.round(correct/totalQuestions*100):0,
         averageScore:matching.length?Math.round(matching.reduce((sum,attempt)=>sum+attempt.accuracy,0)/matching.length):null};
@@ -110,7 +110,7 @@
     const recent=attempts.slice(-10);
     const last10=recent.map((attempt,index)=>({
       id:attempt.attemptId||String(index),
-      label:attempt.subjectId?((SUBJECTS.find(subject=>subject.id===attempt.subjectId)||{}).title||attempt.subjectId):"Test",
+      label:(attempt.subjectId?((SUBJECTS.find(subject=>subject.id===attempt.subjectId)||{}).title||attempt.subjectId):"Test")+(attempt.assessmentTitle?" · "+attempt.assessmentTitle:""),
       shortLabel:(SUBJECTS.find(subject=>subject.id===attempt.subjectId)||{}).emoji||"📘",
       accuracy:attempt.accuracy,
       score:Number(attempt.score||0),

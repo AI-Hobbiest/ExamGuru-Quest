@@ -146,19 +146,30 @@
       if (!attempt) throw new Error("There is no active paper attempt to submit.");
       attempt.answers = clone(answers || {}); attempt.submittedAt = now(); attempt.status = "submitted";
       const questions = row.paperSnapshot.questions || [];
-      let mcqTotal = 0, mcqCorrect = 0, answered = 0;
+      let mcqTotal = 0, mcqCorrect = 0, answered = 0, mcqAnsweredCount = 0;
+      let mcqMarksEarned = 0, mcqMaxMarks = 0;
       questions.forEach((question,index) => {
         if (question.type === "mcq" || question.type === "assertion-reason") {
           mcqTotal++;
+          const marks = Math.max(0, Number(question.marks) || 1);
+          mcqMaxMarks += marks;
           const response = attempt.answers[index];
-          if (response && response.optionId) answered++;
-          if (response && response.optionId === question.correctOptionId) mcqCorrect++;
+          if (response && response.optionId) { answered++; mcqAnsweredCount++; }
+          if (response && response.optionId === question.correctOptionId) {
+            mcqCorrect++;
+            mcqMarksEarned += marks;
+          }
         } else {
           const response = attempt.answers[index];
           if (response && (response.optionId || (response.text || []).some(value => String(value || "").trim()))) answered++;
         }
       });
-      attempt.answered = answered; attempt.mcqCorrect = mcqCorrect; attempt.mcqTotal = mcqTotal;
+      attempt.answered = answered;
+      attempt.mcqCorrect = mcqCorrect;
+      attempt.mcqTotal = mcqTotal;
+      attempt.mcqAnsweredCount = mcqAnsweredCount;
+      attempt.mcqMarksEarned = mcqMarksEarned;
+      attempt.mcqMaxMarks = mcqMaxMarks;
       attempt.hasWrittenResponses = questions.some(question => !["mcq","assertion-reason"].includes(question.type));
       attempt.evaluationStatus = attempt.hasWrittenResponses ? "pending-manual-review" : "auto-scored";
       attempt.manualReviewNote = attempt.hasWrittenResponses ? "Descriptive answers require handwritten or teacher evaluation." : null;
@@ -190,6 +201,152 @@
       row.updatedAt = attempt.evaluatedAt;
     });
   }
+  function analyticsAttemptsForStudent(studentId) {
+    const targetId = String(studentId || "");
+    if (!targetId) return [];
+    const result = [];
+    readAll().forEach(assignment => {
+      if (assignment.studentId !== targetId || assignment.status === "cancelled") return;
+      const attempts = Array.isArray(assignment.attempts) ? assignment.attempts : [];
+      attempts.forEach(attempt => {
+        if (!attempt || attempt.status !== "submitted") return;
+        const base = {
+          attemptId: "assigned-" + assignment.assignmentId + "-" + attempt.attemptId,
+          assignmentId: assignment.assignmentId,
+          assessmentTitle: assignment.title,
+          assessmentSource: "assigned",
+          assessmentKind: assignment.kind,
+          subjectId: String(assignment.subjectId || ""),
+          subjectTitle: String(assignment.subjectTitle || assignment.subjectId || "Assigned assessment"),
+          classId: String(assignment.classId || ""),
+          mode: assignment.kind === "paper-assessment" ? "assigned-paper" : "assigned-test",
+          startedAt: attempt.startedAt || assignment.createdAt || null,
+          submittedAt: attempt.submittedAt || attempt.evaluatedAt || assignment.updatedAt || assignment.createdAt,
+          status: "submitted"
+        };
+
+        if (assignment.kind === "assigned-assessment") {
+          const questions = Array.isArray(assignment.questionSnapshot) ? assignment.questionSnapshot : [];
+          if (!questions.length) return;
+          const responses = attempt.answers && typeof attempt.answers === "object" ? attempt.answers : {};
+          let correct = 0, answered = 0;
+          const chapters = new Map();
+          questions.forEach(question => {
+            const questionId = String(question.questionId || "");
+            const selected = responses[questionId] == null ? "" : String(responses[questionId]);
+            const isAnswered = !!selected;
+            const isCorrect = isAnswered && selected === String(question.correctOptionId || "");
+            if (isAnswered) answered++;
+            if (isCorrect) correct++;
+            const chapterId = String(question.chapterId || question.chapterKey || question.chapterTitle || "");
+            if (chapterId) {
+              const chapter = chapters.get(chapterId) || {
+                chapterId,
+                chapterTitle: String(question.chapterTitle || chapterId),
+                questionCount: 0,
+                answeredCount: 0,
+                correctCount: 0,
+                skippedCount: 0,
+                unansweredCount: 0
+              };
+              chapter.questionCount++;
+              if (isAnswered) chapter.answeredCount++;
+              else chapter.unansweredCount++;
+              if (isCorrect) chapter.correctCount++;
+              chapters.set(chapterId, chapter);
+            }
+          });
+          const total = questions.length;
+          const chapterResults = Array.from(chapters.values()).map(chapter => ({
+            ...chapter,
+            accuracy: chapter.questionCount ? Math.round(chapter.correctCount / chapter.questionCount * 100) : 0
+          }));
+          result.push({
+            ...base,
+            score: correct,
+            maxScore: total,
+            correctCount: correct,
+            questionCount: total,
+            answeredCount: answered,
+            xpCorrectCount: correct,
+            accuracyCount: correct,
+            accuracyTotal: total,
+            chapterResults
+          });
+          return;
+        }
+
+        if (assignment.kind !== "paper-assessment") return;
+        const paperQuestions = assignment.paperSnapshot && Array.isArray(assignment.paperSnapshot.questions)
+          ? assignment.paperSnapshot.questions : [];
+        const objectiveQuestions = paperQuestions.filter(question =>
+          question.type === "mcq" || question.type === "assertion-reason");
+        let calculatedCorrect = 0, calculatedAnswered = 0;
+        let calculatedMarks = 0, calculatedMaxMarks = 0;
+        objectiveQuestions.forEach(question => {
+          const paperIndex = paperQuestions.indexOf(question);
+          const response = attempt.answers && attempt.answers[paperIndex];
+          const marks = Math.max(0, Number(question.marks) || 1);
+          calculatedMaxMarks += marks;
+          if (response && response.optionId) calculatedAnswered++;
+          if (response && response.optionId === question.correctOptionId) {
+            calculatedCorrect++;
+            calculatedMarks += marks;
+          }
+        });
+        const questionCount = Math.max(1, Number(assignment.questionCount) || paperQuestions.length || objectiveQuestions.length);
+
+        if (attempt.evaluationStatus === "evaluated") {
+          const score = Number(attempt.manualScore);
+          const maximum = Number(attempt.maxScore || assignment.totalMarks);
+          if (!Number.isFinite(score) || !Number.isFinite(maximum) || maximum <= 0) return;
+          const equivalentCorrect = Math.round(Math.max(0, Math.min(1, score / maximum)) * questionCount);
+          result.push({
+            ...base,
+            score,
+            maxScore: maximum,
+            correctCount: equivalentCorrect,
+            questionCount,
+            answeredCount: attempt.answered == null
+              ? (attempt.completionMode === "handwritten-offline" ? questionCount : 0)
+              : Number(attempt.answered),
+            xpCorrectCount: equivalentCorrect,
+            accuracyCount: equivalentCorrect,
+            accuracyTotal: questionCount,
+            evaluationStatus: "evaluated",
+            manualFeedback: String(attempt.manualFeedback || "")
+          });
+          return;
+        }
+
+        const autoScored = attempt.evaluationStatus === "auto-scored" ||
+          (!attempt.evaluationStatus && attempt.hasWrittenResponses === false);
+        if (!autoScored || attempt.hasWrittenResponses) return;
+        const correct = Number.isFinite(Number(attempt.mcqCorrect)) ? Number(attempt.mcqCorrect) : calculatedCorrect;
+        const total = Number.isFinite(Number(attempt.mcqTotal)) ? Number(attempt.mcqTotal) : objectiveQuestions.length;
+        const answered = Number.isFinite(Number(attempt.mcqAnsweredCount)) ? Number(attempt.mcqAnsweredCount) : calculatedAnswered;
+        const score = Number.isFinite(Number(attempt.mcqMarksEarned)) ? Number(attempt.mcqMarksEarned) : calculatedMarks;
+        const maximum = Number.isFinite(Number(attempt.mcqMaxMarks)) && Number(attempt.mcqMaxMarks) > 0
+          ? Number(attempt.mcqMaxMarks) : calculatedMaxMarks;
+        if (!total || maximum <= 0) return;
+        result.push({
+          ...base,
+          score,
+          maxScore: maximum,
+          correctCount: correct,
+          questionCount: total,
+          answeredCount: answered,
+          xpCorrectCount: correct,
+          accuracyCount: correct,
+          accuracyTotal: total,
+          evaluationStatus: "auto-scored"
+        });
+      });
+    });
+    return result.sort((a, b) =>
+      String(a.submittedAt || a.startedAt || "").localeCompare(String(b.submittedAt || b.startedAt || "")));
+  }
+
   function listForStudent(studentId) {
     return readAll().filter(x => x.studentId === String(studentId)).sort((a,b) => String(b.createdAt).localeCompare(String(a.createdAt))).map(clone);
   }
@@ -241,6 +398,6 @@
   }
   window.C10AssessmentManager = Object.freeze({
     key: KEY, bankPath, buildQuestionPool, selectQuestions, createMcqAssignment, createPaperAssignment,
-    listForStudent, listForParent, get, start, submit, startPaper, submitPaper, recordPaperEvaluation
+    listForStudent, listForParent, analyticsAttemptsForStudent, get, start, submit, startPaper, submitPaper, recordPaperEvaluation
   });
 })();

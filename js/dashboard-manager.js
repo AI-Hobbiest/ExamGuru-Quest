@@ -52,6 +52,14 @@
         result.push({...attempt,subjectId:attempt.subjectId||entry.subject,subjectTitle:entry.subjectTitle});
       }
     }
+    try{
+      const student=window.C10StudentAuth&&window.C10StudentAuth.currentUser
+        ?window.C10StudentAuth.currentUser():null;
+      if(student&&student.role==="student"&&student.studentId&&
+         window.C10AssessmentManager&&window.C10AssessmentManager.analyticsAttemptsForStudent){
+        result.push(...window.C10AssessmentManager.analyticsAttemptsForStudent(student.studentId));
+      }
+    }catch(_){}
     return result.sort((a,b)=>String(a.submittedAt||a.startedAt).localeCompare(String(b.submittedAt||b.startedAt)));
   }
   function el(tag,className,text){
