@@ -125,11 +125,11 @@
       if (row.deliveryMode === "printable") throw new Error("This paper is assigned for handwritten completion. Use the PDF/print view instead.");
       if (row.status === "cancelled") throw new Error("This assignment has been cancelled.");
       if (row.startsAt && new Date(row.startsAt).getTime() > Date.now()) throw new Error("This paper is not available yet.");
+      const active = row.attempts.find(x => x.attemptId === row.activeAttemptId && x.status === "in-progress");
+      if (active) return;
       if (row.deadlineAt && new Date(row.deadlineAt).getTime() < Date.now()) throw new Error("The deadline for this paper has passed.");
       const completed = row.attempts.filter(x => x.status === "submitted").length;
       if (completed >= row.attemptsAllowed) throw new Error("The allowed number of attempts has been used.");
-      const active = row.attempts.find(x => x.attemptId === row.activeAttemptId && x.status === "in-progress");
-      if (active) return;
       const attempt = { attemptId: makeId("attempt"), startedAt: now(), status: "in-progress", answers: {} };
       row.attempts.push(attempt); row.activeAttemptId = attempt.attemptId; row.status = "in-progress";
     });
@@ -161,6 +161,30 @@
       row.status = "completed"; row.activeAttemptId = null; row.updatedAt = attempt.submittedAt;
     });
   }
+  function recordPaperEvaluation(assignmentId, parentId, score, feedback) {
+    return update(assignmentId, row => {
+      if (row.kind !== "paper-assessment") throw new Error("Only full examination papers support manual paper evaluation.");
+      if (row.parentId !== String(parentId)) throw new Error("This parent is not authorised to evaluate this assignment.");
+      if (row.activeAttemptId) throw new Error("The student has an examination attempt in progress. Submit it before evaluation.");
+      const maximum = Number(row.totalMarks);
+      const awarded = Number(score);
+      if (!Number.isFinite(awarded) || awarded < 0 || awarded > maximum) throw new Error("Enter marks from 0 to " + maximum + ".");
+      let attempt = row.attempts.slice().reverse().find(item => item.status === "submitted");
+      if (!attempt) {
+        attempt = { attemptId: makeId("offline-review"), startedAt: null, submittedAt: now(), status: "submitted", answers: {}, completionMode: "handwritten-offline" };
+        row.attempts.push(attempt);
+      }
+      attempt.manualScore = awarded;
+      attempt.maxScore = maximum;
+      attempt.scorePercent = maximum ? Math.round(awarded / maximum * 100) : 0;
+      attempt.manualFeedback = String(feedback || "").trim().slice(0, 2000);
+      attempt.evaluationStatus = "evaluated";
+      attempt.evaluatedAt = now();
+      attempt.evaluatedBy = String(parentId);
+      row.status = "evaluated";
+      row.updatedAt = attempt.evaluatedAt;
+    });
+  }
   function listForStudent(studentId) {
     return readAll().filter(x => x.studentId === String(studentId)).sort((a,b) => String(b.createdAt).localeCompare(String(a.createdAt))).map(clone);
   }
@@ -181,11 +205,11 @@
       if (row.studentId !== String(studentId)) throw new Error("This test is not assigned to the signed-in student.");
       if (row.status === "cancelled") throw new Error("This assignment has been cancelled.");
       if (row.startsAt && new Date(row.startsAt).getTime() > Date.now()) throw new Error("This test is not available yet.");
+      const active = row.attempts.find(x => x.attemptId === row.activeAttemptId && x.status === "in-progress");
+      if (active) return;
       if (row.deadlineAt && new Date(row.deadlineAt).getTime() < Date.now()) throw new Error("The deadline for this test has passed.");
       const completed = row.attempts.filter(x => x.status === "submitted").length;
       if (completed >= row.attemptsAllowed) throw new Error("The allowed number of attempts has been used.");
-      const active = row.attempts.find(x => x.attemptId === row.activeAttemptId && x.status === "in-progress");
-      if (active) return;
       const attempt = { attemptId: makeId("attempt"), startedAt: now(), status: "in-progress", answers: {} };
       row.attempts.push(attempt); row.activeAttemptId = attempt.attemptId; row.status = "in-progress";
     });
@@ -212,6 +236,6 @@
   }
   window.C10AssessmentManager = Object.freeze({
     key: KEY, bankPath, buildQuestionPool, selectQuestions, createMcqAssignment, createPaperAssignment,
-    listForStudent, listForParent, get, start, submit, startPaper, submitPaper
+    listForStudent, listForParent, get, start, submit, startPaper, submitPaper, recordPaperEvaluation
   });
 })();
