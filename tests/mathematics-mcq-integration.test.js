@@ -6,7 +6,8 @@ const generator=ctx.window.ExamPaperGenerator;
 const source=JSON.parse(fs.readFileSync("data/mathematics.json","utf8"));
 assert.equal(source.length,14,"Class 10 Mathematics source bank must contain all 14 chapters");
 assert.equal(source.reduce((sum,ch)=>sum+(ch.questions||[]).length,0),1400,"Class 10 Mathematics source bank must contain 1,400 MCQs");
-const expectedChapters=["real-numbers","polynomials","pair-of-linear-equations-in-two-variables","quadratic-equations","arithmetic-progressions","coordinate-geometry","introduction-to-trigonometry","some-applications-of-trigonometry","circles","areas-related-to-circles","surface-areas-and-volumes","statistics","probability"];\nconst chapterWithoutDedicatedMcqSlot="triangles";
+const expectedChapters=["real-numbers","polynomials","pair-of-linear-equations-in-two-variables","quadratic-equations","arithmetic-progressions","coordinate-geometry","introduction-to-trigonometry","some-applications-of-trigonometry","circles","areas-related-to-circles","surface-areas-and-volumes","statistics","probability"];
+const chapterWithoutDedicatedMcqSlot="triangles";
 const profiles=[
  {level:"standard",file:"data/exam-papers/blueprints/class-10-mathematics-standard-2026-27.json"},
  {level:"basic",file:"data/exam-papers/blueprints/class-10-mathematics-basic-2026-27.json"}
@@ -33,7 +34,8 @@ for(const profile of profiles){
  assert.equal(adapted.adapterStats.excluded.outOfSummativeScope,0,"all prescribed Mathematics chapters must map to an eligible Section A MCQ slot");
  assert.equal(adapted.adapterStats.excluded.unsupportedCompetency,0);
  assert.equal(adapted.adapterStats.excluded.needsReview,0);
- assert.deepEqual(Object.keys(adapted.adapterStats.byChapter).sort(),expectedChapters.slice().sort());\n assert.equal(adapted.adapterStats.byChapter[chapterWithoutDedicatedMcqSlot],undefined,"Triangles remains in the full-paper blueprint through written-answer slots, not as an MCQ slot.");
+ assert.deepEqual(Object.keys(adapted.adapterStats.byChapter).sort(),expectedChapters.slice().sort());
+ assert.equal(adapted.adapterStats.byChapter[chapterWithoutDedicatedMcqSlot],undefined,"Triangles remains in the full-paper blueprint through written-answer slots, not as an MCQ slot.");
  assert.ok(Object.values(adapted.adapterStats.byChapter).every(count=>count>0),"every chapter must contribute source MCQs");
  const coverage=generator.auditSlotCoverage(blueprint,adapted,3);
  assert.equal(coverage.valid,true,profile.level+": "+coverage.errors.join(" "));
