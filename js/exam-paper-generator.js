@@ -289,8 +289,12 @@ function adaptChapterMcqBank(practiceChapters,bp,options={}){
   const chapterId=chapterIds.find(id=>keys.includes(id))||chapterIds.find(id=>keys.some(key=>key.endsWith("-"+id)||key.startsWith(id+"-")));
   if(!chapterId){excluded.outOfSummativeScope+=(Array.isArray(chapter&&chapter.questions)?chapter.questions.length:0);return;}
   const related=slotRows.filter(s=>(s.chapterIds||[]).includes(chapterId));
-  const sections=[...new Set(related.map(s=>s.sectionId))],units=[...new Set(related.map(s=>s.unitId).filter(Boolean))];
-  if(!sections.length||sections.length>1&&!related.some(s=>s.sectionId===chapter.sectionId)||units.length>1&&!related.some(s=>s.unitId===chapter.unitId)){
+  // Chapter-wise MCQs belong only in eligible one-mark MCQ slots. Written-answer
+  // and case-study slots in the same chapter must not make this mapping ambiguous.
+  const mcqRelated=related.filter(s=>Number(s.marks)===1&&Array.isArray(s.allowedTypes)&&s.allowedTypes.includes("mcq"));
+  if(!mcqRelated.length){excluded.outOfSummativeScope+=(Array.isArray(chapter&&chapter.questions)?chapter.questions.length:0);return;}
+  const sections=[...new Set(mcqRelated.map(s=>s.sectionId))],units=[...new Set(mcqRelated.map(s=>s.unitId).filter(Boolean))];
+  if(sections.length>1&&!mcqRelated.some(s=>s.sectionId===chapter.sectionId)||units.length>1&&!mcqRelated.some(s=>s.unitId===chapter.unitId)){
    excluded.ambiguousChapter+=(Array.isArray(chapter.questions)?chapter.questions.length:0);return;
   }
   const chapterSection=chapter.sectionId&&sections.includes(chapter.sectionId)?chapter.sectionId:sections.length===1?sections[0]:null;

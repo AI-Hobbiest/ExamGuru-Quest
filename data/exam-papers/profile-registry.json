@@ -31,7 +31,8 @@
       "description": "Draft blueprint only. Enable after shared question-bank and coverage audits pass.",
       "blueprintUrl": "./data/exam-papers/blueprints/class-10-mathematics-standard-2026-27.json",
       "questionBankUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",
-      "minimumCandidatesPerSlot": 3
+      "minimumCandidatesPerSlot": 3,
+      "practiceBankUrl": "./data/mathematics.json"
     },
     {
       "profileId": "class-10-mathematics-basic-2026-27",
@@ -46,7 +47,8 @@
       "description": "Draft blueprint only. Enable after shared question-bank and coverage audits pass.",
       "blueprintUrl": "./data/exam-papers/blueprints/class-10-mathematics-basic-2026-27.json",
       "questionBankUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",
-      "minimumCandidatesPerSlot": 3
+      "minimumCandidatesPerSlot": 3,
+      "practiceBankUrl": "./data/mathematics.json"
     }
   ]
 }
