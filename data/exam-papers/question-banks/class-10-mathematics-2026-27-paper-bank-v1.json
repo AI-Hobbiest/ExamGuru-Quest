@@ -1,0 +1,5179 @@
+{
+  "schemaVersion": 1,
+  "kind": "exam-paper-question-bank",
+  "classId": "10",
+  "subjectId": "mathematics",
+  "subjectCode": "041/241",
+  "academicYear": "2026-27",
+  "bankVersion": "examguru-cbse-2026-27-mathematics-paper-pool-v1",
+  "title": "ExamGuru Class 10 Mathematics Standard/Basic approved paper pool · 2026–27",
+  "questionPoolStatus": "curated-approved-paper-pool",
+  "minimumCandidatesPerSlot": 3,
+  "questionCount": 99,
+  "reviewPoolUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",
+  "questions": [
+    {
+      "questionId": "MATH10-Q01-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which is the prime factorisation of 360?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "2³ × 3² × 5"
+        },
+        {
+          "optionId": "B",
+          "text": "2² × 3³ × 5"
+        },
+        {
+          "optionId": "C",
+          "text": "2³ × 3 × 5²"
+        },
+        {
+          "optionId": "D",
+          "text": "2 × 3² × 5²"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 2³ × 3² × 5",
+        "explanation": "360 = 8 × 9 × 5 = 2³ × 3² × 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Real Numbers · source question 2"
+      }
+    },
+    {
+      "questionId": "MATH10-Q01-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which statement about √5 is correct?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "It is rational"
+        },
+        {
+          "optionId": "B",
+          "text": "It is irrational"
+        },
+        {
+          "optionId": "C",
+          "text": "It is an integer"
+        },
+        {
+          "optionId": "D",
+          "text": "Its square is irrational"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. It is irrational",
+        "explanation": "The square root of a non-perfect-square positive integer is irrational."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Real Numbers · source question 5"
+      }
+    },
+    {
+      "questionId": "MATH10-Q01-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which pair is coprime?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "21 and 35"
+        },
+        {
+          "optionId": "B",
+          "text": "16 and 25"
+        },
+        {
+          "optionId": "C",
+          "text": "18 and 27"
+        },
+        {
+          "optionId": "D",
+          "text": "39 and 65"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 16 and 25",
+        "explanation": "16 and 25 have no common prime factor, so their HCF is 1."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Real Numbers · source question 8"
+      }
+    },
+    {
+      "questionId": "MATH10-Q02-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "polynomials",
+      "unitId": "algebra",
+      "topicTags": [
+        "polynomials",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "For ax² + bx + c, the sum of zeroes is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "c/a"
+        },
+        {
+          "optionId": "B",
+          "text": "−b/a"
+        },
+        {
+          "optionId": "C",
+          "text": "b/a"
+        },
+        {
+          "optionId": "D",
+          "text": "−c/a"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. −b/a",
+        "explanation": "The sum of the roots of a quadratic is −b/a."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Polynomials · source question 2"
+      }
+    },
+    {
+      "questionId": "MATH10-Q02-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "polynomials",
+      "unitId": "algebra",
+      "topicTags": [
+        "polynomials",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The graph of a quadratic polynomial can intersect the x-axis in at most:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "One point"
+        },
+        {
+          "optionId": "B",
+          "text": "Two points"
+        },
+        {
+          "optionId": "C",
+          "text": "Three points"
+        },
+        {
+          "optionId": "D",
+          "text": "Four points"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. Two points",
+        "explanation": "A polynomial of degree two has at most two real zeroes."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Polynomials · source question 5"
+      }
+    },
+    {
+      "questionId": "MATH10-Q02-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "polynomials",
+      "unitId": "algebra",
+      "topicTags": [
+        "polynomials",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The degree of (x² + 1)(x³ − 2) is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "2"
+        },
+        {
+          "optionId": "B",
+          "text": "3"
+        },
+        {
+          "optionId": "C",
+          "text": "5"
+        },
+        {
+          "optionId": "D",
+          "text": "6"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 5",
+        "explanation": "The leading term is x⁵, so the degree is 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Polynomials · source question 7"
+      }
+    },
+    {
+      "questionId": "MATH10-Q03-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "pair-of-linear-equations-in-two-variables",
+      "unitId": "algebra",
+      "topicTags": [
+        "pair-of-linear-equations-in-two-variables",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Two lines have a unique intersection when:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "a₁/a₂ = b₁/b₂"
+        },
+        {
+          "optionId": "B",
+          "text": "a₁/a₂ = c₁/c₂"
+        },
+        {
+          "optionId": "C",
+          "text": "a₁/a₂ ≠ b₁/b₂"
+        },
+        {
+          "optionId": "D",
+          "text": "All coefficient ratios are equal"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. a₁/a₂ ≠ b₁/b₂",
+        "explanation": "Different coefficient ratios for x and y indicate intersecting lines."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Pair of Linear Equations in Two Variables · source question 2"
+      }
+    },
+    {
+      "questionId": "MATH10-Q03-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "pair-of-linear-equations-in-two-variables",
+      "unitId": "algebra",
+      "topicTags": [
+        "pair-of-linear-equations-in-two-variables",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The system 2x + 4y = 8 and x + 2y = 4 has:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "No solution"
+        },
+        {
+          "optionId": "B",
+          "text": "Exactly one solution"
+        },
+        {
+          "optionId": "C",
+          "text": "Infinitely many solutions"
+        },
+        {
+          "optionId": "D",
+          "text": "Only x = 0"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. Infinitely many solutions",
+        "explanation": "The second equation is exactly half of the first, so both represent the same line."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Pair of Linear Equations in Two Variables · source question 3"
+      }
+    },
+    {
+      "questionId": "MATH10-Q03-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "pair-of-linear-equations-in-two-variables",
+      "unitId": "algebra",
+      "topicTags": [
+        "pair-of-linear-equations-in-two-variables",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A pair of linear equations with no common solution represents:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Coincident lines"
+        },
+        {
+          "optionId": "B",
+          "text": "Intersecting lines"
+        },
+        {
+          "optionId": "C",
+          "text": "Parallel distinct lines"
+        },
+        {
+          "optionId": "D",
+          "text": "Perpendicular lines only"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. Parallel distinct lines",
+        "explanation": "Distinct parallel lines never meet, so the pair is inconsistent."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Pair of Linear Equations in Two Variables · source question 7"
+      }
+    },
+    {
+      "questionId": "MATH10-Q04-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "quadratic-equations",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The discriminant of ax² + bx + c is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "b² − 4ac"
+        },
+        {
+          "optionId": "B",
+          "text": "b² + 4ac"
+        },
+        {
+          "optionId": "C",
+          "text": "4ac − b"
+        },
+        {
+          "optionId": "D",
+          "text": "a² − 4bc"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. b² − 4ac",
+        "explanation": "The discriminant is D = b² − 4ac."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Quadratic Equations · source question 1"
+      }
+    },
+    {
+      "questionId": "MATH10-Q04-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "quadratic-equations",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "If the discriminant is zero, the roots are:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Distinct real roots"
+        },
+        {
+          "optionId": "B",
+          "text": "Equal real roots"
+        },
+        {
+          "optionId": "C",
+          "text": "Non-real roots"
+        },
+        {
+          "optionId": "D",
+          "text": "Always zero"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. Equal real roots",
+        "explanation": "D = 0 gives two equal real roots."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Quadratic Equations · source question 2"
+      }
+    },
+    {
+      "questionId": "MATH10-Q04-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "quadratic-equations",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The equation x² + 4 = 0 has, over the real numbers:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Two distinct real roots"
+        },
+        {
+          "optionId": "B",
+          "text": "One real root"
+        },
+        {
+          "optionId": "C",
+          "text": "No real roots"
+        },
+        {
+          "optionId": "D",
+          "text": "Roots 2 and −2"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. No real roots",
+        "explanation": "Its discriminant is −16, which is negative."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Quadratic Equations · source question 4"
+      }
+    },
+    {
+      "questionId": "MATH10-Q05-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The nth term of an AP with first term a and common difference d is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "a + nd"
+        },
+        {
+          "optionId": "B",
+          "text": "a + (n−1)d"
+        },
+        {
+          "optionId": "C",
+          "text": "adⁿ"
+        },
+        {
+          "optionId": "D",
+          "text": "a(n−1)+d"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. a + (n−1)d",
+        "explanation": "The first term is a; moving to term n adds d exactly n−1 times."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Arithmetic Progressions · source question 1"
+      }
+    },
+    {
+      "questionId": "MATH10-Q05-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The common difference of 18, 13, 8, 3, … is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "5"
+        },
+        {
+          "optionId": "B",
+          "text": "−5"
+        },
+        {
+          "optionId": "C",
+          "text": "−3"
+        },
+        {
+          "optionId": "D",
+          "text": "−8"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. −5",
+        "explanation": "Each term decreases by 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Arithmetic Progressions · source question 3"
+      }
+    },
+    {
+      "questionId": "MATH10-Q05-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "For an AP, if a = 7 and d = 0, the sequence is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Strictly increasing"
+        },
+        {
+          "optionId": "B",
+          "text": "Strictly decreasing"
+        },
+        {
+          "optionId": "C",
+          "text": "Constant"
+        },
+        {
+          "optionId": "D",
+          "text": "Alternating"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. Constant",
+        "explanation": "A zero common difference means every term equals 7."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Arithmetic Progressions · source question 8"
+      }
+    },
+    {
+      "questionId": "MATH10-Q06-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "triangles",
+      "unitId": "algebra",
+      "topicTags": [
+        "triangles",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "If DE ∥ BC in ΔABC, which ratio is guaranteed by the Basic Proportionality Theorem?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "AD/AB = EC/AE"
+        },
+        {
+          "optionId": "B",
+          "text": "AD/DB = AE/EC"
+        },
+        {
+          "optionId": "C",
+          "text": "AD/DB = AC/AE"
+        },
+        {
+          "optionId": "D",
+          "text": "AB/DB = AC/EC"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. AD/DB = AE/EC",
+        "explanation": "A line parallel to one side divides the other two sides in the same ratio."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Triangles · source question 1"
+      }
+    },
+    {
+      "questionId": "MATH10-Q06-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "triangles",
+      "unitId": "algebra",
+      "topicTags": [
+        "triangles",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which is a valid similarity criterion for triangles?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "SSS with equal side ratios"
+        },
+        {
+          "optionId": "B",
+          "text": "One equal angle only"
+        },
+        {
+          "optionId": "C",
+          "text": "Any two sides equal"
+        },
+        {
+          "optionId": "D",
+          "text": "Equal perimeters only"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. SSS with equal side ratios",
+        "explanation": "SSS similarity holds when all corresponding side ratios are equal."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Triangles · source question 2"
+      }
+    },
+    {
+      "questionId": "MATH10-Q06-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "triangles",
+      "unitId": "algebra",
+      "topicTags": [
+        "triangles",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which condition proves two triangles similar by the AA criterion?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "One side pair is equal"
+        },
+        {
+          "optionId": "B",
+          "text": "Their areas are equal"
+        },
+        {
+          "optionId": "C",
+          "text": "Two pairs of corresponding angles are equal"
+        },
+        {
+          "optionId": "D",
+          "text": "One angle is equal but no other condition is known"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. Two pairs of corresponding angles are equal",
+        "explanation": "Two equal pairs of corresponding angles establish AA similarity."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Triangles · source question 3"
+      }
+    },
+    {
+      "questionId": "MATH10-Q07-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The distance formula between (x₁,y₁) and (x₂,y₂) is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "√[(x₂−x₁)²+(y₂−y₁)²]"
+        },
+        {
+          "optionId": "B",
+          "text": "(x₁+x₂)/2"
+        },
+        {
+          "optionId": "C",
+          "text": "x₁y₁+x₂y₂"
+        },
+        {
+          "optionId": "D",
+          "text": "|x₂−x₁|+|y₂−y₁| always"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. √[(x₂−x₁)²+(y₂−y₁)²]",
+        "explanation": "Use the Pythagorean theorem on the horizontal and vertical differences."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · source question 3"
+      }
+    },
+    {
+      "questionId": "MATH10-Q07-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The point (−5, 0) lies on the:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "x-axis"
+        },
+        {
+          "optionId": "B",
+          "text": "y-axis"
+        },
+        {
+          "optionId": "C",
+          "text": "first quadrant"
+        },
+        {
+          "optionId": "D",
+          "text": "fourth quadrant"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. x-axis",
+        "explanation": "Any point with y-coordinate zero lies on the x-axis."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · source question 7"
+      }
+    },
+    {
+      "questionId": "MATH10-Q07-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The point (-10, 2) lies in which quadrant?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Second quadrant"
+        },
+        {
+          "optionId": "B",
+          "text": "Third quadrant"
+        },
+        {
+          "optionId": "C",
+          "text": "Fourth quadrant"
+        },
+        {
+          "optionId": "D",
+          "text": "On an axis"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. Second quadrant",
+        "explanation": "Since y is positive and x is negative, it lies in the second quadrant."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · source question 15"
+      }
+    },
+    {
+      "questionId": "MATH10-Q08-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "For A(-5, 3) and B(-2, 7), the square of their distance is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "25"
+        },
+        {
+          "optionId": "B",
+          "text": "7"
+        },
+        {
+          "optionId": "C",
+          "text": "49"
+        },
+        {
+          "optionId": "D",
+          "text": "26"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 25",
+        "explanation": "Distance squared=(x₂−x₁)²+(y₂−y₁)²=9+16=25."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · source question 11"
+      }
+    },
+    {
+      "questionId": "MATH10-Q08-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "For A(-7, -6) and B(-5, -3), the absolute difference between the y-coordinates is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "9"
+        },
+        {
+          "optionId": "B",
+          "text": "5"
+        },
+        {
+          "optionId": "C",
+          "text": "3"
+        },
+        {
+          "optionId": "D",
+          "text": "2"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 3",
+        "explanation": "|y₂−y₁|=|-3−(-6)|=3."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · source question 13"
+      }
+    },
+    {
+      "questionId": "MATH10-Q08-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "For A(-4, 4) and B(0, 10), the square of their distance is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "10"
+        },
+        {
+          "optionId": "B",
+          "text": "20"
+        },
+        {
+          "optionId": "C",
+          "text": "100"
+        },
+        {
+          "optionId": "D",
+          "text": "52"
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D. 52",
+        "explanation": "Distance squared=(x₂−x₁)²+(y₂−y₁)²=16+36=52."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: D",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · source question 18"
+      }
+    },
+    {
+      "questionId": "MATH10-Q09-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The midpoint of (2, −1) and (6, 5) is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "(4,2)"
+        },
+        {
+          "optionId": "B",
+          "text": "(8,4)"
+        },
+        {
+          "optionId": "C",
+          "text": "(2,4)"
+        },
+        {
+          "optionId": "D",
+          "text": "(4,3)"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. (4,2)",
+        "explanation": "Average the x-coordinates and y-coordinates separately."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · source question 2"
+      }
+    },
+    {
+      "questionId": "MATH10-Q09-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "P divides A(2, −3) and B(14, 9) internally in the ratio AP:PB = 1:2. The coordinates of P are:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "(6, 1)"
+        },
+        {
+          "optionId": "B",
+          "text": "(8, 3)"
+        },
+        {
+          "optionId": "C",
+          "text": "(4, 5)"
+        },
+        {
+          "optionId": "D",
+          "text": "(10, −1)"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. (6, 1)",
+        "explanation": "Section formula gives x=(1×14+2×2)/3=6 and y=(1×9+2×(−3))/3=1."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · source question 6"
+      }
+    },
+    {
+      "questionId": "MATH10-Q09-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The midpoint of A(-5, 2) and B(-1, 4) has y-coordinate:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "6"
+        },
+        {
+          "optionId": "B",
+          "text": "2"
+        },
+        {
+          "optionId": "C",
+          "text": "4"
+        },
+        {
+          "optionId": "D",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D. 3",
+        "explanation": "The midpoint y-coordinate is (y₁+y₂)/2=(2+4)/2=3."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: D",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Coordinate Geometry · source question 14"
+      }
+    },
+    {
+      "questionId": "MATH10-Q10-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A tangent to a circle is perpendicular to the radius at the:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Centre only"
+        },
+        {
+          "optionId": "B",
+          "text": "Point of contact"
+        },
+        {
+          "optionId": "C",
+          "text": "Any point on tangent"
+        },
+        {
+          "optionId": "D",
+          "text": "Endpoint farthest from the circle"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. Point of contact",
+        "explanation": "The radius drawn to the point of contact makes a 90° angle with the tangent."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Circles · source question 1"
+      }
+    },
+    {
+      "questionId": "MATH10-Q10-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The number of tangents from an external point to a circle is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Zero"
+        },
+        {
+          "optionId": "B",
+          "text": "One"
+        },
+        {
+          "optionId": "C",
+          "text": "Two"
+        },
+        {
+          "optionId": "D",
+          "text": "Infinitely many"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. Two",
+        "explanation": "Two tangents can be drawn from a point outside a circle."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Circles · source question 2"
+      }
+    },
+    {
+      "questionId": "MATH10-Q10-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Tangents PA and PB are drawn from an external point P. Which is true?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "PA > PB"
+        },
+        {
+          "optionId": "B",
+          "text": "PA < PB"
+        },
+        {
+          "optionId": "C",
+          "text": "PA = PB"
+        },
+        {
+          "optionId": "D",
+          "text": "PA + PB = radius"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. PA = PB",
+        "explanation": "Tangents drawn from the same external point have equal lengths."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Circles · source question 3"
+      }
+    },
+    {
+      "questionId": "MATH10-Q11-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "introduction-to-trigonometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "In a right triangle, sin θ equals:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Adjacent/hypotenuse"
+        },
+        {
+          "optionId": "B",
+          "text": "Opposite/hypotenuse"
+        },
+        {
+          "optionId": "C",
+          "text": "Opposite/adjacent"
+        },
+        {
+          "optionId": "D",
+          "text": "Hypotenuse/opposite"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. Opposite/hypotenuse",
+        "explanation": "Sine is opposite side divided by hypotenuse."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · source question 1"
+      }
+    },
+    {
+      "questionId": "MATH10-Q11-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "introduction-to-trigonometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "For an acute angle θ in a right triangle, tan θ is equal to:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "sin θ / cos θ"
+        },
+        {
+          "optionId": "B",
+          "text": "cos θ / sin θ"
+        },
+        {
+          "optionId": "C",
+          "text": "1 / sin θ"
+        },
+        {
+          "optionId": "D",
+          "text": "1 / cos θ"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. sin θ / cos θ",
+        "explanation": "tan θ = opposite/adjacent, and sin θ/cos θ = (opposite/hypotenuse)/(adjacent/hypotenuse) = opposite/adjacent."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · source question 3"
+      }
+    },
+    {
+      "questionId": "MATH10-Q11-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "introduction-to-trigonometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which ratio is the reciprocal of sin θ?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "cos θ"
+        },
+        {
+          "optionId": "B",
+          "text": "tan θ"
+        },
+        {
+          "optionId": "C",
+          "text": "cosec θ"
+        },
+        {
+          "optionId": "D",
+          "text": "sec θ"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. cosec θ",
+        "explanation": "cosec θ = 1/sin θ."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · source question 7"
+      }
+    },
+    {
+      "questionId": "MATH10-Q12-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "introduction-to-trigonometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The value of sin 30° is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "0"
+        },
+        {
+          "optionId": "B",
+          "text": "1/2"
+        },
+        {
+          "optionId": "C",
+          "text": "√3/2"
+        },
+        {
+          "optionId": "D",
+          "text": "1"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 1/2",
+        "explanation": "sin 30° = 1/2."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · source question 4"
+      }
+    },
+    {
+      "questionId": "MATH10-Q12-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "introduction-to-trigonometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The value of tan 45° is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "0"
+        },
+        {
+          "optionId": "B",
+          "text": "1/√3"
+        },
+        {
+          "optionId": "C",
+          "text": "1"
+        },
+        {
+          "optionId": "D",
+          "text": "√3"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 1",
+        "explanation": "At 45°, opposite and adjacent legs are equal."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · source question 5"
+      }
+    },
+    {
+      "questionId": "MATH10-Q12-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "introduction-to-trigonometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The value of sin 0° is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "√3/2"
+        },
+        {
+          "optionId": "B",
+          "text": "0"
+        },
+        {
+          "optionId": "C",
+          "text": "1"
+        },
+        {
+          "optionId": "D",
+          "text": "1/2"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 0",
+        "explanation": "From standard trigonometric values, sin 0° = 0."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · source question 9"
+      }
+    },
+    {
+      "questionId": "MATH10-Q13-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A 10 m pole casts a 10 m shadow on level ground. The sun’s angle of elevation is:",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "30°"
+        },
+        {
+          "optionId": "B",
+          "text": "45°"
+        },
+        {
+          "optionId": "C",
+          "text": "60°"
+        },
+        {
+          "optionId": "D",
+          "text": "90°"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 45°",
+        "explanation": "tan θ = height/shadow = 1, so θ = 45°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Some Applications of Trigonometry · source question 2"
+      }
+    },
+    {
+      "questionId": "MATH10-Q13-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "From a point 20 m from a tower, its angle of elevation is 45°. The tower’s height is:",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "10 m"
+        },
+        {
+          "optionId": "B",
+          "text": "20 m"
+        },
+        {
+          "optionId": "C",
+          "text": "20√3 m"
+        },
+        {
+          "optionId": "D",
+          "text": "40 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 20 m",
+        "explanation": "tan 45° = h/20 = 1, so h = 20 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Some Applications of Trigonometry · source question 3"
+      }
+    },
+    {
+      "questionId": "MATH10-Q13-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "A building is observed from 30 m away at an elevation of 30°. Its height above the observer’s level is:",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "10√3 m"
+        },
+        {
+          "optionId": "B",
+          "text": "30√3 m"
+        },
+        {
+          "optionId": "C",
+          "text": "15 m"
+        },
+        {
+          "optionId": "D",
+          "text": "30 m"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 10√3 m",
+        "explanation": "h = 30 tan 30° = 30/√3 = 10√3 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Some Applications of Trigonometry · source question 5"
+      }
+    },
+    {
+      "questionId": "MATH10-Q14-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "introduction-to-trigonometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "Which reciprocal identity defines cosec θ in terms of sin θ?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "sin θ + cos θ = 1"
+        },
+        {
+          "optionId": "B",
+          "text": "sin²θ − cos²θ = 1"
+        },
+        {
+          "optionId": "C",
+          "text": "cosec θ = 1/sin θ"
+        },
+        {
+          "optionId": "D",
+          "text": "tan θ = sin θ + cos θ"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. cosec θ = 1/sin θ",
+        "explanation": "By definition, cosec θ=1/sin θ, sec θ=1/cos θ and cot θ=1/tan θ where defined."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · source question 14"
+      }
+    },
+    {
+      "questionId": "MATH10-Q14-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "introduction-to-trigonometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The value of sin 45° is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "1/2"
+        },
+        {
+          "optionId": "B",
+          "text": "√3/2"
+        },
+        {
+          "optionId": "C",
+          "text": "2/√2"
+        },
+        {
+          "optionId": "D",
+          "text": "1/√2"
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D. 1/√2",
+        "explanation": "From standard trigonometric values, sin 45° = 1/√2."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: D",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · source question 15"
+      }
+    },
+    {
+      "questionId": "MATH10-Q14-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "introduction-to-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "introduction-to-trigonometry",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The value of sin 60° is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "√3"
+        },
+        {
+          "optionId": "B",
+          "text": "√3/2"
+        },
+        {
+          "optionId": "C",
+          "text": "1/2"
+        },
+        {
+          "optionId": "D",
+          "text": "1/√3"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. √3/2",
+        "explanation": "From standard trigonometric values, sin 60° = √3/2."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Introduction to Trigonometry · source question 21"
+      }
+    },
+    {
+      "questionId": "MATH10-Q15-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "areas-related-to-circles",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The area of a circle of radius r is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "2πr"
+        },
+        {
+          "optionId": "B",
+          "text": "πr²"
+        },
+        {
+          "optionId": "C",
+          "text": "πd"
+        },
+        {
+          "optionId": "D",
+          "text": "πr²/2"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. πr²",
+        "explanation": "Area = πr²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Areas Related to Circles · source question 1"
+      }
+    },
+    {
+      "questionId": "MATH10-Q15-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "areas-related-to-circles",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The length of an arc subtending angle θ at the centre is:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "(θ/360)×2πr"
+        },
+        {
+          "optionId": "B",
+          "text": "(360/θ)×πr²"
+        },
+        {
+          "optionId": "C",
+          "text": "θ×πr²"
+        },
+        {
+          "optionId": "D",
+          "text": "2πr²/θ"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. (θ/360)×2πr",
+        "explanation": "An arc is the same fraction of circumference as its central angle is of 360°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Areas Related to Circles · source question 4"
+      }
+    },
+    {
+      "questionId": "MATH10-Q15-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "areas-related-to-circles",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "If the radius of a circle doubles, its area becomes:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "2 times"
+        },
+        {
+          "optionId": "B",
+          "text": "3 times"
+        },
+        {
+          "optionId": "C",
+          "text": "4 times"
+        },
+        {
+          "optionId": "D",
+          "text": "8 times"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. 4 times",
+        "explanation": "Area depends on the square of the radius."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Areas Related to Circles · source question 8"
+      }
+    },
+    {
+      "questionId": "MATH10-Q16-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The volume of a cylinder of radius r and height h is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "πrh"
+        },
+        {
+          "optionId": "B",
+          "text": "2πrh"
+        },
+        {
+          "optionId": "C",
+          "text": "πr²h"
+        },
+        {
+          "optionId": "D",
+          "text": "4πr²"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. πr²h",
+        "explanation": "Volume = base area × height = πr²h."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Surface Areas and Volumes · source question 1"
+      }
+    },
+    {
+      "questionId": "MATH10-Q16-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The volume of a cone is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "πr²h"
+        },
+        {
+          "optionId": "B",
+          "text": "⅓πr²h"
+        },
+        {
+          "optionId": "C",
+          "text": "2πrh"
+        },
+        {
+          "optionId": "D",
+          "text": "4/3πr³"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. ⅓πr²h",
+        "explanation": "A cone occupies one-third the volume of a cylinder with the same base and height."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Surface Areas and Volumes · source question 2"
+      }
+    },
+    {
+      "questionId": "MATH10-Q16-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The total surface area of a sphere of radius r is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "πr²"
+        },
+        {
+          "optionId": "B",
+          "text": "2πr²"
+        },
+        {
+          "optionId": "C",
+          "text": "3πr²"
+        },
+        {
+          "optionId": "D",
+          "text": "4πr²"
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D. 4πr²",
+        "explanation": "Sphere surface area = 4πr²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: D",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Surface Areas and Volumes · source question 5"
+      }
+    },
+    {
+      "questionId": "MATH10-Q17-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "statistics",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The median class is the class whose cumulative frequency first becomes:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Zero"
+        },
+        {
+          "optionId": "B",
+          "text": "Greater than total frequency"
+        },
+        {
+          "optionId": "C",
+          "text": "At least N/2"
+        },
+        {
+          "optionId": "D",
+          "text": "Equal to the mean"
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C. At least N/2",
+        "explanation": "The median class contains the N/2th observation."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: C",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Statistics · source question 6"
+      }
+    },
+    {
+      "questionId": "MATH10-Q17-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "statistics",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "If each observation increases by 5, the mean:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Decreases by 5"
+        },
+        {
+          "optionId": "B",
+          "text": "Increases by 5"
+        },
+        {
+          "optionId": "C",
+          "text": "Is unchanged"
+        },
+        {
+          "optionId": "D",
+          "text": "Doubles"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. Increases by 5",
+        "explanation": "Adding a constant to every value adds the same constant to the mean."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Statistics · source question 7"
+      }
+    },
+    {
+      "questionId": "MATH10-Q17-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "statistics",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "For grouped data with class marks xᵢ and frequencies fᵢ, the arithmetic mean is calculated as:",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Σfᵢxᵢ / Σfᵢ"
+        },
+        {
+          "optionId": "B",
+          "text": "Σxᵢ / Σfᵢ"
+        },
+        {
+          "optionId": "C",
+          "text": "Σfᵢ / Σxᵢ"
+        },
+        {
+          "optionId": "D",
+          "text": "Σfᵢxᵢ × Σfᵢ"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. Σfᵢxᵢ / Σfᵢ",
+        "explanation": "Multiply each class mark by its frequency, add the products, and divide by the total frequency: mean = Σfᵢxᵢ / Σfᵢ."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Statistics · source question 8"
+      }
+    },
+    {
+      "questionId": "MATH10-Q18-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "probability",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The probability of an impossible event is:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "0"
+        },
+        {
+          "optionId": "B",
+          "text": "1/2"
+        },
+        {
+          "optionId": "C",
+          "text": "1"
+        },
+        {
+          "optionId": "D",
+          "text": "−1"
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A. 0",
+        "explanation": "An impossible event has probability zero."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: A",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Probability · source question 1"
+      }
+    },
+    {
+      "questionId": "MATH10-Q18-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "probability",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The probability of an event lies between:",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "−1 and 1"
+        },
+        {
+          "optionId": "B",
+          "text": "0 and 1 inclusive"
+        },
+        {
+          "optionId": "C",
+          "text": "0 and 100 only"
+        },
+        {
+          "optionId": "D",
+          "text": "1 and 2"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 0 and 1 inclusive",
+        "explanation": "Probability is between zero and one, including both endpoints."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Probability · source question 4"
+      }
+    },
+    {
+      "questionId": "MATH10-Q18-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "probability",
+        "mcq",
+        "curated-source-mcq"
+      ],
+      "type": "mcq",
+      "marks": 1,
+      "prompt": "The complement of an event A has probability:",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "options": [
+        {
+          "optionId": "A",
+          "text": "P(A) + 1"
+        },
+        {
+          "optionId": "B",
+          "text": "1 − P(A)"
+        },
+        {
+          "optionId": "C",
+          "text": "P(A) − 1"
+        },
+        {
+          "optionId": "D",
+          "text": "1/P(A)"
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B. 1 − P(A)",
+        "explanation": "P(not A) = 1 − P(A)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct option selected: B",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Selected source MCQ checked for its mathematical result, option mapping and explanation.",
+      "source": {
+        "type": "practice-bank",
+        "reference": "data/mathematics.json · Probability · source question 6"
+      }
+    },
+    {
+      "questionId": "MATH10-Q19-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "statistics",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "assertionReason": {
+        "assertion": "The median class contains the N/2th observation.",
+        "reason": "The median class is identified from cumulative frequency, which first reaches or exceeds N/2."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both Assertion and Reason are true, and Reason is the correct explanation of Assertion."
+        },
+        {
+          "optionId": "B",
+          "text": "Both Assertion and Reason are true, but Reason is not the correct explanation of Assertion."
+        },
+        {
+          "optionId": "C",
+          "text": "Assertion is true, but Reason is false."
+        },
+        {
+          "optionId": "D",
+          "text": "Assertion is false, but Reason is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both statements are true; the reason explains the assertion."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original assertion–reason item; mathematical statement and explanatory link checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru-authored Class 10 Mathematics item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q19-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "statistics",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "assertionReason": {
+        "assertion": "Adding the same constant to every observation increases the mean by that constant.",
+        "reason": "The mean is the sum of the observations divided by their number."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both Assertion and Reason are true, and Reason is the correct explanation of Assertion."
+        },
+        {
+          "optionId": "B",
+          "text": "Both Assertion and Reason are true, but Reason is not the correct explanation of Assertion."
+        },
+        {
+          "optionId": "C",
+          "text": "Assertion is true, but Reason is false."
+        },
+        {
+          "optionId": "D",
+          "text": "Assertion is false, but Reason is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both statements are true; the reason explains the assertion."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original assertion–reason item; mathematical statement and explanatory link checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru-authored Class 10 Mathematics item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q19-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "statistics",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "assertionReason": {
+        "assertion": "Doubling every frequency in a grouped distribution does not change its mean.",
+        "reason": "The grouped mean is Σfᵢxᵢ/Σfᵢ, so doubling every frequency doubles both numerator and denominator."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both Assertion and Reason are true, and Reason is the correct explanation of Assertion."
+        },
+        {
+          "optionId": "B",
+          "text": "Both Assertion and Reason are true, but Reason is not the correct explanation of Assertion."
+        },
+        {
+          "optionId": "C",
+          "text": "Assertion is true, but Reason is false."
+        },
+        {
+          "optionId": "D",
+          "text": "Assertion is false, but Reason is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both statements are true; the reason explains the assertion."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original assertion–reason item; mathematical statement and explanatory link checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru-authored Class 10 Mathematics item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q20-SHARED-V1",
+      "sectionId": "A",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "probability",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "assertionReason": {
+        "assertion": "The probability of an impossible event is zero.",
+        "reason": "An impossible event has no favourable outcomes."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both Assertion and Reason are true, and Reason is the correct explanation of Assertion."
+        },
+        {
+          "optionId": "B",
+          "text": "Both Assertion and Reason are true, but Reason is not the correct explanation of Assertion."
+        },
+        {
+          "optionId": "C",
+          "text": "Assertion is true, but Reason is false."
+        },
+        {
+          "optionId": "D",
+          "text": "Assertion is false, but Reason is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both statements are true; the reason explains the assertion."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original assertion–reason item; mathematical statement and explanatory link checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru-authored Class 10 Mathematics item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q20-SHARED-V2",
+      "sectionId": "A",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "probability",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "assertionReason": {
+        "assertion": "The probability of a sure event is one.",
+        "reason": "A sure event includes every outcome in the sample space."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both Assertion and Reason are true, and Reason is the correct explanation of Assertion."
+        },
+        {
+          "optionId": "B",
+          "text": "Both Assertion and Reason are true, but Reason is not the correct explanation of Assertion."
+        },
+        {
+          "optionId": "C",
+          "text": "Assertion is true, but Reason is false."
+        },
+        {
+          "optionId": "D",
+          "text": "Assertion is false, but Reason is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both statements are true; the reason explains the assertion."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original assertion–reason item; mathematical statement and explanatory link checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru-authored Class 10 Mathematics item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q20-SHARED-V3",
+      "sectionId": "A",
+      "chapterId": "probability",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "probability",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "assertionReason": {
+        "assertion": "The probabilities of an event and its complement add to one.",
+        "reason": "An event and its complement are disjoint and together cover the sample space."
+      },
+      "options": [
+        {
+          "optionId": "A",
+          "text": "Both Assertion and Reason are true, and Reason is the correct explanation of Assertion."
+        },
+        {
+          "optionId": "B",
+          "text": "Both Assertion and Reason are true, but Reason is not the correct explanation of Assertion."
+        },
+        {
+          "optionId": "C",
+          "text": "Assertion is true, but Reason is false."
+        },
+        {
+          "optionId": "D",
+          "text": "Assertion is false, but Reason is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both statements are true; the reason explains the assertion."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original assertion–reason item; mathematical statement and explanatory link checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru-authored Class 10 Mathematics item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q21-SHARED-V1",
+      "sectionId": "B",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "number-systems",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Using prime factorisation, find the HCF and LCM of 18 and 24.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "18 = 2 × 3² and 24 = 2³ × 3. HCF = 6; LCM = 72."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Write correct prime factorisations",
+          "marks": 1
+        },
+        {
+          "criterion": "Find HCF = 6 and LCM = 72",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Show that 2 × 3 × 5 + 3 is composite.",
+          "answerKey": {
+            "modelAnswer": "2 × 3 × 5 + 3 = 33 = 3 × 11."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Evaluate the expression as 33",
+              "marks": 1
+            },
+            {
+              "criterion": "Factorise 33 as 3 × 11",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q21-SHARED-V2",
+      "sectionId": "B",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "number-systems",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the HCF of 72 and 120 using prime factors.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "72 = 2³ × 3² and 120 = 2³ × 3 × 5. HCF = 2³ × 3 = 24."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Write prime factorisations",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain HCF = 24",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Show that 5 × 7 × 11 + 11 is composite.",
+          "answerKey": {
+            "modelAnswer": "5 × 7 × 11 + 11 = 11(35 + 1) = 11 × 36."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Take 11 common",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify a non-trivial factorisation",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q21-SHARED-V3",
+      "sectionId": "B",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "number-systems",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "If the HCF of two positive integers is 6 and their LCM is 180, find their product.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Product = HCF × LCM = 6 × 180 = 1080."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use HCF × LCM = product",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate 1080",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Show that 7 × 11 × 13 + 13 is composite.",
+          "answerKey": {
+            "modelAnswer": "7 × 11 × 13 + 13 = 13(77 + 1) = 13 × 78."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Take 13 common",
+              "marks": 1
+            },
+            {
+              "criterion": "State both factors exceed 1",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q22-SHARED-V1",
+      "sectionId": "B",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "algebra",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the 12th term of the AP 5, 9, 13, 17, … .",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "a = 5, d = 4; a₁₂ = 5 + 11 × 4 = 49."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify a = 5 and d = 4",
+          "marks": 1
+        },
+        {
+          "criterion": "Apply the nth-term formula to obtain 49",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the 20th term of the AP 2, 7, 12, 17, … .",
+          "answerKey": {
+            "modelAnswer": "a₂₀ = 2 + 19 × 5 = 97."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identify a = 2 and d = 5",
+              "marks": 1
+            },
+            {
+              "criterion": "Calculate the 20th term as 97",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q22-SHARED-V2",
+      "sectionId": "B",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "algebra",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "For the AP 7, 10, 13, 16, …, find the 18th term.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "a = 7, d = 3; a₁₈ = 7 + 17 × 3 = 58."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify a = 7 and d = 3",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate a₁₈ = 58",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "The 4th term of an AP is 14 and its common difference is 3. Find its first term.",
+          "answerKey": {
+            "modelAnswer": "a + 3d = 14; a + 9 = 14; a = 5."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Use a₄ = a + 3d",
+              "marks": 1
+            },
+            {
+              "criterion": "Find a = 5",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q22-SHARED-V3",
+      "sectionId": "B",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "algebra",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the sum of the first 10 terms of the AP 3, 6, 9, 12, … .",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "S₁₀ = 10/2[2(3) + 9(3)] = 165."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify a = 3 and d = 3",
+          "marks": 1
+        },
+        {
+          "criterion": "Apply the sum formula to obtain 165",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "In the AP 4, 9, 14, 19, …, which term is 74?",
+          "answerKey": {
+            "modelAnswer": "4 + (n − 1)5 = 74, so n = 15."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Form the nth-term equation",
+              "marks": 1
+            },
+            {
+              "criterion": "Solve to obtain the 15th term",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q23-SHARED-V1",
+      "sectionId": "B",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "geometry",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A tangent touches a circle with centre O at P. State the angle between OP and the tangent and give the reason.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "The angle is 90°. The tangent at a point is perpendicular to the radius through the point of contact."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State 90°",
+          "marks": 1
+        },
+        {
+          "criterion": "State radius–tangent perpendicularity",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q23-SHARED-V2",
+      "sectionId": "B",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "geometry",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Tangents PA and PB are drawn from an external point P. If PA = 3x + 2 and PB = 5x − 8, find x.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "PA = PB; 3x + 2 = 5x − 8, so x = 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use equality of tangents",
+          "marks": 1
+        },
+        {
+          "criterion": "Solve to obtain x = 5",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q23-SHARED-V3",
+      "sectionId": "B",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "geometry",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A tangent PT is drawn to a circle with centre O at T. If the radius is 4.5 cm, find the perpendicular distance from O to PT.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "OT is perpendicular to PT and equals the radius; the distance is 4.5 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify OT as the perpendicular distance",
+          "marks": 1
+        },
+        {
+          "criterion": "Give 4.5 cm",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q24-SHARED-V1",
+      "sectionId": "B",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "areas-related-to-circles",
+        "mensuration",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the area of a 60° sector of a circle of radius 6 cm in terms of π.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Area = (60/360) × π × 6² = 6π cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use the sector-area formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 6π cm²",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q24-SHARED-V2",
+      "sectionId": "B",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "areas-related-to-circles",
+        "mensuration",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the length of the arc subtending 90° at the centre of a circle of radius 4 cm.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Arc length = (90/360) × 2π × 4 = 2π cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use the arc-length formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 2π cm",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q24-SHARED-V3",
+      "sectionId": "B",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "areas-related-to-circles",
+        "mensuration",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A circular ring has outer radius 7 cm and inner radius 3 cm. Find its area in terms of π.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Area = π(7² − 3²) = 40π cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use the difference of circle areas",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 40π cm²",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q25-SHARED-V1",
+      "sectionId": "B",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mensuration",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the volume of a cylinder of radius 3 cm and height 5 cm in terms of π.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "V = πr²h = π × 9 × 5 = 45π cm³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use V = πr²h",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 45π cm³",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q25-SHARED-V2",
+      "sectionId": "B",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mensuration",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A cone has radius 3 cm and height 12 cm. Find its volume in terms of π.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "V = (1/3)π × 3² × 12 = 36π cm³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use the cone-volume formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 36π cm³",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q25-SHARED-V3",
+      "sectionId": "B",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mensuration",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the total surface area of a sphere of radius 4 cm in terms of π.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "TSA = 4πr² = 4π × 16 = 64π cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use TSA = 4πr²",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 64π cm²",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q26-SHARED-V1",
+      "sectionId": "C",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "number-systems",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Prove that √2 is irrational.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Assume √2 = p/q in lowest terms. Squaring gives p² = 2q², so p is even. Put p = 2k; then q² = 2k², so q is even too. This contradicts gcd(p,q) = 1. Hence √2 is irrational."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Assume √2 = p/q in lowest terms and square",
+          "marks": 1
+        },
+        {
+          "criterion": "Show p is even and then q is even",
+          "marks": 1
+        },
+        {
+          "criterion": "Reach the contradiction to coprimality",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q26-SHARED-V2",
+      "sectionId": "C",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "number-systems",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Prove that √3 is irrational.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Assume √3 = p/q in lowest terms. Then p² = 3q², so 3 divides p. Write p = 3k; substitution gives q² = 3k², so 3 divides q. This contradicts coprimality. Therefore √3 is irrational."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Assume √3 = p/q in lowest terms",
+          "marks": 1
+        },
+        {
+          "criterion": "Show 3 divides p and then q",
+          "marks": 1
+        },
+        {
+          "criterion": "Reach the contradiction to coprimality",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q26-SHARED-V3",
+      "sectionId": "C",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "number-systems",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Prove that √5 is irrational.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Assume √5 = p/q in lowest terms. Then p² = 5q², so 5 divides p. Write p = 5k; substitution gives q² = 5k², so 5 divides q. This contradicts coprimality. Hence √5 is irrational."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Assume √5 = p/q in lowest terms",
+          "marks": 1
+        },
+        {
+          "criterion": "Show 5 divides p and then q",
+          "marks": 1
+        },
+        {
+          "criterion": "Reach the contradiction to coprimality",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q27-SHARED-V1",
+      "sectionId": "C",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "quadratic-equations",
+        "algebra",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Solve x² − 7x + 12 = 0 by factorisation.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "x² − 7x + 12 = (x − 3)(x − 4) = 0. Therefore x = 3 or x = 4."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Factorise the quadratic correctly",
+          "marks": 1
+        },
+        {
+          "criterion": "Set each factor equal to zero",
+          "marks": 1
+        },
+        {
+          "criterion": "Give both roots x = 3 and x = 4",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q27-SHARED-V2",
+      "sectionId": "C",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "quadratic-equations",
+        "algebra",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Solve 2x² − 5x − 3 = 0 by factorisation.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "2x² − 5x − 3 = (2x + 1)(x − 3) = 0. Therefore x = −1/2 or x = 3."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Factorise as (2x + 1)(x − 3)",
+          "marks": 1
+        },
+        {
+          "criterion": "Set both factors equal to zero",
+          "marks": 1
+        },
+        {
+          "criterion": "Give both roots",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q27-SHARED-V3",
+      "sectionId": "C",
+      "chapterId": "quadratic-equations",
+      "unitId": "algebra",
+      "topicTags": [
+        "quadratic-equations",
+        "algebra",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Find the nature of the roots of x² − 4x + 4 = 0 and state the roots.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "D = (−4)² − 4(1)(4) = 0, so the roots are real and equal. Since (x − 2)² = 0, both roots are 2."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Calculate D = 0",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude roots are real and equal",
+          "marks": 1
+        },
+        {
+          "criterion": "State the repeated root x = 2",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q28-SHARED-V1",
+      "sectionId": "C",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "coordinate-geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "For A(−2, 5) and B(6, −3), find the midpoint and the length AB.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Midpoint = (2, 1). Distance = √[(8)² + (−8)²] = 8√2 units."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Calculate midpoint (2, 1)",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute coordinate differences into distance formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 8√2 units",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "A(2, −3) and B(14, 9) are divided internally by P in the ratio 1:2. Find P.",
+          "answerKey": {
+            "modelAnswer": "P = ((14 + 2×2)/3, (9 + 2×(−3))/3) = (6, 1)."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Write the section formula",
+              "marks": 1
+            },
+            {
+              "criterion": "Calculate x-coordinate 6",
+              "marks": 1
+            },
+            {
+              "criterion": "Calculate y-coordinate 1 and state P = (6, 1)",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q28-SHARED-V2",
+      "sectionId": "C",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "coordinate-geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Find the distance and midpoint of P(−3, 4) and Q(5, −2).",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Distance = √[8² + (−6)²] = 10 units. Midpoint = (1, 1)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use the distance formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain distance 10 units",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain midpoint (1, 1)",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the midpoint of A(−4, 3) and B(2, 11), and state its y-coordinate.",
+          "answerKey": {
+            "modelAnswer": "Midpoint = (−1, 7); its y-coordinate is 7."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Use the midpoint formula",
+              "marks": 1
+            },
+            {
+              "criterion": "Calculate x-coordinate −1",
+              "marks": 1
+            },
+            {
+              "criterion": "Calculate y-coordinate 7",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q28-SHARED-V3",
+      "sectionId": "C",
+      "chapterId": "coordinate-geometry",
+      "unitId": "coordinate-geometry",
+      "topicTags": [
+        "coordinate-geometry",
+        "coordinate-geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Find the coordinates of the point dividing A(−3, 2) and B(9, 8) internally in the ratio 1:2.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "P = ((1×9 + 2×(−3))/3, (1×8 + 2×2)/3) = (1, 4)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the ratio 1:2",
+          "marks": 1
+        },
+        {
+          "criterion": "Apply the section formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain P = (1, 4)",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the distance and midpoint of (−1, 2) and (5, 10).",
+          "answerKey": {
+            "modelAnswer": "Distance = √(6² + 8²) = 10; midpoint = (2, 6)."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Use the distance formula",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain distance 10 units",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain midpoint (2, 6)",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q31-SHARED-V1",
+      "sectionId": "C",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "statistics",
+        "statistics-and-probability",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Find the mean of grouped data with classes 0–10, 10–20, 20–30 and frequencies 2, 3, 5.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Class marks are 5, 15, 25. Σf = 10 and Σfx = 180. Mean = 180/10 = 18."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Find the class marks",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate Σfx = 180 and Σf = 10",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain mean 18",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the mean of 4, 6, 8, 10 and 12.",
+          "answerKey": {
+            "modelAnswer": "Mean = (4+6+8+10+12)/5 = 8."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Add the observations",
+              "marks": 1
+            },
+            {
+              "criterion": "Divide by 5",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain mean 8",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q31-SHARED-V2",
+      "sectionId": "C",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "statistics",
+        "statistics-and-probability",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "The frequencies of five consecutive classes are 3, 5, 8, 6 and 4. Find the total frequency and modal class position.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Total frequency = 26. The third class is modal because its frequency 8 is greatest."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Add frequencies to obtain 26",
+          "marks": 1
+        },
+        {
+          "criterion": "Identify greatest frequency 8",
+          "marks": 1
+        },
+        {
+          "criterion": "State that the third class is modal",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "A grouped distribution has frequencies 4, 7, 10, 6 and 3. Identify the modal class position and total frequency.",
+          "answerKey": {
+            "modelAnswer": "The third class is modal; total frequency = 30."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identify the third class as modal",
+              "marks": 1
+            },
+            {
+              "criterion": "Add the frequencies",
+              "marks": 1
+            },
+            {
+              "criterion": "Obtain total frequency 30",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q31-SHARED-V3",
+      "sectionId": "C",
+      "chapterId": "statistics",
+      "unitId": "statistics-and-probability",
+      "topicTags": [
+        "statistics",
+        "statistics-and-probability",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "For 5, 7, 7, 8, 9, 10, 10, 10, 12, find the median and mode.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "There are 9 observations. The 5th value is 9, so median = 9. The most frequent value is 10, so mode = 10."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Count 9 observations and locate the 5th",
+          "marks": 1
+        },
+        {
+          "criterion": "State median = 9",
+          "marks": 1
+        },
+        {
+          "criterion": "State mode = 10",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "For the ordered observations 2, 4, 5, 6, 6, 8, 9, find the median and mode.",
+          "answerKey": {
+            "modelAnswer": "The 4th value is 6, so median = 6. The mode is also 6."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Locate the 4th observation",
+              "marks": 1
+            },
+            {
+              "criterion": "State median = 6",
+              "marks": 1
+            },
+            {
+              "criterion": "State mode = 6",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q29-STANDARD-V1",
+      "sectionId": "C",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "In ΔABC, DE ∥ BC. If AD = 3 cm, DB = 2 cm and AE = 6 cm, find EC.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "By BPT, AD/DB = AE/EC. Thus 3/2 = 6/EC, so EC = 4 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State the BPT ratio",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute 3/2 = 6/EC",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain EC = 4 cm",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q29-STANDARD-V2",
+      "sectionId": "C",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "In ΔABC, DE ∥ BC. If AD = 4 cm, DB = 6 cm and AC = 15 cm, find AE.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "By BPT, AE:EC = AD:DB = 2:3. Since AC = 15 cm, AE = (2/5)×15 = 6 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use BPT to obtain AE:EC = 2:3",
+          "marks": 1
+        },
+        {
+          "criterion": "Use AE + EC = 15",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain AE = 6 cm",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q29-STANDARD-V3",
+      "sectionId": "C",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "In ΔPQR, ST ∥ QR. If PS = 5 cm, SQ = 3 cm and PT = 10 cm, find TR.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "By BPT, PS/SQ = PT/TR. Thus 5/3 = 10/TR, giving TR = 6 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Apply BPT to corresponding segments",
+          "marks": 1
+        },
+        {
+          "criterion": "Form 5/3 = 10/TR",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain TR = 6 cm",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q29-BASIC-V1",
+      "sectionId": "C",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "State the AA similarity criterion and explain why two triangles with two pairs of equal corresponding angles are similar.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "If two angles of one triangle equal two angles of another, the third angles are also equal because the angle sum is 180°. The triangles are similar by AA."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State the two equal corresponding angles",
+          "marks": 1
+        },
+        {
+          "criterion": "Use the angle sum to infer the third pair",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude similarity by AA",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q29-BASIC-V2",
+      "sectionId": "C",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "State the SSS similarity criterion. Show that triangles with sides 3, 4, 5 cm and 6, 8, 10 cm are similar.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "The corresponding side ratios are 3/6 = 4/8 = 5/10 = 1/2. Hence the triangles are similar by SSS."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State proportional-side condition",
+          "marks": 1
+        },
+        {
+          "criterion": "Write the three side ratios",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude similarity by SSS",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q29-BASIC-V3",
+      "sectionId": "C",
+      "chapterId": "triangles",
+      "unitId": "geometry",
+      "topicTags": [
+        "triangles",
+        "geometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "If ΔABC ~ ΔPQR and AB/PQ = 3/5, write the ratios of the other corresponding sides and of the perimeters.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "BC/QR = AC/PR = 3/5. The ratio of the perimeters is also 3/5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the corresponding side pairs",
+          "marks": 1
+        },
+        {
+          "criterion": "Write both other side ratios as 3/5",
+          "marks": 1
+        },
+        {
+          "criterion": "State perimeter ratio 3/5",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q30-STANDARD-V1",
+      "sectionId": "C",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "From a point on level ground 20 m from a tower, the angle of elevation is 45°. Find the tower's height, ignoring eye height.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "tan 45° = h/20 = 1, so h = 20 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Set up tan 45° = h/20",
+          "marks": 1
+        },
+        {
+          "criterion": "Use tan 45° = 1",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain h = 20 m",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q30-STANDARD-V2",
+      "sectionId": "C",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "A pole casts a 12 m shadow when the sun's angle of elevation is 30°. Find the pole's height.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "tan 30° = h/12, so h = 12/√3 = 4√3 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Relate height and shadow using tangent",
+          "marks": 1
+        },
+        {
+          "criterion": "Substitute tan 30° = 1/√3",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain h = 4√3 m",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q30-STANDARD-V3",
+      "sectionId": "C",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "A 10 m ladder makes an angle of 60° with the level ground. Find the vertical height reached.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard"
+      ],
+      "answerKey": {
+        "modelAnswer": "h = 10 sin 60° = 10 × √3/2 = 5√3 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the opposite side and hypotenuse",
+          "marks": 1
+        },
+        {
+          "criterion": "Use sin 60° = √3/2",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain height 5√3 m",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q30-BASIC-V1",
+      "sectionId": "C",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "A student claims that moving farther from a fixed tower makes its angle of elevation larger. Evaluate the claim using tan θ = height/distance.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "The claim is incorrect. For fixed height h, increasing the distance d decreases h/d, so the acute angle θ decreases."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State that the claim is incorrect",
+          "marks": 1
+        },
+        {
+          "criterion": "Explain that h/d decreases as d increases",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude that angle of elevation decreases",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q30-BASIC-V2",
+      "sectionId": "C",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Two observers view the same tower from level ground. A is 10 m away and B is 20 m away. Compare their angles of elevation.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "For tower height h, tan θA = h/10 and tan θB = h/20. Thus tan θA > tan θB, so θA > θB."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Write both tangent ratios",
+          "marks": 1
+        },
+        {
+          "criterion": "Compare h/10 and h/20",
+          "marks": 1
+        },
+        {
+          "criterion": "Conclude θA > θB",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q30-BASIC-V3",
+      "sectionId": "C",
+      "chapterId": "some-applications-of-trigonometry",
+      "unitId": "trigonometry",
+      "topicTags": [
+        "some-applications-of-trigonometry",
+        "trigonometry",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "A learner uses sin θ = height/horizontal distance for an angle of elevation. Identify the error and state the correct ratio.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "The learner has confused sine with tangent. The correct ratio is tan θ = opposite/adjacent = height/horizontal distance."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the misuse of sine",
+          "marks": 1
+        },
+        {
+          "criterion": "State that tangent is opposite/adjacent",
+          "marks": 1
+        },
+        {
+          "criterion": "Write tan θ = height/distance",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; method, result and marking allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    }
+  ]
+}

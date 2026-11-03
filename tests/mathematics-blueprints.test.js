@@ -41,3 +41,20 @@ assert.equal(schema.properties.classId.type,"string");
 assert.equal(schema.properties.subjectId.type,"string");
 assert.equal(schema.properties.questions.items.properties.sectionId.type,"string");
 console.log("Mathematics blueprint tests passed: Standard/Basic structure, unit weightages, competency targets, all 14 chapters, internal-choice locations and disabled publication gate.");
+
+// Existing Class 10 chapter-wise MCQs are imported into a shared review pool.
+// This verifies structural integrity and provenance without prematurely approving content.
+const mathBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json","utf8"));
+const mathAudit=JSON.parse(fs.readFileSync("data/exam-papers/audits/class-10-mathematics-mcq-import-audit-2026-27.json","utf8"));
+assert.equal(mathBank.questions.length,1394);
+assert.equal(mathAudit.summary.sourceQuestions,1400);
+assert.equal(mathAudit.summary.importedQuestions,1394);
+assert.equal(mathAudit.summary.exactDuplicateStemsExcluded,6);
+assert.ok(mathBank.questions.every(q=>q.type==="mcq"&&q.marks===1&&q.approvalStatus==="review"));
+assert.ok(mathBank.questions.every(q=>q.assessmentLevels.includes("standard")&&q.assessmentLevels.includes("basic")));
+assert.ok(mathBank.questions.every(q=>q.competencyTagStatus==="needs-review"));
+assert.equal(generator.validateQuestionBank(mathBank,{classId:"10",subjectId:"mathematics",academicYear:"2026-27"}).valid,true);
+const mathMcqStructural=mathBank.questions.filter(q=>q.options.length===4&&new Set(q.options.map(o=>o.text.trim().toLowerCase())).size===4&&q.options.some(o=>o.optionId===q.correctOptionId)&&q.answerKey&&q.answerKey.explanation&&q.markingScheme.reduce((n,m)=>n+m.marks,0)===1);
+assert.equal(mathMcqStructural.length,1394);
+assert.equal(mathBank.questions.filter(q=>q.approvalStatus==="approved").length,0,"Imported MCQs must not be eligible before the answer/competency audit.");
+console.log("Mathematics MCQ import tests passed: 1,394 structurally valid, deduplicated, shared-level questions remain safely in review.");
