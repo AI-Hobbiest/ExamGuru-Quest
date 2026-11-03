@@ -167,6 +167,7 @@
       if (row.parentId !== String(parentId)) throw new Error("This parent is not authorised to evaluate this assignment.");
       if (row.activeAttemptId) throw new Error("The student has an examination attempt in progress. Submit it before evaluation.");
       const maximum = Number(row.totalMarks);
+      if (score == null || String(score).trim() === "") throw new Error("Enter the marks awarded before saving the result.");
       const awarded = Number(score);
       if (!Number.isFinite(awarded) || awarded < 0 || awarded > maximum) throw new Error("Enter marks from 0 to " + maximum + ".");
       let attempt = row.attempts.slice().reverse().find(item => item.status === "submitted");
