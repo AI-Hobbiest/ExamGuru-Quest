@@ -173,11 +173,24 @@
           <div class="admin-field full"><label>Approved questions by section</label><div id="paperPoolSummary" class="admin-feature-list">No local question pool imported.</div></div>
         </div>
         <hr class="admin-rule">
+        <hr class="admin-rule">
+        <h3>Student delivery mode</h3>
+        <p class="admin-inline-help">Choose how the student will complete this generated paper. Printable is the recommended CBSE pathway; online preserves the interactive attempt experience.</p>
+        <div class="admin-form-grid">
+          <div class="admin-field full"><label for="paperDeliveryMode">How will the student take this paper?</label>
+            <select id="paperDeliveryMode">
+              <option value="printable" selected>Printable · question paper + handwritten answer booklet</option>
+              <option value="online">Online · interactive digital examination</option>
+              <option value="hybrid">Hybrid · printable paper + online follow-up</option>
+            </select>
+          </div>
+          <div class="admin-field full"><div id="paperDeliveryHelp" class="admin-status">Recommended for CBSE: print the question paper and separate answer booklet. The teacher copy contains the marking scheme.</div></div>
+        </div>
         <div class="admin-actions"><button class="admin-btn" type="button" id="generatePaperBtn" disabled>Generate CBSE Science paper</button></div>
         <div id="paperStudioStatus" class="admin-status" role="status" aria-live="polite">Loading examination blueprint…</div>
         <div id="paperPreviewStatus" class="admin-muted">No paper generated in this session.</div>
         <div id="paperPreview" class="admin-feature-list"></div>
-        <div id="paperResultActions" class="admin-actions" hidden><button class="admin-btn secondary" type="button" id="downloadPaperJsonBtn">Download paper JSON</button><button class="admin-btn secondary" type="button" id="printStudentPaperBtn">Print student paper / Save PDF</button><button class="admin-btn secondary" type="button" id="printTeacherPaperBtn">Print teacher copy / Save PDF</button></div>
+        <div id="paperResultActions" class="admin-actions" hidden><button class="admin-btn secondary" type="button" id="downloadPaperJsonBtn">Download paper JSON</button><button class="admin-btn secondary" type="button" id="openPaperOnlineBtn">Open online exam</button><button class="admin-btn secondary" type="button" id="printStudentPaperBtn">Print / Save question paper PDF</button><button class="admin-btn secondary" type="button" id="printAnswerBookletBtn">Print / Save answer booklet PDF</button><button class="admin-btn secondary" type="button" id="printTeacherPaperBtn">Print evaluator copy / Save PDF</button></div>
         <div class="admin-footnote">Imported question pools and generated drafts are stored in this browser using ExamGuru’s versioned local storage adapter. They are not committed to GitHub automatically. Do not import confidential examination content into this public-repository MVP.</div>
       </section>
       <section class="admin-panel" id="tab-knowledge">

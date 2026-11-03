@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#211b48"><title>Assigned Test | ExamGuru Quest</title>
+<link rel="stylesheet" href="./css/branding.css"><link rel="stylesheet" href="./css/app-shell.css">
+<style>
+.test-wrap{max-width:900px;margin:26px auto;padding:0 18px 50px;display:grid;gap:16px;color:#303653}
+.test-hero{padding:24px;border-radius:19px;color:#fff;background:linear-gradient(125deg,#211b48,#5143a8)}.test-hero h1{margin:6px 0;color:#fff}.test-hero p{margin:0;color:#e6e1ff}
+.test-card{background:#fff;border:1px solid #e1e3ee;border-radius:16px;padding:18px;box-shadow:0 6px 22px rgba(40,40,80,.06)}
+.test-actions{display:flex;gap:10px;flex-wrap:wrap}.test-btn{border:0;border-radius:11px;padding:11px 16px;font-weight:800;background:#5143a8;color:white;cursor:pointer}.test-btn.secondary{background:#eeecfa;color:#38316e}
+.test-status,.test-help{font-size:.88rem;line-height:1.5;color:#6a7089}.test-status.error{color:#a52c44}.test-meta{color:#5e6280;font-size:.85rem;font-weight:750}.test-question{border-top:1px solid #ececf3;padding:17px 0}.test-question h3{font-size:1rem;margin:0 0 11px}.test-options{display:grid;gap:8px}.test-option{display:flex;gap:10px;padding:11px;border:1px solid #e2e4ef;border-radius:11px}.test-option input{margin-top:4px}.test-timer{font-size:1.2rem;font-weight:900;color:#373078}
+[hidden]{display:none!important}
+@media(max-width:600px){.test-card{padding:14px}.test-wrap{margin-top:14px}}
+</style>
+</head>
+<body class="c10-theme-quest">
+<main class="test-wrap">
+<section class="test-hero"><div style="font-size:.72rem;font-weight:850;letter-spacing:.12em">EXAMGURU QUEST · ASSIGNED ASSESSMENT</div><h1 id="testTitle">Assigned Test</h1><p id="testMeta">Loading test details…</p></section>
+<section class="test-card" id="testSetup"><p class="test-help">This test was assigned by your Parent/Teacher. Your answers are saved when you submit.</p><div id="testStatus" class="test-status" role="status">Loading assigned test…</div><div class="test-actions"><button class="test-btn" id="startAssignedTest" disabled>Start test</button><a class="test-btn secondary" href="./dashboard.html#assigned-tests">Back to dashboard</a></div></section>
+<section class="test-card" id="testAttempt" hidden><div class="test-meta"><span id="testProgress">0 answered</span> · <span class="test-timer" id="testTimer">--:--</span></div><p class="test-help">You may change your answer any time before submission.</p><div id="testQuestions"></div><div class="test-actions"><button class="test-btn" id="submitAssignedTest">Submit test</button></div></section>
+<section class="test-card" id="testResult" hidden><h2>Test submitted</h2><p id="testResultSummary"></p><p class="test-help" id="testResultNote"></p><div class="test-actions"><a class="test-btn" href="./dashboard.html#assigned-tests">Return to Assigned Tests</a></div></section>
+</main>
+<script src="./js/storage.js"></script><script src="./js/student-auth.js"></script><script src="./js/page-access.js"></script><script src="./js/assessment-manager.js"></script><script src="./js/assigned-test.js"></script><script src="./js/app-shell.js"></script>
+</body></html>

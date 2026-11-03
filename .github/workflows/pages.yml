@@ -29,6 +29,8 @@ jobs:
           node tests/exam-paper-generator.test.js
           node tests/exam-paper-release.test.js
           node tests/exam-paper-renderer.test.js
+          node tests/assessment-manager.test.js
+          for file in js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js; do node --check "$file"; done
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
           node tests/learning-model.test.js
@@ -53,6 +55,8 @@ jobs:
           cp study.html _site/study.html
           cp parent.html _site/parent.html
           cp exam-practice.html _site/exam-practice.html
+          cp assigned-test.html _site/assigned-test.html
+          cp assigned-paper.html _site/assigned-paper.html
           cp .nojekyll _site/.nojekyll
           mkdir -p _site/js _site/data _site/css _site/data/contracts/v1
           cp css/branding.css _site/css/branding.css
@@ -68,6 +72,11 @@ jobs:
           cp js/exam-paper-generator.js _site/js/exam-paper-generator.js
           cp js/exam-paper-renderer.js _site/js/exam-paper-renderer.js
           cp js/exam-paper-studio.js _site/js/exam-paper-studio.js
+          cp js/assessment-manager.js _site/js/assessment-manager.js
+          cp js/assigned-test.js _site/js/assigned-test.js
+          cp js/assigned-paper.js _site/js/assigned-paper.js
+          cp js/assigned-tests-dashboard.js _site/js/assigned-tests-dashboard.js
+          cp js/parent-assessments.js _site/js/parent-assessments.js
           cp js/exam-paper-self-study.js _site/js/exam-paper-self-study.js
           cp js/session-model.js _site/js/session-model.js
           cp js/learning-model.js _site/js/learning-model.js

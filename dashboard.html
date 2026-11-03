@@ -38,6 +38,11 @@
 .badge-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.achievement{border:1px solid var(--c10-line);border-radius:15px;padding:13px;text-align:center;background:#fff;min-width:0}
 .achievement.earned{border-color:#d4eddf;background:linear-gradient(160deg,#f4fff9,#fff)}.achievement.locked{opacity:.57;filter:saturate(.35)}
 .achievement-emoji{font-size:1.8rem;line-height:1.4}.achievement strong{display:block;font-size:.8rem;line-height:1.3;margin:7px 0 4px}.achievement span{display:block;font-size:.7rem;color:var(--c10-muted);line-height:1.4}
+.assigned-test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px}
+.assigned-test-card{display:grid;gap:7px;padding:14px;border:1px solid var(--c10-line);border-radius:14px;background:#fff}
+.assigned-test-card p{margin:0;color:var(--c10-muted);font-size:.78rem;line-height:1.45}
+.assigned-test-state{font-size:.77rem;font-weight:850;color:#5140a6}
+.assigned-test-card .btn{justify-self:start;margin-top:3px}
 .dash-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}.dash-links .btn{margin:0;text-decoration:none}
 .subject-launch{background:#fff;border:1px solid var(--c10-line);border-radius:19px;padding:clamp(16px,2.5vw,23px);box-shadow:0 8px 24px rgba(48,35,111,.04)}
 .subject-launch h2{margin:0 0 5px;font-size:1.08rem}.subject-launch>p{margin:0 0 15px;color:var(--c10-muted);font-size:.82rem;line-height:1.5}
@@ -101,6 +106,10 @@
       <a class="subject-launch-card" data-subject-id="hindi" href="./practice.html?subject=hindi"><span class="subject-launch-icon">📝</span><strong>Hindi</strong><span data-bank-meta>Loading bank details…</span></a>
     </div>
   </section>
+  <section id="assigned-tests" class="dash-panel">
+    <div class="dash-panel-head"><div><h2>Assigned tests</h2><p class="dash-help">Tests created by your Parent/Teacher. Open an assigned test to complete it before its deadline.</p></div><span class="dash-tag">ASSESSMENTS</span></div>
+    <div id="assignedTestList" class="assigned-test-grid"><div class="empty-chart">Checking for assigned tests…</div></div>
+  </section>
   <div class="dash-charts">
     <section class="dash-panel"><div class="dash-panel-head"><div><h2>Score journey</h2><p class="dash-help">Your last 10 completed tests, from oldest to newest.</p></div><span class="dash-tag">TREND</span></div><div id="scoreTrendChart" class="trend-chart" role="img" aria-label="Score trend from the last ten tests"><div class="empty-chart">Complete a test to start your score graph.</div></div></section>
     <section class="dash-panel"><div class="dash-panel-head"><div><h2>Subject strength</h2><p class="dash-help">Accuracy across answered questions in each subject.</p></div><span class="dash-tag">SKILLS</span></div><div id="subjectAccuracyChart" class="subject-bars" role="img" aria-label="Accuracy by subject"><div class="empty-chart">Subject results will appear here after practice.</div></div></section>
@@ -113,8 +122,10 @@
 <script src="./js/storage.js"></script>
 <script src="./js/profile-model.js"></script>
 <script src="./js/student-auth.js"></script>
+<script src="./js/assessment-manager.js"></script>
 <script src="./js/page-access.js"></script>
 <script src="./js/gamification.js"></script>
 <script src="./js/dashboard-manager.js"></script>
+<script src="./js/assigned-tests-dashboard.js"></script>
 <script src="./js/app-shell.js"></script>
 </body></html>
