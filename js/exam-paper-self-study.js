@@ -2,7 +2,7 @@
 (() => {
 "use strict";
 const $=id=>document.getElementById(id);
-let blueprint=null,bank=null,paper=null,answers={},remaining=10800,tick=null,submitted=false,paperHistory=[],assignedPaper=null,currentStudent=null;
+let blueprint=null,bank=null,paper=null,answers={},remaining=10800,tick=null,submitted=false,paperHistory=[],assignedPaper=null,currentStudent=null,resumeAttempt=null;
 const HISTORY_KEY="eg_exam_paper_history_v1",HISTORY_LIMIT=50;
 function readPaperHistory(){
  try{
@@ -45,6 +45,7 @@ async function load(){
    if(assignedPaper.deliveryMode==="printable")throw Error("This assignment is for handwritten completion. Open it from Assigned Tests to print the paper and answer booklet.");
    const frozen=window.C10ExamPaperGenerator.validatePaper(assignedPaper.paperSnapshot,blueprint);
    if(!frozen.valid)throw Error("Assigned paper validation failed: "+frozen.errors.slice(0,3).join(" "));
+   try{const saved=JSON.parse(localStorage.getItem("eg_exam_attempt_v1")||"null");if(saved&&saved.paperId===assignedPaper.paperSnapshot.paperId)resumeAttempt=saved;}catch(_){}
    $("startBtn").textContent="Start assigned examination";
   }
 
@@ -64,6 +65,7 @@ function makePaper(){
   paper=assignedPaper.paperSnapshot;
   const active=assignedPaper.attempts.find(item=>item.attemptId===assignedPaper.activeAttemptId);
   if(active&&active.startedAt){const deadline=new Date(active.startedAt).getTime()+blueprint.durationMinutes*60000;remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));}
+  if(resumeAttempt&&Number.isFinite(Number(resumeAttempt.remaining)))remaining=Math.min(remaining,Number(resumeAttempt.remaining));
   delivered=true;
  }
  if(!assignedPaper&&wantsDelivered){
@@ -80,7 +82,7 @@ function makePaper(){
   const seed="self-study-"+Date.now()+"-"+Math.random().toString(36).slice(2);
   paper=C10ExamPaperGenerator.generateUniquePaper(blueprint,bank,{seed,title:"CBSE Class 10 Science · Self-study Paper",recentPaperFingerprints,recentQuestionIds:recentMcqQuestionIds,uniqueSearchAttempts:500});
  }
- answers={};submitted=false;remaining=blueprint.durationMinutes*60;
+ answers=resumeAttempt&&resumeAttempt.paperId===paper.paperId?JSON.parse(JSON.stringify(resumeAttempt.answers||{})):{};submitted=false;remaining=blueprint.durationMinutes*60;
  const questionIds=paper.questions.map(q=>String(q.questionId));
  const fingerprint=paper.paperFingerprint||C10ExamPaperGenerator.paperFingerprint(paper);
  const alreadyRecorded=paperHistory.some(item=>item.paperId===paper.paperId||item.fingerprint===fingerprint);
@@ -128,6 +130,14 @@ function render(){
  $("paperTitle").textContent=paper.title;
  $("questions").innerHTML=paper.questions.map(questionMarkup).join("");
  $("questions").querySelectorAll(".exam-question").forEach(article=>{
+  const index=Number(article.dataset.q),saved=answers[index];
+  if(saved){
+   if(saved.optionId){const option=[...article.querySelectorAll('input[type="radio"]:not([data-choice])')].find(el=>el.value===saved.optionId);if(option)option.checked=true;}
+   if(saved.choice==="alternative"){const alternative=article.querySelector('input[data-choice][value="alternative"]');if(alternative)alternative.checked=true;}
+   syncChoicePanels(article);
+   const activePanel=article.querySelector('[data-choice-panel="'+(saved.choice==="alternative"?"alternative":"main")+'"]');
+   [...(activePanel||article).querySelectorAll("textarea")].forEach((el,i)=>{el.value=(saved.text||[])[i]||"";});
+  }
   syncChoicePanels(article);
   article.querySelectorAll("input,textarea").forEach(el=>{
    el.addEventListener("change",()=>{if(el.matches("input[data-choice]"))syncChoicePanels(article);saveAnswers();});
