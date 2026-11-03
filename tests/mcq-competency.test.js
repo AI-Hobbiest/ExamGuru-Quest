@@ -14,7 +14,7 @@ const hindi=tagger.infer({question:"दिए गए अनुच्छेद �
 assert.equal(hindi.competency,"analysis-evaluation-creation");
 const sof=tagger.infer({question:"Choose the next number in the pattern.",section:"Logical Reasoning"});
 assert.equal(sof.competency,"analysis-evaluation-creation");
-const needsReview=tagger.infer({question:"Choose one option."});
+const needsReview=tagger.infer({question:"A blue rectangle appears."});
 assert.equal(needsReview.status,"needs-review");
 const tagged=tagger.tagQuestion({question:"Who wrote this poem?",difficulty:"Hard"});
 assert.equal(tagged.competency,"knowledge-understanding");
