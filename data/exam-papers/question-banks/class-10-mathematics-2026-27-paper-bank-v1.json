@@ -9,7 +9,7 @@
   "title": "ExamGuru Class 10 Mathematics Standard/Basic approved paper pool · 2026–27",
   "questionPoolStatus": "curated-approved-paper-pool",
   "minimumCandidatesPerSlot": 3,
-  "questionCount": 60,
+  "questionCount": 75,
   "reviewPoolUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",
   "questions": [
     {
@@ -3328,6 +3328,699 @@
       "source": {
         "type": "original",
         "reference": "Original ExamGuru-authored Class 10 Mathematics item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q21-SHARED-V1",
+      "sectionId": "B",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "number-systems",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Using prime factorisation, find the HCF and LCM of 18 and 24.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "18 = 2 × 3² and 24 = 2³ × 3. HCF = 6; LCM = 72."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Write correct prime factorisations",
+          "marks": 1
+        },
+        {
+          "criterion": "Find HCF = 6 and LCM = 72",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Show that 2 × 3 × 5 + 3 is composite.",
+          "answerKey": {
+            "modelAnswer": "2 × 3 × 5 + 3 = 33 = 3 × 11."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Evaluate the expression as 33",
+              "marks": 1
+            },
+            {
+              "criterion": "Factorise 33 as 3 × 11",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q21-SHARED-V2",
+      "sectionId": "B",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "number-systems",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the HCF of 72 and 120 using prime factors.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "72 = 2³ × 3² and 120 = 2³ × 3 × 5. HCF = 2³ × 3 = 24."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Write prime factorisations",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain HCF = 24",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Show that 5 × 7 × 11 + 11 is composite.",
+          "answerKey": {
+            "modelAnswer": "5 × 7 × 11 + 11 = 11(35 + 1) = 11 × 36."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Take 11 common",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify a non-trivial factorisation",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q21-SHARED-V3",
+      "sectionId": "B",
+      "chapterId": "real-numbers",
+      "unitId": "number-systems",
+      "topicTags": [
+        "real-numbers",
+        "number-systems",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "If the HCF of two positive integers is 6 and their LCM is 180, find their product.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Product = HCF × LCM = 6 × 180 = 1080."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use HCF × LCM = product",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate 1080",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Show that 7 × 11 × 13 + 13 is composite.",
+          "answerKey": {
+            "modelAnswer": "7 × 11 × 13 + 13 = 13(77 + 1) = 13 × 78."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Take 13 common",
+              "marks": 1
+            },
+            {
+              "criterion": "State both factors exceed 1",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q22-SHARED-V1",
+      "sectionId": "B",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "algebra",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the 12th term of the AP 5, 9, 13, 17, … .",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "a = 5, d = 4; a₁₂ = 5 + 11 × 4 = 49."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify a = 5 and d = 4",
+          "marks": 1
+        },
+        {
+          "criterion": "Apply the nth-term formula to obtain 49",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Find the 20th term of the AP 2, 7, 12, 17, … .",
+          "answerKey": {
+            "modelAnswer": "a₂₀ = 2 + 19 × 5 = 97."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identify a = 2 and d = 5",
+              "marks": 1
+            },
+            {
+              "criterion": "Calculate the 20th term as 97",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q22-SHARED-V2",
+      "sectionId": "B",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "algebra",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "For the AP 7, 10, 13, 16, …, find the 18th term.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "a = 7, d = 3; a₁₈ = 7 + 17 × 3 = 58."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify a = 7 and d = 3",
+          "marks": 1
+        },
+        {
+          "criterion": "Calculate a₁₈ = 58",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "The 4th term of an AP is 14 and its common difference is 3. Find its first term.",
+          "answerKey": {
+            "modelAnswer": "a + 3d = 14; a + 9 = 14; a = 5."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Use a₄ = a + 3d",
+              "marks": 1
+            },
+            {
+              "criterion": "Find a = 5",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q22-SHARED-V3",
+      "sectionId": "B",
+      "chapterId": "arithmetic-progressions",
+      "unitId": "algebra",
+      "topicTags": [
+        "arithmetic-progressions",
+        "algebra",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the sum of the first 10 terms of the AP 3, 6, 9, 12, … .",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "S₁₀ = 10/2[2(3) + 9(3)] = 165."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify a = 3 and d = 3",
+          "marks": 1
+        },
+        {
+          "criterion": "Apply the sum formula to obtain 165",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "In the AP 4, 9, 14, 19, …, which term is 74?",
+          "answerKey": {
+            "modelAnswer": "4 + (n − 1)5 = 74, so n = 15."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Form the nth-term equation",
+              "marks": 1
+            },
+            {
+              "criterion": "Solve to obtain the 15th term",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q23-SHARED-V1",
+      "sectionId": "B",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "geometry",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A tangent touches a circle with centre O at P. State the angle between OP and the tangent and give the reason.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "The angle is 90°. The tangent at a point is perpendicular to the radius through the point of contact."
+      },
+      "markingScheme": [
+        {
+          "criterion": "State 90°",
+          "marks": 1
+        },
+        {
+          "criterion": "State radius–tangent perpendicularity",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q23-SHARED-V2",
+      "sectionId": "B",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "geometry",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Tangents PA and PB are drawn from an external point P. If PA = 3x + 2 and PB = 5x − 8, find x.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "PA = PB; 3x + 2 = 5x − 8, so x = 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use equality of tangents",
+          "marks": 1
+        },
+        {
+          "criterion": "Solve to obtain x = 5",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q23-SHARED-V3",
+      "sectionId": "B",
+      "chapterId": "circles",
+      "unitId": "geometry",
+      "topicTags": [
+        "circles",
+        "geometry",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A tangent PT is drawn to a circle with centre O at T. If the radius is 4.5 cm, find the perpendicular distance from O to PT.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "OT is perpendicular to PT and equals the radius; the distance is 4.5 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify OT as the perpendicular distance",
+          "marks": 1
+        },
+        {
+          "criterion": "Give 4.5 cm",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q24-SHARED-V1",
+      "sectionId": "B",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "areas-related-to-circles",
+        "mensuration",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the area of a 60° sector of a circle of radius 6 cm in terms of π.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Area = (60/360) × π × 6² = 6π cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use the sector-area formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 6π cm²",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q24-SHARED-V2",
+      "sectionId": "B",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "areas-related-to-circles",
+        "mensuration",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the length of the arc subtending 90° at the centre of a circle of radius 4 cm.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Arc length = (90/360) × 2π × 4 = 2π cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use the arc-length formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 2π cm",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q24-SHARED-V3",
+      "sectionId": "B",
+      "chapterId": "areas-related-to-circles",
+      "unitId": "mensuration",
+      "topicTags": [
+        "areas-related-to-circles",
+        "mensuration",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A circular ring has outer radius 7 cm and inner radius 3 cm. Find its area in terms of π.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "Area = π(7² − 3²) = 40π cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use the difference of circle areas",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 40π cm²",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q25-SHARED-V1",
+      "sectionId": "B",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mensuration",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the volume of a cylinder of radius 3 cm and height 5 cm in terms of π.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "V = πr²h = π × 9 × 5 = 45π cm³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use V = πr²h",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 45π cm³",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q25-SHARED-V2",
+      "sectionId": "B",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mensuration",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A cone has radius 3 cm and height 12 cm. Find its volume in terms of π.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "V = (1/3)π × 3² × 12 = 36π cm³."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use the cone-volume formula",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 36π cm³",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
+      }
+    },
+    {
+      "questionId": "MATH10-Q25-SHARED-V3",
+      "sectionId": "B",
+      "chapterId": "surface-areas-and-volumes",
+      "unitId": "mensuration",
+      "topicTags": [
+        "surface-areas-and-volumes",
+        "mensuration",
+        "very-short-answer"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the total surface area of a sphere of radius 4 cm in terms of π.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "assessmentLevels": [
+        "standard",
+        "basic"
+      ],
+      "answerKey": {
+        "modelAnswer": "TSA = 4πr² = 4π × 16 = 64π cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Use TSA = 4πr²",
+          "marks": 1
+        },
+        {
+          "criterion": "Obtain 64π cm²",
+          "marks": 1
+        }
+      ],
+      "approvalNote": "Original ExamGuru-authored item; answer and mark allocation checked.",
+      "source": {
+        "type": "original",
+        "reference": "Original ExamGuru Class 10 Mathematics summative practice item."
       }
     }
   ]
