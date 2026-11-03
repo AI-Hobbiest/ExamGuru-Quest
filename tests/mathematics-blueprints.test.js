@@ -58,3 +58,38 @@ const mathMcqStructural=mathBank.questions.filter(q=>q.options.length===4&&new S
 assert.equal(mathMcqStructural.length,1394);
 assert.equal(mathBank.questions.filter(q=>q.approvalStatus==="approved").length,0,"Imported MCQs must not be eligible before the answer/competency audit.");
 console.log("Mathematics MCQ import tests passed: 1,394 structurally valid, deduplicated, shared-level questions remain safely in review.");
+
+const paperBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-mathematics-2026-27-paper-bank-v1.json","utf8"));
+assert.equal(paperBank.questions.length,135);
+assert.equal(paperBank.questionCount,135);
+assert.equal(paperBank.questions.filter(q=>q.type==="mcq").length,54);
+assert.equal(paperBank.questions.filter(q=>q.type==="assertion-reason").length,6);
+assert.equal(paperBank.questions.filter(q=>["very-short-answer","short-answer","long-answer","case-based"].includes(q.type)).length,75);
+assert.equal(generator.validateQuestionBank(paperBank,{classId:"10",subjectId:"mathematics",academicYear:"2026-27"}).valid,true);
+for(const profile of profiles){
+ const blueprint=JSON.parse(fs.readFileSync(profile.file,"utf8"));
+ const readyBlueprint={...blueprint,status:"ready"};
+ const coverage=generator.auditSlotCoverage(readyBlueprint,paperBank,3);
+ assert.equal(coverage.valid,true,coverage.errors.join(" "));
+ assert.equal(coverage.slotCount,38);
+ assert.ok(coverage.coverage.every(row=>row.eligibleCount===3),"Every blueprint slot must have exactly three approved candidates.");
+ const fingerprints=[];
+ for(let i=0;i<50;i++){
+  const paper=generator.generateUniquePaper(readyBlueprint,paperBank,{
+   seed:"math-"+profile.level+"-50-paper-regression-"+i,
+   recentPaperFingerprints:fingerprints,
+   generatedAt:"2026-11-03T00:00:00.000Z"
+  });
+  assert.equal(generator.validatePaper(paper,readyBlueprint).valid,true);
+  fingerprints.push(generator.paperFingerprint(paper));
+ }
+ assert.equal(new Set(fingerprints).size,50,"Must generate 50 distinct papers for "+profile.level);
+}
+assert.ok(paperBank.questions.filter(q=>q.type==="case-based").every(q=>
+ q.parts.length===3&&q.parts[0].marks===1&&q.parts[1].marks===1&&q.parts[2].marks===2&&
+ Array.isArray(q.parts[2].alternatives)&&q.parts[2].alternatives.length===1
+));
+const updatedRegistry=JSON.parse(fs.readFileSync("data/exam-papers/profile-registry.json","utf8"));
+assert.ok(updatedRegistry.profiles.filter(p=>p.subjectId==="mathematics").every(p=>p.enabled===false));
+assert.equal(updatedRegistry.profiles.filter(p=>p.subjectId==="mathematics")[0].questionBankUrl,updatedRegistry.profiles.filter(p=>p.subjectId==="mathematics")[1].questionBankUrl);
+console.log("Mathematics paper-pool tests passed: 135 candidates, all 76? coverage checks, 50 unique Standard and 50 unique Basic papers, internal choices and disabled publication gates.");
