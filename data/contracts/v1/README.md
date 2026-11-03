@@ -29,3 +29,7 @@ Use `questionId` as the durable identifier. The browser currently derives a temp
 ## Storage adapter boundary
 
 UI and quiz logic should use a small storage interface (`load`, `save`, `clear`, `exportJSON`, `importJSON`) rather than calling `localStorage` directly. The current adapter is local-only. A future remote adapter should implement the same interface and add authentication, conflict handling, and server-side active-session enforcement.
+
+## MCQ cognitive competency
+
+Every new MCQ must include `competency`, `competencyTagStatus`, and `competencyTagReason`. The only valid categories are `knowledge-understanding`, `application`, and `analysis-evaluation-creation`. Difficulty remains a separate field. Newly authored questions saved through the Admin Question Bank Editor are marked `author-confirmed`; legacy MCQs are migrated with `inferred` or `needs-review` status and must not be described as educator-verified. See `docs/mcq-competency-tagging-standard.md` for the authoring rubric.
