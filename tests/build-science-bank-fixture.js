@@ -46,12 +46,6 @@ if(fs.existsSync("data/science.json")){
   }
  }
  fs.writeFileSync(output,JSON.stringify(sharedChapters,null,2)+"\n");
- const sourceKeys=[...new Set(chapters.flatMap(chapter=>(chapter.questions||[]).flatMap(question=>Object.keys(question))))].sort();
- const metadataSamples=chapters.flatMap(chapter=>(chapter.questions||[]).map(question=>({question,chapter}))).filter(item=>Object.keys(item.question).some(key=>/compet|bloom|level|skill|cognitive|type|tag|topic/i.test(key))).slice(0,12).map(item=>({chapter:item.chapter.title,keys:Object.keys(item.question),metadata:Object.fromEntries(Object.entries(item.question).filter(([key])=>/compet|bloom|level|skill|cognitive|type|tag|topic/i.test(key)))}));
- const samples=chapters.flatMap(chapter=>(chapter.questions||[]).slice(0,5).map(question=>({chapter:chapter.title,question:question.question||question.prompt||question.text,options:question.options,answer:question.answer,difficulty:question.difficulty,explanation:question.explanation}))).slice(0,60);
- console.log("Raw Science MCQ prompt samples: "+JSON.stringify(samples));
- console.log("Raw Science MCQ source keys: "+JSON.stringify(sourceKeys));
- console.log("Raw Science MCQ competency-like metadata samples: "+JSON.stringify(metadataSamples));
  console.log("Built shared Science question bank from compressed payload: "+chapters.length+" chapters / "+count+" MCQs.");
 }
 const bank=JSON.parse(fs.readFileSync(output,"utf8"));
