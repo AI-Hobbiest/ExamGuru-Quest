@@ -60,7 +60,10 @@ function makePaper(){
  if(assignedPaper){
   if(assignedPaper.deadlineAt&&new Date(assignedPaper.deadlineAt).getTime()<Date.now())throw Error("The deadline for this examination has passed.");
   assignedPaper=window.C10AssessmentManager.startPaper(assignedPaper.assignmentId,currentStudent.studentId);
-  paper=assignedPaper.paperSnapshot;delivered=true;
+  paper=assignedPaper.paperSnapshot;
+  const active=assignedPaper.attempts.find(item=>item.attemptId===assignedPaper.activeAttemptId);
+  if(active&&active.startedAt){const deadline=new Date(active.startedAt).getTime()+blueprint.durationMinutes*60000;remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));}
+  delivered=true;
  }
  if(!assignedPaper&&wantsDelivered){
   try{
