@@ -62,6 +62,7 @@ jobs:
           cp css/admin.css _site/css/admin.css
           cp css/question-media.css _site/css/question-media.css
           cp js/storage.js _site/js/storage.js
+          cp js/competency-tagger.js _site/js/competency-tagger.js
           cp js/question-bank.js _site/js/question-bank.js
           cp js/olympiad-blueprints.js _site/js/olympiad-blueprints.js
           cp js/exam-paper-generator.js _site/js/exam-paper-generator.js
@@ -324,7 +325,7 @@ jobs:
             if (!admin.includes(required)) throw new Error('Admin workspace section missing: '+required);
           }
           if (!admin.includes('./js/admin-manager.js') || !admin.includes('./css/admin.css')) throw new Error('Admin workspace scripts/styles missing.');
-          const adminScripts=['./js/storage.js','./js/question-bank.js','./js/session-model.js','./js/profile-model.js','./js/admin-manager.js','./js/app-shell.js'].map(src=>admin.indexOf(src));
+          const adminScripts=['./js/storage.js','./js/competency-tagger.js','./js/question-bank.js','./js/session-model.js','./js/profile-model.js','./js/admin-manager.js','./js/app-shell.js'].map(src=>admin.indexOf(src));
           if (adminScripts.some(index=>index<0) || !adminScripts.every((index,i)=>i===0||adminScripts[i-1]<index)) throw new Error('Admin workspace scripts are missing or out of order.');
           const classCatalog=JSON.parse(fs.readFileSync('_site/data/classes.json','utf8'));
           if (classCatalog.kind!=='class-catalog' || !Array.isArray(classCatalog.classes) || !classCatalog.classes.some(item=>String(item.classId)==='10')) throw new Error('Class catalogue is missing Class 10.');
@@ -396,6 +397,7 @@ jobs:
           const imageBankSchema=JSON.parse(fs.readFileSync('_site/data/contracts/v1/question-bank.schema.json','utf8'));
           const questionSchema=imageBankSchema.properties.chapters.items.properties.questions.items;
           if (!questionSchema.properties.images) throw new Error('Question-bank contract is missing optional image metadata.');
+          for (const field of ['competency','competencyTagStatus','competencyTagReason']) if (!questionSchema.required.includes(field)) throw new Error('New MCQ contract must require '+field+'.');
           const imageImportSchema=JSON.parse(fs.readFileSync('_site/data/contracts/v1/question-bank-import.schema.json','utf8'));
           if (!imageImportSchema.items.properties.questions.items.properties.images) throw new Error('Legacy import contract is missing optional image metadata.');
           const sequence=['./js/storage.js','./js/question-bank.js','./js/olympiad-blueprints.js','./js/session-model.js','./js/learning-model.js','./js/quiz-engine.js'].map(src=>practice.indexOf(src));
@@ -408,6 +410,8 @@ jobs:
           console.log('Validated subject links, branding, versioned contracts and deployed assets.');
 
           NODE
+      - name: Tag and audit competency across every deployed MCQ bank
+        run: node scripts/tag-mcq-banks.js _site/data && node tests/mcq-competency.test.js _site/data
       - name: Test foundation contracts and migration
         run: node tests/foundation.test.js
       - name: Test session timing and result model
