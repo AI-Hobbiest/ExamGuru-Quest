@@ -17,9 +17,12 @@
     "originalWrittenAndCaseBased": 75,
     "caseStudyCount": 18,
     "caseStudyPartChoiceCount": 18,
-    "internalChoiceQuestionCount": 18,
+    "internalChoiceQuestionCount": 21,
     "uniqueQuestionIds": 135,
-    "allApproved": true
+    "allApproved": true,
+    "wholeQuestionChoiceSlotsPerProfile": 6,
+    "minimumEligibleCandidates": 3,
+    "maximumEligibleCandidates": 9
   },
   "checks": {
     "structuralValidation": "Tested by the shared ExamPaperGenerator.validateQuestionBank",
