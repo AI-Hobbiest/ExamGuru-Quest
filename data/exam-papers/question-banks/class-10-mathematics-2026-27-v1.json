@@ -2657,7 +2657,8 @@
         "type": "original",
         "reference": "Original ExamGuru application MCQ for CBSE Class X Mathematics 2026–27."
       },
-      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context."
+      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context.",
+      "sectionId": "A"
     },
     {
       "questionId": "M10-Q13-APP-02",
@@ -2707,7 +2708,8 @@
         "type": "original",
         "reference": "Original ExamGuru application MCQ for CBSE Class X Mathematics 2026–27."
       },
-      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context."
+      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context.",
+      "sectionId": "A"
     },
     {
       "questionId": "M10-Q13-APP-03",
@@ -2757,7 +2759,8 @@
         "type": "original",
         "reference": "Original ExamGuru application MCQ for CBSE Class X Mathematics 2026–27."
       },
-      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context."
+      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context.",
+      "sectionId": "A"
     },
     {
       "questionId": "M10-Q13-APP-04",
@@ -2807,7 +2810,8 @@
         "type": "original",
         "reference": "Original ExamGuru application MCQ for CBSE Class X Mathematics 2026–27."
       },
-      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context."
+      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context.",
+      "sectionId": "A"
     },
     {
       "questionId": "M10-Q13-APP-05",
@@ -2857,7 +2861,8 @@
         "type": "original",
         "reference": "Original ExamGuru application MCQ for CBSE Class X Mathematics 2026–27."
       },
-      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context."
+      "approvalNote": "Original application item checked for mathematical accuracy, syllabus fit, one-mark suitability and distinct problem context.",
+      "sectionId": "A"
     },
     {
       "questionId": "M10-Q19-AR-01",
@@ -2909,7 +2914,8 @@
       "assertionReason": {
         "assertion": "For grouped data, the class mark is used as the representative value of a class interval when calculating the mean.",
         "reason": "The class mark is the arithmetic mean of the lower and upper class limits."
-      }
+      },
+      "sectionId": "A"
     },
     {
       "questionId": "M10-Q19-AR-02",
@@ -2961,7 +2967,8 @@
       "assertionReason": {
         "assertion": "The arithmetic mean of a data set must always be one of the observations in that data set.",
         "reason": "The arithmetic mean is obtained by dividing the sum of all observations by the number of observations."
-      }
+      },
+      "sectionId": "A"
     },
     {
       "questionId": "M10-Q19-AR-03",
@@ -3013,7 +3020,8 @@
       "assertionReason": {
         "assertion": "The sum of all frequencies in a grouped frequency distribution equals the total number of observations.",
         "reason": "For grouped data, the mean is calculated using Σ(fᵢxᵢ)/Σfᵢ."
-      }
+      },
+      "sectionId": "A"
     },
     {
       "questionId": "M10-Q20-AR-01",
@@ -3065,7 +3073,8 @@
       "assertionReason": {
         "assertion": "The probability of an event lies between 0 and 1, inclusive.",
         "reason": "For equally likely outcomes, probability is the ratio of favourable outcomes to the total number of outcomes in the sample space."
-      }
+      },
+      "sectionId": "A"
     },
     {
       "questionId": "M10-Q20-AR-02",
@@ -3117,7 +3126,8 @@
       "assertionReason": {
         "assertion": "The probability of obtaining a prime number on a fair six-sided die is 1/2.",
         "reason": "The prime outcomes on a fair six-sided die are 2, 3 and 5."
-      }
+      },
+      "sectionId": "A"
     },
     {
       "questionId": "M10-Q20-AR-03",
@@ -3169,7 +3179,8 @@
       "assertionReason": {
         "assertion": "For any event E, P(not E) = 1 − P(E).",
         "reason": "An event and its complement are disjoint and together contain every outcome in the sample space."
-      }
+      },
+      "sectionId": "A"
     },
     {
       "questionId": "M10-Q21-A",
@@ -6337,7 +6348,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q36-STD-B",
@@ -6437,7 +6449,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q36-STD-C",
@@ -6537,7 +6550,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q36-BAS-A",
@@ -6637,7 +6651,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q36-BAS-B",
@@ -6737,7 +6752,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q36-BAS-C",
@@ -6837,7 +6853,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q37-STD-A",
@@ -6937,7 +6954,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q37-STD-B",
@@ -7037,7 +7055,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q37-STD-C",
@@ -7137,7 +7156,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q37-BAS-A",
@@ -7237,7 +7257,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q37-BAS-B",
@@ -7337,7 +7358,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q37-BAS-C",
@@ -7437,7 +7459,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q38-STD-A",
@@ -7537,7 +7560,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q38-STD-B",
@@ -7637,7 +7661,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q38-STD-C",
@@ -7737,7 +7762,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q38-BAS-A",
@@ -7837,7 +7863,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q38-BAS-B",
@@ -7937,7 +7964,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     },
     {
       "questionId": "M10-Q38-BAS-C",
@@ -8037,7 +8065,8 @@
           "criterion": "Correct response to either version of subpart (c).",
           "marks": 2
         }
-      ]
+      ],
+      "sectionId": "E"
     }
   ]
 }
