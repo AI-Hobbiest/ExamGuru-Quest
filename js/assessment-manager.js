@@ -96,6 +96,56 @@
     const all = readAll(); all.push(assignment); writeAll(all);
     return clone(assignment);
   }
+  function createPaperAssignment(args) {
+    const paper = clone(args.paperSnapshot);
+    if (!String(args.studentId || "").trim()) throw new Error("A student must be selected before assigning a paper.");
+    if (!paper || paper.kind !== "exam-paper-snapshot" || !Array.isArray(paper.questions) || !paper.questions.length) throw new Error("A valid frozen exam paper is required.");
+    const createdAt = now();
+    const assignment = {
+      schemaVersion: 1, kind: "paper-assessment",
+      assignmentId: makeId("assignment"), assessmentId: makeId("assessment"),
+      title: String(args.title || paper.title || "Exam Paper").trim(),
+      studentId: String(args.studentId), studentName: String(args.studentName || ""),
+      parentId: String(args.parentId || ""), createdBy: String(args.createdBy || "parent"),
+      classId: String(paper.classId), subjectId: String(args.subjectId || "science"),
+      subjectTitle: String(args.subjectTitle || "Science"),
+      assessmentType: "blueprint-paper", deliveryMode: ["online","printable","hybrid"].includes(args.deliveryMode) ? args.deliveryMode : "printable",
+      status: "assigned", createdAt, startsAt: args.startsAt || createdAt, deadlineAt: args.deadlineAt || null,
+      attemptsAllowed: Math.max(1, Math.min(3, Number(args.attemptsAllowed) || 1)),
+      questionCount: paper.totalQuestions, totalMarks: paper.totalMarks, durationMinutes: paper.durationMinutes,
+      paperSnapshot: paper, attempts: [], activeAttemptId: null
+    };
+    const all = readAll(); all.push(assignment); writeAll(all);
+    return clone(assignment);
+  }
+  function startPaper(assignmentId, studentId) {
+    return update(assignmentId, row => {
+      if (row.kind !== "paper-assessment") throw new Error("This is not a full examination paper.");
+      if (row.studentId !== String(studentId)) throw new Error("This paper is not assigned to the signed-in student.");
+      if (row.deliveryMode === "printable") throw new Error("This paper is assigned for handwritten completion. Use the PDF/print view instead.");
+      if (row.status === "cancelled") throw new Error("This assignment has been cancelled.");
+      if (row.startsAt && new Date(row.startsAt).getTime() > Date.now()) throw new Error("This paper is not available yet.");
+      if (row.deadlineAt && new Date(row.deadlineAt).getTime() < Date.now()) throw new Error("The deadline for this paper has passed.");
+      const completed = row.attempts.filter(x => x.status === "submitted").length;
+      if (completed >= row.attemptsAllowed) throw new Error("The allowed number of attempts has been used.");
+      const active = row.attempts.find(x => x.attemptId === row.activeAttemptId && x.status === "in-progress");
+      if (active) return;
+      const attempt = { attemptId: makeId("attempt"), startedAt: now(), status: "in-progress", answers: {} };
+      row.attempts.push(attempt); row.activeAttemptId = attempt.attemptId; row.status = "in-progress";
+    });
+  }
+  function submitPaper(assignmentId, studentId, answers) {
+    return update(assignmentId, row => {
+      if (row.kind !== "paper-assessment") throw new Error("This is not a full examination paper.");
+      if (row.studentId !== String(studentId)) throw new Error("This paper is not assigned to the signed-in student.");
+      const attempt = row.attempts.find(x => x.attemptId === row.activeAttemptId && x.status === "in-progress");
+      if (!attempt) throw new Error("There is no active paper attempt to submit.");
+      attempt.answers = clone(answers || {}); attempt.submittedAt = now(); attempt.status = "submitted";
+      attempt.evaluationStatus = "pending-manual-review";
+      attempt.manualReviewNote = "Descriptive answers require handwritten or teacher evaluation. MCQ scoring remains available in the examination review.";
+      row.status = "completed"; row.activeAttemptId = null; row.updatedAt = attempt.submittedAt;
+    });
+  }
   function listForStudent(studentId) {
     return readAll().filter(x => x.studentId === String(studentId)).sort((a,b) => String(b.createdAt).localeCompare(String(a.createdAt))).map(clone);
   }
@@ -146,7 +196,7 @@
     });
   }
   window.C10AssessmentManager = Object.freeze({
-    key: KEY, bankPath, buildQuestionPool, selectQuestions, createMcqAssignment,
-    listForStudent, listForParent, get, start, submit
+    key: KEY, bankPath, buildQuestionPool, selectQuestions, createMcqAssignment, createPaperAssignment,
+    listForStudent, listForParent, get, start, submit, startPaper, submitPaper
   });
 })();
