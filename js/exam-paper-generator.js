@@ -114,6 +114,10 @@ function validateBlueprint(bp){
  if(sections.length&&sum(sections.map(s=>Number(s.totalMarks)||0))!==bp.totalMarks)e.push("Section marks do not add up to blueprint total.");
  if(sections.length&&sum(sections.map(s=>Number(s.questionCount)||0))!==bp.totalQuestions)e.push("Section question counts do not add up to blueprint total.");
  if(!["draft","ready","retired"].includes(bp.status))e.push("Blueprint status is invalid.");
+ if(bp.difficultyTargets!=null){
+  if(!obj(bp.difficultyTargets)||DIFFICULTIES.some(d=>!Number.isInteger(bp.difficultyTargets[d])||bp.difficultyTargets[d]<0)||Object.keys(bp.difficultyTargets).some(d=>!DIFFICULTIES.includes(d)))e.push("difficultyTargets must define non-negative integer counts for easy, medium and hard.");
+  else if(sum(DIFFICULTIES.map(d=>bp.difficultyTargets[d]))!==bp.totalQuestions)e.push("difficultyTargets must add up to totalQuestions.");
+ }
  const slots=expandSlotPlan(bp);
  if(bp.status==="ready"){
   if(slots.length!==bp.totalQuestions)e.push("Ready blueprint must define every question slot.");
@@ -172,8 +176,33 @@ function generatePaper(bp,bank,options={}){
  const slots=bc.slots.map((s,i)=>({...s,_position:i,_candidates:shuffle(bank.questions.filter(q=>eligible(q,s)&&!recent.has(String(q.questionId))),rand)}));
  const empty=slots.filter(s=>!s._candidates.length);if(empty.length)throw Error("Question pool shortage: "+empty.map(s=>s.slotId+" ("+s.sectionId+", "+s.marks+" marks)").join("; "));
  const order=slots.slice().sort((a,b)=>a._candidates.length-b._candidates.length||a._position-b._position),used=new Set(),selected=new Map();let tries=0;const max=options.maxSearchAttempts||250000;
- function walk(i){if(i>=order.length)return true;if(++tries>max)return false;const slot=order[i];for(const q of slot._candidates){const id=String(q.questionId);if(used.has(id))continue;used.add(id);selected.set(slot._position,q);if(walk(i+1))return true;selected.delete(slot._position);used.delete(id);}return false;}
- if(!walk(0))throw Error(tries>max?"Selection exceeded its search budget; increase the approved pool.":"No complete unique paper can be assembled from the approved pool.");
+ const remainingDifficulty=bp.difficultyTargets?Object.fromEntries(DIFFICULTIES.map(d=>[d,Number(bp.difficultyTargets[d])||0])):null;
+ function canComplete(start){
+  if(!remainingDifficulty)return true;
+  const remainingSlots=order.length-start;
+  if(sum(DIFFICULTIES.map(d=>remainingDifficulty[d]))!==remainingSlots)return false;
+  for(const difficulty of DIFFICULTIES){
+   const needed=remainingDifficulty[difficulty];if(needed<0||needed>remainingSlots)return false;
+   let possibleSlots=0;
+   for(let j=start;j<order.length;j++)if(order[j]._candidates.some(q=>q.difficulty===difficulty&&!used.has(String(q.questionId))))possibleSlots++;
+   if(needed>possibleSlots)return false;
+  }
+  return true;
+ }
+ function walk(i){
+  if(i>=order.length)return !remainingDifficulty||DIFFICULTIES.every(d=>remainingDifficulty[d]===0);
+  if(++tries>max||!canComplete(i))return false;
+  const slot=order[i];
+  for(const q of slot._candidates){
+   const id=String(q.questionId),difficulty=q.difficulty;
+   if(used.has(id)||(remainingDifficulty&&(!Object.prototype.hasOwnProperty.call(remainingDifficulty,difficulty)||remainingDifficulty[difficulty]<=0)))continue;
+   used.add(id);selected.set(slot._position,q);if(remainingDifficulty)remainingDifficulty[difficulty]--;
+   if(walk(i+1))return true;
+   if(remainingDifficulty)remainingDifficulty[difficulty]++;selected.delete(slot._position);used.delete(id);
+  }
+  return false;
+ }
+ if(!walk(0))throw Error(tries>max?"Selection exceeded its search budget; review the approved pool and difficulty targets.":"No complete paper can satisfy the blueprint slots and difficulty targets from the approved pool.");
  const chosen=slots.sort((a,b)=>a._position-b._position).map((s,i)=>({...clone(selected.get(s._position)),paperQuestionNumber:i+1,slotId:s.slotId,marks:s.marks}));
  const sections=bp.sections.map(s=>{const qs=chosen.filter(q=>q.sectionId===s.sectionId);return{sectionId:s.sectionId,title:s.title,questionCount:qs.length,totalMarks:sum(qs.map(q=>q.marks))};});
  const paper={schemaVersion:1,kind:"exam-paper-snapshot",paperId:String(options.paperId||("paper-"+Math.abs(hashCode(String(options.seed||Date.now())+bp.blueprintId)).toString(36))),title:options.title||bp.title,blueprintId:bp.blueprintId,blueprintVersion:bp.version,academicYear:bp.academicYear,classId:bp.classId,subjectId:bp.subjectId,subjectTitle:bp.subjectTitle||bp.subjectName||null,subjectCode:bp.subjectCode||null,durationMinutes:bp.durationMinutes,totalQuestions:chosen.length,totalMarks:sum(chosen.map(q=>q.marks)),seed:String(options.seed||"examguru-paper"),generatedAt:options.generatedAt||new Date().toISOString(),sourceBankVersion:bank.bankVersion,blueprintSnapshot:clone(bp),sectionResults:sections,questions:chosen};
@@ -230,6 +259,7 @@ function validatePaper(p,bp){
    const target=bp[field];if(target){const totals=new Map();p.questions.forEach(q=>totals.set(q[key],(totals.get(q[key])||0)+q.marks));for(const [k,v] of Object.entries(target))if((totals.get(k)||0)!==Number(v))e.push("Generated paper "+field+" mismatch for "+k+".");}
   }
   if(bp.markDistribution){const totals=new Map();p.questions.forEach(q=>totals.set(q.marks,(totals.get(q.marks)||0)+1));for(const [marks,count] of Object.entries(bp.markDistribution))if((totals.get(Number(marks))||0)!==Number(count))e.push("Generated paper mark distribution mismatch for "+marks+" marks.");}
+   if(bp.difficultyTargets){const totals=new Map(DIFFICULTIES.map(d=>[d,0]));p.questions.forEach(q=>totals.set(q.difficulty,(totals.get(q.difficulty)||0)+1));for(const difficulty of DIFFICULTIES)if((totals.get(difficulty)||0)!==Number(bp.difficultyTargets[difficulty]||0))e.push("Generated paper difficulty target mismatch for "+difficulty+".");}
  }
  return{valid:e.length===0,errors:e};
 }
