@@ -234,7 +234,6 @@ function render(){
    });
    else [...activePanel.querySelectorAll("textarea")].forEach((el,i)=>{el.value=(saved.text||[])[i]||"";});
   }
-  }
   syncChoicePanels(article);
   article.querySelectorAll("input,textarea").forEach(el=>{
    el.addEventListener("change",()=>{if(el.matches("input[data-choice],input[data-subpart-choice]"))syncChoicePanels(article);saveAnswers();});
