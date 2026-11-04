@@ -9,6 +9,7 @@ assert.equal(socialCheck.valid,true,socialCheck.errors.join("; "));
 assert.equal(socialBlueprint.status,"draft","Social Science remains locked until its content audit and slot-depth gate pass");
 assert.equal(socialBlueprint.totalQuestions,38);
 assert.equal(socialBlueprint.totalMarks,80);
+assert.deepEqual(socialBlueprint.markDistribution,{"1":20,"2":5,"3":6,"4":3,"5":4},"mark distribution must include both map-skill questions");
 assert.equal(socialBlueprint.slotPlan.length,38);
 assert.deepEqual(socialBlueprint.sections.map(s=>s.totalMarks),[20,20,20,20]);
 assert.equal(socialBlueprint.slotPlan.filter(s=>s.competency==="map-skill").length,2);
