@@ -11,7 +11,7 @@
   "subjectTitle": "Social Science",
   "subjectCode": "087",
   "status": "draft",
-  "statusReason": "The official CBSE 2026–27 38-question, 80-mark design has been transcribed. Generation remains locked pending NCERT source audit, map-asset validation and 20 eligible approved candidates for every slot.",
+  "statusReason": "The blueprint is structurally defined, but restricted-scope chapters are held out of the MCQ adapter pending subtopic-level review. Generic template questions are marked needs-review. Exam generation remains locked until all 38 slots have at least 20 approved, source-grounded candidates and map assets are validated.",
   "durationMinutes": 180,
   "totalQuestions": 38,
   "totalMarks": 80,
@@ -188,7 +188,9 @@
   "mcqPracticeExclusions": [
     "the-age-of-industrialisation",
     "lifelines-of-national-economy",
-    "consumer-rights"
+    "consumer-rights",
+    "the-making-of-a-global-world",
+    "globalisation-and-the-indian-economy"
   ],
   "supportedQuestionTypes": [
     "mcq",
