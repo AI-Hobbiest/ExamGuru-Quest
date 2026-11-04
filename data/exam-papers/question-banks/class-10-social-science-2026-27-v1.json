@@ -5,7 +5,7 @@
   "subjectId": "social-science",
   "subjectCode": "087",
   "academicYear": "2026-27",
-  "bankVersion": "examguru-cbse-2026-27-social-science-v1.1-mcq-review-pool",
+  "bankVersion": "examguru-cbse-2026-27-social-science-v1.2-mcq-ar-review",
   "title": "ExamGuru Class 10 Social Science examination pool · 2026–27",
   "questionPoolStatus": "review-required",
   "questions": [
@@ -20852,15 +20852,3440 @@
           "marks": 1
         }
       ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-01",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Manufacturing converts raw materials into more valuable products.",
+        "reason": "Manufacturing is part of the secondary sector."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Manufacturing transforms materials through processing, which is the defining activity of the secondary sector."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-02",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Agro-based industries use agricultural products as raw materials.",
+        "reason": "Cotton textiles and sugar are examples of agro-based industries."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Both statements are true; the examples illustrate industries that process agricultural inputs."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-03",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Mineral-based industries use mineral ores and other mineral inputs.",
+        "reason": "Iron and steel is an example of a mineral-based industry."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Iron and steel relies on mineral inputs such as iron ore and coal."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-04",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Iron and steel is called a basic industry.",
+        "reason": "It supplies inputs used by many other industries."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Steel is a foundational input for machinery, construction, transport and other industries."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-05",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Sugar mills are generally seasonal industries.",
+        "reason": "Sugarcane is harvested seasonally and should be processed soon after harvesting to preserve its sucrose content."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "The seasonal availability and timely processing needs of sugarcane make sugar production seasonal."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-06",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Cotton textile production is an agro-based industry.",
+        "reason": "Cotton is an agricultural fibre used as its main raw material."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B",
+        "explanation": "Both are true, but the second restates the input rather than explaining the wider classification of all cotton-textile production."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-07",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Manufacturing industries can create employment.",
+        "reason": "Industrial activity may also generate pollution if wastes are not managed."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B",
+        "explanation": "Both are true, but pollution is not the explanation for employment creation."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-08",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Cotton textile mills are influenced by access to raw cotton and markets.",
+        "reason": "Iron and steel is a basic industry."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B",
+        "explanation": "Both are true, but the nature of iron and steel does not explain the location factors for cotton textile mills."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-09",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Industrial location is influenced by several factors.",
+        "reason": "The software industry requires skilled workers and reliable communication infrastructure."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B",
+        "explanation": "Both statements are true, but the specific needs of software services do not explain the full set of industrial location factors."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-10",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Jute is known as the golden fibre.",
+        "reason": "Iron and steel is a mineral-based industry."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B",
+        "explanation": "Both statements are true, but the reason is unrelated to the description of jute."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-11",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Manufacturing can add value to raw materials.",
+        "reason": "All manufacturing industries are located only near their raw materials."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is true; the reason is false because location also depends on labour, power, capital, transport, markets and other factors."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-12",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Agro-based industries depend on agricultural inputs.",
+        "reason": "Every agro-based industry is also a mineral-based industry."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is true; the reason is false because the two classifications refer to different sources of raw material."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-13",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Reliable power supply can influence industrial location.",
+        "reason": "Power is never considered when industries choose a location."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is true; the reason is false because power is an important location factor."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-14",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Untreated industrial effluents can pollute rivers and other water bodies.",
+        "reason": "Industrial wastewater is always harmless once it leaves a factory."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is true; the reason is false because untreated effluents may contain harmful pollutants."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-15",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Manufacturing can support agriculture by supplying equipment and inputs.",
+        "reason": "All manufacturing industries produce only food products."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is true; the reason is false because manufacturing includes many non-food products and industrial inputs."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-16",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Manufacturing belongs to the primary sector.",
+        "reason": "Manufacturing is classified as a secondary-sector activity."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; manufacturing processes materials and belongs to the secondary sector."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-17",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Industrial location depends only on climate.",
+        "reason": "Raw materials, labour, power, capital, transport and markets can influence industrial location."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; industrial location is shaped by multiple economic and infrastructure factors."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-18",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "All industries are agro-based.",
+        "reason": "Industries may be classified as agro-based or mineral-based according to their raw materials."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; industries use different categories of inputs, including agricultural and mineral resources."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-19",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Sugar mills operate uniformly throughout the year.",
+        "reason": "Sugarcane is a seasonal crop and needs timely processing after harvest."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; sugar production is seasonal because the supply and processing window for sugarcane are seasonal."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-20",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Untreated industrial waste improves the quality of river water.",
+        "reason": "Untreated effluents can harm aquatic ecosystems and human health."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; untreated industrial discharge can pollute water, while the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-01",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Power sharing can reduce the possibility of conflict between social groups.",
+        "reason": "Social conflict can lead to violence and political instability."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Reducing conflict helps protect political stability, which is the prudential reason for power sharing."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-02",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Power sharing is the very spirit of democracy.",
+        "reason": "People affected by decisions have a right to be consulted on how they are governed."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "The reason explains the moral basis of power sharing: those affected should have a voice."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-03",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Majoritarian policies can undermine national unity.",
+        "reason": "Imposing the will of a majority may alienate minority communities."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Excluding minorities can deepen conflict and weaken unity."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-04",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Belgium adopted power-sharing arrangements to accommodate linguistic communities.",
+        "reason": "Its population includes Dutch-speaking, French-speaking and a smaller German-speaking community."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "The country's linguistic diversity made accommodation and representation necessary."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-05",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Horizontal power sharing divides authority among organs of government.",
+        "reason": "The legislature, executive and judiciary exercise different powers and can check one another."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "The reason describes the organs that share power horizontally and their checking role."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-06",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "A prudential reason for power sharing focuses on better political outcomes.",
+        "reason": "A moral reason emphasises that sharing power is valuable in itself."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B",
+        "explanation": "Both are true, but the distinction between prudential and moral reasons does not explain the other statement."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-07",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Brussels has a French-speaking majority.",
+        "reason": "Belgium as a whole has a Dutch-speaking majority."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B",
+        "explanation": "Both statements are true, but the national majority does not explain the linguistic composition of Brussels."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-08",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "A community government in Belgium deals with cultural, educational and language-related matters.",
+        "reason": "Belgium has a federal arrangement with regional governments."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B",
+        "explanation": "Both statements are true, but the regional-government structure is not the explanation for the community government's specific responsibilities."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-09",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Sri Lanka adopted majoritarian policies after independence.",
+        "reason": "Belgium created power-sharing arrangements to accommodate different language communities."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B",
+        "explanation": "Both statements are true, but the Belgian example does not explain the policies adopted in Sri Lanka."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-10",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "A coalition government can be a form of power sharing among political parties.",
+        "reason": "Belgium has Dutch-speaking and French-speaking ministers in its central government."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B",
+        "explanation": "Both statements are true, but Belgium's ministerial arrangement does not explain coalition government as a form of party power sharing."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-11",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "The Sinhala Only Act made Tamil the sole official language of Sri Lanka.",
+        "reason": "The Sinhala Only Act of 1956 made Sinhala the sole official language."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-12",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Vertical power sharing occurs only among the legislature, executive and judiciary.",
+        "reason": "Horizontal power sharing is the division of authority among different organs at the same level."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is false; the reason is true. Vertical sharing is among different levels of government."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-13",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "A community government in Belgium represents only the economic interests of a region.",
+        "reason": "It deals with cultural, educational and language-related matters for a language community."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-14",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Majoritarianism always protects minority interests.",
+        "reason": "Power sharing can provide channels for minority participation."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-15",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Power sharing is limited to the central government.",
+        "reason": "Power can also be shared among social groups and political parties."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-16",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Belgium's central government has more Dutch-speaking ministers than French-speaking ministers by constitutional design.",
+        "reason": "The central government has an equal number of Dutch-speaking and French-speaking ministers."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-17",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "In Sri Lanka, Tamil was made the only official language in 1956.",
+        "reason": "The Sinhala Only Act made Sinhala the sole official language."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-18",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Power sharing always eliminates disagreement in a democracy.",
+        "reason": "Power-sharing arrangements provide institutions and processes for managing disagreement."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; power sharing helps manage conflict but does not eliminate all disagreement."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-19",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "A unitary system and a federal system divide constitutional power in exactly the same way.",
+        "reason": "Federalism constitutionally divides powers between different levels of government."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-POL-CH13-AR-20",
+      "sectionId": "political-science",
+      "chapterId": "power-sharing",
+      "unitId": "democratic-politics",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "power-sharing",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Power sharing can occur only between the executive and legislature.",
+        "reason": "Power can also be shared among levels of government, social groups and political parties."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 1: Power-sharing",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-01",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Globalisation is a process of rapid integration between countries.",
+        "reason": "Greater foreign trade and foreign investment are important channels of this integration."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "The reason identifies the channels through which the integration described in the assertion takes place."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-02",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Multinational corporations play a major role in globalisation.",
+        "reason": "An MNC owns or controls production in more than one country."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "MNCs connect economic activity across countries, so their cross-border operations help drive global integration."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-03",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Foreign trade can connect markets in different countries.",
+        "reason": "It allows producers to sell beyond domestic markets and buyers to access imported goods."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "The reason explains how trade links producers and consumers across national markets."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-04",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Foreign investment is one channel of globalisation.",
+        "reason": "Investment by an MNC in assets such as land, buildings or machines in another country is called foreign investment."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "The reason gives the definition of foreign investment, a channel of cross-border integration."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-05",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Improvements in transport technology have enabled globalisation.",
+        "reason": "Faster and lower-cost movement of goods makes long-distance trade easier."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "The reason explains how transport improvements support greater cross-border exchange."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-06",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Containerisation can reduce the cost of handling goods at ports.",
+        "reason": "Containers can be transferred intact between ships, railways, planes and trucks."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "The ability to transfer standard containers across transport modes reduces handling costs and speeds movement."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-07",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Information technology has supported global integration.",
+        "reason": "It allows information to be communicated and coordinated rapidly across distant locations."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "Rapid communication and coordination help connect economic activities across countries."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-08",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Liberalisation of trade and investment policies can facilitate globalisation.",
+        "reason": "Reducing barriers makes cross-border trade and investment easier."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "The reason directly explains how liberalisation facilitates integration."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-09",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Lower air-transport costs can support globalisation.",
+        "reason": "Lower costs allow larger volumes of goods to be transported by air."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "The reason explains how cheaper air freight can increase cross-border movement of goods."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-10",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Foreign trade is a channel through which markets can become integrated.",
+        "reason": "When goods move between markets, buyers and producers can access a wider range of trading partners."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "A",
+      "answerKey": {
+        "modelAnswer": "A",
+        "explanation": "The reason describes the connection created by foreign trade."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-11",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Globalisation is limited to the movement of physical goods.",
+        "reason": "Foreign trade and foreign investment are important channels of globalisation."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is false because integration also involves services, investment, technology and other connections; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-12",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "MNCs operate only within the country where they were first established.",
+        "reason": "An MNC owns or controls production in more than one country."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-13",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Improved transport technology has made the movement of goods slower and more expensive.",
+        "reason": "Transport improvements have enabled faster delivery over long distances at lower cost."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-14",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Liberalisation means increasing restrictions on foreign trade and investment.",
+        "reason": "Liberalisation facilitates globalisation by reducing or removing barriers."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-15",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Globalisation means that countries become less interconnected.",
+        "reason": "The process involves rapid integration or interconnection between countries."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "C",
+      "answerKey": {
+        "modelAnswer": "C",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-16",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Globalisation is driven only by the movement of people between countries.",
+        "reason": "Foreign trade and foreign investment are major channels of global integration."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-17",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Containerisation increases port-handling costs and slows exports.",
+        "reason": "Containers can reduce port-handling costs and increase the speed of exports."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-18",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Information technology has no role in connecting economic activity across countries.",
+        "reason": "IT supports rapid communication and coordination across distance."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-19",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Removing barriers to trade and investment is an example of protectionism.",
+        "reason": "Liberalisation reduces or removes certain restrictions on trade and investment."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-ECO-CH21-AR-20",
+      "sectionId": "economics",
+      "chapterId": "globalisation-and-the-indian-economy",
+      "unitId": "understanding-economic-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "economics",
+        "globalisation-and-the-indian-economy",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Foreign investment means only the purchase of imported consumer goods by households.",
+        "reason": "Foreign investment involves spending on assets in another country, such as land, buildings and machines."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Understanding Economic Development, Chapter 4: Globalisation and the Indian Economy (board-scope topics only)",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "D",
+      "answerKey": {
+        "modelAnswer": "D",
+        "explanation": "The assertion is false; the reason is true."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
     }
   ],
   "generationDesign": {
     "paperFormat": "CBSE Class X Social Science (087), 2026-27",
     "totalQuestions": 38,
     "totalMarks": 80,
-    "sourceCandidateCount": 386,
+    "sourceCandidateCount": 446,
     "approvalRule": "All imported MCQs are approvalStatus=review. They are not eligible for paper generation until an educator verifies factual accuracy, syllabus scope, uniqueness, answer key, explanation, difficulty and competency, then explicitly approves them.",
     "sourceScope": "Only board-examination scope chapters and approved subtopics are imported. The Age of Industrialisation and Consumer Rights are excluded from board MCQ use; Lifelines of National Economy is reserved for map-skill items; project-only subtopics are held out.",
-    "repeatProtection": "Minimum 20 eligible candidates per MCQ slot; five-paper all-format question exclusion where pool depth permits; 50-paper unique fingerprint protection."
+    "repeatProtection": "Minimum 20 eligible candidates per MCQ slot; five-paper all-format question exclusion where pool depth permits; 50-paper unique fingerprint protection.",
+    "assertionReasonPools": {
+      "q15-geography-manufacturing-industries": 20,
+      "q20-political-science-power-sharing": 20,
+      "q34-economics-globalisation": 20
+    }
   }
 }
