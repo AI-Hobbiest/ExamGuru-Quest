@@ -35,8 +35,10 @@ for(const profile of profiles){
 const registry=JSON.parse(fs.readFileSync("data/exam-papers/profile-registry.json","utf8"));
 const mathProfiles=registry.profiles.filter(profile=>String(profile.profileId||"").startsWith("class-10-mathematics-"));
 assert.equal(mathProfiles.length,2);
-assert.ok(mathProfiles.every(profile=>profile.enabled===false));
+assert.ok(mathProfiles.every(profile=>profile.enabled===true),"Both Mathematics exam profiles must be published after release QA.");
 assert.equal(mathProfiles[0].questionBankUrl,mathProfiles[1].questionBankUrl,"Standard and Basic should use one shared Math question pool.");
+assert.ok(mathProfiles.every(profile=>profile.practiceBankUrl==="./data/mathematics.json"));
+assert.equal(registry.defaultProfileId,"class-10-science-2026-27","Science remains the default profile while Mathematics is added as a selectable option.");
 const schema=JSON.parse(fs.readFileSync("data/exam-papers/question-bank.schema.json","utf8"));
 assert.equal(schema.properties.classId.type,"string");
 assert.equal(schema.properties.subjectId.type,"string");
