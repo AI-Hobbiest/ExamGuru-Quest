@@ -2965,7 +2965,9 @@
         ],
         "answer": 1,
         "explanation": "Workers were recruited under contracts to plantations and other colonial enterprises.",
-        "difficulty": "Medium"
+        "difficulty": "Medium",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Outside or too broad for the CBSE 2026-27 Board scope, which includes only The Pre-modern World through Conquest, disease and trade (subtopics 1 to 1.3). Retain only if specifically mapped to those subtopics."
       },
       {
         "id": 3,
@@ -2978,7 +2980,9 @@
         ],
         "answer": 2,
         "explanation": "The severe global economic downturn began in 1929.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Outside or too broad for the CBSE 2026-27 Board scope, which includes only The Pre-modern World through Conquest, disease and trade (subtopics 1 to 1.3). Retain only if specifically mapped to those subtopics."
       },
       {
         "id": 4,
@@ -2991,7 +2995,9 @@
         ],
         "answer": 2,
         "explanation": "The IMF and World Bank emerged from the Bretton Woods conference arrangements.",
-        "difficulty": "Medium"
+        "difficulty": "Medium",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Outside or too broad for the CBSE 2026-27 Board scope, which includes only The Pre-modern World through Conquest, disease and trade (subtopics 1 to 1.3). Retain only if specifically mapped to those subtopics."
       },
       {
         "id": 5,
@@ -3004,7 +3010,9 @@
         ],
         "answer": 2,
         "explanation": "Global connections formed through multiple kinds of movement and exchange.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Outside or too broad for the CBSE 2026-27 Board scope, which includes only The Pre-modern World through Conquest, disease and trade (subtopics 1 to 1.3). Retain only if specifically mapped to those subtopics."
       },
       {
         "id": 6,
@@ -4039,7 +4047,9 @@
         ],
         "answer": 2,
         "explanation": "Export-oriented agriculture could make communities more vulnerable to shortages and market shocks.",
-        "difficulty": "Medium"
+        "difficulty": "Medium",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Outside or too broad for the CBSE 2026-27 Board scope, which includes only The Pre-modern World through Conquest, disease and trade (subtopics 1 to 1.3). Retain only if specifically mapped to those subtopics."
       },
       {
         "id": 77,
@@ -4392,6 +4402,20 @@
         "difficulty": "Medium",
         "competencyTagStatus": "needs-review",
         "competencyTagReason": "Generic templated stem pattern detected during Social Science bank audit; replace with a specific, source-grounded question before examination use."
+      },
+      {
+        "id": 101,
+        "question": "Which groups travelled long distances along pre-modern trade routes, carrying ideas as well as goods?",
+        "options": [
+          "Only military commanders",
+          "Only European merchants",
+          "Travellers, traders, priests and pilgrims",
+          "Only colonial administrators"
+        ],
+        "answer": 2,
+        "explanation": "The NCERT describes travellers, traders, priests and pilgrims as people who carried goods, ideas, skills and beliefs across long distances.",
+        "difficulty": "medium",
+        "sourceVerification": "NCERT India and the Contemporary World-II, Chapter 3: The Making of a Global World, section 1 The Pre-modern World."
       }
     ]
   },
