@@ -21,9 +21,9 @@ assert.deepEqual(socialBlueprint.mcqSubtopicRestrictions["globalisation-and-the-
 assert.deepEqual(socialBlueprint.mcqSubtopicRestrictions["lifelines-of-national-economy"].allowedQuestionTypes,["map-skill"]);
 assert.ok(m.competencies.includes("map-skill"),"the shared generator must support map-skill competency targets");
 const socialMcqPaths=["data/social-science-topics-01-06.json","data/social-science-topics-07-12.json","data/social-science-topics-13-17.json","data/social-science-topics-18-22.json"];
-let socialMcqCount=0,socialNeedsReview=0;
+let socialMcqCount=0,socialNeedsReview=0;const socialChapters=[];
 for(const file of socialMcqPaths){
- const groups=JSON.parse(fs.readFileSync(file,"utf8"));
+ const groups=JSON.parse(fs.readFileSync(file,"utf8"));socialChapters.push(...groups);
  for(const chapter of groups){
   const answerCounts=[0,0,0,0];
   for(const item of chapter.questions||[]){
@@ -43,7 +43,7 @@ assert.equal(socialMcqCount,2216,"the four source files should contain 2,216 Soc
 assert.equal(socialNeedsReview,1673,"all generic template-pattern MCQs should be held for review");
 const boardMcqChapterNos=[1,2,3,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21];
 for(const chapterNo of boardMcqChapterNos){
- const chapter=chapters.find(item=>item.chapter_no===chapterNo);
+ const chapter=socialChapters.find(item=>item.chapter_no===chapterNo);
  assert.ok(chapter,"expected Social Science source chapter "+chapterNo);
  const eligible=chapter.questions.filter(item=>item.competencyTagStatus!=="needs-review").length;
  assert.ok(eligible>=20,"board-scope Social Science chapter "+chapterNo+" must retain at least 20 non-template, non-duplicate candidates; found "+eligible);
