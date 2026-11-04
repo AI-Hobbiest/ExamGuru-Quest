@@ -56,7 +56,7 @@ assert.deepEqual(socialBlueprint.officialAssessmentDesign.longAnswerQuestionNumb
 const socialBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-social-science-2026-27-v1.json","utf8"));
 const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
 assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
-assert.equal(socialBank.questions.length,767,"Social Science bank should contain 626 original candidates, 80 long-answer, 40 map and 21 additional NCERT-verified MCQs");
+assert.equal(socialBank.questions.length,827,"Social Science bank includes 626 source candidates, 21 additional NCERT-verified MCQs, 80 long-answer, 40 map and 60 Economics short-answer candidates");
 assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,767,"Social Science question IDs must be unique");
 assert.equal(socialBank.questions.filter(q=>q.type==="mcq").length,407,"the Social Science board-scope MCQ pool must contain 407 verified candidates");
 assert.ok(socialBank.questions.filter(q=>q.type==="mcq").every(q=>q.approvalStatus==="approved"),"all verified board-scope MCQs must be approved");
@@ -103,12 +103,20 @@ for(const slot of ["q8","q18","q28"]){
  assert.ok(pool.every(q=>q.stimulus&&q.parts?.length===3&&q.parts.reduce((sum,p)=>sum+p.marks,0)===4),"case-based questions need a source and a four-mark part structure");
 }
 const socialShort=socialBank.questions.filter(q=>q.type==="short-answer");
-assert.equal(socialShort.length,40,"two Social Science short-answer slots must each have 20 candidates");
+assert.equal(socialShort.length,100,"five Social Science short-answer slots must each have 20 candidates");
 for(const slot of ["q6","q26"]){
  const pool=socialShort.filter(q=>q.questionId.startsWith("SST10-"+slot.toUpperCase()+"-SA-"));
  assert.equal(pool.length,20,"short-answer slot "+slot+" must contain 20 candidates");
  assert.ok(pool.every(q=>q.marks===3&&q.markingScheme.reduce((sum,m)=>sum+m.marks,0)===3&&q.alternatives?.length===1&&q.alternatives[0].markingScheme.reduce((sum,m)=>sum+m.marks,0)===3),"short-answer internal-choice marking schemes must total three marks");
 }
+for(const [slot,chapter] of [["q35","sectors-of-the-indian-economy"],["q36","money-and-credit"],["q37","globalisation-and-the-indian-economy"]]){
+ const pool=socialShort.filter(q=>q.questionId.startsWith("SST10-"+slot.toUpperCase()+"-SA-"));
+ assert.equal(pool.length,20,"Economics short-answer slot "+slot+" must contain 20 candidates");
+ assert.ok(pool.every(q=>q.chapterId===chapter&&q.unitId==="economics"&&q.approvalStatus==="review"&&q.marks===3&&q.answerKey?.modelAnswer&&q.markingScheme.reduce((sum,m)=>sum+m.marks,0)===3),"Economics candidates must be chapter-mapped, complete and remain review-gated");
+}
+assert.equal(new Set(socialShort.map(q=>q.prompt.toLowerCase().replace(/[^a-z0-9]+/g," ").trim())).size,100,"all 100 Social Science short-answer stems must be distinct");
+for(const id of ["SST10-Q5-VSA-02","SST10-Q5-VSA-04","SST10-Q5-VSA-06","SST10-Q5-VSA-08","SST10-Q5-VSA-10"])assert.equal(socialBank.questions.find(q=>q.questionId===id).chapterId,"the-rise-of-nationalism-in-europe","European-history VSA questions must map to the correct chapter");
+for(const id of ["SST10-Q5-VSA-11","SST10-Q5-VSA-13","SST10-Q5-VSA-15","SST10-Q5-VSA-17","SST10-Q5-VSA-19"])assert.equal(socialBank.questions.find(q=>q.questionId===id).chapterId,"nationalism-in-india","Indian-history VSA questions must map to the correct chapter");
 const socialVsa=socialBank.questions.filter(q=>q.type==="very-short-answer");
 assert.equal(socialVsa.length,80,"four Social Science VSA slots must each have 20 candidates");
 for(const slot of ["q5","q16","q24","q25"]){
@@ -233,9 +241,9 @@ const socialTestBlueprint={...socialBlueprint,status:"ready"};
 const socialTestBank=JSON.parse(JSON.stringify(socialBank));
 const reviewOnlyTypes=["very-short-answer","short-answer","case-based"];
 const reviewOnlyQuestions=socialTestBank.questions.filter(q=>reviewOnlyTypes.includes(q.type)&&q.approvalStatus==="review");
-assert.equal(reviewOnlyQuestions.length,180,"the VSA, short-answer and case-based pools remain explicitly review-gated in production");
+assert.equal(reviewOnlyQuestions.length,240,"the VSA, all five short-answer and case-based pools remain explicitly review-gated in production");
 reviewOnlyQuestions.forEach(question=>{question.approvalStatus="approved";});
-assert.equal(socialBank.questions.filter(q=>reviewOnlyTypes.includes(q.type)&&q.approvalStatus==="review").length,180,"test-only approval must not mutate the production bank fixture");
+assert.equal(socialBank.questions.filter(q=>reviewOnlyTypes.includes(q.type)&&q.approvalStatus==="review").length,240,"test-only approval must not mutate the production bank fixture");
 const socialCoverage=m.auditSlotCoverage(socialTestBlueprint,socialTestBank,20);
 assert.equal(socialCoverage.valid,true,socialCoverage.errors.join("; "));
 assert.equal(socialCoverage.coverage.length,38);
