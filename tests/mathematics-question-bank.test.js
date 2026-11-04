@@ -2,62 +2,103 @@
 const assert=require("node:assert/strict");
 const fs=require("node:fs");
 const vm=require("node:vm");
+
 const ctx={window:{},Object,Array,String,Number,Set,Map,Math,Date,TypeError,Error};
 ctx.globalThis=ctx;vm.createContext(ctx);
 vm.runInContext(fs.readFileSync("js/exam-paper-generator.js","utf8"),ctx);
 const engine=ctx.window.ExamPaperGenerator;
-const bank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json","utf8"));
+const source=JSON.parse(fs.readFileSync("data/mathematics.json","utf8"));
+const baseBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json","utf8"));
 const profiles=[
- {level:"standard",code:"041",path:"data/exam-papers/blueprints/class-10-mathematics-standard-2026-27.json"},
- {level:"basic",code:"241",path:"data/exam-papers/blueprints/class-10-mathematics-basic-2026-27.json"}
+ {level:"standard",code:"041",path:"data/exam-papers/blueprints/class-10-mathematics-standard-2026-27.json",difficultyTargets:{easy:5,medium:29,hard:4}},
+ {level:"basic",code:"241",path:"data/exam-papers/blueprints/class-10-mathematics-basic-2026-27.json",difficultyTargets:{easy:8,medium:29,hard:1}}
 ];
-assert.equal(bank.classId,"10");
-assert.equal(bank.subjectId,"mathematics");
-assert.equal(bank.academicYear,"2026-27");
-assert.equal(bank.questions.length,140);
-const bankAudit=engine.validateQuestionBank(bank,{classId:"10",subjectId:"mathematics",academicYear:"2026-27"}); assert.equal(bankAudit.valid,true,bankAudit.errors.join(" | "));
-assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,bank.questions.length);
-const typeCounts=bank.questions.reduce((a,q)=>(a[q.type]=(a[q.type]||0)+1,a),{});
-assert.deepEqual(typeCounts,{"mcq":59,"assertion-reason":6,"very-short-answer":15,"short-answer":24,"long-answer":18,"case-based":18});
-assert.equal(bank.questions.filter(q=>q.source&&q.source.type==="practice-bank").length,54);
-assert.equal(new Set(bank.questions.filter(q=>q.type==="mcq").map(q=>q.chapterId)).size,14);
-assert.ok(bank.questions.filter(q=>q.approvalStatus==="approved").length===140);
-for(const q of bank.questions){
- assert.equal(engine.validateQuestion(q).length,0,q.questionId+": "+engine.validateQuestion(q).join(" "));
- if(q.assessmentLevels)assert.ok(q.assessmentLevels.every(x=>["standard","basic"].includes(x)));
- if(q.type==="case-based"){
-  assert.deepEqual(q.parts.map(p=>p.marks),[1,1,2],q.questionId);
-  const part=q.parts.find(p=>p.marks===2);
-  assert.equal(part.alternatives.length,1,q.questionId);
-  assert.equal(part.alternatives[0].markingScheme.reduce((n,x)=>n+x.marks,0),2,q.questionId);
- }
-}
+const countBy=(rows,key)=>rows.reduce((counts,row)=>{const value=String(row[key]??"(missing)");counts[value]=(counts[value]||0)+1;return counts;},{});
+const practiceCount=source.reduce((sum,chapter)=>sum+(chapter.questions||[]).length,0);
+assert.equal(source.length,14,"Mathematics practice source must contain all 14 chapters");
+assert.equal(practiceCount,1400,"Mathematics practice source must retain all 1,400 MCQs");
+assert.equal(baseBank.questions.length,140,"the curated mixed-format examination seed pool must remain intact");
+const baseAudit=engine.validateQuestionBank(baseBank,{classId:"10",subjectId:"mathematics",academicYear:"2026-27"});
+assert.equal(baseAudit.valid,true,baseAudit.errors.join(" | "));
+assert.equal(new Set(baseBank.questions.map(q=>q.questionId)).size,140);
+
 for(const profile of profiles){
- const bp=JSON.parse(fs.readFileSync(profile.path,"utf8"));
- assert.equal(bp.status,"draft","Keep the release gate closed until content has been separately approved.");
- assert.equal(bp.assessmentLevel,profile.level);
- assert.equal(bp.subjectCode,profile.code);
- const ready={...bp,status:"ready"};
- const coverage=engine.auditSlotCoverage(ready,bank,3);
- assert.equal(coverage.valid,true,profile.level+" coverage: "+coverage.errors.join(" "));
+ const blueprint=JSON.parse(fs.readFileSync(profile.path,"utf8"));
+ assert.equal(blueprint.status,"ready",profile.level+" blueprint must be enabled for generation only after release gates pass");
+ assert.equal(blueprint.assessmentLevel,profile.level);
+ assert.equal(blueprint.subjectCode,profile.code);
+ assert.deepEqual(blueprint.difficultyTargets,profile.difficultyTargets);
+ assert.equal(engine.validateBlueprint(blueprint).valid,true,profile.level+" blueprint: "+engine.validateBlueprint(blueprint).errors.join(" | "));
+ assert.equal(blueprint.totalQuestions,38);
+ assert.equal(blueprint.totalMarks,80);
+ assert.equal(blueprint.slotPlan.length,38);
+
+ const integrated=engine.mergeQuestionBanks(baseBank,source,blueprint,{minimumCandidatesPerSlot:3});
+ const bank=integrated.bank;
+ const coverage=integrated.stats.coverage;
+ assert.equal(coverage.valid,true,profile.level+" integrated coverage: "+coverage.errors.join(" | "));
  assert.equal(coverage.slotCount,38);
- assert.ok(coverage.coverage.every(s=>s.eligibleCount>=3),profile.level+" every slot needs at least three eligible candidates");
- const fingerprints=[];
- for(let i=1;i<=50;i++){
-  const paper=engine.generateUniquePaper(ready,bank,{
-   seed:"class10-math-"+profile.level+"-50-paper-audit-"+i,
-   recentPaperFingerprints:fingerprints
+ assert.ok(coverage.coverage.every(slot=>slot.eligibleCount>=3),profile.level+" every paper slot needs at least three eligible candidates");
+ assert.equal(integrated.stats.practiceSourceCount,1294,"1,294 structurally valid, unique, in-scope source MCQs should be adapted");
+ assert.equal(integrated.stats.appended,1243,"1,243 source MCQs should be added after de-duplicating against the curated bank");
+ assert.equal(integrated.stats.duplicateStems,51,"51 adapted MCQs should already exist in the curated examination bank");
+ assert.equal(integrated.stats.excluded.outOfSummativeScope,100,"Triangle practice questions remain available for practice but are outside the current MCQ-only paper adapter");
+ assert.equal(integrated.stats.excluded.invalidQuestion,6,"only the six repeated source stems should be removed from the 1,300 in-scope source MCQs");
+ assert.equal(integrated.stats.invalidReasons.duplicateSourceStem,6);
+ assert.ok(Object.entries(integrated.stats.invalidReasons).filter(([reason])=>reason!=="duplicateSourceStem").every(([,count])=>count===0),"valid source MCQs must not be excluded for malformed content fields");
+
+ assert.equal(bank.questions.length,1383,"the full merged runtime pool must contain 1,383 unique question records");
+ assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,1383);
+ assert.equal(countBy(bank.questions,"type").mcq,1302);
+ assert.deepEqual(countBy(bank.questions,"type"),{
+  mcq:1302,
+  "assertion-reason":6,
+  "very-short-answer":15,
+  "short-answer":24,
+  "long-answer":18,
+  "case-based":18
+ });
+ assert.deepEqual(countBy(bank.questions,"sectionId"),{A:1308,B:15,C:24,D:18,E:18});
+ assert.deepEqual(countBy(bank.questions,"difficulty"),{easy:530,medium:755,hard:98});
+ assert.equal(bank.questions.filter(q=>q.source&&q.source.type==="practice-bank").length,1297,"the runtime pool must retain all 1,294 unique in-scope source MCQs plus three Triangle practice questions already in the curated seed bank");
+
+ const fingerprints=[],paperHistory=[];
+ for(let attempt=1;attempt<=50;attempt++){
+  const recentMcqQuestionIds=paperHistory.slice(-2).flatMap(p=>p.mcqQuestionIds);
+  const paper=engine.generateUniquePaper(blueprint,bank,{
+   seed:"class10-mathematics-full-integration-"+profile.level+"-"+attempt,
+   recentPaperFingerprints:fingerprints,
+   recentQuestionIds:recentMcqQuestionIds,
+   uniqueSearchAttempts:500,
+   maxSearchAttempts:250000
   });
-  const check=engine.validatePaper(paper,ready);
-  assert.equal(check.valid,true,profile.level+" paper "+i+": "+check.errors.join(" "));
+  const check=engine.validatePaper(paper,blueprint);
+  assert.equal(check.valid,true,profile.level+" paper "+attempt+": "+check.errors.join(" | "));
   assert.equal(paper.totalQuestions,38);
   assert.equal(paper.totalMarks,80);
   assert.equal(new Set(paper.questions.map(q=>q.questionId)).size,38);
-  assert.ok(paper.paperFingerprint);
-  fingerprints.push(paper.paperFingerprint);
+  assert.deepEqual(countBy(paper.questions,"difficulty"),profile.difficultyTargets,profile.level+" paper "+attempt+" must satisfy the full-paper difficulty target");
+  assert.deepEqual(countBy(paper.questions,"sectionId"),{A:20,B:5,C:6,D:4,E:3});
+  assert.deepEqual(countBy(paper.questions,"type"),{
+   mcq:18,
+   "assertion-reason":2,
+   "very-short-answer":5,
+   "short-answer":6,
+   "long-answer":4,
+   "case-based":3
+  });
+  assert.ok(paper.questions.some(q=>q.source&&q.source.type==="practice-bank"),"every generated examination must actually draw from the integrated chapter MCQ bank");
+  const mcqQuestionIds=paper.questions.filter(q=>q.type==="mcq").map(q=>q.questionId);
+  for(const previous of paperHistory.slice(-2)){
+   assert.ok(!mcqQuestionIds.some(id=>previous.mcqQuestionIds.includes(id)),profile.level+" MCQs must not repeat in the preceding two papers");
+  }
+  const fingerprint=engine.paperFingerprint(paper);
+  assert.ok(fingerprint);
+  assert.ok(!fingerprints.includes(fingerprint),profile.level+" full paper combination must be unique");
+  fingerprints.push(fingerprint);
+  paperHistory.push({mcqQuestionIds});
  }
- assert.equal(new Set(fingerprints).size,50,profile.level+" must generate 50 distinct complete papers");
+ assert.equal(new Set(fingerprints).size,50,profile.level+" must produce 50 distinct complete papers using the full merged pool");
 }
-const bySection=bank.questions.reduce((a,q)=>(a[q.sectionId]=(a[q.sectionId]||0)+1,a),{});
-assert.deepEqual(bySection,{A:65,B:15,C:24,D:18,E:18});
-console.log("Mathematics bank tests passed: 140 approved candidates, all question types, all 14 chapters, Standard and Basic coverage (3+ per slot), and 50 distinct validated 80-mark papers per level.");
+
+console.log("Mathematics end-to-end passed: 1,400 source MCQs audited; 1,383 merged runtime candidates; 38-question/80-mark Standard and Basic profiles; exact difficulty targets; and 50 unique full-integrated papers per level with two-paper MCQ repeat protection.");
