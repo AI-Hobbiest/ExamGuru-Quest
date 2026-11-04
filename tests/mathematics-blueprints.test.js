@@ -25,6 +25,7 @@ for(const profile of profiles){
  assert.deepEqual(blueprint.slotPlan.map(slot=>slot.questionNumber),Array.from({length:38},(_,i)=>i+1));
  assert.deepEqual([...new Set(blueprint.slotPlan.flatMap(slot=>slot.chapterIds||[]))].sort(),chapters.slice().sort());
  assert.deepEqual(blueprint.difficultyTargets,profile.level==="standard"?{easy:5,medium:29,hard:4}:{easy:8,medium:29,hard:1});
+ assert.deepEqual(blueprint.mcqPracticeExclusions,["triangles"],"Triangle MCQs stay in practice but outside the exam MCQ adapter.");
  const check=generator.validateBlueprint(blueprint);
  assert.equal(check.valid,true,check.errors.join(" "));
  assert.equal(check.readyForGeneration,true);
