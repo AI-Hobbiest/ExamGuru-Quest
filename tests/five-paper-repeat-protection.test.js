@@ -13,7 +13,7 @@ assert.ok(engine && typeof engine.generateUniquePaper === "function", "Exam pape
 function runSequence(label, blueprint, mergedBank, count = 50) {
   const coverage = engine.auditSlotCoverage(blueprint, mergedBank, 20);
   const gaps = coverage.coverage.filter(slot => slot.eligibleCount < 20);
-  assert.deepEqual(gaps, [], label + " must have at least 20 eligible candidates for every blueprint slot");
+  assert.equal(gaps.length, 0, label + " must have at least 20 eligible candidates for every blueprint slot");
   const history = [];
   for (let index = 0; index < count; index++) {
     const previous = history.slice(-5);
