@@ -216,7 +216,7 @@
       const bc=g.validateBlueprint(blueprint),qc=g.validateQuestionBank(base,{classId:blueprint.classId,subjectId:blueprint.subjectId,academicYear:blueprint.academicYear});
       if(!bc.valid||!bc.readyForGeneration)throw new Error("The selected blueprint is not approved for generation: "+bc.errors.slice(0,4).join(" "));
       if(!qc.valid)throw new Error("The selected question pool is invalid: "+qc.errors.slice(0,5).join(" "));
-      const integrated=g.mergeQuestionBanks(base,practice,blueprint,{minimumCandidatesPerSlot:profile.minimumCandidatesPerSlot||3});
+      const integrated=g.mergeQuestionBanks(base,practice,blueprint,{minimumCandidatesPerSlot:profile.minimumCandidatesPerSlot||20});
       bank=integrated.bank;
       const coverage=g.auditSlotCoverage(blueprint,bank,profile.minimumCandidatesPerSlot||3);
       if(!coverage.valid)throw new Error("The integrated question pool does not meet minimum candidate coverage: "+coverage.errors.slice(0,4).join(" "));
@@ -243,12 +243,12 @@
     generate.addEventListener("click",()=>{
       try{
         if(!profile||!blueprint||!bank)throw new Error("The selected approved paper pool has not finished loading.");
-        const g=generator(),rows=readHistory(),recentMcqs=rows.slice(-2).flatMap(x=>x.mcqQuestionIds||[]);
+        const g=generator(),rows=readHistory(),recentQuestionIdSets=rows.slice(-5).map(x=>x.questionIds||[]);
         paper=g.generateUniquePaper(blueprint,bank,{
           seed:"parent-paper-"+profile.profileId+"-"+Date.now()+"-"+Math.random().toString(36).slice(2),
           title:profile.title+" · "+(child.displayName||child.username),
           recentPaperFingerprints:rows.map(x=>x.fingerprint||JSON.stringify(x.questionIds||[])),
-          recentQuestionIds:recentMcqs,uniqueSearchAttempts:500
+          recentQuestionIdSets,uniqueSearchAttempts:500
         });
         paper.deliveryMode=delivery.value;
         const dueAt=due.value?new Date(due.value).toISOString():null;
