@@ -38,7 +38,7 @@ for(const q of bank.questions){
 }
 const qcheck=g.validateQuestionBank(bank,{academicYear:"2026-27"});
 assert.equal(qcheck.valid,true,qcheck.errors.join("; "));
-assert.equal(bank.questions.length,117);
+assert.equal(bank.questions.length, 508);
 assert.equal(g.auditSlotCoverage(blueprint,bank,3).valid,true,g.auditSlotCoverage(blueprint,bank,3).errors.join("; "));
 assert.ok(g.auditSlotCoverage(blueprint,bank,3).coverage.every(slot=>slot.eligibleCount>=3));
 assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,117);
