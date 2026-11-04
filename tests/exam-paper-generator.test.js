@@ -265,7 +265,8 @@ for(let attempt=1;attempt<=6;attempt++){
   assert.equal(currentIds.some(id=>previousIds.includes(id)),false,"no question of any format may reappear in the preceding five papers");
  }
  assert.equal(generated.repeatProtection.requestedWindow,5);
- assert.equal(generated.repeatProtection.appliedWindow,5,"all five previous papers must remain protected when the eligible pools support it");
+ assert.equal(generated.repeatProtection.appliedWindow,Math.min(5,socialPaperHistory.length),"the generator must protect every available prior paper up to the five-paper limit");
+ assert.equal(generated.repeatProtection.fallback,false,"the test fixture must not need to relax its available repeat-protection window");
  socialPaperHistory.push(currentIds);
  socialFingerprintHistory.push(generated.paperFingerprint);
 }
