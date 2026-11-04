@@ -63,7 +63,7 @@ const mcqSlots=blueprint.slotPlan.filter(slot=>slot.allowedTypes.includes("mcq")
 assert.equal(mcqSlots.length,16,"the blueprint currently has 16 MCQ slots");
 const mcqCoverage=integrated.stats.coverage.coverage.filter(slot=>mcqSlots.some(mcq=>mcq.slotId===slot.slotId));
 assert.equal(mcqCoverage.length,16);
-assert.ok(mcqCoverage.every(slot=>slot.eligibleCount>=3),"every MCQ slot needs at least three eligible questions");
+assert.ok(mcqCoverage.every(slot=>slot.eligibleCount>=20),"every MCQ slot needs at least twenty eligible questions");
 const paperFingerprints=[],paperHistory=[];
 for(let attempt=1;attempt<=50;attempt++){
  const recentMcqQuestionIds=paperHistory.slice(-2).flatMap(p=>p.mcqQuestionIds);
@@ -78,5 +78,5 @@ for(let attempt=1;attempt<=50;attempt++){
  paperHistory.push({mcqQuestionIds});
 }
 assert.equal(new Set(paperFingerprints).size,50);
-console.log("Science integration passed: 14 chapter sets / 1,400 practice MCQs; "+integrated.stats.appended+" competency-tagged existing MCQs reused (needs educator review: "+integrated.stats.excluded.needsReview+"); "+imported.length+" carry traceable source IDs; "+mcqCoverage.length+" MCQ slots have 3+ eligible candidates; 50 distinct integrated papers generated. MCQ slot coverage: "+mcqCoverage.map(x=>x.questionNumber+":"+x.eligibleCount).join(", ")+".");
+console.log("Science integration passed: 14 chapter sets / 1,400 practice MCQs; "+integrated.stats.appended+" competency-tagged existing MCQs reused (needs educator review: "+integrated.stats.excluded.needsReview+"); "+imported.length+" carry traceable source IDs; "+mcqCoverage.length+" MCQ slots have 20+ eligible candidates; 50 distinct integrated papers generated. MCQ slot coverage: "+mcqCoverage.map(x=>x.questionNumber+":"+x.eligibleCount).join(", ")+".");
 
