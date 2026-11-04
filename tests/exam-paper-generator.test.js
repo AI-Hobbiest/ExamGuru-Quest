@@ -40,8 +40,8 @@ for(const file of socialMcqPaths){
   assert.ok(Math.max(...answerCounts)-Math.min(...answerCounts)<=1,"each Social Science chapter set must have balanced correct-answer positions");
  }
 }
-assert.equal(socialMcqCount,2216,"the four source files should contain 2,216 Social Science MCQs after NCERT-verified replacement additions");
-assert.equal(socialNeedsReview,1673,"all generic template-pattern MCQs should be held for review");
+assert.equal(socialMcqCount,2200,"the four source files should contain exactly 100 Social Science MCQs in each of 22 topics");
+assert.equal(socialNeedsReview,1657,"remaining generic template-pattern practice MCQs should stay held for review");
 const boardMcqChapterNos=[1,2,3,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21];
 for(const chapterNo of boardMcqChapterNos){
  const chapter=socialChapters.find(item=>item.chapter_no===chapterNo);
