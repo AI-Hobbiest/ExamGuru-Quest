@@ -56,10 +56,19 @@ assert.deepEqual(socialBlueprint.officialAssessmentDesign.longAnswerQuestionNumb
 const socialBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-social-science-2026-27-v1.json","utf8"));
 const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
 assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
-assert.equal(socialBank.questions.length,386,"the draft Social Science bank should import 386 board-scope MCQ candidates");
+assert.equal(socialBank.questions.length,446,"the draft Social Science bank should contain 386 board-scope MCQs and 60 Assertion–Reason candidates");
 assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,386,"Social Science imported question IDs must be unique");
 assert.ok(socialBank.questions.every(q=>q.approvalStatus==="review"),"imported Social Science questions must remain in educator review until explicitly approved");
 assert.ok(socialBank.questions.every(q=>!["the-age-of-industrialisation","lifelines-of-national-economy","consumer-rights"].includes(q.chapterId)),"excluded or map-only chapters must not enter the MCQ examination bank");
+const socialAr=socialBank.questions.filter(q=>q.type==="assertion-reason");
+assert.equal(socialAr.length,60,"three Social Science assertion-reason slots must each have 20 candidates");
+for(const chapterId of ["manufacturing-industries","power-sharing","globalisation-and-the-indian-economy"]){
+ const pool=socialAr.filter(q=>q.chapterId===chapterId);
+ assert.equal(pool.length,20,"Assertion–Reason pool "+chapterId+" must contain 20 candidates");
+ assert.ok(pool.every(q=>q.assertionReason&&q.assertionReason.assertion&&q.assertionReason.reason),"Assertion–Reason candidates need separate assertion and reason fields");
+ const distribution=["A","B","C","D"].map(answer=>pool.filter(q=>q.correctOptionId===answer).length);
+ assert.deepEqual(distribution,[5,5,5,5],"Assertion–Reason answer categories must be balanced for "+chapterId);
+}
 assert.deepEqual(socialBank.generationDesign.repeatProtection.includes("five-paper"),true);
 for(const restricted of ["the-age-of-industrialisation","consumer-rights"]){
  assert.ok(socialBlueprint.mcqPracticeExclusions.includes(restricted),"non-board chapter "+restricted+" must not be auto-imported into the MCQ pool");
