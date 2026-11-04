@@ -3,6 +3,16 @@ const assert=require("node:assert/strict"),fs=require("node:fs"),vm=require("nod
 const ctx={window:{},Object,Array,String,Number,Set,Map,Math,Date,TypeError,Error};ctx.globalThis=ctx;vm.createContext(ctx);
 vm.runInContext(fs.readFileSync("js/exam-paper-generator.js","utf8"),ctx);
 const m=ctx.window.C10ExamPaperGenerator;
+const socialBlueprint=JSON.parse(fs.readFileSync("data/exam-papers/blueprints/class-10-social-science-2026-27.json","utf8"));
+const socialCheck=m.validateBlueprint(socialBlueprint);
+assert.equal(socialCheck.valid,true,socialCheck.errors.join("; "));
+assert.equal(socialBlueprint.status,"draft","Social Science remains locked until its content audit and slot-depth gate pass");
+assert.equal(socialBlueprint.totalQuestions,38);
+assert.equal(socialBlueprint.totalMarks,80);
+assert.equal(socialBlueprint.slotPlan.length,38);
+assert.deepEqual(socialBlueprint.sections.map(s=>s.totalMarks),[20,20,20,20]);
+assert.deepEqual(socialBlueprint.competencyMarksTargets,{"knowledge-understanding":24,application:11,"analysis-evaluation-creation":40,"map-skill":5});
+assert.equal(socialBlueprint.slotPlan.filter(s=>s.competency==="map-skill").length,2);
 const production=JSON.parse(fs.readFileSync("data/exam-papers/blueprints/class-10-science-2026-27.json","utf8"));
 const pcheck=m.validateBlueprint(production);assert.equal(pcheck.valid,true);assert.equal(pcheck.readyForGeneration,true);
 assert.throws(()=>m.generatePaper(production,{schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subjectId:"science",academicYear:"2026-27",bankVersion:"x",questions:[]}),/Question pool shortage/);
