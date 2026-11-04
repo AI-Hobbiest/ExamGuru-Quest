@@ -235,7 +235,13 @@ function generateUniquePaper(bp,bank,options={}){
     }
     throw error;
    }
-   const fingerprint=paperFingerprint(paper);
+   const repeatProtectionGuard=recentIds.length>0&&(paper.questions||[]).some(question=>recentIds.includes(String(question.questionId)));
+    if(repeatProtectionGuard){
+     lastShortage=new Error("Question pool shortage: generated paper contains a question used in the protected recent-paper window.");
+     selectionShortage=true;
+     break;
+    }
+    const fingerprint=paperFingerprint(paper);
    if(fingerprint&&!recent.has(fingerprint)){
     paper.paperFingerprint=fingerprint;
     paper.repeatProtection={requestedWindow:5,appliedWindow:window,availableHistory:historySets.length,fallback:window<Math.min(5,historySets.length)};
