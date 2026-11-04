@@ -47,4 +47,5 @@ jobs:
       - name: Install Playwright Chromium for Mathematics browser QA
         run: npm install --no-save playwright && npx playwright install --with-deps chromium
       - name: Smoke-test online Mathematics Standard and Basic examinations
-        run: node tests/mathematics-browser-smoke.test.js
+        run: node tests/five-paper-repeat-protection.test.js
+          node tests/mathematics-browser-smoke.test.js
