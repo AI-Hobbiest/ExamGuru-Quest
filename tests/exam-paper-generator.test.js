@@ -13,6 +13,31 @@ assert.equal(socialBlueprint.slotPlan.length,38);
 assert.deepEqual(socialBlueprint.sections.map(s=>s.totalMarks),[20,20,20,20]);
 assert.deepEqual(socialBlueprint.competencyMarksTargets,{"knowledge-understanding":24,application:11,"analysis-evaluation-creation":40,"map-skill":5});
 assert.equal(socialBlueprint.slotPlan.filter(s=>s.competency==="map-skill").length,2);
+assert.ok(m.competencies.includes("map-skill"),"the shared generator must support map-skill competency targets");
+const socialMcqPaths=["data/social-science-topics-01-06.json","data/social-science-topics-07-12.json","data/social-science-topics-13-17.json","data/social-science-topics-18-22.json"];
+let socialMcqCount=0,socialNeedsReview=0;
+for(const file of socialMcqPaths){
+ const groups=JSON.parse(fs.readFileSync(file,"utf8"));
+ for(const chapter of groups){
+  const answerCounts=[0,0,0,0];
+  for(const item of chapter.questions||[]){
+   socialMcqCount++;
+   assert.equal(item.options.length,4,"Social Science MCQs must retain four options");
+   assert.ok(Number.isInteger(item.answer)&&item.answer>=0&&item.answer<4,"Social Science MCQ answer index must remain valid");
+   answerCounts[item.answer]++;
+   if(/^(Which statement best describes|What is a key feature or consequence|How is .* best understood|Which description of .* is accurate)/i.test(item.question||"")){
+    assert.equal(item.competencyTagStatus,"needs-review","generic templated Social Science stems must be held out of exam-paper integration");
+    socialNeedsReview++;
+   }
+  }
+  assert.ok(Math.max(...answerCounts)-Math.min(...answerCounts)<=1,"each Social Science chapter set must have balanced correct-answer positions");
+ }
+}
+assert.equal(socialMcqCount,2200,"the four source files should contain 2,200 Social Science MCQs");
+assert.equal(socialNeedsReview,1673,"all generic template-pattern MCQs should be held for review");
+for(const restricted of ["the-making-of-a-global-world","globalisation-and-the-indian-economy","the-age-of-industrialisation","lifelines-of-national-economy","consumer-rights"]){
+ assert.ok(socialBlueprint.mcqPracticeExclusions.includes(restricted),"restricted or non-board chapter "+restricted+" must not be auto-imported into the MCQ pool");
+}
 const production=JSON.parse(fs.readFileSync("data/exam-papers/blueprints/class-10-science-2026-27.json","utf8"));
 const pcheck=m.validateBlueprint(production);assert.equal(pcheck.valid,true);assert.equal(pcheck.readyForGeneration,true);
 assert.throws(()=>m.generatePaper(production,{schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subjectId:"science",academicYear:"2026-27",bankVersion:"x",questions:[]}),/Question pool shortage/);
