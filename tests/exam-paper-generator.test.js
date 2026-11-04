@@ -13,8 +13,12 @@ assert.equal(socialBlueprint.slotPlan.length,38);
 assert.deepEqual(socialBlueprint.sections.map(s=>s.totalMarks),[20,20,20,20]);
 assert.equal(socialBlueprint.slotPlan.filter(s=>s.competency==="map-skill").length,2);
 assert.deepEqual(socialBlueprint.officialAssessmentDesign.internalChoiceQuestionNumbers,[6,7,17,27,38]);
-assert.deepEqual(socialBlueprint.officialAssessmentDesign.caseBasedQuestionNumbers,[8,18,28,38]);
-assert.deepEqual(socialBlueprint.slotPlan.find(s=>s.questionNumber===38).allowedTypes,["case-based"]);
+assert.deepEqual(socialBlueprint.officialAssessmentDesign.caseBasedQuestionNumbers,[8,18,28]);
+assert.deepEqual(socialBlueprint.slotPlan.find(s=>s.questionNumber===38).allowedTypes,["long-answer"]);
+assert.deepEqual(socialBlueprint.mcqPracticeExclusions,["the-age-of-industrialisation","consumer-rights"]);
+assert.deepEqual(socialBlueprint.mcqSubtopicRestrictions["the-making-of-a-global-world"].allowedSubtopics,["1","1.1","1.2","1.3"]);
+assert.deepEqual(socialBlueprint.mcqSubtopicRestrictions["globalisation-and-the-indian-economy"].allowedSubtopics,["what-is-globalisation","factors-that-have-enabled-globalisation"]);
+assert.deepEqual(socialBlueprint.mcqSubtopicRestrictions["lifelines-of-national-economy"].allowedQuestionTypes,["map-skill"]);
 assert.ok(m.competencies.includes("map-skill"),"the shared generator must support map-skill competency targets");
 const socialMcqPaths=["data/social-science-topics-01-06.json","data/social-science-topics-07-12.json","data/social-science-topics-13-17.json","data/social-science-topics-18-22.json"];
 let socialMcqCount=0,socialNeedsReview=0;
@@ -37,8 +41,8 @@ for(const file of socialMcqPaths){
 }
 assert.equal(socialMcqCount,2200,"the four source files should contain 2,200 Social Science MCQs");
 assert.equal(socialNeedsReview,1673,"all generic template-pattern MCQs should be held for review");
-for(const restricted of ["the-making-of-a-global-world","globalisation-and-the-indian-economy","the-age-of-industrialisation","lifelines-of-national-economy","consumer-rights"]){
- assert.ok(socialBlueprint.mcqPracticeExclusions.includes(restricted),"restricted or non-board chapter "+restricted+" must not be auto-imported into the MCQ pool");
+for(const restricted of ["the-age-of-industrialisation","consumer-rights"]){
+ assert.ok(socialBlueprint.mcqPracticeExclusions.includes(restricted),"non-board chapter "+restricted+" must not be auto-imported into the MCQ pool");
 }
 const production=JSON.parse(fs.readFileSync("data/exam-papers/blueprints/class-10-science-2026-27.json","utf8"));
 const pcheck=m.validateBlueprint(production);assert.equal(pcheck.valid,true);assert.equal(pcheck.readyForGeneration,true);
