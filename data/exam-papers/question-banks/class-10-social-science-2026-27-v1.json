@@ -32606,14 +32606,14 @@
         },
         {
           "partId": "b",
-          "prompt": "Name either of the other two categories in the case.",
+          "prompt": "Name one of the other forest categories described in the case.",
           "marks": 1,
           "answerKey": {
             "modelAnswer": "Protected forests or unclassed forests."
           },
           "markingScheme": [
             {
-              "criterion": "Protected forests or unclassed forests",
+              "criterion": "Names protected forests or unclassed forests",
               "marks": 1
             }
           ]
