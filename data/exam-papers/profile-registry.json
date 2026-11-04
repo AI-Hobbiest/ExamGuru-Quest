@@ -16,7 +16,7 @@
       "blueprintUrl": "./data/exam-papers/blueprints/class-10-science-2026-27.json",
       "questionBankUrl": "./data/exam-papers/question-banks/class-10-science-2026-27-v1.json",
       "practiceBankUrl": "./data/science.json",
-      "minimumCandidatesPerSlot": 3
+      "minimumCandidatesPerSlot": 20
     },
     {
       "profileId": "class-10-mathematics-standard-2026-27",
@@ -31,7 +31,7 @@
       "description": "CBSE Class 10 Mathematics Standard (041), 2026–27. Full chapter MCQ bank integrated; 50-paper generation, difficulty calibration and browser smoke checks passed.",
       "blueprintUrl": "./data/exam-papers/blueprints/class-10-mathematics-standard-2026-27.json",
       "questionBankUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",
-      "minimumCandidatesPerSlot": 3,
+      "minimumCandidatesPerSlot": 20,
       "practiceBankUrl": "./data/mathematics.json"
     },
     {
@@ -47,7 +47,7 @@
       "description": "CBSE Class 10 Mathematics Basic (241), 2026–27. Full chapter MCQ bank integrated; 50-paper generation, difficulty calibration and browser smoke checks passed.",
       "blueprintUrl": "./data/exam-papers/blueprints/class-10-mathematics-basic-2026-27.json",
       "questionBankUrl": "./data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",
-      "minimumCandidatesPerSlot": 3,
+      "minimumCandidatesPerSlot": 20,
       "practiceBankUrl": "./data/mathematics.json"
     }
   ]
