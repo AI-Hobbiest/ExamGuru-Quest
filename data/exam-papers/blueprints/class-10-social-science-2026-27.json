@@ -73,8 +73,8 @@
   "officialAssessmentDesign": {
     "questionCounts": {
       "one-mark-mcq-and-assertion-reason": 20,
-      "very-short-answer": 4,
-      "short-answer": 5,
+      "two-mark-very-short-answer": 4,
+      "three-mark-short-answer": 5,
       "four-mark-case-based": 3,
       "five-mark-long-answer": 4,
       "map-based": 2
@@ -120,8 +120,7 @@
     "caseBasedQuestionNumbers": [
       8,
       18,
-      28,
-      38
+      28
     ]
   },
   "syllabusScope": {
