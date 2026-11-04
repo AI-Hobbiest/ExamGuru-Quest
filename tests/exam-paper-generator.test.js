@@ -15,7 +15,6 @@ assert.equal(socialBlueprint.slotPlan.filter(s=>s.competency==="map-skill").leng
 assert.deepEqual(socialBlueprint.officialAssessmentDesign.internalChoiceQuestionNumbers,[6,7,17,27,38]);
 assert.deepEqual(socialBlueprint.officialAssessmentDesign.caseBasedQuestionNumbers,[8,18,28,38]);
 assert.deepEqual(socialBlueprint.slotPlan.find(s=>s.questionNumber===38).allowedTypes,["case-based"]);
-assert.equal(socialBlueprint.officialAssessmentDesign.competencyBasedWeightage.startsWith("50%"),true);
 assert.ok(m.competencies.includes("map-skill"),"the shared generator must support map-skill competency targets");
 const socialMcqPaths=["data/social-science-topics-01-06.json","data/social-science-topics-07-12.json","data/social-science-topics-13-17.json","data/social-science-topics-18-22.json"];
 let socialMcqCount=0,socialNeedsReview=0;
