@@ -17,10 +17,10 @@ const countBy=(rows,key)=>rows.reduce((counts,row)=>{const value=String(row[key]
 const practiceCount=source.reduce((sum,chapter)=>sum+(chapter.questions||[]).length,0);
 assert.equal(source.length,14,"Mathematics practice source must contain all 14 chapters");
 assert.equal(practiceCount,1400,"Mathematics practice source must retain all 1,400 MCQs");
-assert.equal(baseBank.questions.length,482,"the curated mixed-format examination seed pool must remain intact");
+assert.equal(baseBank.questions.length,601,"the curated mixed-format examination seed pool must include the approved Basic slot-depth additions");
 const baseAudit=engine.validateQuestionBank(baseBank,{classId:"10",subjectId:"mathematics",academicYear:"2026-27"});
 assert.equal(baseAudit.valid,true,baseAudit.errors.join(" | "));
-assert.equal(new Set(baseBank.questions.map(q=>q.questionId)).size,482,"the curated mixed-format seed pool must have unique IDs");
+assert.equal(new Set(baseBank.questions.map(q=>q.questionId)).size,601,"the curated mixed-format seed pool must have unique IDs");
 
 for(const profile of profiles){
  const blueprint=JSON.parse(fs.readFileSync(profile.path,"utf8"));
@@ -55,11 +55,11 @@ for(const profile of profiles){
   mcq:1304,
   "assertion-reason":40,
   "very-short-answer":100,
-  "short-answer":126,
-  "long-answer":86,
-  "case-based":69
+  "short-answer":160,
+  "long-answer":120,
+  "case-based":120
  });
- assert.deepEqual(countBy(bank.questions,"sectionId"),{A:1344,B:100,C:126,D:86,E:69});
+ assert.deepEqual(countBy(bank.questions,"sectionId"),{A:1344,B:100,C:160,D:120,E:120});
  const difficultyCounts=countBy(bank.questions,"difficulty");
  assert.deepEqual(Object.keys(difficultyCounts).sort(),["easy","hard","medium"]);
  assert.equal(Object.values(difficultyCounts).reduce((sum,count)=>sum+count,0),bank.questions.length);
@@ -105,4 +105,4 @@ for(const profile of profiles){
  assert.equal(new Set(fingerprints).size,50,profile.level+" must produce 50 distinct complete papers using the full merged pool");
 }
 
-console.log("Mathematics end-to-end passed: 1,400 source MCQs audited; 1,725 unique merged runtime candidates; 38-question/80-mark Standard and Basic profiles; exact difficulty targets; and 50 unique full-integrated papers per level with two-paper MCQ repeat protection.");
+console.log("Mathematics end-to-end passed: 1,400 source MCQs audited; 1,844 unique merged runtime candidates; 38-question/80-mark Standard and Basic profiles; exact difficulty targets; and 50 unique full-integrated papers per level with two-paper MCQ repeat protection.");
