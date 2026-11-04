@@ -3,6 +3,173 @@ const assert=require("node:assert/strict"),fs=require("node:fs"),vm=require("nod
 const ctx={window:{},Object,Array,String,Number,Set,Map,Math,Date,TypeError,Error};ctx.globalThis=ctx;vm.createContext(ctx);
 vm.runInContext(fs.readFileSync("js/exam-paper-generator.js","utf8"),ctx);
 const m=ctx.window.C10ExamPaperGenerator;
+const socialBlueprint=JSON.parse(fs.readFileSync("data/exam-papers/blueprints/class-10-social-science-2026-27.json","utf8"));
+const socialCheck=m.validateBlueprint(socialBlueprint);
+assert.equal(socialCheck.valid,true,socialCheck.errors.join("; "));
+assert.equal(socialBlueprint.status,"ready","Social Science is enabled only after the production bank and slot-depth gates pass");
+assert.equal(socialBlueprint.totalQuestions,38);
+assert.equal(socialBlueprint.totalMarks,80);
+assert.deepEqual(socialBlueprint.markDistribution,{"1":20,"2":5,"3":6,"4":3,"5":4},"mark distribution must include both map-skill questions");
+assert.equal(socialBlueprint.slotPlan.length,38);
+assert.deepEqual(socialBlueprint.sections.map(s=>s.totalMarks),[20,20,20,20]);
+assert.equal(socialBlueprint.slotPlan.filter(s=>s.competency==="map-skill").length,2);
+assert.deepEqual(socialBlueprint.officialAssessmentDesign.internalChoiceQuestionNumbers,[6,7,17,27,38]);
+assert.deepEqual(socialBlueprint.officialAssessmentDesign.caseBasedQuestionNumbers,[8,18,28]);
+assert.deepEqual(socialBlueprint.slotPlan.find(s=>s.questionNumber===38).allowedTypes,["long-answer"]);
+assert.deepEqual(socialBlueprint.mcqPracticeExclusions,["the-age-of-industrialisation","consumer-rights"]);
+assert.deepEqual(socialBlueprint.mcqSubtopicRestrictions["the-making-of-a-global-world"].allowedSubtopics,["1","1.1","1.2","1.3"]);
+assert.deepEqual(socialBlueprint.mcqSubtopicRestrictions["globalisation-and-the-indian-economy"].allowedSubtopics,["what-is-globalisation","factors-that-have-enabled-globalisation"]);
+assert.deepEqual(socialBlueprint.mcqSubtopicRestrictions["lifelines-of-national-economy"].allowedQuestionTypes,["map-skill"]);
+assert.ok(m.competencies.includes("map-skill"),"the shared generator must support map-skill competency targets");
+const socialMcqPaths=["data/social-science-topics-01-06.json","data/social-science-topics-07-12.json","data/social-science-topics-13-17.json","data/social-science-topics-18-22.json"];
+let socialMcqCount=0,socialNeedsReview=0;const socialChapters=[];
+for(const file of socialMcqPaths){
+ const groups=JSON.parse(fs.readFileSync(file,"utf8"));socialChapters.push(...groups);
+ for(const chapter of groups){
+  const answerCounts=[0,0,0,0];
+  for(const item of chapter.questions||[]){
+   socialMcqCount++;
+   assert.equal(item.options.length,4,"Social Science MCQs must retain four options");
+   assert.ok(Number.isInteger(item.answer)&&item.answer>=0&&item.answer<4,"Social Science MCQ answer index must remain valid");
+   answerCounts[item.answer]++;
+   if(/^(Which statement best describes|What is a key feature or consequence|How is .* best understood|Which description of .* is accurate)/i.test(item.question||"")){
+    assert.equal(item.competencyTagStatus,"needs-review","generic templated Social Science stems must be held out of exam-paper integration");
+    socialNeedsReview++;
+   }
+  }
+  assert.ok(Math.max(...answerCounts)-Math.min(...answerCounts)<=1,"each Social Science chapter set must have balanced correct-answer positions");
+ }
+}
+assert.equal(socialMcqCount,2216,"the four source files should contain 2,216 Social Science MCQs after NCERT-verified replacement additions");
+assert.equal(socialNeedsReview,1673,"all generic template-pattern MCQs should be held for review");
+const boardMcqChapterNos=[1,2,3,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21];
+for(const chapterNo of boardMcqChapterNos){
+ const chapter=socialChapters.find(item=>item.chapter_no===chapterNo);
+ assert.ok(chapter,"expected Social Science source chapter "+chapterNo);
+ const eligible=chapter.questions.filter(item=>item.competencyTagStatus!=="needs-review").length;
+ assert.ok(eligible>=20,"board-scope Social Science chapter "+chapterNo+" must retain at least 20 non-template, non-duplicate candidates; found "+eligible);
+}
+assert.ok(socialBlueprint.mcqPracticeExclusions.includes("the-age-of-industrialisation"));
+assert.ok(socialBlueprint.mcqPracticeExclusions.includes("consumer-rights"));
+assert.deepEqual(socialBlueprint.mcqSubtopicRestrictions["lifelines-of-national-economy"].allowedQuestionTypes,["map-skill"]);
+assert.deepEqual(socialBlueprint.officialAssessmentDesign.caseBasedQuestionNumbers,[8,18,28]);
+assert.deepEqual(socialBlueprint.officialAssessmentDesign.longAnswerQuestionNumbers,[7,17,27,38]);
+const socialBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-social-science-2026-27-v1.json","utf8"));
+const socialRegistry=JSON.parse(fs.readFileSync("data/exam-papers/profile-registry.json","utf8"));
+const socialProfile=socialRegistry.profiles.find(p=>p.profileId==="class-10-social-science-2026-27");
+assert.ok(socialProfile,"Social Science profile must remain registered");
+assert.equal(socialProfile.enabled,true,"Social Science must appear in the student profile selector after release gates pass");
+assert.equal(socialBank.questionPoolStatus,"approved");
+assert.equal(socialBank.contentAudit.pendingOtherFormats,0);
+assert.equal(socialBank.questions.filter(q=>q.approvalStatus==="approved").length,827);
+assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q25-VSA-01").prompt,socialBank.questions.find(q=>q.questionId==="SST10-POL-CH15-MCQ-006").prompt,"VSA wording must not duplicate the corresponding MCQ stem");
+assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q6-SA-10").prompt,socialBank.questions.find(q=>q.questionId==="SST10-HIS-CH02-MCQ-066").prompt,"short-answer wording must be distinct from the corresponding MCQ stem");
+assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q26-SA-10").prompt,socialBank.questions.find(q=>q.questionId==="SST10-Q25-VSA-13").prompt,"the caste short-answer stem must be distinct from the VSA stem");
+const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
+assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
+assert.equal(socialBank.questions.length,827,"Social Science bank contains 407 MCQs, 60 Assertion–Reason, 80 VSA, 100 short-answer, 60 case-based, 80 long-answer and 40 map-skill candidates");
+assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,827,"Social Science question IDs must be unique");
+assert.equal(socialBank.questions.filter(q=>q.type==="very-short-answer").length,80);
+assert.equal(socialBank.questions.filter(q=>q.type==="short-answer").length,100);
+assert.equal(socialBank.questions.filter(q=>q.type==="case-based").length,60);
+for(const q of socialBank.questions.filter(q=>q.type==="very-short-answer")){
+ assert.equal(q.approvalStatus,"approved");
+ assert.ok(q.answerKey?.modelAnswer);
+ assert.ok(q.answerKey.modelAnswer.trim().split(/\s+/).length<=40,q.questionId+" VSA answer must remain within 40 words");
+ assert.equal(q.markingScheme.reduce((sum,item)=>sum+item.marks,0),2,q.questionId+" VSA rubric must total two marks");
+}
+for(const q of socialBank.questions.filter(q=>q.type==="short-answer")){
+ assert.equal(q.approvalStatus,"approved");
+ assert.ok(q.answerKey?.modelAnswer);
+ assert.ok(q.answerKey.modelAnswer.trim().split(/\s+/).length<=60,q.questionId+" short-answer model response must remain within 60 words");
+ assert.equal(q.markingScheme.reduce((sum,item)=>sum+item.marks,0),3,q.questionId+" short-answer rubric must total three marks");
+ if(["SST10-Q6-SA-","SST10-Q26-SA-"].some(prefix=>q.questionId.startsWith(prefix))){
+  assert.equal(q.alternatives?.length,1,q.questionId+" must retain its internal alternative");
+  assert.equal(q.alternatives[0].markingScheme.reduce((sum,item)=>sum+item.marks,0),3,q.questionId+" alternative rubric must total three marks");
+ }
+}
+for(const q of socialBank.questions.filter(q=>q.type==="case-based")){
+ assert.equal(q.approvalStatus,"approved");
+ assert.ok(q.stimulus.trim().split(/\s+/).length>=35,q.questionId+" caselet must provide a substantive contextual passage");
+ assert.equal(q.parts.length,3);
+ assert.equal(q.parts.reduce((sum,p)=>sum+p.marks,0),4);
+ for(const part of q.parts){
+  assert.ok(part.answerKey?.modelAnswer);
+  assert.ok(part.answerKey.modelAnswer.trim().split(/\s+/).length<=100,q.questionId+" sub-answer must remain within 100 words");
+  assert.equal(part.markingScheme.reduce((sum,item)=>sum+item.marks,0),part.marks);
+  if(part.marks===1)assert.ok(!/\b(two|three|both|all)\b/i.test(part.prompt),q.questionId+" one-mark subpart must not demand multiple responses");
+ }
+}
+
+assert.equal(socialBank.questions.filter(q=>q.type==="mcq").length,407,"the Social Science board-scope MCQ pool must contain 407 verified candidates");
+assert.ok(socialBank.questions.filter(q=>q.type==="mcq").every(q=>q.approvalStatus==="approved"),"all verified board-scope MCQs must be approved");
+const normaliseMcqStem=value=>String(value||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+const auditedMcqStems=socialBank.questions.filter(q=>q.type==="mcq").map(q=>normaliseMcqStem(q.prompt));
+assert.equal(new Set(auditedMcqStems).size,407,"the 407 approved Social Science MCQs must have distinct stems");
+assert.equal(socialBank.questions.filter(q=>q.type==="assertion-reason"&&q.approvalStatus==="approved").length,60,"all three one-mark Assertion–Reason pools must be approved");
+assert.ok(socialBank.questions.filter(q=>["very-short-answer","short-answer","case-based"].includes(q.type)).every(q=>q.approvalStatus==="approved"),"all VSA, short-answer and case-based candidates must be approved for release");
+const socialLong=socialBank.questions.filter(q=>q.type==="long-answer");
+assert.equal(socialLong.length,80);
+for(const slot of ["Q7","Q17","Q27","Q38"]){const pool=socialLong.filter(q=>q.questionId.startsWith("SST10-"+slot+"-LA-"));assert.equal(pool.length,20);assert.ok(pool.every(q=>q.approvalStatus==="approved"&&q.prompt.length>=70&&q.alternatives?.length===1&&q.alternatives[0].prompt.length>=70&&q.marks===5&&q.markingScheme.length===5&&q.markingScheme.reduce((s,m)=>s+m.marks,0)===5&&q.alternatives[0].markingScheme.reduce((s,m)=>s+m.marks,0)===5));}
+const socialMaps=socialBank.questions.filter(q=>q.type==="diagram-based"&&q.competency==="map-skill");assert.equal(socialMaps.length,40);
+for(const slot of ["Q9","Q19"]){const pool=socialMaps.filter(q=>q.questionId.startsWith("SST10-"+slot+"-MAP-"));assert.equal(pool.length,20);assert.ok(pool.every(q=>q.images?.[0]?.src==="./assets/exam-papers/social-science/india-outline-map.svg"&&q.mapTasks?.length>=(slot==="Q9"?2:4)));}
+assert.ok(socialMaps.filter(q=>q.questionId.startsWith("SST10-Q19-MAP-")).every(q=>q.approvalStatus==="approved"&&q.parts?.length===3&&q.parts.reduce((s,p)=>s+p.marks,0)===3&&q.parts.filter(p=>p.alternatives?.length===1).length===1));
+const geographyMaps=socialMaps.filter(q=>q.questionId.startsWith("SST10-Q19-MAP-"));
+const officialGeoMapIds=new Set(geographyMaps.flatMap(q=>q.mapTasks.map(t=>t.mapWorkId)));
+assert.equal(officialGeoMapIds.size,79,"all 79 CBSE Geography map-work items must be represented without duplicate item identities");
+for(const required of ["Durg","Bellary","Bokaro","Naharkatia","Hyderabad"])assert.ok(geographyMaps.some(q=>q.mapTasks.some(t=>t.acceptedLabel===required)),"missing required map-work label: "+required);
+assert.ok(geographyMaps.every(q=>q.mapTasks.every(t=>t.acceptedLabel&&t.mapWorkId&&Number.isFinite(t.latitude)&&Number.isFinite(t.longitude))),"every Geography map task needs a specific answer label and plotting coordinates");
+assert.ok(socialMaps.every(q=>q.images?.[0]?.alt?.includes("state and Union Territory boundaries")),"map image alt text must describe the state/UT outline shown");
+assert.ok(fs.existsSync("assets/exam-papers/social-science/india-outline-map.svg"));assert.ok(fs.statSync("assets/exam-papers/social-science/india-outline-map.svg").size<70000);
+
+assert.ok(socialBank.questions.every(q=>q.type!=="mcq"||!["the-age-of-industrialisation","lifelines-of-national-economy","consumer-rights"].includes(q.chapterId)),"excluded or map-only chapters must not enter the MCQ examination bank");
+const oneMarkSlots=socialBlueprint.slotPlan.filter(s=>s.marks===1);
+assert.equal(oneMarkSlots.length,20,"the board blueprint must contain 20 one-mark MCQ/Assertion–Reason slots");
+const oneMarkAudit=m.auditSlotCoverage(socialBlueprint,socialBank,20);
+for(const slot of oneMarkSlots){const coverage=oneMarkAudit.coverage.find(x=>x.slotId===slot.slotId);assert.ok(coverage&&coverage.eligibleCount>=20,"one-mark slot "+slot.slotId+" must have at least 20 eligible approved candidates; found "+(coverage?.eligibleCount||0));}
+
+const socialAr=socialBank.questions.filter(q=>q.type==="assertion-reason");
+assert.equal(socialAr.length,60,"three Social Science assertion-reason slots must each have 20 candidates");
+for(const chapterId of ["manufacturing-industries","power-sharing","globalisation-and-the-indian-economy"]){
+ const pool=socialAr.filter(q=>q.chapterId===chapterId);
+ assert.equal(pool.length,20,"Assertion–Reason pool "+chapterId+" must contain 20 candidates");
+ assert.ok(pool.every(q=>q.assertionReason&&q.assertionReason.assertion&&q.assertionReason.reason),"Assertion–Reason candidates need separate assertion and reason fields");
+ const distribution=["A","B","C","D"].map(answer=>pool.filter(q=>q.correctOptionId===answer).length);
+ assert.deepEqual(distribution,[5,5,5,5],"Assertion–Reason answer categories must be balanced for "+chapterId);
+}
+assert.deepEqual(socialBank.generationDesign.repeatProtection.includes("five-paper"),true);
+const socialCases=socialBank.questions.filter(q=>q.type==="case-based");
+assert.equal(socialCases.length,60,"three Social Science case-based slots must each have 20 candidates");
+for(const slot of ["q8","q18","q28"]){
+ const pool=socialCases.filter(q=>q.questionId.startsWith("SST10-"+slot.toUpperCase()+"-CB-"));
+ assert.equal(pool.length,20,"case-based slot "+slot+" must contain 20 candidates");
+ assert.ok(pool.every(q=>q.stimulus&&q.parts?.length===3&&q.parts.reduce((sum,p)=>sum+p.marks,0)===4),"case-based questions need a source and a four-mark part structure");
+}
+const socialShort=socialBank.questions.filter(q=>q.type==="short-answer");
+assert.equal(socialShort.length,100,"five Social Science short-answer slots must each have 20 candidates");
+for(const slot of ["q6","q26"]){
+ const pool=socialShort.filter(q=>q.questionId.startsWith("SST10-"+slot.toUpperCase()+"-SA-"));
+ assert.equal(pool.length,20,"short-answer slot "+slot+" must contain 20 candidates");
+ assert.ok(pool.every(q=>q.marks===3&&q.markingScheme.reduce((sum,m)=>sum+m.marks,0)===3&&q.alternatives?.length===1&&q.alternatives[0].markingScheme.reduce((sum,m)=>sum+m.marks,0)===3),"short-answer internal-choice marking schemes must total three marks");
+}
+for(const [slot,chapter] of [["q35","sectors-of-the-indian-economy"],["q36","money-and-credit"],["q37","globalisation-and-the-indian-economy"]]){
+ const pool=socialShort.filter(q=>q.questionId.startsWith("SST10-"+slot.toUpperCase()+"-SA-"));
+ assert.equal(pool.length,20,"Economics short-answer slot "+slot+" must contain 20 candidates");
+ assert.ok(pool.every(q=>q.chapterId===chapter&&q.unitId==="economics"&&q.approvalStatus==="approved"&&q.marks===3&&q.answerKey?.modelAnswer&&q.markingScheme.reduce((sum,m)=>sum+m.marks,0)===3),"Economics candidates must be chapter-mapped, complete and remain review-gated");
+}
+assert.equal(new Set(socialShort.map(q=>q.prompt.toLowerCase().replace(/[^a-z0-9]+/g," ").trim())).size,100,"all 100 Social Science short-answer stems must be distinct");
+for(const id of ["SST10-Q5-VSA-02","SST10-Q5-VSA-04","SST10-Q5-VSA-06","SST10-Q5-VSA-08","SST10-Q5-VSA-10"])assert.equal(socialBank.questions.find(q=>q.questionId===id).chapterId,"the-rise-of-nationalism-in-europe","European-history VSA questions must map to the correct chapter");
+for(const id of ["SST10-Q5-VSA-11","SST10-Q5-VSA-13","SST10-Q5-VSA-15","SST10-Q5-VSA-17","SST10-Q5-VSA-19"])assert.equal(socialBank.questions.find(q=>q.questionId===id).chapterId,"nationalism-in-india","Indian-history VSA questions must map to the correct chapter");
+const socialVsa=socialBank.questions.filter(q=>q.type==="very-short-answer");
+assert.equal(socialVsa.length,80,"four Social Science VSA slots must each have 20 candidates");
+for(const slot of ["q5","q16","q24","q25"]){
+ const pool=socialVsa.filter(q=>q.questionId.startsWith("SST10-"+slot.toUpperCase()+"-VSA-"));
+ assert.equal(pool.length,20,"VSA slot "+slot+" must contain 20 candidates");
+ assert.ok(pool.every(q=>q.marks===2&&q.markingScheme.reduce((sum,m)=>sum+m.marks,0)===2),"VSA marking schemes must total two marks");
+}
+for(const restricted of ["the-age-of-industrialisation","consumer-rights"]){
+ assert.ok(socialBlueprint.mcqPracticeExclusions.includes(restricted),"non-board chapter "+restricted+" must not be auto-imported into the MCQ pool");
+}
 const production=JSON.parse(fs.readFileSync("data/exam-papers/blueprints/class-10-science-2026-27.json","utf8"));
 const pcheck=m.validateBlueprint(production);assert.equal(pcheck.valid,true);assert.equal(pcheck.readyForGeneration,true);
 assert.throws(()=>m.generatePaper(production,{schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subjectId:"science",academicYear:"2026-27",bankVersion:"x",questions:[]}),/Question pool shortage/);
@@ -15,6 +182,9 @@ const bank={schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subject
 assert.equal(m.validateQuestionBank(bank).valid,true);
 const diagramQuestion=q("diagram","physics",3,"diagram-based",{images:[{src:"./assets/questions/science/circuit.png",alt:"Simple electric circuit"}]});
 assert.equal(m.validateQuestion(diagramQuestion).length,0);
+const mapSkillQuestion=q("map-skill","geography",2,"diagram-based",{competency:"map-skill",images:[{src:"./assets/exam-papers/social-science/india-outline-map.svg",alt:"Outline map of India for map-skill assessment"}]});
+assert.equal(m.validateQuestion(mapSkillQuestion).length,0,"map-based diagram questions must accept the dedicated map-skill competency");
+assert.ok(m.competencies.includes("map-skill"),"the shared generator must support CBSE map-skill competency targets");
 const unsafeDiagram=q("bad-diagram","physics",3,"diagram-based",{images:[{src:"../private.png",alt:"Unsafe path"}]});
 assert.ok(m.validateQuestion(unsafeDiagram).length>0,"diagram assets must use safe relative paths");
 const paper=m.generatePaper(bp,bank,{seed:"same",generatedAt:"2026-11-02T00:00:00.000Z"});
@@ -105,5 +275,59 @@ assert.ok(selfStudySource.includes("integrated.stats.coverage"),"self-study must
 assert.ok(selfStudySource.includes('HISTORY_LIMIT=50'),"self-study should keep a rolling history of 50 complete papers");
 assert.ok(selfStudySource.includes('generateUniquePaper'),"self-study should generate a previously unused full-paper combination");
 assert.ok(selfStudySource.includes('recentPaperFingerprints'),"self-study should pass recent paper fingerprints to the generator");
+
+
+// Social Science Step 3: exercise five-paper, cross-format repeat protection
+// on the actual production Social Science bank after editorial approval; the
+// regression validates the same pool that the student profile will load.
+const socialTestBlueprint=socialBlueprint;
+const socialTestBank=socialBank;
+assert.ok(socialTestBank.questions.every(question=>question.approvalStatus==="approved"),"the production Social Science bank must contain only approved candidates");
+const socialCoverage=m.auditSlotCoverage(socialTestBlueprint,socialTestBank,20);
+assert.equal(socialCoverage.valid,true,socialCoverage.errors.join("; "));
+assert.equal(socialCoverage.coverage.length,38);
+assert.ok(socialCoverage.coverage.every(slot=>slot.eligibleCount>=20),"every Social Science slot must retain 20 eligible candidates in the complete test fixture");
+const socialPaperHistory=[],socialFingerprintHistory=[],socialPaperFingerprints=new Set();
+for(let attempt=1;attempt<=50;attempt++){
+ const generated=m.generateUniquePaper(socialTestBlueprint,socialTestBank,{
+  seed:"social-science-five-paper-repeat-"+attempt,
+  paperId:"social-science-step3-"+attempt,
+  recentQuestionIdSets:socialPaperHistory.slice(-5),
+  recentPaperFingerprints:socialFingerprintHistory.slice(-50)
+ });
+ assert.equal(m.validatePaper(generated,socialTestBlueprint).valid,true);
+ assert.equal(generated.questions.length,38);
+ const currentIds=generated.questions.map(question=>String(question.questionId));
+ assert.equal(new Set(currentIds).size,38,"a Social Science paper must not repeat a question internally");
+ for(const previousIds of socialPaperHistory.slice(-5)){
+  assert.equal(currentIds.some(id=>previousIds.includes(id)),false,"no question of any format may reappear in the preceding five papers");
+ }
+ assert.equal(generated.repeatProtection.requestedWindow,5);
+ assert.equal(generated.repeatProtection.appliedWindow,Math.min(5,socialPaperHistory.length),"the generator must protect every available prior paper up to the five-paper limit");
+ assert.equal(generated.repeatProtection.fallback,false,"the test fixture must not need to relax its available repeat-protection window");
+ assert.ok(generated.paperFingerprint,"each complete Social Science paper must have a fingerprint");
+ assert.equal(socialPaperFingerprints.has(generated.paperFingerprint),false,"all 50 complete Social Science papers must have unique fingerprints");
+ socialPaperFingerprints.add(generated.paperFingerprint);
+ socialPaperHistory.push(currentIds);
+ socialFingerprintHistory.push(generated.paperFingerprint);
+}
+for(const requiredType of ["mcq","assertion-reason","very-short-answer","short-answer","long-answer","case-based","diagram-based"]){
+ assert.ok(socialTestBank.questions.some(q=>q.type===requiredType&&q.approvalStatus==="approved"),"the test fixture must exercise "+requiredType);
+}
+assert.equal(socialPaperHistory.length,50,"generate the full 50-paper Social Science release set");
+assert.equal(socialPaperFingerprints.size,50,"all 50 complete Social Science papers must be unique");
+assert.equal(socialBlueprint.status,"ready","the tested production Social Science blueprint must remain ready");
+assert.ok(socialBank.questions.every(q=>q.approvalStatus==="approved"),"the production bank must remain fully approved after repeat-protection tests");
+
+// Fallback is permitted only after a complete paper cannot be formed with the
+// requested lookback; it must report the shorter window explicitly.
+const fallbackPaper=m.generateUniquePaper(choiceBp,{...bank,questions:[choiceQ]},{
+ seed:"repeat-window-fallback",recentQuestionIdSets:[["choice"]],recentPaperFingerprints:[]
+});
+assert.equal(fallbackPaper.questions.length,1);
+assert.equal(fallbackPaper.questions[0].questionId,"choice");
+assert.equal(fallbackPaper.repeatProtection.requestedWindow,5);
+assert.equal(fallbackPaper.repeatProtection.appliedWindow,0);
+assert.equal(fallbackPaper.repeatProtection.fallback,true);
 
 console.log("Exam paper generator tests passed: subject-neutral blueprints/banks, Maths fixture, language-safe MCQ adapter, draft guard, deterministic unique selection, approved-only eligibility, marks, sections, internal choices, slot coverage and repeat protection.");

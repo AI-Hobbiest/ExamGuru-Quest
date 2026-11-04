@@ -1,0 +1,801 @@
+{
+  "schemaVersion": 1,
+  "kind": "exam-paper-blueprint",
+  "blueprintId": "cbse-class-10-social-science-087-2026-27",
+  "version": 1,
+  "title": "CBSE Class 10 Social Science (087) · Annual Examination 2026–27",
+  "board": "CBSE",
+  "academicYear": "2026-27",
+  "classId": "10",
+  "subjectId": "social-science",
+  "subjectTitle": "Social Science",
+  "subjectCode": "087",
+  "status": "ready",
+  "statusReason": "All 827 unique Social Science candidates have completed editorial QA; every one of the 38 blueprint slots has at least 20 approved eligible candidates. Five-paper all-format repeat protection and 50-paper uniqueness are validated in CI. Internal editorial QA is recorded; no external teacher sign-off is represented.",
+  "durationMinutes": 180,
+  "totalQuestions": 38,
+  "totalMarks": 80,
+  "sections": [
+    {
+      "sectionId": "history",
+      "title": "Section A · History",
+      "questionNumberRange": {
+        "start": 1,
+        "end": 9
+      },
+      "questionCount": 9,
+      "totalMarks": 20
+    },
+    {
+      "sectionId": "geography",
+      "title": "Section B · Geography",
+      "questionNumberRange": {
+        "start": 10,
+        "end": 19
+      },
+      "questionCount": 10,
+      "totalMarks": 20
+    },
+    {
+      "sectionId": "political-science",
+      "title": "Section C · Political Science",
+      "questionNumberRange": {
+        "start": 20,
+        "end": 28
+      },
+      "questionCount": 9,
+      "totalMarks": 20
+    },
+    {
+      "sectionId": "economics",
+      "title": "Section D · Economics",
+      "questionNumberRange": {
+        "start": 29,
+        "end": 38
+      },
+      "questionCount": 10,
+      "totalMarks": 20
+    }
+  ],
+  "markDistribution": {
+    "1": 20,
+    "2": 5,
+    "3": 6,
+    "4": 3,
+    "5": 4
+  },
+  "unitMarkTargets": {
+    "history": 20,
+    "geography": 20,
+    "political-science": 20,
+    "economics": 20
+  },
+  "officialAssessmentDesign": {
+    "questionCounts": {
+      "one-mark-mcq-and-assertion-reason": 20,
+      "two-mark-very-short-answer": 4,
+      "three-mark-short-answer": 5,
+      "four-mark-case-based": 3,
+      "five-mark-long-answer": 4,
+      "map-based": 2
+    },
+    "markTotals": {
+      "one-mark-mcq-and-assertion-reason": 20,
+      "very-short-answer": 8,
+      "short-answer": 15,
+      "four-mark-case-based": 12,
+      "five-mark-long-answer": 20,
+      "map-based": 5
+    },
+    "subjectSectionMarks": {
+      "history": 20,
+      "geography": 20,
+      "political-science": 20,
+      "economics": 20
+    },
+    "mapQuestions": {
+      "history": {
+        "questionNumber": 9,
+        "marks": 2
+      },
+      "geography": {
+        "questionNumber": 19,
+        "marks": 3
+      }
+    },
+    "internalChoiceQuestionNumbers": [
+      6,
+      7,
+      17,
+      27,
+      38
+    ],
+    "note": "The 2026-27 CBSE sample paper states that the question-paper design and assessment pattern are unchanged for this session. Question-level competency classifications will be assigned and reviewed during authoring; no unsupported mark split is assumed.",
+    "longAnswerQuestionNumbers": [
+      7,
+      17,
+      27,
+      38
+    ],
+    "caseBasedQuestionNumbers": [
+      8,
+      18,
+      28
+    ]
+  },
+  "syllabusScope": {
+    "history": {
+      "included": [
+        "the-rise-of-nationalism-in-europe",
+        "nationalism-in-india",
+        "the-making-of-a-global-world",
+        "print-culture-and-the-modern-world"
+      ],
+      "excluded": [
+        {
+          "chapter": "the-age-of-industrialisation",
+          "reason": "Periodic assessment only"
+        }
+      ],
+      "restrictedTopics": [
+        {
+          "chapter": "the-making-of-a-global-world",
+          "scope": "Subtopics 1 to 1.3 only for Board examination"
+        }
+      ]
+    },
+    "geography": {
+      "included": [
+        "resources-and-development",
+        "forest-and-wildlife-resources",
+        "water-resources",
+        "agriculture",
+        "minerals-and-energy-resources",
+        "manufacturing-industries"
+      ],
+      "mapOnly": [
+        "lifelines-of-national-economy"
+      ]
+    },
+    "politicalScience": {
+      "included": [
+        "power-sharing",
+        "federalism",
+        "gender-religion-and-caste",
+        "political-parties",
+        "outcomes-of-democracy"
+      ]
+    },
+    "economics": {
+      "included": [
+        "development",
+        "sectors-of-the-indian-economy",
+        "money-and-credit",
+        "globalisation-and-the-indian-economy"
+      ],
+      "restrictedTopics": [
+        {
+          "chapter": "globalisation-and-the-indian-economy",
+          "scope": "What is Globalisation? and factors that have enabled Globalisation only"
+        }
+      ],
+      "projectOnly": [
+        "consumer-rights"
+      ]
+    }
+  },
+  "mcqPracticeExclusions": [
+    "the-age-of-industrialisation",
+    "consumer-rights"
+  ],
+  "supportedQuestionTypes": [
+    "mcq",
+    "assertion-reason",
+    "very-short-answer",
+    "short-answer",
+    "long-answer",
+    "case-based",
+    "diagram-based"
+  ],
+  "slotPlan": [
+    {
+      "slotId": "q01",
+      "questionNumber": 1,
+      "sectionId": "history",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "history",
+      "chapterIds": [
+        "the-rise-of-nationalism-in-europe"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q02",
+      "questionNumber": 2,
+      "sectionId": "history",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "history",
+      "chapterIds": [
+        "nationalism-in-india"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q03",
+      "questionNumber": 3,
+      "sectionId": "history",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "history",
+      "chapterIds": [
+        "the-making-of-a-global-world"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q04",
+      "questionNumber": 4,
+      "sectionId": "history",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "history",
+      "chapterIds": [
+        "print-culture-and-the-modern-world"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q05",
+      "questionNumber": 5,
+      "sectionId": "history",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "history",
+      "chapterIds": [
+        "the-rise-of-nationalism-in-europe",
+        "nationalism-in-india"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q06",
+      "questionNumber": 6,
+      "sectionId": "history",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "history",
+      "chapterIds": [
+        "nationalism-in-india"
+      ],
+      "competency": "application",
+      "requiresInternalChoice": true
+    },
+    {
+      "slotId": "q07",
+      "questionNumber": 7,
+      "sectionId": "history",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "unitId": "history",
+      "chapterIds": [
+        "the-rise-of-nationalism-in-europe",
+        "nationalism-in-india"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresInternalChoice": true
+    },
+    {
+      "slotId": "q08",
+      "questionNumber": 8,
+      "sectionId": "history",
+      "marks": 4,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "history",
+      "chapterIds": [
+        "print-culture-and-the-modern-world"
+      ],
+      "competency": "analysis-evaluation-creation"
+    },
+    {
+      "slotId": "q09",
+      "questionNumber": 9,
+      "sectionId": "history",
+      "marks": 2,
+      "allowedTypes": [
+        "diagram-based"
+      ],
+      "unitId": "history",
+      "chapterIds": [
+        "nationalism-in-india"
+      ],
+      "competency": "map-skill"
+    },
+    {
+      "slotId": "q10",
+      "questionNumber": 10,
+      "sectionId": "geography",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "geography",
+      "chapterIds": [
+        "resources-and-development"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q11",
+      "questionNumber": 11,
+      "sectionId": "geography",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "geography",
+      "chapterIds": [
+        "resources-and-development"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q12",
+      "questionNumber": 12,
+      "sectionId": "geography",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "geography",
+      "chapterIds": [
+        "minerals-and-energy-resources"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q13",
+      "questionNumber": 13,
+      "sectionId": "geography",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "geography",
+      "chapterIds": [
+        "minerals-and-energy-resources"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q14",
+      "questionNumber": 14,
+      "sectionId": "geography",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "geography",
+      "chapterIds": [
+        "manufacturing-industries"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q15",
+      "questionNumber": 15,
+      "sectionId": "geography",
+      "marks": 1,
+      "allowedTypes": [
+        "assertion-reason"
+      ],
+      "unitId": "geography",
+      "chapterIds": [
+        "manufacturing-industries"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q16",
+      "questionNumber": 16,
+      "sectionId": "geography",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "geography",
+      "chapterIds": [
+        "water-resources"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q17",
+      "questionNumber": 17,
+      "sectionId": "geography",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "unitId": "geography",
+      "chapterIds": [
+        "agriculture"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresInternalChoice": true
+    },
+    {
+      "slotId": "q18",
+      "questionNumber": 18,
+      "sectionId": "geography",
+      "marks": 4,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "geography",
+      "chapterIds": [
+        "forest-and-wildlife-resources"
+      ],
+      "competency": "analysis-evaluation-creation"
+    },
+    {
+      "slotId": "q19",
+      "questionNumber": 19,
+      "sectionId": "geography",
+      "marks": 3,
+      "allowedTypes": [
+        "diagram-based"
+      ],
+      "unitId": "geography",
+      "chapterIds": [
+        "resources-and-development",
+        "water-resources",
+        "agriculture",
+        "minerals-and-energy-resources",
+        "manufacturing-industries",
+        "lifelines-of-national-economy"
+      ],
+      "competency": "map-skill",
+      "requiresPartInternalChoiceMarks": [
+        1
+      ],
+      "mapWorkNote": "Candidates may draw from all chapters named in the 2026–27 CBSE Geography map-work list; Lifelines of National Economy remains map-only."
+    },
+    {
+      "slotId": "q20",
+      "questionNumber": 20,
+      "sectionId": "political-science",
+      "marks": 1,
+      "allowedTypes": [
+        "assertion-reason"
+      ],
+      "unitId": "political-science",
+      "chapterIds": [
+        "power-sharing"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q21",
+      "questionNumber": 21,
+      "sectionId": "political-science",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "political-science",
+      "chapterIds": [
+        "power-sharing",
+        "federalism"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q22",
+      "questionNumber": 22,
+      "sectionId": "political-science",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "political-science",
+      "chapterIds": [
+        "political-parties"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q23",
+      "questionNumber": 23,
+      "sectionId": "political-science",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "political-science",
+      "chapterIds": [
+        "outcomes-of-democracy"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q24",
+      "questionNumber": 24,
+      "sectionId": "political-science",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "political-science",
+      "chapterIds": [
+        "federalism"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q25",
+      "questionNumber": 25,
+      "sectionId": "political-science",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "political-science",
+      "chapterIds": [
+        "gender-religion-and-caste"
+      ],
+      "competency": "analysis-evaluation-creation"
+    },
+    {
+      "slotId": "q26",
+      "questionNumber": 26,
+      "sectionId": "political-science",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "political-science",
+      "chapterIds": [
+        "gender-religion-and-caste"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q27",
+      "questionNumber": 27,
+      "sectionId": "political-science",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "unitId": "political-science",
+      "chapterIds": [
+        "federalism"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresInternalChoice": true
+    },
+    {
+      "slotId": "q28",
+      "questionNumber": 28,
+      "sectionId": "political-science",
+      "marks": 4,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "political-science",
+      "chapterIds": [
+        "political-parties"
+      ],
+      "competency": "analysis-evaluation-creation"
+    },
+    {
+      "slotId": "q29",
+      "questionNumber": 29,
+      "sectionId": "economics",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "economics",
+      "chapterIds": [
+        "development"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q30",
+      "questionNumber": 30,
+      "sectionId": "economics",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "economics",
+      "chapterIds": [
+        "sectors-of-the-indian-economy"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q31",
+      "questionNumber": 31,
+      "sectionId": "economics",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "economics",
+      "chapterIds": [
+        "sectors-of-the-indian-economy"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q32",
+      "questionNumber": 32,
+      "sectionId": "economics",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "economics",
+      "chapterIds": [
+        "money-and-credit"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q33",
+      "questionNumber": 33,
+      "sectionId": "economics",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "economics",
+      "chapterIds": [
+        "money-and-credit"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q34",
+      "questionNumber": 34,
+      "sectionId": "economics",
+      "marks": 1,
+      "allowedTypes": [
+        "assertion-reason"
+      ],
+      "unitId": "economics",
+      "chapterIds": [
+        "globalisation-and-the-indian-economy"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q35",
+      "questionNumber": 35,
+      "sectionId": "economics",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "economics",
+      "chapterIds": [
+        "sectors-of-the-indian-economy"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q36",
+      "questionNumber": 36,
+      "sectionId": "economics",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "economics",
+      "chapterIds": [
+        "money-and-credit"
+      ],
+      "competency": "analysis-evaluation-creation"
+    },
+    {
+      "slotId": "q37",
+      "questionNumber": 37,
+      "sectionId": "economics",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "economics",
+      "chapterIds": [
+        "globalisation-and-the-indian-economy"
+      ],
+      "competency": "analysis-evaluation-creation"
+    },
+    {
+      "slotId": "q38",
+      "questionNumber": 38,
+      "sectionId": "economics",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "unitId": "economics",
+      "chapterIds": [
+        "development"
+      ],
+      "competency": "analysis-evaluation-creation",
+      "requiresInternalChoice": true
+    }
+  ],
+  "mcqSubtopicRestrictions": {
+    "the-making-of-a-global-world": {
+      "boardExamEligible": true,
+      "allowedSubtopics": [
+        "1",
+        "1.1",
+        "1.2",
+        "1.3"
+      ],
+      "excludedSubtopics": [
+        "2",
+        "3",
+        "4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4"
+      ],
+      "note": "Only the pre-modern world through conquest, disease and trade (subtopics 1 to 1.3) are evaluated in the Board Examination; later content is interdisciplinary project work."
+    },
+    "globalisation-and-the-indian-economy": {
+      "boardExamEligible": true,
+      "allowedSubtopics": [
+        "what-is-globalisation",
+        "factors-that-have-enabled-globalisation"
+      ],
+      "excludedSubtopics": [
+        "production-across-countries",
+        "chinese-toys-in-india",
+        "world-trade-organisation",
+        "struggle-for-a-fair-globalisation"
+      ],
+      "note": "Only the concept of globalisation and factors enabling it are evaluated in the Board Examination; remaining topics are interdisciplinary project work."
+    },
+    "lifelines-of-national-economy": {
+      "boardExamEligible": true,
+      "allowedQuestionTypes": [
+        "map-skill"
+      ],
+      "excludedQuestionTypes": [
+        "mcq",
+        "assertion-reason",
+        "very-short-answer",
+        "short-answer",
+        "long-answer",
+        "case-based"
+      ],
+      "note": "Only map pointing is evaluated in the Board Examination."
+    }
+  }
+}

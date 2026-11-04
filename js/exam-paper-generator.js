@@ -3,7 +3,7 @@
 "use strict";
 const TYPES=Object.freeze(["mcq","assertion-reason","very-short-answer","short-answer","long-answer","case-based","numerical","diagram-based"]);
 const DIFFICULTIES=["easy","medium","hard"];
-const COMPETENCIES=["knowledge-understanding","application","analysis-evaluation-creation"];
+const COMPETENCIES=["knowledge-understanding","application","analysis-evaluation-creation","map-skill"];
 const clone=x=>x==null?x:JSON.parse(JSON.stringify(x));
 const obj=x=>!!x&&typeof x==="object"&&!Array.isArray(x);
 const text=x=>typeof x==="string"&&!!x.trim();
@@ -303,6 +303,7 @@ function normalizeCompetency(value){
  if(["knowledge-understanding","knowledge","understanding","recall"].includes(v))return"knowledge-understanding";
  if(["application","apply"].includes(v))return"application";
  if(["analysis-evaluation-creation","analysis","evaluation","creation","analyze","analyse"].includes(v))return"analysis-evaluation-creation";
+ if(["map-skill","map","mapping","geographical-map-skill"].includes(v))return"map-skill";
  return"";
 }
 function inferMcqCompetency(question){
