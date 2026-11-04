@@ -1466,6 +1466,20 @@
         "difficulty": "Medium",
         "competencyTagStatus": "needs-review",
         "competencyTagReason": "Generic templated stem pattern detected during Social Science bank audit; replace with a specific, source-grounded question before examination use."
+      },
+      {
+        "id": 101,
+        "question": "Which organisation publishes the Human Development Report used to compare countries on health, education and income?",
+        "options": [
+          "United Nations Development Programme (UNDP)",
+          "World Trade Organization (WTO)",
+          "Reserve Bank of India (RBI)",
+          "International Labour Organization (ILO)"
+        ],
+        "answer": 0,
+        "explanation": "The Human Development Report published by UNDP compares countries using education, health and per-capita-income indicators.",
+        "difficulty": "medium",
+        "sourceVerification": "NCERT Understanding Economic Development, Chapter 1: Development, Human Development Report section."
       }
     ]
   },
@@ -2936,6 +2950,20 @@
         "difficulty": "Medium",
         "competencyTagStatus": "needs-review",
         "competencyTagReason": "Generic templated stem pattern detected during Social Science bank audit; replace with a specific, source-grounded question before examination use."
+      },
+      {
+        "id": 101,
+        "question": "What criterion is used to classify economic activities into the primary, secondary and tertiary sectors?",
+        "options": [
+          "The nature of the activity",
+          "The ownership of the enterprise",
+          "The number of employees",
+          "The location of the workplace"
+        ],
+        "answer": 0,
+        "explanation": "NCERT classifies primary, secondary and tertiary activities according to the nature of the economic activity.",
+        "difficulty": "medium",
+        "sourceVerification": "NCERT Understanding Economic Development, Chapter 2: Sectors of the Indian Economy, classification of economic activities."
       }
     ]
   },
@@ -4408,6 +4436,34 @@
         "difficulty": "Easy",
         "competencyTagStatus": "needs-review",
         "competencyTagReason": "Generic templated stem pattern detected during Social Science bank audit; replace with a specific, source-grounded question before examination use."
+      },
+      {
+        "id": 101,
+        "question": "Why does the Reserve Bank of India monitor whether banks maintain a minimum cash balance?",
+        "options": [
+          "To ensure banks retain cash to meet depositors' withdrawal needs",
+          "To guarantee every borrower receives the same loan amount",
+          "To set the selling price of all goods",
+          "To replace the role of cooperative banks"
+        ],
+        "answer": 0,
+        "explanation": "Banks keep a proportion of deposits as cash so they can meet withdrawals; the RBI monitors banks' compliance.",
+        "difficulty": "medium",
+        "sourceVerification": "NCERT Understanding Economic Development, Chapter 3: Money and Credit, Formal Sector Credit in India."
+      },
+      {
+        "id": 102,
+        "question": "How do banks connect people who have surplus funds with people who need credit?",
+        "options": [
+          "They act as intermediaries by accepting deposits and lending a major portion to borrowers",
+          "They lend only the money kept by the government",
+          "They convert every deposit into currency notes",
+          "They provide loans without requiring repayment"
+        ],
+        "answer": 0,
+        "explanation": "Banks accept deposits from savers and use a major portion of those deposits to extend loans to borrowers.",
+        "difficulty": "medium",
+        "sourceVerification": "NCERT Understanding Economic Development, Chapter 3: Money and Credit, Loan Activities of Banks."
       }
     ]
   },
