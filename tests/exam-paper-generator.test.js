@@ -6,7 +6,7 @@ const m=ctx.window.C10ExamPaperGenerator;
 const socialBlueprint=JSON.parse(fs.readFileSync("data/exam-papers/blueprints/class-10-social-science-2026-27.json","utf8"));
 const socialCheck=m.validateBlueprint(socialBlueprint);
 assert.equal(socialCheck.valid,true,socialCheck.errors.join("; "));
-assert.equal(socialBlueprint.status,"draft","Social Science remains locked until its content audit and slot-depth gate pass");
+assert.equal(socialBlueprint.status,"ready","Social Science is enabled only after the production bank and slot-depth gates pass");
 assert.equal(socialBlueprint.totalQuestions,38);
 assert.equal(socialBlueprint.totalMarks,80);
 assert.deepEqual(socialBlueprint.markDistribution,{"1":20,"2":5,"3":6,"4":3,"5":4},"mark distribution must include both map-skill questions");
@@ -58,10 +58,10 @@ const socialBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/cla
 const socialRegistry=JSON.parse(fs.readFileSync("data/exam-papers/profile-registry.json","utf8"));
 const socialProfile=socialRegistry.profiles.find(p=>p.profileId==="class-10-social-science-2026-27");
 assert.ok(socialProfile,"Social Science profile must remain registered");
-assert.equal(socialProfile.enabled,false,"Social Science must stay out of the student profile selector while 240 candidates remain under review");
-assert.equal(socialBank.questionPoolStatus,"review-required");
-assert.equal(socialBank.contentAudit.pendingOtherFormats,240);
-assert.equal(socialBank.questions.filter(q=>q.approvalStatus==="approved").length,587);
+assert.equal(socialProfile.enabled,true,"Social Science must appear in the student profile selector after release gates pass");
+assert.equal(socialBank.questionPoolStatus,"approved");
+assert.equal(socialBank.contentAudit.pendingOtherFormats,0);
+assert.equal(socialBank.questions.filter(q=>q.approvalStatus==="approved").length,827);
 assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q25-VSA-01").prompt,socialBank.questions.find(q=>q.questionId==="SST10-POL-CH15-MCQ-006").prompt,"VSA wording must not duplicate the corresponding MCQ stem");
 assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q6-SA-10").prompt,socialBank.questions.find(q=>q.questionId==="SST10-HIS-CH02-MCQ-066").prompt,"short-answer wording must be distinct from the corresponding MCQ stem");
 assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q26-SA-10").prompt,socialBank.questions.find(q=>q.questionId==="SST10-Q25-VSA-13").prompt,"the caste short-answer stem must be distinct from the VSA stem");
@@ -69,6 +69,38 @@ const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:
 assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
 assert.equal(socialBank.questions.length,827,"Social Science bank contains 407 MCQs, 60 Assertion–Reason, 80 VSA, 100 short-answer, 60 case-based, 80 long-answer and 40 map-skill candidates");
 assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,827,"Social Science question IDs must be unique");
+assert.equal(socialBank.questions.filter(q=>q.type==="very-short-answer").length,80);
+assert.equal(socialBank.questions.filter(q=>q.type==="short-answer").length,100);
+assert.equal(socialBank.questions.filter(q=>q.type==="case-based").length,60);
+for(const q of socialBank.questions.filter(q=>q.type==="very-short-answer")){
+ assert.equal(q.approvalStatus,"approved");
+ assert.ok(q.answerKey?.modelAnswer);
+ assert.ok(q.answerKey.modelAnswer.trim().split(/\\s+/).length<=40,q.questionId+" VSA answer must remain within 40 words");
+ assert.equal(q.markingScheme.reduce((sum,item)=>sum+item.marks,0),2,q.questionId+" VSA rubric must total two marks");
+}
+for(const q of socialBank.questions.filter(q=>q.type==="short-answer")){
+ assert.equal(q.approvalStatus,"approved");
+ assert.ok(q.answerKey?.modelAnswer);
+ assert.ok(q.answerKey.modelAnswer.trim().split(/\\s+/).length<=60,q.questionId+" short-answer model response must remain within 60 words");
+ assert.equal(q.markingScheme.reduce((sum,item)=>sum+item.marks,0),3,q.questionId+" short-answer rubric must total three marks");
+ if(["SST10-Q6-SA-","SST10-Q26-SA-"].some(prefix=>q.questionId.startsWith(prefix))){
+  assert.equal(q.alternatives?.length,1,q.questionId+" must retain its internal alternative");
+  assert.equal(q.alternatives[0].markingScheme.reduce((sum,item)=>sum+item.marks,0),3,q.questionId+" alternative rubric must total three marks");
+ }
+}
+for(const q of socialBank.questions.filter(q=>q.type==="case-based")){
+ assert.equal(q.approvalStatus,"approved");
+ assert.ok(q.stimulus.trim().split(/\\s+/).length>=35,q.questionId+" caselet must provide a substantive contextual passage");
+ assert.equal(q.parts.length,3);
+ assert.equal(q.parts.reduce((sum,p)=>sum+p.marks,0),4);
+ for(const part of q.parts){
+  assert.ok(part.answerKey?.modelAnswer);
+  assert.ok(part.answerKey.modelAnswer.trim().split(/\\s+/).length<=100,q.questionId+" sub-answer must remain within 100 words");
+  assert.equal(part.markingScheme.reduce((sum,item)=>sum+item.marks,0),part.marks);
+  if(part.marks===1)assert.ok(!/\\b(two|three|both|all)\\b/i.test(part.prompt),q.questionId+" one-mark subpart must not demand multiple responses");
+ }
+}
+
 assert.equal(socialBank.questions.filter(q=>q.type==="mcq").length,407,"the Social Science board-scope MCQ pool must contain 407 verified candidates");
 assert.ok(socialBank.questions.filter(q=>q.type==="mcq").every(q=>q.approvalStatus==="approved"),"all verified board-scope MCQs must be approved");
 const normaliseMcqStem=value=>String(value||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
@@ -248,13 +280,9 @@ assert.ok(selfStudySource.includes('recentPaperFingerprints'),"self-study should
 // Social Science Step 3: exercise five-paper, cross-format repeat protection
 // on an isolated test fixture. The production bank remains review-gated: this
 // test-only promotion validates generator mechanics, not content approval.
-const socialTestBlueprint={...socialBlueprint,status:"ready"};
-const socialTestBank=JSON.parse(JSON.stringify(socialBank));
-const reviewOnlyTypes=["very-short-answer","short-answer","case-based"];
-const reviewOnlyQuestions=socialTestBank.questions.filter(q=>reviewOnlyTypes.includes(q.type)&&q.approvalStatus==="review");
-assert.equal(reviewOnlyQuestions.length,240,"the VSA, all five short-answer and case-based pools remain explicitly review-gated in production");
-reviewOnlyQuestions.forEach(question=>{question.approvalStatus="approved";});
-assert.equal(socialBank.questions.filter(q=>reviewOnlyTypes.includes(q.type)&&q.approvalStatus==="review").length,240,"test-only approval must not mutate the production bank fixture");
+const socialTestBlueprint=socialBlueprint;
+const socialTestBank=socialBank;
+assert.ok(socialTestBank.questions.every(question=>question.approvalStatus==="approved"),"the production Social Science bank must contain only approved candidates");
 const socialCoverage=m.auditSlotCoverage(socialTestBlueprint,socialTestBank,20);
 assert.equal(socialCoverage.valid,true,socialCoverage.errors.join("; "));
 assert.equal(socialCoverage.coverage.length,38);
@@ -288,8 +316,8 @@ for(const requiredType of ["mcq","assertion-reason","very-short-answer","short-a
 }
 assert.equal(socialPaperHistory.length,50,"generate the full 50-paper Social Science release set");
 assert.equal(socialPaperFingerprints.size,50,"all 50 complete Social Science papers must be unique");
-assert.equal(socialBlueprint.status,"draft","test-only paper generation must not unlock the production Social Science blueprint");
-assert.ok(socialBank.questions.filter(q=>reviewOnlyTypes.includes(q.type)).every(q=>q.approvalStatus==="review"),"production review flags must remain unchanged by repeat-protection tests");
+assert.equal(socialBlueprint.status,"ready","the tested production Social Science blueprint must remain ready");
+assert.ok(socialBank.questions.every(q=>q.approvalStatus==="approved"),"the production bank must remain fully approved after repeat-protection tests");
 
 // Fallback is permitted only after a complete paper cannot be formed with the
 // requested lookback; it must report the shorter window explicitly.
