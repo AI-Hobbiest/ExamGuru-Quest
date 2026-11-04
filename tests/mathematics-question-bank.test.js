@@ -43,6 +43,7 @@ for(const profile of profiles){
  assert.equal(integrated.stats.appended,1243,"1,243 source MCQs should be added after de-duplicating against the curated bank");
  assert.equal(integrated.stats.duplicateStems,51,"51 adapted MCQs should already exist in the curated examination bank");
  assert.equal(integrated.stats.excluded.outOfSummativeScope,100,"Triangle practice questions remain available for practice but are outside the current MCQ-only paper adapter");
+ assert.equal(integrated.stats.excluded.ambiguousChapter,0,"valid source chapters must not be mislabeled as ambiguous when they simply have no MCQ paper slot");
  assert.equal(integrated.stats.excluded.invalidQuestion,6,"only the six repeated source stems should be removed from the 1,300 in-scope source MCQs");
  assert.equal(integrated.stats.invalidReasons.duplicateSourceStem,6);
  assert.ok(Object.entries(integrated.stats.invalidReasons).filter(([reason])=>reason!=="duplicateSourceStem").every(([,count])=>count===0),"valid source MCQs must not be excluded for malformed content fields");
