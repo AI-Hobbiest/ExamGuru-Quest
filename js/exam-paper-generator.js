@@ -318,11 +318,14 @@ function adaptChapterMcqBank(practiceChapters,bp,options={}){
   const keys=[rawKey,slug(rawKey),slug(title)].filter(Boolean);
   const chapterId=chapterIds.find(id=>keys.includes(id))||chapterIds.find(id=>keys.some(key=>key.endsWith("-"+id)||key.startsWith(id+"-")));
   if(!chapterId){excluded.outOfSummativeScope+=(Array.isArray(chapter&&chapter.questions)?chapter.questions.length:0);return;}
+  const explicitMcqExclusions=new Set(Array.isArray(bp.mcqPracticeExclusions)?bp.mcqPracticeExclusions.map(String):[]);
+  if(explicitMcqExclusions.has(chapterId)){excluded.outOfSummativeScope+=(Array.isArray(chapter&&chapter.questions)?chapter.questions.length:0);return;}
   const related=slotRows.filter(s=>(s.chapterIds||[]).includes(chapterId));
-  // Only adapt practice MCQs into an examination pool when the blueprint has
-  // a one-mark MCQ slot for that chapter. The original practice bank remains
-  // untouched and available to students even when the exam uses written items.
-  const mappingSlots=related.filter(s=>Number(s.marks)===1&&Array.isArray(s.allowedTypes)&&s.allowedTypes.includes("mcq"));
+  // Prefer one-mark MCQ slots when available. For other subjects, preserve
+  // their existing section fallback; a blueprint can explicitly exclude a
+  // written-response chapter from its exam MCQ adapter via mcqPracticeExclusions.
+  const mcqRelated=related.filter(s=>Number(s.marks)===1&&Array.isArray(s.allowedTypes)&&s.allowedTypes.includes("mcq"));
+  const mappingSlots=mcqRelated.length?mcqRelated:related;
   if(!mappingSlots.length){excluded.outOfSummativeScope+=(Array.isArray(chapter&&chapter.questions)?chapter.questions.length:0);return;}
   const sections=[...new Set(mappingSlots.map(s=>s.sectionId))],units=[...new Set(mappingSlots.map(s=>s.unitId).filter(Boolean))];
   if(sections.length>1&&!mappingSlots.some(s=>s.sectionId===chapter.sectionId)||units.length>1&&!mappingSlots.some(s=>s.unitId===chapter.unitId)){
