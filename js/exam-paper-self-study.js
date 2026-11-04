@@ -168,7 +168,18 @@ function responseContent(item,i){
  if(item.stimulus)html+='<p>'+esc(item.stimulus)+'</p>';
  (item.images||[]).forEach(im=>{const src=esc(im.src);html+='<img src="./'+(src.startsWith("./")?src.slice(2):src)+'" alt="'+esc(im.alt)+'">';});
  if(Array.isArray(item.parts)&&item.parts.length){
-  item.parts.forEach((part,j)=>html+='<p><strong>('+String.fromCharCode(97+j)+')</strong> '+esc(part.prompt)+' ('+part.marks+' marks)</p><textarea aria-label="Answer for question '+(i+1)+' part '+(j+1)+'" data-part="'+j+'" placeholder="Your answer here…"></textarea>');
+  item.parts.forEach((part,j)=>{
+   const heading='<p><strong>('+String.fromCharCode(97+j)+')</strong> '+esc(part.prompt)+' ('+part.marks+' marks)</p>';
+   const alt=Array.isArray(part.alternatives)&&part.alternatives.length?part.alternatives[0]:null;
+   if(alt){
+    html+=heading+
+     '<fieldset class="exam-choice"><legend>Choose one version of this subpart</legend>'+
+     '<label class="exam-option"><input type="radio" name="subpart-choice-'+i+'-'+j+'" data-subpart-choice="'+j+'" value="main" checked><span>Answer the main subpart</span></label>'+
+     '<label class="exam-option"><input type="radio" name="subpart-choice-'+i+'-'+j+'" data-subpart-choice="'+j+'" value="alternative"><span>Answer the alternative subpart</span></label></fieldset>'+
+     '<div class="exam-choice-panel" data-subpart-panel="'+j+'" data-subpart-variant="main"><textarea data-subpart-answer="'+j+'" aria-label="Answer for question '+(i+1)+' part '+(j+1)+'" placeholder="Your answer here…"></textarea></div>'+
+     '<div class="exam-choice-panel" data-subpart-panel="'+j+'" data-subpart-variant="alternative" hidden><h4>'+esc(alt.prompt)+'</h4><textarea data-subpart-answer="'+j+'" aria-label="Answer for question '+(i+1)+' part '+(j+1)+' alternative" placeholder="Your answer here…"></textarea></div>';
+   }else html+=heading+'<textarea aria-label="Answer for question '+(i+1)+' part '+(j+1)+'" data-part="'+j+'" placeholder="Your answer here…"></textarea>';
+  });
  }else{
   html+='<textarea aria-label="Answer for question '+(i+1)+'" placeholder="Write your answer here…"></textarea>';
  }
@@ -193,7 +204,13 @@ function questionMarkup(q,i){
 function syncChoicePanels(article){
  const selected=article.querySelector('input[data-choice]:checked')?.value||"main";
  article.querySelectorAll("[data-choice-panel]").forEach(panel=>{panel.hidden=panel.dataset.choicePanel!==selected;});
+ const active=article.querySelector('[data-choice-panel="'+selected+'"]')||article;
+ active.querySelectorAll("input[data-subpart-choice]:checked").forEach(radio=>{
+  const part=radio.getAttribute("data-subpart-choice");
+  active.querySelectorAll('[data-subpart-panel="'+part+'"]').forEach(panel=>{panel.hidden=panel.getAttribute("data-subpart-variant")!==radio.value;});
+ });
 }
+
 function render(){
  $("paperTitle").textContent=paper.title;
  $("questions").innerHTML=paper.questions.map(questionMarkup).join("");
@@ -203,12 +220,23 @@ function render(){
    if(saved.optionId){const option=[...article.querySelectorAll('input[type="radio"]:not([data-choice])')].find(el=>el.value===saved.optionId);if(option)option.checked=true;}
    if(saved.choice==="alternative"){const alternative=article.querySelector('input[data-choice][value="alternative"]');if(alternative)alternative.checked=true;}
    syncChoicePanels(article);
-   const activePanel=article.querySelector('[data-choice-panel="'+(saved.choice==="alternative"?"alternative":"main")+'"]');
-   [...(activePanel||article).querySelectorAll("textarea")].forEach((el,i)=>{el.value=(saved.text||[])[i]||"";});
+   const activePanel=article.querySelector('[data-choice-panel="'+(saved.choice==="alternative"?"alternative":"main")+'"]')||article;
+   if(Array.isArray(saved.parts))saved.parts.forEach((part,j)=>{
+    const choice=part.choice||"main";
+    const radio=activePanel.querySelector('input[data-subpart-choice="'+j+'"][value="'+choice+'"]');if(radio)radio.checked=true;
+   });
+   syncChoicePanels(article);
+   if(Array.isArray(saved.parts))saved.parts.forEach((part,j)=>{
+    const choice=part.choice||"main";
+    const panel=activePanel.querySelector('[data-subpart-panel="'+j+'"][data-subpart-variant="'+choice+'"]');
+    const textarea=panel?.querySelector("textarea")||activePanel.querySelector('textarea[data-part="'+j+'"]');
+    if(textarea)textarea.value=part.text||"";
+   });
+   else [...activePanel.querySelectorAll("textarea")].forEach((el,i)=>{el.value=(saved.text||[])[i]||"";});
   }
   syncChoicePanels(article);
   article.querySelectorAll("input,textarea").forEach(el=>{
-   el.addEventListener("change",()=>{if(el.matches("input[data-choice]"))syncChoicePanels(article);saveAnswers();});
+   el.addEventListener("change",()=>{if(el.matches("input[data-choice],input[data-subpart-choice]"))syncChoicePanels(article);saveAnswers();});
    el.addEventListener("input",saveAnswers);
   });
  });
@@ -217,18 +245,25 @@ function render(){
 function saveAnswers(){
  paper.questions.forEach((q,i)=>{
   const article=$("questions").querySelector('[data-q="'+i+'"]');if(!article)return;
-  const radio=article.querySelector('input[type=radio]:checked:not([data-choice])');
+  const radio=article.querySelector('input[type=radio]:checked:not([data-choice]):not([data-subpart-choice])');
   const choice=article.querySelector("input[data-choice]:checked")?.value||"main";
-  const panel=article.querySelector('[data-choice-panel="'+choice+'"]');
-  const textareas=[...(panel||article).querySelectorAll("textarea")].map(x=>x.value);
-  answers[i]={optionId:radio?.value||null,text:textareas,choice,alternative:choice==="alternative"?0:null};
+  const panel=article.querySelector('[data-choice-panel="'+choice+'"]')||article;
+  const selectedQuestion=choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;
+  const partAnswers=Array.isArray(selectedQuestion.parts)?selectedQuestion.parts.map((part,j)=>{
+   const partChoice=panel.querySelector('input[data-subpart-choice="'+j+'"]:checked')?.value||"main";
+   const partPanel=panel.querySelector('[data-subpart-panel="'+j+'"][data-subpart-variant="'+partChoice+'"]');
+   const textarea=partPanel?.querySelector("textarea")||panel.querySelector('textarea[data-part="'+j+'"]');
+   return{choice:partChoice,text:textarea?.value||""};
+  }):null;
+  const textareas=partAnswers?partAnswers.map(part=>part.text):[...panel.querySelectorAll("textarea")].map(x=>x.value);
+  answers[i]={optionId:radio?.value||null,text:textareas,choice,alternative:choice==="alternative"?0:null,parts:partAnswers};
  });
  updateProgress();
  try{localStorage.setItem(storageKey("eg_exam_attempt_v1"),JSON.stringify({paperId:paper.paperId,answers,remaining}));}catch(_){}
 }
 function updateProgress(){const count=Object.values(answers).filter(a=>a&&(a.optionId||a.text?.some(t=>t.trim()))).length;$("progress").textContent=count+" / "+paper.questions.length+" answered";}
 function startTimer(){clearInterval(tick);tick=setInterval(()=>{remaining--;const h=String(Math.floor(remaining/3600)).padStart(2,"0"),m=String(Math.floor(remaining%3600/60)).padStart(2,"0"),s=String(remaining%60).padStart(2,"0");$("timer").textContent=h+":"+m+":"+s;if(remaining<=0){clearInterval(tick);submit(true);}},1000);}
-function submit(auto=false){if(submitted)return;saveAnswers();submitted=true;clearInterval(tick);let mcq=0,correct=0,answered=0;paper.questions.forEach((q,i)=>{const a=answers[i];if(a&&(a.optionId||a.text?.some(t=>t.trim())))answered++;if(q.type==="mcq"||q.type==="assertion-reason"){mcq++;if(a?.optionId===q.correctOptionId)correct++;}});$("attempt").classList.add("exam-hidden");$("review").classList.remove("exam-hidden");$("score").textContent=(auto?"Time is up. ":"")+"Submitted "+answered+" of "+paper.questions.length+" questions. MCQ score: "+correct+" / "+mcq+". Written answers require self-review.";const box=$("reviewAnswers");box.innerHTML="";paper.questions.forEach((q,i)=>{const d=document.createElement("div");d.className="exam-question";const selected=answers[i]?.choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;const key=selected.answerKey?.modelAnswer||selected.answerKey?.answer||selected.answerKey?.correctAnswer||"Refer to your textbook and marking points.";d.innerHTML='<h3>Q'+(i+1)+': '+esc(selected.prompt||q.prompt)+'</h3><p><strong>Your answer:</strong> '+esc(answers[i]?.optionId||answers[i]?.text?.join(" / ")||"Not attempted")+'</p><p><strong>Model answer / review:</strong> '+esc(key)+'</p>';box.appendChild(d);});try{localStorage.setItem(storageKey("eg_exam_last_result_v1"),JSON.stringify({paperId:paper.paperId,answers,submittedAt:new Date().toISOString(),mcqCorrect:correct,mcqTotal:mcq}));localStorage.removeItem(storageKey("eg_exam_attempt_v1"));const queued=JSON.parse(localStorage.getItem(storageKey("eg_exam_paper_delivery_v1"))||"null");if(queued&&queued.paperId===paper.paperId)localStorage.removeItem(storageKey("eg_exam_paper_delivery_v1"));if(assignedPaper&&currentStudent)window.C10AssessmentManager.submitPaper(assignedPaper.assignmentId,currentStudent.studentId,answers);}catch(e){status(e.message||"Answers were saved, but assignment submission needs attention.");}window.scrollTo(0,0);}
+function submit(auto=false){if(submitted)return;saveAnswers();submitted=true;clearInterval(tick);let mcq=0,correct=0,answered=0;paper.questions.forEach((q,i)=>{const a=answers[i];if(a&&(a.optionId||a.text?.some(t=>t.trim())))answered++;if(q.type==="mcq"||q.type==="assertion-reason"){mcq++;if(a?.optionId===q.correctOptionId)correct++;}});$("attempt").classList.add("exam-hidden");$("review").classList.remove("exam-hidden");$("score").textContent=(auto?"Time is up. ":"")+"Submitted "+answered+" of "+paper.questions.length+" questions. MCQ score: "+correct+" / "+mcq+". Written answers require self-review.";const box=$("reviewAnswers");box.innerHTML="";paper.questions.forEach((q,i)=>{const d=document.createElement("div");d.className="exam-question";const selected=answers[i]?.choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;const partReview=Array.isArray(selected.parts)?selected.parts.map((part,j)=>{const response=answers[i]?.parts?.[j]||{},chosen=response.choice==="alternative"&&part.alternatives?.length?part.alternatives[0]:part;return"("+String.fromCharCode(97+j)+(response.choice==="alternative"?" · alternative":"")+") "+(chosen.prompt||part.prompt)+"\nYour answer: "+(response.text||"Not attempted")+"\nModel answer: "+(chosen.answerKey||"Refer to the marking points.");}).join("\n\n"):"";const key=partReview||selected.answerKey?.modelAnswer||selected.answerKey?.answer||selected.answerKey?.correctAnswer||"Refer to your textbook and marking points.";const userResponse=Array.isArray(selected.parts)?"See selected response for each case-study subpart.":(answers[i]?.optionId||answers[i]?.text?.join(" / ")||"Not attempted");d.innerHTML='<h3>Q'+(i+1)+': '+esc(selected.prompt||q.prompt)+'</h3><p><strong>Your answer:</strong> '+esc(userResponse)+'</p><p><strong>Model answer / review:</strong><br>'+esc(key).replace(/\n/g,"<br>")+'</p>';box.appendChild(d);});try{localStorage.setItem(storageKey("eg_exam_last_result_v1"),JSON.stringify({paperId:paper.paperId,answers,submittedAt:new Date().toISOString(),mcqCorrect:correct,mcqTotal:mcq}));localStorage.removeItem(storageKey("eg_exam_attempt_v1"));const queued=JSON.parse(localStorage.getItem(storageKey("eg_exam_paper_delivery_v1"))||"null");if(queued&&queued.paperId===paper.paperId)localStorage.removeItem(storageKey("eg_exam_paper_delivery_v1"));if(assignedPaper&&currentStudent)window.C10AssessmentManager.submitPaper(assignedPaper.assignmentId,currentStudent.studentId,answers);}catch(e){status(e.message||"Answers were saved, but assignment submission needs attention.");}window.scrollTo(0,0);}
 $("startBtn").addEventListener("click",()=>{try{makePaper();}catch(e){status("Cannot generate this paper: "+e.message);}});
 $("submitBtn").addEventListener("click",()=>{if(confirm("Submit your paper now? You cannot change answers after submission."))submit(false);});
 $("printBtn").addEventListener("click",()=>window.print());

@@ -11,8 +11,8 @@
   "subjectTitle": "Mathematics (Basic)",
   "subjectCode": "241",
   "assessmentLevel": "basic",
-  "status": "draft",
-  "statusReason": "Draft blueprint created from the published 2026–27 CBSE Class X Mathematics sample-paper structure and curriculum weightages. Generation remains disabled until a shared question bank is authored, independently checked, and passes per-slot coverage, answer-key, marking-scheme and assessment-level audits.",
+  "status": "ready",
+  "statusReason": "Approved for generation after full integrated question-pool coverage, difficulty-target feasibility and 50-paper regression checks. The 2026–27 CBSE section structure, unit weightages and Basic competency mark targets are retained.",
   "durationMinutes": 180,
   "totalQuestions": 38,
   "totalMarks": 80,
@@ -723,5 +723,15 @@
     "Standard and Basic share the same syllabus and question-bank path. Individual questions may declare assessmentLevels to restrict them to one or both profiles.",
     "Section E part-level internal choice is represented through requiresPartInternalChoiceMarks and the shared question renderer, not as a whole-question alternative.",
     "Do not enable either profile until the shared bank contains sufficient approved questions for every eligibility group and both levels pass separate coverage and quality checks."
-  ]
+  ],
+  "difficultyTargets": {
+    "easy": 8,
+    "medium": 29,
+    "hard": 1
+  },
+  "difficultyTargetNote": "ExamGuru calibration target for a full paper (question counts): 8 easy, 29 medium and 1 hard. This is an internal Basic-level generation target, not a percentage prescribed by CBSE. CBSE alignment is maintained separately through its published section structure, unit marks and competency mark targets.",
+  "mcqPracticeExclusions": [
+    "triangles"
+  ],
+  "mcqPracticeExclusionsNote": "Triangle MCQs remain in the chapter practice bank but are not imported into the examination MCQ adapter because the CBSE paper blueprint assesses Triangles through written-response slots."
 }

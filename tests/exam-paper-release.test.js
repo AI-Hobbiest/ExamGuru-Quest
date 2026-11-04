@@ -117,6 +117,8 @@ assert.ok(!selfStudy.includes('of 39 slots'),"student Exam Practice must not har
 assert.ok(practicePage.includes('id="profileSelect"'),"Exam Practice must expose a profile selector when multiple verified profiles are enabled");
 assert.ok(selfStudy.includes('data-choice-panel="main"')&&selfStudy.includes('data-choice-panel="alternative"'),"main and alternative answer areas must both render");
 assert.ok(selfStudy.includes('input[data-choice]'),"internal choice must be a single-select radio control");
+assert.ok(selfStudy.includes('input[data-subpart-choice]')&&selfStudy.includes('data-subpart-panel='),"online case-study subparts must support internal-choice selection");
+assert.ok(selfStudy.includes("answers[i]={optionId:radio?.value||null,text:textareas,choice,alternative:choice===\"alternative\"?0:null,parts:partAnswers}"),"online case-study subpart choices and responses must be saved");
 assert.ok(selfStudy.includes('selected.answerKey?.modelAnswer'),"review must show the selected alternative's answer key");
 assert.ok(!selfStudy.includes('type="checkbox" data-alt='),"internal choice must not allow both alternatives to be selected");
 assert.ok(practicePage.includes('id="historyStatus"'),"practice UI must explain repeat protection and storage limitations");
