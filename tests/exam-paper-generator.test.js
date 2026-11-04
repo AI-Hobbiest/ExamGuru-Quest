@@ -60,6 +60,9 @@ assert.equal(socialBank.questions.length,767,"Social Science bank should contain
 assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,767,"Social Science question IDs must be unique");
 assert.equal(socialBank.questions.filter(q=>q.type==="mcq").length,407,"the Social Science board-scope MCQ pool must contain 407 verified candidates");
 assert.ok(socialBank.questions.filter(q=>q.type==="mcq").every(q=>q.approvalStatus==="approved"),"all verified board-scope MCQs must be approved");
+const normaliseMcqStem=value=>String(value||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+const auditedMcqStems=socialBank.questions.filter(q=>q.type==="mcq").map(q=>normaliseMcqStem(q.prompt));
+assert.equal(new Set(auditedMcqStems).size,407,"the 407 approved Social Science MCQs must have distinct stems");
 assert.equal(socialBank.questions.filter(q=>q.type==="assertion-reason"&&q.approvalStatus==="approved").length,60,"all three one-mark Assertion–Reason pools must be approved");
 assert.ok(socialBank.questions.filter(q=>!["mcq","assertion-reason"].includes(q.type)).every(q=>q.approvalStatus==="review"),"written-answer, case and map pools remain in review pending their own release checks");
 const socialLong=socialBank.questions.filter(q=>q.type==="long-answer");
