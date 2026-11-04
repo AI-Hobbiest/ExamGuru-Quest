@@ -254,6 +254,16 @@ for(let attempt=1;attempt<=6;attempt++){
  socialPaperHistory.push(currentIds);
  socialFingerprintHistory.push(generated.paperFingerprint);
 }
+// Fallback is permitted only after a complete paper cannot be formed with the
+// requested lookback; it must report the shorter window explicitly.
+const fallbackPaper=m.generateUniquePaper(choiceBp,{...bank,questions:[choiceQ]},{
+ seed:"repeat-window-fallback",recentQuestionIdSets:[["choice"]],recentPaperFingerprints:[]
+});
+assert.deepEqual(fallbackPaper.questions.map(question=>question.questionId),["choice"]);
+assert.equal(fallbackPaper.repeatProtection.requestedWindow,5);
+assert.equal(fallbackPaper.repeatProtection.appliedWindow,0);
+assert.equal(fallbackPaper.repeatProtection.fallback,true);
+
 const socialFormats=new Set(socialBank.questions.filter(q=>q.approvalStatus==="approved").map(q=>q.type));
 for(const requiredType of ["mcq","assertion-reason","very-short-answer","short-answer","long-answer","case-based","diagram-based"]){
  assert.ok(socialFormats.has(requiredType),"the approved Social Science bank must include "+requiredType);
