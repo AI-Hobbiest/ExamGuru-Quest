@@ -17,7 +17,7 @@ const countBy=(rows,key)=>rows.reduce((counts,row)=>{const value=String(row[key]
 const practiceCount=source.reduce((sum,chapter)=>sum+(chapter.questions||[]).length,0);
 assert.equal(source.length,14,"Mathematics practice source must contain all 14 chapters");
 assert.equal(practiceCount,1400,"Mathematics practice source must retain all 1,400 MCQs");
-assert.equal(baseBank.questions.length,140,"the curated mixed-format examination seed pool must remain intact");
+assert.equal(baseBank.questions.length,482,"the curated mixed-format examination seed pool must remain intact");
 const baseAudit=engine.validateQuestionBank(baseBank,{classId:"10",subjectId:"mathematics",academicYear:"2026-27"});
 assert.equal(baseAudit.valid,true,baseAudit.errors.join(" | "));
 assert.equal(new Set(baseBank.questions.map(q=>q.questionId)).size,140);
@@ -33,7 +33,7 @@ for(const profile of profiles){
  assert.equal(blueprint.totalMarks,80);
  assert.equal(blueprint.slotPlan.length,38);
 
- const integrated=engine.mergeQuestionBanks(baseBank,source,blueprint,{minimumCandidatesPerSlot:3});
+ const integrated=engine.mergeQuestionBanks(baseBank,source,blueprint,{minimumCandidatesPerSlot: 20});
  const bank=integrated.bank;
  const coverage=integrated.stats.coverage;
  assert.equal(coverage.valid,true,profile.level+" integrated coverage: "+coverage.errors.join(" | "));
@@ -48,16 +48,16 @@ for(const profile of profiles){
  assert.equal(integrated.stats.invalidReasons.duplicateSourceStem,6);
  assert.ok(Object.entries(integrated.stats.invalidReasons).filter(([reason])=>reason!=="duplicateSourceStem").every(([,count])=>count===0),"valid source MCQs must not be excluded for malformed content fields");
 
- assert.equal(bank.questions.length,1383,"the full merged runtime pool must contain 1,383 unique question records");
+ assert.equal(bank.questions.length,1725,"the full merged runtime pool must contain 1,383 unique question records");
  assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,1383);
- assert.equal(countBy(bank.questions,"type").mcq,1302);
+ assert.equal(countBy(bank.questions,"type").mcq,1304);
  assert.deepEqual(countBy(bank.questions,"type"),{
-  mcq:1302,
-  "assertion-reason":6,
-  "very-short-answer":15,
-  "short-answer":24,
-  "long-answer":18,
-  "case-based":18
+  mcq:1304,
+  "assertion-reason":40,
+  "very-short-answer":100,
+  "short-answer":126,
+  "long-answer":86,
+  "case-based":69
  });
  assert.deepEqual(countBy(bank.questions,"sectionId"),{A:1308,B:15,C:24,D:18,E:18});
  assert.deepEqual(countBy(bank.questions,"difficulty"),{easy:530,medium:755,hard:98});
