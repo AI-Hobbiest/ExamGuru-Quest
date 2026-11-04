@@ -225,4 +225,39 @@ assert.ok(selfStudySource.includes('HISTORY_LIMIT=50'),"self-study should keep a
 assert.ok(selfStudySource.includes('generateUniquePaper'),"self-study should generate a previously unused full-paper combination");
 assert.ok(selfStudySource.includes('recentPaperFingerprints'),"self-study should pass recent paper fingerprints to the generator");
 
+
+// Social Science Step 3: enforce question-level non-repetition across the five
+// immediately preceding papers, including every format represented in its blueprint.
+const socialReadyBlueprint={...socialBlueprint,status:"ready"};
+assert.equal(m.validateBlueprint(socialReadyBlueprint).readyForGeneration,true);
+const socialCoverage=m.auditSlotCoverage(socialReadyBlueprint,socialBank,20);
+assert.equal(socialCoverage.valid,true,socialCoverage.errors.join("; "));
+assert.equal(socialCoverage.coverage.length,38);
+assert.ok(socialCoverage.coverage.every(slot=>slot.eligibleCount>=20),"every Social Science slot must retain 20 approved candidates before repeat protection");
+const socialPaperHistory=[],socialFingerprintHistory=[];
+for(let attempt=1;attempt<=6;attempt++){
+ const generated=m.generateUniquePaper(socialReadyBlueprint,socialBank,{
+  seed:"social-science-five-paper-repeat-"+attempt,
+  paperId:"social-science-step3-"+attempt,
+  recentQuestionIdSets:socialPaperHistory.slice(-5),
+  recentPaperFingerprints:socialFingerprintHistory.slice(-50)
+ });
+ assert.equal(m.validatePaper(generated,socialReadyBlueprint).valid,true);
+ assert.equal(generated.questions.length,38);
+ const currentIds=generated.questions.map(question=>String(question.questionId));
+ assert.equal(new Set(currentIds).size,38,"a Social Science paper must not repeat a question internally");
+ for(const previousIds of socialPaperHistory.slice(-5)){
+  assert.equal(currentIds.some(id=>previousIds.includes(id)),false,"no question of any format may reappear in the preceding five papers");
+ }
+ assert.equal(generated.repeatProtection.requestedWindow,5);
+ assert.equal(generated.repeatProtection.appliedWindow,5,"all five previous papers must remain protected when the eligible pools support it");
+ socialPaperHistory.push(currentIds);
+ socialFingerprintHistory.push(generated.paperFingerprint);
+}
+const socialFormats=new Set(socialBank.questions.filter(q=>q.approvalStatus==="approved").map(q=>q.type));
+for(const requiredType of ["mcq","assertion-reason","very-short-answer","short-answer","long-answer","case-based","diagram-based"]){
+ assert.ok(socialFormats.has(requiredType),"the approved Social Science bank must include "+requiredType);
+}
+assert.equal(socialPaperHistory.length,6,"six complete papers must be generated to prove a five-paper lookback");
+
 console.log("Exam paper generator tests passed: subject-neutral blueprints/banks, Maths fixture, language-safe MCQ adapter, draft guard, deterministic unique selection, approved-only eligibility, marks, sections, internal choices, slot coverage and repeat protection.");
