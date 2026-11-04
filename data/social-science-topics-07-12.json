@@ -154,7 +154,9 @@
         ],
         "answer": 2,
         "explanation": "Endangered species face a significant risk of extinction in the wild.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats endangered-species definition, Chipko movement, or Joint Forest Management already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 12,
@@ -667,7 +669,9 @@
         ],
         "answer": 0,
         "explanation": "The movement used non-violent community action to protect trees and forest livelihoods.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats endangered-species definition, Chipko movement, or Joint Forest Management already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 47,
@@ -740,7 +744,9 @@
         ],
         "answer": 2,
         "explanation": "Joint Forest Management involves communities in conserving and managing forest resources.",
-        "difficulty": "Medium"
+        "difficulty": "Medium",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats endangered-species definition, Chipko movement, or Joint Forest Management already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 52,
@@ -1543,7 +1549,9 @@
         ],
         "answer": 1,
         "explanation": "Scarcity depends on availability, quality, demand and management as well as rainfall.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats multipurpose river projects, rooftop rainwater harvesting, water scarcity, or displacement from large dams already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 7,
@@ -1616,7 +1624,9 @@
         ],
         "answer": 2,
         "explanation": "Such projects may serve several purposes, though they can also have social and ecological costs.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats multipurpose river projects, rooftop rainwater harvesting, water scarcity, or displacement from large dams already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 12,
@@ -1689,7 +1699,9 @@
         ],
         "answer": 0,
         "explanation": "Reservoir construction can displace people and require rehabilitation.",
-        "difficulty": "Medium"
+        "difficulty": "Medium",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats multipurpose river projects, rooftop rainwater harvesting, water scarcity, or displacement from large dams already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 17,
@@ -1835,7 +1847,9 @@
         ],
         "answer": 3,
         "explanation": "Roof runoff can be stored for use or directed into recharge structures.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats multipurpose river projects, rooftop rainwater harvesting, water scarcity, or displacement from large dams already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 27,
@@ -3003,7 +3017,9 @@
         ],
         "answer": 0,
         "explanation": "Kharif crops are generally sown with the monsoon and harvested later in the season.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats Kharif/Rabi timing, rice requirements, plantation agriculture, or Green Revolution inputs already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 7,
@@ -3076,7 +3092,9 @@
         ],
         "answer": 1,
         "explanation": "Rabi crops are sown in winter and harvested in spring or early summer.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats Kharif/Rabi timing, rice requirements, plantation agriculture, or Green Revolution inputs already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 12,
@@ -3222,7 +3240,9 @@
         ],
         "answer": 1,
         "explanation": "Rice needs warm growing conditions and sufficient water, though methods vary by region.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats Kharif/Rabi timing, rice requirements, plantation agriculture, or Green Revolution inputs already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 22,
@@ -3441,7 +3461,9 @@
         ],
         "answer": 0,
         "explanation": "Plantations generally specialise in commercial crops over extensive areas.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats Kharif/Rabi timing, rice requirements, plantation agriculture, or Green Revolution inputs already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 37,
@@ -3587,7 +3609,9 @@
         ],
         "answer": 0,
         "explanation": "New seed varieties worked alongside irrigation and other inputs to increase yields in selected regions.",
-        "difficulty": "Medium"
+        "difficulty": "Medium",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats Kharif/Rabi timing, rice requirements, plantation agriculture, or Green Revolution inputs already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 47,
@@ -4378,6 +4402,21 @@
         "difficulty": "Medium",
         "competencyTagStatus": "needs-review",
         "competencyTagReason": "Generic templated stem pattern detected during Social Science bank audit; replace with a specific, source-grounded question before examination use."
+      },
+      {
+        "id": 101,
+        "question": "Which pair consists of fibre crops commonly grown in India?",
+        "options": [
+          "Rice and wheat",
+          "Cotton and jute",
+          "Tea and coffee",
+          "Sugarcane and maize"
+        ],
+        "answer": 1,
+        "explanation": "Cotton and jute are the two major fibre crops discussed in the NCERT agriculture chapter.",
+        "difficulty": "easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "New replacement candidate; verify against the prescribed NCERT chapter and confirm distractor quality before approval."
       }
     ]
   },
@@ -4463,7 +4502,9 @@
         ],
         "answer": 2,
         "explanation": "Ferrous minerals contain iron or are associated with iron and steel production.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats ferrous minerals, coal as non-renewable energy, renewable wind/solar, or mineral conservation already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 7,
@@ -4682,7 +4723,9 @@
         ],
         "answer": 1,
         "explanation": "Coal is a fossil fuel formed over geological time and is finite on human timescales.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats ferrous minerals, coal as non-renewable energy, renewable wind/solar, or mineral conservation already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 22,
@@ -4755,7 +4798,9 @@
         ],
         "answer": 1,
         "explanation": "Wind is continually replenished by atmospheric processes, though output varies.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats ferrous minerals, coal as non-renewable energy, renewable wind/solar, or mineral conservation already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 27,
@@ -4974,7 +5019,9 @@
         ],
         "answer": 2,
         "explanation": "Efficient use, substitution and recycling can slow depletion of finite resources.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats ferrous minerals, coal as non-renewable energy, renewable wind/solar, or mineral conservation already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 42,
@@ -5996,7 +6043,9 @@
         ],
         "answer": 1,
         "explanation": "Manufacturing can expand output, employment, exports and demand for supporting services.",
-        "difficulty": "Medium"
+        "difficulty": "Medium",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats manufacturing's development role, textile-mill location factors, or industrial air pollution already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 12,
@@ -6288,7 +6337,9 @@
         ],
         "answer": 2,
         "explanation": "Ports, trading links, capital and access to raw cotton supported mill locations.",
-        "difficulty": "Medium"
+        "difficulty": "Medium",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats manufacturing's development role, textile-mill location factors, or industrial air pollution already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 32,
@@ -6434,7 +6485,9 @@
         ],
         "answer": 3,
         "explanation": "Fuel combustion and certain industrial processes release particulate matter and gases.",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "competencyTagStatus": "needs-review",
+        "competencyTagReason": "Semantic overlap: repeats manufacturing's development role, textile-mill location factors, or industrial air pollution already tested by another item. Retain only after replacement or a substantive differentiation audit."
       },
       {
         "id": 42,
