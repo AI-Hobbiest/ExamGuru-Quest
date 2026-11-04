@@ -75,13 +75,13 @@ assert.equal(socialBank.questions.filter(q=>q.type==="case-based").length,60);
 for(const q of socialBank.questions.filter(q=>q.type==="very-short-answer")){
  assert.equal(q.approvalStatus,"approved");
  assert.ok(q.answerKey?.modelAnswer);
- assert.ok(q.answerKey.modelAnswer.trim().split(/\\s+/).length<=40,q.questionId+" VSA answer must remain within 40 words");
+ assert.ok(q.answerKey.modelAnswer.trim().split(/\s+/).length<=40,q.questionId+" VSA answer must remain within 40 words");
  assert.equal(q.markingScheme.reduce((sum,item)=>sum+item.marks,0),2,q.questionId+" VSA rubric must total two marks");
 }
 for(const q of socialBank.questions.filter(q=>q.type==="short-answer")){
  assert.equal(q.approvalStatus,"approved");
  assert.ok(q.answerKey?.modelAnswer);
- assert.ok(q.answerKey.modelAnswer.trim().split(/\\s+/).length<=60,q.questionId+" short-answer model response must remain within 60 words");
+ assert.ok(q.answerKey.modelAnswer.trim().split(/\s+/).length<=60,q.questionId+" short-answer model response must remain within 60 words");
  assert.equal(q.markingScheme.reduce((sum,item)=>sum+item.marks,0),3,q.questionId+" short-answer rubric must total three marks");
  if(["SST10-Q6-SA-","SST10-Q26-SA-"].some(prefix=>q.questionId.startsWith(prefix))){
   assert.equal(q.alternatives?.length,1,q.questionId+" must retain its internal alternative");
@@ -90,14 +90,14 @@ for(const q of socialBank.questions.filter(q=>q.type==="short-answer")){
 }
 for(const q of socialBank.questions.filter(q=>q.type==="case-based")){
  assert.equal(q.approvalStatus,"approved");
- assert.ok(q.stimulus.trim().split(/\\s+/).length>=35,q.questionId+" caselet must provide a substantive contextual passage");
+ assert.ok(q.stimulus.trim().split(/\s+/).length>=35,q.questionId+" caselet must provide a substantive contextual passage");
  assert.equal(q.parts.length,3);
  assert.equal(q.parts.reduce((sum,p)=>sum+p.marks,0),4);
  for(const part of q.parts){
   assert.ok(part.answerKey?.modelAnswer);
-  assert.ok(part.answerKey.modelAnswer.trim().split(/\\s+/).length<=100,q.questionId+" sub-answer must remain within 100 words");
+  assert.ok(part.answerKey.modelAnswer.trim().split(/\s+/).length<=100,q.questionId+" sub-answer must remain within 100 words");
   assert.equal(part.markingScheme.reduce((sum,item)=>sum+item.marks,0),part.marks);
-  if(part.marks===1)assert.ok(!/\\b(two|three|both|all)\\b/i.test(part.prompt),q.questionId+" one-mark subpart must not demand multiple responses");
+  if(part.marks===1)assert.ok(!/\b(two|three|both|all)\b/i.test(part.prompt),q.questionId+" one-mark subpart must not demand multiple responses");
  }
 }
 
