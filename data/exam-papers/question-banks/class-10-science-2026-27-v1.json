@@ -23117,6 +23117,2012 @@
           ]
         }
       ]
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-01",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Which transparent structure first refracts most incoming light?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which transparent structure first refracts most incoming light?",
+          "marks": 1,
+          "answerKey": "Cornea."
+        },
+        {
+          "partId": "b",
+          "prompt": "Which structure changes curvature during accommodation?",
+          "marks": 1,
+          "answerKey": "Crystalline eye lens."
+        },
+        {
+          "partId": "c",
+          "prompt": "Where is a sharp image formed in a normal eye?",
+          "marks": 1,
+          "answerKey": "On the retina."
+        },
+        {
+          "partId": "d",
+          "prompt": "What is the function of the iris?",
+          "marks": 1,
+          "answerKey": "It regulates pupil size and the amount of light entering the eye."
+        },
+        {
+          "partId": "e",
+          "prompt": "Which nerve carries visual impulses to the brain?",
+          "marks": 1,
+          "answerKey": "Optic nerve."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Cornea.\n(b) Crystalline eye lens.\n(c) On the retina.\n(d) It regulates pupil size and the amount of light entering the eye.\n(e) Optic nerve."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/eye-vision-ray-schematic.svg",
+          "alt": "Human-eye ray diagram showing image formation on the retina.",
+          "caption": "Human-eye ray diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-02",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: What is the function of the iris?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What is the function of the iris?",
+          "marks": 1,
+          "answerKey": "It regulates pupil size and the amount of light entering the eye."
+        },
+        {
+          "partId": "b",
+          "prompt": "Which nerve carries visual impulses to the brain?",
+          "marks": 1,
+          "answerKey": "Optic nerve."
+        },
+        {
+          "partId": "c",
+          "prompt": "Which vision defect makes distant objects appear blurred?",
+          "marks": 1,
+          "answerKey": "Myopia."
+        },
+        {
+          "partId": "d",
+          "prompt": "Where does an image of a distant object form in an uncorrected myopic eye?",
+          "marks": 1,
+          "answerKey": "In front of the retina."
+        },
+        {
+          "partId": "e",
+          "prompt": "Which lens corrects myopia?",
+          "marks": 1,
+          "answerKey": "A concave lens."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) It regulates pupil size and the amount of light entering the eye.\n(b) Optic nerve.\n(c) Myopia.\n(d) In front of the retina.\n(e) A concave lens."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/hypermetropia-correction.svg",
+          "alt": "Ray diagram showing correction of hypermetropia with a convex lens.",
+          "caption": "Hypermetropia correction diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-03",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Where does an image of a distant object form in an uncorrected myopic eye?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Where does an image of a distant object form in an uncorrected myopic eye?",
+          "marks": 1,
+          "answerKey": "In front of the retina."
+        },
+        {
+          "partId": "b",
+          "prompt": "Which lens corrects myopia?",
+          "marks": 1,
+          "answerKey": "A concave lens."
+        },
+        {
+          "partId": "c",
+          "prompt": "Which vision defect makes nearby objects appear blurred?",
+          "marks": 1,
+          "answerKey": "Hypermetropia."
+        },
+        {
+          "partId": "d",
+          "prompt": "Where does an image of a nearby object form in an uncorrected hypermetropic eye?",
+          "marks": 1,
+          "answerKey": "Behind the retina."
+        },
+        {
+          "partId": "e",
+          "prompt": "Which lens corrects hypermetropia?",
+          "marks": 1,
+          "answerKey": "A convex lens."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) In front of the retina.\n(b) A concave lens.\n(c) Hypermetropia.\n(d) Behind the retina.\n(e) A convex lens."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/eye-vision-ray-schematic.svg",
+          "alt": "Human-eye ray diagram showing image formation on the retina.",
+          "caption": "Human-eye ray diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-04",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Where does an image of a nearby object form in an uncorrected hypermetropic eye?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Where does an image of a nearby object form in an uncorrected hypermetropic eye?",
+          "marks": 1,
+          "answerKey": "Behind the retina."
+        },
+        {
+          "partId": "b",
+          "prompt": "Which lens corrects hypermetropia?",
+          "marks": 1,
+          "answerKey": "A convex lens."
+        },
+        {
+          "partId": "c",
+          "prompt": "What is accommodation?",
+          "marks": 1,
+          "answerKey": "The ability of the eye lens to change focal length to focus near and distant objects."
+        },
+        {
+          "partId": "d",
+          "prompt": "Which muscles alter the curvature of the eye lens?",
+          "marks": 1,
+          "answerKey": "Ciliary muscles."
+        },
+        {
+          "partId": "e",
+          "prompt": "What happens to the eye lens when viewing a nearby object?",
+          "marks": 1,
+          "answerKey": "It becomes thicker or more convex, increasing its converging power."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Behind the retina.\n(b) A convex lens.\n(c) The ability of the eye lens to change focal length to focus near and distant objects.\n(d) Ciliary muscles.\n(e) It becomes thicker or more convex, increasing its converging power."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/hypermetropia-correction.svg",
+          "alt": "Ray diagram showing correction of hypermetropia with a convex lens.",
+          "caption": "Hypermetropia correction diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-05",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Which muscles alter the curvature of the eye lens?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which muscles alter the curvature of the eye lens?",
+          "marks": 1,
+          "answerKey": "Ciliary muscles."
+        },
+        {
+          "partId": "b",
+          "prompt": "What happens to the eye lens when viewing a nearby object?",
+          "marks": 1,
+          "answerKey": "It becomes thicker or more convex, increasing its converging power."
+        },
+        {
+          "partId": "c",
+          "prompt": "What happens to the eye lens when viewing a distant object?",
+          "marks": 1,
+          "answerKey": "It becomes thinner or less convex, reducing its converging power."
+        },
+        {
+          "partId": "d",
+          "prompt": "Which photoreceptors mainly support colour vision?",
+          "marks": 1,
+          "answerKey": "Cones."
+        },
+        {
+          "partId": "e",
+          "prompt": "Which photoreceptors are more sensitive in dim light?",
+          "marks": 1,
+          "answerKey": "Rods."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Ciliary muscles.\n(b) It becomes thicker or more convex, increasing its converging power.\n(c) It becomes thinner or less convex, reducing its converging power.\n(d) Cones.\n(e) Rods."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/eye-vision-ray-schematic.svg",
+          "alt": "Human-eye ray diagram showing image formation on the retina.",
+          "caption": "Human-eye ray diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-06",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Which photoreceptors mainly support colour vision?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which photoreceptors mainly support colour vision?",
+          "marks": 1,
+          "answerKey": "Cones."
+        },
+        {
+          "partId": "b",
+          "prompt": "Which photoreceptors are more sensitive in dim light?",
+          "marks": 1,
+          "answerKey": "Rods."
+        },
+        {
+          "partId": "c",
+          "prompt": "What is the blind spot?",
+          "marks": 1,
+          "answerKey": "The region where the optic nerve leaves the eye and photoreceptors are absent."
+        },
+        {
+          "partId": "d",
+          "prompt": "What is the near point of a normal adult eye?",
+          "marks": 1,
+          "answerKey": "Approximately 25 cm."
+        },
+        {
+          "partId": "e",
+          "prompt": "What is the far point of a normal eye?",
+          "marks": 1,
+          "answerKey": "Effectively infinity."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Cones.\n(b) Rods.\n(c) The region where the optic nerve leaves the eye and photoreceptors are absent.\n(d) Approximately 25 cm.\n(e) Effectively infinity."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/hypermetropia-correction.svg",
+          "alt": "Ray diagram showing correction of hypermetropia with a convex lens.",
+          "caption": "Hypermetropia correction diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-07",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: What is the near point of a normal adult eye?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What is the near point of a normal adult eye?",
+          "marks": 1,
+          "answerKey": "Approximately 25 cm."
+        },
+        {
+          "partId": "b",
+          "prompt": "What is the far point of a normal eye?",
+          "marks": 1,
+          "answerKey": "Effectively infinity."
+        },
+        {
+          "partId": "c",
+          "prompt": "Which transparent structure first refracts most incoming light?",
+          "marks": 1,
+          "answerKey": "Cornea."
+        },
+        {
+          "partId": "d",
+          "prompt": "Which structure changes curvature during accommodation?",
+          "marks": 1,
+          "answerKey": "Crystalline eye lens."
+        },
+        {
+          "partId": "e",
+          "prompt": "Where is a sharp image formed in a normal eye?",
+          "marks": 1,
+          "answerKey": "On the retina."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Approximately 25 cm.\n(b) Effectively infinity.\n(c) Cornea.\n(d) Crystalline eye lens.\n(e) On the retina."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/eye-vision-ray-schematic.svg",
+          "alt": "Human-eye ray diagram showing image formation on the retina.",
+          "caption": "Human-eye ray diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-08",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Which structure changes curvature during accommodation?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which structure changes curvature during accommodation?",
+          "marks": 1,
+          "answerKey": "Crystalline eye lens."
+        },
+        {
+          "partId": "b",
+          "prompt": "Where is a sharp image formed in a normal eye?",
+          "marks": 1,
+          "answerKey": "On the retina."
+        },
+        {
+          "partId": "c",
+          "prompt": "What is the function of the iris?",
+          "marks": 1,
+          "answerKey": "It regulates pupil size and the amount of light entering the eye."
+        },
+        {
+          "partId": "d",
+          "prompt": "Which nerve carries visual impulses to the brain?",
+          "marks": 1,
+          "answerKey": "Optic nerve."
+        },
+        {
+          "partId": "e",
+          "prompt": "Which vision defect makes distant objects appear blurred?",
+          "marks": 1,
+          "answerKey": "Myopia."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Crystalline eye lens.\n(b) On the retina.\n(c) It regulates pupil size and the amount of light entering the eye.\n(d) Optic nerve.\n(e) Myopia."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/hypermetropia-correction.svg",
+          "alt": "Ray diagram showing correction of hypermetropia with a convex lens.",
+          "caption": "Hypermetropia correction diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-09",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Which nerve carries visual impulses to the brain?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which nerve carries visual impulses to the brain?",
+          "marks": 1,
+          "answerKey": "Optic nerve."
+        },
+        {
+          "partId": "b",
+          "prompt": "Which vision defect makes distant objects appear blurred?",
+          "marks": 1,
+          "answerKey": "Myopia."
+        },
+        {
+          "partId": "c",
+          "prompt": "Where does an image of a distant object form in an uncorrected myopic eye?",
+          "marks": 1,
+          "answerKey": "In front of the retina."
+        },
+        {
+          "partId": "d",
+          "prompt": "Which lens corrects myopia?",
+          "marks": 1,
+          "answerKey": "A concave lens."
+        },
+        {
+          "partId": "e",
+          "prompt": "Which vision defect makes nearby objects appear blurred?",
+          "marks": 1,
+          "answerKey": "Hypermetropia."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Optic nerve.\n(b) Myopia.\n(c) In front of the retina.\n(d) A concave lens.\n(e) Hypermetropia."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/eye-vision-ray-schematic.svg",
+          "alt": "Human-eye ray diagram showing image formation on the retina.",
+          "caption": "Human-eye ray diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-10",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Which lens corrects myopia?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which lens corrects myopia?",
+          "marks": 1,
+          "answerKey": "A concave lens."
+        },
+        {
+          "partId": "b",
+          "prompt": "Which vision defect makes nearby objects appear blurred?",
+          "marks": 1,
+          "answerKey": "Hypermetropia."
+        },
+        {
+          "partId": "c",
+          "prompt": "Where does an image of a nearby object form in an uncorrected hypermetropic eye?",
+          "marks": 1,
+          "answerKey": "Behind the retina."
+        },
+        {
+          "partId": "d",
+          "prompt": "Which lens corrects hypermetropia?",
+          "marks": 1,
+          "answerKey": "A convex lens."
+        },
+        {
+          "partId": "e",
+          "prompt": "What is accommodation?",
+          "marks": 1,
+          "answerKey": "The ability of the eye lens to change focal length to focus near and distant objects."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) A concave lens.\n(b) Hypermetropia.\n(c) Behind the retina.\n(d) A convex lens.\n(e) The ability of the eye lens to change focal length to focus near and distant objects."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/hypermetropia-correction.svg",
+          "alt": "Ray diagram showing correction of hypermetropia with a convex lens.",
+          "caption": "Hypermetropia correction diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-11",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Which lens corrects hypermetropia?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which lens corrects hypermetropia?",
+          "marks": 1,
+          "answerKey": "A convex lens."
+        },
+        {
+          "partId": "b",
+          "prompt": "What is accommodation?",
+          "marks": 1,
+          "answerKey": "The ability of the eye lens to change focal length to focus near and distant objects."
+        },
+        {
+          "partId": "c",
+          "prompt": "Which muscles alter the curvature of the eye lens?",
+          "marks": 1,
+          "answerKey": "Ciliary muscles."
+        },
+        {
+          "partId": "d",
+          "prompt": "What happens to the eye lens when viewing a nearby object?",
+          "marks": 1,
+          "answerKey": "It becomes thicker or more convex, increasing its converging power."
+        },
+        {
+          "partId": "e",
+          "prompt": "What happens to the eye lens when viewing a distant object?",
+          "marks": 1,
+          "answerKey": "It becomes thinner or less convex, reducing its converging power."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) A convex lens.\n(b) The ability of the eye lens to change focal length to focus near and distant objects.\n(c) Ciliary muscles.\n(d) It becomes thicker or more convex, increasing its converging power.\n(e) It becomes thinner or less convex, reducing its converging power."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/eye-vision-ray-schematic.svg",
+          "alt": "Human-eye ray diagram showing image formation on the retina.",
+          "caption": "Human-eye ray diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-12",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: What happens to the eye lens when viewing a nearby object?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What happens to the eye lens when viewing a nearby object?",
+          "marks": 1,
+          "answerKey": "It becomes thicker or more convex, increasing its converging power."
+        },
+        {
+          "partId": "b",
+          "prompt": "What happens to the eye lens when viewing a distant object?",
+          "marks": 1,
+          "answerKey": "It becomes thinner or less convex, reducing its converging power."
+        },
+        {
+          "partId": "c",
+          "prompt": "Which photoreceptors mainly support colour vision?",
+          "marks": 1,
+          "answerKey": "Cones."
+        },
+        {
+          "partId": "d",
+          "prompt": "Which photoreceptors are more sensitive in dim light?",
+          "marks": 1,
+          "answerKey": "Rods."
+        },
+        {
+          "partId": "e",
+          "prompt": "What is the blind spot?",
+          "marks": 1,
+          "answerKey": "The region where the optic nerve leaves the eye and photoreceptors are absent."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) It becomes thicker or more convex, increasing its converging power.\n(b) It becomes thinner or less convex, reducing its converging power.\n(c) Cones.\n(d) Rods.\n(e) The region where the optic nerve leaves the eye and photoreceptors are absent."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/hypermetropia-correction.svg",
+          "alt": "Ray diagram showing correction of hypermetropia with a convex lens.",
+          "caption": "Hypermetropia correction diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-13",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Which photoreceptors are more sensitive in dim light?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which photoreceptors are more sensitive in dim light?",
+          "marks": 1,
+          "answerKey": "Rods."
+        },
+        {
+          "partId": "b",
+          "prompt": "What is the blind spot?",
+          "marks": 1,
+          "answerKey": "The region where the optic nerve leaves the eye and photoreceptors are absent."
+        },
+        {
+          "partId": "c",
+          "prompt": "What is the near point of a normal adult eye?",
+          "marks": 1,
+          "answerKey": "Approximately 25 cm."
+        },
+        {
+          "partId": "d",
+          "prompt": "What is the far point of a normal eye?",
+          "marks": 1,
+          "answerKey": "Effectively infinity."
+        },
+        {
+          "partId": "e",
+          "prompt": "Which transparent structure first refracts most incoming light?",
+          "marks": 1,
+          "answerKey": "Cornea."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Rods.\n(b) The region where the optic nerve leaves the eye and photoreceptors are absent.\n(c) Approximately 25 cm.\n(d) Effectively infinity.\n(e) Cornea."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/eye-vision-ray-schematic.svg",
+          "alt": "Human-eye ray diagram showing image formation on the retina.",
+          "caption": "Human-eye ray diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-14",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: What is the far point of a normal eye?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What is the far point of a normal eye?",
+          "marks": 1,
+          "answerKey": "Effectively infinity."
+        },
+        {
+          "partId": "b",
+          "prompt": "Which transparent structure first refracts most incoming light?",
+          "marks": 1,
+          "answerKey": "Cornea."
+        },
+        {
+          "partId": "c",
+          "prompt": "Which structure changes curvature during accommodation?",
+          "marks": 1,
+          "answerKey": "Crystalline eye lens."
+        },
+        {
+          "partId": "d",
+          "prompt": "Where is a sharp image formed in a normal eye?",
+          "marks": 1,
+          "answerKey": "On the retina."
+        },
+        {
+          "partId": "e",
+          "prompt": "What is the function of the iris?",
+          "marks": 1,
+          "answerKey": "It regulates pupil size and the amount of light entering the eye."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Effectively infinity.\n(b) Cornea.\n(c) Crystalline eye lens.\n(d) On the retina.\n(e) It regulates pupil size and the amount of light entering the eye."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/hypermetropia-correction.svg",
+          "alt": "Ray diagram showing correction of hypermetropia with a convex lens.",
+          "caption": "Hypermetropia correction diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-15",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Where is a sharp image formed in a normal eye?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Where is a sharp image formed in a normal eye?",
+          "marks": 1,
+          "answerKey": "On the retina."
+        },
+        {
+          "partId": "b",
+          "prompt": "What is the function of the iris?",
+          "marks": 1,
+          "answerKey": "It regulates pupil size and the amount of light entering the eye."
+        },
+        {
+          "partId": "c",
+          "prompt": "Which nerve carries visual impulses to the brain?",
+          "marks": 1,
+          "answerKey": "Optic nerve."
+        },
+        {
+          "partId": "d",
+          "prompt": "Which vision defect makes distant objects appear blurred?",
+          "marks": 1,
+          "answerKey": "Myopia."
+        },
+        {
+          "partId": "e",
+          "prompt": "Where does an image of a distant object form in an uncorrected myopic eye?",
+          "marks": 1,
+          "answerKey": "In front of the retina."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) On the retina.\n(b) It regulates pupil size and the amount of light entering the eye.\n(c) Optic nerve.\n(d) Myopia.\n(e) In front of the retina."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/eye-vision-ray-schematic.svg",
+          "alt": "Human-eye ray diagram showing image formation on the retina.",
+          "caption": "Human-eye ray diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-16",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Which vision defect makes distant objects appear blurred?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which vision defect makes distant objects appear blurred?",
+          "marks": 1,
+          "answerKey": "Myopia."
+        },
+        {
+          "partId": "b",
+          "prompt": "Where does an image of a distant object form in an uncorrected myopic eye?",
+          "marks": 1,
+          "answerKey": "In front of the retina."
+        },
+        {
+          "partId": "c",
+          "prompt": "Which lens corrects myopia?",
+          "marks": 1,
+          "answerKey": "A concave lens."
+        },
+        {
+          "partId": "d",
+          "prompt": "Which vision defect makes nearby objects appear blurred?",
+          "marks": 1,
+          "answerKey": "Hypermetropia."
+        },
+        {
+          "partId": "e",
+          "prompt": "Where does an image of a nearby object form in an uncorrected hypermetropic eye?",
+          "marks": 1,
+          "answerKey": "Behind the retina."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Myopia.\n(b) In front of the retina.\n(c) A concave lens.\n(d) Hypermetropia.\n(e) Behind the retina."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/hypermetropia-correction.svg",
+          "alt": "Ray diagram showing correction of hypermetropia with a convex lens.",
+          "caption": "Hypermetropia correction diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
+    },
+    {
+      "questionId": "SCI10-POOL20-Q39-17",
+      "sectionId": "physics",
+      "chapterId": "human-eye-and-colourful-world",
+      "unitId": "natural-phenomena",
+      "topicTags": [
+        "natural-phenomena",
+        "human-eye-and-colourful-world",
+        "human-eye",
+        "ray-diagram"
+      ],
+      "type": "diagram-based",
+      "marks": 5,
+      "prompt": "Refer to the supplied human-eye illustration and answer the following: Which vision defect makes nearby objects appear blurred?",
+      "stimulus": "The diagram shows the human eye or a ray arrangement used to explain a common vision condition.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which vision defect makes nearby objects appear blurred?",
+          "marks": 1,
+          "answerKey": "Hypermetropia."
+        },
+        {
+          "partId": "b",
+          "prompt": "Where does an image of a nearby object form in an uncorrected hypermetropic eye?",
+          "marks": 1,
+          "answerKey": "Behind the retina."
+        },
+        {
+          "partId": "c",
+          "prompt": "Which lens corrects hypermetropia?",
+          "marks": 1,
+          "answerKey": "A convex lens."
+        },
+        {
+          "partId": "d",
+          "prompt": "What is accommodation?",
+          "marks": 1,
+          "answerKey": "The ability of the eye lens to change focal length to focus near and distant objects."
+        },
+        {
+          "partId": "e",
+          "prompt": "Which muscles alter the curvature of the eye lens?",
+          "marks": 1,
+          "answerKey": "Ciliary muscles."
+        }
+      ],
+      "answerKey": {
+        "modelAnswer": "(a) Hypermetropia.\n(b) Behind the retina.\n(c) A convex lens.\n(d) The ability of the eye lens to change focal length to focus near and distant objects.\n(e) Ciliary muscles."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct response to part a.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part b.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part c.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part d.",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct response to part e.",
+          "marks": 1
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "images": [
+        {
+          "src": "./assets/exam-papers/science/eye-vision-ray-schematic.svg",
+          "alt": "Human-eye ray diagram showing image formation on the retina.",
+          "caption": "Human-eye ray diagram"
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain how the human eye focuses light and compare the correction of myopia and hypermetropia.",
+          "answerKey": {
+            "modelAnswer": "The cornea and crystalline lens refract light to form an image on the retina. Myopia is corrected using a concave lens, which diverges incoming rays; hypermetropia is corrected using a convex lens, which converges rays before they enter the eye."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Describe how the eye focuses light on the retina.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify myopia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain concave-lens correction of myopia.",
+              "marks": 1
+            },
+            {
+              "criterion": "Identify hypermetropia and its corrective lens.",
+              "marks": 1
+            },
+            {
+              "criterion": "Explain convex-lens correction of hypermetropia.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "approvalStatus": "approved",
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored CBSE Class X Science 2026–27 diagram-based question mapped to the human-eye blueprint slot."
+      },
+      "approvalNote": "Eye anatomy and vision concept, image linkage, answer key, five one-mark subparts and internal choice checked. Teacher moderation is recommended before high-stakes use."
     }
   ],
   "generationDesign": {
