@@ -41,6 +41,18 @@ for(const file of socialMcqPaths){
 }
 assert.equal(socialMcqCount,2216,"the four source files should contain 2,216 Social Science MCQs after NCERT-verified replacement additions");
 assert.equal(socialNeedsReview,1673,"all generic template-pattern MCQs should be held for review");
+const boardMcqChapterNos=[1,2,3,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21];
+for(const chapterNo of boardMcqChapterNos){
+ const chapter=chapters.find(item=>item.chapter_no===chapterNo);
+ assert.ok(chapter,"expected Social Science source chapter "+chapterNo);
+ const eligible=chapter.questions.filter(item=>item.competencyTagStatus!=="needs-review").length;
+ assert.ok(eligible>=20,"board-scope Social Science chapter "+chapterNo+" must retain at least 20 non-template, non-duplicate candidates; found "+eligible);
+}
+assert.ok(socialBlueprint.mcqPracticeExclusions.includes("the-age-of-industrialisation"));
+assert.ok(socialBlueprint.mcqPracticeExclusions.includes("consumer-rights"));
+assert.deepEqual(socialBlueprint.mcqSubtopicRestrictions["lifelines-of-national-economy"].allowedQuestionTypes,["map-skill"]);
+assert.deepEqual(socialBlueprint.officialAssessmentDesign.caseBasedQuestionNumbers,[8,18,28]);
+assert.deepEqual(socialBlueprint.officialAssessmentDesign.longAnswerQuestionNumbers,[7,17,27,38]);
 for(const restricted of ["the-age-of-industrialisation","consumer-rights"]){
  assert.ok(socialBlueprint.mcqPracticeExclusions.includes(restricted),"non-board chapter "+restricted+" must not be auto-imported into the MCQ pool");
 }
