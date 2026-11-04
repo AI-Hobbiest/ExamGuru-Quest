@@ -38,7 +38,7 @@ for(const profile of profiles){
  const coverage=integrated.stats.coverage;
  assert.equal(coverage.valid,true,profile.level+" integrated coverage: "+coverage.errors.join(" | "));
  assert.equal(coverage.slotCount,38);
- assert.ok(coverage.coverage.every(slot=>slot.eligibleCount>=3),profile.level+" every paper slot needs at least three eligible candidates");
+ assert.ok(coverage.coverage.every(slot=>slot.eligibleCount>=20),profile.level+" every paper slot must have at least 20 eligible candidates");
  assert.equal(integrated.stats.practiceSourceCount,1294,"1,294 structurally valid, unique, in-scope source MCQs should be adapted");
  assert.equal(integrated.stats.appended,1243,"1,243 source MCQs should be added after de-duplicating against the curated bank");
  assert.equal(integrated.stats.duplicateStems,51,"51 adapted MCQs should already exist in the curated examination bank");
