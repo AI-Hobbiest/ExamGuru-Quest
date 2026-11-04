@@ -168,7 +168,18 @@ function responseContent(item,i){
  if(item.stimulus)html+='<p>'+esc(item.stimulus)+'</p>';
  (item.images||[]).forEach(im=>{const src=esc(im.src);html+='<img src="./'+(src.startsWith("./")?src.slice(2):src)+'" alt="'+esc(im.alt)+'">';});
  if(Array.isArray(item.parts)&&item.parts.length){
-  item.parts.forEach((part,j)=>html+='<p><strong>('+String.fromCharCode(97+j)+')</strong> '+esc(part.prompt)+' ('+part.marks+' marks)</p><textarea aria-label="Answer for question '+(i+1)+' part '+(j+1)+'" data-part="'+j+'" placeholder="Your answer here…"></textarea>');
+  item.parts.forEach((part,j)=>{
+   const heading='<p><strong>('+String.fromCharCode(97+j)+')</strong> '+esc(part.prompt)+' ('+part.marks+' marks)</p>';
+   const alt=Array.isArray(part.alternatives)&&part.alternatives.length?part.alternatives[0]:null;
+   if(alt){
+    html+=heading+
+     '<fieldset class="exam-choice"><legend>Choose one version of this subpart</legend>'+
+     '<label class="exam-option"><input type="radio" name="subpart-choice-'+i+'-'+j+'" data-subpart-choice="'+j+'" value="main" checked><span>Answer the main subpart</span></label>'+
+     '<label class="exam-option"><input type="radio" name="subpart-choice-'+i+'-'+j+'" data-subpart-choice="'+j+'" value="alternative"><span>Answer the alternative subpart</span></label></fieldset>'+
+     '<div class="exam-choice-panel" data-subpart-panel="'+j+'" data-subpart-variant="main"><textarea data-subpart-answer="'+j+'" aria-label="Answer for question '+(i+1)+' part '+(j+1)+'" placeholder="Your answer here…"></textarea></div>'+
+     '<div class="exam-choice-panel" data-subpart-panel="'+j+'" data-subpart-variant="alternative" hidden><h4>'+esc(alt.prompt)+'</h4><textarea data-subpart-answer="'+j+'" aria-label="Answer for question '+(i+1)+' part '+(j+1)+' alternative" placeholder="Your answer here…"></textarea></div>';
+   }else html+=heading+'<textarea aria-label="Answer for question '+(i+1)+' part '+(j+1)+'" data-part="'+j+'" placeholder="Your answer here…"></textarea>';
+  });
  }else{
   html+='<textarea aria-label="Answer for question '+(i+1)+'" placeholder="Write your answer here…"></textarea>';
  }
@@ -193,7 +204,13 @@ function questionMarkup(q,i){
 function syncChoicePanels(article){
  const selected=article.querySelector('input[data-choice]:checked')?.value||"main";
  article.querySelectorAll("[data-choice-panel]").forEach(panel=>{panel.hidden=panel.dataset.choicePanel!==selected;});
+ const active=article.querySelector('[data-choice-panel="'+selected+'"]')||article;
+ active.querySelectorAll("input[data-subpart-choice]:checked").forEach(radio=>{
+  const part=radio.getAttribute("data-subpart-choice");
+  active.querySelectorAll('[data-subpart-panel="'+part+'"]').forEach(panel=>{panel.hidden=panel.getAttribute("data-subpart-variant")!==radio.value;});
+ });
 }
+
 function render(){
  $("paperTitle").textContent=paper.title;
  $("questions").innerHTML=paper.questions.map(questionMarkup).join("");
@@ -203,12 +220,24 @@ function render(){
    if(saved.optionId){const option=[...article.querySelectorAll('input[type="radio"]:not([data-choice])')].find(el=>el.value===saved.optionId);if(option)option.checked=true;}
    if(saved.choice==="alternative"){const alternative=article.querySelector('input[data-choice][value="alternative"]');if(alternative)alternative.checked=true;}
    syncChoicePanels(article);
-   const activePanel=article.querySelector('[data-choice-panel="'+(saved.choice==="alternative"?"alternative":"main")+'"]');
-   [...(activePanel||article).querySelectorAll("textarea")].forEach((el,i)=>{el.value=(saved.text||[])[i]||"";});
+   const activePanel=article.querySelector('[data-choice-panel="'+(saved.choice==="alternative"?"alternative":"main")+'"]')||article;
+   if(Array.isArray(saved.parts))saved.parts.forEach((part,j)=>{
+    const choice=part.choice||"main";
+    const radio=activePanel.querySelector('input[data-subpart-choice="'+j+'"][value="'+choice+'"]');if(radio)radio.checked=true;
+   });
+   syncChoicePanels(article);
+   if(Array.isArray(saved.parts))saved.parts.forEach((part,j)=>{
+    const choice=part.choice||"main";
+    const panel=activePanel.querySelector('[data-subpart-panel="'+j+'"][data-subpart-variant="'+choice+'"]');
+    const textarea=panel?.querySelector("textarea")||activePanel.querySelector('textarea[data-part="'+j+'"]');
+    if(textarea)textarea.value=part.text||"";
+   });
+   else [...activePanel.querySelectorAll("textarea")].forEach((el,i)=>{el.value=(saved.text||[])[i]||"";});
+  }
   }
   syncChoicePanels(article);
   article.querySelectorAll("input,textarea").forEach(el=>{
-   el.addEventListener("change",()=>{if(el.matches("input[data-choice]"))syncChoicePanels(article);saveAnswers();});
+   el.addEventListener("change",()=>{if(el.matches("input[data-choice],input[data-subpart-choice]"))syncChoicePanels(article);saveAnswers();});
    el.addEventListener("input",saveAnswers);
   });
  });
@@ -217,11 +246,18 @@ function render(){
 function saveAnswers(){
  paper.questions.forEach((q,i)=>{
   const article=$("questions").querySelector('[data-q="'+i+'"]');if(!article)return;
-  const radio=article.querySelector('input[type=radio]:checked:not([data-choice])');
+  const radio=article.querySelector('input[type=radio]:checked:not([data-choice]):not([data-subpart-choice])');
   const choice=article.querySelector("input[data-choice]:checked")?.value||"main";
-  const panel=article.querySelector('[data-choice-panel="'+choice+'"]');
-  const textareas=[...(panel||article).querySelectorAll("textarea")].map(x=>x.value);
-  answers[i]={optionId:radio?.value||null,text:textareas,choice,alternative:choice==="alternative"?0:null};
+  const panel=article.querySelector('[data-choice-panel="'+choice+'"]')||article;
+  const selectedQuestion=choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;
+  const partAnswers=Array.isArray(selectedQuestion.parts)?selectedQuestion.parts.map((part,j)=>{
+   const partChoice=panel.querySelector('input[data-subpart-choice="'+j+'"]:checked')?.value||"main";
+   const partPanel=panel.querySelector('[data-subpart-panel="'+j+'"][data-subpart-variant="'+partChoice+'"]');
+   const textarea=partPanel?.querySelector("textarea")||panel.querySelector('textarea[data-part="'+j+'"]');
+   return{choice:partChoice,text:textarea?.value||""};
+  }):null;
+  const textareas=partAnswers?partAnswers.map(part=>part.text):[...panel.querySelectorAll("textarea")].map(x=>x.value);
+  answers[i]={optionId:radio?.value||null,text:textareas,choice,alternative:choice==="alternative"?0:null,parts:partAnswers};
  });
  updateProgress();
  try{localStorage.setItem(storageKey("eg_exam_attempt_v1"),JSON.stringify({paperId:paper.paperId,answers,remaining}));}catch(_){}
