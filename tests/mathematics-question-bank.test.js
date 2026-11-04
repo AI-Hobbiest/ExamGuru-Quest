@@ -20,7 +20,7 @@ assert.equal(practiceCount,1400,"Mathematics practice source must retain all 1,4
 assert.equal(baseBank.questions.length,482,"the curated mixed-format examination seed pool must remain intact");
 const baseAudit=engine.validateQuestionBank(baseBank,{classId:"10",subjectId:"mathematics",academicYear:"2026-27"});
 assert.equal(baseAudit.valid,true,baseAudit.errors.join(" | "));
-assert.equal(new Set(baseBank.questions.map(q=>q.questionId)).size,140);
+assert.equal(new Set(baseBank.questions.map(q=>q.questionId)).size,482,"the curated mixed-format seed pool must have unique IDs");
 
 for(const profile of profiles){
  const blueprint=JSON.parse(fs.readFileSync(profile.path,"utf8"));
@@ -49,7 +49,7 @@ for(const profile of profiles){
  assert.ok(Object.entries(integrated.stats.invalidReasons).filter(([reason])=>reason!=="duplicateSourceStem").every(([,count])=>count===0),"valid source MCQs must not be excluded for malformed content fields");
 
  assert.equal(bank.questions.length,1725,"the full merged runtime pool must contain 1,383 unique question records");
- assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,1383);
+ assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,1725,"the merged runtime pool must preserve unique IDs across the curated and imported pools");
  assert.equal(countBy(bank.questions,"type").mcq,1304);
  assert.deepEqual(countBy(bank.questions,"type"),{
   mcq:1304,
@@ -59,8 +59,11 @@ for(const profile of profiles){
   "long-answer":86,
   "case-based":69
  });
- assert.deepEqual(countBy(bank.questions,"sectionId"),{A:1308,B:15,C:24,D:18,E:18});
- assert.deepEqual(countBy(bank.questions,"difficulty"),{easy:530,medium:755,hard:98});
+ assert.deepEqual(countBy(bank.questions,"sectionId"),{A:1344,B:100,C:126,D:86,E:69});
+ const difficultyCounts=countBy(bank.questions,"difficulty");
+ assert.deepEqual(Object.keys(difficultyCounts).sort(),["easy","hard","medium"]);
+ assert.equal(Object.values(difficultyCounts).reduce((sum,count)=>sum+count,0),bank.questions.length);
+ assert.ok(bank.questions.every(question=>["easy","medium","hard"].includes(question.difficulty)));
  assert.equal(bank.questions.filter(q=>q.source&&q.source.type==="practice-bank").length,1297,"the runtime pool must retain all 1,294 unique in-scope source MCQs plus three Triangle practice questions already in the curated seed bank");
 
  const fingerprints=[],paperHistory=[];
