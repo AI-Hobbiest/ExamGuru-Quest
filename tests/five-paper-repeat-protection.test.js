@@ -23,7 +23,7 @@ function runSequence(label, blueprint, bank, count = 50) {
       recentQuestionIdSets: previous.map(entry => entry.questionIds),
       uniqueSearchAttempts: 1000
     });
-    assert.equal(paper.questions.length, 38, label + " paper must contain 38 questions");
+    assert.equal(paper.questions.length, blueprint.totalQuestions, label + " paper must contain the blueprint question count");
     assert.equal(paper.repeatProtection.appliedWindow, previous.length, label + " must apply the full available five-paper history");
     const ids = paper.questions.map(question => question.questionId);
     assert.equal(new Set(ids).size, ids.length, label + " paper must not contain duplicate question IDs");
