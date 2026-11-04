@@ -15,6 +15,9 @@ const bank={schemaVersion:1,kind:"exam-paper-question-bank",classId:"10",subject
 assert.equal(m.validateQuestionBank(bank).valid,true);
 const diagramQuestion=q("diagram","physics",3,"diagram-based",{images:[{src:"./assets/questions/science/circuit.png",alt:"Simple electric circuit"}]});
 assert.equal(m.validateQuestion(diagramQuestion).length,0);
+const mapSkillQuestion=q("map-skill","geography",2,"diagram-based",{competency:"map-skill",images:[{src:"./assets/exam-papers/social-science/india-outline-map.svg",alt:"Outline map of India for map-skill assessment"}]});
+assert.equal(m.validateQuestion(mapSkillQuestion).length,0,"map-based diagram questions must accept the dedicated map-skill competency");
+assert.ok(m.competencies.includes("map-skill"),"the shared generator must support CBSE map-skill competency targets");
 const unsafeDiagram=q("bad-diagram","physics",3,"diagram-based",{images:[{src:"../private.png",alt:"Unsafe path"}]});
 assert.ok(m.validateQuestion(unsafeDiagram).length>0,"diagram assets must use safe relative paths");
 const paper=m.generatePaper(bp,bank,{seed:"same",generatedAt:"2026-11-02T00:00:00.000Z"});
