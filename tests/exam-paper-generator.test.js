@@ -57,7 +57,7 @@ const socialBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/cla
 const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
 assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
 assert.equal(socialBank.questions.length,827,"Social Science bank includes 626 source candidates, 21 additional NCERT-verified MCQs, 80 long-answer, 40 map and 60 Economics short-answer candidates");
-assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,767,"Social Science question IDs must be unique");
+assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,827,"Social Science question IDs must be unique");
 assert.equal(socialBank.questions.filter(q=>q.type==="mcq").length,407,"the Social Science board-scope MCQ pool must contain 407 verified candidates");
 assert.ok(socialBank.questions.filter(q=>q.type==="mcq").every(q=>q.approvalStatus==="approved"),"all verified board-scope MCQs must be approved");
 const normaliseMcqStem=value=>String(value||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
