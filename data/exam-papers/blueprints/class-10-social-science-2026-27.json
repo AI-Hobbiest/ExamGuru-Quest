@@ -11,7 +11,7 @@
   "subjectTitle": "Social Science",
   "subjectCode": "087",
   "status": "draft",
-  "statusReason": "The blueprint is structurally defined, but restricted-scope chapters are held out of the MCQ adapter pending subtopic-level review. Generic template questions are marked needs-review. Exam generation remains locked until all 38 slots have at least 20 approved, source-grounded candidates and map assets are validated.",
+  "statusReason": "Official 2026-27 sample paper structure is mapped. Restricted-scope chapters are held out pending subtopic review; 1,673 generic MCQs are marked needs-review. Generation remains locked until every slot has 20 approved source-grounded candidates, all written-answer marking schemes and map assets are validated.",
   "durationMinutes": 180,
   "totalQuestions": 38,
   "totalMarks": 80,
@@ -70,27 +70,21 @@
     "political-science": 20,
     "economics": 20
   },
-  "competencyMarksTargets": {
-    "knowledge-understanding": 24,
-    "application": 11,
-    "analysis-evaluation-creation": 40,
-    "map-skill": 5
-  },
   "officialAssessmentDesign": {
     "questionCounts": {
-      "mcq": 20,
+      "one-mark-mcq-and-assertion-reason": 20,
       "very-short-answer": 4,
       "short-answer": 5,
-      "case-based": 3,
-      "long-answer": 4,
+      "four-mark-case-based": 3,
+      "five-mark-long-answer": 4,
       "map-based": 2
     },
     "markTotals": {
-      "mcq": 20,
+      "one-mark-mcq-and-assertion-reason": 20,
       "very-short-answer": 8,
       "short-answer": 15,
-      "case-based": 12,
-      "long-answer": 20,
+      "four-mark-case-based": 12,
+      "five-mark-long-answer": 20,
       "map-based": 5
     },
     "officialCompetencyMarks": {
@@ -122,7 +116,20 @@
       27,
       38
     ],
-    "note": "The CBSE sample paper includes a further internal alternative within one part of Geography map question 19."
+    "note": "The CBSE sample paper includes a further internal alternative within one part of Geography map question 19.",
+    "longAnswerQuestionNumbers": [
+      7,
+      17,
+      27,
+      38
+    ],
+    "caseBasedQuestionNumbers": [
+      8,
+      18,
+      28,
+      38
+    ],
+    "competencyBasedWeightage": "50% (CBSE assessment pattern; the blueprint does not invent a subcategory mark split)"
   },
   "syllabusScope": {
     "history": {
@@ -738,7 +745,7 @@
       "sectionId": "economics",
       "marks": 5,
       "allowedTypes": [
-        "long-answer"
+        "case-based"
       ],
       "unitId": "economics",
       "chapterIds": [
