@@ -5,7 +5,7 @@
   "subjectId": "social-science",
   "subjectCode": "087",
   "academicYear": "2026-27",
-  "bankVersion": "examguru-cbse-2026-27-social-science-v1.3-vsa-review",
+  "bankVersion": "examguru-cbse-2026-27-social-science-v1.4-short-answer-review",
   "title": "ExamGuru Class 10 Social Science examination pool · 2026–27",
   "questionPoolStatus": "review-required",
   "questions": [
@@ -27312,13 +27312,2445 @@
           "marks": 1
         }
       ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-01",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain three ways in which the First World War affected India.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "War expenditure increased and was financed through taxes and loans; prices rose and shortages caused hardship; forced recruitment and crop failures intensified popular anger.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "War expenditure increased and was financed through taxes and loans",
+          "marks": 1
+        },
+        {
+          "criterion": "prices rose and shortages caused hardship",
+          "marks": 1
+        },
+        {
+          "criterion": "forced recruitment and crop failures intensified popular anger.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why did the Rowlatt Act create widespread opposition in India?",
+          "answerKey": {
+            "modelAnswer": "It allowed detention without trial under emergency powers; it restricted civil liberties; Indians saw it as an unjust continuation of colonial repression."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It allowed detention without trial under emergency powers",
+              "marks": 1
+            },
+            {
+              "criterion": "it restricted civil liberties",
+              "marks": 1
+            },
+            {
+              "criterion": "Indians saw it as an unjust continuation of colonial repression.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-02",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Describe three main features of Gandhi's idea of satyagraha.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "It emphasised the power of truth; it relied on non-violent resistance to injustice; it sought to persuade rather than physically defeat an opponent.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "It emphasised the power of truth",
+          "marks": 1
+        },
+        {
+          "criterion": "it relied on non-violent resistance to injustice",
+          "marks": 1
+        },
+        {
+          "criterion": "it sought to persuade rather than physically defeat an opponent.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "How did the idea of non-violence shape Gandhi's mass movements?",
+          "answerKey": {
+            "modelAnswer": "Participants were expected to resist injustice without violence; discipline and self-control were emphasised; violent incidents could lead Gandhi to suspend a movement."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Participants were expected to resist injustice without violence",
+              "marks": 1
+            },
+            {
+              "criterion": "discipline and self-control were emphasised",
+              "marks": 1
+            },
+            {
+              "criterion": "violent incidents could lead Gandhi to suspend a movement.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-03",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Why did Gandhi support the Khilafat issue in the Non-Cooperation Movement?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "He wanted to bring Hindus and Muslims into a common anti-colonial struggle; the issue had mobilised many Indian Muslims; he believed unity would strengthen mass opposition to British rule.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "He wanted to bring Hindus and Muslims into a common anti-colonial struggle",
+          "marks": 1
+        },
+        {
+          "criterion": "the issue had mobilised many Indian Muslims",
+          "marks": 1
+        },
+        {
+          "criterion": "he believed unity would strengthen mass opposition to British rule.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "State three methods used during the Non-Cooperation Movement.",
+          "answerKey": {
+            "modelAnswer": "People surrendered titles and honours; students and teachers left government institutions; foreign cloth and other colonial goods were boycotted in favour of swadeshi and khadi."
+          },
+          "markingScheme": [
+            {
+              "criterion": "People surrendered titles and honours",
+              "marks": 1
+            },
+            {
+              "criterion": "students and teachers left government institutions",
+              "marks": 1
+            },
+            {
+              "criterion": "foreign cloth and other colonial goods were boycotted in favour of swadeshi and khadi.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-04",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain why the Non-Cooperation Movement was withdrawn in 1922.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "The Chauri Chaura protest turned violent; protesters killed policemen after a clash; Gandhi believed the movement was not sufficiently disciplined in non-violence and called it off.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "The Chauri Chaura protest turned violent",
+          "marks": 1
+        },
+        {
+          "criterion": "protesters killed policemen after a clash",
+          "marks": 1
+        },
+        {
+          "criterion": "Gandhi believed the movement was not sufficiently disciplined in non-violence and called it off.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "What was the significance of the Chauri Chaura incident for the national movement?",
+          "answerKey": {
+            "modelAnswer": "The incident involved violence against policemen; it exposed the risk of an uncontrolled mass movement; Gandhi withdrew Non-Cooperation to uphold non-violence."
+          },
+          "markingScheme": [
+            {
+              "criterion": "The incident involved violence against policemen",
+              "marks": 1
+            },
+            {
+              "criterion": "it exposed the risk of an uncontrolled mass movement",
+              "marks": 1
+            },
+            {
+              "criterion": "Gandhi withdrew Non-Cooperation to uphold non-violence.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-05",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Why did Gandhi choose salt as the focus of the Civil Disobedience Movement?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Salt was used by rich and poor alike; the British monopoly and tax affected every household; breaking the salt law offered a simple, powerful act of defiance.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Salt was used by rich and poor alike",
+          "marks": 1
+        },
+        {
+          "criterion": "the British monopoly and tax affected every household",
+          "marks": 1
+        },
+        {
+          "criterion": "breaking the salt law offered a simple, powerful act of defiance.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Describe three ways in which the Salt March became a symbol of resistance.",
+          "answerKey": {
+            "modelAnswer": "Gandhi marched from Sabarmati to Dandi; he broke the salt law by making salt; the action inspired people in many regions to challenge colonial laws."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Gandhi marched from Sabarmati to Dandi",
+              "marks": 1
+            },
+            {
+              "criterion": "he broke the salt law by making salt",
+              "marks": 1
+            },
+            {
+              "criterion": "the action inspired people in many regions to challenge colonial laws.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-06",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "How did Civil Disobedience differ from Non-Cooperation?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Non-Cooperation mainly involved withdrawing support from colonial institutions; Civil Disobedience involved openly breaking selected colonial laws; participants also refused certain taxes and violated forest or salt laws where relevant.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Non-Cooperation mainly involved withdrawing support from colonial institutions",
+          "marks": 1
+        },
+        {
+          "criterion": "Civil Disobedience involved openly breaking selected colonial laws",
+          "marks": 1
+        },
+        {
+          "criterion": "participants also refused certain taxes and violated forest or salt laws where relevant.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Give three examples of actions taken during the Civil Disobedience Movement.",
+          "answerKey": {
+            "modelAnswer": "People broke the salt law; peasants in some areas refused to pay revenue or taxes; forest communities and others challenged restrictions on their customary activities."
+          },
+          "markingScheme": [
+            {
+              "criterion": "People broke the salt law",
+              "marks": 1
+            },
+            {
+              "criterion": "peasants in some areas refused to pay revenue or taxes",
+              "marks": 1
+            },
+            {
+              "criterion": "forest communities and others challenged restrictions on their customary activities.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-07",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Why was the Simon Commission opposed in India?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "It was appointed to review constitutional reforms without any Indian member; Indians saw this as an insult to their political capacity; protests demanded self-government and representation.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "It was appointed to review constitutional reforms without any Indian member",
+          "marks": 1
+        },
+        {
+          "criterion": "Indians saw this as an insult to their political capacity",
+          "marks": 1
+        },
+        {
+          "criterion": "protests demanded self-government and representation.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "What was the importance of the Lahore Congress session of 1929?",
+          "answerKey": {
+            "modelAnswer": "Congress adopted Purna Swaraj as its goal; it called for complete independence rather than dominion status; 26 January 1930 was observed as Independence Day."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Congress adopted Purna Swaraj as its goal",
+              "marks": 1
+            },
+            {
+              "criterion": "it called for complete independence rather than dominion status",
+              "marks": 1
+            },
+            {
+              "criterion": "26 January 1930 was observed as Independence Day.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-08",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "State three outcomes of the Gandhi-Irwin Pact of 1931.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Congress agreed to suspend the Civil Disobedience Movement; it agreed to participate in the Second Round Table Conference; the government agreed to release political prisoners not charged with violence and permit peaceful picketing.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Congress agreed to suspend the Civil Disobedience Movement",
+          "marks": 1
+        },
+        {
+          "criterion": "it agreed to participate in the Second Round Table Conference",
+          "marks": 1
+        },
+        {
+          "criterion": "the government agreed to release political prisoners not charged with violence and permit peaceful picketing.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why did the Second Round Table Conference fail to resolve India's constitutional question?",
+          "answerKey": {
+            "modelAnswer": "The parties disagreed over representation and safeguards; Gandhi could not secure agreement on the demands of all communities; the conference did not produce a settlement on independence."
+          },
+          "markingScheme": [
+            {
+              "criterion": "The parties disagreed over representation and safeguards",
+              "marks": 1
+            },
+            {
+              "criterion": "Gandhi could not secure agreement on the demands of all communities",
+              "marks": 1
+            },
+            {
+              "criterion": "the conference did not produce a settlement on independence.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-09",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain why rich peasants participated in the Civil Disobedience Movement.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Falling agricultural prices reduced their income; revenue demands remained burdensome; they hoped the movement would secure relief from colonial taxation.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Falling agricultural prices reduced their income",
+          "marks": 1
+        },
+        {
+          "criterion": "revenue demands remained burdensome",
+          "marks": 1
+        },
+        {
+          "criterion": "they hoped the movement would secure relief from colonial taxation.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why did some poor peasants have a different experience of the Civil Disobedience Movement?",
+          "answerKey": {
+            "modelAnswer": "Poor peasants wanted unpaid rent and debts to be reduced; Congress was cautious about supporting no-rent campaigns; their immediate economic demands were not always addressed."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Poor peasants wanted unpaid rent and debts to be reduced",
+              "marks": 1
+            },
+            {
+              "criterion": "Congress was cautious about supporting no-rent campaigns",
+              "marks": 1
+            },
+            {
+              "criterion": "their immediate economic demands were not always addressed.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-10",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Why did some Indian business groups support the Civil Disobedience Movement?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "They wanted protection from colonial economic policies; they supported swadeshi and reduced dependence on imported goods; they hoped for policies that would support Indian industry and trade.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "They wanted protection from colonial economic policies",
+          "marks": 1
+        },
+        {
+          "criterion": "they supported swadeshi and reduced dependence on imported goods",
+          "marks": 1
+        },
+        {
+          "criterion": "they hoped for policies that would support Indian industry and trade.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "State three reasons why industrialists supported swadeshi during the national movement.",
+          "answerKey": {
+            "modelAnswer": "Swadeshi encouraged demand for Indian-made goods; it could reduce competition from imported manufactures; it offered a political platform to press for a more favourable economic environment."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Swadeshi encouraged demand for Indian-made goods",
+              "marks": 1
+            },
+            {
+              "criterion": "it could reduce competition from imported manufactures",
+              "marks": 1
+            },
+            {
+              "criterion": "it offered a political platform to press for a more favourable economic environment.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-11",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Describe three ways in which women participated in the Civil Disobedience Movement.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Women joined marches and demonstrations; they picketed liquor shops and foreign-cloth shops; many made or promoted salt and khadi as acts of protest.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Women joined marches and demonstrations",
+          "marks": 1
+        },
+        {
+          "criterion": "they picketed liquor shops and foreign-cloth shops",
+          "marks": 1
+        },
+        {
+          "criterion": "many made or promoted salt and khadi as acts of protest.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why did women's participation not automatically lead to equal political rights?",
+          "answerKey": {
+            "modelAnswer": "Many women were still expected to prioritise domestic roles; leadership positions remained largely male-dominated; social participation did not immediately remove structural gender inequality."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Many women were still expected to prioritise domestic roles",
+              "marks": 1
+            },
+            {
+              "criterion": "leadership positions remained largely male-dominated",
+              "marks": 1
+            },
+            {
+              "criterion": "social participation did not immediately remove structural gender inequality.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-12",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Why did Dalit leaders seek separate political safeguards during the national movement?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "They wanted protection against caste discrimination; they sought independent political representation; they feared that dominant-caste leadership might not adequately represent Dalit interests.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "They wanted protection against caste discrimination",
+          "marks": 1
+        },
+        {
+          "criterion": "they sought independent political representation",
+          "marks": 1
+        },
+        {
+          "criterion": "they feared that dominant-caste leadership might not adequately represent Dalit interests.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "What was the significance of the Poona Pact of 1932?",
+          "answerKey": {
+            "modelAnswer": "It followed disagreement over separate electorates for the Depressed Classes; it provided reserved seats in provincial legislatures within a joint electorate; it became a major agreement on political representation."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It followed disagreement over separate electorates for the Depressed Classes",
+              "marks": 1
+            },
+            {
+              "criterion": "it provided reserved seats in provincial legislatures within a joint electorate",
+              "marks": 1
+            },
+            {
+              "criterion": "it became a major agreement on political representation.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-13",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "How did tribal communities interpret the idea of swaraj in some regions?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "They associated swaraj with freedom from restrictive forest laws; they wanted access to forests and customary resources; they expected relief from colonial interference in their livelihoods.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "They associated swaraj with freedom from restrictive forest laws",
+          "marks": 1
+        },
+        {
+          "criterion": "they wanted access to forests and customary resources",
+          "marks": 1
+        },
+        {
+          "criterion": "they expected relief from colonial interference in their livelihoods.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why did forest communities sometimes participate in nationalist protest?",
+          "answerKey": {
+            "modelAnswer": "Colonial forest regulations restricted access to forest produce; restrictions affected grazing, cultivation and livelihoods; protest was a way to defend customary rights."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Colonial forest regulations restricted access to forest produce",
+              "marks": 1
+            },
+            {
+              "criterion": "restrictions affected grazing, cultivation and livelihoods",
+              "marks": 1
+            },
+            {
+              "criterion": "protest was a way to defend customary rights.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-14",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain the importance of Bharat Mata as a nationalist symbol.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "The image personified the nation as a mother; it encouraged emotional attachment and devotion; artists and nationalists used it to communicate ideas of unity and sacrifice.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "The image personified the nation as a mother",
+          "marks": 1
+        },
+        {
+          "criterion": "it encouraged emotional attachment and devotion",
+          "marks": 1
+        },
+        {
+          "criterion": "artists and nationalists used it to communicate ideas of unity and sacrifice.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "How did songs and images contribute to Indian nationalism?",
+          "answerKey": {
+            "modelAnswer": "They created shared symbols and emotional connections; they helped people imagine a common national community; they spread nationalist messages beyond formal political meetings."
+          },
+          "markingScheme": [
+            {
+              "criterion": "They created shared symbols and emotional connections",
+              "marks": 1
+            },
+            {
+              "criterion": "they helped people imagine a common national community",
+              "marks": 1
+            },
+            {
+              "criterion": "they spread nationalist messages beyond formal political meetings.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-15",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "How did the national flag become a symbol of resistance?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "It was carried in marches and public demonstrations; it represented unity and defiance of colonial authority; people associated it with self-rule and national identity.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "It was carried in marches and public demonstrations",
+          "marks": 1
+        },
+        {
+          "criterion": "it represented unity and defiance of colonial authority",
+          "marks": 1
+        },
+        {
+          "criterion": "people associated it with self-rule and national identity.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why were symbols important to the national movement?",
+          "answerKey": {
+            "modelAnswer": "Symbols made abstract ideas easier to recognise; they helped diverse groups express shared aspirations; they could be displayed in processions and public gatherings."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Symbols made abstract ideas easier to recognise",
+              "marks": 1
+            },
+            {
+              "criterion": "they helped diverse groups express shared aspirations",
+              "marks": 1
+            },
+            {
+              "criterion": "they could be displayed in processions and public gatherings.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-16",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Why did different social groups join the Civil Disobedience Movement for different reasons?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Rich peasants sought relief from revenue demands; business groups wanted protection for Indian industry; women, workers, Dalits and tribal communities brought their own social and economic concerns.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Rich peasants sought relief from revenue demands",
+          "marks": 1
+        },
+        {
+          "criterion": "business groups wanted protection for Indian industry",
+          "marks": 1
+        },
+        {
+          "criterion": "women, workers, Dalits and tribal communities brought their own social and economic concerns.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain why participation in the national movement was not identical across India.",
+          "answerKey": {
+            "modelAnswer": "Regional conditions and local grievances differed; social groups had distinct economic interests; the meaning of swaraj varied according to people's experiences."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Regional conditions and local grievances differed",
+              "marks": 1
+            },
+            {
+              "criterion": "social groups had distinct economic interests",
+              "marks": 1
+            },
+            {
+              "criterion": "the meaning of swaraj varied according to people's experiences.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-17",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Describe three limits of unity within the Civil Disobedience Movement.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Some poor peasants' no-rent demands were not fully supported; Dalit leaders sought separate safeguards and representation; some Muslim political groups remained cautious about Congress-led mobilisation.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Some poor peasants' no-rent demands were not fully supported",
+          "marks": 1
+        },
+        {
+          "criterion": "Dalit leaders sought separate safeguards and representation",
+          "marks": 1
+        },
+        {
+          "criterion": "some Muslim political groups remained cautious about Congress-led mobilisation.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why did some communities remain cautious about joining Congress-led movements?",
+          "answerKey": {
+            "modelAnswer": "They had concerns about representation and protection of their interests; earlier political disagreements created mistrust; local social and economic priorities did not always align with Congress strategies."
+          },
+          "markingScheme": [
+            {
+              "criterion": "They had concerns about representation and protection of their interests",
+              "marks": 1
+            },
+            {
+              "criterion": "earlier political disagreements created mistrust",
+              "marks": 1
+            },
+            {
+              "criterion": "local social and economic priorities did not always align with Congress strategies.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-18",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "How did the memory of the Jallianwala Bagh massacre influence Indian nationalism?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "It exposed the violence of colonial rule; it created widespread anger and grief; it encouraged many Indians to withdraw cooperation from British institutions.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "It exposed the violence of colonial rule",
+          "marks": 1
+        },
+        {
+          "criterion": "it created widespread anger and grief",
+          "marks": 1
+        },
+        {
+          "criterion": "it encouraged many Indians to withdraw cooperation from British institutions.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why did the Rowlatt Satyagraha mark an important stage in mass politics?",
+          "answerKey": {
+            "modelAnswer": "It mobilised people against repressive colonial legislation; it used hartals and peaceful protest; it helped expand Gandhi's role in nationwide politics."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It mobilised people against repressive colonial legislation",
+              "marks": 1
+            },
+            {
+              "criterion": "it used hartals and peaceful protest",
+              "marks": 1
+            },
+            {
+              "criterion": "it helped expand Gandhi's role in nationwide politics.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q6-SA-19",
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain the role of the Simon Commission protests in the demand for self-government.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "The all-British commission was rejected by Indian political groups; protests used slogans such as 'Simon Go Back'; the opposition strengthened demands for Indian participation in constitutional decisions.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "The all-British commission was rejected by Indian political groups",
+          "marks": 1
+        },
+        {
+          "criterion": "protests used slogans such as 'Simon Go Back'",
+          "marks": 1
+        },
+        {
+          "criterion": "the opposition strengthened demands for Indian participation in constitutional decisions.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why was the demand for Purna Swaraj a significant change in Congress policy?",
+          "answerKey": {
+            "modelAnswer": "It replaced the earlier goal of dominion status with complete independence; it gave the movement a clear political objective; it mobilised people around a national pledge."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It replaced the earlier goal of dominion status with complete independence",
+              "marks": 1
+            },
+            {
+              "criterion": "it gave the movement a clear political objective",
+              "marks": 1
+            },
+            {
+              "criterion": "it mobilised people around a national pledge.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-01",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain three ways in which gender division is visible in everyday life.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Household and care work is often assigned mainly to women; women may have fewer opportunities in paid employment; unequal expectations can limit participation in public decision-making.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Household and care work is often assigned mainly to women",
+          "marks": 1
+        },
+        {
+          "criterion": "women may have fewer opportunities in paid employment",
+          "marks": 1
+        },
+        {
+          "criterion": "unequal expectations can limit participation in public decision-making.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "How can gender stereotypes affect the opportunities available to girls and boys?",
+          "answerKey": {
+            "modelAnswer": "They shape expectations about subjects and careers; they may restrict freedom to choose roles; they can reinforce unequal access to education, work and leadership."
+          },
+          "markingScheme": [
+            {
+              "criterion": "They shape expectations about subjects and careers",
+              "marks": 1
+            },
+            {
+              "criterion": "they may restrict freedom to choose roles",
+              "marks": 1
+            },
+            {
+              "criterion": "they can reinforce unequal access to education, work and leadership.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-02",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Why is the sexual division of labour considered a social arrangement rather than a natural rule?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Work roles are assigned through social expectations; these roles differ across societies and over time; women and men are both capable of domestic and paid work.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Work roles are assigned through social expectations",
+          "marks": 1
+        },
+        {
+          "criterion": "these roles differ across societies and over time",
+          "marks": 1
+        },
+        {
+          "criterion": "women and men are both capable of domestic and paid work.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "State three objectives of feminist movements.",
+          "answerKey": {
+            "modelAnswer": "They seek equal rights and opportunities; they challenge discrimination and gender stereotypes; they work for dignity, safety and fair participation in public life."
+          },
+          "markingScheme": [
+            {
+              "criterion": "They seek equal rights and opportunities",
+              "marks": 1
+            },
+            {
+              "criterion": "they challenge discrimination and gender stereotypes",
+              "marks": 1
+            },
+            {
+              "criterion": "they work for dignity, safety and fair participation in public life.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-03",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Suggest three measures that can improve women's participation in political institutions.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Reserve seats for women in elected bodies; encourage parties to nominate women candidates; support education, safety and equal opportunities for political leadership.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Reserve seats for women in elected bodies",
+          "marks": 1
+        },
+        {
+          "criterion": "encourage parties to nominate women candidates",
+          "marks": 1
+        },
+        {
+          "criterion": "support education, safety and equal opportunities for political leadership.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why is representation of women in local government significant?",
+          "answerKey": {
+            "modelAnswer": "It brings women's concerns into local decisions; it gives women experience in public leadership; it can make local institutions more representative."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It brings women's concerns into local decisions",
+              "marks": 1
+            },
+            {
+              "criterion": "it gives women experience in public leadership",
+              "marks": 1
+            },
+            {
+              "criterion": "it can make local institutions more representative.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-04",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain three ways in which women may experience inequality in the workplace.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "They may receive lower pay for comparable work; they may face barriers to promotion and leadership; unsafe conditions and unequal care responsibilities can restrict employment choices.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "They may receive lower pay for comparable work",
+          "marks": 1
+        },
+        {
+          "criterion": "they may face barriers to promotion and leadership",
+          "marks": 1
+        },
+        {
+          "criterion": "unsafe conditions and unequal care responsibilities can restrict employment choices.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "How can education help reduce gender inequality?",
+          "answerKey": {
+            "modelAnswer": "It expands knowledge and employment opportunities; it can challenge stereotypes; it helps people understand rights and participate more fully in society."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It expands knowledge and employment opportunities",
+              "marks": 1
+            },
+            {
+              "criterion": "it can challenge stereotypes",
+              "marks": 1
+            },
+            {
+              "criterion": "it helps people understand rights and participate more fully in society.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-05",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "What is communalism? Explain two ways in which it can enter politics.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Communalism treats religious identity as the principal basis of political community; it may appear through religious prejudice and stereotypes; it can become a demand for dominance by one religious group.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Communalism treats religious identity as the principal basis of political community",
+          "marks": 1
+        },
+        {
+          "criterion": "it may appear through religious prejudice and stereotypes",
+          "marks": 1
+        },
+        {
+          "criterion": "it can become a demand for dominance by one religious group.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why is communalism dangerous for democracy?",
+          "answerKey": {
+            "modelAnswer": "It can create hostility between communities; it may undermine equal citizenship and minority rights; it can turn political competition into religious conflict."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It can create hostility between communities",
+              "marks": 1
+            },
+            {
+              "criterion": "it may undermine equal citizenship and minority rights",
+              "marks": 1
+            },
+            {
+              "criterion": "it can turn political competition into religious conflict.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-06",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Distinguish between religious faith and communalism in politics.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Religious faith is a personal or community belief and practice; communalism uses religious identity to claim political dominance; communal politics may portray other communities as enemies.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Religious faith is a personal or community belief and practice",
+          "marks": 1
+        },
+        {
+          "criterion": "communalism uses religious identity to claim political dominance",
+          "marks": 1
+        },
+        {
+          "criterion": "communal politics may portray other communities as enemies.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "State three features of a secular state.",
+          "answerKey": {
+            "modelAnswer": "It has no official state religion; it treats citizens equally regardless of religion; it protects freedom of conscience and religious practice subject to constitutional limits."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It has no official state religion",
+              "marks": 1
+            },
+            {
+              "criterion": "it treats citizens equally regardless of religion",
+              "marks": 1
+            },
+            {
+              "criterion": "it protects freedom of conscience and religious practice subject to constitutional limits.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-07",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "How does the Indian Constitution support secularism?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "It does not establish one official state religion; it guarantees freedom of conscience and religion; it prohibits discrimination on grounds of religion and provides equal citizenship.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "It does not establish one official state religion",
+          "marks": 1
+        },
+        {
+          "criterion": "it guarantees freedom of conscience and religion",
+          "marks": 1
+        },
+        {
+          "criterion": "it prohibits discrimination on grounds of religion and provides equal citizenship.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why should the state not favour one religion over others?",
+          "answerKey": {
+            "modelAnswer": "Favouritism violates equal citizenship; it can marginalise religious minorities; neutrality helps protect freedom of belief and social harmony."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Favouritism violates equal citizenship",
+              "marks": 1
+            },
+            {
+              "criterion": "it can marginalise religious minorities",
+              "marks": 1
+            },
+            {
+              "criterion": "neutrality helps protect freedom of belief and social harmony.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-08",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain how caste can influence electoral politics.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Parties may consider caste composition when selecting candidates; caste groups may organise to demand representation; political competition can bring caste-based inequalities into public debate.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Parties may consider caste composition when selecting candidates",
+          "marks": 1
+        },
+        {
+          "criterion": "caste groups may organise to demand representation",
+          "marks": 1
+        },
+        {
+          "criterion": "political competition can bring caste-based inequalities into public debate.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why is it incorrect to assume that people vote only according to caste?",
+          "answerKey": {
+            "modelAnswer": "Voters consider leadership and party policies; they assess issues such as jobs, services and local development; individuals within the same caste can have different political preferences."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Voters consider leadership and party policies",
+              "marks": 1
+            },
+            {
+              "criterion": "they assess issues such as jobs, services and local development",
+              "marks": 1
+            },
+            {
+              "criterion": "individuals within the same caste can have different political preferences.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-09",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "How can politics influence caste relations in a democracy?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Political participation can give disadvantaged groups a voice; affirmative measures can improve representation; democratic mobilisation can challenge inherited hierarchies and discrimination.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Political participation can give disadvantaged groups a voice",
+          "marks": 1
+        },
+        {
+          "criterion": "affirmative measures can improve representation",
+          "marks": 1
+        },
+        {
+          "criterion": "democratic mobilisation can challenge inherited hierarchies and discrimination.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Give three ways in which democratic politics can address caste inequality.",
+          "answerKey": {
+            "modelAnswer": "Laws can prohibit caste discrimination; reservations can improve access to representation and opportunities; public action and education can challenge social exclusion."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Laws can prohibit caste discrimination",
+              "marks": 1
+            },
+            {
+              "criterion": "reservations can improve access to representation and opportunities",
+              "marks": 1
+            },
+            {
+              "criterion": "public action and education can challenge social exclusion.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-10",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "What is meant by the traditional caste hierarchy?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "It ranked social groups in a hereditary order; it often linked occupations to birth; it restricted social interaction and opportunities for many communities.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "It ranked social groups in a hereditary order",
+          "marks": 1
+        },
+        {
+          "criterion": "it often linked occupations to birth",
+          "marks": 1
+        },
+        {
+          "criterion": "it restricted social interaction and opportunities for many communities.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "How can caste discrimination continue even when equality is guaranteed by law?",
+          "answerKey": {
+            "modelAnswer": "Prejudice may persist in everyday social relations; unequal access to education and resources may continue; informal exclusion can remain despite legal protections."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Prejudice may persist in everyday social relations",
+              "marks": 1
+            },
+            {
+              "criterion": "unequal access to education and resources may continue",
+              "marks": 1
+            },
+            {
+              "criterion": "informal exclusion can remain despite legal protections.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-11",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain why inter-caste marriage can challenge caste divisions.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "It crosses boundaries of caste endogamy; it allows people to form families beyond inherited group restrictions; it can weaken the social reproduction of caste divisions.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "It crosses boundaries of caste endogamy",
+          "marks": 1
+        },
+        {
+          "criterion": "it allows people to form families beyond inherited group restrictions",
+          "marks": 1
+        },
+        {
+          "criterion": "it can weaken the social reproduction of caste divisions.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why is the principle of equal citizenship important in a caste-diverse society?",
+          "answerKey": {
+            "modelAnswer": "It gives every person equal legal status; it rejects discrimination based on birth; it provides a basis for challenging exclusion and unequal treatment."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It gives every person equal legal status",
+              "marks": 1
+            },
+            {
+              "criterion": "it rejects discrimination based on birth",
+              "marks": 1
+            },
+            {
+              "criterion": "it provides a basis for challenging exclusion and unequal treatment.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-12",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "How can gender and caste inequalities reinforce each other?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Women from disadvantaged castes may face both gender and caste discrimination; unequal access to education and employment can compound disadvantage; policies should recognise overlapping barriers.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Women from disadvantaged castes may face both gender and caste discrimination",
+          "marks": 1
+        },
+        {
+          "criterion": "unequal access to education and employment can compound disadvantage",
+          "marks": 1
+        },
+        {
+          "criterion": "policies should recognise overlapping barriers.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Suggest three steps schools can take to promote gender equality.",
+          "answerKey": {
+            "modelAnswer": "Use inclusive classroom practices and examples; ensure equal participation in sports, leadership and subjects; challenge stereotypes and respond to harassment."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Use inclusive classroom practices and examples",
+              "marks": 1
+            },
+            {
+              "criterion": "ensure equal participation in sports, leadership and subjects",
+              "marks": 1
+            },
+            {
+              "criterion": "challenge stereotypes and respond to harassment.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-13",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Why does democracy require equal treatment of citizens regardless of religion?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "It protects freedom of conscience; it prevents state-sponsored discrimination; it allows people of different faiths to participate as equal citizens.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "It protects freedom of conscience",
+          "marks": 1
+        },
+        {
+          "criterion": "it prevents state-sponsored discrimination",
+          "marks": 1
+        },
+        {
+          "criterion": "it allows people of different faiths to participate as equal citizens.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "How can religious diversity strengthen a democratic society?",
+          "answerKey": {
+            "modelAnswer": "Different communities contribute varied traditions and experiences; constitutional rights allow peaceful coexistence; dialogue and equal participation enrich public life."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Different communities contribute varied traditions and experiences",
+              "marks": 1
+            },
+            {
+              "criterion": "constitutional rights allow peaceful coexistence",
+              "marks": 1
+            },
+            {
+              "criterion": "dialogue and equal participation enrich public life.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-14",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain the difference between gender division and gender inequality.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Gender division refers to socially assigned roles and expectations; gender inequality occurs when these roles create unequal power or opportunities; unequal pay and representation are examples of inequality.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Gender division refers to socially assigned roles and expectations",
+          "marks": 1
+        },
+        {
+          "criterion": "gender inequality occurs when these roles create unequal power or opportunities",
+          "marks": 1
+        },
+        {
+          "criterion": "unequal pay and representation are examples of inequality.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Give three examples of gender inequality in public life.",
+          "answerKey": {
+            "modelAnswer": "Women may be under-represented in legislatures; they may face unequal access to senior jobs; safety concerns can restrict participation in public spaces."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Women may be under-represented in legislatures",
+              "marks": 1
+            },
+            {
+              "criterion": "they may face unequal access to senior jobs",
+              "marks": 1
+            },
+            {
+              "criterion": "safety concerns can restrict participation in public spaces.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-15",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "How can political parties help improve women's representation?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "They can nominate more women candidates; they can promote women to leadership positions; they can include gender equality in party policies and programmes.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "They can nominate more women candidates",
+          "marks": 1
+        },
+        {
+          "criterion": "they can promote women to leadership positions",
+          "marks": 1
+        },
+        {
+          "criterion": "they can include gender equality in party policies and programmes.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Why are legal reservations sometimes used to improve representation?",
+          "answerKey": {
+            "modelAnswer": "They create guaranteed opportunities for groups with historically low representation; they can change who participates in decision-making; they complement broader social reforms."
+          },
+          "markingScheme": [
+            {
+              "criterion": "They create guaranteed opportunities for groups with historically low representation",
+              "marks": 1
+            },
+            {
+              "criterion": "they can change who participates in decision-making",
+              "marks": 1
+            },
+            {
+              "criterion": "they complement broader social reforms.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-16",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Why is communal mobilisation based on fear harmful to social harmony?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "It portrays communities as threats to one another; it can encourage prejudice and violence; it weakens trust and equal citizenship.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "It portrays communities as threats to one another",
+          "marks": 1
+        },
+        {
+          "criterion": "it can encourage prejudice and violence",
+          "marks": 1
+        },
+        {
+          "criterion": "it weakens trust and equal citizenship.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "State three democratic safeguards that can reduce religious discrimination.",
+          "answerKey": {
+            "modelAnswer": "Constitutional equality before law; protection of freedom of religion; independent institutions and laws that address discrimination and violence."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Constitutional equality before law",
+              "marks": 1
+            },
+            {
+              "criterion": "protection of freedom of religion",
+              "marks": 1
+            },
+            {
+              "criterion": "independent institutions and laws that address discrimination and violence.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-17",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "How can social reform movements challenge gender stereotypes?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "They question unequal customs and expectations; they promote education and economic independence; they encourage equal participation in family and public life.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "They question unequal customs and expectations",
+          "marks": 1
+        },
+        {
+          "criterion": "they promote education and economic independence",
+          "marks": 1
+        },
+        {
+          "criterion": "they encourage equal participation in family and public life.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain why unpaid care work should be recognised in discussions of gender equality.",
+          "answerKey": {
+            "modelAnswer": "It supports households and the wider economy; it is often performed disproportionately by women; recognising it helps reveal unequal workloads and barriers to paid employment."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It supports households and the wider economy",
+              "marks": 1
+            },
+            {
+              "criterion": "it is often performed disproportionately by women",
+              "marks": 1
+            },
+            {
+              "criterion": "recognising it helps reveal unequal workloads and barriers to paid employment.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-18",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Why should caste identity not be the only basis for political judgement?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Democratic decisions affect people across communities; public services and economic policies matter to all voters; candidates should be assessed on performance, rights and policy commitments.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Democratic decisions affect people across communities",
+          "marks": 1
+        },
+        {
+          "criterion": "public services and economic policies matter to all voters",
+          "marks": 1
+        },
+        {
+          "criterion": "candidates should be assessed on performance, rights and policy commitments.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "How can political participation by marginalised communities improve democracy?",
+          "answerKey": {
+            "modelAnswer": "It brings excluded experiences into public debate; it can make institutions more responsive; it strengthens equal citizenship and accountability."
+          },
+          "markingScheme": [
+            {
+              "criterion": "It brings excluded experiences into public debate",
+              "marks": 1
+            },
+            {
+              "criterion": "it can make institutions more responsive",
+              "marks": 1
+            },
+            {
+              "criterion": "it strengthens equal citizenship and accountability.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-Q26-SA-19",
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain three ways in which gender equality benefits society as a whole.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "It allows everyone to develop their abilities; it broadens the talent available in education, work and leadership; it supports fairer and more inclusive decision-making.",
+        "explanation": "Award one mark for each distinct NCERT-aligned point."
+      },
+      "markingScheme": [
+        {
+          "criterion": "It allows everyone to develop their abilities",
+          "marks": 1
+        },
+        {
+          "criterion": "it broadens the talent available in education, work and leadership",
+          "marks": 1
+        },
+        {
+          "criterion": "it supports fairer and more inclusive decision-making.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Suggest three ways families can promote gender equality at home.",
+          "answerKey": {
+            "modelAnswer": "Share household and care responsibilities; provide equal encouragement and education to all children; make decisions through respect and equal voice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Share household and care responsibilities",
+              "marks": 1
+            },
+            {
+              "criterion": "provide equal encouragement and education to all children",
+              "marks": 1
+            },
+            {
+              "criterion": "make decisions through respect and equal voice.",
+              "marks": 1
+            }
+          ]
+        }
+      ]
     }
   ],
   "generationDesign": {
     "paperFormat": "CBSE Class X Social Science (087), 2026-27",
     "totalQuestions": 38,
     "totalMarks": 80,
-    "sourceCandidateCount": 526,
+    "sourceCandidateCount": 564,
     "approvalRule": "All imported MCQs are approvalStatus=review. They are not eligible for paper generation until an educator verifies factual accuracy, syllabus scope, uniqueness, answer key, explanation, difficulty and competency, then explicitly approves them.",
     "sourceScope": "Only board-examination scope chapters and approved subtopics are imported. The Age of Industrialisation and Consumer Rights are excluded from board MCQ use; Lifelines of National Economy is reserved for map-skill items; project-only subtopics are held out.",
     "repeatProtection": "Minimum 20 eligible candidates per MCQ slot; five-paper all-format question exclusion where pool depth permits; 50-paper unique fingerprint protection.",
@@ -27332,6 +29764,10 @@
       "q16": 20,
       "q24": 20,
       "q25": 20
+    },
+    "shortAnswerPools": {
+      "q6": 20,
+      "q26": 20
     }
   }
 }
