@@ -57,7 +57,7 @@ const socialBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/cla
 const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
 assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
 assert.equal(socialBank.questions.length,446,"the draft Social Science bank should contain 386 board-scope MCQs and 60 Assertion–Reason candidates");
-assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,386,"Social Science imported question IDs must be unique");
+assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,446,"Social Science imported question IDs must be unique");
 assert.ok(socialBank.questions.every(q=>q.approvalStatus==="review"),"imported Social Science questions must remain in educator review until explicitly approved");
 assert.ok(socialBank.questions.every(q=>!["the-age-of-industrialisation","lifelines-of-national-economy","consumer-rights"].includes(q.chapterId)),"excluded or map-only chapters must not enter the MCQ examination bank");
 const socialAr=socialBank.questions.filter(q=>q.type==="assertion-reason");
