@@ -56,8 +56,8 @@ assert.deepEqual(socialBlueprint.officialAssessmentDesign.longAnswerQuestionNumb
 const socialBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-social-science-2026-27-v1.json","utf8"));
 const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
 assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
-assert.equal(socialBank.questions.length,446,"the draft Social Science bank should contain 386 board-scope MCQs and 60 Assertion–Reason candidates");
-assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,446,"Social Science imported question IDs must be unique");
+assert.equal(socialBank.questions.length,526,"the draft Social Science bank should contain 386 board-scope MCQs, 60 Assertion–Reason candidates and 80 VSA candidates");
+assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,526,"Social Science imported question IDs must be unique");
 assert.ok(socialBank.questions.every(q=>q.approvalStatus==="review"),"imported Social Science questions must remain in educator review until explicitly approved");
 assert.ok(socialBank.questions.every(q=>!["the-age-of-industrialisation","lifelines-of-national-economy","consumer-rights"].includes(q.chapterId)),"excluded or map-only chapters must not enter the MCQ examination bank");
 const socialAr=socialBank.questions.filter(q=>q.type==="assertion-reason");
@@ -70,6 +70,13 @@ for(const chapterId of ["manufacturing-industries","power-sharing","globalisatio
  assert.deepEqual(distribution,[5,5,5,5],"Assertion–Reason answer categories must be balanced for "+chapterId);
 }
 assert.deepEqual(socialBank.generationDesign.repeatProtection.includes("five-paper"),true);
+const socialVsa=socialBank.questions.filter(q=>q.type==="very-short-answer");
+assert.equal(socialVsa.length,80,"four Social Science VSA slots must each have 20 candidates");
+for(const slot of ["q5","q16","q24","q25"]){
+ const pool=socialVsa.filter(q=>q.questionId.startsWith("SST10-"+slot.toUpperCase()+"-VSA-"));
+ assert.equal(pool.length,20,"VSA slot "+slot+" must contain 20 candidates");
+ assert.ok(pool.every(q=>q.marks===2&&q.markingScheme.reduce((sum,m)=>sum+m.marks,0)===2),"VSA marking schemes must total two marks");
+}
 for(const restricted of ["the-age-of-industrialisation","consumer-rights"]){
  assert.ok(socialBlueprint.mcqPracticeExclusions.includes(restricted),"non-board chapter "+restricted+" must not be auto-imported into the MCQ pool");
 }
