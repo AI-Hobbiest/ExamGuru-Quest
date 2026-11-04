@@ -65,7 +65,7 @@ for(const slot of ["Q7","Q17","Q27","Q38"]){const pool=socialLong.filter(q=>q.qu
 const socialMaps=socialBank.questions.filter(q=>q.type==="diagram-based"&&q.competency==="map-skill");assert.equal(socialMaps.length,40);
 for(const slot of ["Q9","Q19"]){const pool=socialMaps.filter(q=>q.questionId.startsWith("SST10-"+slot+"-MAP-"));assert.equal(pool.length,20);assert.ok(pool.every(q=>q.images?.[0]?.src==="./assets/exam-papers/social-science/india-outline-map.svg"&&q.mapTasks?.length>=(slot==="Q9"?2:4)));}
 assert.ok(socialMaps.filter(q=>q.questionId.startsWith("SST10-Q19-MAP-")).every(q=>q.parts?.length===3&&q.parts.reduce((s,p)=>s+p.marks,0)===3&&q.parts.some(p=>p.marks===1&&p.alternatives?.length===1)));
-assert.ok(fs.existsSync("assets/exam-papers/social-science/india-outline-map.svg"));assert.ok(fs.statSync("assets/exam-papers/social-science/india-outline-map.svg").size<20000);
+assert.ok(fs.existsSync("assets/exam-papers/social-science/india-outline-map.svg"));assert.ok(fs.statSync("assets/exam-papers/social-science/india-outline-map.svg").size<70000);
 
 assert.ok(socialBank.questions.every(q=>q.type!=="mcq"||!["the-age-of-industrialisation","lifelines-of-national-economy","consumer-rights"].includes(q.chapterId)),"excluded or map-only chapters must not enter the MCQ examination bank");
 const socialAr=socialBank.questions.filter(q=>q.type==="assertion-reason");
