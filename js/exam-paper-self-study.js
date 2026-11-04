@@ -91,7 +91,7 @@ async function load(){
   const bc=ExamPaperGenerator.validateBlueprint(blueprint),qc=ExamPaperGenerator.validateQuestionBank(baseBank,{classId:blueprint.classId,subjectId:blueprint.subjectId,academicYear:blueprint.academicYear});
   if(!bc.valid||!bc.readyForGeneration)throw Error("The exam blueprint is not approved for generation: "+bc.errors.slice(0,4).join(" "));
   if(!qc.valid)throw Error(qc.errors.slice(0,4).join(" "));
-  const minimum=Number.isInteger(profile.minimumCandidatesPerSlot)?profile.minimumCandidatesPerSlot:3;
+  const minimum=Number.isInteger(profile.minimumCandidatesPerSlot)?profile.minimumCandidatesPerSlot:20;
   const integrated=ExamPaperGenerator.mergeQuestionBanks(baseBank,practiceChapters,blueprint,{minimumCandidatesPerSlot:minimum});
   bank=integrated.bank;
   const coverage=integrated.stats.coverage;
@@ -144,9 +144,9 @@ function makePaper(){
  }
  if(!delivered){
   const recentPaperFingerprints=paperHistory.map(item=>item.fingerprint||JSON.stringify(item.questionIds||[]));
-  const recentMcqQuestionIds=paperHistory.slice(-2).flatMap(item=>item.mcqQuestionIds||[]);
+  const recentQuestionIdSets=paperHistory.slice(-5).map(item=>item.questionIds||[]);
   const seed="self-study-"+profileId+"-"+Date.now()+"-"+Math.random().toString(36).slice(2);
-  paper=ExamPaperGenerator.generateUniquePaper(blueprint,bank,{seed,title:"CBSE "+paperDisplayTitle()+" · Self-study Paper",recentPaperFingerprints,recentQuestionIds:recentMcqQuestionIds,uniqueSearchAttempts:500});
+  paper=ExamPaperGenerator.generateUniquePaper(blueprint,bank,{seed,title:"CBSE "+paperDisplayTitle()+" · Self-study Paper",recentPaperFingerprints,recentQuestionIdSets,uniqueSearchAttempts:500});
  }
  const assignedRemaining=assignedPaper?remaining:paper.durationMinutes*60;
  answers=resumeAttempt&&resumeAttempt.paperId===paper.paperId?JSON.parse(JSON.stringify(resumeAttempt.answers||{})):{};
@@ -160,7 +160,7 @@ function makePaper(){
   throw Error("This browser could not save the 50-paper repeat history for this profile. Enable site storage and try again; no paper was started.");
  }
  render();$("setup").classList.add("exam-hidden");$("review").classList.add("exam-hidden");$("attempt").classList.remove("exam-hidden");
- $("historyStatus").textContent=(delivered?"This is the frozen paper prepared by your Parent/Teacher. ":"")+"50-paper repeat protection is active for this profile on this browser. This exact "+paper.totalQuestions+"-question combination will not repeat within the latest 50 generated papers; MCQs from the previous two papers are held out where applicable. Descriptive questions may recur when their approved pool is smaller. History is profile-specific and does not sync to other devices.";
+ $("historyStatus").textContent=(delivered?"This is the frozen paper prepared by your Parent/Teacher. ":"")+"50-paper repeat protection is active for this profile on this browser. This exact "+paper.totalQuestions+"-question combination will not repeat within the latest 50 generated papers; All question formats from the previous five papers are held out wherever the eligible pool supports it. History is profile-specific and does not sync to other devices.";
  startTimer();window.scrollTo(0,0);
 }
 function responseContent(item,i){
