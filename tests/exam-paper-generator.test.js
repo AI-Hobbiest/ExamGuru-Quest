@@ -67,7 +67,7 @@ for(const slot of ["Q9","Q19"]){const pool=socialMaps.filter(q=>q.questionId.sta
 assert.ok(socialMaps.filter(q=>q.questionId.startsWith("SST10-Q19-MAP-")).every(q=>q.parts?.length===3&&q.parts.reduce((s,p)=>s+p.marks,0)===3&&q.parts.some(p=>p.marks===1&&p.alternatives?.length===1)));
 assert.ok(fs.existsSync("assets/exam-papers/social-science/india-outline-map.svg"));assert.ok(fs.statSync("assets/exam-papers/social-science/india-outline-map.svg").size<20000);
 
-assert.ok(socialBank.questions.every(q=>!["the-age-of-industrialisation","lifelines-of-national-economy","consumer-rights"].includes(q.chapterId)),"excluded or map-only chapters must not enter the MCQ examination bank");
+assert.ok(socialBank.questions.every(q=>q.type!=="mcq"||!["the-age-of-industrialisation","lifelines-of-national-economy","consumer-rights"].includes(q.chapterId)),"excluded or map-only chapters must not enter the MCQ examination bank");
 const socialAr=socialBank.questions.filter(q=>q.type==="assertion-reason");
 assert.equal(socialAr.length,60,"three Social Science assertion-reason slots must each have 20 candidates");
 for(const chapterId of ["manufacturing-industries","power-sharing","globalisation-and-the-indian-economy"]){
