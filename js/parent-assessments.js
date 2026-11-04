@@ -218,7 +218,7 @@
       if(!qc.valid)throw new Error("The selected question pool is invalid: "+qc.errors.slice(0,5).join(" "));
       const integrated=g.mergeQuestionBanks(base,practice,blueprint,{minimumCandidatesPerSlot:profile.minimumCandidatesPerSlot||20});
       bank=integrated.bank;
-      const coverage=g.auditSlotCoverage(blueprint,bank,profile.minimumCandidatesPerSlot||3);
+      const coverage=g.auditSlotCoverage(blueprint,bank,profile.minimumCandidatesPerSlot||20);
       if(!coverage.valid)throw new Error("The integrated question pool does not meet minimum candidate coverage: "+coverage.errors.slice(0,4).join(" "));
       generate.disabled=false;
       status.textContent="Ready · "+profile.title+" · "+bank.questions.length.toLocaleString()+" approved pool records · "+blueprint.totalQuestions+" questions · "+blueprint.totalMarks+" marks · "+blueprint.durationMinutes+" minutes.";
