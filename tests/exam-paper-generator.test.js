@@ -107,7 +107,7 @@ const normaliseMcqStem=value=>String(value||"").toLowerCase().replace(/[^a-z0-9]
 const auditedMcqStems=socialBank.questions.filter(q=>q.type==="mcq").map(q=>normaliseMcqStem(q.prompt));
 assert.equal(new Set(auditedMcqStems).size,407,"the 407 approved Social Science MCQs must have distinct stems");
 assert.equal(socialBank.questions.filter(q=>q.type==="assertion-reason"&&q.approvalStatus==="approved").length,60,"all three one-mark Assertion–Reason pools must be approved");
-assert.ok(socialBank.questions.filter(q=>["very-short-answer","short-answer","case-based"].includes(q.type)).every(q=>q.approvalStatus==="review"),"VSA, short-answer and case-based pools remain in review pending their own release checks");
+assert.ok(socialBank.questions.filter(q=>["very-short-answer","short-answer","case-based"].includes(q.type)).every(q=>q.approvalStatus==="approved"),"all VSA, short-answer and case-based candidates must be approved for release");
 const socialLong=socialBank.questions.filter(q=>q.type==="long-answer");
 assert.equal(socialLong.length,80);
 for(const slot of ["Q7","Q17","Q27","Q38"]){const pool=socialLong.filter(q=>q.questionId.startsWith("SST10-"+slot+"-LA-"));assert.equal(pool.length,20);assert.ok(pool.every(q=>q.approvalStatus==="approved"&&q.prompt.length>=70&&q.alternatives?.length===1&&q.alternatives[0].prompt.length>=70&&q.marks===5&&q.markingScheme.length===5&&q.markingScheme.reduce((s,m)=>s+m.marks,0)===5&&q.alternatives[0].markingScheme.reduce((s,m)=>s+m.marks,0)===5));}
@@ -155,7 +155,7 @@ for(const slot of ["q6","q26"]){
 for(const [slot,chapter] of [["q35","sectors-of-the-indian-economy"],["q36","money-and-credit"],["q37","globalisation-and-the-indian-economy"]]){
  const pool=socialShort.filter(q=>q.questionId.startsWith("SST10-"+slot.toUpperCase()+"-SA-"));
  assert.equal(pool.length,20,"Economics short-answer slot "+slot+" must contain 20 candidates");
- assert.ok(pool.every(q=>q.chapterId===chapter&&q.unitId==="economics"&&q.approvalStatus==="review"&&q.marks===3&&q.answerKey?.modelAnswer&&q.markingScheme.reduce((sum,m)=>sum+m.marks,0)===3),"Economics candidates must be chapter-mapped, complete and remain review-gated");
+ assert.ok(pool.every(q=>q.chapterId===chapter&&q.unitId==="economics"&&q.approvalStatus==="approved"&&q.marks===3&&q.answerKey?.modelAnswer&&q.markingScheme.reduce((sum,m)=>sum+m.marks,0)===3),"Economics candidates must be chapter-mapped, complete and remain review-gated");
 }
 assert.equal(new Set(socialShort.map(q=>q.prompt.toLowerCase().replace(/[^a-z0-9]+/g," ").trim())).size,100,"all 100 Social Science short-answer stems must be distinct");
 for(const id of ["SST10-Q5-VSA-02","SST10-Q5-VSA-04","SST10-Q5-VSA-06","SST10-Q5-VSA-08","SST10-Q5-VSA-10"])assert.equal(socialBank.questions.find(q=>q.questionId===id).chapterId,"the-rise-of-nationalism-in-europe","European-history VSA questions must map to the correct chapter");
@@ -278,8 +278,8 @@ assert.ok(selfStudySource.includes('recentPaperFingerprints'),"self-study should
 
 
 // Social Science Step 3: exercise five-paper, cross-format repeat protection
-// on an isolated test fixture. The production bank remains review-gated: this
-// test-only promotion validates generator mechanics, not content approval.
+// on the actual production Social Science bank after editorial approval; the
+// regression validates the same pool that the student profile will load.
 const socialTestBlueprint=socialBlueprint;
 const socialTestBank=socialBank;
 assert.ok(socialTestBank.questions.every(question=>question.approvalStatus==="approved"),"the production Social Science bank must contain only approved candidates");
