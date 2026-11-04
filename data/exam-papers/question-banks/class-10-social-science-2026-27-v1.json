@@ -21155,7 +21155,7 @@
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
         "assertion": "Cotton textile production is an agro-based industry.",
-        "reason": "Cotton is an agricultural fibre used as its main raw material."
+        "reason": "Jute is known as the golden fibre."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -21186,7 +21186,7 @@
       "correctOptionId": "B",
       "answerKey": {
         "modelAnswer": "B",
-        "explanation": "Both are true, but the second restates the input rather than explaining the wider classification of all cotton-textile production."
+        "explanation": "Both statements are true, but the description of jute does not explain why cotton textile production is agro-based."
       },
       "markingScheme": [
         {
@@ -21212,63 +21212,6 @@
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
         "assertion": "Manufacturing industries can create employment.",
-        "reason": "Industrial activity may also generate pollution if wastes are not managed."
-      },
-      "difficulty": "medium",
-      "competency": "knowledge-understanding",
-      "approvalStatus": "review",
-      "source": {
-        "type": "ncert-derived",
-        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
-        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
-      },
-      "options": [
-        {
-          "id": "A",
-          "text": "Both A and R are true, and R is the correct explanation of A."
-        },
-        {
-          "id": "B",
-          "text": "Both A and R are true, but R is not the correct explanation of A."
-        },
-        {
-          "id": "C",
-          "text": "A is true, but R is false."
-        },
-        {
-          "id": "D",
-          "text": "A is false, but R is true."
-        }
-      ],
-      "correctOptionId": "B",
-      "answerKey": {
-        "modelAnswer": "B",
-        "explanation": "Both are true, but pollution is not the explanation for employment creation."
-      },
-      "markingScheme": [
-        {
-          "criterion": "Correct assertion–reason option selected",
-          "marks": 1
-        }
-      ]
-    },
-    {
-      "questionId": "SST10-GEO-CH11-AR-08",
-      "sectionId": "geography",
-      "chapterId": "manufacturing-industries",
-      "unitId": "resources-and-development",
-      "topicTags": [
-        "class-10-social-science",
-        "cbse-2026-27",
-        "geography",
-        "manufacturing-industries",
-        "assertion-reason"
-      ],
-      "type": "assertion-reason",
-      "marks": 1,
-      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
-      "assertionReason": {
-        "assertion": "Cotton textile mills are influenced by access to raw cotton and markets.",
         "reason": "Iron and steel is a basic industry."
       },
       "difficulty": "medium",
@@ -21300,7 +21243,64 @@
       "correctOptionId": "B",
       "answerKey": {
         "modelAnswer": "B",
-        "explanation": "Both are true, but the nature of iron and steel does not explain the location factors for cotton textile mills."
+        "explanation": "Both statements are true, but the basic-industry role of iron and steel does not explain employment creation across manufacturing."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct assertion–reason option selected",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionId": "SST10-GEO-CH11-AR-08",
+      "sectionId": "geography",
+      "chapterId": "manufacturing-industries",
+      "unitId": "resources-and-development",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "geography",
+        "manufacturing-industries",
+        "assertion-reason"
+      ],
+      "type": "assertion-reason",
+      "marks": 1,
+      "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
+      "assertionReason": {
+        "assertion": "Industrial location is influenced by several factors.",
+        "reason": "Software services often require skilled workers and reliable communication infrastructure."
+      },
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Contemporary India-II, Chapter 6: Manufacturing Industries",
+        "sourceVerification": "Newly authored from the prescribed NCERT chapter; pending educator review."
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both A and R are true, and R is the correct explanation of A."
+        },
+        {
+          "id": "B",
+          "text": "Both A and R are true, but R is not the correct explanation of A."
+        },
+        {
+          "id": "C",
+          "text": "A is true, but R is false."
+        },
+        {
+          "id": "D",
+          "text": "A is false, but R is true."
+        }
+      ],
+      "correctOptionId": "B",
+      "answerKey": {
+        "modelAnswer": "B",
+        "explanation": "Both statements are true, but the specific requirements of software services do not explain the wider set of industrial location factors."
       },
       "markingScheme": [
         {
@@ -21325,8 +21325,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "Industrial location is influenced by several factors.",
-        "reason": "The software industry requires skilled workers and reliable communication infrastructure."
+        "assertion": "Industrial pollution can affect air, water and land.",
+        "reason": "Manufacturing activity can create employment."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -21357,7 +21357,7 @@
       "correctOptionId": "B",
       "answerKey": {
         "modelAnswer": "B",
-        "explanation": "Both statements are true, but the specific needs of software services do not explain the full set of industrial location factors."
+        "explanation": "Both statements are true, but employment creation does not explain the environmental effects of industrial pollution."
       },
       "markingScheme": [
         {
@@ -21382,8 +21382,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "Jute is known as the golden fibre.",
-        "reason": "Iron and steel is a mineral-based industry."
+        "assertion": "Manufacturing can add value to raw materials.",
+        "reason": "Cotton textile production is an agro-based industry."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -21414,7 +21414,7 @@
       "correctOptionId": "B",
       "answerKey": {
         "modelAnswer": "B",
-        "explanation": "Both statements are true, but the reason is unrelated to the description of jute."
+        "explanation": "Both statements are true, but the classification of cotton textiles does not explain the general value-addition role of manufacturing."
       },
       "markingScheme": [
         {
@@ -22579,8 +22579,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "The Sinhala Only Act made Tamil the sole official language of Sri Lanka.",
-        "reason": "The Sinhala Only Act of 1956 made Sinhala the sole official language."
+        "assertion": "The Sinhala Only Act of 1956 made Sinhala the sole official language of Sri Lanka.",
+        "reason": "The Act made Tamil the sole official language."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -22611,7 +22611,7 @@
       "correctOptionId": "C",
       "answerKey": {
         "modelAnswer": "C",
-        "explanation": "The assertion is false; the reason is true."
+        "explanation": "The assertion is true, while the reason is false: the Act made Sinhala, not Tamil, the sole official language."
       },
       "markingScheme": [
         {
@@ -22636,8 +22636,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "Vertical power sharing occurs only among the legislature, executive and judiciary.",
-        "reason": "Horizontal power sharing is the division of authority among different organs at the same level."
+        "assertion": "Vertical power sharing divides authority among different levels of government.",
+        "reason": "It refers to separation of powers among the legislature, executive and judiciary at the same level."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -22668,7 +22668,7 @@
       "correctOptionId": "C",
       "answerKey": {
         "modelAnswer": "C",
-        "explanation": "The assertion is false; the reason is true. Vertical sharing is among different levels of government."
+        "explanation": "The assertion is true; the reason describes horizontal rather than vertical power sharing."
       },
       "markingScheme": [
         {
@@ -22693,8 +22693,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "A community government in Belgium represents only the economic interests of a region.",
-        "reason": "It deals with cultural, educational and language-related matters for a language community."
+        "assertion": "Belgium's community governments are organised around language communities.",
+        "reason": "They are elected by all Belgian voters as a single nationwide constituency."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -22725,7 +22725,7 @@
       "correctOptionId": "C",
       "answerKey": {
         "modelAnswer": "C",
-        "explanation": "The assertion is false; the reason is true."
+        "explanation": "The assertion is true; community governments are elected by people belonging to the relevant language community, not by one nationwide constituency."
       },
       "markingScheme": [
         {
@@ -22750,8 +22750,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "Majoritarianism always protects minority interests.",
-        "reason": "Power sharing can provide channels for minority participation."
+        "assertion": "Power sharing can help protect minority interests in a democracy.",
+        "reason": "It requires minority communities to give up political representation."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -22782,7 +22782,7 @@
       "correctOptionId": "C",
       "answerKey": {
         "modelAnswer": "C",
-        "explanation": "The assertion is false; the reason is true."
+        "explanation": "The assertion is true; the reason is false because power sharing aims to include communities rather than remove their representation."
       },
       "markingScheme": [
         {
@@ -22807,8 +22807,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "Power sharing is limited to the central government.",
-        "reason": "Power can also be shared among social groups and political parties."
+        "assertion": "Power sharing may take place among political parties.",
+        "reason": "A coalition government excludes multiple parties from sharing executive responsibility."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -22839,7 +22839,7 @@
       "correctOptionId": "C",
       "answerKey": {
         "modelAnswer": "C",
-        "explanation": "The assertion is false; the reason is true."
+        "explanation": "The assertion is true; the reason is false because coalition governments involve more than one party in government."
       },
       "markingScheme": [
         {
@@ -23434,8 +23434,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "Containerisation can reduce the cost of handling goods at ports.",
-        "reason": "Containers can be transferred intact between ships, railways, planes and trucks."
+        "assertion": "Containerisation can reduce port-handling costs.",
+        "reason": "Globalisation is a process of rapid integration between countries."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -23463,10 +23463,10 @@
           "text": "A is false, but R is true."
         }
       ],
-      "correctOptionId": "A",
+      "correctOptionId": "B",
       "answerKey": {
-        "modelAnswer": "A",
-        "explanation": "The ability to transfer standard containers across transport modes reduces handling costs and speeds movement."
+        "modelAnswer": "B",
+        "explanation": "Both statements are true, but the general definition of globalisation does not explain the specific cost advantage of containerisation."
       },
       "markingScheme": [
         {
@@ -23492,7 +23492,7 @@
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
         "assertion": "Information technology has supported global integration.",
-        "reason": "It allows information to be communicated and coordinated rapidly across distant locations."
+        "reason": "Foreign trade can expand the range of goods available to consumers."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -23520,10 +23520,10 @@
           "text": "A is false, but R is true."
         }
       ],
-      "correctOptionId": "A",
+      "correctOptionId": "B",
       "answerKey": {
-        "modelAnswer": "A",
-        "explanation": "Rapid communication and coordination help connect economic activities across countries."
+        "modelAnswer": "B",
+        "explanation": "Both statements are true, but consumer choice through trade does not explain the role of information technology."
       },
       "markingScheme": [
         {
@@ -23549,7 +23549,7 @@
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
         "assertion": "Liberalisation of trade and investment policies can facilitate globalisation.",
-        "reason": "Reducing barriers makes cross-border trade and investment easier."
+        "reason": "A multinational corporation owns or controls production in more than one country."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -23577,10 +23577,10 @@
           "text": "A is false, but R is true."
         }
       ],
-      "correctOptionId": "A",
+      "correctOptionId": "B",
       "answerKey": {
-        "modelAnswer": "A",
-        "explanation": "The reason directly explains how liberalisation facilitates integration."
+        "modelAnswer": "B",
+        "explanation": "Both statements are true, but the definition of an MNC does not explain how liberalisation reduces barriers."
       },
       "markingScheme": [
         {
@@ -23606,7 +23606,7 @@
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
         "assertion": "Lower air-transport costs can support globalisation.",
-        "reason": "Lower costs allow larger volumes of goods to be transported by air."
+        "reason": "Foreign investment by an MNC involves investment in assets in another country."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -23634,10 +23634,10 @@
           "text": "A is false, but R is true."
         }
       ],
-      "correctOptionId": "A",
+      "correctOptionId": "B",
       "answerKey": {
-        "modelAnswer": "A",
-        "explanation": "The reason explains how cheaper air freight can increase cross-border movement of goods."
+        "modelAnswer": "B",
+        "explanation": "Both statements are true, but the definition of foreign investment does not explain the effect of lower air-transport costs."
       },
       "markingScheme": [
         {
@@ -23662,8 +23662,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "Foreign trade is a channel through which markets can become integrated.",
-        "reason": "When goods move between markets, buyers and producers can access a wider range of trading partners."
+        "assertion": "Foreign trade connects markets in different countries.",
+        "reason": "Foreign investment is another channel through which countries become economically connected."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -23691,10 +23691,10 @@
           "text": "A is false, but R is true."
         }
       ],
-      "correctOptionId": "A",
+      "correctOptionId": "B",
       "answerKey": {
-        "modelAnswer": "A",
-        "explanation": "The reason describes the connection created by foreign trade."
+        "modelAnswer": "B",
+        "explanation": "Both statements are true, but the existence of foreign investment does not explain the market-linking role of foreign trade."
       },
       "markingScheme": [
         {
@@ -23719,8 +23719,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "Globalisation is limited to the movement of physical goods.",
-        "reason": "Foreign trade and foreign investment are important channels of globalisation."
+        "assertion": "Globalisation is a process of rapid integration between countries.",
+        "reason": "Globalisation refers only to cultural exchange and excludes economic connections."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -23751,7 +23751,7 @@
       "correctOptionId": "C",
       "answerKey": {
         "modelAnswer": "C",
-        "explanation": "The assertion is false because integration also involves services, investment, technology and other connections; the reason is true."
+        "explanation": "The assertion is true; the reason is false because the chapter focuses on economic integration through foreign trade and foreign investment."
       },
       "markingScheme": [
         {
@@ -23776,8 +23776,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "MNCs operate only within the country where they were first established.",
-        "reason": "An MNC owns or controls production in more than one country."
+        "assertion": "Multinational corporations play a major role in globalisation.",
+        "reason": "An MNC operates only within the country where it was first established."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -23808,7 +23808,7 @@
       "correctOptionId": "C",
       "answerKey": {
         "modelAnswer": "C",
-        "explanation": "The assertion is false; the reason is true."
+        "explanation": "The assertion is true; the reason is false because an MNC owns or controls production in more than one country."
       },
       "markingScheme": [
         {
@@ -23833,8 +23833,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "Improved transport technology has made the movement of goods slower and more expensive.",
-        "reason": "Transport improvements have enabled faster delivery over long distances at lower cost."
+        "assertion": "Improved transport technology has supported globalisation.",
+        "reason": "Containerisation increases port-handling costs and slows the movement of exports."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -23865,7 +23865,7 @@
       "correctOptionId": "C",
       "answerKey": {
         "modelAnswer": "C",
-        "explanation": "The assertion is false; the reason is true."
+        "explanation": "The assertion is true; the reason is false because containerisation reduces handling costs and speeds movement."
       },
       "markingScheme": [
         {
@@ -23890,8 +23890,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "Liberalisation means increasing restrictions on foreign trade and investment.",
-        "reason": "Liberalisation facilitates globalisation by reducing or removing barriers."
+        "assertion": "Liberalisation can facilitate globalisation.",
+        "reason": "Liberalisation means increasing restrictions on foreign trade and investment."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -23922,7 +23922,7 @@
       "correctOptionId": "C",
       "answerKey": {
         "modelAnswer": "C",
-        "explanation": "The assertion is false; the reason is true."
+        "explanation": "The assertion is true; the reason is false because liberalisation reduces or removes certain barriers."
       },
       "markingScheme": [
         {
@@ -23947,8 +23947,8 @@
       "marks": 1,
       "prompt": "Read the Assertion (A) and Reason (R), then select the correct option.",
       "assertionReason": {
-        "assertion": "Globalisation means that countries become less interconnected.",
-        "reason": "The process involves rapid integration or interconnection between countries."
+        "assertion": "Foreign trade is one channel through which markets in different countries become connected.",
+        "reason": "Imports always reduce the range of goods available to buyers."
       },
       "difficulty": "medium",
       "competency": "knowledge-understanding",
@@ -23979,7 +23979,7 @@
       "correctOptionId": "C",
       "answerKey": {
         "modelAnswer": "C",
-        "explanation": "The assertion is false; the reason is true."
+        "explanation": "The assertion is true; the reason is false because imports can expand consumer choice."
       },
       "markingScheme": [
         {
