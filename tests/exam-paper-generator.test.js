@@ -53,6 +53,14 @@ assert.ok(socialBlueprint.mcqPracticeExclusions.includes("consumer-rights"));
 assert.deepEqual(socialBlueprint.mcqSubtopicRestrictions["lifelines-of-national-economy"].allowedQuestionTypes,["map-skill"]);
 assert.deepEqual(socialBlueprint.officialAssessmentDesign.caseBasedQuestionNumbers,[8,18,28]);
 assert.deepEqual(socialBlueprint.officialAssessmentDesign.longAnswerQuestionNumbers,[7,17,27,38]);
+const socialBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-social-science-2026-27-v1.json","utf8"));
+const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
+assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
+assert.equal(socialBank.questions.length,386,"the draft Social Science bank should import 386 board-scope MCQ candidates");
+assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,386,"Social Science imported question IDs must be unique");
+assert.ok(socialBank.questions.every(q=>q.approvalStatus==="review"),"imported Social Science questions must remain in educator review until explicitly approved");
+assert.ok(socialBank.questions.every(q=>!["the-age-of-industrialisation","lifelines-of-national-economy","consumer-rights"].includes(q.chapterId)),"excluded or map-only chapters must not enter the MCQ examination bank");
+assert.deepEqual(socialBank.generationDesign.repeatProtection.includes("five-paper"),true);
 for(const restricted of ["the-age-of-industrialisation","consumer-rights"]){
  assert.ok(socialBlueprint.mcqPracticeExclusions.includes(restricted),"non-board chapter "+restricted+" must not be auto-imported into the MCQ pool");
 }
