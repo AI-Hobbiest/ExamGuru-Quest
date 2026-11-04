@@ -39,7 +39,7 @@ for(const file of socialMcqPaths){
   assert.ok(Math.max(...answerCounts)-Math.min(...answerCounts)<=1,"each Social Science chapter set must have balanced correct-answer positions");
  }
 }
-assert.equal(socialMcqCount,2201,"the four source files should contain 2,201 Social Science MCQs after the approved Agriculture replacement");
+assert.equal(socialMcqCount,2207,"the four source files should contain 2,207 Social Science MCQs after NCERT-verified replacement additions");
 assert.equal(socialNeedsReview,1673,"all generic template-pattern MCQs should be held for review");
 for(const restricted of ["the-age-of-industrialisation","consumer-rights"]){
  assert.ok(socialBlueprint.mcqPracticeExclusions.includes(restricted),"non-board chapter "+restricted+" must not be auto-imported into the MCQ pool");
