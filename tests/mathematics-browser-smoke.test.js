@@ -119,8 +119,8 @@ async function smokeProfile(browser, baseUrl, profileId, expectedTitle) {
   try {
     browser = await chromium.launch({ headless: true });
     const results = [];
-    results.push(await smokeProfile(browser, baseUrl, "class-10-mathematics-standard-2026-27", "Mathematics (Standard)"));
-    results.push(await smokeProfile(browser, baseUrl, "class-10-mathematics-basic-2026-27", "Mathematics (Basic)"));
+    results.push(await smokeProfile(browser, baseUrl, "class-10-mathematics-standard-2026-27", "Class 10 · Mathematics Standard (041)"));
+    results.push(await smokeProfile(browser, baseUrl, "class-10-mathematics-basic-2026-27", "Class 10 · Mathematics Basic (241)"));
     console.log("Mathematics browser smoke passed: " + JSON.stringify(results));
   } finally {
     if (browser) await browser.close();
