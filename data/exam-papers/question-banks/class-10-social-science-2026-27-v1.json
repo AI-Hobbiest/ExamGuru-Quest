@@ -10287,48 +10287,48 @@
         "cbse-2026-27",
         "geography",
         "manufacturing-industries",
-        "mcq",
-        "industrial-pollution",
-        "thermal-pollution"
+        "industrial-classification",
+        "basic-industry",
+        "mcq"
       ],
       "type": "mcq",
       "marks": 1,
-      "prompt": "Which environmental problem can result when factories discharge hot water into rivers without cooling?",
+      "prompt": "Why is iron and steel often called a basic industry?",
       "difficulty": "medium",
       "competency": "knowledge-understanding",
       "approvalStatus": "approved",
       "source": {
         "type": "ncert-derived",
-        "reference": "NCERT Class X, Contemporary India-II, Chapter 6: Manufacturing Industries",
-        "sourceQuestionId": "reviewed-topic:manufacturing-industries",
+        "reference": "NCERT Class X, Contemporary India-II, Chapter 6: Manufacturing Industries — retained classification of industries by their main role",
+        "sourceQuestionId": "reviewed-topic:basic-industry-classification",
         "sourceVerification": "Item-level review completed against the NCERT Class X content and CBSE 2026–27 Social Science syllabus: chapter and subtopic scope, factual accuracy, keyed answer, distractors, explanation, and duplicate/unsupported framing checked."
       },
       "options": [
         {
           "optionId": "A",
-          "text": "Thermal pollution, which can harm aquatic life"
+          "text": "It produces only household food"
         },
         {
           "optionId": "B",
-          "text": "Soil salinity"
+          "text": "It has no link to machinery or construction"
         },
         {
           "optionId": "C",
-          "text": "Desertification"
+          "text": "It supplies inputs used by many other industries and infrastructure projects"
         },
         {
           "optionId": "D",
-          "text": "Noise pollution"
+          "text": "It is a service that produces no physical material"
         }
       ],
-      "correctOptionId": "A",
+      "correctOptionId": "C",
       "answerKey": {
-        "modelAnswer": "A. Thermal pollution, which can harm aquatic life",
-        "explanation": "Hot industrial water can raise the temperature of receiving water bodies and cause thermal pollution."
+        "modelAnswer": "C. It supplies inputs used by many other industries and infrastructure projects",
+        "explanation": "NCERT classifies iron and steel as a basic or key industry because its products are used as raw materials by many other industries."
       },
       "markingScheme": [
         {
-          "criterion": "Correct option selected: A",
+          "criterion": "Correct option selected: C",
           "marks": 1
         }
       ]
