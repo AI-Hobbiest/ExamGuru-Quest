@@ -187,10 +187,7 @@
   },
   "mcqPracticeExclusions": [
     "the-age-of-industrialisation",
-    "lifelines-of-national-economy",
-    "consumer-rights",
-    "the-making-of-a-global-world",
-    "globalisation-and-the-indian-economy"
+    "consumer-rights"
   ],
   "supportedQuestionTypes": [
     "mcq",
@@ -738,7 +735,7 @@
       "sectionId": "economics",
       "marks": 5,
       "allowedTypes": [
-        "case-based"
+        "long-answer"
       ],
       "unitId": "economics",
       "chapterIds": [
@@ -747,5 +744,55 @@
       "competency": "analysis-evaluation-creation",
       "requiresInternalChoice": true
     }
-  ]
+  ],
+  "mcqSubtopicRestrictions": {
+    "the-making-of-a-global-world": {
+      "boardExamEligible": true,
+      "allowedSubtopics": [
+        "1",
+        "1.1",
+        "1.2",
+        "1.3"
+      ],
+      "excludedSubtopics": [
+        "2",
+        "3",
+        "4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4"
+      ],
+      "note": "Only the pre-modern world through conquest, disease and trade (subtopics 1 to 1.3) are evaluated in the Board Examination; later content is interdisciplinary project work."
+    },
+    "globalisation-and-the-indian-economy": {
+      "boardExamEligible": true,
+      "allowedSubtopics": [
+        "what-is-globalisation",
+        "factors-that-have-enabled-globalisation"
+      ],
+      "excludedSubtopics": [
+        "production-across-countries",
+        "chinese-toys-in-india",
+        "world-trade-organisation",
+        "struggle-for-a-fair-globalisation"
+      ],
+      "note": "Only the concept of globalisation and factors enabling it are evaluated in the Board Examination; remaining topics are interdisciplinary project work."
+    },
+    "lifelines-of-national-economy": {
+      "boardExamEligible": true,
+      "allowedQuestionTypes": [
+        "map-skill"
+      ],
+      "excludedQuestionTypes": [
+        "mcq",
+        "assertion-reason",
+        "very-short-answer",
+        "short-answer",
+        "long-answer",
+        "case-based"
+      ],
+      "note": "Only map pointing is evaluated in the Board Examination."
+    }
+  }
 }
