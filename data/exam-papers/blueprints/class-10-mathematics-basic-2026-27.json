@@ -729,5 +729,9 @@
     "medium": 29,
     "hard": 1
   },
-  "difficultyTargetNote": "ExamGuru calibration target for a full paper (question counts): 8 easy, 29 medium and 1 hard. This is an internal Basic-level generation target, not a percentage prescribed by CBSE. CBSE alignment is maintained separately through its published section structure, unit marks and competency mark targets."
+  "difficultyTargetNote": "ExamGuru calibration target for a full paper (question counts): 8 easy, 29 medium and 1 hard. This is an internal Basic-level generation target, not a percentage prescribed by CBSE. CBSE alignment is maintained separately through its published section structure, unit marks and competency mark targets.",
+  "mcqPracticeExclusions": [
+    "triangles"
+  ],
+  "mcqPracticeExclusionsNote": "Triangle MCQs remain in the chapter practice bank but are not imported into the examination MCQ adapter because the CBSE paper blueprint assesses Triangles through written-response slots."
 }
