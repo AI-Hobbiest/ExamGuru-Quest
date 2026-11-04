@@ -55,6 +55,16 @@ assert.deepEqual(socialBlueprint.mcqSubtopicRestrictions["lifelines-of-national-
 assert.deepEqual(socialBlueprint.officialAssessmentDesign.caseBasedQuestionNumbers,[8,18,28]);
 assert.deepEqual(socialBlueprint.officialAssessmentDesign.longAnswerQuestionNumbers,[7,17,27,38]);
 const socialBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-social-science-2026-27-v1.json","utf8"));
+const socialRegistry=JSON.parse(fs.readFileSync("data/exam-papers/profile-registry.json","utf8"));
+const socialProfile=socialRegistry.profiles.find(p=>p.profileId==="class-10-social-science-2026-27");
+assert.ok(socialProfile,"Social Science profile must remain registered");
+assert.equal(socialProfile.enabled,false,"Social Science must stay out of the student profile selector while 240 candidates remain under review");
+assert.equal(socialBank.questionPoolStatus,"review-required");
+assert.equal(socialBank.contentAudit.pendingOtherFormats,240);
+assert.equal(socialBank.questions.filter(q=>q.approvalStatus==="approved").length,587);
+assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q25-VSA-01").prompt,socialBank.questions.find(q=>q.questionId==="SST10-POL-CH15-MCQ-006").prompt,"VSA wording must not duplicate the corresponding MCQ stem");
+assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q6-SA-10").prompt,socialBank.questions.find(q=>q.questionId==="SST10-HIS-CH02-MCQ-066").prompt,"short-answer wording must be distinct from the corresponding MCQ stem");
+assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q26-SA-10").prompt,socialBank.questions.find(q=>q.questionId==="SST10-Q25-VSA-13").prompt,"the caste short-answer stem must be distinct from the VSA stem");
 const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
 assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
 assert.equal(socialBank.questions.length,827,"Social Science bank includes 626 source candidates, 21 additional NCERT-verified MCQs, 80 long-answer, 40 map and 60 Economics short-answer candidates");
@@ -249,8 +259,8 @@ const socialCoverage=m.auditSlotCoverage(socialTestBlueprint,socialTestBank,20);
 assert.equal(socialCoverage.valid,true,socialCoverage.errors.join("; "));
 assert.equal(socialCoverage.coverage.length,38);
 assert.ok(socialCoverage.coverage.every(slot=>slot.eligibleCount>=20),"every Social Science slot must retain 20 eligible candidates in the complete test fixture");
-const socialPaperHistory=[],socialFingerprintHistory=[];
-for(let attempt=1;attempt<=6;attempt++){
+const socialPaperHistory=[],socialFingerprintHistory=[],socialPaperFingerprints=new Set();
+for(let attempt=1;attempt<=50;attempt++){
  const generated=m.generateUniquePaper(socialTestBlueprint,socialTestBank,{
   seed:"social-science-five-paper-repeat-"+attempt,
   paperId:"social-science-step3-"+attempt,
@@ -267,13 +277,17 @@ for(let attempt=1;attempt<=6;attempt++){
  assert.equal(generated.repeatProtection.requestedWindow,5);
  assert.equal(generated.repeatProtection.appliedWindow,Math.min(5,socialPaperHistory.length),"the generator must protect every available prior paper up to the five-paper limit");
  assert.equal(generated.repeatProtection.fallback,false,"the test fixture must not need to relax its available repeat-protection window");
+ assert.ok(generated.paperFingerprint,"each complete Social Science paper must have a fingerprint");
+ assert.equal(socialPaperFingerprints.has(generated.paperFingerprint),false,"all 50 complete Social Science papers must have unique fingerprints");
+ socialPaperFingerprints.add(generated.paperFingerprint);
  socialPaperHistory.push(currentIds);
  socialFingerprintHistory.push(generated.paperFingerprint);
 }
 for(const requiredType of ["mcq","assertion-reason","very-short-answer","short-answer","long-answer","case-based","diagram-based"]){
  assert.ok(socialTestBank.questions.some(q=>q.type===requiredType&&q.approvalStatus==="approved"),"the test fixture must exercise "+requiredType);
 }
-assert.equal(socialPaperHistory.length,6,"six complete papers must be generated to prove a five-paper lookback");
+assert.equal(socialPaperHistory.length,50,"generate the full 50-paper Social Science release set");
+assert.equal(socialPaperFingerprints.size,50,"all 50 complete Social Science papers must be unique");
 assert.equal(socialBlueprint.status,"draft","test-only paper generation must not unlock the production Social Science blueprint");
 assert.ok(socialBank.questions.filter(q=>reviewOnlyTypes.includes(q.type)).every(q=>q.approvalStatus==="review"),"production review flags must remain unchanged by repeat-protection tests");
 
