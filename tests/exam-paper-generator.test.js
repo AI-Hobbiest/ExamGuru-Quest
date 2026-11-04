@@ -282,7 +282,8 @@ assert.ok(socialBank.questions.filter(q=>reviewOnlyTypes.includes(q.type)).every
 const fallbackPaper=m.generateUniquePaper(choiceBp,{...bank,questions:[choiceQ]},{
  seed:"repeat-window-fallback",recentQuestionIdSets:[["choice"]],recentPaperFingerprints:[]
 });
-assert.deepEqual(fallbackPaper.questions.map(question=>question.questionId),["choice"]);
+assert.equal(fallbackPaper.questions.length,1);
+assert.equal(fallbackPaper.questions[0].questionId,"choice");
 assert.equal(fallbackPaper.repeatProtection.requestedWindow,5);
 assert.equal(fallbackPaper.repeatProtection.appliedWindow,0);
 assert.equal(fallbackPaper.repeatProtection.fallback,true);
