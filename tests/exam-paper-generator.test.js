@@ -64,13 +64,19 @@ const normaliseMcqStem=value=>String(value||"").toLowerCase().replace(/[^a-z0-9]
 const auditedMcqStems=socialBank.questions.filter(q=>q.type==="mcq").map(q=>normaliseMcqStem(q.prompt));
 assert.equal(new Set(auditedMcqStems).size,407,"the 407 approved Social Science MCQs must have distinct stems");
 assert.equal(socialBank.questions.filter(q=>q.type==="assertion-reason"&&q.approvalStatus==="approved").length,60,"all three one-mark Assertion–Reason pools must be approved");
-assert.ok(socialBank.questions.filter(q=>!["mcq","assertion-reason"].includes(q.type)).every(q=>q.approvalStatus==="review"),"written-answer, case and map pools remain in review pending their own release checks");
+assert.ok(socialBank.questions.filter(q=>["very-short-answer","short-answer","case-based"].includes(q.type)).every(q=>q.approvalStatus==="review"),"VSA, short-answer and case-based pools remain in review pending their own release checks");
 const socialLong=socialBank.questions.filter(q=>q.type==="long-answer");
 assert.equal(socialLong.length,80);
-for(const slot of ["Q7","Q17","Q27","Q38"]){const pool=socialLong.filter(q=>q.questionId.startsWith("SST10-"+slot+"-LA-"));assert.equal(pool.length,20);assert.ok(pool.every(q=>q.marks===5&&q.markingScheme.reduce((s,m)=>s+m.marks,0)===5&&q.alternatives?.length===1&&q.alternatives[0].markingScheme.reduce((s,m)=>s+m.marks,0)===5));}
+for(const slot of ["Q7","Q17","Q27","Q38"]){const pool=socialLong.filter(q=>q.questionId.startsWith("SST10-"+slot+"-LA-"));assert.equal(pool.length,20);assert.ok(pool.every(q=>q.approvalStatus==="approved"&&q.prompt.length>=70&&q.alternatives?.length===1&&q.alternatives[0].prompt.length>=70&&q.marks===5&&q.markingScheme.length===5&&q.markingScheme.reduce((s,m)=>s+m.marks,0)===5&&q.alternatives[0].markingScheme.reduce((s,m)=>s+m.marks,0)===5));}
 const socialMaps=socialBank.questions.filter(q=>q.type==="diagram-based"&&q.competency==="map-skill");assert.equal(socialMaps.length,40);
 for(const slot of ["Q9","Q19"]){const pool=socialMaps.filter(q=>q.questionId.startsWith("SST10-"+slot+"-MAP-"));assert.equal(pool.length,20);assert.ok(pool.every(q=>q.images?.[0]?.src==="./assets/exam-papers/social-science/india-outline-map.svg"&&q.mapTasks?.length>=(slot==="Q9"?2:4)));}
-assert.ok(socialMaps.filter(q=>q.questionId.startsWith("SST10-Q19-MAP-")).every(q=>q.parts?.length===3&&q.parts.reduce((s,p)=>s+p.marks,0)===3&&q.parts.some(p=>p.marks===1&&p.alternatives?.length===1)));
+assert.ok(socialMaps.filter(q=>q.questionId.startsWith("SST10-Q19-MAP-")).every(q=>q.approvalStatus==="approved"&&q.parts?.length===3&&q.parts.reduce((s,p)=>s+p.marks,0)===3&&q.parts.filter(p=>p.alternatives?.length===1).length===1));
+const geographyMaps=socialMaps.filter(q=>q.questionId.startsWith("SST10-Q19-MAP-"));
+const officialGeoMapIds=new Set(geographyMaps.flatMap(q=>q.mapTasks.map(t=>t.mapWorkId)));
+assert.equal(officialGeoMapIds.size,79,"all 79 CBSE Geography map-work items must be represented without duplicate item identities");
+for(const required of ["Durg","Bellary","Bokaro","Naharkatia","Hyderabad"])assert.ok(geographyMaps.some(q=>q.mapTasks.some(t=>t.acceptedLabel===required)),"missing required map-work label: "+required);
+assert.ok(geographyMaps.every(q=>q.mapTasks.every(t=>t.acceptedLabel&&t.mapWorkId&&Number.isFinite(t.latitude)&&Number.isFinite(t.longitude))),"every Geography map task needs a specific answer label and plotting coordinates");
+assert.ok(socialMaps.every(q=>q.images?.[0]?.alt?.includes("state and Union Territory boundaries")),"map image alt text must describe the state/UT outline shown");
 assert.ok(fs.existsSync("assets/exam-papers/social-science/india-outline-map.svg"));assert.ok(fs.statSync("assets/exam-papers/social-science/india-outline-map.svg").size<70000);
 
 assert.ok(socialBank.questions.every(q=>q.type!=="mcq"||!["the-age-of-industrialisation","lifelines-of-national-economy","consumer-rights"].includes(q.chapterId)),"excluded or map-only chapters must not enter the MCQ examination bank");
