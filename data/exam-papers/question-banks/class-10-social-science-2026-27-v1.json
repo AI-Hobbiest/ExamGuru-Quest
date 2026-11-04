@@ -5,7 +5,7 @@
   "subjectId": "social-science",
   "subjectCode": "087",
   "academicYear": "2026-27",
-  "bankVersion": "examguru-cbse-2026-27-social-science-v1.4-short-answer-review",
+  "bankVersion": "examguru-cbse-2026-27-social-science-v1.5-short-answer-review",
   "title": "ExamGuru Class 10 Social Science examination pool · 2026–27",
   "questionPoolStatus": "review-required",
   "questions": [
@@ -29744,13 +29744,139 @@
           ]
         }
       ]
+    },
+    {
+      "sectionId": "history",
+      "chapterId": "nationalism-in-india",
+      "unitId": "history",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "history",
+        "nationalism-in-india",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Explain three ways in which khadi became a symbol of the national movement.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT India and the Contemporary World-II, Chapter 2: Nationalism in India",
+        "sourceVerification": "Newly authored from prescribed NCERT content; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "Khadi represented self-reliance and swadeshi; spinning and wearing khadi challenged dependence on foreign cloth; it became a visible symbol of participation in the national movement."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Khadi represented self-reliance and swadeshi.",
+          "marks": 1
+        },
+        {
+          "criterion": "It challenged dependence on foreign cloth through indigenous production and use.",
+          "marks": 1
+        },
+        {
+          "criterion": "It became a visible symbol of nationalist participation.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "How did the idea of swadeshi support the Indian national movement?",
+          "answerKey": {
+            "modelAnswer": "It encouraged the use of Indian-made goods; it promoted the boycott of foreign products; it linked economic self-reliance with opposition to colonial rule."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Encouraged Indian-made goods.",
+              "marks": 1
+            },
+            {
+              "criterion": "Promoted boycott of foreign products.",
+              "marks": 1
+            },
+            {
+              "criterion": "Connected economic self-reliance with anti-colonial protest.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "questionId": "SST10-Q6-SA-20"
+    },
+    {
+      "sectionId": "political-science",
+      "chapterId": "gender-religion-and-caste",
+      "unitId": "political-science",
+      "topicTags": [
+        "class-10-social-science",
+        "cbse-2026-27",
+        "political-science",
+        "gender-religion-and-caste",
+        "short-answer"
+      ],
+      "type": "short-answer",
+      "marks": 3,
+      "prompt": "Why is gender equality important for the whole of society, not only for women?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "review",
+      "source": {
+        "type": "ncert-derived",
+        "reference": "NCERT Democratic Politics-II, Chapter 3: Gender, Religion and Caste",
+        "sourceVerification": "Newly authored from prescribed NCERT themes; pending educator verification and rubric review."
+      },
+      "answerKey": {
+        "modelAnswer": "It protects equal rights and dignity for all citizens; it allows society to use the abilities of all people; it supports fairer families, workplaces and public institutions."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Protects equal rights and dignity.",
+          "marks": 1
+        },
+        {
+          "criterion": "Allows all people to develop and contribute their abilities.",
+          "marks": 1
+        },
+        {
+          "criterion": "Supports fairer social, economic and political institutions.",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "prompt": "Explain three ways in which media representations can influence gender stereotypes.",
+          "answerKey": {
+            "modelAnswer": "Repeated portrayals can reinforce traditional roles; diverse and balanced portrayals can challenge stereotypes; media can shape public expectations about education, work and leadership."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Can reinforce traditional roles through repeated portrayals.",
+              "marks": 1
+            },
+            {
+              "criterion": "Can challenge stereotypes through diverse representation.",
+              "marks": 1
+            },
+            {
+              "criterion": "Can influence expectations about education, work or leadership.",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "questionId": "SST10-Q26-SA-20"
     }
   ],
   "generationDesign": {
     "paperFormat": "CBSE Class X Social Science (087), 2026-27",
     "totalQuestions": 38,
     "totalMarks": 80,
-    "sourceCandidateCount": 564,
+    "sourceCandidateCount": 566,
     "approvalRule": "All imported MCQs are approvalStatus=review. They are not eligible for paper generation until an educator verifies factual accuracy, syllabus scope, uniqueness, answer key, explanation, difficulty and competency, then explicitly approves them.",
     "sourceScope": "Only board-examination scope chapters and approved subtopics are imported. The Age of Industrialisation and Consumer Rights are excluded from board MCQ use; Lifelines of National Economy is reserved for map-skill items; project-only subtopics are held out.",
     "repeatProtection": "Minimum 20 eligible candidates per MCQ slot; five-paper all-format question exclusion where pool depth permits; 50-paper unique fingerprint protection.",
