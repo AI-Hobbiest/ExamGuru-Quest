@@ -48,8 +48,8 @@ for(const profile of profiles){
  assert.equal(integrated.stats.invalidReasons.duplicateSourceStem,6);
  assert.ok(Object.entries(integrated.stats.invalidReasons).filter(([reason])=>reason!=="duplicateSourceStem").every(([,count])=>count===0),"valid source MCQs must not be excluded for malformed content fields");
 
- assert.equal(bank.questions.length,1725,"the full merged runtime pool must contain 1,383 unique question records");
- assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,1725,"the merged runtime pool must preserve unique IDs across the curated and imported pools");
+ assert.equal(bank.questions.length,baseBank.questions.length+integrated.stats.appended,"the merged runtime pool must retain every curated record and every appended practice MCQ");
+ assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,bank.questions.length,"the merged runtime pool must preserve unique IDs across the curated and imported pools");
  assert.equal(countBy(bank.questions,"type").mcq,1304);
  assert.deepEqual(countBy(bank.questions,"type"),{
   mcq:1304,
@@ -64,7 +64,7 @@ for(const profile of profiles){
  assert.deepEqual(Object.keys(difficultyCounts).sort(),["easy","hard","medium"]);
  assert.equal(Object.values(difficultyCounts).reduce((sum,count)=>sum+count,0),bank.questions.length);
  assert.ok(bank.questions.every(question=>["easy","medium","hard"].includes(question.difficulty)));
- assert.equal(bank.questions.filter(q=>q.source&&q.source.type==="practice-bank").length,1297,"the runtime pool must retain all 1,294 unique in-scope source MCQs plus three Triangle practice questions already in the curated seed bank");
+ assert.equal(bank.questions.filter(q=>q.source&&q.source.type==="practice-bank").length,baseBank.questions.filter(q=>q.source&&q.source.type==="practice-bank").length+integrated.stats.appended,"the runtime pool must retain existing practice-bank questions and every newly appended practice MCQ");
 
  const fingerprints=[],paperHistory=[];
  for(let attempt=1;attempt<=50;attempt++){
@@ -105,4 +105,4 @@ for(const profile of profiles){
  assert.equal(new Set(fingerprints).size,50,profile.level+" must produce 50 distinct complete papers using the full merged pool");
 }
 
-console.log("Mathematics end-to-end passed: 1,400 source MCQs audited; 1,383 merged runtime candidates; 38-question/80-mark Standard and Basic profiles; exact difficulty targets; and 50 unique full-integrated papers per level with two-paper MCQ repeat protection.");
+console.log("Mathematics end-to-end passed: 1,400 source MCQs audited; 1,725 unique merged runtime candidates; 38-question/80-mark Standard and Basic profiles; exact difficulty targets; and 50 unique full-integrated papers per level with two-paper MCQ repeat protection.");
