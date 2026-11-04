@@ -44,3 +44,7 @@ jobs:
         run: node tests/quiz-engine.test.js
       - name: Validate responsive portal and dashboard shell
         run: node tests/app-shell.test.js
+      - name: Install Playwright Chromium for Mathematics browser QA
+        run: npm install --no-save playwright && npx playwright install --with-deps chromium
+      - name: Smoke-test online Mathematics Standard and Basic examinations
+        run: node tests/mathematics-browser-smoke.test.js
