@@ -157,7 +157,7 @@ function eligible(q,s){
  hasRequiredPartChoices&&
  (!s.topicTags||!s.topicTags.length||s.topicTags.every(t=>(q.topicTags||[]).includes(t)));
 }
-function auditSlotCoverage(bp,bank,minimumCandidatesPerSlot=3){
+function auditSlotCoverage(bp,bank,minimumCandidatesPerSlot=20){
  const bc=validateBlueprint(bp),qc=validateQuestionBank(bank,{classId:bp&&bp.classId,subjectId:bp&&bp.subjectId,academicYear:bp&&bp.academicYear});
  const errors=[];
  if(!bc.valid)errors.push(...bc.errors);
@@ -217,11 +217,40 @@ function generateUniquePaper(bp,bank,options={}){
  const recent=new Set((options.recentPaperFingerprints||[]).map(String).filter(Boolean));
  const attempts=Number.isInteger(options.uniqueSearchAttempts)&&options.uniqueSearchAttempts>0?Math.min(options.uniqueSearchAttempts,5000):250;
  const baseSeed=String(options.seed||("examguru-paper-"+Date.now()));
- for(let i=0;i<attempts;i++){
-  const paper=generatePaper(bp,bank,{...options,seed:baseSeed+"-"+i,recentQuestionIds:Array.isArray(options.recentQuestionIds)?options.recentQuestionIds:[]});
-  const fingerprint=paperFingerprint(paper);
-  if(fingerprint&&!recent.has(fingerprint)){paper.paperFingerprint=fingerprint;return paper;}
+ const historySets=Array.isArray(options.recentQuestionIdSets)?options.recentQuestionIdSets.slice(-5).map(ids=>Array.isArray(ids)?ids.map(String):[]):[];
+ const legacyRecent=Array.isArray(options.recentQuestionIds)?options.recentQuestionIds.map(String):[];
+ const maxWindow=historySets.length?historySets.length:0;
+ let lastShortage=null;
+ for(let window=maxWindow;window>=0;window--){
+  const recentIds=historySets.length?(window?historySets.slice(-window).flat():[]):legacyRecent;
+  let selectionShortage=false;
+  for(let i=0;i<attempts;i++){
+   let paper;
+   try{
+    paper=generatePaper(bp,bank,{...options,seed:baseSeed+"-"+window+"-"+i,recentQuestionIds:recentIds});
+   }catch(error){
+    const message=String(error&&error.message||error);
+    if(/^Question pool shortage:|^No complete paper can satisfy/.test(message)){
+     lastShortage=error;selectionShortage=true;break;
+    }
+    throw error;
+   }
+   const repeatProtectionGuard=recentIds.length>0&&(paper.questions||[]).some(question=>recentIds.includes(String(question.questionId)));
+    if(repeatProtectionGuard){
+     lastShortage=new Error("Question pool shortage: generated paper contains a question used in the protected recent-paper window.");
+     selectionShortage=true;
+     break;
+    }
+    const fingerprint=paperFingerprint(paper);
+   if(fingerprint&&!recent.has(fingerprint)){
+    paper.paperFingerprint=fingerprint;
+    paper.repeatProtection={requestedWindow:5,appliedWindow:window,availableHistory:historySets.length,fallback:window<Math.min(5,historySets.length)};
+    return paper;
+   }
+  }
+  if(!selectionShortage)break;
  }
+ if(lastShortage)throw Error("Could not generate a complete paper even after relaxing the five-paper question-repeat window: "+String(lastShortage.message||lastShortage));
  throw Error("Could not generate a paper combination distinct from the last 50 attempts. Review or expand the approved question pool.");
 }
 function hashCode(s){let h=0;for(let i=0;i<s.length;i++)h=((h<<5)-h+s.charCodeAt(i))|0;return h;}
@@ -409,7 +438,7 @@ function mergeQuestionBanks(baseBank,practiceChapters,bp,options={}){
  merged.questionPoolStatus=appended?"shared-practice-and-exam-paper-pool":(baseBank.questionPoolStatus||"exam-paper-pool");
  const check=validateQuestionBank(merged,expected);
  if(!check.valid)throw Error("Integrated question pool is invalid: "+check.errors.slice(0,8).join(" "));
- const minimum=Number.isInteger(options.minimumCandidatesPerSlot)?options.minimumCandidatesPerSlot:3;
+ const minimum=Number.isInteger(options.minimumCandidatesPerSlot)?options.minimumCandidatesPerSlot:20;
  const coverage=auditSlotCoverage(bp,merged,minimum);
  if(!coverage.valid)throw Error("Question pool does not meet minimum slot coverage: "+coverage.errors.slice(0,8).join(" "));
  return{bank:merged,stats:{practiceSourceCount:adapted.questions.length,appended,duplicateIds,duplicateStems,excluded:adapted.adapterStats.excluded,invalidReasons:adapted.adapterStats.invalidReasons,byChapter:adapted.adapterStats.byChapter,byCompetency:adapted.adapterStats.byCompetency,coverage}};

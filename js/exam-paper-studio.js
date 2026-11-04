@@ -41,7 +41,7 @@ function drawBank(){
 }
 function assembleIntegratedBank(){
  if(!sourceBank||!blueprint)return;
- const integrated=generator().mergeQuestionBanks(sourceBank,practiceChapters,blueprint,{minimumCandidatesPerSlot:profile.minimumCandidatesPerSlot||3});
+ const integrated=generator().mergeQuestionBanks(sourceBank,practiceChapters,blueprint,{minimumCandidatesPerSlot:profile.minimumCandidatesPerSlot||20});
  bank=integrated.bank;bankIntegrationStats=integrated.stats;drawBank();
 }
 function loadSavedDraft(){try{const saved=draftStore.load();if(saved.drafts.length)paper=saved.drafts[saved.drafts.length-1];}catch(_){paper=null;}}
@@ -57,15 +57,15 @@ function updateDeliveryActions(){const mode=$("paperDeliveryMode")?.value||"prin
 function generate(){
  if(!blueprint||!bank)return;
  try{
-  const g=generator(),minimum=profile.minimumCandidatesPerSlot||3,coverage=g.auditSlotCoverage(blueprint,bank,minimum);
+  const g=generator(),minimum=profile.minimumCandidatesPerSlot||20,coverage=g.auditSlotCoverage(blueprint,bank,minimum);
   if(!coverage.valid)throw Error("A paper pool needs at least "+minimum+" eligible approved questions in every slot. "+coverage.errors.slice(0,5).join(" "));
-  const previousHistory=readPaperHistory(),recentPaperFingerprints=previousHistory.map(item=>item.fingerprint),recentMcqQuestionIds=previousHistory.slice(-2).flatMap(item=>item.mcqQuestionIds||[]);
-  const candidate=g.generateUniquePaper(blueprint,bank,{seed:"admin-"+profileId+"-"+Date.now()+"-"+Math.random().toString(36).slice(2),title:profileTitle()+" Practice Paper",recentPaperFingerprints,recentQuestionIds:recentMcqQuestionIds,uniqueSearchAttempts:500});
+  const previousHistory=readPaperHistory(),recentPaperFingerprints=previousHistory.map(item=>item.fingerprint),recentQuestionIdSets=previousHistory.slice(-5).map(item=>item.questionIds||[]);
+  const candidate=g.generateUniquePaper(blueprint,bank,{seed:"admin-"+profileId+"-"+Date.now()+"-"+Math.random().toString(36).slice(2),title:profileTitle()+" Practice Paper",recentPaperFingerprints,recentQuestionIdSets,uniqueSearchAttempts:500});
   const questionIds=candidate.questions.map(q=>String(q.questionId)),fingerprint=candidate.paperFingerprint||g.paperFingerprint(candidate),mcqQuestionIds=candidate.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId));
   const nextHistory=[...previousHistory,{paperId:candidate.paperId,generatedAt:candidate.generatedAt,questionIds,mcqQuestionIds,fingerprint}].slice(-PAPER_HISTORY_LIMIT);
   if(!savePaperHistory(nextHistory))throw Error("This browser could not save the 50-paper repeat history. Enable site storage and try again; no paper was started.");
   candidate.deliveryMode=$("paperDeliveryMode")?.value||"printable";paper=candidate;saveDraft(paper);showPaper(paper);
-  setStatus("Paper generated. Exact combinations from the previous 50 papers are excluded, and MCQs used in the previous two papers are held out for this profile.","success");
+  setStatus(candidate.repeatProtection?.fallback?`Paper generated. Exact combinations from the previous 50 papers are excluded. The five-paper all-format repeat window was relaxed to ${candidate.repeatProtection.appliedWindow} prior papers because a slot had insufficient unused candidates.`:"Paper generated. Exact combinations from the previous 50 papers are excluded; questions of every format from the previous five papers are held out wherever the eligible pool supports it.","success");
  }catch(e){setStatus(e.message||"Generation failed.","error");}
 }
 async function loadProfile(profileToLoad){
@@ -84,7 +84,7 @@ async function loadProfile(profileToLoad){
  const qc=g.validateQuestionBank(sourceBank,{classId:blueprint.classId,subjectId:blueprint.subjectId,academicYear:blueprint.academicYear});if(!qc.valid)throw Error(qc.errors.slice(0,8).join(" "));
  if(!bankStore.load())bankStore.save(sourceBank);
  assembleIntegratedBank();drawBlueprint();loadSavedDraft();if(paper)showPaper(paper);
- const minimum=profile.minimumCandidatesPerSlot||3,coverage=bankIntegrationStats?.coverage||g.auditSlotCoverage(blueprint,bank,minimum);
+ const minimum=profile.minimumCandidatesPerSlot||20,coverage=bankIntegrationStats?.coverage||g.auditSlotCoverage(blueprint,bank,minimum);
  setStatus(blueprint.status==="ready"&&coverage.valid?"Profile ready: "+profileTitle()+". "+(bankIntegrationStats?.appended||0).toLocaleString()+" linked practice MCQs integrated.":"Profile loaded, but generation remains locked until the blueprint and question-pool coverage are approved.","success");
 }
 async function loadRegistry(){

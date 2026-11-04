@@ -81,7 +81,7 @@ const productionBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks
 const productionCoverage=m.auditSlotCoverage(production,productionBank,3);
 assert.equal(productionCoverage.valid,true,productionCoverage.errors.join(" "));
 assert.equal(productionCoverage.slotCount,39);
-assert.equal(productionCoverage.questionCount,117);
+assert.equal(productionCoverage.questionCount, 565, "Science bank must contain 565 unique approved question records");
 assert.ok(productionCoverage.coverage.every(slot=>slot.eligibleCount>=3),"every paper slot must have at least three eligible approved candidates");
 assert.equal(m.validateQuestionBank(productionBank,{academicYear:"2026-27"}).valid,true);
 const seenPapers=[];

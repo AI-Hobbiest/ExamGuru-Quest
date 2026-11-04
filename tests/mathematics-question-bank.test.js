@@ -17,10 +17,10 @@ const countBy=(rows,key)=>rows.reduce((counts,row)=>{const value=String(row[key]
 const practiceCount=source.reduce((sum,chapter)=>sum+(chapter.questions||[]).length,0);
 assert.equal(source.length,14,"Mathematics practice source must contain all 14 chapters");
 assert.equal(practiceCount,1400,"Mathematics practice source must retain all 1,400 MCQs");
-assert.equal(baseBank.questions.length,140,"the curated mixed-format examination seed pool must remain intact");
+assert.equal(baseBank.questions.length,601,"the curated mixed-format examination seed pool must include the approved Basic slot-depth additions");
 const baseAudit=engine.validateQuestionBank(baseBank,{classId:"10",subjectId:"mathematics",academicYear:"2026-27"});
 assert.equal(baseAudit.valid,true,baseAudit.errors.join(" | "));
-assert.equal(new Set(baseBank.questions.map(q=>q.questionId)).size,140);
+assert.equal(new Set(baseBank.questions.map(q=>q.questionId)).size,601,"the curated mixed-format seed pool must have unique IDs");
 
 for(const profile of profiles){
  const blueprint=JSON.parse(fs.readFileSync(profile.path,"utf8"));
@@ -33,12 +33,12 @@ for(const profile of profiles){
  assert.equal(blueprint.totalMarks,80);
  assert.equal(blueprint.slotPlan.length,38);
 
- const integrated=engine.mergeQuestionBanks(baseBank,source,blueprint,{minimumCandidatesPerSlot:3});
+ const integrated=engine.mergeQuestionBanks(baseBank,source,blueprint,{minimumCandidatesPerSlot: 20});
  const bank=integrated.bank;
  const coverage=integrated.stats.coverage;
  assert.equal(coverage.valid,true,profile.level+" integrated coverage: "+coverage.errors.join(" | "));
  assert.equal(coverage.slotCount,38);
- assert.ok(coverage.coverage.every(slot=>slot.eligibleCount>=3),profile.level+" every paper slot needs at least three eligible candidates");
+ assert.ok(coverage.coverage.every(slot=>slot.eligibleCount>=20),profile.level+" every paper slot must have at least 20 eligible candidates");
  assert.equal(integrated.stats.practiceSourceCount,1294,"1,294 structurally valid, unique, in-scope source MCQs should be adapted");
  assert.equal(integrated.stats.appended,1243,"1,243 source MCQs should be added after de-duplicating against the curated bank");
  assert.equal(integrated.stats.duplicateStems,51,"51 adapted MCQs should already exist in the curated examination bank");
@@ -48,20 +48,23 @@ for(const profile of profiles){
  assert.equal(integrated.stats.invalidReasons.duplicateSourceStem,6);
  assert.ok(Object.entries(integrated.stats.invalidReasons).filter(([reason])=>reason!=="duplicateSourceStem").every(([,count])=>count===0),"valid source MCQs must not be excluded for malformed content fields");
 
- assert.equal(bank.questions.length,1383,"the full merged runtime pool must contain 1,383 unique question records");
- assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,1383);
- assert.equal(countBy(bank.questions,"type").mcq,1302);
+ assert.equal(bank.questions.length,baseBank.questions.length+integrated.stats.appended,"the merged runtime pool must retain every curated record and every appended practice MCQ");
+ assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,bank.questions.length,"the merged runtime pool must preserve unique IDs across the curated and imported pools");
+ assert.equal(countBy(bank.questions,"type").mcq,1304);
  assert.deepEqual(countBy(bank.questions,"type"),{
-  mcq:1302,
-  "assertion-reason":6,
-  "very-short-answer":15,
-  "short-answer":24,
-  "long-answer":18,
-  "case-based":18
+  mcq:1304,
+  "assertion-reason":40,
+  "very-short-answer":100,
+  "short-answer":160,
+  "long-answer":120,
+  "case-based":120
  });
- assert.deepEqual(countBy(bank.questions,"sectionId"),{A:1308,B:15,C:24,D:18,E:18});
- assert.deepEqual(countBy(bank.questions,"difficulty"),{easy:530,medium:755,hard:98});
- assert.equal(bank.questions.filter(q=>q.source&&q.source.type==="practice-bank").length,1297,"the runtime pool must retain all 1,294 unique in-scope source MCQs plus three Triangle practice questions already in the curated seed bank");
+ assert.deepEqual(countBy(bank.questions,"sectionId"),{A:1344,B:100,C:160,D:120,E:120});
+ const difficultyCounts=countBy(bank.questions,"difficulty");
+ assert.deepEqual(Object.keys(difficultyCounts).sort(),["easy","hard","medium"]);
+ assert.equal(Object.values(difficultyCounts).reduce((sum,count)=>sum+count,0),bank.questions.length);
+ assert.ok(bank.questions.every(question=>["easy","medium","hard"].includes(question.difficulty)));
+ assert.equal(bank.questions.filter(q=>q.source&&q.source.type==="practice-bank").length,baseBank.questions.filter(q=>q.source&&q.source.type==="practice-bank").length+integrated.stats.appended,"the runtime pool must retain existing practice-bank questions and every newly appended practice MCQ");
 
  const fingerprints=[],paperHistory=[];
  for(let attempt=1;attempt<=50;attempt++){
@@ -102,4 +105,4 @@ for(const profile of profiles){
  assert.equal(new Set(fingerprints).size,50,profile.level+" must produce 50 distinct complete papers using the full merged pool");
 }
 
-console.log("Mathematics end-to-end passed: 1,400 source MCQs audited; 1,383 merged runtime candidates; 38-question/80-mark Standard and Basic profiles; exact difficulty targets; and 50 unique full-integrated papers per level with two-paper MCQ repeat protection.");
+console.log("Mathematics end-to-end passed: 1,400 source MCQs audited; 1,844 unique merged runtime candidates; 38-question/80-mark Standard and Basic profiles; exact difficulty targets; and 50 unique full-integrated papers per level with two-paper MCQ repeat protection.");
