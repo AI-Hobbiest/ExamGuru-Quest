@@ -57,7 +57,7 @@ const socialBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/cla
 const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
 assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
 assert.equal(socialBank.questions.length,746,"Social Science bank should contain the original 626 plus 80 long-answer and 40 map candidates");
-assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,626,"Social Science imported question IDs must be unique");
+assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,746,"Social Science question IDs must be unique");
 assert.ok(socialBank.questions.every(q=>q.approvalStatus==="review"),"imported Social Science questions must remain in educator review until explicitly approved");
 const socialLong=socialBank.questions.filter(q=>q.type==="long-answer");
 assert.equal(socialLong.length,80);
