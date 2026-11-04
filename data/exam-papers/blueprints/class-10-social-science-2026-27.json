@@ -11,7 +11,7 @@
   "subjectTitle": "Social Science",
   "subjectCode": "087",
   "status": "draft",
-  "statusReason": "Official 2026-27 sample paper structure is mapped. Restricted-scope chapters are held out pending subtopic review; 1,673 generic MCQs are marked needs-review. Generation remains locked until every slot has 20 approved source-grounded candidates, all written-answer marking schemes and map assets are validated.",
+  "statusReason": "Long-answer and map-skill pools are populated. Generation remains locked until NCERT item-level MCQ verification and 20 approved candidates per every paper slot pass.",
   "durationMinutes": 180,
   "totalQuestions": 38,
   "totalMarks": 80,
@@ -465,14 +465,18 @@
       ],
       "unitId": "geography",
       "chapterIds": [
+        "resources-and-development",
         "water-resources",
+        "agriculture",
+        "minerals-and-energy-resources",
         "manufacturing-industries",
         "lifelines-of-national-economy"
       ],
       "competency": "map-skill",
       "requiresPartInternalChoiceMarks": [
         1
-      ]
+      ],
+      "mapWorkNote": "Candidates may draw from all chapters named in the 2026–27 CBSE Geography map-work list; Lifelines of National Economy remains map-only."
     },
     {
       "slotId": "q20",

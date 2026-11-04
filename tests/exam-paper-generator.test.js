@@ -56,9 +56,17 @@ assert.deepEqual(socialBlueprint.officialAssessmentDesign.longAnswerQuestionNumb
 const socialBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-social-science-2026-27-v1.json","utf8"));
 const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
 assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
-assert.equal(socialBank.questions.length,626,"the draft Social Science bank should contain 386 MCQs, 60 Assertion–Reason, 80 VSA, 40 short-answer and 60 case-based candidates");
+assert.equal(socialBank.questions.length,746,"Social Science bank should contain the original 626 plus 80 long-answer and 40 map candidates");
 assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,626,"Social Science imported question IDs must be unique");
 assert.ok(socialBank.questions.every(q=>q.approvalStatus==="review"),"imported Social Science questions must remain in educator review until explicitly approved");
+const socialLong=socialBank.questions.filter(q=>q.type==="long-answer");
+assert.equal(socialLong.length,80);
+for(const slot of ["Q7","Q17","Q27","Q38"]){const pool=socialLong.filter(q=>q.questionId.startsWith("SST10-"+slot+"-LA-"));assert.equal(pool.length,20);assert.ok(pool.every(q=>q.marks===5&&q.markingScheme.reduce((s,m)=>s+m.marks,0)===5&&q.alternatives?.length===1&&q.alternatives[0].markingScheme.reduce((s,m)=>s+m.marks,0)===5));}
+const socialMaps=socialBank.questions.filter(q=>q.type==="diagram-based"&&q.competency==="map-skill");assert.equal(socialMaps.length,40);
+for(const slot of ["Q9","Q19"]){const pool=socialMaps.filter(q=>q.questionId.startsWith("SST10-"+slot+"-MAP-"));assert.equal(pool.length,20);assert.ok(pool.every(q=>q.images?.[0]?.src==="./assets/exam-papers/social-science/india-outline-map.svg"&&q.mapTasks?.length>=(slot==="Q9"?2:4)));}
+assert.ok(socialMaps.filter(q=>q.questionId.startsWith("SST10-Q19-MAP-")).every(q=>q.parts?.length===3&&q.parts.reduce((s,p)=>s+p.marks,0)===3&&q.parts.some(p=>p.marks===1&&p.alternatives?.length===1)));
+assert.ok(fs.existsSync("assets/exam-papers/social-science/india-outline-map.svg"));assert.ok(fs.statSync("assets/exam-papers/social-science/india-outline-map.svg").size<20000);
+
 assert.ok(socialBank.questions.every(q=>!["the-age-of-industrialisation","lifelines-of-national-economy","consumer-rights"].includes(q.chapterId)),"excluded or map-only chapters must not enter the MCQ examination bank");
 const socialAr=socialBank.questions.filter(q=>q.type==="assertion-reason");
 assert.equal(socialAr.length,60,"three Social Science assertion-reason slots must each have 20 candidates");
