@@ -154,7 +154,7 @@ function makePaper(){
  const questionIds=paper.questions.map(q=>String(q.questionId));
  const fingerprint=paper.paperFingerprint||ExamPaperGenerator.paperFingerprint(paper);
  const alreadyRecorded=paperHistory.some(item=>item.paperId===paper.paperId||item.fingerprint===fingerprint);
- if(!alreadyRecorded)paperHistory=[...paperHistory,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds,fingerprint,mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId))}].slice(-HISTORY_LIMIT);
+ if(!alreadyRecorded)paperHistory=[...paperHistory,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds,fingerprint,questionIds:paper.questions.map(question=>question.questionId),mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId))}].slice(-HISTORY_LIMIT);
  if(!savePaperHistory()){
   paperHistory=previousHistory;
   throw Error("This browser could not save the 50-paper repeat history for this profile. Enable site storage and try again; no paper was started.");
