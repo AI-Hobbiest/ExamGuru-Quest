@@ -38,10 +38,10 @@ for(const q of bank.questions){
 }
 const qcheck=g.validateQuestionBank(bank,{academicYear:"2026-27"});
 assert.equal(qcheck.valid,true,qcheck.errors.join("; "));
-assert.equal(bank.questions.length, 389, "Science release bank must contain the audited 389 question records");
+assert.equal(bank.questions.length, 565, "Science release bank must contain the audited 565 question records");
 assert.equal(g.auditSlotCoverage(blueprint,bank,3).valid,true,g.auditSlotCoverage(blueprint,bank,3).errors.join("; "));
 assert.ok(g.auditSlotCoverage(blueprint,bank,3).coverage.every(slot=>slot.eligibleCount>=3));
-assert.equal(new Set(bank.questions.map(q=>q.questionId)).size, 389, "Science release bank must contain 389 unique question IDs");
+assert.equal(new Set(bank.questions.map(q=>q.questionId)).size, 565, "Science release bank must contain 565 unique question IDs");
 const promptKeys=bank.questions.map(q=>String(q.prompt||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim());
 assert.equal(new Set(promptKeys).size,bank.questions.length,"Science bank must not contain duplicate question stems");
 for(const n of choiceSlots){
@@ -122,4 +122,4 @@ assert.ok(selfStudy.includes("answers[i]={optionId:radio?.value||null,text:texta
 assert.ok(selfStudy.includes('selected.answerKey?.modelAnswer'),"review must show the selected alternative's answer key");
 assert.ok(!selfStudy.includes('type="checkbox" data-alt='),"internal choice must not allow both alternatives to be selected");
 assert.ok(practicePage.includes('id="historyStatus"'),"practice UI must explain repeat protection and storage limitations");
-console.log("Exam Paper Studio release passed: 39-question/80-mark blueprint, 389 unique-question pool, minimum three eligible candidates per slot, 50 distinct full-paper combinations, section/unit/competency totals, all internal choices, diagrams, and student/teacher renderer separation.");
+console.log("Exam Paper Studio release passed: 39-question/80-mark blueprint, 565 unique-question pool, minimum three eligible candidates per slot, 50 distinct full-paper combinations, section/unit/competency totals, all internal choices, diagrams, and student/teacher renderer separation.");
