@@ -24,7 +24,7 @@ for(const profile of profiles){
  const sectionA=full.sections.find(section=>section.sectionId==="A");
  const blueprint={...full,status:"ready",totalQuestions:slots.length,totalMarks:slots.reduce((sum,slot)=>sum+slot.marks,0),
   sections:[{...sectionA,questionCount:slots.length,totalMarks:slots.reduce((sum,slot)=>sum+slot.marks,0)}],
-  slotPlan:slots,unitMarkTargets:unitTotals,competencyMarksTargets:competencyTotals,markDistribution:{"1":18}};
+  slotPlan:slots,unitMarkTargets:unitTotals,competencyMarksTargets:competencyTotals,markDistribution:{"1":18},difficultyTargets:{easy:full.difficultyTargets.easy,medium:full.difficultyTargets.medium-20,hard:full.difficultyTargets.hard}};
  const blueprintCheck=generator.validateBlueprint(blueprint);
  assert.equal(blueprintCheck.valid,true,profile.level+": "+blueprintCheck.errors.join(" "));
  const adapted=generator.adaptChapterMcqBank(source,blueprint,{bankVersion:"class-10-mathematics-practice-1400-v1"});
