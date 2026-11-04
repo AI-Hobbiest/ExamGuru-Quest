@@ -5862,6 +5862,20 @@
         "difficulty": "Medium",
         "competencyTagStatus": "needs-review",
         "competencyTagReason": "Generic templated stem pattern detected during Social Science bank audit; replace with a specific, source-grounded question before examination use."
+      },
+      {
+        "id": 101,
+        "question": "What is meant by dynastic succession as a challenge within political parties?",
+        "options": [
+          "Leadership positions are repeatedly controlled by members of one family",
+          "Party leaders are chosen through open internal elections",
+          "Coalition partners share cabinet responsibilities",
+          "Voters change their preferences between elections"
+        ],
+        "answer": 0,
+        "explanation": "Dynastic succession occurs when top party positions are controlled by members of one family, limiting fair opportunities for other members.",
+        "difficulty": "medium",
+        "sourceVerification": "NCERT Democratic Politics-II, Chapter 4: Political Parties, Challenges to Political Parties."
       }
     ]
   },
@@ -7332,6 +7346,20 @@
         "difficulty": "Medium",
         "competencyTagStatus": "needs-review",
         "competencyTagReason": "Generic templated stem pattern detected during Social Science bank audit; replace with a specific, source-grounded question before examination use."
+      },
+      {
+        "id": 101,
+        "question": "Which feature allows democracy to respond when a government makes a mistake?",
+        "options": [
+          "It allows citizens and institutions to question decisions and seek correction through public processes",
+          "It prevents citizens from criticising elected representatives",
+          "It gives permanent authority to one leader",
+          "It removes the need for elections"
+        ],
+        "answer": 0,
+        "explanation": "The NCERT identifies room to correct mistakes as one expected advantage of democracy.",
+        "difficulty": "medium",
+        "sourceVerification": "NCERT Democratic Politics-II, Chapter 5: Outcomes of Democracy."
       }
     ]
   }
