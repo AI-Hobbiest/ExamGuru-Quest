@@ -89,6 +89,21 @@ function startServer(){
   const alternativePrompt=await q10.locator('[data-choice-panel="alternative"] h4').innerText();
   await q10Alternative.fill("Final alternative long-answer response for browser QA.");
 
+  // Reload mid-attempt and verify the exact paper, selected items and typed answers resume.
+  const paperTitle=await page.locator("#paperTitle").innerText();
+  await page.waitForTimeout(1200);
+  await page.reload({waitUntil:"networkidle"});
+  await page.waitForFunction(()=>document.querySelector("#startBtn")?.textContent.includes("Resume saved attempt"));
+  await page.locator("#startBtn").click();
+  await page.locator("#attempt").waitFor({state:"visible"});
+  assert.equal(await page.locator("#paperTitle").innerText(),paperTitle,"reload must resume the same paper snapshot");
+  assert.equal(await page.locator("#questions .exam-question").nth(3).locator('[data-choice-panel="main"] textarea').first().inputValue(),"Revised formal letter response for browser QA.");
+  const resumedQ10=page.locator("#questions .exam-question").nth(9);
+  assert.equal(await resumedQ10.locator('input[data-choice][value="alternative"]').isChecked(),true);
+  assert.equal(await resumedQ10.locator('[data-choice-panel="alternative"] textarea').first().inputValue(),"Final alternative long-answer response for browser QA.");
+  const resumedGrammar=page.locator("#questions .exam-question").nth(2).locator("input[data-part-attempt]");
+  assert.equal(await resumedGrammar.evaluateAll(nodes=>nodes.filter(node=>node.checked).length),10,"attempt-any selection must restore after reload");
+
   await page.locator("#submitBtn").click();
   await page.locator("#review").waitFor({state:"visible"});
   const review=await page.locator("#reviewAnswers").innerText();
