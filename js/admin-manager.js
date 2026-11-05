@@ -7,7 +7,7 @@
   const $ = id => document.getElementById(id);
   const SUBJECTS={science:"Science",mathematics:"Mathematics",english:"English","social-science":"Social Science",hindi:"Hindi","science-sof":"Science · SOF","mathematics-sof":"Mathematics · SOF","english-sof":"English · SOF"};
   const REPORT_BANKS_BY_CLASS={
-    "3":[{id:"class-3-mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"class-3-english",subjectId:"english",title:"English"}],
+    "3":[{id:"class-3-mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"class-3-mathematics-sof",subjectId:"mathematics-sof",title:"Mathematics · SOF"},{id:"class-3-english",subjectId:"english",title:"English"}],
     "6":[{id:"class-6-science",subjectId:"science",title:"Science"},{id:"class-6-mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"class-6-english",subjectId:"english",title:"English"},{id:"class-6-social-science",subjectId:"social-science",title:"Social Science"},{id:"class-6-science-sof",subjectId:"science-sof",title:"Science · SOF"},{id:"class-6-mathematics-sof",subjectId:"mathematics-sof",title:"Mathematics · SOF"},{id:"class-6-english-sof",subjectId:"english-sof",title:"English · SOF"}],
     "10":[{id:"science",subjectId:"science",title:"Science"},{id:"mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"english",subjectId:"english",title:"English"},{id:"social-science",subjectId:"social-science",title:"Social Science"},{id:"hindi",subjectId:"hindi",title:"Hindi"}]
   };
