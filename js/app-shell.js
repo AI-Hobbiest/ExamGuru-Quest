@@ -46,7 +46,7 @@
     try{
       if(window.C10StudentAuth&&window.C10StudentAuth.currentUser)return window.C10StudentAuth.currentUser();
       const value=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");
-      return value&&typeof value.username==="string"?{...value,username:value.username,role:value.role==="parent"?"parent":"student",classId:String(value.classId||"10")}:null;
+      return value&&typeof value.username==="string"?{...value,username:value.username,role:value.role==="parent"?"parent":"student",classId:String(value.classId||"")}:null;
     }catch(_){return null;}
   }
   async function authState(){
@@ -63,8 +63,17 @@
       }catch(_){}
     }
     const student=readStaticStudent();
-    if(student&&student.role==="parent")return {role:"parent",username:student.username,displayName:student.displayName||student.username};
-    return student?{role:"student",username:student.username,classId:String(student.classId||"10")}: {role:"guest",username:""};
+    if(!student)return {role:"guest",username:""};
+    if(window.C10StudentAuth&&typeof window.C10StudentAuth.restoreSession==="function"){
+      try{
+        const verified=await window.C10StudentAuth.restoreSession();
+        if(!verified)return {role:"guest",username:""};
+        if(verified.role==="parent")return {role:"parent",username:verified.username,displayName:verified.displayName||verified.username};
+        return {role:"student",username:verified.username,classId:String(verified.classId||"")};
+      }catch(_){return {role:"guest",username:""};}
+    }
+    if(student.role==="parent")return {role:"parent",username:student.username,displayName:student.displayName||student.username};
+    return {role:"student",username:student.username,classId:String(student.classId||"")};
   }
   async function configuredSubjects(classId){
     try{
