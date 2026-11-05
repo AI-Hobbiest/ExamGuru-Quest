@@ -47,7 +47,7 @@ if(dataDir){
    total++;if(q.competencyTagStatus==="needs-review")needsReview++;
   }
  }
- assert.equal(total,17424,"all supported CBSE and SOF MCQs must be tagged");
+ assert.equal(total,17594,"all supported CBSE and SOF MCQs must be tagged");
  console.log("Cross-subject bank audit passed: "+bankNames.length+" banks, "+total+" MCQs, "+needsReview+" provisional tags flagged for educator review.");
 }
 console.log("Competency tagger tests passed: three-level taxonomy, difficulty independence, Mathematics, Hindi, SOF reasoning, explicit review status, Admin validation and schema contract.");
