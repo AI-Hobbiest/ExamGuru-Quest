@@ -234,7 +234,16 @@
       if(!registry||registry.schemaVersion!==1||registry.kind!=="exam-paper-profile-registry"||!Array.isArray(registry.profiles))throw new Error("The shared examination profile registry is invalid.");
       defaultProfileId=String(registry.defaultProfileId||"");
       profiles=registry.profiles.filter(item=>item&&item.enabled!==false&&String(item.classId)===String(child.classId));
-      if(!profiles.length){section.remove();return;}
+      if(!profiles.length){
+        if(String(child.classId)==="6"){
+          section.replaceChildren();
+          section.append(node("h3","","Class 6 · Exam Paper Practice"));
+          section.append(node("p","assignment-help","Class 6 CBSE full-paper profiles are not published yet. Your child can take the available SOF full mocks from their own student account: Science ISO, Mathematics IMO and English IEO."));
+          const link=node("a","report-button secondary","View Class 6 exam practice guide");link.href="./parent.html#exam-paper-practice";
+          section.appendChild(link);
+        }else section.remove();
+        return;
+      }
       profileSelect.innerHTML="";
       profiles.forEach(item=>{const option=document.createElement("option");option.value=String(item.profileId);option.textContent=String(item.title||("Class "+item.classId+" · "+item.subjectTitle));profileSelect.appendChild(option);});
       const initial=profiles.find(item=>String(item.profileId)===defaultProfileId)||profiles[0];profileSelect.value=initial.profileId;

@@ -12,6 +12,27 @@ function subjectTitle(){return String(profile?.subjectTitle||blueprint?.subjectT
 function profileTitle(){return String(profile?.title||("Class "+blueprint?.classId+" · "+subjectTitle()+(blueprint?.subjectCode?" ("+blueprint.subjectCode+")":"")));}
 function scopedKey(base){return !profileId||profileId===defaultProfileId?base:base+"_"+profileId.replace(/[^a-z0-9_-]/gi,"_");}
 function setStatus(message,tone){const n=$("paperStudioStatus");if(n){n.textContent=message;n.className="admin-status"+(tone?" "+tone:"");}}
+function setProfileLoadState(message,state,tone){
+ const stateField=$("paperBlueprintState"),summary=$("paperTotalSummary");
+ if(stateField)stateField.value=state||"Loading…";
+ if(summary){summary.textContent=message;summary.className="admin-status"+(tone?" "+tone:"");}
+ setStatus(message,tone);
+}
+async function fetchProfileJson(path,label,timeoutMs=30000){
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeoutMs);
+ try{
+  const response=await fetch(path,{cache:"no-store",signal:controller.signal});
+  if(!response.ok)throw new Error(label+" returned HTTP "+response.status+" ("+path+").");
+  try{return await response.json();}catch(error){throw new Error(label+" returned invalid JSON ("+path+"): "+(error.message||error));}
+ }catch(error){
+  if(error&&error.name==="AbortError")throw new Error(label+" request timed out after "+Math.round(timeoutMs/1000)+" seconds ("+path+").");
+  throw error;
+ }finally{clearTimeout(timer);}
+}
+function showProfileLoadError(error){
+ const message="Unable to load Admin Exam Studio: "+String(error&&error.message||error||"Unknown error");
+ setProfileLoadState(message,"Load failed","error");
+}
 function downloadJson(value,name){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)+"\n"],{type:"application/json"}));const a=document.createElement("a");a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function createStores(){
  if(!window.C10Storage)throw Error("Versioned browser storage adapter is unavailable.");
@@ -69,25 +90,32 @@ function generate(){
  }catch(e){setStatus(e.message||"Generation failed.","error");}
 }
 async function loadProfile(profileToLoad){
- profile=profileToLoad;profileId=String(profile.profileId);blueprint=null;bank=null;sourceBank=null;practiceChapters=null;bankIntegrationStats=null;paper=null;
+ profile=profileToLoad;
+ setProfileLoadState("Loading "+String(profile.title||"selected examination profile")+"…","Loading…");profileId=String(profile.profileId);blueprint=null;bank=null;sourceBank=null;practiceChapters=null;bankIntegrationStats=null;paper=null;
  $("paperResultActions").hidden=true;$("paperPreview").innerHTML="";$("paperPreviewStatus").textContent="No paper generated in this session.";
  createStores();
  if(!safePath(profile.blueprintUrl)||!safePath(profile.questionBankUrl)||(profile.practiceBankUrl&&!safePath(profile.practiceBankUrl)))throw Error("The selected profile contains an unsafe data path.");
- const [b,q,practice]=await Promise.all([fetch(profile.blueprintUrl,{cache:"no-store"}),fetch(profile.questionBankUrl,{cache:"no-store"}),profile.practiceBankUrl?fetch(profile.practiceBankUrl,{cache:"no-store"}):Promise.resolve(null)]);
- if(!b.ok||!q.ok||(practice&&!practice.ok))throw Error("The selected profile blueprint or question bank could not be loaded.");
- blueprint=await b.json();blueprint.subjectTitle=blueprint.subjectTitle||profile.subjectTitle||blueprint.subjectId;
+ setProfileLoadState("Fetching blueprint and published question-bank files…","Loading…");
+ const [blueprintData,publishedBankData,practiceData]=await Promise.all([
+  fetchProfileJson(profile.blueprintUrl,"Blueprint"),
+  fetchProfileJson(profile.questionBankUrl,"Published question bank"),
+  profile.practiceBankUrl?fetchProfileJson(profile.practiceBankUrl,"Chapter-wise practice bank"):Promise.resolve(null)
+ ]);
+ blueprint=blueprintData;blueprint.subjectTitle=blueprint.subjectTitle||profile.subjectTitle||blueprint.subjectId;
  if(String(blueprint.classId)!==String(profile.classId)||String(blueprint.subjectId)!==String(profile.subjectId))throw Error("Profile metadata does not match the selected blueprint class and subject.");
  if(profile.subjectCode&&String(blueprint.subjectCode||"")!==String(profile.subjectCode))throw Error("Profile subject code does not match its blueprint.");
  if(profile.academicYear&&String(blueprint.academicYear)!==String(profile.academicYear))throw Error("Profile academic year does not match its blueprint.");
  const g=generator(),bc=g.validateBlueprint(blueprint);if(!bc.valid)throw Error(bc.errors.join(" "));
- const publishedBank=await q.json();
+ setProfileLoadState("Validating blueprint and published question bank…","Loading…");
+ const publishedBank=publishedBankData;
  const savedBank=bankStore.load();
  // Published bank versions are authoritative. Refresh older local copies so a
  // browser cache cannot keep the Studio on an undersized pre-release pool.
  sourceBank=savedBank&&String(savedBank.bankVersion||"")===String(publishedBank.bankVersion||"")
   ?savedBank:publishedBank;
  if(!savedBank||String(savedBank.bankVersion||"")!==String(publishedBank.bankVersion||""))bankStore.save(sourceBank);
- practiceChapters=practice?await practice.json():null;
+ setProfileLoadState("Integrating chapter-wise practice questions and auditing paper slots…","Loading…");
+ practiceChapters=practiceData;
  const qc=g.validateQuestionBank(sourceBank,{classId:blueprint.classId,subjectId:blueprint.subjectId,academicYear:blueprint.academicYear});if(!qc.valid)throw Error(qc.errors.slice(0,8).join(" "));
  if(!bankStore.load())bankStore.save(sourceBank);
  assembleIntegratedBank();drawBlueprint();loadSavedDraft();if(paper)showPaper(paper);
@@ -95,11 +123,13 @@ async function loadProfile(profileToLoad){
  setStatus(blueprint.status==="ready"&&coverage.valid?"Profile ready: "+profileTitle()+". "+(bankIntegrationStats?.appended||0).toLocaleString()+" linked practice MCQs integrated.":"Profile loaded, but generation remains locked until the blueprint and question-pool coverage are approved.","success");
 }
 async function loadRegistry(){
- const response=await fetch(REGISTRY_URL,{cache:"no-store"});if(!response.ok)throw Error("Exam profile registry HTTP "+response.status);
- registry=await response.json();if(!registry||registry.schemaVersion!==1||registry.kind!=="exam-paper-profile-registry"||!Array.isArray(registry.profiles))throw Error("Exam profile registry is invalid.");
+ setProfileLoadState("Fetching enabled examination profiles…","Loading…");
+ registry=await fetchProfileJson(REGISTRY_URL,"Exam profile registry");
+ if(!registry||registry.schemaVersion!==1||registry.kind!=="exam-paper-profile-registry"||!Array.isArray(registry.profiles))throw Error("Exam profile registry is invalid.");
  defaultProfileId=String(registry.defaultProfileId||"");const available=registry.profiles.filter(item=>item&&item.enabled!==false);if(!available.length)throw Error("No enabled examination profiles are published.");
  const select=$("paperProfileSelect");if(select){select.innerHTML="";available.forEach(item=>{const option=document.createElement("option");option.value=String(item.profileId);option.textContent=String(item.title||("Class "+item.classId+" · "+item.subjectTitle));select.appendChild(option);});}
  const requested=new URLSearchParams(location.search).get("profile")||defaultProfileId;const selected=available.find(item=>String(item.profileId)===requested)||available.find(item=>String(item.profileId)===defaultProfileId)||available[0];
+ setProfileLoadState("Loading "+String(selected.title||"selected profile")+"…","Loading…");
  if(select){select.value=selected.profileId;select.disabled=available.length<2;select.addEventListener("change",()=>{const url=new URL(location.href);url.searchParams.set("profile",select.value);location.href=url.toString();});}
  await loadProfile(selected);
 }
@@ -113,7 +143,8 @@ function init(){
  $("printAnswerBookletBtn").addEventListener("click",()=>{if(paper)try{renderer().printAnswerBooklet(paper);}catch(e){setStatus(e.message||String(e),"error");}});
  $("printTeacherPaperBtn").addEventListener("click",()=>{if(paper)try{renderer().printPaper(paper,"teacher");}catch(e){setStatus(e.message||String(e),"error");}});
  $("openPaperOnlineBtn").addEventListener("click",()=>{if(!paper)return;try{localStorage.setItem("eg_exam_paper_delivery_v1",JSON.stringify(paper));const opened=window.open("./exam-practice.html?delivery=latest&profile="+encodeURIComponent(profileId),"_blank");setStatus(opened?"Frozen paper prepared. The student must sign in on this browser to start.":"Paper saved on this browser. Allow pop-ups or open Exam Paper Practice after sign-in.","success");}catch(e){setStatus(e.message||String(e),"error");}});
- updateDeliveryActions();loadRegistry().catch(e=>setStatus("Unable to load Admin Exam Studio: "+(e.message||e),"error"));
+ setProfileLoadState("Starting Exam Paper Studio…","Loading…");
+ updateDeliveryActions();loadRegistry().catch(showProfileLoadError);
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();
