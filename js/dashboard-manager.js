@@ -159,8 +159,10 @@
           const bankResponse=await fetch("./data/"+bankId+".json",{cache:"no-store"});
           if(!bankResponse.ok)throw new Error("Bank not published");
           const bank=await bankResponse.json();
-          const total=(bank||[]).reduce((sum,chapter)=>sum+(Array.isArray(chapter.questions)?chapter.questions.length:0),0);
-          if(meta)meta.textContent=total.toLocaleString()+" MCQs · "+bank.length+" chapter sets";
+          if(!Array.isArray(bank)||!bank.some(chapter=>Array.isArray(chapter.questions)&&chapter.questions.length)){
+            throw new Error("Published practice content is unavailable");
+          }
+          if(meta)meta.textContent="Explore topics and practise";
         }catch(_){card.hidden=true;card.style.display="none";}
       }));
       let note=$("subjectLaunchStatus");
