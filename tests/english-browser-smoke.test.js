@@ -43,6 +43,7 @@ function startServer(){
   await context.addInitScript(()=>sessionStorage.setItem("c10playground_static_student_v1",JSON.stringify({username:"jp10",role:"student",classId:"10"})));
   const page=await context.newPage();page.setDefaultTimeout(60000);
   const pageErrors=[];page.on("pageerror",error=>pageErrors.push(error.message));
+  page.on("dialog",dialog=>dialog.accept());
   await page.goto(baseUrl+"/exam-practice.html?profile="+encodeURIComponent(ENGLISH_ID),{waitUntil:"networkidle"});
   await page.waitForFunction(()=>{const status=document.querySelector("#loadStatus")?.textContent||"";return status.includes("Ready:")||status.includes("Unable to prepare");});
   const loadStatus=await page.locator("#loadStatus").innerText();
