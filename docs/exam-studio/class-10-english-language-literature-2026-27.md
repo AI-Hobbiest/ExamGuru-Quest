@@ -101,7 +101,8 @@ The batch now contains **180 numbered-question candidate bundles**: twenty candi
 - [x] Q8 attempt-any-four-of-five structure; 100 model answers checked at 40–50 words.
 - [x] Bank-wide parent, nested-part and alternative content-ID uniqueness check.
 - [x] Earlier English nested-response regression and question-bank audit passed for Q9.
-- [ ] Run the updated English regression suite and both CI workflows against the latest batch commit.
+- [x] Updated English regression suite passed on the Q1–Q9 batch commit (workflow run 41978483915); generator, release, renderer and English nested-response checks passed.
+- [x] Quiz-quality workflow passed on the same commit (run 41978484099). Its existing 50-paper all-format checks passed for Mathematics Standard, Mathematics Basic and Class 10 Science; these results do not certify 50 English papers.
 - [ ] Verify all detailed prescribed texts/units against a readable official 2026–27 syllabus and sample-paper marking scheme. The official CBSE 2026–27 index lists Language & Literature and Communicative as separate courses, but the detailed PDF could not be opened during this update.
 - [ ] Populate Q10 and Q11 to 20 candidates each (40 remaining bundles).
 - [ ] Generate 50 distinct complete 80-mark papers from the final production bank.
