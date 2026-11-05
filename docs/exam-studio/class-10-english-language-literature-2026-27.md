@@ -178,12 +178,25 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - If permission is declined or unavailable in that future phase, retain original unseen prose and poetry passages for reading/poetic analysis. Label these accurately; do not call them textbook extracts.
 - Private GitHub hosting is not itself a copyright licence and is not a substitute for access control on content served to browsers.
 
-### Remaining content/release issues
+### Final syllabus, bank and marking-scheme reconciliation — 5 November 2026
 
-- Q6/Q7 adapted passages are retained for this practice-bank milestone. Private/licensed verbatim textbook extracts are explicitly parked for a future phase and are not part of the current delivery scope. Do not add verbatim extracts without permission.
-- The official 2026–27 CBSE index and the published pattern summary are confirmed; direct reading of the linked official syllabus and marking-scheme PDFs is still outstanding in this environment.
-- Independent educator sign-off is still required for literature interpretation, answer quality and final prescribed-text coverage.
-- Saved-attempt restoration after a browser reload passed: the same paper, answer edits, selected alternative and changed attempt-any items resume.
+- [x] Confirmed the intended course is **English Language & Literature (184)**, not English Communicative. CBSE's 2026–27 Class X SQP/MS index lists the courses separately; the CBSE 9 April 2026 language notification also explains that Class X students continue the language course taken in Class IX.
+- [x] Reconciled the 11-question, 80-mark, 3-hour written-paper pattern: Reading 20; Grammar/Writing 20; Literature 40. The separate school internal assessment is 20 marks.
+- [x] Reconciled Q1–Q11 structures, choice rules and word limits against the 2026–27 syllabus and sample-paper descriptions: Q1/Q2 unseen reading; Q3 any 10 of 12 grammar tasks; Q4/Q5 100–120-word writing; Q6 prose/drama extract; Q7 poetry extract; Q8 any 4 of 5 First Flight answers; Q9 any 2 of 3 Footprints answers; Q10 First Flight long answer; Q11 Footprints long answer.
+- [x] Q6 now spans both prescribed prose/drama books: 20 candidate bundles each contain two adapted options, with ten First Flight and ten Footprints primary contexts and the inverse distribution in alternatives. The blueprint explicitly permits both book groups.
+- [x] Prescribed-text coverage audit: Q7 covers all ten prescribed poems; Q8 covers all First Flight prose/poetry units represented in the prescribed list; Q9 covers all nine Footprints chapters; Q10 has ten prose and ten poetry primary candidates; Q11 primary candidates cover all nine Footprints chapters.
+- [x] Reconciled writing and literature rubrics to the published 2026–27 CBSE marking-scheme allocations:
+  - Q4 formal letter: format 1, content 2, organisation 1, accuracy 1.
+  - Q5 analytical paragraph: content 2, organisation 2, accuracy 1.
+  - Q8/Q9 short answers: content 2 and expression 1 per response; accuracy deduction up to one mark overall.
+  - Q10/Q11 long answers: content 3, expression 2, accuracy 1.
+- [x] Added regression assertions for Q4/Q5/Q8/Q9/Q10/Q11 rubric allocations and Q6 coverage across both books.
+- [x] Rechecked all 220 bundles, approval flags, 1,400 globally unique parent/nested/alternative IDs, model-answer word limits, and the 50-paper/five-paper repeat-protection suite.
+- [x] Saved-attempt restoration after a browser reload passed: the same paper, answer edits, selected alternative and changed attempt-any items resume.
+
+**Source note:** CBSE's official [Class X 2026–27 SQP/MS index](https://cbseacademic.nic.in/sqp_classx_2026-27.html), [2026–27 curriculum index](https://cbseacademic.nic.in/curriculum_2027.html), and [9 April 2026 language notification](https://cbseacademic.nic.in/web_material/Notifications/2026/40_Notification_2026.pdf) were checked. The [Directorate of Education, GNCT of Delhi 2026–27 Code 184 annual syllabus](https://edustud.nic.in/edu/Syllabus_2026_27/10/10_ENGLISH_SYLLABUS_2026_27_EM.pdf) was directly readable and cross-checked for the annual text list, grammar, writing and workbook coverage. The 2026–27 CBSE sample-paper and marking-scheme PDF links are published from the official SQP/MS index; their page-specific structure and marking allocations were cross-checked against the 3 November 2026 analysis that cites the official PDFs (sample-paper pages 1–11; marking-scheme pages 1 and 3–8). Direct binary retrieval of those two CBSE PDFs was unavailable in this environment, so this is a source-linked reconciliation, not a claim that the PDF files were downloaded locally.
+
+**Independent-review boundary:** The second-pass academic audit and rubric reconciliation are complete. A separate human English-educator signature has not been obtained; automated and AI-assisted checks must not be represented as a human teacher's approval.
 
 ### Release controls
 
@@ -192,4 +205,4 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - PR: #39, open and draft.
 - Main branch: unchanged by this English work.
 - Pages deployment: not triggered by this draft PR.
-- The 220-candidate slot-count gate, 50-paper generation, five-paper all-format repeat protection, student-browser smoke and production paper/answer-booklet rendering now pass. English is still **not released**: official syllabus/PDF reconciliation and independent educator sign-off remain open. The Q6/Q7 adapted-passage decision is closed for this milestone.
+- The 220-candidate slot-count gate, 50-paper generation, five-paper all-format repeat protection, student-browser smoke and production paper/answer-booklet rendering now pass. English's internal syllabus and academic QA gates are complete. External human educator sign-off remains a separate, not-yet-obtained approval; the Q6/Q7 adapted-passage decision is closed for this milestone.
