@@ -15,11 +15,12 @@ const blueprint = context.window.C10OlympiadBlueprints.getBlueprint("sof-imo-cla
 const model = context.window.C10OlympiadBlueprints;
 const sections = ["Logical Reasoning", "Mathematical Reasoning", "Everyday Mathematics", "Achievers Section"];
 assert.equal(normalized.length, 4);
-assert.deepEqual(normalized.map(chapter => chapter.section), sections);
-assert.deepEqual(normalized.map(chapter => chapter.questions.length), [60, 60, 60, 30]);
+assert.deepEqual(Array.from(normalized, chapter => chapter.section), sections);
+assert.deepEqual(Array.from(normalized, chapter => chapter.questions.length), [60, 60, 60, 30]);
 assert.equal(normalized.reduce((sum, chapter) => sum + chapter.questions.length, 0), 210);
 
-const all = normalized.flatMap(chapter => chapter.questions);
+const normalizedChapters = Array.from(normalized);
+const all = normalizedChapters.flatMap(chapter => Array.from(chapter.questions));
 assert.equal(new Set(all.map(question => question.id)).size, 210, "question IDs are unique");
 assert.equal(new Set(all.map(question => question.questionKey)).size, 210, "normalized question keys are unique");
 assert.ok(all.every(question => question.section && question.syllabusTopic && question.syllabusSource),
@@ -38,7 +39,7 @@ assert.ok(all.every(question => ["Easy", "Medium", "Challenge"].includes(questio
 const normalizedStem = value => String(value).toLowerCase().normalize("NFKC")
   .replace(/[’‘]/g, "'").replace(/[0-9,]+/g, "#")
   .replace(/[^a-z#₹]+/g, " ").replace(/\s+/g, " ").trim();
-for (const chapter of normalized) {
+for (const chapter of normalizedChapters) {
   const stems = chapter.questions.map(question => normalizedStem(question.question));
   assert.equal(new Set(stems).size, stems.length, chapter.title + " has no repeated stems after number normalization");
 }
@@ -76,7 +77,7 @@ assert.ok(Math.max(...answerPositions) - Math.min(...answerPositions) <= 1,
 assert.equal(blueprint.classId, "3");
 assert.equal(blueprint.subjectId, "mathematics-sof");
 assert.equal(blueprint.durationSeconds, 3600);
-assert.deepEqual(blueprint.sections.map(section => [
+assert.deepEqual(Array.from(blueprint.sections, section => [
   section.id, section.questionCount, section.marksPerQuestion
 ]), [
   ["logical-reasoning", 10, 1],
@@ -102,8 +103,8 @@ for (let index = 0; index < 50; index++) {
   assert.equal(paper.totalQuestions, 35, "every generated paper has 35 questions");
   assert.equal(paper.maxMarks, 40, "every generated paper totals 40 marks");
   assert.equal(paper.durationSeconds, 3600, "every generated paper is 60 minutes");
-  assert.deepEqual(paper.sections.map(section => section.questionCount), [10, 10, 10, 5]);
-  assert.deepEqual(paper.sections.map(section => section.maxMarks), [10, 10, 10, 10]);
+  assert.deepEqual(Array.from(paper.sections, section => section.questionCount), [10, 10, 10, 5]);
+  assert.deepEqual(Array.from(paper.sections, section => section.maxMarks), [10, 10, 10, 10]);
   assert.equal(new Set(paper.questions.map(question => question.questionKey)).size, 35,
     "one generated paper never repeats a question");
   const recent = new Set(recentQuestionIds);
