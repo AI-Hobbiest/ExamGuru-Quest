@@ -5,6 +5,7 @@ const esc=v=>String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;"
 const list=x=>Array.isArray(x)?x:[];
 function partHtml(p,teacher){
  let h='<div class="part"><strong>('+esc(p.partId||"")+')</strong> '+esc(p.prompt)+' <span class="marks">['+esc(p.marks)+']</span></div>';
+ if(Array.isArray(p.options))h+='<ol class="options" type="A">'+p.options.map(o=>"<li>"+esc(o.text)+"</li>").join("")+'</ol>';
  list(p.alternatives).forEach(a=>{
   h+='<div class="or">OR</div><div class="part-alternative">'+esc(a.prompt)+' <span class="marks">['+esc(p.marks)+' marks]</span></div>';
   if(teacher)h+=teacherAnswerHtml(a.answerKey,a.markingScheme);
@@ -31,6 +32,7 @@ function alternativeHtml(a,teacher){
 function questionHtml(q,teacher){
  let h='<article class="question"><div class="question-heading"><b>Q'+esc(q.paperQuestionNumber)+'.</b> '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></div>';
  if(q.stimulus)h+='<div class="stimulus">'+esc(q.stimulus)+'</div>';
+ if(Number.isInteger(q.attemptAny))h+='<p class="attempt-any-note"><strong>Attempt any '+esc(q.attemptAny)+' of the '+esc(q.parts?.length||0)+' items.</strong></p>';
  if(Array.isArray(q.options))h+='<ol class="options" type="A">'+q.options.map(o=>"<li>"+esc(o.text)+"</li>").join("")+'</ol>';
  h+=imageHtml(q.images);
  list(q.parts).forEach(p=>h+=partHtml(p,teacher));
@@ -63,11 +65,12 @@ function buildAnswerBookletHtml(paper,baseHref){
   const questions=paper.questions.filter(q=>q.sectionId===section.sectionId).map(q=>{
    const linesFor=marks=>Array.from({length:Math.max(3,Math.min(18,Number(marks||1)*3))},()=>'<div class="answer-line"></div>').join("");
    const questionChoice=q.alternatives&&q.alternatives.length?'<p class="choice-note">Answer either the main question or the internal-choice question, not both.</p>':"";
+   const attemptAnyNote=Number.isInteger(q.attemptAny)?'<p class="choice-note">Attempt any '+esc(q.attemptAny)+' of the '+esc(q.parts?.length||0)+' items.</p>':"";
    const responseSpace=Array.isArray(q.parts)&&q.parts.length?q.parts.map(part=>{
     const partChoice=Array.isArray(part.alternatives)&&part.alternatives.length?'<p class="choice-note">Choose either the main or alternative version of this subpart.</p>':"";
     return'<div class="answer-part"><b>('+esc(part.partId||"")+')</b> '+esc(part.prompt)+' <span class="marks">['+esc(part.marks)+' marks]</span></div>'+partChoice+linesFor(part.marks);
    }).join(""):linesFor(q.marks);
-   return'<article class="answer-space"><h3>Q'+esc(q.paperQuestionNumber)+'. '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></h3>'+questionChoice+responseSpace+'</article>';
+   return'<article class="answer-space"><h3>Q'+esc(q.paperQuestionNumber)+'. '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></h3>'+questionChoice+attemptAnyNote+responseSpace+'</article>';
   }).join("");
   return'<section><h2>'+esc(section.title)+' · '+esc(section.totalMarks)+' marks</h2>'+questions+'</section>';
  }).join("");

@@ -13,7 +13,7 @@ function validateQuestion(q,path="question"){
  const e=[];if(!obj(q))return[path+" must be an object."];
  for(const key of ["questionId","sectionId","chapterId","prompt"])if(!text(q[key]))e.push(path+"."+key+" is required.");
  if(!TYPES.includes(q.type))e.push(path+".type is unsupported.");
- if(!Number.isInteger(q.marks)||q.marks<1||q.marks>10)e.push(path+".marks must be an integer from 1 to 10.");
+ if(!Number.isInteger(q.marks)||q.marks<1||q.marks>20)e.push(path+".marks must be an integer from 1 to 20.");
  if(!DIFFICULTIES.includes(q.difficulty))e.push(path+".difficulty must be easy, medium or hard.");
  if(!COMPETENCIES.includes(q.competency))e.push(path+".competency is invalid.");
  if(!["draft","review","approved","rejected","retired"].includes(q.approvalStatus))e.push(path+".approvalStatus is invalid.");
@@ -31,8 +31,18 @@ function validateQuestion(q,path="question"){
   const ids=q.parts.map(p=>String(p&&p.partId||""));
   if(ids.some(x=>!x)||new Set(ids).size!==ids.length)e.push(path+".parts need unique IDs.");
   if(!q.parts.every(p=>p&&text(p.prompt)&&Number.isInteger(p.marks)&&p.marks>0))e.push(path+".parts need prompts and positive integer marks.");
-  else if(sum(q.parts.map(p=>p.marks))!==q.marks)e.push(path+".parts marks must equal question marks.");
+  else if(q.attemptAny==null&&sum(q.parts.map(p=>p.marks))!==q.marks)e.push(path+".parts marks must equal question marks.");
+  if(q.attemptAny!=null){
+   if(!Number.isInteger(q.attemptAny)||q.attemptAny<1||q.attemptAny>q.parts.length)e.push(path+".attemptAny must be a positive count not greater than the available parts.");
+   else{const partMarks=[...new Set(q.parts.map(p=>Number(p.marks)))];if(partMarks.length!==1||Number(q.marks)!==Number(q.attemptAny)*partMarks[0])e.push(path+".marks must equal attemptAny multiplied by the common part mark value.");}
+  }
   q.parts.forEach((part,partIndex)=>{
+   if(part&&part.options!=null){
+    const options=part.options,optionIds=Array.isArray(options)?options.map(o=>String(o&&o.optionId||"")):[];
+    if(!Array.isArray(options)||options.length<2||optionIds.some(x=>!x)||new Set(optionIds).size!==optionIds.length||!options.every(o=>o&&text(o.text)))e.push(path+".parts["+partIndex+"].options must contain at least two uniquely identified non-empty options.");
+    else if(!optionIds.includes(String(part.correctOptionId||"")))e.push(path+".parts["+partIndex+"].correctOptionId must reference a part option.");
+    if(q.approvalStatus==="approved"&&(!part.answerKey||!Array.isArray(part.markingScheme)||!part.markingScheme.length||sum((part.markingScheme||[]).map(m=>Number(m&&m.marks)||0))!==Number(part.marks)))e.push(path+".parts["+partIndex+"] needs an answerKey and a markingScheme matching its marks.");
+   }
    if(part&&part.alternatives!=null){
     const alternativesPath=path+".parts["+partIndex+"].alternatives";
     if(!Array.isArray(part.alternatives)||!part.alternatives.length)e.push(alternativesPath+" must be a non-empty array.");
@@ -73,7 +83,20 @@ function validateQuestion(q,path="question"){
   if(!Array.isArray(q.alternatives))e.push(path+".alternatives must be an array.");
   else q.alternatives.forEach((a,i)=>{
    if(!obj(a)||!text(a.prompt))e.push(path+".alternatives["+i+"] needs a prompt.");
-   if(a&&Array.isArray(a.parts)&&a.parts.length&&a.parts.every(p=>Number.isInteger(p.marks))&&sum(a.parts.map(p=>p.marks))!==q.marks)e.push(path+".alternatives["+i+"] parts marks must equal question marks.");
+   if(a&&Array.isArray(a.parts)&&a.parts.length){
+     const altPartIds=a.parts.map(p=>String(p&&p.partId||""));
+     if(altPartIds.some(id=>!id)||new Set(altPartIds).size!==altPartIds.length)e.push(path+".alternatives["+i+"] parts need unique IDs.");
+     if(!a.parts.every(p=>p&&text(p.prompt)&&Number.isInteger(p.marks)&&p.marks>0))e.push(path+".alternatives["+i+"] parts need prompts and positive integer marks.");
+     else if(sum(a.parts.map(p=>p.marks))!==q.marks)e.push(path+".alternatives["+i+"] parts marks must equal question marks.");
+     a.parts.forEach((part,partIndex)=>{
+      if(part&&part.options!=null){
+       const options=part.options,optionIds=Array.isArray(options)?options.map(o=>String(o&&o.optionId||"")):[];
+       if(!Array.isArray(options)||options.length<2||optionIds.some(id=>!id)||new Set(optionIds).size!==optionIds.length||!options.every(o=>o&&text(o.text)))e.push(path+".alternatives["+i+"].parts["+partIndex+"].options must contain at least two uniquely identified non-empty options.");
+       else if(!optionIds.includes(String(part.correctOptionId||"")))e.push(path+".alternatives["+i+"].parts["+partIndex+"].correctOptionId must reference a part option.");
+       if(q.approvalStatus==="approved"&&(!part.answerKey||!Array.isArray(part.markingScheme)||!part.markingScheme.length||sum((part.markingScheme||[]).map(m=>Number(m&&m.marks)||0))!==Number(part.marks)))e.push(path+".alternatives["+i+"].parts["+partIndex+"] needs a matching answerKey and markingScheme.");
+      }
+     });
+    }
    if(q.approvalStatus==="approved"){
     if(!a||a.answerKey==null)e.push(path+".alternatives["+i+"] needs an answerKey.");
     if(!a||!Array.isArray(a.markingScheme)||!a.markingScheme.length||!a.markingScheme.every(m=>m&&text(m.criterion)&&Number.isInteger(m.marks)&&m.marks>0)||sum((a&&a.markingScheme||[]).map(m=>Number(m.marks)||0))!==q.marks)e.push(path+".alternatives["+i+"] markingScheme must total exactly the question marks.");
@@ -168,12 +191,22 @@ function auditSlotCoverage(bp,bank,minimumCandidatesPerSlot=20){
  coverage.forEach(s=>{if(s.eligibleCount<minimumCandidatesPerSlot)errors.push("Slot "+s.slotId+" has "+s.eligibleCount+" eligible approved questions; "+minimumCandidatesPerSlot+" required.");});
  return{valid:errors.length===0,minimumCandidatesPerSlot,slotCount:slots.length,questionCount:Array.isArray(bank&&bank.questions)?bank.questions.length:0,coverage,errors};
 }
+function questionContentIds(question){
+ const ids=new Set();
+ function visit(node,fallback){
+  if(!obj(node))return;
+  const id=String(node.questionId||fallback||"").trim();if(id)ids.add(id);
+  (Array.isArray(node.parts)?node.parts:[]).forEach((part,index)=>visit(part,(id||fallback||"question")+"#part:"+(part&&part.partId||index+1)));
+  (Array.isArray(node.alternatives)?node.alternatives:[]).forEach((alternative,index)=>visit(alternative,(id||fallback||"question")+"#alternative:"+(index+1)));
+ }
+ visit(question,"");return[...ids];
+}
 function generatePaper(bp,bank,options={}){
  const bc=validateBlueprint(bp);if(!bc.valid)throw Error("Invalid blueprint: "+bc.errors.join(" "));
  if(!bc.readyForGeneration)throw Error("Paper generation is locked: blueprint is not approved for generation.");
  const qc=validateQuestionBank(bank,{classId:bp.classId,subjectId:bp.subjectId,academicYear:bp.academicYear});if(!qc.valid)throw Error("Invalid question bank: "+qc.errors.join(" "));
  const recent=new Set((options.recentQuestionIds||[]).map(String)),rand=seedRandom(options.seed||"examguru-paper");
- const slots=bc.slots.map((s,i)=>({...s,_position:i,_candidates:shuffle(bank.questions.filter(q=>eligible(q,s)&&!recent.has(String(q.questionId))),rand)}));
+ const slots=bc.slots.map((s,i)=>({...s,_position:i,_candidates:shuffle(bank.questions.filter(q=>eligible(q,s)&&!questionContentIds(q).some(id=>recent.has(id))),rand)}));
  const empty=slots.filter(s=>!s._candidates.length);if(empty.length)throw Error("Question pool shortage: "+empty.map(s=>s.slotId+" ("+s.sectionId+", "+s.marks+" marks)").join("; "));
  const order=slots.slice().sort((a,b)=>a._candidates.length-b._candidates.length||a._position-b._position),used=new Set(),selected=new Map();let tries=0;const max=options.maxSearchAttempts||250000;
  const remainingDifficulty=bp.difficultyTargets?Object.fromEntries(DIFFICULTIES.map(d=>[d,Number(bp.difficultyTargets[d])||0])):null;
@@ -194,11 +227,11 @@ function generatePaper(bp,bank,options={}){
   if(++tries>max||!canComplete(i))return false;
   const slot=order[i];
   for(const q of slot._candidates){
-   const id=String(q.questionId),difficulty=q.difficulty;
-   if(used.has(id)||(remainingDifficulty&&(!Object.prototype.hasOwnProperty.call(remainingDifficulty,difficulty)||remainingDifficulty[difficulty]<=0)))continue;
-   used.add(id);selected.set(slot._position,q);if(remainingDifficulty)remainingDifficulty[difficulty]--;
+   const id=String(q.questionId),contentIds=questionContentIds(q),difficulty=q.difficulty;
+   if(contentIds.some(contentId=>used.has(contentId))||(remainingDifficulty&&(!Object.prototype.hasOwnProperty.call(remainingDifficulty,difficulty)||remainingDifficulty[difficulty]<=0)))continue;
+   contentIds.forEach(contentId=>used.add(contentId));selected.set(slot._position,q);if(remainingDifficulty)remainingDifficulty[difficulty]--;
    if(walk(i+1))return true;
-   if(remainingDifficulty)remainingDifficulty[difficulty]++;selected.delete(slot._position);used.delete(id);
+   if(remainingDifficulty)remainingDifficulty[difficulty]++;selected.delete(slot._position);contentIds.forEach(contentId=>used.delete(contentId));
   }
   return false;
  }
@@ -235,7 +268,7 @@ function generateUniquePaper(bp,bank,options={}){
     }
     throw error;
    }
-   const repeatProtectionGuard=recentIds.length>0&&(paper.questions||[]).some(question=>recentIds.includes(String(question.questionId)));
+   const repeatProtectionGuard=recentIds.length>0&&(paper.questions||[]).some(question=>questionContentIds(question).some(id=>recentIds.includes(id)));
     if(repeatProtectionGuard){
      lastShortage=new Error("Question pool shortage: generated paper contains a question used in the protected recent-paper window.");
      selectionShortage=true;
@@ -445,7 +478,7 @@ function mergeQuestionBanks(baseBank,practiceChapters,bp,options={}){
  return{bank:merged,stats:{practiceSourceCount:adapted.questions.length,appended,duplicateIds,duplicateStems,excluded:adapted.adapterStats.excluded,invalidReasons:adapted.adapterStats.invalidReasons,byChapter:adapted.adapterStats.byChapter,byCompetency:adapted.adapterStats.byCompetency,coverage}};
 }
 
-const api=Object.freeze({schemaVersion:1,questionTypes:TYPES,difficulties:DIFFICULTIES,competencies:COMPETENCIES,validateQuestion,validateQuestionBank,validateBlueprint,expandSlotPlan,auditSlotCoverage,generatePaper,paperFingerprint,generateUniquePaper,validatePaper,createQuestionBankTemplate,normalizeCompetency,inferMcqCompetency,normalizeStem,adaptChapterMcqBank,adaptPracticeMcqBank,mergeQuestionBanks});
+const api=Object.freeze({schemaVersion:1,questionTypes:TYPES,difficulties:DIFFICULTIES,competencies:COMPETENCIES,validateQuestion,validateQuestionBank,validateBlueprint,expandSlotPlan,auditSlotCoverage,questionContentIds,generatePaper,paperFingerprint,generateUniquePaper,validatePaper,createQuestionBankTemplate,normalizeCompetency,inferMcqCompetency,normalizeStem,adaptChapterMcqBank,adaptPracticeMcqBank,mergeQuestionBanks});
 window.ExamPaperGenerator=api;
 window.C10ExamPaperGenerator=api;
 })();

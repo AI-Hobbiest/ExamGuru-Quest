@@ -151,7 +151,7 @@ function makePaper(){
  const assignedRemaining=assignedPaper?remaining:paper.durationMinutes*60;
  answers=resumeAttempt&&resumeAttempt.paperId===paper.paperId?JSON.parse(JSON.stringify(resumeAttempt.answers||{})):{};
  submitted=false;remaining=assignedRemaining;
- const questionIds=paper.questions.map(q=>String(q.questionId));
+ const questionIds=paper.questions.flatMap(q=>ExamPaperGenerator.questionContentIds(q));
  const fingerprint=paper.paperFingerprint||ExamPaperGenerator.paperFingerprint(paper);
  const alreadyRecorded=paperHistory.some(item=>item.paperId===paper.paperId||item.fingerprint===fingerprint);
  if(!alreadyRecorded)paperHistory=[...paperHistory,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds,fingerprint,questionIds:paper.questions.map(question=>question.questionId),mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId))}].slice(-HISTORY_LIMIT);
@@ -168,17 +168,24 @@ function responseContent(item,i){
  if(item.stimulus)html+='<p>'+esc(item.stimulus)+'</p>';
  (item.images||[]).forEach(im=>{const src=esc(im.src);html+='<img src="./'+(src.startsWith("./")?src.slice(2):src)+'" alt="'+esc(im.alt)+'">';});
  if(Array.isArray(item.parts)&&item.parts.length){
+  if(Number.isInteger(item.attemptAny))html+='<p class="attempt-any-note"><strong>Attempt any '+item.attemptAny+' of the '+item.parts.length+' items.</strong> Select the items you will answer; you may change your selection while the exam is open.</p>';
   item.parts.forEach((part,j)=>{
+   const selectedByDefault=!Number.isInteger(item.attemptAny)||j<item.attemptAny;
    const heading='<p><strong>('+String.fromCharCode(97+j)+')</strong> '+esc(part.prompt)+' ('+part.marks+' marks)</p>';
    const alt=Array.isArray(part.alternatives)&&part.alternatives.length?part.alternatives[0]:null;
-   if(alt){
-    html+=heading+
-     '<fieldset class="exam-choice"><legend>Choose one version of this subpart</legend>'+
+   html+='<div class="exam-subquestion">';
+   if(Number.isInteger(item.attemptAny))html+='<label class="exam-option attempt-any-select"><input type="checkbox" data-part-attempt="'+j+'" '+(selectedByDefault?'checked':'')+'><span>Attempt this item</span></label>';
+   html+='<div data-attempt-part-panel="'+j+'">'+heading;
+   if(Array.isArray(part.options)&&part.options.length){
+    html+='<div class="exam-options">'+part.options.map(o=>'<label class="exam-option"><input type="radio" name="part-option-'+i+'-'+j+'" data-part-option="'+j+'" value="'+esc(o.optionId)+'"><span>'+esc(o.text)+'</span></label>').join("")+'</div>';
+   }else if(alt){
+    html+='<fieldset class="exam-choice"><legend>Choose one version of this subpart</legend>'+
      '<label class="exam-option"><input type="radio" name="subpart-choice-'+i+'-'+j+'" data-subpart-choice="'+j+'" value="main" checked><span>Answer the main subpart</span></label>'+
      '<label class="exam-option"><input type="radio" name="subpart-choice-'+i+'-'+j+'" data-subpart-choice="'+j+'" value="alternative"><span>Answer the alternative subpart</span></label></fieldset>'+
-     '<div class="exam-choice-panel" data-subpart-panel="'+j+'" data-subpart-variant="main"><textarea data-subpart-answer="'+j+'" aria-label="Answer for question '+(i+1)+' part '+(j+1)+'" placeholder="Your answer here…"></textarea></div>'+
-     '<div class="exam-choice-panel" data-subpart-panel="'+j+'" data-subpart-variant="alternative" hidden><h4>'+esc(alt.prompt)+'</h4><textarea data-subpart-answer="'+j+'" aria-label="Answer for question '+(i+1)+' part '+(j+1)+' alternative" placeholder="Your answer here…"></textarea></div>';
-   }else html+=heading+'<textarea aria-label="Answer for question '+(i+1)+' part '+(j+1)+'" data-part="'+j+'" placeholder="Your answer here…"></textarea>';
+     '<div class="exam-choice-panel" data-subpart-panel="'+j+'" data-subpart-variant="main"><textarea data-part="'+j+'" data-subpart-answer="'+j+'" aria-label="Answer for question '+(i+1)+' part '+(j+1)+'" placeholder="Your answer here…"></textarea></div>'+
+     '<div class="exam-choice-panel" data-subpart-panel="'+j+'" data-subpart-variant="alternative" hidden><h4>'+esc(alt.prompt)+'</h4><textarea data-part="'+j+'" data-subpart-answer="'+j+'" aria-label="Answer for question '+(i+1)+' part '+(j+1)+' alternative" placeholder="Your answer here…"></textarea></div>';
+   }else html+='<textarea aria-label="Answer for question '+(i+1)+' part '+(j+1)+'" data-part="'+j+'" placeholder="Your answer here…"></textarea>';
+   html+='</div></div>';
   });
  }else{
   html+='<textarea aria-label="Answer for question '+(i+1)+'" placeholder="Write your answer here…"></textarea>';
@@ -205,6 +212,7 @@ function syncChoicePanels(article){
  const selected=article.querySelector('input[data-choice]:checked')?.value||"main";
  article.querySelectorAll("[data-choice-panel]").forEach(panel=>{panel.hidden=panel.dataset.choicePanel!==selected;});
  const active=article.querySelector('[data-choice-panel="'+selected+'"]')||article;
+ active.querySelectorAll("input[data-part-attempt]").forEach(box=>{const part=box.getAttribute("data-part-attempt");active.querySelectorAll('[data-attempt-part-panel="'+part+'"]').forEach(panel=>{panel.hidden=!box.checked;});});
  active.querySelectorAll("input[data-subpart-choice]:checked").forEach(radio=>{
   const part=radio.getAttribute("data-subpart-choice");
   active.querySelectorAll('[data-subpart-panel="'+part+'"]').forEach(panel=>{panel.hidden=panel.getAttribute("data-subpart-variant")!==radio.value;});
@@ -217,11 +225,13 @@ function render(){
  $("questions").querySelectorAll(".exam-question").forEach(article=>{
   const index=Number(article.dataset.q),saved=answers[index];
   if(saved){
-   if(saved.optionId){const option=[...article.querySelectorAll('input[type="radio"]:not([data-choice])')].find(el=>el.value===saved.optionId);if(option)option.checked=true;}
+   if(saved.optionId){const option=[...article.querySelectorAll('input[type="radio"]:not([data-choice]):not([data-subpart-choice]):not([data-part-option])')].find(el=>el.value===saved.optionId);if(option)option.checked=true;}
    if(saved.choice==="alternative"){const alternative=article.querySelector('input[data-choice][value="alternative"]');if(alternative)alternative.checked=true;}
    syncChoicePanels(article);
    const activePanel=article.querySelector('[data-choice-panel="'+(saved.choice==="alternative"?"alternative":"main")+'"]')||article;
    if(Array.isArray(saved.parts))saved.parts.forEach((part,j)=>{
+    const attempt=activePanel.querySelector('input[data-part-attempt="'+j+'"]');if(attempt&&part.attempted===false)attempt.checked=false;
+    if(part.optionId){const option=activePanel.querySelector('input[data-part-option="'+j+'"][value="'+part.optionId+'"]');if(option)option.checked=true;}
     const choice=part.choice||"main";
     const radio=activePanel.querySelector('input[data-subpart-choice="'+j+'"][value="'+choice+'"]');if(radio)radio.checked=true;
    });
@@ -236,7 +246,10 @@ function render(){
   }
   syncChoicePanels(article);
   article.querySelectorAll("input,textarea").forEach(el=>{
-   el.addEventListener("change",()=>{if(el.matches("input[data-choice],input[data-subpart-choice]"))syncChoicePanels(article);saveAnswers();});
+   el.addEventListener("change",()=>{
+    if(el.matches("input[data-part-attempt]")&&el.checked){const group=article.querySelectorAll("input[data-part-attempt]"),max=Number((paper.questions[index]||{}).attemptAny)||group.length;if([...group].filter(node=>node.checked).length>max)el.checked=false;}
+    if(el.matches("input[data-choice],input[data-subpart-choice],input[data-part-attempt]"))syncChoicePanels(article);saveAnswers();
+   });
    el.addEventListener("input",saveAnswers);
   });
  });
@@ -245,7 +258,7 @@ function render(){
 function saveAnswers(){
  paper.questions.forEach((q,i)=>{
   const article=$("questions").querySelector('[data-q="'+i+'"]');if(!article)return;
-  const radio=article.querySelector('input[type=radio]:checked:not([data-choice]):not([data-subpart-choice])');
+  const radio=article.querySelector('input[type=radio]:checked:not([data-choice]):not([data-subpart-choice]):not([data-part-option])');
   const choice=article.querySelector("input[data-choice]:checked")?.value||"main";
   const panel=article.querySelector('[data-choice-panel="'+choice+'"]')||article;
   const selectedQuestion=choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;
@@ -253,7 +266,9 @@ function saveAnswers(){
    const partChoice=panel.querySelector('input[data-subpart-choice="'+j+'"]:checked')?.value||"main";
    const partPanel=panel.querySelector('[data-subpart-panel="'+j+'"][data-subpart-variant="'+partChoice+'"]');
    const textarea=partPanel?.querySelector("textarea")||panel.querySelector('textarea[data-part="'+j+'"]');
-   return{choice:partChoice,text:textarea?.value||""};
+   const attempt=panel.querySelector('input[data-part-attempt="'+j+'"]');
+    const partOption=panel.querySelector('input[data-part-option="'+j+'"]:checked');
+    return{choice:partChoice,text:textarea?.value||"",attempted:attempt?attempt.checked:true,optionId:partOption?.value||null};
   }):null;
   const textareas=partAnswers?partAnswers.map(part=>part.text):[...panel.querySelectorAll("textarea")].map(x=>x.value);
   answers[i]={optionId:radio?.value||null,text:textareas,choice,alternative:choice==="alternative"?0:null,parts:partAnswers};
@@ -261,9 +276,9 @@ function saveAnswers(){
  updateProgress();
  try{localStorage.setItem(storageKey("eg_exam_attempt_v1"),JSON.stringify({paperId:paper.paperId,answers,remaining}));}catch(_){}
 }
-function updateProgress(){const count=Object.values(answers).filter(a=>a&&(a.optionId||a.text?.some(t=>t.trim()))).length;$("progress").textContent=count+" / "+paper.questions.length+" answered";}
+function updateProgress(){const count=Object.values(answers).filter(a=>a&&(a.optionId||a.parts?.some(p=>p.attempted!==false&&(p.optionId||p.text?.trim()))||a.text?.some(t=>t.trim()))).length;$("progress").textContent=count+" / "+paper.questions.length+" answered";}
 function startTimer(){clearInterval(tick);tick=setInterval(()=>{remaining--;const h=String(Math.floor(remaining/3600)).padStart(2,"0"),m=String(Math.floor(remaining%3600/60)).padStart(2,"0"),s=String(remaining%60).padStart(2,"0");$("timer").textContent=h+":"+m+":"+s;if(remaining<=0){clearInterval(tick);submit(true);}},1000);}
-function submit(auto=false){if(submitted)return;saveAnswers();submitted=true;clearInterval(tick);let mcq=0,correct=0,answered=0;paper.questions.forEach((q,i)=>{const a=answers[i];if(a&&(a.optionId||a.text?.some(t=>t.trim())))answered++;if(q.type==="mcq"||q.type==="assertion-reason"){mcq++;if(a?.optionId===q.correctOptionId)correct++;}});$("attempt").classList.add("exam-hidden");$("review").classList.remove("exam-hidden");$("score").textContent=(auto?"Time is up. ":"")+"Submitted "+answered+" of "+paper.questions.length+" questions. MCQ score: "+correct+" / "+mcq+". Written answers require self-review.";const box=$("reviewAnswers");box.innerHTML="";paper.questions.forEach((q,i)=>{const d=document.createElement("div");d.className="exam-question";const selected=answers[i]?.choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;const partReview=Array.isArray(selected.parts)?selected.parts.map((part,j)=>{const response=answers[i]?.parts?.[j]||{},chosen=response.choice==="alternative"&&part.alternatives?.length?part.alternatives[0]:part;return"("+String.fromCharCode(97+j)+(response.choice==="alternative"?" · alternative":"")+") "+(chosen.prompt||part.prompt)+"\nYour answer: "+(response.text||"Not attempted")+"\nModel answer: "+(chosen.answerKey||"Refer to the marking points.");}).join("\n\n"):"";const key=partReview||selected.answerKey?.modelAnswer||selected.answerKey?.answer||selected.answerKey?.correctAnswer||"Refer to your textbook and marking points.";const userResponse=Array.isArray(selected.parts)?"See selected response for each case-study subpart.":(answers[i]?.optionId||answers[i]?.text?.join(" / ")||"Not attempted");d.innerHTML='<h3>Q'+(i+1)+': '+esc(selected.prompt||q.prompt)+'</h3><p><strong>Your answer:</strong> '+esc(userResponse)+'</p><p><strong>Model answer / review:</strong><br>'+esc(key).replace(/\n/g,"<br>")+'</p>';box.appendChild(d);});try{localStorage.setItem(storageKey("eg_exam_last_result_v1"),JSON.stringify({paperId:paper.paperId,answers,submittedAt:new Date().toISOString(),mcqCorrect:correct,mcqTotal:mcq}));localStorage.removeItem(storageKey("eg_exam_attempt_v1"));const queued=JSON.parse(localStorage.getItem(storageKey("eg_exam_paper_delivery_v1"))||"null");if(queued&&queued.paperId===paper.paperId)localStorage.removeItem(storageKey("eg_exam_paper_delivery_v1"));if(assignedPaper&&currentStudent)window.C10AssessmentManager.submitPaper(assignedPaper.assignmentId,currentStudent.studentId,answers);}catch(e){status(e.message||"Answers were saved, but assignment submission needs attention.");}window.scrollTo(0,0);}
+function submit(auto=false){if(submitted)return;saveAnswers();submitted=true;clearInterval(tick);let mcq=0,correct=0,answered=0;paper.questions.forEach((q,i)=>{const a=answers[i];if(a&&(a.optionId||a.parts?.some(p=>p.attempted!==false&&(p.optionId||p.text?.trim()))||a.text?.some(t=>t.trim())))answered++;if(q.type==="mcq"||q.type==="assertion-reason"){mcq++;if(a?.optionId===q.correctOptionId)correct++;}if(Array.isArray(q.parts))q.parts.forEach((part,j)=>{const response=a?.parts?.[j];if(Array.isArray(part.options)){mcq++;if(response?.optionId===part.correctOptionId)correct++;}});});$("attempt").classList.add("exam-hidden");$("review").classList.remove("exam-hidden");$("score").textContent=(auto?"Time is up. ":"")+"Submitted "+answered+" of "+paper.questions.length+" questions. MCQ score: "+correct+" / "+mcq+". Written answers require self-review.";const box=$("reviewAnswers");box.innerHTML="";paper.questions.forEach((q,i)=>{const d=document.createElement("div");d.className="exam-question";const selected=answers[i]?.choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;const partReview=Array.isArray(selected.parts)?selected.parts.map((part,j)=>{const response=answers[i]?.parts?.[j]||{},chosen=response.choice==="alternative"&&part.alternatives?.length?part.alternatives[0]:part;const user=response.optionId||response.text||"Not attempted";const key=chosen.answerKey?.modelAnswer||chosen.answerKey||"Refer to the marking points.";const optionKey=chosen.options&&response.optionId?String(chosen.correctOptionId||"")+" — "+(chosen.options.find(o=>o.optionId===chosen.correctOptionId)?.text||""):"";return"("+String.fromCharCode(97+j)+(response.attempted===false?" · not selected":response.choice==="alternative"?" · alternative":"")+") "+(chosen.prompt||part.prompt)+"\nYour answer: "+user+"\nModel answer: "+(optionKey||key);}).join("\n\n"):"";const key=partReview||selected.answerKey?.modelAnswer||selected.answerKey?.answer||selected.answerKey?.correctAnswer||"Refer to your textbook and marking points.";const userResponse=Array.isArray(selected.parts)?"See selected response for each case-study subpart.":(answers[i]?.optionId||answers[i]?.text?.join(" / ")||"Not attempted");d.innerHTML='<h3>Q'+(i+1)+': '+esc(selected.prompt||q.prompt)+'</h3><p><strong>Your answer:</strong> '+esc(userResponse)+'</p><p><strong>Model answer / review:</strong><br>'+esc(key).replace(/\n/g,"<br>")+'</p>';box.appendChild(d);});try{localStorage.setItem(storageKey("eg_exam_last_result_v1"),JSON.stringify({paperId:paper.paperId,answers,submittedAt:new Date().toISOString(),mcqCorrect:correct,mcqTotal:mcq}));localStorage.removeItem(storageKey("eg_exam_attempt_v1"));const queued=JSON.parse(localStorage.getItem(storageKey("eg_exam_paper_delivery_v1"))||"null");if(queued&&queued.paperId===paper.paperId)localStorage.removeItem(storageKey("eg_exam_paper_delivery_v1"));if(assignedPaper&&currentStudent)window.C10AssessmentManager.submitPaper(assignedPaper.assignmentId,currentStudent.studentId,answers);}catch(e){status(e.message||"Answers were saved, but assignment submission needs attention.");}window.scrollTo(0,0);}
 $("startBtn").addEventListener("click",()=>{try{makePaper();}catch(e){status("Cannot generate this paper: "+e.message);}});
 $("submitBtn").addEventListener("click",()=>{if(confirm("Submit your paper now? You cannot change answers after submission."))submit(false);});
 $("printBtn").addEventListener("click",()=>window.print());
