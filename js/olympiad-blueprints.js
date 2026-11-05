@@ -32,6 +32,20 @@
       ],
       syllabusCoverageNote: "This Class 6 Level 1 mock allocates 60% current-class and 40% previous-class questions across the 45 non-Achievers questions (27 current-class, 18 previous-class). All five Achievers questions are drawn from the current-class syllabus, as SOF specifies."
     },
+    "sof-iso-class-3-level-1": {
+      id: "sof-iso-class-3-level-1",
+      title: "SOF International Science Olympiad (ISO) · Class 3 · Level 1",
+      legacyName: "National Science Olympiad (NSO)",
+      classId: "3",
+      subjectId: "science-sof",
+      durationSeconds: 3600,
+      sections: [
+        { id: "logical-reasoning", title: "Logical Reasoning", sourceSection: "Logical Reasoning", questionCount: 5, marksPerQuestion: 1, syllabusOriginQuotas: { "current-class": 3, "previous-class": 2 } },
+        { id: "science", title: "Science", sourceSection: "Science", questionCount: 25, marksPerQuestion: 1, syllabusOriginQuotas: { "current-class": 15, "previous-class": 10 } },
+        { id: "achievers", title: "Achievers Section", sourceSection: "Achievers Section", questionCount: 5, marksPerQuestion: 2, syllabusOriginQuotas: { "current-class": 5 } }
+      ],
+      syllabusCoverageNote: "This Class 3 Level 1 mock uses 18 current-class and 12 previous-class questions across the 30 non-Achievers questions (3/2 in Logical Reasoning and 15/10 in Science). All five Achievers questions are current-class only. The per-section split is an ExamGuru allocation to make the published 60:40 Level 1 rule auditable."
+    },
     "sof-imo-class-3-level-1": {
       id: "sof-imo-class-3-level-1",
       title: "SOF International Mathematics Olympiad (IMO) · Class 3 · Level 1",
