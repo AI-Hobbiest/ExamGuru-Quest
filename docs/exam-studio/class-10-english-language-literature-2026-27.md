@@ -146,7 +146,7 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - [x] Admin Exam Studio history now persists the same complete content-ID set.
 - [x] The shared five-paper regression now compares all content IDs rather than parent question IDs alone.
 - [x] English regression asserts that both student and Admin flows retain the full content-ID list.
-- [x] CI passed after these changes: English regression and all-format repeat protection (run 41986159925).
+- [x] CI passed after these changes: English regression and all-format repeat protection (run 41988266385).
 
 ### Latest certification evidence — 5 November 2026
 
@@ -171,7 +171,7 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - Q6/Q7 currently use original paraphrased scene/poem-context cues, not literal textbook extracts. The blueprint expects prose/drama and poetry extract questions. This needs a deliberate CBSE-alignment decision and educator review; do not treat it as already resolved.
 - The official 2026–27 CBSE index is confirmed, but direct reading of the linked official syllabus and marking-scheme PDFs is still outstanding in this environment.
 - Independent educator sign-off is still required for literature interpretation, answer quality and final prescribed-text coverage.
-- Saved-attempt restoration after a browser reload has not yet been demonstrated by the English browser smoke test.
+- Saved-attempt restoration after a browser reload passed: the same paper, answer edits, selected alternative and changed attempt-any items resume.
 
 ### Release controls
 
@@ -180,4 +180,4 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - PR: #39, open and draft.
 - Main branch: unchanged by this English work.
 - Pages deployment: not triggered by this draft PR.
-- The 220-candidate slot-count gate, 50-paper generation, five-paper all-format repeat protection, student-browser smoke and production paper/answer-booklet rendering now pass. English is still **not released**: official syllabus/PDF reconciliation, Q6/Q7 extract alignment, independent educator sign-off and saved-attempt restoration remain open.
+- The 220-candidate slot-count gate, 50-paper generation, five-paper all-format repeat protection, student-browser smoke and production paper/answer-booklet rendering now pass. English is still **not released**: official syllabus/PDF reconciliation, Q6/Q7 extract alignment and independent educator sign-off remain open.
