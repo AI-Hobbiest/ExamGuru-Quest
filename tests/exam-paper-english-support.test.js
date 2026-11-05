@@ -93,6 +93,7 @@ assert.ok(html.includes("Attempt any 10 of the 12 items."));
 assert.ok(html.includes("Option A")&&html.includes("Option D"),"nested MCQ options must print");
 const booklet=renderer.buildAnswerBookletHtml(paper,"/");
 assert.ok(booklet.includes("Attempt any 10 of the 12 items."));
+assert.ok(booklet.includes("Option A")&&booklet.includes("Option D"),"nested MCQ options must appear in the printable answer booklet");
 const selfStudy=fs.readFileSync("js/exam-paper-self-study.js","utf8");
 assert.ok(selfStudy.includes('data-part-attempt'),"online exam must let students choose the required number of nested items");
 assert.ok(selfStudy.includes('data-part-option'),"online exam must support MCQs inside nested parts");
