@@ -72,6 +72,11 @@ function startServer(){
   assert.equal(await q8.count(),5);assert.equal(await q8.evaluateAll(nodes=>nodes.filter(node=>node.checked).length),4);
   assert.equal(await q9.count(),3);assert.equal(await q9.evaluateAll(nodes=>nodes.filter(node=>node.checked).length),2);
 
+  // Select an objective subpart so the submission path also exercises MCQ scoring.
+  const objectiveOption=page.locator("#questions .exam-question input[data-part-option]").first();
+  assert.ok(await objectiveOption.count()>0,"the English paper should render objective literature/reading subparts");
+  await objectiveOption.check();
+
   // Q4: verify a student can revise a written answer before submission.
   const letter=page.locator("#questions .exam-question").nth(3);
   const letterAnswer=letter.locator('[data-choice-panel="main"] textarea').first();
@@ -87,6 +92,7 @@ function startServer(){
   await page.locator("#submitBtn").click();
   await page.locator("#review").waitFor({state:"visible"});
   const review=await page.locator("#reviewAnswers").innerText();
+  assert.match(await page.locator("#score").innerText(),/MCQ score: \\d+ \/ \\d+/,"submission must calculate and display the objective score");
   assert.ok(review.includes("Revised formal letter response for browser QA."),"review must retain the latest edited written answer");
   assert.ok(review.includes(alternativePrompt),"review must show the selected Q10 alternative prompt");
   assert.ok(review.includes("Final alternative long-answer response for browser QA."),"review must retain the selected alternative answer");
