@@ -9,6 +9,7 @@ on:
       - "data/exam-papers/**"
       - "js/exam-paper-generator.js"
       - "js/exam-paper-self-study.js"
+      - "js/exam-paper-renderer.js"
       - "tests/exam-paper-*.test.js"
       - ".github/workflows/exam-paper-uniqueness.yml"
 
@@ -16,7 +17,7 @@ permissions:
   contents: read
 
 jobs:
-  science-paper-regression:
+  exam-paper-regression:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,8 +26,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Validate generator and Science paper diversity
+      - name: Validate generator, renderer and paper diversity
         run: |
           node tests/exam-paper-generator.test.js
           node tests/exam-paper-release.test.js
           node tests/exam-paper-renderer.test.js
+          node tests/exam-paper-english-support.test.js

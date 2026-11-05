@@ -26,13 +26,15 @@ function runSequence(label, blueprint, bank, count = 50) {
     assert.equal(paper.questions.length, blueprint.totalQuestions, label + " paper must contain the blueprint question count");
     assert.equal(paper.repeatProtection.appliedWindow, previous.length, label + " must apply the full available five-paper history");
     const ids = paper.questions.map(question => question.questionId);
-    assert.equal(new Set(ids).size, ids.length, label + " paper must not contain duplicate question IDs");
+    assert.equal(new Set(ids).size, ids.length, label + " paper must not contain duplicate parent question IDs");
+    const contentIds = paper.questions.flatMap(question => engine.questionContentIds(question));
+    assert.equal(new Set(contentIds).size, contentIds.length, label + " paper must not repeat parent, nested or alternative IDs internally");
     for (const prior of previous) {
       const priorIds = new Set(prior.questionIds);
-      assert.equal(ids.filter(id => priorIds.has(id)).length, 0, label + " must not repeat any format from the preceding five papers");
+      assert.equal(contentIds.filter(id => priorIds.has(id)).length, 0, label + " must not repeat parent, nested or alternative content from the preceding five papers");
     }
     assert.ok(paper.paperFingerprint, label + " paper must have a fingerprint");
-    history.push({ fingerprint: paper.paperFingerprint, questionIds: ids });
+    history.push({ fingerprint: paper.paperFingerprint, questionIds: contentIds });
   }
   assert.equal(new Set(history.map(entry => entry.fingerprint)).size, count, label + " must produce distinct complete papers");
   return { label, papers: count, slots: coverage.coverage.length, bankQuestions: bank.questions.length, repeatProtection: "five-paper all-format passed" };

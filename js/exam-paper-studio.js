@@ -61,7 +61,7 @@ function generate(){
   if(!coverage.valid)throw Error("A paper pool needs at least "+minimum+" eligible approved questions in every slot. "+coverage.errors.slice(0,5).join(" "));
   const previousHistory=readPaperHistory(),recentPaperFingerprints=previousHistory.map(item=>item.fingerprint),recentQuestionIdSets=previousHistory.slice(-5).map(item=>item.questionIds||[]);
   const candidate=g.generateUniquePaper(blueprint,bank,{seed:"admin-"+profileId+"-"+Date.now()+"-"+Math.random().toString(36).slice(2),title:profileTitle()+" Practice Paper",recentPaperFingerprints,recentQuestionIdSets,uniqueSearchAttempts:500});
-  const questionIds=candidate.questions.map(q=>String(q.questionId)),fingerprint=candidate.paperFingerprint||g.paperFingerprint(candidate),mcqQuestionIds=candidate.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId));
+  const questionIds=candidate.questions.flatMap(q=>g.questionContentIds(q)),fingerprint=candidate.paperFingerprint||g.paperFingerprint(candidate),mcqQuestionIds=candidate.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId));
   const nextHistory=[...previousHistory,{paperId:candidate.paperId,generatedAt:candidate.generatedAt,questionIds,mcqQuestionIds,fingerprint}].slice(-PAPER_HISTORY_LIMIT);
   if(!savePaperHistory(nextHistory))throw Error("This browser could not save the 50-paper repeat history. Enable site storage and try again; no paper was started.");
   candidate.deliveryMode=$("paperDeliveryMode")?.value||"printable";paper=candidate;saveDraft(paper);showPaper(paper);

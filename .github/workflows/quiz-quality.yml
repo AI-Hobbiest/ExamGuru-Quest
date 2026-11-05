@@ -50,3 +50,5 @@ jobs:
         run: node tests/five-paper-repeat-protection.test.js
       - name: Smoke-test online Mathematics Standard and Basic examinations
         run: node tests/mathematics-browser-smoke.test.js
+      - name: Smoke-test online Class 10 English Language & Literature examination
+        run: node tests/english-browser-smoke.test.js

@@ -85,7 +85,7 @@
           "marks": {
             "type": "integer",
             "minimum": 1,
-            "maximum": 10
+            "maximum": 20
           },
           "prompt": {
             "type": "string"
@@ -145,6 +145,36 @@
                     },
                     "additionalProperties": true
                   }
+                },
+                "questionId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Stable question identity for all-format repetition protection."
+                },
+                "options": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "optionId",
+                      "text"
+                    ],
+                    "properties": {
+                      "optionId": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  }
+                },
+                "correctOptionId": {
+                  "type": "string",
+                  "minLength": 1
                 }
               },
               "additionalProperties": true
@@ -258,6 +288,11 @@
               "minLength": 1
             },
             "description": "Optional assessment profiles that may use this question, such as standard or basic."
+          },
+          "attemptAny": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Number of nested parts students must attempt when fewer than all parts are required."
           }
         },
         "additionalProperties": true
