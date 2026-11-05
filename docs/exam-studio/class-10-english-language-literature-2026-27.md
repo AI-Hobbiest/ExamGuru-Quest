@@ -120,17 +120,19 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - [x] Quiz-quality workflow passed on the same commit (run 41980881468). Its existing 50-paper all-format checks and online browser smoke checks passed for Mathematics Standard, Mathematics Basic and Class 10 Science; these do not certify English papers.
 - [ ] Verify every prescribed text/unit against a readable official 2026–27 syllabus and sample-paper marking scheme. The current CBSE index lists English Language & Literature and English Communicative separately, but the detailed 2026–27 PDF syllabus still requires direct verification.
 - [x] Generate 50 distinct complete 80-mark English papers against the production bank (CI simulation; the committed blueprint remains draft).
-- [ ] Validate five-paper, all-format repeat protection across all parent, nested and alternative English content IDs.
-- [ ] Complete student-browser checks for answer selection/editing/restoration, grading, printing and answer booklet.
+- [x] Validate five-paper, all-format repeat protection across all parent, nested and alternative English content IDs.
+- [x] Student-browser smoke: English 11-question/80-mark paper, timer, attempt-any selection (10/12, 4/5, 2/3), written-answer editing, objective scoring, Q10 internal choice and submit/review (run 41986159928).
+- [x] Production English paper rendering: student paper, teacher copy and blank answer booklet passed (run 41986159925).
+- [ ] Verify saved-attempt restoration after a page reload; this is separate from the edit-and-submit flow already tested.
 - [ ] Obtain independent English educator sign-off, particularly on Q6/Q7 extract alignment and Q10/Q11 content quality.
 - [ ] Only after all gates pass: promote the blueprint, enable the profile, merge to main, deploy Pages and verify the live student profile.
 
-### 50-paper English certification — test added, CI pending
+### 50-paper English certification — passed
 
 - [x] Added a production-bank release simulation to the English regression suite. It promotes a copy of the draft blueprint to `ready` in memory only; the committed blueprint remains `draft`.
 - [x] The new test generates 50 complete English papers (11 questions, 80 marks each) and checks unique paper fingerprints.
 - [x] The five-paper lookback compares every parent, nested-part and alternative content ID; any fallback that relaxes the five-paper window fails the test.
-- [x] GitHub Actions passed the English 50-paper simulation and five-paper all-format repeat checks (run 41985452926).
+- [x] GitHub Actions passed the English 50-paper simulation and five-paper all-format repeat checks (run 41986159925).
 
 ### Official 2026–27 CBSE references located
 
@@ -144,7 +146,20 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - [x] Admin Exam Studio history now persists the same complete content-ID set.
 - [x] The shared five-paper regression now compares all content IDs rather than parent question IDs alone.
 - [x] English regression asserts that both student and Admin flows retain the full content-ID list.
-- [x] CI passed after these changes: English regression and all-format repeat protection (run 41985452926).
+- [x] CI passed after these changes: English regression and all-format repeat protection (run 41986159925).
+
+### Latest certification evidence — 5 November 2026
+
+- English 50-paper simulation, all-format five-paper repeat protection and production print rendering: [Exam paper uniqueness regression, run 41986159925](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41986159925).
+- Full LMS quality suite and English student-browser smoke (including objective score display): [Quiz quality checks, run 41986159928](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41986159928).
+- Browser test unlocks the English profile and sets the blueprint to ready **only in the local test server response**. The committed registry and blueprint remain disabled/draft.
+
+### Remaining content/release issues
+
+- Q6/Q7 currently use original paraphrased scene/poem-context cues, not literal textbook extracts. The blueprint expects prose/drama and poetry extract questions. This needs a deliberate CBSE-alignment decision and educator review; do not treat it as already resolved.
+- The official 2026–27 CBSE index is confirmed, but direct reading of the linked official syllabus and marking-scheme PDFs is still outstanding in this environment.
+- Independent educator sign-off is still required for literature interpretation, answer quality and final prescribed-text coverage.
+- Saved-attempt restoration after a browser reload has not yet been demonstrated by the English browser smoke test.
 
 ### Release controls
 
