@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "kind": "sof-olympiad-blueprint",
+  "id": "sof-imo-class-3-level-1",
+  "exam": "SOF International Mathematics Olympiad",
+  "legacyName": "IMO",
+  "classId": "3",
+  "level": "Level 1",
+  "session": "2026-27",
+  "durationSeconds": 3600,
+  "totalQuestions": 35,
+  "totalMarks": 40,
+  "syllabusCoverage": {
+    "basis": "SOF states that Level 1 questions are drawn 60% from the current class and 40% from the previous class; Achievers questions are current-class only.",
+    "interpretation": "Apply the 60:40 split to the 30 non-Achievers questions: 18 current-class and 12 previous-class. Reserve all five Achievers questions for current-class syllabus.",
+    "quotas": {
+      "currentClassNonAchievers": 18,
+      "previousClassNonAchievers": 12,
+      "currentClassAchievers": 5
+    },
+    "previousClassId": "2"
+  },
+  "sections": [
+    {
+      "id": "logical-reasoning",
+      "title": "Logical Reasoning",
+      "sourceSection": "Logical Reasoning",
+      "questionCount": 10,
+      "marksPerQuestion": 1,
+      "maxMarks": 10,
+      "originQuotas": {
+        "current-class": 6,
+        "previous-class": 4
+      }
+    },
+    {
+      "id": "mathematical-reasoning",
+      "title": "Mathematical Reasoning",
+      "sourceSection": "Mathematical Reasoning",
+      "questionCount": 10,
+      "marksPerQuestion": 1,
+      "maxMarks": 10,
+      "originQuotas": {
+        "current-class": 6,
+        "previous-class": 4
+      }
+    },
+    {
+      "id": "everyday-mathematics",
+      "title": "Everyday Mathematics",
+      "sourceSection": "Everyday Mathematics",
+      "questionCount": 10,
+      "marksPerQuestion": 1,
+      "maxMarks": 10,
+      "originQuotas": {
+        "current-class": 6,
+        "previous-class": 4
+      }
+    },
+    {
+      "id": "achievers",
+      "title": "Achievers Section",
+      "sourceSection": "Achievers Section",
+      "questionCount": 5,
+      "marksPerQuestion": 2,
+      "maxMarks": 10,
+      "originQuotas": {
+        "current-class": 5
+      }
+    }
+  ],
+  "sourceReferences": [
+    "https://sofworld.org/imo/class-3/imo-syllabus/imo-syllabus-class-3",
+    "https://sofworld.org/download/file/fid/73713"
+  ],
+  "releaseGates": [
+    "Every question has a unique ID, four distinct options, one verified answer and a meaningful explanation.",
+    "Every question is tagged with section, syllabusClass, syllabusOrigin, syllabusTopic and syllabusSource.",
+    "The current/previous-class origin quotas are met by each section and the complete paper.",
+    "A 35-question paper totals 40 marks and runs for 60 minutes.",
+    "Question IDs and normalized stems are unique; answer positions and difficulty are balanced.",
+    "At least 50 full papers can be generated while avoiding question reuse in the preceding five papers whenever eligible pools permit.",
+    "Student, dashboard, Admin Question Bank and reporting integrations pass regression tests."
+  ]
+}
