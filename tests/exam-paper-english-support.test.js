@@ -60,7 +60,7 @@ shortAnswerGroup.parts=shortAnswerGroup.parts.slice(0,5).map((part,i)=>({
  markingScheme:[{criterion:"Relevant textual point",marks:1},{criterion:"Supporting evidence",marks:1},{criterion:"Clear explanation",marks:1}]
 }));
 shortAnswerGroup.markingScheme=[{criterion:"Four selected responses, each worth three marks",marks:12}];
-assert.deepEqual(generator.validateQuestion(shortAnswerGroup),[],"12-mark choose-four-of-five groups must validate");
+assert.equal(generator.validateQuestion(shortAnswerGroup).length,0,"12-mark choose-four-of-five groups must validate");
 const wrongGroupMarks={...shortAnswerGroup,marks:11};
 assert.ok(generator.validateQuestion(wrongGroupMarks).some(error=>error.includes("common part mark value")));
 const withAlternative=makeQuestion(98);
@@ -72,7 +72,7 @@ withAlternative.alternatives=[{
  answerKey:{modelAnswer:"Responses should be supported by the alternative passage."},
  markingScheme:[{criterion:"Accurate responses to the alternative passage items",marks:10}]
 }];
-assert.deepEqual(generator.validateQuestion(withAlternative),[],"nested parts inside a full-question alternative must validate");
+assert.equal(generator.validateQuestion(withAlternative).length,0,"nested parts inside a full-question alternative must validate");
 
 const invalidPart={...bank.questions[0],parts:bank.questions[0].parts.map((part,i)=>i===0?{...part,correctOptionId:"Z"}:part)};
 assert.ok(generator.validateQuestion(invalidPart).some(error=>error.includes("correctOptionId")));
