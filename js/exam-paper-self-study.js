@@ -3,6 +3,26 @@
 "use strict";
 const $=id=>document.getElementById(id);
 let profile=null,profileId="",defaultProfileId="",blueprint=null,bank=null,paper=null,answers={},remaining=0,tick=null,submitted=false,paperHistory=[],assignedPaper=null,currentStudent=null,resumeAttempt=null,savedSelfStudyPaper=null;
+async function resolveStudentSession(){
+ if(window.C10StudentAuth&&typeof window.C10StudentAuth.restoreSession==="function"){
+  try{
+   const restored=await window.C10StudentAuth.restoreSession();
+   if(restored&&restored.role==="student")return restored;
+  }catch(_){}
+  try{
+   const current=window.C10StudentAuth.currentUser&&window.C10StudentAuth.currentUser();
+   if(current&&current.role==="student")return current;
+  }catch(_){}
+ }
+ try{
+  const saved=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");
+  if(saved&&typeof saved.username==="string"&&saved.role!=="parent"){
+   return{...saved,role:"student",classId:String(saved.classId||"")};
+  }
+ }catch(_){}
+ return null;
+}
+
 const HISTORY_KEY="eg_exam_paper_history_v1",HISTORY_LIMIT=50,PROFILE_REGISTRY_URL="./data/exam-papers/profile-registry.json";
 function storageKey(base){
  if(!profileId||profileId===defaultProfileId)return base;
@@ -63,15 +83,22 @@ function renderProfileMeta(){
 }
 async function load(){
  try{
+  currentStudent=await resolveStudentSession();
+  if(!currentStudent||currentStudent.role!=="student")throw Error("Sign in with your student account to open exam practice.");
+  const studentClassId=String(currentStudent.classId||"").trim();
+  if(!studentClassId)throw Error("Your student profile is missing its class. Sign out and sign in again, or ask your Parent/Teacher to correct the account.");
   const registryResponse=await fetch(PROFILE_REGISTRY_URL,{cache:"no-store"});
   if(!registryResponse.ok)throw Error("The exam profile registry is unavailable.");
   const registry=await registryResponse.json();
   if(!registry||registry.schemaVersion!==1||registry.kind!=="exam-paper-profile-registry"||!Array.isArray(registry.profiles))throw Error("The exam profile registry is invalid.");
   defaultProfileId=String(registry.defaultProfileId||"");
-  const available=registry.profiles.filter(item=>item&&item.enabled!==false);
+  const available=registry.profiles.filter(item=>item&&item.enabled!==false&&String(item.classId)===studentClassId);
+  if(!available.length){
+   throw Error("Full-paper exam mode is not configured for Class "+studentClassId+". Open a subject from your student dashboard and choose the exam mode available for that subject.");
+  }
   const requested=new URLSearchParams(location.search).get("profile")||defaultProfileId;
   profile=available.find(item=>String(item.profileId)===requested);
-  if(!profile)throw Error("The selected exam profile is not available. Choose an enabled profile from the Exam Practice page.");
+  if(!profile)throw Error("The requested exam profile does not belong to your Class "+studentClassId+" account.");
   profileId=String(profile.profileId);
   populateProfileSelector(available);
   const safePath=value=>typeof value==="string"&&value.startsWith("./data/")&&!value.split("/").includes("..");
@@ -98,7 +125,6 @@ async function load(){
   if(!coverage.valid)throw Error("The selected question pool is not ready: "+coverage.errors.slice(0,5).join(" "));
   renderProfileMeta();
   paperHistory=readPaperHistory();
-  currentStudent=window.C10StudentAuth?await window.C10StudentAuth.restoreSession():null;
   const assignmentId=new URLSearchParams(location.search).get("assignment");
   if(assignmentId){
    if(!currentStudent||currentStudent.role!=="student")throw Error("Sign in with the assigned student account to open this examination.");
@@ -124,9 +150,7 @@ async function load(){
   else{
    $("startBtn").textContent="Generate & start paper";
    $("startBtn").disabled=false;
-   const adapted=integrated.stats.appended;
-   const covered=coverage.coverage.filter(s=>s.eligibleCount>=minimum).length;
-   status("Ready: "+blueprint.totalQuestions+" questions · "+blueprint.totalMarks+" marks. "+(adapted?adapted.toLocaleString()+" chapter-wise practice MCQs have been integrated. ":"")+covered+" of "+coverage.slotCount+" paper slots meet the minimum of "+minimum+" eligible questions.");
+   status("Ready: "+blueprint.totalQuestions+" questions · "+blueprint.totalMarks+" marks. Your paper is ready when you are.");
   }
  }catch(e){status("Unable to prepare the paper: "+e.message);}
 }
