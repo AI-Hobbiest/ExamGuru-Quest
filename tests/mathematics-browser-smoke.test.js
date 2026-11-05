@@ -41,6 +41,32 @@ function startServer() {
   });
 }
 
+async function smokeAdminStudio(browser, baseUrl) {
+  const context = await browser.newContext();
+  await context.addInitScript(() => sessionStorage.setItem("examguru_mvp_admin_session_v1", JSON.stringify({
+    role: "admin", username: "Jayaprakashganathe@gmail.com"
+  })));
+  const page = await context.newPage();
+  page.setDefaultTimeout(60000);
+  const pageErrors = [];
+  page.on("pageerror", error => pageErrors.push(error.message));
+  await page.goto(baseUrl + "/admin.html?profile=class-10-mathematics-standard-2026-27#tab-exam-papers", { waitUntil: "networkidle" });
+  await page.waitForFunction(() => {
+    const status = document.querySelector("#paperStudioStatus")?.textContent || "";
+    return status.includes("Profile ready:") || status.includes("Unable to load Admin Exam Studio:");
+  });
+  const status = await page.locator("#paperStudioStatus").innerText();
+  assert.match(status, /Profile ready:/, "Admin Studio must complete registry, blueprint and bank loading");
+  assert.equal(await page.locator("#paperBlueprintState").inputValue(), "Approved for generation");
+  assert.match(await page.locator("#paperTotalSummary").innerText(), /38 questions · 80 marks/);
+  assert.equal(await page.locator("#generatePaperBtn").isEnabled(), true);
+  await page.locator("#generatePaperBtn").click();
+  await page.waitForFunction(() => (document.querySelector("#paperStudioStatus")?.textContent || "").includes("Paper generated."));
+  assert.ok(await page.locator("#paperPreview").innerText().then(value => value.includes("Practice Paper")));
+  assert.ok(!pageErrors.length, "Admin page errors: " + pageErrors.join(" | "));
+  await context.close();
+  return { adminMathematicsStudio: "loaded", standardPaper: "generated" };
+}
 async function smokeProfile(browser, baseUrl, profileId, expectedTitle) {
   const context = await browser.newContext();
   await context.addInitScript(() => {
@@ -171,9 +197,7 @@ async function smokeClass6ExamIsolation(browser, baseUrl) {
   const context = await browser.newContext();
   await context.addInitScript(() => {
     sessionStorage.setItem("c10playground_static_student_v1", JSON.stringify({
-      username: "c6pilot",
-      role: "student",
-      classId: "6"
+      username: "c6pilot", role: "student", classId: "6"
     }));
   });
   const page = await context.newPage();
@@ -182,66 +206,27 @@ async function smokeClass6ExamIsolation(browser, baseUrl) {
   page.on("pageerror", error => pageErrors.push(error.message));
   await page.goto(baseUrl + "/dashboard.html", { waitUntil: "networkidle" });
   await page.locator("#c10Sidebar").waitFor({ state: "visible" });
-  assert.equal(await page.locator('#c10Sidebar a[href="./exam-practice.html"]').count(), 0,
-    "Class 6 navigation must not offer the Class 10 full-paper exam route");
-
+  assert.equal(await page.locator('#c10Sidebar a[href="./exam-practice.html"]').count(), 1,
+    "Class 6 students must see the class-safe Exam Paper Practice hub");
   await page.goto(baseUrl + "/exam-practice.html?profile=class-10-mathematics-standard-2026-27", { waitUntil: "networkidle" });
-  await page.waitForFunction(() => (document.querySelector("#loadStatus")?.textContent || "").includes("Full-paper exam mode is not configured for Class 6"));
-  const blockedStatus = await page.locator("#loadStatus").innerText();
-  assert.match(blockedStatus, /not configured for Class 6/);
-  assert.ok(!blockedStatus.includes("Mathematics Standard") && !blockedStatus.includes("Mathematics Basic"),
-    "Class 6 must not be shown a Class 10 Mathematics profile");
-
+  await page.locator("#class6ExamHub").waitFor({ state: "visible" });
+  assert.match(await page.locator("#profileTitle").innerText(), /Class 6 · SOF Olympiad Exam Practice/);
+  const hubLinks = await page.locator("#class6ExamHub a").evaluateAll(nodes => nodes.map(node => node.getAttribute("href")));
+  assert.deepEqual(hubLinks.sort(), [
+    "./practice.html?subject=english-sof",
+    "./practice.html?subject=mathematics-sof",
+    "./practice.html?subject=science-sof"
+  ]);
+  assert.ok(!(await page.locator("#profileTitle").innerText()).includes("Class 10"));
   await page.goto(baseUrl + "/practice.html?subject=science-sof", { waitUntil: "networkidle" });
   const olympiadButton = page.locator("#olympiadModeBtn");
   await olympiadButton.waitFor({ state: "visible" });
-  assert.ok(await olympiadButton.isVisible(), "Class 6 should retain its own subject-level SOF mock entry");
   await olympiadButton.click();
   await page.locator("#olympiadBlueprintPanel").waitFor({ state: "visible" });
-  const title = await page.locator("#olympiadBlueprintTitle").innerText();
-  assert.ok(title.includes("Class 6"), "Class 6 SOF exam mode must load a Class 6 blueprint");
-  assert.ok(!pageErrors.length, "Class 6 browser page errors: " + pageErrors.join(" | "));
-  await context.close();
-  return { classId: "6", class10PaperRoute: "blocked", class6Olympiad: "available" };
-}
-
-async function smokeClass6ExamIsolation(browser, baseUrl) {
-  const context = await browser.newContext();
-  await context.addInitScript(() => {
-    sessionStorage.setItem("c10playground_static_student_v1", JSON.stringify({
-      username: "c6pilot",
-      role: "student",
-      classId: "6"
-    }));
-  });
-  const page = await context.newPage();
-  page.setDefaultTimeout(60000);
-  const pageErrors = [];
-  page.on("pageerror", error => pageErrors.push(error.message));
-
-  await page.goto(baseUrl + "/dashboard.html", { waitUntil: "networkidle" });
-  await page.locator("#c10Sidebar").waitFor({ state: "visible" });
-  assert.equal(await page.locator('#c10Sidebar a[href="./exam-practice.html"]').count(), 0,
-    "Class 6 navigation must not expose the Class 10 full-paper route");
-
-  await page.goto(baseUrl + "/exam-practice.html?profile=class-10-mathematics-standard-2026-27", { waitUntil: "networkidle" });
-  await page.waitForFunction(() => (document.querySelector("#loadStatus")?.textContent || "").includes("Full-paper exam mode is not configured for Class 6"));
-  const status = await page.locator("#loadStatus").innerText();
-  assert.match(status, /not configured for Class 6/);
-  assert.ok(!status.includes("Mathematics Standard") && !status.includes("Mathematics Basic"),
-    "Class 6 must not be shown a Class 10 Mathematics profile");
-
-  await page.goto(baseUrl + "/practice.html?subject=science-sof", { waitUntil: "networkidle" });
-  const olympiadButton = page.locator("#olympiadModeBtn");
-  await olympiadButton.waitFor({ state: "visible" });
-  assert.ok(await olympiadButton.isVisible(), "Class 6 keeps its own subject-level SOF mock entry");
-  await olympiadButton.click();
-  await page.locator("#olympiadBlueprintPanel").waitFor({ state: "visible" });
-  assert.ok((await page.locator("#olympiadBlueprintTitle").innerText()).includes("Class 6"),
-    "Class 6 Olympiad mode must load a Class 6 blueprint");
+  assert.ok((await page.locator("#olympiadBlueprintTitle").innerText()).includes("Class 6"));
   assert.ok(!pageErrors.length, "Class 6 browser errors: " + pageErrors.join(" | "));
   await context.close();
-  return { classId: "6", class10FullPaperRoute: "blocked", class6OlympiadMode: "available" };
+  return { classId: "6", examPracticeHub: "available", class10Route: "isolated", class6Olympiad: "available" };
 }
 (async () => {
   const server = await startServer();
@@ -253,6 +238,7 @@ async function smokeClass6ExamIsolation(browser, baseUrl) {
     const results = [];
     results.push(await smokeProfile(browser, baseUrl, "class-10-mathematics-standard-2026-27", "Class 10 · Mathematics Standard (041)"));
     results.push(await smokeProfile(browser, baseUrl, "class-10-mathematics-basic-2026-27", "Class 10 · Mathematics Basic (241)"));
+    results.push(await smokeAdminStudio(browser, baseUrl));
     results.push(await smokeClass6ExamIsolation(browser, baseUrl));
     console.log("Mathematics and class-aware exam browser smoke passed: " + JSON.stringify(results));
   } finally {
