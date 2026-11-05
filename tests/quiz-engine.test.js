@@ -336,6 +336,13 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
   assert.equal(new Set(olympiadActive.questionIds).size,50,"paper contains no repeated questions");
   assert.deepEqual(olympiadActive.sectionBlueprint.map(section=>section.questionCount),[10,35,5]);
   assert.deepEqual(olympiadActive.sectionBlueprint.map(section=>section.maxMarks),[10,35,15]);
+  const nsoOrigins = olympiadActive.questions.reduce((counts, question) => {
+    counts[question.syllabusOrigin] = (counts[question.syllabusOrigin] || 0) + 1;
+    return counts;
+  }, {});
+  assert.deepEqual(nsoOrigins, { "current-class": 32, "previous-class": 18 }, "NSO mock enforces 60:40 across non-Achievers and keeps Achievers current-class");
+  assert.ok(olympiadActive.questions.filter(question => question.examSectionId === "achievers").every(question => question.syllabusOrigin === "current-class"), "NSO Achievers questions are all current-class");
+  assert.ok(olympiad.elements.olympiadBlueprintDescription.textContent.includes("60% current-class"), "NSO mock explains the syllabus split before launch");
   olympiad.elements.mobileNavigatorBtn.click();
   assert.equal(olympiad.elements.questionNavigatorGrid.children.length,50,"mobile question navigator lists the entire paper");
   assert.equal(olympiad.elements.navigatorSectionSummary.children.length,3,"navigator displays section-level completion chips");
@@ -392,6 +399,15 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
     assert.deepEqual(active.sectionBlueprint.map(section => section.questionCount), expectedCounts);
     assert.deepEqual(active.sectionBlueprint.map(section => section.maxMarks),
       expectedCounts.map((count, index) => index === expectedCounts.length - 1 ? 15 : count));
+    if (shortName === "IMO") {
+      const originCounts = active.questions.reduce((counts, question) => {
+        counts[question.syllabusOrigin] = (counts[question.syllabusOrigin] || 0) + 1;
+        return counts;
+      }, {});
+      assert.deepEqual(originCounts, { "current-class": 32, "previous-class": 18 }, "IMO mock enforces the published syllabus split");
+      assert.ok(active.questions.filter(question => question.examSectionId === "achievers").every(question => question.syllabusOrigin === "current-class"), "IMO Achievers questions are all current-class");
+      assert.ok(env.elements.olympiadBlueprintDescription.textContent.includes("60% current-class"), "IMO mock explains syllabus coverage before launch");
+    }
 
     env.elements.mobileNavigatorBtn.click();
     assert.equal(env.elements.questionNavigatorGrid.children.length, 50, shortName + " mobile palette lists all questions");
