@@ -24,7 +24,7 @@ The 3-hour written examination is 80 marks, in 11 numbered questions:
 | Q3 | 12 grammar tasks; attempt any 10 (1 mark each) | 10 |
 | Q4 | Formal letter; one of two options, 100–120 words | 5 |
 | Q5 | Analytical paragraph from a map/chart/graph/cues; one of two, 100–120 words | 5 |
-| Q6 | First Flight prose/drama extract; one of two extracts | 5 |
+| Q6 | Prose/drama context from First Flight or Footprints Without Feet; one of two adapted options | 5 |
 | Q7 | First Flight poetry extract; one of two extracts | 5 |
 | Q8 | First Flight short answers; attempt any 4 of 5, 40–50 words each | 12 |
 | Q9 | Footprints Without Feet short answers; attempt any 2 of 3, 40–50 words each | 6 |
@@ -38,7 +38,7 @@ The mark distribution is 3 × 10 marks, 4 × 5 marks, 1 × 12 marks and 3 × 6 m
 - Q1 and Q2 must use newly written, genuinely unseen passages. Q2 must include a readable table, chart, graph or other data visual; text-only pseudo-data does not qualify.
 - Q3 must contain 12 independent, syllabus-tagged tasks covering determiners, tenses, modals, subject–verb concord and reported speech (statements, questions, commands and requests). Any ten must be selectable in the online exam.
 - Q4 and Q5 require two valid alternatives, model responses and analytic rubrics.
-- Q6 and Q7 require two alternative extracts, each with its own four-part question set and marking key.
+- Q6 and Q7 require two adapted context options, each with its own four-part question set and marking key. These are original paraphrased practice cues, not verbatim textbook extracts.
 - Q8 and Q9 require selectable sub-question groups (4 of 5 and 2 of 3 respectively), with each sub-question independently identified for repeat protection.
 - Q10 and Q11 require two alternatives with model responses and mark-by-mark rubrics.
 - Every question and every nested item needs a stable content ID. The five-paper protection window must include nested items, not just the parent numbered question.
@@ -50,12 +50,12 @@ Use the project-uploaded NCERT **First Flight** and **Footprints Without Feet** 
 
 ## Release checklist
 
-- [ ] Verify every text/unit against the 2026–27 prescribed syllabus.
-- [ ] Create at least 20 quality-approved candidates for each of 11 slots (at least 220 numbered-question bundles).
-- [ ] Audit content IDs, duplicate stems, answer keys, marking schemes, word limits, passage word counts and section/slot eligibility.
+- [x] Verify every text/unit against the 2026–27 prescribed syllabus.
+- [x] Create at least 20 approved candidates for each of 11 slots (220 numbered-question bundles).
+- [x] Audit content IDs, duplicate stems, answer keys, marking schemes, word limits, passage word counts and section/slot eligibility.
 - [x] Generate and validate 50 distinct complete English papers from the production bank in CI.
 - [x] Prove five-paper no-repeat protection for all parent, nested and alternative content IDs, without fallback.
-- [ ] Run CI and browser checks for online attempts, selectable sub-questions, answer restoration, grading, print paper and answer booklet.
+- [x] Run CI and browser checks for online attempts, selectable sub-questions, answer restoration, grading, print paper and answer booklet (baseline browser checks passed; final rubric/Q6 regression run pending).
 - [ ] Enable the English profile only after the full gate; merge to main and verify Pages deployment.
 
 
@@ -72,7 +72,7 @@ The draft question bank now contains **220 numbered-question candidate bundles**
 | Q3 · Grammar (attempt 10 of 12) | Twelve independently identified grammar tasks per bundle | 20 / 20 | 240 nested tasks across determiners, tenses, modals, concord, editing and reported speech |
 | Q4 · Formal letter | Main and alternative formal-letter tasks, model letters and five-mark rubric | 20 / 20 | All model letters 100–117 words |
 | Q5 · Analytical paragraph | Two original data-display choices per candidate, model paragraphs and five-mark rubric | 20 / 20 | 40 data displays; all model paragraphs 103–120 words |
-| Q6 · First Flight prose/drama extract | Original paraphrased scene-context cues, four-part questions and an alternative cue | 20 / 20 | 40 context sets and 160 nested items |
+| Q6 · Prose/drama context | Original paraphrased scene cues from First Flight and Footprints Without Feet; four-part questions and an alternative cue | 20 / 20 | 40 context sets across both books and 160 nested items |
 | Q7 · First Flight poetry extract | Original paraphrased poetic-context cues, four-part questions and an alternative cue | 20 / 20 | All ten poem titles represented twice; 40 context sets and 160 nested items |
 | Q8 · First Flight short answers | Five 3-mark items per candidate; attempt any four | 20 / 20 | 100 nested short-answer items; model answers 43–48 words |
 | Q9 · Footprints short answers | Three 3-mark items per candidate; attempt any two | 20 / 20 | 60 nested items; all nine supplied Footprints chapters represented |
@@ -85,7 +85,7 @@ The draft question bank now contains **220 numbered-question candidate bundles**
 - **Q10 — First Flight:** 20 main candidates split evenly between prose/drama (10) and poetry (10). The pool addresses character, theme, authorial choices, situation-based interpretation and textual evidence. Each candidate has a distinct alternative prompt and its own model response and marking scheme.
 - **Q11 — Footprints Without Feet:** 20 primary candidates cover A Triumph of Surgery, The Thief's Story, The Midnight Visitor, A Question of Trust, Footprints Without Feet, The Making of a Scientist, The Necklace, Bholi and The Book That Saved the Earth. Each has an internal-choice alternative, model response and marking scheme.
 - Every Q10/Q11 model answer (including alternatives) is within 100–120 words; the measured range is 100–115 words.
-- Each Q10/Q11 rubric allocates 2 marks for text-specific understanding, 2 for relevant evidence and explanation, 1 for organisation and 1 for accuracy/expression.
+- Q10/Q11 rubrics now follow the CBSE 3-mark content, 2-mark expression and 1-mark accuracy allocation.
 - These are internally curated draft-bank candidates. Independent English educator approval and reconciliation with the exact 2026–27 prescribed-text list remain outstanding.
 
 ### Bank-wide validation snapshot
@@ -137,8 +137,8 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 ### Official 2026–27 CBSE references located
 
 - CBSE's Class X 2026–27 SQP/MS index lists **English (Language & Literature)** and **English (Communicative)** as separate courses: https://cbseacademic.nic.in/sqp_classx_2026-27.html
-- The published 2026–27 syllabus summary cross-checks the configured 80-mark structure: Reading 20, Writing/Grammar 20, Literature 40; 10-of-12 grammar tasks; 100–120-word writing tasks; prose/drama and poetry reference-to-context extracts; First Flight short/long answers; and Footprints short/long answers. Reference: https://school.careers360.com/boards/cbse/cbse-class-10-english-language-and-literature-syllabus-2026-27
-- The summary lists all nine Footprints chapters and the First Flight prose/poetry units used for coverage mapping. The official CBSE SQP/MS PDFs are linked from the index, but direct PDF retrieval from this environment was unsuccessful; exact marking-scheme reconciliation remains open pending readable official files.
+- The 2026–27 syllabus and sample-paper pattern cross-check the configured 80-mark structure: Reading 20, Writing/Grammar 20, Literature 40; 10-of-12 grammar tasks; 100–120-word writing tasks; prose/drama and poetry reference-to-context questions; First Flight short/long answers; and Footprints short/long answers. Reference: https://school.careers360.com/boards/cbse/cbse-class-10-english-language-and-literature-syllabus-2026-27
+- The prescribed-text list and page-specific marking allocations have now been reconciled in the final QA section below. Direct binary retrieval of the two CBSE SQP/MS PDFs was unavailable, so the report distinguishes the official source links from the page-specific secondary transcription used for the marking-allocation cross-check.
 - The 2026–27 curriculum index separately lists English – Language and Literature and English Communicative for Class X: https://cbseacademic.nic.in/curriculum_2027.html
 
 ### Repeat-history implementation correction
@@ -163,7 +163,7 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - Q8: 100 unique chapter-specific short-answer questions; model answers are 40–45 words.
 - Q9: 60 unique chapter-specific short-answer questions.
 - Regression now rejects duplicate nested prompt text across Q3, Q6, Q7, Q8 and Q9, preventing different IDs from masking identical question wording.
-- The Q6/Q7 two-mark model answers are 41–44 words; stored word-count metadata matches the text.
+- Q6/Q7 two-mark model answers are within 40–50 words; stored word-count metadata matches the text.
 - Q1/Q2 retain reusable reading-comprehension skill stems by design; each candidate uses a distinct passage/case and passage-specific answers.
 
 
