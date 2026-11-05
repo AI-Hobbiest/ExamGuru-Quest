@@ -163,4 +163,48 @@ const englishProfile=draftRegistry.profiles.find(profile=>profile.profileId==="c
 assert.ok(englishProfile,"English draft profile must be registered");
 assert.equal(englishProfile.enabled,false,"English must not appear in student Exam Studio before approval");
 
+
+/*
+ * English release-gate simulation: build 50 complete papers using the
+ * production bank and a ready-only in-memory blueprint. Every history entry
+ * stores all parent, nested-part and alternative content IDs.
+ */
+const generationBlueprint={...draftBlueprint,status:"ready"};
+const generationCheck=generator.validateBlueprint(generationBlueprint);
+assert.equal(generationCheck.valid,true,generationCheck.errors.join("; "));
+assert.equal(generationCheck.readyForGeneration,true,"the release simulation must use a generation-ready blueprint");
+const englishPaperHistory=[];
+const englishFingerprintHistory=[];
+const englishFingerprints=new Set();
+for(let attempt=1;attempt<=50;attempt++){
+ const previous=englishPaperHistory.slice(-5);
+ const generated=generator.generateUniquePaper(generationBlueprint,draftBank,{
+  seed:"english-184-five-paper-repeat-"+attempt,
+  paperId:"english-184-release-simulation-"+attempt,
+  recentQuestionIdSets:previous.map(entry=>entry.contentIds),
+  recentPaperFingerprints:englishFingerprintHistory,
+  uniqueSearchAttempts:1000
+ });
+ assert.equal(generator.validatePaper(generated,generationBlueprint).valid,true,"English paper "+attempt+" must validate");
+ assert.equal(generated.questions.length,11,"each English paper must contain all 11 numbered questions");
+ assert.equal(generated.totalMarks,80,"each English paper must total 80 marks");
+ const currentContentIds=generated.questions.flatMap(question=>generator.questionContentIds(question));
+ assert.equal(new Set(currentContentIds).size,currentContentIds.length,"a paper must not repeat any parent, nested or alternative content ID internally");
+ for(const prior of previous){
+  const priorIds=new Set(prior.contentIds);
+  assert.equal(currentContentIds.some(id=>priorIds.has(id)),false,"no parent, nested part or alternative may repeat within the preceding five English papers");
+ }
+ assert.equal(generated.repeatProtection.requestedWindow,5);
+ assert.equal(generated.repeatProtection.appliedWindow,Math.min(5,englishPaperHistory.length),"the full available five-paper lookback must be applied");
+ assert.equal(generated.repeatProtection.fallback,false,"English generation must not relax the five-paper repeat window");
+ assert.ok(generated.paperFingerprint,"each complete English paper must have a fingerprint");
+ assert.equal(englishFingerprints.has(generated.paperFingerprint),false,"all 50 English paper combinations must be distinct");
+ englishFingerprints.add(generated.paperFingerprint);
+ englishPaperHistory.push({contentIds:currentContentIds});
+ englishFingerprintHistory.push(generated.paperFingerprint);
+}
+assert.equal(englishPaperHistory.length,50,"generate the complete 50-paper English certification set");
+assert.equal(englishFingerprints.size,50,"all 50 complete English papers must be unique");
+console.log("English 50-paper certification simulation passed: 50 complete 80-mark papers, 11 questions each, zero internal or five-paper parent/nested/alternative repeats, no fallback.");
+
 console.log("English Exam Studio nested response checks passed: attempt-any validation, nested MCQ, online answer capture, print rendering and all-format repeat exclusion.");
