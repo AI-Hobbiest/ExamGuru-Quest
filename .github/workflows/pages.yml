@@ -279,6 +279,7 @@ jobs:
             'social-science': { chapters: 22, questions: 2200 },
             hindi: { chapters: 27, questions: 254 },
             'class-3-mathematics': { chapters: 14, questions: 1400 },
+            'class-3-mathematics-sof': { chapters: 4, questions: 210 },
             'class-6-science': { chapters: 12, questions: 1200 },
             'class-6-mathematics': { chapters: 10, questions: 1000 },
             'class-6-english': { chapters: 16, questions: 1600 },
@@ -324,7 +325,7 @@ jobs:
             }
             console.log('Validated '+name+': '+data.length+' topics, '+questionCount+' MCQs.');
           }
-          for (const file of ['practice.html','profile.html','dashboard.html','learning.html','study.html','parent.html','admin.html','exam-practice.html','js/competency-tagger.js','js/exam-paper-self-study.js','css/admin.css','js/admin-manager.js','js/student-auth.js','js/static-account-admin.js','js/family-access-admin.js','js/parent-dashboard.js','data/family-access.json','data/student-accounts.json','data/classes.json','data/knowledge-base.json','css/branding.css','css/app-shell.css','css/theme-roles.css','css/theme-roles-v2.css','css/question-media.css','js/app-shell.js','js/gamification.js','js/dashboard-manager.js','js/storage.js','js/question-bank.js','js/session-model.js','js/learning-model.js','js/learning-center.js','js/study-model.js','js/study-library.js','js/profile-model.js','js/profile-manager.js','js/quiz-engine.js','data/contracts/v1/question-bank.schema.json','data/contracts/v1/question-bank-import.schema.json','data/contracts/v1/student-profile.schema.json','data/contracts/v1/answer-record.schema.json','data/contracts/v1/test-attempt.schema.json','data/contracts/v1/local-store-envelope.schema.json','data/contracts/v1/backup.schema.json','data/science.json','data/mathematics.json','data/english.json','data/social-science.json','data/hindi.json','data/class-3-mathematics.json','data/class-6-science.json','data/class-6-mathematics.json','data/class-6-english.json','data/class-6-social-science.json','data/class-6-mathematics-sof.json','data/class-6-science-sof.json']) {
+          for (const file of ['practice.html','profile.html','dashboard.html','learning.html','study.html','parent.html','admin.html','exam-practice.html','js/competency-tagger.js','js/exam-paper-self-study.js','css/admin.css','js/admin-manager.js','js/student-auth.js','js/static-account-admin.js','js/family-access-admin.js','js/parent-dashboard.js','data/family-access.json','data/student-accounts.json','data/classes.json','data/knowledge-base.json','css/branding.css','css/app-shell.css','css/theme-roles.css','css/theme-roles-v2.css','css/question-media.css','js/app-shell.js','js/gamification.js','js/dashboard-manager.js','js/storage.js','js/question-bank.js','js/session-model.js','js/learning-model.js','js/learning-center.js','js/study-model.js','js/study-library.js','js/profile-model.js','js/profile-manager.js','js/quiz-engine.js','data/contracts/v1/question-bank.schema.json','data/contracts/v1/question-bank-import.schema.json','data/contracts/v1/student-profile.schema.json','data/contracts/v1/answer-record.schema.json','data/contracts/v1/test-attempt.schema.json','data/contracts/v1/local-store-envelope.schema.json','data/contracts/v1/backup.schema.json','data/science.json','data/mathematics.json','data/english.json','data/social-science.json','data/hindi.json','data/class-3-mathematics.json','data/class-3-mathematics-sof.json','data/class-6-science.json','data/class-6-mathematics.json','data/class-6-english.json','data/class-6-social-science.json','data/class-6-mathematics-sof.json','data/class-6-science-sof.json']) {
             if (!fs.existsSync('_site/'+file)) throw new Error('Missing deployed site file: '+file);
           }
           const examPractice=fs.readFileSync('_site/exam-practice.html','utf8');
@@ -343,7 +344,7 @@ jobs:
           const classCatalog=JSON.parse(fs.readFileSync('_site/data/classes.json','utf8'));
           if (classCatalog.kind!=='class-catalog' || !Array.isArray(classCatalog.classes) || !classCatalog.classes.some(item=>String(item.classId)==='10')) throw new Error('Class catalogue is missing Class 10.');
           const class3=classCatalog.classes.find(item=>String(item.classId)==='3');
-          if (!class3 || !(class3.subjects||[]).includes('mathematics')) throw new Error('Class 3 catalogue must include Mathematics.');
+          if (!class3 || !['mathematics','mathematics-sof'].every(subject=>(class3.subjects||[]).includes(subject))) throw new Error('Class 3 catalogue must include Mathematics and SOF IMO.');
           const class6=classCatalog.classes.find(item=>String(item.classId)==='6');
           if (!class6 || !['science','mathematics','english','social-science','mathematics-sof','science-sof'].every(subject=>(class6.subjects||[]).includes(subject))) throw new Error('Class 6 subject catalogue is missing a required CBSE or SOF Mathematics subject.');
           const resourceManifest=JSON.parse(fs.readFileSync('_site/data/knowledge-base.json','utf8'));
@@ -434,7 +435,7 @@ jobs:
       - name: Test Science shared-engine migration
         run: node tests/science-integration.test.js
       - name: Test Class 3 Mathematics and English banks
-        run: node tests/class3-mathematics.test.js && node tests/class3-english.test.js
+        run: node tests/class3-mathematics.test.js && node tests/class3-english.test.js && node tests/class3-sof-blueprint.test.js && node tests/class3-imo-bank.test.js
       - name: "Test Class 6 banks: Science, Mathematics, English and Social Science"
         run: node tests/class6-science.test.js
       - name: Test profile model and privacy fields
