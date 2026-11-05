@@ -5,7 +5,7 @@
   "subjectId": "english-language-literature",
   "subjectCode": "184",
   "academicYear": "2026-27",
-  "bankVersion": "draft-6-q01-q06-plus-q09-20-bundles",
+  "bankVersion": "draft-7-q01-q07-plus-q09-20-bundles",
   "title": "Class 10 English Language & Literature (184) · Draft Exam Studio Question Pool",
   "questionPoolStatus": "partially-curated",
   "questions": [
@@ -26247,6 +26247,4526 @@
       "source": {
         "type": "original-paraphrased-text-context",
         "reference": "First Flight prose/drama: Madam Rides the Bus; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-01",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — Dust of Snow: A brief encounter with a small bird and falling snow changes the speaker's mood. An ordinary outdoor moment interrupts a day that had seemed disappointing.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-01-A",
+          "prompt": "Which central idea is suggested by the situation in Dust of Snow?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "small moments can renew perspective"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "small moments can renew perspective"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-01-B",
+          "prompt": "Identify the image or situation that introduces the idea in Dust of Snow.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A brief encounter with a small bird and falling snow changes the speaker's mood. An ordinary outdoor moment interrupts a day that had seemed disappointing."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-01-C",
+          "prompt": "How does the contrast in Dust of Snow shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The speaker's mood changes through a seemingly minor event in nature."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-01-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Dust of Snow.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses a brief encounter with a small bird and falling snow changes the speaker's mood. an ordinary outdoor moment interrupts a day that had seemed disappointing. to develop small moments can renew perspective. Its contrast between the speaker's mood changes through a seemingly minor event in nature. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-01-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — How to Tell Wild Animals: The speaker offers exaggerated and playful advice for identifying dangerous animals. The humour depends on mock instruction and the absurd danger built into each example.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-01-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in How to Tell Wild Animals?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "humour and exaggeration"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "humour and exaggeration"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-01-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in How to Tell Wild Animals.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The speaker offers exaggerated and playful advice for identifying dangerous animals. The humour depends on mock instruction and the absurd danger built into each example."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-01-ALT-C",
+              "prompt": "How does the contrast in How to Tell Wild Animals shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The playful tone makes a risky encounter sound like a set of comic instructions."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-01-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of How to Tell Wild Animals.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses the speaker offers exaggerated and playful advice for identifying dangerous animals. the humour depends on mock instruction and the absurd danger built into each example. to develop humour and exaggeration. Its contrast between the playful tone makes a risky encounter sound like a set of comic instructions. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: Dust of Snow; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-02",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — Fire and Ice: The poem considers two destructive possibilities and connects them with intense human emotions. Its compact argument suggests that powerful feelings can damage relationships and the world.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-02-A",
+          "prompt": "Which central idea is suggested by the situation in Fire and Ice?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "destructive force of human desire"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "destructive force of human desire"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-02-B",
+          "prompt": "Identify the image or situation that introduces the idea in Fire and Ice.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The poem considers two destructive possibilities and connects them with intense human emotions. Its compact argument suggests that powerful feelings can damage relationships and the world."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-02-C",
+          "prompt": "How does the contrast in Fire and Ice shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The poem links emotional excess with destruction rather than presenting the forces as only physical."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-02-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Fire and Ice.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses the poem considers two destructive possibilities and connects them with intense human emotions. its compact argument suggests that powerful feelings can damage relationships and the world. to develop destructive force of human desire. Its contrast between the poem links emotional excess with destruction rather than presenting the forces as only physical. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-02-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — The Ball Poem: A child loses a ball and must face the feeling that follows. The poem treats the event as more than a small purchase, connecting it with the first experience of loss and responsibility.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-02-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in The Ball Poem?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "learning through loss"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "learning through loss"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-02-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in The Ball Poem.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A child loses a ball and must face the feeling that follows. The poem treats the event as more than a small purchase, connecting it with the first experience of loss and responsibility."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-02-ALT-C",
+              "prompt": "How does the contrast in The Ball Poem shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The child is not simply given a replacement because the experience carries emotional meaning."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-02-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of The Ball Poem.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses a child loses a ball and must face the feeling that follows. the poem treats the event as more than a small purchase, connecting it with the first experience of loss and responsibility. to develop learning through loss. Its contrast between the child is not simply given a replacement because the experience carries emotional meaning. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: Fire and Ice; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-03",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — A Tiger in the Zoo: A powerful animal moves within a confined space while the poem contrasts its present restrictions with the freedom and strength it would display in its natural habitat.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-03-A",
+          "prompt": "Which central idea is suggested by the situation in A Tiger in the Zoo?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "freedom and captivity"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "freedom and captivity"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-03-B",
+          "prompt": "Identify the image or situation that introduces the idea in A Tiger in the Zoo.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A powerful animal moves within a confined space while the poem contrasts its present restrictions with the freedom and strength it would display in its natural habitat."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-03-C",
+          "prompt": "How does the contrast in A Tiger in the Zoo shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The contrast between the cage and the forest exposes the cost of confinement."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-03-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of A Tiger in the Zoo.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses a powerful animal moves within a confined space while the poem contrasts its present restrictions with the freedom and strength it would display in its natural habitat. to develop freedom and captivity. Its contrast between the contrast between the cage and the forest exposes the cost of confinement. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-03-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — Amanda!: An adult voice repeatedly corrects a young person's behaviour, while the child's imagined worlds offer an escape from constant instruction.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-03-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in Amanda!?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "need for freedom and understanding"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "need for freedom and understanding"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-03-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in Amanda!.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "An adult voice repeatedly corrects a young person's behaviour, while the child's imagined worlds offer an escape from constant instruction."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-03-ALT-C",
+              "prompt": "How does the contrast in Amanda! shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The contrast between commands and imagined freedom reveals how persistent criticism can affect a child."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-03-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Amanda!.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses an adult voice repeatedly corrects a young person's behaviour, while the child's imagined worlds offer an escape from constant instruction. to develop need for freedom and understanding. Its contrast between the contrast between commands and imagined freedom reveals how persistent criticism can affect a child. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: A Tiger in the Zoo; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-04",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — How to Tell Wild Animals: The speaker offers exaggerated and playful advice for identifying dangerous animals. The humour depends on mock instruction and the absurd danger built into each example.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-04-A",
+          "prompt": "Which central idea is suggested by the situation in How to Tell Wild Animals?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "humour and exaggeration"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "humour and exaggeration"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-04-B",
+          "prompt": "Identify the image or situation that introduces the idea in How to Tell Wild Animals.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The speaker offers exaggerated and playful advice for identifying dangerous animals. The humour depends on mock instruction and the absurd danger built into each example."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-04-C",
+          "prompt": "How does the contrast in How to Tell Wild Animals shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The playful tone makes a risky encounter sound like a set of comic instructions."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-04-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of How to Tell Wild Animals.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses the speaker offers exaggerated and playful advice for identifying dangerous animals. the humour depends on mock instruction and the absurd danger built into each example. to develop humour and exaggeration. Its contrast between the playful tone makes a risky encounter sound like a set of comic instructions. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-04-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — The Trees: Trees appear to move from an enclosed indoor space towards the open forest. The poem gives the movement a sense of release and suggests that nature cannot remain permanently controlled.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-04-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in The Trees?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "release and natural freedom"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "release and natural freedom"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-04-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in The Trees.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "Trees appear to move from an enclosed indoor space towards the open forest. The poem gives the movement a sense of release and suggests that nature cannot remain permanently controlled."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-04-ALT-C",
+              "prompt": "How does the contrast in The Trees shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The gradual movement from enclosure to the outside world creates the central image of liberation."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-04-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of The Trees.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses trees appear to move from an enclosed indoor space towards the open forest. the poem gives the movement a sense of release and suggests that nature cannot remain permanently controlled. to develop release and natural freedom. Its contrast between the gradual movement from enclosure to the outside world creates the central image of liberation. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: How to Tell Wild Animals; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-05",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — The Ball Poem: A child loses a ball and must face the feeling that follows. The poem treats the event as more than a small purchase, connecting it with the first experience of loss and responsibility.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-05-A",
+          "prompt": "Which central idea is suggested by the situation in The Ball Poem?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "learning through loss"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "learning through loss"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-05-B",
+          "prompt": "Identify the image or situation that introduces the idea in The Ball Poem.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A child loses a ball and must face the feeling that follows. The poem treats the event as more than a small purchase, connecting it with the first experience of loss and responsibility."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-05-C",
+          "prompt": "How does the contrast in The Ball Poem shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The child is not simply given a replacement because the experience carries emotional meaning."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-05-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of The Ball Poem.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses a child loses a ball and must face the feeling that follows. the poem treats the event as more than a small purchase, connecting it with the first experience of loss and responsibility. to develop learning through loss. Its contrast between the child is not simply given a replacement because the experience carries emotional meaning. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-05-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — Fog: A natural event arrives quietly, pauses over a city and moves away without announcement. The poem uses a brief comparison to make the movement easy to imagine.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-05-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in Fog?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "quiet power of nature"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "quiet power of nature"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-05-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in Fog.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A natural event arrives quietly, pauses over a city and moves away without announcement. The poem uses a brief comparison to make the movement easy to imagine."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-05-ALT-C",
+              "prompt": "How does the contrast in Fog shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The short observation makes an ordinary change in weather feel watchful and deliberate."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-05-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Fog.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses a natural event arrives quietly, pauses over a city and moves away without announcement. the poem uses a brief comparison to make the movement easy to imagine. to develop quiet power of nature. Its contrast between the short observation makes an ordinary change in weather feel watchful and deliberate. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: The Ball Poem; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-06",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — Amanda!: An adult voice repeatedly corrects a young person's behaviour, while the child's imagined worlds offer an escape from constant instruction.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-06-A",
+          "prompt": "Which central idea is suggested by the situation in Amanda!?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "need for freedom and understanding"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "need for freedom and understanding"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-06-B",
+          "prompt": "Identify the image or situation that introduces the idea in Amanda!.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "An adult voice repeatedly corrects a young person's behaviour, while the child's imagined worlds offer an escape from constant instruction."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-06-C",
+          "prompt": "How does the contrast in Amanda! shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The contrast between commands and imagined freedom reveals how persistent criticism can affect a child."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-06-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Amanda!.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses an adult voice repeatedly corrects a young person's behaviour, while the child's imagined worlds offer an escape from constant instruction. to develop need for freedom and understanding. Its contrast between the contrast between commands and imagined freedom reveals how persistent criticism can affect a child. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-06-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — The Tale of Custard the Dragon: A supposedly timid dragon is surrounded by characters who boast of their bravery. When real danger arrives, the dragon acts while the others retreat.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-06-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in The Tale of Custard the Dragon?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "courage shown through action"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "courage shown through action"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-06-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in The Tale of Custard the Dragon.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A supposedly timid dragon is surrounded by characters who boast of their bravery. When real danger arrives, the dragon acts while the others retreat."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-06-ALT-C",
+              "prompt": "How does the contrast in The Tale of Custard the Dragon shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The contrast between boasting and the response to danger challenges first impressions."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-06-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of The Tale of Custard the Dragon.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses a supposedly timid dragon is surrounded by characters who boast of their bravery. when real danger arrives, the dragon acts while the others retreat. to develop courage shown through action. Its contrast between the contrast between boasting and the response to danger challenges first impressions. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: Amanda!; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-07",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — The Trees: Trees appear to move from an enclosed indoor space towards the open forest. The poem gives the movement a sense of release and suggests that nature cannot remain permanently controlled.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-07-A",
+          "prompt": "Which central idea is suggested by the situation in The Trees?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "release and natural freedom"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "release and natural freedom"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-07-B",
+          "prompt": "Identify the image or situation that introduces the idea in The Trees.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "Trees appear to move from an enclosed indoor space towards the open forest. The poem gives the movement a sense of release and suggests that nature cannot remain permanently controlled."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-07-C",
+          "prompt": "How does the contrast in The Trees shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The gradual movement from enclosure to the outside world creates the central image of liberation."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-07-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of The Trees.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses trees appear to move from an enclosed indoor space towards the open forest. the poem gives the movement a sense of release and suggests that nature cannot remain permanently controlled. to develop release and natural freedom. Its contrast between the gradual movement from enclosure to the outside world creates the central image of liberation. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-07-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — For Anne Gregory: The poem questions whether affection is based on appearance or a person's deeper qualities. A conversation about changing outward beauty leads to a reflection on the difficulty of recognising inner worth.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-07-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in For Anne Gregory?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "inner worth beyond appearance"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "inner worth beyond appearance"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-07-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in For Anne Gregory.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The poem questions whether affection is based on appearance or a person's deeper qualities. A conversation about changing outward beauty leads to a reflection on the difficulty of recognising inner worth."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-07-ALT-C",
+              "prompt": "How does the contrast in For Anne Gregory shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The discussion distinguishes physical attraction from a deeper and more lasting appreciation."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-07-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of For Anne Gregory.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses the poem questions whether affection is based on appearance or a person's deeper qualities. a conversation about changing outward beauty leads to a reflection on the difficulty of recognising inner worth. to develop inner worth beyond appearance. Its contrast between the discussion distinguishes physical attraction from a deeper and more lasting appreciation. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: The Trees; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-08",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — Fog: A natural event arrives quietly, pauses over a city and moves away without announcement. The poem uses a brief comparison to make the movement easy to imagine.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-08-A",
+          "prompt": "Which central idea is suggested by the situation in Fog?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "quiet power of nature"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "quiet power of nature"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-08-B",
+          "prompt": "Identify the image or situation that introduces the idea in Fog.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A natural event arrives quietly, pauses over a city and moves away without announcement. The poem uses a brief comparison to make the movement easy to imagine."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-08-C",
+          "prompt": "How does the contrast in Fog shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The short observation makes an ordinary change in weather feel watchful and deliberate."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-08-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Fog.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses a natural event arrives quietly, pauses over a city and moves away without announcement. the poem uses a brief comparison to make the movement easy to imagine. to develop quiet power of nature. Its contrast between the short observation makes an ordinary change in weather feel watchful and deliberate. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-08-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — Dust of Snow: A brief encounter with a small bird and falling snow changes the speaker's mood. An ordinary outdoor moment interrupts a day that had seemed disappointing.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-08-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in Dust of Snow?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "small moments can renew perspective"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "small moments can renew perspective"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-08-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in Dust of Snow.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A brief encounter with a small bird and falling snow changes the speaker's mood. An ordinary outdoor moment interrupts a day that had seemed disappointing."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-08-ALT-C",
+              "prompt": "How does the contrast in Dust of Snow shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The speaker's mood changes through a seemingly minor event in nature."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-08-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Dust of Snow.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses a brief encounter with a small bird and falling snow changes the speaker's mood. an ordinary outdoor moment interrupts a day that had seemed disappointing. to develop small moments can renew perspective. Its contrast between the speaker's mood changes through a seemingly minor event in nature. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: Fog; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-09",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — The Tale of Custard the Dragon: A supposedly timid dragon is surrounded by characters who boast of their bravery. When real danger arrives, the dragon acts while the others retreat.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-09-A",
+          "prompt": "Which central idea is suggested by the situation in The Tale of Custard the Dragon?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "courage shown through action"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "courage shown through action"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-09-B",
+          "prompt": "Identify the image or situation that introduces the idea in The Tale of Custard the Dragon.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A supposedly timid dragon is surrounded by characters who boast of their bravery. When real danger arrives, the dragon acts while the others retreat."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-09-C",
+          "prompt": "How does the contrast in The Tale of Custard the Dragon shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The contrast between boasting and the response to danger challenges first impressions."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-09-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of The Tale of Custard the Dragon.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses a supposedly timid dragon is surrounded by characters who boast of their bravery. when real danger arrives, the dragon acts while the others retreat. to develop courage shown through action. Its contrast between the contrast between boasting and the response to danger challenges first impressions. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-09-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — Fire and Ice: The poem considers two destructive possibilities and connects them with intense human emotions. Its compact argument suggests that powerful feelings can damage relationships and the world.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-09-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in Fire and Ice?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "destructive force of human desire"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "destructive force of human desire"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-09-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in Fire and Ice.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The poem considers two destructive possibilities and connects them with intense human emotions. Its compact argument suggests that powerful feelings can damage relationships and the world."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-09-ALT-C",
+              "prompt": "How does the contrast in Fire and Ice shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The poem links emotional excess with destruction rather than presenting the forces as only physical."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-09-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Fire and Ice.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses the poem considers two destructive possibilities and connects them with intense human emotions. its compact argument suggests that powerful feelings can damage relationships and the world. to develop destructive force of human desire. Its contrast between the poem links emotional excess with destruction rather than presenting the forces as only physical. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: The Tale of Custard the Dragon; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-10",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — For Anne Gregory: The poem questions whether affection is based on appearance or a person's deeper qualities. A conversation about changing outward beauty leads to a reflection on the difficulty of recognising inner worth.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-10-A",
+          "prompt": "Which central idea is suggested by the situation in For Anne Gregory?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "inner worth beyond appearance"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "inner worth beyond appearance"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-10-B",
+          "prompt": "Identify the image or situation that introduces the idea in For Anne Gregory.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The poem questions whether affection is based on appearance or a person's deeper qualities. A conversation about changing outward beauty leads to a reflection on the difficulty of recognising inner worth."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-10-C",
+          "prompt": "How does the contrast in For Anne Gregory shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The discussion distinguishes physical attraction from a deeper and more lasting appreciation."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-10-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of For Anne Gregory.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses the poem questions whether affection is based on appearance or a person's deeper qualities. a conversation about changing outward beauty leads to a reflection on the difficulty of recognising inner worth. to develop inner worth beyond appearance. Its contrast between the discussion distinguishes physical attraction from a deeper and more lasting appreciation. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-10-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — A Tiger in the Zoo: A powerful animal moves within a confined space while the poem contrasts its present restrictions with the freedom and strength it would display in its natural habitat.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-10-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in A Tiger in the Zoo?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "freedom and captivity"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "freedom and captivity"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-10-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in A Tiger in the Zoo.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A powerful animal moves within a confined space while the poem contrasts its present restrictions with the freedom and strength it would display in its natural habitat."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-10-ALT-C",
+              "prompt": "How does the contrast in A Tiger in the Zoo shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The contrast between the cage and the forest exposes the cost of confinement."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-10-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of A Tiger in the Zoo.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses a powerful animal moves within a confined space while the poem contrasts its present restrictions with the freedom and strength it would display in its natural habitat. to develop freedom and captivity. Its contrast between the contrast between the cage and the forest exposes the cost of confinement. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: For Anne Gregory; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-11",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — Dust of Snow: A brief encounter with a small bird and falling snow changes the speaker's mood. An ordinary outdoor moment interrupts a day that had seemed disappointing.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-11-A",
+          "prompt": "Which central idea is suggested by the situation in Dust of Snow?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "small moments can renew perspective"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "small moments can renew perspective"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-11-B",
+          "prompt": "Identify the image or situation that introduces the idea in Dust of Snow.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A brief encounter with a small bird and falling snow changes the speaker's mood. An ordinary outdoor moment interrupts a day that had seemed disappointing."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-11-C",
+          "prompt": "How does the contrast in Dust of Snow shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The speaker's mood changes through a seemingly minor event in nature."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-11-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Dust of Snow.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses a brief encounter with a small bird and falling snow changes the speaker's mood. an ordinary outdoor moment interrupts a day that had seemed disappointing. to develop small moments can renew perspective. Its contrast between the speaker's mood changes through a seemingly minor event in nature. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-11-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — How to Tell Wild Animals: The speaker offers exaggerated and playful advice for identifying dangerous animals. The humour depends on mock instruction and the absurd danger built into each example.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-11-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in How to Tell Wild Animals?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "humour and exaggeration"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "humour and exaggeration"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-11-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in How to Tell Wild Animals.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The speaker offers exaggerated and playful advice for identifying dangerous animals. The humour depends on mock instruction and the absurd danger built into each example."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-11-ALT-C",
+              "prompt": "How does the contrast in How to Tell Wild Animals shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The playful tone makes a risky encounter sound like a set of comic instructions."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-11-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of How to Tell Wild Animals.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses the speaker offers exaggerated and playful advice for identifying dangerous animals. the humour depends on mock instruction and the absurd danger built into each example. to develop humour and exaggeration. Its contrast between the playful tone makes a risky encounter sound like a set of comic instructions. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: Dust of Snow; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-12",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — Fire and Ice: The poem considers two destructive possibilities and connects them with intense human emotions. Its compact argument suggests that powerful feelings can damage relationships and the world.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-12-A",
+          "prompt": "Which central idea is suggested by the situation in Fire and Ice?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "destructive force of human desire"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "destructive force of human desire"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-12-B",
+          "prompt": "Identify the image or situation that introduces the idea in Fire and Ice.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The poem considers two destructive possibilities and connects them with intense human emotions. Its compact argument suggests that powerful feelings can damage relationships and the world."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-12-C",
+          "prompt": "How does the contrast in Fire and Ice shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The poem links emotional excess with destruction rather than presenting the forces as only physical."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-12-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Fire and Ice.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses the poem considers two destructive possibilities and connects them with intense human emotions. its compact argument suggests that powerful feelings can damage relationships and the world. to develop destructive force of human desire. Its contrast between the poem links emotional excess with destruction rather than presenting the forces as only physical. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-12-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — The Ball Poem: A child loses a ball and must face the feeling that follows. The poem treats the event as more than a small purchase, connecting it with the first experience of loss and responsibility.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-12-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in The Ball Poem?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "learning through loss"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "learning through loss"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-12-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in The Ball Poem.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A child loses a ball and must face the feeling that follows. The poem treats the event as more than a small purchase, connecting it with the first experience of loss and responsibility."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-12-ALT-C",
+              "prompt": "How does the contrast in The Ball Poem shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The child is not simply given a replacement because the experience carries emotional meaning."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-12-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of The Ball Poem.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses a child loses a ball and must face the feeling that follows. the poem treats the event as more than a small purchase, connecting it with the first experience of loss and responsibility. to develop learning through loss. Its contrast between the child is not simply given a replacement because the experience carries emotional meaning. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: Fire and Ice; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-13",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — A Tiger in the Zoo: A powerful animal moves within a confined space while the poem contrasts its present restrictions with the freedom and strength it would display in its natural habitat.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-13-A",
+          "prompt": "Which central idea is suggested by the situation in A Tiger in the Zoo?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "freedom and captivity"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "freedom and captivity"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-13-B",
+          "prompt": "Identify the image or situation that introduces the idea in A Tiger in the Zoo.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A powerful animal moves within a confined space while the poem contrasts its present restrictions with the freedom and strength it would display in its natural habitat."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-13-C",
+          "prompt": "How does the contrast in A Tiger in the Zoo shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The contrast between the cage and the forest exposes the cost of confinement."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-13-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of A Tiger in the Zoo.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses a powerful animal moves within a confined space while the poem contrasts its present restrictions with the freedom and strength it would display in its natural habitat. to develop freedom and captivity. Its contrast between the contrast between the cage and the forest exposes the cost of confinement. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-13-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — Amanda!: An adult voice repeatedly corrects a young person's behaviour, while the child's imagined worlds offer an escape from constant instruction.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-13-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in Amanda!?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "need for freedom and understanding"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "need for freedom and understanding"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-13-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in Amanda!.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "An adult voice repeatedly corrects a young person's behaviour, while the child's imagined worlds offer an escape from constant instruction."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-13-ALT-C",
+              "prompt": "How does the contrast in Amanda! shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The contrast between commands and imagined freedom reveals how persistent criticism can affect a child."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-13-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Amanda!.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses an adult voice repeatedly corrects a young person's behaviour, while the child's imagined worlds offer an escape from constant instruction. to develop need for freedom and understanding. Its contrast between the contrast between commands and imagined freedom reveals how persistent criticism can affect a child. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: A Tiger in the Zoo; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-14",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — How to Tell Wild Animals: The speaker offers exaggerated and playful advice for identifying dangerous animals. The humour depends on mock instruction and the absurd danger built into each example.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-14-A",
+          "prompt": "Which central idea is suggested by the situation in How to Tell Wild Animals?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "humour and exaggeration"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "humour and exaggeration"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-14-B",
+          "prompt": "Identify the image or situation that introduces the idea in How to Tell Wild Animals.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The speaker offers exaggerated and playful advice for identifying dangerous animals. The humour depends on mock instruction and the absurd danger built into each example."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-14-C",
+          "prompt": "How does the contrast in How to Tell Wild Animals shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The playful tone makes a risky encounter sound like a set of comic instructions."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-14-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of How to Tell Wild Animals.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses the speaker offers exaggerated and playful advice for identifying dangerous animals. the humour depends on mock instruction and the absurd danger built into each example. to develop humour and exaggeration. Its contrast between the playful tone makes a risky encounter sound like a set of comic instructions. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-14-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — The Trees: Trees appear to move from an enclosed indoor space towards the open forest. The poem gives the movement a sense of release and suggests that nature cannot remain permanently controlled.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-14-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in The Trees?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "release and natural freedom"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "release and natural freedom"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-14-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in The Trees.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "Trees appear to move from an enclosed indoor space towards the open forest. The poem gives the movement a sense of release and suggests that nature cannot remain permanently controlled."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-14-ALT-C",
+              "prompt": "How does the contrast in The Trees shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The gradual movement from enclosure to the outside world creates the central image of liberation."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-14-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of The Trees.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses trees appear to move from an enclosed indoor space towards the open forest. the poem gives the movement a sense of release and suggests that nature cannot remain permanently controlled. to develop release and natural freedom. Its contrast between the gradual movement from enclosure to the outside world creates the central image of liberation. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: How to Tell Wild Animals; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-15",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — The Ball Poem: A child loses a ball and must face the feeling that follows. The poem treats the event as more than a small purchase, connecting it with the first experience of loss and responsibility.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-15-A",
+          "prompt": "Which central idea is suggested by the situation in The Ball Poem?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "learning through loss"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "learning through loss"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-15-B",
+          "prompt": "Identify the image or situation that introduces the idea in The Ball Poem.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A child loses a ball and must face the feeling that follows. The poem treats the event as more than a small purchase, connecting it with the first experience of loss and responsibility."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-15-C",
+          "prompt": "How does the contrast in The Ball Poem shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The child is not simply given a replacement because the experience carries emotional meaning."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-15-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of The Ball Poem.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses a child loses a ball and must face the feeling that follows. the poem treats the event as more than a small purchase, connecting it with the first experience of loss and responsibility. to develop learning through loss. Its contrast between the child is not simply given a replacement because the experience carries emotional meaning. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-15-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — Fog: A natural event arrives quietly, pauses over a city and moves away without announcement. The poem uses a brief comparison to make the movement easy to imagine.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-15-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in Fog?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "quiet power of nature"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "quiet power of nature"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-15-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in Fog.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A natural event arrives quietly, pauses over a city and moves away without announcement. The poem uses a brief comparison to make the movement easy to imagine."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-15-ALT-C",
+              "prompt": "How does the contrast in Fog shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The short observation makes an ordinary change in weather feel watchful and deliberate."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-15-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Fog.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses a natural event arrives quietly, pauses over a city and moves away without announcement. the poem uses a brief comparison to make the movement easy to imagine. to develop quiet power of nature. Its contrast between the short observation makes an ordinary change in weather feel watchful and deliberate. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: The Ball Poem; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-16",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — Amanda!: An adult voice repeatedly corrects a young person's behaviour, while the child's imagined worlds offer an escape from constant instruction.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-16-A",
+          "prompt": "Which central idea is suggested by the situation in Amanda!?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "need for freedom and understanding"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "need for freedom and understanding"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-16-B",
+          "prompt": "Identify the image or situation that introduces the idea in Amanda!.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "An adult voice repeatedly corrects a young person's behaviour, while the child's imagined worlds offer an escape from constant instruction."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-16-C",
+          "prompt": "How does the contrast in Amanda! shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The contrast between commands and imagined freedom reveals how persistent criticism can affect a child."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-16-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Amanda!.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses an adult voice repeatedly corrects a young person's behaviour, while the child's imagined worlds offer an escape from constant instruction. to develop need for freedom and understanding. Its contrast between the contrast between commands and imagined freedom reveals how persistent criticism can affect a child. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-16-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — The Tale of Custard the Dragon: A supposedly timid dragon is surrounded by characters who boast of their bravery. When real danger arrives, the dragon acts while the others retreat.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-16-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in The Tale of Custard the Dragon?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "courage shown through action"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "courage shown through action"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-16-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in The Tale of Custard the Dragon.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A supposedly timid dragon is surrounded by characters who boast of their bravery. When real danger arrives, the dragon acts while the others retreat."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-16-ALT-C",
+              "prompt": "How does the contrast in The Tale of Custard the Dragon shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The contrast between boasting and the response to danger challenges first impressions."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-16-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of The Tale of Custard the Dragon.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses a supposedly timid dragon is surrounded by characters who boast of their bravery. when real danger arrives, the dragon acts while the others retreat. to develop courage shown through action. Its contrast between the contrast between boasting and the response to danger challenges first impressions. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: Amanda!; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-17",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — The Trees: Trees appear to move from an enclosed indoor space towards the open forest. The poem gives the movement a sense of release and suggests that nature cannot remain permanently controlled.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-17-A",
+          "prompt": "Which central idea is suggested by the situation in The Trees?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "release and natural freedom"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "release and natural freedom"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-17-B",
+          "prompt": "Identify the image or situation that introduces the idea in The Trees.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "Trees appear to move from an enclosed indoor space towards the open forest. The poem gives the movement a sense of release and suggests that nature cannot remain permanently controlled."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-17-C",
+          "prompt": "How does the contrast in The Trees shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The gradual movement from enclosure to the outside world creates the central image of liberation."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-17-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of The Trees.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses trees appear to move from an enclosed indoor space towards the open forest. the poem gives the movement a sense of release and suggests that nature cannot remain permanently controlled. to develop release and natural freedom. Its contrast between the gradual movement from enclosure to the outside world creates the central image of liberation. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-17-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — For Anne Gregory: The poem questions whether affection is based on appearance or a person's deeper qualities. A conversation about changing outward beauty leads to a reflection on the difficulty of recognising inner worth.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-17-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in For Anne Gregory?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "inner worth beyond appearance"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "inner worth beyond appearance"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-17-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in For Anne Gregory.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The poem questions whether affection is based on appearance or a person's deeper qualities. A conversation about changing outward beauty leads to a reflection on the difficulty of recognising inner worth."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-17-ALT-C",
+              "prompt": "How does the contrast in For Anne Gregory shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The discussion distinguishes physical attraction from a deeper and more lasting appreciation."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-17-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of For Anne Gregory.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses the poem questions whether affection is based on appearance or a person's deeper qualities. a conversation about changing outward beauty leads to a reflection on the difficulty of recognising inner worth. to develop inner worth beyond appearance. Its contrast between the discussion distinguishes physical attraction from a deeper and more lasting appreciation. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: The Trees; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-18",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — Fog: A natural event arrives quietly, pauses over a city and moves away without announcement. The poem uses a brief comparison to make the movement easy to imagine.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-18-A",
+          "prompt": "Which central idea is suggested by the situation in Fog?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "quiet power of nature"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "quiet power of nature"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-18-B",
+          "prompt": "Identify the image or situation that introduces the idea in Fog.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A natural event arrives quietly, pauses over a city and moves away without announcement. The poem uses a brief comparison to make the movement easy to imagine."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-18-C",
+          "prompt": "How does the contrast in Fog shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The short observation makes an ordinary change in weather feel watchful and deliberate."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-18-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Fog.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses a natural event arrives quietly, pauses over a city and moves away without announcement. the poem uses a brief comparison to make the movement easy to imagine. to develop quiet power of nature. Its contrast between the short observation makes an ordinary change in weather feel watchful and deliberate. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-18-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — Dust of Snow: A brief encounter with a small bird and falling snow changes the speaker's mood. An ordinary outdoor moment interrupts a day that had seemed disappointing.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-18-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in Dust of Snow?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "small moments can renew perspective"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "small moments can renew perspective"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-18-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in Dust of Snow.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A brief encounter with a small bird and falling snow changes the speaker's mood. An ordinary outdoor moment interrupts a day that had seemed disappointing."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-18-ALT-C",
+              "prompt": "How does the contrast in Dust of Snow shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The speaker's mood changes through a seemingly minor event in nature."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-18-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Dust of Snow.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses a brief encounter with a small bird and falling snow changes the speaker's mood. an ordinary outdoor moment interrupts a day that had seemed disappointing. to develop small moments can renew perspective. Its contrast between the speaker's mood changes through a seemingly minor event in nature. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: Fog; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-19",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — The Tale of Custard the Dragon: A supposedly timid dragon is surrounded by characters who boast of their bravery. When real danger arrives, the dragon acts while the others retreat.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-19-A",
+          "prompt": "Which central idea is suggested by the situation in The Tale of Custard the Dragon?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "courage shown through action"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "courage shown through action"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-19-B",
+          "prompt": "Identify the image or situation that introduces the idea in The Tale of Custard the Dragon.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A supposedly timid dragon is surrounded by characters who boast of their bravery. When real danger arrives, the dragon acts while the others retreat."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-19-C",
+          "prompt": "How does the contrast in The Tale of Custard the Dragon shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The contrast between boasting and the response to danger challenges first impressions."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-19-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of The Tale of Custard the Dragon.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses a supposedly timid dragon is surrounded by characters who boast of their bravery. when real danger arrives, the dragon acts while the others retreat. to develop courage shown through action. Its contrast between the contrast between boasting and the response to danger challenges first impressions. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-19-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — Fire and Ice: The poem considers two destructive possibilities and connects them with intense human emotions. Its compact argument suggests that powerful feelings can damage relationships and the world.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-19-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in Fire and Ice?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "destructive force of human desire"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "destructive force of human desire"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-19-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in Fire and Ice.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The poem considers two destructive possibilities and connects them with intense human emotions. Its compact argument suggests that powerful feelings can damage relationships and the world."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-19-ALT-C",
+              "prompt": "How does the contrast in Fire and Ice shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The poem links emotional excess with destruction rather than presenting the forces as only physical."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-19-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of Fire and Ice.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses the poem considers two destructive possibilities and connects them with intense human emotions. its compact argument suggests that powerful feelings can damage relationships and the world. to develop destructive force of human desire. Its contrast between the poem links emotional excess with destruction rather than presenting the forces as only physical. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: The Tale of Custard the Dragon; original paraphrase, no lines reproduced."
+      }
+    },
+    {
+      "questionId": "ENG184-Q07-POETRY-20",
+      "sectionId": "literature",
+      "chapterId": "first-flight-poetry",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased poetic-context cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased poetic-context cue — For Anne Gregory: The poem questions whether affection is based on appearance or a person's deeper qualities. A conversation about changing outward beauty leads to a reflection on the difficulty of recognising inner worth.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q07-POETRY-20-A",
+          "prompt": "Which central idea is suggested by the situation in For Anne Gregory?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "inner worth beyond appearance"
+            },
+            {
+              "optionId": "B",
+              "text": "the certainty of material success"
+            },
+            {
+              "optionId": "C",
+              "text": "the value of public competition"
+            },
+            {
+              "optionId": "D",
+              "text": "the rejection of all human feeling"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "inner worth beyond appearance"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the poem's central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q07-POETRY-20-B",
+          "prompt": "Identify the image or situation that introduces the idea in For Anne Gregory.",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The poem questions whether affection is based on appearance or a person's deeper qualities. A conversation about changing outward beauty leads to a reflection on the difficulty of recognising inner worth."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant image or situation",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q07-POETRY-20-C",
+          "prompt": "How does the contrast in For Anne Gregory shape the reader's understanding?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The discussion distinguishes physical attraction from a deeper and more lasting appreciation."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the effect of the contrast",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q07-POETRY-20-D",
+          "prompt": "Explain how the poet's choice of image or tone strengthens the theme of For Anne Gregory.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The poem uses the poem questions whether affection is based on appearance or a person's deeper qualities. a conversation about changing outward beauty leads to a reflection on the difficulty of recognising inner worth. to develop inner worth beyond appearance. Its contrast between the discussion distinguishes physical attraction from a deeper and more lasting appreciation. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+            "wordCount": 43
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the image or tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects the choice to the poem's theme",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the paraphrased poetic situation and the prescribed poem."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q07-POETRY-20-ALT",
+          "prompt": "OR\nRead the alternative paraphrased poetic-context cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased poetic-context cue — A Tiger in the Zoo: A powerful animal moves within a confined space while the poem contrasts its present restrictions with the freedom and strength it would display in its natural habitat.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q07-POETRY-20-ALT-A",
+              "prompt": "Which central idea is suggested by the situation in A Tiger in the Zoo?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "freedom and captivity"
+                },
+                {
+                  "optionId": "B",
+                  "text": "the certainty of material success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "the value of public competition"
+                },
+                {
+                  "optionId": "D",
+                  "text": "the rejection of all human feeling"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "freedom and captivity"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the poem's central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q07-POETRY-20-ALT-B",
+              "prompt": "Identify the image or situation that introduces the idea in A Tiger in the Zoo.",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A powerful animal moves within a confined space while the poem contrasts its present restrictions with the freedom and strength it would display in its natural habitat."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant image or situation",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q07-POETRY-20-ALT-C",
+              "prompt": "How does the contrast in A Tiger in the Zoo shape the reader's understanding?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The contrast between the cage and the forest exposes the cost of confinement."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the effect of the contrast",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q07-POETRY-20-ALT-D",
+              "prompt": "Explain how the poet's choice of image or tone strengthens the theme of A Tiger in the Zoo.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The poem uses a powerful animal moves within a confined space while the poem contrasts its present restrictions with the freedom and strength it would display in its natural habitat. to develop freedom and captivity. Its contrast between the contrast between the cage and the forest exposes the cost of confinement. guides the reader beyond the immediate image towards a wider reflection. The choice is effective because it communicates the idea economically and invites interpretation.",
+                "wordCount": 43
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the image or tone",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects the choice to the poem's theme",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased poetic situation and the prescribed poem."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-poem-context",
+        "reference": "First Flight poem: For Anne Gregory; original paraphrase, no lines reproduced."
       }
     }
   ]
