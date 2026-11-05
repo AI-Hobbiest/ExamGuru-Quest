@@ -1084,6 +1084,186 @@
         "syllabusOrigin": "previous-class",
         "syllabusTopic": "Patterns",
         "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-001",
+        "question": "Continue the number chain 1, 4, 10, 19, 31, __.",
+        "options": [
+          "46",
+          "43",
+          "45",
+          "47"
+        ],
+        "answer": 0,
+        "explanation": "The gaps are 3, 6, 9, 12 and then 15; 31 + 15 = 46.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Patterns",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-002",
+        "question": "In the alphabet, what letter is three places after W?",
+        "options": [
+          "A",
+          "Z",
+          "Y",
+          "X"
+        ],
+        "answer": 1,
+        "explanation": "X is one place after W, Y two places after W and Z three places after W.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Alphabet Test",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-003",
+        "question": "Thermometer is to temperature as weighing scale is to ____.",
+        "options": [
+          "length",
+          "capacity",
+          "weight",
+          "time"
+        ],
+        "answer": 2,
+        "explanation": "A thermometer measures temperature; a weighing scale measures weight.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Analogy",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-004",
+        "question": "Which number is not a multiple of 8: 24, 32, 40 or 45?",
+        "options": [
+          "24",
+          "32",
+          "40",
+          "45"
+        ],
+        "answer": 3,
+        "explanation": "24, 32 and 40 are multiples of 8; 45 is not.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Classification",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-005",
+        "question": "In a line of 13 pupils, Arjun is seventh from the left. Which position is he from the right?",
+        "options": [
+          "7th",
+          "6th",
+          "8th",
+          "9th"
+        ],
+        "answer": 0,
+        "explanation": "13 − 7 + 1 = 7, so he is seventh from the right.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Ranking Test",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-006",
+        "question": "A lunch order offers 3 sandwiches and 3 juices. How many different sandwich-and-juice pairs are possible?",
+        "options": [
+          "12",
+          "9",
+          "6",
+          "8"
+        ],
+        "answer": 1,
+        "explanation": "There are 3 choices of sandwich for each of 3 juices: 3 × 3 = 9.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Possible Combinations",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-007",
+        "question": "Which number completes the pattern 9, 18, 27, 36, __?",
+        "options": [
+          "44",
+          "54",
+          "45",
+          "42"
+        ],
+        "answer": 2,
+        "explanation": "The pattern adds 9 each time.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning",
+        "syllabusClass": 2,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Patterns",
+        "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-008",
+        "question": "Which unit would you use to measure the mass of a school bag?",
+        "options": [
+          "litre",
+          "centimetre",
+          "minute",
+          "kilogram"
+        ],
+        "answer": 3,
+        "explanation": "A school bag has mass, which is commonly measured in kilograms.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning",
+        "syllabusClass": 2,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Measuring Units",
+        "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-009",
+        "question": "Which shape has four straight sides and four corners, with opposite sides equal?",
+        "options": [
+          "rectangle",
+          "triangle",
+          "circle",
+          "pentagon"
+        ],
+        "answer": 0,
+        "explanation": "A rectangle has four sides and opposite sides equal.",
+        "difficulty": "Easy",
+        "section": "Logical Reasoning",
+        "syllabusClass": 2,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Geometrical Shapes",
+        "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-010",
+        "question": "If each letter is replaced by the next letter, how is SUN coded?",
+        "options": [
+          "UVO",
+          "TVO",
+          "SVP",
+          "TUN"
+        ],
+        "answer": 1,
+        "explanation": "S moves to T, U to V and N to O.",
+        "difficulty": "Medium",
+        "section": "Logical Reasoning",
+        "syllabusClass": 2,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Coding-Decoding",
+        "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
       }
     ]
   },
@@ -2203,6 +2383,186 @@
         "syllabusClass": 2,
         "syllabusOrigin": "previous-class",
         "syllabusTopic": "Geometry",
+        "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-011",
+        "question": "Which number has 6 thousands, 2 hundreds, 4 tens and 9 ones?",
+        "options": [
+          "6,294",
+          "6,204",
+          "6,249",
+          "6,429"
+        ],
+        "answer": 2,
+        "explanation": "The place values make 6,000 + 200 + 40 + 9 = 6,249.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Number Sense (4-digit numbers)",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-012",
+        "question": "Which is the number name for 7,015?",
+        "options": [
+          "Seven thousand and fifty",
+          "Seven hundred and fifteen",
+          "Seven thousand one hundred and five",
+          "Seven thousand and fifteen"
+        ],
+        "answer": 3,
+        "explanation": "7,015 has seven thousands, no hundreds, one ten and five ones.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Number Names",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-013",
+        "question": "Find the missing number: 1,875 + __ = 2,500.",
+        "options": [
+          "625",
+          "525",
+          "615",
+          "725"
+        ],
+        "answer": 0,
+        "explanation": "2,500 − 1,875 = 625.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Computation Operations",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-014",
+        "question": "A shape is split into 6 equal parts. Five parts are shaded. Which fraction is not shaded?",
+        "options": [
+          "6/5",
+          "1/6",
+          "5/6",
+          "2/6"
+        ],
+        "answer": 1,
+        "explanation": "One of the six equal parts is not shaded, so the fraction is 1/6.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Fractions",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-015",
+        "question": "A triangle has sides of 5 cm, 5 cm and 7 cm. What is its perimeter?",
+        "options": [
+          "16 cm",
+          "18 cm",
+          "17 cm",
+          "15 cm"
+        ],
+        "answer": 2,
+        "explanation": "5 + 5 + 7 = 17 cm.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Geometry",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-016",
+        "question": "A chart shows 8 votes for red, 13 for blue and 9 for green. How many more votes does blue receive than red?",
+        "options": [
+          "4",
+          "6",
+          "7",
+          "5"
+        ],
+        "answer": 3,
+        "explanation": "13 − 8 = 5 votes.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Data Handling",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-017",
+        "question": "Which is the smallest number that can be made with the digits 5, 0 and 8, using each once?",
+        "options": [
+          "508",
+          "580",
+          "805",
+          "850"
+        ],
+        "answer": 0,
+        "explanation": "A three-digit number cannot begin with zero; 5 is the smallest possible hundreds digit.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 2,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Number Sense (3-digit numbers)",
+        "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-018",
+        "question": "A class collects 145 shells and then 126 more. How many shells does it have?",
+        "options": [
+          "281",
+          "271",
+          "261",
+          "269"
+        ],
+        "answer": 1,
+        "explanation": "145 + 126 = 271.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 2,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Computation Operations",
+        "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-019",
+        "question": "Two erasers cost ₹8 each. What is their total cost?",
+        "options": [
+          "₹14",
+          "₹18",
+          "₹16",
+          "₹12"
+        ],
+        "answer": 2,
+        "explanation": "2 × ₹8 = ₹16.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 2,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Money",
+        "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-020",
+        "question": "Which solid shape has six equal square faces?",
+        "options": [
+          "cuboid",
+          "cone",
+          "cylinder",
+          "cube"
+        ],
+        "answer": 3,
+        "explanation": "A cube has six faces, and each face is a square.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 2,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Shapes and Solids",
         "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
       }
     ]
@@ -3324,6 +3684,186 @@
         "syllabusOrigin": "previous-class",
         "syllabusTopic": "Computation Operations",
         "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-021",
+        "question": "A family buys 3 tickets at ₹85 each and pays with ₹300. How much change do they receive?",
+        "options": [
+          "₹45",
+          "₹35",
+          "₹55",
+          "₹65"
+        ],
+        "answer": 0,
+        "explanation": "3 × ₹85 = ₹255; ₹300 − ₹255 = ₹45.",
+        "difficulty": "Challenge",
+        "section": "Everyday Mathematics",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Money",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-022",
+        "question": "A school assembly starts at 8:40 a.m. and lasts 35 minutes. At what time does it end?",
+        "options": [
+          "9:25 a.m.",
+          "9:15 a.m.",
+          "9:05 a.m.",
+          "9:10 a.m."
+        ],
+        "answer": 1,
+        "explanation": "20 minutes takes the time to 9:00; 15 more minutes makes 9:15.",
+        "difficulty": "Medium",
+        "section": "Everyday Mathematics",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Time",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-023",
+        "question": "A path is 2 km 300 m long. A student walks 750 m. How much remains?",
+        "options": [
+          "1 km 650 m",
+          "2 km 50 m",
+          "1 km 550 m",
+          "1 km 450 m"
+        ],
+        "answer": 2,
+        "explanation": "2,300 m − 750 m = 1,550 m = 1 km 550 m.",
+        "difficulty": "Challenge",
+        "section": "Everyday Mathematics",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Length",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-024",
+        "question": "A fruit basket weighs 1 kg 600 g. Another basket weighs 900 g. What is their total weight?",
+        "options": [
+          "2 kg 400 g",
+          "2 kg 600 g",
+          "3 kg 500 g",
+          "2 kg 500 g"
+        ],
+        "answer": 3,
+        "explanation": "1,600 g + 900 g = 2,500 g = 2 kg 500 g.",
+        "difficulty": "Medium",
+        "section": "Everyday Mathematics",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Weight",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-025",
+        "question": "A bottle contains 1 litre 200 mL. How many millilitres is that?",
+        "options": [
+          "1,200 mL",
+          "1,020 mL",
+          "1,100 mL",
+          "2,200 mL"
+        ],
+        "answer": 0,
+        "explanation": "1 litre is 1,000 mL; add 200 mL to get 1,200 mL.",
+        "difficulty": "Easy",
+        "section": "Everyday Mathematics",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Capacity",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-026",
+        "question": "The room temperature rises from 21°C to 29°C. By how many degrees does it rise?",
+        "options": [
+          "9°C",
+          "8°C",
+          "6°C",
+          "7°C"
+        ],
+        "answer": 1,
+        "explanation": "29 − 21 = 8 degrees Celsius.",
+        "difficulty": "Easy",
+        "section": "Everyday Mathematics",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Temperature",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-027",
+        "question": "A farmer has 235 mangoes and sells 118. How many remain?",
+        "options": [
+          "127",
+          "137",
+          "117",
+          "107"
+        ],
+        "answer": 2,
+        "explanation": "235 − 118 = 117.",
+        "difficulty": "Medium",
+        "section": "Everyday Mathematics",
+        "syllabusClass": 2,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Computation Operations",
+        "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-028",
+        "question": "A pencil is 16 cm long. A ruler is 14 cm longer. How long is the ruler?",
+        "options": [
+          "28 cm",
+          "29 cm",
+          "32 cm",
+          "30 cm"
+        ],
+        "answer": 3,
+        "explanation": "16 + 14 = 30 cm.",
+        "difficulty": "Easy",
+        "section": "Everyday Mathematics",
+        "syllabusClass": 2,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Length",
+        "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-029",
+        "question": "A child has ₹75 and spends ₹28. How much is left?",
+        "options": [
+          "₹47",
+          "₹43",
+          "₹45",
+          "₹53"
+        ],
+        "answer": 0,
+        "explanation": "₹75 − ₹28 = ₹47.",
+        "difficulty": "Medium",
+        "section": "Everyday Mathematics",
+        "syllabusClass": 2,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Money",
+        "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-030",
+        "question": "A pictograph uses one star for 3 toys. How many toys do 8 stars represent?",
+        "options": [
+          "30 toys",
+          "24 toys",
+          "21 toys",
+          "27 toys"
+        ],
+        "answer": 1,
+        "explanation": "8 × 3 = 24 toys.",
+        "difficulty": "Easy",
+        "section": "Everyday Mathematics",
+        "syllabusClass": 2,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Pictographs",
+        "syllabusSource": "SOF IMO Class 2 syllabus 2026–27"
       }
     ]
   },
@@ -3871,6 +4411,132 @@
         "syllabusClass": 3,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Multi-step Operations",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-031",
+        "question": "A shop has 9 trays with 18 cups on each tray. It sells 47 cups. How many cups remain?",
+        "options": [
+          "113",
+          "125",
+          "115",
+          "105"
+        ],
+        "answer": 2,
+        "explanation": "9 × 18 = 162; 162 − 47 = 115.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Multi-step Operations",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-032",
+        "question": "A box has 24 counters. One-third are red and one-quarter are blue. How many are neither red nor blue?",
+        "options": [
+          "8",
+          "9",
+          "12",
+          "10"
+        ],
+        "answer": 3,
+        "explanation": "One-third of 24 is 8; one-quarter is 6; 24 − 8 − 6 = 10.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Fractions and Reasoning",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-033",
+        "question": "A rectangle has a perimeter of 34 cm. Its length is 10 cm. What is its width?",
+        "options": [
+          "7 cm",
+          "6 cm",
+          "8 cm",
+          "9 cm"
+        ],
+        "answer": 0,
+        "explanation": "2 × (10 + width) = 34, so 10 + width = 17 and width = 7 cm.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Geometry",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-034",
+        "question": "A library opens at 9:30 a.m. and closes at 4:15 p.m. How long is it open?",
+        "options": [
+          "7 hours 15 minutes",
+          "6 hours 45 minutes",
+          "6 hours 15 minutes",
+          "6 hours 30 minutes"
+        ],
+        "answer": 1,
+        "explanation": "From 9:30 to 4:00 is 6 hours 30 minutes; add 15 minutes.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Time and Calendar",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-035",
+        "question": "A four-digit number has 4 thousands and 6 hundreds. Its ones digit is 3 greater than its tens digit. Which option could be the number?",
+        "options": [
+          "4,673",
+          "4,626",
+          "4,636",
+          "4,663"
+        ],
+        "answer": 2,
+        "explanation": "In 4,636, the tens digit is 3 and the ones digit is 6, so the ones digit is 3 greater.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Number Sense",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-036",
+        "question": "A school buys 7 packs of 16 notebooks and shares them equally among 4 classes. How many notebooks does each class receive?",
+        "options": [
+          "24",
+          "26",
+          "32",
+          "28"
+        ],
+        "answer": 3,
+        "explanation": "7 × 16 = 112; 112 ÷ 4 = 28.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Everyday Mathematics",
+        "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
+      },
+      {
+        "id": "c3imo-extra-037",
+        "question": "A jug contains 1 litre 800 mL of juice. It is poured into 6 equal cups. How much juice is in each cup?",
+        "options": [
+          "300 mL",
+          "250 mL",
+          "350 mL",
+          "400 mL"
+        ],
+        "answer": 0,
+        "explanation": "1,800 mL ÷ 6 = 300 mL.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section",
+        "syllabusClass": 3,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Measurement",
         "syllabusSource": "SOF IMO Class 3 syllabus 2026–27"
       }
     ]
