@@ -103,6 +103,8 @@ function startServer(){
   assert.equal(await resumedQ10.locator('[data-choice-panel="alternative"] textarea').first().inputValue(),"Final alternative long-answer response for browser QA.");
   const resumedGrammar=page.locator("#questions .exam-question").nth(2).locator("input[data-part-attempt]");
   assert.equal(await resumedGrammar.evaluateAll(nodes=>nodes.filter(node=>node.checked).length),10,"attempt-any selection must restore after reload");
+  assert.equal(await resumedGrammar.nth(0).isChecked(),false,"the deselected grammar item must remain deselected after reload");
+  assert.equal(await resumedGrammar.nth(11).isChecked(),true,"the newly selected grammar item must remain selected after reload");
 
   await page.locator("#submitBtn").click();
   await page.locator("#review").waitFor({state:"visible"});
