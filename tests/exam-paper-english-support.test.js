@@ -219,6 +219,23 @@ assert.ok(englishStudentPrint.includes("Q10."),"the production English paper pri
 assert.ok(englishTeacherPrint.includes("Expected answer:"),"the teacher copy must include model answers");
 assert.ok(englishAnswerBooklet.includes("Answer Booklet")&&englishAnswerBooklet.includes("Student Name:"),"the English blank answer booklet must render");
 
+const contentPrompts=slot=>bySlot(slot).flatMap(question=>[
+ ...(question.parts||[]).map(part=>part.prompt),
+ ...(question.alternatives||[]).flatMap(alternative=>(alternative.parts||[]).map(part=>part.prompt))
+]);
+for(const slot of [3,6,7,8,9]){
+ const prompts=contentPrompts(slot);
+ assert.equal(new Set(prompts).size,prompts.length,"Q"+slot+" must not reuse exact nested question prompts under different IDs");
+}
+assert.equal(contentPrompts(3).length,240,"Q3 must contain 240 individually authored grammar tasks");
+assert.equal(contentPrompts(6).length,160,"Q6 must contain 160 main/alternative sub-questions");
+assert.equal(contentPrompts(7).length,160,"Q7 must contain 160 main/alternative sub-questions");
+assert.equal(contentPrompts(8).length,100,"Q8 must contain 100 text-specific short-answer questions");
+assert.equal(contentPrompts(9).length,60,"Q9 must contain 60 text-specific short-answer questions");
+assert.ok([...q6,...q7].every(q=>[q.parts[3],...q.alternatives[0].parts.slice(3,4)].every(part=>part.answerKey.wordCount>=40&&part.answerKey.wordCount<=50)),"Q6/Q7 two-mark interpretive answers must stay within 40–50 words");
+const q3CorrectPositions=q3.flatMap(question=>question.parts.filter(part=>part.options).map(part=>part.correctOptionId));
+assert.ok(new Set(q3CorrectPositions).size===4,"Q3 correct MCQ options must not always occupy the same position");
+
 console.log("English 50-paper certification simulation passed: 50 complete 80-mark papers, 11 questions each, zero internal or five-paper parent/nested/alternative repeats, no fallback.");
 
 console.log("English Exam Studio nested response checks passed: attempt-any validation, nested MCQ, online answer capture, print rendering and all-format repeat exclusion.");
