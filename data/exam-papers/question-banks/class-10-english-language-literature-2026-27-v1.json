@@ -5,7 +5,7 @@
   "subjectId": "english-language-literature",
   "subjectCode": "184",
   "academicYear": "2026-27",
-  "bankVersion": "draft-4-q01-q04-plus-q09-20-bundles",
+  "bankVersion": "draft-5-q01-q05-plus-q09-20-bundles",
   "title": "Class 10 English Language & Literature (184) · Draft Exam Studio Question Pool",
   "questionPoolStatus": "partially-curated",
   "questions": [
@@ -19427,6 +19427,2286 @@
       "source": {
         "type": "original-writing-task",
         "reference": "Original ExamGuru formal-letter pair for Asha Colony."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-01",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "library visits — Lakeview",
+        "caption": "April to June; unit: visits per week.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Ages 10–13",
+            "45",
+            "62"
+          ],
+          [
+            "Ages 14–17",
+            "38",
+            "57"
+          ],
+          [
+            "Adults",
+            "20",
+            "31"
+          ]
+        ]
+      },
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare library visits in Lakeview during April to June. The combined figure moved from 103 to 150. Ages 10–13 has the highest later value (62), while Adults is lowest (31). The largest rise occurred in Ages 14–17 (38 to 57); Adults changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 113
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-01-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "library visits — Lakeview",
+            "caption": "April to June; unit: visits per week.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Fiction",
+                "52",
+                "69"
+              ],
+              [
+                "Science",
+                "31",
+                "43"
+              ],
+              [
+                "History",
+                "18",
+                "28"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of library visits in Lakeview during a separate follow-up period. The combined figure moved from 101 to 140. Fiction has the highest later value (69), while History is lowest (28). The largest rise occurred in Fiction (52 to 69); History changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 114
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Lakeview."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-02",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "household water use — Ridge Colony",
+        "caption": "May to July; unit: litres per household per day.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Block A",
+            "410",
+            "365"
+          ],
+          [
+            "Block B",
+            "390",
+            "352"
+          ],
+          [
+            "Block C",
+            "430",
+            "401"
+          ]
+        ]
+      },
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare household water use in Ridge Colony during May to July. The combined figure moved from 1230 to 1118. Block C has the highest later value (401), while Block B is lowest (352). The largest rise occurred in Block C (430 to 401); Block A changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 115
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-02-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "household water use — Ridge Colony",
+            "caption": "May to July; unit: litres per household per day.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Morning",
+                "122",
+                "108"
+              ],
+              [
+                "Afternoon",
+                "146",
+                "131"
+              ],
+              [
+                "Evening",
+                "142",
+                "119"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of household water use in Ridge Colony during a separate follow-up period. The combined figure moved from 410 to 358. Afternoon has the highest later value (131), while Morning is lowest (108). The largest rise occurred in Morning (122 to 108); Evening changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 116
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Ridge Colony."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-03",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "recyclable waste collected — Meadow Ward",
+        "caption": "Week 1 to Week 6; unit: kilograms per week.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Paper",
+            "120",
+            "168"
+          ],
+          [
+            "Plastic",
+            "95",
+            "131"
+          ],
+          [
+            "Metal",
+            "42",
+            "58"
+          ]
+        ]
+      },
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare recyclable waste collected in Meadow Ward during Week 1 to Week 6. The combined figure moved from 257 to 357. Paper has the highest later value (168), while Metal is lowest (58). The largest rise occurred in Paper (120 to 168); Metal changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 113
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-03-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "recyclable waste collected — Meadow Ward",
+            "caption": "Week 1 to Week 6; unit: kilograms per week.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Route 1",
+                "88",
+                "121"
+              ],
+              [
+                "Route 2",
+                "104",
+                "147"
+              ],
+              [
+                "Route 3",
+                "65",
+                "89"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of recyclable waste collected in Meadow Ward during a separate follow-up period. The combined figure moved from 257 to 357. Route 2 has the highest later value (147), while Route 3 is lowest (89). The largest rise occurred in Route 2 (104 to 147); Route 3 changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 120
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Meadow Ward."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-04",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "student travel modes — Harbour School",
+        "caption": "Term 1 to Term 2; unit: students in a 100-student survey.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Walk",
+            "22",
+            "28"
+          ],
+          [
+            "Cycle",
+            "15",
+            "24"
+          ],
+          [
+            "Bus",
+            "41",
+            "39"
+          ]
+        ]
+      },
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare student travel modes in Harbour School during Term 1 to Term 2. The combined figure moved from 78 to 91. Bus has the highest later value (39), while Cycle is lowest (24). The largest rise occurred in Cycle (15 to 24); Bus changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 113
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-04-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "student travel modes — Harbour School",
+            "caption": "Term 1 to Term 2; unit: students in a 100-student survey.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Grade 8",
+                "18",
+                "25"
+              ],
+              [
+                "Grade 9",
+                "21",
+                "27"
+              ],
+              [
+                "Grade 10",
+                "16",
+                "23"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of student travel modes in Harbour School during a separate follow-up period. The combined figure moved from 55 to 75. Grade 9 has the highest later value (27), while Grade 10 is lowest (23). The largest rise occurred in Grade 8 (18 to 25); Grade 9 changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 120
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Harbour School."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-05",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "evening library visitors — Palm Street",
+        "caption": "May to August; unit: visitors per evening.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "5–6 pm",
+            "32",
+            "38"
+          ],
+          [
+            "6–7 pm",
+            "27",
+            "46"
+          ],
+          [
+            "7–8 pm",
+            "14",
+            "29"
+          ]
+        ]
+      },
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare evening library visitors in Palm Street during May to August. The combined figure moved from 73 to 113. 6–7 pm has the highest later value (46), while 7–8 pm is lowest (29). The largest rise occurred in 6–7 pm (27 to 46); 5–6 pm changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 119
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-05-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "evening library visitors — Palm Street",
+            "caption": "May to August; unit: visitors per evening.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Monday",
+                "48",
+                "61"
+              ],
+              [
+                "Wednesday",
+                "42",
+                "59"
+              ],
+              [
+                "Friday",
+                "37",
+                "54"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of evening library visitors in Palm Street during a separate follow-up period. The combined figure moved from 127 to 174. Monday has the highest later value (61), while Friday is lowest (54). The largest rise occurred in Wednesday (42 to 59); Monday changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 116
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Palm Street."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-06",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "vehicles yielding at crossings — Cantonment Road",
+        "caption": "Before to after campaign; unit: vehicles per 100 observed.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Crossing A",
+            "41",
+            "63"
+          ],
+          [
+            "Crossing B",
+            "52",
+            "68"
+          ],
+          [
+            "Crossing C",
+            "36",
+            "55"
+          ]
+        ]
+      },
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare vehicles yielding at crossings in Cantonment Road during Before to after campaign. The combined figure moved from 129 to 186. Crossing B has the highest later value (68), while Crossing C is lowest (55). The largest rise occurred in Crossing A (41 to 63); Crossing B changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 117
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-06-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "vehicles yielding at crossings — Cantonment Road",
+            "caption": "Before to after campaign; unit: vehicles per 100 observed.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Morning",
+                "38",
+                "57"
+              ],
+              [
+                "Afternoon",
+                "49",
+                "64"
+              ],
+              [
+                "Evening",
+                "31",
+                "51"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of vehicles yielding at crossings in Cantonment Road during a separate follow-up period. The combined figure moved from 118 to 172. Afternoon has the highest later value (64), while Evening is lowest (51). The largest rise occurred in Evening (31 to 51); Afternoon changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 117
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Cantonment Road."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-07",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "compost output — Uday Park",
+        "caption": "June to September; unit: kilograms per week.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Cluster 1",
+            "42",
+            "58"
+          ],
+          [
+            "Cluster 2",
+            "35",
+            "47"
+          ],
+          [
+            "Cluster 3",
+            "29",
+            "41"
+          ]
+        ]
+      },
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare compost output in Uday Park during June to September. The combined figure moved from 106 to 146. Cluster 1 has the highest later value (58), while Cluster 3 is lowest (41). The largest rise occurred in Cluster 1 (42 to 58); Cluster 2 changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 114
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-07-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "compost output — Uday Park",
+            "caption": "June to September; unit: kilograms per week.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Kitchen waste",
+                "61",
+                "79"
+              ],
+              [
+                "Garden waste",
+                "24",
+                "37"
+              ],
+              [
+                "Market waste",
+                "38",
+                "54"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of compost output in Uday Park during a separate follow-up period. The combined figure moved from 123 to 170. Kitchen waste has the highest later value (79), while Garden waste is lowest (37). The largest rise occurred in Kitchen waste (61 to 79); Garden waste changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 119
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Uday Park."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-08",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "exercise-trail use — West Lake",
+        "caption": "Weekday to weekend average; unit: users per hour.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "North gate",
+            "19",
+            "31"
+          ],
+          [
+            "Lake path",
+            "24",
+            "36"
+          ],
+          [
+            "South gate",
+            "13",
+            "21"
+          ]
+        ]
+      },
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare exercise-trail use in West Lake during Weekday to weekend average. The combined figure moved from 56 to 88. Lake path has the highest later value (36), while South gate is lowest (21). The largest rise occurred in North gate (19 to 31); South gate changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 115
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-08-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "exercise-trail use — West Lake",
+            "caption": "Weekday to weekend average; unit: users per hour.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Morning",
+                "28",
+                "39"
+              ],
+              [
+                "Afternoon",
+                "14",
+                "22"
+              ],
+              [
+                "Evening",
+                "17",
+                "29"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of exercise-trail use in West Lake during a separate follow-up period. The combined figure moved from 59 to 90. Morning has the highest later value (39), while Afternoon is lowest (22). The largest rise occurred in Evening (17 to 29); Afternoon changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 115
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for West Lake."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-09",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "audio-guide use — Old Town",
+        "caption": "June to August; unit: weekly guide starts.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Museum",
+            "46",
+            "72"
+          ],
+          [
+            "Clock tower",
+            "31",
+            "59"
+          ],
+          [
+            "Market arch",
+            "22",
+            "43"
+          ]
+        ]
+      },
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare audio-guide use in Old Town during June to August. The combined figure moved from 99 to 174. Museum has the highest later value (72), while Market arch is lowest (43). The largest rise occurred in Clock tower (31 to 59); Market arch changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 113
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-09-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "audio-guide use — Old Town",
+            "caption": "June to August; unit: weekly guide starts.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Local visitors",
+                "38",
+                "57"
+              ],
+              [
+                "School groups",
+                "44",
+                "65"
+              ],
+              [
+                "Tourists",
+                "27",
+                "49"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of audio-guide use in Old Town during a separate follow-up period. The combined figure moved from 109 to 171. School groups has the highest later value (65), while Tourists is lowest (49). The largest rise occurred in Tourists (27 to 49); Local visitors changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 117
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Old Town."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-10",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "school attendance — Riverbank",
+        "caption": "Month 1 to Month 3; unit: students meeting the attendance target.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Class 8",
+            "74",
+            "81"
+          ],
+          [
+            "Class 9",
+            "78",
+            "84"
+          ],
+          [
+            "Class 10",
+            "71",
+            "79"
+          ]
+        ]
+      },
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare school attendance in Riverbank during Month 1 to Month 3. The combined figure moved from 223 to 244. Class 9 has the highest later value (84), while Class 10 is lowest (79). The largest rise occurred in Class 10 (71 to 79); Class 9 changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 115
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-10-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "school attendance — Riverbank",
+            "caption": "Month 1 to Month 3; unit: students meeting the attendance target.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Girls",
+                "82",
+                "88"
+              ],
+              [
+                "Boys",
+                "79",
+                "83"
+              ],
+              [
+                "New admissions",
+                "66",
+                "75"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of school attendance in Riverbank during a separate follow-up period. The combined figure moved from 227 to 246. Girls has the highest later value (88), while New admissions is lowest (75). The largest rise occurred in New admissions (66 to 75); Boys changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 116
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Riverbank."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-11",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "single-use bags issued — East Market",
+        "caption": "June to August; unit: bags per day.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Shop A",
+            "180",
+            "96"
+          ],
+          [
+            "Shop B",
+            "145",
+            "88"
+          ],
+          [
+            "Shop C",
+            "120",
+            "81"
+          ]
+        ]
+      },
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare single-use bags issued in East Market during June to August. The combined figure moved from 445 to 265. Shop A has the highest later value (96), while Shop C is lowest (81). The largest rise occurred in Shop C (120 to 81); Shop A changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 115
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-11-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "single-use bags issued — East Market",
+            "caption": "June to August; unit: bags per day.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Food stalls",
+                "210",
+                "137"
+              ],
+              [
+                "Clothing stalls",
+                "98",
+                "63"
+              ],
+              [
+                "Grocery stalls",
+                "165",
+                "91"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of single-use bags issued in East Market during a separate follow-up period. The combined figure moved from 473 to 291. Food stalls has the highest later value (137), while Clothing stalls is lowest (63). The largest rise occurred in Clothing stalls (98 to 63); Grocery stalls changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 120
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for East Market."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-12",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "tree survival — Highland Block",
+        "caption": "First to second inspection; unit: trees alive after six months.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Segment A",
+            "32",
+            "29"
+          ],
+          [
+            "Segment B",
+            "27",
+            "25"
+          ],
+          [
+            "Segment C",
+            "35",
+            "33"
+          ]
+        ]
+      },
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare tree survival in Highland Block during First to second inspection. The combined figure moved from 94 to 87. Segment C has the highest later value (33), while Segment B is lowest (25). The largest rise occurred in Segment B (27 to 25); Segment A changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 115
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-12-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "tree survival — Highland Block",
+            "caption": "First to second inspection; unit: trees alive after six months.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Neem",
+                "21",
+                "20"
+              ],
+              [
+                "Rain tree",
+                "18",
+                "16"
+              ],
+              [
+                "Native fruit",
+                "24",
+                "23"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of tree survival in Highland Block during a separate follow-up period. The combined figure moved from 63 to 59. Native fruit has the highest later value (23), while Rain tree is lowest (16). The largest rise occurred in Neem (21 to 20); Rain tree changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 118
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Highland Block."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-13",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "useful bus information ratings — Metro Link",
+        "caption": "Before to after display update; unit: positive responses per 100 surveyed.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Stop A",
+            "44",
+            "71"
+          ],
+          [
+            "Stop B",
+            "39",
+            "66"
+          ],
+          [
+            "Stop C",
+            "51",
+            "74"
+          ]
+        ]
+      },
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare useful bus information ratings in Metro Link during Before to after display update. The combined figure moved from 134 to 211. Stop C has the highest later value (74), while Stop B is lowest (66). The largest rise occurred in Stop A (44 to 71); Stop C changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 118
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-13-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "useful bus information ratings — Metro Link",
+            "caption": "Before to after display update; unit: positive responses per 100 surveyed.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Morning",
+                "47",
+                "69"
+              ],
+              [
+                "Afternoon",
+                "41",
+                "63"
+              ],
+              [
+                "Evening",
+                "36",
+                "61"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of useful bus information ratings in Metro Link during a separate follow-up period. The combined figure moved from 124 to 193. Morning has the highest later value (69), while Evening is lowest (61). The largest rise occurred in Evening (36 to 61); Morning changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 117
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Metro Link."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-14",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "community sports attendance — Saffron Street",
+        "caption": "First to fourth month; unit: participants per session.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Ages 10–14",
+            "18",
+            "31"
+          ],
+          [
+            "Ages 15–19",
+            "14",
+            "23"
+          ],
+          [
+            "Adults",
+            "9",
+            "17"
+          ]
+        ]
+      },
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare community sports attendance in Saffron Street during First to fourth month. The combined figure moved from 41 to 71. Ages 10–14 has the highest later value (31), while Adults is lowest (17). The largest rise occurred in Ages 10–14 (18 to 31); Adults changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 116
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-14-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "community sports attendance — Saffron Street",
+            "caption": "First to fourth month; unit: participants per session.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Football",
+                "16",
+                "25"
+              ],
+              [
+                "Yoga",
+                "12",
+                "21"
+              ],
+              [
+                "Badminton",
+                "11",
+                "19"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of community sports attendance in Saffron Street during a separate follow-up period. The combined figure moved from 39 to 65. Football has the highest later value (25), while Badminton is lowest (19). The largest rise occurred in Football (16 to 25); Badminton changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 116
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Saffron Street."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-15",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "drain reports resolved — Canal Side",
+        "caption": "April to June; unit: cases closed within 48 hours.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Zone A",
+            "18",
+            "27"
+          ],
+          [
+            "Zone B",
+            "21",
+            "29"
+          ],
+          [
+            "Zone C",
+            "12",
+            "24"
+          ]
+        ]
+      },
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare drain reports resolved in Canal Side during April to June. The combined figure moved from 51 to 80. Zone B has the highest later value (29), while Zone C is lowest (24). The largest rise occurred in Zone C (12 to 24); Zone B changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 115
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-15-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "drain reports resolved — Canal Side",
+            "caption": "April to June; unit: cases closed within 48 hours.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Road drains",
+                "22",
+                "33"
+              ],
+              [
+                "Market inlets",
+                "14",
+                "22"
+              ],
+              [
+                "School lanes",
+                "9",
+                "17"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of drain reports resolved in Canal Side during a separate follow-up period. The combined figure moved from 45 to 72. Road drains has the highest later value (33), while School lanes is lowest (17). The largest rise occurred in Road drains (22 to 33); Market inlets changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 120
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Canal Side."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-16",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "peer tutoring sessions — Crescent School",
+        "caption": "Term 1 to Term 2; unit: sessions per week.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Mathematics",
+            "12",
+            "21"
+          ],
+          [
+            "Science",
+            "9",
+            "18"
+          ],
+          [
+            "English",
+            "11",
+            "17"
+          ]
+        ]
+      },
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare peer tutoring sessions in Crescent School during Term 1 to Term 2. The combined figure moved from 32 to 56. Mathematics has the highest later value (21), while English is lowest (17). The largest rise occurred in Mathematics (12 to 21); English changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 113
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-16-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "peer tutoring sessions — Crescent School",
+            "caption": "Term 1 to Term 2; unit: sessions per week.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Grade 8",
+                "8",
+                "14"
+              ],
+              [
+                "Grade 9",
+                "12",
+                "19"
+              ],
+              [
+                "Grade 10",
+                "10",
+                "17"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of peer tutoring sessions in Crescent School during a separate follow-up period. The combined figure moved from 30 to 50. Grade 9 has the highest later value (19), while Grade 8 is lowest (14). The largest rise occurred in Grade 9 (12 to 19); Grade 8 changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 120
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Crescent School."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-17",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "food waste collected — Garden Estate",
+        "caption": "Monday to Friday averages; unit: kilograms per collection.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Monday",
+            "63",
+            "81"
+          ],
+          [
+            "Wednesday",
+            "58",
+            "76"
+          ],
+          [
+            "Friday",
+            "49",
+            "70"
+          ]
+        ]
+      },
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare food waste collected in Garden Estate during Monday to Friday averages. The combined figure moved from 170 to 227. Monday has the highest later value (81), while Friday is lowest (70). The largest rise occurred in Friday (49 to 70); Monday changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 112
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-17-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "food waste collected — Garden Estate",
+            "caption": "Monday to Friday averages; unit: kilograms per collection.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Vegetables",
+                "46",
+                "61"
+              ],
+              [
+                "Bread",
+                "19",
+                "27"
+              ],
+              [
+                "Cooked food",
+                "22",
+                "31"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of food waste collected in Garden Estate during a separate follow-up period. The combined figure moved from 87 to 119. Vegetables has the highest later value (61), while Bread is lowest (27). The largest rise occurred in Vegetables (46 to 61); Bread changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 116
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Garden Estate."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-18",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "adequate lighting ratings — South Station",
+        "caption": "Before to after repairs; unit: positive responses per 100 surveyed.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "7–8 pm",
+            "61",
+            "78"
+          ],
+          [
+            "8–9 pm",
+            "48",
+            "72"
+          ],
+          [
+            "9–10 pm",
+            "35",
+            "64"
+          ]
+        ]
+      },
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare adequate lighting ratings in South Station during Before to after repairs. The combined figure moved from 144 to 214. 7–8 pm has the highest later value (78), while 9–10 pm is lowest (64). The largest rise occurred in 9–10 pm (35 to 64); 7–8 pm changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 120
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-18-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "adequate lighting ratings — South Station",
+            "caption": "Before to after repairs; unit: positive responses per 100 surveyed.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Platform 1",
+                "54",
+                "72"
+              ],
+              [
+                "Platform 2",
+                "49",
+                "69"
+              ],
+              [
+                "Bus bay",
+                "32",
+                "58"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of adequate lighting ratings in South Station during a separate follow-up period. The combined figure moved from 135 to 199. Platform 1 has the highest later value (72), while Bus bay is lowest (58). The largest rise occurred in Bus bay (32 to 58); Platform 1 changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 120
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for South Station."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-19",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "public refill use — Pine Hill",
+        "caption": "June to August; unit: litres dispensed per week.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Bus depot",
+            "210",
+            "344"
+          ],
+          [
+            "Sports ground",
+            "165",
+            "251"
+          ],
+          [
+            "Market square",
+            "188",
+            "279"
+          ]
+        ]
+      },
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare public refill use in Pine Hill during June to August. The combined figure moved from 563 to 874. Bus depot has the highest later value (344), while Sports ground is lowest (251). The largest rise occurred in Bus depot (210 to 344); Sports ground changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 115
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-19-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "public refill use — Pine Hill",
+            "caption": "June to August; unit: litres dispensed per week.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Morning",
+                "72",
+                "118"
+              ],
+              [
+                "Afternoon",
+                "65",
+                "101"
+              ],
+              [
+                "Evening",
+                "91",
+                "144"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of public refill use in Pine Hill during a separate follow-up period. The combined figure moved from 228 to 363. Evening has the highest later value (144), while Afternoon is lowest (101). The largest rise occurred in Evening (91 to 144); Afternoon changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 116
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Pine Hill."
+      }
+    },
+    {
+      "questionId": "ENG184-Q05-20",
+      "sectionId": "grammar-writing",
+      "chapterId": "analytical-paragraph",
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Study the data and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+      "visualData": {
+        "title": "school electricity use — Brighton Ward",
+        "caption": "May to July; unit: kWh per school day.",
+        "columns": [
+          "Category",
+          "Earlier",
+          "Later"
+        ],
+        "rows": [
+          [
+            "Block A",
+            "145",
+            "128"
+          ],
+          [
+            "Block B",
+            "132",
+            "119"
+          ],
+          [
+            "Block C",
+            "156",
+            "142"
+          ]
+        ]
+      },
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The data compare school electricity use in Brighton Ward during May to July. The combined figure moved from 433 to 389. Block C has the highest later value (142), while Block B is lowest (119). The largest rise occurred in Block B (132 to 119); Block A changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+        "wordCount": 115
+      },
+      "markingScheme": [
+        {
+          "criterion": "Content and accurate coverage of the data",
+          "marks": 3
+        },
+        {
+          "criterion": "Organisation and coherence",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and appropriate language",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q05-20-ALT",
+          "prompt": "OR\nStudy the second data set and write an analytical paragraph in 100–120 words, highlighting the main trends and comparisons.",
+          "visualData": {
+            "title": "school electricity use — Brighton Ward",
+            "caption": "May to July; unit: kWh per school day.",
+            "columns": [
+              "Category",
+              "Earlier",
+              "Later"
+            ],
+            "rows": [
+              [
+                "Lighting",
+                "68",
+                "55"
+              ],
+              [
+                "Fans",
+                "51",
+                "46"
+              ],
+              [
+                "Computers",
+                "42",
+                "39"
+              ]
+            ]
+          },
+          "answerKey": {
+            "modelAnswer": "The data compare a second measure of school electricity use in Brighton Ward during a separate follow-up period. The combined figure moved from 161 to 140. Lighting has the highest later value (55), while Computers is lowest (39). The largest rise occurred in Computers (42 to 39); Lighting changed least. These differences show that the pattern was not uniform across groups. The table helps identify where attention may be needed, but it does not explain why each value changed or establish a lasting cause. A fair conclusion is that the figures justify further enquiry, not a claim of complete success. A later survey using the same method and feedback from participants would make the assessment stronger.",
+            "wordCount": 116
+          },
+          "markingScheme": [
+            {
+              "criterion": "Content and accurate coverage of the data",
+              "marks": 3
+            },
+            {
+              "criterion": "Organisation and coherence",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and appropriate language",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-data-interpretation-task",
+        "reference": "Original ExamGuru data interpretation exercise for Brighton Ward."
       }
     }
   ]
