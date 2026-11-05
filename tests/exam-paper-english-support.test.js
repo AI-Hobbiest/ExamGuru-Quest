@@ -136,12 +136,26 @@ assert.equal(q8.filter(q=>q.chapterId==="first-flight-poetry").length,10,"Q8 mus
 assert.ok(q9Bundles.every(question=>question.approvalStatus==="approved"&&question.parts.length===3),"each approved Q9 bundle must contain three independently tracked sub-questions");
 assert.ok(q10.every(q=>["first-flight-prose","first-flight-poetry"].includes(q.chapterId)&&q.alternatives?.length===1&&q.answerKey.wordCount>=100&&q.answerKey.wordCount<=120&&q.alternatives[0].answerKey.wordCount>=100&&q.alternatives[0].answerKey.wordCount<=120),"Q10 must contain First Flight long-answer choices with 100–120-word model answers");
 assert.ok(q11.every(q=>q.chapterId==="footprints-without-feet"&&q.alternatives?.length===1&&q.answerKey.wordCount>=100&&q.answerKey.wordCount<=120&&q.alternatives[0].answerKey.wordCount>=100&&q.alternatives[0].answerKey.wordCount<=120),"Q11 must contain Footprints long-answer choices with 100–120-word model answers");
+assert.ok([...q10,...q11].every(q=>wordCount(q.answerKey.modelAnswer)===q.answerKey.wordCount&&wordCount(q.alternatives[0].answerKey.modelAnswer)===q.alternatives[0].answerKey.wordCount),"Q10/Q11 main and alternative word-count metadata must match the answer text");
+assert.ok([...q10,...q11].every(q=>q.markingScheme.reduce((n,m)=>n+m.marks,0)===6&&q.alternatives[0].markingScheme.reduce((n,m)=>n+m.marks,0)===6),"Q10/Q11 main and alternative rubrics must each total six marks");
+assert.equal(q10.filter(q=>q.chapterId==="first-flight-prose").length,10,"Q10 must include ten prose candidates");
+assert.equal(q10.filter(q=>q.chapterId==="first-flight-poetry").length,10,"Q10 must include ten poetry candidates");
+const q11PrimaryChapters=q11.map(q=>{const match=String(q.source?.reference||"").match(/pair: (.*?); alternative/);return match&&match[1];});
+assert.equal(new Set(q11PrimaryChapters).size,9,"Q11 primary candidates must cover all nine supplied Footprints chapters");
+const nestedAnswerKeys=[];
+for(const question of draftBank.questions){
+ for(const part of question.parts||[])if(part.answerKey?.wordCount!=null)nestedAnswerKeys.push(part.answerKey);
+ for(const alternative of question.alternatives||[])for(const part of alternative.parts||[])if(part.answerKey?.wordCount!=null)nestedAnswerKeys.push(part.answerKey);
+}
+assert.ok(nestedAnswerKeys.every(answer=>wordCount(answer.modelAnswer)===answer.wordCount),"all stored nested model-answer word-count metadata must match the text");
+
 assert.ok([...q10,...q11].every(q=>q.markingScheme.reduce((n,m)=>n+m.marks,0)===6&&q.alternatives[0].markingScheme.reduce((n,m)=>n+m.marks,0)===6),"Q10/Q11 main and alternative rubrics must each total six marks");
 assert.equal(q10.filter(q=>q.chapterId==="first-flight-prose").length,10,"Q10 must include ten prose candidates");
 assert.equal(q10.filter(q=>q.chapterId==="first-flight-poetry").length,10,"Q10 must include ten poetry candidates");
 const q11PrimaryChapters=q11.map(q=>{const match=String(q.source?.reference||"").match(/pair: (.*?); alternative/);return match&&match[1];});
 assert.equal(new Set(q11PrimaryChapters).size,9,"Q11 primary candidates must cover all nine supplied Footprints chapters");
 const allContentIds=draftBank.questions.flatMap(question=>generator.questionContentIds(question));
+assert.equal(allContentIds.length,1400,"the completed bank must contain 1,400 independently identified parent, nested and alternative content items");
 assert.equal(new Set(allContentIds).size,allContentIds.length,"all parent, part and alternative content IDs must be globally unique");
 const q9ContentIds=q9Bundles.flatMap(question=>generator.questionContentIds(question));
 assert.equal(q9ContentIds.length,80,"Q9 parent and nested IDs must be accounted for");
