@@ -5,7 +5,7 @@
   "subjectId": "english-language-literature",
   "subjectCode": "184",
   "academicYear": "2026-27",
-  "bankVersion": "draft-5-q01-q05-plus-q09-20-bundles",
+  "bankVersion": "draft-4-q01-q04-plus-q09-20-bundles",
   "title": "Class 10 English Language & Literature (184) · Draft Exam Studio Question Pool",
   "questionPoolStatus": "partially-curated",
   "questions": [
@@ -21707,6 +21707,1386 @@
       "source": {
         "type": "original-data-interpretation-task",
         "reference": "Original ExamGuru data interpretation exercise for Brighton Ward."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-01",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Municipal Commissioner about unsafe pedestrian crossings near the market, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Municipal Commissioner\nLakeview\n\nDate: 5 November 2026\nSubject: Request for action regarding unsafe pedestrian crossings near the market\n\nSir/Madam,\n\nI am writing about unsafe pedestrian crossings near the market in Lakeview, which affects schoolchildren and older residents. Please review the matter and consider repainting crossings and restoring warning lights. I also request positioning a crossing assistant at peak hours. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 104
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-01-ALT",
+          "prompt": "OR\nWrite a formal letter to Editor about late bus notices, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Editor\nLakeview\n\nDate: 5 November 2026\nSubject: Request for action regarding late bus notices\n\nSir/Madam,\n\nI am writing about late bus notices in Lakeview, which affects commuters who do not use a travel app. Please review the matter and consider displaying a clear route map. I also request showing dated service updates. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request. A written reply will help residents understand the next steps and take part constructively.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 111
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Lakeview."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-02",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the School Principal about the lack of accessible drinking-water points, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe School Principal\nCedar Ward\n\nDate: 5 November 2026\nSubject: Request for action regarding the lack of accessible drinking-water points\n\nSir/Madam,\n\nI am writing about the lack of accessible drinking-water points in Cedar Ward, which affects students moving between floors. Please review the matter and consider adding a refill point on the ground floor. I also request displaying a weekly cleaning log. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 106
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-02-ALT",
+          "prompt": "OR\nWrite a formal letter to Health Officer about playground inspection records, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Health Officer\nCedar Ward\n\nDate: 5 November 2026\nSubject: Request for action regarding playground inspection records\n\nSir/Madam,\n\nI am writing about playground inspection records in Cedar Ward, which affects children using the park after rainfall. Please review the matter and consider publishing inspection dates. I also request providing a contact for reporting hazards. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request. A written reply will help residents understand the next steps and take part constructively.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 112
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Cedar Ward."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-03",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Transport Manager about the gap in late-evening bus services, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Transport Manager\nOld Harbour\n\nDate: 5 November 2026\nSubject: Request for action regarding the gap in late-evening bus services\n\nSir/Madam,\n\nI am writing about the gap in late-evening bus services in Old Harbour, which affects hospital staff finishing after the last bus. Please review the matter and consider testing one later bus for a month. I also request publishing passenger numbers and trial results. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 109
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-03-ALT",
+          "prompt": "OR\nWrite a formal letter to Editor about evening study spaces, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Editor\nOld Harbour\n\nDate: 5 November 2026\nSubject: Request for action regarding evening study spaces\n\nSir/Madam,\n\nI am writing about evening study spaces in Old Harbour, which affects students with long travel schedules. Please review the matter and consider opening a supervised community room. I also request recording unique users and feedback. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request. A written reply will help residents understand the next steps and take part constructively.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 111
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Old Harbour."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-04",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the School Management Committee about unsafe bicycle access at the school entrance, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe School Management Committee\nGreenfield\n\nDate: 5 November 2026\nSubject: Request for action regarding unsafe bicycle access at the school entrance\n\nSir/Madam,\n\nI am writing about unsafe bicycle access at the school entrance in Greenfield, which affects students crossing a busy service lane. Please review the matter and consider marking a supervised crossing and waiting zone. I also request consulting families about the safest route. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 109
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-04-ALT",
+          "prompt": "OR\nWrite a formal letter to Commissioner about waste-sorting information, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Commissioner\nGreenfield\n\nDate: 5 November 2026\nSubject: Request for action regarding waste-sorting information\n\nSir/Madam,\n\nI am writing about waste-sorting information in Greenfield, which affects families separating household waste. Please review the matter and consider placing illustrated instructions near collection points. I also request publishing collection timings. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request. A written reply will help residents understand the next steps and take part constructively.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 105
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Greenfield."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-05",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Public Librarian about limited evening access to the reading room, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Public Librarian\nNallur\n\nDate: 5 November 2026\nSubject: Request for action regarding limited evening access to the reading room\n\nSir/Madam,\n\nI am writing about limited evening access to the reading room in Nallur, which affects students unable to visit in the afternoon. Please review the matter and consider opening the room on two additional evenings. I also request measuring unique users before making the change permanent. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 111
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-05-ALT",
+          "prompt": "OR\nWrite a formal letter to Editor about public seating near the bus stop, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Editor\nNallur\n\nDate: 5 November 2026\nSubject: Request for action regarding public seating near the bus stop\n\nSir/Madam,\n\nI am writing about public seating near the bus stop in Nallur, which affects older visitors waiting for transport. Please review the matter and consider installing benches at marked points. I also request adding shade where the pavement permits. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 102
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Nallur."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-06",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Public Works Officer about broken pavement near the primary health centre, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Public Works Officer\nMeadow Road\n\nDate: 5 November 2026\nSubject: Request for action regarding broken pavement near the primary health centre\n\nSir/Madam,\n\nI am writing about broken pavement near the primary health centre in Meadow Road, which affects people using wheelchairs, walking frames and prams. Please review the matter and consider repairing uneven stretches and keeping a clear passage. I also request conducting an access inspection after repairs. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 113
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-06-ALT",
+          "prompt": "OR\nWrite a formal letter to Health Officer about stagnant water near the ground, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Health Officer\nMeadow Road\n\nDate: 5 November 2026\nSubject: Request for action regarding stagnant water near the ground\n\nSir/Madam,\n\nI am writing about stagnant water near the ground in Meadow Road, which affects children and residents after heavy rain. Please review the matter and consider clearing blocked inlets. I also request publishing a fortnightly inspection schedule. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 101
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Meadow Road."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-07",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the School Principal about food waste from the canteen, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe School Principal\nRiverbank\n\nDate: 5 November 2026\nSubject: Request for action regarding food waste from the canteen\n\nSir/Madam,\n\nI am writing about food waste from the canteen in Riverbank, which affects the school budget and cleanliness of the area. Please review the matter and consider introducing a measured pre-order system. I also request donating safe labelled surplus food through an approved partner. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 107
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-07-ALT",
+          "prompt": "OR\nWrite a formal letter to Editor about public recycling reports, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Editor\nRiverbank\n\nDate: 5 November 2026\nSubject: Request for action regarding public recycling reports\n\nSir/Madam,\n\nI am writing about public recycling reports in Riverbank, which affects households wanting to know where material goes. Please review the matter and consider publishing route-level figures. I also request including contamination rates. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request. A written reply will help residents understand the next steps and take part constructively.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 107
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Riverbank."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-08",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Railway Station Manager about insufficient lighting at the late-night waiting area, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Railway Station Manager\nEast Junction\n\nDate: 5 November 2026\nSubject: Request for action regarding insufficient lighting at the late-night waiting area\n\nSir/Madam,\n\nI am writing about insufficient lighting at the late-night waiting area in East Junction, which affects passengers travelling after office shifts. Please review the matter and consider repairing failed lights and moving the help point into view. I also request auditing the area with night-time passengers. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 113
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-08-ALT",
+          "prompt": "OR\nWrite a formal letter to Commissioner about access signs at the station, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Commissioner\nEast Junction\n\nDate: 5 November 2026\nSubject: Request for action regarding access signs at the station\n\nSir/Madam,\n\nI am writing about access signs at the station in East Junction, which affects passengers arriving after dark. Please review the matter and consider placing high-contrast signs at decision points. I also request checking the route with passengers needing assistance. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 103
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for East Junction."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-09",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Museum Director about the lack of audio access for visitors with low vision, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Museum Director\nHill Fort\n\nDate: 5 November 2026\nSubject: Request for action regarding the lack of audio access for visitors with low vision\n\nSir/Madam,\n\nI am writing about the lack of audio access for visitors with low vision in Hill Fort, which affects visitors exploring exhibits independently. Please review the matter and consider testing an offline audio guide with tactile markers. I also request asking users to review the route before expansion. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 117
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-09-ALT",
+          "prompt": "OR\nWrite a formal letter to Editor about heritage information for visitors, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Editor\nHill Fort\n\nDate: 5 November 2026\nSubject: Request for action regarding heritage information for visitors\n\nSir/Madam,\n\nI am writing about heritage information for visitors in Hill Fort, which affects people unable to read small display labels. Please review the matter and consider providing short audio descriptions. I also request consulting visitors before expanding the route. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 101
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Hill Fort."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-10",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Horticulture Officer about the poor survival of roadside trees, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Horticulture Officer\nSouth Park\n\nDate: 5 November 2026\nSubject: Request for action regarding the poor survival of roadside trees\n\nSir/Madam,\n\nI am writing about the poor survival of roadside trees in South Park, which affects residents expecting shade along the route. Please review the matter and consider assigning watering turns and inspecting tree guards. I also request publishing survival results after each season. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 108
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-10-ALT",
+          "prompt": "OR\nWrite a formal letter to Health Officer about safe public refill points, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Health Officer\nSouth Park\n\nDate: 5 November 2026\nSubject: Request for action regarding safe public refill points\n\nSir/Madam,\n\nI am writing about safe public refill points in South Park, which affects visitors currently buying disposable bottles. Please review the matter and consider displaying current water-test results. I also request publishing cleaning and downtime records. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request. A written reply will help residents understand the next steps and take part constructively.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 113
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for South Park."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-11",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Municipal Commissioner about the repeated blockage of storm-water drains, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Municipal Commissioner\nCentral Ward\n\nDate: 5 November 2026\nSubject: Request for action regarding the repeated blockage of storm-water drains\n\nSir/Madam,\n\nI am writing about the repeated blockage of storm-water drains in Central Ward, which affects families whose lanes flood after showers. Please review the matter and consider clearing the inlet and inspecting it after rainfall. I also request publishing a response number for residents. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 109
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-11-ALT",
+          "prompt": "OR\nWrite a formal letter to Editor about local flood-risk information, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Editor\nCentral Ward\n\nDate: 5 November 2026\nSubject: Request for action regarding local flood-risk information\n\nSir/Madam,\n\nI am writing about local flood-risk information in Central Ward, which affects residents unable to see the tank level. Please review the matter and consider displaying time-stamped readings. I also request checking volunteer records against an official gauge. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request. A written reply will help residents understand the next steps and take part constructively.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 113
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Central Ward."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-12",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Public Library Officer about the absence of a tool-lending service, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Public Library Officer\nPine Hill\n\nDate: 5 November 2026\nSubject: Request for action regarding the absence of a tool-lending service\n\nSir/Madam,\n\nI am writing about the absence of a tool-lending service in Pine Hill, which affects renters unable to afford or store rarely used tools. Please review the matter and consider testing a small collection with safety instructions. I also request checking each item on return. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 111
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-12-ALT",
+          "prompt": "OR\nWrite a formal letter to Commissioner about mentor-led repair workshops, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Commissioner\nPine Hill\n\nDate: 5 November 2026\nSubject: Request for action regarding mentor-led repair workshops\n\nSir/Madam,\n\nI am writing about mentor-led repair workshops in Pine Hill, which affects school leavers seeking supervised experience. Please review the matter and consider arranging short placements. I also request tracking later training and employment. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request. A written reply will help residents understand the next steps and take part constructively.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 109
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Pine Hill."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-13",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Municipal Commissioner about the lack of shade and resting points, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Municipal Commissioner\nTemple Road\n\nDate: 5 November 2026\nSubject: Request for action regarding the lack of shade and resting points\n\nSir/Madam,\n\nI am writing about the lack of shade and resting points in Temple Road, which affects older visitors walking to public services. Please review the matter and consider installing temporary shade and seats. I also request planning native trees without blocking access. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 108
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-13-ALT",
+          "prompt": "OR\nWrite a formal letter to Editor about wayfinding along the walking route, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Editor\nTemple Road\n\nDate: 5 November 2026\nSubject: Request for action regarding wayfinding along the walking route\n\nSir/Madam,\n\nI am writing about wayfinding along the walking route in Temple Road, which affects older people visiting public services. Please review the matter and consider marking resting points clearly. I also request publishing a step-free route map. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 100
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Temple Road."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-14",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the District Sports Officer about the lack of beginner-friendly public activities, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe District Sports Officer\nSaffron Street\n\nDate: 5 November 2026\nSubject: Request for action regarding the lack of beginner-friendly public activities\n\nSir/Madam,\n\nI am writing about the lack of beginner-friendly public activities in Saffron Street, which affects children and adults avoiding competitive sports. Please review the matter and consider scheduling a weekly supervised beginner session. I also request providing shared equipment and accessible timings. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 108
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-14-ALT",
+          "prompt": "OR\nWrite a formal letter to Health Officer about safety at public sport sessions, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Health Officer\nSaffron Street\n\nDate: 5 November 2026\nSubject: Request for action regarding safety at public sport sessions\n\nSir/Madam,\n\nI am writing about safety at public sport sessions in Saffron Street, which affects beginners unsure where to join. Please review the matter and consider providing a named session supervisor. I also request displaying timings and equipment rules. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 102
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Saffron Street."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-15",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Park Superintendent about uneven walking surfaces around the exercise trail, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Park Superintendent\nWest Lake\n\nDate: 5 November 2026\nSubject: Request for action regarding uneven walking surfaces around the exercise trail\n\nSir/Madam,\n\nI am writing about uneven walking surfaces around the exercise trail in West Lake, which affects older walkers and people using mobility aids. Please review the matter and consider repairing damaged sections and maintaining a clear width. I also request asking users to inspect the route after repairs. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 114
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-15-ALT",
+          "prompt": "OR\nWrite a formal letter to Editor about pond-restoration updates, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Editor\nWest Lake\n\nDate: 5 November 2026\nSubject: Request for action regarding pond-restoration updates\n\nSir/Madam,\n\nI am writing about pond-restoration updates in West Lake, which affects residents volunteering in the area. Please review the matter and consider publishing comparable water tests. I also request reporting unsuccessful readings too. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request. A written reply will help residents understand the next steps and take part constructively.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 107
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for West Lake."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-16",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the School Principal about uneven access to digital learning equipment, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe School Principal\nOrchard Block\n\nDate: 5 November 2026\nSubject: Request for action regarding uneven access to digital learning equipment\n\nSir/Madam,\n\nI am writing about uneven access to digital learning equipment in Orchard Block, which affects students sharing devices at home. Please review the matter and consider creating a supervised lending timetable. I also request tracking availability by class and time. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 105
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-16-ALT",
+          "prompt": "OR\nWrite a formal letter to Commissioner about access to shared learning devices, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Commissioner\nOrchard Block\n\nDate: 5 November 2026\nSubject: Request for action regarding access to shared learning devices\n\nSir/Madam,\n\nI am writing about access to shared learning devices in Orchard Block, which affects students depending on borrowed equipment. Please review the matter and consider setting a transparent lending timetable. I also request publishing availability by class. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 100
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Orchard Block."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-17",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Municipal Commissioner about poor pedestrian access during delivery hours, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Municipal Commissioner\nMarket Square\n\nDate: 5 November 2026\nSubject: Request for action regarding poor pedestrian access during delivery hours\n\nSir/Madam,\n\nI am writing about poor pedestrian access during delivery hours in Market Square, which affects shoppers sharing pavements with loading vehicles. Please review the matter and consider marking delivery windows and a protected walking lane. I also request reviewing the arrangement with shopkeepers. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 108
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-17-ALT",
+          "prompt": "OR\nWrite a formal letter to Editor about loading and pedestrian movement, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Editor\nMarket Square\n\nDate: 5 November 2026\nSubject: Request for action regarding loading and pedestrian movement\n\nSir/Madam,\n\nI am writing about loading and pedestrian movement in Market Square, which affects shoppers using the narrow market pavement. Please review the matter and consider marking delivery windows. I also request reviewing the layout with shopkeepers. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request. A written reply will help residents understand the next steps and take part constructively.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 112
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Market Square."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-18",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the School Principal about limited opportunities for peer tutoring, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe School Principal\nCrescent Ward\n\nDate: 5 November 2026\nSubject: Request for action regarding limited opportunities for peer tutoring\n\nSir/Madam,\n\nI am writing about limited opportunities for peer tutoring in Crescent Ward, which affects students hesitant to ask questions in class. Please review the matter and consider starting a supervised weekly peer-learning session. I also request training tutors to refer difficult questions to teachers. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 108
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-18-ALT",
+          "prompt": "OR\nWrite a formal letter to Health Officer about referrals in peer tutoring, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Health Officer\nCrescent Ward\n\nDate: 5 November 2026\nSubject: Request for action regarding referrals in peer tutoring\n\nSir/Madam,\n\nI am writing about referrals in peer tutoring in Crescent Ward, which affects students needing subject support. Please review the matter and consider publishing the teacher referral process. I also request reviewing the programme after one term. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 100
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Crescent Ward."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-19",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Training Centre Director about the lack of practical workshops linked to employers, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Training Centre Director\nNorth Workshop\n\nDate: 5 November 2026\nSubject: Request for action regarding the lack of practical workshops linked to employers\n\nSir/Madam,\n\nI am writing about the lack of practical workshops linked to employers in North Workshop, which affects students finishing courses without supervised experience. Please review the matter and consider arranging short placements with named mentors. I also request tracking later training and job outcomes. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 112
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-19-ALT",
+          "prompt": "OR\nWrite a formal letter to Editor about local apprenticeship information, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Editor\nNorth Workshop\n\nDate: 5 November 2026\nSubject: Request for action regarding local apprenticeship information\n\nSir/Madam,\n\nI am writing about local apprenticeship information in North Workshop, which affects families comparing training options. Please review the matter and consider publishing entry requirements and dates. I also request reporting completion and follow-up outcomes. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request. A written reply will help residents understand the next steps and take part constructively.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 110
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for North Workshop."
+      }
+    },
+    {
+      "questionId": "ENG184-Q04-20",
+      "sectionId": "grammar-writing",
+      "chapterId": "formal-letter",
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write a formal letter to the Municipal Health Officer about smoke reports without comparable local observations, explaining its impact and requesting practical action. (100–120 words)",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "To\nThe Municipal Health Officer\nAsha Colony\n\nDate: 5 November 2026\nSubject: Request for action regarding smoke reports without comparable local observations\n\nSir/Madam,\n\nI am writing about smoke reports without comparable local observations in Asha Colony, which affects families living close to the bus depot. Please review the matter and consider maintaining a time-stamped air-quality diary. I also request labelling low-cost readings as indicative until validated. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request.\n\nYours faithfully,\nA concerned resident",
+        "wordCount": 109
+      },
+      "markingScheme": [
+        {
+          "criterion": "Format: address, date, subject, salutation and closing",
+          "marks": 1
+        },
+        {
+          "criterion": "Content: context, purpose and specific value points",
+          "marks": 2
+        },
+        {
+          "criterion": "Organisation: logical sequence and appropriate tone",
+          "marks": 1
+        },
+        {
+          "criterion": "Accuracy and expression",
+          "marks": 1
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q04-20-ALT",
+          "prompt": "OR\nWrite a formal letter to Commissioner about local air-quality notices, explaining the impact and requesting action. (100–120 words)",
+          "answerKey": {
+            "modelAnswer": "To\nThe Commissioner\nAsha Colony\n\nDate: 5 November 2026\nSubject: Request for action regarding local air-quality notices\n\nSir/Madam,\n\nI am writing about local air-quality notices in Asha Colony, which affects residents reporting smoke episodes. Please review the matter and consider labelling sensor readings as indicative. I also request publishing methods and validation notes. A named contact and a dated progress notice would help residents follow the response and provide feedback. Kindly arrange an inspection and let the community know the action and expected timetable. Thank you for considering this request. A written reply will help residents understand the next steps and take part constructively.\n\nYours faithfully,\nA concerned resident",
+            "wordCount": 110
+          },
+          "markingScheme": [
+            {
+              "criterion": "Format: address, date, subject, salutation and closing",
+              "marks": 1
+            },
+            {
+              "criterion": "Content: context, purpose and specific value points",
+              "marks": 2
+            },
+            {
+              "criterion": "Organisation: logical sequence and appropriate tone",
+              "marks": 1
+            },
+            {
+              "criterion": "Accuracy and expression",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-writing-task",
+        "reference": "Original ExamGuru formal-letter pair for Asha Colony."
       }
     }
   ]
