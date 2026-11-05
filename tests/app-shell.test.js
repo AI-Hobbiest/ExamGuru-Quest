@@ -33,7 +33,19 @@ assert.ok(nav.includes('auth:"guest"'),"guest navigation is separated from stude
 assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"'),"admin navigation exposes Exam Paper Studio directly");
 assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"'),"parent navigation is isolated to the family role");
-assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"student and parent navigation expose self-study exam practice");
+assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"Class 10 students can open full-paper self-study practice");
+assert.ok(nav.includes('classIds:["10"]')&&nav.includes('if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return;'),
+  "the Class 10 full-paper route is filtered from other classes");
+assert.ok(!nav.includes("36 starter MCQs · 12 chapters"),"student navigation does not disclose Class 6 bank inventory");
+const dashboardManager=fs.readFileSync("js/dashboard-manager.js","utf8");
+assert.ok(dashboardManager.includes('meta.textContent="Explore topics and practise"'),"student subject cards use generic practice copy");
+assert.ok(!dashboardManager.includes('toLocaleString()+" MCQs · "+bank.length+" chapter sets"'),
+  "student dashboard never displays question-bank inventory");
+assert.ok(!dashboard.includes("Loading bank details…"),"student dashboard does not expose bank inventory loading text");
+assert.ok(!examPracticeScript.includes("integrated.stats.appended")&&!examPracticeScript.includes("coverage.slotCount"),
+  "student exam setup does not disclose appended bank size or eligible slot inventory");
+assert.ok(examPracticeScript.includes('String(item.classId)===studentClassId'),
+  "exam practice profiles are filtered to the authenticated student's class");
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"'),"admin navigation exposes the authoring studio");
 assert.ok(nav.includes('role==="parent"'),"parent sessions are recognised by the shared navigation shell");
 assert.ok(nav.includes('c10playground_static_student_v1'),"navigation detects the current student session");
