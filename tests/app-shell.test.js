@@ -37,8 +37,8 @@ assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"'),"admin navigation exposes Exam Paper Studio directly");
 assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"'),"parent navigation is isolated to the family role");
 assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"Class 10 students can open full-paper self-study practice");
-assert.ok(nav.includes('classIds:["10"]')&&nav.includes('if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return;'),
-  "the Class 10 full-paper route is filtered from other classes");
+assert.ok(!nav.includes('classIds:["10"]'),"Exam Paper Practice discovery is not hidden from Class 6 students");
+assert.ok(nav.includes('label:"Exam Paper Practice",icon:"🧾",href:"./parent.html#assessments"'),"parent navigation exposes the examination workspace");
 assert.ok(nav.includes("await window.C10StudentAuth.restoreSession()"),"navigation resolves the authoritative account class before rendering class-gated links");
 assert.ok(!nav.includes('classId||"10"'),"navigation never silently defaults an unknown student class to Class 10");
 assert.ok(studentAuth.includes('classId:String(row.classId||"")')&&studentAuth.includes('classId:String(value.classId||"")'),"student identity preserves an explicit class and leaves missing class unknown");
