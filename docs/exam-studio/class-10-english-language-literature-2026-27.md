@@ -125,6 +125,19 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - [ ] Obtain independent English educator sign-off, particularly on Q6/Q7 extract alignment and Q10/Q11 content quality.
 - [ ] Only after all gates pass: promote the blueprint, enable the profile, merge to main, deploy Pages and verify the live student profile.
 
+### 50-paper English certification — test added, CI pending
+
+- [x] Added a production-bank release simulation to the English regression suite. It promotes a copy of the draft blueprint to `ready` in memory only; the committed blueprint remains `draft`.
+- [x] The new test generates 50 complete English papers (11 questions, 80 marks each) and checks unique paper fingerprints.
+- [x] The five-paper lookback compares every parent, nested-part and alternative content ID; any fallback that relaxes the five-paper window fails the test.
+- [ ] Await the GitHub Actions run on the updated PR commit. A passing result is required before this gate can be marked complete.
+
+### Official 2026–27 CBSE references located
+
+- CBSE's Class X 2026–27 SQP/MS index lists **English (Language & Literature)** and **English (Communicative)** as separate courses: https://cbseacademic.nic.in/sqp_classx_2026-27.html
+- The corresponding official SQP and marking-scheme files are linked from that index. Direct PDF retrieval from this environment was unsuccessful, so prescribed-text and fine-grained marking-scheme reconciliation remain open pending readable document review.
+- The 2026–27 curriculum index separately lists English – Language and Literature and English Communicative for Class X: https://cbseacademic.nic.in/curriculum_2027.html
+
 ### Release controls
 
 - Student profile: `enabled: false`.
