@@ -88,6 +88,10 @@ const dashboard = fs.readFileSync("dashboard.html", "utf8");
 assert.ok(dashboard.includes('id="subjectLaunchCards"'), "dashboard uses class-aware subject launch cards");
 const dashboardScript = fs.readFileSync("js/dashboard-manager.js", "utf8");
 assert.ok(dashboardScript.includes('async function renderSubjectLaunches()'), "dashboard checks the logged-in class and bank inventory");
+assert.ok(dashboardScript.includes('? ["mathematics","mathematics-sof","english"]'), "Class 3 dashboard analytics includes the SOF IMO attempt ledger");
+const parentDashboard = fs.readFileSync("js/parent-dashboard.js", "utf8");
+assert.ok(parentDashboard.includes('String(c)==="3"?["mathematics","mathematics-sof","english"]'),
+  "parent subject history includes the Class 3 SOF IMO ledger");
 
 const context = { window: {} };
 context.globalThis = context;
