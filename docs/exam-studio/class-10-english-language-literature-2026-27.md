@@ -168,4 +168,4 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - PR: #39, open and draft.
 - Main branch: unchanged by this English work.
 - Pages deployment: not triggered by this draft PR.
-- The 220-candidate milestone completes the **slot-count requirement only**. It does not mean English is released or that 50 complete papers and five-paper all-format repeat protection have already passed.
+- The 220-candidate slot-count gate, 50-paper generation, five-paper all-format repeat protection, student-browser smoke and production paper/answer-booklet rendering now pass. English is still **not released**: official syllabus/PDF reconciliation, Q6/Q7 extract alignment, independent educator sign-off and saved-attempt restoration remain open.
