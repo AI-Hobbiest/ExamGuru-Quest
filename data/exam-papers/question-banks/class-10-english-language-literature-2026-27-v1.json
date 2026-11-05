@@ -21472,7 +21472,7 @@
     {
       "questionId": "ENG184-Q06-PROSE-01",
       "sectionId": "literature",
-      "chapterId": "first-flight-prose",
+      "chapterId": "footprints-without-feet",
       "topicTags": [
         "literature",
         "extract-based",
@@ -21482,34 +21482,34 @@
       "type": "case-based",
       "marks": 5,
       "prompt": "Read the adapted scene passage and answer its four text-specific questions.",
-      "stimulus": "Original paraphrased scene cue — A Letter to God: A farmer watches a storm destroy the crop on which his family depends. He asks for help with complete confidence. The post-office workers collect money for him, but the amount is smaller than he expects.",
+      "stimulus": "Original paraphrased scene cue — A Triumph of Surgery: Tricki becomes dangerously unwell after being given rich food and little exercise. Dr Herriot takes him away from the indulgent routine, gives him controlled meals and activity, and watches him recover without elaborate medical treatment.",
       "parts": [
         {
           "partId": "a",
           "questionId": "ENG184-Q06-PROSE-01-A",
-          "prompt": "Which central concern is brought into focus by the key event in A Letter to God?",
+          "prompt": "Which central concern is most clearly developed in the adapted scene from A Triumph of Surgery?",
           "marks": 1,
           "options": [
             {
+              "optionId": "D",
+              "text": "Genuine care requires choices that meet another person's needs, not simply repeated treats."
+            },
+            {
               "optionId": "A",
-              "text": "personal wealth is the only source of lasting happiness"
+              "text": "Luxury automatically proves affection."
             },
             {
               "optionId": "B",
-              "text": "competition matters more than cooperation"
+              "text": "Illness can be solved only through expensive treatment."
             },
             {
               "optionId": "C",
-              "text": "The episode contrasts spiritual hope with practical human kindness."
-            },
-            {
-              "optionId": "D",
-              "text": "the event has no wider consequence"
+              "text": "Avoiding responsibility is the best form of kindness."
             }
           ],
-          "correctOptionId": "C",
+          "correctOptionId": "A",
           "answerKey": {
-            "modelAnswer": "The episode contrasts spiritual hope with practical human kindness."
+            "modelAnswer": "Genuine care requires choices that meet another person's needs, not simply repeated treats."
           },
           "markingScheme": [
             {
@@ -21521,10 +21521,10 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q06-PROSE-01-B",
-          "prompt": "Which event in the A Letter to God cue most directly establishes the situation?",
+          "prompt": "Which detail in the A Triumph of Surgery cue most directly establishes the immediate situation?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "A Letter to God: A farmer watches a storm destroy the crop on which his family depends."
+            "modelAnswer": "Tricki's recovery follows a simpler routine with measured food and exercise."
           },
           "markingScheme": [
             {
@@ -21536,10 +21536,10 @@
         {
           "partId": "c",
           "questionId": "ENG184-Q06-PROSE-01-C",
-          "prompt": "What does the central character's response in A Letter to God reveal about Lencho's understanding of help and generosity?",
+          "prompt": "What does Dr Herriot's response reveal about responsible care rather than indulgence in A Triumph of Surgery?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "His faith remains firm, but his trust in people falters. The cue supports this reading through A Letter to God: A farmer watches a storm destroy the crop."
+            "modelAnswer": "Genuine care requires choices that meet another person's needs, not simply repeated treats."
           },
           "markingScheme": [
             {
@@ -21551,11 +21551,11 @@
         {
           "partId": "d",
           "questionId": "ENG184-Q06-PROSE-01-D",
-          "prompt": "Explain how the postmaster's generosity and Lencho's suspicion develops the central concern of A Letter to God.",
+          "prompt": "Explain how the scene's contrast between Mrs Pumphrey's indulgence and Dr Herriot's restraint develops a wider idea in A Triumph of Surgery. (40–50 words)",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "The cue begins with A Letter to God: A farmer watches a storm destroy the crop. His faith remains firm, but his trust in people falters. The episode contrasts spiritual hope with practical human kindness. This makes the passage meaningful beyond its immediate setting.",
-            "wordCount": 44
+            "modelAnswer": "Mrs Pumphrey expresses affection through rich food and constant attention, but these habits damage Tricki's health. Dr Herriot responds with measured meals, exercise and observation. The contrast shows that genuine care requires understanding another person's needs rather than satisfying every desire.",
+            "wordCount": 41
           },
           "markingScheme": [
             {
@@ -21692,14 +21692,14 @@
         }
       ],
       "source": {
-        "type": "original-paraphrased-text-context",
-        "reference": "First Flight prose/drama: A Letter to God; original scene description, not a textbook extract."
+        "type": "original-paraphrased-scene",
+        "reference": "Footprints Without Feet: A Triumph of Surgery; original scene description, not a textbook extract."
       }
     },
     {
       "questionId": "ENG184-Q06-PROSE-02",
       "sectionId": "literature",
-      "chapterId": "first-flight-prose",
+      "chapterId": "footprints-without-feet",
       "topicTags": [
         "literature",
         "extract-based",
@@ -21709,34 +21709,34 @@
       "type": "case-based",
       "marks": 5,
       "prompt": "Read the adapted scene passage and answer its four text-specific questions.",
-      "stimulus": "Original paraphrased scene cue — Nelson Mandela – Long Walk to Freedom: At a historic ceremony, a leader recalls the sacrifices that made a new political beginning possible. He describes courage as overcoming fear and argues that freedom must be shared by all.",
+      "stimulus": "Original paraphrased scene cue — The Thief's Story: After stealing Anil's money, Hari walks through the rain and considers leaving. He remembers Anil's trust and the possibility of learning to read and write, then returns quietly and replaces the notes before morning.",
       "parts": [
         {
           "partId": "a",
           "questionId": "ENG184-Q06-PROSE-02-A",
-          "prompt": "Which central concern is brought into focus by the key event in Nelson Mandela – Long Walk to Freedom?",
+          "prompt": "Which central concern is most clearly developed in the adapted scene from The Thief's Story?",
           "marks": 1,
           "options": [
             {
               "optionId": "A",
-              "text": "personal wealth is the only source of lasting happiness"
-            },
-            {
-              "optionId": "B",
-              "text": "competition matters more than cooperation"
-            },
-            {
-              "optionId": "C",
-              "text": "the event has no wider consequence"
+              "text": "Wealth is the only reliable path to success."
             },
             {
               "optionId": "D",
-              "text": "Freedom is a collective achievement requiring courage and equality."
+              "text": "Trust and the chance to improve can awaken a person's conscience more effectively than punishment."
+            },
+            {
+              "optionId": "B",
+              "text": "A clever theft is admirable if it is not discovered."
+            },
+            {
+              "optionId": "C",
+              "text": "Education has no connection with personal choices."
             }
           ],
-          "correctOptionId": "D",
+          "correctOptionId": "B",
           "answerKey": {
-            "modelAnswer": "Freedom is a collective achievement requiring courage and equality."
+            "modelAnswer": "Trust and the chance to improve can awaken a person's conscience more effectively than punishment."
           },
           "markingScheme": [
             {
@@ -21748,10 +21748,10 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q06-PROSE-02-B",
-          "prompt": "Which event in the Nelson Mandela – Long Walk to Freedom cue most directly establishes the situation?",
+          "prompt": "Which detail in the The Thief's Story cue most directly establishes the immediate situation?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "Nelson Mandela – Long Walk to Freedom: At a historic ceremony, a leader recalls the sacrifices that made a new political beginning possible."
+            "modelAnswer": "Hari returns the stolen notes before Anil discovers the theft."
           },
           "markingScheme": [
             {
@@ -21763,10 +21763,10 @@
         {
           "partId": "c",
           "questionId": "ENG184-Q06-PROSE-02-C",
-          "prompt": "What does the central character's response in Nelson Mandela – Long Walk to Freedom reveal about the meaning of freedom and responsibility?",
+          "prompt": "What does Hari Singh's response reveal about trust and moral change in The Thief's Story?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "Mandela expresses humility and responsibility rather than personal triumph. The cue supports this reading through Nelson Mandela – Long Walk to Freedom: At a historic ceremony, a."
+            "modelAnswer": "Trust and the chance to improve can awaken a person's conscience more effectively than punishment."
           },
           "markingScheme": [
             {
@@ -21778,10 +21778,10 @@
         {
           "partId": "d",
           "questionId": "ENG184-Q06-PROSE-02-D",
-          "prompt": "Explain how past oppression and the promise of equal citizenship develops the central concern of Nelson Mandela – Long Walk to Freedom.",
+          "prompt": "Explain how the scene's contrast between the temptation of easy money and the value of Anil's trust develops a wider idea in The Thief's Story. (40–50 words)",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "The cue begins with Nelson Mandela – Long Walk to Freedom: At a historic ceremony, a. Mandela expresses humility and responsibility rather than personal triumph. Freedom is a collective achievement requiring courage and equality. This makes the passage meaningful beyond its immediate setting.",
+            "modelAnswer": "Hari initially sees Anil as an easy target, but the theft makes him recognise what he may lose: trust, education and a chance to change. Returning the money marks a moral turning point. The scene suggests that patient faith can encourage responsibility.",
             "wordCount": 42
           },
           "markingScheme": [
@@ -21919,14 +21919,14 @@
         }
       ],
       "source": {
-        "type": "original-paraphrased-text-context",
-        "reference": "First Flight prose/drama: Nelson Mandela – Long Walk to Freedom; original scene description, not a textbook extract."
+        "type": "original-paraphrased-scene",
+        "reference": "Footprints Without Feet: The Thief's Story; original scene description, not a textbook extract."
       }
     },
     {
       "questionId": "ENG184-Q06-PROSE-03",
       "sectionId": "literature",
-      "chapterId": "first-flight-prose",
+      "chapterId": "footprints-without-feet",
       "topicTags": [
         "literature",
         "extract-based",
@@ -21936,34 +21936,34 @@
       "type": "case-based",
       "marks": 5,
       "prompt": "Read the adapted scene passage and answer its four text-specific questions.",
-      "stimulus": "Original paraphrased scene cue — His First Flight: A young seabird hesitates on a ledge. Hunger and family encouragement eventually push it forward. Once it moves, its wings support it and the frightening act becomes possible.",
+      "stimulus": "Original paraphrased scene cue — The Midnight Visitor: A dangerous intruder confronts Ausable in his hotel room. Ausable calmly invents a story about a balcony outside the window and an approaching police visit. Max believes the invented danger and jumps when a knock is heard.",
       "parts": [
         {
           "partId": "a",
           "questionId": "ENG184-Q06-PROSE-03-A",
-          "prompt": "Which central concern is brought into focus by the key event in His First Flight?",
+          "prompt": "Which central concern is most clearly developed in the adapted scene from The Midnight Visitor?",
           "marks": 1,
           "options": [
             {
               "optionId": "A",
-              "text": "Courage can grow through action, practice and encouragement."
+              "text": "Physical strength is always more useful than planning."
             },
             {
               "optionId": "B",
-              "text": "personal wealth is the only source of lasting happiness"
-            },
-            {
-              "optionId": "C",
-              "text": "competition matters more than cooperation"
+              "text": "Ausable succeeds because Max understands the room better."
             },
             {
               "optionId": "D",
-              "text": "the event has no wider consequence"
+              "text": "Intelligence and composure can overcome physical danger when a person understands an opponent's expectations."
+            },
+            {
+              "optionId": "C",
+              "text": "The incident proves that fear is always irrational."
             }
           ],
-          "correctOptionId": "A",
+          "correctOptionId": "C",
           "answerKey": {
-            "modelAnswer": "Courage can grow through action, practice and encouragement."
+            "modelAnswer": "Intelligence and composure can overcome physical danger when a person understands an opponent's expectations."
           },
           "markingScheme": [
             {
@@ -21975,10 +21975,10 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q06-PROSE-03-B",
-          "prompt": "Which event in the His First Flight cue most directly establishes the situation?",
+          "prompt": "Which detail in the The Midnight Visitor cue most directly establishes the immediate situation?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "His First Flight: A young seabird hesitates on a ledge."
+            "modelAnswer": "Ausable invents a balcony and uses the knock at the door to make Max panic."
           },
           "markingScheme": [
             {
@@ -21990,10 +21990,10 @@
         {
           "partId": "c",
           "questionId": "ENG184-Q06-PROSE-03-C",
-          "prompt": "What does the central character's response in His First Flight reveal about the seagull's changing response to fear?",
+          "prompt": "What does Ausable's response reveal about presence of mind and deception in The Midnight Visitor?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "Fear changes into confidence when he discovers his ability to fly. The cue supports this reading through His First Flight: A young seabird hesitates on a ledge.."
+            "modelAnswer": "Intelligence and composure can overcome physical danger when a person understands an opponent's expectations."
           },
           "markingScheme": [
             {
@@ -22005,11 +22005,11 @@
         {
           "partId": "d",
           "questionId": "ENG184-Q06-PROSE-03-D",
-          "prompt": "Explain how the seagull's earlier hesitation and the freedom he discovers in flight develops the central concern of His First Flight.",
+          "prompt": "Explain how the scene's contrast between Max's armed confidence and Ausable's calm improvisation develops a wider idea in The Midnight Visitor. (40–50 words)",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "The cue begins with His First Flight: A young seabird hesitates on a ledge.. Fear changes into confidence when he discovers his ability to fly. Courage can grow through action, practice and encouragement. This makes the passage meaningful beyond its immediate setting.",
-            "wordCount": 42
+            "modelAnswer": "Max relies on his weapon and assumes he controls the situation. Ausable stays calm, invents a believable balcony and uses the knock to complete the deception. The contrast shows how quick thinking and knowledge of an opponent's expectations can defeat apparent physical power.",
+            "wordCount": 43
           },
           "markingScheme": [
             {
@@ -22146,14 +22146,14 @@
         }
       ],
       "source": {
-        "type": "original-paraphrased-text-context",
-        "reference": "First Flight prose/drama: His First Flight; original scene description, not a textbook extract."
+        "type": "original-paraphrased-scene",
+        "reference": "Footprints Without Feet: The Midnight Visitor; original scene description, not a textbook extract."
       }
     },
     {
       "questionId": "ENG184-Q06-PROSE-04",
       "sectionId": "literature",
-      "chapterId": "first-flight-prose",
+      "chapterId": "footprints-without-feet",
       "topicTags": [
         "literature",
         "extract-based",
@@ -22163,34 +22163,34 @@
       "type": "case-based",
       "marks": 5,
       "prompt": "Read the adapted scene passage and answer its four text-specific questions.",
-      "stimulus": "Original paraphrased scene cue — The Black Aeroplane: A pilot caught in a storm sees an unfamiliar aircraft that appears to guide him towards safety. After landing, he learns that the control tower recorded no other aircraft.",
+      "stimulus": "Original paraphrased scene cue — A Question of Trust: Horace Danby enters a house believing it is empty and begins opening a safe. A young woman appears, claims to be the owner and persuades him to remove his gloves and open the safe for her, leaving evidence behind.",
       "parts": [
         {
           "partId": "a",
           "questionId": "ENG184-Q06-PROSE-04-A",
-          "prompt": "Which central concern is brought into focus by the key event in The Black Aeroplane?",
+          "prompt": "Which central concern is most clearly developed in the adapted scene from A Question of Trust?",
           "marks": 1,
           "options": [
             {
               "optionId": "A",
-              "text": "personal wealth is the only source of lasting happiness"
+              "text": "Crime becomes harmless when the target is wealthy."
             },
             {
               "optionId": "B",
-              "text": "Conflicting evidence and uncertainty create the story's suspense."
+              "text": "The safest plan is to trust every confident stranger."
             },
             {
               "optionId": "C",
-              "text": "competition matters more than cooperation"
+              "text": "Horace is caught because he refuses to enter the house."
             },
             {
               "optionId": "D",
-              "text": "the event has no wider consequence"
+              "text": "A person who prides himself on careful planning can still be deceived through vanity and misplaced confidence."
             }
           ],
-          "correctOptionId": "B",
+          "correctOptionId": "D",
           "answerKey": {
-            "modelAnswer": "Conflicting evidence and uncertainty create the story's suspense."
+            "modelAnswer": "A person who prides himself on careful planning can still be deceived through vanity and misplaced confidence."
           },
           "markingScheme": [
             {
@@ -22202,10 +22202,10 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q06-PROSE-04-B",
-          "prompt": "Which event in the The Black Aeroplane cue most directly establishes the situation?",
+          "prompt": "Which detail in the A Question of Trust cue most directly establishes the immediate situation?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "The Black Aeroplane: A pilot caught in a storm sees an unfamiliar aircraft that appears to guide him towards safety."
+            "modelAnswer": "Horace removes his gloves and opens the safe after believing the woman is its owner."
           },
           "markingScheme": [
             {
@@ -22217,10 +22217,10 @@
         {
           "partId": "c",
           "questionId": "ENG184-Q06-PROSE-04-C",
-          "prompt": "What does the central character's response in The Black Aeroplane reveal about the pilot's choices under uncertainty?",
+          "prompt": "What does Horace Danby's response reveal about overconfidence and misplaced trust in A Question of Trust?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "He combines fear with trust in the mysterious guide. The cue supports this reading through The Black Aeroplane: A pilot caught in a storm sees an unfamiliar."
+            "modelAnswer": "A person who prides himself on careful planning can still be deceived through vanity and misplaced confidence."
           },
           "markingScheme": [
             {
@@ -22232,11 +22232,11 @@
         {
           "partId": "d",
           "questionId": "ENG184-Q06-PROSE-04-D",
-          "prompt": "Explain how the pilot's experience and the control tower's evidence develops the central concern of The Black Aeroplane.",
+          "prompt": "Explain how the scene's contrast between Horace's careful preparation and his unquestioning trust in the stranger develops a wider idea in A Question of Trust. (40–50 words)",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "The cue begins with The Black Aeroplane: A pilot caught in a storm sees an unfamiliar. He combines fear with trust in the mysterious guide. Conflicting evidence and uncertainty create the story's suspense. This makes the passage meaningful beyond its immediate setting.",
-            "wordCount": 42
+            "modelAnswer": "Horace plans the burglary carefully, yet his confidence makes him accept the stranger's story without checking it. By removing his gloves and opening the safe, he leaves evidence and loses control. The scene exposes the danger of vanity and misplaced trust.",
+            "wordCount": 41
           },
           "markingScheme": [
             {
@@ -22373,14 +22373,14 @@
         }
       ],
       "source": {
-        "type": "original-paraphrased-text-context",
-        "reference": "First Flight prose/drama: The Black Aeroplane; original scene description, not a textbook extract."
+        "type": "original-paraphrased-scene",
+        "reference": "Footprints Without Feet: A Question of Trust; original scene description, not a textbook extract."
       }
     },
     {
       "questionId": "ENG184-Q06-PROSE-05",
       "sectionId": "literature",
-      "chapterId": "first-flight-prose",
+      "chapterId": "footprints-without-feet",
       "topicTags": [
         "literature",
         "extract-based",
@@ -22390,34 +22390,34 @@
       "type": "case-based",
       "marks": 5,
       "prompt": "Read the adapted scene passage and answer its four text-specific questions.",
-      "stimulus": "Original paraphrased scene cue — From the Diary of Anne Frank: A student writes privately because she wants a companion who will listen. In class, a teacher responds to her talkative nature with a writing assignment that becomes a playful exercise.",
+      "stimulus": "Original paraphrased scene cue — Footprints Without Feet: Griffin uses his scientific discovery to become invisible, but his lack of clothing and shelter makes him vulnerable. He enters a large store for warmth and food, then leaves evidence of his presence through the disorder he creates.",
       "parts": [
         {
           "partId": "a",
           "questionId": "ENG184-Q06-PROSE-05-A",
-          "prompt": "Which central concern is brought into focus by the key event in From the Diary of Anne Frank?",
+          "prompt": "Which central concern is most clearly developed in the adapted scene from Footprints Without Feet?",
           "marks": 1,
           "options": [
             {
+              "optionId": "D",
+              "text": "Scientific ability becomes dangerous when knowledge is used without ethical judgement or concern for others."
+            },
+            {
               "optionId": "A",
-              "text": "personal wealth is the only source of lasting happiness"
+              "text": "Invisibility automatically makes a person powerful and safe."
             },
             {
               "optionId": "B",
-              "text": "competition matters more than cooperation"
+              "text": "Theft is justified whenever a scientist is uncomfortable."
             },
             {
               "optionId": "C",
-              "text": "Writing helps her express identity and understand relationships."
-            },
-            {
-              "optionId": "D",
-              "text": "the event has no wider consequence"
+              "text": "Society should admire results without considering conduct."
             }
           ],
-          "correctOptionId": "C",
+          "correctOptionId": "A",
           "answerKey": {
-            "modelAnswer": "Writing helps her express identity and understand relationships."
+            "modelAnswer": "Scientific ability becomes dangerous when knowledge is used without ethical judgement or concern for others."
           },
           "markingScheme": [
             {
@@ -22429,10 +22429,10 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q06-PROSE-05-B",
-          "prompt": "Which event in the From the Diary of Anne Frank cue most directly establishes the situation?",
+          "prompt": "Which detail in the Footprints Without Feet cue most directly establishes the immediate situation?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "From the Diary of Anne Frank: A student writes privately because she wants a companion who will listen."
+            "modelAnswer": "Griffin's need for warmth and food leads him into the store and exposes his presence."
           },
           "markingScheme": [
             {
@@ -22444,10 +22444,10 @@
         {
           "partId": "c",
           "questionId": "ENG184-Q06-PROSE-05-C",
-          "prompt": "What does the central character's response in From the Diary of Anne Frank reveal about Anne's need for self-expression and friendship?",
+          "prompt": "What does Griffin's response reveal about science without responsibility in Footprints Without Feet?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "Anne is observant, candid and imaginative in her responses. The cue supports this reading through From the Diary of Anne Frank: A student writes privately because she."
+            "modelAnswer": "Scientific ability becomes dangerous when knowledge is used without ethical judgement or concern for others."
           },
           "markingScheme": [
             {
@@ -22459,11 +22459,11 @@
         {
           "partId": "d",
           "questionId": "ENG184-Q06-PROSE-05-D",
-          "prompt": "Explain how adult correction and Anne's lively adolescent voice develops the central concern of From the Diary of Anne Frank.",
+          "prompt": "Explain how the scene's contrast between Griffin's extraordinary discovery and his irresponsible choices develops a wider idea in Footprints Without Feet. (40–50 words)",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "The cue begins with From the Diary of Anne Frank: A student writes privately because she. Anne is observant, candid and imaginative in her responses. Writing helps her express identity and understand relationships. This makes the passage meaningful beyond its immediate setting.",
-            "wordCount": 42
+            "modelAnswer": "Griffin's discovery gives him an unusual power, but he uses it for theft and intimidation instead of constructive work. His actions create harm and reveal his lack of responsibility. The scene suggests that scientific achievement must be guided by ethics and concern for others.",
+            "wordCount": 44
           },
           "markingScheme": [
             {
@@ -22600,14 +22600,14 @@
         }
       ],
       "source": {
-        "type": "original-paraphrased-text-context",
-        "reference": "First Flight prose/drama: From the Diary of Anne Frank; original scene description, not a textbook extract."
+        "type": "original-paraphrased-scene",
+        "reference": "Footprints Without Feet: Footprints Without Feet; original scene description, not a textbook extract."
       }
     },
     {
       "questionId": "ENG184-Q06-PROSE-06",
       "sectionId": "literature",
-      "chapterId": "first-flight-prose",
+      "chapterId": "footprints-without-feet",
       "topicTags": [
         "literature",
         "extract-based",
@@ -22617,34 +22617,34 @@
       "type": "case-based",
       "marks": 5,
       "prompt": "Read the adapted scene passage and answer its four text-specific questions.",
-      "stimulus": "Original paraphrased scene cue — A Baker from Goa: A narrator recalls the village baker whose arrival was part of daily life. Bread was connected with family routines and festivals, so the baker represented more than a trade.",
+      "stimulus": "Original paraphrased scene cue — The Making of a Scientist: Richard Ebright begins by collecting butterflies, but his curiosity grows into careful observation and experiments. Encouragement, scientific reading and repeated investigation help him move from collecting specimens to asking questions about how living things develop.",
       "parts": [
         {
           "partId": "a",
           "questionId": "ENG184-Q06-PROSE-06-A",
-          "prompt": "What interpretation best captures the significance of the cue in A Baker from Goa?",
+          "prompt": "Which central concern is most clearly developed in the adapted scene from The Making of a Scientist?",
           "marks": 1,
           "options": [
             {
               "optionId": "A",
-              "text": "success depends entirely on social status"
-            },
-            {
-              "optionId": "B",
-              "text": "the character avoids every difficult choice"
-            },
-            {
-              "optionId": "C",
-              "text": "the scene celebrates material possessions"
+              "text": "Natural talent makes practice unnecessary."
             },
             {
               "optionId": "D",
-              "text": "Traditional work preserves community memory and shared identity."
+              "text": "Curiosity becomes meaningful achievement when it is joined with patience, evidence and disciplined effort."
+            },
+            {
+              "optionId": "B",
+              "text": "Competition matters more than careful investigation."
+            },
+            {
+              "optionId": "C",
+              "text": "Collecting objects is the final purpose of science."
             }
           ],
-          "correctOptionId": "D",
+          "correctOptionId": "B",
           "answerKey": {
-            "modelAnswer": "Traditional work preserves community memory and shared identity."
+            "modelAnswer": "Curiosity becomes meaningful achievement when it is joined with patience, evidence and disciplined effort."
           },
           "markingScheme": [
             {
@@ -22656,10 +22656,10 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q06-PROSE-06-B",
-          "prompt": "Identify the detail in the A Baker from Goa passage that signals the key change.",
+          "prompt": "Which detail in the The Making of a Scientist cue most directly establishes the immediate situation?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "A Baker from Goa: A narrator recalls the village baker whose arrival was part of daily life."
+            "modelAnswer": "Richard moves from collecting butterflies to designing investigations and experiments."
           },
           "markingScheme": [
             {
@@ -22671,10 +22671,10 @@
         {
           "partId": "c",
           "questionId": "ENG184-Q06-PROSE-06-C",
-          "prompt": "How does the speaker or character react to the situation in A Baker from Goa?",
+          "prompt": "What does Richard Ebright's response reveal about curiosity and disciplined learning in The Making of a Scientist?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "The narrator recalls the baker with affection and cultural nostalgia. The cue supports this reading through A Baker from Goa: A narrator recalls the village baker whose arrival."
+            "modelAnswer": "Curiosity becomes meaningful achievement when it is joined with patience, evidence and disciplined effort."
           },
           "markingScheme": [
             {
@@ -22686,11 +22686,11 @@
         {
           "partId": "d",
           "questionId": "ENG184-Q06-PROSE-06-D",
-          "prompt": "Discuss how the event in A Baker from Goa connects the immediate scene with a wider idea.",
+          "prompt": "Explain how the scene's contrast between early collecting and later evidence-based investigation develops a wider idea in The Making of a Scientist. (40–50 words)",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "The cue begins with A Baker from Goa: A narrator recalls the village baker whose arrival. The narrator recalls the baker with affection and cultural nostalgia. Traditional work preserves community memory and shared identity. This makes the passage meaningful beyond its immediate setting.",
-            "wordCount": 43
+            "modelAnswer": "Richard's early interest in butterflies gives him a starting point, but he progresses by asking questions and testing ideas. Reading, guidance and repeated experiments turn curiosity into disciplined inquiry. The scene shows that scientific achievement grows through patience, evidence and sustained effort.",
+            "wordCount": 42
           },
           "markingScheme": [
             {
@@ -22827,14 +22827,14 @@
         }
       ],
       "source": {
-        "type": "original-paraphrased-text-context",
-        "reference": "First Flight prose/drama: A Baker from Goa; original scene description, not a textbook extract."
+        "type": "original-paraphrased-scene",
+        "reference": "Footprints Without Feet: The Making of a Scientist; original scene description, not a textbook extract."
       }
     },
     {
       "questionId": "ENG184-Q06-PROSE-07",
       "sectionId": "literature",
-      "chapterId": "first-flight-prose",
+      "chapterId": "footprints-without-feet",
       "topicTags": [
         "literature",
         "extract-based",
@@ -22844,34 +22844,34 @@
       "type": "case-based",
       "marks": 5,
       "prompt": "Read the adapted scene passage and answer its four text-specific questions.",
-      "stimulus": "Original paraphrased scene cue — Coorg: A travel account presents hills, forests, coffee estates and local traditions. It connects scenery with wildlife, history and activities, showing that the region has several forms of appeal.",
+      "stimulus": "Original paraphrased scene cue — The Necklace: Matilda borrows a necklace for a formal evening and enjoys the admiration it brings. After discovering that it is missing, she and her husband replace it with an expensive one, then spend years repaying the debt before learning the original was imitation jewellery.",
       "parts": [
         {
           "partId": "a",
           "questionId": "ENG184-Q06-PROSE-07-A",
-          "prompt": "What interpretation best captures the significance of the cue in Coorg?",
+          "prompt": "Which central concern is most clearly developed in the adapted scene from The Necklace?",
           "marks": 1,
           "options": [
             {
               "optionId": "A",
-              "text": "Landscape and culture together shape a region's identity."
+              "text": "Social status is more important than honesty."
             },
             {
               "optionId": "B",
-              "text": "success depends entirely on social status"
-            },
-            {
-              "optionId": "C",
-              "text": "the character avoids every difficult choice"
+              "text": "A costly gift always guarantees lasting happiness."
             },
             {
               "optionId": "D",
-              "text": "the scene celebrates material possessions"
+              "text": "The desire to appear wealthier than one is can create suffering far greater than the original problem."
+            },
+            {
+              "optionId": "C",
+              "text": "Hard work is pointless when luck changes."
             }
           ],
-          "correctOptionId": "A",
+          "correctOptionId": "C",
           "answerKey": {
-            "modelAnswer": "Landscape and culture together shape a region's identity."
+            "modelAnswer": "The desire to appear wealthier than one is can create suffering far greater than the original problem."
           },
           "markingScheme": [
             {
@@ -22883,10 +22883,10 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q06-PROSE-07-B",
-          "prompt": "Identify the detail in the Coorg passage that signals the key change.",
+          "prompt": "Which detail in the The Necklace cue most directly establishes the immediate situation?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "Coorg: A travel account presents hills, forests, coffee estates and local traditions."
+            "modelAnswer": "Matilda and her husband spend years repaying the cost of a replacement necklace."
           },
           "markingScheme": [
             {
@@ -22898,10 +22898,10 @@
         {
           "partId": "c",
           "questionId": "ENG184-Q06-PROSE-07-C",
-          "prompt": "How does the speaker or character react to the situation in Coorg?",
+          "prompt": "What does Matilda's response reveal about appearance and consequences in The Necklace?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "The narrator's tone is admiring and warmly inviting. The cue supports this reading through Coorg: A travel account presents hills, forests, coffee estates and local traditions.."
+            "modelAnswer": "The desire to appear wealthier than one is can create suffering far greater than the original problem."
           },
           "markingScheme": [
             {
@@ -22913,11 +22913,11 @@
         {
           "partId": "d",
           "questionId": "ENG184-Q06-PROSE-07-D",
-          "prompt": "Discuss how the event in Coorg connects the immediate scene with a wider idea.",
+          "prompt": "Explain how the scene's contrast between Matilda's brief display of status and the long burden of repayment develops a wider idea in The Necklace. (40–50 words)",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "The cue begins with Coorg: A travel account presents hills, forests, coffee estates and local traditions.. The narrator's tone is admiring and warmly inviting. Landscape and culture together shape a region's identity. This makes the passage meaningful beyond its immediate setting.",
-            "wordCount": 41
+            "modelAnswer": "Matilda's wish to appear wealthy brings her temporary admiration, but losing the necklace leads to years of hardship. The replacement debt is especially tragic because the original was imitation jewellery. The scene warns against vanity and judging happiness through appearances.",
+            "wordCount": 40
           },
           "markingScheme": [
             {
@@ -23054,14 +23054,14 @@
         }
       ],
       "source": {
-        "type": "original-paraphrased-text-context",
-        "reference": "First Flight prose/drama: Coorg; original scene description, not a textbook extract."
+        "type": "original-paraphrased-scene",
+        "reference": "Footprints Without Feet: The Necklace; original scene description, not a textbook extract."
       }
     },
     {
       "questionId": "ENG184-Q06-PROSE-08",
       "sectionId": "literature",
-      "chapterId": "first-flight-prose",
+      "chapterId": "footprints-without-feet",
       "topicTags": [
         "literature",
         "extract-based",
@@ -23071,34 +23071,34 @@
       "type": "case-based",
       "marks": 5,
       "prompt": "Read the adapted scene passage and answer its four text-specific questions.",
-      "stimulus": "Original paraphrased scene cue — Tea from Assam: Two friends travel through tea country and discuss the plant's history while looking at the estates. The journey joins an everyday drink with its agricultural setting and stories of cultivation.",
+      "stimulus": "Original paraphrased scene cue — Bholi: At school, Bholi struggles to speak because she expects ridicule. Her teacher responds with patience and encouragement, helping her gain confidence. Later, when a proposed marriage exposes the groom's greed and disrespect, Bholi refuses to accept the injustice.",
       "parts": [
         {
           "partId": "a",
           "questionId": "ENG184-Q06-PROSE-08-A",
-          "prompt": "What interpretation best captures the significance of the cue in Tea from Assam?",
+          "prompt": "Which central concern is most clearly developed in the adapted scene from Bholi?",
           "marks": 1,
           "options": [
             {
               "optionId": "A",
-              "text": "success depends entirely on social status"
+              "text": "Silence is the only way to preserve family honour."
             },
             {
               "optionId": "B",
-              "text": "Everyday habits connect with history, geography and labour."
+              "text": "A person's worth depends on appearance and speech."
             },
             {
               "optionId": "C",
-              "text": "the character avoids every difficult choice"
+              "text": "Obedience is more important than justice."
             },
             {
               "optionId": "D",
-              "text": "the scene celebrates material possessions"
+              "text": "Education and compassionate support can help a person recognise dignity and resist exploitation."
             }
           ],
-          "correctOptionId": "B",
+          "correctOptionId": "D",
           "answerKey": {
-            "modelAnswer": "Everyday habits connect with history, geography and labour."
+            "modelAnswer": "Education and compassionate support can help a person recognise dignity and resist exploitation."
           },
           "markingScheme": [
             {
@@ -23110,10 +23110,10 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q06-PROSE-08-B",
-          "prompt": "Identify the detail in the Tea from Assam passage that signals the key change.",
+          "prompt": "Which detail in the Bholi cue most directly establishes the immediate situation?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "Tea from Assam: Two friends travel through tea country and discuss the plant's history while looking at the estates."
+            "modelAnswer": "Bholi refuses the marriage after the groom demands money and humiliates her family."
           },
           "markingScheme": [
             {
@@ -23125,10 +23125,10 @@
         {
           "partId": "c",
           "questionId": "ENG184-Q06-PROSE-08-C",
-          "prompt": "How does the speaker or character react to the situation in Tea from Assam?",
+          "prompt": "What does Bholi's response reveal about education and self-respect in Bholi?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "His curiosity turns an ordinary journey into an opportunity to learn. The cue supports this reading through Tea from Assam: Two friends travel through tea country and discuss the."
+            "modelAnswer": "Education and compassionate support can help a person recognise dignity and resist exploitation."
           },
           "markingScheme": [
             {
@@ -23140,11 +23140,11 @@
         {
           "partId": "d",
           "questionId": "ENG184-Q06-PROSE-08-D",
-          "prompt": "Discuss how the event in Tea from Assam connects the immediate scene with a wider idea.",
+          "prompt": "Explain how the scene's contrast between Bholi's early fear and her later confident refusal develops a wider idea in Bholi. (40–50 words)",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "The cue begins with Tea from Assam: Two friends travel through tea country and discuss the. His curiosity turns an ordinary journey into an opportunity to learn. Everyday habits connect with history, geography and labour. This makes the passage meaningful beyond its immediate setting.",
-            "wordCount": 44
+            "modelAnswer": "Bholi begins as a frightened child who expects others to mock her, but education and her teacher's kindness build confidence. When the groom behaves greedily, she refuses the marriage. Her decision shows that learning can create self-respect and the courage to resist injustice.",
+            "wordCount": 43
           },
           "markingScheme": [
             {
@@ -23281,14 +23281,14 @@
         }
       ],
       "source": {
-        "type": "original-paraphrased-text-context",
-        "reference": "First Flight prose/drama: Tea from Assam; original scene description, not a textbook extract."
+        "type": "original-paraphrased-scene",
+        "reference": "Footprints Without Feet: Bholi; original scene description, not a textbook extract."
       }
     },
     {
       "questionId": "ENG184-Q06-PROSE-09",
       "sectionId": "literature",
-      "chapterId": "first-flight-prose",
+      "chapterId": "footprints-without-feet",
       "topicTags": [
         "literature",
         "extract-based",
@@ -23298,34 +23298,34 @@
       "type": "case-based",
       "marks": 5,
       "prompt": "Read the adapted scene passage and answer its four text-specific questions.",
-      "stimulus": "Original paraphrased scene cue — Madam Rides the Bus: A curious child plans a bus journey by observing the schedule and saving her fare. She enjoys travelling independently, but an unexpected sight on the return journey changes her mood.",
+      "stimulus": "Original paraphrased scene cue — The Book That Saved the Earth: Think-Tank interprets ordinary nursery rhymes as evidence of Earth's military strength. His officers become increasingly alarmed, and the Martian mission withdraws rather than investigate. A simple book is later recognised as the object that prevented an invasion.",
       "parts": [
         {
           "partId": "a",
           "questionId": "ENG184-Q06-PROSE-09-A",
-          "prompt": "What interpretation best captures the significance of the cue in Madam Rides the Bus?",
+          "prompt": "Which central concern is most clearly developed in the adapted scene from The Book That Saved the Earth?",
           "marks": 1,
           "options": [
             {
+              "optionId": "D",
+              "text": "Arrogance and poor judgement can turn ordinary information into imagined threats and lead to foolish decisions."
+            },
+            {
               "optionId": "A",
-              "text": "success depends entirely on social status"
+              "text": "Military force is the only way to resolve uncertainty."
             },
             {
               "optionId": "B",
-              "text": "the character avoids every difficult choice"
+              "text": "Books are dangerous because they contain secret weapons."
             },
             {
               "optionId": "C",
-              "text": "Independence grows alongside awareness of life's unpredictability."
-            },
-            {
-              "optionId": "D",
-              "text": "the scene celebrates material possessions"
+              "text": "A leader should discourage questions from subordinates."
             }
           ],
-          "correctOptionId": "C",
+          "correctOptionId": "A",
           "answerKey": {
-            "modelAnswer": "Independence grows alongside awareness of life's unpredictability."
+            "modelAnswer": "Arrogance and poor judgement can turn ordinary information into imagined threats and lead to foolish decisions."
           },
           "markingScheme": [
             {
@@ -23337,10 +23337,10 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q06-PROSE-09-B",
-          "prompt": "Identify the detail in the Madam Rides the Bus passage that signals the key change.",
+          "prompt": "Which detail in the The Book That Saved the Earth cue most directly establishes the immediate situation?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "Madam Rides the Bus: A curious child plans a bus journey by observing the schedule and saving her fare."
+            "modelAnswer": "Think-Tank mistakes nursery rhymes for threatening information about Earth's power."
           },
           "markingScheme": [
             {
@@ -23352,10 +23352,10 @@
         {
           "partId": "c",
           "questionId": "ENG184-Q06-PROSE-09-C",
-          "prompt": "How does the speaker or character react to the situation in Madam Rides the Bus?",
+          "prompt": "What does Think-Tank's response reveal about misinterpretation and arrogance in The Book That Saved the Earth?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "She is confident and curious, but the return journey unsettles her. The cue supports this reading through Madam Rides the Bus: A curious child plans a bus journey by."
+            "modelAnswer": "Arrogance and poor judgement can turn ordinary information into imagined threats and lead to foolish decisions."
           },
           "markingScheme": [
             {
@@ -23367,11 +23367,11 @@
         {
           "partId": "d",
           "questionId": "ENG184-Q06-PROSE-09-D",
-          "prompt": "Discuss how the event in Madam Rides the Bus connects the immediate scene with a wider idea.",
+          "prompt": "Explain how the scene's contrast between Think-Tank's grand confidence and the absurdity of his interpretations develops a wider idea in The Book That Saved the Earth. (40–50 words)",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "The cue begins with Madam Rides the Bus: A curious child plans a bus journey by. She is confident and curious, but the return journey unsettles her. Independence grows alongside awareness of life's unpredictability. This makes the passage meaningful beyond its immediate setting.",
-            "wordCount": 43
+            "modelAnswer": "Think-Tank treats familiar nursery rhymes as secret military messages because he assumes his guesses must be correct. His officers' fear grows from this poor reasoning, and the mission retreats. The scene satirises arrogance and shows why leaders need evidence and humility.",
+            "wordCount": 41
           },
           "markingScheme": [
             {
@@ -23508,14 +23508,14 @@
         }
       ],
       "source": {
-        "type": "original-paraphrased-text-context",
-        "reference": "First Flight prose/drama: Madam Rides the Bus; original scene description, not a textbook extract."
+        "type": "original-paraphrased-scene",
+        "reference": "Footprints Without Feet: The Book That Saved the Earth; original scene description, not a textbook extract."
       }
     },
     {
       "questionId": "ENG184-Q06-PROSE-10",
       "sectionId": "literature",
-      "chapterId": "first-flight-prose",
+      "chapterId": "footprints-without-feet",
       "topicTags": [
         "literature",
         "extract-based",
@@ -23525,34 +23525,34 @@
       "type": "case-based",
       "marks": 5,
       "prompt": "Read the adapted scene passage and answer its four text-specific questions.",
-      "stimulus": "Original paraphrased scene cue — The Sermon at Benares: A grieving mother seeks a remedy for her dead child. A teacher asks her to find a household untouched by death; visiting homes teaches her that loss is shared by all families.",
+      "stimulus": "Original paraphrased scene cue — A Triumph of Surgery: When Tricki is taken to the veterinary hospital, he initially refuses food and appears weak. Dr Herriot avoids unnecessary treatment, lets him join the other dogs and restores a routine of exercise and simple meals until his health returns.",
       "parts": [
         {
           "partId": "a",
           "questionId": "ENG184-Q06-PROSE-10-A",
-          "prompt": "What interpretation best captures the significance of the cue in The Sermon at Benares?",
+          "prompt": "Which central concern is most clearly developed in the adapted scene from A Triumph of Surgery?",
           "marks": 1,
           "options": [
             {
               "optionId": "A",
-              "text": "success depends entirely on social status"
-            },
-            {
-              "optionId": "B",
-              "text": "the character avoids every difficult choice"
-            },
-            {
-              "optionId": "C",
-              "text": "the scene celebrates material possessions"
+              "text": "A patient always needs elaborate medicines."
             },
             {
               "optionId": "D",
-              "text": "Death is universal, and wisdom can grow through experience."
+              "text": "Sound judgement often means choosing simple, appropriate care instead of dramatic intervention."
+            },
+            {
+              "optionId": "B",
+              "text": "Comfort should replace healthy routine."
+            },
+            {
+              "optionId": "C",
+              "text": "The owner should decide every medical treatment."
             }
           ],
-          "correctOptionId": "D",
+          "correctOptionId": "B",
           "answerKey": {
-            "modelAnswer": "Death is universal, and wisdom can grow through experience."
+            "modelAnswer": "Sound judgement often means choosing simple, appropriate care instead of dramatic intervention."
           },
           "markingScheme": [
             {
@@ -23564,10 +23564,10 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q06-PROSE-10-B",
-          "prompt": "Identify the detail in the The Sermon at Benares passage that signals the key change.",
+          "prompt": "Which detail in the A Triumph of Surgery cue most directly establishes the immediate situation?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "The Sermon at Benares: A grieving mother seeks a remedy for her dead child."
+            "modelAnswer": "Dr Herriot allows Tricki to exercise with other dogs and eat measured meals."
           },
           "markingScheme": [
             {
@@ -23579,10 +23579,10 @@
         {
           "partId": "c",
           "questionId": "ENG184-Q06-PROSE-10-C",
-          "prompt": "How does the speaker or character react to the situation in The Sermon at Benares?",
+          "prompt": "What does Dr Herriot's response reveal about practical judgement in A Triumph of Surgery?",
           "marks": 1,
           "answerKey": {
-            "modelAnswer": "Her grief gradually changes into understanding and acceptance. The cue supports this reading through The Sermon at Benares: A grieving mother seeks a remedy for her."
+            "modelAnswer": "Sound judgement often means choosing simple, appropriate care instead of dramatic intervention."
           },
           "markingScheme": [
             {
@@ -23594,10 +23594,10 @@
         {
           "partId": "d",
           "questionId": "ENG184-Q06-PROSE-10-D",
-          "prompt": "Discuss how the event in The Sermon at Benares connects the immediate scene with a wider idea.",
+          "prompt": "Explain how the scene's contrast between Mrs Pumphrey's anxious overprotection and the doctor's practical routine develops a wider idea in A Triumph of Surgery. (40–50 words)",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "The cue begins with The Sermon at Benares: A grieving mother seeks a remedy for her. Her grief gradually changes into understanding and acceptance. Death is universal, and wisdom can grow through experience. This makes the passage meaningful beyond its immediate setting.",
+            "modelAnswer": "Mrs Pumphrey believes constant treats and attention will protect Tricki, but they have weakened him. Dr Herriot restores health through ordinary food, exercise and companionship. The scene shows that good judgement may require restraint and a practical routine rather than elaborate treatment.",
             "wordCount": 42
           },
           "markingScheme": [
@@ -23735,8 +23735,8 @@
         }
       ],
       "source": {
-        "type": "original-paraphrased-text-context",
-        "reference": "First Flight prose/drama: The Sermon at Benares; original scene description, not a textbook extract."
+        "type": "original-paraphrased-scene",
+        "reference": "Footprints Without Feet: A Triumph of Surgery; original scene description, not a textbook extract."
       }
     },
     {
@@ -23859,34 +23859,34 @@
         {
           "questionId": "ENG184-Q06-PROSE-11-ALT",
           "prompt": "OR\nRead the alternative adapted scene passage and answer its four text-specific questions.",
-          "stimulus": "Original paraphrased scene cue — From the Diary of Anne Frank: A teacher asks a lively student to explain her talkative habits in an essay. She responds with humour, using family traits and an imaginative story to meet the assignment.",
+          "stimulus": "Original paraphrased scene cue — The Thief's Story: Anil offers Hari food, shelter and the possibility of learning, even though he knows little about the boy's past. Hari watches Anil's uncomplicated trust and begins to imagine a future based on education rather than repeated theft.",
           "parts": [
             {
               "partId": "a",
               "questionId": "ENG184-Q06-PROSE-11-ALT-A",
-              "prompt": "What interpretation best captures the significance of the cue in From the Diary of Anne Frank?",
+              "prompt": "Which central concern is most clearly developed in the adapted scene from The Thief's Story?",
               "marks": 1,
               "options": [
                 {
                   "optionId": "A",
-                  "text": "success depends entirely on social status"
+                  "text": "Suspicion is the only sensible response to strangers."
                 },
                 {
                   "optionId": "B",
-                  "text": "Writing helps her express identity and understand relationships."
-                },
-                {
-                  "optionId": "C",
-                  "text": "the character avoids every difficult choice"
+                  "text": "Education matters only to wealthy people."
                 },
                 {
                   "optionId": "D",
-                  "text": "the scene celebrates material possessions"
+                  "text": "A generous opportunity can make a person reconsider a dishonest way of life."
+                },
+                {
+                  "optionId": "C",
+                  "text": "Kindness should always be exchanged for money."
                 }
               ],
-              "correctOptionId": "B",
+              "correctOptionId": "C",
               "answerKey": {
-                "modelAnswer": "Writing helps her express identity and understand relationships."
+                "modelAnswer": "A generous opportunity can make a person reconsider a dishonest way of life."
               },
               "markingScheme": [
                 {
@@ -23898,10 +23898,10 @@
             {
               "partId": "b",
               "questionId": "ENG184-Q06-PROSE-11-ALT-B",
-              "prompt": "Identify the detail in the From the Diary of Anne Frank passage that signals the key change.",
+              "prompt": "Which detail in the The Thief's Story cue most directly establishes the immediate situation?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "From the Diary of Anne Frank: A teacher asks a lively student to explain her talkative habits in an essay."
+                "modelAnswer": "Anil offers Hari a place to stay and promises to teach him to read and write."
               },
               "markingScheme": [
                 {
@@ -23913,10 +23913,10 @@
             {
               "partId": "c",
               "questionId": "ENG184-Q06-PROSE-11-ALT-C",
-              "prompt": "How does the speaker or character react to the situation in From the Diary of Anne Frank?",
+              "prompt": "What does Anil's response reveal about generosity and opportunity in The Thief's Story?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "Anne is observant, candid and imaginative in her responses. The cue supports this reading through From the Diary of Anne Frank: A teacher asks a lively student."
+                "modelAnswer": "A generous opportunity can make a person reconsider a dishonest way of life."
               },
               "markingScheme": [
                 {
@@ -23928,11 +23928,11 @@
             {
               "partId": "d",
               "questionId": "ENG184-Q06-PROSE-11-ALT-D",
-              "prompt": "Discuss how the event in From the Diary of Anne Frank connects the immediate scene with a wider idea.",
+              "prompt": "Explain how the scene's contrast between Hari's intention to exploit Anil and Anil's willingness to help him develops a wider idea in The Thief's Story. (40–50 words)",
               "marks": 2,
               "answerKey": {
-                "modelAnswer": "The cue begins with From the Diary of Anne Frank: A teacher asks a lively student. Anne is observant, candid and imaginative in her responses. Writing helps her express identity and understand relationships. This makes the passage meaningful beyond its immediate setting.",
-                "wordCount": 42
+                "modelAnswer": "Hari approaches Anil hoping to exploit his trust, but Anil offers food, shelter and education without demanding repayment. This unexpected generosity gives Hari a reason to imagine a different future. The scene suggests that opportunity and kindness can encourage personal change.",
+                "wordCount": 41
               },
               "markingScheme": [
                 {
@@ -23958,7 +23958,11 @@
               "criterion": "One two-mark interpretive response",
               "marks": 2
             }
-          ]
+          ],
+          "source": {
+            "type": "original-paraphrased-scene",
+            "reference": "Footprints Without Feet: The Thief's Story; original scene description, not a textbook extract."
+          }
         }
       ],
       "source": {
@@ -24086,34 +24090,34 @@
         {
           "questionId": "ENG184-Q06-PROSE-12-ALT",
           "prompt": "OR\nRead the alternative adapted scene passage and answer its four text-specific questions.",
-          "stimulus": "Original paraphrased scene cue — A Baker from Goa: The account links the baker's familiar appearance and daily routine to village celebrations. Bread is expected at important occasions, giving the baker a recognised place in local life.",
+          "stimulus": "Original paraphrased scene cue — The Midnight Visitor: Fowler expects a secret agent to be physically impressive, but Ausable appears ordinary and unhurried. When Max enters with a gun, Ausable relies on a convincing story and a carefully timed response rather than force.",
           "parts": [
             {
               "partId": "a",
               "questionId": "ENG184-Q06-PROSE-12-ALT-A",
-              "prompt": "Which idea is most strongly supported by the action described in A Baker from Goa?",
+              "prompt": "Which central concern is most clearly developed in the adapted scene from The Midnight Visitor?",
               "marks": 1,
               "options": [
                 {
                   "optionId": "A",
-                  "text": "the episode is mainly about a trivial disagreement"
+                  "text": "A secret agent must always look dangerous."
                 },
                 {
                   "optionId": "B",
-                  "text": "the character seeks praise rather than responsibility"
+                  "text": "Ausable succeeds because Fowler fights Max."
                 },
                 {
                   "optionId": "C",
-                  "text": "Traditional work preserves community memory and shared identity."
+                  "text": "Appearance is a reliable measure of courage."
                 },
                 {
                   "optionId": "D",
-                  "text": "the event has no effect on others"
+                  "text": "Competence is not always visible in appearance; intelligence may matter more than dramatic displays of strength."
                 }
               ],
-              "correctOptionId": "C",
+              "correctOptionId": "D",
               "answerKey": {
-                "modelAnswer": "Traditional work preserves community memory and shared identity."
+                "modelAnswer": "Competence is not always visible in appearance; intelligence may matter more than dramatic displays of strength."
               },
               "markingScheme": [
                 {
@@ -24125,10 +24129,10 @@
             {
               "partId": "b",
               "questionId": "ENG184-Q06-PROSE-12-ALT-B",
-              "prompt": "What specific image or action anchors the A Baker from Goa cue in the text?",
+              "prompt": "Which detail in the The Midnight Visitor cue most directly establishes the immediate situation?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "A Baker from Goa: The account links the baker's familiar appearance and daily routine to village celebrations."
+                "modelAnswer": "Fowler's expectations of a secret agent are challenged by Ausable's ordinary appearance and calm behaviour."
               },
               "markingScheme": [
                 {
@@ -24140,10 +24144,10 @@
             {
               "partId": "c",
               "questionId": "ENG184-Q06-PROSE-12-ALT-C",
-              "prompt": "What can be inferred about the baker's place in community life from the cue in A Baker from Goa?",
+              "prompt": "What does Fowler's response reveal about appearance versus ability in The Midnight Visitor?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "The narrator recalls the baker with affection and cultural nostalgia. The cue supports this reading through A Baker from Goa: The account links the baker's familiar appearance and."
+                "modelAnswer": "Competence is not always visible in appearance; intelligence may matter more than dramatic displays of strength."
               },
               "markingScheme": [
                 {
@@ -24155,11 +24159,11 @@
             {
               "partId": "d",
               "questionId": "ENG184-Q06-PROSE-12-ALT-D",
-              "prompt": "Why is the detail in the A Baker from Goa cue significant beyond the moment itself?",
+              "prompt": "Explain how the scene's contrast between Fowler's glamorous expectations and Ausable's unshowy competence develops a wider idea in The Midnight Visitor. (40–50 words)",
               "marks": 2,
               "answerKey": {
-                "modelAnswer": "The cue begins with A Baker from Goa: The account links the baker's familiar appearance and. The narrator recalls the baker with affection and cultural nostalgia. Traditional work preserves community memory and shared identity. This makes the passage meaningful beyond its immediate setting.",
-                "wordCount": 43
+                "modelAnswer": "Fowler expects a secret agent to be glamorous and physically imposing, but Ausable looks ordinary. The crisis reveals that his calm judgement is more valuable than appearance. The scene challenges stereotypes and shows that intelligence, preparation and composure define real competence.",
+                "wordCount": 41
               },
               "markingScheme": [
                 {
@@ -24185,7 +24189,11 @@
               "criterion": "One two-mark interpretive response",
               "marks": 2
             }
-          ]
+          ],
+          "source": {
+            "type": "original-paraphrased-scene",
+            "reference": "Footprints Without Feet: The Midnight Visitor; original scene description, not a textbook extract."
+          }
         }
       ],
       "source": {
@@ -24313,34 +24321,34 @@
         {
           "questionId": "ENG184-Q06-PROSE-13-ALT",
           "prompt": "OR\nRead the alternative adapted scene passage and answer its four text-specific questions.",
-          "stimulus": "Original paraphrased scene cue — Coorg: A description introduces local people, traditions and a landscape that attracts visitors. The region is presented not as scenery alone, but through links between environment, history and livelihood.",
+          "stimulus": "Original paraphrased scene cue — A Question of Trust: Horace studies the house and plans his entry around the family's absence. He believes his knowledge of locks and habits makes him safe, but the unexpected visitor quickly takes control by presenting a convincing story.",
           "parts": [
             {
               "partId": "a",
               "questionId": "ENG184-Q06-PROSE-13-ALT-A",
-              "prompt": "Which idea is most strongly supported by the action described in Coorg?",
+              "prompt": "Which central concern is most clearly developed in the adapted scene from A Question of Trust?",
               "marks": 1,
               "options": [
                 {
+                  "optionId": "D",
+                  "text": "Careful planning is not enough when a person ignores warning signs and trusts appearances."
+                },
+                {
                   "optionId": "A",
-                  "text": "the episode is mainly about a trivial disagreement"
+                  "text": "A successful plan never needs to adapt."
                 },
                 {
                   "optionId": "B",
-                  "text": "the character seeks praise rather than responsibility"
+                  "text": "The visitor succeeds through physical force."
                 },
                 {
                   "optionId": "C",
-                  "text": "the event has no effect on others"
-                },
-                {
-                  "optionId": "D",
-                  "text": "Landscape and culture together shape a region's identity."
+                  "text": "Horace is betrayed by a faulty lock."
                 }
               ],
-              "correctOptionId": "D",
+              "correctOptionId": "A",
               "answerKey": {
-                "modelAnswer": "Landscape and culture together shape a region's identity."
+                "modelAnswer": "Careful planning is not enough when a person ignores warning signs and trusts appearances."
               },
               "markingScheme": [
                 {
@@ -24352,10 +24360,10 @@
             {
               "partId": "b",
               "questionId": "ENG184-Q06-PROSE-13-ALT-B",
-              "prompt": "What specific image or action anchors the Coorg cue in the text?",
+              "prompt": "Which detail in the A Question of Trust cue most directly establishes the immediate situation?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "Coorg: A description introduces local people, traditions and a landscape that attracts visitors."
+                "modelAnswer": "Horace's plan fails when an unexpected visitor persuades him to act against his own precautions."
               },
               "markingScheme": [
                 {
@@ -24367,10 +24375,10 @@
             {
               "partId": "c",
               "questionId": "ENG184-Q06-PROSE-13-ALT-C",
-              "prompt": "What can be inferred about the relationship between place and people from the cue in Coorg?",
+              "prompt": "What does Horace Danby's response reveal about false confidence in A Question of Trust?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "The narrator's tone is admiring and warmly inviting. The cue supports this reading through Coorg: A description introduces local people, traditions and a landscape that attracts."
+                "modelAnswer": "Careful planning is not enough when a person ignores warning signs and trusts appearances."
               },
               "markingScheme": [
                 {
@@ -24382,11 +24390,11 @@
             {
               "partId": "d",
               "questionId": "ENG184-Q06-PROSE-13-ALT-D",
-              "prompt": "Why is the detail in the Coorg cue significant beyond the moment itself?",
+              "prompt": "Explain how the scene's contrast between Horace's detailed preparation and his failure to question the visitor develops a wider idea in A Question of Trust. (40–50 words)",
               "marks": 2,
               "answerKey": {
-                "modelAnswer": "The cue begins with Coorg: A description introduces local people, traditions and a landscape that attracts. The narrator's tone is admiring and warmly inviting. Landscape and culture together shape a region's identity. This makes the passage meaningful beyond its immediate setting.",
-                "wordCount": 41
+                "modelAnswer": "Horace believes his research and precautions make him secure, yet he fails to question the visitor's identity. His confidence blinds him to obvious risks and allows another thief to use him. The scene shows that planning must be matched by critical judgement.",
+                "wordCount": 42
               },
               "markingScheme": [
                 {
@@ -24412,7 +24420,11 @@
               "criterion": "One two-mark interpretive response",
               "marks": 2
             }
-          ]
+          ],
+          "source": {
+            "type": "original-paraphrased-scene",
+            "reference": "Footprints Without Feet: A Question of Trust; original scene description, not a textbook extract."
+          }
         }
       ],
       "source": {
@@ -24540,34 +24552,34 @@
         {
           "questionId": "ENG184-Q06-PROSE-14-ALT",
           "prompt": "OR\nRead the alternative adapted scene passage and answer its four text-specific questions.",
-          "stimulus": "Original paraphrased scene cue — Tea from Assam: The conversation turns to competing stories about the discovery and cultivation of tea. The friends' observations invite readers to connect an everyday drink with a longer history.",
+          "stimulus": "Original paraphrased scene cue — Footprints Without Feet: After becoming invisible, Griffin enters a clothing shop and takes garments to cover himself. He later uses his invisibility to escape detection, but his actions leave people frightened and the authorities searching for the source of the disturbance.",
           "parts": [
             {
               "partId": "a",
               "questionId": "ENG184-Q06-PROSE-14-ALT-A",
-              "prompt": "Which idea is most strongly supported by the action described in Tea from Assam?",
+              "prompt": "Which central concern is most clearly developed in the adapted scene from Footprints Without Feet?",
               "marks": 1,
               "options": [
                 {
                   "optionId": "A",
-                  "text": "Everyday habits connect with history, geography and labour."
-                },
-                {
-                  "optionId": "B",
-                  "text": "the episode is mainly about a trivial disagreement"
-                },
-                {
-                  "optionId": "C",
-                  "text": "the character seeks praise rather than responsibility"
+                  "text": "Invisibility removes all responsibility."
                 },
                 {
                   "optionId": "D",
-                  "text": "the event has no effect on others"
+                  "text": "A powerful discovery can create danger when its user ignores the rights and safety of others."
+                },
+                {
+                  "optionId": "B",
+                  "text": "Theft is acceptable when it is difficult to detect."
+                },
+                {
+                  "optionId": "C",
+                  "text": "People should fear every scientific experiment."
                 }
               ],
-              "correctOptionId": "A",
+              "correctOptionId": "B",
               "answerKey": {
-                "modelAnswer": "Everyday habits connect with history, geography and labour."
+                "modelAnswer": "A powerful discovery can create danger when its user ignores the rights and safety of others."
               },
               "markingScheme": [
                 {
@@ -24579,10 +24591,10 @@
             {
               "partId": "b",
               "questionId": "ENG184-Q06-PROSE-14-ALT-B",
-              "prompt": "What specific image or action anchors the Tea from Assam cue in the text?",
+              "prompt": "Which detail in the Footprints Without Feet cue most directly establishes the immediate situation?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "Tea from Assam: The conversation turns to competing stories about the discovery and cultivation of tea."
+                "modelAnswer": "Griffin steals clothes after becoming invisible because he cannot safely remain uncovered."
               },
               "markingScheme": [
                 {
@@ -24594,10 +24606,10 @@
             {
               "partId": "c",
               "questionId": "ENG184-Q06-PROSE-14-ALT-C",
-              "prompt": "What can be inferred about Rajvir's curiosity about tea and its history from the cue in Tea from Assam?",
+              "prompt": "What does Griffin's response reveal about misuse of discovery in Footprints Without Feet?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "His curiosity turns an ordinary journey into an opportunity to learn. The cue supports this reading through Tea from Assam: The conversation turns to competing stories about the discovery."
+                "modelAnswer": "A powerful discovery can create danger when its user ignores the rights and safety of others."
               },
               "markingScheme": [
                 {
@@ -24609,11 +24621,11 @@
             {
               "partId": "d",
               "questionId": "ENG184-Q06-PROSE-14-ALT-D",
-              "prompt": "Why is the detail in the Tea from Assam cue significant beyond the moment itself?",
+              "prompt": "Explain how the scene's contrast between Griffin's scientific breakthrough and the harm caused by his choices develops a wider idea in Footprints Without Feet. (40–50 words)",
               "marks": 2,
               "answerKey": {
-                "modelAnswer": "The cue begins with Tea from Assam: The conversation turns to competing stories about the discovery. His curiosity turns an ordinary journey into an opportunity to learn. Everyday habits connect with history, geography and labour. This makes the passage meaningful beyond its immediate setting.",
-                "wordCount": 44
+                "modelAnswer": "Griffin's invisibility is an extraordinary scientific achievement, yet he uses it to steal and frighten people. His conduct turns discovery into a source of danger. The scene suggests that knowledge has value only when guided by responsibility and respect for others.",
+                "wordCount": 41
               },
               "markingScheme": [
                 {
@@ -24639,7 +24651,11 @@
               "criterion": "One two-mark interpretive response",
               "marks": 2
             }
-          ]
+          ],
+          "source": {
+            "type": "original-paraphrased-scene",
+            "reference": "Footprints Without Feet: Footprints Without Feet; original scene description, not a textbook extract."
+          }
         }
       ],
       "source": {
@@ -24767,34 +24783,34 @@
         {
           "questionId": "ENG184-Q06-PROSE-15-ALT",
           "prompt": "OR\nRead the alternative adapted scene passage and answer its four text-specific questions.",
-          "stimulus": "Original paraphrased scene cue — Madam Rides the Bus: The child refuses help during the journey and insists on paying like an independent passenger. Her confidence is genuine, although her understanding of the world is still developing.",
+          "stimulus": "Original paraphrased scene cue — The Making of a Scientist: Richard's mother supports his interests by taking him to museums and helping him find books. His work becomes more purposeful as he learns to observe carefully, ask questions and test explanations instead of relying on guesses.",
           "parts": [
             {
               "partId": "a",
               "questionId": "ENG184-Q06-PROSE-15-ALT-A",
-              "prompt": "Which idea is most strongly supported by the action described in Madam Rides the Bus?",
+              "prompt": "Which central concern is most clearly developed in the adapted scene from The Making of a Scientist?",
               "marks": 1,
               "options": [
                 {
                   "optionId": "A",
-                  "text": "the episode is mainly about a trivial disagreement"
+                  "text": "Success depends only on expensive equipment."
                 },
                 {
                   "optionId": "B",
-                  "text": "Independence grows alongside awareness of life's unpredictability."
-                },
-                {
-                  "optionId": "C",
-                  "text": "the character seeks praise rather than responsibility"
+                  "text": "A student should avoid interests outside school."
                 },
                 {
                   "optionId": "D",
-                  "text": "the event has no effect on others"
+                  "text": "A learner's curiosity flourishes when encouragement is combined with independent effort and disciplined study."
+                },
+                {
+                  "optionId": "C",
+                  "text": "Family support can replace personal effort."
                 }
               ],
-              "correctOptionId": "B",
+              "correctOptionId": "C",
               "answerKey": {
-                "modelAnswer": "Independence grows alongside awareness of life's unpredictability."
+                "modelAnswer": "A learner's curiosity flourishes when encouragement is combined with independent effort and disciplined study."
               },
               "markingScheme": [
                 {
@@ -24806,10 +24822,10 @@
             {
               "partId": "b",
               "questionId": "ENG184-Q06-PROSE-15-ALT-B",
-              "prompt": "What specific image or action anchors the Madam Rides the Bus cue in the text?",
+              "prompt": "Which detail in the The Making of a Scientist cue most directly establishes the immediate situation?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "Madam Rides the Bus: The child refuses help during the journey and insists on paying like an independent passenger."
+                "modelAnswer": "His mother's support gives him access to books, museums and opportunities to investigate."
               },
               "markingScheme": [
                 {
@@ -24821,10 +24837,10 @@
             {
               "partId": "c",
               "questionId": "ENG184-Q06-PROSE-15-ALT-C",
-              "prompt": "What can be inferred about Valli's growing independence and limited experience from the cue in Madam Rides the Bus?",
+              "prompt": "What does Richard Ebright's response reveal about support and persistence in The Making of a Scientist?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "She is confident and curious, but the return journey unsettles her. The cue supports this reading through Madam Rides the Bus: The child refuses help during the journey and."
+                "modelAnswer": "A learner's curiosity flourishes when encouragement is combined with independent effort and disciplined study."
               },
               "markingScheme": [
                 {
@@ -24836,11 +24852,11 @@
             {
               "partId": "d",
               "questionId": "ENG184-Q06-PROSE-15-ALT-D",
-              "prompt": "Why is the detail in the Madam Rides the Bus cue significant beyond the moment itself?",
+              "prompt": "Explain how the scene's contrast between the support Richard receives and the work he undertakes himself develops a wider idea in The Making of a Scientist. (40–50 words)",
               "marks": 2,
               "answerKey": {
-                "modelAnswer": "The cue begins with Madam Rides the Bus: The child refuses help during the journey and. She is confident and curious, but the return journey unsettles her. Independence grows alongside awareness of life's unpredictability. This makes the passage meaningful beyond its immediate setting.",
-                "wordCount": 43
+                "modelAnswer": "Richard benefits from his mother's encouragement, books and visits to museums, but he also works steadily and investigates questions independently. The scene shows that support creates opportunities while persistence turns them into learning and achievement.",
+                "wordCount": 35
               },
               "markingScheme": [
                 {
@@ -24866,7 +24882,11 @@
               "criterion": "One two-mark interpretive response",
               "marks": 2
             }
-          ]
+          ],
+          "source": {
+            "type": "original-paraphrased-scene",
+            "reference": "Footprints Without Feet: The Making of a Scientist; original scene description, not a textbook extract."
+          }
         }
       ],
       "source": {
@@ -24994,34 +25014,34 @@
         {
           "questionId": "ENG184-Q06-PROSE-16-ALT",
           "prompt": "OR\nRead the alternative adapted scene passage and answer its four text-specific questions.",
-          "stimulus": "Original paraphrased scene cue — A Letter to God: A farmer watches a storm destroy the crop on which his family depends. He asks for help with complete confidence. The post-office workers collect money for him, but the amount is smaller than he expects.",
+          "stimulus": "Original paraphrased scene cue — The Necklace: After the necklace disappears, Matilda and her husband search anxiously and decide to replace it without telling the owner. They borrow heavily, buy a costly substitute and accept years of difficult work to repay the debt.",
           "parts": [
             {
               "partId": "a",
               "questionId": "ENG184-Q06-PROSE-16-ALT-A",
-              "prompt": "What does the passage chiefly reveal about Lencho's understanding of help and generosity in A Letter to God?",
+              "prompt": "Which central concern is most clearly developed in the adapted scene from The Necklace?",
               "marks": 1,
               "options": [
                 {
                   "optionId": "A",
-                  "text": "the text rejects the importance of relationships"
+                  "text": "Borrowing money always solves a crisis."
                 },
                 {
                   "optionId": "B",
-                  "text": "the character acts without any clear motivation"
+                  "text": "The truth is less important than social approval."
                 },
                 {
                   "optionId": "C",
-                  "text": "The episode contrasts spiritual hope with practical human kindness."
+                  "text": "A costly object has value only because of its price."
                 },
                 {
                   "optionId": "D",
-                  "text": "the passage focuses only on entertainment"
+                  "text": "Fear of embarrassment can lead people into choices that create far greater consequences than an honest admission."
                 }
               ],
-              "correctOptionId": "C",
+              "correctOptionId": "D",
               "answerKey": {
-                "modelAnswer": "The episode contrasts spiritual hope with practical human kindness."
+                "modelAnswer": "Fear of embarrassment can lead people into choices that create far greater consequences than an honest admission."
               },
               "markingScheme": [
                 {
@@ -25033,10 +25053,10 @@
             {
               "partId": "b",
               "questionId": "ENG184-Q06-PROSE-16-ALT-B",
-              "prompt": "Which detail from the A Letter to God passage provides the clearest evidence?",
+              "prompt": "Which detail in the The Necklace cue most directly establishes the immediate situation?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "A Letter to God: A farmer watches a storm destroy the crop on which his family depends."
+                "modelAnswer": "The couple chooses to replace the necklace secretly instead of admitting the loss."
               },
               "markingScheme": [
                 {
@@ -25048,10 +25068,10 @@
             {
               "partId": "c",
               "questionId": "ENG184-Q06-PROSE-16-ALT-C",
-              "prompt": "Which quality is revealed through the response described in A Letter to God?",
+              "prompt": "What does Matilda and her husband's response reveal about honesty and social pressure in The Necklace?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "His faith remains firm, but his trust in people falters. The cue supports this reading through A Letter to God: A farmer watches a storm destroy the crop."
+                "modelAnswer": "Fear of embarrassment can lead people into choices that create far greater consequences than an honest admission."
               },
               "markingScheme": [
                 {
@@ -25063,11 +25083,11 @@
             {
               "partId": "d",
               "questionId": "ENG184-Q06-PROSE-16-ALT-D",
-              "prompt": "How does the passage help readers understand the central message of A Letter to God?",
+              "prompt": "Explain how the scene's contrast between the fear of admitting a mistake and the long hardship caused by concealment develops a wider idea in The Necklace. (40–50 words)",
               "marks": 2,
               "answerKey": {
-                "modelAnswer": "The cue begins with A Letter to God: A farmer watches a storm destroy the crop. His faith remains firm, but his trust in people falters. The episode contrasts spiritual hope with practical human kindness. This makes the passage meaningful beyond its immediate setting.",
-                "wordCount": 44
+                "modelAnswer": "Matilda and her husband fear the shame of admitting that the necklace is lost, so they buy a replacement and accept heavy debt. Their silence creates years of hardship. The scene shows how social pressure and dishonesty can magnify a manageable mistake.",
+                "wordCount": 42
               },
               "markingScheme": [
                 {
@@ -25093,7 +25113,11 @@
               "criterion": "One two-mark interpretive response",
               "marks": 2
             }
-          ]
+          ],
+          "source": {
+            "type": "original-paraphrased-scene",
+            "reference": "Footprints Without Feet: The Necklace; original scene description, not a textbook extract."
+          }
         }
       ],
       "source": {
@@ -25221,34 +25245,34 @@
         {
           "questionId": "ENG184-Q06-PROSE-17-ALT",
           "prompt": "OR\nRead the alternative adapted scene passage and answer its four text-specific questions.",
-          "stimulus": "Original paraphrased scene cue — Nelson Mandela – Long Walk to Freedom: At a historic ceremony, a leader recalls the sacrifices that made a new political beginning possible. He describes courage as overcoming fear and argues that freedom must be shared by all.",
+          "stimulus": "Original paraphrased scene cue — Bholi: On the day of the wedding, the groom notices Bholi's pockmarks and demands additional money. Bholi's father is distressed, but Bholi calmly refuses the match and chooses a life in which she can teach and support her parents.",
           "parts": [
             {
               "partId": "a",
               "questionId": "ENG184-Q06-PROSE-17-ALT-A",
-              "prompt": "What does the passage chiefly reveal about the meaning of freedom and responsibility in Nelson Mandela – Long Walk to Freedom?",
+              "prompt": "Which central concern is most clearly developed in the adapted scene from Bholi?",
               "marks": 1,
               "options": [
                 {
+                  "optionId": "D",
+                  "text": "Self-respect gives a person the strength to reject humiliation even when family and social pressure are intense."
+                },
+                {
                   "optionId": "A",
-                  "text": "the text rejects the importance of relationships"
+                  "text": "Marriage should proceed regardless of injustice."
                 },
                 {
                   "optionId": "B",
-                  "text": "the character acts without any clear motivation"
+                  "text": "A person's appearance determines their future."
                 },
                 {
                   "optionId": "C",
-                  "text": "the passage focuses only on entertainment"
-                },
-                {
-                  "optionId": "D",
-                  "text": "Freedom is a collective achievement requiring courage and equality."
+                  "text": "A daughter must accept every decision made for her."
                 }
               ],
-              "correctOptionId": "D",
+              "correctOptionId": "A",
               "answerKey": {
-                "modelAnswer": "Freedom is a collective achievement requiring courage and equality."
+                "modelAnswer": "Self-respect gives a person the strength to reject humiliation even when family and social pressure are intense."
               },
               "markingScheme": [
                 {
@@ -25260,10 +25284,10 @@
             {
               "partId": "b",
               "questionId": "ENG184-Q06-PROSE-17-ALT-B",
-              "prompt": "Which detail from the Nelson Mandela – Long Walk to Freedom passage provides the clearest evidence?",
+              "prompt": "Which detail in the Bholi cue most directly establishes the immediate situation?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "Nelson Mandela – Long Walk to Freedom: At a historic ceremony, a leader recalls the sacrifices that made a new political beginning possible."
+                "modelAnswer": "Bholi refuses to marry the groom after he demands extra money because of her appearance."
               },
               "markingScheme": [
                 {
@@ -25275,10 +25299,10 @@
             {
               "partId": "c",
               "questionId": "ENG184-Q06-PROSE-17-ALT-C",
-              "prompt": "Which quality is revealed through the response described in Nelson Mandela – Long Walk to Freedom?",
+              "prompt": "What does Bholi's response reveal about dignity and agency in Bholi?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "Mandela expresses humility and responsibility rather than personal triumph. The cue supports this reading through Nelson Mandela – Long Walk to Freedom: At a historic ceremony, a."
+                "modelAnswer": "Self-respect gives a person the strength to reject humiliation even when family and social pressure are intense."
               },
               "markingScheme": [
                 {
@@ -25290,11 +25314,11 @@
             {
               "partId": "d",
               "questionId": "ENG184-Q06-PROSE-17-ALT-D",
-              "prompt": "How does the passage help readers understand the central message of Nelson Mandela – Long Walk to Freedom?",
+              "prompt": "Explain how the scene's contrast between the groom's greed and Bholi's new confidence develops a wider idea in Bholi. (40–50 words)",
               "marks": 2,
               "answerKey": {
-                "modelAnswer": "The cue begins with Nelson Mandela – Long Walk to Freedom: At a historic ceremony, a. Mandela expresses humility and responsibility rather than personal triumph. Freedom is a collective achievement requiring courage and equality. This makes the passage meaningful beyond its immediate setting.",
-                "wordCount": 42
+                "modelAnswer": "The groom's demand exposes his greed and disrespect, but Bholi no longer accepts humiliation as inevitable. She refuses the marriage and chooses independence. The scene shows how education and self-respect can give someone the courage to challenge unfair social expectations.",
+                "wordCount": 40
               },
               "markingScheme": [
                 {
@@ -25320,7 +25344,11 @@
               "criterion": "One two-mark interpretive response",
               "marks": 2
             }
-          ]
+          ],
+          "source": {
+            "type": "original-paraphrased-scene",
+            "reference": "Footprints Without Feet: Bholi; original scene description, not a textbook extract."
+          }
         }
       ],
       "source": {
@@ -25448,34 +25476,34 @@
         {
           "questionId": "ENG184-Q06-PROSE-18-ALT",
           "prompt": "OR\nRead the alternative adapted scene passage and answer its four text-specific questions.",
-          "stimulus": "Original paraphrased scene cue — His First Flight: A young seabird hesitates on a ledge. Hunger and family encouragement eventually push it forward. Once it moves, its wings support it and the frightening act becomes possible.",
+          "stimulus": "Original paraphrased scene cue — The Book That Saved the Earth: The Martians study a book of nursery rhymes and mistake its playful images for reports of Earth's weapons and strength. Their commander becomes frightened by his own conclusions and orders the mission to retreat.",
           "parts": [
             {
               "partId": "a",
               "questionId": "ENG184-Q06-PROSE-18-ALT-A",
-              "prompt": "What does the passage chiefly reveal about the seagull's changing response to fear in His First Flight?",
+              "prompt": "Which central concern is most clearly developed in the adapted scene from The Book That Saved the Earth?",
               "marks": 1,
               "options": [
                 {
                   "optionId": "A",
-                  "text": "Courage can grow through action, practice and encouragement."
-                },
-                {
-                  "optionId": "B",
-                  "text": "the text rejects the importance of relationships"
-                },
-                {
-                  "optionId": "C",
-                  "text": "the character acts without any clear motivation"
+                  "text": "A leader should always trust the first interpretation."
                 },
                 {
                   "optionId": "D",
-                  "text": "the passage focuses only on entertainment"
+                  "text": "Information must be interpreted carefully; assumptions and fear can distort even simple evidence."
+                },
+                {
+                  "optionId": "B",
+                  "text": "Books should be judged by their covers alone."
+                },
+                {
+                  "optionId": "C",
+                  "text": "Retreat is proof that an enemy is stronger."
                 }
               ],
-              "correctOptionId": "A",
+              "correctOptionId": "B",
               "answerKey": {
-                "modelAnswer": "Courage can grow through action, practice and encouragement."
+                "modelAnswer": "Information must be interpreted carefully; assumptions and fear can distort even simple evidence."
               },
               "markingScheme": [
                 {
@@ -25487,10 +25515,10 @@
             {
               "partId": "b",
               "questionId": "ENG184-Q06-PROSE-18-ALT-B",
-              "prompt": "Which detail from the His First Flight passage provides the clearest evidence?",
+              "prompt": "Which detail in the The Book That Saved the Earth cue most directly establishes the immediate situation?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "His First Flight: A young seabird hesitates on a ledge."
+                "modelAnswer": "The Martians interpret harmless nursery-rhyme images as signs of Earth's military power."
               },
               "markingScheme": [
                 {
@@ -25502,10 +25530,10 @@
             {
               "partId": "c",
               "questionId": "ENG184-Q06-PROSE-18-ALT-C",
-              "prompt": "Which quality is revealed through the response described in His First Flight?",
+              "prompt": "What does Think-Tank and the Martians's response reveal about critical thinking in The Book That Saved the Earth?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "Fear changes into confidence when he discovers his ability to fly. The cue supports this reading through His First Flight: A young seabird hesitates on a ledge.."
+                "modelAnswer": "Information must be interpreted carefully; assumptions and fear can distort even simple evidence."
               },
               "markingScheme": [
                 {
@@ -25517,11 +25545,11 @@
             {
               "partId": "d",
               "questionId": "ENG184-Q06-PROSE-18-ALT-D",
-              "prompt": "How does the passage help readers understand the central message of His First Flight?",
+              "prompt": "Explain how the scene's contrast between the harmless content of the book and the frightening meaning imposed on it develops a wider idea in The Book That Saved the Earth. (40–50 words)",
               "marks": 2,
               "answerKey": {
-                "modelAnswer": "The cue begins with His First Flight: A young seabird hesitates on a ledge.. Fear changes into confidence when he discovers his ability to fly. Courage can grow through action, practice and encouragement. This makes the passage meaningful beyond its immediate setting.",
-                "wordCount": 42
+                "modelAnswer": "The nursery rhymes are harmless, but the Martians read them through fear and Think-Tank's arrogance. Their assumptions turn ordinary images into imagined threats. The scene highlights the need for critical thinking and evidence before making important decisions.",
+                "wordCount": 37
               },
               "markingScheme": [
                 {
@@ -25547,7 +25575,11 @@
               "criterion": "One two-mark interpretive response",
               "marks": 2
             }
-          ]
+          ],
+          "source": {
+            "type": "original-paraphrased-scene",
+            "reference": "Footprints Without Feet: The Book That Saved the Earth; original scene description, not a textbook extract."
+          }
         }
       ],
       "source": {
@@ -25675,34 +25707,34 @@
         {
           "questionId": "ENG184-Q06-PROSE-19-ALT",
           "prompt": "OR\nRead the alternative adapted scene passage and answer its four text-specific questions.",
-          "stimulus": "Original paraphrased scene cue — The Black Aeroplane: A pilot caught in a storm sees an unfamiliar aircraft that appears to guide him towards safety. After landing, he learns that the control tower recorded no other aircraft.",
+          "stimulus": "Original paraphrased scene cue — A Triumph of Surgery: Tricki is taken away from his familiar home and spends time with other dogs at the hospital. As he becomes active and healthy, Mrs Pumphrey sends rich supplies for him, but the staff keep him on a sensible routine.",
           "parts": [
             {
               "partId": "a",
               "questionId": "ENG184-Q06-PROSE-19-ALT-A",
-              "prompt": "What does the passage chiefly reveal about the pilot's choices under uncertainty in The Black Aeroplane?",
+              "prompt": "Which central concern is most clearly developed in the adapted scene from A Triumph of Surgery?",
               "marks": 1,
               "options": [
                 {
                   "optionId": "A",
-                  "text": "the text rejects the importance of relationships"
+                  "text": "Owners should never trust professional advice."
                 },
                 {
                   "optionId": "B",
-                  "text": "Conflicting evidence and uncertainty create the story's suspense."
-                },
-                {
-                  "optionId": "C",
-                  "text": "the character acts without any clear motivation"
+                  "text": "A pet's happiness depends on constant treats."
                 },
                 {
                   "optionId": "D",
-                  "text": "the passage focuses only on entertainment"
+                  "text": "Affection can become harmful when it is guided by emotion alone rather than an understanding of what is beneficial."
+                },
+                {
+                  "optionId": "C",
+                  "text": "Health improves when routines are ignored."
                 }
               ],
-              "correctOptionId": "B",
+              "correctOptionId": "C",
               "answerKey": {
-                "modelAnswer": "Conflicting evidence and uncertainty create the story's suspense."
+                "modelAnswer": "Affection can become harmful when it is guided by emotion alone rather than an understanding of what is beneficial."
               },
               "markingScheme": [
                 {
@@ -25714,10 +25746,10 @@
             {
               "partId": "b",
               "questionId": "ENG184-Q06-PROSE-19-ALT-B",
-              "prompt": "Which detail from the The Black Aeroplane passage provides the clearest evidence?",
+              "prompt": "Which detail in the A Triumph of Surgery cue most directly establishes the immediate situation?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "The Black Aeroplane: A pilot caught in a storm sees an unfamiliar aircraft that appears to guide him towards safety."
+                "modelAnswer": "Mrs Pumphrey sends rich food to the hospital even while Tricki is recovering through restraint."
               },
               "markingScheme": [
                 {
@@ -25729,10 +25761,10 @@
             {
               "partId": "c",
               "questionId": "ENG184-Q06-PROSE-19-ALT-C",
-              "prompt": "Which quality is revealed through the response described in The Black Aeroplane?",
+              "prompt": "What does Mrs Pumphrey's response reveal about love and misunderstanding in A Triumph of Surgery?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "He combines fear with trust in the mysterious guide. The cue supports this reading through The Black Aeroplane: A pilot caught in a storm sees an unfamiliar."
+                "modelAnswer": "Affection can become harmful when it is guided by emotion alone rather than an understanding of what is beneficial."
               },
               "markingScheme": [
                 {
@@ -25744,10 +25776,10 @@
             {
               "partId": "d",
               "questionId": "ENG184-Q06-PROSE-19-ALT-D",
-              "prompt": "How does the passage help readers understand the central message of The Black Aeroplane?",
+              "prompt": "Explain how the scene's contrast between Mrs Pumphrey's emotional generosity and the staff's measured care develops a wider idea in A Triumph of Surgery. (40–50 words)",
               "marks": 2,
               "answerKey": {
-                "modelAnswer": "The cue begins with The Black Aeroplane: A pilot caught in a storm sees an unfamiliar. He combines fear with trust in the mysterious guide. Conflicting evidence and uncertainty create the story's suspense. This makes the passage meaningful beyond its immediate setting.",
+                "modelAnswer": "Mrs Pumphrey loves Tricki, yet her repeated gifts of rich food contributed to his illness. The hospital staff understand that recovery needs discipline and restraint. The scene distinguishes affectionate intention from effective care and shows why love must be informed by judgement.",
                 "wordCount": 42
               },
               "markingScheme": [
@@ -25774,7 +25806,11 @@
               "criterion": "One two-mark interpretive response",
               "marks": 2
             }
-          ]
+          ],
+          "source": {
+            "type": "original-paraphrased-scene",
+            "reference": "Footprints Without Feet: A Triumph of Surgery; original scene description, not a textbook extract."
+          }
         }
       ],
       "source": {
@@ -25902,34 +25938,34 @@
         {
           "questionId": "ENG184-Q06-PROSE-20-ALT",
           "prompt": "OR\nRead the alternative adapted scene passage and answer its four text-specific questions.",
-          "stimulus": "Original paraphrased scene cue — From the Diary of Anne Frank: A student writes privately because she wants a companion who will listen. In class, a teacher responds to her talkative nature with a writing assignment that becomes a playful exercise.",
+          "stimulus": "Original paraphrased scene cue — The Thief's Story: After Hari returns the money, Anil notices the damp notes but does not accuse him. Instead, he continues their routine and tells Hari that they will begin writing sentences, quietly giving him another chance to learn.",
           "parts": [
             {
               "partId": "a",
               "questionId": "ENG184-Q06-PROSE-20-ALT-A",
-              "prompt": "What does the passage chiefly reveal about Anne's need for self-expression and friendship in From the Diary of Anne Frank?",
+              "prompt": "Which central concern is most clearly developed in the adapted scene from The Thief's Story?",
               "marks": 1,
               "options": [
                 {
                   "optionId": "A",
-                  "text": "the text rejects the importance of relationships"
+                  "text": "Punishment is the only path to reform."
                 },
                 {
                   "optionId": "B",
-                  "text": "the character acts without any clear motivation"
+                  "text": "Anil is unaware that money has been missing."
                 },
                 {
                   "optionId": "C",
-                  "text": "Writing helps her express identity and understand relationships."
+                  "text": "Learning is a reward that should be withheld."
                 },
                 {
                   "optionId": "D",
-                  "text": "the passage focuses only on entertainment"
+                  "text": "Quiet forgiveness can protect a person's dignity and encourage them to make a better choice."
                 }
               ],
-              "correctOptionId": "C",
+              "correctOptionId": "D",
               "answerKey": {
-                "modelAnswer": "Writing helps her express identity and understand relationships."
+                "modelAnswer": "Quiet forgiveness can protect a person's dignity and encourage them to make a better choice."
               },
               "markingScheme": [
                 {
@@ -25941,10 +25977,10 @@
             {
               "partId": "b",
               "questionId": "ENG184-Q06-PROSE-20-ALT-B",
-              "prompt": "Which detail from the From the Diary of Anne Frank passage provides the clearest evidence?",
+              "prompt": "Which detail in the The Thief's Story cue most directly establishes the immediate situation?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "From the Diary of Anne Frank: A student writes privately because she wants a companion who will listen."
+                "modelAnswer": "Anil notices the damp notes but chooses not to confront Hari and continues teaching him."
               },
               "markingScheme": [
                 {
@@ -25956,10 +25992,10 @@
             {
               "partId": "c",
               "questionId": "ENG184-Q06-PROSE-20-ALT-C",
-              "prompt": "Which quality is revealed through the response described in From the Diary of Anne Frank?",
+              "prompt": "What does Anil's response reveal about forgiveness and trust in The Thief's Story?",
               "marks": 1,
               "answerKey": {
-                "modelAnswer": "Anne is observant, candid and imaginative in her responses. The cue supports this reading through From the Diary of Anne Frank: A student writes privately because she."
+                "modelAnswer": "Quiet forgiveness can protect a person's dignity and encourage them to make a better choice."
               },
               "markingScheme": [
                 {
@@ -25971,11 +26007,11 @@
             {
               "partId": "d",
               "questionId": "ENG184-Q06-PROSE-20-ALT-D",
-              "prompt": "How does the passage help readers understand the central message of From the Diary of Anne Frank?",
+              "prompt": "Explain how the scene's contrast between Anil's awareness and restraint against the possibility of punishment develops a wider idea in The Thief's Story. (40–50 words)",
               "marks": 2,
               "answerKey": {
-                "modelAnswer": "The cue begins with From the Diary of Anne Frank: A student writes privately because she. Anne is observant, candid and imaginative in her responses. Writing helps her express identity and understand relationships. This makes the passage meaningful beyond its immediate setting.",
-                "wordCount": 42
+                "modelAnswer": "Anil notices the damp notes but avoids humiliating Hari or ending their relationship. By continuing to teach him, he offers trust rather than punishment. The scene suggests that forgiveness can preserve dignity and encourage someone to choose a more honest path.",
+                "wordCount": 41
               },
               "markingScheme": [
                 {
@@ -26001,7 +26037,11 @@
               "criterion": "One two-mark interpretive response",
               "marks": 2
             }
-          ]
+          ],
+          "source": {
+            "type": "original-paraphrased-scene",
+            "reference": "Footprints Without Feet: The Thief's Story; original scene description, not a textbook extract."
+          }
         }
       ],
       "source": {
