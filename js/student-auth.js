@@ -33,7 +33,7 @@
   }
   function publicView(row,role){
     if(role==="parent")return {username:row.username,role:"parent",parentId:String(row.parentId),displayName:String(row.displayName||row.username)};
-    return {username:row.username,role:"student",studentId:stableStudentId(row),classId:String(row.classId||"10"),displayName:String(row.displayName||row.username)};
+    return {username:row.username,role:"student",studentId:stableStudentId(row),classId:String(row.classId||""),displayName:String(row.displayName||row.username)};
   }
   function readSession(){
     try{
@@ -41,7 +41,7 @@
       if(!value||typeof value.username!=="string")return null;
       return value.role==="parent"
         ?{username:value.username,role:"parent",parentId:String(value.parentId||""),displayName:String(value.displayName||value.username)}
-        :{username:value.username,role:"student",studentId:String(value.studentId||stableStudentId(value)),classId:String(value.classId||"10"),displayName:String(value.displayName||value.username)};
+        :{username:value.username,role:"student",studentId:String(value.studentId||stableStudentId(value)),classId:String(value.classId||""),displayName:String(value.displayName||value.username)};
     }catch(_){return null;}
   }
   async function login(usernameInput,password){
@@ -69,7 +69,7 @@
       const db=await loadDatabase();
       const row=db.accounts.find(item=>normalizeUsername(item.username)===normalizeUsername(current.username)&&item.active!==false);
       if(!row){logout();return null;}return publicView(row,"student");
-    }catch(_){return current;}
+    }catch(_){return null;}
   }
   async function getLinkedChildren(){
     const current=readSession();if(!current||current.role!=="parent")throw new Error("A parent account is required.");
