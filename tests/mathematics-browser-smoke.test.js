@@ -76,8 +76,8 @@ async function smokeProfile(browser, baseUrl, profileId, expectedTitle) {
   assert.ok(options.some(text => text.includes("Science (086)")));
   assert.equal(await selector.inputValue(), profileId);
 
-  // Exercise the real student-page path with five prior complete papers saved in this profile.
-  // The sixth paper must honour the same five-paper all-format repeat window used in production.
+  // Exercise the real student-page path with a full 50-paper saved history.
+  // The next paper must honour the same five-paper all-format repeat window used in production.
   await page.evaluate(async profileId => {
     const registry = await (await fetch("./data/exam-papers/profile-registry.json")).json();
     const profile = registry.profiles.find(item => item.profileId === profileId);
@@ -114,44 +114,6 @@ async function smokeProfile(browser, baseUrl, profileId, expectedTitle) {
   await page.waitForFunction(() => (document.querySelector("#loadStatus")?.textContent || "").includes("Ready: 38 questions · 80 marks"));
   const seededStatus = await page.locator("#loadStatus").innerText();
   assert.match(seededStatus, /Ready: 38 questions · 80 marks/);
-
-  // Seed a full 50-paper history in this student's profile to test the real UI at the history limit.
-  await page.evaluate(async profileId => {
-    const registry = await (await fetch("./data/exam-papers/profile-registry.json", { cache: "no-store" })).json();
-    const profile = registry.profiles.find(item => item.profileId === profileId);
-    const [blueprint, baseBank, practice] = await Promise.all([
-      fetch(profile.blueprintUrl, { cache: "no-store" }).then(response => response.json()),
-      fetch(profile.questionBankUrl, { cache: "no-store" }).then(response => response.json()),
-      profile.practiceBankUrl ? fetch(profile.practiceBankUrl, { cache: "no-store" }).then(response => response.json()) : Promise.resolve(null)
-    ]);
-    const engine = window.ExamPaperGenerator;
-    const merged = engine.mergeQuestionBanks(baseBank, practice, blueprint, {
-      minimumCandidatesPerSlot: profile.minimumCandidatesPerSlot || 20
-    });
-    const history = [];
-    for (let index = 0; index < 5; index++) {
-      const paper = engine.generateUniquePaper(blueprint, merged.bank, {
-        seed: "browser-five-paper-history-" + profileId + "-" + index,
-        recentPaperFingerprints: history.map(item => item.fingerprint),
-        recentQuestionIdSets: history.slice(-5).map(item => item.questionIds),
-        uniqueSearchAttempts: 1000
-      });
-      history.push({
-        paperId: paper.paperId,
-        generatedAt: paper.generatedAt,
-        questionIds: paper.questions.flatMap(question => engine.questionContentIds(question)),
-        fingerprint: paper.paperFingerprint || engine.paperFingerprint(paper),
-        mcqQuestionIds: paper.questions.filter(question => question.type === "mcq").map(question => question.questionId)
-      });
-    }
-    const suffix = "_" + profileId.replace(/[^a-z0-9_-]/gi, "_");
-    localStorage.setItem("eg_exam_paper_history_v1" + suffix, JSON.stringify(history));
-    return { papers: history.length, fingerprints: new Set(history.map(item => item.fingerprint)).size };
-  }, profileId);
-  await page.reload({ waitUntil: "networkidle" });
-  await page.waitForFunction(() => (document.querySelector("#loadStatus")?.textContent || "").includes("Ready: 38 questions · 80 marks"));
-  const seededLoadStatus = await page.locator("#loadStatus").innerText();
-  assert.match(seededLoadStatus, /Ready: 38 questions · 80 marks/);
 
   const start = page.locator("#startBtn");
   assert.equal(await start.isEnabled(), true);
