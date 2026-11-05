@@ -37,8 +37,15 @@ assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"'),"admin navigation exposes Exam Paper Studio directly");
 assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"'),"parent navigation is isolated to the family role");
 assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"Class 10 students can open full-paper self-study practice");
-assert.ok(nav.includes('classIds:["10"]')&&nav.includes('if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return;'),
-  "the Class 10 full-paper route is filtered from other classes");
+assert.ok(nav.includes('classIds:["6","10"]')&&nav.includes('if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return;'),
+  "Class 6 and Class 10 students see the class-safe Exam Paper Practice entry");
+assert.ok(nav.includes('href:"./parent.html#exam-paper-practice"')&&parentPage.includes('id="exam-paper-practice"'),
+  "parents have a dedicated Exam Paper Practice guide destination");
+assert.ok(examPracticeScript.includes("renderClass6OlympiadHub")&&examPracticeScript.includes("mathematics-sof")&&examPracticeScript.includes("english-sof"),
+  "Class 6 Exam Paper Practice opens the three available SOF full-mock subject routes");
+const parentAssessments=fs.readFileSync("js/parent-assessments.js","utf8");
+assert.ok(parentAssessments.includes("Class 6 · Exam Paper Practice")&&parentAssessments.includes("CBSE full-paper profiles are not published yet"),
+  "Class 6 parent child detail explains available SOF mock routes without hiding the section");
 assert.ok(nav.includes("await window.C10StudentAuth.restoreSession()"),"navigation resolves the authoritative account class before rendering class-gated links");
 assert.ok(!nav.includes('classId||"10"'),"navigation never silently defaults an unknown student class to Class 10");
 assert.ok(studentAuth.includes('classId:String(row.classId||"")')&&studentAuth.includes('classId:String(value.classId||"")'),"student identity preserves an explicit class and leaves missing class unknown");
