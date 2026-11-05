@@ -86,8 +86,8 @@ assert.equal(nso.flat.length, 685, "the Class 6 SOF Science pool includes curren
 assert.deepEqual(sectionCounts(nso.flat), {
   "Logical Reasoning": 75, "Science": 560, "Achievers Section": 50
 });
-assert.ok(nso.flat.every(question => question.syllabusClass && question.syllabusOrigin),
-  "every NSO question has syllabus-grade provenance");
+assert.ok(nso.flat.every(question => question.syllabusClass && question.syllabusOrigin && question.syllabusTopic && question.syllabusSource),
+  "every NSO question has complete syllabus-grade provenance");
 assert.ok(nso.flat.every(question => (question.syllabusOrigin === "current-class" && question.syllabusClass === 6) ||
   (question.syllabusOrigin === "previous-class" && question.syllabusClass === 5)),
   "NSO origin tags agree with their source class");
@@ -128,8 +128,8 @@ assert.deepEqual(sectionCounts(imo.flat), {
   "Achievers Section": 80,
   "Logical Reasoning": 75
 });
-assert.ok(imo.flat.every(question => question.syllabusClass && question.syllabusOrigin),
-  "every IMO question has syllabus-grade provenance");
+assert.ok(imo.flat.every(question => question.syllabusClass && question.syllabusOrigin && question.syllabusTopic && question.syllabusSource),
+  "every IMO question has complete syllabus-grade provenance");
 assert.ok(imo.flat.every(question => (question.syllabusOrigin === "current-class" && question.syllabusClass === 6) ||
   (question.syllabusOrigin === "previous-class" && question.syllabusClass === 5)),
   "IMO origin tags agree with their source class");
