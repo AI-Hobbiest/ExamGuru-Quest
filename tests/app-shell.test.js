@@ -47,7 +47,7 @@ assert.ok(!dashboard.includes("Loading bank details…"),"student dashboard does
 assert.ok(!examPracticeScript.includes("integrated.stats.appended")&&!examPracticeScript.includes("coverage.slotCount"),
   "student exam setup does not disclose appended bank size or eligible slot inventory");
 const profileRegistry=JSON.parse(fs.readFileSync("data/exam-papers/profile-registry.json","utf8"));
-assert.ok(profileRegistry.profiles.every(item=>!/(?:\\d[,.]?\\d*\\s+(?:candidates|questions)|MCQ bank integrated|paper generation|repeat protection|slot depth)/i.test(item.description||"")),
+assert.ok(profileRegistry.profiles.every(item=>!/([0-9]+ ?(?:candidates|questions)|MCQ bank integrated|paper generation|repeat protection|slot depth)/i.test(item.description||"")),
   "student-visible exam profile descriptions must not disclose bank size or internal pool-readiness metrics");
 assert.ok(examPracticeScript.includes('String(item.classId)===studentClassId'),
   "exam practice profiles are filtered to the authenticated student's class");
