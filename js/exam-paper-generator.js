@@ -32,12 +32,6 @@ function validateQuestion(q,path="question"){
   if(ids.some(x=>!x)||new Set(ids).size!==ids.length)e.push(path+".parts need unique IDs.");
   if(!q.parts.every(p=>p&&text(p.prompt)&&Number.isInteger(p.marks)&&p.marks>0))e.push(path+".parts need prompts and positive integer marks.");
   else if(q.attemptAny==null&&sum(q.parts.map(p=>p.marks))!==q.marks)e.push(path+".parts marks must equal question marks.");
-  if(q.attemptAny!=null){
-   const attemptParts=Array.isArray(q.parts)?q.parts:[];
-   if(!attemptParts.length)e.push(path+".attemptAny requires a non-empty parts array.");
-   else if(!Number.isInteger(q.attemptAny)||q.attemptAny<1||q.attemptAny>attemptParts.length)e.push(path+".attemptAny must be a positive count not greater than the available parts.");
-   else{const partMarks=[...new Set(attemptParts.map(p=>Number(p.marks)))];if(partMarks.length!==1||Number(q.marks)!==Number(q.attemptAny)*partMarks[0])e.push(path+".marks must equal attemptAny multiplied by the common part mark value.");}
-  }
   q.parts.forEach((part,partIndex)=>{
    if(part&&part.options!=null){
     const options=part.options,optionIds=Array.isArray(options)?options.map(o=>String(o&&o.optionId||"")):[];
@@ -59,6 +53,13 @@ function validateQuestion(q,path="question"){
     });
    }
   });
+ }
+ if(q.attemptAny!=null){
+  const attemptParts=Array.isArray(q.parts)?q.parts:[];
+  if(!attemptParts.length)e.push(path+".attemptAny requires a non-empty parts array.");
+  else if(!Number.isInteger(q.attemptAny)||q.attemptAny<1||q.attemptAny>attemptParts.length)e.push(path+".attemptAny must be a positive count not greater than the available parts.");
+  else if(!attemptParts.every(p=>Number.isInteger(p&&p.marks)&&p.marks>0))e.push(path+".attemptAny parts must have positive integer marks.");
+  else{const partMarks=[...new Set(attemptParts.map(p=>Number(p.marks)))];if(partMarks.length!==1||Number(q.marks)!==Number(q.attemptAny)*partMarks[0])e.push(path+".marks must equal attemptAny multiplied by the common part mark value.");}
  }
  if(q.assessmentLevels!=null){
   if(!Array.isArray(q.assessmentLevels)||!q.assessmentLevels.length||!q.assessmentLevels.every(level=>text(level))||new Set(q.assessmentLevels).size!==q.assessmentLevels.length)e.push(path+".assessmentLevels must be a non-empty list of unique labels.");
