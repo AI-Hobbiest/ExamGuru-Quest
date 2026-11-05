@@ -16,13 +16,13 @@ const model = context.window.C10OlympiadBlueprints;
 const sections = ["Logical Reasoning", "Mathematical Reasoning", "Everyday Mathematics", "Achievers Section"];
 assert.equal(normalized.length, 4);
 assert.deepEqual(Array.from(normalized, chapter => chapter.section), sections);
-assert.deepEqual(Array.from(normalized, chapter => chapter.questions.length), [60, 60, 60, 30]);
-assert.equal(normalized.reduce((sum, chapter) => sum + chapter.questions.length, 0), 210);
+assert.deepEqual(Array.from(normalized, chapter => chapter.questions.length), [70, 70, 70, 37]);
+assert.equal(normalized.reduce((sum, chapter) => sum + chapter.questions.length, 0), 247);
 
 const normalizedChapters = Array.from(normalized);
 const all = normalizedChapters.flatMap(chapter => Array.from(chapter.questions));
-assert.equal(new Set(all.map(question => question.id)).size, 210, "question IDs are unique");
-assert.equal(new Set(all.map(question => question.questionKey)).size, 210, "normalized question keys are unique");
+assert.equal(new Set(all.map(question => question.id)).size, 247, "question IDs are unique");
+assert.equal(new Set(all.map(question => question.questionKey)).size, 247, "normalized question keys are unique");
 assert.ok(all.every(question => question.section && question.syllabusTopic && question.syllabusSource),
   "every question records its exam section and topic provenance");
 assert.ok(all.every(question => Number.isInteger(question.syllabusClass) && [2, 3].includes(question.syllabusClass)),
@@ -65,10 +65,10 @@ for (const question of reused) {
     "reused keyed answer remains identical to the reviewed source");
   assert.equal(question.explanation, source.question.explanation, "reused explanation matches its source");
 }
-assert.equal(all.filter(question => question.syllabusOrigin === "previous-class").length, 72,
-  "previous-class source pool has 24 questions in each non-Achievers section");
-assert.equal(all.filter(question => question.syllabusOrigin === "current-class").length, 138,
-  "current-class source pool has 36 questions in each non-Achievers section and 30 Achievers questions");
+assert.equal(all.filter(question => question.syllabusOrigin === "previous-class").length, 84,
+  "previous-class source pool has 28 questions in each non-Achievers section");
+assert.equal(all.filter(question => question.syllabusOrigin === "current-class").length, 163,
+  "current-class source pool has 42 questions in each non-Achievers section and 37 Achievers questions");
 const answerPositions = [0, 0, 0, 0];
 raw.flatMap(chapter => chapter.questions).forEach(question => answerPositions[question.answer]++);
 assert.ok(Math.max(...answerPositions) - Math.min(...answerPositions) <= 1,
@@ -133,4 +133,4 @@ assert.equal(sectionResults.length, 4);
 assert.equal(sectionResults.reduce((sum, section) => sum + section.maxMarks, 0), 40);
 assert.equal(sectionResults.find(section => section.sectionId === "achievers").marksEarned, 2,
   "a correct Achievers response earns two marks");
-console.log("Class 3 SOF IMO bank tests passed: 210 question-bank records, 16 traceable CBSE reuse, exact syllabus quotas, 50 distinct papers, five-paper repeat protection and weighted 40-mark scoring.");
+console.log("Class 3 SOF IMO bank tests passed: 247 question-bank records, 16 traceable CBSE reuse, exact syllabus quotas, 50 distinct papers, five-paper repeat protection and weighted 40-mark scoring.");
