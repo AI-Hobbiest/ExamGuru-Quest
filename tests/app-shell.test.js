@@ -18,6 +18,7 @@ const parentPage=fs.readFileSync("parent.html","utf8");
 const examPractice=fs.readFileSync("exam-practice.html","utf8");
 const examPracticeScript=fs.readFileSync("js/exam-paper-self-study.js","utf8");
 const parentDashboard=fs.readFileSync("js/parent-dashboard.js","utf8");
+const parentAssessments=fs.readFileSync("js/parent-assessments.js","utf8");
 const pageAccess=fs.readFileSync("js/page-access.js","utf8");
 assert.ok(parentPage.includes("./js/parent-dashboard.js")&&parentPage.includes("./js/student-auth.js"),"parent workspace loads family identity and dashboard code");
 assert.ok(parentDashboard.includes("getLinkedChildren")&&parentDashboard.includes("studentId"),"parent dashboard reads only linked children using student-specific IDs");
@@ -39,6 +40,8 @@ assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"'),"p
 assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"Class 10 students can open full-paper self-study practice");
 assert.ok(!nav.includes('classIds:["10"]'),"Exam Paper Practice discovery is not hidden from Class 6 students");
 assert.ok(nav.includes('label:"Exam Paper Practice",icon:"🧾",href:"./parent.html#assessments"'),"parent navigation exposes the examination workspace");
+assert.ok(parentAssessments.includes("Class 6 full-paper examination profiles are not enabled yet"),"Class 6 parent assessment details must explain full-paper readiness rather than hide the workspace");
+assert.ok(!parentAssessments.includes("if(!profiles.length){section.remove();return;}"),"parent Class 6 exam workspace must remain visible when a full-paper profile is not yet published");
 assert.ok(nav.includes("await window.C10StudentAuth.restoreSession()"),"navigation resolves the authoritative account class before rendering class-gated links");
 assert.ok(!nav.includes('classId||"10"'),"navigation never silently defaults an unknown student class to Class 10");
 assert.ok(studentAuth.includes('classId:String(row.classId||"")')&&studentAuth.includes('classId:String(value.classId||"")'),"student identity preserves an explicit class and leaves missing class unknown");
