@@ -167,6 +167,17 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - Q1/Q2 retain reusable reading-comprehension skill stems by design; each candidate uses a distinct passage/case and passage-specific answers.
 
 
+### Q6/Q7 content strategy decision — 5 November 2026
+
+**Decision: retain the current adapted passages only as a temporary draft; do not add verbatim NCERT extracts or publish additional NCERT-derived adaptations until written permission is obtained.**
+
+- The repository is public and the GitHub Pages site is publicly accessible. Making the source repository private would not make assets delivered by the published student website private.
+- NCERT's online textbook terms state that republication, redistribution in digital content packages/software, and adaptation/summary/derivation are restricted without written permission. See the [NCERT textbook copyright notice](https://epathshala.nic.in/wp-content/doc/book/btextbook/textbook.htm) and [NCERT e-content licence](https://epathshala.nic.in/wp-content/doc/book/gtextbook/textbook.htm).
+- Next content-rights step: request written permission from NCERT for the intended non-commercial educational use, specifying the exact textbooks, chapters/poems, extract lengths, question-bank format, student audience, public/private delivery, and whether paraphrased/adapted material is permitted.
+- If permission is granted, keep licensed source files outside the public GitHub repository and deliver them only through an authenticated content service with access controls. Do not expose signed credentials or private source files in client-side code.
+- If permission is declined or unavailable, replace Q6/Q7 with genuinely original, non-derivative unseen prose and poetry passages for reading/poetic analysis, while keeping separate text-specific literature questions that do not reproduce or adapt protected expression. Label the exercise accurately; do not call original passages textbook extracts.
+- Private GitHub hosting is not itself a copyright licence and is not a substitute for access control on content served to browsers.
+
 ### Remaining content/release issues
 
 - Q6/Q7 currently use original adapted/paraphrased scene and poem-context passages, not verbatim textbook extracts. They exercise reference-to-context skills, but the official pattern calls for extracts from prose/drama and poetry. Because this repository is public, do not copy long copyrighted textbook passages into the bank without permission. The final decision is whether to accept adapted passages for practice or move to a licensed/private content approach; educator review is required.
