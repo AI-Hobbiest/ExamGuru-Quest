@@ -116,7 +116,8 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - [x] Q10/Q11 internal-choice alternatives, 100–120-word model responses and six-mark rubrics supplied.
 - [x] Q10 has ten prose and ten poetry primary candidates; Q11 primary candidates cover all nine supplied Footprints chapters.
 - [x] Bank-wide audit: 220 bundles, 20 eligible per slot, 1,400 unique IDs, zero duplicate IDs and zero structural/word-count metadata errors.
-- [ ] Run the updated English regression suite and both CI workflows against the final Q1–Q11 commit.
+- [x] Updated full Q1–Q11 English regression suite passed on commit `17e600e0abeb7155d53cbd4f620b108dfc8e31b4` (run 41980881261). Generator, release, renderer and English bank/response checks passed.
+- [x] Quiz-quality workflow passed on the same commit (run 41980881468). Its existing 50-paper all-format checks and online browser smoke checks passed for Mathematics Standard, Mathematics Basic and Class 10 Science; these do not certify English papers.
 - [ ] Verify every prescribed text/unit against a readable official 2026–27 syllabus and sample-paper marking scheme. The current CBSE index lists English Language & Literature and English Communicative separately, but the detailed 2026–27 PDF syllabus still requires direct verification.
 - [ ] Generate 50 distinct complete 80-mark English papers against the final production bank.
 - [ ] Validate five-paper, all-format repeat protection across all parent, nested and alternative English content IDs.
