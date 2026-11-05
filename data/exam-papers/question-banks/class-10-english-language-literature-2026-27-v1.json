@@ -5,7 +5,7 @@
   "subjectId": "english-language-literature",
   "subjectCode": "184",
   "academicYear": "2026-27",
-  "bankVersion": "draft-2-q01-q02-plus-q09-20-bundles",
+  "bankVersion": "draft-3-q01-q03-plus-q09-20-bundles",
   "title": "Class 10 English Language & Literature (184) · Draft Exam Studio Question Pool",
   "questionPoolStatus": "partially-curated",
   "questions": [
@@ -11307,6 +11307,6746 @@
       "source": {
         "type": "original-assessment-stimulus",
         "reference": "Original ExamGuru case study and dataset about energy-monitoring challenge in Brighton Ward."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-01",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-01-A",
+          "prompt": "There is ___ useful information in the weekly log for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-01-B",
+          "prompt": "Only ___ participants returned their permission slips by Friday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-01-C",
+          "prompt": "By the time the review began, the volunteers ___ the entries in the weekly log.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-01-D",
+          "prompt": "Riverdale Eco Club ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-01-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-01-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-01-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-01-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-01-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-01-J",
+          "prompt": "team said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The team said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-01-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-01-L",
+          "prompt": "The coordinator said, “Please submit the final chart by Friday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The coordinator requested the group to submit the final chart by Friday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Riverdale Eco Club."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-02",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-02-A",
+          "prompt": "There is ___ useful information in the return register for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-02-B",
+          "prompt": "Only ___ participants returned their permission slips by Monday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-02-C",
+          "prompt": "By the time the review began, the readers ___ the entries in the return register.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-02-D",
+          "prompt": "Sunrise Library ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-02-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-02-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-02-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-02-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-02-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-02-J",
+          "prompt": "librarian said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The librarian said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-02-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-02-L",
+          "prompt": "The teacher said, “Please submit the final chart by Monday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The teacher requested the group to submit the final chart by Monday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Sunrise Library."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-03",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-03-A",
+          "prompt": "There is ___ useful information in the experiment record for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-03-B",
+          "prompt": "Only ___ participants returned their permission slips by Thursday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-03-C",
+          "prompt": "By the time the review began, the participants ___ the entries in the experiment record.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-03-D",
+          "prompt": "Bluebell Science Fair ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-03-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-03-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-03-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-03-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-03-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-03-J",
+          "prompt": "committee said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The committee said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-03-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-03-L",
+          "prompt": "The mentor said, “Please submit the final chart by Thursday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The mentor requested the group to submit the final chart by Thursday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Bluebell Science Fair."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-04",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-04-A",
+          "prompt": "There is ___ useful information in the collection chart for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-04-B",
+          "prompt": "Only ___ participants returned their permission slips by Saturday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-04-C",
+          "prompt": "By the time the review began, the workers ___ the entries in the collection chart.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-04-D",
+          "prompt": "Harbour Clean-up ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-04-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-04-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-04-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-04-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-04-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-04-J",
+          "prompt": "supervisor said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The supervisor said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-04-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-04-L",
+          "prompt": "The guide said, “Please submit the final chart by Saturday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The guide requested the group to submit the final chart by Saturday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Harbour Clean-up."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-05",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-05-A",
+          "prompt": "There is ___ useful information in the result sheet for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-05-B",
+          "prompt": "Only ___ participants returned their permission slips by Tuesday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-05-C",
+          "prompt": "By the time the review began, the athletes ___ the entries in the result sheet.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-05-D",
+          "prompt": "Hillview Sports Meet ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-05-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-05-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-05-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-05-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-05-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-05-J",
+          "prompt": "captain said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The captain said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-05-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-05-L",
+          "prompt": "The coach said, “Please submit the final chart by Tuesday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The coach requested the group to submit the final chart by Tuesday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Hillview Sports Meet."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-06",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-06-A",
+          "prompt": "There is ___ useful information in the display list for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-06-B",
+          "prompt": "Only ___ participants returned their permission slips by Wednesday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-06-C",
+          "prompt": "By the time the review began, the artists ___ the entries in the display list.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-06-D",
+          "prompt": "Meadow Art Circle ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-06-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-06-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-06-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-06-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-06-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-06-J",
+          "prompt": "curator said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The curator said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-06-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-06-L",
+          "prompt": "The instructor said, “Please submit the final chart by Wednesday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The instructor requested the group to submit the final chart by Wednesday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Meadow Art Circle."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-07",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-07-A",
+          "prompt": "There is ___ useful information in the field notes for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-07-B",
+          "prompt": "Only ___ participants returned their permission slips by Sunday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-07-C",
+          "prompt": "By the time the review began, the surveyors ___ the entries in the field notes.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-07-D",
+          "prompt": "Green Line Survey ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-07-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-07-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-07-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-07-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-07-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-07-J",
+          "prompt": "analyst said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The analyst said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-07-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-07-L",
+          "prompt": "The researcher said, “Please submit the final chart by Sunday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The researcher requested the group to submit the final chart by Sunday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Green Line Survey."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-08",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-08-A",
+          "prompt": "There is ___ useful information in the entry register for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-08-B",
+          "prompt": "Only ___ participants returned their permission slips by Friday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-08-C",
+          "prompt": "By the time the review began, the visitors ___ the entries in the entry register.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-08-D",
+          "prompt": "City Museum Group ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-08-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-08-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-08-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-08-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-08-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-08-J",
+          "prompt": "curator said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The curator said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-08-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-08-L",
+          "prompt": "The guide said, “Please submit the final chart by Friday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The guide requested the group to submit the final chart by Friday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for City Museum Group."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-09",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-09-A",
+          "prompt": "There is ___ useful information in the planting record for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-09-B",
+          "prompt": "Only ___ participants returned their permission slips by Monday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-09-C",
+          "prompt": "By the time the review began, the students ___ the entries in the planting record.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-09-D",
+          "prompt": "Orchard School Garden ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-09-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-09-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-09-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-09-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-09-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-09-J",
+          "prompt": "gardener said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The gardener said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-09-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-09-L",
+          "prompt": "The teacher said, “Please submit the final chart by Monday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The teacher requested the group to submit the final chart by Monday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Orchard School Garden."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-10",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-10-A",
+          "prompt": "There is ___ useful information in the appointment list for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-10-B",
+          "prompt": "Only ___ participants returned their permission slips by Thursday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-10-C",
+          "prompt": "By the time the review began, the nurses ___ the entries in the appointment list.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-10-D",
+          "prompt": "Community Health Desk ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-10-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-10-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-10-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-10-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-10-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-10-J",
+          "prompt": "coordinator said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The coordinator said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-10-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-10-L",
+          "prompt": "The doctor said, “Please submit the final chart by Thursday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The doctor requested the group to submit the final chart by Thursday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Community Health Desk."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-11",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-11-A",
+          "prompt": "There is ___ useful information in the attendance sheet for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-11-B",
+          "prompt": "Only ___ participants returned their permission slips by Tuesday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-11-C",
+          "prompt": "By the time the review began, the learners ___ the entries in the attendance sheet.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-11-D",
+          "prompt": "Digital Skills Centre ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-11-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-11-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-11-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-11-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-11-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-11-J",
+          "prompt": "trainer said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The trainer said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-11-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-11-L",
+          "prompt": "The instructor said, “Please submit the final chart by Tuesday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The instructor requested the group to submit the final chart by Tuesday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Digital Skills Centre."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-12",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-12-A",
+          "prompt": "There is ___ useful information in the water log for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-12-B",
+          "prompt": "Only ___ participants returned their permission slips by Saturday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-12-C",
+          "prompt": "By the time the review began, the observers ___ the entries in the water log.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-12-D",
+          "prompt": "River Watch Team ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-12-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-12-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-12-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-12-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-12-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-12-J",
+          "prompt": "scientist said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The scientist said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-12-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-12-L",
+          "prompt": "The researcher said, “Please submit the final chart by Saturday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The researcher requested the group to submit the final chart by Saturday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for River Watch Team."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-13",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-13-A",
+          "prompt": "There is ___ useful information in the checklist for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-13-B",
+          "prompt": "Only ___ participants returned their permission slips by Wednesday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-13-C",
+          "prompt": "By the time the review began, the inspectors ___ the entries in the checklist.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-13-D",
+          "prompt": "Market Safety Group ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-13-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-13-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-13-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-13-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-13-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-13-J",
+          "prompt": "officer said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The officer said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-13-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-13-L",
+          "prompt": "The supervisor said, “Please submit the final chart by Wednesday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The supervisor requested the group to submit the final chart by Wednesday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Market Safety Group."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-14",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-14-A",
+          "prompt": "There is ___ useful information in the rehearsal notes for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-14-B",
+          "prompt": "Only ___ participants returned their permission slips by Friday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-14-C",
+          "prompt": "By the time the review began, the performers ___ the entries in the rehearsal notes.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-14-D",
+          "prompt": "Music Club ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-14-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-14-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-14-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-14-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-14-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-14-J",
+          "prompt": "conductor said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The conductor said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-14-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-14-L",
+          "prompt": "The teacher said, “Please submit the final chart by Friday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The teacher requested the group to submit the final chart by Friday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Music Club."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-15",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-15-A",
+          "prompt": "There is ___ useful information in the cast list for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-15-B",
+          "prompt": "Only ___ participants returned their permission slips by Thursday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-15-C",
+          "prompt": "By the time the review began, the actors ___ the entries in the cast list.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-15-D",
+          "prompt": "Theatre Workshop ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-15-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-15-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-15-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-15-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-15-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-15-J",
+          "prompt": "director said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The director said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-15-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-15-L",
+          "prompt": "The mentor said, “Please submit the final chart by Thursday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The mentor requested the group to submit the final chart by Thursday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Theatre Workshop."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-16",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-16-A",
+          "prompt": "There is ___ useful information in the planting chart for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-16-B",
+          "prompt": "Only ___ participants returned their permission slips by Monday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-16-C",
+          "prompt": "By the time the review began, the gardeners ___ the entries in the planting chart.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-16-D",
+          "prompt": "Public Garden Team ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-16-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-16-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-16-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-16-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-16-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-16-J",
+          "prompt": "horticulturist said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The horticulturist said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-16-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-16-L",
+          "prompt": "The officer said, “Please submit the final chart by Monday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The officer requested the group to submit the final chart by Monday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Public Garden Team."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-17",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-17-A",
+          "prompt": "There is ___ useful information in the route register for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-17-B",
+          "prompt": "Only ___ participants returned their permission slips by Sunday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-17-C",
+          "prompt": "By the time the review began, the riders ___ the entries in the route register.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-17-D",
+          "prompt": "Cycling Club ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-17-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-17-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-17-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-17-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-17-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-17-J",
+          "prompt": "leader said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The leader said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-17-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-17-L",
+          "prompt": "The coach said, “Please submit the final chart by Sunday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The coach requested the group to submit the final chart by Sunday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Cycling Club."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-18",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-18-A",
+          "prompt": "There is ___ useful information in the draft file for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-18-B",
+          "prompt": "Only ___ participants returned their permission slips by Wednesday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-18-C",
+          "prompt": "By the time the review began, the reporters ___ the entries in the draft file.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-18-D",
+          "prompt": "Young Journalists ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-18-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-18-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-18-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-18-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-18-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-18-J",
+          "prompt": "editor said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The editor said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-18-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-18-L",
+          "prompt": "The teacher said, “Please submit the final chart by Wednesday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The teacher requested the group to submit the final chart by Wednesday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Young Journalists."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-19",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-19-A",
+          "prompt": "There is ___ useful information in the sky map for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-19-B",
+          "prompt": "Only ___ participants returned their permission slips by Saturday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-19-C",
+          "prompt": "By the time the review began, the observers ___ the entries in the sky map.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-19-D",
+          "prompt": "Astronomy Circle ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-19-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-19-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-19-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-19-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-19-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-19-J",
+          "prompt": "organiser said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The organiser said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-19-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-19-L",
+          "prompt": "The guide said, “Please submit the final chart by Saturday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The guide requested the group to submit the final chart by Saturday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Astronomy Circle."
+      }
+    },
+    {
+      "questionId": "ENG184-Q03-20",
+      "sectionId": "grammar-writing",
+      "chapterId": "grammar",
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "type": "short-answer",
+      "marks": 10,
+      "attemptAny": 10,
+      "prompt": "Attempt any ten of the following twelve integrated grammar tasks. Each task carries one mark.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q03-20-A",
+          "prompt": "There is ___ useful information in the stock ledger for the next meeting.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "some"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "some"
+            },
+            {
+              "optionId": "B",
+              "text": "many"
+            },
+            {
+              "optionId": "C",
+              "text": "few"
+            },
+            {
+              "optionId": "D",
+              "text": "a"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q03-20-B",
+          "prompt": "Only ___ participants returned their permission slips by Tuesday.",
+          "marks": 1,
+          "grammarTopic": "determiners",
+          "answerKey": {
+            "modelAnswer": "a few"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "a little"
+            },
+            {
+              "optionId": "B",
+              "text": "a few"
+            },
+            {
+              "optionId": "C",
+              "text": "much"
+            },
+            {
+              "optionId": "D",
+              "text": "any of"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q03-20-C",
+          "prompt": "By the time the review began, the helpers ___ the entries in the stock ledger.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "had checked"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q03-20-D",
+          "prompt": "Food Bank Volunteers ___ the results since the start of the month.",
+          "marks": 1,
+          "grammarTopic": "tenses",
+          "answerKey": {
+            "modelAnswer": "has been recording"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "e",
+          "questionId": "ENG184-Q03-20-E",
+          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "must"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "must"
+            },
+            {
+              "optionId": "B",
+              "text": "might"
+            },
+            {
+              "optionId": "C",
+              "text": "would"
+            },
+            {
+              "optionId": "D",
+              "text": "could have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "f",
+          "questionId": "ENG184-Q03-20-F",
+          "prompt": "The group ___ verify the figures before publishing its report.",
+          "marks": 1,
+          "grammarTopic": "modals",
+          "answerKey": {
+            "modelAnswer": "should"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "should"
+            },
+            {
+              "optionId": "B",
+              "text": "can"
+            },
+            {
+              "optionId": "C",
+              "text": "might have"
+            },
+            {
+              "optionId": "D",
+              "text": "will have"
+            }
+          ],
+          "correctOptionId": "A"
+        },
+        {
+          "partId": "g",
+          "questionId": "ENG184-Q03-20-G",
+          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "is"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "are"
+            },
+            {
+              "optionId": "B",
+              "text": "is"
+            },
+            {
+              "optionId": "C",
+              "text": "were"
+            },
+            {
+              "optionId": "D",
+              "text": "have"
+            }
+          ],
+          "correctOptionId": "B"
+        },
+        {
+          "partId": "h",
+          "questionId": "ENG184-Q03-20-H",
+          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "marks": 1,
+          "grammarTopic": "subject-verb-concord",
+          "answerKey": {
+            "modelAnswer": "has"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Supplies the grammatically correct form",
+              "marks": 1
+            }
+          ],
+          "options": [
+            {
+              "optionId": "A",
+              "text": "have"
+            },
+            {
+              "optionId": "B",
+              "text": "are having"
+            },
+            {
+              "optionId": "C",
+              "text": "has"
+            },
+            {
+              "optionId": "D",
+              "text": "were"
+            }
+          ],
+          "correctOptionId": "C"
+        },
+        {
+          "partId": "i",
+          "questionId": "ENG184-Q03-20-I",
+          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "marks": 1,
+          "grammarTopic": "editing",
+          "answerKey": {
+            "modelAnswer": "were"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Corrects subject–verb agreement",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "j",
+          "questionId": "ENG184-Q03-20-J",
+          "prompt": "manager said, “I have checked the figures twice.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-statements",
+          "answerKey": {
+            "modelAnswer": "The manager said that they had checked the figures twice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "k",
+          "questionId": "ENG184-Q03-20-K",
+          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-questions",
+          "answerKey": {
+            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "l",
+          "questionId": "ENG184-Q03-20-L",
+          "prompt": "The coordinator said, “Please submit the final chart by Tuesday.” Change into reported speech.",
+          "marks": 1,
+          "grammarTopic": "reported-speech-commands-requests",
+          "answerKey": {
+            "modelAnswer": "The coordinator requested the group to submit the final chart by Tuesday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Uses the correct reporting structure and backshift",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Award one mark for each grammatically accurate response; accept equivalent correct transformations."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Any ten correctly answered tasks",
+          "marks": 10
+        }
+      ],
+      "source": {
+        "type": "original-assessment-stimulus",
+        "reference": "Original integrated grammar set for Food Bank Volunteers."
       }
     }
   ]
