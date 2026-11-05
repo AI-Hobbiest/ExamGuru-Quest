@@ -22,6 +22,8 @@ assert.ok(parentPage.includes("./js/parent-dashboard.js")&&parentPage.includes("
 assert.ok(parentDashboard.includes("getLinkedChildren")&&parentDashboard.includes("studentId"),"parent dashboard reads only linked children using student-specific IDs");
 assert.ok(parentPage.includes('id="childDetail"')&&parentDashboard.includes("showDetail"),"parent Level 2 provides an individual child progress view");
 assert.ok(parentDashboard.includes("Subject performance")&&parentDashboard.includes("Chapter progress")&&parentDashboard.includes("Learning insights"),"parent Level 2 includes subject, chapter and insight sections");
+assert.ok(!parentDashboard.includes("MCQs ·")&&!parentDashboard.includes("chapter sets"),
+  "parent dashboard does not disclose question-bank size or chapter inventory");
 assert.ok(parentDashboard.includes("openReport")&&parentDashboard.includes("window.print")&&parentDashboard.includes("chartSvg"),"parent Level 3 generates printable reports with charts");
 assert.ok(parentPage.includes("Progress reports"),"parent workspace explains report availability");
 assert.ok(pageAccess.includes('session.role==="parent"')&&pageAccess.includes('"./parent.html"'),"student-only routes redirect parent accounts to family workspace");
@@ -33,7 +35,22 @@ assert.ok(nav.includes('auth:"guest"'),"guest navigation is separated from stude
 assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"'),"admin navigation exposes Exam Paper Studio directly");
 assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"'),"parent navigation is isolated to the family role");
-assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"student and parent navigation expose self-study exam practice");
+assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"Class 10 students can open full-paper self-study practice");
+assert.ok(nav.includes('classIds:["10"]')&&nav.includes('if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return;'),
+  "the Class 10 full-paper route is filtered from other classes");
+assert.ok(!nav.includes("36 starter MCQs · 12 chapters"),"student navigation does not disclose Class 6 bank inventory");
+const dashboardManager=fs.readFileSync("js/dashboard-manager.js","utf8");
+assert.ok(dashboardManager.includes('meta.textContent="Explore topics and practise"'),"student subject cards use generic practice copy");
+assert.ok(!dashboardManager.includes('toLocaleString()+" MCQs · "+bank.length+" chapter sets"'),
+  "student dashboard never displays question-bank inventory");
+assert.ok(!dashboard.includes("Loading bank details…"),"student dashboard does not expose bank inventory loading text");
+assert.ok(!examPracticeScript.includes("integrated.stats.appended")&&!examPracticeScript.includes("coverage.slotCount"),
+  "student exam setup does not disclose appended bank size or eligible slot inventory");
+const profileRegistry=JSON.parse(fs.readFileSync("data/exam-papers/profile-registry.json","utf8"));
+assert.ok(profileRegistry.profiles.every(item=>!/([0-9]+ ?(?:candidates|questions)|MCQ bank integrated|paper generation|repeat protection|slot depth)/i.test(item.description||"")),
+  "student-visible exam profile descriptions must not disclose bank size or internal pool-readiness metrics");
+assert.ok(examPracticeScript.includes('String(item.classId)===studentClassId'),
+  "exam practice profiles are filtered to the authenticated student's class");
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"'),"admin navigation exposes the authoring studio");
 assert.ok(nav.includes('role==="parent"'),"parent sessions are recognised by the shared navigation shell");
 assert.ok(nav.includes('c10playground_static_student_v1'),"navigation detects the current student session");

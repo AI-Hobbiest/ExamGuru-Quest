@@ -68,12 +68,12 @@ for(const profile of profiles){
 
  const fingerprints=[],paperHistory=[];
  for(let attempt=1;attempt<=50;attempt++){
-  const recentMcqQuestionIds=paperHistory.slice(-2).flatMap(p=>p.mcqQuestionIds);
+  const previousPapers=paperHistory.slice(-5);
   const paper=engine.generateUniquePaper(blueprint,bank,{
    seed:"class10-mathematics-full-integration-"+profile.level+"-"+attempt,
    recentPaperFingerprints:fingerprints,
-   recentQuestionIds:recentMcqQuestionIds,
-   uniqueSearchAttempts:500,
+   recentQuestionIdSets:previousPapers.map(previous=>previous.questionIds),
+   uniqueSearchAttempts:1000,
    maxSearchAttempts:250000
   });
   const check=engine.validatePaper(paper,blueprint);
@@ -92,17 +92,38 @@ for(const profile of profiles){
    "case-based":3
   });
   assert.ok(paper.questions.some(q=>q.source&&q.source.type==="practice-bank"),"every generated examination must actually draw from the integrated chapter MCQ bank");
-  const mcqQuestionIds=paper.questions.filter(q=>q.type==="mcq").map(q=>q.questionId);
-  for(const previous of paperHistory.slice(-2)){
-   assert.ok(!mcqQuestionIds.some(id=>previous.mcqQuestionIds.includes(id)),profile.level+" MCQs must not repeat in the preceding two papers");
+  const contentIds=paper.questions.flatMap(q=>engine.questionContentIds(q));
+  const appliedWindow=previousPapers.length;
+  assert.equal(paper.repeatProtection.appliedWindow,appliedWindow,
+    profile.level+" must honour the complete available five-paper history without relaxing it");
+  for(const previous of previousPapers){
+   const previousIds=new Set(previous.questionIds);
+   assert.ok(!contentIds.some(id=>previousIds.has(id)),
+    profile.level+" must not repeat any question format or nested content from the preceding five papers");
   }
   const fingerprint=engine.paperFingerprint(paper);
   assert.ok(fingerprint);
   assert.ok(!fingerprints.includes(fingerprint),profile.level+" full paper combination must be unique");
   fingerprints.push(fingerprint);
-  paperHistory.push({mcqQuestionIds});
+  paperHistory.push({questionIds:contentIds});
  }
  assert.equal(new Set(fingerprints).size,50,profile.level+" must produce 50 distinct complete papers using the full merged pool");
+ const previousPapers=paperHistory.slice(-5);
+ const paper51=engine.generateUniquePaper(blueprint,bank,{
+  seed:"class10-mathematics-full-integration-"+profile.level+"-51",
+  recentPaperFingerprints:fingerprints,
+  recentQuestionIdSets:previousPapers.map(previous=>previous.questionIds),
+  uniqueSearchAttempts:1000,
+  maxSearchAttempts:250000
+ });
+ const paper51Ids=paper51.questions.flatMap(q=>engine.questionContentIds(q));
+ assert.equal(paper51.repeatProtection.appliedWindow,5,profile.level+" must preserve the five-paper rule after a full 50-paper browser history");
+ for(const previous of previousPapers){
+  const ids=new Set(previous.questionIds);
+  assert.ok(!paper51Ids.some(id=>ids.has(id)),profile.level+" paper 51 must exclude all question formats from the previous five papers");
+ }
+ assert.ok(!fingerprints.includes(engine.paperFingerprint(paper51)),profile.level+" paper 51 must remain distinct from all 50 previous full-paper combinations");
+
 }
 
-console.log("Mathematics end-to-end passed: 1,400 source MCQs audited; 1,844 unique merged runtime candidates; 38-question/80-mark Standard and Basic profiles; exact difficulty targets; and 50 unique full-integrated papers per level with two-paper MCQ repeat protection.");
+console.log("Mathematics end-to-end passed: 1,400 source MCQs audited; 1,844 unique merged runtime candidates; 38-question/80-mark Standard and Basic profiles; exact difficulty targets; and 50 unique full-integrated papers per level with five-paper all-format repeat protection.");
