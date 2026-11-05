@@ -5,7 +5,7 @@
   "subjectId": "english-language-literature",
   "subjectCode": "184",
   "academicYear": "2026-27",
-  "bankVersion": "draft-5b-deduplicated-q01-q05-plus-q09",
+  "bankVersion": "draft-6-q01-q06-plus-q09-20-bundles",
   "title": "Class 10 English Language & Literature (184) · Draft Exam Studio Question Pool",
   "questionPoolStatus": "partially-curated",
   "questions": [
@@ -21707,6 +21707,4546 @@
       "source": {
         "type": "original-data-interpretation-task",
         "reference": "Original ExamGuru data interpretation exercise for Brighton Ward."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-01",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — A Letter to God: A farmer watches a storm destroy the crop on which his family depends. He asks for help with complete confidence. The post-office workers collect money for him, but the amount is smaller than he expects.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-01-A",
+          "prompt": "In the A Letter to God scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "faith tested by hardship"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "faith tested by hardship"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-01-B",
+          "prompt": "Which detail in the A Letter to God cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A farmer watches a storm destroy the crop on which his family depends. He asks for help with complete confidence. The post-office workers collect money for him, but the amount is smaller than he expects."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-01-C",
+          "prompt": "What does the A Letter to God episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The workers respond with kindness, while the farmer suspects the very people who helped him."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-01-D",
+          "prompt": "Explain how the contrast in A Letter to God develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the workers respond with kindness, while the farmer suspects the very people who helped him. with faith tested by hardship. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-01-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — A Baker from Goa: A narrator recalls the village baker whose arrival was part of daily life. Bread was connected with family routines and festivals, so the baker represented more than a trade.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-01-ALT-A",
+              "prompt": "In the A Baker from Goa scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "tradition and community"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "tradition and community"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-01-ALT-B",
+              "prompt": "Which detail in the A Baker from Goa cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A narrator recalls the village baker whose arrival was part of daily life. Bread was connected with family routines and festivals, so the baker represented more than a trade."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-01-ALT-C",
+              "prompt": "What does the A Baker from Goa episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The baker's routine connects food, celebration and a shared village rhythm."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-01-ALT-D",
+              "prompt": "Explain how the contrast in A Baker from Goa develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the baker's routine connects food, celebration and a shared village rhythm. with tradition and community. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: A Letter to God; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-02",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — Nelson Mandela – Long Walk to Freedom: At a historic ceremony, a leader recalls the sacrifices that made a new political beginning possible. He describes courage as overcoming fear and argues that freedom must be shared by all.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-02-A",
+          "prompt": "In the Nelson Mandela – Long Walk to Freedom scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "freedom and human dignity"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "freedom and human dignity"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-02-B",
+          "prompt": "Which detail in the Nelson Mandela – Long Walk to Freedom cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "At a historic ceremony, a leader recalls the sacrifices that made a new political beginning possible. He describes courage as overcoming fear and argues that freedom must be shared by all."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-02-C",
+          "prompt": "What does the Nelson Mandela – Long Walk to Freedom episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The speaker links personal dignity to equal rights and public responsibility."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-02-D",
+          "prompt": "Explain how the contrast in Nelson Mandela – Long Walk to Freedom develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the speaker links personal dignity to equal rights and public responsibility. with freedom and human dignity. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-02-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — Coorg: A travel account presents hills, forests, coffee estates and local traditions. It connects scenery with wildlife, history and activities, showing that the region has several forms of appeal.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-02-ALT-A",
+              "prompt": "In the Coorg scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "place and identity"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "place and identity"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-02-ALT-B",
+              "prompt": "Which detail in the Coorg cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A travel account presents hills, forests, coffee estates and local traditions. It connects scenery with wildlife, history and activities, showing that the region has several forms of appeal."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-02-ALT-C",
+              "prompt": "What does the Coorg episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The description links the natural setting with the culture and history of its people."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-02-ALT-D",
+              "prompt": "Explain how the contrast in Coorg develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the description links the natural setting with the culture and history of its people. with place and identity. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: Nelson Mandela – Long Walk to Freedom; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-03",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — His First Flight: A young seabird hesitates on a ledge. Hunger and family encouragement eventually push it forward. Once it moves, its wings support it and the frightening act becomes possible.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-03-A",
+          "prompt": "In the His First Flight scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "overcoming fear"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "overcoming fear"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-03-B",
+          "prompt": "Which detail in the His First Flight cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A young seabird hesitates on a ledge. Hunger and family encouragement eventually push it forward. Once it moves, its wings support it and the frightening act becomes possible."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-03-C",
+          "prompt": "What does the His First Flight episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The bird moves from hesitation to action, discovering ability through experience."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-03-D",
+          "prompt": "Explain how the contrast in His First Flight develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the bird moves from hesitation to action, discovering ability through experience. with overcoming fear. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-03-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — Tea from Assam: Two friends travel through tea country and discuss the plant's history while looking at the estates. The journey joins an everyday drink with its agricultural setting and stories of cultivation.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-03-ALT-A",
+              "prompt": "In the Tea from Assam scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "knowledge through observation"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "knowledge through observation"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-03-ALT-B",
+              "prompt": "Which detail in the Tea from Assam cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "Two friends travel through tea country and discuss the plant's history while looking at the estates. The journey joins an everyday drink with its agricultural setting and stories of cultivation."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-03-ALT-C",
+              "prompt": "What does the Tea from Assam episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The landscape makes the topic concrete, while conversation adds historical context."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-03-ALT-D",
+              "prompt": "Explain how the contrast in Tea from Assam develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the landscape makes the topic concrete, while conversation adds historical context. with knowledge through observation. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: His First Flight; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-04",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — The Black Aeroplane: A pilot caught in a storm sees an unfamiliar aircraft that appears to guide him towards safety. After landing, he learns that the control tower recorded no other aircraft.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-04-A",
+          "prompt": "In the The Black Aeroplane scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "mystery and uncertainty"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "mystery and uncertainty"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-04-B",
+          "prompt": "Which detail in the The Black Aeroplane cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A pilot caught in a storm sees an unfamiliar aircraft that appears to guide him towards safety. After landing, he learns that the control tower recorded no other aircraft."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-04-C",
+          "prompt": "What does the The Black Aeroplane episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The guide seems real to the pilot, yet the missing record leaves the experience unexplained."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-04-D",
+          "prompt": "Explain how the contrast in The Black Aeroplane develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the guide seems real to the pilot, yet the missing record leaves the experience unexplained. with mystery and uncertainty. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-04-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — Madam Rides the Bus: A curious child plans a bus journey by observing the schedule and saving her fare. She enjoys travelling independently, but an unexpected sight on the return journey changes her mood.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-04-ALT-A",
+              "prompt": "In the Madam Rides the Bus scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "curiosity and growing awareness"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "curiosity and growing awareness"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-04-ALT-B",
+              "prompt": "Which detail in the Madam Rides the Bus cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A curious child plans a bus journey by observing the schedule and saving her fare. She enjoys travelling independently, but an unexpected sight on the return journey changes her mood."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-04-ALT-C",
+              "prompt": "What does the Madam Rides the Bus episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The journey gives the child independence but also exposes her to a more serious side of life."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-04-ALT-D",
+              "prompt": "Explain how the contrast in Madam Rides the Bus develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the journey gives the child independence but also exposes her to a more serious side of life. with curiosity and growing awareness. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: The Black Aeroplane; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-05",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — From the Diary of Anne Frank: A student writes privately because she wants a companion who will listen. In class, a teacher responds to her talkative nature with a writing assignment that becomes a playful exercise.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-05-A",
+          "prompt": "In the From the Diary of Anne Frank scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "the need to be heard"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "the need to be heard"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-05-B",
+          "prompt": "Which detail in the From the Diary of Anne Frank cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A student writes privately because she wants a companion who will listen. In class, a teacher responds to her talkative nature with a writing assignment that becomes a playful exercise."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-05-C",
+          "prompt": "What does the From the Diary of Anne Frank episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The diary offers companionship, while humour helps the student turn criticism into creativity."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-05-D",
+          "prompt": "Explain how the contrast in From the Diary of Anne Frank develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the diary offers companionship, while humour helps the student turn criticism into creativity. with the need to be heard. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-05-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — The Sermon at Benares: A grieving mother seeks a remedy for her dead child. A teacher asks her to find a household untouched by death; visiting homes teaches her that loss is shared by all families.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-05-ALT-A",
+              "prompt": "In the The Sermon at Benares scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "acceptance of loss"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "acceptance of loss"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-05-ALT-B",
+              "prompt": "Which detail in the The Sermon at Benares cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A grieving mother seeks a remedy for her dead child. A teacher asks her to find a household untouched by death; visiting homes teaches her that loss is shared by all families."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-05-ALT-C",
+              "prompt": "What does the The Sermon at Benares episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The search reveals that grief is universal and acceptance begins with that recognition."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-05-ALT-D",
+              "prompt": "Explain how the contrast in The Sermon at Benares develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the search reveals that grief is universal and acceptance begins with that recognition. with acceptance of loss. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: From the Diary of Anne Frank; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-06",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — A Baker from Goa: A narrator recalls the village baker whose arrival was part of daily life. Bread was connected with family routines and festivals, so the baker represented more than a trade.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-06-A",
+          "prompt": "In the A Baker from Goa scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "tradition and community"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "tradition and community"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-06-B",
+          "prompt": "Which detail in the A Baker from Goa cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A narrator recalls the village baker whose arrival was part of daily life. Bread was connected with family routines and festivals, so the baker represented more than a trade."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-06-C",
+          "prompt": "What does the A Baker from Goa episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The baker's routine connects food, celebration and a shared village rhythm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-06-D",
+          "prompt": "Explain how the contrast in A Baker from Goa develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the baker's routine connects food, celebration and a shared village rhythm. with tradition and community. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-06-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — The Proposal: A landowner visits a neighbour intending to ask for marriage. The conversation repeatedly turns into disputes about property and status, and the elders become more concerned with winning arguments than listening.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-06-ALT-A",
+              "prompt": "In the The Proposal scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "comic conflict and pride"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "comic conflict and pride"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-06-ALT-B",
+              "prompt": "Which detail in the The Proposal cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A landowner visits a neighbour intending to ask for marriage. The conversation repeatedly turns into disputes about property and status, and the elders become more concerned with winning arguments than listening."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-06-ALT-C",
+              "prompt": "What does the The Proposal episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The proposal is interrupted by quarrels, satirising vanity and social convention."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-06-ALT-D",
+              "prompt": "Explain how the contrast in The Proposal develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the proposal is interrupted by quarrels, satirising vanity and social convention. with comic conflict and pride. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: A Baker from Goa; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-07",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — Coorg: A travel account presents hills, forests, coffee estates and local traditions. It connects scenery with wildlife, history and activities, showing that the region has several forms of appeal.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-07-A",
+          "prompt": "In the Coorg scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "place and identity"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "place and identity"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-07-B",
+          "prompt": "Which detail in the Coorg cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A travel account presents hills, forests, coffee estates and local traditions. It connects scenery with wildlife, history and activities, showing that the region has several forms of appeal."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-07-C",
+          "prompt": "What does the Coorg episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The description links the natural setting with the culture and history of its people."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-07-D",
+          "prompt": "Explain how the contrast in Coorg develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the description links the natural setting with the culture and history of its people. with place and identity. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-07-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — A Letter to God: After receiving less money than requested, the farmer believes the unseen giver is generous but that some helpers have taken the rest. He writes again asking for the balance and blaming the postal workers.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-07-ALT-A",
+              "prompt": "In the A Letter to God scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "misplaced suspicion"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "misplaced suspicion"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-07-ALT-B",
+              "prompt": "Which detail in the A Letter to God cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "After receiving less money than requested, the farmer believes the unseen giver is generous but that some helpers have taken the rest. He writes again asking for the balance and blaming the postal workers."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-07-ALT-C",
+              "prompt": "What does the A Letter to God episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The final misunderstanding exposes the gap between faith and the farmer's recognition of human kindness."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-07-ALT-D",
+              "prompt": "Explain how the contrast in A Letter to God develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the final misunderstanding exposes the gap between faith and the farmer's recognition of human kindness. with misplaced suspicion. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: Coorg; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-08",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — Tea from Assam: Two friends travel through tea country and discuss the plant's history while looking at the estates. The journey joins an everyday drink with its agricultural setting and stories of cultivation.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-08-A",
+          "prompt": "In the Tea from Assam scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "knowledge through observation"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "knowledge through observation"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-08-B",
+          "prompt": "Which detail in the Tea from Assam cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "Two friends travel through tea country and discuss the plant's history while looking at the estates. The journey joins an everyday drink with its agricultural setting and stories of cultivation."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-08-C",
+          "prompt": "What does the Tea from Assam episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The landscape makes the topic concrete, while conversation adds historical context."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-08-D",
+          "prompt": "Explain how the contrast in Tea from Assam develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the landscape makes the topic concrete, while conversation adds historical context. with knowledge through observation. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-08-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — Nelson Mandela – Long Walk to Freedom: The speaker reflects on duties to family and to the wider community. He explains how an unjust system restricted both and how the struggle for equality reshaped his understanding of responsibility.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-08-ALT-A",
+              "prompt": "In the Nelson Mandela – Long Walk to Freedom scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "duty and freedom"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "duty and freedom"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-08-ALT-B",
+              "prompt": "Which detail in the Nelson Mandela – Long Walk to Freedom cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The speaker reflects on duties to family and to the wider community. He explains how an unjust system restricted both and how the struggle for equality reshaped his understanding of responsibility."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-08-ALT-C",
+              "prompt": "What does the Nelson Mandela – Long Walk to Freedom episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "Public injustice can limit private life, and the pursuit of rights may demand sacrifice."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-08-ALT-D",
+              "prompt": "Explain how the contrast in Nelson Mandela – Long Walk to Freedom develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts public injustice can limit private life, and the pursuit of rights may demand sacrifice. with duty and freedom. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: Tea from Assam; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-09",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — Madam Rides the Bus: A curious child plans a bus journey by observing the schedule and saving her fare. She enjoys travelling independently, but an unexpected sight on the return journey changes her mood.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-09-A",
+          "prompt": "In the Madam Rides the Bus scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "curiosity and growing awareness"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "curiosity and growing awareness"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-09-B",
+          "prompt": "Which detail in the Madam Rides the Bus cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A curious child plans a bus journey by observing the schedule and saving her fare. She enjoys travelling independently, but an unexpected sight on the return journey changes her mood."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-09-C",
+          "prompt": "What does the Madam Rides the Bus episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The journey gives the child independence but also exposes her to a more serious side of life."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-09-D",
+          "prompt": "Explain how the contrast in Madam Rides the Bus develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the journey gives the child independence but also exposes her to a more serious side of life. with curiosity and growing awareness. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-09-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — His First Flight: The young bird's mother approaches with food but stops just beyond reach. Hunger and persistent encouragement create a choice between remaining on the ledge and attempting flight.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-09-ALT-A",
+              "prompt": "In the His First Flight scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "learning through action"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "learning through action"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-09-ALT-B",
+              "prompt": "Which detail in the His First Flight cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The young bird's mother approaches with food but stops just beyond reach. Hunger and persistent encouragement create a choice between remaining on the ledge and attempting flight."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-09-ALT-C",
+              "prompt": "What does the His First Flight episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "Need and encouragement overcome hesitation; experience replaces imagined danger."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-09-ALT-D",
+              "prompt": "Explain how the contrast in His First Flight develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts need and encouragement overcome hesitation; experience replaces imagined danger. with learning through action. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: Madam Rides the Bus; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-10",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — The Sermon at Benares: A grieving mother seeks a remedy for her dead child. A teacher asks her to find a household untouched by death; visiting homes teaches her that loss is shared by all families.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-10-A",
+          "prompt": "In the The Sermon at Benares scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "acceptance of loss"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "acceptance of loss"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-10-B",
+          "prompt": "Which detail in the The Sermon at Benares cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A grieving mother seeks a remedy for her dead child. A teacher asks her to find a household untouched by death; visiting homes teaches her that loss is shared by all families."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-10-C",
+          "prompt": "What does the The Sermon at Benares episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The search reveals that grief is universal and acceptance begins with that recognition."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-10-D",
+          "prompt": "Explain how the contrast in The Sermon at Benares develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the search reveals that grief is universal and acceptance begins with that recognition. with acceptance of loss. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-10-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — The Black Aeroplane: Low on fuel and unable to see clearly, the pilot follows an unknown aircraft through the storm. He does not know who is flying it or why it has appeared.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-10-ALT-A",
+              "prompt": "In the The Black Aeroplane scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "trust under pressure"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "trust under pressure"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-10-ALT-B",
+              "prompt": "Which detail in the The Black Aeroplane cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "Low on fuel and unable to see clearly, the pilot follows an unknown aircraft through the storm. He does not know who is flying it or why it has appeared."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-10-ALT-C",
+              "prompt": "What does the The Black Aeroplane episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The aircraft offers direction, but the pilot has no reliable way to identify its source."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-10-ALT-D",
+              "prompt": "Explain how the contrast in The Black Aeroplane develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the aircraft offers direction, but the pilot has no reliable way to identify its source. with trust under pressure. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: The Sermon at Benares; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-11",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — The Proposal: A landowner visits a neighbour intending to ask for marriage. The conversation repeatedly turns into disputes about property and status, and the elders become more concerned with winning arguments than listening.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-11-A",
+          "prompt": "In the The Proposal scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "comic conflict and pride"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "comic conflict and pride"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-11-B",
+          "prompt": "Which detail in the The Proposal cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A landowner visits a neighbour intending to ask for marriage. The conversation repeatedly turns into disputes about property and status, and the elders become more concerned with winning arguments than listening."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-11-C",
+          "prompt": "What does the The Proposal episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The proposal is interrupted by quarrels, satirising vanity and social convention."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-11-D",
+          "prompt": "Explain how the contrast in The Proposal develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the proposal is interrupted by quarrels, satirising vanity and social convention. with comic conflict and pride. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-11-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — From the Diary of Anne Frank: A teacher asks a lively student to explain her talkative habits in an essay. She responds with humour, using family traits and an imaginative story to meet the assignment.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-11-ALT-A",
+              "prompt": "In the From the Diary of Anne Frank scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "creativity and resilience"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "creativity and resilience"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-11-ALT-B",
+              "prompt": "Which detail in the From the Diary of Anne Frank cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A teacher asks a lively student to explain her talkative habits in an essay. She responds with humour, using family traits and an imaginative story to meet the assignment."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-11-ALT-C",
+              "prompt": "What does the From the Diary of Anne Frank episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A reprimand becomes an opportunity to write imaginatively and use humour thoughtfully."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-11-ALT-D",
+              "prompt": "Explain how the contrast in From the Diary of Anne Frank develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts a reprimand becomes an opportunity to write imaginatively and use humour thoughtfully. with creativity and resilience. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: The Proposal; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-12",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — A Letter to God: After receiving less money than requested, the farmer believes the unseen giver is generous but that some helpers have taken the rest. He writes again asking for the balance and blaming the postal workers.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-12-A",
+          "prompt": "In the A Letter to God scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "misplaced suspicion"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "misplaced suspicion"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-12-B",
+          "prompt": "Which detail in the A Letter to God cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "After receiving less money than requested, the farmer believes the unseen giver is generous but that some helpers have taken the rest. He writes again asking for the balance and blaming the postal workers."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-12-C",
+          "prompt": "What does the A Letter to God episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The final misunderstanding exposes the gap between faith and the farmer's recognition of human kindness."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-12-D",
+          "prompt": "Explain how the contrast in A Letter to God develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the final misunderstanding exposes the gap between faith and the farmer's recognition of human kindness. with misplaced suspicion. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-12-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — A Baker from Goa: The account links the baker's familiar appearance and daily routine to village celebrations. Bread is expected at important occasions, giving the baker a recognised place in local life.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-12-ALT-A",
+              "prompt": "In the A Baker from Goa scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "continuity and memory"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "continuity and memory"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-12-ALT-B",
+              "prompt": "Which detail in the A Baker from Goa cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The account links the baker's familiar appearance and daily routine to village celebrations. Bread is expected at important occasions, giving the baker a recognised place in local life."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-12-ALT-C",
+              "prompt": "What does the A Baker from Goa episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The baker represents a custom that connects generations even as daily life changes."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-12-ALT-D",
+              "prompt": "Explain how the contrast in A Baker from Goa develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the baker represents a custom that connects generations even as daily life changes. with continuity and memory. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: A Letter to God; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-13",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — Nelson Mandela – Long Walk to Freedom: The speaker reflects on duties to family and to the wider community. He explains how an unjust system restricted both and how the struggle for equality reshaped his understanding of responsibility.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-13-A",
+          "prompt": "In the Nelson Mandela – Long Walk to Freedom scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "duty and freedom"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "duty and freedom"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-13-B",
+          "prompt": "Which detail in the Nelson Mandela – Long Walk to Freedom cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The speaker reflects on duties to family and to the wider community. He explains how an unjust system restricted both and how the struggle for equality reshaped his understanding of responsibility."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-13-C",
+          "prompt": "What does the Nelson Mandela – Long Walk to Freedom episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "Public injustice can limit private life, and the pursuit of rights may demand sacrifice."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-13-D",
+          "prompt": "Explain how the contrast in Nelson Mandela – Long Walk to Freedom develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts public injustice can limit private life, and the pursuit of rights may demand sacrifice. with duty and freedom. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-13-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — Coorg: A description introduces local people, traditions and a landscape that attracts visitors. The region is presented not as scenery alone, but through links between environment, history and livelihood.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-13-ALT-A",
+              "prompt": "In the Coorg scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "culture and geography"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "culture and geography"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-13-ALT-B",
+              "prompt": "Which detail in the Coorg cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A description introduces local people, traditions and a landscape that attracts visitors. The region is presented not as scenery alone, but through links between environment, history and livelihood."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-13-ALT-C",
+              "prompt": "What does the Coorg episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The place is understood through the relationship between natural features and its people."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-13-ALT-D",
+              "prompt": "Explain how the contrast in Coorg develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the place is understood through the relationship between natural features and its people. with culture and geography. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: Nelson Mandela – Long Walk to Freedom; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-14",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — His First Flight: The young bird's mother approaches with food but stops just beyond reach. Hunger and persistent encouragement create a choice between remaining on the ledge and attempting flight.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-14-A",
+          "prompt": "In the His First Flight scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "learning through action"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "learning through action"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-14-B",
+          "prompt": "Which detail in the His First Flight cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The young bird's mother approaches with food but stops just beyond reach. Hunger and persistent encouragement create a choice between remaining on the ledge and attempting flight."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-14-C",
+          "prompt": "What does the His First Flight episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "Need and encouragement overcome hesitation; experience replaces imagined danger."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-14-D",
+          "prompt": "Explain how the contrast in His First Flight develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts need and encouragement overcome hesitation; experience replaces imagined danger. with learning through action. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-14-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — Tea from Assam: The conversation turns to competing stories about the discovery and cultivation of tea. The friends' observations invite readers to connect an everyday drink with a longer history.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-14-ALT-A",
+              "prompt": "In the Tea from Assam scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "history in everyday life"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "history in everyday life"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-14-ALT-B",
+              "prompt": "Which detail in the Tea from Assam cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The conversation turns to competing stories about the discovery and cultivation of tea. The friends' observations invite readers to connect an everyday drink with a longer history."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-14-ALT-C",
+              "prompt": "What does the Tea from Assam episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "Travel and observation introduce background knowledge without separating it from the journey."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-14-ALT-D",
+              "prompt": "Explain how the contrast in Tea from Assam develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts travel and observation introduce background knowledge without separating it from the journey. with history in everyday life. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: His First Flight; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-15",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — The Black Aeroplane: Low on fuel and unable to see clearly, the pilot follows an unknown aircraft through the storm. He does not know who is flying it or why it has appeared.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-15-A",
+          "prompt": "In the The Black Aeroplane scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "trust under pressure"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "trust under pressure"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-15-B",
+          "prompt": "Which detail in the The Black Aeroplane cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "Low on fuel and unable to see clearly, the pilot follows an unknown aircraft through the storm. He does not know who is flying it or why it has appeared."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-15-C",
+          "prompt": "What does the The Black Aeroplane episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The aircraft offers direction, but the pilot has no reliable way to identify its source."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-15-D",
+          "prompt": "Explain how the contrast in The Black Aeroplane develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the aircraft offers direction, but the pilot has no reliable way to identify its source. with trust under pressure. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-15-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — Madam Rides the Bus: The child refuses help during the journey and insists on paying like an independent passenger. Her confidence is genuine, although her understanding of the world is still developing.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-15-ALT-A",
+              "prompt": "In the Madam Rides the Bus scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "independence and maturity"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "independence and maturity"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-15-ALT-B",
+              "prompt": "Which detail in the Madam Rides the Bus cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The child refuses help during the journey and insists on paying like an independent passenger. Her confidence is genuine, although her understanding of the world is still developing."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-15-ALT-C",
+              "prompt": "What does the Madam Rides the Bus episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "Careful planning shows independence, while the journey reveals the limits of experience."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-15-ALT-D",
+              "prompt": "Explain how the contrast in Madam Rides the Bus develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts careful planning shows independence, while the journey reveals the limits of experience. with independence and maturity. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: The Black Aeroplane; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-16",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — From the Diary of Anne Frank: A teacher asks a lively student to explain her talkative habits in an essay. She responds with humour, using family traits and an imaginative story to meet the assignment.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-16-A",
+          "prompt": "In the From the Diary of Anne Frank scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "creativity and resilience"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "creativity and resilience"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-16-B",
+          "prompt": "Which detail in the From the Diary of Anne Frank cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A teacher asks a lively student to explain her talkative habits in an essay. She responds with humour, using family traits and an imaginative story to meet the assignment."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-16-C",
+          "prompt": "What does the From the Diary of Anne Frank episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A reprimand becomes an opportunity to write imaginatively and use humour thoughtfully."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-16-D",
+          "prompt": "Explain how the contrast in From the Diary of Anne Frank develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts a reprimand becomes an opportunity to write imaginatively and use humour thoughtfully. with creativity and resilience. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-16-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — A Letter to God: A farmer watches a storm destroy the crop on which his family depends. He asks for help with complete confidence. The post-office workers collect money for him, but the amount is smaller than he expects.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-16-ALT-A",
+              "prompt": "In the A Letter to God scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "faith tested by hardship"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "faith tested by hardship"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-16-ALT-B",
+              "prompt": "Which detail in the A Letter to God cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A farmer watches a storm destroy the crop on which his family depends. He asks for help with complete confidence. The post-office workers collect money for him, but the amount is smaller than he expects."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-16-ALT-C",
+              "prompt": "What does the A Letter to God episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The workers respond with kindness, while the farmer suspects the very people who helped him."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-16-ALT-D",
+              "prompt": "Explain how the contrast in A Letter to God develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the workers respond with kindness, while the farmer suspects the very people who helped him. with faith tested by hardship. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: From the Diary of Anne Frank; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-17",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — A Baker from Goa: The account links the baker's familiar appearance and daily routine to village celebrations. Bread is expected at important occasions, giving the baker a recognised place in local life.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-17-A",
+          "prompt": "In the A Baker from Goa scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "continuity and memory"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "continuity and memory"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-17-B",
+          "prompt": "Which detail in the A Baker from Goa cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The account links the baker's familiar appearance and daily routine to village celebrations. Bread is expected at important occasions, giving the baker a recognised place in local life."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-17-C",
+          "prompt": "What does the A Baker from Goa episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The baker represents a custom that connects generations even as daily life changes."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-17-D",
+          "prompt": "Explain how the contrast in A Baker from Goa develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the baker represents a custom that connects generations even as daily life changes. with continuity and memory. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-17-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — Nelson Mandela – Long Walk to Freedom: At a historic ceremony, a leader recalls the sacrifices that made a new political beginning possible. He describes courage as overcoming fear and argues that freedom must be shared by all.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-17-ALT-A",
+              "prompt": "In the Nelson Mandela – Long Walk to Freedom scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "freedom and human dignity"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "freedom and human dignity"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-17-ALT-B",
+              "prompt": "Which detail in the Nelson Mandela – Long Walk to Freedom cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "At a historic ceremony, a leader recalls the sacrifices that made a new political beginning possible. He describes courage as overcoming fear and argues that freedom must be shared by all."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-17-ALT-C",
+              "prompt": "What does the Nelson Mandela – Long Walk to Freedom episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The speaker links personal dignity to equal rights and public responsibility."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-17-ALT-D",
+              "prompt": "Explain how the contrast in Nelson Mandela – Long Walk to Freedom develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the speaker links personal dignity to equal rights and public responsibility. with freedom and human dignity. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: A Baker from Goa; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-18",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — Coorg: A description introduces local people, traditions and a landscape that attracts visitors. The region is presented not as scenery alone, but through links between environment, history and livelihood.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-18-A",
+          "prompt": "In the Coorg scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "culture and geography"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "culture and geography"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-18-B",
+          "prompt": "Which detail in the Coorg cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "A description introduces local people, traditions and a landscape that attracts visitors. The region is presented not as scenery alone, but through links between environment, history and livelihood."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-18-C",
+          "prompt": "What does the Coorg episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The place is understood through the relationship between natural features and its people."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-18-D",
+          "prompt": "Explain how the contrast in Coorg develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts the place is understood through the relationship between natural features and its people. with culture and geography. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-18-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — His First Flight: A young seabird hesitates on a ledge. Hunger and family encouragement eventually push it forward. Once it moves, its wings support it and the frightening act becomes possible.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-18-ALT-A",
+              "prompt": "In the His First Flight scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "overcoming fear"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "overcoming fear"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-18-ALT-B",
+              "prompt": "Which detail in the His First Flight cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A young seabird hesitates on a ledge. Hunger and family encouragement eventually push it forward. Once it moves, its wings support it and the frightening act becomes possible."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-18-ALT-C",
+              "prompt": "What does the His First Flight episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The bird moves from hesitation to action, discovering ability through experience."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-18-ALT-D",
+              "prompt": "Explain how the contrast in His First Flight develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the bird moves from hesitation to action, discovering ability through experience. with overcoming fear. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: Coorg; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-19",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — Tea from Assam: The conversation turns to competing stories about the discovery and cultivation of tea. The friends' observations invite readers to connect an everyday drink with a longer history.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-19-A",
+          "prompt": "In the Tea from Assam scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "history in everyday life"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "history in everyday life"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-19-B",
+          "prompt": "Which detail in the Tea from Assam cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The conversation turns to competing stories about the discovery and cultivation of tea. The friends' observations invite readers to connect an everyday drink with a longer history."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-19-C",
+          "prompt": "What does the Tea from Assam episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "Travel and observation introduce background knowledge without separating it from the journey."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-19-D",
+          "prompt": "Explain how the contrast in Tea from Assam develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts travel and observation introduce background knowledge without separating it from the journey. with history in everyday life. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-19-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — The Black Aeroplane: A pilot caught in a storm sees an unfamiliar aircraft that appears to guide him towards safety. After landing, he learns that the control tower recorded no other aircraft.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-19-ALT-A",
+              "prompt": "In the The Black Aeroplane scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "mystery and uncertainty"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "mystery and uncertainty"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-19-ALT-B",
+              "prompt": "Which detail in the The Black Aeroplane cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A pilot caught in a storm sees an unfamiliar aircraft that appears to guide him towards safety. After landing, he learns that the control tower recorded no other aircraft."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-19-ALT-C",
+              "prompt": "What does the The Black Aeroplane episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The guide seems real to the pilot, yet the missing record leaves the experience unexplained."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-19-ALT-D",
+              "prompt": "Explain how the contrast in The Black Aeroplane develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the guide seems real to the pilot, yet the missing record leaves the experience unexplained. with mystery and uncertainty. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: Tea from Assam; original scene description, not a textbook extract."
+      }
+    },
+    {
+      "questionId": "ENG184-Q06-PROSE-20",
+      "sectionId": "literature",
+      "chapterId": "first-flight-prose",
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "type": "case-based",
+      "marks": 5,
+      "prompt": "Read the original paraphrased scene cue and answer its four sub-questions.",
+      "stimulus": "Original paraphrased scene cue — Madam Rides the Bus: The child refuses help during the journey and insists on paying like an independent passenger. Her confidence is genuine, although her understanding of the world is still developing.",
+      "parts": [
+        {
+          "partId": "a",
+          "questionId": "ENG184-Q06-PROSE-20-A",
+          "prompt": "In the Madam Rides the Bus scene, which idea is most strongly developed?",
+          "marks": 1,
+          "options": [
+            {
+              "optionId": "A",
+              "text": "independence and maturity"
+            },
+            {
+              "optionId": "B",
+              "text": "wealth as the only measure of success"
+            },
+            {
+              "optionId": "C",
+              "text": "a contest with no wider meaning"
+            },
+            {
+              "optionId": "D",
+              "text": "an event with no effect on anyone"
+            }
+          ],
+          "correctOptionId": "A",
+          "answerKey": {
+            "modelAnswer": "independence and maturity"
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies the central idea",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "questionId": "ENG184-Q06-PROSE-20-B",
+          "prompt": "Which detail in the Madam Rides the Bus cue best establishes the situation?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "The child refuses help during the journey and insists on paying like an independent passenger. Her confidence is genuine, although her understanding of the world is still developing."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Identifies a relevant scene detail",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "c",
+          "questionId": "ENG184-Q06-PROSE-20-C",
+          "prompt": "What does the Madam Rides the Bus episode reveal about the central character's attitude?",
+          "marks": 1,
+          "answerKey": {
+            "modelAnswer": "Careful planning shows independence, while the journey reveals the limits of experience."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains an attitude supported by the cue",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "d",
+          "questionId": "ENG184-Q06-PROSE-20-D",
+          "prompt": "Explain how the contrast in Madam Rides the Bus develops the larger idea of the text.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The episode contrasts careful planning shows independence, while the journey reveals the limits of experience. with independence and maturity. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+            "wordCount": 42
+          },
+          "markingScheme": [
+            {
+              "criterion": "Explains the contrast in the scene",
+              "marks": 1
+            },
+            {
+              "criterion": "Connects it to the text's wider idea",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Responses should be grounded in the original paraphrased scene cue and the prescribed text."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Three accurate one-mark responses",
+          "marks": 3
+        },
+        {
+          "criterion": "One two-mark interpretive response",
+          "marks": 2
+        }
+      ],
+      "alternatives": [
+        {
+          "questionId": "ENG184-Q06-PROSE-20-ALT",
+          "prompt": "OR\nRead the alternative original paraphrased scene cue and answer its four sub-questions.",
+          "stimulus": "Original paraphrased scene cue — From the Diary of Anne Frank: A student writes privately because she wants a companion who will listen. In class, a teacher responds to her talkative nature with a writing assignment that becomes a playful exercise.",
+          "parts": [
+            {
+              "partId": "a",
+              "questionId": "ENG184-Q06-PROSE-20-ALT-A",
+              "prompt": "In the From the Diary of Anne Frank scene, which idea is most strongly developed?",
+              "marks": 1,
+              "options": [
+                {
+                  "optionId": "A",
+                  "text": "the need to be heard"
+                },
+                {
+                  "optionId": "B",
+                  "text": "wealth as the only measure of success"
+                },
+                {
+                  "optionId": "C",
+                  "text": "a contest with no wider meaning"
+                },
+                {
+                  "optionId": "D",
+                  "text": "an event with no effect on anyone"
+                }
+              ],
+              "correctOptionId": "A",
+              "answerKey": {
+                "modelAnswer": "the need to be heard"
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies the central idea",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "b",
+              "questionId": "ENG184-Q06-PROSE-20-ALT-B",
+              "prompt": "Which detail in the From the Diary of Anne Frank cue best establishes the situation?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "A student writes privately because she wants a companion who will listen. In class, a teacher responds to her talkative nature with a writing assignment that becomes a playful exercise."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Identifies a relevant scene detail",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "c",
+              "questionId": "ENG184-Q06-PROSE-20-ALT-C",
+              "prompt": "What does the From the Diary of Anne Frank episode reveal about the central character's attitude?",
+              "marks": 1,
+              "answerKey": {
+                "modelAnswer": "The diary offers companionship, while humour helps the student turn criticism into creativity."
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains an attitude supported by the cue",
+                  "marks": 1
+                }
+              ]
+            },
+            {
+              "partId": "d",
+              "questionId": "ENG184-Q06-PROSE-20-ALT-D",
+              "prompt": "Explain how the contrast in From the Diary of Anne Frank develops the larger idea of the text.",
+              "marks": 2,
+              "answerKey": {
+                "modelAnswer": "The episode contrasts the diary offers companionship, while humour helps the student turn criticism into creativity. with the need to be heard. This moves the scene beyond a simple event and helps readers understand the text's wider concern. The detail matters because it reveals how experience tests or changes a character's judgement.",
+                "wordCount": 42
+              },
+              "markingScheme": [
+                {
+                  "criterion": "Explains the contrast in the scene",
+                  "marks": 1
+                },
+                {
+                  "criterion": "Connects it to the text's wider idea",
+                  "marks": 1
+                }
+              ]
+            }
+          ],
+          "answerKey": {
+            "modelAnswer": "Responses should be grounded in the alternative paraphrased scene cue and the prescribed text."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Three accurate one-mark responses",
+              "marks": 3
+            },
+            {
+              "criterion": "One two-mark interpretive response",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "source": {
+        "type": "original-paraphrased-text-context",
+        "reference": "First Flight prose/drama: Madam Rides the Bus; original scene description, not a textbook extract."
       }
     }
   ]
