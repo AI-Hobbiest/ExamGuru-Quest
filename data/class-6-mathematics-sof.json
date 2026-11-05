@@ -10427,15 +10427,15 @@
       },
       {
         "id": "c6imo_prev_mr025",
-        "question": "Which number is divisible by both 2 and 5?",
+        "question": "A whole number is divisible by both 2 and 5. Which final digit must it have?",
         "options": [
-          "3,425",
-          "4,318",
-          "5,670",
-          "7,413"
+          "0",
+          "2",
+          "5",
+          "8"
         ],
-        "answer": 2,
-        "explanation": "A number divisible by both 2 and 5 ends in 0; 5,670 does.",
+        "answer": 0,
+        "explanation": "A number divisible by 5 ends in 0 or 5, and a number divisible by 2 ends in an even digit. The only common possibility is 0.",
         "difficulty": "Medium",
         "section": "Mathematical Reasoning",
         "syllabusClass": 5,
@@ -11003,7 +11003,7 @@
       },
       {
         "id": "c6imo_prev_mr037",
-        "question": "What is 3/4 of 200?",
+        "question": "A box holds 200 marbles. Three quarters of the marbles are red. How many red marbles are there?",
         "options": [
           "125",
           "150",
@@ -11011,7 +11011,7 @@
           "180"
         ],
         "answer": 1,
-        "explanation": "200÷4=50 and 50×3=150.",
+        "explanation": "One quarter is 200÷4=50 marbles; three quarters is 3×50=150 marbles.",
         "difficulty": "Medium",
         "section": "Mathematical Reasoning",
         "syllabusClass": 5,
