@@ -123,7 +123,7 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - [x] Validate five-paper, all-format repeat protection across all parent, nested and alternative English content IDs.
 - [x] Student-browser smoke: English 11-question/80-mark paper, timer, attempt-any selection (10/12, 4/5, 2/3), written-answer editing, objective scoring, Q10 internal choice and submit/review (run 41986159928).
 - [x] Production English paper rendering: student paper, teacher copy and blank answer booklet passed (run 41986159925).
-- [ ] Verify saved-attempt restoration after a page reload; this is separate from the edit-and-submit flow already tested.
+- [x] Verify saved-attempt restoration after a page reload: the same paper, changed attempt-any selections, written answers and selected internal choice resume correctly.
 - [ ] Obtain independent English educator sign-off, particularly on Q6/Q7 extract alignment and Q10/Q11 content quality.
 - [ ] Only after all gates pass: promote the blueprint, enable the profile, merge to main, deploy Pages and verify the live student profile.
 
@@ -150,9 +150,21 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 
 ### Latest certification evidence — 5 November 2026
 
-- English 50-paper simulation, all-format five-paper repeat protection and production print rendering: [Exam paper uniqueness regression, run 41986159925](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41986159925).
-- Full LMS quality suite and English student-browser smoke (including objective score display): [Quiz quality checks, run 41986159928](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41986159928).
+- English 50-paper simulation, all-format five-paper repeat protection, semantic prompt-diversity assertions and production print rendering: [Exam paper uniqueness regression, run 41988266385](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41988266385).
+- Full LMS quality suite and English student-browser smoke, including objective scoring and reload restoration: [Quiz quality checks, run 41988266452](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41988266452).
 - Browser test unlocks the English profile and sets the blueprint to ready **only in the local test server response**. The committed registry and blueprint remain disabled/draft.
+
+### Semantic question-diversity audit — passed
+
+- Q3: 240 individually worded grammar tasks across 20 bundles; MCQ answer positions are distributed across A–D.
+- Q6: 160 unique main/alternative sub-questions; model answers are grounded in each adapted scene cue.
+- Q7: 160 unique main/alternative sub-questions; speaker-focused poetry prompts and cue-specific answers.
+- Q8: 100 unique chapter-specific short-answer questions; model answers are 40–45 words.
+- Q9: 60 unique chapter-specific short-answer questions.
+- Regression now rejects duplicate nested prompt text across Q3, Q6, Q7, Q8 and Q9, preventing different IDs from masking identical question wording.
+- The Q6/Q7 two-mark model answers are 41–44 words; stored word-count metadata matches the text.
+- Q1/Q2 retain reusable reading-comprehension skill stems by design; each candidate uses a distinct passage/case and passage-specific answers.
+
 
 ### Remaining content/release issues
 
