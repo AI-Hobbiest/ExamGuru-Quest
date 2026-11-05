@@ -278,7 +278,7 @@ function syncModeControls(){
     const totalQuestions=blueprint.sections.reduce((sum,section)=>sum+section.questionCount,0);
     const totalMarks=blueprint.sections.reduce((sum,section)=>sum+section.questionCount*section.marksPerQuestion,0);
     if(title)title.textContent=blueprint.title+" · Full Mock";
-    if(description)description.textContent=totalQuestions+" questions · "+Math.round(blueprint.durationSeconds/60)+" minutes · "+totalMarks+" marks. A fresh paper is drawn from the Class 6 SOF bank. Feedback and correct answers remain hidden until submission.";
+    if(description)description.textContent=totalQuestions+" questions · "+Math.round(blueprint.durationSeconds/60)+" minutes · "+totalMarks+" marks. A fresh paper is drawn from the Class 6 SOF bank. Feedback and correct answers remain hidden until submission. "+(blueprint.syllabusCoverageNote||"");
     if(grid)grid.innerHTML=blueprint.sections.map(section=>"<span><strong>"+section.questionCount+" × "+section.marksPerQuestion+"</strong>"+section.title+"</span>").join("");
   }
   const chapterControls=$("chapterControls");

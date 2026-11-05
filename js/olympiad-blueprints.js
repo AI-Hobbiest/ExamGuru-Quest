@@ -11,11 +11,11 @@
       subjectId: "science-sof",
       durationSeconds: 3600,
       sections: [
-        { id: "logical-reasoning", title: "Logical Reasoning", sourceSection: "Logical Reasoning", questionCount: 10, marksPerQuestion: 1 },
-        { id: "science", title: "Science", sourceSection: "Science", questionCount: 35, marksPerQuestion: 1 },
-        { id: "achievers", title: "Achievers Section", sourceSection: "Achievers Section", questionCount: 5, marksPerQuestion: 3 }
+        { id: "logical-reasoning", title: "Logical Reasoning", sourceSection: "Logical Reasoning", questionCount: 10, marksPerQuestion: 1, syllabusOriginQuotas: { "current-class": 6, "previous-class": 4 } },
+        { id: "science", title: "Science", sourceSection: "Science", questionCount: 35, marksPerQuestion: 1, syllabusOriginQuotas: { "current-class": 21, "previous-class": 14 } },
+        { id: "achievers", title: "Achievers Section", sourceSection: "Achievers Section", questionCount: 5, marksPerQuestion: 3, syllabusOriginQuotas: { "current-class": 5 } }
       ],
-      syllabusCoverageNote: "Question records are not yet tagged with verified current-class/previous-class syllabus origin. The published 60% current-class / 40% previous-class split is not certified by this pool."
+      syllabusCoverageNote: "This Class 6 Level 1 mock allocates 60% current-class and 40% previous-class questions across the 45 non-Achievers questions (27 current-class, 18 previous-class). All five Achievers questions are drawn from the current-class syllabus, as SOF specifies."
     },
     "sof-imo-class-6-level-1": {
       id: "sof-imo-class-6-level-1",
@@ -25,12 +25,12 @@
       subjectId: "mathematics-sof",
       durationSeconds: 3600,
       sections: [
-        { id: "logical-reasoning", title: "Logical Reasoning", sourceSection: "Logical Reasoning", questionCount: 15, marksPerQuestion: 1 },
-        { id: "mathematical-reasoning", title: "Mathematical Reasoning", sourceSection: "Mathematical Reasoning", questionCount: 20, marksPerQuestion: 1 },
-        { id: "everyday-mathematics", title: "Everyday Mathematics", sourceSection: "Everyday Mathematics", questionCount: 10, marksPerQuestion: 1 },
-        { id: "achievers", title: "Achievers Section", sourceSection: "Achievers Section", questionCount: 5, marksPerQuestion: 3 }
+        { id: "logical-reasoning", title: "Logical Reasoning", sourceSection: "Logical Reasoning", questionCount: 15, marksPerQuestion: 1, syllabusOriginQuotas: { "current-class": 9, "previous-class": 6 } },
+        { id: "mathematical-reasoning", title: "Mathematical Reasoning", sourceSection: "Mathematical Reasoning", questionCount: 20, marksPerQuestion: 1, syllabusOriginQuotas: { "current-class": 12, "previous-class": 8 } },
+        { id: "everyday-mathematics", title: "Everyday Mathematics", sourceSection: "Everyday Mathematics", questionCount: 10, marksPerQuestion: 1, syllabusOriginQuotas: { "current-class": 6, "previous-class": 4 } },
+        { id: "achievers", title: "Achievers Section", sourceSection: "Achievers Section", questionCount: 5, marksPerQuestion: 3, syllabusOriginQuotas: { "current-class": 5 } }
       ],
-      syllabusCoverageNote: "SOF specifies 60% current-class and 40% previous-class syllabus coverage for Level 1, with Achievers questions from current-class syllabus. Current/previous-class origin is not yet tagged and audited in the source bank, so this mock enforces section quotas and marks but does not certify the 60/40 split."
+      syllabusCoverageNote: "This Class 6 Level 1 mock allocates 60% current-class and 40% previous-class questions across the 45 non-Achievers questions (27 current-class, 18 previous-class). All five Achievers questions are drawn from the current-class syllabus, as SOF specifies."
     },
     "sof-ieo-class-6-level-1": {
       id: "sof-ieo-class-6-level-1",
@@ -78,14 +78,49 @@
     const selected = [];
     const sectionBlueprint = blueprint.sections.map((section, sectionIndex) => {
       const pool = allQuestions.filter(question => String(question.section || "").trim() === section.sourceSection);
-      if (pool.length < section.questionCount) {
-        throw new Error("Blueprint needs " + section.questionCount + " questions for " + section.title +
-          ", but the bank has only " + pool.length + ".");
-      }
       const recentIds = new Set((options.recentQuestionIds || []).map(String));
-      const unseen = shuffle(pool.filter(question => !recentIds.has(String(question.questionKey || question.id))), random);
-      const recent = shuffle(pool.filter(question => recentIds.has(String(question.questionKey || question.id))), random);
-      const chosen = (unseen.length >= section.questionCount ? unseen : unseen.concat(recent)).slice(0, section.questionCount);
+      const originQuotas = section.syllabusOriginQuotas || null;
+      let chosen = [];
+      if (originQuotas) {
+        const quotaEntries = Object.entries(originQuotas);
+        const quotaTotal = quotaEntries.reduce((sum, entry) => sum + Number(entry[1] || 0), 0);
+        if (quotaTotal !== section.questionCount) {
+          throw new Error("Syllabus-origin quotas for " + section.title + " total " + quotaTotal +
+            ", but the section requires " + section.questionCount + ".");
+        }
+        for (const [origin, rawCount] of quotaEntries) {
+          const count = Number(rawCount);
+          if (!Number.isInteger(count) || count < 0) {
+            throw new Error("Invalid syllabus-origin quota for " + section.title + ": " + origin + ".");
+          }
+          if (!count) continue;
+          const originPool = pool.filter(question => question.syllabusOrigin === origin);
+          if (originPool.length < count) {
+            throw new Error("Blueprint needs " + count + " " + origin + " questions for " + section.title +
+              ", but the bank has only " + originPool.length + ".");
+          }
+          const unseen = shuffle(originPool.filter(question => !recentIds.has(String(question.questionKey || question.id))), random);
+          const recent = shuffle(originPool.filter(question => recentIds.has(String(question.questionKey || question.id))), random);
+          chosen = chosen.concat((unseen.length >= count ? unseen : unseen.concat(recent)).slice(0, count));
+        }
+        chosen = shuffle(chosen, random);
+      } else {
+        if (pool.length < section.questionCount) {
+          throw new Error("Blueprint needs " + section.questionCount + " questions for " + section.title +
+            ", but the bank has only " + pool.length + ".");
+        }
+        const unseen = shuffle(pool.filter(question => !recentIds.has(String(question.questionKey || question.id))), random);
+        const recent = shuffle(pool.filter(question => recentIds.has(String(question.questionKey || question.id))), random);
+        chosen = (unseen.length >= section.questionCount ? unseen : unseen.concat(recent)).slice(0, section.questionCount);
+      }
+      if (chosen.length !== section.questionCount) {
+        throw new Error("The selected questions do not meet the required syllabus-origin quotas for " + section.title + ".");
+      }
+      const syllabusOriginCounts = chosen.reduce((counts, question) => {
+        const origin = String(question.syllabusOrigin || "unclassified");
+        counts[origin] = (counts[origin] || 0) + 1;
+        return counts;
+      }, {});
       chosen.forEach((question, questionIndex) => {
         selected.push({
           ...question,
@@ -103,7 +138,9 @@
         sourceSection: section.sourceSection,
         questionCount: section.questionCount,
         marksPerQuestion: section.marksPerQuestion,
-        maxMarks: section.questionCount * section.marksPerQuestion
+        maxMarks: section.questionCount * section.marksPerQuestion,
+        syllabusOriginQuotas: originQuotas ? { ...originQuotas } : null,
+        syllabusOriginCounts
       };
     });
     const questionKeys = selected.map(question => String(question.questionKey || question.id));
@@ -121,6 +158,11 @@
       totalQuestions,
       maxMarks,
       syllabusCoverageNote: blueprint.syllabusCoverageNote,
+      syllabusOriginCounts: selected.reduce((counts, question) => {
+        const origin = String(question.syllabusOrigin || "unclassified");
+        counts[origin] = (counts[origin] || 0) + 1;
+        return counts;
+      }, {}),
       sections: sectionBlueprint,
       questions: selected.map((question, index) => ({ ...question, examQuestionNumber: index + 1 }))
     };
