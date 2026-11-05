@@ -87,5 +87,6 @@ for(const file of ["js/storage.js","js/profile-model.js","js/learning-model.js",
  const restored=JSON.parse(seed.get("c10playground:store:v1:local-profile-identity:default"));
  assert.equal(restored.data.displayName,"Restored Learner");
  assert.match(getElementById("pageStatus").textContent,/Backup imported successfully/);
- console.log("Profile page integration passed: generated ID, India state/UT list, history rendering, profile save, JSON export, backup import and restore.");
+ assert.ok(fs.readFileSync("js/profile-manager.js","utf8").includes('{id:"class-3-mathematics-sof",subjectId:"mathematics-sof",title:"Mathematics · SOF"}'), "Class 3 profile backups include the SOF IMO bank");
+ console.log("Profile page integration passed: generated ID, India state/UT list, Class 3 SOF backup mapping, history rendering, profile save, JSON export, backup import and restore.");
 })().catch(error=>{console.error(error);process.exitCode=1;});
