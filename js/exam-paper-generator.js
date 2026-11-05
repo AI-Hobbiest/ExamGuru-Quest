@@ -33,8 +33,10 @@ function validateQuestion(q,path="question"){
   if(!q.parts.every(p=>p&&text(p.prompt)&&Number.isInteger(p.marks)&&p.marks>0))e.push(path+".parts need prompts and positive integer marks.");
   else if(q.attemptAny==null&&sum(q.parts.map(p=>p.marks))!==q.marks)e.push(path+".parts marks must equal question marks.");
   if(q.attemptAny!=null){
-   if(!Number.isInteger(q.attemptAny)||q.attemptAny<1||q.attemptAny>q.parts.length)e.push(path+".attemptAny must be a positive count not greater than the available parts.");
-   else{const partMarks=[...new Set(q.parts.map(p=>Number(p.marks)))];if(partMarks.length!==1||Number(q.marks)!==Number(q.attemptAny)*partMarks[0])e.push(path+".marks must equal attemptAny multiplied by the common part mark value.");}
+   const attemptParts=Array.isArray(q.parts)?q.parts:[];
+   if(!attemptParts.length)e.push(path+".attemptAny requires a non-empty parts array.");
+   else if(!Number.isInteger(q.attemptAny)||q.attemptAny<1||q.attemptAny>attemptParts.length)e.push(path+".attemptAny must be a positive count not greater than the available parts.");
+   else{const partMarks=[...new Set(attemptParts.map(p=>Number(p.marks)))];if(partMarks.length!==1||Number(q.marks)!==Number(q.attemptAny)*partMarks[0])e.push(path+".marks must equal attemptAny multiplied by the common part mark value.");}
   }
   q.parts.forEach((part,partIndex)=>{
    if(part&&part.options!=null){
@@ -116,8 +118,17 @@ function validateQuestionBank(bank,expected={}){
  if(expected.subjectId&&String(bank.subjectId)!==String(expected.subjectId))e.push("Question bank subject does not match the blueprint.");
  if(expected.academicYear&&bank.academicYear!==expected.academicYear)e.push("Question bank academic year does not match.");
  if(Array.isArray(bank.questions)){
-  const ids=new Set();
-  bank.questions.forEach((q,i)=>{e.push(...validateQuestion(q,"questions["+i+"]"));const id=String(q&&q.questionId||"");if(id&&ids.has(id))e.push("Duplicate questionId: "+id);if(id)ids.add(id);});
+  const ids=new Set(),contentIds=new Set();
+  bank.questions.forEach((q,i)=>{
+   e.push(...validateQuestion(q,"questions["+i+"]"));
+   const id=String(q&&q.questionId||"");
+   if(id&&ids.has(id))e.push("Duplicate questionId: "+id);
+   if(id)ids.add(id);
+   questionContentIds(q).forEach(contentId=>{
+    if(contentIds.has(contentId))e.push("Duplicate question content ID: "+contentId);
+    contentIds.add(contentId);
+   });
+  });
  }
  return{valid:e.length===0,errors:e};
 }

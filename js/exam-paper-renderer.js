@@ -68,7 +68,8 @@ function buildAnswerBookletHtml(paper,baseHref){
    const attemptAnyNote=Number.isInteger(q.attemptAny)?'<p class="choice-note">Attempt any '+esc(q.attemptAny)+' of the '+esc(q.parts?.length||0)+' items.</p>':"";
    const responseSpace=Array.isArray(q.parts)&&q.parts.length?q.parts.map(part=>{
     const partChoice=Array.isArray(part.alternatives)&&part.alternatives.length?'<p class="choice-note">Choose either the main or alternative version of this subpart.</p>':"";
-    return'<div class="answer-part"><b>('+esc(part.partId||"")+')</b> '+esc(part.prompt)+' <span class="marks">['+esc(part.marks)+' marks]</span></div>'+partChoice+linesFor(part.marks);
+    const partOptions=Array.isArray(part.options)?'<ol class="options" type="A">'+part.options.map(option=>"<li>"+esc(option.text)+"</li>").join("")+'</ol>':linesFor(part.marks);
+    return'<div class="answer-part"><b>('+esc(part.partId||"")+')</b> '+esc(part.prompt)+' <span class="marks">['+esc(part.marks)+' marks]</span></div>'+partChoice+partOptions;
    }).join(""):linesFor(q.marks);
    return'<article class="answer-space"><h3>Q'+esc(q.paperQuestionNumber)+'. '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></h3>'+questionChoice+attemptAnyNote+responseSpace+'</article>';
   }).join("");

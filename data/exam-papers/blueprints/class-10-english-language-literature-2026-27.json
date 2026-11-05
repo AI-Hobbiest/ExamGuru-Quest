@@ -1,0 +1,612 @@
+{
+  "schemaVersion": 1,
+  "kind": "exam-paper-blueprint",
+  "blueprintId": "cbse-class-10-english-language-literature-184-2026-27",
+  "version": 1,
+  "title": "CBSE Class 10 English Language & Literature (184) · 2026–27",
+  "board": "CBSE",
+  "academicYear": "2026-27",
+  "classId": "10",
+  "subjectId": "english-language-literature",
+  "subjectTitle": "English Language & Literature",
+  "subjectCode": "184",
+  "status": "draft",
+  "statusReason": "Draft structure only. Do not enable the student profile until every slot has at least 20 quality-approved candidates, 50 unique complete papers pass and five-paper all-format repeat protection passes against the production bank.",
+  "durationMinutes": 180,
+  "totalQuestions": 11,
+  "totalMarks": 80,
+  "sections": [
+    {
+      "sectionId": "reading-skills",
+      "title": "Section A · Reading Skills",
+      "questionNumberRange": {
+        "start": 1,
+        "end": 2
+      },
+      "questionCount": 2,
+      "totalMarks": 20
+    },
+    {
+      "sectionId": "grammar-writing",
+      "title": "Section B · Grammar and Creative Writing Skills",
+      "questionNumberRange": {
+        "start": 3,
+        "end": 5
+      },
+      "questionCount": 3,
+      "totalMarks": 20
+    },
+    {
+      "sectionId": "literature",
+      "title": "Section C · Literature Textbook",
+      "questionNumberRange": {
+        "start": 6,
+        "end": 11
+      },
+      "questionCount": 6,
+      "totalMarks": 40
+    }
+  ],
+  "markDistribution": {
+    "5": 4,
+    "6": 3,
+    "10": 3,
+    "12": 1
+  },
+  "supportedQuestionTypes": [
+    "mcq",
+    "assertion-reason",
+    "very-short-answer",
+    "short-answer",
+    "long-answer",
+    "case-based"
+  ],
+  "officialAssessmentDesign": {
+    "course": "English Language & Literature",
+    "subjectCode": "184",
+    "writtenExaminationMarks": 80,
+    "internalAssessmentMarks": 20,
+    "durationMinutes": 180,
+    "sections": [
+      {
+        "sectionId": "reading-skills",
+        "marks": 20
+      },
+      {
+        "sectionId": "grammar-writing",
+        "marks": 20
+      },
+      {
+        "sectionId": "literature",
+        "marks": 40
+      }
+    ],
+    "numberedQuestionPattern": [
+      {
+        "questionNumber": 1,
+        "marks": 10,
+        "design": "Unseen discursive passage; 400–450 words; 8 sub-questions."
+      },
+      {
+        "questionNumber": 2,
+        "marks": 10,
+        "design": "Unseen case-based factual passage with visual/statistical input; 200–250 words; 9 sub-questions."
+      },
+      {
+        "questionNumber": 3,
+        "marks": 10,
+        "design": "12 grammar tasks; attempt any 10; 1 mark each."
+      },
+      {
+        "questionNumber": 4,
+        "marks": 5,
+        "design": "Formal letter; attempt one of two alternatives; 100–120 words."
+      },
+      {
+        "questionNumber": 5,
+        "marks": 5,
+        "design": "Analytical paragraph based on map/chart/graph/cues; attempt one of two alternatives; 100–120 words."
+      },
+      {
+        "questionNumber": 6,
+        "marks": 5,
+        "design": "One of two prose/drama extracts; objective and short-response subparts."
+      },
+      {
+        "questionNumber": 7,
+        "marks": 5,
+        "design": "One of two poetry extracts; objective and short-response subparts."
+      },
+      {
+        "questionNumber": 8,
+        "marks": 12,
+        "design": "First Flight short answers; attempt any 4 of 5; 3 marks each; 40–50 words."
+      },
+      {
+        "questionNumber": 9,
+        "marks": 6,
+        "design": "Footprints Without Feet short answers; attempt any 2 of 3; 3 marks each; 40–50 words."
+      },
+      {
+        "questionNumber": 10,
+        "marks": 6,
+        "design": "First Flight long answer; one of two alternatives; 100–120 words."
+      },
+      {
+        "questionNumber": 11,
+        "marks": 6,
+        "design": "Footprints Without Feet long answer; one of two alternatives; 100–120 words."
+      }
+    ]
+  },
+  "syllabusScope": {
+    "grammar": [
+      "Determiners",
+      "Tenses",
+      "Modals",
+      "Subject–verb concord",
+      "Reported speech: statements, questions, commands and requests"
+    ],
+    "writing": [
+      "Formal letter (100–120 words)",
+      "Analytical paragraph based on a map, chart, graph or cues (100–120 words)"
+    ],
+    "reading": [
+      "Unseen discursive passage (400–450 words)",
+      "Unseen case-based factual passage with visual/statistical input (200–250 words)"
+    ],
+    "prescribedBooks": [
+      {
+        "title": "First Flight",
+        "components": [
+          "Prose and drama",
+          "Poetry"
+        ]
+      },
+      {
+        "title": "Footprints Without Feet",
+        "components": [
+          "Supplementary reader"
+        ]
+      }
+    ],
+    "contentRules": [
+      "Reading passages must be original and unseen; do not lift passages from NCERT, commercial question banks or prior board papers.",
+      "Literature questions must be grounded in the prescribed text and ask interpretation, inference, character, theme, structure, language or evidence-based response rather than generic plot recall.",
+      "Do not reproduce extended copyrighted textbook extracts. Use brief, necessary extracts or original context descriptions with precise text references.",
+      "Every written response requires a defensible model answer and a mark-by-mark analytic marking scheme that allows equivalent valid student expression.",
+      "Preserve exact CBSE word limits and attempt-any instructions."
+    ]
+  },
+  "slotPlan": [
+    {
+      "slotId": "q01-discursive-reading",
+      "questionNumber": 1,
+      "sectionId": "reading-skills",
+      "marks": 10,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "chapterIds": [
+        "discursive-reading"
+      ],
+      "topicTags": [
+        "unseen-passage",
+        "discursive",
+        "reading-comprehension"
+      ],
+      "contentDesign": {
+        "stimulusWords": {
+          "min": 400,
+          "max": 450
+        },
+        "subQuestionCount": 8,
+        "partMarks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "questionMix": [
+          "mcq",
+          "very-short-answer",
+          "short-answer"
+        ],
+        "competencies": [
+          "interpretation",
+          "inference",
+          "analysis",
+          "evaluation",
+          "vocabulary"
+        ]
+      }
+    },
+    {
+      "slotId": "q02-case-based-reading",
+      "questionNumber": 2,
+      "sectionId": "reading-skills",
+      "marks": 10,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "chapterIds": [
+        "case-based-factual-reading"
+      ],
+      "topicTags": [
+        "unseen-passage",
+        "case-based",
+        "visual-data"
+      ],
+      "contentDesign": {
+        "stimulusWords": {
+          "min": 200,
+          "max": 250
+        },
+        "subQuestionCount": 9,
+        "partMarks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "visualInputRequired": true,
+        "questionMix": [
+          "mcq",
+          "very-short-answer",
+          "short-answer"
+        ],
+        "competencies": [
+          "interpretation",
+          "inference",
+          "analysis",
+          "evaluation",
+          "data-reading"
+        ]
+      }
+    },
+    {
+      "slotId": "q03-grammar-any-ten",
+      "questionNumber": 3,
+      "sectionId": "grammar-writing",
+      "marks": 10,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "chapterIds": [
+        "grammar"
+      ],
+      "topicTags": [
+        "grammar",
+        "integrated-grammar"
+      ],
+      "contentDesign": {
+        "taskCount": 12,
+        "attemptAny": 10,
+        "partMarks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "topics": [
+          "determiners",
+          "tenses",
+          "modals",
+          "subject-verb-concord",
+          "reported-speech-statements",
+          "reported-speech-questions",
+          "reported-speech-commands-requests"
+        ],
+        "questionMix": [
+          "mcq",
+          "fill-in",
+          "editing",
+          "error-correction",
+          "reported-speech-transformation"
+        ]
+      }
+    },
+    {
+      "slotId": "q04-formal-letter",
+      "questionNumber": 4,
+      "sectionId": "grammar-writing",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "chapterIds": [
+        "formal-letter"
+      ],
+      "topicTags": [
+        "writing",
+        "formal-letter"
+      ],
+      "requiresInternalChoice": true,
+      "contentDesign": {
+        "alternatives": 2,
+        "answerWords": {
+          "min": 100,
+          "max": 120
+        },
+        "markingRubric": [
+          "Format",
+          "Content",
+          "Organisation",
+          "Accuracy and expression"
+        ]
+      }
+    },
+    {
+      "slotId": "q05-analytical-paragraph",
+      "questionNumber": 5,
+      "sectionId": "grammar-writing",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "chapterIds": [
+        "analytical-paragraph"
+      ],
+      "topicTags": [
+        "writing",
+        "analytical-paragraph",
+        "data-interpretation"
+      ],
+      "requiresInternalChoice": true,
+      "contentDesign": {
+        "alternatives": 2,
+        "answerWords": {
+          "min": 100,
+          "max": 120
+        },
+        "inputTypes": [
+          "map",
+          "chart",
+          "graph",
+          "cues"
+        ],
+        "markingRubric": [
+          "Content and coverage of data",
+          "Organisation and coherence",
+          "Accuracy and appropriate language"
+        ]
+      }
+    },
+    {
+      "slotId": "q06-first-flight-prose-extract",
+      "questionNumber": 6,
+      "sectionId": "literature",
+      "marks": 5,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "chapterIds": [
+        "first-flight-prose"
+      ],
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "prose",
+        "drama"
+      ],
+      "requiresInternalChoice": true,
+      "contentDesign": {
+        "alternatives": 2,
+        "subQuestionCount": 4,
+        "partMarks": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "source": "First Flight prose/drama",
+        "questionMix": [
+          "mcq",
+          "very-short-answer",
+          "short-answer"
+        ]
+      }
+    },
+    {
+      "slotId": "q07-first-flight-poetry-extract",
+      "questionNumber": 7,
+      "sectionId": "literature",
+      "marks": 5,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "chapterIds": [
+        "first-flight-poetry"
+      ],
+      "topicTags": [
+        "literature",
+        "extract-based",
+        "poetry"
+      ],
+      "requiresInternalChoice": true,
+      "contentDesign": {
+        "alternatives": 2,
+        "subQuestionCount": 4,
+        "partMarks": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "source": "First Flight poetry",
+        "questionMix": [
+          "mcq",
+          "very-short-answer",
+          "short-answer"
+        ],
+        "skills": [
+          "imagery",
+          "tone",
+          "structure",
+          "poetic devices",
+          "inference"
+        ]
+      }
+    },
+    {
+      "slotId": "q08-first-flight-short-answer",
+      "questionNumber": 8,
+      "sectionId": "literature",
+      "marks": 12,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "chapterIds": [
+        "first-flight-prose",
+        "first-flight-poetry"
+      ],
+      "topicTags": [
+        "literature",
+        "short-answer",
+        "first-flight"
+      ],
+      "contentDesign": {
+        "availableParts": 5,
+        "attemptAny": 4,
+        "partMarks": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "answerWords": {
+          "min": 40,
+          "max": 50
+        },
+        "source": "First Flight"
+      }
+    },
+    {
+      "slotId": "q09-footprints-short-answer",
+      "questionNumber": 9,
+      "sectionId": "literature",
+      "marks": 6,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "chapterIds": [
+        "footprints-without-feet"
+      ],
+      "topicTags": [
+        "literature",
+        "short-answer",
+        "footprints"
+      ],
+      "contentDesign": {
+        "availableParts": 3,
+        "attemptAny": 2,
+        "partMarks": [
+          3,
+          3,
+          3
+        ],
+        "answerWords": {
+          "min": 40,
+          "max": 50
+        },
+        "source": "Footprints Without Feet"
+      }
+    },
+    {
+      "slotId": "q10-first-flight-long-answer",
+      "questionNumber": 10,
+      "sectionId": "literature",
+      "marks": 6,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "chapterIds": [
+        "first-flight-prose",
+        "first-flight-poetry"
+      ],
+      "topicTags": [
+        "literature",
+        "long-answer",
+        "first-flight"
+      ],
+      "requiresInternalChoice": true,
+      "contentDesign": {
+        "alternatives": 2,
+        "answerWords": {
+          "min": 100,
+          "max": 120
+        },
+        "source": "First Flight",
+        "focus": [
+          "situation-based response",
+          "theme",
+          "character",
+          "authorial choices",
+          "textual evidence"
+        ]
+      }
+    },
+    {
+      "slotId": "q11-footprints-long-answer",
+      "questionNumber": 11,
+      "sectionId": "literature",
+      "marks": 6,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "chapterIds": [
+        "footprints-without-feet"
+      ],
+      "topicTags": [
+        "literature",
+        "long-answer",
+        "footprints"
+      ],
+      "requiresInternalChoice": true,
+      "contentDesign": {
+        "alternatives": 2,
+        "answerWords": {
+          "min": 100,
+          "max": 120
+        },
+        "source": "Footprints Without Feet",
+        "focus": [
+          "theme",
+          "plot",
+          "character sketch",
+          "textual evidence"
+        ]
+      }
+    }
+  ],
+  "sources": [
+    "CBSE Class X Sample Question Paper & Marking Scheme 2026–27: https://cbseacademic.nic.in/sqp_classx_2026-27.html",
+    "CBSE Curriculum 2026–27: https://cbseacademic.nic.in/curriculum_2027.html",
+    "NCERT Class X First Flight (uploaded project source; 2025–26 reprint)",
+    "NCERT Class X Footprints Without Feet (uploaded project source; 2025–26 reprint)"
+  ],
+  "notes": [
+    "This is a draft assessment structure; it must remain unavailable to students until the content and release gates pass.",
+    "The 2026–27 CBSE notification states that Class X students continue the language course they studied in Class IX; a student who opted for English Communicative in Class IX may continue with it. This profile is specifically English Language & Literature (184).",
+    "The existing legacy English chapter/topic MCQ files are not pre-approved for this board bank. Keep them in their current practice role; candidate promotion requires a content-level QA pass.",
+    "The 20-candidate minimum is required independently for each of the 11 numbered-question slots."
+  ]
+}
