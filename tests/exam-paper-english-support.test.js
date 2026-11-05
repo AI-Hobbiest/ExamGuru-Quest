@@ -113,16 +113,16 @@ assert.equal(draftBlueprint.totalMarks,80);
 assert.equal(draftBlueprint.slotPlan.length,11);
 assert.equal(generator.validateQuestionBank(draftBank,{classId:"10",subjectId:"english-language-literature",academicYear:"2026-27"}).valid,true);
 const wordCount=value=>(String(value||"").match(/[A-Za-z0-9]+(?:[’'-][A-Za-z0-9]+)*/g)||[]).length;
-assert.equal(draftBank.questions.length,180,"Q1–Q9 must each contain twenty curated candidate bundles at this milestone");
+assert.equal(draftBank.questions.length,220,"all eleven numbered-question slots must contain twenty candidate bundles");
 const bySlot=number=>draftBank.questions.filter(question=>question.questionId.startsWith("ENG184-Q"+String(number).padStart(2,"0")+"-"));
-for(let number=1;number<=9;number++)assert.equal(bySlot(number).length,20,"Q"+number+" must contain twenty candidates");
-const slotCoverage=generator.auditSlotCoverage(draftBlueprint,draftBank,20).coverage;
-for(let number=1;number<=9;number++){
- const slot=slotCoverage.find(item=>item.questionNumber===number);
+for(let number=1;number<=11;number++)assert.equal(bySlot(number).length,20,"Q"+number+" must contain twenty candidates");
+const slotCoverage=generator.auditSlotCoverage(draftBlueprint,draftBank,20);
+assert.equal(slotCoverage.valid,true,slotCoverage.errors.join("; "));
+for(let number=1;number<=11;number++){
+ const slot=slotCoverage.coverage.find(item=>item.questionNumber===number);
  assert.equal(slot.eligibleCount,20,"Q"+number+" must clear the twenty-candidate eligibility gate");
 }
-for(const number of [10,11])assert.equal(slotCoverage.find(item=>item.questionNumber===number).eligibleCount,0,"Q"+number+" remains outstanding");
-const q1=bySlot(1),q2=bySlot(2),q3=bySlot(3),q4=bySlot(4),q5=bySlot(5),q6=bySlot(6),q7=bySlot(7),q8=bySlot(8),q9Bundles=bySlot(9);
+const [q1,q2,q3,q4,q5,q6,q7,q8,q9Bundles,q10,q11]=Array.from({length:11},(_,i)=>bySlot(i+1));
 assert.ok(q1.every(q=>q.stimulusWordCount>=400&&q.stimulusWordCount<=450&&wordCount(q.stimulus)>=400&&wordCount(q.stimulus)<=450&&q.parts.length===8),"Q1 must contain original 400–450-word unseen passages with eight marked items");
 assert.ok(q2.every(q=>q.stimulusWordCount>=200&&q.stimulusWordCount<=250&&wordCount(q.stimulus)>=200&&wordCount(q.stimulus)<=250&&q.parts.length===9&&q.visualData&&q.visualData.columns.length===3&&q.visualData.rows.length===3),"Q2 must contain 200–250-word case passages and structured three-row visual data");
 assert.ok(q3.every(q=>q.attemptAny===10&&q.parts.length===12&&q.parts.every(p=>p.marks===1)),"Q3 must have twelve one-mark grammar tasks with attempt-any-ten");
@@ -134,8 +134,13 @@ assert.ok(q8.every(q=>q.attemptAny===4&&q.parts.length===5&&q.parts.every(p=>p.m
 assert.equal(q8.filter(q=>q.chapterId==="first-flight-prose").length,10,"Q8 must include ten prose bundles");
 assert.equal(q8.filter(q=>q.chapterId==="first-flight-poetry").length,10,"Q8 must include ten poetry bundles");
 assert.ok(q9Bundles.every(question=>question.approvalStatus==="approved"&&question.parts.length===3),"each approved Q9 bundle must contain three independently tracked sub-questions");
-const q9Coverage=slotCoverage.find(slot=>slot.slotId==="q09-footprints-short-answer");
-assert.equal(q9Coverage.eligibleCount,20,"Q9 must clear the twenty-candidate toll gate");
+assert.ok(q10.every(q=>["first-flight-prose","first-flight-poetry"].includes(q.chapterId)&&q.alternatives?.length===1&&q.answerKey.wordCount>=100&&q.answerKey.wordCount<=120&&q.alternatives[0].answerKey.wordCount>=100&&q.alternatives[0].answerKey.wordCount<=120),"Q10 must contain First Flight long-answer choices with 100–120-word model answers");
+assert.ok(q11.every(q=>q.chapterId==="footprints-without-feet"&&q.alternatives?.length===1&&q.answerKey.wordCount>=100&&q.answerKey.wordCount<=120&&q.alternatives[0].answerKey.wordCount>=100&&q.alternatives[0].answerKey.wordCount<=120),"Q11 must contain Footprints long-answer choices with 100–120-word model answers");
+assert.ok([...q10,...q11].every(q=>q.markingScheme.reduce((n,m)=>n+m.marks,0)===6&&q.alternatives[0].markingScheme.reduce((n,m)=>n+m.marks,0)===6),"Q10/Q11 main and alternative rubrics must each total six marks");
+assert.equal(q10.filter(q=>q.chapterId==="first-flight-prose").length,10,"Q10 must include ten prose candidates");
+assert.equal(q10.filter(q=>q.chapterId==="first-flight-poetry").length,10,"Q10 must include ten poetry candidates");
+const q11PrimaryChapters=q11.map(q=>{const match=String(q.source?.reference||"").match(/pair: (.*?); alternative/);return match&&match[1];});
+assert.equal(new Set(q11PrimaryChapters).size,9,"Q11 primary candidates must cover all nine supplied Footprints chapters");
 const allContentIds=draftBank.questions.flatMap(question=>generator.questionContentIds(question));
 assert.equal(new Set(allContentIds).size,allContentIds.length,"all parent, part and alternative content IDs must be globally unique");
 const q9ContentIds=q9Bundles.flatMap(question=>generator.questionContentIds(question));
