@@ -23,6 +23,25 @@ The blueprint applies SOF's Level 1 current/previous-class rule to the 30 non-Ac
 - **Science:** Plants and Animals; Birds; Food; Housing, Clothing and Occupation; Transport, Communication and Safety Rules; Human Body; Earth and Universe; Matter and Materials; Light, Sound and Force; Our Environment.
 - **Achievers:** Higher-order thinking based on the Section 2 science syllabus.
 
+## Initial NCERT topic map
+
+The current Class 3 reference is *Our Wondrous World — The World Around Us* (12 chapters). This is an integrated curricular area, not a conventional standalone Science textbook. The bank must map each question to both the SOF topic and the closest NCERT learning context; where the SOF syllabus extends beyond an explicit chapter, mark it as an age-appropriate syllabus extension rather than inventing a textbook citation.
+
+| SOF science topic | NCERT Class 3 learning context |
+|---|---|
+| Plants and Animals | Chapters 4–6: Getting to Know Plants; Plants and Animals Live Together; Living in Harmony |
+| Birds | Chapters 5–6: animal groups, habitats and living together |
+| Food | Chapters 8–9: Food We Eat; Staying Healthy and Happy |
+| Housing, Clothing and Occupation | Chapters 1–3: families, communities, mela and occupations; clothing/material contexts from Chapters 10–11 |
+| Transport, Communication and Safety Rules | Chapters 1–2: community life and journeys; safety rules taught as practical extensions |
+| Human Body | Chapter 9: Staying Healthy and Happy |
+| Earth and Universe | Age-appropriate sky, Sun, Moon, day/night and Earth-observation extension; verify each concept against the SOF syllabus |
+| Matter and Materials | Chapters 10–11: This World of Things; Making Things |
+| Light, Sound and Force | Age-appropriate observation and simple-effects extension; do not introduce advanced physics |
+| Our Environment | Chapters 5–7 and 12: living together, harmony, water and waste |
+
+Class 2 is a separate prior-learning pool. Since NCERT does not provide a conventional standalone Class 2 Science textbook in the current foundational-stage sequence, previous-class provenance must be based on Grade 2 learning outcomes and familiar foundational knowledge—not by copying or relabelling Class 3 textbook questions.
+
 ## Content alignment and provenance
 
 - Current-class content should be checked against the NCERT Class 3 *Our Wondrous World — The World Around Us* textbook (12 chapters) and the official SOF syllabus.
