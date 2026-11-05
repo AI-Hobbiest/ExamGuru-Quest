@@ -22,7 +22,7 @@
     {section:"MY LEARNING",auth:"student"},
     {label:"Study Library",icon:"📖",href:"./study.html",page:"study.html",auth:"student"},
     {label:"Assigned tests",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",auth:"student"},
-    {label:"Exam Paper Practice",icon:"📝",href:"./exam-practice.html",page:"exam-practice.html",auth:"student"},
+    {label:"Exam Paper Practice",icon:"📝",href:"./exam-practice.html",page:"exam-practice.html",classIds:["10"],auth:"student"},
     {label:"Learning Hub",icon:"🧠",href:"./learning.html",page:"learning.html",auth:"student"},
     {label:"My profile",icon:"👤",href:"./profile.html#profile",page:"profile.html",hash:"#profile",auth:"student"},
     {label:"Test history",icon:"📈",href:"./profile.html#history",page:"profile.html",hash:"#history",auth:"student"},
@@ -103,11 +103,7 @@
     let notice=document.getElementById("configuredSubjectsNotice");
     if(!notice&&cards.length){notice=node("p","c10-subjects-notice");notice.id="configuredSubjectsNotice";notice.setAttribute("role","status");cards[0].parentElement.insertBefore(notice,cards[0]);}
     if(notice){notice.hidden=config.subjects.length>0;notice.textContent="No subjects have been configured for "+config.label+" yet. Please ask your administrator to configure the class subjects.";}
-    if(config.label==="Class 6"){
-      const science=cards.find(card=>new URL(card.href,location.href).searchParams.get("subject")==="science");
-      const count=science&&science.querySelector("span:last-child");
-      if(count)count.textContent="36 starter MCQs · 12 chapters";
-    }
+
   }
   async function createNav(){
     if(document.getElementById("c10Sidebar"))return;
@@ -125,6 +121,7 @@
     links.forEach(item=>{
       if(item.auth!==auth.role)return;
       if(item.subject&&subjectConfig&& !subjectConfig.subjects.includes(item.subject))return;
+      if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return;
       if(item.section){list.appendChild(node("div","c10-nav-label",item.section));return;}
       const link=node("a","c10-nav-link");link.href=item.href;
       if(isActive(item,current)){link.classList.add("active");link.setAttribute("aria-current","page");}
