@@ -7,12 +7,8 @@ async function resolveStudentSession(){
  if(window.C10StudentAuth&&typeof window.C10StudentAuth.restoreSession==="function"){
   try{
    const restored=await window.C10StudentAuth.restoreSession();
-   if(restored&&restored.role==="student")return restored;
-  }catch(_){}
-  try{
-   const current=window.C10StudentAuth.currentUser&&window.C10StudentAuth.currentUser();
-   if(current&&current.role==="student")return current;
-  }catch(_){}
+   return restored&&restored.role==="student"?restored:null;
+  }catch(_){return null;}
  }
  try{
   const saved=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");

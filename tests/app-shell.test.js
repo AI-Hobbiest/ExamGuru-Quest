@@ -4,6 +4,7 @@ const fs=require("node:fs");
 const branding=fs.readFileSync("css/branding.css","utf8");
 const roleTheme=fs.readFileSync("css/theme-roles-v2.css","utf8");
 const nav=fs.readFileSync("js/app-shell.js","utf8");
+const studentAuth=fs.readFileSync("js/student-auth.js","utf8");
 const css=fs.readFileSync("css/app-shell.css","utf8");
 const dashboard=fs.readFileSync("dashboard.html","utf8");
 const homepage=fs.readFileSync("index.html","utf8");
@@ -38,6 +39,12 @@ assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"'),"p
 assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"Class 10 students can open full-paper self-study practice");
 assert.ok(nav.includes('classIds:["10"]')&&nav.includes('if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return;'),
   "the Class 10 full-paper route is filtered from other classes");
+assert.ok(nav.includes("await window.C10StudentAuth.restoreSession()"),"navigation resolves the authoritative account class before rendering class-gated links");
+assert.ok(!nav.includes('classId||"10"'),"navigation never silently defaults an unknown student class to Class 10");
+assert.ok(studentAuth.includes('classId:String(row.classId||"")')&&studentAuth.includes('classId:String(value.classId||"")'),"student identity preserves an explicit class and leaves missing class unknown");
+assert.ok(studentAuth.includes("}catch(_){return null;}"),"failed account verification cannot reuse a stale cached student class");
+assert.ok(examPracticeScript.includes("return restored&&restored.role===\"student\"?restored:null;")&&!examPracticeScript.includes("currentUser&&window.C10StudentAuth.currentUser()"),"exam page refuses to fall back to an unverified cached class identity");
+
 assert.ok(!nav.includes("36 starter MCQs · 12 chapters"),"student navigation does not disclose Class 6 bank inventory");
 const dashboardManager=fs.readFileSync("js/dashboard-manager.js","utf8");
 assert.ok(dashboardManager.includes('meta.textContent="Explore topics and practise"'),"student subject cards use generic practice copy");
