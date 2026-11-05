@@ -11360,7 +11360,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-01-B",
-          "prompt": "Only ___ participants returned their permission slips by Friday.",
+          "prompt": "Only ___ of the visitor passes were ready before opening day.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -11375,11 +11375,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -11387,10 +11387,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -11427,7 +11427,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-01-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All museum volunteers ___ wear identification badges while working at the gallery entrance.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -11462,7 +11462,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-01-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The curator ___ check the entry register before sharing it with visitors.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -11481,15 +11481,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -11497,7 +11497,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-01-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the visitor passes ___ recorded in the entry register.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -11512,11 +11512,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -11527,16 +11527,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-01-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of visitor passes ___ been checked by museum volunteers.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -11551,27 +11551,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-01-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the entry register nor the visitor passes was ready for opening day.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -11583,11 +11583,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-01-J",
-          "prompt": "team said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The curator said, “I have checked the display labels.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The team said that they had checked the figures twice."
+            "modelAnswer": "The curator said that they had checked the display labels."
           },
           "markingScheme": [
             {
@@ -11599,11 +11599,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-01-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The curator asked, “Did you check the display labels?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The curator asked whether they had checked the display labels."
           },
           "markingScheme": [
             {
@@ -11615,11 +11615,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-01-L",
-          "prompt": "The coordinator said, “Please submit the final chart by Friday.” Change into reported speech.",
+          "prompt": "The curator requested, “Please check the display labels before opening day.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The coordinator requested the group to submit the final chart by Friday."
+            "modelAnswer": "The curator requested them to check the display labels before opening day."
           },
           "markingScheme": [
             {
@@ -11697,7 +11697,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-02-B",
-          "prompt": "Only ___ participants returned their permission slips by Monday.",
+          "prompt": "Only ___ of the water samples were ready before the review.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -11712,11 +11712,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -11724,10 +11724,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -11764,7 +11764,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-02-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All field researchers ___ wear identification badges while working at the riverbank station.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -11799,7 +11799,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-02-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The lead scientist ___ test the survey log before sharing it with inspectors.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -11818,15 +11818,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -11834,7 +11834,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-02-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the water samples ___ recorded in the survey log.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -11849,11 +11849,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -11864,16 +11864,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-02-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of water samples ___ been tested by field researchers.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -11888,27 +11888,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-02-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the survey log nor the water samples was ready for the review.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -11920,11 +11920,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-02-J",
-          "prompt": "librarian said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The lead scientist said, “I have tested the sample readings.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The librarian said that they had checked the figures twice."
+            "modelAnswer": "The lead scientist said that they had tested the sample readings."
           },
           "markingScheme": [
             {
@@ -11936,11 +11936,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-02-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The lead scientist asked, “Did you test the sample readings?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The lead scientist asked whether they had tested the sample readings."
           },
           "markingScheme": [
             {
@@ -11952,11 +11952,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-02-L",
-          "prompt": "The teacher said, “Please submit the final chart by Monday.” Change into reported speech.",
+          "prompt": "The lead scientist requested, “Please test the sample readings before the review.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The teacher requested the group to submit the final chart by Monday."
+            "modelAnswer": "The lead scientist requested them to test the sample readings before the review."
           },
           "markingScheme": [
             {
@@ -12034,7 +12034,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-03-B",
-          "prompt": "Only ___ participants returned their permission slips by Thursday.",
+          "prompt": "Only ___ of the new arrivals were ready before the inventory.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -12049,11 +12049,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -12061,10 +12061,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -12101,7 +12101,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-03-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All library assistants ___ wear identification badges while working at the reading room.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -12136,7 +12136,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-03-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The librarian ___ sort the accession register before sharing it with readers.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -12155,15 +12155,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -12171,7 +12171,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-03-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the new arrivals ___ recorded in the accession register.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -12186,11 +12186,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -12201,16 +12201,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-03-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of new arrivals ___ been sorted by library assistants.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -12225,27 +12225,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-03-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the accession register nor the new arrivals was ready for the inventory.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -12257,11 +12257,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-03-J",
-          "prompt": "committee said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The librarian said, “I have sorted the book records.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The committee said that they had checked the figures twice."
+            "modelAnswer": "The librarian said that they had sorted the book records."
           },
           "markingScheme": [
             {
@@ -12273,11 +12273,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-03-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The librarian asked, “Did you sort the book records?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The librarian asked whether they had sorted the book records."
           },
           "markingScheme": [
             {
@@ -12289,11 +12289,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-03-L",
-          "prompt": "The mentor said, “Please submit the final chart by Thursday.” Change into reported speech.",
+          "prompt": "The librarian requested, “Please sort the book records before the inventory.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The mentor requested the group to submit the final chart by Thursday."
+            "modelAnswer": "The librarian requested them to sort the book records before the inventory."
           },
           "markingScheme": [
             {
@@ -12371,7 +12371,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-04-B",
-          "prompt": "Only ___ participants returned their permission slips by Saturday.",
+          "prompt": "Only ___ of the player records were ready before the final.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -12386,11 +12386,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -12398,10 +12398,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -12438,7 +12438,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-04-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All sports coaches ___ wear identification badges while working at the training ground.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -12473,7 +12473,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-04-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The captain ___ review the score sheet before sharing it with players.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -12492,15 +12492,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -12508,7 +12508,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-04-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the player records ___ recorded in the score sheet.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -12523,11 +12523,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -12538,16 +12538,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-04-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of player records ___ been reviewed by sports coaches.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -12562,27 +12562,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-04-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the score sheet nor the player records was ready for the final.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -12594,11 +12594,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-04-J",
-          "prompt": "supervisor said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The captain said, “I have reviewed the fitness reports.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The supervisor said that they had checked the figures twice."
+            "modelAnswer": "The captain said that they had reviewed the fitness reports."
           },
           "markingScheme": [
             {
@@ -12610,11 +12610,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-04-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The captain asked, “Did you review the fitness reports?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The captain asked whether they had reviewed the fitness reports."
           },
           "markingScheme": [
             {
@@ -12626,11 +12626,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-04-L",
-          "prompt": "The guide said, “Please submit the final chart by Saturday.” Change into reported speech.",
+          "prompt": "The captain requested, “Please review the fitness reports before the final.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The guide requested the group to submit the final chart by Saturday."
+            "modelAnswer": "The captain requested them to review the fitness reports before the final."
           },
           "markingScheme": [
             {
@@ -12708,7 +12708,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-05-B",
-          "prompt": "Only ___ participants returned their permission slips by Tuesday.",
+          "prompt": "Only ___ of the stage entries were ready before the rehearsal.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -12723,11 +12723,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -12735,10 +12735,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -12775,7 +12775,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-05-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All festival organisers ___ wear identification badges while working at the town hall.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -12810,7 +12810,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-05-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The coordinator ___ arrange the event schedule before sharing it with performers.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -12829,15 +12829,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -12845,7 +12845,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-05-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the stage entries ___ recorded in the event schedule.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -12860,11 +12860,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -12875,16 +12875,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-05-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of stage entries ___ been arranged by festival organisers.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -12899,27 +12899,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-05-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the event schedule nor the stage entries was ready for the rehearsal.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -12931,11 +12931,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-05-J",
-          "prompt": "captain said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The coordinator said, “I have arranged the performer list.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The captain said that they had checked the figures twice."
+            "modelAnswer": "The coordinator said that they had arranged the performer list."
           },
           "markingScheme": [
             {
@@ -12947,11 +12947,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-05-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The coordinator asked, “Did you arrange the performer list?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The coordinator asked whether they had arranged the performer list."
           },
           "markingScheme": [
             {
@@ -12963,11 +12963,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-05-L",
-          "prompt": "The coach said, “Please submit the final chart by Tuesday.” Change into reported speech.",
+          "prompt": "The coordinator requested, “Please arrange the performer list before the rehearsal.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The coach requested the group to submit the final chart by Tuesday."
+            "modelAnswer": "The coordinator requested them to arrange the performer list before the rehearsal."
           },
           "markingScheme": [
             {
@@ -13045,7 +13045,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-06-B",
-          "prompt": "Only ___ participants returned their permission slips by Wednesday.",
+          "prompt": "Only ___ of the camera images were ready before the briefing.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -13060,11 +13060,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -13072,10 +13072,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -13112,7 +13112,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-06-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All wildlife monitors ___ wear identification badges while working at the forest camp.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -13147,7 +13147,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-06-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The field officer ___ classify the sighting log before sharing it with rangers.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -13166,15 +13166,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -13182,7 +13182,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-06-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the camera images ___ recorded in the sighting log.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -13197,11 +13197,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -13212,16 +13212,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-06-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of camera images ___ been classified by wildlife monitors.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -13236,27 +13236,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-06-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the sighting log nor the camera images was ready for the briefing.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -13268,11 +13268,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-06-J",
-          "prompt": "curator said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The field officer said, “I have classified the animal photographs.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The curator said that they had checked the figures twice."
+            "modelAnswer": "The field officer said that they had classified the animal photographs."
           },
           "markingScheme": [
             {
@@ -13284,11 +13284,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-06-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The field officer asked, “Did you classify the animal photographs?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The field officer asked whether they had classified the animal photographs."
           },
           "markingScheme": [
             {
@@ -13300,11 +13300,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-06-L",
-          "prompt": "The instructor said, “Please submit the final chart by Wednesday.” Change into reported speech.",
+          "prompt": "The field officer requested, “Please classify the animal photographs before the briefing.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The instructor requested the group to submit the final chart by Wednesday."
+            "modelAnswer": "The field officer requested them to classify the animal photographs before the briefing."
           },
           "markingScheme": [
             {
@@ -13382,7 +13382,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-07-B",
-          "prompt": "Only ___ participants returned their permission slips by Sunday.",
+          "prompt": "Only ___ of the canvas panels were ready before the exhibition.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -13397,11 +13397,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -13409,10 +13409,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -13449,7 +13449,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-07-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All art students ___ wear identification badges while working at the studio entrance.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -13484,7 +13484,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-07-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The instructor ___ prepare the materials list before sharing it with students.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -13503,15 +13503,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -13519,7 +13519,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-07-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the canvas panels ___ recorded in the materials list.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -13534,11 +13534,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -13549,16 +13549,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-07-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of canvas panels ___ been prepared by art students.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -13573,27 +13573,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-07-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the materials list nor the canvas panels was ready for the exhibition.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -13605,11 +13605,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-07-J",
-          "prompt": "analyst said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The instructor said, “I have prepared the colour samples.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The analyst said that they had checked the figures twice."
+            "modelAnswer": "The instructor said that they had prepared the colour samples."
           },
           "markingScheme": [
             {
@@ -13621,11 +13621,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-07-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The instructor asked, “Did you prepare the colour samples?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The instructor asked whether they had prepared the colour samples."
           },
           "markingScheme": [
             {
@@ -13637,11 +13637,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-07-L",
-          "prompt": "The researcher said, “Please submit the final chart by Sunday.” Change into reported speech.",
+          "prompt": "The instructor requested, “Please prepare the colour samples before the exhibition.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The researcher requested the group to submit the final chart by Sunday."
+            "modelAnswer": "The instructor requested them to prepare the colour samples before the exhibition."
           },
           "markingScheme": [
             {
@@ -13719,7 +13719,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-08-B",
-          "prompt": "Only ___ participants returned their permission slips by Friday.",
+          "prompt": "Only ___ of the visitor groups were ready before the tour.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -13734,11 +13734,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -13746,10 +13746,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -13786,7 +13786,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-08-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All heritage guides ___ wear identification badges while working at the fort courtyard.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -13821,7 +13821,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-08-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The guide ___ explain the tour register before sharing it with visitors.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -13840,15 +13840,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -13856,7 +13856,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-08-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the visitor groups ___ recorded in the tour register.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -13871,11 +13871,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -13886,16 +13886,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-08-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of visitor groups ___ been explained by heritage guides.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -13910,27 +13910,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-08-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the tour register nor the visitor groups was ready for the tour.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -13942,11 +13942,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-08-J",
-          "prompt": "curator said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The guide said, “I have explained the route notes.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The curator said that they had checked the figures twice."
+            "modelAnswer": "The guide said that they had explained the route notes."
           },
           "markingScheme": [
             {
@@ -13958,11 +13958,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-08-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The guide asked, “Did you explain the route notes?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The guide asked whether they had explained the route notes."
           },
           "markingScheme": [
             {
@@ -13974,11 +13974,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-08-L",
-          "prompt": "The guide said, “Please submit the final chart by Friday.” Change into reported speech.",
+          "prompt": "The guide requested, “Please explain the route notes before the tour.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The guide requested the group to submit the final chart by Friday."
+            "modelAnswer": "The guide requested them to explain the route notes before the tour."
           },
           "markingScheme": [
             {
@@ -14056,7 +14056,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-09-B",
-          "prompt": "Only ___ participants returned their permission slips by Monday.",
+          "prompt": "Only ___ of the seed packets were ready before the planting.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -14071,11 +14071,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -14083,10 +14083,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -14123,7 +14123,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-09-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All garden volunteers ___ wear identification badges while working at the school garden.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -14158,7 +14158,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-09-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The head gardener ___ organise the planting chart before sharing it with helpers.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -14177,15 +14177,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -14193,7 +14193,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-09-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the seed packets ___ recorded in the planting chart.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -14208,11 +14208,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -14223,16 +14223,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-09-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of seed packets ___ been organised by garden volunteers.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -14247,27 +14247,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-09-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the planting chart nor the seed packets was ready for the planting.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -14279,11 +14279,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-09-J",
-          "prompt": "gardener said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The head gardener said, “I have organised the seed labels.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The gardener said that they had checked the figures twice."
+            "modelAnswer": "The head gardener said that they had organised the seed labels."
           },
           "markingScheme": [
             {
@@ -14295,11 +14295,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-09-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The head gardener asked, “Did you organise the seed labels?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The head gardener asked whether they had organised the seed labels."
           },
           "markingScheme": [
             {
@@ -14311,11 +14311,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-09-L",
-          "prompt": "The teacher said, “Please submit the final chart by Monday.” Change into reported speech.",
+          "prompt": "The head gardener requested, “Please organise the seed labels before the planting.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The teacher requested the group to submit the final chart by Monday."
+            "modelAnswer": "The head gardener requested them to organise the seed labels before the planting."
           },
           "markingScheme": [
             {
@@ -14393,7 +14393,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-10-B",
-          "prompt": "Only ___ participants returned their permission slips by Thursday.",
+          "prompt": "Only ___ of the patient files were ready before the morning round.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -14408,11 +14408,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -14420,10 +14420,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -14460,7 +14460,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-10-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All clinic assistants ___ wear identification badges while working at the health centre.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -14495,7 +14495,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-10-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The nurse ___ update the appointment register before sharing it with doctors.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -14514,15 +14514,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -14530,7 +14530,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-10-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the patient files ___ recorded in the appointment register.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -14545,11 +14545,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -14560,16 +14560,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-10-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of patient files ___ been updated by clinic assistants.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -14584,27 +14584,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-10-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the appointment register nor the patient files was ready for the morning round.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -14616,11 +14616,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-10-J",
-          "prompt": "coordinator said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The nurse said, “I have updated the case notes.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The coordinator said that they had checked the figures twice."
+            "modelAnswer": "The nurse said that they had updated the case notes."
           },
           "markingScheme": [
             {
@@ -14632,11 +14632,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-10-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The nurse asked, “Did you update the case notes?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The nurse asked whether they had updated the case notes."
           },
           "markingScheme": [
             {
@@ -14648,11 +14648,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-10-L",
-          "prompt": "The doctor said, “Please submit the final chart by Thursday.” Change into reported speech.",
+          "prompt": "The nurse requested, “Please update the case notes before the morning round.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The doctor requested the group to submit the final chart by Thursday."
+            "modelAnswer": "The nurse requested them to update the case notes before the morning round."
           },
           "markingScheme": [
             {
@@ -14730,7 +14730,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-11-B",
-          "prompt": "Only ___ participants returned their permission slips by Tuesday.",
+          "prompt": "Only ___ of the costume boxes were ready before the performance.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -14745,11 +14745,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -14757,10 +14757,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -14797,7 +14797,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-11-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All theatre performers ___ wear identification badges while working at the green room.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -14832,7 +14832,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-11-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The director ___ arrange the prop checklist before sharing it with actors.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -14851,15 +14851,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -14867,7 +14867,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-11-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the costume boxes ___ recorded in the prop checklist.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -14882,11 +14882,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -14897,16 +14897,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-11-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of costume boxes ___ been arranged by theatre performers.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -14921,27 +14921,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-11-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the prop checklist nor the costume boxes was ready for the performance.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -14953,11 +14953,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-11-J",
-          "prompt": "trainer said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The director said, “I have arranged the stage props.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The trainer said that they had checked the figures twice."
+            "modelAnswer": "The director said that they had arranged the stage props."
           },
           "markingScheme": [
             {
@@ -14969,11 +14969,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-11-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The director asked, “Did you arrange the stage props?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The director asked whether they had arranged the stage props."
           },
           "markingScheme": [
             {
@@ -14985,11 +14985,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-11-L",
-          "prompt": "The instructor said, “Please submit the final chart by Tuesday.” Change into reported speech.",
+          "prompt": "The director requested, “Please arrange the stage props before the performance.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The instructor requested the group to submit the final chart by Tuesday."
+            "modelAnswer": "The director requested them to arrange the stage props before the performance."
           },
           "markingScheme": [
             {
@@ -15067,7 +15067,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-12-B",
-          "prompt": "Only ___ participants returned their permission slips by Saturday.",
+          "prompt": "Only ___ of the rescue kits were ready before the drill.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -15082,11 +15082,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -15094,10 +15094,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -15134,7 +15134,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-12-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All water-safety officers ___ wear identification badges while working at the pool deck.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -15169,7 +15169,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-12-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The supervisor ___ inspect the equipment log before sharing it with lifeguards.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -15188,15 +15188,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -15204,7 +15204,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-12-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the rescue kits ___ recorded in the equipment log.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -15219,11 +15219,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -15234,16 +15234,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-12-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of rescue kits ___ been inspected by water-safety officers.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -15258,27 +15258,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-12-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the equipment log nor the rescue kits was ready for the drill.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -15290,11 +15290,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-12-J",
-          "prompt": "scientist said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The supervisor said, “I have inspected the safety devices.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The scientist said that they had checked the figures twice."
+            "modelAnswer": "The supervisor said that they had inspected the safety devices."
           },
           "markingScheme": [
             {
@@ -15306,11 +15306,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-12-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The supervisor asked, “Did you inspect the safety devices?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The supervisor asked whether they had inspected the safety devices."
           },
           "markingScheme": [
             {
@@ -15322,11 +15322,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-12-L",
-          "prompt": "The researcher said, “Please submit the final chart by Saturday.” Change into reported speech.",
+          "prompt": "The supervisor requested, “Please inspect the safety devices before the drill.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The researcher requested the group to submit the final chart by Saturday."
+            "modelAnswer": "The supervisor requested them to inspect the safety devices before the drill."
           },
           "markingScheme": [
             {
@@ -15404,7 +15404,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-13-B",
-          "prompt": "Only ___ participants returned their permission slips by Wednesday.",
+          "prompt": "Only ___ of the telescope parts were ready before the session.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -15419,11 +15419,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -15431,10 +15431,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -15471,7 +15471,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-13-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All astronomy club members ___ wear identification badges while working at the science block.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -15506,7 +15506,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-13-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The astronomy teacher ___ adjust the observation record before sharing it with students.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -15525,15 +15525,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -15541,7 +15541,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-13-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the telescope parts ___ recorded in the observation record.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -15556,11 +15556,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -15571,16 +15571,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-13-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of telescope parts ___ been adjusted by astronomy club members.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -15595,27 +15595,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-13-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the observation record nor the telescope parts was ready for the session.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -15627,11 +15627,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-13-J",
-          "prompt": "officer said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The astronomy teacher said, “I have adjusted the lens settings.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The officer said that they had checked the figures twice."
+            "modelAnswer": "The astronomy teacher said that they had adjusted the lens settings."
           },
           "markingScheme": [
             {
@@ -15643,11 +15643,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-13-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The astronomy teacher asked, “Did you adjust the lens settings?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The astronomy teacher asked whether they had adjusted the lens settings."
           },
           "markingScheme": [
             {
@@ -15659,11 +15659,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-13-L",
-          "prompt": "The supervisor said, “Please submit the final chart by Wednesday.” Change into reported speech.",
+          "prompt": "The astronomy teacher requested, “Please adjust the lens settings before the session.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The supervisor requested the group to submit the final chart by Wednesday."
+            "modelAnswer": "The astronomy teacher requested them to adjust the lens settings before the session."
           },
           "markingScheme": [
             {
@@ -15741,7 +15741,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-14-B",
-          "prompt": "Only ___ participants returned their permission slips by Friday.",
+          "prompt": "Only ___ of the food samples were ready before the visit.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -15756,11 +15756,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -15768,10 +15768,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -15808,7 +15808,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-14-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All market inspectors ___ wear identification badges while working at the market lane.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -15843,7 +15843,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-14-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The health officer ___ record the inspection sheet before sharing it with vendors.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -15862,15 +15862,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -15878,7 +15878,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-14-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the food samples ___ recorded in the inspection sheet.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -15893,11 +15893,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -15908,16 +15908,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-14-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of food samples ___ been recorded by market inspectors.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -15932,27 +15932,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-14-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the inspection sheet nor the food samples was ready for the visit.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -15964,11 +15964,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-14-J",
-          "prompt": "conductor said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The health officer said, “I have recorded the storage conditions.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The conductor said that they had checked the figures twice."
+            "modelAnswer": "The health officer said that they had recorded the storage conditions."
           },
           "markingScheme": [
             {
@@ -15980,11 +15980,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-14-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The health officer asked, “Did you record the storage conditions?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The health officer asked whether they had recorded the storage conditions."
           },
           "markingScheme": [
             {
@@ -15996,11 +15996,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-14-L",
-          "prompt": "The teacher said, “Please submit the final chart by Friday.” Change into reported speech.",
+          "prompt": "The health officer requested, “Please record the storage conditions before the visit.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The teacher requested the group to submit the final chart by Friday."
+            "modelAnswer": "The health officer requested them to record the storage conditions before the visit."
           },
           "markingScheme": [
             {
@@ -16078,7 +16078,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-15-B",
-          "prompt": "Only ___ participants returned their permission slips by Thursday.",
+          "prompt": "Only ___ of the instrument cases were ready before the concert.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -16093,11 +16093,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -16105,10 +16105,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -16145,7 +16145,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-15-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All music students ___ wear identification badges while working at the practice room.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -16180,7 +16180,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-15-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The conductor ___ arrange the rehearsal list before sharing it with musicians.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -16199,15 +16199,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -16215,7 +16215,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-15-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the instrument cases ___ recorded in the rehearsal list.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -16230,11 +16230,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -16245,16 +16245,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-15-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of instrument cases ___ been arranged by music students.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -16269,27 +16269,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-15-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the rehearsal list nor the instrument cases was ready for the concert.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -16301,11 +16301,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-15-J",
-          "prompt": "director said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The conductor said, “I have arranged the music folders.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The director said that they had checked the figures twice."
+            "modelAnswer": "The conductor said that they had arranged the music folders."
           },
           "markingScheme": [
             {
@@ -16317,11 +16317,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-15-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The conductor asked, “Did you arrange the music folders?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The conductor asked whether they had arranged the music folders."
           },
           "markingScheme": [
             {
@@ -16333,11 +16333,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-15-L",
-          "prompt": "The mentor said, “Please submit the final chart by Thursday.” Change into reported speech.",
+          "prompt": "The conductor requested, “Please arrange the music folders before the concert.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The mentor requested the group to submit the final chart by Thursday."
+            "modelAnswer": "The conductor requested them to arrange the music folders before the concert."
           },
           "markingScheme": [
             {
@@ -16415,7 +16415,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-16-B",
-          "prompt": "Only ___ participants returned their permission slips by Monday.",
+          "prompt": "Only ___ of the route markers were ready before the event.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -16430,11 +16430,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -16442,10 +16442,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -16482,7 +16482,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-16-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All cycling marshals ___ wear identification badges while working at the stadium gate.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -16517,7 +16517,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-16-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The race organiser ___ position the race checklist before sharing it with riders.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -16536,15 +16536,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -16552,7 +16552,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-16-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the route markers ___ recorded in the race checklist.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -16567,11 +16567,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -16582,16 +16582,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-16-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of route markers ___ been positioned by cycling marshals.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -16606,27 +16606,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-16-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the race checklist nor the route markers was ready for the event.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -16638,11 +16638,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-16-J",
-          "prompt": "horticulturist said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The race organiser said, “I have positioned the safety barriers.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The horticulturist said that they had checked the figures twice."
+            "modelAnswer": "The race organiser said that they had positioned the safety barriers."
           },
           "markingScheme": [
             {
@@ -16654,11 +16654,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-16-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The race organiser asked, “Did you position the safety barriers?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The race organiser asked whether they had positioned the safety barriers."
           },
           "markingScheme": [
             {
@@ -16670,11 +16670,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-16-L",
-          "prompt": "The officer said, “Please submit the final chart by Monday.” Change into reported speech.",
+          "prompt": "The race organiser requested, “Please position the safety barriers before the event.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The officer requested the group to submit the final chart by Monday."
+            "modelAnswer": "The race organiser requested them to position the safety barriers before the event."
           },
           "markingScheme": [
             {
@@ -16752,7 +16752,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-17-B",
-          "prompt": "Only ___ participants returned their permission slips by Sunday.",
+          "prompt": "Only ___ of the photo captions were ready before the deadline.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -16767,11 +16767,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -16779,10 +16779,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -16819,7 +16819,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-17-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All newsroom interns ___ wear identification badges while working at the editorial desk.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -16854,7 +16854,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-17-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The editor ___ verify the draft schedule before sharing it with reporters.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -16873,15 +16873,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -16889,7 +16889,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-17-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the photo captions ___ recorded in the draft schedule.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -16904,11 +16904,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -16919,16 +16919,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-17-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of photo captions ___ been verified by newsroom interns.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -16943,27 +16943,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-17-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the draft schedule nor the photo captions was ready for the deadline.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -16975,11 +16975,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-17-J",
-          "prompt": "leader said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The editor said, “I have verified the headline notes.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The leader said that they had checked the figures twice."
+            "modelAnswer": "The editor said that they had verified the headline notes."
           },
           "markingScheme": [
             {
@@ -16991,11 +16991,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-17-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The editor asked, “Did you verify the headline notes?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The editor asked whether they had verified the headline notes."
           },
           "markingScheme": [
             {
@@ -17007,11 +17007,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-17-L",
-          "prompt": "The coach said, “Please submit the final chart by Sunday.” Change into reported speech.",
+          "prompt": "The editor requested, “Please verify the headline notes before the deadline.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The coach requested the group to submit the final chart by Sunday."
+            "modelAnswer": "The editor requested them to verify the headline notes before the deadline."
           },
           "markingScheme": [
             {
@@ -17089,7 +17089,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-18-B",
-          "prompt": "Only ___ participants returned their permission slips by Wednesday.",
+          "prompt": "Only ___ of the relief parcels were ready before the dispatch.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -17104,11 +17104,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -17116,10 +17116,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -17156,7 +17156,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-18-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All community volunteers ___ wear identification badges while working at the supply centre.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -17191,7 +17191,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-18-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The relief coordinator ___ count the distribution sheet before sharing it with families.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -17210,15 +17210,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -17226,7 +17226,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-18-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the relief parcels ___ recorded in the distribution sheet.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -17241,11 +17241,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -17256,16 +17256,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-18-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of relief parcels ___ been counted by community volunteers.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -17280,27 +17280,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-18-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the distribution sheet nor the relief parcels was ready for the dispatch.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -17312,11 +17312,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-18-J",
-          "prompt": "editor said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The relief coordinator said, “I have counted the parcel labels.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The editor said that they had checked the figures twice."
+            "modelAnswer": "The relief coordinator said that they had counted the parcel labels."
           },
           "markingScheme": [
             {
@@ -17328,11 +17328,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-18-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The relief coordinator asked, “Did you count the parcel labels?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The relief coordinator asked whether they had counted the parcel labels."
           },
           "markingScheme": [
             {
@@ -17344,11 +17344,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-18-L",
-          "prompt": "The teacher said, “Please submit the final chart by Wednesday.” Change into reported speech.",
+          "prompt": "The relief coordinator requested, “Please count the parcel labels before the dispatch.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The teacher requested the group to submit the final chart by Wednesday."
+            "modelAnswer": "The relief coordinator requested them to count the parcel labels before the dispatch."
           },
           "markingScheme": [
             {
@@ -17426,7 +17426,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-19-B",
-          "prompt": "Only ___ participants returned their permission slips by Saturday.",
+          "prompt": "Only ___ of the project boards were ready before the final round.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -17441,11 +17441,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -17453,10 +17453,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -17493,7 +17493,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-19-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All science fair judges ___ wear identification badges while working at the exhibition hall.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -17528,7 +17528,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-19-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The chief judge ___ assess the score register before sharing it with participants.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -17547,15 +17547,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -17563,7 +17563,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-19-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the project boards ___ recorded in the score register.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -17578,11 +17578,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -17593,16 +17593,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-19-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of project boards ___ been assessed by science fair judges.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -17617,27 +17617,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-19-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the score register nor the project boards was ready for the final round.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -17649,11 +17649,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-19-J",
-          "prompt": "organiser said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The chief judge said, “I have assessed the project summaries.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The organiser said that they had checked the figures twice."
+            "modelAnswer": "The chief judge said that they had assessed the project summaries."
           },
           "markingScheme": [
             {
@@ -17665,11 +17665,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-19-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The chief judge asked, “Did you assess the project summaries?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The chief judge asked whether they had assessed the project summaries."
           },
           "markingScheme": [
             {
@@ -17681,11 +17681,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-19-L",
-          "prompt": "The guide said, “Please submit the final chart by Saturday.” Change into reported speech.",
+          "prompt": "The chief judge requested, “Please assess the project summaries before the final round.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The guide requested the group to submit the final chart by Saturday."
+            "modelAnswer": "The chief judge requested them to assess the project summaries before the final round."
           },
           "markingScheme": [
             {
@@ -17763,7 +17763,7 @@
         {
           "partId": "b",
           "questionId": "ENG184-Q03-20-B",
-          "prompt": "Only ___ participants returned their permission slips by Tuesday.",
+          "prompt": "Only ___ of the old documents were ready before the audit.",
           "marks": 1,
           "grammarTopic": "determiners",
           "answerKey": {
@@ -17778,11 +17778,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "a little"
+              "text": "a few"
             },
             {
               "optionId": "B",
-              "text": "a few"
+              "text": "a little"
             },
             {
               "optionId": "C",
@@ -17790,10 +17790,10 @@
             },
             {
               "optionId": "D",
-              "text": "any of"
+              "text": "every"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "c",
@@ -17830,7 +17830,7 @@
         {
           "partId": "e",
           "questionId": "ENG184-Q03-20-E",
-          "prompt": "Every visitor ___ follow the safety instructions before entering the work area.",
+          "prompt": "All archive assistants ___ wear identification badges while working at the records room.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -17865,7 +17865,7 @@
         {
           "partId": "f",
           "questionId": "ENG184-Q03-20-F",
-          "prompt": "The group ___ verify the figures before publishing its report.",
+          "prompt": "The archivist ___ compare the catalogue index before sharing it with researchers.",
           "marks": 1,
           "grammarTopic": "modals",
           "answerKey": {
@@ -17884,15 +17884,15 @@
             },
             {
               "optionId": "B",
-              "text": "can"
-            },
-            {
-              "optionId": "C",
               "text": "might have"
             },
             {
+              "optionId": "C",
+              "text": "would have"
+            },
+            {
               "optionId": "D",
-              "text": "will have"
+              "text": "can have"
             }
           ],
           "correctOptionId": "A"
@@ -17900,7 +17900,7 @@
         {
           "partId": "g",
           "questionId": "ENG184-Q03-20-G",
-          "prompt": "The list of completed tasks ___ on the noticeboard.",
+          "prompt": "The condition of the old documents ___ recorded in the catalogue index.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
@@ -17915,11 +17915,11 @@
           "options": [
             {
               "optionId": "A",
-              "text": "are"
+              "text": "is"
             },
             {
               "optionId": "B",
-              "text": "is"
+              "text": "are"
             },
             {
               "optionId": "C",
@@ -17930,16 +17930,16 @@
               "text": "have"
             }
           ],
-          "correctOptionId": "B"
+          "correctOptionId": "A"
         },
         {
           "partId": "h",
           "questionId": "ENG184-Q03-20-H",
-          "prompt": "Each of the volunteers ___ a separate observation sheet.",
+          "prompt": "A number of old documents ___ been compared by archive assistants.",
           "marks": 1,
           "grammarTopic": "subject-verb-concord",
           "answerKey": {
-            "modelAnswer": "has"
+            "modelAnswer": "have"
           },
           "markingScheme": [
             {
@@ -17954,27 +17954,27 @@
             },
             {
               "optionId": "B",
-              "text": "are having"
-            },
-            {
-              "optionId": "C",
               "text": "has"
             },
             {
+              "optionId": "C",
+              "text": "is"
+            },
+            {
               "optionId": "D",
-              "text": "were"
+              "text": "was"
             }
           ],
-          "correctOptionId": "C"
+          "correctOptionId": "A"
         },
         {
           "partId": "i",
           "questionId": "ENG184-Q03-20-I",
-          "prompt": "Correct the verb error: “Neither the summary nor the observation sheets was available.”",
+          "prompt": "Correct the verb error: “Neither the catalogue index nor the old documents was ready for the audit.”",
           "marks": 1,
           "grammarTopic": "editing",
           "answerKey": {
-            "modelAnswer": "were"
+            "modelAnswer": "were ready"
           },
           "markingScheme": [
             {
@@ -17986,11 +17986,11 @@
         {
           "partId": "j",
           "questionId": "ENG184-Q03-20-J",
-          "prompt": "manager said, “I have checked the figures twice.” Change into reported speech.",
+          "prompt": "The archivist said, “I have compared the document entries.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-statements",
           "answerKey": {
-            "modelAnswer": "The manager said that they had checked the figures twice."
+            "modelAnswer": "The archivist said that they had compared the document entries."
           },
           "markingScheme": [
             {
@@ -18002,11 +18002,11 @@
         {
           "partId": "k",
           "questionId": "ENG184-Q03-20-K",
-          "prompt": "The auditor asked, “Did you record the starting value?” Change into reported speech.",
+          "prompt": "The archivist asked, “Did you compare the document entries?” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-questions",
           "answerKey": {
-            "modelAnswer": "The auditor asked whether they had recorded the starting value."
+            "modelAnswer": "The archivist asked whether they had compared the document entries."
           },
           "markingScheme": [
             {
@@ -18018,11 +18018,11 @@
         {
           "partId": "l",
           "questionId": "ENG184-Q03-20-L",
-          "prompt": "The coordinator said, “Please submit the final chart by Tuesday.” Change into reported speech.",
+          "prompt": "The archivist requested, “Please compare the document entries before the audit.” Change into reported speech.",
           "marks": 1,
           "grammarTopic": "reported-speech-commands-requests",
           "answerKey": {
-            "modelAnswer": "The coordinator requested the group to submit the final chart by Tuesday."
+            "modelAnswer": "The archivist requested them to compare the document entries before the audit."
           },
           "markingScheme": [
             {
