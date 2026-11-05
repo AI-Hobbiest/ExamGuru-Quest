@@ -93,7 +93,7 @@ for(const profile of profiles){
   });
   assert.ok(paper.questions.some(q=>q.source&&q.source.type==="practice-bank"),"every generated examination must actually draw from the integrated chapter MCQ bank");
   const contentIds=paper.questions.flatMap(q=>engine.questionContentIds(q));
-  const appliedWindow=Math.min(5,attempt);
+  const appliedWindow=previousPapers.length;
   assert.equal(paper.repeatProtection.appliedWindow,appliedWindow,
     profile.level+" must honour the complete available five-paper history without relaxing it");
   for(const previous of previousPapers){
