@@ -30,6 +30,28 @@ function sectionCounts(flat) {
     section, flat.filter(question => question.section === section).length
   ]));
 }
+function verifyOriginQuotas(paper, expected) {
+  for (const [sectionId, counts] of Object.entries(expected)) {
+    const section = paper.sections.find(item => item.id === sectionId);
+    assert.ok(section, "missing section " + sectionId);
+    assert.deepEqual(JSON.parse(JSON.stringify(section.syllabusOriginCounts)), counts,
+      sectionId + " syllabus-origin quota");
+  }
+  assert.deepEqual(JSON.parse(JSON.stringify(paper.syllabusOriginCounts)), {
+    "current-class": 32, "previous-class": 18
+  }, paper.blueprintId + " overall 60:40 non-Achievers split plus current-class Achievers");
+}
+function verifyFourPaperRepeat(chapters, blueprintId) {
+  const completed = [];
+  for (let round = 0; round < 4; round++) {
+    const recentQuestionIds = completed.slice(-3).flat();
+    const paper = model.buildPaper(chapters, blueprintId, () => 0.42, { recentQuestionIds });
+    const prior = new Set(recentQuestionIds);
+    assert.ok(paper.questions.every(question => !prior.has(question.questionKey)),
+      blueprintId + " avoids all questions from the preceding three mocks when eligible pools permit");
+    completed.push(paper.questions.map(question => question.questionKey));
+  }
+}
 function verifyPaper(chapters, blueprintId, expectedSections, expectedQuestions = 50) {
   const paper = model.buildPaper(chapters, blueprintId, () => 0.42);
   assert.equal(paper.totalQuestions, expectedQuestions, blueprintId + " question count");
@@ -44,12 +66,7 @@ function verifyPaper(chapters, blueprintId, expectedSections, expectedQuestions 
     blueprintId + " selects distinct questions");
   assert.equal(paper.questions[0].examQuestionNumber, 1);
   assert.equal(paper.questions[0].sectionQuestionNumber, 1);
-  const nextPaper = model.buildPaper(chapters, blueprintId, () => 0.42, {
-    recentQuestionIds: paper.questions.map(question => question.questionKey)
-  });
-  const previousIds = new Set(paper.questions.map(question => question.questionKey));
-  assert.ok(nextPaper.questions.every(question => !previousIds.has(question.questionKey)),
-    blueprintId + " avoids the immediately previous paper while unseen section pools are sufficient");
+  verifyFourPaperRepeat(chapters, blueprintId);
   const answers = paper.questions.map((question, index) => ({
     status: index % 7 === 0 ? "skipped" : index % 3 === 0 ? "unanswered" : "answered",
     isCorrect: index % 3 !== 0 && index % 7 !== 0 && index % 2 === 0
@@ -65,24 +82,62 @@ function verifyPaper(chapters, blueprintId, expectedSections, expectedQuestions 
 }
 
 const nso = loadBank("data/class-6-science-sof.json", "class-6-science-sof");
-assert.equal(nso.flat.length, 600, "the Class 6 SOF Science pool retains all 600 questions");
+assert.equal(nso.flat.length, 677, "the Class 6 SOF Science pool includes current- and previous-class questions");
 assert.deepEqual(sectionCounts(nso.flat), {
-  "Logical Reasoning": 50, "Science": 500, "Achievers Section": 50
+  "Logical Reasoning": 75, "Science": 552, "Achievers Section": 50
 });
-verifyPaper(nso.chapters, "sof-iso-class-6-level-1", [
+assert.ok(nso.flat.every(question => question.syllabusClass && question.syllabusOrigin),
+  "every NSO question has syllabus-grade provenance");
+assert.deepEqual(
+  Object.fromEntries(["Science", "Logical Reasoning", "Achievers Section"].map(section => [section,
+    Object.fromEntries(["current-class", "previous-class"].map(origin => [origin,
+      nso.flat.filter(question => question.section === section && question.syllabusOrigin === origin).length
+    ]))
+  ])),
+  {
+    "Science": { "current-class": 500, "previous-class": 52 },
+    "Logical Reasoning": { "current-class": 50, "previous-class": 25 },
+    "Achievers Section": { "current-class": 50, "previous-class": 0 }
+  }
+);
+const nsoPaper = verifyPaper(nso.chapters, "sof-iso-class-6-level-1", [
   ["logical-reasoning", 10, 1, 10],
   ["science", 35, 1, 35],
   ["achievers", 5, 3, 15]
 ]);
+verifyOriginQuotas(nsoPaper, {
+  "logical-reasoning": { "current-class": 6, "previous-class": 4 },
+  "science": { "current-class": 21, "previous-class": 14 },
+  "achievers": { "current-class": 5 }
+});
+const nsoWithoutPrevious = nso.chapters.map(chapter => ({
+  ...chapter, questions: chapter.questions.filter(question => question.syllabusOrigin !== "previous-class")
+}));
+assert.throws(() => model.buildPaper(nsoWithoutPrevious, "sof-iso-class-6-level-1"), /previous-class questions/);
 
 const imo = loadBank("data/class-6-mathematics-sof.json", "class-6-mathematics-sof");
-assert.equal(imo.flat.length, 550, "the IMO bank retains all 550 questions");
+assert.equal(imo.flat.length, 625, "the IMO bank includes current- and previous-class pools");
 assert.deepEqual(sectionCounts(imo.flat), {
-  "Mathematical Reasoning": 300,
-  "Everyday Mathematics": 120,
+  "Mathematical Reasoning": 330,
+  "Everyday Mathematics": 140,
   "Achievers Section": 80,
-  "Logical Reasoning": 50
+  "Logical Reasoning": 75
 });
+assert.ok(imo.flat.every(question => question.syllabusClass && question.syllabusOrigin),
+  "every IMO question has syllabus-grade provenance");
+assert.deepEqual(
+  Object.fromEntries(["Mathematical Reasoning", "Everyday Mathematics", "Logical Reasoning", "Achievers Section"].map(section => [section,
+    Object.fromEntries(["current-class", "previous-class"].map(origin => [origin,
+      imo.flat.filter(question => question.section === section && question.syllabusOrigin === origin).length
+    ]))
+  ])),
+  {
+    "Mathematical Reasoning": { "current-class": 300, "previous-class": 30 },
+    "Everyday Mathematics": { "current-class": 120, "previous-class": 20 },
+    "Logical Reasoning": { "current-class": 50, "previous-class": 25 },
+    "Achievers Section": { "current-class": 80, "previous-class": 0 }
+  }
+);
 const imoPaper = verifyPaper(imo.chapters, "sof-imo-class-6-level-1", [
   ["logical-reasoning", 15, 1, 15],
   ["mathematical-reasoning", 20, 1, 20],
@@ -91,7 +146,17 @@ const imoPaper = verifyPaper(imo.chapters, "sof-imo-class-6-level-1", [
 ]);
 assert.ok(imoPaper.questions.filter(question => question.examSectionId === "achievers").every(question => question.marks === 3));
 assert.ok(imoPaper.questions.filter(question => question.examSectionId !== "achievers").every(question => question.marks === 1));
+verifyOriginQuotas(imoPaper, {
+  "logical-reasoning": { "current-class": 9, "previous-class": 6 },
+  "mathematical-reasoning": { "current-class": 12, "previous-class": 8 },
+  "everyday-mathematics": { "current-class": 6, "previous-class": 4 },
+  "achievers": { "current-class": 5 }
+});
 assert.match(model.getBlueprint("sof-imo-class-6-level-1").syllabusCoverageNote, /60% current-class and 40% previous-class/);
+const imoWithoutPrevious = imo.chapters.map(chapter => ({
+  ...chapter, questions: chapter.questions.filter(question => question.syllabusOrigin !== "previous-class")
+}));
+assert.throws(() => model.buildPaper(imoWithoutPrevious, "sof-imo-class-6-level-1"), /previous-class questions/);
 
 const ieo = loadBank("data/class-6-english-sof.json", "class-6-english-sof");
 assert.equal(ieo.bank.length, 12, "IEO bank has its eight word/grammar topics plus Reading, mixed practice, Spoken/Written and Achievers sets");
@@ -116,4 +181,4 @@ assert.ok(ieoPaper.questions.filter(question => question.examSectionId !== "achi
 
 assert.throws(() => model.buildPaper(imo.chapters, "unknown"), /Unknown Olympiad blueprint/);
 assert.throws(() => model.buildPaper(ieo.chapters.slice(0, 1), "sof-ieo-class-6-level-1"), /bank has only/);
-console.log("Olympiad blueprint tests passed: NSO, IMO and IEO bank inventories, SOF section quotas, 60-mark weighting, no-repeat paper assembly, section scoring and insufficient-pool guards.");
+console.log("Olympiad blueprint tests passed: NSO, IMO and IEO inventories, syllabus-origin quotas, 60:40 current/previous-class coverage, current-class Achievers, four-paper repeat avoidance, 60-mark weighting and insufficient-pool guards.");
