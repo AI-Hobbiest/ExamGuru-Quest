@@ -46,6 +46,9 @@ assert.ok(!dashboardManager.includes('toLocaleString()+" MCQs · "+bank.length+"
 assert.ok(!dashboard.includes("Loading bank details…"),"student dashboard does not expose bank inventory loading text");
 assert.ok(!examPracticeScript.includes("integrated.stats.appended")&&!examPracticeScript.includes("coverage.slotCount"),
   "student exam setup does not disclose appended bank size or eligible slot inventory");
+const profileRegistry=JSON.parse(fs.readFileSync("data/exam-papers/profile-registry.json","utf8"));
+assert.ok(profileRegistry.profiles.every(item=>!/(?:\\d[,.]?\\d*\\s+(?:candidates|questions)|MCQ bank integrated|paper generation|repeat protection|slot depth)/i.test(item.description||"")),
+  "student-visible exam profile descriptions must not disclose bank size or internal pool-readiness metrics");
 assert.ok(examPracticeScript.includes('String(item.classId)===studentClassId'),
   "exam practice profiles are filtered to the authenticated student's class");
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"'),"admin navigation exposes the authoring studio");
