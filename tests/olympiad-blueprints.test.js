@@ -82,12 +82,17 @@ function verifyPaper(chapters, blueprintId, expectedSections, expectedQuestions 
 }
 
 const nso = loadBank("data/class-6-science-sof.json", "class-6-science-sof");
-assert.equal(nso.flat.length, 677, "the Class 6 SOF Science pool includes current- and previous-class questions");
+assert.equal(nso.flat.length, 685, "the Class 6 SOF Science pool includes current- and previous-class questions");
 assert.deepEqual(sectionCounts(nso.flat), {
-  "Logical Reasoning": 75, "Science": 552, "Achievers Section": 50
+  "Logical Reasoning": 75, "Science": 560, "Achievers Section": 50
 });
 assert.ok(nso.flat.every(question => question.syllabusClass && question.syllabusOrigin),
   "every NSO question has syllabus-grade provenance");
+assert.ok(nso.flat.every(question => (question.syllabusOrigin === "current-class" && question.syllabusClass === 6) ||
+  (question.syllabusOrigin === "previous-class" && question.syllabusClass === 5)),
+  "NSO origin tags agree with their source class");
+assert.equal(new Set(nso.flat.map(question => question.id)).size, nso.flat.length, "NSO IDs are unique");
+assert.equal(new Set(nso.flat.map(question => question.question.trim().toLowerCase())).size, nso.flat.length, "NSO stems are unique");
 assert.deepEqual(
   Object.fromEntries(["Science", "Logical Reasoning", "Achievers Section"].map(section => [section,
     Object.fromEntries(["current-class", "previous-class"].map(origin => [origin,
@@ -95,7 +100,7 @@ assert.deepEqual(
     ]))
   ])),
   {
-    "Science": { "current-class": 500, "previous-class": 52 },
+    "Science": { "current-class": 500, "previous-class": 60 },
     "Logical Reasoning": { "current-class": 50, "previous-class": 25 },
     "Achievers Section": { "current-class": 50, "previous-class": 0 }
   }
@@ -116,15 +121,20 @@ const nsoWithoutPrevious = nso.chapters.map(chapter => ({
 assert.throws(() => model.buildPaper(nsoWithoutPrevious, "sof-iso-class-6-level-1"), /previous-class questions/);
 
 const imo = loadBank("data/class-6-mathematics-sof.json", "class-6-mathematics-sof");
-assert.equal(imo.flat.length, 625, "the IMO bank includes current- and previous-class pools");
+assert.equal(imo.flat.length, 635, "the IMO bank includes current- and previous-class pools");
 assert.deepEqual(sectionCounts(imo.flat), {
-  "Mathematical Reasoning": 330,
+  "Mathematical Reasoning": 340,
   "Everyday Mathematics": 140,
   "Achievers Section": 80,
   "Logical Reasoning": 75
 });
 assert.ok(imo.flat.every(question => question.syllabusClass && question.syllabusOrigin),
   "every IMO question has syllabus-grade provenance");
+assert.ok(imo.flat.every(question => (question.syllabusOrigin === "current-class" && question.syllabusClass === 6) ||
+  (question.syllabusOrigin === "previous-class" && question.syllabusClass === 5)),
+  "IMO origin tags agree with their source class");
+assert.equal(new Set(imo.flat.map(question => question.id)).size, imo.flat.length, "IMO IDs are unique");
+assert.equal(new Set(imo.flat.map(question => question.question.trim().toLowerCase())).size, imo.flat.length, "IMO stems are unique");
 assert.deepEqual(
   Object.fromEntries(["Mathematical Reasoning", "Everyday Mathematics", "Logical Reasoning", "Achievers Section"].map(section => [section,
     Object.fromEntries(["current-class", "previous-class"].map(origin => [origin,
@@ -132,7 +142,7 @@ assert.deepEqual(
     ]))
   ])),
   {
-    "Mathematical Reasoning": { "current-class": 300, "previous-class": 30 },
+    "Mathematical Reasoning": { "current-class": 300, "previous-class": 40 },
     "Everyday Mathematics": { "current-class": 120, "previous-class": 20 },
     "Logical Reasoning": { "current-class": 50, "previous-class": 25 },
     "Achievers Section": { "current-class": 80, "previous-class": 0 }
