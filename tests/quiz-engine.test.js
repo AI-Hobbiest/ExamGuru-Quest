@@ -448,6 +448,64 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
     [30, 10, 5, 5]
   );
 
+
+  const class3MathSofBank=JSON.parse(fs.readFileSync("data/class-3-mathematics-sof.json","utf8"));
+  const class3IMO=makeEnvironment(new Map(),"mathematics-sof","3",class3MathSofBank);
+  await delay();
+  const class3IMOButton=class3IMO.modeButtons.find(button=>button.dataset.mode==="olympiad");
+  assert.equal(class3IMOButton.classList.contains("hide"),false,"Class 3 IMO full mock is available for the Class 3 SOF Mathematics bank");
+  assert.ok(class3IMOButton.textContent.includes("IMO"),"Class 3 SOF mode is labelled IMO");
+  class3IMOButton.click();
+  assert.equal(class3IMO.elements.overallTimerSetting.value,"3600","Class 3 IMO fixes its timer at 60 minutes");
+  assert.equal(class3IMO.elements.questionTimerSetting.value,"off","Class 3 IMO disables question-level countdowns");
+  assert.ok(class3IMO.elements.olympiadBlueprintTitle.textContent.includes("Class 3"),"Class 3 IMO title is shown");
+  assert.ok(class3IMO.elements.olympiadBlueprintDescription.textContent.includes("35 questions · 60 minutes · 40 marks"),
+    "Class 3 IMO shows its own official 35-question / 40-mark blueprint");
+  assert.equal(class3IMO.elements.chapterControls.classList.contains("hide"),true,"Class 3 IMO hides chapter filtering");
+  assert.equal(class3IMO.elements.lengthControl.classList.contains("hide"),true,"Class 3 IMO fixes the question count");
+  class3IMO.elements.startBtn.click();
+  assert.equal(class3IMO.elements.numberPill.textContent,"Question 1 / 35","Class 3 IMO launches a complete 35-question paper");
+  assert.equal(class3IMO.elements.chapterPill.textContent,"Logical Reasoning");
+  const class3LedgerRow=[...class3IMO.values.entries()].find(([key])=>
+    key.includes("test-attempt-ledger")&&key.endsWith("class-3-mathematics-sof"));
+  assert.ok(class3LedgerRow,"Class 3 IMO saves to its own subject attempt ledger");
+  const class3Active=JSON.parse(class3LedgerRow[1]).data.activeAttempt;
+  assert.equal(class3Active.examBlueprintId,"sof-imo-class-3-level-1");
+  assert.equal(class3Active.examType,"olympiad");
+  assert.equal(class3Active.questions.length,35);
+  assert.equal(new Set(class3Active.questionIds).size,35);
+  assert.deepEqual(class3Active.sectionBlueprint.map(section=>section.questionCount),[10,10,10,5]);
+  assert.deepEqual(class3Active.sectionBlueprint.map(section=>section.maxMarks),[10,10,10,10]);
+  const class3Origins=class3Active.questions.reduce((counts,question)=>{
+    counts[question.syllabusOrigin]=(counts[question.syllabusOrigin]||0)+1;return counts;
+  },{});
+  assert.deepEqual(class3Origins,{"current-class":23,"previous-class":12},
+    "Class 3 IMO uses 18 current plus 12 previous non-Achievers and five current-class Achievers");
+  assert.ok(class3Active.questions.filter(question=>question.examSectionId==="achievers")
+    .every(question=>question.syllabusOrigin==="current-class"&&question.marks===2),
+    "Class 3 Achievers questions are current-class only and worth two marks");
+  class3IMO.elements.mobileNavigatorBtn.click();
+  assert.equal(class3IMO.elements.questionNavigatorGrid.children.length,35,"Class 3 IMO question palette lists all 35 questions");
+  assert.equal(class3IMO.elements.navigatorSectionSummary.children.length,4,"Class 3 IMO shows four section navigation chips");
+  class3IMO.elements.navigatorSectionSummary.children[3].click();
+  assert.equal(class3IMO.elements.numberPill.textContent,"Question 31 / 35","Class 3 IMO Achievers chip jumps to question 31");
+  assert.equal(class3IMO.elements.chapterPill.textContent,"Achievers Section");
+  const class3AchieverAnswer=class3Active.questions[30].answer;
+  class3IMO.elements.options.children[class3AchieverAnswer].click();
+  class3IMO.elements.submitBtn.click();
+  assert.equal(class3IMO.elements.results.classList.contains("hide"),false,"Class 3 IMO can submit and render results");
+  const class3ResultRow=[...class3IMO.values.entries()].find(([key])=>
+    key.includes("test-attempt-ledger")&&key.endsWith("class-3-mathematics-sof"));
+  const class3Result=JSON.parse(class3ResultRow[1]).data.attempts[0];
+  assert.equal(class3Result.maxMarks,40);
+  assert.equal(class3Result.marksEarned,2,"a correct Class 3 Achievers answer earns two marks");
+  assert.equal(class3Result.sectionResults.length,4);
+  assert.equal(class3Result.sectionResults[3].marksEarned,2);
+  assert.equal(class3IMO.elements.scorePct.textContent,"2 / 40");
+  assert.equal(class3IMO.elements.scoreUnit.textContent,"marks");
+  assert.equal(typeof class3IMO.elements.reportExcelBtn.onclick,"function");
+  assert.equal(typeof class3IMO.elements.reportPdfBtn.onclick,"function");
+
   const learner=makeEnvironment();
   await delay();
   learner.elements.startBtn.click();

@@ -71,7 +71,7 @@ const context={
   const path=String(url).split("?")[0].split("/").pop();
   if(path==="classes.json")return {ok:true,json:async()=>classes};
   if(path==="knowledge-base.json")return {ok:true,json:async()=>manifest};
-  if(path==="science.json"||path==="class-6-social-science.json"||path==="class-6-english.json")return {ok:true,json:async()=>miniBank};
+  if(path==="science.json"||path==="class-6-social-science.json"||path==="class-6-english.json"||path==="class-3-mathematics-sof.json")return {ok:true,json:async()=>miniBank};
   return {ok:false,status:404,json:async()=>({})};
  },
  window:{},URLSearchParams
@@ -84,20 +84,33 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
 
 (async()=>{
  await delay();await delay();
- assert.equal(elements.statQuestions.textContent,"6","published question summary counts actual bank records from available class-specific banks");
+ assert.equal(elements.statQuestions.textContent,"8","published question summary counts actual bank records from available class-specific banks");
  assert.equal(elements.statClasses.textContent,"8","class catalogue loaded, including Class 3");
- assert.ok(elements.questionBankInventoryStatus.textContent.includes("6 questions counted across 3 available primary banks"),"question-bank inventory dynamically totals available JSON banks");
- assert.equal(elements.questionBankInventory.children[0].children[1].children.length,15,"inventory lists all fourteen supported bank files and a total row");
+ assert.ok(elements.questionBankInventoryStatus.textContent.includes("8 questions counted across 4 available primary banks"),"question-bank inventory dynamically totals available JSON banks");
+ assert.equal(elements.questionBankInventory.children[0].children[1].children.length,16,"inventory lists all fifteen supported bank files and a total row");
  assert.equal(elements.questionBankInventory.children[0].children[1].children[6].children[0].textContent,"Class 3 · English","Class 3 English appears in the Admin inventory");
-  assert.equal(elements.questionBankInventory.children[0].children[1].children[9].children[0].textContent,"Class 6 · English","Class 6 English appears in the Admin inventory");
- assert.equal(elements.questionBankInventory.children[0].children[1].children[10].children[0].textContent,"Class 6 · Social Science","Class 6 Social Science appears in the Admin inventory");
-  assert.equal(elements.questionBankInventory.children[0].children[1].children[11].children[0].textContent,"Class 6 · Science SOF","Class 6 Science SOF appears in the Admin inventory");
-  assert.equal(elements.questionBankInventory.children[0].children[1].children[12].children[0].textContent,"Class 6 · Mathematics SOF","Class 6 Mathematics SOF appears in the Admin inventory");
-  assert.equal(elements.questionBankInventory.children[0].children[1].children[13].children[0].textContent,"Class 6 · English SOF","Class 6 English SOF appears in the Admin inventory");
+ assert.equal(elements.questionBankInventory.children[0].children[1].children[7].children[0].textContent,"Class 3 · Mathematics SOF","Class 3 SOF IMO appears in the Admin inventory");
+ assert.ok(manager.includes('id:"class-3-mathematics-sof",subjectId:"mathematics-sof",title:"Mathematics · SOF"'),"Class 3 SOF IMO is included in class-level report aggregation");
+  assert.equal(elements.questionBankInventory.children[0].children[1].children[10].children[0].textContent,"Class 6 · English","Class 6 English appears in the Admin inventory");
+ assert.equal(elements.questionBankInventory.children[0].children[1].children[11].children[0].textContent,"Class 6 · Social Science","Class 6 Social Science appears in the Admin inventory");
+  assert.equal(elements.questionBankInventory.children[0].children[1].children[12].children[0].textContent,"Class 6 · Science SOF","Class 6 Science SOF appears in the Admin inventory");
+  assert.equal(elements.questionBankInventory.children[0].children[1].children[13].children[0].textContent,"Class 6 · Mathematics SOF","Class 6 Mathematics SOF appears in the Admin inventory");
+  assert.equal(elements.questionBankInventory.children[0].children[1].children[14].children[0].textContent,"Class 6 · English SOF","Class 6 English SOF appears in the Admin inventory");
  assert.ok(elements.questionList.children.length===2,"questions render in the Admin editor");
 
  // Switching class filters the subject choices and loads the class-specific path.
- elements.bankClass.value="6";elements.bankClass.dispatch("change");
+  
+ // The new Class 3 SOF IMO bank is selectable and retains its own published file path.
+ elements.bankClass.value="3";elements.bankClass.dispatch("change");
+ await delay();await delay();
+ assert.ok(elements.bankSubject.options.some(option=>option.value==="mathematics-sof"),"Class 3 exposes its SOF IMO bank");
+ elements.bankSubject.value="mathematics-sof";elements.bankSubject.dispatch("change");
+ await delay();await delay();
+ assert.ok(elements.bankStatus.textContent.includes("Class 3 · Mathematics SOF"),"Class 3 SOF IMO loads into the Admin editor");
+ assert.equal(elements.bankTargetPath.textContent,"Published file: data/class-3-mathematics-sof.json","Class 3 SOF IMO editor resolves the correct JSON path");
+ assert.equal(elements.bankQuestionTotal.textContent,"2","the Admin editor counts the loaded question records");
+
+elements.bankClass.value="6";elements.bankClass.dispatch("change");
  await delay();await delay();
  assert.ok(elements.bankSubject.options.some(option=>option.value==="english"),"Class 6 exposes its English bank");
  elements.bankSubject.value="english";elements.bankSubject.dispatch("change");

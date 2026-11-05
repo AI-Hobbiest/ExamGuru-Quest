@@ -7,7 +7,7 @@
   const $ = id => document.getElementById(id);
   const SUBJECTS={science:"Science",mathematics:"Mathematics",english:"English","social-science":"Social Science",hindi:"Hindi","science-sof":"Science · SOF","mathematics-sof":"Mathematics · SOF","english-sof":"English · SOF"};
   const REPORT_BANKS_BY_CLASS={
-    "3":[{id:"class-3-mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"class-3-english",subjectId:"english",title:"English"}],
+    "3":[{id:"class-3-mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"class-3-mathematics-sof",subjectId:"mathematics-sof",title:"Mathematics · SOF"},{id:"class-3-english",subjectId:"english",title:"English"}],
     "6":[{id:"class-6-science",subjectId:"science",title:"Science"},{id:"class-6-mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"class-6-english",subjectId:"english",title:"English"},{id:"class-6-social-science",subjectId:"social-science",title:"Social Science"},{id:"class-6-science-sof",subjectId:"science-sof",title:"Science · SOF"},{id:"class-6-mathematics-sof",subjectId:"mathematics-sof",title:"Mathematics · SOF"},{id:"class-6-english-sof",subjectId:"english-sof",title:"English · SOF"}],
     "10":[{id:"science",subjectId:"science",title:"Science"},{id:"mathematics",subjectId:"mathematics",title:"Mathematics"},{id:"english",subjectId:"english",title:"English"},{id:"social-science",subjectId:"social-science",title:"Social Science"},{id:"hindi",subjectId:"hindi",title:"Hindi"}]
   };
@@ -36,6 +36,7 @@
     {classId:"10",classLabel:"Class 10",subject:"hindi",path:"hindi.json",label:"Class 10 · Hindi"},
     {classId:"3",classLabel:"Class 3",subject:"mathematics",path:"class-3-mathematics.json",label:"Class 3 · Mathematics"},
     {classId:"3",classLabel:"Class 3",subject:"english",path:"class-3-english.json",label:"Class 3 · English"},
+    {classId:"3",classLabel:"Class 3",subject:"mathematics-sof",path:"class-3-mathematics-sof.json",label:"Class 3 · Mathematics SOF"},
     {classId:"6",classLabel:"Class 6",subject:"science",path:"class-6-science.json",label:"Class 6 · Science"},
     {classId:"6",classLabel:"Class 6",subject:"mathematics",path:"class-6-mathematics.json",label:"Class 6 · Mathematics"},
     {classId:"6",classLabel:"Class 6",subject:"english",path:"class-6-english.json",label:"Class 6 · English"},

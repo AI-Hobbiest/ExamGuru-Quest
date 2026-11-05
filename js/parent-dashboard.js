@@ -5,7 +5,7 @@ const $=id=>document.getElementById(id);
 const SUBJECTS={science:"Science",mathematics:"Mathematics",english:"English","social-science":"Social Science",hindi:"Hindi","science-sof":"Science · SOF","mathematics-sof":"Mathematics · SOF","english-sof":"English · SOF"};
 let childrenCache=[];
 function node(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=String(text);return e;}
-function subjectIds(c){return String(c)==="6"?["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"]:String(c)==="3"?["mathematics","english"]:["science","mathematics","english","social-science","hindi"];}
+function subjectIds(c){return String(c)==="6"?["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"]:String(c)==="3"?["mathematics","mathematics-sof","english"]:["science","mathematics","english","social-science","hindi"];}
 function ledger(studentId,bankId){return window.C10Storage.createLocalStore({kind:"test-attempt-ledger",recordId:bankId,studentId,defaults:()=>({attempts:[],activeAttempt:null,answerRecords:[]}),validate:v=>!!v&&Array.isArray(v.attempts)}).load();}
 function attemptsFor(s){
  const a=[];

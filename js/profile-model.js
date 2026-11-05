@@ -184,7 +184,7 @@
   function isValidBackup(bundle) {
     if(!bundle||bundle.schemaVersion!==1||bundle.kind!=="c10-playground-backup"||
        !validateProfile(bundle.profile)||!bundle.subjectData||typeof bundle.subjectData!=="object")return false;
-    const legacySubjects=["science","mathematics","english","social-science","hindi"],banksByClass={"3":["class-3-mathematics","class-3-english"],"6":["class-6-science","class-6-mathematics","class-6-english","class-6-social-science","class-6-science-sof","class-6-mathematics-sof","class-6-english-sof"],"10":legacySubjects};
+    const legacySubjects=["science","mathematics","english","social-science","hindi"],banksByClass={"3":["class-3-mathematics","class-3-mathematics-sof","class-3-english"],"6":["class-6-science","class-6-mathematics","class-6-english","class-6-social-science","class-6-science-sof","class-6-mathematics-sof","class-6-english-sof"],"10":legacySubjects};
     const expected=banksByClass[String(bundle.profile.classLevel)]||legacySubjects,provided=Object.keys(bundle.subjectData);
     const hasCurrent=expected.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject));
     const legacyOnly=legacySubjects.every(subject=>Object.prototype.hasOwnProperty.call(bundle.subjectData,subject))&&provided.every(subject=>legacySubjects.includes(subject));

@@ -1,4 +1,4 @@
-/* Config-driven Class 6 SOF Olympiad Level 1 paper blueprints and section scoring. */
+/* Config-driven SOF Olympiad Level 1 paper blueprints and section scoring. */
 (() => {
   "use strict";
 
@@ -31,6 +31,21 @@
         { id: "achievers", title: "Achievers Section", sourceSection: "Achievers Section", questionCount: 5, marksPerQuestion: 3, syllabusOriginQuotas: { "current-class": 5 } }
       ],
       syllabusCoverageNote: "This Class 6 Level 1 mock allocates 60% current-class and 40% previous-class questions across the 45 non-Achievers questions (27 current-class, 18 previous-class). All five Achievers questions are drawn from the current-class syllabus, as SOF specifies."
+    },
+    "sof-imo-class-3-level-1": {
+      id: "sof-imo-class-3-level-1",
+      title: "SOF International Mathematics Olympiad (IMO) · Class 3 · Level 1",
+      legacyName: "SOF IMO",
+      classId: "3",
+      subjectId: "mathematics-sof",
+      durationSeconds: 3600,
+      sections: [
+        { id: "logical-reasoning", title: "Logical Reasoning", sourceSection: "Logical Reasoning", questionCount: 10, marksPerQuestion: 1, syllabusOriginQuotas: { "current-class": 6, "previous-class": 4 } },
+        { id: "mathematical-reasoning", title: "Mathematical Reasoning", sourceSection: "Mathematical Reasoning", questionCount: 10, marksPerQuestion: 1, syllabusOriginQuotas: { "current-class": 6, "previous-class": 4 } },
+        { id: "everyday-mathematics", title: "Everyday Mathematics", sourceSection: "Everyday Mathematics", questionCount: 10, marksPerQuestion: 1, syllabusOriginQuotas: { "current-class": 6, "previous-class": 4 } },
+        { id: "achievers", title: "Achievers Section", sourceSection: "Achievers Section", questionCount: 5, marksPerQuestion: 2, syllabusOriginQuotas: { "current-class": 5 } }
+      ],
+      syllabusCoverageNote: "SOF Level 1 coverage is implemented as 18 current-class and 12 previous-class questions across the 30 non-Achievers questions, plus five current-class Achievers questions. The 6/4 split in each non-Achievers section is an ExamGuru allocation to make the paper deterministic and auditable; SOF does not publish separate per-section grade quotas."
     },
     "sof-ieo-class-6-level-1": {
       id: "sof-ieo-class-6-level-1",

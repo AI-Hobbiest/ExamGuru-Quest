@@ -6,7 +6,7 @@ const ROOT=process.argv[2]||"_site/data";
 const BANKS=[
  ["science","science",1400],["mathematics","mathematics",1400],["english","english",3700],
  ["social-science","social-science",2200],["hindi","hindi",254],
- ["class-3-mathematics","mathematics",1400],["class-3-english","english",120],
+ ["class-3-mathematics","mathematics",1400],["class-3-mathematics-sof","mathematics-sof",247],["class-3-english","english",120],
  ["class-6-science","science",1200],["class-6-mathematics","mathematics",1000],
  ["class-6-english","english",1600],["class-6-social-science","social-science",1400],
  ["class-6-science-sof","science-sof",685],["class-6-mathematics-sof","mathematics-sof",635],
@@ -36,7 +36,7 @@ for(const [file,subjectId,expected] of BANKS){
  totals.banks++;totals.chapters+=chapters;
  console.log(file+": "+chapters+" chapters / "+count+" MCQs tagged.");
 }
-if(totals.banks!==BANKS.length||totals.questions!==17594)throw Error("Cross-subject tagging coverage mismatch: "+JSON.stringify(totals));
+if(totals.banks!==BANKS.length||totals.questions!==17841)throw Error("Cross-subject tagging coverage mismatch: "+JSON.stringify(totals));
 console.log("Cross-subject MCQ competency tagging complete: "+totals.banks+" banks, "+totals.chapters+" chapters, "+totals.questions+" MCQs.");
 console.log("Competency totals: "+JSON.stringify(totals.byCompetency));
 console.log("Tag status totals: "+JSON.stringify(totals.byStatus));

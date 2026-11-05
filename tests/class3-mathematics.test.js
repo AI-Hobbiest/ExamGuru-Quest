@@ -74,19 +74,24 @@ assert.ok(fairNormalizedStems.size >= 75, "Surajkund Fair exercises varied quest
 
 const catalogue = JSON.parse(fs.readFileSync("data/classes.json", "utf8"));
 const class3 = catalogue.classes.find(item => String(item.classId) === "3");
-assert.ok(class3 && class3.active && class3.subjects.includes("mathematics") && class3.subjects.includes("english"), "Class 3 Mathematics and English appear in the catalogue");
+assert.ok(class3 && class3.active && class3.subjects.includes("mathematics") && class3.subjects.includes("mathematics-sof") && class3.subjects.includes("english"), "Class 3 Mathematics and English appear in the catalogue");
 const admin = fs.readFileSync("js/admin-manager.js", "utf8");
 assert.ok(admin.includes('path:"class-3-mathematics.json"'), "Admin Question Banks lists the Class 3 Mathematics bank");
 assert.ok(admin.includes('path:"class-3-english.json"'), "Admin Question Banks lists the Class 3 English bank");
+assert.ok(admin.includes('path:"class-3-mathematics-sof.json"'), "Admin Question Banks lists the Class 3 SOF Mathematics bank");
 const engine = fs.readFileSync("js/quiz-engine.js", "utf8");
 assert.ok(engine.includes('const bankId = classId === "10" ? subject : "class-" + classId + "-" + subject'), "non-Class-10 classes use their own bank files");
-assert.ok(engine.includes('"3":["mathematics","english"]'), "Class 3 exposes both published Mathematics and English banks");
+assert.ok(engine.includes('"3":["mathematics","mathematics-sof","english"]'), "Class 3 exposes Mathematics, SOF IMO and English banks");
 assert.ok(engine.includes('if(!(CLASS_SUBJECTS[classId]||[]).includes(subject))'), "unpublished subject links are blocked rather than falling through to Class 10");
 
 const dashboard = fs.readFileSync("dashboard.html", "utf8");
 assert.ok(dashboard.includes('id="subjectLaunchCards"'), "dashboard uses class-aware subject launch cards");
 const dashboardScript = fs.readFileSync("js/dashboard-manager.js", "utf8");
 assert.ok(dashboardScript.includes('async function renderSubjectLaunches()'), "dashboard checks the logged-in class and bank inventory");
+assert.ok(dashboardScript.includes('? ["mathematics","mathematics-sof","english"]'), "Class 3 dashboard analytics includes the SOF IMO attempt ledger");
+const parentDashboard = fs.readFileSync("js/parent-dashboard.js", "utf8");
+assert.ok(parentDashboard.includes('String(c)==="3"?["mathematics","mathematics-sof","english"]'),
+  "parent subject history includes the Class 3 SOF IMO ledger");
 
 const context = { window: {} };
 context.globalThis = context;
@@ -95,4 +100,4 @@ vm.runInContext(fs.readFileSync("js/question-bank.js", "utf8"), context, { filen
 const normalized = context.window.C10QuestionBank.normalize(bank, "class-3-mathematics");
 assert.equal(normalized.flatMap(chapter => chapter.questions).length, 1400, "all questions load through the shared runtime normalizer");
 
-console.log("Class 3 Mathematics checks passed: 14 Maths Mela chapters, 1,400 MCQs, distinct stems and options, balanced answer positions, explanations, concept coverage, class-aware routing and Admin/dashboard integration.");
+console.log("Class 3 Mathematics and SOF catalogue checks passed: 14 Maths Mela chapters, 1,400 MCQs, distinct stems and options, balanced answer positions, explanations, concept coverage, class-aware routing and Admin/dashboard integration.");

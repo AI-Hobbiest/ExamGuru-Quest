@@ -37,7 +37,7 @@ jobs:
       - name: Validate NSO, IMO and IEO blueprints and section weighting
         run: node tests/olympiad-blueprints.test.js
       - name: Validate Class 3 SOF IMO blueprint
-        run: node tests/class3-sof-blueprint.test.js
+        run: node tests/class3-sof-blueprint.test.js && node tests/class3-imo-bank.test.js
       - name: Validate Class 6 CBSE and SOF bank inventories, provenance and routing
         run: node tests/class6-science.test.js
       - name: Validate session timing, weighted marks and summary model

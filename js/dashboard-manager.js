@@ -35,7 +35,7 @@
     const subjectIds=classId==="6"
       ? ["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"]
       : classId==="3"
-        ? ["mathematics","english"]
+        ? ["mathematics","mathematics-sof","english"]
         : ["science","mathematics","english","social-science","hindi"];
     return subjectIds.map(subject=>({
       subject,

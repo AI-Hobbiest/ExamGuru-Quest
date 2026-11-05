@@ -4,7 +4,7 @@ const SUBJECTS = {
   science: { title:"Science", icon:"🧪", subtitle:"Explore biology, chemistry and physics through concept checks, explanations and exam-style practice." },
   "science-sof": { title:"Science - SOF", icon:"🏆", subtitle:"Class 6 SOF International Science Olympiad (ISO), formerly NSO, with original science and reasoning questions." },
   mathematics: { title:"Mathematics", icon:"📐", subtitle:"Reason it out, work step by step, and use each mistake to sharpen the method." },
-  "mathematics-sof": { title:"Mathematics - SOF", icon:"🏆", subtitle:"Class 6 SOF International Mathematics Olympiad (IMO) practice with original reasoning-focused questions." },
+  "mathematics-sof": { title:"Mathematics - SOF", icon:"🏆", subtitle:"Class 3 and Class 6 SOF International Mathematics Olympiad (IMO) practice with original reasoning-focused questions." },
   english: { title:"English", icon:"📚", subtitle:"Practise reading, grammar and original questions about the prescribed literature." },
   "english-sof": { title:"English - SOF", icon:"🏆", subtitle:"Class 6 SOF International English Olympiad (IEO) practice across vocabulary, grammar, reading and verbal ability." },
   "social-science": { title:"Social Science", icon:"🌍", subtitle:"Connect historical evidence, geography, democratic ideas and economic choices." },
@@ -25,19 +25,22 @@ function readActiveStudent(){
 const activeStudent = readActiveStudent();
 const classId = String(activeStudent && activeStudent.classId || "10");
 const bankId = classId === "10" ? subject : "class-" + classId + "-" + subject;
-const CLASS_SUBJECTS = { "3":["mathematics","english"], "6":["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"], "10":["science","mathematics","english","social-science","hindi"] };
+const CLASS_SUBJECTS = { "3":["mathematics","mathematics-sof","english"], "6":["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"], "10":["science","mathematics","english","social-science","hindi"] };
 const config = SUBJECTS[subject];
 const requestParams=new URLSearchParams(location.search);
 const initialCollection=requestParams.get("collection")||"";
 const initialMode=initialCollection==="mistakes"?"retry":initialCollection==="bookmarks"?"bookmarks":initialCollection==="adaptive"?"adaptive":"learn";
 let chapters=[], mode=initialMode, session=[], index=0, picked=null, answers=[], lastMissed=[];
-const OLYMPIAD_BLUEPRINT_BY_SUBJECT = {
-  "science-sof":"sof-iso-class-6-level-1",
-  "mathematics-sof":"sof-imo-class-6-level-1",
-  "english-sof":"sof-ieo-class-6-level-1"
+const OLYMPIAD_BLUEPRINT_BY_CLASS = {
+  "3": { "mathematics-sof":"sof-imo-class-3-level-1" },
+  "6": {
+    "science-sof":"sof-iso-class-6-level-1",
+    "mathematics-sof":"sof-imo-class-6-level-1",
+    "english-sof":"sof-ieo-class-6-level-1"
+  }
 };
-const olympiadBlueprintId=OLYMPIAD_BLUEPRINT_BY_SUBJECT[subject]||null;
-const olympiadAvailable=classId==="6"&&!!olympiadBlueprintId&&!!window.C10OlympiadBlueprints;
+const olympiadBlueprintId=(OLYMPIAD_BLUEPRINT_BY_CLASS[classId]||{})[subject]||null;
+const olympiadAvailable=!!olympiadBlueprintId&&!!window.C10OlympiadBlueprints;
 const olympiadShortName=subject==="mathematics-sof"?"IMO":subject==="english-sof"?"IEO":"ISO / NSO";
 const currentOlympiadBlueprint=()=>olympiadAvailable?window.C10OlympiadBlueprints.getBlueprint(olympiadBlueprintId):null;
 const isExamMode=()=>mode==="test"||mode==="timed"||mode==="olympiad";
@@ -278,7 +281,7 @@ function syncModeControls(){
     const totalQuestions=blueprint.sections.reduce((sum,section)=>sum+section.questionCount,0);
     const totalMarks=blueprint.sections.reduce((sum,section)=>sum+section.questionCount*section.marksPerQuestion,0);
     if(title)title.textContent=blueprint.title+" · Full Mock";
-    if(description)description.textContent=totalQuestions+" questions · "+Math.round(blueprint.durationSeconds/60)+" minutes · "+totalMarks+" marks. A fresh paper is drawn from the Class 6 SOF bank. Feedback and correct answers remain hidden until submission. "+(blueprint.syllabusCoverageNote||"");
+    if(description)description.textContent=totalQuestions+" questions · "+Math.round(blueprint.durationSeconds/60)+" minutes · "+totalMarks+" marks. A fresh paper is drawn from the Class "+classId+" SOF bank. Feedback and correct answers remain hidden until submission. "+(blueprint.syllabusCoverageNote||"");
     if(grid)grid.innerHTML=blueprint.sections.map(section=>"<span><strong>"+section.questionCount+" × "+section.marksPerQuestion+"</strong>"+section.title+"</span>").join("");
   }
   const chapterControls=$("chapterControls");
@@ -460,11 +463,11 @@ function start(){
   }
   let pool=[],examPlan=null;
   if(mode==="olympiad"){
-    if(!olympiadAvailable){setText("modeHint","A SOF Class 6 full mock is not available for this subject.");return;}
+    if(!olympiadAvailable){setText("modeHint","A SOF Class "+classId+" full mock is not available for this subject.");return;}
     try{
       const recentlyUsed=ledger.attempts
         .filter(attempt=>attempt&&attempt.examBlueprintId===olympiadBlueprintId&&Array.isArray(attempt.questionIds))
-        .slice(0,3).flatMap(attempt=>attempt.questionIds);
+        .slice(0,5).flatMap(attempt=>attempt.questionIds);
       examPlan=window.C10OlympiadBlueprints.buildPaper(chapters,olympiadBlueprintId,Math.random,{recentQuestionIds:recentlyUsed});
       pool=examPlan.questions;
     }catch(error){setText("modeHint","The Olympiad paper could not be assembled: "+error.message);return;}
@@ -927,8 +930,8 @@ function init(){
     mode=button.dataset.mode;modeButtons.forEach(item=>item.classList.toggle("active",item===button));syncModeControls();
     const blueprint=currentOlympiadBlueprint();
     const olympiadHint=blueprint
-      ?blueprint.title+" full mock · 50 questions · 60 minutes · 60 marks. The paper is randomised to the published section blueprint."
-      :"SOF full-mock mode is available only for supported Class 6 Olympiad tracks.";
+      ?blueprint.title+" full mock · "+blueprint.sections.reduce((sum,section)=>sum+section.questionCount,0)+" questions · "+Math.round(blueprint.durationSeconds/60)+" minutes · "+blueprint.sections.reduce((sum,section)=>sum+section.questionCount*section.marksPerQuestion,0)+" marks. The paper is randomised to the published section blueprint."
+      :"SOF full-mock mode is available only for supported class and Olympiad tracks.";
     const hints={learn:"Learn mode explains each answer immediately.",test:"Test mode holds feedback until submission and saves answers as you go.",retry:"Practise open mistakes from your consolidated Mistake Book, filtered to the selected topics.",bookmarks:"Practise questions you have personally saved from any session.",adaptive:"Questions are weighted towards weak topics, open mistakes, unseen questions and a suitable next difficulty.",random:"Mixed practice draws questions across your selected chapters.",timed:"Timed exam holds feedback until submission and automatically submits when the countdown reaches zero.",olympiad:olympiadHint};
     setText("modeHint",hints[mode]||"");
     $("startBtn").textContent=mode==="olympiad"?"Start "+olympiadShortName+" full mock →":
