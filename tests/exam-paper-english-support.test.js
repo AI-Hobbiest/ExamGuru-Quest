@@ -180,6 +180,7 @@ assert.equal(generationCheck.readyForGeneration,true,"the release simulation mus
 const englishPaperHistory=[];
 const englishFingerprintHistory=[];
 const englishFingerprints=new Set();
+let firstEnglishPaper=null;
 for(let attempt=1;attempt<=50;attempt++){
  const previous=englishPaperHistory.slice(-5);
  const generated=generator.generateUniquePaper(generationBlueprint,draftBank,{
@@ -204,11 +205,20 @@ for(let attempt=1;attempt<=50;attempt++){
  assert.ok(generated.paperFingerprint,"each complete English paper must have a fingerprint");
  assert.equal(englishFingerprints.has(generated.paperFingerprint),false,"all 50 English paper combinations must be distinct");
  englishFingerprints.add(generated.paperFingerprint);
+ if(!firstEnglishPaper)firstEnglishPaper=generated;
  englishPaperHistory.push({contentIds:currentContentIds});
  englishFingerprintHistory.push(generated.paperFingerprint);
 }
 assert.equal(englishPaperHistory.length,50,"generate the complete 50-paper English certification set");
 assert.equal(englishFingerprints.size,50,"all 50 complete English papers must be unique");
+const englishStudentPrint=renderer.buildDocumentHtml(firstEnglishPaper,"student","/");
+const englishTeacherPrint=renderer.buildDocumentHtml(firstEnglishPaper,"teacher","/");
+const englishAnswerBooklet=renderer.buildAnswerBookletHtml(firstEnglishPaper,"/");
+assert.ok(englishStudentPrint.includes("Q1."),"the production English paper print must render its numbered questions");
+assert.ok(englishStudentPrint.includes("Q10."),"the production English paper print must render the long-answer section");
+assert.ok(englishTeacherPrint.includes("Expected answer:"),"the teacher copy must include model answers");
+assert.ok(englishAnswerBooklet.includes("Answer Booklet")&&englishAnswerBooklet.includes("Student Name:"),"the English blank answer booklet must render");
+
 console.log("English 50-paper certification simulation passed: 50 complete 80-mark papers, 11 questions each, zero internal or five-paper parent/nested/alternative repeats, no fallback.");
 
 console.log("English Exam Studio nested response checks passed: attempt-any validation, nested MCQ, online answer capture, print rendering and all-format repeat exclusion.");
