@@ -147,6 +147,7 @@ assert.ok(q6.every(q=>["first-flight-prose","footprints-without-feet"].includes(
 assert.equal(q6.filter(q=>q.chapterId==="first-flight-prose").length,10,"Q6 must retain ten First Flight primary contexts");
 assert.equal(q6.filter(q=>q.chapterId==="footprints-without-feet").length,10,"Q6 must add ten Footprints primary contexts");
 assert.equal(q6.filter(q=>String(q.alternatives[0].source?.reference||"").startsWith("Footprints Without Feet:")).length,10,"Q6 alternatives must include ten Footprints contexts");
+assert.deepEqual(draftBlueprint.slotPlan.find(slot=>slot.questionNumber===6).chapterIds.sort(),["first-flight-prose","footprints-without-feet"].sort(),"Q6 blueprint must admit both prescribed prose/drama books");
 assert.equal(q6.filter(q=>String(q.source?.reference||"").startsWith("Footprints Without Feet:")).length,10,"Q6 primary contexts must include ten Footprints contexts");
 assert.ok(q7.every(q=>q.chapterId==="first-flight-poetry"&&q.parts.length===4&&q.alternatives?.length===1&&q.alternatives[0].parts.length===4&&String(q.stimulus).includes("Original paraphrased poetic-context cue")),"Q7 must contain poetry context sets with four parts and an alternative");
 assert.ok(q8.every(q=>q.attemptAny===4&&q.parts.length===5&&q.parts.every(p=>p.marks===3&&p.answerKey.wordCount>=40&&p.answerKey.wordCount<=50&&wordCount(p.answerKey.modelAnswer)>=40&&wordCount(p.answerKey.modelAnswer)<=50)),"Q8 must contain five independently tracked 3-mark items and 40–50-word model answers");
