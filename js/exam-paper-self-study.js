@@ -64,6 +64,37 @@ function populateProfileSelector(profiles){
   window.location.href=next.toString();
  },{once:true});
 }
+function renderClass6OlympiadHub(){
+ const setup=$("setup");
+ $("profileTitle").textContent="Class 6 · SOF Olympiad Exam Practice";
+ $("profileDescription").textContent="Choose a subject to open its SOF Level 1 full mock. The timed paper starts under the student account on the subject practice page.";
+ $("profileMeta").innerHTML="";
+ $("loadStatus").textContent="Available Class 6 Olympiad mock subjects are listed below.";
+ $("profileSelectWrap").hidden=true;
+ $("startBtn").hidden=true;
+ $("startBtn").disabled=true;
+ let hub=$("class6ExamHub");
+ if(!hub){hub=document.createElement("div");hub.id="class6ExamHub";hub.className="class6-exam-hub";$("loadStatus").insertAdjacentElement("afterend",hub);}
+ hub.innerHTML="";
+ const intro=document.createElement("p");intro.className="exam-muted";intro.textContent="Open a subject, then choose “SOF full mock” in Practice mode.";
+ hub.appendChild(intro);
+ const cards=[
+  {subject:"science-sof",title:"Science Olympiad (ISO)",detail:"SOF International Science Olympiad · Level 1"},
+  {subject:"mathematics-sof",title:"Mathematics Olympiad (IMO)",detail:"SOF International Mathematics Olympiad · Level 1"},
+  {subject:"english-sof",title:"English Olympiad (IEO)",detail:"SOF International English Olympiad · Level 1"}
+ ];
+ const grid=document.createElement("div");grid.className="class6-exam-hub-grid";
+ cards.forEach(item=>{
+  const card=document.createElement("a");card.className="class6-exam-hub-card";card.href="./practice.html?subject="+encodeURIComponent(item.subject);
+  const title=document.createElement("strong");title.textContent=item.title;
+  const detail=document.createElement("span");detail.textContent=item.detail;
+  const action=document.createElement("span");action.className="class6-exam-hub-action";action.textContent="Open subject practice →";
+  card.append(title,detail,action);grid.appendChild(card);
+ });
+ hub.appendChild(grid);
+ const note=document.createElement("p");note.className="exam-muted";note.textContent="Class 6 CBSE full-paper profiles are not published in the exam registry yet. This hub shows the available Class 6 SOF mock routes only.";
+ hub.appendChild(note);
+}
 function renderProfileMeta(){
  $("profileTitle").textContent=paperDisplayTitle();
  $("profileDescription").textContent=String(profile.description||"Timed CBSE-style examination practice with a profile-specific blueprint and approved question pool.");
@@ -90,6 +121,7 @@ async function load(){
   defaultProfileId=String(registry.defaultProfileId||"");
   const available=registry.profiles.filter(item=>item&&item.enabled!==false&&String(item.classId)===studentClassId);
   if(!available.length){
+   if(studentClassId==="6"){renderClass6OlympiadHub();return;}
    throw Error("Full-paper exam mode is not configured for Class "+studentClassId+". Open a subject from your student dashboard and choose the exam mode available for that subject.");
   }
   const requested=new URLSearchParams(location.search).get("profile");
