@@ -309,7 +309,6 @@ async function smokeClass6ExamIsolation(browser, baseUrl) {
     results.push(await smokeProfile(browser, baseUrl, "class-10-mathematics-standard-2026-27", "Class 10 · Mathematics Standard (041)"));
     results.push(await smokeProfile(browser, baseUrl, "class-10-mathematics-basic-2026-27", "Class 10 · Mathematics Basic (241)"));
     results.push(await smokeClass6ExamIsolation(browser, baseUrl));
-    results.push(await smokeClass6ExamIsolation(browser, baseUrl));
     console.log("Mathematics and class-aware exam browser smoke passed: " + JSON.stringify(results));
   } finally {
     if (browser) await browser.close();
