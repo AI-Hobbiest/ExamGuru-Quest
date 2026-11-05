@@ -76,12 +76,12 @@ The repository currently has no dedicated Class 2 question-bank file. Therefore 
 |---|---|
 | Official Class 3 IMO pattern and syllabus captured | Complete |
 | Blueprint and current/previous-class quota documented | Complete |
-| Existing Class 3 Maths bank suitability audit | Pending |
-| Class 2 previous-class question pool | Pending |
-| IMO bank generation and independent answer audit | Pending |
-| 50-paper uniqueness / repeat-protection validation | Pending |
-| Student exam mode and Admin/dashboard integration | Pending |
-| CI, merge and deployment | Pending |
+| Existing Class 3 Maths bank suitability audit | Complete — 16 source-traceable items selected; no bulk import |
+| Class 2 previous-class question pool | Complete — 72 newly authored, origin-tagged questions |
+| IMO bank generation and internal answer/structure checks | Complete — 210 questions across four pools |
+| 50-paper uniqueness / repeat-protection validation | Test implemented — CI pending |
+| Student exam mode and Admin/dashboard integration | Implemented — CI pending |
+| CI, merge and deployment | Pending — awaiting full regression and deployment verification |
 
 ## Official references
 
