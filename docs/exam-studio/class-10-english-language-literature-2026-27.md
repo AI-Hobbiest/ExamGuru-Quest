@@ -147,12 +147,12 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - [x] Admin Exam Studio history now persists the same complete content-ID set.
 - [x] The shared five-paper regression now compares all content IDs rather than parent question IDs alone.
 - [x] English regression asserts that both student and Admin flows retain the full content-ID list.
-- [x] CI passed after these changes: English regression and all-format repeat protection (run 41988266385).
+- [x] CI passed after these changes: English regression and all-format repeat protection (run 41988607868).
 
 ### Latest certification evidence — 5 November 2026
 
-- English 50-paper simulation, all-format five-paper repeat protection, semantic prompt-diversity assertions and production print rendering: [Exam paper uniqueness regression, run 41988266385](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41988266385).
-- Full LMS quality suite and English student-browser smoke, including objective scoring and reload restoration: [Quiz quality checks, run 41988266452](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41988266452).
+- English 50-paper simulation, all-format five-paper repeat protection, semantic prompt-diversity assertions and production print rendering: [Exam paper uniqueness regression, run 41988266385](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41988607868).
+- Full LMS quality suite and English student-browser smoke, including objective scoring and reload restoration: [Quiz quality checks, run 41988607666](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41988607666).
 - Browser test unlocks the English profile and sets the blueprint to ready **only in the local test server response**. The committed registry and blueprint remain disabled/draft.
 
 ### Semantic question-diversity audit — passed
