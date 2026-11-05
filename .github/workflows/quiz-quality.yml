@@ -49,7 +49,7 @@ jobs:
       - name: Validate responsive portal and dashboard shell
         run: node tests/app-shell.test.js
       - name: Install Playwright Chromium for Mathematics browser QA
-        run: npm install --no-save playwright && npx playwright install --with-deps chromium
+        run: npm install --no-save playwright@1.64.1 && npx playwright install --with-deps chromium
       - name: Validate five-paper all-format repeat protection
         run: node tests/five-paper-repeat-protection.test.js
       - name: Smoke-test online Mathematics Standard and Basic examinations
