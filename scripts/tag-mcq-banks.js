@@ -36,7 +36,7 @@ for(const [file,subjectId,expected] of BANKS){
  totals.banks++;totals.chapters+=chapters;
  console.log(file+": "+chapters+" chapters / "+count+" MCQs tagged.");
 }
-if(totals.banks!==BANKS.length||totals.questions!==17594)throw Error("Cross-subject tagging coverage mismatch: "+JSON.stringify(totals));
+if(totals.banks!==BANKS.length||totals.questions!==17804)throw Error("Cross-subject tagging coverage mismatch: "+JSON.stringify(totals));
 console.log("Cross-subject MCQ competency tagging complete: "+totals.banks+" banks, "+totals.chapters+" chapters, "+totals.questions+" MCQs.");
 console.log("Competency totals: "+JSON.stringify(totals.byCompetency));
 console.log("Tag status totals: "+JSON.stringify(totals.byStatus));
