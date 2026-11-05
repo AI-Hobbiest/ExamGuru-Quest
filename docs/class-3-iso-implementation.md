@@ -2,7 +2,7 @@
 
 ## Scope
 
-Build Class 3 SOF ISO Level 1 as a separate exam experience. SOF renamed the National Science Olympiad (NSO) to International Science Olympiad (ISO) for the 2026–27 session. In student-facing labels, use **Science · SOF (ISO / formerly NSO)** so families can recognise both names.
+Build Class 3 SOF ISO Level 1 as a separate exam experience with a 500-question bank target. Use supplied or existing material selectively after qualification; do not bulk-import a source bank. SOF renamed the National Science Olympiad (NSO) to International Science Olympiad (ISO) for the 2026–27 session. In student-facing labels, use **Science · SOF (ISO / formerly NSO)** so families can recognise both names.
 
 ## Official Level 1 paper pattern (2026–27)
 
@@ -55,7 +55,9 @@ Class 2 is a separate prior-learning pool. Since NCERT does not provide a conven
 - 35 questions / 40 marks / 60 minutes.
 - 5 Logical Reasoning, 25 Science and 5 Achievers.
 - 18 current-class + 12 previous-class questions across non-Achievers; five current-class Achievers.
-- Target a bank large enough to produce at least 50 distinct papers with no question repeated in the preceding five papers wherever eligible pools permit.
+- Build a 500-question bank for this SOF subject: 70 Logical Reasoning, 360 Science and 70 Achievers questions.
+- Proposed provenance split: Logical Reasoning 42 current / 28 previous; Science 216 current / 144 previous; Achievers 70 current only. This gives each paper its exact 3/2, 15/10 and 5 origin quotas.
+- Target at least 50 distinct papers with no question repeated in the preceding five papers wherever eligible pools permit.
 - Check answer-position and difficulty balance, unique IDs and normalized stems, topic coverage and arithmetic/science correctness.
 
 ## Release gates
