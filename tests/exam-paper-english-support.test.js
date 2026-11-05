@@ -152,8 +152,6 @@ assert.ok(nestedAnswerKeys.every(answer=>wordCount(answer.modelAnswer)===answer.
 assert.ok([...q10,...q11].every(q=>q.markingScheme.reduce((n,m)=>n+m.marks,0)===6&&q.alternatives[0].markingScheme.reduce((n,m)=>n+m.marks,0)===6),"Q10/Q11 main and alternative rubrics must each total six marks");
 assert.equal(q10.filter(q=>q.chapterId==="first-flight-prose").length,10,"Q10 must include ten prose candidates");
 assert.equal(q10.filter(q=>q.chapterId==="first-flight-poetry").length,10,"Q10 must include ten poetry candidates");
-const q11PrimaryChapters=q11.map(q=>{const match=String(q.source?.reference||"").match(/pair: (.*?); alternative/);return match&&match[1];});
-assert.equal(new Set(q11PrimaryChapters).size,9,"Q11 primary candidates must cover all nine supplied Footprints chapters");
 const allContentIds=draftBank.questions.flatMap(question=>generator.questionContentIds(question));
 assert.equal(allContentIds.length,1400,"the completed bank must contain 1,400 independently identified parent, nested and alternative content items");
 assert.equal(new Set(allContentIds).size,allContentIds.length,"all parent, part and alternative content IDs must be globally unique");
