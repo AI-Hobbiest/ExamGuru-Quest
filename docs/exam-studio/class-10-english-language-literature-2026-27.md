@@ -63,7 +63,7 @@ Use the project-uploaded NCERT **First Flight** and **Footprints Without Feet** 
 
 ### Current milestone: 220 candidate bundles completed
 
-The draft question bank now contains **220 numbered-question candidate bundles**, with twenty candidates in every slot from Q1 to Q11. This completes the numeric candidate gate, but does not yet certify 50 complete English papers or authorise student release.
+The draft question bank contains **220 numbered-question candidate bundles**, with twenty candidates in every slot from Q1 to Q11. The 50-paper certification and five-paper all-format repeat-protection checks have also passed; student release remains separately controlled.
 
 | Slot | Bank structure completed | Candidate count | Quality and coverage record |
 |---|---|---:|---|
@@ -150,6 +150,9 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - [x] CI passed after these changes: English regression and all-format repeat protection (run 41988607868).
 
 ### Latest certification evidence — 5 November 2026
+
+- Final Q6 cross-book coverage, rubric alignment and prompt uniqueness: [Exam paper uniqueness regression, run 41996289289](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41996289289) — passed.
+- Full LMS quality suite including English student-browser smoke: [Quiz quality checks, run 41996289255](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41996289255) — passed.
 
 - English 50-paper simulation, all-format five-paper repeat protection, semantic prompt-diversity assertions and production print rendering: [Exam paper uniqueness regression, run 41988266385](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41988607868).
 - Full LMS quality suite and English student-browser smoke, including objective scoring and reload restoration: [Quiz quality checks, run 41988607666](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/41988607666).
