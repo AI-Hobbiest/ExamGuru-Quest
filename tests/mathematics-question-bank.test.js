@@ -14,14 +14,11 @@ const adminHtml=fs.readFileSync("admin.html","utf8");
 const examPracticeHtml=fs.readFileSync("exam-practice.html","utf8");
 assert.ok(adminHtml.includes("./js/exam-paper-generator.js?v=20261106-math-integrated-pool-v2"),"Admin must load the current Mathematics integration generator");
 assert.ok(examPracticeHtml.includes("./js/exam-paper-generator.js?v=20261106-math-integrated-pool-v2"),"Student exam must load the current Mathematics integration generator");
-const examPracticeHtml=fs.readFileSync("exam-practice.html","utf8");
-assert.ok(examPracticeHtml.includes("./js/exam-paper-generator.js?v=20261105-math-adapter-refresh"),"Student exam page must load the refreshed generator/MCQ adapter instead of a cached older copy");
-assert.ok(adminHtml.includes("./js/exam-paper-studio.js?v=20261105-studio-load-diagnostics"),"Admin must load the refreshed Studio script instead of a cached older copy");
-assert.ok(adminHtml.includes("./js/exam-paper-generator.js?v=20261105-math-adapter-refresh"),"Admin must load the refreshed generator/MCQ adapter instead of a cached older copy");
-assert.ok(studioSource.includes("const publishedBank=publishedBankData;"),"Exam Paper Studio must always fetch the published Mathematics bank");
-assert.ok(studioSource.includes('String(savedBank.bankVersion||"")===String(publishedBank.bankVersion||"")'),"a saved local bank may be reused only when its version matches the published bank");
-assert.ok(studioSource.includes("bankStore.save(sourceBank)"),"a stale local bank must be replaced with the current published version");
-assert.ok(!studioSource.includes("sourceBank=bankStore.load()||await q.json()"),"a stale local bank must never silently override a newer published question pool");
+assert.ok(adminHtml.includes("./js/exam-paper-studio.js?v=20261106-math-integrated-pool-v2"),"Admin must load the current Mathematics integration Studio");
+assert.ok(studioSource.includes("sourceBank=publishedBank;"),"the published bank must always be authoritative over local saved copies");
+assert.ok(studioSource.includes("Linked practice bank did not load as a chapter array"),"the Studio must report a missing or malformed linked practice bank");
+assert.ok(studioSource.includes("expected at least 1,000 linked MCQs"),"Mathematics must fail closed unless linked practice MCQs are integrated");
+assert.ok(studioSource.includes("assembleIntegratedBank();"),"the Studio must assemble the published and chapter-wise practice pools");
 const profiles=[
  {level:"standard",code:"041",path:"data/exam-papers/blueprints/class-10-mathematics-standard-2026-27.json",difficultyTargets:{easy:5,medium:29,hard:4}},
  {level:"basic",code:"241",path:"data/exam-papers/blueprints/class-10-mathematics-basic-2026-27.json",difficultyTargets:{easy:8,medium:29,hard:1}}
