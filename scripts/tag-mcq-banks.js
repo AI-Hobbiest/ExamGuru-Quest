@@ -6,7 +6,7 @@ const ROOT=process.argv[2]||"_site/data";
 const BANKS=[
  ["science","science",1400],["mathematics","mathematics",1400],["english","english",3700],
  ["social-science","social-science",2200],["hindi","hindi",254],
- ["class-3-mathematics","mathematics",1400],["class-3-english","english",120],
+ ["class-3-mathematics","mathematics",1400],["class-3-mathematics-sof","mathematics-sof",210],["class-3-english","english",120],
  ["class-6-science","science",1200],["class-6-mathematics","mathematics",1000],
  ["class-6-english","english",1600],["class-6-social-science","social-science",1400],
  ["class-6-science-sof","science-sof",685],["class-6-mathematics-sof","mathematics-sof",635],
