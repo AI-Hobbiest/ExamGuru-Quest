@@ -2,7 +2,7 @@
 (() => {
 "use strict";
 const $=id=>document.getElementById(id);
-let profile=null,profileId="",defaultProfileId="",blueprint=null,bank=null,paper=null,answers={},remaining=0,tick=null,submitted=false,paperHistory=[],assignedPaper=null,currentStudent=null,resumeAttempt=null;
+let profile=null,profileId="",defaultProfileId="",blueprint=null,bank=null,paper=null,answers={},remaining=0,tick=null,submitted=false,paperHistory=[],assignedPaper=null,currentStudent=null,resumeAttempt=null,savedSelfStudyPaper=null;
 const HISTORY_KEY="eg_exam_paper_history_v1",HISTORY_LIMIT=50,PROFILE_REGISTRY_URL="./data/exam-papers/profile-registry.json";
 function storageKey(base){
  if(!profileId||profileId===defaultProfileId)return base;
@@ -111,9 +111,18 @@ async function load(){
    $("startBtn").textContent="Start assigned examination";
   }
   const assignment=!!assignmentId,preparedDelivery=new URLSearchParams(location.search).get("delivery")==="latest";
+  if(!assignment&&!preparedDelivery){
+   try{
+    const savedPaper=JSON.parse(localStorage.getItem(storageKey("eg_exam_active_paper_v1"))||"null");
+    const savedState=JSON.parse(localStorage.getItem(storageKey("eg_exam_attempt_v1"))||"null");
+    if(savedPaper&&savedState&&savedPaper.paperId===savedState.paperId&&ExamPaperGenerator.validatePaper(savedPaper,blueprint).valid){savedSelfStudyPaper=savedPaper;resumeAttempt=savedState;}
+   }catch(_){savedSelfStudyPaper=null;resumeAttempt=null;}
+  }
   if(assignment){$("startBtn").textContent="Start assigned examination";$("startBtn").disabled=false;status("Assigned to you by your Parent/Teacher. The paper snapshot is frozen; the timer starts when you begin.");}
   else if(preparedDelivery){$("startBtn").textContent="Start prepared paper";$("startBtn").disabled=false;status("Prepared paper loaded. Start when ready.");}
+  else if(savedSelfStudyPaper){$("startBtn").textContent="Resume saved attempt";$("startBtn").disabled=false;status("An unfinished English/exam attempt was found in this browser. Resume to restore your saved answers and remaining time.");}
   else{
+   $("startBtn").textContent="Generate & start paper";
    $("startBtn").disabled=false;
    const adapted=integrated.stats.appended;
    const covered=coverage.coverage.filter(s=>s.eligibleCount>=minimum).length;
@@ -124,7 +133,9 @@ async function load(){
 function makePaper(){
  const previousHistory=paperHistory;
  const wantsDelivered=new URLSearchParams(location.search).get("delivery")==="latest";
+ const resumingSelfStudy=!assignedPaper&&!wantsDelivered&&!!savedSelfStudyPaper&&!!resumeAttempt;
  let delivered=false;
+ if(resumingSelfStudy){paper=savedSelfStudyPaper;remaining=Math.max(0,Number(resumeAttempt.remaining)||paper.durationMinutes*60);}
  if(assignedPaper){
   if(assignedPaper.deadlineAt&&new Date(assignedPaper.deadlineAt).getTime()<Date.now())throw Error("The deadline for this examination has passed.");
   assignedPaper=window.C10AssessmentManager.startPaper(assignedPaper.assignmentId,currentStudent.studentId);
@@ -142,13 +153,13 @@ function makePaper(){
    paper=saved;delivered=true;
   }catch(e){throw new Error(e.message||"Unable to load the prepared paper.");}
  }
- if(!delivered){
+ if(!delivered&&!resumingSelfStudy){
   const recentPaperFingerprints=paperHistory.map(item=>item.fingerprint||JSON.stringify(item.questionIds||[]));
   const recentQuestionIdSets=paperHistory.slice(-5).map(item=>item.questionIds||[]);
   const seed="self-study-"+profileId+"-"+Date.now()+"-"+Math.random().toString(36).slice(2);
   paper=ExamPaperGenerator.generateUniquePaper(blueprint,bank,{seed,title:"CBSE "+paperDisplayTitle()+" · Self-study Paper",recentPaperFingerprints,recentQuestionIdSets,uniqueSearchAttempts:500});
  }
- const assignedRemaining=assignedPaper?remaining:paper.durationMinutes*60;
+ const assignedRemaining=assignedPaper||resumingSelfStudy?remaining:paper.durationMinutes*60;
  answers=resumeAttempt&&resumeAttempt.paperId===paper.paperId?JSON.parse(JSON.stringify(resumeAttempt.answers||{})):{};
  submitted=false;remaining=assignedRemaining;
  const questionIds=paper.questions.flatMap(q=>ExamPaperGenerator.questionContentIds(q));
@@ -159,9 +170,10 @@ function makePaper(){
   paperHistory=previousHistory;
   throw Error("This browser could not save the 50-paper repeat history for this profile. Enable site storage and try again; no paper was started.");
  }
+ if(!assignedPaper&&!delivered){try{localStorage.setItem(storageKey("eg_exam_active_paper_v1"),JSON.stringify(paper));}catch(_){throw Error("This browser could not save the active paper for reload recovery. Enable site storage and try again.");}}
  render();$("setup").classList.add("exam-hidden");$("review").classList.add("exam-hidden");$("attempt").classList.remove("exam-hidden");
- $("historyStatus").textContent=(delivered?"This is the frozen paper prepared by your Parent/Teacher. ":"")+"50-paper repeat protection is active for this profile on this browser. This exact "+paper.totalQuestions+"-question combination will not repeat within the latest 50 generated papers; All question formats from the previous five papers are held out wherever the eligible pool supports it. History is profile-specific and does not sync to other devices.";
- startTimer();window.scrollTo(0,0);
+ $("historyStatus").textContent=(delivered?"This is the frozen paper prepared by your Parent/Teacher. ":resumingSelfStudy?"Resuming your saved attempt. ":"")+"50-paper repeat protection is active for this profile on this browser. This exact "+paper.totalQuestions+"-question combination will not repeat within the latest 50 generated papers; All question formats from the previous five papers are held out wherever the eligible pool supports it. History is profile-specific and does not sync to other devices.";
+ saveAnswers();startTimer();window.scrollTo(0,0);
 }
 function responseContent(item,i){
  let html="";
@@ -277,8 +289,8 @@ function saveAnswers(){
  try{localStorage.setItem(storageKey("eg_exam_attempt_v1"),JSON.stringify({paperId:paper.paperId,answers,remaining}));}catch(_){}
 }
 function updateProgress(){const count=Object.values(answers).filter(a=>a&&(a.optionId||a.parts?.some(p=>p.attempted!==false&&(p.optionId||p.text?.trim()))||a.text?.some(t=>t.trim()))).length;$("progress").textContent=count+" / "+paper.questions.length+" answered";}
-function startTimer(){clearInterval(tick);tick=setInterval(()=>{remaining--;const h=String(Math.floor(remaining/3600)).padStart(2,"0"),m=String(Math.floor(remaining%3600/60)).padStart(2,"0"),s=String(remaining%60).padStart(2,"0");$("timer").textContent=h+":"+m+":"+s;if(remaining<=0){clearInterval(tick);submit(true);}},1000);}
-function submit(auto=false){if(submitted)return;saveAnswers();submitted=true;clearInterval(tick);let mcq=0,correct=0,answered=0;paper.questions.forEach((q,i)=>{const a=answers[i];if(a&&(a.optionId||a.parts?.some(p=>p.attempted!==false&&(p.optionId||p.text?.trim()))||a.text?.some(t=>t.trim())))answered++;if(q.type==="mcq"||q.type==="assertion-reason"){mcq++;if(a?.optionId===q.correctOptionId)correct++;}if(Array.isArray(q.parts))q.parts.forEach((part,j)=>{const response=a?.parts?.[j];if(Array.isArray(part.options)){mcq++;if(response?.optionId===part.correctOptionId)correct++;}});});$("attempt").classList.add("exam-hidden");$("review").classList.remove("exam-hidden");$("score").textContent=(auto?"Time is up. ":"")+"Submitted "+answered+" of "+paper.questions.length+" questions. MCQ score: "+correct+" / "+mcq+". Written answers require self-review.";const box=$("reviewAnswers");box.innerHTML="";paper.questions.forEach((q,i)=>{const d=document.createElement("div");d.className="exam-question";const selected=answers[i]?.choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;const partReview=Array.isArray(selected.parts)?selected.parts.map((part,j)=>{const response=answers[i]?.parts?.[j]||{},chosen=response.choice==="alternative"&&part.alternatives?.length?part.alternatives[0]:part;const user=response.optionId||response.text||"Not attempted";const key=chosen.answerKey?.modelAnswer||chosen.answerKey||"Refer to the marking points.";const optionKey=chosen.options&&response.optionId?String(chosen.correctOptionId||"")+" — "+(chosen.options.find(o=>o.optionId===chosen.correctOptionId)?.text||""):"";return"("+String.fromCharCode(97+j)+(response.attempted===false?" · not selected":response.choice==="alternative"?" · alternative":"")+") "+(chosen.prompt||part.prompt)+"\nYour answer: "+user+"\nModel answer: "+(optionKey||key);}).join("\n\n"):"";const key=partReview||selected.answerKey?.modelAnswer||selected.answerKey?.answer||selected.answerKey?.correctAnswer||"Refer to your textbook and marking points.";const userResponse=Array.isArray(selected.parts)?"See selected response for each case-study subpart.":(answers[i]?.optionId||answers[i]?.text?.join(" / ")||"Not attempted");d.innerHTML='<h3>Q'+(i+1)+': '+esc(selected.prompt||q.prompt)+'</h3><p><strong>Your answer:</strong> '+esc(userResponse)+'</p><p><strong>Model answer / review:</strong><br>'+esc(key).replace(/\n/g,"<br>")+'</p>';box.appendChild(d);});try{localStorage.setItem(storageKey("eg_exam_last_result_v1"),JSON.stringify({paperId:paper.paperId,answers,submittedAt:new Date().toISOString(),mcqCorrect:correct,mcqTotal:mcq}));localStorage.removeItem(storageKey("eg_exam_attempt_v1"));const queued=JSON.parse(localStorage.getItem(storageKey("eg_exam_paper_delivery_v1"))||"null");if(queued&&queued.paperId===paper.paperId)localStorage.removeItem(storageKey("eg_exam_paper_delivery_v1"));if(assignedPaper&&currentStudent)window.C10AssessmentManager.submitPaper(assignedPaper.assignmentId,currentStudent.studentId,answers);}catch(e){status(e.message||"Answers were saved, but assignment submission needs attention.");}window.scrollTo(0,0);}
+function startTimer(){clearInterval(tick);tick=setInterval(()=>{remaining--;const h=String(Math.floor(remaining/3600)).padStart(2,"0"),m=String(Math.floor(remaining%3600/60)).padStart(2,"0"),s=String(remaining%60).padStart(2,"0");$("timer").textContent=h+":"+m+":"+s;try{const saved=JSON.parse(localStorage.getItem(storageKey("eg_exam_attempt_v1"))||"null");if(saved&&saved.paperId===paper.paperId){saved.remaining=remaining;localStorage.setItem(storageKey("eg_exam_attempt_v1"),JSON.stringify(saved));}}catch(_){}if(remaining<=0){clearInterval(tick);submit(true);}},1000);}
+function submit(auto=false){if(submitted)return;saveAnswers();submitted=true;clearInterval(tick);let mcq=0,correct=0,answered=0;paper.questions.forEach((q,i)=>{const a=answers[i];if(a&&(a.optionId||a.parts?.some(p=>p.attempted!==false&&(p.optionId||p.text?.trim()))||a.text?.some(t=>t.trim())))answered++;if(q.type==="mcq"||q.type==="assertion-reason"){mcq++;if(a?.optionId===q.correctOptionId)correct++;}if(Array.isArray(q.parts))q.parts.forEach((part,j)=>{const response=a?.parts?.[j];if(Array.isArray(part.options)){mcq++;if(response?.optionId===part.correctOptionId)correct++;}});});$("attempt").classList.add("exam-hidden");$("review").classList.remove("exam-hidden");$("score").textContent=(auto?"Time is up. ":"")+"Submitted "+answered+" of "+paper.questions.length+" questions. MCQ score: "+correct+" / "+mcq+". Written answers require self-review.";const box=$("reviewAnswers");box.innerHTML="";paper.questions.forEach((q,i)=>{const d=document.createElement("div");d.className="exam-question";const selected=answers[i]?.choice==="alternative"&&q.alternatives?.length?q.alternatives[0]:q;const partReview=Array.isArray(selected.parts)?selected.parts.map((part,j)=>{const response=answers[i]?.parts?.[j]||{},chosen=response.choice==="alternative"&&part.alternatives?.length?part.alternatives[0]:part;const user=response.optionId||response.text||"Not attempted";const key=chosen.answerKey?.modelAnswer||chosen.answerKey||"Refer to the marking points.";const optionKey=chosen.options&&response.optionId?String(chosen.correctOptionId||"")+" — "+(chosen.options.find(o=>o.optionId===chosen.correctOptionId)?.text||""):"";return"("+String.fromCharCode(97+j)+(response.attempted===false?" · not selected":response.choice==="alternative"?" · alternative":"")+") "+(chosen.prompt||part.prompt)+"\nYour answer: "+user+"\nModel answer: "+(optionKey||key);}).join("\n\n"):"";const key=partReview||selected.answerKey?.modelAnswer||selected.answerKey?.answer||selected.answerKey?.correctAnswer||"Refer to your textbook and marking points.";const userResponse=Array.isArray(selected.parts)?"See selected response for each case-study subpart.":(answers[i]?.optionId||answers[i]?.text?.join(" / ")||"Not attempted");d.innerHTML='<h3>Q'+(i+1)+': '+esc(selected.prompt||q.prompt)+'</h3><p><strong>Your answer:</strong> '+esc(userResponse)+'</p><p><strong>Model answer / review:</strong><br>'+esc(key).replace(/\n/g,"<br>")+'</p>';box.appendChild(d);});try{localStorage.setItem(storageKey("eg_exam_last_result_v1"),JSON.stringify({paperId:paper.paperId,answers,submittedAt:new Date().toISOString(),mcqCorrect:correct,mcqTotal:mcq}));localStorage.removeItem(storageKey("eg_exam_attempt_v1"));localStorage.removeItem(storageKey("eg_exam_active_paper_v1"));savedSelfStudyPaper=null;resumeAttempt=null;const queued=JSON.parse(localStorage.getItem(storageKey("eg_exam_paper_delivery_v1"))||"null");if(queued&&queued.paperId===paper.paperId)localStorage.removeItem(storageKey("eg_exam_paper_delivery_v1"));if(assignedPaper&&currentStudent)window.C10AssessmentManager.submitPaper(assignedPaper.assignmentId,currentStudent.studentId,answers);}catch(e){status(e.message||"Answers were saved, but assignment submission needs attention.");}window.scrollTo(0,0);}
 $("startBtn").addEventListener("click",()=>{try{makePaper();}catch(e){status("Cannot generate this paper: "+e.message);}});
 $("submitBtn").addEventListener("click",()=>{if(confirm("Submit your paper now? You cannot change answers after submission."))submit(false);});
 $("printBtn").addEventListener("click",()=>window.print());
