@@ -1,4 +1,4 @@
-/* Config-driven Class 6 SOF Olympiad Level 1 paper blueprints and section scoring. */
+/* Config-driven SOF Olympiad Level 1 paper blueprints and section scoring. */
 (() => {
   "use strict";
 
