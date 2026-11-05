@@ -36,7 +36,7 @@ SOF's published Level 1 note says 60% of questions are from the current class an
 ### Quality and release gates
 
 - Unique IDs, unique stems and distinct options.
-- Exactly one correct answer, independently checked; explanations must teach the reasoning.
+- Exactly one correct answer; check the answer key and ensure explanations teach the reasoning. Obtain a separate educator moderation pass before high-stakes use.
 - Difficulty distribution and answer-position balance.
 - Section inventory sufficient for each official quota.
 - Generate at least 50 full papers; no question should recur in the preceding five papers when the eligible unseen pool supports it.
@@ -68,7 +68,25 @@ These are useful quality signals, but they are not a full SOF approval. The bank
 
 The repository currently has no dedicated Class 2 question-bank file. Therefore the previous-class IMO pool must be authored and audited separately; it must not be fabricated by relabelling Class 3 questions as Class 2.
 
-**Audit conclusion:** 1,400 existing questions are available for a controlled current-class reuse audit. No question is yet certified as an SOF IMO question, and no Class 3 SOF bank is released by this foundation PR.
+**Audit conclusion:** The Class 3 CBSE bank was used selectively, not bulk-imported. Sixteen traceable items were selected (eight each for Mathematical Reasoning and Everyday Mathematics); the Logical Reasoning and Achievers pools are original. Each reused item preserves its source ID, stem, keyed answer and explanation. The rest of the 210-question bank is original ExamGuru content. This is SOF-pattern-aligned practice content, not official SOF question content.
+
+## Class 3 IMO bank — first complete pool
+
+`data/class-3-mathematics-sof.json` contains 210 questions:
+
+| Section | Total | Class 3 | Class 2 | Reused CBSE |
+|---|---:|---:|---:|---:|
+| Logical Reasoning | 60 | 36 | 24 | 0 |
+| Mathematical Reasoning | 60 | 36 | 24 | 8 |
+| Everyday Mathematics | 60 | 36 | 24 | 8 |
+| Achievers Section | 30 | 30 | 0 | 0 |
+| **Total** | **210** | **138** | **72** | **16** |
+
+The Class 2 pool is newly authored and separately tagged; it is not created by relabelling Class 3 questions. Every bank record carries a section, topic, syllabus grade and source label. The bank has unique IDs and normalized stems, four distinct options per question, answer explanations and balanced correct-answer positions.
+
+The 60-question pools in each 10-question section and the 30-question Achievers pool support at least one complete set of six non-repeating papers. That is enough to exclude all questions from the preceding five completed papers when assembling the next paper. A regression test simulates 50 consecutive papers and checks the rolling five-paper exclusion, section quotas, 35-question / 40-mark pattern and two-mark Achievers scoring.
+
+The question content has been checked for answer plausibility and arithmetic consistency during authoring and structurally validated by regression tests. This remains ExamGuru-generated practice content; separate teacher moderation is recommended before treating it as a high-stakes assessment.
 
 ## Status
 
