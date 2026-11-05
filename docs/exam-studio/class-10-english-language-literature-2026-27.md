@@ -57,3 +57,66 @@ Use the project-uploaded NCERT **First Flight** and **Footprints Without Feet** 
 - [ ] Prove five-paper no-repeat protection for all parent and nested content IDs, including alternatives, without fallback where the eligible pool supports it.
 - [ ] Run CI and browser checks for online attempts, selectable sub-questions, answer restoration, grading, print paper and answer booklet.
 - [ ] Enable the English profile only after the full gate; merge to main and verify Pages deployment.
+
+
+## Progress tracker — 5 November 2026
+
+### Current milestone: Q9 short-answer pool
+
+| Measure | Current result | Gate |
+|---|---:|---:|
+| Q9 numbered-question bundles | 20 | 20 |
+| Nested short-answer items | 60 | 60 |
+| Candidate mark value | 6 marks each | 6 |
+| Sub-question pattern | Attempt any 2 of 3 | Exact blueprint |
+| Marking scheme | 3 points × 1 mark per item | Required |
+| Model-answer length | 40–49 words | 40–50 |
+| Coverage across Footprints Without Feet | 9 of 9 textbook chapters | All prescribed texts |
+| Difficulty split | 5 easy / 10 medium / 5 hard | Balanced mix |
+| Unique parent + nested content IDs | 80 of 80 | No duplicates |
+| Exact duplicate sub-question stems | 0 | 0 |
+| High-overlap stem pairs (Jaccard ≥ 0.55) | 0 | Editorial review |
+
+Each Q9 bundle has a stable parent question ID and three separately identified 3-mark items. All model answers are original summaries, not reproduced textbook passages. The 20 bundles are internally QA-approved for this draft bank; independent educator sign-off is still pending.
+
+### Slot-by-slot readiness
+
+| Blueprint slot | Required candidates | Approved candidates | Status |
+|---|---:|---:|---|
+| Q1 · Discursive reading | 20 | 0 | Not started |
+| Q2 · Case-based reading | 20 | 0 | Not started |
+| Q3 · Grammar (attempt 10 of 12) | 20 | 0 | Not started |
+| Q4 · Formal letter | 20 | 0 | Not started |
+| Q5 · Analytical paragraph | 20 | 0 | Not started |
+| Q6 · First Flight prose/drama extract | 20 | 0 | Not started |
+| Q7 · First Flight poetry extract | 20 | 0 | Not started |
+| **Q8 · First Flight short answers** | **20** | **0** | **Next** |
+| Q9 · Footprints short answers | 20 | 20 | Candidate gate met |
+| Q10 · First Flight long answer | 20 | 0 | Not started |
+| Q11 · Footprints long answer | 20 | 0 | Not started |
+| **Total** | **220** | **20** | **9.1% of the candidate target** |
+
+### Automated validation
+
+- [x] Question-bank schema and approved-question validation.
+- [x] Q9 slot audit: 20 eligible approved candidates against the 20-candidate minimum.
+- [x] 60 unique nested question IDs and 20 parent IDs.
+- [x] 40–50-word model-answer checks.
+- [x] Duplicate-stem and high-overlap prompt audit.
+- [x] English nested-response and attempt-any regression tests.
+- [x] Exam paper uniqueness regression workflow — passed on commit `8cefb5dc038de8f8efc5cd000d559abfba0e5b60` (run 41974544337).
+- [x] ExamGuru Quest quiz-quality workflow — passed on the same commit (run 41974544466).
+- [ ] Full 50-paper generation against the completed production bank.
+- [ ] Five-paper, all-format repeat-window validation across all 11 slots.
+- [ ] End-to-end manual student-browser sign-off for the complete English paper.
+- [ ] Independent English educator review.
+- [ ] Merge, deploy and verify the student-facing English profile.
+
+### Release controls
+
+- Student profile: `enabled: false`.
+- Blueprint: `draft`.
+- PR: #39, still open as a draft.
+- Main branch: unchanged by this English work.
+- Pages deployment: not triggered by this draft PR.
+- Do not enable or merge the profile until all 11 slots meet the 20-candidate gate and the 50-paper / five-paper repeat criteria pass.
