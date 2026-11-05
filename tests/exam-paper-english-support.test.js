@@ -49,6 +49,31 @@ assert.equal(generator.questionContentIds(bank.questions[0]).length,13,"content 
 assert.ok(generator.questionContentIds(bank.questions[0]).includes(bank.questions[0].parts[0].questionId));
 const invalidAttempt={...bank.questions[0],attemptAny:13};
 assert.ok(generator.validateQuestion(invalidAttempt).some(error=>error.includes("attemptAny")));
+const shortAnswerGroup=makeQuestion(99);
+shortAnswerGroup.type="short-answer";
+shortAnswerGroup.marks=12;
+shortAnswerGroup.attemptAny=4;
+shortAnswerGroup.parts=shortAnswerGroup.parts.slice(0,5).map((part,i)=>({
+ ...part,partId:String.fromCharCode(97+i),marks:3,
+ prompt:"Explain a distinct textual choice using evidence in approximately 40–50 words.",
+ options:undefined,correctOptionId:undefined,
+ markingScheme:[{criterion:"Relevant textual point",marks:1},{criterion:"Supporting evidence",marks:1},{criterion:"Clear explanation",marks:1}]
+}));
+shortAnswerGroup.markingScheme=[{criterion:"Four selected responses, each worth three marks",marks:12}];
+assert.deepEqual(generator.validateQuestion(shortAnswerGroup),[],"12-mark choose-four-of-five groups must validate");
+const wrongGroupMarks={...shortAnswerGroup,marks:11};
+assert.ok(generator.validateQuestion(wrongGroupMarks).some(error=>error.includes("common part mark value")));
+const withAlternative=makeQuestion(98);
+withAlternative.alternatives=[{
+ questionId:withAlternative.questionId+"-ALT",
+ prompt:"OR read this alternative passage and answer its questions.",
+ stimulus:"An original alternative passage for regression purposes.",
+ parts:withAlternative.parts.slice(0,10).map((part,i)=>({...part,partId:String.fromCharCode(97+i),questionId:withAlternative.questionId+"-ALT-ITEM-"+(i+1)})),
+ answerKey:{modelAnswer:"Responses should be supported by the alternative passage."},
+ markingScheme:[{criterion:"Accurate responses to the alternative passage items",marks:10}]
+}];
+assert.deepEqual(generator.validateQuestion(withAlternative),[],"nested parts inside a full-question alternative must validate");
+
 const invalidPart={...bank.questions[0],parts:bank.questions[0].parts.map((part,i)=>i===0?{...part,correctOptionId:"Z"}:part)};
 assert.ok(generator.validateQuestion(invalidPart).some(error=>error.includes("correctOptionId")));
 const usedIds=generator.questionContentIds(bank.questions[0]);
