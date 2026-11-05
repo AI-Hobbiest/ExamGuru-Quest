@@ -25,7 +25,7 @@ All three Class 6 papers contain 50 questions, run for 60 minutes and total 60 m
 
 Blueprint ID: `sof-iso-class-6-level-1`.
 
-The 677-question ISO bank retains the 600-question Class 6 inventory and adds 52 Class 5 Science questions plus 25 Class 5 Logical Reasoning questions. Every question now carries `syllabusClass`, `syllabusOrigin` and `syllabusTopic` metadata. Each mock selects 6 current-class and 4 previous-class Logical Reasoning questions, 21 current-class and 14 previous-class Science questions, and five current-class Achievers questions.
+The 685-question ISO bank retains the 600-question Class 6 inventory and adds 60 Class 5 Science questions plus 25 Class 5 Logical Reasoning questions. Every question now carries `syllabusClass`, `syllabusOrigin` and `syllabusTopic` metadata. Each mock selects 6 current-class and 4 previous-class Logical Reasoning questions, 21 current-class and 14 previous-class Science questions, and five current-class Achievers questions.
 
 ### IMO
 
@@ -39,7 +39,7 @@ The 677-question ISO bank retains the 600-question Class 6 inventory and adds 52
 
 Blueprint ID: `sof-imo-class-6-level-1`.
 
-The 625-question bank has 75 Logical Reasoning, 330 Mathematical Reasoning, 140 Everyday Mathematics and 80 Achievers questions. It retains the 550-question Class 6 inventory and adds 25 Class 5 Logical Reasoning, 30 Class 5 Mathematical Reasoning and 20 Class 5 Everyday Mathematics questions. Every question carries `syllabusClass`, `syllabusOrigin` and `syllabusTopic` metadata. Each mock selects 9 current-class and 6 previous-class Logical Reasoning questions, 12 current-class and 8 previous-class Mathematical Reasoning questions, 6 current-class and 4 previous-class Everyday Mathematics questions, and five current-class Achievers questions.
+The 635-question bank has 75 Logical Reasoning, 340 Mathematical Reasoning, 140 Everyday Mathematics and 80 Achievers questions. It retains the 550-question Class 6 inventory and adds 25 Class 5 Logical Reasoning, 40 Class 5 Mathematical Reasoning and 20 Class 5 Everyday Mathematics questions. Every question carries `syllabusClass`, `syllabusOrigin` and `syllabusTopic` metadata. Each mock selects 9 current-class and 6 previous-class Logical Reasoning questions, 12 current-class and 8 previous-class Mathematical Reasoning questions, 6 current-class and 4 previous-class Everyday Mathematics questions, and five current-class Achievers questions.
 
 ### IEO
 
@@ -95,7 +95,7 @@ The blueprint section counts, duration and marking scheme are based on SOF's pub
 
 SOF specifies that Level 1 ISO and IMO papers use 60% current-class and 40% previous-class syllabus coverage, and that Achievers questions come from the current-class syllabus. ExamGuru implements this as a 60:40 split across the 45 non-Achievers questions in each paper (27 current-class and 18 previous-class), with the five Achievers questions separately reserved for current-class content. The logical-reasoning section is included in the non-Achievers split. This is an explicit implementation interpretation of SOF's syllabus note; the official page states the overall split and Achievers exception but does not publish per-section grade quotas.
 
-The NSO/ISO bank has 677 questions: 600 current-class questions and 77 Class 5 previous-class supplements. The IMO bank has 625 questions: 550 current-class questions and 75 Class 5 previous-class supplements. Each question is explicitly tagged with its syllabus class, origin and topic. The generator enforces the quotas shown in the blueprint tables above and fails closed if a required origin pool is insufficient. It avoids question IDs from the preceding three completed mocks in each origin pool whenever enough unseen questions remain.
+The NSO/ISO bank has 685 questions: 600 current-class questions and 85 Class 5 previous-class supplements. The IMO bank has 635 questions: 550 current-class questions and 85 Class 5 previous-class supplements. Each question is explicitly tagged with its syllabus class, origin and topic. The generator enforces the quotas shown in the blueprint tables above and fails closed if a required origin pool is insufficient. It avoids question IDs from the preceding three completed mocks in each origin pool whenever enough unseen questions remain.
 
 The IEO bank is explicitly tagged by the four published Level 1 exam sections. This implementation does not claim a separate grade-origin compliance audit.
 
