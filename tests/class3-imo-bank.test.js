@@ -14,7 +14,6 @@ const normalized = context.window.C10QuestionBank.normalize(raw, "class-3-mathem
 const blueprint = context.window.C10OlympiadBlueprints.getBlueprint("sof-imo-class-3-level-1");
 const model = context.window.C10OlympiadBlueprints;
 const sections = ["Logical Reasoning", "Mathematical Reasoning", "Everyday Mathematics", "Achievers Section"];
-const origins = ["current-class", "previous-class"];
 assert.equal(normalized.length, 4);
 assert.deepEqual(normalized.map(chapter => chapter.section), sections);
 assert.deepEqual(normalized.map(chapter => chapter.questions.length), [60, 60, 60, 30]);
@@ -63,7 +62,7 @@ assert.equal(all.filter(question => question.syllabusOrigin === "previous-class"
 assert.equal(all.filter(question => question.syllabusOrigin === "current-class").length, 138,
   "current-class source pool has 36 questions in each non-Achievers section and 30 Achievers questions");
 const answerPositions = [0, 0, 0, 0];
-all.forEach(question => answerPositions[question.answer]++);
+raw.flatMap(chapter => chapter.questions).forEach(question => answerPositions[question.answer]++);
 assert.ok(Math.max(...answerPositions) - Math.min(...answerPositions) <= 1,
   "correct answer positions are balanced across the bank");
 
