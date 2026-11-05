@@ -37,11 +37,18 @@ assert.ok(all.every(question => ["Easy", "Medium", "Challenge"].includes(questio
   "difficulty labels use the supported bank vocabulary");
 const normalizedStem = value => String(value).toLowerCase().normalize("NFKC")
   .replace(/[’‘]/g, "'").replace(/[0-9,]+/g, "#")
-  .replace(/[^a-z#₹]+/g, " ").replace(/\\s+/g, " ").trim();
+  .replace(/[^a-z#₹]+/g, " ").replace(/\s+/g, " ").trim();
 for (const chapter of normalized) {
   const stems = chapter.questions.map(question => normalizedStem(question.question));
   assert.equal(new Set(stems).size, stems.length, chapter.title + " has no repeated stems after number normalization");
 }
+const allStems = all.map(question => normalizedStem(question.question));
+assert.equal(new Set(allStems).size, allStems.length, "question stems are unique across every exam section");
+assert.ok(raw[0].questions.find(question => question.id === "c3imo-lr-c-020").question.includes("3, 4 and 5 straight sides"),
+  "the shape-sequence item uses a valid polygon sequence");
+const achieverRange = raw[3].questions.find(question => question.id === "c3imo-ach-c-181");
+assert.equal(achieverRange.options[achieverRange.answer], "3,266",
+  "the Achievers number-range item has one valid matching number");
 const sourceBank = JSON.parse(fs.readFileSync("data/class-3-mathematics.json", "utf8"));
 const sourceById = new Map(sourceBank.flatMap(chapter => chapter.questions.map(question =>
   [String(question.id), { question, chapter }]
