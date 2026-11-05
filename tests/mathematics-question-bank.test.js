@@ -15,7 +15,7 @@ const examPracticeHtml=fs.readFileSync("exam-practice.html","utf8");
 assert.ok(examPracticeHtml.includes("./js/exam-paper-generator.js?v=20261105-math-adapter-refresh"),"Student exam page must load the refreshed generator/MCQ adapter instead of a cached older copy");
 assert.ok(adminHtml.includes("./js/exam-paper-studio.js?v=20261105-studio-load-diagnostics"),"Admin must load the refreshed Studio script instead of a cached older copy");
 assert.ok(adminHtml.includes("./js/exam-paper-generator.js?v=20261105-math-adapter-refresh"),"Admin must load the refreshed generator/MCQ adapter instead of a cached older copy");
-assert.ok(studioSource.includes("const publishedBank=await q.json();"),"Exam Paper Studio must always fetch the published Mathematics bank");
+assert.ok(studioSource.includes("const publishedBank=publishedBankData;"),"Exam Paper Studio must always fetch the published Mathematics bank");
 assert.ok(studioSource.includes('String(savedBank.bankVersion||"")===String(publishedBank.bankVersion||"")'),"a saved local bank may be reused only when its version matches the published bank");
 assert.ok(studioSource.includes("bankStore.save(sourceBank)"),"a stale local bank must be replaced with the current published version");
 assert.ok(!studioSource.includes("sourceBank=bankStore.load()||await q.json()"),"a stale local bank must never silently override a newer published question pool");
