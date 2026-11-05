@@ -53,8 +53,8 @@ Use the project-uploaded NCERT **First Flight** and **Footprints Without Feet** 
 - [ ] Verify every text/unit against the 2026–27 prescribed syllabus.
 - [ ] Create at least 20 quality-approved candidates for each of 11 slots (at least 220 numbered-question bundles).
 - [ ] Audit content IDs, duplicate stems, answer keys, marking schemes, word limits, passage word counts and section/slot eligibility.
-- [ ] Generate 50 distinct complete papers from the production bank.
-- [ ] Prove five-paper no-repeat protection for all parent and nested content IDs, including alternatives, without fallback where the eligible pool supports it.
+- [x] Generate and validate 50 distinct complete English papers from the production bank in CI.
+- [x] Prove five-paper no-repeat protection for all parent, nested and alternative content IDs, without fallback.
 - [ ] Run CI and browser checks for online attempts, selectable sub-questions, answer restoration, grading, print paper and answer booklet.
 - [ ] Enable the English profile only after the full gate; merge to main and verify Pages deployment.
 
@@ -119,7 +119,7 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - [x] Updated full Q1–Q11 English regression suite passed on commit `17e600e0abeb7155d53cbd4f620b108dfc8e31b4` (run 41980881261). Generator, release, renderer and English bank/response checks passed.
 - [x] Quiz-quality workflow passed on the same commit (run 41980881468). Its existing 50-paper all-format checks and online browser smoke checks passed for Mathematics Standard, Mathematics Basic and Class 10 Science; these do not certify English papers.
 - [ ] Verify every prescribed text/unit against a readable official 2026–27 syllabus and sample-paper marking scheme. The current CBSE index lists English Language & Literature and English Communicative separately, but the detailed 2026–27 PDF syllabus still requires direct verification.
-- [ ] Generate 50 distinct complete 80-mark English papers against the final production bank.
+- [x] Generate 50 distinct complete 80-mark English papers against the production bank (CI simulation; the committed blueprint remains draft).
 - [ ] Validate five-paper, all-format repeat protection across all parent, nested and alternative English content IDs.
 - [ ] Complete student-browser checks for answer selection/editing/restoration, grading, printing and answer booklet.
 - [ ] Obtain independent English educator sign-off, particularly on Q6/Q7 extract alignment and Q10/Q11 content quality.
@@ -130,13 +130,21 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 - [x] Added a production-bank release simulation to the English regression suite. It promotes a copy of the draft blueprint to `ready` in memory only; the committed blueprint remains `draft`.
 - [x] The new test generates 50 complete English papers (11 questions, 80 marks each) and checks unique paper fingerprints.
 - [x] The five-paper lookback compares every parent, nested-part and alternative content ID; any fallback that relaxes the five-paper window fails the test.
-- [ ] Await the GitHub Actions run on the updated PR commit. A passing result is required before this gate can be marked complete.
+- [x] GitHub Actions passed the English 50-paper simulation and five-paper all-format repeat checks (run 41985452926).
 
 ### Official 2026–27 CBSE references located
 
 - CBSE's Class X 2026–27 SQP/MS index lists **English (Language & Literature)** and **English (Communicative)** as separate courses: https://cbseacademic.nic.in/sqp_classx_2026-27.html
 - The corresponding official SQP and marking-scheme files are linked from that index. Direct PDF retrieval from this environment was unsuccessful, so prescribed-text and fine-grained marking-scheme reconciliation remain open pending readable document review.
 - The 2026–27 curriculum index separately lists English – Language and Literature and English Communicative for Class X: https://cbseacademic.nic.in/curriculum_2027.html
+
+### Repeat-history implementation correction
+
+- [x] Student self-study history now persists every parent, nested-part and alternative content ID (removing a duplicate object key that previously overwrote the full list with parent IDs).
+- [x] Admin Exam Studio history now persists the same complete content-ID set.
+- [x] The shared five-paper regression now compares all content IDs rather than parent question IDs alone.
+- [x] English regression asserts that both student and Admin flows retain the full content-ID list.
+- [x] CI passed after these changes: English regression and all-format repeat protection (run 41985452926).
 
 ### Release controls
 
