@@ -10,6 +10,8 @@ const engine=ctx.window.ExamPaperGenerator;
 const source=JSON.parse(fs.readFileSync("data/mathematics.json","utf8"));
 const baseBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json","utf8"));
 const studioSource=fs.readFileSync("js/exam-paper-studio.js","utf8");
+const adminHtml=fs.readFileSync("admin.html","utf8");
+assert.ok(adminHtml.includes("./js/exam-paper-studio.js?v=20261105-mathbank-refresh"),"Admin must load the refreshed Studio script instead of a cached older copy");
 assert.ok(studioSource.includes("const publishedBank=await q.json();"),"Exam Paper Studio must always fetch the published Mathematics bank");
 assert.ok(studioSource.includes('String(savedBank.bankVersion||"")===String(publishedBank.bankVersion||"")'),"a saved local bank may be reused only when its version matches the published bank");
 assert.ok(studioSource.includes("bankStore.save(sourceBank)"),"a stale local bank must be replaced with the current published version");
