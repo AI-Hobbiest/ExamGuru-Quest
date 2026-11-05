@@ -51,7 +51,7 @@ function startServer(){
   await page.locator("#startBtn").click();
   await page.locator("#attempt").waitFor({state:"visible"});
   assert.equal(await page.locator("#questions .exam-question").count(),11);
-  assert.match(await page.locator("#timer").innerText(),/^(03:00:00|02:59:[0-5]\\d)$/);
+  assert.match(await page.locator("#timer").innerText(),/^(03:00:00|02:59:[0-5]\d)$/);
   assert.match(await page.locator("#historyStatus").innerText(),/50-paper repeat protection is active/);
 
   // Q3: change the selected ten grammar tasks while keeping the attempt limit.
