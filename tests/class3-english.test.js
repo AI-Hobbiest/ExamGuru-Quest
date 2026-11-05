@@ -37,5 +37,5 @@ assert.equal(ids.size, 120);
 assert.deepEqual(positions, [30, 30, 30, 30], "answer positions are balanced");
 
 const classCatalog = JSON.parse(fs.readFileSync("data/classes.json", "utf8"));
-assert.deepEqual(classCatalog.classes.find(c => c.classId === "3").subjects, ["mathematics", "english"]);
-console.log("Class 3 English bank checks passed: 12 chapters, 120 MCQs.");
+assert.deepEqual(classCatalog.classes.find(c => c.classId === "3").subjects, ["mathematics", "mathematics-sof", "english"]);
+console.log("Class 3 English bank checks passed: 12 chapters, 120 MCQs; Class 3 catalogue includes the SOF IMO track.");
