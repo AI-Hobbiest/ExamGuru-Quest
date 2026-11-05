@@ -22,6 +22,8 @@ assert.ok(parentPage.includes("./js/parent-dashboard.js")&&parentPage.includes("
 assert.ok(parentDashboard.includes("getLinkedChildren")&&parentDashboard.includes("studentId"),"parent dashboard reads only linked children using student-specific IDs");
 assert.ok(parentPage.includes('id="childDetail"')&&parentDashboard.includes("showDetail"),"parent Level 2 provides an individual child progress view");
 assert.ok(parentDashboard.includes("Subject performance")&&parentDashboard.includes("Chapter progress")&&parentDashboard.includes("Learning insights"),"parent Level 2 includes subject, chapter and insight sections");
+assert.ok(!parentDashboard.includes("MCQs ·")&&!parentDashboard.includes("chapter sets"),
+  "parent dashboard does not disclose question-bank size or chapter inventory");
 assert.ok(parentDashboard.includes("openReport")&&parentDashboard.includes("window.print")&&parentDashboard.includes("chartSvg"),"parent Level 3 generates printable reports with charts");
 assert.ok(parentPage.includes("Progress reports"),"parent workspace explains report availability");
 assert.ok(pageAccess.includes('session.role==="parent"')&&pageAccess.includes('"./parent.html"'),"student-only routes redirect parent accounts to family workspace");
