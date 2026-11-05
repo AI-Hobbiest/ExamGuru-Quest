@@ -125,4 +125,4 @@ assert.equal(sectionResults.length, 4);
 assert.equal(sectionResults.reduce((sum, section) => sum + section.maxMarks, 0), 40);
 assert.equal(sectionResults.find(section => section.sectionId === "achievers").marksEarned, 2,
   "a correct Achievers response earns two marks");
-console.log("Class 3 SOF IMO bank tests passed: 210 audited-pool records, 16 traceable CBSE reuse, exact syllabus quotas, 50 distinct papers, five-paper repeat protection and weighted 40-mark scoring.");
+console.log("Class 3 SOF IMO bank tests passed: 210 question-bank records, 16 traceable CBSE reuse, exact syllabus quotas, 50 distinct papers, five-paper repeat protection and weighted 40-mark scoring.");
