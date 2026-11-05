@@ -55,7 +55,7 @@ Use the project-uploaded NCERT **First Flight** and **Footprints Without Feet** 
 - [x] Audit content IDs, duplicate stems, answer keys, marking schemes, word limits, passage word counts and section/slot eligibility.
 - [x] Generate and validate 50 distinct complete English papers from the production bank in CI.
 - [x] Prove five-paper no-repeat protection for all parent, nested and alternative content IDs, without fallback.
-- [x] Run CI and browser checks for online attempts, selectable sub-questions, answer restoration, grading, print paper and answer booklet (baseline browser checks passed; final rubric/Q6 regression run pending).
+- [x] Run CI and browser checks for online attempts, selectable sub-questions, answer restoration, grading, print paper and answer booklet; latest final regression and quality workflows passed.
 - [ ] Enable the English profile only after the full gate; merge to main and verify Pages deployment.
 
 
