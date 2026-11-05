@@ -349,15 +349,15 @@
       },
       {
         "id": "c3imo-lr-c-020",
-        "question": "A shape changes from 1 side to 2 sides to 3 sides. Which shape comes next?",
+        "question": "A sequence of flat shapes has 3, 4 and 5 straight sides. Which shape comes next?",
         "options": [
-          "square",
+          "hexagon",
           "circle",
-          "triangle",
-          "pentagon"
+          "pentagon",
+          "rectangle"
         ],
         "answer": 0,
-        "explanation": "The number of straight sides increases by one: 1, 2, 3, then 4.",
+        "explanation": "The number of sides increases by one: 3, 4, 5, then 6. A six-sided flat shape is a hexagon.",
         "difficulty": "Medium",
         "section": "Logical Reasoning",
         "syllabusClass": 3,
@@ -3335,7 +3335,7 @@
     "questions": [
       {
         "id": "c3imo-ach-c-181",
-        "question": "A four-digit number has 3 thousands, 2 hundreds, and the same digit in its tens and ones places. It is greater than 3,250 but less than 3,280. Which number could it be?",
+        "question": "A four-digit number has 3 thousands, 2 hundreds, and the same digit in its tens and ones places. It is greater than 3,260 but less than 3,270. Which number could it be?",
         "options": [
           "3,244",
           "3,266",
