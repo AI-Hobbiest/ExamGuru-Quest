@@ -10,8 +10,8 @@
   "subjectId": "english-language-literature",
   "subjectTitle": "English Language & Literature",
   "subjectCode": "184",
-  "status": "draft",
-  "statusReason": "Internal content, syllabus-alignment, marking-rubric, 50-paper uniqueness, five-paper repeat-protection and browser checks have passed. Keep this blueprint in draft until the outstanding independent human English-educator review is recorded and release approval is given.",
+  "status": "ready",
+  "statusReason": "Project owner accepted the completed AI-assisted academic review as sufficient for this release milestone. Internal content, syllabus-alignment, marking-rubric, 50-paper uniqueness, five-paper repeat-protection and browser checks passed. No external human English-educator sign-off is claimed.",
   "durationMinutes": 180,
   "totalQuestions": 11,
   "totalMarks": 80,
@@ -605,9 +605,11 @@
     "NCERT Class X Footprints Without Feet (uploaded project source; 2025–26 reprint)"
   ],
   "notes": [
-    "This is a draft assessment structure; it must remain unavailable to students until the content and release gates pass.",
-    "The 2026–27 CBSE notification states that Class X students continue the language course they studied in Class IX; a student who opted for English Communicative in Class IX may continue with it. This profile is specifically English Language & Literature (184).",
+    "Released for Class 10 English Language & Literature (184) 2026–27 practice through Exam Studio after project-owner acceptance of AI-assisted academic review and completion of the documented automated and internal QA gates.",
+    "This profile is specifically English Language & Literature (184). The 2026–27 CBSE notification states that Class X students continue the language course studied in Class IX; students who opted for English Communicative in Class IX may continue with it.",
     "The existing legacy English chapter/topic MCQ files are not pre-approved for this board bank. Keep them in their current practice role; candidate promotion requires a content-level QA pass.",
-    "The 20-candidate minimum is required independently for each of the 11 numbered-question slots."
+    "The 20-candidate minimum is required independently for each of the 11 numbered-question slots.",
+    "The Q6/Q7 context passages are original adapted paraphrases, not verbatim textbook extracts. Private/licensed verbatim NCERT extracts remain a future enhancement and must not be added without written permission.",
+    "Review disclosure: the project owner accepted AI-assisted academic review for this milestone. No separate human English-educator sign-off is represented."
   ]
 }
