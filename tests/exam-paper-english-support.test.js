@@ -111,7 +111,7 @@ const draftBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/clas
 const draftRegistry=JSON.parse(fs.readFileSync("data/exam-papers/profile-registry.json","utf8"));
 const draftCheck=generator.validateBlueprint(draftBlueprint);
 assert.equal(draftCheck.valid,true,draftCheck.errors.join("; "));
-assert.equal(draftCheck.readyForGeneration,false,"English must stay locked until the release gate is met");
+assert.equal(draftCheck.readyForGeneration,true,"English release blueprint must be generation-ready after owner approval");
 assert.equal(draftBlueprint.totalQuestions,11);
 assert.equal(draftBlueprint.totalMarks,80);
 assert.equal(draftBlueprint.slotPlan.length,11);
@@ -181,7 +181,7 @@ const q9WordCounts=q9Bundles.flatMap(question=>question.parts.map(part=>part.ans
 assert.ok(q9WordCounts.every(count=>count>=40&&count<=50),"Q9 model answers must follow the 40–50-word limit");
 const englishProfile=draftRegistry.profiles.find(profile=>profile.profileId==="class-10-english-language-literature-2026-27");
 assert.ok(englishProfile,"English draft profile must be registered");
-assert.equal(englishProfile.enabled,false,"English must not appear in student Exam Studio before approval");
+assert.equal(englishProfile.enabled,true,"English student Exam Studio profile must be enabled after owner approval");
 
 
 /*
