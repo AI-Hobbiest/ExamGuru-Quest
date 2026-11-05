@@ -3,7 +3,7 @@
   "use strict";
   const $ = id => document.getElementById(id);
   const SUBJECTS = {science:"Science",mathematics:"Mathematics",english:"English","social-science":"Social Science",hindi:"Hindi","science-sof":"Science · SOF","mathematics-sof":"Mathematics · SOF","english-sof":"English · SOF"};
-  const subjectIds = c => String(c)==="3" ? ["mathematics","english"] : String(c)==="6" ? ["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"] : ["science","mathematics","english","social-science","hindi"];
+  const subjectIds = c => String(c)==="3" ? ["mathematics","mathematics-sof","english"] : String(c)==="6" ? ["science","science-sof","mathematics","mathematics-sof","english","english-sof","social-science"] : ["science","mathematics","english","social-science","hindi"];
   const node = (tag,cls,value) => { const el=document.createElement(tag); if(cls)el.className=cls; if(value!==undefined)el.textContent=String(value); return el; };
   const esc = value => String(value==null?"":value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   let parent=null, children=[];
