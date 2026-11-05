@@ -91,7 +91,7 @@ async function smokeProfile(browser, baseUrl, profileId, expectedTitle) {
       minimumCandidatesPerSlot: profile.minimumCandidatesPerSlot || 20
     });
     const history = [];
-    for (let index = 0; index < 5; index++) {
+    for (let index = 0; index < 50; index++) {
       const paper = engine.generateUniquePaper(blueprint, merged.bank, {
         seed: "browser-five-paper-history-" + profileId + "-" + index,
         recentPaperFingerprints: history.map(item => item.fingerprint),
@@ -115,8 +115,7 @@ async function smokeProfile(browser, baseUrl, profileId, expectedTitle) {
   const seededStatus = await page.locator("#loadStatus").innerText();
   assert.match(seededStatus, /Ready: 38 questions · 80 marks/);
 
-  // Seed five completed papers in this student's profile to test the real UI with its
-  // normal rolling history, not just a clean browser.
+  // Seed a full 50-paper history in this student's profile to test the real UI at the history limit.
   await page.evaluate(async profileId => {
     const registry = await (await fetch("./data/exam-papers/profile-registry.json", { cache: "no-store" })).json();
     const profile = registry.profiles.find(item => item.profileId === profileId);
@@ -168,22 +167,6 @@ async function smokeProfile(browser, baseUrl, profileId, expectedTitle) {
     const paper = JSON.parse(localStorage.getItem("eg_exam_active_paper_v1" + suffix) || "null");
     const engine = window.ExamPaperGenerator;
     const currentIds = paper.questions.flatMap(question => engine.questionContentIds(question));
-    const previous = history.slice(-6, -1);
-    const overlapCount = previous.reduce((count, entry) => {
-      const ids = new Set(entry.questionIds || []);
-      return count + currentIds.filter(id => ids.has(id)).length;
-    }, 0);
-    return { historyCount: history.length, appliedWindow: paper.repeatProtection?.appliedWindow, overlapCount };
-  }, profileId);
-  assert.equal(repeatProof.historyCount, 6, "the new paper should be appended to five saved papers");
-  assert.equal(repeatProof.appliedWindow, 5, "the browser route should apply five-paper repeat protection");
-  assert.equal(repeatProof.overlapCount, 0, "the browser route must not repeat any previous question format");
-  const repeatProof = await page.evaluate(profileId => {
-    const suffix = "_" + profileId.replace(/[^a-z0-9_-]/gi, "_");
-    const history = JSON.parse(localStorage.getItem("eg_exam_paper_history_v1" + suffix) || "[]");
-    const paper = JSON.parse(localStorage.getItem("eg_exam_active_paper_v1" + suffix) || "null");
-    const engine = window.ExamPaperGenerator;
-    const currentIds = paper.questions.flatMap(question => engine.questionContentIds(question));
     const prior = history.slice(-6, -1);
     const overlaps = prior.reduce((count, entry) => {
       const ids = new Set(entry.questionIds || []);
@@ -191,7 +174,7 @@ async function smokeProfile(browser, baseUrl, profileId, expectedTitle) {
     }, 0);
     return { historyCount: history.length, appliedWindow: paper.repeatProtection?.appliedWindow, overlaps };
   }, profileId);
-  assert.equal(repeatProof.historyCount, 6, "the generated paper should be appended to the five pre-existing profile papers");
+  assert.equal(repeatProof.historyCount, 50, "the profile should retain its newest 50 records after preparing the 51st paper");
   assert.equal(repeatProof.appliedWindow, 5, "student paper generation should retain the full five-paper exclusion window");
   assert.equal(repeatProof.overlaps, 0, "the generated paper must not repeat any format from the previous five papers");
 
