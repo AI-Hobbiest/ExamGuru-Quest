@@ -96,8 +96,10 @@ async function load(){
   if(!available.length){
    throw Error("Full-paper exam mode is not configured for Class "+studentClassId+". Open a subject from your student dashboard and choose the exam mode available for that subject.");
   }
-  const requested=new URLSearchParams(location.search).get("profile")||defaultProfileId;
-  profile=available.find(item=>String(item.profileId)===requested);
+  const requested=new URLSearchParams(location.search).get("profile");
+  profile=requested
+   ?available.find(item=>String(item.profileId)===requested)
+   :(available.find(item=>String(item.profileId)===defaultProfileId)||available[0]);
   if(!profile)throw Error("The requested exam profile does not belong to your Class "+studentClassId+" account.");
   profileId=String(profile.profileId);
   populateProfileSelector(available);
@@ -146,7 +148,7 @@ async function load(){
   }
   if(assignment){$("startBtn").textContent="Start assigned examination";$("startBtn").disabled=false;status("Assigned to you by your Parent/Teacher. The paper snapshot is frozen; the timer starts when you begin.");}
   else if(preparedDelivery){$("startBtn").textContent="Start prepared paper";$("startBtn").disabled=false;status("Prepared paper loaded. Start when ready.");}
-  else if(savedSelfStudyPaper){$("startBtn").textContent="Resume saved attempt";$("startBtn").disabled=false;status("An unfinished English/exam attempt was found in this browser. Resume to restore your saved answers and remaining time.");}
+  else if(savedSelfStudyPaper){$("startBtn").textContent="Resume saved attempt";$("startBtn").disabled=false;status("An unfinished exam attempt was found in this browser. Resume to restore your saved answers and remaining time.");}
   else{
    $("startBtn").textContent="Generate & start paper";
    $("startBtn").disabled=false;
