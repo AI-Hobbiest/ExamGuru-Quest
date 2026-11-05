@@ -39,6 +39,19 @@ const backup={
 backup.learningLibrary={schemaVersion:1,kind:"learning-library",mistakes:[],bookmarks:[],responses:[]};
 backup.studyLibraryProgress={schemaVersion:1,kind:"study-library-progress",completedResourceIds:["r1"],bookmarkedResourceIds:["r2"]};
 assert.equal(model.isValidBackup(backup),true);
+
+const class3Backup=JSON.parse(JSON.stringify(backup));
+class3Backup.profile={...normalized,classLevel:"3"};
+class3Backup.subjectData={
+  "class-3-mathematics":{progress:{missed:[],answered:0,correct:0,attempts:[]},ledger:{attempts:[],activeAttempt:null,answerRecords:[]}},
+  "class-3-mathematics-sof":{progress:{missed:[],answered:1,correct:1,attempts:[]},ledger:{attempts:[{examType:"olympiad",examBlueprintId:"sof-imo-class-3-level-1",status:"submitted",maxMarks:40}],activeAttempt:null,answerRecords:[]}},
+  "class-3-english":{progress:{missed:[],answered:0,correct:0,attempts:[]},ledger:{attempts:[],activeAttempt:null,answerRecords:[]}}
+};
+assert.equal(model.isValidBackup(class3Backup),true,"Class 3 backup accepts the separate SOF IMO ledger");
+const withoutClass3IMO=JSON.parse(JSON.stringify(class3Backup));
+delete withoutClass3IMO.subjectData["class-3-mathematics-sof"];
+assert.equal(model.isValidBackup(withoutClass3IMO),false,"Class 3 backup requires its published SOF IMO subject data");
+
 assert.equal(model.isValidBackup({...backup,learningLibrary:{...backup.learningLibrary,kind:"invalid"}}),false);
 assert.equal(model.isValidBackup({...backup,studyLibraryProgress:{...backup.studyLibraryProgress,kind:"invalid"}}),false);
 const legacyBackup=JSON.parse(JSON.stringify(backup));delete legacyBackup.learningLibrary;delete legacyBackup.studyLibraryProgress;
