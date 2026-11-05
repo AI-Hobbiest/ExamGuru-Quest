@@ -22,7 +22,7 @@ assert.equal(pm.isValidBackup({schemaVersion:1,kind:"c10-playground-backup",prof
 assert.equal(pm.isValidBackup({schemaVersion:1,kind:"c10-playground-backup",profile,subjectData:Object.fromEntries(["science","mathematics","english","social-science","hindi"].map(id=>[id,empty]))}),true);
 assert.ok(read("js/quiz-engine.js").includes('"3":["mathematics","mathematics-sof","english"]'));
 assert.ok(read("js/admin-manager.js").includes('path:"class-3-english.json"'));
-assert.ok(read("js/dashboard-manager.js").includes('? ["mathematics","english"]'));
+assert.ok(read("js/dashboard-manager.js").includes('? ["mathematics","mathematics-sof","english"]'));
 for(const id of ids)assert.ok(read("js/profile-manager.js").includes(id));
 assert.match(read("profile.html"),/id="exportBtn" type="button">Export JSON backup/);
 assert.match(read("profile.html"),/id="importBtn" type="button">Import JSON backup/);
@@ -31,7 +31,7 @@ assert.equal((read("admin.html").match(/id="familyAccessPanel"/g)||[]).length,1)
 for(const id of ["science-sof","mathematics-sof","english-sof"])assert.ok(read("admin.html").includes('value="'+id+'"'));
 assert.ok(read("js/parent-dashboard.js").includes("chapterResults"));
 assert.ok(read("js/parent-dashboard.js").includes("answerRecords"));
-assert.ok(read("js/parent-dashboard.js").includes('?["mathematics","english"]'));
+assert.ok(read("js/parent-dashboard.js").includes('?["mathematics","mathematics-sof","english"]'));
 const family=JSON.parse(read("data/family-access.json"));assert.equal(family.kind,"c10-family-access");assert.ok(Array.isArray(family.parents)&&Array.isArray(family.parentStudentLinks));
 assert.match(read("index.html"),/Student &amp; Parent sign in/);
 console.log("Stage A integration passed: SOF analytics/reporting, class-specific backups, chapter attribution, Class 3 English, Admin SOF banks and Parent sign-in.");
