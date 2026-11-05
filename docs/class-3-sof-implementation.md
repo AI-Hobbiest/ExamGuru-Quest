@@ -43,6 +43,33 @@ SOF's published Level 1 note says 60% of questions are from the current class an
 - Test 35 questions / 40 marks / 60 minutes, weighted Achievers scoring, navigation, review, results, dashboard history, Admin Question Bank and reports.
 - Merge and deploy only after CI and the live Pages smoke check pass.
 
+## Preliminary audit of the existing Class 3 Mathematics bank
+
+Repository inspection confirms that `data/class-3-mathematics.json` contains 1,400 existing CBSE-aligned questions across 14 Maths Mela chapters, with 100 questions per chapter. Its current regression test checks unique IDs and stems, four distinct options, valid answer indexes, explanations, a 40/40/20 difficulty split, balanced answer positions and selected chapter-concept coverage.
+
+These are useful quality signals, but they are not a full SOF approval. The bank is a candidate source for Class 3 current-syllabus content only. It does not currently provide a dedicated Logical Reasoning pool, and it must be audited for SOF-specific topic fit before reuse.
+
+| Existing chapter | Likely IMO use | Reuse decision |
+|---|---|---|
+| What's in a Name? | Data handling / reading simple charts | Candidate; inspect every item |
+| Toy Joy | Geometry / 3-D shapes | Candidate; inspect every item |
+| Double Century | Number sense / place value | Candidate; inspect every item |
+| Vacation with My Nani Maa | Operations / everyday word problems | Candidate; inspect every item |
+| Fun with Shapes | Geometry | Candidate; inspect every item |
+| House of Hundreds - I | Number sense / place value | Candidate; inspect every item |
+| Raksha Bandhan | Multiplication / equal groups | Candidate; inspect every item |
+| Fair Share | Fractions | Candidate; inspect every item |
+| House of Hundreds - II | Number sense / place value | Candidate; inspect every item |
+| Fun at Class Party! | Length and measurement | Candidate; inspect every item |
+| Filling and Lifting | Capacity | Candidate; inspect every item |
+| Give and Take | Operations / money | Candidate; inspect every item |
+| Time Goes On | Time and calendar | Candidate; inspect every item |
+| The Surajkund Fair | Symmetry / maps / spatial reasoning | Candidate; inspect every item |
+
+The repository currently has no dedicated Class 2 question-bank file. Therefore the previous-class IMO pool must be authored and audited separately; it must not be fabricated by relabelling Class 3 questions as Class 2.
+
+**Audit conclusion:** 1,400 existing questions are available for a controlled current-class reuse audit. No question is yet certified as an SOF IMO question, and no Class 3 SOF bank is released by this foundation PR.
+
 ## Status
 
 | Work item | Status |
