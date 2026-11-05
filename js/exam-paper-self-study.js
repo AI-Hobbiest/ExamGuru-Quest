@@ -242,7 +242,7 @@ function render(){
    syncChoicePanels(article);
    const activePanel=article.querySelector('[data-choice-panel="'+(saved.choice==="alternative"?"alternative":"main")+'"]')||article;
    if(Array.isArray(saved.parts))saved.parts.forEach((part,j)=>{
-    const attempt=activePanel.querySelector('input[data-part-attempt="'+j+'"]');if(attempt&&part.attempted===false)attempt.checked=false;
+    const attempt=activePanel.querySelector('input[data-part-attempt="'+j+'"]');if(attempt)attempt.checked=part.attempted!==false;
     if(part.optionId){const option=activePanel.querySelector('input[data-part-option="'+j+'"][value="'+part.optionId+'"]');if(option)option.checked=true;}
     const choice=part.choice||"main";
     const radio=activePanel.querySelector('input[data-subpart-choice="'+j+'"][value="'+choice+'"]');if(radio)radio.checked=true;
