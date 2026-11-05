@@ -10,7 +10,7 @@ const MIME={".html":"text/html; charset=utf-8",".css":"text/css; charset=utf-8",
 function startServer(){
  const server=http.createServer((req,res)=>{
   let pathname;try{pathname=decodeURIComponent(new URL(req.url,"http://127.0.0.1").pathname);}catch{res.writeHead(400).end("Bad request");return;}
-  const relative=pathname==="/"?"index.html":pathname.replace(/^\\/+/, "");
+  const relative=pathname==="/"?"index.html":pathname.replace(/^\/+/, "");
   const file=path.resolve(ROOT,relative);
   if(file!==ROOT&&!file.startsWith(ROOT+path.sep)){res.writeHead(403).end("Forbidden");return;}
   fs.readFile(file,(error,data)=>{
