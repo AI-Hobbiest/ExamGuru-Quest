@@ -127,6 +127,17 @@ for(let number=1;number<=11;number++){
  assert.equal(slot.eligibleCount,20,"Q"+number+" must clear the twenty-candidate eligibility gate");
 }
 const [q1,q2,q3,q4,q5,q6,q7,q8,q9Bundles,q10,q11]=Array.from({length:11},(_,i)=>bySlot(i+1));
+
+const rubricMarks=items=>items.map(item=>item.marks);
+const rubricTotals=items=>items.reduce((sum,item)=>sum+item.marks,0);
+assert.ok(q4.every(q=>JSON.stringify(rubricMarks(q.markingScheme))==="[1,2,1,1]"&&JSON.stringify(rubricMarks(q.alternatives[0].markingScheme))==="[1,2,1,1]"),"Q4 letter rubrics must follow CBSE format 1, content 2, organisation 1, accuracy 1");
+assert.ok(q5.every(q=>JSON.stringify(rubricMarks(q.markingScheme))==="[2,2,1]"&&JSON.stringify(rubricMarks(q.alternatives[0].markingScheme))==="[2,2,1]"),"Q5 analytical paragraph rubrics must follow CBSE content 2, organisation 2, accuracy 1");
+assert.ok([...q8,...q9Bundles].every(q=>q.parts.every(part=>JSON.stringify(rubricMarks(part.markingScheme))==="[2,1]")),"Q8/Q9 sub-answer rubrics must allocate content 2 and expression 1");
+assert.ok([...q8,...q9Bundles].every(q=>/deduct up to one mark overall for accuracy errors/i.test(q.markingScheme[0].criterion)),"Q8/Q9 must document CBSE's up-to-one-mark overall accuracy deduction");
+const officialLongRubric="[3,2,1]";
+assert.ok([...q10,...q11].every(q=>JSON.stringify(rubricMarks(q.markingScheme))===officialLongRubric&&JSON.stringify(rubricMarks(q.alternatives[0].markingScheme))===officialLongRubric),"Q10/Q11 main and alternative rubrics must follow CBSE content 3, expression 2, accuracy 1");
+assert.ok([...q4,...q5].every(q=>rubricTotals(q.markingScheme)===q.marks&&rubricTotals(q.alternatives[0].markingScheme)===q.marks),"Q4/Q5 main and alternative rubrics must total the slot marks");
+
 assert.ok(q1.every(q=>q.stimulusWordCount>=400&&q.stimulusWordCount<=450&&wordCount(q.stimulus)>=400&&wordCount(q.stimulus)<=450&&q.parts.length===8),"Q1 must contain original 400–450-word unseen passages with eight marked items");
 assert.ok(q2.every(q=>q.stimulusWordCount>=200&&q.stimulusWordCount<=250&&wordCount(q.stimulus)>=200&&wordCount(q.stimulus)<=250&&q.parts.length===9&&q.visualData&&q.visualData.columns.length===3&&q.visualData.rows.length===3),"Q2 must contain 200–250-word case passages and structured three-row visual data");
 assert.ok(q3.every(q=>q.attemptAny===10&&q.parts.length===12&&q.parts.every(p=>p.marks===1)),"Q3 must have twelve one-mark grammar tasks with attempt-any-ten");
