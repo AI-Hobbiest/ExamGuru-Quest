@@ -10892,6 +10892,176 @@
         "syllabusOrigin": "previous-class",
         "syllabusTopic": "Data handling",
         "syllabusSource": "SOF Class 5 IMO syllabus"
+      },
+      {
+        "id": "c6imo_prev_mr031",
+        "question": "What is the smallest seven-digit number?",
+        "options": [
+          "10,00,000",
+          "1,00,000",
+          "99,99,999",
+          "10,00,001"
+        ],
+        "answer": 0,
+        "explanation": "The smallest seven-digit number is 1 followed by six zeroes: 10,00,000.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 5,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Number sense"
+      },
+      {
+        "id": "c6imo_prev_mr032",
+        "question": "Round 6,48,729 to the nearest ten thousand.",
+        "options": [
+          "6,40,000",
+          "6,50,000",
+          "6,48,000",
+          "6,49,000"
+        ],
+        "answer": 1,
+        "explanation": "The thousands digit is 8, so round 6,48,729 up to 6,50,000.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 5,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Rounding"
+      },
+      {
+        "id": "c6imo_prev_mr033",
+        "question": "Which fraction is greater?",
+        "options": [
+          "3/8",
+          "1/2",
+          "2/5",
+          "5/12"
+        ],
+        "answer": 1,
+        "explanation": "1/2 is 0.5; the other fractions are 0.375, 0.4 and about 0.417.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 5,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Fractions"
+      },
+      {
+        "id": "c6imo_prev_mr034",
+        "question": "How many millilitres are equal to 4.25 litres?",
+        "options": [
+          "425 mL",
+          "4,025 mL",
+          "4,250 mL",
+          "42,500 mL"
+        ],
+        "answer": 2,
+        "explanation": "One litre is 1,000 mL, so 4.25 litres is 4,250 mL.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 5,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Capacity conversions"
+      },
+      {
+        "id": "c6imo_prev_mr035",
+        "question": "A square has perimeter 64 cm. What is its side length?",
+        "options": [
+          "8 cm",
+          "12 cm",
+          "16 cm",
+          "32 cm"
+        ],
+        "answer": 2,
+        "explanation": "All four sides are equal, so 64÷4=16 cm.",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 5,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Perimeter"
+      },
+      {
+        "id": "c6imo_prev_mr036",
+        "question": "A rectangle has length 15 cm and width 8 cm. What is its area?",
+        "options": [
+          "23 cm²",
+          "46 cm²",
+          "120 cm²",
+          "240 cm²"
+        ],
+        "answer": 2,
+        "explanation": "Area = length×width = 15×8 = 120 cm².",
+        "difficulty": "Easy",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 5,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Area"
+      },
+      {
+        "id": "c6imo_prev_mr037",
+        "question": "What is 25% of 200?",
+        "options": [
+          "25",
+          "40",
+          "50",
+          "75"
+        ],
+        "answer": 2,
+        "explanation": "25% means one quarter; 200÷4=50.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 5,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Fractions and percentages"
+      },
+      {
+        "id": "c6imo_prev_mr038",
+        "question": "A bus travels 135 km in 3 hours at a constant speed. What is its speed?",
+        "options": [
+          "35 km/h",
+          "40 km/h",
+          "45 km/h",
+          "50 km/h"
+        ],
+        "answer": 2,
+        "explanation": "Speed = distance÷time = 135÷3=45 km/h.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 5,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Measurement and time"
+      },
+      {
+        "id": "c6imo_prev_mr039",
+        "question": "What is the sum of the first five multiples of 6?",
+        "options": [
+          "60",
+          "75",
+          "90",
+          "105"
+        ],
+        "answer": 2,
+        "explanation": "6+12+18+24+30=90.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 5,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Computation operations"
+      },
+      {
+        "id": "c6imo_prev_mr040",
+        "question": "A shopkeeper has 3,600 marbles and packs 48 in each box. How many full boxes can be filled?",
+        "options": [
+          "65",
+          "70",
+          "75",
+          "80"
+        ],
+        "answer": 2,
+        "explanation": "3,600÷48=75 full boxes.",
+        "difficulty": "Medium",
+        "section": "Mathematical Reasoning",
+        "syllabusClass": 5,
+        "syllabusOrigin": "previous-class",
+        "syllabusTopic": "Division in daily life"
       }
     ]
   },
