@@ -9,6 +9,11 @@ vm.runInContext(fs.readFileSync("js/exam-paper-generator.js","utf8"),ctx);
 const engine=ctx.window.ExamPaperGenerator;
 const source=JSON.parse(fs.readFileSync("data/mathematics.json","utf8"));
 const baseBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json","utf8"));
+const studioSource=fs.readFileSync("js/exam-paper-studio.js","utf8");
+assert.ok(studioSource.includes("const publishedBank=await q.json();"),"Exam Paper Studio must always fetch the published Mathematics bank");
+assert.ok(studioSource.includes('String(savedBank.bankVersion||"")===String(publishedBank.bankVersion||"")'),"a saved local bank may be reused only when its version matches the published bank");
+assert.ok(studioSource.includes("bankStore.save(sourceBank)"),"a stale local bank must be replaced with the current published version");
+assert.ok(!studioSource.includes("sourceBank=bankStore.load()||await q.json()"),"a stale local bank must never silently override a newer published question pool");
 const profiles=[
  {level:"standard",code:"041",path:"data/exam-papers/blueprints/class-10-mathematics-standard-2026-27.json",difficultyTargets:{easy:5,medium:29,hard:4}},
  {level:"basic",code:"241",path:"data/exam-papers/blueprints/class-10-mathematics-basic-2026-27.json",difficultyTargets:{easy:8,medium:29,hard:1}}

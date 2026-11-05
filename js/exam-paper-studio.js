@@ -80,7 +80,14 @@ async function loadProfile(profileToLoad){
  if(profile.subjectCode&&String(blueprint.subjectCode||"")!==String(profile.subjectCode))throw Error("Profile subject code does not match its blueprint.");
  if(profile.academicYear&&String(blueprint.academicYear)!==String(profile.academicYear))throw Error("Profile academic year does not match its blueprint.");
  const g=generator(),bc=g.validateBlueprint(blueprint);if(!bc.valid)throw Error(bc.errors.join(" "));
- sourceBank=bankStore.load()||await q.json();practiceChapters=practice?await practice.json():null;
+ const publishedBank=await q.json();
+ const savedBank=bankStore.load();
+ // Published bank versions are authoritative. Refresh older local copies so a
+ // browser cache cannot keep the Studio on an undersized pre-release pool.
+ sourceBank=savedBank&&String(savedBank.bankVersion||"")===String(publishedBank.bankVersion||"")
+  ?savedBank:publishedBank;
+ if(!savedBank||String(savedBank.bankVersion||"")!==String(publishedBank.bankVersion||""))bankStore.save(sourceBank);
+ practiceChapters=practice?await practice.json():null;
  const qc=g.validateQuestionBank(sourceBank,{classId:blueprint.classId,subjectId:blueprint.subjectId,academicYear:blueprint.academicYear});if(!qc.valid)throw Error(qc.errors.slice(0,8).join(" "));
  if(!bankStore.load())bankStore.save(sourceBank);
  assembleIntegratedBank();drawBlueprint();loadSavedDraft();if(paper)showPaper(paper);
