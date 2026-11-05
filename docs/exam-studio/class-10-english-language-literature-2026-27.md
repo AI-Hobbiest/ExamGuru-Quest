@@ -137,7 +137,8 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 ### Official 2026–27 CBSE references located
 
 - CBSE's Class X 2026–27 SQP/MS index lists **English (Language & Literature)** and **English (Communicative)** as separate courses: https://cbseacademic.nic.in/sqp_classx_2026-27.html
-- The corresponding official SQP and marking-scheme files are linked from that index. Direct PDF retrieval from this environment was unsuccessful, so prescribed-text and fine-grained marking-scheme reconciliation remain open pending readable document review.
+- The published 2026–27 syllabus summary cross-checks the configured 80-mark structure: Reading 20, Writing/Grammar 20, Literature 40; 10-of-12 grammar tasks; 100–120-word writing tasks; prose/drama and poetry reference-to-context extracts; First Flight short/long answers; and Footprints short/long answers. Reference: https://school.careers360.com/boards/cbse/cbse-class-10-english-language-and-literature-syllabus-2026-27
+- The summary lists all nine Footprints chapters and the First Flight prose/poetry units used for coverage mapping. The official CBSE SQP/MS PDFs are linked from the index, but direct PDF retrieval from this environment was unsuccessful; exact marking-scheme reconciliation remains open pending readable official files.
 - The 2026–27 curriculum index separately lists English – Language and Literature and English Communicative for Class X: https://cbseacademic.nic.in/curriculum_2027.html
 
 ### Repeat-history implementation correction
@@ -168,8 +169,8 @@ The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested mod
 
 ### Remaining content/release issues
 
-- Q6/Q7 currently use original paraphrased scene/poem-context cues, not literal textbook extracts. The blueprint expects prose/drama and poetry extract questions. This needs a deliberate CBSE-alignment decision and educator review; do not treat it as already resolved.
-- The official 2026–27 CBSE index is confirmed, but direct reading of the linked official syllabus and marking-scheme PDFs is still outstanding in this environment.
+- Q6/Q7 currently use original adapted/paraphrased scene and poem-context passages, not verbatim textbook extracts. They exercise reference-to-context skills, but the official pattern calls for extracts from prose/drama and poetry. Because this repository is public, do not copy long copyrighted textbook passages into the bank without permission. The final decision is whether to accept adapted passages for practice or move to a licensed/private content approach; educator review is required.
+- The official 2026–27 CBSE index and the published pattern summary are confirmed; direct reading of the linked official syllabus and marking-scheme PDFs is still outstanding in this environment.
 - Independent educator sign-off is still required for literature interpretation, answer quality and final prescribed-text coverage.
 - Saved-attempt restoration after a browser reload passed: the same paper, answer edits, selected alternative and changed attempt-any items resume.
 
