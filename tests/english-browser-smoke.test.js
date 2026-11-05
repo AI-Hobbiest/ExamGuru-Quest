@@ -92,7 +92,7 @@ function startServer(){
   await page.locator("#submitBtn").click();
   await page.locator("#review").waitFor({state:"visible"});
   const review=await page.locator("#reviewAnswers").innerText();
-  assert.match(await page.locator("#score").innerText(),/MCQ score: \\d+ \/ \\d+/,"submission must calculate and display the objective score");
+  assert.match(await page.locator("#score").innerText(),/MCQ score: \d+ \/ \d+/,"submission must calculate and display the objective score");
   assert.ok(review.includes("Revised formal letter response for browser QA."),"review must retain the latest edited written answer");
   assert.ok(review.includes(alternativePrompt),"review must show the selected Q10 alternative prompt");
   assert.ok(review.includes("Final alternative long-answer response for browser QA."),"review must retain the selected alternative answer");
