@@ -19,8 +19,11 @@ assert.deepEqual(blueprint.sections.map(section => [
 ]);
 assert.equal(blueprint.sections.reduce((sum, section) => sum + section.questionCount, 0), 35);
 assert.equal(blueprint.sections.reduce((sum, section) => sum + section.maxMarks, 0), 40);
+assert.ok(blueprint.sections.every(section => Number.isInteger(section.marksPerQuestion)), "every section has a defined mark value");
+assert.equal(blueprint.sections.reduce((sum, section) => sum + section.syllabusOriginQuotas["current-class"], 0), 23);
+assert.equal(blueprint.sections.reduce((sum, section) => sum + (section.syllabusOriginQuotas["previous-class"] || 0), 0), 12);
 for (const section of blueprint.sections) {
-  assert.equal(Object.values(section.originQuotas).reduce((sum, count) => sum + count, 0), section.questionCount,
+  assert.equal(Object.values(section.syllabusOriginQuotas).reduce((sum, count) => sum + count, 0), section.questionCount,
     section.title + " origin quotas sum to its question count");
 }
 assert.deepEqual(blueprint.syllabusCoverage.quotas, {
@@ -28,13 +31,13 @@ assert.deepEqual(blueprint.syllabusCoverage.quotas, {
   previousClassNonAchievers: 12,
   currentClassAchievers: 5
 });
-assert.deepEqual(blueprint.sections.map(section => section.originQuotas), [
+assert.deepEqual(blueprint.sections.map(section => section.syllabusOriginQuotas), [
   {"current-class":6,"previous-class":4},
   {"current-class":6,"previous-class":4},
   {"current-class":6,"previous-class":4},
   {"current-class":5}
 ]);
-assert.ok(blueprint.sections.at(-1).originQuotas["previous-class"] === undefined,
+assert.ok(blueprint.sections.at(-1).syllabusOriginQuotas["previous-class"] === undefined,
   "Achievers questions are current-class only");
 assert.equal(blueprint.sourceReferences.length, 2);
 assert.ok(blueprint.releaseGates.length >= 7);
