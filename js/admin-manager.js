@@ -36,6 +36,7 @@
     {classId:"10",classLabel:"Class 10",subject:"hindi",path:"hindi.json",label:"Class 10 · Hindi"},
     {classId:"3",classLabel:"Class 3",subject:"mathematics",path:"class-3-mathematics.json",label:"Class 3 · Mathematics"},
     {classId:"3",classLabel:"Class 3",subject:"english",path:"class-3-english.json",label:"Class 3 · English"},
+    {classId:"3",classLabel:"Class 3",subject:"mathematics-sof",path:"class-3-mathematics-sof.json",label:"Class 3 · Mathematics SOF"},
     {classId:"6",classLabel:"Class 6",subject:"science",path:"class-6-science.json",label:"Class 6 · Science"},
     {classId:"6",classLabel:"Class 6",subject:"mathematics",path:"class-6-mathematics.json",label:"Class 6 · Mathematics"},
     {classId:"6",classLabel:"Class 6",subject:"english",path:"class-6-english.json",label:"Class 6 · English"},
