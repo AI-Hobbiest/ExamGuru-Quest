@@ -90,7 +90,7 @@ async function load(){
   defaultProfileId=String(registry.defaultProfileId||"");
   const available=registry.profiles.filter(item=>item&&item.enabled!==false&&String(item.classId)===studentClassId);
   if(!available.length){
-   throw Error("Full-paper exam mode is not configured for Class "+studentClassId+". Open a subject from your student dashboard and choose the exam mode available for that subject.");
+   throw Error("Full-paper exam practice is not enabled for Class "+studentClassId+" yet. No other class's paper will be shown. For Class 6, open Science - SOF, Mathematics - SOF or English - SOF from your student dashboard for the available subject practice. The timed full-paper experience will appear here after its Class 6 blueprint is verified.");
   }
   const requested=new URLSearchParams(location.search).get("profile");
   profile=requested

@@ -182,13 +182,13 @@ async function smokeClass6ExamIsolation(browser, baseUrl) {
   page.on("pageerror", error => pageErrors.push(error.message));
   await page.goto(baseUrl + "/dashboard.html", { waitUntil: "networkidle" });
   await page.locator("#c10Sidebar").waitFor({ state: "visible" });
-  assert.equal(await page.locator('#c10Sidebar a[href="./exam-practice.html"]').count(), 0,
-    "Class 6 navigation must not offer the Class 10 full-paper exam route");
+  assert.equal(await page.locator('#c10Sidebar a[href="./exam-practice.html"]').count(), 1,
+    "Class 6 should see the generic Exam Paper Practice entry without receiving a Class 10 paper");
 
   await page.goto(baseUrl + "/exam-practice.html?profile=class-10-mathematics-standard-2026-27", { waitUntil: "networkidle" });
-  await page.waitForFunction(() => (document.querySelector("#loadStatus")?.textContent || "").includes("Full-paper exam mode is not configured for Class 6"));
+  await page.waitForFunction(() => (document.querySelector("#loadStatus")?.textContent || "").includes("Full-paper exam practice is not enabled for Class 6"));
   const blockedStatus = await page.locator("#loadStatus").innerText();
-  assert.match(blockedStatus, /not configured for Class 6/);
+  assert.match(blockedStatus, /not enabled for Class 6/);
   assert.ok(!blockedStatus.includes("Mathematics Standard") && !blockedStatus.includes("Mathematics Basic"),
     "Class 6 must not be shown a Class 10 Mathematics profile");
 
@@ -221,13 +221,13 @@ async function smokeClass6ExamIsolation(browser, baseUrl) {
 
   await page.goto(baseUrl + "/dashboard.html", { waitUntil: "networkidle" });
   await page.locator("#c10Sidebar").waitFor({ state: "visible" });
-  assert.equal(await page.locator('#c10Sidebar a[href="./exam-practice.html"]').count(), 0,
-    "Class 6 navigation must not expose the Class 10 full-paper route");
+  assert.equal(await page.locator('#c10Sidebar a[href="./exam-practice.html"]').count(), 1,
+    "Class 6 should see the generic Exam Paper Practice entry without receiving a Class 10 paper");
 
   await page.goto(baseUrl + "/exam-practice.html?profile=class-10-mathematics-standard-2026-27", { waitUntil: "networkidle" });
-  await page.waitForFunction(() => (document.querySelector("#loadStatus")?.textContent || "").includes("Full-paper exam mode is not configured for Class 6"));
+  await page.waitForFunction(() => (document.querySelector("#loadStatus")?.textContent || "").includes("Full-paper exam practice is not enabled for Class 6"));
   const status = await page.locator("#loadStatus").innerText();
-  assert.match(status, /not configured for Class 6/);
+  assert.match(status, /not enabled for Class 6/);
   assert.ok(!status.includes("Mathematics Standard") && !status.includes("Mathematics Basic"),
     "Class 6 must not be shown a Class 10 Mathematics profile");
 

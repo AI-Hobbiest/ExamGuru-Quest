@@ -234,7 +234,15 @@
       if(!registry||registry.schemaVersion!==1||registry.kind!=="exam-paper-profile-registry"||!Array.isArray(registry.profiles))throw new Error("The shared examination profile registry is invalid.");
       defaultProfileId=String(registry.defaultProfileId||"");
       profiles=registry.profiles.filter(item=>item&&item.enabled!==false&&String(item.classId)===String(child.classId));
-      if(!profiles.length){section.remove();return;}
+      if(!profiles.length){
+        profileSelect.disabled=true;
+        const option=document.createElement("option");option.value="";option.textContent="Not enabled for this class yet";profileSelect.appendChild(option);
+        delivery.disabled=true;due.disabled=true;generate.disabled=true;
+        status.textContent=String(child.classId)==="6"
+          ?"Class 6 full-paper examination profiles are not enabled yet. No Class 10 paper will be substituted. The student can practise the available Science - SOF, Mathematics - SOF and English - SOF banks from their subject menu. A timed full-paper experience will appear here after its Class 6 blueprint is verified."
+          :"Full-paper examination profiles are not enabled for Class "+child.classId+" yet. No other class's paper will be substituted. Existing subject practice and custom MCQ assignments remain available.";
+        return;
+      }
       profileSelect.innerHTML="";
       profiles.forEach(item=>{const option=document.createElement("option");option.value=String(item.profileId);option.textContent=String(item.title||("Class "+item.classId+" · "+item.subjectTitle));profileSelect.appendChild(option);});
       const initial=profiles.find(item=>String(item.profileId)===defaultProfileId)||profiles[0];profileSelect.value=initial.profileId;
