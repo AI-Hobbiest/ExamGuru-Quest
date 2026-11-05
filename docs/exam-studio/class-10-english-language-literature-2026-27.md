@@ -59,57 +59,70 @@ Use the project-uploaded NCERT **First Flight** and **Footprints Without Feet** 
 - [ ] Enable the English profile only after the full gate; merge to main and verify Pages deployment.
 
 
-## Progress tracker — 5 November 2026 (batch through Q8)
+## Progress tracker — 5 November 2026 (all 11 question slots populated)
 
-### Current milestone: Q1–Q9 candidate banks populated
+### Current milestone: 220 candidate bundles completed
 
-The batch now contains **180 numbered-question candidate bundles**: twenty candidates for each of Q1 through Q9. Q10 and Q11 remain unpopulated. The student profile remains disabled; this is a content milestone, not a release.
+The draft question bank now contains **220 numbered-question candidate bundles**, with twenty candidates in every slot from Q1 to Q11. This completes the numeric candidate gate, but does not yet certify 50 complete English papers or authorise student release.
 
-| Slot | Bank structure completed | Candidate count | Content checks recorded |
+| Slot | Bank structure completed | Candidate count | Quality and coverage record |
 |---|---|---:|---|
-| Q1 · Discursive reading | Original unseen passages; eight sub-questions per passage | 20 / 20 | Passage lengths 405–438 words; six 1-mark and two 2-mark items per passage |
-| Q2 · Case-based reading | Original factual case studies; nine sub-questions and a structured three-row data table | 20 / 20 | Passage lengths 218–227 words; eight 1-mark and one 2-mark items; visual data included |
-| Q3 · Grammar (attempt 10 of 12) | Twelve independently identified grammar tasks per bundle | 20 / 20 | 240 nested tasks across determiners, tenses, modals, subject–verb concord, editing and reported speech |
-| Q4 · Formal letter | Two writing choices per candidate with model letters and a five-mark analytic rubric | 20 / 20 | Main and alternative model letters are 100–117 words |
-| Q5 · Analytical paragraph | Two original data displays per candidate, with model paragraphs and five-mark rubrics | 20 / 20 | 40 data displays; model paragraphs are 103–120 words |
-| Q6 · First Flight prose/drama | Original paraphrased scene-context cues, four-part questions and an alternative context | 20 / 20 | 40 context sets and 160 nested one-/two-mark items |
-| Q7 · First Flight poetry | Original paraphrased poetic-context cues, four-part questions and an alternative context | 20 / 20 | All ten poem titles represented twice; 40 context sets and 160 nested items |
+| Q1 · Discursive reading | Original unseen passages; eight sub-questions per passage | 20 / 20 | Passage lengths 405–438 words; six 1-mark and two 2-mark items |
+| Q2 · Case-based reading | Original factual cases; nine sub-questions and structured three-row data tables | 20 / 20 | Passage lengths 218–227 words; eight 1-mark and one 2-mark items |
+| Q3 · Grammar (attempt 10 of 12) | Twelve independently identified grammar tasks per bundle | 20 / 20 | 240 nested tasks across determiners, tenses, modals, concord, editing and reported speech |
+| Q4 · Formal letter | Main and alternative formal-letter tasks, model letters and five-mark rubric | 20 / 20 | All model letters 100–117 words |
+| Q5 · Analytical paragraph | Two original data-display choices per candidate, model paragraphs and five-mark rubric | 20 / 20 | 40 data displays; all model paragraphs 103–120 words |
+| Q6 · First Flight prose/drama extract | Original paraphrased scene-context cues, four-part questions and an alternative cue | 20 / 20 | 40 context sets and 160 nested items |
+| Q7 · First Flight poetry extract | Original paraphrased poetic-context cues, four-part questions and an alternative cue | 20 / 20 | All ten poem titles represented twice; 40 context sets and 160 nested items |
 | Q8 · First Flight short answers | Five 3-mark items per candidate; attempt any four | 20 / 20 | 100 nested short-answer items; model answers 43–48 words |
 | Q9 · Footprints short answers | Three 3-mark items per candidate; attempt any two | 20 / 20 | 60 nested items; all nine supplied Footprints chapters represented |
-| Q10 · First Flight long answer | Two alternatives required | 0 / 20 | Not started |
-| Q11 · Footprints long answer | Two alternatives required | 0 / 20 | Not started |
-| **Total** | **11 numbered-question slots** | **180 / 220** | **9 of 11 slots meet the numeric candidate minimum (81.8% of the overall target)** |
+| **Q10 · First Flight long answer** | One main long-answer prompt plus one internal-choice alternative per candidate | **20 / 20** | 10 prose and 10 poetry primary candidates; all main and alternative model answers 100–115 words; six-mark analytic rubrics |
+| **Q11 · Footprints long answer** | One main long-answer prompt plus one internal-choice alternative per candidate | **20 / 20** | Primary prompts cover all nine Footprints chapters; all main and alternative model answers 100–115 words; six-mark analytic rubrics |
+| **Total** | **All 11 numbered-question slots** | **220 / 220** | **100% of the numeric candidate target** |
 
-### Content and quality notes
+### Q10 and Q11 content design
 
-- Q1 passages and Q2 case passages are original assessment stimuli. Q2 and Q5 use structured data tables; the paper renderer now prints those tables in both student papers and teacher answer booklets.
-- Q3 contains 240 separate grammar tasks and preserves the 10-of-12 response rule.
-- Q4 and Q5 each contain a real internal-choice alternative, model response and mark-by-mark rubric.
-- Q6 and Q7 use **original paraphrased scene/poem-context cues**, not copied NCERT or poem lines. They are useful content candidates for the extract slots, but they are not substitutes for the final teacher-verified extract selection and CBSE-style extract alignment. Educator review of the cues, question mix and text references remains a release dependency.
-- Q8 provides 100 independently identified short-answer items across ten prose/context units and ten poems. Each response has a 40–50-word model answer and a 3-point, 1-mark-per-point rubric.
-- Q9 remains the completed Footprints milestone: 20 bundles, 60 nested questions, 80 parent/part content IDs, 40–49-word model answers and coverage across all nine chapters in the supplied textbook.
-- A bank-wide audit after the batch found no duplicate parent, nested-part or alternative content IDs. A previous duplicate Q4/Q5 record set was removed before this check.
+- **Q10 — First Flight:** 20 main candidates split evenly between prose/drama (10) and poetry (10). The pool addresses character, theme, authorial choices, situation-based interpretation and textual evidence. Each candidate has a distinct alternative prompt and its own model response and marking scheme.
+- **Q11 — Footprints Without Feet:** 20 primary candidates cover A Triumph of Surgery, The Thief's Story, The Midnight Visitor, A Question of Trust, Footprints Without Feet, The Making of a Scientist, The Necklace, Bholi and The Book That Saved the Earth. Each has an internal-choice alternative, model response and marking scheme.
+- Every Q10/Q11 model answer (including alternatives) is within 100–120 words; the measured range is 100–115 words.
+- Each Q10/Q11 rubric allocates 2 marks for text-specific understanding, 2 for relevant evidence and explanation, 1 for organisation and 1 for accuracy/expression.
+- These are internally curated draft-bank candidates. Independent English educator approval and reconciliation with the exact 2026–27 prescribed-text list remain outstanding.
+
+### Bank-wide validation snapshot
+
+| Measure | Result |
+|---|---:|
+| Parent question bundles | 220 |
+| Candidates per blueprint slot | 20 in each of 11 slots |
+| Parent, nested-part and alternative content IDs | 1,400 |
+| Duplicate content IDs | 0 |
+| Slot eligibility failures | 0 |
+| Q10/Q11 model answer range | 100–115 words |
+| Q10/Q11 rubric totals | 6 marks for every main and alternative response |
+| Nested answer word-count metadata corrections | 80 |
+
+The audit also corrected 80 stale word-count metadata values in Q6/Q7 nested model answers; the answer texts were retained, and the stored counts now match the text.
 
 ### Automated validation and release checklist
 
-- [x] Q1–Q9 each contain 20 candidates that meet their blueprint slot's section, type, chapter, mark and topic-tag eligibility rules.
+- [x] All 11 slots contain 20 candidates eligible by section, question type, marks, chapter and topic tags.
 - [x] Q1 passage lengths (400–450 words) and Q2 case lengths (200–250 words) checked.
-- [x] Q2 and Q5 structured visual data supplied; renderer support added for main and alternative question tables.
-- [x] Q3 attempt-any-ten-of-twelve structure and nested marks supplied.
+- [x] Q2 and Q5 structured visual data supplied; tables render in student papers and teacher answer booklets.
+- [x] Q3 attempt-any-ten-of-twelve structure and nested grammar items supplied.
 - [x] Q4 and Q5 internal choices, model-answer word limits and marking schemes supplied.
-- [x] Q6/Q7 alternative context sets and nested question marks supplied; these still need educator review against extract requirements.
-- [x] Q8 attempt-any-four-of-five structure; 100 model answers checked at 40–50 words.
-- [x] Bank-wide parent, nested-part and alternative content-ID uniqueness check.
-- [x] Earlier English nested-response regression and question-bank audit passed for Q9.
-- [x] Updated English regression suite passed on the Q1–Q9 batch commit (workflow run 41978483915); generator, release, renderer and English nested-response checks passed.
-- [x] Quiz-quality workflow passed on the same commit (run 41978484099). Its existing 50-paper all-format checks passed for Mathematics Standard, Mathematics Basic and Class 10 Science; these results do not certify 50 English papers.
-- [ ] Verify all detailed prescribed texts/units against a readable official 2026–27 syllabus and sample-paper marking scheme. The official CBSE 2026–27 index lists Language & Literature and Communicative as separate courses, but the detailed PDF could not be opened during this update.
-- [ ] Populate Q10 and Q11 to 20 candidates each (40 remaining bundles).
-- [ ] Generate 50 distinct complete 80-mark papers from the final production bank.
-- [ ] Validate the five-paper, all-format repeat window across all 11 slots and all nested/alternative content IDs.
-- [ ] Complete end-to-end student-browser checks for attempt-any selection, answer editing/restoration, grading, printing and answer booklet.
-- [ ] Obtain independent English educator sign-off, especially on Q6/Q7 extract alignment and Q8 text coverage.
-- [ ] Only after every gate passes: promote blueprint, enable profile, merge to main, deploy Pages and verify the live student profile.
+- [x] Q6/Q7 alternative context sets and nested question marks supplied; educator review of extract alignment remains open.
+- [x] Q8 attempt-any-four-of-five structure; model answers checked at 40–50 words.
+- [x] Q9 attempt-any-two-of-three structure; all nine supplied Footprints chapters represented.
+- [x] Q10/Q11 internal-choice alternatives, 100–120-word model responses and six-mark rubrics supplied.
+- [x] Q10 has ten prose and ten poetry primary candidates; Q11 primary candidates cover all nine supplied Footprints chapters.
+- [x] Bank-wide audit: 220 bundles, 20 eligible per slot, 1,400 unique IDs, zero duplicate IDs and zero structural/word-count metadata errors.
+- [ ] Run the updated English regression suite and both CI workflows against the final Q1–Q11 commit.
+- [ ] Verify every prescribed text/unit against a readable official 2026–27 syllabus and sample-paper marking scheme. The current CBSE index lists English Language & Literature and English Communicative separately, but the detailed 2026–27 PDF syllabus still requires direct verification.
+- [ ] Generate 50 distinct complete 80-mark English papers against the final production bank.
+- [ ] Validate five-paper, all-format repeat protection across all parent, nested and alternative English content IDs.
+- [ ] Complete student-browser checks for answer selection/editing/restoration, grading, printing and answer booklet.
+- [ ] Obtain independent English educator sign-off, particularly on Q6/Q7 extract alignment and Q10/Q11 content quality.
+- [ ] Only after all gates pass: promote the blueprint, enable the profile, merge to main, deploy Pages and verify the live student profile.
 
 ### Release controls
 
@@ -118,4 +131,4 @@ The batch now contains **180 numbered-question candidate bundles**: twenty candi
 - PR: #39, open and draft.
 - Main branch: unchanged by this English work.
 - Pages deployment: not triggered by this draft PR.
-- The 180-candidate milestone is **not** a complete English paper bank and does **not** authorise student release. Q10/Q11, 50-paper generation, five-paper all-format validation, teacher review, browser checks and deployment verification remain outstanding.
+- The 220-candidate milestone completes the **slot-count requirement only**. It does not mean English is released or that 50 complete papers and five-paper all-format repeat protection have already passed.
