@@ -36,6 +36,8 @@ jobs:
         run: node tests/profile-model.test.js && node tests/profile-page.test.js
       - name: Validate NSO, IMO and IEO blueprints and section weighting
         run: node tests/olympiad-blueprints.test.js
+      - name: Validate Class 6 CBSE and SOF bank inventories, provenance and routing
+        run: node tests/class6-science.test.js
       - name: Validate session timing, weighted marks and summary model
         run: node tests/session-model.test.js
       - name: Validate Stage A LMS integrations
