@@ -221,7 +221,10 @@
       const coverage=g.auditSlotCoverage(blueprint,bank,profile.minimumCandidatesPerSlot||20);
       if(!coverage.valid)throw new Error("The integrated question pool does not meet minimum candidate coverage: "+coverage.errors.slice(0,4).join(" "));
       generate.disabled=false;
-      status.textContent="Ready · "+profile.title+" · "+bank.questions.length.toLocaleString()+" approved pool records · "+blueprint.totalQuestions+" questions · "+blueprint.totalMarks+" marks · "+blueprint.durationMinutes+" minutes.";
+      const typeLabels={"mcq":"MCQ","assertion-reason":"Assertion–Reason","very-short-answer":"Very short answer","short-answer":"Short answer","long-answer":"Long answer","case-based":"Case-based","numerical":"Numerical","diagram-based":"Diagram-based"};
+      const typeCounts={};bank.questions.forEach(question=>{const type=String(question.type||"other");typeCounts[type]=(typeCounts[type]||0)+1;});
+      const typeSummary=Object.entries(typeCounts).map(([type,count])=>(typeLabels[type]||"Other")+" "+count.toLocaleString()).join(" · ");
+      status.textContent="Ready · "+profile.title+" · Question bank: "+bank.questions.length.toLocaleString()+" records ("+typeSummary+") · Paper: "+blueprint.totalQuestions+" questions · "+blueprint.totalMarks+" marks · "+blueprint.durationMinutes+" minutes.";
     }
     profileSelect.addEventListener("change",()=>{
       const selected=profiles.find(item=>String(item.profileId)===profileSelect.value);if(!selected)return;
