@@ -95,6 +95,13 @@ const normalizedMath=context.window.C10QuestionBank.normalize(mathBank,"class-6-
 const mathQuestions=normalizedMath.flatMap(chapter=>chapter.questions);
 assert.equal(mathQuestions.length,1000);
 assert.equal(new Set(mathQuestions.map(question=>question.questionKey)).size,1000,"Class 6 Mathematics question keys are unique");
+const numberPlay=mathBank.find(chapter=>chapter.chapter_no===3);
+const palindromeIds=["c6m03q011","c6m03q021","c6m03q031","c6m03q041","c6m03q051","c6m03q061","c6m03q071","c6m03q081","c6m03q091"];
+const palindromeQuestions=numberPlay.questions.filter(question=>palindromeIds.includes(question.id));
+assert.equal(palindromeQuestions.length,9,"the repeated Number Play palindrome group has been replaced");
+assert.equal(new Set(palindromeQuestions.map(question=>question.question)).size,9,"Number Play palindrome prompts are distinct");
+assert.equal(palindromeQuestions.find(question=>question.id==="c6m03q011").options[palindromeQuestions.find(question=>question.id==="c6m03q011").answer],"121","the basic palindrome answer is correct");
+assert.equal(palindromeQuestions.find(question=>question.id==="c6m03q091").options[palindromeQuestions.find(question=>question.id==="c6m03q091").answer],"3","the multi-step palindrome digit answer is correct");
 for(const question of questions)assert.ok(question.options.includes(question.options[question.answer])&&question.explanation);
 const engine=fs.readFileSync("js/quiz-engine.js","utf8");
 assert.ok(engine.includes('const bankId = classId === "10" ? subject : "class-" + classId + "-" + subject'),"non-Class-10 learners use class-prefixed question-bank files");
