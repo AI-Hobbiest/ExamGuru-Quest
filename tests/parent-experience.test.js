@@ -7,6 +7,13 @@ for(const topic of ["Sign in","dashboard","practice","Assigned tests","results",
 const shell=fs.readFileSync("js/app-shell.js","utf8");
 assert.ok(shell.includes('href:"./help.html#student-guide"')&&shell.includes('auth:"student"'),"Student navigation exposes the Student Guide");
 assert.ok(shell.includes('href:"./help.html#parent-guide"')&&shell.includes('auth:"parent"'),"Parent navigation exposes the Parent Guide");
+const parentFaq=shell.indexOf('{label:"FAQ & Guide",icon:"❔",href:"./help.html#parent-guide"');
+const parentLast=shell.indexOf('{label:"Exam Paper Practice",icon:"📝",href:"./parent.html#exam-paper-practice"');
+assert.ok(parentFaq>parentLast,"Parent FAQ & Guide is the final parent menu item");
+const studentFaq=shell.indexOf('{label:"FAQ & Guide",icon:"❔",href:"./help.html#student-guide"');
+const studentLast=shell.indexOf('{label:"Backup & restore",icon:"💾"');
+assert.ok(studentFaq>studentLast,"Student FAQ & Guide is the final student menu item");
+assert.equal((shell.match(/label:"FAQ & Guide"/g)||[]).length,2,"Both roles use the same FAQ & Guide label");
 const parent=fs.readFileSync("js/parent-dashboard.js","utf8");
 assert.ok(parent.includes('const open=()=>showDetail(s)')&&parent.includes('c.addEventListener("click",open)'),"Each family card opens detail for its own linked child");
 assert.ok(parent.includes('function showDetail(s){const z=summary(s),box=$("childDetail");box.hidden=false;box.innerHTML="";'),"Selecting a different child recalculates that child's summary and clears the previous detail view");
