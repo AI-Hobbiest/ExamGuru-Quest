@@ -8,11 +8,13 @@ ctx.globalThis=ctx;vm.createContext(ctx);
 vm.runInContext(fs.readFileSync("js/exam-paper-generator.js","utf8"),ctx);
 const engine=ctx.window.ExamPaperGenerator;
 const source=JSON.parse(fs.readFileSync("data/mathematics.json","utf8"));
+const competencyTagger=require("../js/competency-tagger.js");
+const deployedSource=source.map(chapter=>({...chapter,questions:chapter.questions.map(question=>competencyTagger.tagQuestion(question,{subjectId:"mathematics",chapterTitle:chapter.title,chapterId:chapter.key}))}));
 const baseBank=JSON.parse(fs.readFileSync("data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json","utf8"));
 const studioSource=fs.readFileSync("js/exam-paper-studio.js","utf8");
 const adminHtml=fs.readFileSync("admin.html","utf8");
 const examPracticeHtml=fs.readFileSync("exam-practice.html","utf8");
-assert.ok(adminHtml.includes("./js/exam-paper-generator.js?v=20261106-math-integrated-pool-v2"),"Admin must load the current Mathematics integration generator");
+assert.ok(adminHtml.includes("./js/exam-paper-generator.js?v=20261106-math-competency-alignment-v3"),"Admin must load the current Mathematics integration generator");
 assert.ok(examPracticeHtml.includes("./js/exam-paper-generator.js?v=20261106-math-integrated-pool-v2"),"Student exam must load the current Mathematics integration generator");
 assert.ok(adminHtml.includes("./js/exam-paper-studio.js?v=20261106-math-integrated-pool-v2"),"Admin must load the current Mathematics integration Studio");
 assert.ok(studioSource.includes("sourceBank=publishedBank;"),"the published bank must always be authoritative over local saved copies");
@@ -43,18 +45,19 @@ for(const profile of profiles){
  assert.equal(blueprint.totalMarks,80);
  assert.equal(blueprint.slotPlan.length,38);
 
- const integrated=engine.mergeQuestionBanks(baseBank,source,blueprint,{minimumCandidatesPerSlot: 20});
+ const integrated=engine.mergeQuestionBanks(baseBank,deployedSource,blueprint,{minimumCandidatesPerSlot: 20});
  const bank=integrated.bank;
  const coverage=integrated.stats.coverage;
  assert.equal(coverage.valid,true,profile.level+" integrated coverage: "+coverage.errors.join(" | "));
  assert.equal(coverage.slotCount,38);
  assert.ok(coverage.coverage.every(slot=>slot.eligibleCount>=20),profile.level+" every paper slot must have at least 20 eligible candidates");
- assert.equal(integrated.stats.practiceSourceCount,1294,"1,294 structurally valid, unique, in-scope source MCQs should be adapted");
- assert.equal(integrated.stats.appended,1243,"1,243 source MCQs should be added after de-duplicating against the curated bank");
- assert.equal(integrated.stats.duplicateStems,51,"51 adapted MCQs should already exist in the curated examination bank");
+ assert.equal(integrated.stats.practiceSourceCount,1285,"1,285 structurally valid in-scope MCQs should be adapted after the deployment competency-tagging step");
+ assert.equal(integrated.stats.appended,1239,"1,239 source MCQs should be added after de-duplicating against the curated bank and excluding review-flagged items");
+ assert.equal(integrated.stats.duplicateStems,46,"46 adapted MCQs should already exist in the curated examination bank");
  assert.equal(integrated.stats.excluded.outOfSummativeScope,100,"Triangle practice questions remain available for practice but are outside the current MCQ-only paper adapter");
  assert.equal(integrated.stats.excluded.ambiguousChapter,0,"valid source chapters must not be mislabeled as ambiguous when they simply have no MCQ paper slot");
- assert.equal(integrated.stats.excluded.invalidQuestion,6,"only the six repeated source stems should be removed from the 1,300 in-scope source MCQs");
+ assert.equal(integrated.stats.excluded.invalidQuestion,6,"only the six repeated source stems should be removed from the in-scope source MCQs");
+ assert.equal(integrated.stats.excluded.needsReview,9,"nine review-flagged MCQs remain excluded from examination use");
  assert.equal(integrated.stats.invalidReasons.duplicateSourceStem,6);
  assert.ok(Object.entries(integrated.stats.invalidReasons).filter(([reason])=>reason!=="duplicateSourceStem").every(([,count])=>count===0),"valid source MCQs must not be excluded for malformed content fields");
 
@@ -62,14 +65,14 @@ for(const profile of profiles){
  assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,bank.questions.length,"the merged runtime pool must preserve unique IDs across the curated and imported pools");
  assert.equal(countBy(bank.questions,"type").mcq,1304);
  assert.deepEqual(countBy(bank.questions,"type"),{
-  mcq:1304,
+  mcq:1300,
   "assertion-reason":40,
   "very-short-answer":100,
   "short-answer":160,
   "long-answer":120,
   "case-based":120
  });
- assert.deepEqual(countBy(bank.questions,"sectionId"),{A:1344,B:100,C:160,D:120,E:120});
+ assert.deepEqual(countBy(bank.questions,"sectionId"),{A:1340,B:100,C:160,D:120,E:120});
  const difficultyCounts=countBy(bank.questions,"difficulty");
  assert.deepEqual(Object.keys(difficultyCounts).sort(),["easy","hard","medium"]);
  assert.equal(Object.values(difficultyCounts).reduce((sum,count)=>sum+count,0),bank.questions.length);
@@ -136,4 +139,4 @@ for(const profile of profiles){
 
 }
 
-console.log("Mathematics end-to-end passed: 1,400 source MCQs audited; 1,844 unique merged runtime candidates; 38-question/80-mark Standard and Basic profiles; exact difficulty targets; and 50 unique full-integrated papers per level with five-paper all-format repeat protection.");
+console.log("Mathematics end-to-end passed: 1,400 source MCQs audited; 1,840 unique merged runtime candidates; 38-question/80-mark Standard and Basic profiles; exact difficulty targets; and 50 unique full-integrated papers per level with five-paper all-format repeat protection.");
