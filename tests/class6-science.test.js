@@ -16,6 +16,7 @@ for(const chapter of bank){
     ids.add(question.id);
     assert.equal(question.options.length,4,"each MCQ has four options");
     assert.equal(new Set(question.options).size,4,"each MCQ has four distinct options");
+    assert.ok(!question.options.some(option=>["h","t","n/a"].includes(String(option).trim().toLowerCase())),"Science options must not contain malformed placeholder tokens");
     assert.ok(Number.isInteger(question.answer)&&question.answer>=0&&question.answer<4,"answer index is valid");
     assert.ok(!prompts.has(question.question),"question prompts are unique");
     prompts.add(question.question);
