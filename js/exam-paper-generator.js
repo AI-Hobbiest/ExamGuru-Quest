@@ -289,7 +289,7 @@ function generateUniquePaper(bp,bank,options={}){
     const fingerprint=paperFingerprint(paper);
    if(fingerprint&&!recent.has(fingerprint)){
     paper.paperFingerprint=fingerprint;
-    paper.repeatProtection={requestedWindow:5,appliedWindow:window,availableHistory:historySets.length,fallback:window<Math.min(5,historySets.length)};
+    paper.repeatProtection={requestedWindow:5,appliedWindow:window,availableHistory:historySets.length,fallback:window<Math.min(5,historySets.length),fallbackReason:window<Math.min(5,historySets.length)?String(lastShortage&&lastShortage.message||"Insufficient candidates in the protected window."):null};
     return paper;
    }
   }
