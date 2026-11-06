@@ -101,6 +101,8 @@ assert.ok(parentStudio.includes('profile.blueprintUrl')&&parentStudio.includes('
 assert.ok(parentStudio.includes('profile.practiceBankUrl'),"Parent paper builder must integrate an optional profile practice bank");
 assert.ok(parentStudio.includes('examProfileId:profile.profileId'),"Parent assignments must retain the selected profile identity");
 assert.ok(parentStudio.includes('historyKey(profile.profileId)'),"Parent paper repeat history must be isolated by profile");
+assert.ok(parentStudio.includes('function historyLimit()'),"Parent paper repeat history must honour profile-specific retention");
+assert.ok(parentStudio.includes('profile&&profile.paperHistoryLimit'),"Parent paper generation must retain 75 combinations for Class 6 Maths");
 assert.ok(!parentStudio.includes('class-10-science-2026-27.json')&&!parentStudio.includes('./data/science.json'),"Parent paper builder must not hardcode Science data paths");
 assert.ok(assignedPaper.includes('profile-registry.json')&&assignedPaper.includes('profile.blueprintUrl'),"Student assigned-paper view must resolve the originating profile from the registry");
 assert.ok(assignedPaper.includes('assignment.examProfileId'),"Student assigned-paper view must resolve the exact frozen assignment profile");
