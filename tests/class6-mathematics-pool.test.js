@@ -63,7 +63,7 @@ for(let attempt=1;attempt<=75;attempt++){
  assert.deepEqual(sumMarksBy(paper.questions,"competency"),{"knowledge-understanding":38,"application":28,"analysis-evaluation-creation":14});
  const ids=paper.questions.flatMap(q=>g.questionContentIds(q));
  assert.equal(paper.repeatProtection.requestedWindow,5);
- assert.equal(paper.repeatProtection.appliedWindow,Math.min(5,history.length));
+ assert.equal(paper.repeatProtection.appliedWindow,Math.min(5,history.length),"Paper "+attempt+" repeat window fallback: "+String(paper.repeatProtection.fallbackReason||"none"));
  for(const prior of previous){const priorIds=new Set(prior);assert.ok(!ids.some(id=>priorIds.has(id)),"No question or nested case part may repeat within the previous five papers.");}
  const fingerprint=g.paperFingerprint(paper);assert.ok(fingerprint);assert.ok(!fingerprints.includes(fingerprint),"full paper combination must be unique");
  fingerprints.push(fingerprint);history.push(ids);
