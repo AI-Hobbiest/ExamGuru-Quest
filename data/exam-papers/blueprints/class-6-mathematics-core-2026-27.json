@@ -1,0 +1,696 @@
+{
+  "schemaVersion": 1,
+  "kind": "exam-paper-blueprint",
+  "blueprintId": "class-6-mathematics-core-2026-27",
+  "version": 1,
+  "title": "ExamGuru Class 6 Mathematics · Core School Examination Practice",
+  "board": "CBSE curriculum-aligned · school practice blueprint (not a prescribed CBSE board-paper pattern)",
+  "academicYear": "2026-27",
+  "classId": "6",
+  "subjectId": "mathematics",
+  "subjectTitle": "Mathematics",
+  "status": "draft",
+  "statusReason": "Draft blueprint pending question-pool expansion, independent content review, and 75-paper repeat/uniqueness validation.",
+  "durationMinutes": 150,
+  "totalQuestions": 38,
+  "totalMarks": 80,
+  "sections": [
+    {
+      "sectionId": "A",
+      "title": "Section A · Objective",
+      "questionNumberRange": {
+        "start": 1,
+        "end": 20
+      },
+      "questionCount": 20,
+      "totalMarks": 20
+    },
+    {
+      "sectionId": "B",
+      "title": "Section B · Very Short Answer",
+      "questionNumberRange": {
+        "start": 21,
+        "end": 25
+      },
+      "questionCount": 5,
+      "totalMarks": 10
+    },
+    {
+      "sectionId": "C",
+      "title": "Section C · Short Answer",
+      "questionNumberRange": {
+        "start": 26,
+        "end": 31
+      },
+      "questionCount": 6,
+      "totalMarks": 18
+    },
+    {
+      "sectionId": "D",
+      "title": "Section D · Extended Response",
+      "questionNumberRange": {
+        "start": 32,
+        "end": 35
+      },
+      "questionCount": 4,
+      "totalMarks": 20
+    },
+    {
+      "sectionId": "E",
+      "title": "Section E · Case-based Application",
+      "questionNumberRange": {
+        "start": 36,
+        "end": 38
+      },
+      "questionCount": 3,
+      "totalMarks": 12
+    }
+  ],
+  "markDistribution": {
+    "1": 20,
+    "2": 5,
+    "3": 6,
+    "4": 3,
+    "5": 4
+  },
+  "competencyMarksTargets": {
+    "knowledge-understanding": 38,
+    "application": 28,
+    "analysis-evaluation-creation": 14
+  },
+  "unitMarkTargets": {
+    "number-sense": 29,
+    "geometry-spatial": 25,
+    "measurement-data": 26
+  },
+  "difficultyTargets": {
+    "easy": 8,
+    "medium": 24,
+    "hard": 6
+  },
+  "supportedQuestionTypes": [
+    "mcq",
+    "very-short-answer",
+    "short-answer",
+    "long-answer",
+    "case-based",
+    "numerical",
+    "diagram-based"
+  ],
+  "slotPlan": [
+    {
+      "slotId": "q01",
+      "questionNumber": 1,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "patterns-in-mathematics"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q02",
+      "questionNumber": 2,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "patterns-in-mathematics"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q03",
+      "questionNumber": 3,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "geometry-spatial",
+      "chapterIds": [
+        "lines-and-angles"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q04",
+      "questionNumber": 4,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "geometry-spatial",
+      "chapterIds": [
+        "lines-and-angles"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q05",
+      "questionNumber": 5,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "number-play"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q06",
+      "questionNumber": 6,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "number-play"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q07",
+      "questionNumber": 7,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "measurement-data",
+      "chapterIds": [
+        "data-handling-and-presentation"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q08",
+      "questionNumber": 8,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "measurement-data",
+      "chapterIds": [
+        "data-handling-and-presentation"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q09",
+      "questionNumber": 9,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "prime-time"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q10",
+      "questionNumber": 10,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "prime-time"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q11",
+      "questionNumber": 11,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "measurement-data",
+      "chapterIds": [
+        "perimeter-and-area"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q12",
+      "questionNumber": 12,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "measurement-data",
+      "chapterIds": [
+        "perimeter-and-area"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q13",
+      "questionNumber": 13,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "fractions"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q14",
+      "questionNumber": 14,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "fractions"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q15",
+      "questionNumber": 15,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "geometry-spatial",
+      "chapterIds": [
+        "playing-with-constructions"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q16",
+      "questionNumber": 16,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "geometry-spatial",
+      "chapterIds": [
+        "playing-with-constructions"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q17",
+      "questionNumber": 17,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "geometry-spatial",
+      "chapterIds": [
+        "symmetry"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q18",
+      "questionNumber": 18,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "geometry-spatial",
+      "chapterIds": [
+        "symmetry"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q19",
+      "questionNumber": 19,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "the-other-side-of-zero"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q20",
+      "questionNumber": 20,
+      "sectionId": "A",
+      "marks": 1,
+      "allowedTypes": [
+        "mcq"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "the-other-side-of-zero"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q21",
+      "questionNumber": 21,
+      "sectionId": "B",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "patterns-in-mathematics",
+        "number-play",
+        "prime-time",
+        "fractions",
+        "the-other-side-of-zero"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q22",
+      "questionNumber": 22,
+      "sectionId": "B",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "geometry-spatial",
+      "chapterIds": [
+        "lines-and-angles",
+        "playing-with-constructions",
+        "symmetry"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q23",
+      "questionNumber": 23,
+      "sectionId": "B",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "measurement-data",
+      "chapterIds": [
+        "data-handling-and-presentation",
+        "perimeter-and-area"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q24",
+      "questionNumber": 24,
+      "sectionId": "B",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "patterns-in-mathematics",
+        "number-play",
+        "prime-time",
+        "fractions",
+        "the-other-side-of-zero"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q25",
+      "questionNumber": 25,
+      "sectionId": "B",
+      "marks": 2,
+      "allowedTypes": [
+        "very-short-answer"
+      ],
+      "unitId": "geometry-spatial",
+      "chapterIds": [
+        "lines-and-angles",
+        "playing-with-constructions",
+        "symmetry"
+      ],
+      "competency": "analysis-evaluation-creation"
+    },
+    {
+      "slotId": "q26",
+      "questionNumber": 26,
+      "sectionId": "C",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "patterns-in-mathematics",
+        "number-play",
+        "prime-time",
+        "fractions",
+        "the-other-side-of-zero"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q27",
+      "questionNumber": 27,
+      "sectionId": "C",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "geometry-spatial",
+      "chapterIds": [
+        "lines-and-angles",
+        "playing-with-constructions",
+        "symmetry"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q28",
+      "questionNumber": 28,
+      "sectionId": "C",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "measurement-data",
+      "chapterIds": [
+        "data-handling-and-presentation",
+        "perimeter-and-area"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q29",
+      "questionNumber": 29,
+      "sectionId": "C",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "patterns-in-mathematics",
+        "number-play",
+        "prime-time",
+        "fractions",
+        "the-other-side-of-zero"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q30",
+      "questionNumber": 30,
+      "sectionId": "C",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "geometry-spatial",
+      "chapterIds": [
+        "lines-and-angles",
+        "playing-with-constructions",
+        "symmetry"
+      ],
+      "competency": "analysis-evaluation-creation"
+    },
+    {
+      "slotId": "q31",
+      "questionNumber": 31,
+      "sectionId": "C",
+      "marks": 3,
+      "allowedTypes": [
+        "short-answer"
+      ],
+      "unitId": "measurement-data",
+      "chapterIds": [
+        "data-handling-and-presentation",
+        "perimeter-and-area"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q32",
+      "questionNumber": 32,
+      "sectionId": "D",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "patterns-in-mathematics",
+        "number-play",
+        "prime-time",
+        "fractions",
+        "the-other-side-of-zero"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q33",
+      "questionNumber": 33,
+      "sectionId": "D",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "unitId": "geometry-spatial",
+      "chapterIds": [
+        "lines-and-angles",
+        "playing-with-constructions",
+        "symmetry"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q34",
+      "questionNumber": 34,
+      "sectionId": "D",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "unitId": "measurement-data",
+      "chapterIds": [
+        "data-handling-and-presentation",
+        "perimeter-and-area"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q35",
+      "questionNumber": 35,
+      "sectionId": "D",
+      "marks": 5,
+      "allowedTypes": [
+        "long-answer"
+      ],
+      "unitId": "measurement-data",
+      "chapterIds": [
+        "data-handling-and-presentation",
+        "perimeter-and-area"
+      ],
+      "competency": "analysis-evaluation-creation"
+    },
+    {
+      "slotId": "q36",
+      "questionNumber": 36,
+      "sectionId": "E",
+      "marks": 4,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "number-sense",
+      "chapterIds": [
+        "patterns-in-mathematics",
+        "number-play",
+        "prime-time",
+        "fractions",
+        "the-other-side-of-zero"
+      ],
+      "competency": "knowledge-understanding"
+    },
+    {
+      "slotId": "q37",
+      "questionNumber": 37,
+      "sectionId": "E",
+      "marks": 4,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "geometry-spatial",
+      "chapterIds": [
+        "lines-and-angles",
+        "playing-with-constructions",
+        "symmetry"
+      ],
+      "competency": "application"
+    },
+    {
+      "slotId": "q38",
+      "questionNumber": 38,
+      "sectionId": "E",
+      "marks": 4,
+      "allowedTypes": [
+        "case-based"
+      ],
+      "unitId": "measurement-data",
+      "chapterIds": [
+        "data-handling-and-presentation",
+        "perimeter-and-area"
+      ],
+      "competency": "analysis-evaluation-creation"
+    }
+  ],
+  "generalInstructions": [
+    "Attempt all questions unless a question explicitly offers an internal choice.",
+    "Show working for calculations and include appropriate units.",
+    "Use ruler, compass or protractor where a construction or measurement requires it.",
+    "Diagrams are not necessarily drawn to scale unless stated.",
+    "This is an ExamGuru school-practice blueprint; teachers may adapt it to their school assessment plan."
+  ],
+  "sources": [
+    {
+      "title": "NCERT Ganita Prakash · Textbook of Mathematics for Grade 6 · Reprint 2026–27",
+      "reference": "User-provided Class6-Maths.pdf; chapters 1–10."
+    }
+  ],
+  "notes": [
+    "This is an in-house proposed assessment structure, not an official CBSE-prescribed Class 6 examination pattern.",
+    "The chapter allocation covers all ten chapters in the supplied NCERT Grade 6 textbook.",
+    "The question pool must contain at least 20 approved eligible candidates for every slot before generation is enabled.",
+    "The generator must validate 75 distinct complete papers, with no question repeated within the preceding five papers wherever the eligible pool supports it.",
+    "Papers are generated on demand; no pre-generated paper PDFs or duplicate paper files are stored."
+  ]
+}

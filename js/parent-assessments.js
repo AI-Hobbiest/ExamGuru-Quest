@@ -195,11 +195,12 @@
       printBooklet.hidden=delivery.value==="online";
       printEvaluator.hidden=delivery.value==="online";
     };
+    function historyLimit(){return Math.max(50,Math.min(200,Number(profile&&profile.paperHistoryLimit)||50));}
     function readHistory(){
-      try{const rows=JSON.parse(localStorage.getItem(historyKey(profile.profileId))||"[]");return Array.isArray(rows)?rows:[];}catch(_){return[];}
+      try{const rows=JSON.parse(localStorage.getItem(historyKey(profile.profileId))||"[]");return Array.isArray(rows)?rows.slice(-historyLimit()):[];}catch(_){return[];}
     }
     function writeHistory(rows,row){
-      localStorage.setItem(historyKey(profile.profileId),JSON.stringify([...rows,row].slice(-50)));
+      localStorage.setItem(historyKey(profile.profileId),JSON.stringify([...rows,row].slice(-historyLimit())));
     }
     async function loadProfile(selected){
       profile=selected;blueprint=null;bank=null;paper=null;assignment=null;actions.hidden=true;openAssignment.hidden=true;generate.disabled=true;
@@ -264,10 +265,9 @@
         });
         paper.deliveryMode=delivery.value;
         const dueAt=due.value?new Date(due.value).toISOString():null;
-        const ids=paper.questions.map(q=>String(q.questionId));
         const fingerprint=paper.paperFingerprint||g.paperFingerprint(paper);
-        const nextHistory=[...rows,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds:ids,
-          questionIds:paper.questions.map(question=>question.questionId),mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId)),fingerprint}].slice(-50);
+        const nextHistory=[...rows,{paperId:paper.paperId,generatedAt:paper.generatedAt,
+          questionIds:paper.questions.map(question=>question.questionId),mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId)),fingerprint}].slice(-historyLimit());
         writeHistory(rows,nextHistory[nextHistory.length-1]);
         try{
           assignment=window.C10AssessmentManager.createPaperAssignment({

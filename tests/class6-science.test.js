@@ -41,10 +41,11 @@ for(const chapter of socialBank){
 }
 const mathBank=JSON.parse(fs.readFileSync("data/class-6-mathematics.json","utf8"));
 assert.equal(mathBank.length,10,"Class 6 Mathematics follows all 10 Ganita Prakash chapters");
-assert.equal(mathBank.reduce((sum,chapter)=>sum+chapter.questions.length,0),1000,"Mathematics bank includes 100 MCQs per chapter");
+assert.equal(mathBank.reduce((sum,chapter)=>sum+chapter.questions.length,0),1043,"Mathematics practice bank includes the original 1,000 MCQs plus 43 reviewed additions");
+const expectedMathCounts={"patterns-in-mathematics":100,"lines-and-angles":100,"number-play":100,"data-handling-and-presentation":100,"prime-time":100,"perimeter-and-area":100,"fractions":119,"playing-with-constructions":112,"symmetry":112,"the-other-side-of-zero":100};
 for(const chapter of mathBank){
+  assert.equal(chapter.questions.length,expectedMathCounts[chapter.key],"chapter inventory should match the controlled expansion plan");
   assert.ok(chapter.title,"every Mathematics chapter has a title");
-  assert.equal(chapter.questions.length,100,"each Mathematics chapter has 100 questions");
   for(const question of chapter.questions){
     assert.ok(question.id&&question.question&&question.explanation,"question ID, prompt and explanation are present");
     assert.equal(question.options.length,4,"each Mathematics MCQ has four options");
@@ -92,8 +93,8 @@ assert.equal(new Set(englishQuestions.map(question=>question.questionKey)).size,
 
 const normalizedMath=context.window.C10QuestionBank.normalize(mathBank,"class-6-mathematics");
 const mathQuestions=normalizedMath.flatMap(chapter=>chapter.questions);
-assert.equal(mathQuestions.length,1000);
-assert.equal(new Set(mathQuestions.map(question=>question.questionKey)).size,1000,"Class 6 Mathematics question keys are unique");
+assert.equal(mathQuestions.length,1043);
+assert.equal(new Set(mathQuestions.map(question=>question.questionKey)).size,1043,"Class 6 Mathematics question keys are unique");
 for(const question of questions)assert.ok(question.options.includes(question.options[question.answer])&&question.explanation);
 const engine=fs.readFileSync("js/quiz-engine.js","utf8");
 assert.ok(engine.includes('const bankId = classId === "10" ? subject : "class-" + classId + "-" + subject'),"non-Class-10 learners use class-prefixed question-bank files");

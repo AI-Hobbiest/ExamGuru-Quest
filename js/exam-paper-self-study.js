@@ -19,7 +19,7 @@ async function resolveStudentSession(){
  return null;
 }
 
-const HISTORY_KEY="eg_exam_paper_history_v1",HISTORY_LIMIT=50,PROFILE_REGISTRY_URL="./data/exam-papers/profile-registry.json";
+const HISTORY_KEY="eg_exam_paper_history_v1",PROFILE_REGISTRY_URL="./data/exam-papers/profile-registry.json";
 function storageKey(base){
  if(!profileId||profileId===defaultProfileId)return base;
  return base+"_"+profileId.replace(/[^a-z0-9_-]/gi,"_");
@@ -30,6 +30,7 @@ function subjectTitle(){
 function paperDisplayTitle(){
  return String(profile&&profile.title||("Class "+blueprint.classId+" · "+subjectTitle()+(blueprint.subjectCode?" ("+blueprint.subjectCode+")":"")));
 }
+function historyLimit(){return Math.max(50,Math.min(200,Number(profile&&profile.paperHistoryLimit)||50));}
 function readPaperHistory(){
  try{
   const parsed=JSON.parse(localStorage.getItem(storageKey(HISTORY_KEY))||"[]");
@@ -38,7 +39,7 @@ function readPaperHistory(){
    const questionIds=Array.isArray(item&&item.questionIds)?item.questionIds.map(String).filter(Boolean):[];
    const mcqQuestionIds=Array.isArray(item&&item.mcqQuestionIds)?item.mcqQuestionIds.map(String).filter(Boolean):[];
    return{paperId:String(item&&item.paperId||""),generatedAt:String(item&&item.generatedAt||""),questionIds,mcqQuestionIds,fingerprint:String(item&&item.fingerprint||JSON.stringify(questionIds))};
-  }).filter(item=>item.questionIds.length&&item.fingerprint!=="[]").slice(-HISTORY_LIMIT);
+  }).filter(item=>item.questionIds.length&&item.fingerprint!=="[]").slice(-historyLimit());
  }catch(_){return[];}
 }
 function savePaperHistory(){try{localStorage.setItem(storageKey(HISTORY_KEY),JSON.stringify(paperHistory));return true;}catch(_){return false;}}
@@ -219,14 +220,14 @@ function makePaper(){
  const questionIds=paper.questions.flatMap(q=>ExamPaperGenerator.questionContentIds(q));
  const fingerprint=paper.paperFingerprint||ExamPaperGenerator.paperFingerprint(paper);
  const alreadyRecorded=paperHistory.some(item=>item.paperId===paper.paperId||item.fingerprint===fingerprint);
- if(!alreadyRecorded)paperHistory=[...paperHistory,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds,fingerprint,mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId))}].slice(-HISTORY_LIMIT);
+ if(!alreadyRecorded)paperHistory=[...paperHistory,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds,fingerprint,mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId))}].slice(-historyLimit());
  if(!savePaperHistory()){
   paperHistory=previousHistory;
-  throw Error("This browser could not save the 50-paper repeat history for this profile. Enable site storage and try again; no paper was started.");
+  throw Error("This browser could not save the repeat-history for this profile. Enable site storage and try again; no paper was started.");
  }
  if(!assignedPaper&&!delivered){try{localStorage.setItem(storageKey("eg_exam_active_paper_v1"),JSON.stringify(paper));}catch(_){throw Error("This browser could not save the active paper for reload recovery. Enable site storage and try again.");}}
  render();$("setup").classList.add("exam-hidden");$("review").classList.add("exam-hidden");$("attempt").classList.remove("exam-hidden");
- $("historyStatus").textContent=(delivered?"This is the frozen paper prepared by your Parent/Teacher. ":resumingSelfStudy?"Resuming your saved attempt. ":"")+"50-paper repeat protection is active for this profile on this browser. This exact "+paper.totalQuestions+"-question combination will not repeat within the latest 50 generated papers; All question formats from the previous five papers are held out wherever the eligible pool supports it. History is profile-specific and does not sync to other devices.";
+ $("historyStatus").textContent=(delivered?"This is the frozen paper prepared by your Parent/Teacher. ":resumingSelfStudy?"Resuming your saved attempt. ":"")+historyLimit()+"-paper repeat protection is active for this profile on this browser. This exact "+paper.totalQuestions+"-question combination will not repeat within the latest "+historyLimit()+" generated papers; All question formats from the previous five papers are held out wherever the eligible pool supports it. History is profile-specific and does not sync to other devices.";
  saveAnswers();startTimer();window.scrollTo(0,0);
 }
 function responseContent(item,i){

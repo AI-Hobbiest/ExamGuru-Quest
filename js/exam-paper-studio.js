@@ -4,7 +4,7 @@
 const $=id=>document.getElementById(id);
 let profile=null,profileId="",defaultProfileId="",registry=null,blueprint=null,bank=null,paper=null,bankStore=null,draftStore=null;
 let sourceBank=null,practiceChapters=null,bankIntegrationStats=null;
-const PAPER_HISTORY_KEY="eg_exam_paper_history_v1",PAPER_HISTORY_LIMIT=50,REGISTRY_URL="./data/exam-papers/profile-registry.json";
+const PAPER_HISTORY_KEY="eg_exam_paper_history_v1",REGISTRY_URL="./data/exam-papers/profile-registry.json";
 const safePath=value=>typeof value==="string"&&value.startsWith("./data/")&&!value.split("/").includes("..");
 const generator=()=>window.ExamPaperGenerator||window.C10ExamPaperGenerator;
 const renderer=()=>window.ExamPaperRenderer||window.C10ExamPaperRenderer;
@@ -67,7 +67,8 @@ function assembleIntegratedBank(){
 }
 function loadSavedDraft(){try{const saved=draftStore.load();if(saved.drafts.length)paper=saved.drafts[saved.drafts.length-1];}catch(_){paper=null;}}
 function saveDraft(value){const saved=draftStore.load();const drafts=(saved.drafts||[]).filter(item=>item.paperId!==value.paperId);drafts.push(value);draftStore.save({drafts:drafts.slice(-5)});}
-function readPaperHistory(){try{const value=JSON.parse(localStorage.getItem(scopedKey(PAPER_HISTORY_KEY))||"[]");if(!Array.isArray(value))return[];return value.map(item=>{const questionIds=Array.isArray(item?.questionIds)?item.questionIds.map(String).filter(Boolean):[],mcqQuestionIds=Array.isArray(item?.mcqQuestionIds)?item.mcqQuestionIds.map(String).filter(Boolean):[];return{paperId:String(item?.paperId||""),generatedAt:String(item?.generatedAt||""),questionIds,mcqQuestionIds,fingerprint:String(item?.fingerprint||JSON.stringify(questionIds))};}).filter(item=>item.questionIds.length&&item.fingerprint!=="[]").slice(-PAPER_HISTORY_LIMIT);}catch(_){return[];}}
+function paperHistoryLimit(){return Math.max(50,Math.min(200,Number(profile&&profile.paperHistoryLimit)||50));}
+function readPaperHistory(){try{const value=JSON.parse(localStorage.getItem(scopedKey(PAPER_HISTORY_KEY))||"[]");if(!Array.isArray(value))return[];return value.map(item=>{const questionIds=Array.isArray(item?.questionIds)?item.questionIds.map(String).filter(Boolean):[],mcqQuestionIds=Array.isArray(item?.mcqQuestionIds)?item.mcqQuestionIds.map(String).filter(Boolean):[];return{paperId:String(item?.paperId||""),generatedAt:String(item?.generatedAt||""),questionIds,mcqQuestionIds,fingerprint:String(item?.fingerprint||JSON.stringify(questionIds))};}).filter(item=>item.questionIds.length&&item.fingerprint!=="[]").slice(-paperHistoryLimit());}catch(_){return[];}}
 function savePaperHistory(history){try{localStorage.setItem(scopedKey(PAPER_HISTORY_KEY),JSON.stringify(history));return true;}catch(_){return false;}}
 function showPaper(p){
  const n=$("paperPreview");n.innerHTML="";const h=document.createElement("h3");h.textContent=p.title;const meta=document.createElement("p");meta.textContent=p.totalQuestions+" questions · "+p.totalMarks+" marks · "+(p.deliveryMode||"printable")+" delivery";n.append(h,meta);
@@ -83,10 +84,10 @@ function generate(){
   const previousHistory=readPaperHistory(),recentPaperFingerprints=previousHistory.map(item=>item.fingerprint),recentQuestionIdSets=previousHistory.slice(-5).map(item=>item.questionIds||[]);
   const candidate=g.generateUniquePaper(blueprint,bank,{seed:"admin-"+profileId+"-"+Date.now()+"-"+Math.random().toString(36).slice(2),title:profileTitle()+" Practice Paper",recentPaperFingerprints,recentQuestionIdSets,uniqueSearchAttempts:500});
   const questionIds=candidate.questions.flatMap(q=>g.questionContentIds(q)),fingerprint=candidate.paperFingerprint||g.paperFingerprint(candidate),mcqQuestionIds=candidate.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId));
-  const nextHistory=[...previousHistory,{paperId:candidate.paperId,generatedAt:candidate.generatedAt,questionIds,mcqQuestionIds,fingerprint}].slice(-PAPER_HISTORY_LIMIT);
-  if(!savePaperHistory(nextHistory))throw Error("This browser could not save the 50-paper repeat history. Enable site storage and try again; no paper was started.");
+  const nextHistory=[...previousHistory,{paperId:candidate.paperId,generatedAt:candidate.generatedAt,questionIds,mcqQuestionIds,fingerprint}].slice(-paperHistoryLimit());
+  if(!savePaperHistory(nextHistory))throw Error("This browser could not save the repeat-history. Enable site storage and try again; no paper was started.");
   candidate.deliveryMode=$("paperDeliveryMode")?.value||"printable";paper=candidate;saveDraft(paper);showPaper(paper);
-  setStatus(candidate.repeatProtection?.fallback?`Paper generated. Exact combinations from the previous 50 papers are excluded. The five-paper all-format repeat window was relaxed to ${candidate.repeatProtection.appliedWindow} prior papers because a slot had insufficient unused candidates.`:"Paper generated. Exact combinations from the previous 50 papers are excluded; questions of every format from the previous five papers are held out wherever the eligible pool supports it.","success");
+  setStatus(candidate.repeatProtection?.fallback?`Paper generated. Exact combinations from the previous ${paperHistoryLimit()} papers are excluded. The five-paper all-format repeat window was relaxed to ${candidate.repeatProtection.appliedWindow} prior papers because a slot had insufficient unused candidates.`:`Paper generated. Exact combinations from the previous ${paperHistoryLimit()} papers are excluded; questions of every format from the previous five papers are held out wherever the eligible pool supports it.`,"success");
  }catch(e){setStatus(e.message||"Generation failed.","error");}
 }
 async function loadProfile(profileToLoad){

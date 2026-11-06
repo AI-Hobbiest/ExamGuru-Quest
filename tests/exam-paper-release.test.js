@@ -81,7 +81,8 @@ assert.equal(new Set(paperFingerprints).size,50,"the Science generator must prod
 
 const adminStudio=fs.readFileSync("js/exam-paper-studio.js","utf8");
 assert.ok(adminStudio.includes('PAPER_HISTORY_KEY="eg_exam_paper_history_v1"'),"Admin Studio must share the self-study paper-history key");
-assert.ok(adminStudio.includes('PAPER_HISTORY_LIMIT=50'),"Admin Studio must keep a 50-paper rolling history");
+assert.ok(adminStudio.includes('function paperHistoryLimit()'),"Admin Studio must support a profile-specific rolling history");
+assert.ok(adminStudio.includes('profile&&profile.paperHistoryLimit'),"Admin Studio must honour the profile-specific paper history target");
 assert.ok(adminStudio.includes('generateUniquePaper'),"Admin Studio must reject exact full-paper repeats");
 assert.ok(adminStudio.includes('auditSlotCoverage(blueprint,bank,minimum)'),"Admin Studio must enforce the profile-specific candidate minimum");
 assert.ok(adminStudio.includes('profile-registry.json'),"Admin Studio must load the shared exam profile registry");
@@ -100,6 +101,8 @@ assert.ok(parentStudio.includes('profile.blueprintUrl')&&parentStudio.includes('
 assert.ok(parentStudio.includes('profile.practiceBankUrl'),"Parent paper builder must integrate an optional profile practice bank");
 assert.ok(parentStudio.includes('examProfileId:profile.profileId'),"Parent assignments must retain the selected profile identity");
 assert.ok(parentStudio.includes('historyKey(profile.profileId)'),"Parent paper repeat history must be isolated by profile");
+assert.ok(parentStudio.includes('function historyLimit()'),"Parent paper repeat history must honour profile-specific retention");
+assert.ok(parentStudio.includes('profile&&profile.paperHistoryLimit'),"Parent paper generation must retain 75 combinations for Class 6 Maths");
 assert.ok(!parentStudio.includes('class-10-science-2026-27.json')&&!parentStudio.includes('./data/science.json'),"Parent paper builder must not hardcode Science data paths");
 assert.ok(assignedPaper.includes('profile-registry.json')&&assignedPaper.includes('profile.blueprintUrl'),"Student assigned-paper view must resolve the originating profile from the registry");
 assert.ok(assignedPaper.includes('assignment.examProfileId'),"Student assigned-paper view must resolve the exact frozen assignment profile");
@@ -108,7 +111,8 @@ assert.ok(assessmentManager.includes('examProfileId: String(args.examProfileId |
 const selfStudy=fs.readFileSync("js/exam-paper-self-study.js","utf8");
 const practicePage=fs.readFileSync("exam-practice.html","utf8");
 assert.ok(selfStudy.includes('eg_exam_paper_history_v1'),"self-study paper history must persist locally");
-assert.ok(selfStudy.includes('HISTORY_LIMIT=50'),"self-study must retain the last 50 generated paper combinations");
+assert.ok(selfStudy.includes('function historyLimit()'),"self-study must support profile-specific paper-history retention");
+assert.ok(selfStudy.includes('profile&&profile.paperHistoryLimit'),"self-study must honour a profile's 75-paper history target");
 assert.ok(selfStudy.includes('generateUniquePaper'),"self-study must request a new full-paper combination");
 assert.ok(selfStudy.includes('recentPaperFingerprints'),"self-study must reject exact repeats from saved paper history");
 assert.ok(selfStudy.includes('profile-registry.json'),"self-study must resolve profile-specific blueprint and question-bank paths from the registry");
