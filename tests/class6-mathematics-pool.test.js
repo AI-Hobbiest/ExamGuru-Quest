@@ -11,10 +11,12 @@ const practice=JSON.parse(fs.readFileSync("data/class-6-mathematics.json","utf8"
 const bp={...blueprint,status:"ready"};
 const bpCheck=g.validateBlueprint(bp);assert.equal(bpCheck.valid,true,bpCheck.errors.join(" | "));assert.equal(bpCheck.readyForGeneration,true);
 const bankCheck=g.validateQuestionBank(base,{classId:"6",subjectId:"mathematics",academicYear:"2026-27"});assert.equal(bankCheck.valid,true,bankCheck.errors.slice(0,20).join(" | "));
+assert.ok(base.questions.every(q=>q.approvalStatus==="review"),"new written questions must remain in review until independently checked");
 assert.equal(base.questions.length,340,"written-response pool must contain 340 reviewed candidates");
 assert.deepEqual(base.questions.reduce((m,q)=>{m[q.type]=(m[q.type]||0)+1;return m;},{}),{"very-short-answer":100,"short-answer":100,"long-answer":80,"case-based":60});
 assert.equal(practice.length,10);assert.equal(practice.reduce((n,c)=>n+c.questions.length,0),1043);
-const integrated=g.mergeQuestionBanks(base,practice,bp,{minimumCandidatesPerSlot:20});
+const reviewSimulation={...base,questions:base.questions.map(q=>({...q,approvalStatus:"approved"})),questionPoolStatus:"review-simulation-only"};
+const integrated=g.mergeQuestionBanks(reviewSimulation,practice,bp,{minimumCandidatesPerSlot:20});
 assert.equal(integrated.stats.coverage.valid,true,integrated.stats.coverage.errors.join(" | "));
 assert.equal(integrated.stats.coverage.slotCount,38);
 assert.ok(integrated.stats.coverage.coverage.every(slot=>slot.eligibleCount>=20),"every Class 6 Maths slot must have at least 20 eligible approved candidates");
@@ -49,4 +51,4 @@ for(let attempt=1;attempt<=75;attempt++){
 }
 assert.equal(fingerprints.length,75);assert.equal(new Set(fingerprints).size,75);
 const bytes=Buffer.byteLength(JSON.stringify(base));assert.ok(bytes<400000,"stored written bank should remain compact");
-console.log("Class 6 Mathematics pool release gate passed: 1,043 linked MCQs + 340 written questions; all 38 slots have 20+ eligible candidates; 75 distinct 38-question/80-mark papers generated with exact blueprint distributions and five-paper all-format repeat protection.");
+console.log("Class 6 Mathematics pool release gate passed: 1,043 linked MCQs + 340 written review candidates (approval simulated only for generation QA); all 38 slots have 20+ eligible candidates; 75 distinct 38-question/80-mark papers generated with exact blueprint distributions and five-paper all-format repeat protection.");
