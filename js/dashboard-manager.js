@@ -162,7 +162,9 @@
           if(!Array.isArray(bank)||!bank.some(chapter=>Array.isArray(chapter.questions)&&chapter.questions.length)){
             throw new Error("Published practice content is unavailable");
           }
-          if(meta)meta.textContent="Explore topics and practise";
+          const mcqCount=bank.reduce((sum,chapter)=>sum+(Array.isArray(chapter.questions)?chapter.questions.length:0),0);
+          if(!mcqCount)throw new Error("Published MCQ practice content is unavailable");
+          if(meta)meta.textContent=mcqCount.toLocaleString()+" MCQs available";
         }catch(_){card.hidden=true;card.style.display="none";}
       }));
       let note=$("subjectLaunchStatus");
