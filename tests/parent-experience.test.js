@@ -7,6 +7,7 @@ for(const topic of ["Sign in","dashboard","practice","Assigned tests","results",
 const shell=fs.readFileSync("js/app-shell.js","utf8");
 assert.ok(shell.includes('href:"./help.html#student-guide"')&&shell.includes('auth:"student"'),"Student navigation exposes the Student Guide");
 assert.ok(shell.includes('href:"./help.html#parent-guide"')&&shell.includes('auth:"parent"'),"Parent navigation exposes the Parent Guide");
+assert.ok(shell.includes('if(auth.role==="student")')&&shell.includes('document.querySelector(\'.help-nav a[href="#parent-guide"]\')')&&shell.includes('document.getElementById("parent-guide")'),"Student role hides both the Parent Guide section link and its content on the Help Centre");
 const parentFaq=shell.indexOf('{label:"FAQ & Guide",icon:"❔",href:"./help.html#parent-guide"');
 const parentLast=shell.indexOf('{label:"Exam Paper Practice",icon:"📝",href:"./parent.html#exam-paper-practice"');
 assert.ok(parentFaq>parentLast,"Parent FAQ & Guide is the final parent menu item");
