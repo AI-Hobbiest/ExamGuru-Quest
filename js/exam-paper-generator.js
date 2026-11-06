@@ -411,6 +411,7 @@ function adaptChapterMcqBank(practiceChapters,bp,options={}){
   if(!chapterSection){excluded.ambiguousChapter+=(Array.isArray(chapter.questions)?chapter.questions.length:0);return;}
   byChapter[chapterId]=0;
   (chapter.questions||[]).forEach((q,questionIndex)=>{
+    if(q&&(q.examEligibility==="practice-only"||q.examEligibility===false)){excluded.outOfSummativeScope++;return;}
    const prompt=String(q&&(q.question||q.prompt||q.text)||"").trim();
    const stem=normalizeStem(prompt);
    const opts=Array.isArray(q&&q.options)?q.options.map((option,index)=>({
