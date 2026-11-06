@@ -81,7 +81,8 @@ assert.equal(new Set(paperFingerprints).size,50,"the Science generator must prod
 
 const adminStudio=fs.readFileSync("js/exam-paper-studio.js","utf8");
 assert.ok(adminStudio.includes('PAPER_HISTORY_KEY="eg_exam_paper_history_v1"'),"Admin Studio must share the self-study paper-history key");
-assert.ok(adminStudio.includes('PAPER_HISTORY_LIMIT=50'),"Admin Studio must keep a 50-paper rolling history");
+assert.ok(adminStudio.includes('function paperHistoryLimit()'),"Admin Studio must support a profile-specific rolling history");
+assert.ok(adminStudio.includes('profile&&profile.paperHistoryLimit'),"Admin Studio must honour the profile-specific paper history target");
 assert.ok(adminStudio.includes('generateUniquePaper'),"Admin Studio must reject exact full-paper repeats");
 assert.ok(adminStudio.includes('auditSlotCoverage(blueprint,bank,minimum)'),"Admin Studio must enforce the profile-specific candidate minimum");
 assert.ok(adminStudio.includes('profile-registry.json'),"Admin Studio must load the shared exam profile registry");
