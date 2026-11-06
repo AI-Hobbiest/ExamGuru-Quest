@@ -34,7 +34,7 @@ jobs:
           node tests/exam-paper-renderer.test.js
           node tests/assessment-manager.test.js
           node tests/assessment-analytics.test.js
-          for file in js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js; do node --check "$file"; done
+          for file in js/report-print.js js/app-shell.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js; do node --check "$file"; done
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
           node tests/learning-model.test.js
@@ -42,6 +42,7 @@ jobs:
           node tests/canonical-url.test.js
           node tests/stage-a-integration.test.js
           node tests/app-shell.test.js
+          node tests/report-print.test.js
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:
@@ -98,6 +99,7 @@ jobs:
           cp js/static-account-admin.js _site/js/static-account-admin.js
           cp js/family-access-admin.js _site/js/family-access-admin.js
           cp js/parent-dashboard.js _site/js/parent-dashboard.js
+          cp js/report-print.js _site/js/report-print.js
           cp js/app-shell.js _site/js/app-shell.js
           cp js/gamification.js _site/js/gamification.js
           cp js/dashboard-manager.js _site/js/dashboard-manager.js
@@ -325,7 +327,7 @@ jobs:
             }
             console.log('Validated '+name+': '+data.length+' topics, '+questionCount+' MCQs.');
           }
-          for (const file of ['practice.html','profile.html','dashboard.html','learning.html','study.html','parent.html','admin.html','exam-practice.html','js/competency-tagger.js','js/exam-paper-self-study.js','css/admin.css','js/admin-manager.js','js/student-auth.js','js/static-account-admin.js','js/family-access-admin.js','js/parent-dashboard.js','data/family-access.json','data/student-accounts.json','data/classes.json','data/knowledge-base.json','css/branding.css','css/app-shell.css','css/theme-roles.css','css/theme-roles-v2.css','css/question-media.css','js/app-shell.js','js/gamification.js','js/dashboard-manager.js','js/storage.js','js/question-bank.js','js/session-model.js','js/learning-model.js','js/learning-center.js','js/study-model.js','js/study-library.js','js/profile-model.js','js/profile-manager.js','js/quiz-engine.js','data/contracts/v1/question-bank.schema.json','data/contracts/v1/question-bank-import.schema.json','data/contracts/v1/student-profile.schema.json','data/contracts/v1/answer-record.schema.json','data/contracts/v1/test-attempt.schema.json','data/contracts/v1/local-store-envelope.schema.json','data/contracts/v1/backup.schema.json','data/science.json','data/mathematics.json','data/english.json','data/social-science.json','data/hindi.json','data/class-3-mathematics.json','data/class-3-mathematics-sof.json','data/class-6-science.json','data/class-6-mathematics.json','data/class-6-english.json','data/class-6-social-science.json','data/class-6-mathematics-sof.json','data/class-6-science-sof.json']) {
+          for (const file of ['practice.html','profile.html','dashboard.html','learning.html','study.html','parent.html','admin.html','exam-practice.html','js/competency-tagger.js','js/exam-paper-self-study.js','css/admin.css','js/admin-manager.js','js/student-auth.js','js/static-account-admin.js','js/family-access-admin.js','js/parent-dashboard.js','js/report-print.js','data/family-access.json','data/student-accounts.json','data/classes.json','data/knowledge-base.json','css/branding.css','css/app-shell.css','css/theme-roles.css','css/theme-roles-v2.css','css/question-media.css','js/app-shell.js','js/gamification.js','js/dashboard-manager.js','js/storage.js','js/question-bank.js','js/session-model.js','js/learning-model.js','js/learning-center.js','js/study-model.js','js/study-library.js','js/profile-model.js','js/profile-manager.js','js/quiz-engine.js','data/contracts/v1/question-bank.schema.json','data/contracts/v1/question-bank-import.schema.json','data/contracts/v1/student-profile.schema.json','data/contracts/v1/answer-record.schema.json','data/contracts/v1/test-attempt.schema.json','data/contracts/v1/local-store-envelope.schema.json','data/contracts/v1/backup.schema.json','data/science.json','data/mathematics.json','data/english.json','data/social-science.json','data/hindi.json','data/class-3-mathematics.json','data/class-3-mathematics-sof.json','data/class-6-science.json','data/class-6-mathematics.json','data/class-6-english.json','data/class-6-social-science.json','data/class-6-mathematics-sof.json','data/class-6-science-sof.json']) {
             if (!fs.existsSync('_site/'+file)) throw new Error('Missing deployed site file: '+file);
           }
           const examPractice=fs.readFileSync('_site/exam-practice.html','utf8');
@@ -352,8 +354,11 @@ jobs:
           const profilePage=fs.readFileSync('_site/profile.html','utf8');
           if (!profilePage.includes('id="studentId"') || !profilePage.includes('id="school"') || !profilePage.includes('id="city"') || !profilePage.includes('id="state"') || !profilePage.includes('id="classLevel"')) throw new Error('Profile fields are missing.');
           if (!profilePage.includes('Export JSON backup') || !profilePage.includes('Import JSON backup')) throw new Error('Profile backup controls are missing.');
-          const profileScripts=['./js/storage.js','./js/profile-model.js','./js/learning-model.js','./js/student-auth.js','./js/profile-manager.js'].map(src=>profilePage.indexOf(src));
+          const profileScripts=['./js/storage.js','./js/profile-model.js','./js/learning-model.js','./js/student-auth.js','./js/report-print.js','./js/profile-manager.js'].map(src=>profilePage.indexOf(src));
           if (profileScripts.some(index=>index<0) || !profileScripts.every((index,i)=>i===0||profileScripts[i-1]<index)) throw new Error('Profile scripts are missing or out of order.');
+          const parentPage=fs.readFileSync('_site/parent.html','utf8');
+          const parentScripts=['./js/student-auth.js','./js/storage.js','./js/gamification.js','./js/assessment-manager.js','./js/report-print.js','./js/parent-dashboard.js'].map(src=>parentPage.indexOf(src));
+          if (parentScripts.some(index=>index<0) || !parentScripts.every((index,i)=>i===0||parentScripts[i-1]<index)) throw new Error('Parent report scripts are missing or out of order.');
           const learningPage=fs.readFileSync('_site/learning.html','utf8');
           for (const required of ['id="recommendations"','id="mistakes"','id="bookmarkList"','id="topicMasteryList"','id="mistakeStatusFilter"']) {
             if (!learningPage.includes(required)) throw new Error('Learning Hub section missing: '+required);
@@ -394,7 +399,7 @@ jobs:
             throw new Error('Login handler does not authenticate students and route to dashboard.');
           }
           const shell=fs.readFileSync('_site/js/app-shell.js','utf8');
-          for (const required of ['c10-auth-changed','dashboard.html','profile.html','Sign out']) {
+          for (const required of ['c10-auth-changed','dashboard.html','profile.html','Sign out','c10-topbar-brand','c10HeaderSignout']) {
             if (!shell.includes(required)) throw new Error('Role-aware navigation is missing '+required);
           }
           const dashboardLanding=fs.readFileSync('_site/dashboard.html','utf8');
@@ -407,6 +412,7 @@ jobs:
           if (!quizEngine.includes('science: { title:"Science"')) throw new Error('Science is missing from the shared engine subject registry.');
           const practice=fs.readFileSync('_site/practice.html','utf8');
           if (!practice.includes('Conceptualised by')) throw new Error('Practice-page attribution is missing.');
+          if (!practice.includes('MCQs in practice bank')) throw new Error('Student-facing bank count must be labelled as MCQs only.');
           if (!practice.includes('id="questionMedia"') || !practice.includes('id="imageViewer"') || !practice.includes('./css/question-media.css')) throw new Error('Practice page is missing question-image UI.');
           const imageBankSchema=JSON.parse(fs.readFileSync('_site/data/contracts/v1/question-bank.schema.json','utf8'));
           const questionSchema=imageBankSchema.properties.chapters.items.properties.questions.items;
@@ -443,7 +449,7 @@ jobs:
       - name: Test profile page save/history and JSON backup
         run: node tests/profile-page.test.js
       - name: Test levels XP badges and responsive navigation
-        run: node tests/gamification.test.js && node tests/app-shell.test.js
+        run: node tests/gamification.test.js && node tests/app-shell.test.js && node tests/report-print.test.js
       - name: Test Admin Workspace data handling and safety boundaries
         run: node tests/admin-workspace.test.js && node tests/account-contract.test.js && node tests/static-accounts.test.js
       - name: Upload static site
