@@ -76,6 +76,21 @@ A subject is not complete until every chapter meets all of these checks:
 6. Randomised sample-paper checks, answer-key checks and subject-level regression tests pass.
 7. Practice difficulty filters and adaptive selection continue to distinguish all four levels correctly.
 
+## Continuous-integration result
+
+The first full baseline run of the new release gate reported **589 outstanding checks** after correcting the test normaliser so apostrophes are preserved in English options. The existing Class 6 bank-inventory, structure, IDs and subject-routing tests passed. The new quality gate correctly remains red because chapter difficulty distributions are not at target and the Maths / English stem-uniqueness checks still find repeated content. The count is a total of failed gate assertions, not a count of 589 separate defective question IDs.
+
+A red quality gate is intentional until the full bank remediation passes. Do not merge or deploy the current content branch.
+
+## Other-class spot check (read-only)
+
+A preliminary inventory scan shows this is not guaranteed to be Class 6-only:
+- Class 10 Mathematics: 1,400 questions; Easy 546, Medium 756, Hard 98, Challenge 0.
+- Class 3 Mathematics: 1,400 questions; Easy 560, Medium 560, Hard 0, Challenge 280.
+- Class 3 English: 120 questions; Easy 48, Medium 60, Hard 0, Challenge 12.
+
+This is not a full content audit of those classes, and no other-class banks are changed in this PR.
+
 ## Remediation already applied
 
 - Corrected the seven malformed Science observation questions in `data/class-6-science.json` on this branch.
