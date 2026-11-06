@@ -32,6 +32,7 @@ const correctedCase=base.questions.find(q=>q.questionId==="C6M-CASE4-MD-AN-003")
 assert.ok(correctedCase.answerKey.modelAnswer.includes("64 m²"),"the Garden B area answer key must be mathematically correct");
 assert.deepEqual(base.questions.reduce((m,q)=>{m[q.type]=(m[q.type]||0)+1;return m;},{}),{"very-short-answer":100,"short-answer":100,"long-answer":80,"case-based":60});
 assert.equal(practice.length,10);assert.equal(practice.reduce((n,c)=>n+c.questions.length,0),1043);
+assert.equal(practice.flatMap(c=>c.questions).filter(q=>q.examEligibility==="practice-only").length,38,"out-of-syllabus items remain available for practice but are not eligible for exam-paper generation");
 const reviewSimulation={...base,questions:base.questions.map(q=>({...q,approvalStatus:"approved"})),questionPoolStatus:"review-simulation-only"};
 const integrated=g.mergeQuestionBanks(reviewSimulation,practice,bp,{minimumCandidatesPerSlot:20});
 assert.equal(integrated.stats.coverage.valid,true,integrated.stats.coverage.errors.join(" | "));
