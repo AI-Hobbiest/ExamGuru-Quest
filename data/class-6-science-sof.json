@@ -4427,147 +4427,155 @@
       },
       {
         "id": "c6nsoq243",
-        "question": "Which process removes mud but not dissolved salt from muddy salt water?",
+        "question": "A dry mixture contains iron filings, sand and salt. Which sequence can recover each component without mixing them again?",
         "options": [
-          "Evaporation",
-          "Magnetic separation",
-          "Winnowing",
-          "Filtration"
+          "Use a magnet for iron, dissolve the salt in water, filter out sand, then evaporate the water",
+          "Evaporate first, then use a magnet on the vapour",
+          "Filter the dry mixture, then pour away the salt",
+          "Use winnowing to remove the dissolved salt"
         ],
-        "answer": 3,
-        "explanation": "Mud is insoluble and retained; dissolved salt passes through.",
+        "answer": 0,
+        "explanation": "A magnet removes iron. Water dissolves salt but not sand; filtration collects sand, and evaporation recovers salt.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Methods of Separation",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It combines magnetic separation, dissolving, filtration and evaporation in a purposeful order."
       },
       {
         "id": "c6nsoq244",
-        "question": "In a salt-water solution, salt is the:",
+        "question": "A farmer wants to separate light husk from heavier grains after threshing. Which method works best and why?",
         "options": [
-          "Solvent",
-          "Residue",
-          "Solute",
-          "Filter"
+          "Sieving, because both have exactly the same size",
+          "Winnowing, because moving air carries the lighter husk farther",
+          "Filtration, because grains dissolve in water",
+          "Evaporation, because husk becomes vapour"
         ],
-        "answer": 2,
-        "explanation": "The solute is the substance dissolved in a solvent.",
+        "answer": 1,
+        "explanation": "Winnowing uses air to carry the lighter husk away while heavier grains fall nearby.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Methods of Separation",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It matches a method to a difference in mass and predicts how both materials behave."
       },
       {
         "id": "c6nsoq245",
-        "question": "A dish of salt water is heated until all water evaporates. What remains?",
+        "question": "A jar contains sand, water and a layer of cooking oil. Which first action best separates the oil from the other two materials?",
         "options": [
-          "Pure water",
-          "Salt",
-          "Only water vapour in the dish",
-          "No material"
+          "Filter the whole mixture through cloth",
+          "Evaporate the water immediately",
+          "Allow the layers to settle, then carefully decant the top oil layer",
+          "Use a magnet to pull out the oil"
         ],
-        "answer": 1,
-        "explanation": "The dissolved salt remains as a solid.",
+        "answer": 2,
+        "explanation": "Oil forms a separate upper layer above water. Letting the mixture settle and carefully decanting separates the oil before dealing with the sand.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Methods of Separation",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It uses settling and density-related layering to choose the first step in a multi-part separation."
       },
       {
         "id": "c6nsoq246",
-        "question": "After iron filings are removed magnetically, a mixture of sand and salt is stirred into water. What remains on the filter paper?",
+        "question": "Salt dissolved in clear water passes through ordinary filter paper. What does this show?",
         "options": [
-          "Sand",
-          "Salt solution",
-          "Iron filings",
-          "Water vapour"
+          "Salt is magnetic",
+          "The filter paper has dissolved",
+          "The salt has turned into water",
+          "Dissolved salt particles travel with the water through the filter"
         ],
-        "answer": 0,
-        "explanation": "Salt dissolves and passes through with the water; insoluble sand is retained on the filter paper.",
+        "answer": 3,
+        "explanation": "Filtration removes insoluble particles, not a substance dissolved in the liquid. Evaporation is needed to recover the salt.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Methods of Separation",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It distinguishes a solution from a suspension and selects the correct next process."
       },
       {
         "id": "c6nsoq247",
-        "question": "Two liquids do not mix and form layers. Which method can separate them?",
+        "question": "A cup of sweet tea contains dissolved sugar and loose tea leaves. Which order gives tea without leaves and can later recover sugar from the liquid?",
         "options": [
-          "Sieving",
-          "Winnowing",
-          "Handpicking",
-          "Careful decantation of the layers"
+          "Filter the tea leaves first, then evaporate the liquid if sugar must be recovered",
+          "Evaporate the cup before removing the leaves",
+          "Use a magnet to collect the sugar",
+          "Use a sieve to remove dissolved sugar"
         ],
-        "answer": 3,
-        "explanation": "Immiscible liquids form layers that can be poured apart.",
+        "answer": 0,
+        "explanation": "Filtration removes the insoluble leaves. Evaporating the filtered liquid can leave the dissolved sugar behind.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Methods of Separation",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It orders two methods according to whether each component is soluble or insoluble."
       },
       {
         "id": "c6nsoq248",
-        "question": "If filter pores are larger than particles in a suspension, what may happen?",
+        "question": "A mixture contains stones, large grains and fine flour. Which approach is most suitable before any water is added?",
         "options": [
-          "All liquid is held back",
-          "Particles dissolve automatically",
-          "Some particles may pass through with the liquid",
-          "Paper becomes magnetic"
+          "Evaporate the mixture",
+          "Hand-pick the stones, then sieve to separate particles of different sizes",
+          "Use a magnet to dissolve the flour",
+          "Filter the dry mixture through water"
         ],
-        "answer": 2,
-        "explanation": "The filter must retain particles to separate them.",
+        "answer": 1,
+        "explanation": "Hand-picking removes visible stones; sieving separates the remaining materials according to particle size.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Methods of Separation",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It plans two complementary physical methods based on visible differences and particle size."
       },
       {
         "id": "c6nsoq249",
-        "question": "Why is simple evaporation not best when we need to collect both salt and pure water?",
+        "question": "A sample of muddy water contains visible soil and dissolved salt. The aim is to obtain clear salty water, not dry salt. Which sequence is best?",
         "options": [
-          "Salt changes to iron",
-          "The water escapes as vapour and is not collected",
-          "Water cannot evaporate",
-          "Salt dissolves into air"
+          "Evaporate everything until only soil remains",
+          "Add more mud so it settles faster",
+          "Allow the soil to settle, decant the clearer liquid and filter it",
+          "Use a magnet to remove the salt"
         ],
-        "answer": 1,
-        "explanation": "Distillation is used to collect the evaporated solvent.",
+        "answer": 2,
+        "explanation": "Settling and decanting remove much of the soil; filtration removes remaining insoluble particles while dissolved salt stays in the water.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Methods of Separation",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It selects a sequence that preserves the desired dissolved substance in the liquid."
       },
       {
         "id": "c6nsoq250",
-        "question": "A mixture of dry sand and salt is to be separated with the least loss of both. Which sequence is appropriate?",
+        "question": "A mixture contains rice, small stones and fine sand. Which plan is most likely to separate all three efficiently?",
         "options": [
-          "Dissolve salt, filter sand, then evaporate the filtrate",
-          "Heat the dry mixture until both melt",
-          "Use only a sieve",
-          "Use winnowing then a magnet"
+          "Dissolve the rice in water",
+          "Evaporate the stones",
+          "Use a magnet on all three materials",
+          "Hand-pick the stones, then sieve the rice and sand using a mesh that lets sand pass"
         ],
-        "answer": 0,
-        "explanation": "Salt dissolves in water; sand is retained by filtration; evaporation recovers salt.",
+        "answer": 3,
+        "explanation": "Hand-picking removes stones. A suitable sieve retains the larger rice grains while finer sand passes through.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Methods of Separation",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It combines visual sorting with a size-based method and considers the required mesh."
       }
     ]
   },
@@ -5335,147 +5343,155 @@
       },
       {
         "id": "c6nsoq293",
-        "question": "Which is useful for identifying an organism in a classification key?",
+        "question": "An unknown animal has a backbone, feathers, wings and lays eggs. Which classification is best supported by all four clues?",
         "options": [
-          "An observable feature such as number of legs",
-          "Its favourite colour as guessed",
-          "Its name in a story",
-          "Its price"
+          "Bird",
+          "Fish",
+          "Mammal",
+          "Insect"
         ],
         "answer": 0,
-        "explanation": "Classification keys use observable features.",
+        "explanation": "A backbone places it among vertebrates, while feathers and egg-laying are characteristic bird features.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Living World and Its Diversity",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It combines several observable traits instead of classifying from one feature alone."
       },
       {
         "id": "c6nsoq294",
-        "question": "A pond dries for part of the year. Which feature helps some organisms survive?",
+        "question": "A cactus and a water lily live in very different habitats. Which paired adaptation best explains how each suits its habitat?",
         "options": [
-          "Permanent need for flowing water",
-          "Inability to reproduce",
-          "Larger body size only",
-          "Seeds or dormant stages that remain inactive"
+          "Cactus has broad floating leaves; water lily has spines to reduce water loss",
+          "Cactus has a thick water-storing stem; water lily has broad floating leaves",
+          "Both need dry sand to survive",
+          "Water lily stores all its water in underground spines"
         ],
-        "answer": 3,
-        "explanation": "Dormant stages can survive unfavourable conditions.",
+        "answer": 1,
+        "explanation": "A cactus stores water and reduces loss in dry habitats; a water lily's broad floating leaves help it live on the water surface.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Living World and Its Diversity",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It compares two organisms and links different structures to contrasting habitats."
       },
       {
         "id": "c6nsoq295",
-        "question": "A plant has tendrils coiling around a support. What is their advantage?",
+        "question": "A pond food chain is algae → insect larvae → small fish → large fish. If the small fish population falls sharply, which immediate effect is most likely?",
         "options": [
-          "They absorb minerals from rocks",
-          "They become roots underground",
-          "They help a weak stem climb towards light",
-          "They trap fish"
+          "Algae must disappear at once",
+          "Large fish will have more food",
+          "Insect larvae may increase while large fish have less food",
+          "The water will stop evaporating"
         ],
         "answer": 2,
-        "explanation": "Tendrils support climbing stems.",
+        "explanation": "Fewer small fish means fewer larvae are eaten, while large fish lose one of their food sources.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Living World and Its Diversity",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It traces two effects in opposite directions through a food chain."
       },
       {
         "id": "c6nsoq296",
-        "question": "Why do polar bears and camels have different body features?",
+        "question": "A plant produces many small, light seeds with hair-like structures. Which combination best explains how this feature helps the plant?",
         "options": [
-          "They belong to different kingdoms",
-          "They are adapted to different environmental conditions",
-          "One is non-living",
-          "All animals choose their body shape"
+          "It makes the seeds heavier so they sink",
+          "It prevents the seeds from ever moving",
+          "It lets animals digest the seeds before germination",
+          "It helps air carry the seeds away from the parent plant"
         ],
-        "answer": 1,
-        "explanation": "Adaptations improve survival in particular habitats.",
+        "answer": 3,
+        "explanation": "Hair-like structures increase the chance that wind will carry the light seeds away, reducing crowding near the parent plant.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Living World and Its Diversity",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It connects a seed structure to a dispersal method and its ecological benefit."
       },
       {
         "id": "c6nsoq297",
-        "question": "Which organism is most likely a decomposer?",
+        "question": "Two organisms are found in a habitat. One has moist skin and lays eggs in water; the other has dry scales and lays eggs on land. Which inference is most reasonable?",
         "options": [
-          "Mushroom",
-          "Grass",
-          "Deer",
-          "Eagle"
+          "The first may be an amphibian and the second a reptile",
+          "Both must be birds",
+          "The first must be a mammal",
+          "Both must be fish"
         ],
         "answer": 0,
-        "explanation": "Fungi break down dead organic matter.",
+        "explanation": "Moist skin and reproduction linked to water suggest an amphibian; dry scales and land-laid eggs are typical reptile features.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Living World and Its Diversity",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It uses two sets of characteristics to distinguish broad animal groups."
       },
       {
         "id": "c6nsoq298",
-        "question": "An animal has a backbone, breathes with lungs and has dry scales. Which group?",
+        "question": "A gardener removes every flowering plant from a small area. Which pair of changes is most likely over time?",
         "options": [
-          "Fish",
-          "Amphibians",
-          "Molluscs",
-          "Reptiles"
+          "More nectar becomes available and pollinators increase",
+          "Some pollinators lose food sources and fewer seeds may form in plants that depend on them",
+          "All soil organisms immediately become plants",
+          "The area gains more plant diversity"
         ],
-        "answer": 3,
-        "explanation": "Many reptiles have dry scales and breathe with lungs.",
+        "answer": 1,
+        "explanation": "Flowering plants provide nectar or pollen for many pollinators; fewer flowers can reduce food and affect pollination and seed production.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Living World and Its Diversity",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It reasons from plant–animal interdependence to two linked consequences."
       },
       {
         "id": "c6nsoq299",
-        "question": "An organism lacks chlorophyll and grows on dead wood. Which nutrition mode is likely?",
+        "question": "A bird living in a cold region has dense feathers and a layer of body fat. Which explanation best connects the two features?",
         "options": [
-          "Photosynthesis",
-          "Hunting",
-          "Saprotrophic nutrition",
-          "Filter feeding"
+          "Both help it fly faster in every condition",
+          "Both make the bird absorb more water",
+          "The feathers trap air and the fat helps reduce heat loss",
+          "The features turn sunlight directly into food"
         ],
         "answer": 2,
-        "explanation": "Some fungi obtain nutrients by decomposing dead organic matter.",
+        "explanation": "Dense feathers trap insulating air and body fat also reduces heat loss, helping the bird stay warm.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Living World and Its Diversity",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It integrates two adaptations to explain survival in one habitat."
       },
       {
         "id": "c6nsoq300",
-        "question": "Why classify organisms using several features rather than only body colour?",
+        "question": "In a food web, grass feeds grasshoppers and rabbits; grasshoppers feed frogs; frogs and rabbits are eaten by eagles. If frogs become scarce, which outcome is best supported?",
         "options": [
-          "Colour is always invisible",
-          "Many unrelated organisms can share a colour",
-          "Body colour never varies",
-          "All organisms have the same colour"
+          "Rabbits must disappear immediately",
+          "Eagles can no longer eat any animal",
+          "Grass will stop growing",
+          "Grasshoppers may increase, while eagles lose one of their food sources"
         ],
-        "answer": 1,
-        "explanation": "Several observable features give more reliable grouping.",
+        "answer": 3,
+        "explanation": "With fewer frogs, fewer grasshoppers may be eaten; eagles also lose frogs as one food source, although they can still eat rabbits.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Living World and Its Diversity",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It follows multiple links in a food web and avoids claiming that one change controls the entire system."
       }
     ]
   },
@@ -6243,147 +6259,155 @@
       },
       {
         "id": "c6nsoq343",
-        "question": "A north pole is brought near the south pole of a compass needle. What happens?",
+        "question": "A bar magnet has an unknown end X. X repels the north pole of a labelled magnet. What must X be?",
         "options": [
-          "The needle's south pole is repelled",
-          "The needle stops being magnetic",
-          "The south pole of the needle is attracted",
-          "Both poles disappear"
+          "A north pole",
+          "A south pole",
+          "A non-magnetic end",
+          "A pole that has no fixed identity"
         ],
-        "answer": 2,
-        "explanation": "Unlike poles attract.",
+        "answer": 0,
+        "explanation": "Like poles repel. Since X repels a known north pole, X is also north.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Exploring Magnets",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It uses repulsion as a decisive test rather than relying on attraction, which can occur with an unmagnetised magnetic material."
       },
       {
         "id": "c6nsoq344",
-        "question": "Which statement best explains why a magnet can attract an iron nail without touching it?",
+        "question": "A student wants to test whether a magnet can attract a steel pin through a barrier. Which setup gives the clearest result?",
         "options": [
-          "The magnet sends out glue",
-          "Its magnetic field exerts a force at a distance",
-          "Air pushes the nail",
-          "The nail becomes weightless"
+          "Place the pin inside a thick steel box",
+          "Keep the same magnet and pin, then repeat with equal-thickness paper, cardboard and plastic barriers",
+          "Use a different magnet for each barrier",
+          "Change the distance and barrier at the same time"
         ],
         "answer": 1,
-        "explanation": "Magnetic forces can act without direct contact.",
+        "explanation": "Keeping the magnet, pin and distance constant makes the barrier the only changing factor, so the results can be compared fairly.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Exploring Magnets",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It designs a controlled comparison across several materials."
       },
       {
         "id": "c6nsoq345",
-        "question": "A student tests an unknown metal using a magnet and sees no attraction. What should be concluded?",
+        "question": "Two magnets are compared by counting how many identical paper clips each can lift from the same pile. Magnet A lifts 8 and Magnet B lifts 12. Which conclusion is justified?",
         "options": [
-          "The sample is not strongly magnetic under this test",
-          "It must be copper",
-          "It is definitely not a metal",
-          "It must be a non-living thing"
+          "A is stronger because it lifted fewer clips",
+          "The test proves B is stronger at every point and distance",
+          "B attracted more clips in this test, suggesting greater strength under these conditions",
+          "The result depends only on the colour of the magnets"
         ],
-        "answer": 0,
-        "explanation": "Many metals are not attracted by ordinary magnets.",
+        "answer": 2,
+        "explanation": "B lifted more identical clips in the same test, which is evidence that it was stronger under those conditions; repeating would improve confidence.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Exploring Magnets",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It interprets a controlled measurement while keeping the conclusion limited to the test."
       },
       {
         "id": "c6nsoq346",
-        "question": "A bar magnet is broken into three small pieces. How many poles are present in total?",
+        "question": "A compass needle turns when a bar magnet is brought near it. The needle turns the opposite way when the magnet is reversed. What best explains this?",
         "options": [
-          "Two",
-          "Three",
-          "Four",
-          "Six"
+          "The compass has stopped working",
+          "The magnet has lost both poles",
+          "The compass is responding to room temperature",
+          "Reversing the magnet reverses the direction of its magnetic field near the compass"
         ],
         "answer": 3,
-        "explanation": "Each piece is a magnet with two poles.",
+        "explanation": "The compass needle aligns with the magnetic field. Reversing the magnet's poles changes the field direction near the needle.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Exploring Magnets",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It connects a controlled reversal to the observed change in compass direction."
       },
       {
         "id": "c6nsoq347",
-        "question": "Two identical magnets are suspended with like poles facing. What occurs?",
+        "question": "A bar magnet is broken into two smaller pieces. What will the two pieces behave like?",
         "options": [
-          "They move together",
-          "They become non-magnetic",
-          "They move apart",
-          "They rotate into liquid"
+          "Each piece will have a north and a south pole",
+          "One piece will be north only and the other south only",
+          "Both pieces will lose magnetism in every case",
+          "Only the broken faces will become magnetic"
         ],
-        "answer": 2,
-        "explanation": "Like poles repel.",
+        "answer": 0,
+        "explanation": "Each smaller piece is still a magnet with both north and south poles; isolated single poles are not produced by simply breaking a bar magnet.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Exploring Magnets",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It applies the pole model to a change in the magnet's shape."
       },
       {
         "id": "c6nsoq348",
-        "question": "Why is a magnetic compass useful to navigators?",
+        "question": "A compass is first aligned away from nearby objects. A magnet is then placed to its left with its south pole facing the compass. Which change should be expected?",
         "options": [
-          "It measures distance",
-          "It provides a reference direction even when landmarks are not visible",
-          "It measures air temperature",
-          "It produces electricity"
+          "The compass needle must point to the geographic east",
+          "The needle turns because the magnet's field combines with Earth's field",
+          "The compass needle becomes a magnet with no poles",
+          "The compass stops responding to Earth's field permanently"
         ],
         "answer": 1,
-        "explanation": "The needle aligns with Earth's magnetic field and indicates direction.",
+        "explanation": "The compass responds to the combined magnetic field of Earth and the nearby magnet, so its direction changes.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Exploring Magnets",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It combines the compass's normal reference direction with the influence of a nearby magnetic field."
       },
       {
         "id": "c6nsoq349",
-        "question": "A magnet attracts a paper clip through cardboard but not through a thick iron plate placed between them. What is the best explanation?",
+        "question": "A box contains one of two objects: an iron nail or an aluminium strip. A magnet attracts the hidden object. Which conclusion is safest?",
         "options": [
-          "The iron plate changes or shunts the magnetic field path",
-          "Cardboard is a stronger magnet",
-          "The paper clip loses its mass",
-          "Iron blocks all forces including gravity"
+          "It must be aluminium",
+          "The magnet has attracted the box",
+          "The hidden object is likely the iron nail because iron is magnetic and aluminium is not attracted like iron",
+          "Both objects must be magnetic"
         ],
-        "answer": 0,
-        "explanation": "Iron can redirect the magnetic field and reduce the field reaching the clip.",
+        "answer": 2,
+        "explanation": "The attraction supports the iron-nail explanation; aluminium is not a typical strongly magnetic material in this school-level test.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Exploring Magnets",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It uses a test result to distinguish two candidate materials and states the inference carefully."
       },
       {
         "id": "c6nsoq350",
-        "question": "A coil with an iron nail inside attracts more pins when the current is increased. What does this indicate?",
+        "question": "A student says attraction proves that two unknown ends are opposite poles. Why is a repulsion test more reliable for identifying a pole?",
         "options": [
-          "The nail has melted",
-          "The pins have become lighter",
-          "The current has stopped",
-          "The electromagnet has become stronger"
+          "Attraction happens only between two magnets",
+          "Repulsion happens between all materials",
+          "A compass cannot respond to magnets",
+          "A magnet can attract an unmagnetised magnetic object, but repulsion indicates like magnetic poles"
         ],
         "answer": 3,
-        "explanation": "Increasing coil current strengthens the electromagnet's field.",
+        "explanation": "Iron can be attracted to either pole even when it is not itself a magnet. Repulsion is the sure sign that two like poles are facing.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Exploring Magnets",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It evaluates the limits of one test and selects the more conclusive evidence."
       }
     ]
   },
@@ -7151,147 +7175,155 @@
       },
       {
         "id": "c6nsoq393",
-        "question": "A toy completes one circular revolution in 10 seconds. Its time period is:",
+        "question": "Runner A travels 240 m in 4 minutes. Runner B travels 360 m in 6 minutes. Which comparison is correct?",
         "options": [
-          "5 seconds",
-          "20 seconds",
-          "1 second",
-          "10 seconds"
+          "They have the same average speed of 1 m/s",
+          "A is twice as fast as B",
+          "B is three times as fast as A",
+          "Their speeds cannot be compared"
         ],
-        "answer": 3,
-        "explanation": "One full round takes 10 seconds.",
+        "answer": 0,
+        "explanation": "A: 240÷240=1 m/s. B: 360÷360=1 m/s. Their average speeds are equal.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Measurement of Length and Motion",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It converts minutes to seconds and compares two average speeds."
       },
       {
         "id": "c6nsoq394",
-        "question": "How can the curved edge of a leaf be measured?",
+        "question": "A cyclist covers 450 m in 3 minutes, then 300 m in 2 minutes. What is the average speed over the whole journey?",
         "options": [
-          "Measure only the straight distance between tips",
-          "Use a thermometer",
-          "Trace it with thread and then measure the thread",
-          "Estimate by eye"
+          "1 m/s",
+          "2.5 m/s",
+          "3 m/s",
+          "5 m/s"
         ],
-        "answer": 2,
-        "explanation": "Thread follows the curve and can be measured straight.",
+        "answer": 1,
+        "explanation": "Total distance = 750 m and total time = 5 minutes = 300 s. Average speed = 750÷300 = 2.5 m/s.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Measurement of Length and Motion",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It requires adding distances and times before calculating the overall average."
       },
       {
         "id": "c6nsoq395",
-        "question": "A car travels 40 km in 40 minutes. Average speed in km/h?",
+        "question": "A student walks one lap of a 200 m track in 50 s and another lap in 40 s. Which statement is correct?",
         "options": [
-          "40 km/h",
-          "60 km/h",
-          "50 km/h",
-          "80 km/h"
+          "The first lap was faster because it took longer",
+          "The second lap covered less distance",
+          "The second lap had the higher average speed because the same distance took less time",
+          "Both laps had zero speed"
         ],
-        "answer": 1,
-        "explanation": "40 minutes is 2/3 hour; 40÷(2/3)=60 km/h.",
+        "answer": 2,
+        "explanation": "For equal distances, the shorter time means higher average speed. The second lap took 40 s instead of 50 s.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Measurement of Length and Motion",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It compares rates for equal distances and uses time correctly."
       },
       {
         "id": "c6nsoq396",
-        "question": "A person travels 3 km in 30 minutes then 2 km in 30 minutes. Average speed?",
+        "question": "A pace is calibrated as 60 cm per step. A student takes 25 steps along a straight corridor. What distance is estimated?",
         "options": [
-          "5 km/h",
-          "2.5 km/h",
-          "3 km/h",
-          "6 km/h"
+          "6 m",
+          "12 m",
+          "18 m",
+          "15 m"
         ],
-        "answer": 0,
-        "explanation": "5 km in one hour.",
+        "answer": 3,
+        "explanation": "25×60 cm = 1500 cm = 15 m.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Measurement of Length and Motion",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It combines multiplication with a conversion from centimetres to metres."
       },
       {
         "id": "c6nsoq397",
-        "question": "A moving walkway carries a person 120 m in 60 s. The person walks in the same direction and moves 180 m relative to the ground in that time. How far does the person walk relative to the walkway?",
+        "question": "A toy car travels 20 cm in the first second, 20 cm in the second, and 40 cm in the third. Which description best fits its motion?",
         "options": [
-          "120 m",
-          "180 m",
-          "300 m",
-          "60 m"
+          "It did not move at a constant speed throughout",
+          "It moved at exactly the same speed in every interval",
+          "It travelled the greatest distance in the first second",
+          "It moved backwards in the third second"
         ],
-        "answer": 3,
-        "explanation": "The walkway carries the person 120 m; the additional distance from walking is 180−120=60 m relative to the walkway.",
+        "answer": 0,
+        "explanation": "The car covered equal distances in the first two seconds but twice that distance in the third, so its speed was not constant.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Measurement of Length and Motion",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It interprets a short distance–time record across multiple intervals."
       },
       {
         "id": "c6nsoq398",
-        "question": "An object starts at 1.2 cm and ends at 7.6 cm on a scale. Find its length.",
+        "question": "A table is measured three times and the readings are 118 cm, 119 cm and 118 cm. Which value is the best estimate if the measurements were taken carefully?",
         "options": [
-          "7.6 cm",
-          "8.8 cm",
-          "6.4 cm",
-          "5.2 cm"
+          "119 cm because it is the largest",
+          "About 118 cm, because the readings cluster around it",
+          "355 cm because all readings should be added",
+          "1180 cm because three readings were taken"
         ],
-        "answer": 2,
-        "explanation": "7.6−1.2=6.4 cm.",
+        "answer": 1,
+        "explanation": "The readings are close together and average about 118.3 cm, so approximately 118 cm is a sensible estimate.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Measurement of Length and Motion",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It combines repeated measurements and uses them to form a reasonable estimate."
       },
       {
         "id": "c6nsoq399",
-        "question": "A runner covers 100 m in 12.5 s. Time for 240 m at the same speed?",
+        "question": "A map uses 1 cm to represent 5 km. Two towns are 3.6 cm apart on the map. What is their represented distance?",
         "options": [
-          "24 seconds",
-          "30 seconds",
-          "25 seconds",
-          "36 seconds"
+          "5 km",
+          "8.6 km",
+          "18 km",
+          "36 km"
         ],
-        "answer": 1,
-        "explanation": "Speed=8 m/s; 240÷8=30 s.",
+        "answer": 2,
+        "explanation": "Each centimetre represents 5 km, so 3.6×5 = 18 km.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Measurement of Length and Motion",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It interprets a scale and multiplies by the represented distance per unit."
       },
       {
         "id": "c6nsoq400",
-        "question": "Two cyclists travel at 5 m/s and 6 m/s for 20 s. How much farther does the faster cyclist travel?",
+        "question": "Two routes connect the same school and library. Route P is a straight 600 m path. Route Q is a winding 750 m path. A student walks Q in 10 minutes. Which statement is correct?",
         "options": [
-          "20 m",
-          "5 m",
-          "10 m",
-          "120 m"
+          "The displacement along Q must be 750 m",
+          "The school and library are 750 m apart",
+          "The winding route is shorter because it has more turns",
+          "Route Q covers 150 m more path than P, although both have the same start and end points"
         ],
-        "answer": 0,
-        "explanation": "Their speed difference is 1 m/s; over 20 s the distance difference is 20 m.",
+        "answer": 3,
+        "explanation": "The route lengths differ by 750−600=150 m. Since the endpoints match, the straight separation is not the same as the longer path length.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Measurement of Length and Motion",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It distinguishes path distance from the shared endpoints and compares the route lengths."
       }
     ]
   },
