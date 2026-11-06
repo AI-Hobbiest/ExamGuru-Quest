@@ -3,44 +3,44 @@
   "use strict";
   const links=[
     {label:"Sign in",icon:"🔐",href:"./index.html",page:"index.html",auth:"guest"},
-    {section:"FAMILY",auth:"parent"},
-    {label:"Family dashboard",icon:"👨‍👩‍👧‍👦",href:"./parent.html",page:"parent.html",auth:"parent"},
-    {label:"Create & assign tests",icon:"📝",href:"./parent.html#assessments",page:"parent.html",hash:"#assessments",auth:"parent"},
-    {label:"Exam Paper Practice",icon:"📝",href:"./parent.html#exam-paper-practice",page:"parent.html",hash:"#exam-paper-practice",auth:"parent"},
+    ,
+    {label:"Family dashboard"group:"Family",,icon:"👨‍👩‍👧‍👦",href:"./parent.html",page:"parent.html",auth:"parent"},
+    {label:"Create & assign tests"group:"Family",,icon:"📝",href:"./parent.html#assessments",page:"parent.html",hash:"#assessments",auth:"parent"},
+    {label:"Exam Paper Practice",icon:"📝",href:"./parent.html#exam-paper-practice"group:"Family",,page:"parent.html",hash:"#exam-paper-practice",auth:"parent"},
     {label:"FAQ & Guide",icon:"❔",href:"./help.html#parent-guide",page:"help.html",auth:"parent"},
-    {section:"LEARN",auth:"student"},
+    ,
     {label:"Dashboard",icon:"🏡",href:"./dashboard.html",page:"dashboard.html",auth:"student"},
-    {label:"All subjects",icon:"📚",href:"./dashboard.html#subjects",page:"dashboard.html",hash:"#subjects",auth:"student"},
+    {label:"All subjects"group:"Subjects",,icon:"📚",href:"./dashboard.html#subjects",page:"dashboard.html",hash:"#subjects",auth:"student"},
+    {label:"Levels & rewards"group:"My Account",,icon:"🏆",href:"./dashboard.html#rewards",page:"dashboard.html",hash:"#rewards",auth:"student"},
+    ,
+    {label:"Science"group:"Subjects",,icon:"🧪",href:"./practice.html?subject=science",page:"practice.html",subject:"science",auth:"student"},
+    {label:"Science - SOF"group:"Subjects",,icon:"🏆",href:"./practice.html?subject=science-sof",page:"practice.html",subject:"science-sof",auth:"student"},
+    {label:"Mathematics"group:"Subjects",,icon:"📐",href:"./practice.html?subject=mathematics",page:"practice.html",subject:"mathematics",auth:"student"},
+    {label:"Mathematics - SOF"group:"Subjects",,icon:"🏆",href:"./practice.html?subject=mathematics-sof",page:"practice.html",subject:"mathematics-sof",auth:"student"},
+    {label:"English"group:"Subjects",,icon:"📖",href:"./practice.html?subject=english",page:"practice.html",subject:"english",auth:"student"},
+    {label:"English - SOF"group:"Subjects",,icon:"🏆",href:"./practice.html?subject=english-sof",page:"practice.html",subject:"english-sof",auth:"student"},
+    {label:"Social Science"group:"Subjects",,icon:"🌍",href:"./practice.html?subject=social-science",page:"practice.html",subject:"social-science",auth:"student"},
+    {label:"Hindi"group:"Subjects",,icon:"📝",href:"./practice.html?subject=hindi",page:"practice.html",subject:"hindi",auth:"student"},
+    ,
+    {label:"Study Library"group:"Study Pack",,icon:"📖",href:"./study.html",page:"study.html",auth:"student"},
+    {label:"Assigned tests"group:"Assessments",,icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",auth:"student"},
+    {label:"Exam Paper Practice",icon:"📝",href:"./exam-practice.html"group:"Assessments",,page:"exam-practice.html",classIds:["6","10"],auth:"student"},
+    {label:"Learning Hub"group:"My Learning",,icon:"🧠",href:"./learning.html",page:"learning.html",auth:"student"},
+    {label:"My profile"group:"My Account",,icon:"👤",href:"./profile.html#profile",page:"profile.html",hash:"#profile",auth:"student"},
+    {label:"Test history"group:"My Account",,icon:"📈",href:"./profile.html#history",page:"profile.html",hash:"#history",auth:"student"},
     {label:"Levels & rewards",icon:"🏆",href:"./dashboard.html#rewards",page:"dashboard.html",hash:"#rewards",auth:"student"},
-    {section:"SUBJECTS",auth:"student"},
-    {label:"Science",icon:"🧪",href:"./practice.html?subject=science",page:"practice.html",subject:"science",auth:"student"},
-    {label:"Science - SOF",icon:"🏆",href:"./practice.html?subject=science-sof",page:"practice.html",subject:"science-sof",auth:"student"},
-    {label:"Mathematics",icon:"📐",href:"./practice.html?subject=mathematics",page:"practice.html",subject:"mathematics",auth:"student"},
-    {label:"Mathematics - SOF",icon:"🏆",href:"./practice.html?subject=mathematics-sof",page:"practice.html",subject:"mathematics-sof",auth:"student"},
-    {label:"English",icon:"📖",href:"./practice.html?subject=english",page:"practice.html",subject:"english",auth:"student"},
-    {label:"English - SOF",icon:"🏆",href:"./practice.html?subject=english-sof",page:"practice.html",subject:"english-sof",auth:"student"},
-    {label:"Social Science",icon:"🌍",href:"./practice.html?subject=social-science",page:"practice.html",subject:"social-science",auth:"student"},
-    {label:"Hindi",icon:"📝",href:"./practice.html?subject=hindi",page:"practice.html",subject:"hindi",auth:"student"},
-    {section:"MY LEARNING",auth:"student"},
-    {label:"Study Library",icon:"📖",href:"./study.html",page:"study.html",auth:"student"},
-    {label:"Assigned tests",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",auth:"student"},
-    {label:"Exam Paper Practice",icon:"📝",href:"./exam-practice.html",page:"exam-practice.html",classIds:["6","10"],auth:"student"},
-    {label:"Learning Hub",icon:"🧠",href:"./learning.html",page:"learning.html",auth:"student"},
-    {label:"My profile",icon:"👤",href:"./profile.html#profile",page:"profile.html",hash:"#profile",auth:"student"},
-    {label:"Test history",icon:"📈",href:"./profile.html#history",page:"profile.html",hash:"#history",auth:"student"},
-    {label:"Levels & rewards",icon:"🏆",href:"./dashboard.html#rewards",page:"dashboard.html",hash:"#rewards",auth:"student"},
-    {label:"Backup & restore",icon:"💾",href:"./profile.html#backup",page:"profile.html",hash:"#backup",auth:"student"},
+    {label:"Backup & restore"group:"My Account",,icon:"💾",href:"./profile.html#backup",page:"profile.html",hash:"#backup",auth:"student"},
     {label:"FAQ & Guide",icon:"❔",href:"./help.html#student-guide",page:"help.html",auth:"student"},
-    {section:"ADMINISTRATION",auth:"admin"},
-    {label:"Overview",icon:"🏠",href:"./admin.html#tab-overview",page:"admin.html",hash:"#tab-overview",auth:"admin"},
-    {label:"Question banks",icon:"🧩",href:"./admin.html#tab-banks",page:"admin.html",hash:"#tab-banks",auth:"admin"},
-    {label:"Classes & subjects",icon:"🏫",href:"./admin.html#tab-classes",page:"admin.html",hash:"#tab-classes",auth:"admin"},
-    {label:"Exam Paper Studio",icon:"📝",href:"./admin.html#tab-exam-papers",page:"admin.html",hash:"#tab-exam-papers",auth:"admin"},
-    {label:"Knowledge base",icon:"📚",href:"./admin.html#tab-knowledge",page:"admin.html",hash:"#tab-knowledge",auth:"admin"},
-    {label:"Students & reports",icon:"👩‍🎓",href:"./admin.html#tab-students",page:"admin.html",hash:"#tab-students",auth:"admin"},
-    {label:"Leaderboards",icon:"🏆",href:"./admin.html#tab-leaderboard",page:"admin.html",hash:"#tab-leaderboard",auth:"admin"},
-    {label:"Admin access",icon:"🔐",href:"./admin.html#tab-access",page:"admin.html",hash:"#tab-access",auth:"admin"},
-    {label:"Operations",icon:"⚙️",href:"./admin.html#tab-operations",page:"admin.html",hash:"#tab-operations",auth:"admin"}
+    ,
+    {label:"Overview"group:"Workspace",,icon:"🏠",href:"./admin.html#tab-overview",page:"admin.html",hash:"#tab-overview",auth:"admin"},
+    {label:"Question banks"group:"Workspace",,icon:"🧩",href:"./admin.html#tab-banks",page:"admin.html",hash:"#tab-banks",auth:"admin"},
+    {label:"Classes & subjects"group:"Workspace",,icon:"🏫",href:"./admin.html#tab-classes",page:"admin.html",hash:"#tab-classes",auth:"admin"},
+    {label:"Exam Paper Studio"group:"Assessment tools",,icon:"📝",href:"./admin.html#tab-exam-papers",page:"admin.html",hash:"#tab-exam-papers",auth:"admin"},
+    {label:"Knowledge base"group:"Workspace",,icon:"📚",href:"./admin.html#tab-knowledge",page:"admin.html",hash:"#tab-knowledge",auth:"admin"},
+    {label:"Students & reports"group:"People & insights",,icon:"👩‍🎓",href:"./admin.html#tab-students",page:"admin.html",hash:"#tab-students",auth:"admin"},
+    {label:"Leaderboards"group:"People & insights",,icon:"🏆",href:"./admin.html#tab-leaderboard",page:"admin.html",hash:"#tab-leaderboard",auth:"admin"},
+    {label:"Admin access"group:"System",,icon:"🔐",href:"./admin.html#tab-access",page:"admin.html",hash:"#tab-access",auth:"admin"},
+    {label:"Operations"group:"System",,icon:"⚙️",href:"./admin.html#tab-operations",page:"admin.html",hash:"#tab-operations",auth:"admin"}
   ];
   function node(tag,className,text){const element=document.createElement(tag);if(className)element.className=className;if(text!==undefined)element.textContent=text;return element;}
   function getLocation(){const last=location.pathname.split("/").filter(Boolean).pop()||"index.html";const file=last.includes(".")?last:"index.html";const params=new URLSearchParams(location.search);return {file,subject:params.get("subject")||"",hash:location.hash||""};}
@@ -140,14 +140,40 @@
     identity.append(node("div","c10-user-class",auth.role==="admin"?"Administrator":auth.role==="student"?"Class "+String(auth.classId||"not assigned"):auth.role==="parent"?"Parent / Guardian":"Sign in to begin"));
     sidebarTop.appendChild(identity);sidebar.appendChild(sidebarTop);
     const list=node("nav","c10-nav-list");list.setAttribute("aria-label","Learning and account");
-    links.forEach(item=>{
-      if(item.auth!==auth.role)return;
-      if(item.subject&&subjectConfig&& !subjectConfig.subjects.includes(item.subject))return;
-      if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return;
-      if(item.section){list.appendChild(node("div","c10-nav-label",item.section));return;}
+    const visibleLinks=links.filter(item=>{
+      if(item.auth!==auth.role)return false;
+      if(item.subject&&subjectConfig&&!subjectConfig.subjects.includes(item.subject))return false;
+      if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return false;
+      return true;
+    });
+    const groups=new Map();
+    visibleLinks.forEach(item=>{if(item.group){if(!groups.has(item.group))groups.set(item.group,[]);groups.get(item.group).push(item);}});
+    const renderLink=item=>{
       const link=node("a","c10-nav-link");link.href=item.href;
       if(isActive(item,current)){link.classList.add("active");link.setAttribute("aria-current","page");}
-      link.append(node("span","c10-nav-icon",item.icon),node("span","",item.label));link.addEventListener("click",()=>closeMenu());list.appendChild(link);
+      link.append(node("span","c10-nav-icon",item.icon),node("span","c10-nav-link-label",item.label));
+      link.addEventListener("click",()=>closeMenu());return link;
+    };
+    const renderedGroups=new Set();
+    visibleLinks.forEach(item=>{
+      if(!item.group){list.appendChild(renderLink(item));return;}
+      if(renderedGroups.has(item.group))return;
+      renderedGroups.add(item.group);
+      const groupItems=groups.get(item.group);
+      const groupId="c10-nav-submenu-"+item.group.toLowerCase().replace(/[^a-z0-9]+/g,"-");
+      const active=groupItems.some(entry=>isActive(entry,current));
+      const wrapper=node("section","c10-nav-group"+(active?" is-active":""));
+      const trigger=node("button","c10-nav-group-trigger");
+      trigger.type="button";trigger.setAttribute("aria-expanded",String(active));trigger.setAttribute("aria-controls",groupId);
+      trigger.append(node("span","c10-nav-icon",groupItems[0].icon||"▸"),node("span","c10-nav-group-label",item.group),node("span","c10-nav-chevron","⌄"));
+      const submenu=node("div","c10-nav-submenu");submenu.id=groupId;submenu.hidden=!active;
+      groupItems.forEach(entry=>submenu.appendChild(renderLink(entry)));
+      trigger.addEventListener("click",()=>{
+        const expanded=trigger.getAttribute("aria-expanded")==="true";
+        trigger.setAttribute("aria-expanded",String(!expanded));submenu.hidden=expanded;
+        wrapper.classList.toggle("is-expanded",!expanded);
+      });
+      wrapper.append(trigger,submenu);list.appendChild(wrapper);
     });
     sidebar.appendChild(list);
     const bottom=node("div","c10-sidebar-bottom");
