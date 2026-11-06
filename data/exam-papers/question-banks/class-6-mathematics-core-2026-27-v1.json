@@ -9967,6 +9967,4326 @@
         "type": "original",
         "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
       }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-001",
+      "sectionId": "E",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "number-patterns",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A school assembly arranges students in rows. The first four rows contain 3, 5, 7 and 9 students respectively.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "State the rule used to form the rows.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Add 2 students in each new row."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "How many students would be in the fifth row?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "11 students."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Add 2 students in each new row. (b) 11 students."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-002",
+      "sectionId": "E",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "square-numbers",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A tile design uses square numbers of tiles in successive stages: 1, 4, 9, 16.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Name the sequence represented by these numbers.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "They are square numbers."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "How many tiles are in the next stage?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "25 tiles."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) They are square numbers. (b) 25 tiles."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-003",
+      "sectionId": "E",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "factors",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A teacher asks pupils to find the factors of 36.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write any four factors of 36 other than 1 and 36.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "2, 3, 4 and 6 (any four valid factors)."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Is 36 prime or composite? Give a reason.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Composite; it has more than two factors."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 2, 3, 4 and 6 (any four valid factors). (b) Composite; it has more than two factors."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-004",
+      "sectionId": "E",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "common-multiples",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A treasure game allows a player to jump by 4 or by 6 spaces.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write the first two positive common multiples of 4 and 6.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "12 and 24."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What is the least common multiple?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "12."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 12 and 24. (b) 12."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-005",
+      "sectionId": "E",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "digit-sums",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A number card shows 7,245.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the digit sum of the number.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "7 + 2 + 4 + 5 = 18."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Is the number divisible by 9? Explain.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Yes; 18 is divisible by 9."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 7 + 2 + 4 + 5 = 18. (b) Yes; 18 is divisible by 9."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-006",
+      "sectionId": "E",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-of-quantity",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A fruit basket contains 24 fruits. Three-eighths of them are apples.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write the fraction of the basket that contains apples.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "3/8."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "How many apples are in the basket?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "3/8 × 24 = 9 apples."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 3/8. (b) 3/8 × 24 = 9 apples."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-007",
+      "sectionId": "E",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fractions",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A chocolate bar is divided into 12 equal pieces. Rohan eats 5 pieces.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What fraction of the bar did Rohan eat?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "5/12."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What fraction of the bar remains?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "7/12."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 5/12. (b) 7/12."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-008",
+      "sectionId": "E",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-operations",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A recipe needs 2/5 kg of flour for one batch.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How much flour is needed for two batches?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "4/5 kg."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "How much more flour is needed to make three batches than one batch?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "6/5 − 2/5 = 4/5 kg."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 4/5 kg. (b) 6/5 − 2/5 = 4/5 kg."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-009",
+      "sectionId": "E",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "prime-factorisation",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A number is written as 2 × 2 × 3 × 5.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write the number represented by this prime factorisation.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "60."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Name the distinct prime factors.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "2, 3 and 5."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 60. (b) 2, 3 and 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-010",
+      "sectionId": "E",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integers",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A lift begins on the ground floor, labelled 0, and travels down 4 floors.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Represent the lift's final floor using an integer.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "−4."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "If it then rises 7 floors, where does it stop?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "−4 + 7 = floor 3."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) −4. (b) −4 + 7 = floor 3."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-011",
+      "sectionId": "E",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-context",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "The temperature at sunrise is −3°C and at noon is 8°C.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "By how many degrees did the temperature rise?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "8 − (−3) = 11°C."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What integer represents the sunrise temperature?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "−3."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 8 − (−3) = 11°C. (b) −3."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-012",
+      "sectionId": "E",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "digit-sums",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A calendar shows a date with digit sum 12.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Give one three-digit number whose digit sum is 12.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "For example, 345."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Is 345 divisible by 3? Explain.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Yes; its digit sum is 12, divisible by 3."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) For example, 345. (b) Yes; its digit sum is 12, divisible by 3."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-013",
+      "sectionId": "E",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "triangular-numbers",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A sequence begins 1, 3, 6, 10, 15.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What type of number pattern is this?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Triangular numbers."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What is the difference between the fourth and fifth terms?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "15 − 10 = 5."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Triangular numbers. (b) 15 − 10 = 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-014",
+      "sectionId": "E",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "prime-numbers",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A student says 1 is a prime number because it has one factor.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "State the definition of a prime number.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "A prime number has exactly two distinct positive factors."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Explain why 1 is not prime.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "It has only one positive factor, itself."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) A prime number has exactly two distinct positive factors. (b) It has only one positive factor, itself."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-015",
+      "sectionId": "E",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-of-quantity",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A class has 28 students. One-quarter bring a packed lunch.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many students bring a packed lunch?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "28 ÷ 4 = 7."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "How many students do not bring a packed lunch?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "28 − 7 = 21."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 28 ÷ 4 = 7. (b) 28 − 7 = 21."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-016",
+      "sectionId": "E",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-movement",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A diver is 6 m below sea level.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write the diver's position as an integer.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "−6."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "The diver rises 9 m. What is the new position?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "−6 + 9 = 3 m above sea level."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) −6. (b) −6 + 9 = 3 m above sea level."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-017",
+      "sectionId": "E",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "arithmetic-patterns",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A number pattern starts at 8 and increases by 4 each time.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Write the next three terms after 8.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "12, 16, 20."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What is the sixth term?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "28."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 12, 16, 20. (b) 28."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-018",
+      "sectionId": "E",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-of-quantity",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A packet has 30 stickers. Two-fifths are animals.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many animal stickers are there?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "2/5 × 30 = 12."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What fraction of the stickers are not animals?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "3/5."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 2/5 × 30 = 12. (b) 3/5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-019",
+      "sectionId": "E",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "divisibility",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A number is divisible by 2 and 5.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What must its units digit be?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "0."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Give one four-digit example and explain why it works.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "For example, 1,240; it ends in 0, so it is divisible by both 2 and 5."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 0. (b) For example, 1,240; it ends in 0, so it is divisible by both 2 and 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-NS-K-020",
+      "sectionId": "E",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-context",
+        "number-sense"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A bank balance is −₹40. A deposit of ₹65 is made.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What is the new balance?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "−40 + 65 = ₹25."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Is the new balance positive or negative?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Positive."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) −40 + 65 = ₹25. (b) Positive."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-001",
+      "sectionId": "E",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-types",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A school gate opens through an angle of 70° from its closed position.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Classify the angle of 70°.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Acute angle."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "How many more degrees are needed to make a right angle?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "90° − 70° = 20°."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Acute angle. (b) 90° − 70° = 20°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-002",
+      "sectionId": "E",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rectangle-properties",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A rectangular notice board measures 80 cm by 50 cm.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many right angles does the board have?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Four."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find its perimeter.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "2 × (80 + 50) = 260 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Four. (b) 2 × (80 + 50) = 260 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-003",
+      "sectionId": "E",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "square-properties",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A square floor tile has a side length of 25 cm.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many lines of symmetry does the tile have?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Four."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find its perimeter.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "4 × 25 = 100 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Four. (b) 4 × 25 = 100 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-004",
+      "sectionId": "E",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "circle-construction",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A compass is opened to 4 cm and used to draw a circle.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What is the radius of the circle?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "4 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What is its diameter?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "8 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 4 cm. (b) 8 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-005",
+      "sectionId": "E",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "polygon-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A regular pentagon is used in a decorative pattern.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many lines of symmetry does it have?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Five."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What is its smallest rotational angle?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "360° ÷ 5 = 72°."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Five. (b) 360° ÷ 5 = 72°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-006",
+      "sectionId": "E",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-calculation",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "Two roads meet at an angle of 125°.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Classify the angle.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Obtuse angle."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the smaller angle on the straight line beside it.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "180° − 125° = 55°."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Obtuse angle. (b) 180° − 125° = 55°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-007",
+      "sectionId": "E",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rotational-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A square window is turned by one quarter of a full turn.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many degrees is the turn?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "90°."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Will the square match its original outline?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Yes; a square has quarter-turn rotational symmetry."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 90°. (b) Yes; a square has quarter-turn rotational symmetry."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-008",
+      "sectionId": "E",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rectangle-properties",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A rectangle has length 14 cm and width 6 cm.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find its perimeter.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "2 × (14 + 6) = 40 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Are its diagonals equal in length?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Yes; rectangle diagonals are equal."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 2 × (14 + 6) = 40 cm. (b) Yes; rectangle diagonals are equal."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-009",
+      "sectionId": "E",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "hexagon-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A regular hexagon is drawn on a worksheet.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many sides does it have?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Six."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What is its smallest rotational angle?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "60°."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Six. (b) 60°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-010",
+      "sectionId": "E",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "midpoint",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A line segment AB is 12 cm long.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the distance from its midpoint to A.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "6 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What is the distance from the midpoint to B?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "6 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 6 cm. (b) 6 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-011",
+      "sectionId": "E",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "perpendicular-lines",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A student constructs a perpendicular line through point P.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What angle should the new line make with the original line?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "90°."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Name the relationship between the two lines.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "They are perpendicular."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 90°. (b) They are perpendicular."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-012",
+      "sectionId": "E",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "triangle-angles",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A triangle has angles 55° and 65°.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the third angle.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "60°."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Classify the triangle by its angles.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "All angles are acute; it is an acute-angled triangle."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 60°. (b) All angles are acute; it is an acute-angled triangle."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-013",
+      "sectionId": "E",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "square-diagonal",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A square has a diagonal drawn from one corner to the opposite corner.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many triangles are formed?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Two."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Are the two triangles equal in area?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Yes; the diagonal divides the square into two congruent triangles."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Two. (b) Yes; the diagonal divides the square into two congruent triangles."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-014",
+      "sectionId": "E",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "circle-properties",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A circle is drawn with centre O and radius 7 cm.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How far is a point on the circle from O?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "7 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What is the diameter?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "14 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 7 cm. (b) 14 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-015",
+      "sectionId": "E",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "octagon-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A regular octagon is part of a floor pattern.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many sides does it have?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Eight."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find its smallest rotational angle.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "360° ÷ 8 = 45°."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Eight. (b) 360° ÷ 8 = 45°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-016",
+      "sectionId": "E",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rectangle-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A non-square rectangle is reflected across its vertical midline.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Do the two halves overlap exactly?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Yes."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "How many lines of symmetry does the rectangle have in total?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Two."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Yes. (b) Two."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-017",
+      "sectionId": "E",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-complement",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A line makes an angle of 35° with the horizontal.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What is the complementary angle to 35°?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "55°."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Together, what kind of angle do they form?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "A right angle."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 55°. (b) A right angle."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-018",
+      "sectionId": "E",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "square-measurement",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A square is built with side 9 cm.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find its area.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "9 × 9 = 81 cm²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find its perimeter.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "36 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 9 × 9 = 81 cm². (b) 36 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-019",
+      "sectionId": "E",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rotational-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A shape has three identical arms spaced evenly around a centre.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the smallest turn that maps it onto itself.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "120°."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "How many matching positions occur in one full turn?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Three."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 120°. (b) Three."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-GEO-A-020",
+      "sectionId": "E",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rectangle-properties",
+        "geometry-spatial"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A rectangle is 10 cm long and 4 cm wide.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the difference between its length and width.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "6 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the sum of its four interior angles.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "360°."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 6 cm. (b) 360°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-001",
+      "sectionId": "E",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "data-interpretation",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A class survey records favourite sports: cricket 18, football 12, badminton 9 and hockey 6.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which sport is most popular?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Cricket."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "How many more students chose cricket than hockey?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "18 − 6 = 12 students."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Cricket. (b) 18 − 6 = 12 students."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-002",
+      "sectionId": "E",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "bar-graph-analysis",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A bar graph shows visitors to a library over four days: 24, 30, 18 and 36.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "On which day is the highest value recorded if the days are Monday to Thursday in order?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Thursday."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the difference between the highest and lowest values.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "36 − 18 = 18 visitors."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Thursday. (b) 36 − 18 = 18 visitors."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-003",
+      "sectionId": "E",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-perimeter-comparison",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "Two gardens are rectangular. Garden A is 12 m by 8 m; Garden B is 16 m by 4 m.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the area of each garden.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Both have area 96 m²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Compare their perimeters.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "A: 40 m; B: 40 m. The perimeters are equal."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Both have area 96 m². (b) A: 40 m; B: 40 m. The perimeters are equal."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-004",
+      "sectionId": "E",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "pictograph-scale",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A pictograph uses one full symbol for 5 children and a half symbol for 2.5 children.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many children do 4 full symbols represent?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "20 children."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Why might a half symbol be awkward if the data must be whole children?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "It represents 2.5 children, which is not a whole person; choose a key that avoids fractions of a person."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 20 children. (b) It represents 2.5 children, which is not a whole person; choose a key that avoids fractions of a person."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-005",
+      "sectionId": "E",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-subtraction",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A rectangular field is 20 m by 12 m. A square pond of side 4 m is built inside it.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the field's total area.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "240 m²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the area left after the pond is built.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "240 − 16 = 224 m²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 240 m². (b) 240 − 16 = 224 m²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-006",
+      "sectionId": "E",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "data-summary",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A survey records 10, 14, 14, 16 and 21 votes for five choices.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Which number is the mode?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "14."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Explain what the mode tells us here.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "14 is the most frequently recorded vote count."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 14. (b) 14 is the most frequently recorded vote count."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-007",
+      "sectionId": "E",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "graph-scale",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A bar graph uses 1 division to represent 4 books. A bar reaches 9 divisions.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many books does the bar represent?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "36 books."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "If the scale were changed to 1 division = 6 books, how many divisions would represent 36 books?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "6 divisions."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 36 books. (b) 6 divisions."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-008",
+      "sectionId": "E",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-perimeter-comparison",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A square and a rectangle both have perimeter 48 cm. The rectangle is 16 cm by 8 cm.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the area of the rectangle.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "128 cm²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the side and area of the square.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Side = 12 cm; area = 144 cm²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 128 cm². (b) Side = 12 cm; area = 144 cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-009",
+      "sectionId": "E",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "triangle-area",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A triangular sign has base 18 cm and height 10 cm.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find its area.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "90 cm²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "If the base is doubled and the height stays the same, what will the new area be?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "180 cm²; doubling the base doubles the area."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 90 cm². (b) 180 cm²; doubling the base doubles the area."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-010",
+      "sectionId": "E",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "data-trends",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A bar graph shows sales of 20, 25, 30, 35 and 40 items over five weeks.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Describe the trend.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Sales increase by 5 items each week."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Predict the sales for week six if the pattern continues.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "45 items."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Sales increase by 5 items each week. (b) 45 items."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-011",
+      "sectionId": "E",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-tiling",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A rectangular floor is 6 m long and 4 m wide. Square tiles have side 1 m.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many tiles cover the floor?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "24 tiles."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What is the area of the floor?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "24 m²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 24 tiles. (b) 24 m²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-012",
+      "sectionId": "E",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "graph-construction",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A student draws a bar graph with bars of different widths.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Why is this a problem?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Unequal widths make visual comparison misleading."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "State one feature that should be consistent in a bar graph.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Bars should have equal width and equal spacing."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) Unequal widths make visual comparison misleading. (b) Bars should have equal width and equal spacing."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-013",
+      "sectionId": "E",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "rectangle-measurement",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A rectangle has area 150 cm². One side is 15 cm.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the other side.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "10 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find its perimeter.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "50 cm."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 10 cm. (b) 50 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-014",
+      "sectionId": "E",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-context",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A square garden has side 14 m. A path is built around it so the outer square has side 18 m.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the area of the original garden.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "196 m²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the area of the path.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "324 − 196 = 128 m²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 196 m². (b) 324 − 196 = 128 m²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-015",
+      "sectionId": "E",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "pictograph-interpretation",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A class has 40 students. A pictograph shows 6 symbols for students who walk, with one symbol representing 5 students.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "How many students does the pictograph show walking?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "30 students."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "How many students use other ways to travel?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "40 − 30 = 10 students."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 30 students. (b) 40 − 30 = 10 students."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-016",
+      "sectionId": "E",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "data-summary",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A bar graph has values 12, 15, 15, 18 and 25.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the median value.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "15."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Explain why the median is not the same as the highest value.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The median is the middle value after ordering; the highest is 25."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 15. (b) The median is the middle value after ordering; the highest is 25."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-017",
+      "sectionId": "E",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "square-area",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A rectangle is 24 cm by 10 cm. A square has the same area.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the rectangle's area.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "240 cm²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Can the square have an integer side length? Explain.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "No; 15² = 225 and 16² = 256, so 240 is not a perfect square."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 240 cm². (b) No; 15² = 225 and 16² = 256, so 240 is not a perfect square."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-018",
+      "sectionId": "E",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "graph-integrity",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A bar graph's vertical axis begins at 20 rather than 0, but the break is not marked.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "What could a reader misunderstand?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "The visual difference between bars may appear much larger than the actual difference."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "What should the graph maker do?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "Mark the axis break clearly or use a zero-based scale."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) The visual difference between bars may appear much larger than the actual difference. (b) Mark the axis break clearly or use a zero-based scale."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-019",
+      "sectionId": "E",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "rectangle-perimeter",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A rectangular plot has perimeter 60 m. One side is 20 m.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the other side.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "10 m."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "Find the area.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "200 m²."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 10 m. (b) 200 m²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-CASE4-MD-AN-020",
+      "sectionId": "E",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "data-interpretation",
+        "measurement-data"
+      ],
+      "type": "case-based",
+      "marks": 4,
+      "stimulus": "A school collects data on the number of books read by students: 0, 1, 1, 2, 2, 2, 3, 4.",
+      "prompt": "Read the situation and answer both parts.",
+      "parts": [
+        {
+          "partId": "a",
+          "prompt": "Find the mode.",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "2 books."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "partId": "b",
+          "prompt": "How many students read at least 2 books?",
+          "marks": 2,
+          "answerKey": {
+            "modelAnswer": "5 students."
+          },
+          "markingScheme": [
+            {
+              "criterion": "Correct approach or identification",
+              "marks": 1
+            },
+            {
+              "criterion": "Correct result",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(a) 2 books. (b) 5 students."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Part (a)",
+          "marks": 2
+        },
+        {
+          "criterion": "Part (b)",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored case-based question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
     }
   ]
 }
