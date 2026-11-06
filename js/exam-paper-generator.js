@@ -452,7 +452,7 @@ function adaptChapterMcqBank(practiceChapters,bp,options={}){
    const correct=opts[answer],letter=String(correct.optionId);
    const question={
     questionId:id,sectionId:chapterSection,chapterId,topicTags:["mcq","practice-bank",chapterId],
-    type:"mcq",marks:1,prompt,difficulty:normalisePracticeDifficulty(q.difficulty),
+    type:"mcq",marks:1,prompt,difficulty:normalisePracticeDifficulty(q.examDifficulty||q.difficulty),
     competency:tagged.competency,competencyTagMethod:useSourceCompetency?(tagStatus==="author-confirmed"?"author-confirmed-source":"shared-bank-tag"):"exam-paper-content-inference",competencyTagStatus:useSourceCompetency?(tagStatus||"inferred"):"inferred",competencyTagReason:useSourceCompetency?String(q.competencyTagReason||"Competency supplied by the shared MCQ bank tagger."):"Re-inferred from the question stem and explanation for Mathematics examination-slot alignment; generic auto-inferred bank tags are not treated as authoritative.",approvalStatus:"approved",
     options:opts,correctOptionId:correct.optionId,
     answerKey:{modelAnswer:letter+". "+correct.text,explanation:String(q.explanation||q.rationale).trim()},
