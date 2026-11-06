@@ -93,8 +93,8 @@ assert.equal(new Set(englishQuestions.map(question=>question.questionKey)).size,
 
 const normalizedMath=context.window.C10QuestionBank.normalize(mathBank,"class-6-mathematics");
 const mathQuestions=normalizedMath.flatMap(chapter=>chapter.questions);
-assert.equal(mathQuestions.length,1000);
-assert.equal(new Set(mathQuestions.map(question=>question.questionKey)).size,1000,"Class 6 Mathematics question keys are unique");
+assert.equal(mathQuestions.length,1043);
+assert.equal(new Set(mathQuestions.map(question=>question.questionKey)).size,1043,"Class 6 Mathematics question keys are unique");
 for(const question of questions)assert.ok(question.options.includes(question.options[question.answer])&&question.explanation);
 const engine=fs.readFileSync("js/quiz-engine.js","utf8");
 assert.ok(engine.includes('const bankId = classId === "10" ? subject : "class-" + classId + "-" + subject'),"non-Class-10 learners use class-prefixed question-bank files");
