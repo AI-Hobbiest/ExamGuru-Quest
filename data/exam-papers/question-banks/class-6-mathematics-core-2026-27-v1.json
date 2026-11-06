@@ -7007,6 +7007,2966 @@
         "type": "original",
         "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
       }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-001",
+      "sectionId": "D",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "square-patterns",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Describe the pattern in the sequence 1, 4, 9, 16, 25, … and explain how to find its 10th term.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "These are square numbers: 1², 2², 3², …; the 10th term is 10² = 100."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-002",
+      "sectionId": "D",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "prime-factorisation",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Find the prime factorisation of 180 and use it to list all the prime factors.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "180 = 2² × 3² × 5; its prime factors are 2, 3 and 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-003",
+      "sectionId": "D",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "factors-multiples",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Explain the difference between a factor and a multiple, using 6 and 24 as examples.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "6 is a factor of 24 because 24 ÷ 6 = 4; 24 is a multiple of 6 because 6 × 4 = 24."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-004",
+      "sectionId": "D",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "common-multiples",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Find the first four multiples common to 3 and 5, and explain how you found them.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "15, 30, 45 and 60; they are multiples of 15, the least common multiple of 3 and 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-005",
+      "sectionId": "D",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "divisibility-tests",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Use divisibility rules to decide whether 5,832 is divisible by 2, 3 and 9.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "It is divisible by 2 because it is even; by 3 because digit sum 18 is divisible by 3; and by 9 because 18 is divisible by 9."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-006",
+      "sectionId": "D",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "equivalent-fractions",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write 7/12 as an equivalent fraction with denominator 60 and explain the change.",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "35/60; multiply numerator and denominator by 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-007",
+      "sectionId": "D",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-comparison",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Compare 5/6 and 7/9 by converting them to a common denominator.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "5/6 = 15/18 and 7/9 = 14/18, so 5/6 is greater."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-008",
+      "sectionId": "D",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-addition",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Add 2/3 and 1/4, showing how you make the fractional units equal.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "2/3 = 8/12 and 1/4 = 3/12; sum = 11/12."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-009",
+      "sectionId": "D",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-subtraction",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Subtract 3/10 from 4/5 and simplify the answer.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "4/5 = 8/10; 8/10 − 3/10 = 5/10 = 1/2."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-010",
+      "sectionId": "D",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "equivalent-fractions",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Explain why 3/4 and 6/8 represent the same quantity.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Both represent three quarters of a whole; multiplying numerator and denominator by 2 does not change the value."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-011",
+      "sectionId": "D",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-order",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Arrange −8, 5, −2, 0 and 3 in ascending order and explain the position of negative numbers.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "−8, −2, 0, 3, 5; negative integers lie to the left of zero on the number line."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-012",
+      "sectionId": "D",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-addition",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Evaluate −7 + 12 − 4 and show the movement on a number line.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "−7 + 12 = 5; 5 − 4 = 1. The final position is 1."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-013",
+      "sectionId": "D",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "odd-square-pattern",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Explain why the sum of the first n odd numbers forms a square number, using n = 4 as an example.",
+      "difficulty": "hard",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The first four odd numbers sum to 1 + 3 + 5 + 7 = 16 = 4²; each new odd number can form the next outer layer of a square."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-014",
+      "sectionId": "D",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "triangular-numbers",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Describe how to find the next term in a triangular-number sequence and find the next two terms after 1, 3, 6, 10.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Add consecutive integers: +2, +3, +4, then +5 and +6; the next terms are 15 and 21."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-015",
+      "sectionId": "D",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "divisibility-tests",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Explain how a number can be divisible by 6, using divisibility rules.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "It must be divisible by both 2 and 3: it must be even and its digit sum must be divisible by 3."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-016",
+      "sectionId": "D",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "hcf",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Find the HCF of 18 and 30 by listing their factors.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Factors of 18: 1,2,3,6,9,18; of 30: 1,2,3,5,6,10,15,30; HCF = 6."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-017",
+      "sectionId": "D",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "simplest-form",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A fraction has numerator 9 and denominator 15. Reduce it and explain why the value does not change.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "9/15 = 3/5 after dividing numerator and denominator by 3; the same equal-part ratio is preserved."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-018",
+      "sectionId": "D",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "mixed-fractions",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Write 2 3/5 as an improper fraction and explain the conversion.",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "2 × 5 + 3 = 13, so 2 3/5 = 13/5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-019",
+      "sectionId": "D",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-order",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Explain why −4 is greater than −9 using a number line.",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "−4 lies to the right of −9, and numbers farther right on a number line are greater."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-NS-K-020",
+      "sectionId": "D",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "digit-sums",
+        "number-sense"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Find the digit sum of 39,876 and use it to test divisibility by 9.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "3 + 9 + 8 + 7 + 6 = 33; 33 is not divisible by 9, so 39,876 is not divisible by 9."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-001",
+      "sectionId": "D",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-calculation",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "An angle is 38° and another angle is 27° larger. Find the second angle and classify both.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Second angle = 65°. Both are acute angles."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-002",
+      "sectionId": "D",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-partition",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A straight angle is divided into two angles in the ratio 2:1. Find the measure of each angle.",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The three equal parts are 180° ÷ 3 = 60°; the angles are 120° and 60°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-003",
+      "sectionId": "D",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "square-construction",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Describe the steps to construct a square of side 5 cm using a ruler and compass.",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Draw AB = 5 cm; construct perpendiculars at A and B; mark AD = BC = 5 cm; join C to D."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-004",
+      "sectionId": "D",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rectangle-diagonal",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangle is 12 cm long and 5 cm wide. Calculate the length of its diagonal.",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The diagonal is √(12² + 5²) = √169 = 13 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-005",
+      "sectionId": "D",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rotational-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A regular hexagon is rotated about its centre. Find its smallest angle of rotational symmetry.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "360° ÷ 6 = 60°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-006",
+      "sectionId": "D",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "triangle-angle-sum",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A triangle has angles 48° and 67°. Find its third angle.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "180° − 48° − 67° = 65°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-007",
+      "sectionId": "D",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "square-diagonal",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A square has diagonal AC. Explain how the diagonal divides the square into two equal triangles.",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The triangles share AC and have equal corresponding sides/angles; they are congruent and have equal area."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-008",
+      "sectionId": "D",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "perpendicular-bisector",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A line segment is 8 cm long. Explain how to construct its perpendicular bisector.",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Draw equal-radius arcs from both endpoints above and below the segment; join the two arc intersections."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-009",
+      "sectionId": "D",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rotational-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A regular pentagon is rotated about its centre. Find the smallest matching rotation and the order.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "360° ÷ 5 = 72°; the rotational order is 5."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-010",
+      "sectionId": "D",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-equations",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "An angle is 3 times another angle, and together they form a right angle. Find both angles.",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Let the smaller be x; x + 3x = 90°, so x = 22.5° and the larger is 67.5°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-011",
+      "sectionId": "D",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rectangle-diagonal",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangle is 14 cm by 8 cm. Compare its two side lengths and state the length of the longer diagonal qualitatively.",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The diagonal is longer than 14 cm and can be found from the two perpendicular sides; it is √(14² + 8²) = √260 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-012",
+      "sectionId": "D",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rotational-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A figure has 4 identical arms equally spaced around a centre. Find all matching rotations less than 360°.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "90°, 180° and 270°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-013",
+      "sectionId": "D",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "reflection",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A square is reflected across one diagonal. Explain which vertices remain fixed and where the other two go.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The two diagonal endpoints stay fixed; the other two vertices exchange places."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-014",
+      "sectionId": "D",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "supplementary-angles",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A line makes an angle of 125° with another line. Find the adjacent angle on a straight line.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "180° − 125° = 55°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-015",
+      "sectionId": "D",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rectangle-properties",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangle has perimeter 46 cm and length 15 cm. Find its width and state the number of right angles.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "15 + width = 23, so width = 8 cm; it has four right angles."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-016",
+      "sectionId": "D",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "square-perimeter",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A square is constructed with side 9 cm. Find its perimeter and explain why rotation cannot change it.",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Perimeter = 4 × 9 = 36 cm; rotation preserves side lengths."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-017",
+      "sectionId": "D",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "circle-properties",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A circle has radius 6 cm. Find its diameter and explain the relationship.",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Diameter = 2 × 6 = 12 cm; it is twice the radius."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-018",
+      "sectionId": "D",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rotational-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A regular octagon is rotated. Find the smallest angle after which it matches itself.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "360° ÷ 8 = 45°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-019",
+      "sectionId": "D",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "line-segment",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A line segment is 10 cm long. Its midpoint is marked. What is the distance from the midpoint to either endpoint?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "5 cm; the midpoint divides the segment into two equal parts."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-GEO-A-020",
+      "sectionId": "D",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "quadrilateral-classification",
+        "geometry-spatial"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A quadrilateral has four right angles and opposite sides equal. Identify it and state one additional property if it is a square.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "It is a rectangle; if it is also a square, all four sides are equal."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-001",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-perimeter",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangular playground is 28 m long and 17 m wide. Find the area and perimeter.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Area = 28 × 17 = 476 m²; perimeter = 2 × 45 = 90 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-002",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "square-area",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A square courtyard has area 324 m². Find its side and perimeter.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Side = √324 = 18 m; perimeter = 72 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-003",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "triangle-area",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A triangular banner has base 24 cm and height 15 cm. Find its area.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Area = 1/2 × 24 × 15 = 180 cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-004",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "rectangle-perimeter",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangle has perimeter 70 cm and width 12 cm. Find its length.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Length + width = 35; length = 35 − 12 = 23 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-005",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "measurement-context",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A garden is 20 m by 14 m. A 2 m wide path runs around its outside. Find the outer dimensions.",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Outer length = 24 m and outer width = 18 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-006",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "bar-graph-analysis",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A bar graph shows daily book sales of 18, 25, 20, 27 and 10. Find the total sales and the range.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Total = 100 books; range = 27 − 10 = 17 books."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-007",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "pictograph-scale",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A pictograph uses one symbol for 8 students. Three classes show 5, 7 and 4 symbols. Find the total students represented.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "(5 + 7 + 4) × 8 = 128 students."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-008",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "rectangle-area",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangle has area 180 cm² and length 15 cm. Find its width and perimeter.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Width = 180 ÷ 15 = 12 cm; perimeter = 2 × 27 = 54 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-009",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "triangle-area",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A triangular field has base 30 m and height 18 m. Find its area.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Area = 1/2 × 30 × 18 = 270 m²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-010",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "square-perimeter",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A square has perimeter 84 cm. Find its area.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Side = 84 ÷ 4 = 21 cm; area = 441 cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-011",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "bar-graph-scale",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A bar graph uses 1 cm to represent 10 students. A bar is 4.5 cm tall. How many students does it represent?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "4.5 × 10 = 45 students."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-012",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-partition",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangular sheet 25 cm by 16 cm is cut into two equal rectangles along its length. Find the area of each part.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Original area = 400 cm²; each half = 200 cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-013",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "perimeter-context",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangular field has length 32 m and width 18 m. A fence is placed around it twice. How much fencing is needed?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Perimeter = 2 × 50 = 100 m; twice around = 200 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-014",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "data-fractions",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A survey records 14 votes for apples, 21 for bananas and 15 for oranges. Find the total and the fraction voting for bananas.",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Total = 50; bananas = 21/50 of the votes."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-015",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-tiling",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A square tile has side 40 cm. How many such tiles are needed to cover a 2 m by 2 m floor?",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Each tile is 0.4 m × 0.4 m = 0.16 m²; floor area 4 m²; 4 ÷ 0.16 = 25 tiles."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-016",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-context",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangular park is 45 m by 30 m. A 5 m wide strip is marked along one short side. Find the area of the strip.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Area = 30 × 5 = 150 m²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-017",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "bar-graph-comparison",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A bar graph shows 32 students in Class A and 28 in Class B choosing a sport. How many more students are in Class A?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "32 − 28 = 4 students."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-018",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "triangle-area",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A triangular plot has area 96 m² and base 16 m. Find its height.",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "96 = 1/2 × 16 × h, so h = 12 m."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-019",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "rectangle-perimeter",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangle's length is twice its width. Its perimeter is 54 cm. Find both dimensions.",
+      "difficulty": "hard",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Let width be w; 2(2w + w) = 54, so w = 9 cm and length = 18 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-A-020",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "pictograph-interpretation",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A pictograph shows 12 symbols for one type of vehicle and 9 for another. If each symbol represents 5 vehicles, find the difference and combined total.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Difference = 15 vehicles; total = 105 vehicles."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-001",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "perimeter-area-comparison",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Two rectangles have the same perimeter of 40 cm. One is 12 cm by 8 cm. Find the dimensions of another rectangle with a different area and compare the areas.",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A 14 cm by 6 cm rectangle also has perimeter 40 cm; its area is 84 cm² versus 96 cm² for the first."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-002",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-perimeter-reasoning",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A student says that the shape with the larger perimeter must also have the larger area. Give an example that disproves the claim.",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A 1 cm by 20 cm rectangle has perimeter 42 cm and area 20 cm²; a 6 cm by 6 cm square has perimeter 24 cm and area 36 cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-003",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "graph-scale-analysis",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A bar graph uses different vertical scales for two categories. Explain why comparing the bar heights may be misleading.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The bars must be read using the same scale; unequal scales can exaggerate or hide differences."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-004",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "pictograph-reasoning",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A pictograph uses one symbol for 10 people, but half a symbol is used for 3 people. Explain why this key is inconsistent.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Half a symbol should represent 5 people if one symbol represents 10; it cannot represent 3 under the same key."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-005",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "square-scaling",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Two square gardens have sides 8 m and 12 m. Compare the increase in perimeter with the increase in area.",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Perimeters: 32 m and 48 m, increase 16 m; areas: 64 m² and 144 m², increase 80 m²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-006",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-subtraction",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangular field is 18 m by 10 m. A 2 m by 2 m square pond is inside it. Find the usable area and explain the subtraction.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Field area = 180 m²; pond area = 4 m²; usable area = 176 m²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-007",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "data-trends",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A bar graph shows 16, 20, 24 and 28 books across four weeks. Describe the trend and predict the next week's value if it continues.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Sales increase by 4 books each week; the next value would be 32 books."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-008",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-comparison",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A triangle and a rectangle have the same base of 12 cm and height of 8 cm. Compare their areas.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Rectangle area = 96 cm²; triangle area = 48 cm², exactly half."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-009",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-concept",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A student calculates a rectangle's area by adding length and width. Explain the error and give the correct method for 9 cm by 5 cm.",
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Area uses multiplication, not addition; 9 × 5 = 45 cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-010",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "data-collection",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A class records favourite games but allows students to select more than one game. Explain why the total votes may exceed the number of students.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Each student may contribute multiple votes, so category counts are not mutually exclusive."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-011",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "graph-interpretation",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "Two graphs show the same data but use different vertical scales. What should a reader compare to avoid a wrong conclusion?",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Read the labelled scale and actual values, not bar height alone."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-012",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-perimeter-comparison",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A square and a rectangle each have area 64 cm². Find their perimeters and compare them.",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Square side 8 cm, perimeter 32 cm; a 16 cm by 4 cm rectangle has perimeter 40 cm."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-013",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "data-summary",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A bar graph shows the number of visitors as 12, 18, 18, 24 and 30 over five days. Find the median and explain.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Ordered values are already listed; the middle value is 18 visitors."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-014",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-context",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangular garden is 15 m by 9 m. A path 1 m wide is added all around the outside. Compare the new and original areas.",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Outer dimensions 17 m by 11 m; outer area 187 m², original 135 m²; path area 52 m²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-015",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "data-summary",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A survey records 8, 11, 11, 13 and 17 votes for five choices. Find the mode and explain what it tells us.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The mode is 11; it is the most frequent vote count."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-016",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "bar-graph-construction",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A student draws a bar graph but leaves unequal gaps between bars. Explain why this makes the graph unclear.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Bars should have uniform width and equal spacing so categories can be compared fairly."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-017",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-partition",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A square of side 10 cm is cut into four equal smaller squares. Find the side and area of each smaller square.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Each small square has side 5 cm and area 25 cm²."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-018",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-perimeter-comparison",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangular poster has area 240 cm². Two possible dimensions are 20 cm by 12 cm and 30 cm by 8 cm. Compare their perimeters.",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "20 × 12: perimeter 64 cm; 30 × 8: perimeter 76 cm; the second has the larger perimeter."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-019",
+      "sectionId": "D",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "graph-integrity",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A bar graph has a broken vertical axis but does not show the break clearly. What problem can this cause?",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Readers may misread the scale and overestimate differences between categories."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-LA5-MD-AN-020",
+      "sectionId": "D",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-perimeter-relationships",
+        "measurement-data"
+      ],
+      "type": "long-answer",
+      "marks": 5,
+      "prompt": "A rectangle is changed by increasing its length while keeping its width fixed. Explain what happens to both its area and perimeter.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Both area and perimeter increase because area = length × width and perimeter = 2(length + width)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Identify the correct mathematical approach",
+          "marks": 1
+        },
+        {
+          "criterion": "Show accurate intermediate reasoning or calculation",
+          "marks": 2
+        },
+        {
+          "criterion": "Give the correct final answer with explanation or units",
+          "marks": 2
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
     }
   ]
 }
