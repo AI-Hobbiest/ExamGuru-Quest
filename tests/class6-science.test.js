@@ -46,7 +46,6 @@ const expectedMathCounts={"patterns-in-mathematics":100,"lines-and-angles":100,"
 for(const chapter of mathBank){
   assert.equal(chapter.questions.length,expectedMathCounts[chapter.key],"chapter inventory should match the controlled expansion plan");
   assert.ok(chapter.title,"every Mathematics chapter has a title");
-  assert.equal(chapter.questions.length,100,"each Mathematics chapter has 100 questions");
   for(const question of chapter.questions){
     assert.ok(question.id&&question.question&&question.explanation,"question ID, prompt and explanation are present");
     assert.equal(question.options.length,4,"each Mathematics MCQ has four options");
