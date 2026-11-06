@@ -47,6 +47,14 @@ const countBy=(rows,key)=>rows.reduce((m,q)=>{m[q[key]]=(m[q[key]]||0)+1;return 
 const sumMarksBy=(rows,key)=>rows.reduce((m,q)=>{m[q[key]]=(m[q[key]]||0)+Number(q.marks||0);return m;},{});
 for(let attempt=1;attempt<=75;attempt++){
  const previous=history.slice(-5);
+ if(attempt===5){
+  const recentIds=new Set(previous.flat());
+  const availability=bp.slotPlan.map(slot=>{
+   const candidates=integrated.bank.questions.filter(q=>q.approvalStatus==="approved"&&q.sectionId===slot.sectionId&&q.marks===slot.marks&&slot.allowedTypes.includes(q.type)&&(!slot.unitId||q.unitId===slot.unitId)&&(!slot.competency||q.competency===slot.competency)&&(!slot.chapterIds?.length||slot.chapterIds.includes(q.chapterId))&&!g.questionContentIds(q).some(id=>recentIds.has(id)));
+   return {slot:slot.slotId,easy:candidates.filter(q=>q.difficulty==="easy").length,medium:candidates.filter(q=>q.difficulty==="medium").length,hard:candidates.filter(q=>q.difficulty==="hard").length};
+  });
+  console.log("Class 6 Maths attempt-5 post-history candidate availability: "+JSON.stringify(availability));
+ }
  const paper=g.generateUniquePaper(bp,integrated.bank,{
   seed:"class6-mathematics-75-paper-release-"+attempt,
   recentPaperFingerprints:fingerprints.slice(-75),
