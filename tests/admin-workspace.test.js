@@ -6,6 +6,8 @@ const vm=require("node:vm");
 const read=path=>fs.readFileSync(path,"utf8");
 const html=read("admin.html"),manager=read("js/admin-manager.js"),css=read("css/admin.css");
 assert.ok(html.includes("Admin publishing:") && html.includes("trusted repository maintainer"),"GitHub repository permissions control publishing");
+assert.ok(html.includes("<option>Challenge</option>")&&html.includes("multi-step reasoning"),"Admin exposes Challenge as the highest difficulty tier with authoring guidance");
+assert.ok(manager.includes('["Easy","Medium","Hard","Challenge","Unspecified"]'),"editing a Challenge question must preserve its difficulty instead of silently downgrading it");
 assert.ok(html.includes('id="centralStudentUsername"'),"admin can assign a distinct student username");
 assert.ok(manager.includes("apiReady&&protectedTabs.has(name)&&!isAdminAuthenticated()"),"authoring and report tabs require an authenticated administrator");
 for(const section of ["overview","banks","classes","knowledge","students","leaderboard","access","operations","exam-papers"])assert.ok(html.includes('data-tab="'+section+'"'),"missing Admin section "+section);
