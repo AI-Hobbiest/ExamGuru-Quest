@@ -7,5 +7,3306 @@
   "bankVersion": "draft-1",
   "title": "Class 6 Mathematics core examination question pool · draft",
   "questionPoolStatus": "draft-awaiting-reviewed-content",
-  "questions": []
+  "questions": [
+    {
+      "questionId": "C6M-VSA-NS-K-001",
+      "sectionId": "B",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "arithmetic-patterns",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Write the next two terms of the sequence 4, 7, 10, 13, …",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "16, 19"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-002",
+      "sectionId": "B",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "square-numbers",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the square number immediately after 49?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "64"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-003",
+      "sectionId": "B",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "prime-numbers",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "State whether 91 is prime or composite, giving one reason.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Composite; 91 = 7 × 13."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-004",
+      "sectionId": "B",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "prime-factorisation",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Write the prime factorisation of 30.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "2 × 3 × 5"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-005",
+      "sectionId": "B",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "common-multiples",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Give one common multiple of 6 and 8 that is less than 50.",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "24"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-006",
+      "sectionId": "B",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "digit-sums",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the digit sum of 4,728?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "21"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-007",
+      "sectionId": "B",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "prime-numbers",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Is 1 a prime number? Give a reason.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "No; a prime number has exactly two distinct factors, while 1 has only one."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-008",
+      "sectionId": "B",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "equivalent-fractions",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Write 3/5 as an equivalent fraction with denominator 20.",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "12/20"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-009",
+      "sectionId": "B",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "simplest-form",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Simplify 18/24 to its lowest terms.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "3/4"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-010",
+      "sectionId": "B",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "comparing-fractions",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Which is greater, 5/8 or 1/2?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "5/8"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-011",
+      "sectionId": "B",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-addition",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Calculate 3/7 + 2/7.",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "5/7"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-012",
+      "sectionId": "B",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-subtraction",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Calculate 7/9 − 4/9.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "1/3"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-013",
+      "sectionId": "B",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integers",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What integer represents 4 floors below ground level?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "−4"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-014",
+      "sectionId": "B",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-order",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Which is greater, −3 or −8?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "−3"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-015",
+      "sectionId": "B",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-opposites",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the opposite of −12 on the number line?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "12"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-016",
+      "sectionId": "B",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "figurate-patterns",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Write the next term: 2, 6, 12, 20, …",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "30"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-017",
+      "sectionId": "B",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "prime-factors",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Give the smallest prime factor of 77.",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "7"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-018",
+      "sectionId": "B",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "place-value",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the remainder when 257 is divided by 10?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "7"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-019",
+      "sectionId": "B",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "divisibility",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A number is divisible by both 2 and 5. What must its units digit be?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "0"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-K-020",
+      "sectionId": "B",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-addition",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is −5 + 9?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "4"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-001",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-parts",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Name the common endpoint of the two rays that form an angle.",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The vertex"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-002",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-measure",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the measure of a right angle?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "90°"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-003",
+      "sectionId": "B",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "line-segment",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "How many endpoints does a line segment have?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Two"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-004",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rays",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the name of a part of a line that has one endpoint and extends endlessly in one direction?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A ray"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-005",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "measuring-angles",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What tool is used to measure an angle in degrees?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A protractor"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-006",
+      "sectionId": "B",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-types",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is an angle greater than 90° but less than 180° called?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "An obtuse angle"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-007",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "circle-construction",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the point equidistant from all points on a circle called?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The centre"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-008",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rectangles",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "How many right angles does a rectangle have?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Four"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-009",
+      "sectionId": "B",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "diagonals",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the line joining opposite vertices of a quadrilateral called?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A diagonal"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-010",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "square-properties",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "How many equal sides does a square have?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Four"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-011",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "line-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is a line that divides a figure into two matching mirror halves called?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A line of symmetry"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-012",
+      "sectionId": "B",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "line-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "How many lines of symmetry does a square have?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Four"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-013",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rotational-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the smallest angle of rotation that maps a square onto itself?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "90°"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-014",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-types",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the name of an angle measuring exactly 180°?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A straight angle"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-015",
+      "sectionId": "B",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "perpendicular-lines",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What do perpendicular lines form at their intersection?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Four right angles"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-016",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "circle-properties",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the fixed distance from the centre of a circle to its boundary called?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The radius"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-017",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "polygons",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "How many sides does a regular hexagon have?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Six"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-018",
+      "sectionId": "B",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "polygons",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the name of a four-sided polygon?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A quadrilateral"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-019",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "line-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "How many lines of symmetry does a non-square rectangle have?",
+      "difficulty": "medium",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Two"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-K-020",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "constructions",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "What is the tool called that is used to draw a circle of fixed radius?",
+      "difficulty": "easy",
+      "competency": "knowledge-understanding",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A compass"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-001",
+      "sectionId": "B",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "bar-graph-interpretation",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A bar graph shows 12 votes for chess and 8 for carrom. How many more votes were cast for chess?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "4 votes"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-002",
+      "sectionId": "B",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "perimeter",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A rectangle is 9 cm long and 4 cm wide. Find its perimeter.",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "26 cm"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-003",
+      "sectionId": "B",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-of-square",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A square has side 7 cm. Find its area.",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "49 cm²"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-004",
+      "sectionId": "B",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "pictographs",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A pictograph uses one symbol to represent 5 students. What do 6 symbols represent?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "30 students"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-005",
+      "sectionId": "B",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "perimeter",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "The lengths of three sides of a triangle are 5 cm, 6 cm and 7 cm. Find its perimeter.",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "18 cm"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-006",
+      "sectionId": "B",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-of-rectangle",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A rectangle has area 48 cm² and length 8 cm. Find its width.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "6 cm"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-007",
+      "sectionId": "B",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "bar-graph-scale",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A bar graph has scale 1 unit = 4 books. A bar reaches 7 units. How many books does it represent?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "28 books"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-008",
+      "sectionId": "B",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "perimeter-square",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A square garden has perimeter 36 m. Find the length of one side.",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "9 m"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-009",
+      "sectionId": "B",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-of-triangle",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A triangle has base 10 cm and height 6 cm. Find its area.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "30 cm²"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-010",
+      "sectionId": "B",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "data-total",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A class survey records 9, 12 and 7 votes for three games. Find the total votes.",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "28 votes"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-011",
+      "sectionId": "B",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-of-rectangle",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A rectangle is 12 m by 5 m. Find its area.",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "60 m²"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-012",
+      "sectionId": "B",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "square-area",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A square tile has area 64 cm². Find its side length.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "8 cm"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-013",
+      "sectionId": "B",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "bar-graph-interpretation",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A bar graph shows 18 visitors on Monday and 25 on Tuesday. How many visitors came on the two days altogether?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "43 visitors"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-014",
+      "sectionId": "B",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "perimeter-square",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A 20 cm ribbon is used to outline a square. What is the side length of the square?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "5 cm"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-015",
+      "sectionId": "B",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "perimeter-rectangle",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A rectangle has perimeter 30 cm and length 9 cm. Find its width.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "6 cm"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-016",
+      "sectionId": "B",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "pictograph-scale",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A pictograph shows 4 symbols for each symbol key of 3 bicycles. How many bicycles are shown?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "12 bicycles"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-017",
+      "sectionId": "B",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-of-triangle",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A triangular board has base 8 cm and height 5 cm. Find its area.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "20 cm²"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-018",
+      "sectionId": "B",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "perimeter-square",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "The perimeter of a square is 52 cm. Find its side length.",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "13 cm"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-019",
+      "sectionId": "B",
+      "chapterId": "data-handling-and-presentation",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "bar-graph-comparison",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A bar graph's tallest bar represents 42 students and the shortest represents 18. Find the difference.",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "24 students"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-MD-A-020",
+      "sectionId": "B",
+      "chapterId": "perimeter-and-area",
+      "unitId": "measurement-data",
+      "topicTags": [
+        "area-of-rectangle",
+        "measurement-data"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A rectangular field is 15 m long and 8 m wide. Find the area.",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "120 m²"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-001",
+      "sectionId": "B",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "sequence-application",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A pattern starts at 5 and adds 6 each time. What is its sixth term?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "35"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-002",
+      "sectionId": "B",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "prime-number-application",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A number is 4 times a prime number and equals 44. What is the prime number?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "11"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-003",
+      "sectionId": "B",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "divisibility-application",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Find the smallest number that must be added to 38 to make it divisible by 5.",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "2"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-004",
+      "sectionId": "B",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-of-quantity",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A box has 36 beads. One-third are blue. How many are blue?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "12"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-005",
+      "sectionId": "B",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-context",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "The temperature is −2°C and rises by 7°C. What is the new temperature?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "5°C"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-006",
+      "sectionId": "B",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "square-pattern",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A number pattern follows 1, 4, 9, 16, … What is the next term?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "25"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-007",
+      "sectionId": "B",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "common-multiples",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Two bells ring every 6 minutes and 8 minutes. After how many minutes will they ring together again?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "24 minutes"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-008",
+      "sectionId": "B",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-of-quantity",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A 40-page book has 3/8 of its pages read. How many pages were read?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "15 pages"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-009",
+      "sectionId": "B",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-movement",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A lift starts at floor −3 and moves up 8 floors. Which floor does it reach?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Floor 5"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-010",
+      "sectionId": "B",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "division",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A shop packs 48 pencils equally into 6 boxes. How many pencils go in each box?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "8 pencils"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-011",
+      "sectionId": "B",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "factors",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A number has factors 1, 2, 4 and 8 only. What is the number?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "8"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-012",
+      "sectionId": "B",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-measure",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A strip is 3/4 metre long. How many centimetres long is it?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "75 cm"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-013",
+      "sectionId": "B",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "arithmetic-patterns",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A sequence increases by 4 each step. If the first term is 7, find the eighth term.",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "35"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-014",
+      "sectionId": "B",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-of-quantity",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A club has 30 members; 2/5 are new members. How many are new?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "12 members"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-015",
+      "sectionId": "B",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-context",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A diver is at −12 m and rises 5 m. What is the diver's new position?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "−7 m"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-016",
+      "sectionId": "B",
+      "chapterId": "patterns-in-mathematics",
+      "unitId": "number-sense",
+      "topicTags": [
+        "divisibility",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A number is divisible by 3 and 5 and lies between 40 and 50. What is it?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "45"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-017",
+      "sectionId": "B",
+      "chapterId": "number-play",
+      "unitId": "number-sense",
+      "topicTags": [
+        "fraction-multiplication",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A recipe uses 2/3 cup of rice per batch. How much is needed for 3 batches?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "2 cups"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-018",
+      "sectionId": "B",
+      "chapterId": "prime-time",
+      "unitId": "number-sense",
+      "topicTags": [
+        "calendar-pattern",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A calendar month begins on Monday. What day of the week is the date 15 days later?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Tuesday"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-019",
+      "sectionId": "B",
+      "chapterId": "fractions",
+      "unitId": "number-sense",
+      "topicTags": [
+        "integer-addition",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A player scores −4 points for a penalty and then earns 11 points. What is the net score?",
+      "difficulty": "easy",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "7 points"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-NS-A-020",
+      "sectionId": "B",
+      "chapterId": "the-other-side-of-zero",
+      "unitId": "number-sense",
+      "topicTags": [
+        "triangular-numbers",
+        "number-sense"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A pattern uses triangular numbers 1, 3, 6, 10. What is the next number?",
+      "difficulty": "medium",
+      "competency": "application",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "15"
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-001",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-reasoning",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Two angles are 35° and 55°. What do you notice about their sum, and what angle does it form?",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "They add to 90°, so together they form a right angle."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-002",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "shape-properties",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A student says every rectangle has four equal sides. Is the statement always true? Explain briefly.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "No. A rectangle has opposite sides equal; all four sides are equal only in a square."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-003",
+      "sectionId": "B",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "shape-comparison",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A square and a non-square rectangle both have four right angles. State one property that distinguishes them.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A square has four equal sides; a non-square rectangle does not."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-004",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rotational-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A figure matches after a 180° turn but has no mirror line. Name one possible figure.",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A general parallelogram."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-005",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "circle-reasoning",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A line segment is drawn from the centre of a circle to its boundary. Explain why it is a radius.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "It joins the centre to a point on the circle, so it is a radius."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-006",
+      "sectionId": "B",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-classification",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A student calls an angle of 145° acute. Correct the classification.",
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "It is obtuse because it is greater than 90° and less than 180°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-007",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rotation-invariance",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A square is rotated by 45°. Does it still have four right angles? Give a reason.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Yes. Rotation changes orientation, not the angle measures of the square."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-008",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "diagonal-properties",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A rectangle has diagonals of unequal lengths in a student's drawing. What should the student check?",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "The construction or measurement; rectangle diagonals should be equal."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-009",
+      "sectionId": "B",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "line-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A figure has exactly one line of symmetry. Could it be a non-equilateral isosceles triangle? Explain.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Yes. Its symmetry line passes through the apex and midpoint of the base."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-010",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rotational-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A regular hexagon has six sides. Predict the number of its rotationally matching positions in one full turn.",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Six positions; its rotational symmetry order is 6."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-011",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "line-relationships",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Two lines meet at 90°. A student says they are parallel. Explain the error.",
+      "difficulty": "easy",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Perpendicular lines intersect at 90°; parallel lines do not meet."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-012",
+      "sectionId": "B",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "compass-construction",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A compass is used with a fixed opening to mark two points from the same centre. What geometric property do those points share?",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "They are at equal distances from the centre."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-013",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "quadrilateral-properties",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A quadrilateral has only one pair of parallel sides. Which common name may describe it?",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A trapezium (using the usual school definition)."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-014",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "circle-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A student claims a circle has only one line of symmetry. What counterexample would disprove this?",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "Any second diameter is also a line of symmetry; in fact there are infinitely many."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-015",
+      "sectionId": "B",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "angle-reasoning",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "An angle is 25° less than a straight angle. Find its measure and classify it.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "155°; it is obtuse."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-016",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "shape-comparison",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A square and a rhombus both have four equal sides. State a property that may distinguish them.",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "A square has four right angles; a general rhombus need not."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-017",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "rotational-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A figure has three identical arms spaced evenly around its centre. What is its smallest rotational match?",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "120° because 360° ÷ 3 = 120°."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-018",
+      "sectionId": "B",
+      "chapterId": "symmetry",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "line-symmetry",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A student draws a line through a rectangle's centre but not parallel to either pair of sides. Is it a symmetry line for a non-square rectangle?",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "No. Its two halves will not exactly overlap under reflection."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-019",
+      "sectionId": "B",
+      "chapterId": "lines-and-angles",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "construction-reasoning",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "Why can a ruler-and-compass construction be more reliable than estimating a right angle by eye?",
+      "difficulty": "medium",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "It uses fixed geometric relationships and tools rather than visual guessing."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    },
+    {
+      "questionId": "C6M-VSA-GEO-AN-020",
+      "sectionId": "B",
+      "chapterId": "playing-with-constructions",
+      "unitId": "geometry-spatial",
+      "topicTags": [
+        "diagonal-area",
+        "geometry-spatial"
+      ],
+      "type": "very-short-answer",
+      "marks": 2,
+      "prompt": "A square's diagonal is drawn. What two equal triangles does it create, and why are they equal in area?",
+      "difficulty": "hard",
+      "competency": "analysis-evaluation-creation",
+      "approvalStatus": "approved",
+      "answerKey": {
+        "modelAnswer": "It creates two congruent triangles because the diagonal divides the square into matching halves."
+      },
+      "markingScheme": [
+        {
+          "criterion": "Correct method or key mathematical fact",
+          "marks": 1
+        },
+        {
+          "criterion": "Correct result or supporting statement",
+          "marks": 1
+        }
+      ],
+      "source": {
+        "type": "original",
+        "reference": "ExamGuru-authored question aligned to NCERT Ganita Prakash Grade 6; content review required before release."
+      }
+    }
+  ]
 }
