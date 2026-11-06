@@ -11,7 +11,8 @@ const banks=[
 const expectedLevels={Easy:25,Medium:25,Hard:25,Challenge:25};
 const problems=[];
 const normalise=value=>String(value||"").toLowerCase()
-  .replace(/[“”‘’"]/g,"")
+  .replace(/[“”]/g, '"' )
+  .replace(/[‘’]/g, "'")
   .replace(/\s+/g," ")
   .trim();
 
