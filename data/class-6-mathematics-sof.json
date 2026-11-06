@@ -385,22 +385,22 @@
       },
       {
         "id": "c6imoq022",
-        "question": "A number pattern starts at 6. Each new term is found by multiplying the previous term by 2 and then adding 1. What is the fifth term?",
+        "question": "A row of joined squares uses 4 matchsticks for the first square. Each additional square shares one side and needs 3 more sticks. If the row uses 46 sticks, how many squares are joined?",
         "options": [
-          "55",
-          "63",
-          "95",
-          "111"
+          "13",
+          "14",
+          "15",
+          "16"
         ],
-        "answer": 3,
-        "explanation": "6→13→27→55→111. The fifth term is 111.",
+        "answer": 2,
+        "explanation": "After the first square, each new square adds 3 sticks. So 4+3(n−1)=46; 3(n−1)=42; n=15.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Repeatedly apply a two-operation rule across several stages."
+        "difficultyRationale": "Set up a growing pattern from a shared-edge model, then reverse the rule to find the stage."
       },
       {
         "id": "c6imoq023",
@@ -764,155 +764,155 @@
       },
       {
         "id": "c6imoq043",
-        "question": "A sequence has term 3 equal to 14 and term 8 equal to 39. The same number is added each time. What is term 12?",
+        "question": "A dot design has 5 dots in stage 1, 9 in stage 2, 15 in stage 3, 23 in stage 4 and 33 in stage 5. How many dots are in stage 8 if the pattern continues?",
         "options": [
-          "54",
-          "59",
-          "64",
-          "69"
+          "63",
+          "69",
+          "75",
+          "81"
         ],
-        "answer": 1,
-        "explanation": "Five steps add 25, so the common difference is 5. Term 12 is four steps after term 8: 39+20=59.",
+        "answer": 2,
+        "explanation": "The increases are +4,+6,+8,+10. Continue with +12,+14,+16: stage 6=45, stage 7=59, stage 8=75.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Derive a common difference from non-consecutive terms, then extrapolate."
+        "difficultyRationale": "Identify a changing difference and extend it through three additional stages."
       },
       {
         "id": "c6imoq044",
-        "question": "A pattern alternates square numbers at odd positions and even numbers at even positions. What is term 7?",
+        "question": "The sequence 2, 5, 11, 23, 47 is made by doubling a term and adding 1. What is the seventh term?",
         "options": [
-          "14",
-          "16",
-          "25",
-          "36"
+          "95",
+          "143",
+          "191",
+          "287"
         ],
-        "answer": 1,
-        "explanation": "Odd positions are 1²,2²,3²,4²; term 7 is 4²=16.",
+        "answer": 2,
+        "explanation": "The sixth term is 47×2+1=95. The seventh is 95×2+1=191.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Apply the same two-operation rule twice beyond the supplied terms."
       },
       {
         "id": "c6imoq045",
-        "question": "Reverse the rule ×2+1 from 95. What value came immediately before it?",
+        "question": "Two patterns are interleaved: odd-position terms are 4, 7, 10, … and even-position terms are 10, 15, 20, …. What is term 12 of the combined pattern?",
         "options": [
-          "47",
-          "46",
-          "48",
-          "49"
+          "30",
+          "32",
+          "35",
+          "38"
         ],
-        "answer": 0,
-        "explanation": "(95−1)÷2=47.",
+        "answer": 2,
+        "explanation": "Term 12 is the sixth even-position term. The even-position pattern starts at 10 and adds 5: 10,15,20,25,30,35.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Separate alternating sub-patterns and determine which sub-pattern contains the requested position."
       },
       {
         "id": "c6imoq046",
-        "question": "A dot pattern has 2,3,5,8,12,17 dots. How many dots are in picture 9?",
+        "question": "A pattern follows the rule: stage n has n²+2n tiles. What is the first stage with more than 100 tiles?",
         "options": [
-          "35",
-          "39",
-          "42",
-          "38"
+          "8",
+          "9",
+          "10",
+          "11"
         ],
-        "answer": 3,
-        "explanation": "Continue by adding 6, 7 and 8: 23,30,38.",
+        "answer": 2,
+        "explanation": "Stage 9 has 81+18=99 tiles. Stage 10 has 100+20=120, so stage 10 is the first above 100.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Evaluate consecutive stages around a threshold and justify why the earlier stage does not qualify."
       },
       {
         "id": "c6imoq047",
-        "question": "An arithmetic sequence has third term 14 and ninth term 38. What is its common difference?",
+        "question": "A growing sequence adds the same number each time. Term 4 is 19 and term 10 is 49. What is term 15?",
         "options": [
-          "3",
-          "5",
-          "4",
-          "6"
+          "69",
+          "74",
+          "79",
+          "84"
         ],
-        "answer": 2,
-        "explanation": "Six steps separate terms 3 and 9; (38−14)÷6=4.",
+        "answer": 1,
+        "explanation": "There are six equal steps from term 4 to term 10, so each step is (49−19)÷6=5. Five more steps give 49+25=74.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Find a constant step from non-adjacent terms and use it to project a later term."
       },
       {
         "id": "c6imoq048",
-        "question": "A sequence follows n²−n+2. Find term 7.",
+        "question": "A number machine triples its input, subtracts 4, then doubles the result. Its final output is 34. What was the input?",
         "options": [
-          "42",
-          "44",
-          "48",
-          "50"
+          "5",
+          "7",
+          "9",
+          "11"
         ],
         "answer": 1,
-        "explanation": "49−7+2=44.",
+        "explanation": "Reverse the operations: 34÷2=17; 17+4=21; 21÷3=7.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Reverse a three-stage function in the correct opposite order."
       },
       {
         "id": "c6imoq049",
-        "question": "A sequence is generated by n³+n². What is term 6?",
+        "question": "A sequence begins 1, 4, 10, 19, 31. The increases follow a regular pattern. What is term 8?",
         "options": [
-          "252",
-          "216",
-          "240",
-          "258"
+          "64",
+          "73",
+          "82",
+          "85"
         ],
-        "answer": 0,
-        "explanation": "6³+6²=216+36=252.",
+        "answer": 3,
+        "explanation": "The increases are +3,+6,+9,+12; continue with +15,+18,+21. Terms 6, 7 and 8 are 46, 64 and 85.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Recognise a second-level pattern in the differences and extend it several stages."
       },
       {
         "id": "c6imoq050",
-        "question": "The sequence 5, 9, 17, 33, 65 follows which rule?",
+        "question": "A sequence increases by a constant amount. Its fourth term is 29 and its ninth term is 64. What is the sum of its first and twelfth terms?",
         "options": [
-          "Double the term, then add 1",
-          "Add 4 each time",
-          "Square the term",
-          "Double the term, then subtract 1"
+          "86",
+          "92",
+          "99",
+          "106"
         ],
-        "answer": 3,
-        "explanation": "5×2−1=9 and the same rule continues to 129.",
+        "answer": 2,
+        "explanation": "Five steps add 35, so the step is 7. Term 1 is 29−3×7=8; term 12 is 64+3×7=85. Their sum is 93.",
         "difficulty": "Challenge",
         "section": "Mathematical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Infer the common difference, work backwards to the first term and forwards to a distant term."
       }
     ]
   },
@@ -1302,22 +1302,22 @@
       },
       {
         "id": "c6imoq072",
-        "question": "Two angles on a straight line are in the ratio 2:7. The larger angle is then bisected. What is the size of each half?",
+        "question": "Three angles around a point are 2x, 3x and 4x. A fourth angle is 45°. What is the largest angle?",
         "options": [
-          "20°",
-          "35°",
-          "70°",
-          "140°"
+          "126°",
+          "135°",
+          "140°",
+          "144°"
         ],
         "answer": 2,
-        "explanation": "Nine ratio parts equal 180°, so one part is 20°. The larger angle is 140°; each half is 70°.",
+        "explanation": "Angles around a point total 360°: 2x+3x+4x+45=360. Thus x=35° and the largest is 4x=140°.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Combine ratio reasoning, a straight-angle constraint and angle bisection."
+        "difficultyRationale": "Combine an angle-sum rule with a ratio-like variable relationship and compare the resulting angles."
       },
       {
         "id": "c6imoq073",
@@ -1681,26 +1681,26 @@
       },
       {
         "id": "c6imoq093",
-        "question": "Three angles around a point are 2x, 3x and 4x. A fourth angle is 45°. Find the largest angle.",
+        "question": "Two angles on a straight line are in the ratio 2:7. The larger angle is bisected. What is the size of each half?",
         "options": [
-          "126°",
-          "135°",
-          "140°",
-          "144°"
+          "20°",
+          "35°",
+          "70°",
+          "140°"
         ],
         "answer": 2,
-        "explanation": "2x+3x+4x+45=360, so 9x=315 and x=35. The largest angle is 4x=140°.",
+        "explanation": "Nine equal parts make 180°, so one part is 20°. The larger angle is 7×20°=140°; half of it is 70°.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Combine the angle sum around a point with an unknown ratio and identify the largest angle."
+        "difficultyRationale": "Solve a ratio on a straight line, then apply a second geometric operation to the larger angle."
       },
       {
         "id": "c6imoq094",
-        "question": "Turns are 72° clockwise, 108° anticlockwise, then 45° clockwise. Find the net turn.",
+        "question": "A pointer turns 72° clockwise, then 108° anticlockwise, then 45° clockwise. What is the net turn?",
         "options": [
           "9° clockwise",
           "45° clockwise",
@@ -1708,128 +1708,128 @@
           "135° anticlockwise"
         ],
         "answer": 2,
-        "explanation": "108° anticlockwise exceeds the combined 117° clockwise by 9°.",
+        "explanation": "Clockwise turns total 117°. The anticlockwise turn is 108°, leaving a net 9° clockwise.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Combine turns in opposite directions; 72+45−108=9 degrees clockwise."
       },
       {
         "id": "c6imoq095",
-        "question": "Two intersecting lines form adjacent angles in ratio 3:5. Find the smaller.",
+        "question": "Two intersecting lines form adjacent angles in the ratio 4:5. What is the larger angle?",
         "options": [
-          "54°",
-          "67.5°",
-          "72°",
-          "112.5°"
+          "80°",
+          "90°",
+          "100°",
+          "120°"
         ],
-        "answer": 1,
-        "explanation": "Eight parts equal 180°; three parts are 67.5°.",
+        "answer": 2,
+        "explanation": "Adjacent angles on a straight line total 180°. Nine parts equal 180°, so one part is 20° and the larger angle is 5×20°=100°.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Use the straight-line angle sum to determine a ratio part and then identify the larger adjacent angle."
       },
       {
         "id": "c6imoq096",
-        "question": "A straight angle is split in ratio 2:5:5. Find the smallest.",
+        "question": "Four angles around a point are in the ratio 1:2:3:4. What is the difference between the largest and smallest angles?",
         "options": [
-          "30°",
-          "45°",
-          "60°",
-          "75°"
+          "72°",
+          "90°",
+          "108°",
+          "126°"
         ],
-        "answer": 0,
-        "explanation": "Twelve parts equal 180°; each part is 15°.",
+        "answer": 2,
+        "explanation": "Ten parts total 360°, so each part is 36°. The largest is 144° and the smallest is 36°; difference=108°.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Partition a full turn using a ratio, then compare two angles rather than report one angle."
       },
       {
         "id": "c6imoq097",
-        "question": "A clock hand moves from 12 to 4 and then to 7 clockwise. What is the total turn?",
+        "question": "A clock hand moves clockwise from 10 to 2, then anticlockwise from 2 to 11. Each hour interval is 30°. What is the net turn?",
         "options": [
-          "150°",
-          "180°",
-          "240°",
-          "210°"
+          "30° clockwise",
+          "30° anticlockwise",
+          "60° clockwise",
+          "90° clockwise"
         ],
-        "answer": 3,
-        "explanation": "Seven hour intervals at 30° each equal 210°.",
+        "answer": 0,
+        "explanation": "From 10 to 2 is four intervals=120° clockwise. From 2 back to 11 is three intervals=90° anticlockwise. Net=30° clockwise.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Translate clock positions to angular movement and combine movements in opposite directions."
       },
       {
         "id": "c6imoq098",
-        "question": "Angles around a point are 80°, 2x, 3x and 4x. Find the largest angle.",
+        "question": "Two vertically opposite angles are 3x+15° and 5x−25°. What is the size of either of these angles?",
         "options": [
-          "96°",
-          "128°",
-          "112°",
-          "144°"
+          "65°",
+          "75°",
+          "85°",
+          "95°"
         ],
-        "answer": 2,
-        "explanation": "80+9x=360, x=280/9; largest=4x=124.44°. This item is invalid and will be replaced.",
+        "answer": 1,
+        "explanation": "Vertically opposite angles are equal: 3x+15=5x−25, so x=20. The angle is 3×20+15=75°.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Use the equality of vertically opposite angles to form and solve an equation, then substitute."
       },
       {
         "id": "c6imoq099",
-        "question": "A reflex angle is 248°. What is the smaller angle formed by the same two rays?",
+        "question": "A straight angle is split into three adjacent angles in the ratio 1:2:3. What is the largest angle?",
         "options": [
-          "112°",
-          "108°",
-          "122°",
-          "132°"
+          "30°",
+          "60°",
+          "90°",
+          "120°"
         ],
-        "answer": 0,
-        "explanation": "A full turn is 360°; the smaller angle is 360°−248°=112°.",
+        "answer": 2,
+        "explanation": "Six parts make 180°, so each part is 30°. The largest angle is 3×30°=90°.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Divide a straight angle into unequal adjacent parts and identify the largest part."
       },
       {
         "id": "c6imoq100",
-        "question": "Angles around a point are 80°, 2x, 3x and 4x. Which equation represents the angle sum?",
+        "question": "Two adjacent angles on a straight line are 2x+10° and 3x+20°. Find the larger angle.",
         "options": [
-          "80+9x=360",
-          "80+9x=180",
-          "80+7x=360",
-          "80+9x=90"
+          "80°",
+          "90°",
+          "100°",
+          "110°"
         ],
-        "answer": 0,
-        "explanation": "All four angles meet at a point, so they sum to 360°.",
+        "answer": 3,
+        "explanation": "(2x+10)+(3x+20)=180, so 5x=150 and x=30. The larger angle is 3×30+20=110°.",
         "difficulty": "Challenge",
         "section": "Mathematical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Set up the supplementary-angle equation and evaluate the larger of two algebraic expressions."
       }
     ]
   },
@@ -2219,22 +2219,22 @@
       },
       {
         "id": "c6imoq122",
-        "question": "A number is divisible by 6 and 8, is between 100 and 200, and its digits add to 9. Which number works?",
+        "question": "A shop has 96 pencils and 72 erasers. It makes identical packs with none left over. What is the greatest number of packs, and how many pencils go in each?",
         "options": [
-          "120",
-          "144",
-          "168",
-          "192"
+          "12 packs, 8 pencils",
+          "18 packs, 6 pencils",
+          "24 packs, 4 pencils",
+          "36 packs, 3 pencils"
         ],
-        "answer": 1,
-        "explanation": "144 is divisible by 6 and 8, lies between 100 and 200, and 1+4+4=9.",
+        "answer": 2,
+        "explanation": "The greatest common factor of 96 and 72 is 24. Each pack has 96÷24=4 pencils (and 72÷24=3 erasers).",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Combine divisibility tests, a range constraint and a digit-sum condition."
+        "difficultyRationale": "Find the greatest possible equal grouping, then interpret the quotient for one type of item."
       },
       {
         "id": "c6imoq123",
@@ -2598,155 +2598,155 @@
       },
       {
         "id": "c6imoq143",
-        "question": "A shop has 96 pencils and 72 erasers. It makes identical packs with none left over. What is the greatest number of packs, and how many pencils go in each?",
+        "question": "A number is divisible by both 6 and 8, lies between 100 and 200, and has a digit sum of 9. Which number satisfies all three conditions?",
         "options": [
-          "12 packs, 8 pencils",
-          "18 packs, 6 pencils",
-          "24 packs, 4 pencils",
-          "36 packs, 3 pencils"
+          "120",
+          "144",
+          "168",
+          "192"
         ],
-        "answer": 2,
-        "explanation": "The greatest common factor of 96 and 72 is 24. Each pack has 96÷24=4 pencils.",
+        "answer": 1,
+        "explanation": "144 is divisible by 6 and 8, is between 100 and 200, and its digit sum is 1+4+4=9.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Use a greatest-common-factor constraint, then interpret the quotient in context."
+        "difficultyRationale": "Combine divisibility by two numbers with a range and digit-sum constraint."
       },
       {
         "id": "c6imoq144",
-        "question": "Which is the greatest four-digit number divisible by 9 and ending in 5?",
+        "question": "Using the digits 1, 3, 4 and 7 exactly once, what is the greatest four-digit even number divisible by 3?",
         "options": [
-          "9,975",
-          "9,995",
-          "9,955",
-          "9,945"
+          "7,314",
+          "7,134",
+          "4,731",
+          "3,714"
         ],
-        "answer": 3,
-        "explanation": "9,945 has digit sum 27 and is divisible by 9; the other greater numbers have digit sums not divisible by 9.",
+        "answer": 0,
+        "explanation": "The digit sum is 15, so every arrangement is divisible by 3. An even number must end in 4; arranging the remaining digits in descending order gives 7,314.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Apply a digit-use rule, parity condition and divisibility test to optimise a number."
       },
       {
         "id": "c6imoq145",
-        "question": "A number divisible by 12 and 15 is less than 200. How many positive possibilities are there?",
+        "question": "A number leaves remainder 2 when divided by 5 and remainder 3 when divided by 6. What is the smallest such number greater than 50?",
         "options": [
-          "4",
-          "5",
-          "3",
-          "6"
+          "52",
+          "57",
+          "62",
+          "87"
         ],
-        "answer": 2,
-        "explanation": "Multiples of 60 below 200 are 60, 120 and 180.",
+        "answer": 1,
+        "explanation": "57÷5 leaves 2 and 57÷6 leaves 3. The next number with both remainders is 87, so 57 is the smallest above 50.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Satisfy two remainder conditions simultaneously and test candidates in the stated range."
       },
       {
         "id": "c6imoq146",
-        "question": "A balance moves from −₹75 to +₹125. What is the total change?",
+        "question": "A three-digit number has the form 2□4. What is the greatest possible digit that can fill the box if the number must be divisible by 3?",
         "options": [
-          "₹50",
-          "₹200",
-          "₹125",
-          "₹150"
+          "3",
+          "6",
+          "8",
+          "9"
         ],
-        "answer": 1,
-        "explanation": "125−(−75)=200.",
+        "answer": 3,
+        "explanation": "The digit sum is 2+d+4=6+d. For divisibility by 3, d can be 0, 3, 6 or 9; the greatest is 9.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Use a divisibility rule to identify all possible digits, then select the greatest."
       },
       {
         "id": "c6imoq147",
-        "question": "The sum of four consecutive integers is 110. What is the greatest?",
+        "question": "A number between 500 and 600 is divisible by both 8 and 9. Its digits are all different. What is the greatest possible number?",
         "options": [
-          "29",
-          "27",
-          "28",
-          "30"
+          "504",
+          "528",
+          "576",
+          "594"
         ],
-        "answer": 0,
-        "explanation": "The integers are 26,27,28,29.",
+        "answer": 2,
+        "explanation": "Multiples of 72 between 500 and 600 are 504 and 576. Both have different digits, and 576 is greater.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Combine common multiples, a range restriction and a digit constraint, then compare valid candidates."
       },
       {
         "id": "c6imoq148",
-        "question": "A three-digit number is divisible by 6 and 9. What is the smallest possible number?",
+        "question": "A school has between 100 and 150 badges. They can be packed in groups of 5 with 2 left over, or in groups of 6 with 3 left over. How many badges are there?",
         "options": [
-          "102",
-          "114",
-          "126",
-          "108"
+          "117",
+          "122",
+          "132",
+          "147"
         ],
-        "answer": 3,
-        "explanation": "It must be a multiple of 18; 108 is the first three-digit multiple.",
+        "answer": 0,
+        "explanation": "117 leaves remainder 2 when divided by 5 and remainder 3 when divided by 6. Checking the values 102–147 that meet the first condition identifies 117.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Search systematically under two remainder conditions instead of relying on one divisibility test."
       },
       {
         "id": "c6imoq149",
-        "question": "A six-digit number has digits 4,0,8,2,0,5 in descending place order. Write it.",
+        "question": "A number is made by reversing the digits of 4,725. What is the difference between the original and reversed numbers?",
         "options": [
-          "480,205",
-          "408,025",
-          "408,205",
-          "480,025"
+          "2,277",
+          "2,673",
+          "3,267",
+          "3,672"
         ],
-        "answer": 2,
-        "explanation": "Reading the place values gives 408,205.",
+        "answer": 1,
+        "explanation": "The reversed number is 5,274. The difference is 5,274−4,725=549.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Interpret place-value reversal and compare two four-digit numbers accurately."
       },
       {
         "id": "c6imoq150",
-        "question": "Using digits 3,4,7 exactly once, what is the greatest even three-digit number?",
+        "question": "A four-digit number uses 2, 5, 6 and 9 once each. It must be divisible by 5 and as large as possible. What is the number?",
         "options": [
-          "374",
-          "734",
-          "743",
-          "347"
+          "9,625",
+          "9,652",
+          "6,925",
+          "5,962"
         ],
-        "answer": 1,
-        "explanation": "An even number must end in 4; arrange 7 and 3 in descending order at the front.",
+        "answer": 0,
+        "explanation": "A number divisible by 5 must end in 5. Arrange the remaining digits in descending order: 9,625.",
         "difficulty": "Challenge",
         "section": "Mathematical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Combine a final-digit divisibility condition with place-value ordering to maximise the number."
       }
     ]
   },
@@ -3522,147 +3522,147 @@
           "20; 17"
         ],
         "answer": 1,
-        "explanation": "The original total is 5×16=80. The fifth score is 80−64=16. Add 14: total 94; new mean 94÷6=15⅔.",
+        "explanation": "The original total is 5×16=80. The fifth score is 80−64=16. Adding 14 gives 94 across six scores; 94÷6=15⅔.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Recover a missing value from a mean, then recalculate the mean after adding another observation."
+        "difficultyRationale": "Recover a missing observation from a mean, then recalculate the mean after a new observation is added."
       },
       {
         "id": "c6imoq194",
-        "question": "A 120° sector represents 54 pupils. Find the total.",
+        "question": "In a survey of 120 pupils, ⅜ choose football and ¼ choose cricket. Everyone else chooses athletics. How many choose athletics?",
         "options": [
-          "162",
-          "144",
-          "180",
-          "216"
+          "35",
+          "40",
+          "45",
+          "50"
         ],
-        "answer": 0,
-        "explanation": "120° is one-third of a full circle; total=54×3.",
+        "answer": 2,
+        "explanation": "Football=⅜×120=45; cricket=¼×120=30. The remainder is 120−45−30=45.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Interpret two fractional parts of a total and calculate the remaining category."
       },
       {
         "id": "c6imoq195",
-        "question": "A frequency list has 8 observations with mean 12. If the 20 is removed, what is the exact total of the remaining observations?",
+        "question": "A pictograph uses one full square to represent 8 books. Class A has 3 full squares and one quarter-square. Class B has 2½ squares. How many more books did Class A borrow?",
         "options": [
-          "72",
-          "80",
-          "96",
-          "76"
+          "4",
+          "6",
+          "8",
+          "10"
         ],
-        "answer": 3,
-        "explanation": "Original total is 8×12=96; 96−20=76.",
+        "answer": 1,
+        "explanation": "The difference is 3¼−2½=¾ of a square. Three quarters of 8 is 6 books.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Read fractional symbols in a pictograph and compare the represented quantities."
       },
       {
         "id": "c6imoq196",
-        "question": "A display uses 1 square for 6 votes. It shows 7 full squares and 2 half-squares. Total?",
+        "question": "Seven values are arranged in order: 4, 7, 9, 12, 15, 18, 21. A new value of 30 is added. What is the new median?",
         "options": [
-          "42",
-          "45",
-          "48",
-          "51"
+          "9",
+          "10.5",
+          "12",
+          "13.5"
         ],
-        "answer": 2,
-        "explanation": "42+6=48.",
+        "answer": 3,
+        "explanation": "After adding 30, the ordered list has eight values. The middle two are 12 and 15, so the median is (12+15)÷2=13.5.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Reorder an expanded data set and calculate the median for an even number of observations."
       },
       {
         "id": "c6imoq197",
-        "question": "A 72° pie sector represents 18 students. How many students are there altogether?",
+        "question": "A pupil's mean score over 4 tests is 18. One score of 12 was recorded as 21 by mistake. What is the correct mean?",
         "options": [
-          "72",
-          "90",
-          "84",
-          "100"
+          "15",
+          "15¾",
+          "16",
+          "16¼"
         ],
         "answer": 1,
-        "explanation": "72° is one-fifth of 360°; total=18×5=90.",
+        "explanation": "The recorded total was 4×18=72. Correct the total: 72−21+12=63. The correct mean is 63÷4=15.75.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Correct an erroneous data value before recalculating an average."
       },
       {
         "id": "c6imoq198",
-        "question": "Scores are 6,7,7,8,9,10. Find the median.",
+        "question": "A table shows the numbers of books read by four groups: 8, 12, 15 and 21. If the group with 21 books is split into two equal groups, what is the new mean across the five groups?",
         "options": [
-          "7.5",
-          "7",
-          "8",
-          "8.5"
+          "11.2",
+          "12",
+          "13",
+          "14"
         ],
         "answer": 0,
-        "explanation": "The middle two are 7 and 8; their mean is 7.5.",
+        "explanation": "The original total is 8+12+15+21=56. Splitting 21 into two equal groups gives 10.5 and 10.5; the total remains 56 across five groups, so the mean is 56÷5=11.2.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Understand that splitting a quantity preserves the sum but changes the number of observations."
       },
       {
         "id": "c6imoq199",
-        "question": "A table records 12,18,15 and 21 books borrowed over four days. What is the mean?",
+        "question": "A pie chart sector of 90° represents 30 students. A second sector is 150°. How many more students are represented by the second sector?",
         "options": [
+          "10",
           "15",
-          "16",
-          "17",
-          "16.5"
+          "20",
+          "25"
         ],
-        "answer": 3,
-        "explanation": "Total=66; 66÷4=16.5.",
+        "answer": 2,
+        "explanation": "90° represents 30, so each degree represents 1/3 student. The 150° sector represents 50; the difference is 20.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Use proportional scaling from one sector to another, then compare the totals."
       },
       {
         "id": "c6imoq200",
-        "question": "A survey has 72 responses. One third choose A, one quarter choose B, and the rest choose C. How many choose C?",
+        "question": "The mean of six numbers is 14. Five of them add to 61. The sixth number is then replaced by 3 more than itself. What is the new mean?",
         "options": [
-          "24",
-          "27",
-          "30",
-          "36"
+          "14",
+          "14½",
+          "14⅔",
+          "15"
         ],
-        "answer": 2,
-        "explanation": "A=24, B=18; C=72−42=30.",
+        "answer": 1,
+        "explanation": "The sixth number is 84−61=23. Replacing it with 26 makes the total 87; 87÷6=14.5.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Find an unknown from a mean and update the data total after a controlled change."
       }
     ]
   },
@@ -4445,140 +4445,140 @@
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Apply LCM to recurring events and count all occurrences in a bounded time interval."
+        "difficultyRationale": "Use an LCM to find recurring coincidences, then count all occurrences in a time window."
       },
       {
         "id": "c6imoq244",
-        "question": "Find the LCM of 45 and 75. Then convert it to minutes and hours.",
+        "question": "A number gives remainders 1, 2, 3 and 4 when divided by 2, 3, 4 and 5 respectively. What is the least such number greater than 1?",
         "options": [
-          "180 minutes (3 h)",
-          "225 minutes (3 h 45 min)",
-          "200 minutes (3 h 20 min)",
-          "250 minutes (4 h 10 min)"
+          "31",
+          "41",
+          "59",
+          "61"
         ],
-        "answer": 1,
-        "explanation": "45=3²×5 and 75=3×5²; LCM=3²×5²=225 minutes.",
+        "answer": 3,
+        "explanation": "The number is one more than a multiple of 2, 3, 4 and 5. Their LCM is 60, so the least value greater than 1 is 61.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Translate several remainder conditions into one common-multiple relationship."
       },
       {
         "id": "c6imoq245",
-        "question": "When 2,3,4,5 are divisors, a number gives remainders 1,2,3,4 respectively. Find the least such number greater than 1.",
+        "question": "A floor is 252 cm long and 180 cm wide. It is covered exactly by the largest possible identical square tiles. How many tiles are needed?",
         "options": [
-          "59",
-          "29",
-          "39",
-          "119"
+          "30",
+          "35",
+          "40",
+          "42"
         ],
-        "answer": 0,
-        "explanation": "59 is one less than 60 and satisfies all four remainder conditions.",
+        "answer": 1,
+        "explanation": "The largest tile side is HCF(252,180)=36 cm. The floor fits 252÷36=7 tiles along and 180÷36=5 across: 7×5=35.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Combine an HCF to determine the largest tile with a two-dimensional count."
       },
       {
         "id": "c6imoq246",
-        "question": "Largest square tile for a 420 cm by 300 cm floor?",
+        "question": "The HCF of two numbers is 12 and their LCM is 180. One number is 36. What is the other number?",
         "options": [
-          "30",
-          "40",
-          "70",
-          "60 cm"
+          "48",
+          "54",
+          "60",
+          "72"
         ],
-        "answer": 3,
-        "explanation": "HCF(420,300)=60.",
+        "answer": 2,
+        "explanation": "For two numbers, product=HCF×LCM=12×180=2160. The other number is 2160÷36=60.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Use the product relationship between HCF and LCM to recover an unknown number."
       },
       {
         "id": "c6imoq247",
-        "question": "A number is divisible by 12 and 15, and less than 200. How many positive possibilities?",
+        "question": "Two lights flash every 12 seconds and 18 seconds. They flash together at 8:15:00. How many times do they flash together up to and including 8:17:00?",
         "options": [
+          "3",
           "4",
           "5",
-          "3",
           "6"
         ],
-        "answer": 2,
-        "explanation": "Multiples of 60 below 200 are 60,120,180.",
+        "answer": 1,
+        "explanation": "LCM(12,18)=36 seconds. They coincide at 8:15:00, :36, 8:16:12 and 8:16:48. The next is 8:17:24, so four times.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Find the common interval and count events carefully within an inclusive time limit."
       },
       {
         "id": "c6imoq248",
-        "question": "Which pair of consecutive primes has product 77?",
+        "question": "The prime factorisation of 360 is 2³×3²×5. How many of its positive factors are even?",
         "options": [
-          "5 and 13",
-          "7 and 11",
-          "11 and 13",
-          "3 and 29"
+          "6",
+          "12",
+          "18",
+          "24"
         ],
-        "answer": 1,
-        "explanation": "7 and 11 are consecutive primes and 7×11=77.",
+        "answer": 2,
+        "explanation": "An even factor must contain at least one 2. There are 3 choices for the power of 2 (1,2,3), 3 choices for the power of 3 and 2 choices for the power of 5: 3×3×2=18.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Count factor combinations while excluding all odd factors from the total possibilities."
       },
       {
         "id": "c6imoq249",
-        "question": "The prime factorisation of a number is 2²×3²×5. How many positive divisors does it have?",
+        "question": "A number is divisible by 9 and 10, and is between 200 and 300. What is the greatest possible such number?",
         "options": [
-          "18",
-          "17",
-          "24",
-          "30"
+          "240",
+          "250",
+          "270",
+          "290"
         ],
-        "answer": 0,
-        "explanation": "(2+1)(2+1)(1+1)=18.",
+        "answer": 2,
+        "explanation": "A number divisible by 9 and 10 must be a multiple of 90. The multiples in the range are 270 only (and 180/360 lie outside), so the greatest is 270.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Combine divisibility rules into a common multiple, then apply an interval constraint."
       },
       {
         "id": "c6imoq250",
-        "question": "Two numbers have product 3,360 and HCF 8. Find their LCM.",
+        "question": "A rectangular courtyard measures 168 m by 120 m. It is divided into the largest possible square plots with no space left over. How many plots are made?",
         "options": [
-          "400",
-          "424",
-          "480",
-          "420"
+          "28",
+          "30",
+          "32",
+          "35"
         ],
         "answer": 3,
-        "explanation": "LCM=3,360÷8=420.",
+        "explanation": "The largest square side is HCF(168,120)=24 m. The layout is 168÷24=7 by 120÷24=5, giving 35 plots.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Use the HCF to find a maximum square size and calculate the number of plots in both directions."
       }
     ]
   },
@@ -5354,147 +5354,147 @@
           "72 m²"
         ],
         "answer": 2,
-        "explanation": "The outer rectangle is 22 m by 14 m: 308 m². The field is 240 m², so the path is 68 m².",
+        "explanation": "The outer dimensions are 22 m by 14 m, so outer area=308 m². Field area=240 m². Path area=308−240=68 m².",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Adjust both dimensions for an outside border, then subtract the original area."
+        "difficultyRationale": "Adjust both dimensions for an outside border and subtract the original area."
       },
       {
         "id": "c6imoq294",
-        "question": "A 90 m by 60 m ground is run around 5 times. Find distance.",
+        "question": "A square and a rectangle have equal perimeters. The rectangle measures 18 cm by 10 cm. The square is cut into four equal smaller squares. What is the area of one smaller square?",
         "options": [
-          "1,200 m",
-          "1,400 m",
-          "1,500 m",
-          "1,600 m"
+          "36 cm²",
+          "42.25 cm²",
+          "49 cm²",
+          "56.25 cm²"
         ],
         "answer": 2,
-        "explanation": "One lap=300 m; five laps=1500.",
+        "explanation": "The rectangle perimeter is 2(18+10)=56 cm. The large square side is 14 cm. Each small square side is 7 cm, so its area is 49 cm².",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Transfer a perimeter equality to a side length, then account for subdivision before finding area."
       },
       {
         "id": "c6imoq295",
-        "question": "A square's perimeter equals a 22 cm by 14 cm rectangle's perimeter. Find square area.",
+        "question": "A rectangular garden has perimeter 60 m. Its length is 18 m. A 2 m wide path is made inside along both long sides. What is the remaining garden area?",
         "options": [
-          "256 cm²",
-          "324 cm²",
-          "289 cm²",
-          "361 cm²"
+          "96 m²",
+          "120 m²",
+          "144 m²",
+          "168 m²"
         ],
-        "answer": 1,
-        "explanation": "Rectangle perimeter=72; square side=18; area=324.",
+        "answer": 2,
+        "explanation": "Width=30−18=12 m. Removing a 2 m strip along each long side leaves width 12−4=8 m. Remaining area=18×8=144 m².",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Infer the missing dimension from perimeter, then remove two inside strips and calculate the remaining area."
       },
       {
         "id": "c6imoq296",
-        "question": "A 36 m by 24 m field is split into largest possible identical square plots. How many?",
+        "question": "A 24 cm by 16 cm rectangle is made from a wire. The same wire is reshaped into a square. What is the area of the square?",
         "options": [
-          "6",
-          "4",
-          "8",
-          "12"
+          "256 cm²",
+          "324 cm²",
+          "400 cm²",
+          "484 cm²"
         ],
-        "answer": 0,
-        "explanation": "Side=HCF(36,24)=12; plots=3×2=6.",
+        "answer": 1,
+        "explanation": "The wire length is the rectangle perimeter: 2(24+16)=80 cm. The square side is 80÷4=20 cm; area=400 cm².",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Preserve perimeter while changing shape, then find the new area."
       },
       {
         "id": "c6imoq297",
-        "question": "A rectangular pool is 25 m by 12 m. A 1 m wide paving strip surrounds it outside. Find paving area.",
+        "question": "Three identical squares of side 6 cm are joined edge-to-edge in a straight row. What is the perimeter of the new rectangle, and how does it compare with the sum of the three separate perimeters?",
         "options": [
-          "74 m²",
-          "76 m²",
-          "84 m²",
-          "78 m²"
+          "48 cm; 24 cm less",
+          "48 cm; 12 cm less",
+          "60 cm; 12 cm less",
+          "72 cm; unchanged"
         ],
-        "answer": 3,
-        "explanation": "Outer dimensions 27×14=378 m²; pool=300; strip=78.",
+        "answer": 0,
+        "explanation": "The row is 18 cm by 6 cm, perimeter=48 cm. Separate perimeters total 3×24=72 cm, so the joined shape has 24 cm less.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Track the boundary after joining shapes and compare exposed edges with the separate perimeters."
       },
       {
         "id": "c6imoq298",
-        "question": "A square courtyard has side 30 m. A 2 m wide path runs inside along all four sides. Find grass area.",
+        "question": "A square courtyard has side 30 m. A 2 m wide path runs inside along all four edges. What is the area left in the middle?",
         "options": [
-          "700 m²",
-          "720 m²",
+          "576 m²",
+          "625 m²",
           "676 m²",
           "784 m²"
         ],
         "answer": 2,
-        "explanation": "Inner square side=26 m; area=676.",
+        "explanation": "The inner square side is 30−2−2=26 m. Its area is 26×26=676 m².",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Account for the path on both sides of each dimension before calculating the inner area."
       },
       {
         "id": "c6imoq299",
-        "question": "A rectangular poster's length is reduced by 10% and width increased by 10%. What happens to area?",
+        "question": "A rectangular field measures 35 m by 20 m. A square field has the same perimeter. What is the difference between their areas?",
         "options": [
-          "It increases by 1%",
-          "It decreases by 1%",
-          "It stays the same",
-          "It decreases by 10%"
+          "25 m²",
+          "50 m²",
+          "56.25 m²",
+          "100 m²"
         ],
-        "answer": 1,
-        "explanation": "New area factor=0.9×1.1=0.99.",
+        "answer": 2,
+        "explanation": "Rectangle perimeter=2(35+20)=110 m. The square side is 110÷4=27.5 m, area=756.25 m². Rectangle area=700 m²; difference=56.25 m².",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Compare two shapes with equal perimeter and calculate the difference between their areas."
       },
       {
         "id": "c6imoq300",
-        "question": "A square of side 14 cm is cut into four equal squares. What is the total perimeter of all pieces?",
+        "question": "A rectangular room is 8 m long and 6 m wide. A square carpet covers exactly ¼ of the floor area. What is the carpet's side length?",
         "options": [
-          "112 cm",
-          "56 cm",
-          "84 cm",
-          "140 cm"
+          "2 m",
+          "3 m",
+          "√12 m",
+          "4 m"
         ],
-        "answer": 0,
-        "explanation": "Each small side=7; perimeter=28; total=112.",
+        "answer": 2,
+        "explanation": "Floor area=8×6=48 m². One quarter is 12 m². A square with area 12 m² has side length √12 m.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Combine an area fraction with the inverse relationship between square area and side length."
       }
     ]
   },
@@ -6270,7 +6270,7 @@
           "140 L"
         ],
         "answer": 2,
-        "explanation": "The added 24 L represents ⅕ of the capacity. Capacity=24×5=120 L.",
+        "explanation": "The added 24 L represents ⅕ of the tank. The full capacity is 24×5=120 L.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
@@ -6281,136 +6281,136 @@
       },
       {
         "id": "c6imoq344",
-        "question": "A runner completes 3/4 of a 2/3 km path. How far?",
+        "question": "A student spends ⅓ of an allowance on books and ⅖ of the remainder on art supplies. What fraction of the original allowance remains?",
         "options": [
-          "2/7 km",
-          "5/12 km",
-          "3/5 km",
-          "1/2 km"
+          "2/5",
+          "4/15",
+          "8/15",
+          "3/5"
         ],
-        "answer": 3,
-        "explanation": "3/4×2/3=1/2 km.",
+        "answer": 0,
+        "explanation": "After buying books, ⅔ remains. Art supplies use ⅖×⅔=4/15. Remaining=⅔−4/15=10/15−4/15=6/15=2/5.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Apply a fraction to a remainder and then express the final amount relative to the original whole."
       },
       {
         "id": "c6imoq345",
-        "question": "A mixed number is 2 1/2. What is its reciprocal?",
+        "question": "A recipe needs ¾ cup of flour for one batch. A cook makes 2½ batches and then uses ⅓ cup for dusting. How much flour is used altogether?",
         "options": [
-          "5/2",
-          "1/2",
-          "2/5",
-          "1/5"
+          "1⅚ cups",
+          "2 cups",
+          "2 5/24 cups",
+          "2½ cups"
         ],
         "answer": 2,
-        "explanation": "2½=5/2; reciprocal=2/5.",
+        "explanation": "For 2½ batches: ¾×5/2=15/8=1⅞ cups. Add ⅓: 45/24+8/24=53/24=2 5/24 cups.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Scale a fractional recipe and then add a separate fractional amount using a common denominator."
       },
       {
         "id": "c6imoq346",
-        "question": "A jar has 5/6 kg nuts. Each packet holds 1/12 kg. How many full packets?",
+        "question": "A ribbon is 7½ m long. Pieces of ⅝ m are cut from it. How many complete pieces can be made, and how much ribbon remains?",
         "options": [
-          "8",
-          "10",
-          "9",
-          "12"
+          "11 pieces, ⅝ m",
+          "12 pieces, 0 m",
+          "12 pieces, ⅛ m",
+          "13 pieces, ⅛ m"
         ],
         "answer": 1,
-        "explanation": "5/6÷1/12=10.",
+        "explanation": "7½÷⅝ = 15/2×8/5=12 exactly, so 12 pieces are made with no ribbon left.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Convert a mixed number and divide by a fractional length, then interpret the remainder."
       },
       {
         "id": "c6imoq347",
-        "question": "The smaller fraction is 1/6 less than 7/8. Find it.",
+        "question": "Which is greatest: ⅚ of ¾, ⅘ of ⅔, ⅞ of ½, or ⅔ of ⅝?",
         "options": [
-          "17/24",
-          "13/24",
-          "19/24",
-          "5/12"
+          "⅚ of ¾",
+          "⅘ of ⅔",
+          "⅞ of ½",
+          "⅔ of ⅝"
         ],
         "answer": 0,
-        "explanation": "7/8−1/6=21/24−4/24=17/24.",
+        "explanation": "The products are 5/8, 8/15, 7/16 and 5/12. The greatest is 5/8, so ⅚ of ¾ is greatest.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Compare products of fractions by calculating and comparing unlike denominators."
       },
       {
         "id": "c6imoq348",
-        "question": "A budget uses 2/7 for books and 3/8 for sports. What fraction is spent?",
+        "question": "A water container is ⅞ full. A family uses ⅓ of the water in it. What fraction of the container's full capacity remains filled?",
         "options": [
-          "29/56",
-          "35/56",
-          "5/15",
-          "37/56"
+          "7/12",
+          "5/8",
+          "11/24",
+          "13/24"
         ],
-        "answer": 3,
-        "explanation": "16/56+21/56=37/56.",
+        "answer": 0,
+        "explanation": "Water used is ⅓×⅞=7/24. Remaining=21/24−7/24=14/24=7/12.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Apply a fraction to a fractional quantity and subtract it from the starting amount."
       },
       {
         "id": "c6imoq349",
-        "question": "A fraction with denominator 12 lies strictly between 1/2 and 2/3. Which is it?",
+        "question": "A student read ⅖ of a book on Monday and ⅓ of the remaining pages on Tuesday. What fraction of the whole book is still unread?",
         "options": [
-          "5/12",
-          "8/12",
-          "7/12",
-          "9/12"
+          "2/5",
+          "1/3",
+          "1/5",
+          "3/5"
         ],
-        "answer": 2,
-        "explanation": "6/12<7/12<8/12.",
+        "answer": 0,
+        "explanation": "After Monday, 3/5 remains. Tuesday's reading is ⅓×3/5=1/5. Unread=3/5−1/5=2/5.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Calculate a fraction of the remaining whole, then determine the final uncompleted part."
       },
       {
         "id": "c6imoq350",
-        "question": "5/6 of a project is complete. Of the unfinished part, 2/3 is research. What fraction of the whole is unfinished research?",
+        "question": "A jar is ⅔ full. After 300 ml is poured out, it is ⅖ full. What is the jar's full capacity?",
         "options": [
-          "1/6",
-          "1/9",
-          "2/9",
-          "1/3"
+          "900 ml",
+          "1,000 ml",
+          "1,125 ml",
+          "1,200 ml"
         ],
-        "answer": 1,
-        "explanation": "Unfinished=1/6; 2/3 of it=1/9.",
+        "answer": 2,
+        "explanation": "The amount poured out is ⅔−⅖=10/15−6/15=4/15 of capacity. Thus capacity=300×15÷4=1,125 ml.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Find the difference between two fractions of a whole and use it to recover the total capacity."
       }
     ]
   },
@@ -7178,7 +7178,7 @@
       },
       {
         "id": "c6imoq393",
-        "question": "Two circles have radii 5 cm and 3 cm. Their centres are 8 cm apart. How many points can they share, and why?",
+        "question": "Two circles have radii 5 cm and 3 cm. Their centres are 8 cm apart. How many common points do they have?",
         "options": [
           "0",
           "1",
@@ -7186,147 +7186,147 @@
           "Infinitely many"
         ],
         "answer": 1,
-        "explanation": "The distance between centres equals 5+3=8 cm, so the circles touch externally at exactly one point.",
+        "explanation": "The centre distance equals 5+3=8 cm, so the circles touch externally at exactly one point.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Compare centre distance with the sum and difference of radii to determine intersection count."
+        "difficultyRationale": "Compare centre distance with the sum and difference of the radii to determine how two circles meet."
       },
       {
         "id": "c6imoq394",
-        "question": "A 90° angle is bisected twice. Find each final angle.",
+        "question": "A point P is the same distance from the endpoints A and B of a line segment. What is the set of all possible positions of P?",
         "options": [
-          "30°",
-          "45°",
-          "15°",
-          "22.5°"
+          "The line AB",
+          "A circle centred at A",
+          "The perpendicular bisector of AB",
+          "A line parallel to AB"
         ],
-        "answer": 3,
-        "explanation": "90÷2÷2=22.5°.",
+        "answer": 2,
+        "explanation": "Every point on the perpendicular bisector is equally distant from A and B; conversely, any point equally distant from A and B lies on it.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Connect an equal-distance condition with the geometric locus used in a construction."
       },
       {
         "id": "c6imoq395",
-        "question": "P is 5 cm from both A and B. Which construction locates its possible positions?",
+        "question": "Can a triangle be constructed with side lengths 4 cm, 6 cm and 11 cm? What is the reason?",
         "options": [
-          "Only midpoint of AB",
-          "A line parallel to AB",
-          "Intersections of circles radius 5 cm centred at A and B",
-          "The whole circle centred at A"
+          "Yes, because all lengths are different",
+          "Yes, because 4+6 is greater than 11",
+          "No, because 4+6 is less than 11",
+          "No, because 6+11 is greater than 4"
         ],
         "answer": 2,
-        "explanation": "P must lie on both circles.",
+        "explanation": "The sum of the two shorter sides is 4+6=10 cm, which is less than 11 cm. The sides cannot close to form a triangle.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Check the triangle inequality rather than assuming any three lengths make a triangle."
       },
       {
         "id": "c6imoq396",
-        "question": "A 150° angle is split into three equal parts. Find each.",
+        "question": "A triangle is to be constructed with sides 5 cm, 6 cm and 7 cm. Which first step and compass settings will ensure the correct construction?",
         "options": [
-          "45°",
-          "50°",
-          "60°",
-          "75°"
+          "Draw 5 cm base; arcs of 6 cm and 7 cm from its endpoints",
+          "Draw 7 cm base; arcs of 5 cm and 6 cm from its endpoints",
+          "Draw 5 cm base; two arcs both 5 cm",
+          "Draw 6 cm base; draw a parallel line 7 cm away"
         ],
-        "answer": 1,
-        "explanation": "150÷3=50°.",
+        "answer": 0,
+        "explanation": "Draw a 5 cm base. With one endpoint as centre draw radius 6 cm; with the other draw radius 7 cm. Their intersection is the third vertex.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Choose a valid base and construct the vertex using two prescribed distances."
       },
       {
         "id": "c6imoq397",
-        "question": "A ruler is marked in millimetres. Smallest marked unit?",
+        "question": "Two circles of radius 4 cm are drawn with centres A and B, 6 cm apart. What can be concluded about their intersections?",
         "options": [
-          "1 mm",
-          "0.1 mm",
-          "1 cm",
-          "1 m"
+          "They do not meet",
+          "They touch at one point",
+          "They meet at two points",
+          "They are identical"
         ],
-        "answer": 0,
-        "explanation": "One millimetre is the smallest mark.",
+        "answer": 2,
+        "explanation": "The centre distance 6 cm is less than the sum of radii 8 cm and greater than the difference 0 cm, so the circles intersect at two points.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Use the distance between centres together with both radii to classify circle intersections."
       },
       {
         "id": "c6imoq398",
-        "question": "Two parallel lines are 4 cm apart. What is the shortest distance between them?",
+        "question": "To construct a perpendicular bisector of a 6 cm segment AB using a compass, which compass opening is suitable?",
         "options": [
-          "8 cm",
-          "2 cm",
-          "It varies",
-          "4 cm"
+          "Less than 3 cm",
+          "Exactly 3 cm",
+          "Greater than 3 cm",
+          "Any opening, even 1 cm"
         ],
-        "answer": 3,
-        "explanation": "The perpendicular distance is constant.",
+        "answer": 2,
+        "explanation": "The arcs from A and B must cross both above and below AB. Their radius must be greater than half of AB, so greater than 3 cm.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Reason about the geometry of intersecting arcs and the minimum compass opening."
       },
       {
         "id": "c6imoq399",
-        "question": "A circle is drawn with radius 5 cm. A second circle has twice the first circle's diameter. What is its radius?",
+        "question": "A triangle has two sides 5 cm and 8 cm. Which of these could be the third side if all lengths are whole centimetres?",
         "options": [
-          "5 cm",
-          "15 cm",
-          "10 cm",
-          "20 cm"
+          "2 cm",
+          "3 cm",
+          "12 cm",
+          "14 cm"
         ],
         "answer": 2,
-        "explanation": "Original diameter is 10 cm; doubled diameter is 20 cm, so radius is 10 cm.",
+        "explanation": "The third side must be greater than 8−5=3 and less than 8+5=13. Only 12 cm among the options satisfies this.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Apply both bounds of the triangle inequality to eliminate impossible constructions."
       },
       {
         "id": "c6imoq400",
-        "question": "A compass is set to 6.2 cm. If its opening is shortened by 1.7 cm, what is the new radius?",
+        "question": "Two parallel lines are 4 cm apart. A point Q is placed on one line. What is the shortest possible distance from Q to the other line?",
         "options": [
-          "4.2 cm",
-          "4.5 cm",
-          "5.5 cm",
-          "7.9 cm"
+          "Less than 4 cm",
+          "Exactly 4 cm",
+          "More than 4 cm",
+          "It depends on where Q is"
         ],
         "answer": 1,
-        "explanation": "6.2−1.7=4.5 cm.",
+        "explanation": "The shortest distance between parallel lines is measured along a perpendicular and is constant everywhere: 4 cm.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Understand why the perpendicular separation of parallel lines is constant, independent of the point chosen."
       }
     ]
   },
@@ -8094,7 +8094,7 @@
       },
       {
         "id": "c6imoq443",
-        "question": "A regular polygon has an interior angle of 150°. How many sides does it have, and what is its smallest rotational turn?",
+        "question": "A regular polygon has an interior angle of 150°. How many sides does it have, and what is its smallest matching rotation?",
         "options": [
           "10 sides, 36°",
           "12 sides, 30°",
@@ -8102,147 +8102,147 @@
           "9 sides, 40°"
         ],
         "answer": 1,
-        "explanation": "The exterior angle is 180°−150°=30°. The polygon has 360°÷30°=12 sides; its smallest rotational turn is 30°.",
+        "explanation": "The exterior angle is 180°−150°=30°. The polygon has 360°÷30°=12 sides; its smallest matching turn is 30°.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Connect interior and exterior angles to both polygon side count and rotational symmetry."
+        "difficultyRationale": "Link interior and exterior angles to both the number of sides and rotational symmetry."
       },
       {
         "id": "c6imoq444",
-        "question": "A square grid is reflected across the main diagonal. Where does cell row 2, column 1 move?",
+        "question": "A point at row 2, column 1 of a 4×4 square grid is reflected in the main diagonal from top-left to bottom-right. Where does it move?",
         "options": [
+          "Row 1, column 2",
           "Row 2, column 4",
           "Row 3, column 1",
-          "Row 1, column 2",
           "Row 4, column 2"
         ],
-        "answer": 2,
-        "explanation": "Reflection in the main diagonal swaps row and column.",
+        "answer": 0,
+        "explanation": "Reflection across the main diagonal swaps the row and column positions: (2,1) becomes (1,2).",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Track a cell under a specified reflection, not simply a turn or a horizontal flip."
       },
       {
         "id": "c6imoq445",
-        "question": "A pattern has rotational symmetry but no reflection symmetry. What does this show?",
+        "question": "A design matches itself after a 90° clockwise turn. Which other turns must also map it onto itself?",
         "options": [
-          "Every rotation is a reflection",
-          "Rotational symmetry does not require mirror symmetry",
-          "It must be a regular polygon",
-          "It has no symmetry"
+          "Only 180°",
+          "180°, 270° and 360°",
+          "Only 270°",
+          "Every turn"
         ],
         "answer": 1,
-        "explanation": "A design can match after turns without matching in a mirror.",
+        "explanation": "Repeating the 90° turn gives 180°, 270° and 360°. Each is a whole number of quarter-turns.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Infer the full set of matching rotations from the smallest rotational symmetry."
       },
       {
         "id": "c6imoq446",
-        "question": "Uniformly enlarging a square preserves which property?",
+        "question": "A square is reflected first in its vertical middle line and then in its horizontal middle line. What is the combined effect on every point of the square?",
         "options": [
-          "Its four lines of symmetry",
-          "Only its area",
-          "No symmetry",
-          "Exactly one line"
+          "A 90° turn",
+          "A 180° turn",
+          "A 270° turn",
+          "No movement"
         ],
-        "answer": 0,
-        "explanation": "A similar enlargement preserves the square's shape and symmetry axes.",
+        "answer": 1,
+        "explanation": "Two reflections in perpendicular lines are equivalent to a half-turn (180°) about their intersection.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Compose two reflections and identify the equivalent single transformation."
       },
       {
         "id": "c6imoq447",
-        "question": "A pattern repeats after 72° turns. Which turn does not necessarily map it onto itself?",
+        "question": "A regular hexagon has 6 lines of symmetry. How many rotational positions, including the starting position, map it onto itself in one full turn?",
         "options": [
-          "144°",
-          "216°",
-          "288°",
-          "60°"
+          "3",
+          "4",
+          "6",
+          "12"
         ],
-        "answer": 3,
-        "explanation": "Multiples of 72° match; 60° is not one.",
+        "answer": 2,
+        "explanation": "A regular hexagon matches after each 60° turn: 0°,60°,120°,180°,240° and 300°, giving 6 positions in one full turn.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Connect the number of symmetry lines of a regular polygon with its rotational order."
       },
       {
         "id": "c6imoq448",
-        "question": "A point (−2,5) is reflected in y=0 and then in x=0. What is the final point?",
+        "question": "A point (−3, 4) is reflected in the x-axis and then in the line y=x. What are its final coordinates?",
         "options": [
-          "(−2,−5)",
-          "(2,5)",
-          "(2,−5)",
-          "(5,−2)"
+          "(4,3)",
+          "(−4,−3)",
+          "(−4,3)",
+          "(3,−4)"
         ],
-        "answer": 2,
-        "explanation": "The first reflection changes y; the second changes x.",
+        "answer": 1,
+        "explanation": "Reflection in the x-axis gives (−3,−4). Reflection in y=x swaps coordinates, giving (−4,−3).",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Apply two different reflections in the correct order and track both coordinates."
       },
       {
         "id": "c6imoq449",
-        "question": "A regular 8-point star has arms equally spaced around the centre. Find the angle between adjacent arms.",
+        "question": "A regular 5-point star has five equally spaced outer points around its centre. What is the angle between lines from the centre to neighbouring outer points?",
         "options": [
-          "30°",
-          "45°",
+          "36°",
           "60°",
+          "72°",
           "90°"
         ],
-        "answer": 1,
-        "explanation": "360°÷8=45°.",
+        "answer": 2,
+        "explanation": "One full turn is 360°. Dividing equally among five points gives 360°÷5=72°.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Relate equal spacing around a centre to a full-turn division."
       },
       {
         "id": "c6imoq450",
-        "question": "A shape has 6-fold rotational symmetry. What is its smallest matching turn?",
+        "question": "A pattern has rotational symmetry of order 4. A mirror line is also present. What can be said about the number of mirror lines?",
         "options": [
-          "60°",
-          "30°",
-          "45°",
-          "90°"
+          "Exactly 1",
+          "At least 2",
+          "At least 4",
+          "Exactly 8"
         ],
-        "answer": 0,
-        "explanation": "360°÷6=60°.",
+        "answer": 2,
+        "explanation": "Rotating the design by 90°, 180° and 270° carries the original mirror line to three other mirror lines. Thus there are at least four.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Combine rotational symmetry with reflection symmetry to infer additional mirror axes."
       }
     ]
   },
@@ -9010,7 +9010,7 @@
       },
       {
         "id": "c6imoq493",
-        "question": "A lift starts on floor −3, goes up 8 floors, down 11 floors and up 4 floors. How many more floors must it move to reach floor 0, and what is its total travel?",
+        "question": "A lift starts on floor −3, goes up 8 floors, down 11 floors and up 4 floors. How many floors must it move to reach floor 0, and what is the total distance travelled?",
         "options": [
           "2 more; 25 floors",
           "2 more; 23 floors",
@@ -9018,147 +9018,147 @@
           "6 more; 29 floors"
         ],
         "answer": 0,
-        "explanation": "It reaches −3+8−11+4=−2, so it must go up 2 more floors. Total travel=8+11+4+2=25 floors.",
+        "explanation": "It reaches −3+8−11+4=−2, so 2 more floors are needed. Total travel=8+11+4+2=25 floors.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Track signed position and separately sum absolute movement distances."
+        "difficultyRationale": "Track signed position separately from total distance, which adds every movement length."
       },
       {
         "id": "c6imoq494",
-        "question": "A submarine at −120 m rises to −45 m, then dives 70 m. Final position?",
+        "question": "A submarine is at −120 m. It rises 75 m, dives 68 m and then rises 40 m. What is its final position relative to sea level?",
         "options": [
-          "−115 m",
-          "−95 m",
-          "−25 m",
-          "−235 m"
+          "−73 m",
+          "−67 m",
+          "−53 m",
+          "−33 m"
         ],
         "answer": 0,
-        "explanation": "−120+75−70=−115.",
+        "explanation": "−120+75−68+40=−73 m. It is still 73 m below sea level.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Combine several signed changes while preserving the meaning of negative depth."
       },
       {
         "id": "c6imoq495",
-        "question": "Temperature at midnight is −4°C. By 6 a.m. it is three times as far below zero. What is it?",
+        "question": "At midnight the temperature is −6°C. It rises by 9°C, falls by 13°C and then rises by 4°C. What is the final temperature?",
         "options": [
-          "12°C",
-          "−7°C",
-          "−1°C",
-          "−12°C"
+          "−8°C",
+          "−6°C",
+          "−4°C",
+          "2°C"
         ],
-        "answer": 3,
-        "explanation": "Three times −4 is −12.",
+        "answer": 1,
+        "explanation": "−6+9−13+4=−6°C.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Track a sequence of positive and negative changes rather than compare only the final increase and decrease."
       },
       {
         "id": "c6imoq496",
-        "question": "Two integers have product 48 and sum −14. Which pair?",
+        "question": "Three readings on a number line are −8, 3 and x. Their sum is −12. What is x, and how far is x from zero?",
         "options": [
-          "6 and 8",
-          "−4 and −12",
-          "−6 and −8",
-          "−3 and −16"
+          "−7; 7 units",
+          "−5; 5 units",
+          "7; 7 units",
+          "−3; 3 units"
         ],
-        "answer": 2,
-        "explanation": "−6×−8=48 and their sum is −14.",
+        "answer": 0,
+        "explanation": "−8+3+x=−12, so x=−7. Its distance from zero is 7 units.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Find an unknown from a signed sum and distinguish its value from its distance to zero."
       },
       {
         "id": "c6imoq497",
-        "question": "Starting at −8, what integer must be added to reach −21?",
+        "question": "A diver is at −18 m. A second diver is 7 m closer to the surface, and a third is 5 m deeper than the second. What is the third diver's depth?",
         "options": [
-          "13",
-          "−13",
-          "−29",
-          "29"
+          "−16 m",
+          "−20 m",
+          "−30 m",
+          "−12 m"
         ],
-        "answer": 1,
-        "explanation": "−8+x=−21 gives x=−13.",
+        "answer": 0,
+        "explanation": "The second diver is at −18+7=−11 m. The third is 5 m deeper: −11−5=−16 m.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Interpret 'closer to the surface' and 'deeper' as opposite signed movements."
       },
       {
         "id": "c6imoq498",
-        "question": "Find the difference between the greatest and smallest of −12,5,−3,−17.",
+        "question": "A bank balance is −₹45. A deposit of ₹120 is made, then ₹85 is withdrawn, and finally ₹30 is deposited. What is the final balance?",
         "options": [
-          "22",
-          "14",
-          "19",
-          "24"
+          "−₹40",
+          "−₹10",
+          "₹20",
+          "₹40"
         ],
-        "answer": 0,
-        "explanation": "5−(−17)=22.",
+        "answer": 2,
+        "explanation": "−45+120−85+30=₹20.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Combine credits and debits as signed quantities in a real-world sequence."
       },
       {
         "id": "c6imoq499",
-        "question": "A number line shows A at −7 and B at 5. Which integer is exactly halfway?",
+        "question": "On a number line, A is at −9 and B is at 5. Point C is 4 units to the left of B. What is the distance between A and C?",
         "options": [
-          "−2",
-          "0",
-          "1",
-          "−1"
+          "6 units",
+          "10 units",
+          "13 units",
+          "14 units"
         ],
-        "answer": 3,
-        "explanation": "(−7+5)÷2=−1.",
+        "answer": 1,
+        "explanation": "C=5−4=1. The distance from −9 to 1 is 10 units.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Locate a point using a direction and then calculate the distance between positions."
       },
       {
         "id": "c6imoq500",
-        "question": "The product of two integers is −72. One is 9. Find the other.",
+        "question": "A hiker begins 4 m below a reference level. She climbs 11 m, descends 8 m and climbs 3 m. What is her final position and total vertical distance travelled?",
         "options": [
-          "8",
-          "−9",
-          "−8",
-          "−7"
+          "2 m above; 22 m",
+          "2 m above; 18 m",
+          "6 m above; 22 m",
+          "6 m below; 22 m"
         ],
-        "answer": 2,
-        "explanation": "−72÷9=−8.",
+        "answer": 0,
+        "explanation": "Final position=−4+11−8+3=2 m above. Total vertical distance=11+8+3=22 m.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Separate net position change from total path length."
       }
     ]
   },
@@ -9934,147 +9934,147 @@
           "48"
         ],
         "answer": 1,
-        "explanation": "Each of 12 edges contributes 4−2=2 cubes with exactly two painted faces. Total=12×2=24.",
+        "explanation": "There are 12 edges. On each edge, the two corner cubes have three painted faces, leaving 4−2=2 cubes with exactly two painted faces. Total=12×2=24.",
         "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Distinguish edge cubes from corner cubes and apply the count across all 12 edges."
+        "difficultyRationale": "Classify small cubes by location and count only edge cubes excluding the corners."
       },
       {
         "id": "c6imoq544",
-        "question": "M taller than K; K taller than L; N shorter than L. Second tallest?",
+        "question": "Four students stand in a line. D is ahead of A; A is ahead of B; and C is behind B. Who is third from the front?",
         "options": [
-          "K",
-          "L",
-          "M",
-          "N"
+          "A",
+          "B",
+          "C",
+          "D"
         ],
-        "answer": 0,
-        "explanation": "Order M>K>L>N.",
+        "answer": 1,
+        "explanation": "The order is D, A, B, C. Therefore B is third.",
         "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Combine three ordering clues into one complete sequence."
       },
       {
         "id": "c6imoq545",
-        "question": "Add 2 to each alphabet position. ACE becomes:",
+        "question": "A student walks 5 m north, 8 m east, 5 m south and 3 m west. How far and in which direction is the student from the starting point?",
         "options": [
-          "1-3-5",
-          "2-4-6",
-          "4-6-8",
-          "3-5-7"
+          "5 m east",
+          "5 m west",
+          "8 m east",
+          "3 m north"
         ],
-        "answer": 3,
-        "explanation": "A=1→3,C=3→5,E=5→7.",
+        "answer": 0,
+        "explanation": "The north and south movements cancel. The east-west difference is 8−3=5 m east.",
         "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Resolve movements on two perpendicular directions and find the final displacement."
       },
       {
         "id": "c6imoq546",
-        "question": "Facing pages sum to 61. Pages?",
+        "question": "If 1 January is a Monday in a non-leap year, what day is 1 March?",
         "options": [
-          "29 and 32",
-          "28 and 33",
-          "30 and 31",
-          "31 and 32"
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
         ],
-        "answer": 2,
-        "explanation": "Facing pages are consecutive.",
+        "answer": 1,
+        "explanation": "January has 31 days: 31 leaves remainder 3 on division by 7, so 1 February is Thursday. February has 28 days, exactly four weeks, so 1 March is also Thursday.",
         "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Track the weekday shift across two months using remainders after full weeks."
       },
       {
         "id": "c6imoq547",
-        "question": "Next: 4,9,19,39,79,__?",
+        "question": "Five children sit in a row. P is left of Q. R is right of Q. S is left of P. T is right of R. Who must sit in the middle?",
         "options": [
-          "149",
-          "159",
-          "157",
-          "161"
+          "P",
+          "Q",
+          "R",
+          "S"
         ],
         "answer": 1,
-        "explanation": "Double and add one each time.",
+        "explanation": "The order is S, P, Q, R, T, so Q occupies the middle seat.",
         "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Combine directional ordering constraints to determine a unique middle position."
       },
       {
         "id": "c6imoq548",
-        "question": "A painted 3×3×3 cube is cut into unit cubes. How many have no paint?",
+        "question": "A code shifts every letter 2 places forward in the alphabet and then reverses the result. What is the code for MATH?",
         "options": [
-          "1",
-          "0",
-          "4",
-          "8"
+          "OCVJ",
+          "JVCO",
+          "J V C O",
+          "OCJV"
         ],
-        "answer": 0,
-        "explanation": "Only the centre cube is unpainted.",
+        "answer": 1,
+        "explanation": "MATH becomes OCVJ after the +2 shift. Reversing those letters gives JVCO.",
         "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Apply two ordered transformations to a word and preserve the order of operations."
       },
       {
         "id": "c6imoq549",
-        "question": "Travel 3 km north, 4 km east, 3 km south. Distance from start?",
+        "question": "A bag contains 5 red, 4 blue and 3 green counters. Without looking, what is the smallest number of counters that guarantees at least 4 of one colour?",
         "options": [
-          "3 km",
-          "5 km",
-          "10 km",
-          "4 km"
+          "8",
+          "9",
+          "10",
+          "11"
         ],
-        "answer": 3,
-        "explanation": "North and south cancel; 4 km east remains.",
+        "answer": 2,
+        "explanation": "In the worst case, 3 of each colour can be drawn first: 3+3+3=9. The tenth counter must make one colour reach 4.",
         "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Use a worst-case argument rather than assuming counters are drawn evenly."
       },
       {
         "id": "c6imoq550",
-        "question": "A tray has 3 red, 2 blue and 4 green counters. Without looking, what is the smallest number of counters to draw to guarantee that at least three are the same colour?",
+        "question": "Find the missing number in the pattern 2, 6, 12, 20, 30, 42, __. Which rule explains it?",
         "options": [
-          "7",
-          "6",
-          "8",
-          "9"
+          "48; add 6 each time",
+          "56; add consecutive even numbers",
+          "54; multiply by 2 then add 2",
+          "60; add 12 each time"
         ],
-        "answer": 0,
-        "explanation": "In the worst case, six draws could be two of each colour. The seventh draw must make three of one colour.",
+        "answer": 1,
+        "explanation": "The differences are +4,+6,+8,+10,+12; the next is +14, giving 56.",
         "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
+        "difficultyRationale": "Identify a second-level pattern from its changing differences."
       }
     ]
   },
