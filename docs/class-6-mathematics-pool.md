@@ -17,7 +17,7 @@ The source textbook is the user-provided NCERT *Ganita Prakash*, Grade 6, reprin
 
 ## Baseline inventory audit
 
-The existing practice bank contains 1,000 MCQs, 100 per chapter. A normalised-stem audit found 674 distinct stems and 80 repeated-stem groups. The lowest variety is concentrated in Fractions (45 distinct stems), Playing with Constructions (13), and Symmetry (13). The existing bank remains the practice source; it is not automatically treated as an approved examination pool.
+The existing practice bank initially contained 1,000 MCQs, 100 per chapter. A mathematical-stem audit found 674 distinct stems and 80 repeated-stem groups. The lowest variety was concentrated in Fractions (45 distinct stems), Playing with Constructions (13), and Symmetry (13). The first expansion adds 43 new, distinct MCQs: 12 to Playing with Constructions, 12 to Symmetry, and 19 to Fractions. The practice bank now contains 1,043 MCQs; the chapter-specific unique pools must still be confirmed by the adapter and release tests. The existing bank remains the practice source; it is not automatically treated as an approved examination pool.
 
 A previous option audit reported five apparent collisions because its normaliser removed minus signs and superscript/unit distinctions. Those were false positives (for example, −8 versus 8, and cm versus cm²). Future checks must preserve mathematical signs, exponents, and units.
 
