@@ -11,7 +11,6 @@
 
     {label:"Dashboard",icon:"🏡",href:"./dashboard.html",page:"dashboard.html",auth:"student"},
     {label:"All subjects",group:"Subjects",icon:"📚",href:"./dashboard.html#subjects",page:"dashboard.html",hash:"#subjects",auth:"student"},
-    {label:"Levels & rewards",group:"My Account",icon:"🏆",href:"./dashboard.html#rewards",page:"dashboard.html",hash:"#rewards",auth:"student"},
 
     {label:"Science",group:"Subjects",icon:"🧪",href:"./practice.html?subject=science",page:"practice.html",subject:"science",auth:"student"},
     {label:"Science - SOF",group:"Subjects",icon:"🏆",href:"./practice.html?subject=science-sof",page:"practice.html",subject:"science-sof",auth:"student"},
