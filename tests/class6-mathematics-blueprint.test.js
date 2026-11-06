@@ -32,6 +32,8 @@ assert.equal(coverage.slotCount,20);assert.ok(coverage.coverage.every(s=>s.eligi
 assert.ok(adapted.adapterStats.byChapter["playing-with-constructions"]>=20,"Constructions must clear 20 unique eligible MCQs after expansion.");
 assert.ok(adapted.adapterStats.byChapter.symmetry>=20,"Symmetry must clear 20 unique eligible MCQs after expansion.");
 assert.ok(adapted.adapterStats.byChapter.fractions>=50,"Fractions pool should be expanded beyond its original 45 unique stems.");
+assert.equal(adapted.adapterStats.excluded.outOfSummativeScope,38,"mean, median, mode and decimal-only items are retained for practice but excluded from this textbook-aligned summative pool.");
+for(const id of ["c6m04q007","c6m04q008","c6m04q013","c6m07q012"])assert.ok(!adapted.questions.some(q=>q.questionId.endsWith("-"+id)),"practice-only item must not enter the examination pool: "+id);
 const profile=registry.profiles.find(p=>p.profileId==="class-6-mathematics-core-2026-27");
 assert.ok(profile);assert.equal(profile.enabled,false);assert.equal(profile.classId,"6");assert.equal(profile.paperHistoryLimit,75);assert.equal(profile.minimumCandidatesPerSlot,20);
 assert.equal(bank.classId,"6");assert.equal(bank.subjectId,"mathematics");assert.equal(bank.questions.length,340,"the draft bank must contain the initial written-response candidate pool");assert.ok(bank.questions.every(q=>q.approvalStatus==="review"),"written candidates must remain in review until independently approved");
