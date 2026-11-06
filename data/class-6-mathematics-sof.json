@@ -880,13 +880,13 @@
         "id": "c6imoq049",
         "question": "A sequence begins 1, 4, 10, 19, 31. The increases follow a regular pattern. What is term 8?",
         "options": [
-          "64",
-          "73",
-          "82",
-          "85"
+          "86",
+          "92",
+          "93",
+          "106"
         ],
-        "answer": 3,
-        "explanation": "The increases are +3,+6,+9,+12; continue with +15,+18,+21. Terms 6, 7 and 8 are 46, 64 and 85.",
+        "answer": 2,
+        "explanation": "Five steps from term 4 to term 9 add 35, so the step is 7. Term 1 is 29−3×7=8; term 12 is 64+3×7=85. Their sum is 8+85=93.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
@@ -1707,8 +1707,8 @@
           "9° anticlockwise",
           "135° anticlockwise"
         ],
-        "answer": 2,
-        "explanation": "Clockwise turns total 117°. The anticlockwise turn is 108°, leaving a net 9° clockwise.",
+        "answer": 0,
+        "explanation": "Clockwise turns total 72°+45°=117°. The 108° anticlockwise turn cancels 108° of that, leaving 9° clockwise.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
@@ -2693,7 +2693,7 @@
       },
       {
         "id": "c6imoq148",
-        "question": "A school has between 100 and 150 badges. They can be packed in groups of 5 with 2 left over, or in groups of 6 with 3 left over. How many badges are there?",
+        "question": "A school has between 100 and 150 badges. They can be packed in groups of 5 with 2 left over, or in groups of 6 with 3 left over. What is the least possible number of badges?",
         "options": [
           "117",
           "122",
@@ -2701,7 +2701,7 @@
           "147"
         ],
         "answer": 0,
-        "explanation": "117 leaves remainder 2 when divided by 5 and remainder 3 when divided by 6. Checking the values 102–147 that meet the first condition identifies 117.",
+        "explanation": "117 leaves remainder 2 when divided by 5 and remainder 3 when divided by 6. The only other value in the stated range that meets both conditions is 147, so the least is 117.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
@@ -2714,13 +2714,13 @@
         "id": "c6imoq149",
         "question": "A number is made by reversing the digits of 4,725. What is the difference between the original and reversed numbers?",
         "options": [
-          "2,277",
-          "2,673",
-          "3,267",
-          "3,672"
+          "549",
+          "459",
+          "594",
+          "645"
         ],
-        "answer": 1,
-        "explanation": "The reversed number is 5,274. The difference is 5,274−4,725=549.",
+        "answer": 0,
+        "explanation": "Reversing the digits of 4,725 gives 5,274. The difference is 5,274−4,725=549.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
@@ -4470,13 +4470,13 @@
         "id": "c6imoq245",
         "question": "A floor is 252 cm long and 180 cm wide. It is covered exactly by the largest possible identical square tiles. How many tiles are needed?",
         "options": [
-          "30",
-          "35",
-          "40",
-          "42"
+          "31",
+          "41",
+          "59",
+          "61"
         ],
-        "answer": 1,
-        "explanation": "The largest tile side is HCF(252,180)=36 cm. The floor fits 252÷36=7 tiles along and 180÷36=5 across: 7×5=35.",
+        "answer": 2,
+        "explanation": "The number is one more than a multiple of 2, 3, 4 and 5 respectively: 59 leaves remainders 1, 2, 3 and 4. The least such number greater than 1 is 59.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
@@ -5410,8 +5410,8 @@
           "400 cm²",
           "484 cm²"
         ],
-        "answer": 1,
-        "explanation": "The wire length is the rectangle perimeter: 2(24+16)=80 cm. The square side is 80÷4=20 cm; area=400 cm².",
+        "answer": 2,
+        "explanation": "The rectangle's perimeter is 2(24+16)=80 cm. The square side is 80÷4=20 cm, so its area is 20×20=400 cm².",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
@@ -8210,20 +8210,20 @@
         "id": "c6imoq449",
         "question": "A regular 5-point star has five equally spaced outer points around its centre. What is the angle between lines from the centre to neighbouring outer points?",
         "options": [
-          "36°",
-          "60°",
-          "72°",
-          "90°"
+          "Exactly 1",
+          "At least 2",
+          "At least 4",
+          "Exactly 8"
         ],
-        "answer": 2,
-        "explanation": "One full turn is 360°. Dividing equally among five points gives 360°÷5=72°.",
+        "answer": 1,
+        "explanation": "A 90° rotation carries any mirror line through the centre to a perpendicular mirror line. Thus, if one mirror line exists, at least two are present.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
         "syllabusSource": "SOF Class 6 IMO syllabus",
-        "difficultyRationale": "Relate equal spacing around a centre to a full-turn division."
+        "difficultyRationale": "Combines the effect of a quarter-turn rotation with the orientation of a reflection axis; a rotation maps a mirror axis to a perpendicular one."
       },
       {
         "id": "c6imoq450",
