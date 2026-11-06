@@ -763,147 +763,155 @@
       },
       {
         "id": "c6nsoq043",
-        "question": "Two teams get different results using the same procedure. Which action is most useful?",
+        "question": "A class wants to compare how quickly water evaporates from two dishes. Which plan isolates the effect of dish width?",
         "options": [
-          "Decide the larger value must be right",
-          "Combine the answers without checking",
-          "Stop investigating",
-          "Compare the methods, equipment and measurements, then repeat carefully"
+          "Use equal water volumes, identical dishes except for width, the same location and the same start time",
+          "Use different water volumes and place one dish in sunlight",
+          "Use a wide dish near a fan and a narrow dish in a cupboard",
+          "Change dish width, water temperature and airflow together"
         ],
-        "answer": 3,
-        "explanation": "Checking procedure and repeating helps identify sources of difference.",
+        "answer": 0,
+        "explanation": "Only width should change. Equal volumes, location, temperature and airflow keep the comparison fair.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Wonderful World of Science",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "The learner must identify the variable being tested and control the other conditions."
       },
       {
         "id": "c6nsoq044",
-        "question": "A student investigates whether different amounts of salt change the time needed for ice to melt. Which set-up is best?",
+        "question": "Three teams repeat the same measurement. Their readings are A: 12, 12, 13; B: 9, 15, 12; C: 10, 10, 10. Which team's readings are most consistent?",
         "options": [
-          "Use different ice sizes and different rooms",
-          "Change salt, wind and sunlight together",
-          "Use equal ice pieces, different measured salt amounts and the same surroundings",
-          "Use unknown amounts of salt"
+          "Team A, because its average is highest",
+          "Team C, because its readings show no spread",
+          "Team B, because its values are different",
+          "All teams, because each has three readings"
         ],
-        "answer": 2,
-        "explanation": "Only the salt amount should vary; other relevant conditions should be controlled.",
+        "answer": 1,
+        "explanation": "Consistency is about how close repeated readings are to one another. Team C recorded the same value each time.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Wonderful World of Science",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "The answer requires comparing variation across three sets rather than selecting the largest value."
       },
       {
         "id": "c6nsoq045",
-        "question": "A class records 2, 4, 6 and 8 minutes for four trials. What is the mean time?",
+        "question": "A student grows two seedlings but gives one more light and more water. It grows taller. What can the student conclude from this test?",
         "options": [
-          "4 minutes",
-          "5 minutes",
-          "6 minutes",
-          "20 minutes"
+          "More light alone caused the extra growth",
+          "More water alone caused the extra growth",
+          "The combined conditions were associated with greater growth, but the separate effects are unknown",
+          "Light and water have no effect"
         ],
-        "answer": 1,
-        "explanation": "(2+4+6+8)÷4=5.",
+        "answer": 2,
+        "explanation": "Because light and water changed together, their individual effects cannot be separated. A fair follow-up changes one factor at a time.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Wonderful World of Science",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It evaluates a confounded experiment and identifies what the evidence can and cannot establish."
       },
       {
         "id": "c6nsoq046",
-        "question": "A student sees bubbles when vinegar is mixed with baking soda. Which conclusion is justified by this observation alone?",
+        "question": "A group claims that every shiny object is a metal after testing a coin and a steel spoon. Which follow-up best checks the claim?",
         "options": [
-          "A gas is being produced",
-          "The gas is definitely oxygen",
-          "The mixture is safe to drink",
-          "The container contains no liquid"
+          "Test only more coins",
+          "Polish the spoon until it shines more",
+          "Ask which object looks brightest",
+          "Test a wider range of shiny and non-shiny materials using more than appearance"
         ],
-        "answer": 0,
-        "explanation": "Bubbling indicates gas formation, but its identity needs a separate test.",
+        "answer": 3,
+        "explanation": "A conclusion about all materials needs a broader sample and properties beyond appearance; shine alone does not prove that something is a metal.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Wonderful World of Science",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It challenges overgeneralisation and requires choosing a broader evidence-based test."
       },
       {
         "id": "c6nsoq047",
-        "question": "A fair test gives the same result when repeated by another team. What does this most strongly suggest?",
+        "question": "A model uses a small ball for Earth and a lamp for the Sun. Which conclusion cannot be made reliably from this model if the spacing is not to scale?",
         "options": [
-          "The result is true in every situation",
-          "No measurement error is possible",
-          "The hypothesis can never change",
-          "The result is reproducible under the tested conditions"
+          "The actual distance between Earth and the Sun",
+          "That light from the lamp can illuminate one side of the ball",
+          "That a sphere can represent Earth",
+          "That turning the ball changes the lit side"
         ],
-        "answer": 3,
-        "explanation": "Independent repetition supports reproducibility, not universal certainty.",
+        "answer": 0,
+        "explanation": "A model can demonstrate illumination and rotation, but unscaled spacing cannot show the real Earth–Sun distance.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Wonderful World of Science",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "The learner must distinguish what a model represents from what it cannot represent."
       },
       {
         "id": "c6nsoq048",
-        "question": "A student finds that a metal spoon and wooden spoon are both at room temperature but feel different. Which investigation best tests the explanation?",
+        "question": "A student records that a metal spoon feels cooler than a wooden spoon in the same room. Which statement is an observation rather than an explanation?",
         "options": [
-          "Compare their colours",
-          "Weigh them only",
-          "Measure heat transfer from identical warm-water cups using each spoon",
-          "Place them in different rooms"
+          "The metal must contain more cold",
+          "The spoon feels cooler when touched",
+          "Wood creates heat",
+          "Metal always has a lower temperature"
         ],
-        "answer": 2,
-        "explanation": "A controlled comparison can test how quickly each material transfers heat.",
+        "answer": 1,
+        "explanation": "The feeling is the direct observation. Claims about the materials' temperatures or heat production need separate evidence.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Wonderful World of Science",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It separates observed evidence from competing explanations."
       },
       {
         "id": "c6nsoq049",
-        "question": "A class uses a model to explain why day and night occur. Which movement should the model show?",
+        "question": "A ruler is used to measure a pencil, but the pencil begins at the 2 cm mark and ends at 14 cm. What length should be recorded, and why?",
         "options": [
-          "Earth stopping in space",
-          "Earth rotating on its axis",
-          "The Moon moving around Earth once each hour",
-          "The Sun orbiting Earth every day"
+          "14 cm, because the end mark is the length",
+          "16 cm, because both marks are added",
+          "12 cm, because the starting reading must be subtracted",
+          "2 cm, because that is where measurement began"
         ],
-        "answer": 1,
-        "explanation": "Earth's rotation causes the regular day-night cycle.",
+        "answer": 2,
+        "explanation": "The length is 14 − 2 = 12 cm. A measurement is the difference between the end and start readings.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Wonderful World of Science",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It combines reading two scale positions with the correct measurement operation."
       },
       {
         "id": "c6nsoq050",
-        "question": "In a fair test, the result changes whenever two factors are changed together. Why is the cause unclear?",
+        "question": "A student tests a claim using one trial and gets an unexpected result. Which next step gives the strongest evidence?",
         "options": [
-          "The effect of each factor cannot be separated",
-          "Both factors must have no effect",
-          "The result is always false",
-          "The measurements become units"
+          "Change the conclusion immediately",
+          "Discard the result without recording it",
+          "Ask another student to guess the answer",
+          "Repeat the same controlled procedure, record all readings and compare the pattern"
         ],
-        "answer": 0,
-        "explanation": "Changing multiple variables makes it difficult to attribute the result to one cause.",
+        "answer": 3,
+        "explanation": "Repeating a controlled test helps show whether the unusual result is reproducible and whether a procedural error occurred.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Wonderful World of Science",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It requires selecting a verification strategy rather than reacting to one result."
       }
     ]
   },
@@ -1671,147 +1679,155 @@
       },
       {
         "id": "c6nsoq093",
-        "question": "A child avoids dairy. Which foods can help supply calcium?",
+        "question": "A snack contains 30 g carbohydrate, 10 g protein and 5 g fat. Using 4 kcal/g for carbohydrate and protein and 9 kcal/g for fat, how much energy does it provide?",
         "options": [
-          "Ragi and calcium-set tofu",
-          "Sugar and honey",
-          "White rice and oil",
-          "Jam and fruit juice"
+          "205 kcal",
+          "180 kcal",
+          "225 kcal",
+          "245 kcal"
         ],
         "answer": 0,
-        "explanation": "Ragi and calcium-set tofu can contribute calcium.",
+        "explanation": "Carbohydrate: 30×4=120 kcal; protein: 10×4=40 kcal; fat: 5×9=45 kcal. Total = 205 kcal.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Food and Its Components",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It requires three separate energy calculations followed by addition."
       },
       {
         "id": "c6nsoq094",
-        "question": "Which vitamin deficiency is associated with beriberi?",
+        "question": "Two lunch boxes provide the same energy. Box A has 8 g protein and Box B has 14 g protein. Which conclusion is best supported?",
         "options": [
-          "Vitamin A",
-          "Vitamin C",
-          "Vitamin D",
-          "Vitamin B1"
+          "Box A must be healthier in every way",
+          "Box B provides more protein, but the full balance of nutrients still needs to be compared",
+          "Both boxes contain equal protein because their energy is equal",
+          "Box B contains no carbohydrates"
         ],
-        "answer": 3,
-        "explanation": "Beriberi is linked to thiamine deficiency.",
+        "answer": 1,
+        "explanation": "Equal energy does not mean equal nutrient content. Box B has more protein, but a balanced-diet judgement also considers other nutrients and food groups.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Food and Its Components",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It distinguishes energy content from nutrient balance and avoids an unsupported overall health claim."
       },
       {
         "id": "c6nsoq095",
-        "question": "A growing child eats enough carbohydrates but too little protein over time. What may result?",
+        "question": "A child eats mostly rice and sweets and very little dal, beans or other protein-rich food. Which change most directly improves the missing part of the diet?",
         "options": [
-          "Improved muscle repair",
-          "Night blindness directly",
-          "Poor growth and tissue repair",
-          "Goitre in every case"
+          "Add more sweets",
+          "Replace water with fruit juice",
+          "Add pulses, beans or another suitable protein-rich food while keeping the meal varied",
+          "Remove all vegetables"
         ],
         "answer": 2,
-        "explanation": "Protein is needed for growth and tissue repair.",
+        "explanation": "Pulses and beans add protein. A varied meal should still include other food groups rather than replacing them all.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Food and Its Components",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It links a dietary pattern to a nutrient need and selects a targeted correction."
       },
       {
         "id": "c6nsoq096",
-        "question": "A meal has 60 g carbohydrate, 10 g protein and 5 g fat. Using 4 kcal/g for carbohydrate and protein and 9 kcal/g for fat, what energy does it provide?",
+        "question": "A food label says a serving is 25 g and contains 12 g protein per 100 g. How much protein is in one serving?",
         "options": [
-          "285 kcal",
-          "325 kcal",
-          "300 kcal",
-          "345 kcal"
+          "12 g",
+          "6 g",
+          "4 g",
+          "3 g"
         ],
-        "answer": 1,
-        "explanation": "60×4+10×4+5×9=325 kcal.",
+        "answer": 3,
+        "explanation": "A 25 g serving is one-quarter of 100 g, so protein = 12÷4 = 3 g.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Food and Its Components",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It requires interpreting a per-100-g label and scaling to the actual serving."
       },
       {
         "id": "c6nsoq097",
-        "question": "A child lacks vitamin A. Which symptom may occur?",
+        "question": "A child has difficulty seeing in dim light. Which food choice most directly helps supply the nutrient associated with normal vision?",
         "options": [
-          "Difficulty seeing in dim light",
-          "Bleeding gums",
-          "Swollen thyroid",
-          "Soft bones"
+          "Carrot and leafy vegetables that provide vitamin A precursors",
+          "Only white sugar",
+          "Only polished rice",
+          "Butter-free sweets"
         ],
         "answer": 0,
-        "explanation": "Vitamin A deficiency can cause night blindness.",
+        "explanation": "Carrots and many leafy vegetables contain carotenoids that the body can use to make vitamin A, which supports normal vision.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Food and Its Components",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It connects a symptom clue with a nutrient function and suitable food sources."
       },
       {
         "id": "c6nsoq098",
-        "question": "Why is a varied diet a better way to obtain vitamins and minerals?",
+        "question": "A meal has enough energy but very little dietary fibre. Which addition best addresses that gap without simply adding more sugar?",
         "options": [
-          "One food always contains everything",
-          "Nutrients cancel each other",
-          "Variety makes nutrients unusable",
-          "Different foods supply different nutrients in different amounts"
+          "A sweetened drink",
+          "A serving of vegetables, fruit or whole grains",
+          "A spoonful of oil",
+          "A second sugary dessert"
         ],
-        "answer": 3,
-        "explanation": "A varied diet helps meet different nutritional needs.",
+        "answer": 1,
+        "explanation": "Vegetables, fruit and whole grains can add dietary fibre. Fibre supports healthy digestion, while sugary drinks do not solve the gap.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Food and Its Components",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It asks the learner to identify a nutrient gap and choose a food group that addresses it."
       },
       {
         "id": "c6nsoq099",
-        "question": "A lunch has rice, dal, spinach and curd. Which addition is a good vitamin C source?",
+        "question": "A student compares two breakfasts: P has 6 g protein and 4 g fibre; Q has 9 g protein and 1 g fibre. Which statement is accurate?",
         "options": [
-          "Extra ghee",
-          "Sugar",
-          "Guava",
-          "More plain rice"
+          "P has more protein and fibre",
+          "Q has more fibre but less protein",
+          "Q has more protein, while P has more fibre",
+          "Both have the same amounts of both"
         ],
         "answer": 2,
-        "explanation": "Guava supplies vitamin C.",
+        "explanation": "Compare each nutrient separately: Q has 9 g protein versus 6 g, while P has 4 g fibre versus 1 g.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Food and Its Components",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It requires comparing two independent measures and resisting a single overall ranking."
       },
       {
         "id": "c6nsoq100",
-        "question": "A food label gives 12 g protein per 100 g. How much protein is in 250 g?",
+        "question": "A family wants a varied meal using rice, lentils, vegetables and curd. Which explanation best describes why this is a stronger plan than eating only rice?",
         "options": [
-          "24 g",
-          "30 g",
-          "36 g",
-          "40 g"
+          "Rice alone supplies every nutrient in the right amount",
+          "The vegetables make protein unnecessary",
+          "Curd and lentils should replace all other foods",
+          "The foods contribute different nutrients, so the combination is more varied and balanced"
         ],
-        "answer": 1,
-        "explanation": "250 g is 2.5 times 100 g; 12×2.5=30 g.",
+        "answer": 3,
+        "explanation": "Different foods contribute different nutrients. Combining grains, pulses, vegetables and dairy can improve variety and balance.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Food and Its Components",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It integrates the functions of several food groups to evaluate a whole meal."
       }
     ]
   },
@@ -2579,147 +2595,155 @@
       },
       {
         "id": "c6nsoq143",
-        "question": "A metal block and wood block have equal volumes; metal has twice the mass. Which has twice the density?",
+        "question": "A school needs a cover that lets light through, bends without breaking easily and does not soak up rain. Which material best fits all three needs?",
         "options": [
-          "The wooden block",
-          "The metal block",
-          "Both have equal density",
-          "Density cannot be compared"
+          "A flexible transparent plastic sheet",
+          "A thick piece of blotting paper",
+          "A dry sponge",
+          "An opaque clay tile"
         ],
-        "answer": 1,
-        "explanation": "Density is mass divided by volume.",
+        "answer": 0,
+        "explanation": "A suitable plastic sheet can be transparent, flexible and water-resistant; the other choices fail at least one required property.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Materials Around Us",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It combines three material properties and selects the only option that satisfies all constraints."
       },
       {
         "id": "c6nsoq144",
-        "question": "Which object is opaque and magnetic?",
+        "question": "A mixture contains iron pins, sand and small plastic pieces. Which sequence separates all three most sensibly?",
         "options": [
-          "Iron sheet",
-          "Clear glass",
-          "Cotton cloth",
-          "Plastic film"
+          "Sieve first, then dissolve everything",
+          "Use a magnet to remove iron, then sort the plastic from the sand",
+          "Add water and evaporate it before using a magnet",
+          "Heat the mixture until the plastic disappears"
         ],
-        "answer": 0,
-        "explanation": "Iron is opaque and attracted to a magnet.",
+        "answer": 1,
+        "explanation": "A magnet removes the iron. The remaining plastic pieces can be picked out or separated by a suitable size-based method, leaving sand.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Materials Around Us",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It plans a sequence using two different physical properties without changing the materials chemically."
       },
       {
         "id": "c6nsoq145",
-        "question": "Why do plastic containers have recycling identification symbols?",
+        "question": "Four samples are tested. P is transparent and waterproof; Q is opaque and magnetic; R is translucent and absorbent; S is transparent but dissolves in water. Which sample is most suitable for a clear rain shield?",
         "options": [
-          "They show plastic dissolves in water",
-          "They prove suitability for every food",
-          "They mean the container is magnetic",
-          "They help identify plastic types for sorting"
+          "Q",
+          "R",
+          "S",
+          "P"
         ],
         "answer": 3,
-        "explanation": "Identification codes support sorting for recycling.",
+        "explanation": "A rain shield should let light through and resist water. P is the only sample with both properties.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Materials Around Us",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It uses a set of test results to match a material to two functional requirements."
       },
       {
         "id": "c6nsoq146",
-        "question": "Salt dissolves in water but can be recovered by evaporation. What does this show?",
+        "question": "A same-sized wooden block floats while a metal block sinks in water. Which explanation is best?",
         "options": [
-          "Salt changes into water",
-          "Salt becomes magnetic",
-          "Dissolving does not destroy the salt",
-          "Salt is insoluble"
+          "The wooden block is always heavier",
+          "Water pushes only wooden objects upward",
+          "For these blocks, the wood is less dense than water while the metal is denser",
+          "The metal block has no volume"
         ],
         "answer": 2,
-        "explanation": "Evaporation removes water and leaves salt behind.",
+        "explanation": "Floating and sinking depend on average density relative to the liquid, not simply on whether an object looks large or small.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Materials Around Us",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It compares material behaviour and applies the idea of floating and sinking to explain the result."
       },
       {
         "id": "c6nsoq147",
-        "question": "What property is most important for a saucepan base to heat efficiently?",
+        "question": "A student says a material is soluble because it disappears when stirred into water. Which extra check is best before concluding it has dissolved?",
         "options": [
-          "High transparency",
-          "Good thermal conductivity",
-          "High absorbency",
-          "Electrical insulation"
+          "Filter the mixture and see whether solid remains, then gently evaporate a small sample to check for residue",
+          "Stir it faster and assume it is soluble",
+          "Look only at the colour of the container",
+          "Add more of the same material until the water is full"
         ],
-        "answer": 1,
-        "explanation": "A good thermal conductor transfers heat efficiently.",
+        "answer": 0,
+        "explanation": "Filtering checks for undissolved particles; evaporation can show whether the material was present in the water as a dissolved substance.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Materials Around Us",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It distinguishes dissolving from merely breaking into particles suspended in water."
       },
       {
         "id": "c6nsoq148",
-        "question": "A material bends without breaking and returns to its shape. Which property is shown?",
+        "question": "A window must be made from a material that allows a clear view and does not absorb rain. Which pair of tests is most relevant?",
         "options": [
-          "Elasticity",
-          "Brittleness",
-          "Solubility",
-          "Opacity"
+          "Check whether it is magnetic and rough",
+          "Check transparency and water absorption",
+          "Check whether it is heavy and coloured",
+          "Check whether it can be crushed by hand"
         ],
-        "answer": 0,
-        "explanation": "Elastic materials recover their shape after deformation.",
+        "answer": 1,
+        "explanation": "Transparency determines whether a clear view is possible, and water absorption helps assess its suitability for exposure to rain.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Materials Around Us",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It chooses the two tests that directly match the intended use."
       },
       {
         "id": "c6nsoq149",
-        "question": "Two equal-size cubes are put in water. Cube A floats higher than B. What is most likely?",
+        "question": "A wire has a metal core and a rubber covering. Which explanation best accounts for using two different materials?",
         "options": [
-          "Cube A has greater mass than B",
-          "Cube B has no matter",
-          "Both must have identical density",
-          "Cube A has lower average density than B"
+          "Both materials are used because they are equally magnetic",
+          "Rubber carries the electric current better than metal",
+          "The metal core conducts electricity while the rubber covering helps insulate the outside",
+          "The rubber makes the metal dissolve"
         ],
-        "answer": 3,
-        "explanation": "A less-dense object displaces less water to balance its weight.",
+        "answer": 2,
+        "explanation": "Metals such as copper conduct electricity; rubber is an electrical insulator and helps protect people from contact with the conducting core.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Materials Around Us",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It integrates the distinct properties of two materials and their roles in one object."
       },
       {
         "id": "c6nsoq150",
-        "question": "A metal spoon and a wooden spoon have equal size. Which is likely to warm a cold hand faster when held?",
+        "question": "Two cloth samples are compared for making a towel. Sample A absorbs 18 mL of water in the test and Sample B absorbs 11 mL. Which conclusion is justified if equal-sized pieces were tested in the same way?",
         "options": [
-          "The wooden spoon",
-          "Both always transfer heat equally",
-          "The metal spoon",
-          "Neither can transfer heat"
+          "B must be warmer",
+          "A is waterproof",
+          "The test proves A will dry faster",
+          "A absorbed more water under the test conditions, but drying speed needs a separate test"
         ],
-        "answer": 2,
-        "explanation": "Metal conducts heat more rapidly.",
+        "answer": 3,
+        "explanation": "The test measures absorption, not drying rate. A absorbed 7 mL more, but drying depends on other conditions too.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Materials Around Us",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It requires careful interpretation of what a property test measures and what it does not."
       }
     ]
   },
@@ -3487,147 +3511,155 @@
       },
       {
         "id": "c6nsoq193",
-        "question": "A glass containing ice is placed outdoors on a humid day. Droplets form outside. What would happen if the outside surface were wiped dry?",
+        "question": "Two equal wet cloths are placed in the same room. One is spread out and the other is folded. Why is the spread cloth expected to dry sooner?",
         "options": [
-          "The glass starts leaking",
-          "The ice moves through the glass",
-          "New droplets may form again while the glass stays cold",
-          "Condensation becomes impossible"
+          "More of its surface is exposed to air, allowing faster evaporation",
+          "Its water changes into ice first",
+          "Folding makes the water boil",
+          "The spread cloth has less water by definition"
         ],
-        "answer": 2,
-        "explanation": "Water vapour continues to condense on the cold surface.",
+        "answer": 0,
+        "explanation": "Spreading increases the exposed surface area, so more water can evaporate at a time when other conditions are similar.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "A Journey through States of Water",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It links surface area to evaporation while controlling the comparison."
       },
       {
         "id": "c6nsoq194",
-        "question": "Why does steam cause more severe burns than hot water at the same temperature?",
+        "question": "A cold bottle is taken from a refrigerator into a warm room. Drops form on the outside, although the bottle is sealed. Where does this water come from?",
         "options": [
-          "Steam has no energy",
-          "Steam releases extra heat when it condenses on skin",
-          "Steam is always hotter than 100°C",
-          "Water vapour is a solid"
+          "Water leaking through the bottle wall",
+          "Water vapour in the surrounding air cooling and condensing",
+          "Ice inside the bottle passing through the cap",
+          "The bottle creating new water"
         ],
         "answer": 1,
-        "explanation": "Condensing steam releases latent heat as well as transferring thermal energy.",
+        "explanation": "Water vapour in the air touches the cold surface, cools and condenses into liquid droplets. A sealed bottle need not leak.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "A Journey through States of Water",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It follows the source of water through a change of state and rules out a tempting alternative."
       },
       {
         "id": "c6nsoq195",
-        "question": "A student wants to compare evaporation rates of salt water and pure water. Which variable must be controlled?",
+        "question": "A student tests evaporation using equal amounts of water in a wide plate and a narrow glass. The plate loses water faster. What is the strongest conclusion?",
         "options": [
-          "Same exposed surface area and surrounding conditions",
-          "Different container sizes",
-          "Different starting volumes without recording them",
-          "Different temperatures"
+          "Water evaporates only from plates",
+          "The glass must be colder",
+          "The larger exposed surface may explain the faster loss, provided other conditions were alike",
+          "The water in the glass has changed into a solid"
         ],
-        "answer": 0,
-        "explanation": "Keep surface area, volume, temperature and airflow comparable.",
+        "answer": 2,
+        "explanation": "A wider exposed surface allows more water molecules to escape into the air. The conclusion is valid only if temperature, airflow and other conditions were comparable.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "A Journey through States of Water",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It interprets an experiment and checks the conditions needed for a fair conclusion."
       },
       {
         "id": "c6nsoq196",
-        "question": "A water droplet forms on the underside of a lid above hot water. Which sequence explains it?",
+        "question": "Which sequence correctly describes water moving from a pond into clouds and later returning as rain?",
         "options": [
-          "Water freezes then melts on the lid",
-          "The lid releases water vapour",
-          "The water changes directly into ice",
-          "Water evaporates, touches the cooler lid and condenses"
+          "Freezing, melting, filtration, boiling",
+          "Condensation, freezing, melting, sieving",
+          "Boiling, separation, settling, freezing",
+          "Evaporation, condensation, cloud droplets grow, precipitation"
         ],
         "answer": 3,
-        "explanation": "Vapour condenses on the cooler surface of the lid.",
+        "explanation": "Water evaporates from the pond, vapour cools and condenses into droplets, droplets combine and eventually fall as precipitation.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "A Journey through States of Water",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It requires ordering several linked stages of the water cycle."
       },
       {
         "id": "c6nsoq197",
-        "question": "Why are clouds more likely when warm moist air rises and cools?",
+        "question": "Grass is wet early in the morning although it did not rain overnight. The air cooled during the night. Which explanation best fits the evidence?",
         "options": [
-          "Cooling changes oxygen into water",
-          "Rising air creates water molecules",
-          "Cooling can cause water vapour to condense into droplets",
-          "Clouds form only when air is hot"
+          "Water vapour in the air condensed on the cool grass",
+          "The grass produced new water",
+          "Water travelled up from the soil through the sky",
+          "The Sun melted ice on every blade"
         ],
-        "answer": 2,
-        "explanation": "Air that cools to its dew point can form cloud droplets.",
+        "answer": 0,
+        "explanation": "As the grass cooled, nearby water vapour condensed on its surface, forming dew.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "A Journey through States of Water",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It applies condensation to a real situation and distinguishes dew from rainfall."
       },
       {
         "id": "c6nsoq198",
-        "question": "A shallow tray of water and a narrow-necked bottle contain equal water volumes. Under the same conditions, which loses water faster?",
+        "question": "A sealed clear jar contains a little water and is placed in sunlight. Water droplets later appear on the inside wall above the water. Which sequence explains the droplets?",
         "options": [
-          "The bottle",
-          "The shallow tray",
-          "Both at the same rate because volumes match",
-          "Neither"
+          "The jar makes water from sunlight",
+          "Some liquid evaporates, vapour touches a cooler wall and condenses",
+          "The water passes through the glass as a liquid",
+          "The droplets are dust that has melted"
         ],
         "answer": 1,
-        "explanation": "The tray exposes a larger water surface.",
+        "explanation": "Water evaporates from the liquid, then vapour cools at the inner wall and condenses into droplets. The jar allows the cycle to be observed.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "A Journey through States of Water",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It tracks two state changes in the correct order within one model."
       },
       {
         "id": "c6nsoq199",
-        "question": "What happens to the particles' arrangement when liquid water freezes?",
+        "question": "A pot of water is heated. Small bubbles appear at the bottom before the whole liquid boils. Which observation would best distinguish boiling from ordinary surface evaporation?",
         "options": [
-          "They become arranged in a fixed solid structure and vibrate in place",
-          "They stop existing",
-          "They spread infinitely far apart",
-          "They turn into air"
+          "Only the water surface loses particles",
+          "The pot becomes heavier",
+          "Bubbles form throughout the liquid as it reaches its boiling condition",
+          "The water changes directly into ice"
         ],
-        "answer": 0,
-        "explanation": "In a solid, particles occupy fixed positions but still vibrate.",
+        "answer": 2,
+        "explanation": "Evaporation can occur at the surface at many temperatures; boiling involves bubbles forming throughout the liquid.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "A Journey through States of Water",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It compares two similar processes and identifies the decisive observation."
       },
       {
         "id": "c6nsoq200",
-        "question": "In a closed container, water evaporates and then condenses on a cool surface. What is true of the total water in the container?",
+        "question": "Two equal bowls of water are kept side by side. Bowl A is near a fan and Bowl B is in still air. A loses more water. What additional check would make the inference about airflow stronger?",
         "options": [
-          "It increases during evaporation",
-          "It becomes zero after condensation",
-          "It changes into a different element",
-          "It remains the same if none escapes"
+          "Use different bowl sizes as well",
+          "Add salt to Bowl A only",
+          "Measure the bowls with different rulers",
+          "Repeat with equal bowls, equal water and the same temperature while changing only airflow"
         ],
         "answer": 3,
-        "explanation": "Phase changes do not change the amount of water in a closed system.",
+        "explanation": "Repeating with all other conditions held alike tests whether airflow is responsible for the difference in evaporation.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "A Journey through States of Water",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It designs a controlled follow-up to isolate one factor."
       }
     ]
   },
