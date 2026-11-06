@@ -109,16 +109,19 @@ async function loadProfile(profileToLoad){
  setProfileLoadState("Validating blueprint and published question bank…","Loading…");
  const publishedBank=publishedBankData;
  const savedBank=bankStore.load();
- // Published bank versions are authoritative. Refresh older local copies so a
- // browser cache cannot keep the Studio on an undersized pre-release pool.
- sourceBank=savedBank&&String(savedBank.bankVersion||"")===String(publishedBank.bankVersion||"")
-  ?savedBank:publishedBank;
- if(!savedBank||String(savedBank.bankVersion||"")!==String(publishedBank.bankVersion||""))bankStore.save(sourceBank);
+ // The published bank is the sole source of truth. Never allow a locally saved
+ // copy (even one with a matching version label) to replace published content.
+ sourceBank=publishedBank;
+ if(!savedBank||JSON.stringify(savedBank)!==JSON.stringify(publishedBank))bankStore.save(sourceBank);
  setProfileLoadState("Integrating chapter-wise practice questions and auditing paper slots…","Loading…");
  practiceChapters=practiceData;
+ if(profile.practiceBankUrl&&!Array.isArray(practiceChapters))throw Error("Linked practice bank did not load as a chapter array: "+profile.practiceBankUrl);
+ if(profile.subjectId==="mathematics"&&(!Array.isArray(practiceChapters)||!practiceChapters.length))throw Error("Mathematics chapter-wise practice bank is missing or empty; refusing to audit the smaller curated pool alone.");
  const qc=g.validateQuestionBank(sourceBank,{classId:blueprint.classId,subjectId:blueprint.subjectId,academicYear:blueprint.academicYear});if(!qc.valid)throw Error(qc.errors.slice(0,8).join(" "));
  if(!bankStore.load())bankStore.save(sourceBank);
- assembleIntegratedBank();drawBlueprint();loadSavedDraft();if(paper)showPaper(paper);
+ assembleIntegratedBank();
+ if(profile.subjectId==="mathematics"&&(!bankIntegrationStats||bankIntegrationStats.appended<1000))throw Error("Mathematics practice-bank integration incomplete: expected at least 1,000 linked MCQs, integrated "+Number(bankIntegrationStats?.appended||0)+".");
+ drawBlueprint();loadSavedDraft();if(paper)showPaper(paper);
  const minimum=profile.minimumCandidatesPerSlot||20,coverage=bankIntegrationStats?.coverage||g.auditSlotCoverage(blueprint,bank,minimum);
  setStatus(blueprint.status==="ready"&&coverage.valid?"Profile ready: "+profileTitle()+". "+(bankIntegrationStats?.appended||0).toLocaleString()+" linked practice MCQs integrated.":"Profile loaded, but generation remains locked until the blueprint and question-pool coverage are approved.","success");
 }
