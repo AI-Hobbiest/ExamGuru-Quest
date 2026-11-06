@@ -227,7 +227,7 @@ function makePaper(){
  }
  if(!assignedPaper&&!delivered){try{localStorage.setItem(storageKey("eg_exam_active_paper_v1"),JSON.stringify(paper));}catch(_){throw Error("This browser could not save the active paper for reload recovery. Enable site storage and try again.");}}
  render();$("setup").classList.add("exam-hidden");$("review").classList.add("exam-hidden");$("attempt").classList.remove("exam-hidden");
- $("historyStatus").textContent=(delivered?"This is the frozen paper prepared by your Parent/Teacher. ":resumingSelfStudy?"Resuming your saved attempt. ":"")+""+historyLimit()+"-paper repeat protection is active for this profile on this browser. This exact "+paper.totalQuestions+"-question combination will not repeat within the latest "+historyLimit()+" generated papers; All question formats from the previous five papers are held out wherever the eligible pool supports it. History is profile-specific and does not sync to other devices.";
+ $("historyStatus").textContent=(delivered?"This is the frozen paper prepared by your Parent/Teacher. ":resumingSelfStudy?"Resuming your saved attempt. ":"")+historyLimit()+"-paper repeat protection is active for this profile on this browser. This exact "+paper.totalQuestions+"-question combination will not repeat within the latest "+historyLimit()+" generated papers; All question formats from the previous five papers are held out wherever the eligible pool supports it. History is profile-specific and does not sync to other devices.";
  saveAnswers();startTimer();window.scrollTo(0,0);
 }
 function responseContent(item,i){
