@@ -74,9 +74,9 @@
     "5": 4
   },
   "competencyMarksTargets": {
-    "knowledge-understanding": 27,
-    "application": 37,
-    "analysis-evaluation-creation": 16
+    "knowledge-understanding": 40,
+    "application": 28,
+    "analysis-evaluation-creation": 12
   },
   "unitMarkTargets": {
     "number-sense": 29,
@@ -124,7 +124,7 @@
       "chapterIds": [
         "patterns-in-mathematics"
       ],
-      "competency": "application"
+      "competency": "knowledge-understanding"
     },
     {
       "slotId": "q03",
@@ -152,7 +152,7 @@
       "chapterIds": [
         "lines-and-angles"
       ],
-      "competency": "application"
+      "competency": "knowledge-understanding"
     },
     {
       "slotId": "q05",
@@ -180,7 +180,7 @@
       "chapterIds": [
         "number-play"
       ],
-      "competency": "application"
+      "competency": "knowledge-understanding"
     },
     {
       "slotId": "q07",
@@ -208,7 +208,7 @@
       "chapterIds": [
         "data-handling-and-presentation"
       ],
-      "competency": "application"
+      "competency": "knowledge-understanding"
     },
     {
       "slotId": "q09",
@@ -236,7 +236,7 @@
       "chapterIds": [
         "prime-time"
       ],
-      "competency": "application"
+      "competency": "knowledge-understanding"
     },
     {
       "slotId": "q11",
@@ -264,7 +264,7 @@
       "chapterIds": [
         "perimeter-and-area"
       ],
-      "competency": "application"
+      "competency": "knowledge-understanding"
     },
     {
       "slotId": "q13",
@@ -292,7 +292,7 @@
       "chapterIds": [
         "fractions"
       ],
-      "competency": "application"
+      "competency": "knowledge-understanding"
     },
     {
       "slotId": "q15",
@@ -320,7 +320,7 @@
       "chapterIds": [
         "playing-with-constructions"
       ],
-      "competency": "application"
+      "competency": "knowledge-understanding"
     },
     {
       "slotId": "q17",
@@ -334,7 +334,7 @@
       "chapterIds": [
         "symmetry"
       ],
-      "competency": "application"
+      "competency": "knowledge-understanding"
     },
     {
       "slotId": "q18",
@@ -348,7 +348,7 @@
       "chapterIds": [
         "symmetry"
       ],
-      "competency": "application"
+      "competency": "knowledge-understanding"
     },
     {
       "slotId": "q19",
@@ -362,7 +362,7 @@
       "chapterIds": [
         "the-other-side-of-zero"
       ],
-      "competency": "analysis-evaluation-creation"
+      "competency": "knowledge-understanding"
     },
     {
       "slotId": "q20",
@@ -376,7 +376,7 @@
       "chapterIds": [
         "the-other-side-of-zero"
       ],
-      "competency": "analysis-evaluation-creation"
+      "competency": "application"
     },
     {
       "slotId": "q21",
