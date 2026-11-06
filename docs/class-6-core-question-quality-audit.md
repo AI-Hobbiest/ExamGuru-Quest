@@ -45,6 +45,7 @@ The percentages above are label counts, not quality-approved difficulty levels. 
 - Playing with Constructions and Symmetry each have only 13 unique literal stems in 100 items.
 - 106 questions contain suspect distractor tokens such as “Maybe”, “No” or “None of these”; each must be checked in context. These are not automatically all invalid, but they are a strong quality signal.
 - Several questions labelled Challenge are simple recall or one-step calculations. For example, a direct 2 × 2 calculation is not Challenge.
+- The repeated palindrome question in Number Play had an incorrect keyed answer (142) while its explanation referred to 121. Nine repeated entries have now been replaced with distinct prompts, corrected answer keys and explanations; two use multi-step digit reasoning and two use challenge-level structure/divisibility reasoning.
 - Rebuild must use varied numerical contexts, diagrams described in text where helpful, multi-step reasoning and plausible misconception-based distractors.
 
 ### Science
