@@ -12,6 +12,19 @@ const bp={...blueprint,status:"ready"};
 const bpCheck=g.validateBlueprint(bp);assert.equal(bpCheck.valid,true,bpCheck.errors.join(" | "));assert.equal(bpCheck.readyForGeneration,true);
 const bankCheck=g.validateQuestionBank(base,{classId:"6",subjectId:"mathematics",academicYear:"2026-27"});assert.equal(bankCheck.valid,true,bankCheck.errors.slice(0,20).join(" | "));
 assert.ok(base.questions.every(q=>q.approvalStatus==="review"),"new written questions must remain in review until independently checked");
+
+const chapterUnit={"patterns-in-mathematics":"number-sense","number-play":"number-sense","prime-time":"number-sense","fractions":"number-sense","the-other-side-of-zero":"number-sense","lines-and-angles":"geometry-spatial","playing-with-constructions":"geometry-spatial","symmetry":"geometry-spatial","data-handling-and-presentation":"measurement-data","perimeter-and-area":"measurement-data"};
+assert.deepEqual([...new Set(base.questions.map(q=>q.chapterId))].sort(),Object.keys(chapterUnit).sort(),"written candidates must map across all ten textbook chapters");
+for(const q of base.questions){
+ assert.equal(chapterUnit[q.chapterId],q.unitId,"chapter/unit mapping mismatch for "+q.questionId);
+ assert.ok(q.answerKey&&q.answerKey.modelAnswer,"every review candidate must have a model answer");
+ assert.equal(q.markingScheme.reduce((n,m)=>n+m.marks,0),q.marks,"marking scheme must total the question marks: "+q.questionId);
+ if(q.type==="case-based"){
+  assert.equal(q.parts.reduce((n,p)=>n+p.marks,0),q.marks,"case parts must total the case marks");
+  assert.ok(q.parts.every(p=>p.answerKey&&p.answerKey.modelAnswer&&p.markingScheme.reduce((n,m)=>n+m.marks,0)===p.marks),"each case part needs its own answer key and marking scheme");
+ }
+}
+
 assert.equal(base.questions.length,340,"written-response pool must contain 340 review candidates");
 const contentKeys=base.questions.map(q=>[q.prompt,q.stimulus||"",...(q.parts||[]).map(p=>p.prompt)].join(" ").normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu," ").trim());
 assert.equal(new Set(contentKeys).size,340,"all written prompts and case-study content combinations must be distinct");
