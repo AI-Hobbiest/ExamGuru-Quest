@@ -67,5 +67,7 @@ for(let attempt=1;attempt<=75;attempt++){
  fingerprints.push(fingerprint);history.push(ids);
 }
 assert.equal(fingerprints.length,75);assert.equal(new Set(fingerprints).size,75);
-const bytes=Buffer.byteLength(JSON.stringify(base));assert.ok(bytes<400000,"stored written bank should remain compact");
+const bytes=Buffer.byteLength(JSON.stringify(base));assert.ok(bytes<400000,"minified written bank should remain compact");
+const storedBytes=fs.statSync("data/exam-papers/question-banks/class-6-mathematics-core-2026-27-v1.json").size;
+assert.ok(storedBytes<450000,"pretty-printed written bank must stay below the 450 KB storage guard");
 console.log("Class 6 Mathematics pool release gate passed: 1,043 linked MCQs + 340 written review candidates (approval simulated only for generation QA); all 38 slots have 20+ eligible candidates; 75 distinct 38-question/80-mark papers generated with exact blueprint distributions and five-paper all-format repeat protection.");
