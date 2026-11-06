@@ -137,29 +137,31 @@
       if(isActive(item,current)){link.classList.add("active");link.setAttribute("aria-current","page");}
       link.append(node("span","c10-nav-icon",item.icon),node("span","",item.label));link.addEventListener("click",()=>closeMenu());list.appendChild(link);
     });
-    if(auth.role!=="guest"){
-      const header=document.querySelector("header");
-      if(header&&!document.getElementById("c10HeaderSignout")){
-        const logout=node("button","c10-header-signout","↪ Sign out");
-        logout.id="c10HeaderSignout";logout.type="button";logout.setAttribute("aria-label","Sign out of ExamGuru");
-        logout.addEventListener("click",async()=>{
-          logout.disabled=true;
-          try{if(window.C10Api&&window.C10Api.isAuthenticated())await window.C10Api.logout();}catch(_){}
-          if(window.C10StudentAuth&&window.C10StudentAuth.logout)window.C10StudentAuth.logout();
-          try{sessionStorage.removeItem("c10playground_static_student_v1");sessionStorage.removeItem("c10playground_api_session");sessionStorage.removeItem("examguru_mvp_admin_session_v1");}catch(_){}
-          location.replace("./index.html");
-        });
-        header.appendChild(logout);
-      }
-    }
     sidebar.appendChild(list);
     const bottom=node("div","c10-sidebar-bottom");
     bottom.append(node("div","",auth.role==="guest"?"Sign in to open your learning dashboard.":"Signed in"+(auth.username?" as "+auth.username:"")+"."));
     sidebar.appendChild(bottom);
-    const mobileBar=node("div","c10-mobilebar"),toggle=node("button","c10-menu-toggle","☰");
+    const mobileBar=node("div","c10-mobilebar");mobileBar.setAttribute("role","banner");
+    const toggle=node("button","c10-menu-toggle","☰");
     toggle.type="button";toggle.setAttribute("aria-label","Open navigation menu");toggle.setAttribute("aria-controls","c10Sidebar");toggle.setAttribute("aria-expanded","false");
     toggle.addEventListener("click",()=>sidebar.classList.contains("open")?closeMenu():openMenu());
-    const mobileCopy=node("div","");mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":auth.role==="parent"?"Parent":"Class "+String(auth.classId||"not assigned"))));mobileBar.append(toggle,mobileCopy);
+    const mobileBrand=node("span","c10-topbar-brand"),mobileLogo=node("img");
+    mobileLogo.src="./assets/examguru-saraswati.svg";mobileLogo.alt="";mobileLogo.width=32;mobileLogo.height=32;mobileBrand.appendChild(mobileLogo);
+    const mobileCopy=node("div","c10-topbar-copy");
+    mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":auth.role==="parent"?"Parent":"Class "+String(auth.classId||"not assigned"))));
+    mobileBar.append(toggle,mobileBrand,mobileCopy);
+    if(auth.role!=="guest"){
+      const logout=node("button","c10-header-signout","↪ Sign out");
+      logout.id="c10HeaderSignout";logout.type="button";logout.setAttribute("aria-label","Sign out of ExamGuru");
+      logout.addEventListener("click",async()=>{
+        logout.disabled=true;
+        try{if(window.C10Api&&window.C10Api.isAuthenticated())await window.C10Api.logout();}catch(_){}
+        if(window.C10StudentAuth&&window.C10StudentAuth.logout)window.C10StudentAuth.logout();
+        try{sessionStorage.removeItem("c10playground_static_student_v1");sessionStorage.removeItem("c10playground_api_session");sessionStorage.removeItem("examguru_mvp_admin_session_v1");}catch(_){}
+        location.replace("./index.html");
+      });
+      mobileBar.appendChild(logout);
+    }
     const scrim=node("button","c10-nav-scrim");scrim.type="button";scrim.setAttribute("aria-label","Close navigation menu");scrim.addEventListener("click",closeMenu);
     document.body.prepend(sidebar);document.body.prepend(mobileBar);document.body.prepend(scrim);document.body.classList.add("c10-shell-ready");
     if(subjectConfig)applyConfiguredSubjectVisibility(subjectConfig);
