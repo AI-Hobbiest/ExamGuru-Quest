@@ -9145,6 +9145,253 @@
         "answer": 1,
         "explanation": "The denominators match, so add the numerators.",
         "difficulty": "Easy"
+      },
+      {
+        "id": "c6m07q101",
+        "question": "What is 2/7 of 42?",
+        "options": [
+          "6",
+          "10",
+          "12",
+          "14"
+        ],
+        "answer": 2,
+        "explanation": "42 ÷ 7 = 6, and 6 × 2 = 12.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m07q102",
+        "question": "Which is larger: 5/8 or 3/4?",
+        "options": [
+          "5/8",
+          "3/4",
+          "They are equal",
+          "Cannot be compared"
+        ],
+        "answer": 1,
+        "explanation": "3/4 = 6/8, which is greater than 5/8.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m07q103",
+        "question": "What is 4/9 + 2/9?",
+        "options": [
+          "2/9",
+          "6/9",
+          "6/18",
+          "8/9"
+        ],
+        "answer": 1,
+        "explanation": "Add the numerators when denominators are equal: 4 + 2 = 6.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m07q104",
+        "question": "What is 8/11 − 3/11?",
+        "options": [
+          "4/11",
+          "5/11",
+          "5/22",
+          "11/5"
+        ],
+        "answer": 1,
+        "explanation": "Subtract the numerators: 8 − 3 = 5.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m07q105",
+        "question": "Which is the simplest form of 15/25?",
+        "options": [
+          "2/5",
+          "3/5",
+          "5/3",
+          "5/8"
+        ],
+        "answer": 1,
+        "explanation": "Divide numerator and denominator by 5 to get 3/5.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m07q106",
+        "question": "A cake is cut into 12 equal pieces. Riya eats 5 pieces. What fraction is left?",
+        "options": [
+          "5/12",
+          "7/12",
+          "1/12",
+          "12/7"
+        ],
+        "answer": 1,
+        "explanation": "Seven of the twelve equal pieces remain.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m07q107",
+        "question": "What is 1/3 + 1/6?",
+        "options": [
+          "1/9",
+          "1/2",
+          "2/9",
+          "2/3"
+        ],
+        "answer": 1,
+        "explanation": "1/3 = 2/6, so 2/6 + 1/6 = 3/6 = 1/2.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m07q108",
+        "question": "What is 3/4 − 1/8?",
+        "options": [
+          "1/8",
+          "3/8",
+          "5/8",
+          "7/8"
+        ],
+        "answer": 2,
+        "explanation": "3/4 = 6/8; 6/8 − 1/8 = 5/8.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m07q109",
+        "question": "Which fraction is closest to zero?",
+        "options": [
+          "1/2",
+          "1/5",
+          "1/3",
+          "1/4"
+        ],
+        "answer": 1,
+        "explanation": "Among these positive fractions, 1/5 is the smallest.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m07q110",
+        "question": "A 24 cm ribbon is cut into pieces each 1/6 of the original length. How long is each piece?",
+        "options": [
+          "3 cm",
+          "4 cm",
+          "6 cm",
+          "8 cm"
+        ],
+        "answer": 1,
+        "explanation": "One-sixth of 24 cm is 24 ÷ 6 = 4 cm.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m07q111",
+        "question": "Which fraction is equivalent to 4/7 with denominator 21?",
+        "options": [
+          "8/21",
+          "10/21",
+          "12/21",
+          "16/21"
+        ],
+        "answer": 2,
+        "explanation": "Multiply numerator and denominator by 3 to get 12/21.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m07q112",
+        "question": "What is 1 whole and 2/5 written as an improper fraction?",
+        "options": [
+          "5/2",
+          "6/5",
+          "7/5",
+          "8/5"
+        ],
+        "answer": 2,
+        "explanation": "One whole is 5/5; 5/5 + 2/5 = 7/5.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m07q113",
+        "question": "A water bottle is 3/5 full. After drinking 1/5 of the bottle's capacity, what fraction remains?",
+        "options": [
+          "1/5",
+          "2/5",
+          "3/5",
+          "4/5"
+        ],
+        "answer": 1,
+        "explanation": "3/5 − 1/5 = 2/5.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m07q114",
+        "question": "Which pair has the same value?",
+        "options": [
+          "2/4 and 3/6",
+          "1/2 and 2/3",
+          "3/4 and 4/5",
+          "2/5 and 5/2"
+        ],
+        "answer": 0,
+        "explanation": "2/4 and 3/6 both simplify to 1/2.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m07q115",
+        "question": "What is 5/6 + 1/6?",
+        "options": [
+          "1",
+          "5/12",
+          "6/12",
+          "2"
+        ],
+        "answer": 0,
+        "explanation": "5/6 + 1/6 = 6/6 = 1.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m07q116",
+        "question": "What is 7/8 − 1/4?",
+        "options": [
+          "3/8",
+          "4/8",
+          "5/8",
+          "6/8"
+        ],
+        "answer": 2,
+        "explanation": "1/4 = 2/8; 7/8 − 2/8 = 5/8.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m07q117",
+        "question": "A class has 30 pupils. Two-fifths are in the choir. How many pupils are in the choir?",
+        "options": [
+          "10",
+          "12",
+          "15",
+          "18"
+        ],
+        "answer": 1,
+        "explanation": "30 ÷ 5 = 6, and 6 × 2 = 12.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m07q118",
+        "question": "Which is the correct order from greatest to smallest?",
+        "options": [
+          "1/2, 2/3, 3/4",
+          "3/4, 2/3, 1/2",
+          "2/3, 1/2, 3/4",
+          "3/4, 1/2, 2/3"
+        ],
+        "answer": 1,
+        "explanation": "Using denominator 12: 3/4 = 9/12, 2/3 = 8/12 and 1/2 = 6/12.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m07q119",
+        "question": "A recipe needs 3/4 cup of milk. How much milk is needed for two batches?",
+        "options": [
+          "1 cup",
+          "1 1/4 cups",
+          "1 1/2 cups",
+          "2 cups"
+        ],
+        "answer": 2,
+        "explanation": "Twice 3/4 is 6/4, or 1 1/2 cups.",
+        "difficulty": "Medium"
       }
     ]
   },
@@ -10452,6 +10699,162 @@
         "answer": 0,
         "explanation": "A trapezium has one pair of parallel sides in this definition.",
         "difficulty": "Easy"
+      },
+      {
+        "id": "c6m08q101",
+        "question": "When a compass is used to copy a segment, what must stay fixed?",
+        "options": [
+          "The gap between its points",
+          "The pencil colour",
+          "The paper size",
+          "The ruler's angle"
+        ],
+        "answer": 0,
+        "explanation": "The compass opening preserves the length being copied.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m08q102",
+        "question": "Every point on a circle is 5 cm from its centre. What is the circle's radius?",
+        "options": [
+          "2.5 cm",
+          "5 cm",
+          "10 cm",
+          "25 cm"
+        ],
+        "answer": 1,
+        "explanation": "The radius is the fixed distance from the centre to the circle.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m08q103",
+        "question": "Which tool keeps a chosen distance while drawing a circle?",
+        "options": [
+          "Ruler",
+          "Protractor",
+          "Compass",
+          "Set square"
+        ],
+        "answer": 2,
+        "explanation": "A compass traces a circle with a fixed opening.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m08q104",
+        "question": "A square is turned through 30 degrees on a sheet. What happens to its side lengths?",
+        "options": [
+          "They become shorter",
+          "They stay the same",
+          "They double",
+          "They become unequal"
+        ],
+        "answer": 1,
+        "explanation": "Rotation changes orientation, not dimensions.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m08q105",
+        "question": "A rectangle has a diagonal joining vertices A and C. Which vertices are opposite to A and C respectively?",
+        "options": [
+          "B and D",
+          "D and B",
+          "A and C",
+          "B and C"
+        ],
+        "answer": 0,
+        "explanation": "The two diagonals join opposite pairs A–C and B–D.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m08q106",
+        "question": "What is the measure of each interior angle of a rectangle?",
+        "options": [
+          "45°",
+          "60°",
+          "90°",
+          "120°"
+        ],
+        "answer": 2,
+        "explanation": "Every rectangle has four right angles.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m08q107",
+        "question": "The diagonals of a square intersect at O. Which statement is always true?",
+        "options": [
+          "They are unequal",
+          "They bisect each other at right angles",
+          "They never meet",
+          "Only one diagonal is bisected"
+        ],
+        "answer": 1,
+        "explanation": "Square diagonals are equal, perpendicular, and bisect each other.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m08q108",
+        "question": "Which information is sufficient to construct a square?",
+        "options": [
+          "One side length",
+          "One diagonal direction only",
+          "One corner point only",
+          "Its colour"
+        ],
+        "answer": 0,
+        "explanation": "A square can be constructed from a given side length using perpendiculars and equal lengths.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m08q109",
+        "question": "A rectangle is 9 cm long and 4 cm wide. What is the length of its longer side?",
+        "options": [
+          "4 cm",
+          "5 cm",
+          "9 cm",
+          "13 cm"
+        ],
+        "answer": 2,
+        "explanation": "The longer side is the given length of 9 cm.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m08q110",
+        "question": "Why are opposite sides of a rectangle parallel?",
+        "options": [
+          "They never meet when extended",
+          "They are curved",
+          "They are perpendicular",
+          "They have different lengths"
+        ],
+        "answer": 0,
+        "explanation": "Opposite sides of a rectangle lie in parallel directions and do not meet.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m08q111",
+        "question": "A square's side is 7 cm. After rotating it by 90°, what is its perimeter?",
+        "options": [
+          "14 cm",
+          "21 cm",
+          "28 cm",
+          "49 cm"
+        ],
+        "answer": 2,
+        "explanation": "Rotation does not change side lengths; perimeter remains 4 × 7 = 28 cm.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m08q112",
+        "question": "Which pair of tools is most suitable for constructing a perpendicular line through a point?",
+        "options": [
+          "Compass and ruler",
+          "Only a calculator",
+          "Only a clock",
+          "Only a weighing scale"
+        ],
+        "answer": 0,
+        "explanation": "A compass and straightedge can construct a perpendicular accurately.",
+        "difficulty": "Medium"
       }
     ]
   },
@@ -11759,6 +12162,162 @@
         "answer": 3,
         "explanation": "These block letters are symmetric about a vertical line.",
         "difficulty": "Easy"
+      },
+      {
+        "id": "c6m09q101",
+        "question": "A regular hexagon is folded through its centre along a line joining opposite vertices. Do the halves match?",
+        "options": [
+          "Yes",
+          "No",
+          "Only if it is stretched",
+          "Only after a half-turn"
+        ],
+        "answer": 0,
+        "explanation": "A regular hexagon has symmetry axes through opposite vertices.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m09q102",
+        "question": "How many symmetry axes pass through the midpoints of opposite sides of a regular hexagon?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "6"
+        ],
+        "answer": 2,
+        "explanation": "Three axes pass through the midpoints of opposite sides.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m09q103",
+        "question": "A square is rotated by one quarter of a full turn. What angle is this?",
+        "options": [
+          "45°",
+          "60°",
+          "90°",
+          "180°"
+        ],
+        "answer": 2,
+        "explanation": "A quarter-turn is 360° ÷ 4 = 90°.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m09q104",
+        "question": "Which shape has rotational symmetry of order 3?",
+        "options": [
+          "Equilateral triangle",
+          "Non-square rectangle",
+          "Scalene triangle",
+          "Trapezium"
+        ],
+        "answer": 0,
+        "explanation": "An equilateral triangle matches itself three times in one full turn.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m09q105",
+        "question": "A non-square rectangle is rotated until it first matches itself. What is the turn?",
+        "options": [
+          "45°",
+          "90°",
+          "180°",
+          "270°"
+        ],
+        "answer": 2,
+        "explanation": "A non-square rectangle has rotational symmetry at a half-turn, 180 degrees.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m09q106",
+        "question": "Which figure has infinitely many lines of symmetry?",
+        "options": [
+          "Square",
+          "Circle",
+          "Regular pentagon",
+          "Rectangle"
+        ],
+        "answer": 1,
+        "explanation": "Every diameter of a circle is a line of symmetry.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m09q107",
+        "question": "A figure has 5 equally spaced identical arms around a centre. What is its smallest matching rotation?",
+        "options": [
+          "36°",
+          "60°",
+          "72°",
+          "90°"
+        ],
+        "answer": 2,
+        "explanation": "360° divided by 5 equal arms is 72 degrees.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m09q108",
+        "question": "Which statement describes reflection symmetry?",
+        "options": [
+          "A figure matches after a mirror flip",
+          "A figure matches after sliding",
+          "A figure becomes larger",
+          "A figure changes colour"
+        ],
+        "answer": 0,
+        "explanation": "Reflection symmetry means the two sides of a line are mirror images.",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "c6m09q109",
+        "question": "How many lines of symmetry does a regular pentagon have?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 3,
+        "explanation": "A regular pentagon has five symmetry axes, one through each vertex and the midpoint of the opposite side.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m09q110",
+        "question": "A general parallelogram is turned by 180°. What is the result?",
+        "options": [
+          "It matches its original shape",
+          "It becomes a rectangle",
+          "It loses its opposite sides",
+          "It matches only after 90°"
+        ],
+        "answer": 0,
+        "explanation": "A parallelogram has half-turn rotational symmetry.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m09q111",
+        "question": "Which shape has exactly one line of symmetry?",
+        "options": [
+          "A non-equilateral isosceles triangle",
+          "A square",
+          "A circle",
+          "A general parallelogram"
+        ],
+        "answer": 0,
+        "explanation": "A non-equilateral isosceles triangle has one axis through its apex and base midpoint.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "c6m09q112",
+        "question": "A figure matches after 60°, 120°, 180°, 240° and 300° turns. What is its rotational order?",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 3,
+        "explanation": "There are six matching positions in one complete turn, so the order is 6.",
+        "difficulty": "Challenge"
       }
     ]
   },
