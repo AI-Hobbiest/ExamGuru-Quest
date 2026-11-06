@@ -7865,17 +7865,17 @@
       "chapterId": "playing-with-constructions",
       "unitId": "geometry-spatial",
       "topicTags": [
-        "rectangle-diagonal",
+        "diagonal-properties",
         "geometry-spatial"
       ],
       "type": "long-answer",
       "marks": 5,
-      "prompt": "A rectangle is 12 cm long and 5 cm wide. Calculate the length of its diagonal.",
+      "prompt": "A rectangle ABCD has a diagonal AC of length 18 cm. Its diagonals meet at O. Find AO and OC and state the property used.",
       "difficulty": "hard",
       "competency": "application",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "The diagonal is √(12² + 5²) = √169 = 13 cm."
+        "modelAnswer": "AO = OC = 9 cm. The diagonals of a rectangle bisect each other."
       },
       "markingScheme": [
         {
@@ -8087,17 +8087,17 @@
       "chapterId": "lines-and-angles",
       "unitId": "geometry-spatial",
       "topicTags": [
-        "angle-equations",
+        "angle-calculation",
         "geometry-spatial"
       ],
       "type": "long-answer",
       "marks": 5,
-      "prompt": "An angle is 3 times another angle, and together they form a right angle. Find both angles.",
+      "prompt": "A right angle is divided into two angles. One measures 28°. Find the other angle and classify it.",
       "difficulty": "hard",
       "competency": "application",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "Let the smaller be x; x + 3x = 90°, so x = 22.5° and the larger is 67.5°."
+        "modelAnswer": "The other angle is 90° − 28° = 62°. It is acute."
       },
       "markingScheme": [
         {
@@ -8124,17 +8124,17 @@
       "chapterId": "playing-with-constructions",
       "unitId": "geometry-spatial",
       "topicTags": [
-        "rectangle-diagonal",
+        "diagonal-properties",
         "geometry-spatial"
       ],
       "type": "long-answer",
       "marks": 5,
-      "prompt": "A rectangle is 14 cm by 8 cm. Compare its two side lengths and state the length of the longer diagonal qualitatively.",
+      "prompt": "A square has one diagonal of length 16 cm. Find the length of its other diagonal and explain.",
       "difficulty": "hard",
       "competency": "application",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "The diagonal is longer than 14 cm and can be found from the two perpendicular sides; it is √(14² + 8²) = √260 cm."
+        "modelAnswer": "The other diagonal is 16 cm because the diagonals of a square are equal."
       },
       "markingScheme": [
         {
@@ -8277,12 +8277,12 @@
       ],
       "type": "long-answer",
       "marks": 5,
-      "prompt": "A rectangle has perimeter 46 cm and length 15 cm. Find its width and state the number of right angles.",
+      "prompt": "In rectangle ABCD, AB = CD and BC = DA. Name the two pairs of opposite sides and state how many right angles the rectangle has.",
       "difficulty": "medium",
       "competency": "application",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "15 + width = 23, so width = 8 cm; it has four right angles."
+        "modelAnswer": "The opposite pairs are AB and CD, and BC and DA. A rectangle has four right angles."
       },
       "markingScheme": [
         {
@@ -8680,12 +8680,12 @@
       ],
       "type": "long-answer",
       "marks": 5,
-      "prompt": "A bar graph shows daily book sales of 18, 25, 20, 27 and 10. Find the total sales and the range.",
+      "prompt": "A bar graph records daily book sales of 18, 22, 15, 25 and 20. Find the total sales and the difference between the highest and lowest daily sales.",
       "difficulty": "medium",
       "competency": "application",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "Total = 100 books; range = 27 − 10 = 17 books."
+        "modelAnswer": "Total = 100 books. Difference = 25 − 15 = 10 books."
       },
       "markingScheme": [
         {
@@ -9412,20 +9412,20 @@
     {
       "questionId": "C6M-LA5-MD-AN-006",
       "sectionId": "D",
-      "chapterId": "perimeter-and-area",
+      "chapterId": "data-handling-and-presentation",
       "unitId": "measurement-data",
       "topicTags": [
-        "area-subtraction",
+        "bar-graph-analysis",
         "measurement-data"
       ],
       "type": "long-answer",
       "marks": 5,
-      "prompt": "A rectangular field is 18 m by 10 m. A 2 m by 2 m square pond is inside it. Find the usable area and explain the subtraction.",
+      "prompt": "A bar graph shows books borrowed on five days: 18, 22, 15, 25 and 20. Find the total number of books and the difference between the highest and lowest daily counts.",
       "difficulty": "medium",
       "competency": "analysis-evaluation-creation",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "Field area = 180 m²; pond area = 4 m²; usable area = 176 m²."
+        "modelAnswer": "Total = 18 + 22 + 15 + 25 + 20 = 100 books. Difference = 25 − 15 = 10 books."
       },
       "markingScheme": [
         {
@@ -9674,17 +9674,17 @@
       "chapterId": "data-handling-and-presentation",
       "unitId": "measurement-data",
       "topicTags": [
-        "data-summary",
+        "bar-graph-interpretation",
         "measurement-data"
       ],
       "type": "long-answer",
       "marks": 5,
-      "prompt": "A bar graph shows the number of visitors as 12, 18, 18, 24 and 30 over five days. Find the median and explain.",
+      "prompt": "A bar graph shows votes for three sports: cricket 28, football 21 and badminton 17. Which sport has the highest count, and how many more votes did it receive than badminton?",
       "difficulty": "medium",
       "competency": "analysis-evaluation-creation",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "Ordered values are already listed; the middle value is 18 visitors."
+        "modelAnswer": "Cricket has the highest count. It received 28 − 17 = 11 more votes than badminton."
       },
       "markingScheme": [
         {
@@ -9748,17 +9748,17 @@
       "chapterId": "data-handling-and-presentation",
       "unitId": "measurement-data",
       "topicTags": [
-        "data-summary",
+        "data-comparison",
         "measurement-data"
       ],
       "type": "long-answer",
       "marks": 5,
-      "prompt": "A survey records 8, 11, 11, 13 and 17 votes for five choices. Find the mode and explain what it tells us.",
+      "prompt": "A frequency table shows books borrowed by four groups: Group A 18, Group B 24, Group C 20 and Group D 16. Arrange the groups from highest to lowest and find the difference between the highest and lowest counts.",
       "difficulty": "medium",
       "competency": "analysis-evaluation-creation",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "The mode is 11; it is the most frequent vote count."
+        "modelAnswer": "Order: Group B (24), Group C (20), Group A (18), Group D (16). Difference = 24 − 16 = 8 books."
       },
       "markingScheme": [
         {
@@ -13210,46 +13210,46 @@
       "chapterId": "data-handling-and-presentation",
       "unitId": "measurement-data",
       "topicTags": [
-        "data-summary",
+        "bar-graph-interpretation",
         "measurement-data"
       ],
       "type": "case-based",
       "marks": 4,
-      "stimulus": "A survey records 10, 14, 14, 16 and 21 votes for five choices.",
-      "prompt": "Read the situation and answer both parts.",
+      "stimulus": "A bar graph records the number of students arriving at school by bus, walking, bicycle and car: 20, 15, 10 and 5 respectively.",
+      "prompt": "Read the bar-graph information and answer both parts.",
       "parts": [
         {
           "partId": "a",
-          "prompt": "Which number is the mode?",
+          "prompt": "Which mode of travel has the highest count?",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "14."
+            "modelAnswer": "Bus."
           },
           "markingScheme": [
             {
-              "criterion": "Correct approach or identification",
+              "criterion": "Identify the tallest bar/highest count",
               "marks": 1
             },
             {
-              "criterion": "Correct result",
+              "criterion": "Name bus",
               "marks": 1
             }
           ]
         },
         {
           "partId": "b",
-          "prompt": "Explain what the mode tells us here.",
+          "prompt": "How many more students travel by bus than by bicycle?",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "14 is the most frequently recorded vote count."
+            "modelAnswer": "20 − 10 = 10 students."
           },
           "markingScheme": [
             {
-              "criterion": "Correct approach or identification",
+              "criterion": "Subtract the two counts",
               "marks": 1
             },
             {
-              "criterion": "Correct result",
+              "criterion": "Give 10 students",
               "marks": 1
             }
           ]
@@ -13259,7 +13259,7 @@
       "competency": "analysis-evaluation-creation",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "(a) 14. (b) 14 is the most frequently recorded vote count."
+        "modelAnswer": "(a) Bus. (b) 10 more students travel by bus than by bicycle."
       },
       "markingScheme": [
         {
@@ -13930,46 +13930,46 @@
       "chapterId": "data-handling-and-presentation",
       "unitId": "measurement-data",
       "topicTags": [
-        "data-summary",
+        "bar-graph-comparison",
         "measurement-data"
       ],
       "type": "case-based",
       "marks": 4,
-      "stimulus": "A bar graph has values 12, 15, 15, 18 and 25.",
-      "prompt": "Read the situation and answer both parts.",
+      "stimulus": "A bar graph shows the books borrowed by four classes: VI-A 18, VI-B 25, VI-C 21 and VI-D 14.",
+      "prompt": "Use the bar-graph data to answer both parts.",
       "parts": [
         {
           "partId": "a",
-          "prompt": "Find the median value.",
+          "prompt": "Which class borrowed the greatest number of books?",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "15."
+            "modelAnswer": "Class VI-B."
           },
           "markingScheme": [
             {
-              "criterion": "Correct approach or identification",
+              "criterion": "Compare the bar heights/counts",
               "marks": 1
             },
             {
-              "criterion": "Correct result",
+              "criterion": "Name Class VI-B",
               "marks": 1
             }
           ]
         },
         {
           "partId": "b",
-          "prompt": "Explain why the median is not the same as the highest value.",
+          "prompt": "How many more books did VI-B borrow than VI-D?",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "The median is the middle value after ordering; the highest is 25."
+            "modelAnswer": "25 − 14 = 11 books."
           },
           "markingScheme": [
             {
-              "criterion": "Correct approach or identification",
+              "criterion": "Subtract the two counts",
               "marks": 1
             },
             {
-              "criterion": "Correct result",
+              "criterion": "Give 11 books",
               "marks": 1
             }
           ]
@@ -13979,7 +13979,7 @@
       "competency": "analysis-evaluation-creation",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "(a) 15. (b) The median is the middle value after ordering; the highest is 25."
+        "modelAnswer": "(a) VI-B. (b) 11 more books."
       },
       "markingScheme": [
         {
