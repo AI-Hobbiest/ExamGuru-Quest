@@ -2750,16 +2750,16 @@
       },
       {
         "id": "c6m03q011",
-        "question": "A palindrome number reads the same forwards and backwards. Which is a palindrome?",
+        "question": "Which of the following numbers reads the same forwards and backwards?",
         "options": [
           "142",
-          "No",
-          "Maybe",
-          "None of these"
+          "121",
+          "134",
+          "231"
         ],
-        "answer": 0,
-        "explanation": "121 reads the same from either direction.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "121 reads as 1–2–1 from left to right and from right to left.",
+        "difficulty": "Easy"
       },
       {
         "id": "c6m03q012",
@@ -2880,16 +2880,16 @@
       },
       {
         "id": "c6m03q021",
-        "question": "A palindrome number reads the same forwards and backwards. Which is a palindrome?",
+        "question": "A three-digit palindrome has 5 in the tens place. The sum of its digits is 11. Which number is it?",
         "options": [
-          "Maybe",
-          "None of these",
-          "121",
-          "No"
+          "353",
+          "545",
+          "242",
+          "515"
         ],
-        "answer": 2,
-        "explanation": "121 reads the same from either direction.",
-        "difficulty": "Challenge"
+        "answer": 0,
+        "explanation": "The first and last digits must match. If each is 3, then 3 + 5 + 3 = 11, so the number is 353.",
+        "difficulty": "Hard"
       },
       {
         "id": "c6m03q022",
@@ -3010,15 +3010,15 @@
       },
       {
         "id": "c6m03q031",
-        "question": "A palindrome number reads the same forwards and backwards. Which is a palindrome?",
+        "question": "Which four-digit number is a palindrome?",
         "options": [
-          "142",
-          "No",
-          "Maybe",
-          "None of these"
+          "1221",
+          "1231",
+          "1122",
+          "2112"
         ],
         "answer": 0,
-        "explanation": "121 reads the same from either direction.",
+        "explanation": "In 1221, the digits read 1–2–2–1 in either direction.",
         "difficulty": "Easy"
       },
       {
@@ -3140,15 +3140,15 @@
       },
       {
         "id": "c6m03q041",
-        "question": "A palindrome number reads the same forwards and backwards. Which is a palindrome?",
+        "question": "A three-digit palindrome has 4 in the hundreds place and 7 in the tens place. What is the number?",
         "options": [
-          "Maybe",
-          "None of these",
-          "121",
-          "No"
+          "447",
+          "474",
+          "744",
+          "477"
         ],
-        "answer": 2,
-        "explanation": "121 reads the same from either direction.",
+        "answer": 1,
+        "explanation": "A three-digit palindrome has the same first and last digit. The number is therefore 474.",
         "difficulty": "Medium"
       },
       {
@@ -3270,16 +3270,16 @@
       },
       {
         "id": "c6m03q051",
-        "question": "A palindrome number reads the same forwards and backwards. Which is a palindrome?",
+        "question": "A number is written as 262. Which statement explains why it is a palindrome?",
         "options": [
-          "142",
-          "No",
-          "Maybe",
-          "None of these"
+          "Its first and last digits are both 2.",
+          "All its digits are even.",
+          "Its digit sum is 10.",
+          "Its middle digit is the largest digit."
         ],
         "answer": 0,
-        "explanation": "121 reads the same from either direction.",
-        "difficulty": "Challenge"
+        "explanation": "A three-digit number is a palindrome when its first and last digits match. In 262, both are 2.",
+        "difficulty": "Medium"
       },
       {
         "id": "c6m03q052",
@@ -3400,16 +3400,16 @@
       },
       {
         "id": "c6m03q061",
-        "question": "A palindrome number reads the same forwards and backwards. Which is a palindrome?",
+        "question": "A four-digit palindrome begins with 6 and has 3 as its second digit. What is the complete number?",
         "options": [
-          "Maybe",
-          "None of these",
-          "121",
-          "No"
+          "6363",
+          "6336",
+          "6633",
+          "3663"
         ],
-        "answer": 2,
-        "explanation": "121 reads the same from either direction.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "A four-digit palindrome has the pattern A–B–B–A. With A = 6 and B = 3, the number is 6336.",
+        "difficulty": "Medium"
       },
       {
         "id": "c6m03q062",
@@ -3530,16 +3530,16 @@
       },
       {
         "id": "c6m03q071",
-        "question": "A palindrome number reads the same forwards and backwards. Which is a palindrome?",
+        "question": "A three-digit palindrome has 4 in the tens place. Its digit sum is 16. Which number must it be?",
         "options": [
-          "142",
-          "No",
-          "Maybe",
-          "None of these"
+          "464",
+          "646",
+          "484",
+          "444"
         ],
-        "answer": 0,
-        "explanation": "121 reads the same from either direction.",
-        "difficulty": "Medium"
+        "answer": 1,
+        "explanation": "The first and last digits are equal. Their sum is 16 − 4 = 12, so each is 6. The number is 646.",
+        "difficulty": "Hard"
       },
       {
         "id": "c6m03q072",
@@ -3660,15 +3660,15 @@
       },
       {
         "id": "c6m03q081",
-        "question": "A palindrome number reads the same forwards and backwards. Which is a palindrome?",
+        "question": "A four-digit palindrome has the form ABBA. Why must every such number be divisible by 11?",
         "options": [
-          "Maybe",
-          "None of these",
-          "121",
-          "No"
+          "Its last digit is always 0.",
+          "Its digit sum is always 11.",
+          "The alternating sum A − B + B − A equals 0.",
+          "Every four-digit number is divisible by 11."
         ],
         "answer": 2,
-        "explanation": "121 reads the same from either direction.",
+        "explanation": "The divisibility test for 11 uses the difference between alternating digit sums. For ABBA, A + A and B + B are equal, so the difference is 0 and the number is divisible by 11.",
         "difficulty": "Challenge"
       },
       {
@@ -3790,16 +3790,16 @@
       },
       {
         "id": "c6m03q091",
-        "question": "A palindrome number reads the same forwards and backwards. Which is a palindrome?",
+        "question": "A five-digit palindrome has 3 at both ends and 8 in the middle. Its digit sum is 20. Which digit must appear in both the second and fourth places?",
         "options": [
-          "142",
-          "No",
-          "Maybe",
-          "None of these"
+          "2",
+          "3",
+          "4",
+          "5"
         ],
-        "answer": 0,
-        "explanation": "121 reads the same from either direction.",
-        "difficulty": "Easy"
+        "answer": 1,
+        "explanation": "Let the repeated second and fourth digit be x. Then 3 + x + 8 + x + 3 = 20, so 14 + 2x = 20 and x = 3. The correct number is 33833. The options must therefore include 3.",
+        "difficulty": "Challenge"
       },
       {
         "id": "c6m03q092",
