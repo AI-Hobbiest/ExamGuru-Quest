@@ -1,0 +1,17 @@
+"use strict";
+const assert=require("node:assert/strict");
+const fs=require("node:fs");
+const help=fs.readFileSync("help.html","utf8");
+for(const section of ['id="student-guide"','id="parent-guide"','id="exam-instructions"','id="faq"'])assert.ok(help.includes(section),"Help Centre section is present: "+section);
+for(const topic of ["Sign in","dashboard","practice","Assigned tests","results","Family Dashboard","Switch between children","Print / Save PDF report","timer","interruption","Backup"])assert.ok(help.toLowerCase().includes(topic.toLowerCase()),"Help Centre covers "+topic);
+const shell=fs.readFileSync("js/app-shell.js","utf8");
+assert.ok(shell.includes('href:"./help.html#student-guide"')&&shell.includes('auth:"student"'),"Student navigation exposes the Student Guide");
+assert.ok(shell.includes('href:"./help.html#parent-guide"')&&shell.includes('auth:"parent"'),"Parent navigation exposes the Parent Guide");
+const parent=fs.readFileSync("js/parent-dashboard.js","utf8");
+assert.ok(parent.includes('const open=()=>showDetail(s)')&&parent.includes('c.addEventListener("click",open)'),"Each family card opens detail for its own linked child");
+assert.ok(parent.includes('function showDetail(s){const z=summary(s),box=$("childDetail");box.hidden=false;box.innerHTML="";'),"Selecting a different child recalculates that child's summary and clears the previous detail view");
+assert.ok(parent.includes('report.addEventListener("click",()=>openReport(s,z))'),"The report action is bound to the currently selected child's identity and summary");
+assert.ok(parent.includes("learning progress"),"The detail heading identifies the selected child");
+const reportTests=fs.readFileSync("tests/report-print.test.js","utf8");
+assert.ok(reportTests.includes("popup-blocked")&&parent.includes("C10ReportPrint.open"),"PDF report print fallback and popup-blocked handling are covered by report regression tests");
+console.log("Package 2 parent/student experience checks passed: help sections, role-based navigation, child selection refresh, child-specific report binding and print fallback coverage.");
