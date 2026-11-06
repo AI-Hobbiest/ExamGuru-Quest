@@ -34,7 +34,7 @@ assert.ok(adapted.adapterStats.byChapter.symmetry>=20,"Symmetry must clear 20 un
 assert.ok(adapted.adapterStats.byChapter.fractions>=50,"Fractions pool should be expanded beyond its original 45 unique stems.");
 const profile=registry.profiles.find(p=>p.profileId==="class-6-mathematics-core-2026-27");
 assert.ok(profile);assert.equal(profile.enabled,false);assert.equal(profile.classId,"6");assert.equal(profile.paperHistoryLimit,75);assert.equal(profile.minimumCandidatesPerSlot,20);
-assert.equal(bank.classId,"6");assert.equal(bank.subjectId,"mathematics");assert.equal(bank.questions.length,0,"empty draft bank must not be mistaken for a released pool");
+assert.equal(bank.classId,"6");assert.equal(bank.subjectId,"mathematics");assert.equal(bank.questions.length,340,"the draft bank must contain the initial written-response candidate pool");assert.ok(bank.questions.every(q=>q.approvalStatus==="review"),"written candidates must remain in review until independently approved");
 assert.equal(practice.length,10);assert.equal(practice.reduce((n,c)=>n+c.questions.length,0),1043);
 assert.ok(blueprint.notes.some(n=>n.includes("not an official CBSE")));
 console.log("Class 6 Mathematics draft blueprint and MCQ slot-depth gate passed: 10 chapters, 38 slots, 80 marks, 150 minutes, all 20 objective slots have at least 20 eligible MCQs, and profile remains disabled pending written-pool QA.");
