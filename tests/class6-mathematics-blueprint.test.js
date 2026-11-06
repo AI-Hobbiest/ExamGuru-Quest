@@ -26,6 +26,7 @@ const objectiveSlots=blueprint.slotPlan.filter(s=>s.sectionId==="A");
 const mcqBlueprint={...blueprint,status:"ready",totalQuestions:20,totalMarks:20,sections:[blueprint.sections[0]],slotPlan:objectiveSlots,markDistribution:{"1":20},unitMarkTargets:{"number-sense":10,"geometry-spatial":6,"measurement-data":4},competencyMarksTargets:{"knowledge-understanding":19,"application":1},difficultyTargets:{easy:4,medium:12,hard:4}};
 const mcqCheck=generator.validateBlueprint(mcqBlueprint);assert.equal(mcqCheck.valid,true,mcqCheck.errors.join("; "));
 const adapted=generator.adaptChapterMcqBank(practice,mcqBlueprint,{bankVersion:"class-6-mathematics-practice-v1"});
+assert.equal(adapted.questions.length,684,"684 unique in-scope MCQs should be imported after practice-only and duplicate-stem exclusions");
 const coverage=generator.auditSlotCoverage(mcqBlueprint,adapted,20);
 assert.equal(coverage.valid,true,coverage.errors.join("; "));
 assert.equal(coverage.slotCount,20);assert.ok(coverage.coverage.every(s=>s.eligibleCount>=20),"Every Class 6 objective slot must have at least 20 eligible unique MCQs.");
