@@ -14,7 +14,8 @@ const paths = [
 const suspectOptions = new Set(["maybe", "no", "none of these", "h", "t", "n/a"]);
 const normalise = value => String(value || "")
   .toLowerCase()
-  .replace(/[“”‘’"]/g, "")
+  .replace(/[“”]/g, '"' )
+  .replace(/[‘’]/g, "'")
   .replace(/\s+/g, " ")
   .trim();
 
