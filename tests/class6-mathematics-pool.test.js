@@ -13,7 +13,7 @@ const bpCheck=g.validateBlueprint(bp);assert.equal(bpCheck.valid,true,bpCheck.er
 const bankCheck=g.validateQuestionBank(base,{classId:"6",subjectId:"mathematics",academicYear:"2026-27"});assert.equal(bankCheck.valid,true,bankCheck.errors.slice(0,20).join(" | "));
 assert.ok(base.questions.every(q=>q.approvalStatus==="review"),"new written questions must remain in review until independently checked");
 assert.equal(base.questions.length,340,"written-response pool must contain 340 review candidates");
-const contentKeys=base.questions.map(q=>[q.prompt,q.stimulus||"",...(q.parts||[]).map(p=>p.prompt)].join(" " ).normalize("NFKC").toLowerCase().replace(/[^\\p{L}\\p{N}]+/gu," ").trim());
+const contentKeys=base.questions.map(q=>[q.prompt,q.stimulus||"",...(q.parts||[]).map(p=>p.prompt)].join(" ").normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu," ").trim());
 assert.equal(new Set(contentKeys).size,340,"all written prompts and case-study content combinations must be distinct");
 const correctedCase=base.questions.find(q=>q.questionId==="C6M-CASE4-MD-AN-003");
 assert.ok(correctedCase.answerKey.modelAnswer.includes("64 m²"),"the Garden B area answer key must be mathematically correct");
