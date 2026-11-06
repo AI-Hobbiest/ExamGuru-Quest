@@ -143,10 +143,15 @@ for(const chapter of sofBank){
 assert.equal(sofIds.size,635,"all IMO question IDs are unique across the whole bank");
 assert.equal(sofQuestions.filter(question=>question.syllabusOrigin==="current-class").length,550,"all 550 original IMO questions remain current-class");
 assert.equal(sofQuestions.filter(question=>question.syllabusOrigin==="previous-class").length,85,"the previous-class IMO supplements total 85 questions");
-for(const chapter of sofBank.slice(0,11)){
+for(const [index,chapter] of sofBank.slice(0,11).entries()){
   const difficultyCounts=["Easy","Medium","Hard","Challenge"].map(level=>[level,chapter.questions.filter(q=>q.difficulty===level).length]);
-  assert.deepEqual(difficultyCounts,[["Easy",5],["Medium",17],["Hard",20],["Challenge",8]],"each original Class 6 IMO group retains its difficulty balance");
+  const expectedChallenge=index<3?9:8;
+  const expectedMedium=25-expectedChallenge;
+  assert.deepEqual(difficultyCounts,[["Easy",5],["Medium",expectedMedium],["Hard",20],["Challenge",expectedChallenge]],"each Class 6 IMO topic retains its approved balance with added Challenge coverage");
 }
+assert.equal(sofQuestions.filter(q=>q.difficulty==="Challenge").length,91,"Maths SOF includes 91 Challenge questions");
+assert.ok(sofQuestions.filter(q=>q.difficulty==="Challenge").every(q=>typeof q.difficultyRationale==="string"&&q.difficultyRationale.length>=25),"every Maths Challenge question includes a difficulty rationale");
+assert.ok(sofQuestions.filter(q=>q.difficulty==="Hard"||q.difficulty==="Challenge").length>=Math.ceil(sofQuestions.length*0.5),"at least 50% of the full Maths SOF bank is Hard or Challenge");
 assert.ok(sofBank[11].questions.every(q=>q.syllabusClass===5&&q.syllabusOrigin==="previous-class"&&q.syllabusSource==="SOF Class 5 IMO syllabus"),"Class 5 Maths supplement is origin-tagged");
 assert.equal(sofBank[11].questions.filter(q=>q.section==="Mathematical Reasoning").length,40);
 assert.equal(sofBank[11].questions.filter(q=>q.section==="Everyday Mathematics").length,20);
