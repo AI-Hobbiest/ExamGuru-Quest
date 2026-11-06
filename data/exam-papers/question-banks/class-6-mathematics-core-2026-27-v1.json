@@ -13011,7 +13011,7 @@
           "prompt": "Find the area of each garden.",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "Both have area 96 m²."
+            "modelAnswer": "Garden A: 12 × 8 = 96 m²; Garden B: 16 × 4 = 64 m²."
           },
           "markingScheme": [
             {
@@ -13029,7 +13029,7 @@
           "prompt": "Compare their perimeters.",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "A: 40 m; B: 40 m. The perimeters are equal."
+            "modelAnswer": "Garden A perimeter = 40 m; Garden B perimeter = 40 m. Their perimeters are equal, but their areas differ."
           },
           "markingScheme": [
             {
@@ -13047,7 +13047,7 @@
       "competency": "analysis-evaluation-creation",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "(a) Both have area 96 m². (b) A: 40 m; B: 40 m. The perimeters are equal."
+        "modelAnswer": "(a) Garden A: 96 m²; Garden B: 64 m². (b) Both perimeters are 40 m, so they are equal even though the areas differ."
       },
       "markingScheme": [
         {
