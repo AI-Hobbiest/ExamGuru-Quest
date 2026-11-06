@@ -8091,147 +8091,155 @@
       },
       {
         "id": "c6nsoq443",
-        "question": "Why do thermometers use a narrow capillary tube in liquid-in-glass designs?",
+        "question": "A laboratory thermometer reads from −10°C to 110°C, while a clinical thermometer reads from 35°C to 42°C. Which is suitable for measuring boiling water and why?",
         "options": [
-          "A small expansion makes the column move visibly",
-          "To store more liquid",
-          "To stop all expansion",
-          "To measure length directly"
+          "The laboratory thermometer, because its range includes temperatures near 100°C",
+          "The clinical thermometer, because it is designed for every hot liquid",
+          "Either thermometer, because all thermometers have the same range",
+          "Neither, because boiling water has no temperature"
         ],
         "answer": 0,
-        "explanation": "A narrow tube makes small volume changes easier to observe.",
+        "explanation": "Water boils near 100°C at ordinary atmospheric pressure. That value is outside a clinical thermometer's range but within the laboratory thermometer's range.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Temperature and Its Measurement",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It compares instrument ranges with the measurement needed."
       },
       {
         "id": "c6nsoq444",
-        "question": "A temperature rises from 18°C to 25°C over 7 minutes. What is the average rise per minute if it is steady?",
+        "question": "Two cups contain equal amounts of hot water. Cup A is wrapped in wool and Cup B is left uncovered. Both start at 70°C. After the same time A is 62°C and B is 54°C. What does the test suggest?",
         "options": [
-          "2°C per minute",
-          "7°C per minute",
-          "43°C per minute",
-          "1°C per minute"
+          "Wool creates heat",
+          "The wool covering reduced heat loss under these conditions",
+          "The uncovered cup contained less water at the start",
+          "The thermometer changed the water temperature"
         ],
-        "answer": 3,
-        "explanation": "The rise is 7°C in 7 minutes.",
+        "answer": 1,
+        "explanation": "Cup A cooled by 8°C and Cup B by 16°C. The covering slowed cooling in this test.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Temperature and Its Measurement",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It compares temperature changes and calculates the size of each change."
       },
       {
         "id": "c6nsoq445",
-        "question": "A student wants to compare water temperatures in two beakers. Why use the same depth and wait for each reading to stabilise?",
+        "question": "A thermometer shows 24°C at the start and 31°C later. Which statement correctly describes the change?",
         "options": [
-          "To change the temperature intentionally",
-          "To increase the beaker volume",
-          "To make the measurements comparable",
-          "To avoid using a thermometer"
+          "The temperature fell by 7°C",
+          "The temperature rose by 31°C",
+          "The temperature increased by 7°C",
+          "The temperature doubled"
         ],
         "answer": 2,
-        "explanation": "Consistent placement and stable readings reduce measurement differences.",
+        "explanation": "31−24=7°C, so the temperature increased by 7°C.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Temperature and Its Measurement",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It requires interpreting two readings and calculating the difference."
       },
       {
         "id": "c6nsoq446",
-        "question": "A thermometer has markings every 5°C. The liquid level lies halfway between 20°C and 25°C. What is the estimated reading?",
+        "question": "A student records room temperature at four times: 22°C, 24°C, 27°C and 25°C. At which recorded time was the temperature highest?",
         "options": [
-          "20°C",
-          "22.5°C",
-          "25°C",
-          "27.5°C"
+          "The first reading",
+          "The second reading",
+          "The fourth reading",
+          "The third reading"
         ],
-        "answer": 1,
-        "explanation": "Halfway between 20 and 25 is 22.5°C.",
+        "answer": 3,
+        "explanation": "27°C is the highest of the four readings.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Temperature and Its Measurement",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It compares a short data set and identifies the maximum without confusing order with size."
       },
       {
         "id": "c6nsoq447",
-        "question": "A student sees a clinical thermometer reading of 37.2°C. Which statement is most reasonable?",
+        "question": "A thermometer has marks every 2°C. The liquid level is halfway between 28°C and 30°C. What reading should be estimated?",
         "options": [
-          "It is close to the usual average body temperature",
-          "It means the person is freezing",
-          "It confirms a serious illness",
-          "It is the boiling point of water"
+          "29°C",
+          "28°C",
+          "30°C",
+          "32°C"
         ],
         "answer": 0,
-        "explanation": "37.2°C is near the commonly quoted average body temperature.",
+        "explanation": "Halfway between 28°C and 30°C is 29°C.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Temperature and Its Measurement",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It reads a scale by estimating between two marked values."
       },
       {
         "id": "c6nsoq448",
-        "question": "Why does a thermometer need calibration?",
+        "question": "Equal amounts of water at 20°C and 60°C are mixed in an insulated container. Which result is the most reasonable before considering measurement error?",
         "options": [
-          "To change its colour",
-          "To make it heavier",
-          "To make it measure length",
-          "To check that its readings match known reference temperatures"
+          "The mixture must become 80°C",
+          "The final temperature should lie between 20°C and 60°C",
+          "The mixture must freeze",
+          "The final temperature must be exactly 20°C"
         ],
-        "answer": 3,
-        "explanation": "Calibration checks measurement accuracy against known standards.",
+        "answer": 1,
+        "explanation": "Mixing the two samples transfers heat from the warmer water to the cooler water; the final temperature should be between the starting temperatures.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Temperature and Its Measurement",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It combines the direction of heat transfer with a constraint on the possible final reading."
       },
       {
         "id": "c6nsoq449",
-        "question": "A laboratory thermometer is used to measure a hot liquid. Which action is unsafe?",
+        "question": "A student tries to measure the temperature of hot cooking oil with a clinical thermometer. Why is this a poor choice?",
         "options": [
-          "Keeping it upright",
-          "Reading at eye level",
-          "Holding the thermometer by the bulb or touching hot glass",
-          "Using a suitable holder"
+          "Oil cannot have a temperature",
+          "A thermometer measures only water",
+          "The oil may be far outside the clinical thermometer's narrow body-temperature range",
+          "The clinical thermometer measures distance"
         ],
         "answer": 2,
-        "explanation": "Hot glass can burn; hold the thermometer safely by its upper stem or holder.",
+        "explanation": "A clinical thermometer is designed for body temperatures and has a narrow range. Hot oil may exceed that range and damage the instrument.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Temperature and Its Measurement",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It matches the instrument's design limits to the situation and identifies a safety issue."
       },
       {
         "id": "c6nsoq450",
-        "question": "Two objects are at the same temperature but have different masses. Which is true?",
+        "question": "Two identical containers of warm water are left in the same room. One is covered and one is not. Which additional information is most important before attributing a difference in cooling to the cover?",
         "options": [
-          "They must contain the same thermal energy",
-          "They have the same temperature, but may have different total thermal energy",
-          "The heavier object must be hotter",
-          "Temperature depends only on mass"
+          "The colour of the table",
+          "The name of the student who filled them",
+          "The shape of the room's door",
+          "That both samples started at the same temperature and contained equal amounts of water"
         ],
-        "answer": 1,
-        "explanation": "Temperature and total thermal energy are different concepts.",
+        "answer": 3,
+        "explanation": "Equal starting temperatures and equal amounts of water are needed so the cover is the meaningful difference between the tests.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Temperature and Its Measurement",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It identifies hidden variables that must be controlled in an experiment."
       }
     ]
   },
@@ -8999,147 +9007,155 @@
       },
       {
         "id": "c6nsoq493",
-        "question": "A spacecraft travels away from Earth. Which force becomes weaker with increasing distance, all else equal?",
+        "question": "A student sees the Moon as a thin crescent, then several days later as a half-moon. What best explains the changing shape seen from Earth?",
         "options": [
-          "The spacecraft's mass",
-          "Earth's gravitational pull",
-          "The speed of light",
-          "The Sun's energy output"
+          "We see different portions of the Moon's sunlit half as the Moon moves around Earth",
+          "The Moon makes its own light stronger each night",
+          "Earth's shadow covers the Moon every evening",
+          "The Moon changes its actual shape"
         ],
-        "answer": 1,
-        "explanation": "Gravitational attraction decreases with distance.",
+        "answer": 0,
+        "explanation": "The Sun always lights half the Moon. As the Moon orbits Earth, the visible portion of that lit half changes, producing phases.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Beyond Earth",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It explains a sequence of observations using the Sun–Earth–Moon arrangement."
       },
       {
         "id": "c6nsoq494",
-        "question": "Why do planets not usually collide as they orbit the Sun?",
+        "question": "A flagpole's shadow is long in the morning and shorter near midday on a clear day. Which explanation best accounts for the pattern?",
         "options": [
-          "They follow separate paths with large distances between their orbits",
-          "There is no gravity in space",
-          "Planets are fixed to invisible strings",
-          "The Sun pushes all planets outward equally"
+          "The flagpole becomes shorter",
+          "The Sun's apparent position changes as Earth rotates, changing the shadow angle",
+          "The ground moves closer to the flagpole",
+          "The Sun switches off at midday"
         ],
-        "answer": 0,
-        "explanation": "Stable orbits and large separations prevent routine collisions.",
+        "answer": 1,
+        "explanation": "As Earth rotates, the Sun appears to move across the sky. Its changing angle changes the length and direction of the shadow.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Beyond Earth",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It links a daily pattern to Earth's rotation and the geometry of shadows."
       },
       {
         "id": "c6nsoq495",
-        "question": "Which is a natural satellite of Mars?",
+        "question": "A model shows the planets at equal distances from the Sun to fit them on one page. Which statement about the model is correct?",
         "options": [
-          "Titan",
-          "Europa",
-          "Ganymede",
-          "Phobos"
+          "It accurately shows all orbital distances",
+          "It proves the planets travel at equal speeds",
+          "It can show the order of planets, but not their true relative distances",
+          "It shows that the planets are all the same size"
         ],
-        "answer": 3,
-        "explanation": "Phobos is one of Mars's two small moons.",
+        "answer": 2,
+        "explanation": "A simplified model can preserve the order while changing the spacing. It should not be used to compare real orbital distances.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Beyond Earth",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It distinguishes a model's useful feature from a limitation caused by scaling."
       },
       {
         "id": "c6nsoq496",
-        "question": "What makes the Sun appear to rise in the east and set in the west?",
+        "question": "A bright object is visible after sunset and does not twinkle as much as many stars. Which observation would best help decide whether it is a planet rather than a star?",
         "options": [
-          "The Sun orbits Earth once daily",
-          "The Moon pushes the Sun",
-          "Earth rotates from west to east",
-          "Earth revolves around the Sun each day"
+          "It is bright, so it must be a star",
+          "It appears white, so it must be a star",
+          "It is visible after sunset, so it must be the Moon",
+          "Track its position against the background stars over several nights"
         ],
-        "answer": 2,
-        "explanation": "Earth's rotation makes the Sun appear to move east to west.",
+        "answer": 3,
+        "explanation": "Planets change their positions against the background stars over time, while the star patterns remain nearly fixed relative to one another over short periods.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Beyond Earth",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It selects a repeated observation that distinguishes two kinds of celestial objects."
       },
       {
         "id": "c6nsoq497",
-        "question": "Which planet has a sidereal rotation period (one rotation relative to distant stars) longer than its orbital year?",
+        "question": "A student says day and night happen because the Sun moves around Earth once every 24 hours. Which model observation best challenges that claim?",
         "options": [
-          "Earth",
-          "Venus",
-          "Jupiter",
-          "Mars"
+          "A globe rotating while a fixed lamp lights only the side facing it",
+          "A Moon model revolving around a globe",
+          "A planet model with no rotation",
+          "A drawing of stars without Earth"
         ],
-        "answer": 1,
-        "explanation": "Venus takes about 243 Earth days to rotate once relative to distant stars but about 225 days to orbit the Sun.",
+        "answer": 0,
+        "explanation": "With a fixed lamp and rotating globe, places move into and out of the lit half. This models day and night without the Sun orbiting Earth.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Beyond Earth",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It tests a claim with a model and identifies the mechanism that matches the observation."
       },
       {
         "id": "c6nsoq498",
-        "question": "Why does a lunar eclipse not happen at every full Moon?",
+        "question": "A full Moon is followed by a last-quarter Moon and then a thin crescent. What does this sequence tell us?",
         "options": [
-          "The Moon's orbit is tilted relative to Earth's orbital plane",
-          "The Moon is too small",
-          "Earth has no shadow",
-          "The Sun shines through the Moon"
+          "The Moon is moving farther from the Sun every night",
+          "The visible lit portion is decreasing during this part of the lunar cycle",
+          "The Moon has stopped revolving around Earth",
+          "Earth is blocking all sunlight from the Moon"
         ],
-        "answer": 0,
-        "explanation": "The alignment for an eclipse occurs only near an orbital node.",
+        "answer": 1,
+        "explanation": "After full Moon, the visible illuminated portion decreases through the waning phases.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Beyond Earth",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It interprets the order of phases rather than treating them as separate shapes."
       },
       {
         "id": "c6nsoq499",
-        "question": "Which statement explains why regular Moon phases are not caused by Earth's shadow?",
+        "question": "Two students observe the same constellation six hours apart on one night. Its position in the sky appears to have changed. Which explanation is strongest?",
         "options": [
-          "The Moon has no surface",
-          "The Moon is always dark",
-          "The Sun does not illuminate the Moon",
-          "Earth's shadow causes lunar eclipses, not the monthly phases"
+          "The stars have moved around Earth in six hours",
+          "The constellation has changed its pattern",
+          "Earth's rotation makes the stars appear to move across the sky",
+          "The stars have switched off and on"
         ],
-        "answer": 3,
-        "explanation": "Regular phases result from the changing view of the sunlit half.",
+        "answer": 2,
+        "explanation": "Earth's rotation makes the sky appear to turn over the night, so the constellation seems to shift position.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Beyond Earth",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It connects an observation across time to Earth's rotation."
       },
       {
         "id": "c6nsoq500",
-        "question": "Why does a comet's tail usually point away from the Sun?",
+        "question": "A season model uses a tilted globe moving around a lamp. Which feature must remain pointing in the same direction during the orbit to model Earth's seasons correctly?",
         "options": [
-          "The tail always points behind the comet's path",
-          "Earth's gravity pulls it away",
-          "Solar wind and sunlight push gas and dust away from the Sun",
-          "The comet's tail is a shadow"
+          "The lamp must move around the globe",
+          "The globe must stop rotating",
+          "The distance between every planet must be equal",
+          "The direction of Earth's tilted axis"
         ],
-        "answer": 2,
-        "explanation": "Solar wind and radiation pressure push tail material generally away from the Sun.",
+        "answer": 3,
+        "explanation": "Earth's axis keeps nearly the same direction as Earth orbits the Sun. The tilt changes how directly sunlight reaches each hemisphere during the year.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Beyond Earth",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It identifies the key geometric condition in a model of seasonal change."
       }
     ]
   },
@@ -9907,147 +9923,155 @@
       },
       {
         "id": "c6nsoq543",
-        "question": "How does planting trees help reduce carbon dioxide in the air?",
+        "question": "A hillside loses most of its trees. After heavy rain, more soil reaches the stream and the water becomes muddy. Which explanation best connects the observations?",
         "options": [
-          "Trees turn carbon dioxide into nitrogen",
-          "Roots absorb all gases from the air",
-          "Plants absorb carbon dioxide during photosynthesis",
-          "Leaves release only carbon dioxide"
+          "Fewer roots and less plant cover leave soil easier to wash away",
+          "Trees make rain fall upward",
+          "The stream has stopped flowing",
+          "Soil becomes heavier only when trees are present"
         ],
-        "answer": 2,
-        "explanation": "Photosynthesis uses carbon dioxide to make food.",
+        "answer": 0,
+        "explanation": "Roots help hold soil and plant cover slows the impact of rain. Removing them can increase erosion and muddy runoff.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Natural Resources",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It links vegetation, soil stability and water quality in one causal chain."
       },
       {
         "id": "c6nsoq544",
-        "question": "Why is using public transport often more resource-efficient than many people travelling separately by car?",
+        "question": "A school roof collects rainwater into a covered tank. Which combination makes this a more useful water-saving system?",
         "options": [
-          "It uses no energy",
-          "It can reduce fuel use per passenger",
-          "It creates unlimited fuel",
-          "It prevents all traffic"
+          "Leave the tank open and let leaves fall in",
+          "Keep the roof and gutters clean, use a screen and cover the tank",
+          "Connect the tank to a drain so water cannot remain",
+          "Use the tank only when there is no rain"
         ],
         "answer": 1,
-        "explanation": "Shared transport can lower energy use and emissions per person.",
+        "explanation": "Clean collection surfaces, screens and a covered tank reduce debris and contamination and allow stored rainwater to be used later where appropriate.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Natural Resources",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It evaluates the collection, storage and protection stages of a resource-conservation system."
       },
       {
         "id": "c6nsoq545",
-        "question": "Which rock is commonly used for building and countertops and is made mainly of quartz, feldspar and mica?",
+        "question": "Which pair contains one renewable resource and one non-renewable resource, in that order?",
         "options": [
-          "Marble",
-          "Granite",
-          "Coal",
-          "Chalk"
+          "Coal and petroleum",
+          "Natural gas and coal",
+          "Sunlight and coal",
+          "Petroleum and wind"
         ],
-        "answer": 1,
-        "explanation": "Granite is an igneous rock commonly composed mainly of quartz, feldspar and mica.",
+        "answer": 2,
+        "explanation": "Sunlight is renewed naturally on human timescales, while coal forms over very long periods and is non-renewable on human timescales.",
         "difficulty": "Challenge",
         "section": "Science",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Natural Resources",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It classifies two resources using the timescale of replenishment."
       },
       {
         "id": "c6nsoq546",
-        "question": "A village uses more groundwater each year than rainfall replenishes. What is the likely long-term result?",
+        "question": "Two soil trays receive the same amount of simulated rain. Tray A is bare; Tray B has grass. More soil washes out of Tray A. What is the best conclusion?",
         "options": [
-          "The water table rises indefinitely",
-          "Rainfall stops permanently",
-          "The aquifer becomes a fossil fuel",
-          "Groundwater levels decline"
+          "Grass makes soil disappear",
+          "Rain has no effect on soil",
+          "The trays must have contained different kinds of water",
+          "Plant cover helped reduce soil erosion in this test"
         ],
         "answer": 3,
-        "explanation": "Withdrawal above recharge causes depletion.",
+        "explanation": "The grass cover helped hold the soil and reduce the amount carried away by water under the tested conditions.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Natural Resources",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It interprets a controlled comparison and identifies the ecosystem service of vegetation."
       },
       {
         "id": "c6nsoq547",
-        "question": "Which action best follows the 3Rs in resource conservation?",
+        "question": "A family wants to reduce electricity use without changing the number of people in the home. Which plan is most effective?",
         "options": [
-          "Replace, remove and burn everything",
-          "Refuse all natural resources",
-          "Reduce unnecessary use, reuse items and recycle suitable materials",
-          "Rely only on mining"
+          "Switch off unused lights and appliances and use daylight when possible",
+          "Leave lights on so they last longer",
+          "Keep doors open while cooling an empty room",
+          "Run an empty washing machine each day"
         ],
-        "answer": 2,
-        "explanation": "Reduce, reuse and recycle conserve materials and energy.",
+        "answer": 0,
+        "explanation": "Turning off unused devices and making use of daylight reduces unnecessary electricity use without reducing the household size or its basic needs.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Natural Resources",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It combines several practical conservation actions and considers the stated constraint."
       },
       {
         "id": "c6nsoq548",
-        "question": "Why are renewable resources not automatically unlimited?",
+        "question": "A village has limited clean water during a dry month. Which order of action is most sensible?",
         "options": [
-          "They never regenerate",
-          "They can be used faster than nature replaces them",
-          "They are all made from coal",
-          "They do not exist in nature"
+          "Use clean drinking water first to wash roads",
+          "Protect drinking and cooking needs, repair leaks, then reuse suitable water for non-drinking purposes",
+          "Stop checking storage and use water without limits",
+          "Use untreated stream water for every purpose"
         ],
         "answer": 1,
-        "explanation": "Even renewable resources need sustainable management.",
+        "explanation": "Essential drinking and cooking needs come first. Fixing leaks and reusing suitable water for tasks such as cleaning can reduce demand on safe supplies.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Natural Resources",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It prioritises needs while combining supply protection and demand reduction."
       },
       {
         "id": "c6nsoq549",
-        "question": "Which choice best protects a local freshwater lake?",
+        "question": "Fertilisers wash from fields into a pond and algae grow very quickly. Later, fish begin to die. Which explanation best connects these events?",
         "options": [
-          "Keep sewage, oil and plastic waste out of it",
-          "Use it as a dump",
-          "Remove all water plants",
-          "Wash pesticide containers in it"
+          "The algae turn into fish",
+          "The pond has gained too much sunlight only",
+          "Excess nutrients can cause heavy algal growth; when algae die and decompose, oxygen in the water can fall",
+          "Fish die because water has no minerals"
         ],
-        "answer": 0,
-        "explanation": "Preventing pollutants protects water quality and aquatic life.",
+        "answer": 2,
+        "explanation": "Extra nutrients can trigger algal growth. Decomposition of large amounts of algae can use dissolved oxygen, making survival harder for fish.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Natural Resources",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It traces a multi-step effect of pollution through an aquatic ecosystem."
       },
       {
         "id": "c6nsoq550",
-        "question": "A community plants trees, builds rainwater pits and reduces groundwater pumping. What combined benefit is likely?",
+        "question": "A community separates paper, metal cans and food scraps instead of mixing all waste. Which outcome is the strongest reason for doing this?",
         "options": [
-          "More fossil fuels form quickly",
-          "The air loses all oxygen",
-          "All droughts become impossible",
-          "Less soil erosion and improved groundwater recharge"
+          "All waste becomes drinking water",
+          "Nothing needs to be collected afterwards",
+          "The materials become non-existent",
+          "Some materials can be recycled and food scraps can be composted, reducing waste sent to disposal"
         ],
         "answer": 3,
-        "explanation": "Vegetation protects soil and infiltration helps replenish groundwater.",
+        "explanation": "Sorting keeps recyclable materials usable and allows suitable food waste to become compost, reducing the amount that needs disposal.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Natural Resources",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It integrates material recovery and composting into a waste-reduction strategy."
       }
     ]
   },
@@ -10815,147 +10839,155 @@
       },
       {
         "id": "c6nsoq593",
-        "question": "Four children are different heights. A is taller than B, C is taller than A, and D is shorter than B. Who is second tallest?",
+        "question": "A number pattern alternates two rules: multiply by 2, then add 3. It begins 4, 8, 11, 22, 25, 50. What comes next?",
+        "options": [
+          "53",
+          "55",
+          "100",
+          "103"
+        ],
+        "answer": 0,
+        "explanation": "The rules alternate: 4×2=8, +3=11, ×2=22, +3=25, ×2=50, then +3=53.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning",
+        "syllabusClass": 6,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It detects an alternating two-operation rule and applies the correct next operation."
+      },
+      {
+        "id": "c6nsoq594",
+        "question": "In a letter sequence, the first positions move forward by 2 letters while the second positions move backward by 1: AZ, CX, EV, GT, __. Which pair comes next?",
+        "options": [
+          "IR",
+          "IS",
+          "HS",
+          "JR"
+        ],
+        "answer": 0,
+        "explanation": "The first letters are A, C, E, G, I; the second are Z, X, V, T, R. So the next pair is IR.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning",
+        "syllabusClass": 6,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It tracks two independent alphabet patterns at the same time."
+      },
+      {
+        "id": "c6nsoq595",
+        "question": "A code changes each letter to the next letter, then reverses the order of the word. What is the code for MAP?",
+        "options": [
+          "NBQ",
+          "OVT",
+          "QBN",
+          "QBO"
+        ],
+        "answer": 2,
+        "explanation": "Move forward first: M→N, A→B, P→Q, giving NBQ. Reverse the order to get QBN.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning",
+        "syllabusClass": 6,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It requires applying two coding operations in the correct order."
+      },
+      {
+        "id": "c6nsoq596",
+        "question": "Four children stand in a line. Tara is ahead of Uma; Uma is ahead of Vik; and Wren is behind Tara but ahead of Uma. Who must be second?",
+        "options": [
+          "Tara",
+          "Vik",
+          "Wren",
+          "Uma"
+        ],
+        "answer": 2,
+        "explanation": "The order constraints are Tara, Wren, Uma, Vik. Wren must be second.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning",
+        "syllabusClass": 6,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It combines three relative-position clues into one complete ordering."
+      },
+      {
+        "id": "c6nsoq597",
+        "question": "A four-digit code uses 2, 3, 4 and 6 once each. The first digit is twice the last, the second digit is the smallest, and the third digit is 2 more than the second. What is the code?",
+        "options": [
+          "6243",
+          "2346",
+          "6423",
+          "3264"
+        ],
+        "answer": 0,
+        "explanation": "The second digit is 2; the third is 4. The remaining digits are 6 and 3, and the first must be twice the last, so the code is 6243.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning",
+        "syllabusClass": 6,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It solves a constraint puzzle by fixing positions one by one and checking the remaining condition."
+      },
+      {
+        "id": "c6nsoq598",
+        "question": "A walker faces north, turns right and walks 4 m, turns left and walks 3 m, then turns left and walks 4 m. Where is the walker relative to the start?",
+        "options": [
+          "4 m east",
+          "3 m north",
+          "4 m west",
+          "3 m south"
+        ],
+        "answer": 1,
+        "explanation": "The 4 m east and 4 m west movements cancel. The remaining movement is 3 m north.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning",
+        "syllabusClass": 6,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It tracks direction changes and cancels equal movements on opposite axes."
+      },
+      {
+        "id": "c6nsoq599",
+        "question": "A square tile has an arrow pointing up. It is rotated a quarter-turn clockwise, then reflected in a vertical mirror. Which way does the arrow point at the end?",
+        "options": [
+          "Up",
+          "Left",
+          "Down",
+          "Right"
+        ],
+        "answer": 1,
+        "explanation": "A quarter-turn clockwise points the arrow right. A vertical mirror reverses left and right, so the final arrow points left.",
+        "difficulty": "Challenge",
+        "section": "Logical Reasoning",
+        "syllabusClass": 6,
+        "syllabusOrigin": "current-class",
+        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It applies a rotation followed by a reflection, keeping the order of transformations clear."
+      },
+      {
+        "id": "c6nsoq600",
+        "question": "In a class, A scored more than B, B scored more than C, and D scored less than C. E scored more than A. Which student must have the highest score?",
         "options": [
           "A",
           "B",
           "C",
-          "D"
-        ],
-        "answer": 0,
-        "explanation": "The order is C>A>B>D.",
-        "difficulty": "Challenge",
-        "section": "Logical Reasoning",
-        "syllabusClass": 6,
-        "syllabusOrigin": "current-class",
-        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
-      },
-      {
-        "id": "c6nsoq594",
-        "question": "Each letter is replaced by the letter two places later. What does DOG become?",
-        "options": [
-          "EPH",
-          "FQH",
-          "EPI",
-          "FQI"
+          "E"
         ],
         "answer": 3,
-        "explanation": "D→F, O→Q and G→I.",
+        "explanation": "The clues give E > A > B > C > D. Therefore E must be highest.",
         "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
-      },
-      {
-        "id": "c6nsoq595",
-        "question": "Two consecutive page numbers add to 103. What are the numbers?",
-        "options": [
-          "49 and 54",
-          "50 and 53",
-          "51 and 52",
-          "52 and 53"
-        ],
-        "answer": 2,
-        "explanation": "51+52=103 and the two numbers are consecutive.",
-        "difficulty": "Challenge",
-        "section": "Logical Reasoning",
-        "syllabusClass": 6,
-        "syllabusOrigin": "current-class",
-        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
-      },
-      {
-        "id": "c6nsoq596",
-        "question": "What number follows 2, 5, 11, 23, 47?",
-        "options": [
-          "93",
-          "95",
-          "94",
-          "96"
-        ],
-        "answer": 1,
-        "explanation": "Double each term and add one.",
-        "difficulty": "Challenge",
-        "section": "Logical Reasoning",
-        "syllabusClass": 6,
-        "syllabusOrigin": "current-class",
-        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
-      },
-      {
-        "id": "c6nsoq597",
-        "question": "A large cube is painted on all faces and cut into 125 equal cubes. How many small cubes have exactly one painted face?",
-        "options": [
-          "54",
-          "36",
-          "48",
-          "60"
-        ],
-        "answer": 0,
-        "explanation": "For a 5×5×5 cube, six faces each have (5−2)²=9 inner face cubes; total 54.",
-        "difficulty": "Challenge",
-        "section": "Logical Reasoning",
-        "syllabusClass": 6,
-        "syllabusOrigin": "current-class",
-        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
-      },
-      {
-        "id": "c6nsoq598",
-        "question": "A person travels 5 km east, 12 km north and then 5 km west. How far are they from the start?",
-        "options": [
-          "5 km",
-          "17 km",
-          "22 km",
-          "12 km"
-        ],
-        "answer": 3,
-        "explanation": "East and west cancel; 12 km north remains.",
-        "difficulty": "Challenge",
-        "section": "Logical Reasoning",
-        "syllabusClass": 6,
-        "syllabusOrigin": "current-class",
-        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
-      },
-      {
-        "id": "c6nsoq599",
-        "question": "A code moves each letter three places backwards. Decode KHOOR.",
-        "options": [
-          "GDKKN",
-          "IFMMP",
-          "HELLO",
-          "JGNNQ"
-        ],
-        "answer": 2,
-        "explanation": "K→H, H→E, O→L, O→L and R→O.",
-        "difficulty": "Challenge",
-        "section": "Logical Reasoning",
-        "syllabusClass": 6,
-        "syllabusOrigin": "current-class",
-        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
-      },
-      {
-        "id": "c6nsoq600",
-        "question": "Meera is Arun's mother. Ravi is Meera's father. How is Ravi related to Arun?",
-        "options": [
-          "Maternal grandfather",
-          "Paternal grandfather",
-          "Maternal uncle",
-          "Older brother"
-        ],
-        "answer": 0,
-        "explanation": "Ravi is the father of Arun's mother, so he is Arun's maternal grandfather.",
-        "difficulty": "Challenge",
-        "section": "Logical Reasoning",
-        "syllabusClass": 6,
-        "syllabusOrigin": "current-class",
-        "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 ISO syllabus"
+        "syllabusSource": "SOF Class 6 ISO syllabus",
+        "difficultyRationale": "It combines several comparison clues into a strict ranking."
       }
     ]
   },
@@ -12055,21 +12087,22 @@
     "questions": [
       {
         "id": "c6nso_prev_lr001",
-        "question": "Find the next number: 4, 9, 19, 39, __.",
+        "question": "A sequence uses two alternating rules: add 2 to the odd-position terms and double the even-position terms. It begins 3, 8, 5, 16, 7, 32. What is the next term?",
         "options": [
-          "59",
-          "69",
-          "79",
-          "89"
+          "9",
+          "12",
+          "14",
+          "64"
         ],
-        "answer": 2,
-        "explanation": "Each term is doubled and then 1 is added.",
-        "difficulty": "Medium",
+        "answer": 0,
+        "explanation": "Odd-position terms are 3, 5, 7, so the next odd-position term is 9. The even-position terms double: 8, 16, 32.",
+        "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 5,
         "syllabusOrigin": "previous-class",
         "syllabusTopic": "Number patterns",
-        "syllabusSource": "SOF Class 5 ISO syllabus"
+        "syllabusSource": "SOF Class 5 ISO syllabus",
+        "difficultyRationale": "It separates two interleaved sequences before continuing the correct one."
       },
       {
         "id": "c6nso_prev_lr002",
@@ -12163,39 +12196,41 @@
       },
       {
         "id": "c6nso_prev_lr007",
-        "question": "Complete the sequence: AB, DE, GH, JK, __.",
+        "question": "A code changes each letter to the next letter and then reads the result backwards. If SUN is coded this way, what is the result?",
         "options": [
-          "LM",
-          "MN",
-          "NO",
-          "OP"
+          "TVO",
+          "OVT",
+          "UOV",
+          "VOT"
         ],
         "answer": 1,
-        "explanation": "The first letters advance A, D, G, J, M; the second letters do the same.",
-        "difficulty": "Medium",
+        "explanation": "Move forward first: S→T, U→V, N→O, giving TVO. Reverse the order to get OVT.",
+        "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 5,
         "syllabusOrigin": "previous-class",
         "syllabusTopic": "Alphabet Test",
-        "syllabusSource": "SOF Class 5 ISO syllabus"
+        "syllabusSource": "SOF Class 5 ISO syllabus",
+        "difficultyRationale": "It combines a letter shift with a reversal and requires performing them in the correct order."
       },
       {
         "id": "c6nso_prev_lr008",
-        "question": "Arrange the stages: 1 Fruit forms 2 Seed germinates 3 Flower opens 4 Plant grows.",
+        "question": "Four books P, Q, R and S are placed in a row. P is immediately left of R; Q is to the right of R; and S is to the left of P. Which order is possible and satisfies every clue?",
         "options": [
-          "2, 4, 3, 1",
-          "3, 2, 1, 4",
-          "4, 1, 2, 3",
-          "1, 3, 4, 2"
+          "P, S, R, Q",
+          "S, P, Q, R",
+          "S, P, R, Q",
+          "R, P, S, Q"
         ],
-        "answer": 0,
-        "explanation": "A seed germinates, the plant grows, it flowers and fruit may form.",
-        "difficulty": "Medium",
+        "answer": 2,
+        "explanation": "S must be left of P; P must be immediately left of R; Q must be to the right of R. The order S, P, R, Q satisfies all three clues.",
+        "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 5,
         "syllabusOrigin": "previous-class",
         "syllabusTopic": "Logical Sequence of Words",
-        "syllabusSource": "SOF Class 5 ISO syllabus"
+        "syllabusSource": "SOF Class 5 ISO syllabus",
+        "difficultyRationale": "It combines an immediate-neighbour condition with two relative-order clues."
       },
       {
         "id": "c6nso_prev_lr009",
