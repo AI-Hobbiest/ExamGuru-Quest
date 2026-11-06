@@ -61,7 +61,8 @@ assert.ok(examPracticeScript.includes("return restored&&restored.role===\"studen
 
 assert.ok(!nav.includes("36 starter MCQs · 12 chapters"),"student navigation does not disclose Class 6 bank inventory");
 const dashboardManager=fs.readFileSync("js/dashboard-manager.js","utf8");
-assert.ok(dashboardManager.includes('meta.textContent="Explore topics and practise"'),"student subject cards use generic practice copy");
+assert.ok(dashboardManager.includes("const mcqCount=bank.reduce")&&dashboardManager.includes('meta.textContent=mcqCount.toLocaleString()+" MCQs available"'),"student dashboard shows the MCQ-only count for every published subject");
+assert.ok(!dashboardManager.includes("typeCounts")&&!dashboardManager.includes("Assertion–Reason"),"student dashboard never exposes non-MCQ question-bank inventory");
 assert.ok(!dashboardManager.includes('toLocaleString()+" MCQs · "+bank.length+" chapter sets"'),
   "student dashboard never displays question-bank inventory");
 assert.ok(!dashboard.includes("Loading bank details…"),"student dashboard does not expose bank inventory loading text");
