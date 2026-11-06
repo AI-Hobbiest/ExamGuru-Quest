@@ -39,7 +39,7 @@ jobs:
       - name: Validate Class 3 SOF IMO blueprint
         run: node tests/class3-sof-blueprint.test.js && node tests/class3-imo-bank.test.js
       - name: Validate Class 6 CBSE and SOF bank inventories, provenance and routing
-        run: node tests/class6-science.test.js
+        run: node tests/class6-science.test.js && node tests/class6-mathematics-sof.test.js
       - name: Validate session timing, weighted marks and summary model
         run: node tests/session-model.test.js
       - name: Validate Stage A LMS integrations
