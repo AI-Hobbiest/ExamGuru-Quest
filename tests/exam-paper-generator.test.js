@@ -272,7 +272,9 @@ assert.ok(selfStudySource.includes("profile-registry.json"),"self-study must loa
 assert.ok(selfStudySource.includes("mergeQuestionBanks(baseBank,practiceChapters,blueprint,{minimumCandidatesPerSlot:minimum})"),"self-study must merge an optional chapter-wise bank before profile-specific slot-coverage validation");
 assert.ok(!selfStudySource.includes("class-10-science-2026-27"),"self-study must not hardcode the Science profile");
 assert.ok(selfStudySource.includes("integrated.stats.coverage"),"self-study must validate minimum slot coverage on the integrated pool");
-assert.ok(selfStudySource.includes('HISTORY_LIMIT=50'),"self-study should keep a rolling history of 50 complete papers");
+assert.ok(selfStudySource.includes('function historyLimit()'),"self-study repeat history must be configurable per exam profile");
+ assert.ok(selfStudySource.includes('profile&&profile.paperHistoryLimit'),"self-study should honour the profile-specific paper history target");
+ assert.ok(studioSource.includes('function paperHistoryLimit()'),"admin generation repeat history must be configurable per exam profile");
 assert.ok(selfStudySource.includes('generateUniquePaper'),"self-study should generate a previously unused full-paper combination");
 assert.ok(selfStudySource.includes('recentPaperFingerprints'),"self-study should pass recent paper fingerprints to the generator");
 
