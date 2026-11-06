@@ -79,16 +79,16 @@ assert.ok(nav.includes('c10playground_static_student_v1'),"navigation detects th
 assert.ok(nav.includes('Sign out'),"authenticated navigation provides sign-out");
 assert.ok(nav.includes('href:"./profile.html#profile"'));
 assert.ok(nav.includes('href:"./profile.html#history"'));
-assert.ok(nav.includes('href:"./profile.html#backup"'));
+assert.ok(nav.includes('href:"./profile.html#backup"')&&nav.includes('group:"My Account"'));
 assert.ok(nav.includes('href:"./study.html"'),"student navigation exposes the Study Library");
 assert.ok(nav.includes('href:"./learning.html"'),"student navigation exposes the Learning Hub");
-assert.ok(nav.includes('href:"./practice.html?subject=science"'),"Science menu opens the shared engine");
+assert.ok(nav.includes('href:"./practice.html?subject=science"')&&nav.includes('group:"Subjects"'),"Science menu opens the shared engine from the Subjects submenu");
 assert.ok(homepage.includes('id="studentLoginForm"'),"landing page is the student login screen");
 assert.ok(homepage.includes('id="adminLoginForm"'),"landing page offers the temporary admin username/password form");
 assert.ok(homepage.includes('login-page.js'),"landing page loads the login flow");
 assert.ok(homepage.includes('Sign in as administrator'),"admin sign-in has a clear submit action");
 assert.ok(dashboard.includes('id="subjects"')&&dashboard.includes('practice.html?subject=science'),"dashboard contains subject launch cards");
-assert.ok(nav.includes("aria-expanded"));
+assert.ok(nav.includes("aria-expanded")&&nav.includes("c10-nav-group-trigger")&&nav.includes("c10-nav-submenu"),"sidebar groups use accessible expandable submenu controls");
 assert.ok(nav.includes('event.key==="Escape"'));
 assert.ok(nav.includes('const file=last.includes(".")?last:"index.html"'),"GitHub Pages project root resolves as index");
 assert.ok(css.includes("@media(max-width:1100px)"),"tablet-sized viewports use the compact slide-in menu");
@@ -127,7 +127,7 @@ assert.ok(learning.includes('id="mistakes"')&&learning.includes('id="bookmarkLis
 assert.ok(learning.includes("./js/learning-model.js")&&learning.includes("./js/learning-center.js"),"Learning Hub loads its data model and rendering controller");
 assert.ok(study.includes('id="studyResourceList"')&&study.includes("./js/study-model.js")&&study.includes("./js/study-library.js"),"Study Library displays published learning resources");
 assert.ok(dashboard.includes('href="./study.html"'),"dashboard links to the Study Library");
-assert.ok(nav.indexOf('href:"./learning.html"')>nav.indexOf('section:"MY LEARNING"'),"Learning Hub link is under My Learning");
+assert.ok(nav.includes('group:"My Learning"')&&nav.includes('group:"Study Pack"'),"Study Library and Learning Hub are grouped under their learning destinations");
 const loginScript=fs.readFileSync("js/login-page.js","utf8");
 const accessScript=fs.readFileSync("js/page-access.js","utf8");
 assert.ok(loginScript.includes("C10StudentAuth.login"),"login form authenticates student accounts");
