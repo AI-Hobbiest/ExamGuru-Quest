@@ -108,3 +108,26 @@ body.c10-shell-ready{padding-top:64px}
   .c10-topbar-brand{display:none}
   .c10-header-signout{padding:6px 8px;font-size:.7rem}
 }
+
+
+/* Grouped, accessible sidebar navigation. */
+.c10-nav-list{gap:7px}
+.c10-nav-group{min-width:0}
+.c10-nav-group-trigger{
+  display:flex;align-items:center;gap:11px;width:100%;min-height:43px;padding:9px 11px;
+  border:1px solid transparent;border-radius:12px;background:transparent;color:#3d4560;
+  text-align:left;font:inherit;font-size:.87rem;font-weight:780;cursor:pointer;
+}
+.c10-nav-group-trigger:hover,.c10-nav-group-trigger:focus-visible{background:rgba(255,255,255,.78);border-color:rgba(64,59,140,.13);outline:none}
+.c10-nav-group.is-active>.c10-nav-group-trigger{background:rgba(255,255,255,.58);color:#39347f}
+.c10-nav-group-label{flex:1;min-width:0}
+.c10-nav-chevron{font-size:1.05rem;color:#77739a;transition:transform .16s ease}
+.c10-nav-group-trigger[aria-expanded="true"] .c10-nav-chevron{transform:rotate(180deg)}
+.c10-nav-submenu{display:grid;gap:3px;margin:3px 0 5px 17px;padding:3px 0 3px 10px;border-left:1px solid rgba(64,59,140,.16)}
+.c10-nav-submenu[hidden]{display:none}
+.c10-nav-submenu .c10-nav-link{min-height:37px;padding:7px 9px;font-size:.81rem;font-weight:650}
+.c10-nav-submenu .c10-nav-icon{width:19px;font-size:.94rem}
+.c10-nav-group-trigger:focus-visible,.c10-nav-submenu .c10-nav-link:focus-visible{outline:2px solid #796bc3;outline-offset:2px}
+.c10-nav-link-label{min-width:0}
+@media(max-width:1100px){.c10-nav-group-trigger{min-height:42px}}
+@media(prefers-reduced-motion:reduce){.c10-nav-chevron{transition:none}}
