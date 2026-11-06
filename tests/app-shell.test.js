@@ -50,7 +50,7 @@ assert.ok(nav.includes('href:"./parent.html#exam-paper-practice"')&&parentPage.i
   "parents have a dedicated Exam Paper Practice guide destination");
 assert.ok(examPracticeScript.includes("renderClass6OlympiadHub")&&examPracticeScript.includes("mathematics-sof")&&examPracticeScript.includes("english-sof"),
   "Class 6 Exam Paper Practice opens the three available SOF full-mock subject routes");
-const parentAssessments=fs.readFileSync("js/parent-assessments.js","utf8");
+
 assert.ok(parentAssessments.includes("Class 6 · Exam Paper Practice")&&parentAssessments.includes("CBSE full-paper profiles are not published yet"),
   "Class 6 parent child detail explains available SOF mock routes without hiding the section");
 assert.ok(nav.includes("await window.C10StudentAuth.restoreSession()"),"navigation resolves the authoritative account class before rendering class-gated links");
