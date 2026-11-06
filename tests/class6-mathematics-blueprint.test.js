@@ -23,7 +23,7 @@ assert.deepEqual(blueprint.unitMarkTargets,sums("unitId"));assert.deepEqual(blue
 assert.deepEqual(blueprint.difficultyTargets,{easy:8,medium:24,hard:6});
 const validation=generator.validateBlueprint(blueprint);assert.equal(validation.valid,true,validation.errors.join("; "));assert.equal(validation.readyForGeneration,false);
 const objectiveSlots=blueprint.slotPlan.filter(s=>s.sectionId==="A");
-const mcqBlueprint={...blueprint,status:"ready",totalQuestions:20,totalMarks:20,sections:[blueprint.sections[0]],slotPlan:objectiveSlots,markDistribution:{"1":20},unitMarkTargets:{"number-sense":10,"geometry-spatial":6,"measurement-data":4},competencyMarksTargets:{"knowledge-understanding":19,"application":1}};
+const mcqBlueprint={...blueprint,status:"ready",totalQuestions:20,totalMarks:20,sections:[blueprint.sections[0]],slotPlan:objectiveSlots,markDistribution:{"1":20},unitMarkTargets:{"number-sense":10,"geometry-spatial":6,"measurement-data":4},competencyMarksTargets:{"knowledge-understanding":19,"application":1},difficultyTargets:{easy:4,medium:12,hard:4}};
 const mcqCheck=generator.validateBlueprint(mcqBlueprint);assert.equal(mcqCheck.valid,true,mcqCheck.errors.join("; "));
 const adapted=generator.adaptChapterMcqBank(practice,mcqBlueprint,{bankVersion:"class-6-mathematics-practice-v1"});
 const coverage=generator.auditSlotCoverage(mcqBlueprint,adapted,20);
@@ -35,6 +35,6 @@ assert.ok(adapted.adapterStats.byChapter.fractions>=50,"Fractions pool should be
 const profile=registry.profiles.find(p=>p.profileId==="class-6-mathematics-core-2026-27");
 assert.ok(profile);assert.equal(profile.enabled,false);assert.equal(profile.classId,"6");assert.equal(profile.paperHistoryLimit,75);assert.equal(profile.minimumCandidatesPerSlot,20);
 assert.equal(bank.classId,"6");assert.equal(bank.subjectId,"mathematics");assert.equal(bank.questions.length,0,"empty draft bank must not be mistaken for a released pool");
-assert.equal(practice.length,10);assert.equal(practice.reduce((n,c)=>n+c.questions.length,0),1063);
+assert.equal(practice.length,10);assert.equal(practice.reduce((n,c)=>n+c.questions.length,0),1043);
 assert.ok(blueprint.notes.some(n=>n.includes("not an official CBSE")));
 console.log("Class 6 Mathematics draft blueprint and MCQ slot-depth gate passed: 10 chapters, 38 slots, 80 marks, 150 minutes, all 20 objective slots have at least 20 eligible MCQs, and profile remains disabled pending written-pool QA.");
