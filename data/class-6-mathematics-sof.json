@@ -385,21 +385,22 @@
       },
       {
         "id": "c6imoq022",
-        "question": "Square perimeters in a pattern are 4, 8, 12, 16, … units. Which stage has perimeter 52?",
+        "question": "A number pattern starts at 6. Each new term is found by multiplying the previous term by 2 and then adding 1. What is the fifth term?",
         "options": [
-          "12",
-          "14",
-          "15",
-          "13"
+          "55",
+          "63",
+          "95",
+          "111"
         ],
         "answer": 3,
-        "explanation": "Perimeter is 4n; 52÷4=13.",
-        "difficulty": "Medium",
-        "section": "Mathematical Reasoning",
+        "explanation": "6→13→27→55→111. The fifth term is 111.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Repeatedly apply a two-operation rule across several stages."
       },
       {
         "id": "c6imoq023",
@@ -763,21 +764,22 @@
       },
       {
         "id": "c6imoq043",
-        "question": "For input 9, square the number and add its predecessor. What is the output?",
+        "question": "A sequence has term 3 equal to 14 and term 8 equal to 39. The same number is added each time. What is term 12?",
         "options": [
-          "81",
-          "90",
-          "89",
-          "99"
+          "54",
+          "59",
+          "64",
+          "69"
         ],
-        "answer": 2,
-        "explanation": "9²+8=89.",
+        "answer": 1,
+        "explanation": "Five steps add 25, so the common difference is 5. Term 12 is four steps after term 8: 39+20=59.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Derive a common difference from non-consecutive terms, then extrapolate."
       },
       {
         "id": "c6imoq044",
@@ -795,7 +797,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq045",
@@ -813,7 +816,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq046",
@@ -831,7 +835,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq047",
@@ -849,7 +854,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq048",
@@ -867,7 +873,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq049",
@@ -885,7 +892,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq050",
@@ -903,7 +911,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Patterns in Mathematics",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part patterns in mathematics problem, selection of the relevant relationship and connected reasoning across steps."
       }
     ]
   },
@@ -1293,21 +1302,22 @@
       },
       {
         "id": "c6imoq072",
-        "question": "Two supplementary angles differ by 46°. Find the smaller.",
+        "question": "Two angles on a straight line are in the ratio 2:7. The larger angle is then bisected. What is the size of each half?",
         "options": [
-          "67°",
-          "57°",
-          "72°",
-          "113°"
+          "20°",
+          "35°",
+          "70°",
+          "140°"
         ],
-        "answer": 0,
-        "explanation": "(180−46)÷2=67°.",
-        "difficulty": "Medium",
-        "section": "Mathematical Reasoning",
+        "answer": 2,
+        "explanation": "Nine ratio parts equal 180°, so one part is 20°. The larger angle is 140°; each half is 70°.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Combine ratio reasoning, a straight-angle constraint and angle bisection."
       },
       {
         "id": "c6imoq073",
@@ -1671,21 +1681,22 @@
       },
       {
         "id": "c6imoq093",
-        "question": "A smaller angle is 3/8 of a full turn. Find it.",
+        "question": "Three angles around a point are 2x, 3x and 4x. A fourth angle is 45°. Find the largest angle.",
         "options": [
-          "120°",
-          "150°",
-          "225°",
-          "135°"
+          "126°",
+          "135°",
+          "140°",
+          "144°"
         ],
-        "answer": 3,
-        "explanation": "3/8×360=135°.",
+        "answer": 2,
+        "explanation": "2x+3x+4x+45=360, so 9x=315 and x=35. The largest angle is 4x=140°.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Combine the angle sum around a point with an unknown ratio and identify the largest angle."
       },
       {
         "id": "c6imoq094",
@@ -1703,7 +1714,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq095",
@@ -1721,7 +1733,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq096",
@@ -1739,7 +1752,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq097",
@@ -1757,7 +1771,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq098",
@@ -1775,7 +1790,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq099",
@@ -1793,7 +1809,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq100",
@@ -1811,7 +1828,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Lines and Angles",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part lines and angles problem, selection of the relevant relationship and connected reasoning across steps."
       }
     ]
   },
@@ -2201,21 +2219,22 @@
       },
       {
         "id": "c6imoq122",
-        "question": "Multiply 14 by 6, subtract 17, then double. Find the result.",
+        "question": "A number is divisible by 6 and 8, is between 100 and 200, and its digits add to 9. Which number works?",
         "options": [
-          "118",
-          "134",
-          "126",
-          "142"
+          "120",
+          "144",
+          "168",
+          "192"
         ],
         "answer": 1,
-        "explanation": "14×6=84; 84−17=67; double=134.",
-        "difficulty": "Medium",
-        "section": "Mathematical Reasoning",
+        "explanation": "144 is divisible by 6 and 8, lies between 100 and 200, and 1+4+4=9.",
+        "difficulty": "Challenge",
+        "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Combine divisibility tests, a range constraint and a digit-sum condition."
       },
       {
         "id": "c6imoq123",
@@ -2579,21 +2598,22 @@
       },
       {
         "id": "c6imoq143",
-        "question": "A class collects 1,248 bottle caps and packs 24 per bag. How many full bags?",
+        "question": "A shop has 96 pencils and 72 erasers. It makes identical packs with none left over. What is the greatest number of packs, and how many pencils go in each?",
         "options": [
-          "52",
-          "48",
-          "50",
-          "54"
+          "12 packs, 8 pencils",
+          "18 packs, 6 pencils",
+          "24 packs, 4 pencils",
+          "36 packs, 3 pencils"
         ],
-        "answer": 0,
-        "explanation": "1,248÷24=52.",
+        "answer": 2,
+        "explanation": "The greatest common factor of 96 and 72 is 24. Each pack has 96÷24=4 pencils.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Use a greatest-common-factor constraint, then interpret the quotient in context."
       },
       {
         "id": "c6imoq144",
@@ -2611,7 +2631,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq145",
@@ -2629,7 +2650,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq146",
@@ -2647,7 +2669,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq147",
@@ -2665,7 +2688,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq148",
@@ -2683,7 +2707,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq149",
@@ -2701,7 +2726,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq150",
@@ -2719,7 +2745,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Number Play",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part number play problem, selection of the relevant relationship and connected reasoning across steps."
       }
     ]
   },
@@ -3487,21 +3514,22 @@
       },
       {
         "id": "c6imoq193",
-        "question": "The mean of ten values is 15. If every value increases by 3, what is the new mean?",
+        "question": "Five test scores have a mean of 16. Four scores are 12, 15, 17 and 20. What is the fifth score, and what is the new mean if a sixth score of 14 is added?",
         "options": [
-          "15",
-          "18",
-          "30",
-          "45"
+          "16; 15",
+          "16; 15⅔",
+          "18; 16",
+          "20; 17"
         ],
         "answer": 1,
-        "explanation": "Adding 3 to every value adds 3 to the mean.",
+        "explanation": "The original total is 5×16=80. The fifth score is 80−64=16. Add 14: total 94; new mean 94÷6=15⅔.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Recover a missing value from a mean, then recalculate the mean after adding another observation."
       },
       {
         "id": "c6imoq194",
@@ -3519,7 +3547,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq195",
@@ -3537,7 +3566,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq196",
@@ -3555,7 +3585,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq197",
@@ -3573,7 +3604,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq198",
@@ -3591,7 +3623,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq199",
@@ -3609,7 +3642,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq200",
@@ -3627,7 +3661,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Data Handling and Presentation",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part data handling and presentation problem, selection of the relevant relationship and connected reasoning across steps."
       }
     ]
   },
@@ -4395,21 +4430,22 @@
       },
       {
         "id": "c6imoq243",
-        "question": "Between 40 and 60, which number has exactly three positive factors?",
+        "question": "Two bells ring every 18 minutes and 24 minutes. They ring together at 9:00 a.m. How many times will they ring together by 1:00 p.m., including 9:00?",
         "options": [
-          "45",
-          "51",
-          "49",
-          "55"
+          "3",
+          "4",
+          "5",
+          "6"
         ],
-        "answer": 2,
-        "explanation": "49=7², so its factors are 1,7,49.",
+        "answer": 1,
+        "explanation": "LCM(18,24)=72 minutes. They ring together at 9:00, 10:12, 11:24 and 12:36: four times.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Apply LCM to recurring events and count all occurrences in a bounded time interval."
       },
       {
         "id": "c6imoq244",
@@ -4427,7 +4463,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq245",
@@ -4445,7 +4482,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq246",
@@ -4463,7 +4501,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq247",
@@ -4481,7 +4520,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq248",
@@ -4499,7 +4539,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq249",
@@ -4517,7 +4558,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq250",
@@ -4535,7 +4577,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Prime Time",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part prime time problem, selection of the relevant relationship and connected reasoning across steps."
       }
     ]
   },
@@ -5303,21 +5346,22 @@
       },
       {
         "id": "c6imoq293",
-        "question": "A square frame has outer side 20 cm and inner side 16 cm. Find frame area.",
+        "question": "A 20 m by 12 m field has a 1 m wide path built outside all around it. What is the area of the path?",
         "options": [
-          "136 cm²",
-          "160 cm²",
-          "176 cm²",
-          "144 cm²"
+          "60 m²",
+          "64 m²",
+          "68 m²",
+          "72 m²"
         ],
-        "answer": 3,
-        "explanation": "400−256=144.",
+        "answer": 2,
+        "explanation": "The outer rectangle is 22 m by 14 m: 308 m². The field is 240 m², so the path is 68 m².",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Adjust both dimensions for an outside border, then subtract the original area."
       },
       {
         "id": "c6imoq294",
@@ -5335,7 +5379,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq295",
@@ -5353,7 +5398,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq296",
@@ -5371,7 +5417,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq297",
@@ -5389,7 +5436,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq298",
@@ -5407,7 +5455,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq299",
@@ -5425,7 +5474,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq300",
@@ -5443,7 +5493,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Perimeter and Area",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part perimeter and area problem, selection of the relevant relationship and connected reasoning across steps."
       }
     ]
   },
@@ -6211,21 +6262,22 @@
       },
       {
         "id": "c6imoq343",
-        "question": "A fraction simplifies to 3/5 and has denominator 20 before simplifying. What was its numerator?",
+        "question": "A tank is ⅗ full. After 24 litres are added, it becomes ⅘ full. What is its full capacity?",
         "options": [
-          "12",
-          "10",
-          "15",
-          "16"
+          "80 L",
+          "100 L",
+          "120 L",
+          "140 L"
         ],
-        "answer": 0,
-        "explanation": "3/5=12/20.",
+        "answer": 2,
+        "explanation": "The added 24 L represents ⅕ of the capacity. Capacity=24×5=120 L.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Interpret the difference between two fractions of a whole as a known quantity."
       },
       {
         "id": "c6imoq344",
@@ -6243,7 +6295,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq345",
@@ -6261,7 +6314,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq346",
@@ -6279,7 +6333,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq347",
@@ -6297,7 +6352,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq348",
@@ -6315,7 +6371,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq349",
@@ -6333,7 +6390,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq350",
@@ -6351,7 +6409,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Fractions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part fractions problem, selection of the relevant relationship and connected reasoning across steps."
       }
     ]
   },
@@ -7119,21 +7178,22 @@
       },
       {
         "id": "c6imoq393",
-        "question": "Two circles have equal radii 6 cm and centres 10 cm apart. How many intersections?",
+        "question": "Two circles have radii 5 cm and 3 cm. Their centres are 8 cm apart. How many points can they share, and why?",
         "options": [
-          "2",
           "0",
           "1",
-          "Infinite"
+          "2",
+          "Infinitely many"
         ],
-        "answer": 0,
-        "explanation": "Distance is less than sum 12 and greater than difference 0.",
+        "answer": 1,
+        "explanation": "The distance between centres equals 5+3=8 cm, so the circles touch externally at exactly one point.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Compare centre distance with the sum and difference of radii to determine intersection count."
       },
       {
         "id": "c6imoq394",
@@ -7151,7 +7211,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq395",
@@ -7169,7 +7230,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq396",
@@ -7187,7 +7249,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq397",
@@ -7205,7 +7268,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq398",
@@ -7223,7 +7287,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq399",
@@ -7241,7 +7306,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq400",
@@ -7259,7 +7325,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Playing with Constructions",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part playing with constructions problem, selection of the relevant relationship and connected reasoning across steps."
       }
     ]
   },
@@ -8027,21 +8094,22 @@
       },
       {
         "id": "c6imoq443",
-        "question": "A design has 3-fold rotational symmetry and one mirror axis. How many mirror axes are implied?",
+        "question": "A regular polygon has an interior angle of 150°. How many sides does it have, and what is its smallest rotational turn?",
         "options": [
-          "1",
-          "2",
-          "6",
-          "3"
+          "10 sides, 36°",
+          "12 sides, 30°",
+          "8 sides, 45°",
+          "9 sides, 40°"
         ],
-        "answer": 3,
-        "explanation": "Rotating the mirror axis by 120° and 240° gives three axes.",
+        "answer": 1,
+        "explanation": "The exterior angle is 180°−150°=30°. The polygon has 360°÷30°=12 sides; its smallest rotational turn is 30°.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Connect interior and exterior angles to both polygon side count and rotational symmetry."
       },
       {
         "id": "c6imoq444",
@@ -8059,7 +8127,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq445",
@@ -8077,7 +8146,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq446",
@@ -8095,7 +8165,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq447",
@@ -8113,7 +8184,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq448",
@@ -8131,7 +8203,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq449",
@@ -8149,7 +8222,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq450",
@@ -8167,7 +8241,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Symmetry",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part symmetry problem, selection of the relevant relationship and connected reasoning across steps."
       }
     ]
   },
@@ -8935,21 +9010,22 @@
       },
       {
         "id": "c6imoq493",
-        "question": "Evaluate (−2)³+3².",
+        "question": "A lift starts on floor −3, goes up 8 floors, down 11 floors and up 4 floors. How many more floors must it move to reach floor 0, and what is its total travel?",
         "options": [
-          "−17",
-          "1",
-          "17",
-          "−1"
+          "2 more; 25 floors",
+          "2 more; 23 floors",
+          "4 more; 27 floors",
+          "6 more; 29 floors"
         ],
-        "answer": 1,
-        "explanation": "−8+9=1.",
+        "answer": 0,
+        "explanation": "It reaches −3+8−11+4=−2, so it must go up 2 more floors. Total travel=8+11+4+2=25 floors.",
         "difficulty": "Challenge",
         "section": "Achievers Section",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Track signed position and separately sum absolute movement distances."
       },
       {
         "id": "c6imoq494",
@@ -8967,7 +9043,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq495",
@@ -8985,7 +9062,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq496",
@@ -9003,7 +9081,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq497",
@@ -9021,7 +9100,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq498",
@@ -9039,7 +9119,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq499",
@@ -9057,7 +9138,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq500",
@@ -9075,7 +9157,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "The Other Side of Zero",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part the other side of zero problem, selection of the relevant relationship and connected reasoning across steps."
       }
     ]
   },
@@ -9843,21 +9926,22 @@
       },
       {
         "id": "c6imoq543",
-        "question": "Turns repeat left,right,right. 20th turn?",
+        "question": "A cube is painted on all six faces and cut into 4×4×4 equal cubes. How many small cubes have exactly two painted faces?",
         "options": [
-          "Left",
-          "Right",
-          "Straight",
-          "Cannot tell"
+          "16",
+          "24",
+          "32",
+          "48"
         ],
         "answer": 1,
-        "explanation": "20 mod 3=2; second in the pattern is right.",
+        "explanation": "Each of 12 edges contributes 4−2=2 cubes with exactly two painted faces. Total=12×2=24.",
         "difficulty": "Challenge",
         "section": "Logical Reasoning",
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Distinguish edge cubes from corner cubes and apply the count across all 12 edges."
       },
       {
         "id": "c6imoq544",
@@ -9875,7 +9959,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq545",
@@ -9893,7 +9978,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq546",
@@ -9911,7 +9997,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq547",
@@ -9929,7 +10016,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq548",
@@ -9947,7 +10035,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq549",
@@ -9965,7 +10054,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
       },
       {
         "id": "c6imoq550",
@@ -9983,7 +10073,8 @@
         "syllabusClass": 6,
         "syllabusOrigin": "current-class",
         "syllabusTopic": "Verbal and Non-Verbal Reasoning",
-        "syllabusSource": "SOF Class 6 IMO syllabus"
+        "syllabusSource": "SOF Class 6 IMO syllabus",
+        "difficultyRationale": "Challenge-level: requires interpretation of a multi-part verbal and non-verbal reasoning problem, selection of the relevant relationship and connected reasoning across steps."
       }
     ]
   },
