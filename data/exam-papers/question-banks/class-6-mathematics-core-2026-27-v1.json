@@ -7796,12 +7796,12 @@
       ],
       "type": "long-answer",
       "marks": 5,
-      "prompt": "A straight angle is divided into two angles in the ratio 2:1. Find the measure of each angle.",
+      "prompt": "A straight angle is divided into two angles. One angle measures 72°. Find the other angle.",
       "difficulty": "hard",
       "competency": "application",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "The three equal parts are 180° ÷ 3 = 60°; the angles are 120° and 60°."
+        "modelAnswer": "180° − 72° = 108°."
       },
       "markingScheme": [
         {
@@ -14223,15 +14223,15 @@
       ],
       "type": "case-based",
       "marks": 4,
-      "stimulus": "A school collects data on the number of books read by students: 0, 1, 1, 2, 2, 2, 3, 4.",
-      "prompt": "Read the situation and answer both parts.",
+      "stimulus": "A school records the number of books read by eight students: 0, 1, 1, 2, 2, 2, 3 and 4.",
+      "prompt": "Use the list of book counts to answer both parts.",
       "parts": [
         {
           "partId": "a",
-          "prompt": "Find the mode.",
+          "prompt": "How many students read at least two books?",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "2 books."
+            "modelAnswer": "Five students."
           },
           "markingScheme": [
             {
@@ -14246,10 +14246,10 @@
         },
         {
           "partId": "b",
-          "prompt": "How many students read at least 2 books?",
+          "prompt": "How many students read exactly one book?",
           "marks": 2,
           "answerKey": {
-            "modelAnswer": "5 students."
+            "modelAnswer": "Two students."
           },
           "markingScheme": [
             {
@@ -14267,7 +14267,7 @@
       "competency": "analysis-evaluation-creation",
       "approvalStatus": "review",
       "answerKey": {
-        "modelAnswer": "(a) 2 books. (b) 5 students."
+        "modelAnswer": "(a) Five students read at least two books. (b) Two students read exactly one book."
       },
       "markingScheme": [
         {
