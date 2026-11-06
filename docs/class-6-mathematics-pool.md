@@ -44,4 +44,4 @@ A previous option audit reported five apparent collisions because its normaliser
 
 ## Storage policy
 
-No pre-generated paper PDFs, duplicate banks, or unnecessary image assets. Question records are stored once in compact JSON. Paper history stores IDs and fingerprints only and is profile-specific in the browser.
+No pre-generated paper PDFs, duplicate banks, or unnecessary image assets. The current practice MCQ file is about 354 KB and the mixed-format review bank about 431 KB; the blueprint is about 16 KB. The complete Class 6 Maths data footprint is approximately 0.8 MB. Question records are stored once in JSON. Paper history stores IDs and fingerprints only and is profile-specific in the browser.
