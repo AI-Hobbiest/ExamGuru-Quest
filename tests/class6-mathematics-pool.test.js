@@ -44,6 +44,7 @@ assert.ok(integrated.stats.byChapter.fractions>=50);
 const history=[],fingerprints=[];
 const expectedTypes={"mcq":20,"very-short-answer":5,"short-answer":6,"long-answer":4,"case-based":3};
 const countBy=(rows,key)=>rows.reduce((m,q)=>{m[q[key]]=(m[q[key]]||0)+1;return m;},{});
+const sumMarksBy=(rows,key)=>rows.reduce((m,q)=>{m[q[key]]=(m[q[key]]||0)+Number(q.marks||0);return m;},{});
 for(let attempt=1;attempt<=75;attempt++){
  const previous=history.slice(-5);
  const paper=g.generateUniquePaper(bp,integrated.bank,{
@@ -58,8 +59,8 @@ for(let attempt=1;attempt<=75;attempt++){
  assert.equal(new Set(paper.questions.map(q=>q.questionId)).size,38,"no question may repeat within a paper");
  assert.deepEqual(countBy(paper.questions,"type"),expectedTypes);
  assert.deepEqual(countBy(paper.questions,"difficulty"),{easy:8,medium:24,hard:6});
- assert.deepEqual(countBy(paper.questions,"unitId"),{"number-sense":29,"geometry-spatial":25,"measurement-data":26});
- assert.deepEqual(countBy(paper.questions,"competency"),{"knowledge-understanding":38,"application":28,"analysis-evaluation-creation":14});
+ assert.deepEqual(sumMarksBy(paper.questions,"unitId"),{"number-sense":29,"geometry-spatial":25,"measurement-data":26});
+ assert.deepEqual(sumMarksBy(paper.questions,"competency"),{"knowledge-understanding":38,"application":28,"analysis-evaluation-creation":14});
  const ids=paper.questions.flatMap(q=>g.questionContentIds(q));
  assert.equal(paper.repeatProtection.requestedWindow,5);
  assert.equal(paper.repeatProtection.appliedWindow,Math.min(5,history.length));
