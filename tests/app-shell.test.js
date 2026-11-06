@@ -18,6 +18,8 @@ const parentPage=fs.readFileSync("parent.html","utf8");
 const examPractice=fs.readFileSync("exam-practice.html","utf8");
 const examPracticeScript=fs.readFileSync("js/exam-paper-self-study.js","utf8");
 const parentDashboard=fs.readFileSync("js/parent-dashboard.js","utf8");
+const parentAssessments=fs.readFileSync("js/parent-assessments.js","utf8");
+const quizEngineSource=fs.readFileSync("js/quiz-engine.js","utf8");
 const pageAccess=fs.readFileSync("js/page-access.js","utf8");
 assert.ok(parentPage.includes("./js/parent-dashboard.js")&&parentPage.includes("./js/student-auth.js"),"parent workspace loads family identity and dashboard code");
 assert.ok(parentDashboard.includes("getLinkedChildren")&&parentDashboard.includes("studentId"),"parent dashboard reads only linked children using student-specific IDs");
@@ -25,7 +27,12 @@ assert.ok(parentPage.includes('id="childDetail"')&&parentDashboard.includes("sho
 assert.ok(parentDashboard.includes("Subject performance")&&parentDashboard.includes("Chapter progress")&&parentDashboard.includes("Learning insights"),"parent Level 2 includes subject, chapter and insight sections");
 assert.ok(!parentDashboard.includes("MCQs ·")&&!parentDashboard.includes("chapter sets"),
   "parent dashboard does not disclose question-bank size or chapter inventory");
-assert.ok(parentDashboard.includes("openReport")&&parentDashboard.includes("window.print")&&parentDashboard.includes("chartSvg"),"parent Level 3 generates printable reports with charts");
+assert.ok(parentDashboard.includes("openReport")&&parentDashboard.includes("C10ReportPrint.open")&&parentDashboard.includes("chartSvg"),"parent Level 3 uses the shared report print flow with charts");
+assert.ok(parentPage.includes("./js/report-print.js")&&profile.includes("./js/report-print.js"),"Parent and student profile pages load the shared report print helper");
+assert.ok(!parentDashboard.includes("noopener,noreferrer"),"parent report popup does not use a noopener feature that would null the window reference");
+assert.ok(parentAssessments.includes("Question bank:")&&parentAssessments.includes("typeCounts")&&parentAssessments.includes("Diagram-based"),"Parent/Teacher paper setup exposes the complete question-bank count by question type");
+assert.ok(practice.includes("<span>MCQs in practice bank</span>")&&quizEngineSource.includes('setText("questionTotal",total)'),"students retain only the MCQ practice-bank count");
+assert.ok(!examPracticeScript.includes("approved pool records")&&!examPracticeScript.includes("typeSummary")&&!examPracticeScript.includes("bank.questions.length.toLocaleString()"),"student exam setup does not reveal full question-bank inventory");
 assert.ok(parentPage.includes("Progress reports"),"parent workspace explains report availability");
 assert.ok(pageAccess.includes('session.role==="parent"')&&pageAccess.includes('"./parent.html"'),"student-only routes redirect parent accounts to family workspace");
 
@@ -43,7 +50,7 @@ assert.ok(nav.includes('href:"./parent.html#exam-paper-practice"')&&parentPage.i
   "parents have a dedicated Exam Paper Practice guide destination");
 assert.ok(examPracticeScript.includes("renderClass6OlympiadHub")&&examPracticeScript.includes("mathematics-sof")&&examPracticeScript.includes("english-sof"),
   "Class 6 Exam Paper Practice opens the three available SOF full-mock subject routes");
-const parentAssessments=fs.readFileSync("js/parent-assessments.js","utf8");
+
 assert.ok(parentAssessments.includes("Class 6 · Exam Paper Practice")&&parentAssessments.includes("CBSE full-paper profiles are not published yet"),
   "Class 6 parent child detail explains available SOF mock routes without hiding the section");
 assert.ok(nav.includes("await window.C10StudentAuth.restoreSession()"),"navigation resolves the authoritative account class before rendering class-gated links");
@@ -98,7 +105,8 @@ for(const [name,html,theme] of [["homepage",homepage,"c10-theme-quest"],["practi
 assert.ok(css.includes(".c10-sidebar a.c10-nav-link:visited"),"sidebar link color overrides the global anchor theme");
 assert.ok(css.includes(".c10-sidebar a.c10-nav-link.active:visited"),"active link remains readable on the dark sidebar");
 assert.ok(css.includes(".c10-sidebar.open"));
-assert.ok(css.includes(".c10-mobilebar{display:none}"),"mobile bar is hidden on desktop");
+assert.ok(css.includes("Persistent ExamGuru top bar")&&css.includes("position:fixed;inset:0 0 auto var(--c10-sidebar-width)")&&css.includes(".c10-mobilebar{left:0"),"branded top bar remains fixed across desktop, tablet and mobile");
+assert.ok(nav.includes("c10-topbar-brand")&&nav.includes("c10HeaderSignout")&&nav.includes("mobileBar.appendChild(logout)"),"persistent top bar includes branding and role-aware sign-out");
 assert.ok(css.includes(".c10-nav-scrim.visible"));
 assert.ok(css.includes("prefers-reduced-motion"));
 for(const [name,html] of [["homepage",homepage],["practice",practice],["profile",profile],["learning",learning],["study",study]]) {
