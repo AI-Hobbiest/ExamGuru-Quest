@@ -117,9 +117,19 @@
     if(notice){notice.hidden=config.subjects.length>0;notice.textContent="No subjects have been configured for "+config.label+" yet. Please ask your administrator to configure the class subjects.";}
 
   }
+  function applyHelpRoleVisibility(auth){
+    if(getLocation().file!=="help.html"||!auth)return;
+    if(auth.role==="student"){
+      const parentLink=document.querySelector('.help-nav a[href="#parent-guide"]');
+      const parentSection=document.getElementById("parent-guide");
+      if(parentLink)parentLink.hidden=true;
+      if(parentSection)parentSection.hidden=true;
+    }
+  }
   async function createNav(){
     if(document.getElementById("c10Sidebar"))return;
     const current=getLocation(),auth=await authState();
+    applyHelpRoleVisibility(auth);
     const subjectConfig=auth.role==="student"?await configuredSubjects(auth.classId):null;
     const sidebar=node("aside","c10-sidebar");sidebar.id="c10Sidebar";sidebar.setAttribute("aria-label","Main navigation");
     const sidebarTop=node("div","c10-sidebar-top");
