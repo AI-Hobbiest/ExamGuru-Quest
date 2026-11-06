@@ -36,6 +36,7 @@ The percentages above are label counts, not quality-approved difficulty levels. 
 - 64 repeated cross-chapter prompt-template clusters cover 968 entries after chapter-name substitutions are normalised. This includes recurring generic analysis and grammar question structures.
 - Chapter banks have 100 unique literal stems each, but uniqueness by exact text hides repeated templates.
 - Several explanations are generic and do not explain why the selected answer is correct in the specific text.
+- The first 30-item review slice in each chapter is especially formulaic: for example, central-theme, summary, “deepest discussion”, textual-evidence and conclusion prompts are repeated as the same question structures with the chapter name and a few answers substituted. The broader normalised scan detected 64 cross-chapter template clusters covering 968 entries.
 - The next rebuild must create passage-specific comprehension, evidence-based inference, vocabulary-in-context, language application and unseen-passage items. Replacing only the chapter name is not a new question.
 
 ### Mathematics
@@ -46,18 +47,21 @@ The percentages above are label counts, not quality-approved difficulty levels. 
 - 106 questions contain suspect distractor tokens such as “Maybe”, “No” or “None of these”; each must be checked in context. These are not automatically all invalid, but they are a strong quality signal.
 - Several questions labelled Challenge are simple recall or one-step calculations. For example, a direct 2 × 2 calculation is not Challenge.
 - The repeated palindrome question in Number Play had an incorrect keyed answer (142) while its explanation referred to 121. Nine repeated entries have now been replaced with distinct prompts, corrected answer keys and explanations; two use multi-step digit reasoning and two use challenge-level structure/divisibility reasoning.
+- A sample of current Challenge items includes direct facts such as identifying a tool, naming a unit, classifying a shape or calculating a one-step result. These need to be downgraded or rewritten; a Challenge label is not evidence of Challenge-level thinking.
 - Rebuild must use varied numerical contexts, diagrams described in text where helpful, multi-step reasoning and plausible misconception-based distractors.
 
 ### Science
 
 - Seven malformed questions in the first chapter used literal placeholder options (“h” and “T”). These seven have been corrected on this remediation branch with observation-based prompts, meaningful choices and explanations.
 - The baseline contains 348 Challenge labels but no Hard labels. The label count alone does not establish that the questions are challenging.
+- Sampled Challenge items include “Which unit is suitable for measuring the length of a leaf?” and matching a camel to a desert. Those are basic recall/application questions, not Challenge items.
 - Review must distinguish direct factual recall from interpreting results, planning fair tests, identifying variables, evaluating evidence and applying concepts to unfamiliar situations.
 
 ### Social Science
 
 - The bank has 420 Challenge labels and no Hard labels, but the sample audit found Challenge-labelled questions that ask for straightforward fact recognition.
 - Several options recycle complete statements from neighbouring questions. Plausible distractors should test misconceptions and should fit the question's category.
+- Sampled Challenge items use generic stems such as “Why is Gram Sabha meeting important when studying…” and place four unrelated true statements in the options. This tests recognition of a prepared statement, not deeper civic reasoning.
 - Review must include source/map/data interpretation, chronology, cause and consequence, civic reasoning, comparison and evidence-based judgement.
 
 ## Release gates
