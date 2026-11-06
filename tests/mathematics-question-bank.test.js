@@ -63,7 +63,7 @@ for(const profile of profiles){
 
  assert.equal(bank.questions.length,baseBank.questions.length+integrated.stats.appended,"the merged runtime pool must retain every curated record and every appended practice MCQ");
  assert.equal(new Set(bank.questions.map(q=>q.questionId)).size,bank.questions.length,"the merged runtime pool must preserve unique IDs across the curated and imported pools");
- assert.equal(countBy(bank.questions,"type").mcq,1304);
+ assert.equal(countBy(bank.questions,"type").mcq,1300);
  assert.deepEqual(countBy(bank.questions,"type"),{
   mcq:1300,
   "assertion-reason":40,
