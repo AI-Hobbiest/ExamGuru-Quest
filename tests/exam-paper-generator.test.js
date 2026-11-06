@@ -290,12 +290,12 @@ assert.equal(socialCoverage.valid,true,socialCoverage.errors.join("; "));
 assert.equal(socialCoverage.coverage.length,38);
 assert.ok(socialCoverage.coverage.every(slot=>slot.eligibleCount>=20),"every Social Science slot must retain 20 eligible candidates in the complete test fixture");
 const socialPaperHistory=[],socialFingerprintHistory=[],socialPaperFingerprints=new Set();
-for(let attempt=1;attempt<=50;attempt++){
+for(let attempt=1;attempt<=75;attempt++){
  const generated=m.generateUniquePaper(socialTestBlueprint,socialTestBank,{
   seed:"social-science-five-paper-repeat-"+attempt,
   paperId:"social-science-step3-"+attempt,
   recentQuestionIdSets:socialPaperHistory.slice(-5),
-  recentPaperFingerprints:socialFingerprintHistory.slice(-50)
+  recentPaperFingerprints:socialFingerprintHistory.slice(-75)
  });
  assert.equal(m.validatePaper(generated,socialTestBlueprint).valid,true);
  assert.equal(generated.questions.length,38);
@@ -308,7 +308,7 @@ for(let attempt=1;attempt<=50;attempt++){
  assert.equal(generated.repeatProtection.appliedWindow,Math.min(5,socialPaperHistory.length),"the generator must protect every available prior paper up to the five-paper limit");
  assert.equal(generated.repeatProtection.fallback,false,"the test fixture must not need to relax its available repeat-protection window");
  assert.ok(generated.paperFingerprint,"each complete Social Science paper must have a fingerprint");
- assert.equal(socialPaperFingerprints.has(generated.paperFingerprint),false,"all 50 complete Social Science papers must have unique fingerprints");
+ assert.equal(socialPaperFingerprints.has(generated.paperFingerprint),false,"all 75 complete Social Science papers must have unique fingerprints");
  socialPaperFingerprints.add(generated.paperFingerprint);
  socialPaperHistory.push(currentIds);
  socialFingerprintHistory.push(generated.paperFingerprint);
@@ -316,8 +316,8 @@ for(let attempt=1;attempt<=50;attempt++){
 for(const requiredType of ["mcq","assertion-reason","very-short-answer","short-answer","long-answer","case-based","diagram-based"]){
  assert.ok(socialTestBank.questions.some(q=>q.type===requiredType&&q.approvalStatus==="approved"),"the test fixture must exercise "+requiredType);
 }
-assert.equal(socialPaperHistory.length,50,"generate the full 50-paper Social Science release set");
-assert.equal(socialPaperFingerprints.size,50,"all 50 complete Social Science papers must be unique");
+assert.equal(socialPaperHistory.length,75,"generate the full 75-paper Social Science release set");
+assert.equal(socialPaperFingerprints.size,75,"all 75 complete Social Science papers must be unique");
 assert.equal(socialBlueprint.status,"ready","the tested production Social Science blueprint must remain ready");
 assert.ok(socialBank.questions.every(q=>q.approvalStatus==="approved"),"the production bank must remain fully approved after repeat-protection tests");
 
