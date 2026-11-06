@@ -109,7 +109,8 @@ assert.ok(assessmentManager.includes('examProfileId: String(args.examProfileId |
 const selfStudy=fs.readFileSync("js/exam-paper-self-study.js","utf8");
 const practicePage=fs.readFileSync("exam-practice.html","utf8");
 assert.ok(selfStudy.includes('eg_exam_paper_history_v1'),"self-study paper history must persist locally");
-assert.ok(selfStudy.includes('HISTORY_LIMIT=50'),"self-study must retain the last 50 generated paper combinations");
+assert.ok(selfStudy.includes('function historyLimit()'),"self-study must support profile-specific paper-history retention");
+assert.ok(selfStudy.includes('profile&&profile.paperHistoryLimit'),"self-study must honour a profile's 75-paper history target");
 assert.ok(selfStudy.includes('generateUniquePaper'),"self-study must request a new full-paper combination");
 assert.ok(selfStudy.includes('recentPaperFingerprints'),"self-study must reject exact repeats from saved paper history");
 assert.ok(selfStudy.includes('profile-registry.json'),"self-study must resolve profile-specific blueprint and question-bank paths from the registry");
