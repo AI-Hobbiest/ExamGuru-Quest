@@ -437,12 +437,14 @@ function adaptChapterMcqBank(practiceChapters,bp,options={}){
    if(invalid){excluded.invalidQuestion++;return;}
    usedIds.add(id);usedStems.add(stem);
    const tagStatus=String(q.competencyTagStatus||"");
-   // The shared bank tagger marks many numeric Math questions as application.
-   // That broad inferred tag must not override the exam-paper content classifier
-   // or it starves knowledge/understanding slots. Preserve only author-confirmed
-   // tags (and legacy explicit tags without a status); re-evaluate inferred tags.
-   const trustedCompetency=tagStatus==="author-confirmed"||(!tagStatus&&!!(q.competency||q.competencyLevel||q.competencyTag));
-   const competencyInput=trustedCompetency?q:{...q,competency:undefined,competencyLevel:undefined,competencyTag:undefined};
+   // Mathematics has a subject-specific exam blueprint whose competency split
+   // must be inferred from the stem rather than the broad shared bank tagger.
+   // Keep the shared bank's existing tags for every other subject: their
+   // blueprints and candidate distributions were validated against those tags.
+   const hasSourceCompetency=!!normalizeCompetency(q.competency||q.competencyLevel||q.competencyTag);
+   const reclassifyForMath=String(bp.subjectId||"").toLowerCase()==="mathematics"&&tagStatus!=="author-confirmed"&&tagStatus!=="";
+   const useSourceCompetency=hasSourceCompetency&&!reclassifyForMath;
+   const competencyInput=useSourceCompetency?q:{...q,competency:undefined,competencyLevel:undefined,competencyTag:undefined};
    const tagged=inferMcqCompetency(competencyInput);
    if(tagStatus==="needs-review"){excluded.needsReview++;return;}
    if(!COMPETENCIES.includes(tagged.competency)){excluded.unsupportedCompetency++;return;}
@@ -450,7 +452,7 @@ function adaptChapterMcqBank(practiceChapters,bp,options={}){
    const question={
     questionId:id,sectionId:chapterSection,chapterId,topicTags:["mcq","practice-bank",chapterId],
     type:"mcq",marks:1,prompt,difficulty:normalisePracticeDifficulty(q.difficulty),
-    competency:tagged.competency,competencyTagMethod:trustedCompetency?"author-confirmed-source":"exam-paper-content-inference",competencyTagStatus:trustedCompetency?(tagStatus||"author-confirmed"):"inferred",competencyTagReason:trustedCompetency?String(q.competencyTagReason||"Competency supplied by the question author."):"Re-inferred from the question stem and explanation for examination-slot alignment; generic auto-inferred bank tags are not treated as authoritative.",approvalStatus:"approved",
+    competency:tagged.competency,competencyTagMethod:useSourceCompetency?(tagStatus==="author-confirmed"?"author-confirmed-source":"shared-bank-tag"):"exam-paper-content-inference",competencyTagStatus:useSourceCompetency?(tagStatus||"inferred"):"inferred",competencyTagReason:useSourceCompetency?String(q.competencyTagReason||"Competency supplied by the shared MCQ bank tagger."):"Re-inferred from the question stem and explanation for Mathematics examination-slot alignment; generic auto-inferred bank tags are not treated as authoritative.",approvalStatus:"approved",
     options:opts,correctOptionId:correct.optionId,
     answerKey:{modelAnswer:letter+". "+correct.text,explanation:String(q.explanation||q.rationale).trim()},
     markingScheme:[{criterion:"Correct option selected: "+letter,marks:1}],
