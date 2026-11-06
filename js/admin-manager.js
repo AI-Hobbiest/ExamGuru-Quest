@@ -267,7 +267,7 @@
     $("qId").value=String(q.id);$("qPrompt").value=q.question||"";
     for(let i=0;i<4;i++)$("qOption"+i).value=q.options[i]||"";
     $("qAnswer").value=String(q.answer);$("qExplanation").value=q.explanation||"";
-    $("qDifficulty").value=["Easy","Medium","Hard","Unspecified"].includes(q.difficulty)?q.difficulty:"Medium";
+    $("qDifficulty").value=["Easy","Medium","Hard","Challenge","Unspecified"].includes(q.difficulty)?q.difficulty:"Medium";
     const tagged=window.C10CompetencyTagger.tagQuestion(q,{subjectId:bankSubject,section:bank[selectedChapter].section,chapterTitle:bank[selectedChapter].title});
     $("qCompetency").value=tagged.competency;
     $("qCompetencyStatus").textContent=tagged.competencyTagStatus==="author-confirmed"?"Author-confirmed competency.":tagged.competencyTagStatus==="inferred"?"Automatically inferred from question wording. Please verify before changing or exporting.":"Provisional label — educator review required before using this tag for advanced paper selection.";
