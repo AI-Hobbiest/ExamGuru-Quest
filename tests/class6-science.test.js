@@ -208,6 +208,13 @@ assert.equal(allIsoQuestions.filter(question=>question.syllabusOrigin==="previou
 for(const chapter of sofScienceBank.slice(0,12)){
   const difficultyCounts=["Easy","Medium","Hard","Challenge"].map(level=>[level,chapter.questions.filter(q=>q.difficulty===level).length]);
   assert.deepEqual(difficultyCounts,[["Easy",5],["Medium",17],["Hard",20],["Challenge",8]],"each original Class 6 ISO group retains its difficulty balance");
+const isoDifficultyTotals=allIsoQuestions.reduce((counts,q)=>(counts[q.difficulty]=(counts[q.difficulty]||0)+1,counts),{});
+assert.deepEqual(isoDifficultyTotals,{Easy:105,Medium:237,Hard:244,Challenge:99},"ISO difficulty totals preserve the 50% combined Hard + Challenge target across all 685 questions");
+const isoHighTierCount=allIsoQuestions.filter(q=>q.difficulty==="Hard"||q.difficulty==="Challenge").length;
+assert.equal(isoHighTierCount,343,"exactly 343 ISO questions are Hard or Challenge");
+assert.ok(isoHighTierCount/allIsoQuestions.length>=0.5,"Hard + Challenge must be at least 50% of the full ISO bank");
+assert.ok(allIsoQuestions.filter(q=>q.difficulty==="Challenge").every(q=>typeof q.difficultyRationale==="string"&&q.difficultyRationale.length>=30),"every Challenge item must record why it is above Hard");
+
 }
 assert.ok(sofScienceBank[12].questions.every(q=>q.section==="Science"&&q.syllabusClass===5&&q.syllabusOrigin==="previous-class"&&q.syllabusSource==="SOF Class 5 ISO syllabus"),"Class 5 Science supplement is origin-tagged");
 assert.ok(sofScienceBank[13].questions.every(q=>q.section==="Logical Reasoning"&&q.syllabusClass===5&&q.syllabusOrigin==="previous-class"),"Class 5 reasoning supplement is origin-tagged");
