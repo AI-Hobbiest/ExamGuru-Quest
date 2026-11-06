@@ -87,7 +87,7 @@ function generate(){
   const nextHistory=[...previousHistory,{paperId:candidate.paperId,generatedAt:candidate.generatedAt,questionIds,mcqQuestionIds,fingerprint}].slice(-paperHistoryLimit());
   if(!savePaperHistory(nextHistory))throw Error("This browser could not save the repeat-history. Enable site storage and try again; no paper was started.");
   candidate.deliveryMode=$("paperDeliveryMode")?.value||"printable";paper=candidate;saveDraft(paper);showPaper(paper);
-  setStatus(candidate.repeatProtection?.fallback?`Paper generated. Exact combinations from the previous "+paperHistoryLimit()+" papers are excluded. The five-paper all-format repeat window was relaxed to ${candidate.repeatProtection.appliedWindow} prior papers because a slot had insufficient unused candidates.`:"Paper generated. Exact combinations from the previous "+paperHistoryLimit()+" papers are excluded; questions of every format from the previous five papers are held out wherever the eligible pool supports it.","success");
+  setStatus(candidate.repeatProtection?.fallback?`Paper generated. Exact combinations from the previous ${paperHistoryLimit()} papers are excluded. The five-paper all-format repeat window was relaxed to ${candidate.repeatProtection.appliedWindow} prior papers because a slot had insufficient unused candidates.`:`Paper generated. Exact combinations from the previous ${paperHistoryLimit()} papers are excluded; questions of every format from the previous five papers are held out wherever the eligible pool supports it.`,"success");
  }catch(e){setStatus(e.message||"Generation failed.","error");}
 }
 async function loadProfile(profileToLoad){
