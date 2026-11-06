@@ -267,6 +267,7 @@ for(let attempt=1;attempt<=6;attempt++){
  seenPapers.push(currentIds);
 }
 const selfStudySource=fs.readFileSync("js/exam-paper-self-study.js","utf8");
+const studioSource=fs.readFileSync("js/exam-paper-studio.js","utf8");
 assert.ok(selfStudySource.includes('eg_exam_paper_history_v1'),"self-study should persist recent paper history locally");
 assert.ok(selfStudySource.includes("profile-registry.json"),"self-study must load exam profiles from the registry");
 assert.ok(selfStudySource.includes("mergeQuestionBanks(baseBank,practiceChapters,blueprint,{minimumCandidatesPerSlot:minimum})"),"self-study must merge an optional chapter-wise bank before profile-specific slot-coverage validation");
