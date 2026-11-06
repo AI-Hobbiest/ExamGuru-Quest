@@ -265,9 +265,8 @@
         });
         paper.deliveryMode=delivery.value;
         const dueAt=due.value?new Date(due.value).toISOString():null;
-        const ids=paper.questions.map(q=>String(q.questionId));
         const fingerprint=paper.paperFingerprint||g.paperFingerprint(paper);
-        const nextHistory=[...rows,{paperId:paper.paperId,generatedAt:paper.generatedAt,questionIds:ids,
+        const nextHistory=[...rows,{paperId:paper.paperId,generatedAt:paper.generatedAt,
           questionIds:paper.questions.map(question=>question.questionId),mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId)),fingerprint}].slice(-historyLimit());
         writeHistory(rows,nextHistory[nextHistory.length-1]);
         try{
