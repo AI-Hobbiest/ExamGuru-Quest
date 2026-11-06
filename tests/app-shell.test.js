@@ -41,10 +41,10 @@ assert.ok(nav.includes('href:"./dashboard.html"'));
 assert.ok(nav.includes('href:"./dashboard.html#rewards"'));
 assert.ok(nav.includes('auth:"guest"'),"guest navigation is separated from student navigation");
 assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
-assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"'),"admin navigation exposes Exam Paper Studio directly");
-assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"'),"parent navigation is isolated to the family role");
+assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"')&&nav.includes('group:"Assessment tools"'),"admin navigation exposes Exam Paper Studio in a grouped submenu");
+assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"')&&nav.includes('group:"Family"'),"parent navigation is isolated to the Family submenu");
 assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"Class 10 students can open full-paper self-study practice");
-assert.ok(nav.includes('classIds:["6","10"]')&&nav.includes('if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return;'),
+assert.ok(nav.includes('classIds:["6","10"]')&&nav.includes('if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return false;'),
   "Class 6 and Class 10 students see the class-safe Exam Paper Practice entry");
 assert.ok(nav.includes('href:"./parent.html#exam-paper-practice"')&&parentPage.includes('id="exam-paper-practice"'),
   "parents have a dedicated Exam Paper Practice guide destination");
