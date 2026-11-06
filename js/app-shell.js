@@ -21,10 +21,11 @@
     {label:"Social Science",group:"Subjects",icon:"🌍",href:"./practice.html?subject=social-science",page:"practice.html",subject:"social-science",auth:"student"},
     {label:"Hindi",group:"Subjects",icon:"📝",href:"./practice.html?subject=hindi",page:"practice.html",subject:"hindi",auth:"student"},
 
-    {label:"Study Library",group:"Study Pack",icon:"📖",href:"./study.html",page:"study.html",auth:"student"},
+    {label:"Study Library",group:"Study Pack",icon:"📖",href:"./study.html",page:"study.html",auth:"student"},    {label:"Learning Hub",group:"My Learning",icon:"🧠",href:"./learning.html",page:"learning.html",auth:"student"},
+    
+    {label:"Assigned tests",group:"Assessments",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",auth:"student"},
     {label:"Assigned tests",group:"Assessments",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",auth:"student"},
     {label:"Exam Paper Practice",icon:"📝",href:"./exam-practice.html",page:"exam-practice.html",classIds:["6","10"],auth:"student"},
-    {label:"Learning Hub",group:"My Learning",icon:"🧠",href:"./learning.html",page:"learning.html",auth:"student"},
     {label:"My profile",group:"My Account",icon:"👤",href:"./profile.html#profile",page:"profile.html",hash:"#profile",auth:"student"},
     {label:"Test history",group:"My Account",icon:"📈",href:"./profile.html#history",page:"profile.html",hash:"#history",auth:"student"},
     {label:"Levels & rewards",group:"My Account",icon:"🏆",href:"./dashboard.html#rewards",page:"dashboard.html",hash:"#rewards",auth:"student"},
