@@ -436,14 +436,23 @@ function adaptChapterMcqBank(practiceChapters,bp,options={}){
    if(usedStems.has(stem)){invalidReasons.duplicateSourceStem++;invalid=true;}
    if(invalid){excluded.invalidQuestion++;return;}
    usedIds.add(id);usedStems.add(stem);
-   const tagged=inferMcqCompetency(q);
-   if(String(q.competencyTagStatus||"")==="needs-review"){excluded.needsReview++;return;}
+   const tagStatus=String(q.competencyTagStatus||"");
+   // Mathematics has a subject-specific exam blueprint whose competency split
+   // must be inferred from the stem rather than the broad shared bank tagger.
+   // Keep the shared bank's existing tags for every other subject: their
+   // blueprints and candidate distributions were validated against those tags.
+   const hasSourceCompetency=!!normalizeCompetency(q.competency||q.competencyLevel||q.competencyTag);
+   const reclassifyForMath=String(bp.subjectId||"").toLowerCase()==="mathematics"&&tagStatus!=="author-confirmed"&&tagStatus!=="";
+   const useSourceCompetency=hasSourceCompetency&&!reclassifyForMath;
+   const competencyInput=useSourceCompetency?q:{...q,competency:undefined,competencyLevel:undefined,competencyTag:undefined};
+   const tagged=inferMcqCompetency(competencyInput);
+   if(tagStatus==="needs-review"){excluded.needsReview++;return;}
    if(!COMPETENCIES.includes(tagged.competency)){excluded.unsupportedCompetency++;return;}
    const correct=opts[answer],letter=String(correct.optionId);
    const question={
     questionId:id,sectionId:chapterSection,chapterId,topicTags:["mcq","practice-bank",chapterId],
     type:"mcq",marks:1,prompt,difficulty:normalisePracticeDifficulty(q.difficulty),
-    competency:tagged.competency,competencyTagMethod:tagged.method,competencyTagStatus:q.competencyTagStatus||"inferred",competencyTagReason:q.competencyTagReason||"Imported from the selected subject's chapter-wise MCQ bank with a provisional competency tag.",approvalStatus:"approved",
+    competency:tagged.competency,competencyTagMethod:useSourceCompetency?(tagStatus==="author-confirmed"?"author-confirmed-source":"shared-bank-tag"):"exam-paper-content-inference",competencyTagStatus:useSourceCompetency?(tagStatus||"inferred"):"inferred",competencyTagReason:useSourceCompetency?String(q.competencyTagReason||"Competency supplied by the shared MCQ bank tagger."):"Re-inferred from the question stem and explanation for Mathematics examination-slot alignment; generic auto-inferred bank tags are not treated as authoritative.",approvalStatus:"approved",
     options:opts,correctOptionId:correct.optionId,
     answerKey:{modelAnswer:letter+". "+correct.text,explanation:String(q.explanation||q.rationale).trim()},
     markingScheme:[{criterion:"Correct option selected: "+letter,marks:1}],
