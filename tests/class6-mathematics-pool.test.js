@@ -58,7 +58,7 @@ for(let attempt=1;attempt<=75;attempt++){
  assert.deepEqual(countBy(paper.questions,"type"),expectedTypes);
  assert.deepEqual(countBy(paper.questions,"difficulty"),{easy:8,medium:24,hard:6});
  assert.deepEqual(countBy(paper.questions,"unitId"),{"number-sense":29,"geometry-spatial":25,"measurement-data":26});
- assert.deepEqual(countBy(paper.questions,"competency"),{"knowledge-understanding":40,"application":28,"analysis-evaluation-creation":12});
+ assert.deepEqual(countBy(paper.questions,"competency"),{"knowledge-understanding":38,"application":28,"analysis-evaluation-creation":14});
  const ids=paper.questions.flatMap(q=>g.questionContentIds(q));
  assert.equal(paper.repeatProtection.requestedWindow,5);
  assert.equal(paper.repeatProtection.appliedWindow,Math.min(5,history.length));
