@@ -39,7 +39,7 @@ A previous option audit reported five apparent collisions because its normaliser
 2. Expand thin chapters with original, varied questions, especially Fractions, Playing with Constructions, and Symmetry.
 3. Author and review written-response, numerical, diagram-based, and case-based candidates; retain answer keys and mark-wise marking schemes.
 4. Require at least 20 approved candidates per blueprint slot.
-5. <badge label="Passed in simulation" color="success" /> Generate 75 distinct complete papers; verify all blueprint totals, chapter/unit/competency/difficulty targets, no internal duplicates, and five-paper cross-paper repeat protection. Re-run after independent content approval.
+5. **Passed in simulation.** Generate 75 distinct complete papers; verify all blueprint totals, chapter/unit/competency/difficulty targets, no internal duplicates, and five-paper cross-paper repeat protection. Re-run after independent content approval.
 6. Keep the profile disabled until every gate passes. Store one question pool and lightweight local paper fingerprints only; generate papers on demand.
 
 ## Storage policy
