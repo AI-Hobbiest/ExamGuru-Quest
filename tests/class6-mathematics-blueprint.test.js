@@ -18,7 +18,7 @@ assert.equal(blueprint.slotPlan.length,38);assert.deepEqual(blueprint.slotPlan.m
 assert.deepEqual([...new Set(blueprint.slotPlan.flatMap(s=>s.chapterIds||[]))].sort(),chapterIds.slice().sort());
 const sums=field=>blueprint.slotPlan.reduce((acc,s)=>{acc[s[field]]=(acc[s[field]]||0)+s.marks;return acc;},{});
 assert.deepEqual(sums("unitId"),{"number-sense":29,"geometry-spatial":25,"measurement-data":26});
-assert.deepEqual(sums("competency"),{"knowledge-understanding":40,"application":28,"analysis-evaluation-creation":12});
+assert.deepEqual(sums("competency"),{"knowledge-understanding":38,"application":28,"analysis-evaluation-creation":14});
 assert.deepEqual(blueprint.unitMarkTargets,sums("unitId"));assert.deepEqual(blueprint.competencyMarksTargets,sums("competency"));
 assert.deepEqual(blueprint.difficultyTargets,{easy:8,medium:24,hard:6});
 const validation=generator.validateBlueprint(blueprint);assert.equal(validation.valid,true,validation.errors.join("; "));assert.equal(validation.readyForGeneration,false);
