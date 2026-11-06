@@ -16,7 +16,7 @@ const adminHtml=fs.readFileSync("admin.html","utf8");
 const examPracticeHtml=fs.readFileSync("exam-practice.html","utf8");
 assert.ok(adminHtml.includes("./js/exam-paper-generator.js?v=20261106-math-competency-alignment-v3"),"Admin must load the current Mathematics integration generator");
 assert.ok(examPracticeHtml.includes("./js/exam-paper-generator.js?v=20261106-math-competency-alignment-v3"),"Student exam must load the current Mathematics integration generator");
-assert.ok(adminHtml.includes("./js/exam-paper-studio.js?v=20261105-studio-load-diagnostics"),"Admin must load the current Mathematics integration Studio");
+assert.ok(adminHtml.includes("./js/exam-paper-studio.js?v=20261106-math-integrated-pool-v2"),"Admin must load the current Mathematics integration Studio");
 assert.ok(studioSource.includes("sourceBank=publishedBank;"),"the published bank must always be authoritative over local saved copies");
 assert.ok(studioSource.includes("Linked practice bank did not load as a chapter array"),"the Studio must report a missing or malformed linked practice bank");
 assert.ok(studioSource.includes("expected at least 1,000 linked MCQs"),"Mathematics must fail closed unless linked practice MCQs are integrated");
