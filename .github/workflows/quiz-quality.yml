@@ -40,6 +40,8 @@ jobs:
         run: node tests/class3-sof-blueprint.test.js && node tests/class3-imo-bank.test.js
       - name: Validate Class 6 CBSE and SOF bank inventories, provenance and routing
         run: node tests/class6-science.test.js
+      - name: Enforce Class 6 core question-bank quality and difficulty targets
+        run: node tests/class6-core-question-quality.test.js
       - name: Validate session timing, weighted marks and summary model
         run: node tests/session-model.test.js
       - name: Validate Stage A LMS integrations
