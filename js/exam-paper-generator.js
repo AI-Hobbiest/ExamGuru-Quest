@@ -296,7 +296,7 @@ function generateUniquePaper(bp,bank,options={}){
   if(!selectionShortage)break;
  }
  if(lastShortage)throw Error("Could not generate a complete paper even after relaxing the five-paper question-repeat window: "+String(lastShortage.message||lastShortage));
- throw Error("Could not generate a paper combination distinct from the last 50 attempts. Review or expand the approved question pool.");
+ throw Error("Could not generate a paper combination distinct from the last "+recent.size+" retained attempts. Review or expand the approved question pool.");
 }
 function hashCode(s){let h=0;for(let i=0;i<s.length;i++)h=((h<<5)-h+s.charCodeAt(i))|0;return h;}
 function validatePaper(p,bp){
