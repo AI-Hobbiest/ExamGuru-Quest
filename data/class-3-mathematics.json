@@ -2857,28 +2857,28 @@
       },
       {
         "id": "c3m03q019",
-        "question": "What number comes immediately after 157?",
+        "question": "I am between 150 and 170. My ones digit is 8, and I am 2 more than 156. Which number am I?",
         "options": [
+          "168",
           "157",
-          "160",
           "158",
           "159"
         ],
         "answer": 2,
-        "explanation": "One more than 157 is 158.",
+        "explanation": "156 + 2 = 158; it is between 150 and 170 and ends in 8.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m03q020",
-        "question": "What number comes immediately after 161?",
+        "question": "A number is 3 less than 165 and 2 more than 160. Which number is it?",
         "options": [
-          "163",
           "161",
+          "163",
           "164",
           "162"
         ],
         "answer": 3,
-        "explanation": "One more than 161 is 162.",
+        "explanation": "165 − 3 = 162 and 160 + 2 = 162.",
         "difficulty": "Challenge"
       },
       {
@@ -5473,28 +5473,28 @@
       },
       {
         "id": "c3m05q019",
-        "question": "How many corners does the triangle sign have if its outline is a triangle?",
+        "question": "A pattern uses one triangle, one square and one pentagon. How many corners do the three shapes have altogether?",
         "options": [
-          "2",
-          "5",
-          "3",
-          "1"
+          "11",
+          "13",
+          "12",
+          "14"
         ],
         "answer": 2,
-        "explanation": "A triangle has 3 corners.",
+        "explanation": "3 + 4 + 5 = 12 corners.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m05q020",
-        "question": "How many corners does the square paper have if its outline is a square?",
+        "question": "A square and two triangles are drawn separately. How many corners are there altogether?",
         "options": [
-          "1",
-          "2",
-          "5",
-          "4"
+          "8",
+          "9",
+          "11",
+          "10"
         ],
         "answer": 3,
-        "explanation": "A square has 4 corners.",
+        "explanation": "4 + 3 + 3 = 10 corners.",
         "difficulty": "Challenge"
       },
       {
@@ -6651,28 +6651,28 @@
       },
       {
         "id": "c3m06q009",
-        "question": "A number has 6 hundreds, 0 tens and 8 ones. What is 10 more than this number?",
+        "question": "A number has 6 hundreds, 0 tens and 8 ones. Add 2 tens, then take away 5 ones. What is the result?",
         "options": [
-          "618",
-          "609",
-          "708",
-          "718"
+          "623",
+          "613",
+          "628",
+          "633"
         ],
         "answer": 0,
-        "explanation": "608 + 10 = 618.",
+        "explanation": "608 + 20 = 628; 628 − 5 = 623.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m06q010",
-        "question": "A number is 100 more than 276. What is the number?",
+        "question": "A number is 100 more than 276. Then 26 is taken away. What number remains?",
         "options": [
-          "376",
-          "366",
-          "386",
-          "396"
+          "350",
+          "340",
+          "360",
+          "376"
         ],
         "answer": 0,
-        "explanation": "276 + 100 = 376.",
+        "explanation": "276 + 100 = 376; 376 − 26 = 350.",
         "difficulty": "Challenge"
       },
       {
@@ -6781,28 +6781,28 @@
       },
       {
         "id": "c3m06q019",
-        "question": "In 335, what is the value of the digit in the hundreds place?",
+        "question": "In 335, add the value of the hundreds digit to the value of the tens digit. What is the total?",
         "options": [
-          "299",
-          "302",
-          "300",
-          "301"
+          "335",
+          "350",
+          "330",
+          "305"
         ],
         "answer": 2,
-        "explanation": "The hundreds digit is 3, worth 300.",
+        "explanation": "300 + 30 = 330.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m06q020",
-        "question": "In 348, what is the value of the digit in the hundreds place?",
+        "question": "In 348, subtract the value of the tens digit from the value of the hundreds digit. What is the result?",
         "options": [
-          "301",
-          "299",
-          "302",
-          "300"
+          "280",
+          "240",
+          "300",
+          "260"
         ],
         "answer": 3,
-        "explanation": "The hundreds digit is 3, worth 300.",
+        "explanation": "300 − 40 = 260.",
         "difficulty": "Challenge"
       },
       {
@@ -6989,80 +6989,80 @@
       },
       {
         "id": "c3m06q035",
-        "question": "What is 10 more than 284?",
+        "question": "A number is 10 more than 284. Then 5 is added. What is the final number?",
         "options": [
-          "293",
-          "296",
           "294",
-          "295"
+          "289",
+          "299",
+          "304"
         ],
         "answer": 2,
-        "explanation": "284 + 10 = 294.",
+        "explanation": "284 + 10 = 294; 294 + 5 = 299.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m06q036",
-        "question": "What is 10 more than 295?",
+        "question": "A number is 10 more than 295. Then 7 is taken away. What is the result?",
         "options": [
-          "306",
-          "304",
+          "305",
+          "297",
           "307",
-          "305"
+          "298"
         ],
         "answer": 3,
-        "explanation": "295 + 10 = 305.",
+        "explanation": "295 + 10 = 305; 305 − 7 = 298.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m06q037",
-        "question": "What is 10 more than 306?",
+        "question": "A number is 10 more than 306. Then 8 is added. What is the result?",
         "options": [
+          "324",
           "316",
-          "317",
-          "315",
-          "318"
+          "322",
+          "326"
         ],
         "answer": 0,
-        "explanation": "306 + 10 = 316.",
+        "explanation": "306 + 10 = 316; 316 + 8 = 324.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m06q038",
-        "question": "What is 10 more than 317?",
+        "question": "A number is 10 more than 317. Then 9 is taken away. What is the result?",
         "options": [
-          "329",
           "327",
-          "328",
-          "326"
+          "318",
+          "319",
+          "329"
         ],
         "answer": 1,
-        "explanation": "317 + 10 = 327.",
+        "explanation": "317 + 10 = 327; 327 − 9 = 318.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m06q039",
-        "question": "What is 10 more than 328?",
+        "question": "A number is 10 more than 328. Then 12 is added. What is the result?",
         "options": [
-          "337",
-          "340",
           "338",
-          "339"
+          "348",
+          "350",
+          "360"
         ],
         "answer": 2,
-        "explanation": "328 + 10 = 338.",
+        "explanation": "328 + 10 = 338; 338 + 12 = 350.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m06q040",
-        "question": "What is 10 more than 339?",
+        "question": "A number is 10 more than 339. Then 14 is taken away. What is the result?",
         "options": [
-          "350",
-          "348",
-          "351",
-          "349"
+          "349",
+          "345",
+          "325",
+          "335"
         ],
         "answer": 3,
-        "explanation": "339 + 10 = 349.",
+        "explanation": "339 + 10 = 349; 349 − 14 = 335.",
         "difficulty": "Challenge"
       },
       {
@@ -9410,15 +9410,15 @@
       },
       {
         "id": "c3m08q020",
-        "question": "What is one-quarter of 48?",
+        "question": "A ribbon is 48 cm long. One-quarter is used for a bow, then 6 cm more is cut away. How much remains?",
         "options": [
-          "13",
-          "11",
-          "14",
-          "12"
+          "24 cm",
+          "36 cm",
+          "18 cm",
+          "30 cm"
         ],
         "answer": 3,
-        "explanation": "48 ÷ 4 = 12, one of four equal parts.",
+        "explanation": "One-quarter of 48 cm is 12 cm; 48 − 12 − 6 = 30 cm.",
         "difficulty": "Challenge"
       },
       {
@@ -10705,15 +10705,15 @@
       },
       {
         "id": "c3m09q019",
-        "question": "In 425, what is the value of the digit in the tens place?",
+        "question": "In 425, what is the value of the tens digit plus the value of the ones digit?",
         "options": [
-          "19",
-          "22",
-          "20",
-          "21"
+          "24",
+          "26",
+          "25",
+          "35"
         ],
         "answer": 2,
-        "explanation": "The tens digit is 2; its value is 20.",
+        "explanation": "The tens digit is worth 20 and the ones digit is worth 5; 20 + 5 = 25.",
         "difficulty": "Challenge"
       },
       {
