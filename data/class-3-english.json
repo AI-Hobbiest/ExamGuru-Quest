@@ -113,12 +113,12 @@
         "id": "c3e01q009",
         "question": "Mina sees a red flower beside a yellow flower. Which detail would make her description more precise?",
         "options": [
-          "The flowers are nice.",
+          "The red flower has five petals and the yellow one has six.",
           "There are flowers.",
           "The flowers are outside.",
-          "The red flower has five petals and the yellow one has six."
+          "The flowers are nice."
         ],
-        "answer": 3,
+        "answer": 0,
         "explanation": "Counting and naming visible features gives a more precise description.",
         "difficulty": "Challenge"
       },
@@ -126,12 +126,12 @@
         "id": "c3e01q010",
         "question": "Mina has red, blue and yellow paint. Which mixture can make green?",
         "options": [
-          "Mix red and blue paint.",
+          "Mix blue and yellow paint.",
           "Mix red and yellow paint.",
           "Mix all the paint with water.",
-          "Mix blue and yellow paint."
+          "Mix red and blue paint."
         ],
-        "answer": 3,
+        "answer": 0,
         "explanation": "Blue and yellow are the two colours that combine to make green.",
         "difficulty": "Challenge"
       }
@@ -251,12 +251,12 @@
         "id": "c3e02q009",
         "question": "Moti is hiding during a thunderstorm. Badal sits nearby and speaks softly. Why is this better than pulling Moti outside?",
         "options": [
-          "It makes the thunder louder.",
+          "It lets Moti feel safer while the storm passes.",
           "It teaches Moti to dislike Badal.",
           "It stops the rain immediately.",
-          "It lets Moti feel safer while the storm passes."
+          "It makes the thunder louder."
         ],
-        "answer": 3,
+        "answer": 0,
         "explanation": "Staying calm nearby can comfort a frightened animal without forcing it.",
         "difficulty": "Challenge"
       },
@@ -264,12 +264,12 @@
         "id": "c3e02q010",
         "question": "Badal notices that Moti has no clean water. What is the most helpful action?",
         "options": [
-          "Wait until Moti finds some.",
+          "Give Moti clean drinking water.",
           "Give Moti sweets instead.",
           "Move the water bowl out of reach.",
-          "Give Moti clean drinking water."
+          "Wait until Moti finds some."
         ],
-        "answer": 3,
+        "answer": 0,
         "explanation": "Dogs need clean drinking water; providing it directly meets Moti’s need.",
         "difficulty": "Challenge"
       }
@@ -389,12 +389,12 @@
         "id": "c3e03q009",
         "question": "Tara and Dev disagree about a game. Which action is most likely to help them solve the problem fairly?",
         "options": [
-          "One friend decides everything.",
+          "They take turns explaining ideas and agree on a rule.",
           "They stop speaking forever.",
           "They change the rules after every turn.",
-          "They take turns explaining ideas and agree on a rule."
+          "One friend decides everything."
         ],
-        "answer": 3,
+        "answer": 0,
         "explanation": "Listening and agreeing on a rule gives both friends a fair chance.",
         "difficulty": "Challenge"
       },
@@ -402,12 +402,12 @@
         "id": "c3e03q010",
         "question": "Tara has forgotten her lunch. Dev has enough food to share. What would be the kindest choice?",
         "options": [
-          "Laugh at Tara.",
+          "Offer to share some food with Tara.",
           "Tell everyone about her mistake.",
           "Hide the lunch box.",
-          "Offer to share some food with Tara."
+          "Laugh at Tara."
         ],
-        "answer": 3,
+        "answer": 0,
         "explanation": "Offering food helps a friend without embarrassing her.",
         "difficulty": "Challenge"
       }
@@ -528,11 +528,11 @@
         "question": "A bee visits a flower, then visits another flower. What might happen because of this movement?",
         "options": [
           "The flower turns into a bee.",
-          "The flower stops needing sunlight.",
+          "Pollen may be carried from one flower to another.",
           "The bee waters the roots.",
-          "Pollen may be carried from one flower to another."
+          "The flower stops needing sunlight."
         ],
-        "answer": 3,
+        "answer": 1,
         "explanation": "Bees can carry pollen between flowers, helping pollination.",
         "difficulty": "Challenge"
       },
@@ -541,11 +541,11 @@
         "question": "A plant is drooping. Its soil is dry, but its leaves have no spots. What should the gardener try first?",
         "options": [
           "Pull the plant out of the ground.",
-          "Cut off every leaf.",
+          "Water the soil and observe the plant.",
           "Keep it in a dark cupboard.",
-          "Water the soil and observe the plant."
+          "Cut off every leaf."
         ],
-        "answer": 3,
+        "answer": 1,
         "explanation": "Dry soil suggests the plant may need water; observing it afterwards checks the result.",
         "difficulty": "Challenge"
       }
@@ -666,11 +666,11 @@
         "question": "A toy robot gives three instructions, but Rohan follows only the last one. Why might the result be wrong?",
         "options": [
           "Robots cannot speak.",
-          "The last instruction is always wrong.",
+          "The instructions may need to be followed in order.",
           " toys cannot be sorted.",
-          "The instructions may need to be followed in order."
+          "The last instruction is always wrong."
         ],
-        "answer": 3,
+        "answer": 1,
         "explanation": "Changing the order can change the result when steps depend on one another.",
         "difficulty": "Challenge"
       },
@@ -679,11 +679,11 @@
         "question": "Rohan says the toy train is flying through the clouds. Which clue tells you this is pretend play?",
         "options": [
           "The train has wheels.",
-          "The train is on a shelf.",
+          "Rohan is imagining the train travelling through the clouds.",
           "The toy is made of plastic.",
-          "Rohan is imagining the train travelling through the clouds."
+          "The train is on a shelf."
         ],
-        "answer": 3,
+        "answer": 1,
         "explanation": "The train is a toy and its cloud journey is described as Rohan’s imagination.",
         "difficulty": "Challenge"
       }
@@ -804,11 +804,11 @@
         "question": "A paper boat is folded unevenly and leans to one side. What should the maker check first?",
         "options": [
           "The colour of the table.",
-          "Whether the room is quiet.",
+          "Whether both sides are folded evenly.",
           "The size of the water bowl only.",
-          "Whether both sides are folded evenly."
+          "Whether the room is quiet."
         ],
-        "answer": 3,
+        "answer": 1,
         "explanation": "Uneven folds can make the boat unbalanced, so checking the folds is a sensible first step.",
         "difficulty": "Challenge"
       },
@@ -817,11 +817,11 @@
         "question": "A paper boat sinks after a large stone is put inside. What change would best help it float again?",
         "options": [
           "Add two more stones.",
-          "Make the paper wet.",
+          "Remove the stone and test the boat again.",
           "Push the boat under the water.",
-          "Remove the stone and test the boat again."
+          "Make the paper wet."
         ],
-        "answer": 3,
+        "answer": 1,
         "explanation": "Removing the heavy stone reduces the load; the boat can then be tested again.",
         "difficulty": "Challenge"
       }
@@ -943,10 +943,10 @@
         "options": [
           "1",
           "3",
-          "4",
-          "2"
+          "2",
+          "4"
         ],
-        "answer": 3,
+        "answer": 2,
         "explanation": "Each child first gets 4. Giving away 3 leaves the child with 1.",
         "difficulty": "Challenge"
       },
@@ -956,10 +956,10 @@
         "options": [
           "2",
           "3",
-          "6",
-          "4"
+          "4",
+          "6"
         ],
-        "answer": 3,
+        "answer": 2,
         "explanation": "24 divided by 4 is 6; after eating 2, 4 remain.",
         "difficulty": "Challenge"
       }
@@ -1081,10 +1081,10 @@
         "options": [
           "It will make rain stop everywhere.",
           "It will turn stones into soil overnight.",
-          "It will remove the need for water.",
-          "It may provide shade for people and shelter for birds."
+          "It may provide shade for people and shelter for birds.",
+          "It will remove the need for water."
         ],
-        "answer": 3,
+        "answer": 2,
         "explanation": "A growing tree can provide shade and habitat.",
         "difficulty": "Challenge"
       },
@@ -1094,10 +1094,10 @@
         "options": [
           "Break small branches for fun.",
           "Pour rubbish around its roots.",
-          "Pull off its leaves.",
-          "Avoid damaging it and keep the area clean."
+          "Avoid damaging it and keep the area clean.",
+          "Pull off its leaves."
         ],
-        "answer": 3,
+        "answer": 2,
         "explanation": "Protecting the tree and keeping its surroundings clean help it and the living things that depend on it.",
         "difficulty": "Challenge"
       }
@@ -1219,10 +1219,10 @@
         "options": [
           "Throw rubbish on the path.",
           "Leave the mud untouched forever.",
-          "Block the path with stones.",
-          "Make a safe, non-slippery path and keep drains clear."
+          "Make a safe, non-slippery path and keep drains clear.",
+          "Block the path with stones."
         ],
-        "answer": 3,
+        "answer": 2,
         "explanation": "A stable path and clear drainage reduce slipping and help people reach the well.",
         "difficulty": "Challenge"
       },
@@ -1232,10 +1232,10 @@
         "options": [
           "Clean it once and never check again.",
           "Throw waste behind the well.",
-          "Wait for the wind to carry rubbish away.",
-          "Ask neighbours to take turns cleaning and use a rubbish bin."
+          "Ask neighbours to take turns cleaning and use a rubbish bin.",
+          "Wait for the wind to carry rubbish away."
         ],
-        "answer": 3,
+        "answer": 2,
         "explanation": "A shared routine and proper waste disposal help keep the area clean over time.",
         "difficulty": "Challenge"
       }
