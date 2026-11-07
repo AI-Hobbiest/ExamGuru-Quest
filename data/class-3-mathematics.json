@@ -124,15 +124,15 @@
       },
       {
         "id": "c3m01q010",
-        "question": "A class has 18 votes for a story and 16 for a poem. How many votes were cast altogether?",
+        "question": "A pictograph uses one kite for 4 children. The red row has 5 kites and the blue row has 3. How many more children chose red than blue?",
         "options": [
-          "2",
-          "34",
-          "32",
-          "35"
+          "8",
+          "12",
+          "20",
+          "32"
         ],
-        "answer": 1,
-        "explanation": "18 + 16 = 34 votes.",
+        "answer": 0,
+        "explanation": "The difference is (5 − 3) × 4 = 8 children.",
         "difficulty": "Challenge"
       },
       {
@@ -254,15 +254,15 @@
       },
       {
         "id": "c3m01q020",
-        "question": "Team A counted 16, Team B counted 22, and Team C counted 19 items. Which team counted the most?",
+        "question": "Four teams collect leaves: 17, 23, 19 and 23. What is the difference between the greatest and least totals?",
         "options": [
-          "Team A",
-          "Team C",
-          "All teams counted the same",
-          "Team B"
+          "6",
+          "4",
+          "5",
+          "7"
         ],
-        "answer": 3,
-        "explanation": "22 is greater than both 16 and 19.",
+        "answer": 0,
+        "explanation": "The greatest is 23 and the least is 17; 23 − 17 = 6.",
         "difficulty": "Challenge"
       },
       {
@@ -1421,13 +1421,13 @@
         "id": "c3m02q009",
         "question": "A toy box contains 3 cubes and 1 cylinder. How many flat faces do they have altogether?",
         "options": [
-          "22",
-          "18",
           "20",
+          "18",
+          "22",
           "24"
         ],
         "answer": 0,
-        "explanation": "3 cubes have 18 square faces and a cylinder has 2 circular faces: 18 + 2 = 20.",
+        "explanation": "Three cubes have 18 square faces and a cylinder has 2 circular faces: 18 + 2 = 20.",
         "difficulty": "Challenge"
       },
       {
@@ -1562,15 +1562,15 @@
       },
       {
         "id": "c3m02q020",
-        "question": "Which solid has a curved surface all around?",
+        "question": "A shape has 6 square faces. Which description could be part of a net that folds into a cube?",
         "options": [
-          "Cube",
-          "Cuboid",
-          "Cylinder",
-          "Sphere"
+          "Six squares joined edge-to-edge in a cross arrangement",
+          "Four squares only",
+          "Six circles",
+          "Two triangles and four circles"
         ],
-        "answer": 3,
-        "explanation": "A sphere has a curved surface all around.",
+        "answer": 0,
+        "explanation": "A cube net has six squares arranged so they fold into the six faces of the cube.",
         "difficulty": "Challenge"
       },
       {
@@ -2727,15 +2727,15 @@
       },
       {
         "id": "c3m03q009",
-        "question": "A hall has 125 seats on each of two sides. How many seats are there?",
+        "question": "A library has 198 books. It receives 27 more and then lends 36. How many books remain?",
         "options": [
-          "250",
-          "225",
-          "150",
-          "260"
+          "189",
+          "179",
+          "199",
+          "209"
         ],
         "answer": 0,
-        "explanation": "125 + 125 = 250.",
+        "explanation": "198 + 27 = 225; 225 − 36 = 189.",
         "difficulty": "Challenge"
       },
       {
@@ -4035,28 +4035,28 @@
       },
       {
         "id": "c3m04q009",
-        "question": "A shop has 90 postcards and sells 37. How many remain?",
+        "question": "Nani has ₹250. She buys fruit for ₹78 and a notebook for ₹46. How much money is left?",
         "options": [
-          "53",
-          "63",
-          "57",
-          "127"
+          "₹126",
+          "₹116",
+          "₹136",
+          "₹146"
         ],
         "answer": 0,
-        "explanation": "90 − 37 = 53.",
+        "explanation": "78 + 46 = 124; 250 − 124 = ₹126.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m04q010",
-        "question": "Nani Maa walks 25 minutes to the park and 25 minutes back. Total walking time?",
+        "question": "A train journey starts at 9:35 and takes 45 minutes. At what time does it end?",
         "options": [
-          "25 minutes",
-          "50 minutes",
-          "45 minutes",
-          "60 minutes"
+          "10:20",
+          "10:10",
+          "10:15",
+          "10:25"
         ],
-        "answer": 1,
-        "explanation": "25 + 25 = 50 minutes.",
+        "answer": 0,
+        "explanation": "25 minutes takes us to 10:00, then 20 more minutes gives 10:20.",
         "difficulty": "Challenge"
       },
       {
@@ -4178,15 +4178,15 @@
       },
       {
         "id": "c3m04q020",
-        "question": "There are 97 guavas. The family eats 36. How many remain?",
+        "question": "Nani makes 84 sweets. She packs 28 in one box and 19 in another. How many are not packed?",
         "options": [
-          "62",
-          "60",
-          "63",
-          "61"
+          "37",
+          "27",
+          "47",
+          "57"
         ],
-        "answer": 3,
-        "explanation": "97 − 36 = 61.",
+        "answer": 0,
+        "explanation": "28 + 19 = 47; 84 − 47 = 37.",
         "difficulty": "Challenge"
       },
       {
@@ -5343,28 +5343,28 @@
       },
       {
         "id": "c3m05q009",
-        "question": "A warning sign has an outline shaped like a triangle. How many straight sides does that outline have?",
+        "question": "A rangoli is made with 4 identical triangles and 2 squares. How many straight sides are there altogether before any sides are joined?",
         "options": [
-          "3",
-          "1",
-          "2",
-          "5"
+          "20",
+          "16",
+          "18",
+          "22"
         ],
         "answer": 0,
-        "explanation": "A triangle has 3 straight sides.",
+        "explanation": "Four triangles have 12 sides and two squares have 8: 12 + 8 = 20.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m05q010",
-        "question": "A window has an outline shaped like a rectangle. How many straight sides does that outline have?",
+        "question": "A rectangle is made using 6 equal unit squares in a 2-by-3 arrangement. How many outside unit edges does its boundary have?",
         "options": [
-          "5",
-          "4",
-          "1",
-          "2"
+          "10",
+          "8",
+          "12",
+          "14"
         ],
-        "answer": 1,
-        "explanation": "A rectangle has 4 straight sides.",
+        "answer": 0,
+        "explanation": "The rectangle is 2 units by 3 units, so its boundary is 2 + 3 + 2 + 3 = 10 unit edges.",
         "difficulty": "Challenge"
       },
       {
@@ -6651,15 +6651,15 @@
       },
       {
         "id": "c3m06q009",
-        "question": "A number has 4 hundreds, 3 tens and 8 ones. If the tens and ones digits swap places, how much greater is the new number?",
+        "question": "A number has 6 hundreds, 0 tens and 8 ones. What is 10 more than this number?",
         "options": [
-          "45",
-          "18",
-          "27",
-          "36"
+          "618",
+          "609",
+          "708",
+          "718"
         ],
         "answer": 0,
-        "explanation": "438 becomes 483. The difference is 483 − 438 = 45.",
+        "explanation": "608 + 10 = 618.",
         "difficulty": "Challenge"
       },
       {
@@ -6885,15 +6885,15 @@
       },
       {
         "id": "c3m06q027",
-        "question": "A place-value chart shows 317. What is the value of its tens digit?",
+        "question": "A number is 10 less than 630 and 100 more than another number. What is the other number?",
         "options": [
-          "9",
-          "12",
-          "10",
-          "11"
+          "520",
+          "420",
+          "510",
+          "620"
         ],
-        "answer": 2,
-        "explanation": "The tens digit is 1, worth 10.",
+        "answer": 0,
+        "explanation": "630 − 10 = 620; 620 − 100 = 520.",
         "difficulty": "Hard"
       },
       {
@@ -7959,28 +7959,28 @@
       },
       {
         "id": "c3m07q009",
-        "question": "There are 2 teams with 8 players each. How many players?",
+        "question": "A gift shop puts 6 rakhis in each packet. It makes 8 packets and keeps 5 rakhis aside. How many rakhis were made?",
         "options": [
-          "16",
-          "10",
-          "8",
-          "18"
+          "53",
+          "43",
+          "48",
+          "58"
         ],
         "answer": 0,
-        "explanation": "2 × 8 = 16.",
+        "explanation": "8 × 6 = 48; 48 + 5 = 53.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m07q010",
-        "question": "A tray has 5 rows of 5 sweets. How many sweets?",
+        "question": "There are 4 tables with 6 children at each table. Three children leave. How many children remain?",
         "options": [
-          "10",
-          "25",
-          "20",
-          "30"
+          "21",
+          "18",
+          "24",
+          "27"
         ],
-        "answer": 1,
-        "explanation": "5 × 5 = 25.",
+        "answer": 0,
+        "explanation": "4 × 6 = 24; 24 − 3 = 21.",
         "difficulty": "Challenge"
       },
       {
@@ -8102,15 +8102,15 @@
       },
       {
         "id": "c3m07q020",
-        "question": "There are 3 plates with 2 laddoos on each plate. How many laddoos are there?",
+        "question": "A baker places 5 laddoos on each plate. How many plates are needed for 35 laddoos?",
         "options": [
           "7",
           "5",
-          "8",
-          "6"
+          "6",
+          "8"
         ],
-        "answer": 3,
-        "explanation": "3 × 2 = 6 laddoos.",
+        "answer": 0,
+        "explanation": "35 ÷ 5 = 7 plates.",
         "difficulty": "Challenge"
       },
       {
@@ -9267,28 +9267,28 @@
       },
       {
         "id": "c3m08q009",
-        "question": "What is one-half of 24?",
+        "question": "A pizza is cut into 8 equal slices. Ria eats 2 and Sam eats 3. What fraction of the pizza is left?",
         "options": [
-          "12",
-          "13",
-          "11",
-          "14"
+          "3/8",
+          "1/8",
+          "5/8",
+          "6/8"
         ],
         "answer": 0,
-        "explanation": "Half means divide by 2: 24 ÷ 2 = 12.",
+        "explanation": "Five of eight slices are eaten, so 3 of 8 slices remain.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m08q010",
-        "question": "What is one-half of 26?",
+        "question": "A ribbon is 24 cm long. Meena uses one-quarter for a craft and half of the ribbon for a bow. How many centimetres remain?",
         "options": [
-          "15",
-          "13",
-          "14",
-          "12"
+          "6 cm",
+          "3 cm",
+          "9 cm",
+          "12 cm"
         ],
-        "answer": 1,
-        "explanation": "Half means divide by 2: 26 ÷ 2 = 13.",
+        "answer": 0,
+        "explanation": "One-quarter of 24 is 6 and half is 12; 24 − 6 − 12 = 6 cm.",
         "difficulty": "Challenge"
       },
       {
@@ -9397,15 +9397,15 @@
       },
       {
         "id": "c3m08q019",
-        "question": "What is one-quarter of 44?",
+        "question": "Three children share 18 mangoes equally. Then each child gives away 2 mangoes. How many does each child keep?",
         "options": [
-          "10",
-          "13",
-          "11",
-          "12"
+          "4",
+          "2",
+          "3",
+          "6"
         ],
-        "answer": 2,
-        "explanation": "44 ÷ 4 = 11, one of four equal parts.",
+        "answer": 0,
+        "explanation": "18 ÷ 3 = 6; 6 − 2 = 4.",
         "difficulty": "Challenge"
       },
       {
@@ -10575,28 +10575,28 @@
       },
       {
         "id": "c3m09q009",
-        "question": "In 808, what is the value of the digit 0?",
+        "question": "A number has 6 hundreds, 0 tens and 8 ones. What is 10 more than this number?",
         "options": [
-          "0",
-          "8",
-          "80",
-          "800"
+          "618",
+          "609",
+          "708",
+          "718"
         ],
         "answer": 0,
-        "explanation": "The tens digit is zero.",
+        "explanation": "608 + 10 = 618.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m09q010",
-        "question": "A number has 2 hundreds, 9 tens and 4 ones. What is it?",
+        "question": "Arrange 405, 450 and 504 from greatest to least. Which number is in the middle?",
         "options": [
-          "249",
-          "294",
-          "924",
-          "204"
+          "450",
+          "405",
+          "504",
+          "540"
         ],
-        "answer": 1,
-        "explanation": "200 + 90 + 4 = 294.",
+        "answer": 0,
+        "explanation": "504 is greatest, 450 is next and 405 is least.",
         "difficulty": "Challenge"
       },
       {
@@ -10718,15 +10718,15 @@
       },
       {
         "id": "c3m09q020",
-        "question": "In 438, what is the value of the digit in the tens place?",
+        "question": "I am a three-digit number. My hundreds digit is 5. My tens digit is 1 more than my ones digit. My digits add to 12. What number am I?",
         "options": [
-          "31",
-          "29",
-          "32",
-          "30"
+          "543",
+          "552",
+          "534",
+          "525"
         ],
-        "answer": 3,
-        "explanation": "The tens digit is 3; its value is 30.",
+        "answer": 0,
+        "explanation": "5 + 4 + 3 = 12, and the tens digit 4 is one more than the ones digit 3.",
         "difficulty": "Challenge"
       },
       {
@@ -11883,15 +11883,15 @@
       },
       {
         "id": "c3m10q009",
-        "question": "A ribbon is 10 metres long and another is 1 metre long. What is their total length?",
+        "question": "A 3 m ribbon is cut into 50 cm pieces. How many complete pieces can be made?",
         "options": [
-          "11",
-          "12",
-          "10",
-          "13"
+          "6",
+          "5",
+          "7",
+          "8"
         ],
         "answer": 0,
-        "explanation": "10 m + 1 m = 11 m.",
+        "explanation": "3 m = 300 cm; 300 ÷ 50 = 6 pieces.",
         "difficulty": "Challenge"
       },
       {
@@ -12013,15 +12013,15 @@
       },
       {
         "id": "c3m10q019",
-        "question": "How many half-metre pieces make 10 metres?",
+        "question": "A rope is 5 m long. A 175 cm piece is cut off. How much rope remains?",
         "options": [
-          "19",
-          "22",
-          "20",
-          "21"
+          "325 cm",
+          "225 cm",
+          "275 cm",
+          "375 cm"
         ],
-        "answer": 2,
-        "explanation": "There are two half-metres in each metre: 10 × 2 = 20.",
+        "answer": 0,
+        "explanation": "5 m = 500 cm; 500 − 175 = 325 cm.",
         "difficulty": "Challenge"
       },
       {
@@ -12117,15 +12117,15 @@
       },
       {
         "id": "c3m10q027",
-        "question": "How many quarter-metre pieces make 8 metres?",
+        "question": "A ribbon of 2 m 40 cm is joined to a ribbon of 1 m 75 cm. What is the total length?",
         "options": [
-          "31",
-          "34",
-          "32",
-          "33"
+          "4 m 15 cm",
+          "3 m 15 cm",
+          "4 m 5 cm",
+          "4 m 25 cm"
         ],
-        "answer": 2,
-        "explanation": "Four quarter-metres make one metre: 8 × 4 = 32.",
+        "answer": 0,
+        "explanation": "240 cm + 175 cm = 415 cm = 4 m 15 cm.",
         "difficulty": "Hard"
       },
       {
@@ -13191,15 +13191,15 @@
       },
       {
         "id": "c3m11q009",
-        "question": "A jug holds 9 litres and a bottle holds 1 litre. What is their total capacity?",
+        "question": "A 2 L jug is full. Ria pours out 750 mL. How much water remains?",
         "options": [
-          "10",
-          "11",
-          "9",
-          "12"
+          "1 L 250 mL",
+          "1 L 150 mL",
+          "1 L 350 mL",
+          "1 L 750 mL"
         ],
         "answer": 0,
-        "explanation": "9 L + 1 L = 10 L.",
+        "explanation": "2 L = 2000 mL; 2000 − 750 = 1250 mL = 1 L 250 mL.",
         "difficulty": "Challenge"
       },
       {
@@ -13321,15 +13321,15 @@
       },
       {
         "id": "c3m11q019",
-        "question": "How many half-litre bottles hold 9 litres altogether?",
+        "question": "A bottle holds 500 mL. How many such full bottles are needed to fill a 3 L container?",
         "options": [
-          "17",
-          "20",
-          "18",
-          "19"
+          "6",
+          "3",
+          "5",
+          "8"
         ],
-        "answer": 2,
-        "explanation": "Two half-litres make one litre; 9 litres need 18 half-litre bottles.",
+        "answer": 0,
+        "explanation": "3 L = 3000 mL; 3000 ÷ 500 = 6 bottles.",
         "difficulty": "Challenge"
       },
       {
@@ -14499,15 +14499,15 @@
       },
       {
         "id": "c3m12q009",
-        "question": "A bag costs ₹235 and a lunch box ₹149. What is the total cost?",
+        "question": "A toy costs ₹275. A customer pays ₹500. They also buy a pencil for ₹18. How much change should they get?",
         "options": [
-          "₹384",
-          "₹374",
-          "₹394",
-          "₹386"
+          "₹207",
+          "₹197",
+          "₹217",
+          "₹225"
         ],
         "answer": 0,
-        "explanation": "235 + 149 = 384.",
+        "explanation": "Total cost is 275 + 18 = 293; change is 500 − 293 = ₹207.",
         "difficulty": "Challenge"
       },
       {
@@ -14629,28 +14629,28 @@
       },
       {
         "id": "c3m12q019",
-        "question": "A store has 337 notebooks and sells 76. How many remain?",
+        "question": "A pencil costs ₹8. How much do 6 pencils cost, and how much change is left from ₹100?",
         "options": [
-          "260",
-          "263",
-          "261",
-          "262"
+          "₹48 cost, ₹52 change",
+          "₹48 cost, ₹42 change",
+          "₹56 cost, ₹44 change",
+          "₹64 cost, ₹36 change"
         ],
-        "answer": 2,
-        "explanation": "337 − 76 = 261.",
+        "answer": 0,
+        "explanation": "6 × 8 = ₹48; 100 − 48 = ₹52.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m12q020",
-        "question": "A store has 359 notebooks and sells 81. How many remain?",
+        "question": "A family spends ₹135 on fruit and ₹248 on groceries. They had ₹500. How much is left?",
         "options": [
-          "279",
-          "277",
-          "280",
-          "278"
+          "₹117",
+          "₹107",
+          "₹127",
+          "₹137"
         ],
-        "answer": 3,
-        "explanation": "359 − 81 = 278.",
+        "answer": 0,
+        "explanation": "135 + 248 = 383; 500 − 383 = ₹117.",
         "difficulty": "Challenge"
       },
       {
@@ -15807,28 +15807,28 @@
       },
       {
         "id": "c3m13q009",
-        "question": "If today is Sunday, what day will it be three days later?",
+        "question": "A movie starts at 2:35 pm and lasts 1 hour 40 minutes. When does it end?",
         "options": [
-          "Wednesday",
-          "Tuesday",
-          "Thursday",
-          "Monday"
+          "4:15 pm",
+          "4:05 pm",
+          "4:25 pm",
+          "4:35 pm"
         ],
         "answer": 0,
-        "explanation": "Monday is one day later, Tuesday two, Wednesday three.",
+        "explanation": "2:35 + 1 hour = 3:35; +40 minutes = 4:15 pm.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m13q010",
-        "question": "A bus leaves at 11:20 and arrives at 11:50. How long is the journey?",
+        "question": "A school day begins at 8:15 am. The first class lasts 45 minutes and the next lasts 35 minutes. At what time do both classes finish?",
         "options": [
-          "20 minutes",
-          "30 minutes",
-          "40 minutes",
-          "50 minutes"
+          "9:35 am",
+          "9:25 am",
+          "9:45 am",
+          "10:05 am"
         ],
-        "answer": 1,
-        "explanation": "From 11:20 to 11:50 is 30 minutes.",
+        "answer": 0,
+        "explanation": "45 + 35 = 80 minutes; 8:15 + 1 hour 20 minutes = 9:35 am.",
         "difficulty": "Challenge"
       },
       {
@@ -15950,15 +15950,15 @@
       },
       {
         "id": "c3m13q020",
-        "question": "How many days are in October in a common year?",
+        "question": "A clock shows 4:50. How many minutes are left until 5:30?",
         "options": [
-          "32",
+          "40",
           "30",
-          "33",
-          "31"
+          "35",
+          "45"
         ],
-        "answer": 3,
-        "explanation": "October has 31 days in a common year.",
+        "answer": 0,
+        "explanation": "From 4:50 to 5:00 is 10 minutes, then 30 more: 40 minutes.",
         "difficulty": "Challenge"
       },
       {
@@ -16041,15 +16041,15 @@
       },
       {
         "id": "c3m13q027",
-        "question": "How many minutes are in 9 hours?",
+        "question": "A bus leaves at 10:45 am. The trip takes 1 hour 35 minutes. It stops for 15 minutes before the final 20-minute ride. What time does it arrive?",
         "options": [
-          "539",
-          "542",
-          "540",
-          "541"
+          "12:55 pm",
+          "12:35 pm",
+          "12:45 pm",
+          "1:05 pm"
         ],
-        "answer": 2,
-        "explanation": "Each hour has 60 minutes: 9 × 60 = 540.",
+        "answer": 0,
+        "explanation": "10:45 + 1 h 35 min = 12:20; +15 +20 = 12:55 pm.",
         "difficulty": "Hard"
       },
       {
@@ -17128,15 +17128,15 @@
       },
       {
         "id": "c3m14q010",
-        "question": "Which design is most likely to have left-right symmetry?",
+        "question": "A pattern repeats: red, blue, blue, yellow. What colour is the 10th tile?",
         "options": [
-          "A one-sided arrow shape",
-          "A simple butterfly with matching wings",
-          "A random uneven scribble",
-          "A shape with only one side drawn"
+          "Blue",
+          "Red",
+          "Yellow",
+          "Green"
         ],
-        "answer": 1,
-        "explanation": "A butterfly drawn with matching wings is a familiar example of left-right symmetry.",
+        "answer": 0,
+        "explanation": "The pattern repeats every four: positions 1, 5 and 9 are red; 2, 6 and 10 are blue.",
         "difficulty": "Challenge"
       },
       {
@@ -17245,15 +17245,15 @@
       },
       {
         "id": "c3m14q019",
-        "question": "Which item is naturally useful to demonstrate mirror symmetry?",
+        "question": "A butterfly picture has a vertical line down its centre. The left wing has 3 spots. How many matching spots should the right wing have for symmetry?",
         "options": [
-          "A single straight ruler",
-          "A calendar page showing dates",
-          "A butterfly drawing with matching wings",
-          "A closed bottle viewed from above"
+          "3",
+          "2",
+          "4",
+          "6"
         ],
-        "answer": 2,
-        "explanation": "The matching wings make the symmetry easy to see.",
+        "answer": 0,
+        "explanation": "Mirror symmetry means the right side matches the left: 3 spots.",
         "difficulty": "Challenge"
       },
       {
