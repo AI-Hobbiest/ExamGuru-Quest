@@ -113,12 +113,12 @@
         "id": "c3m01q009",
         "question": "Four groups have counts 9, 13, 7 and 11. Which group has the fewest?",
         "options": [
-          "The group with 7",
           "The group with 9",
+          "The group with 7",
           "The group with 11",
           "The group with 13"
         ],
-        "answer": 0,
+        "answer": 1,
         "explanation": "7 is the smallest count.",
         "difficulty": "Challenge"
       },
@@ -126,12 +126,12 @@
         "id": "c3m01q010",
         "question": "A pictograph uses one kite for 4 children. The red row has 5 kites and the blue row has 3. How many more children chose red than blue?",
         "options": [
-          "8",
           "12",
+          "8",
           "20",
           "32"
         ],
-        "answer": 0,
+        "answer": 1,
         "explanation": "The difference is (5 − 3) × 4 = 8 children.",
         "difficulty": "Challenge"
       },
@@ -256,12 +256,12 @@
         "id": "c3m01q020",
         "question": "Four teams collect leaves: 17, 23, 19 and 23. What is the difference between the greatest and least totals?",
         "options": [
-          "6",
           "4",
+          "6",
           "5",
           "7"
         ],
-        "answer": 0,
+        "answer": 1,
         "explanation": "The greatest is 23 and the least is 17; 23 − 17 = 6.",
         "difficulty": "Challenge"
       },
@@ -373,12 +373,12 @@
         "id": "c3m01q029",
         "question": "Team B counted 21 items and Team A counted 15. How many more did Team B count?",
         "options": [
-          "6",
-          "7",
           "5",
+          "7",
+          "6",
           "8"
         ],
-        "answer": 0,
+        "answer": 2,
         "explanation": "21 − 15 = 6.",
         "difficulty": "Challenge"
       },
@@ -477,12 +477,12 @@
         "id": "c3m01q037",
         "question": "There are 20 red beads and 25 blue beads. How many beads are there altogether?",
         "options": [
-          "45",
-          "46",
           "44",
+          "46",
+          "45",
           "47"
         ],
-        "answer": 0,
+        "answer": 2,
         "explanation": "20 + 25 = 45.",
         "difficulty": "Hard"
       },
@@ -581,12 +581,12 @@
         "id": "c3m01q045",
         "question": "Which tally record represents 9 objects?",
         "options": [
-          "||||/ ||||",
+          "||||/ ||||/ |",
           "||||/ ||||/",
           "||||/ |||",
-          "||||/ ||||/ |"
+          "||||/ ||||"
         ],
-        "answer": 0,
+        "answer": 3,
         "explanation": "A crossed tally group represents five; count the remaining strokes to get the total.",
         "difficulty": "Hard"
       },
