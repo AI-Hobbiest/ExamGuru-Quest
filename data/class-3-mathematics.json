@@ -1294,7 +1294,7 @@
       },
       {
         "id": "c3m01q100",
-        "question": "A group has 17 objects. Three more are added. The objects are arranged in 2 equal groups, with 3 left over. How many objects are there altogether?",
+        "question": "A group has 17 objects. Three more are added. Then another group of the same size is made. How many objects are there altogether?",
         "options": [
           "41",
           "42",
@@ -1302,7 +1302,7 @@
           "40"
         ],
         "answer": 3,
-        "explanation": "17 + 3 = 20; two groups of 20 make 40, so use 2 equal groups without leftovers.",
+        "explanation": "17 + 3 = 20 in one group; a second equal group has 20, so 20 + 20 = 40.",
         "difficulty": "Challenge"
       }
     ]
