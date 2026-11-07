@@ -50,6 +50,33 @@ for (const chapter of bank) {
 }
 assert.deepEqual(positions, [30, 30, 30, 30], "answer positions are balanced");
 
+for (const chapter of bank) {
+  for (const suffix of ["009", "010"]) {
+    const q = chapter.questions.find(item => item.id.endsWith("q" + suffix));
+    assert.equal(q.difficulty, "Challenge", chapter.title + " keeps its revised Challenge items");
+    assert.doesNotMatch(q.question, /closest in meaning|helpful way to learn|guess every answer/i,
+      chapter.title + " has no vocabulary filler or generic study-advice item in its Challenge slots");
+  }
+}
+const repairedExplanations = {
+  c3e09q002: /well area|water source/i,
+  c3e09q005: /parched|thirsty/i,
+  c3e09q006: /saving water|save water/i,
+  c3e10q002: /quiet|hearing/i,
+  c3e10q005: /light|night|rhyme/i,
+  c3e10q006: /softly|lamps/i,
+  c3e11q002: /12 \\+ 5|17 stars/i,
+  c3e11q005: /observation|brightness/i
+};
+for (const chapter of bank) {
+  for (const q of chapter.questions) {
+    if (repairedExplanations[q.id]) {
+      assert.match(q.explanation, repairedExplanations[q.id], q.id + " explanation matches its question");
+    }
+  }
+}
+
+
 const classCatalog = JSON.parse(fs.readFileSync("data/classes.json", "utf8"));
 assert.deepEqual(classCatalog.classes.find(c => c.classId === "3").subjects, ["mathematics", "mathematics-sof", "english"]);
 console.log("Class 3 English bank checks passed: 12 chapters, 120 MCQs; Class 3 catalogue includes the SOF IMO track.");
