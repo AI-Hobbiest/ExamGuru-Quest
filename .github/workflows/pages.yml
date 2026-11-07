@@ -26,6 +26,10 @@ jobs:
       - name: Run quiz regression tests
         run: |
           node tests/olympiad-blueprints.test.js
+          node tests/class3-english.test.js
+          node tests/class3-mathematics.test.js
+          node tests/class3-sof-blueprint.test.js
+          node tests/class3-imo-bank.test.js
           node tests/exam-paper-generator.test.js
           node tests/mathematics-blueprints.test.js
           node tests/mathematics-question-bank.test.js
