@@ -3845,80 +3845,80 @@
       },
       {
         "id": "c3m03q095",
-        "question": "Complete the pattern: 120, 125, 130, __.",
+        "question": "A number pattern starts at 120. It adds 5, then 10, then 5, then 10. What comes after 150?",
         "options": [
-          "134",
-          "137",
-          "135",
-          "136"
+          "154",
+          "160",
+          "155",
+          "165"
         ],
         "answer": 2,
-        "explanation": "The pattern increases by 5, so 130 + 5 = 135.",
+        "explanation": "The jumps alternate +5 and +10. After 150, add 5 to get 155.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m03q096",
-        "question": "Complete the pattern: 125, 130, 135, __.",
+        "question": "Start at 125. Add 5, then 10, then 5. What number comes next if the pattern continues?",
         "options": [
-          "141",
-          "139",
-          "142",
-          "140"
+          "145",
+          "155",
+          "160",
+          "150"
         ],
         "answer": 3,
-        "explanation": "The pattern increases by 5, so 135 + 5 = 140.",
+        "explanation": "The jumps alternate +5, +10, +5, so the next jump is +10: 140 + 10 = 150.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m03q097",
-        "question": "Complete the pattern: 130, 135, 140, __.",
+        "question": "A number line starts at 130. Riya jumps forward 5 twice and then backward 3. Where does she land?",
         "options": [
-          "145",
-          "146",
-          "144",
-          "147"
+          "137",
+          "135",
+          "138",
+          "140"
         ],
         "answer": 0,
-        "explanation": "The pattern increases by 5, so 140 + 5 = 145.",
+        "explanation": "130 + 5 + 5 − 3 = 137.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m03q098",
-        "question": "Complete the pattern: 135, 140, 145, __.",
+        "question": "A pattern goes 135, 140, 150, 155, __. What is the next number?",
         "options": [
-          "152",
-          "150",
-          "151",
-          "149"
+          "160",
+          "165",
+          "170",
+          "175"
         ],
         "answer": 1,
-        "explanation": "The pattern increases by 5, so 145 + 5 = 150.",
+        "explanation": "The pattern alternates +5 and +10. After 155, add 10 to get 165.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m03q099",
-        "question": "Complete the pattern: 140, 145, 150, __.",
+        "question": "A game score is 140. It rises by 5 in round one, 10 in round two and 15 in round three. What is the score after round three?",
         "options": [
-          "154",
-          "157",
-          "155",
-          "156"
+          "165",
+          "175",
+          "170",
+          "180"
         ],
         "answer": 2,
-        "explanation": "The pattern increases by 5, so 150 + 5 = 155.",
+        "explanation": "140 + 5 + 10 + 15 = 170.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m03q100",
-        "question": "Complete the pattern: 145, 150, 155, __.",
+        "question": "A counter shows 145. It moves forward 20, back 5, then forward 10. What number does it show?",
         "options": [
-          "161",
-          "159",
-          "162",
-          "160"
+          "165",
+          "175",
+          "180",
+          "170"
         ],
         "answer": 3,
-        "explanation": "The pattern increases by 5, so 155 + 5 = 160.",
+        "explanation": "145 + 20 − 5 + 10 = 170.",
         "difficulty": "Challenge"
       }
     ]
@@ -7769,80 +7769,80 @@
       },
       {
         "id": "c3m06q095",
-        "question": "Write 2 hundreds, 8 tens and 9 ones as a number.",
+        "question": "A number has 2 hundreds, 8 tens and 9 ones. Take away 9, then add 20. What is the result?",
         "options": [
-          "288",
-          "291",
-          "289",
+          "299",
+          "310",
+          "300",
           "290"
         ],
         "answer": 2,
-        "explanation": "The place values combine to make 289.",
+        "explanation": "The number is 289. 289 − 9 = 280; 280 + 20 = 300.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m06q096",
-        "question": "Write 3 hundreds, 0 tens and 6 ones as a number.",
+        "question": "A number has 3 hundreds, no tens and 6 ones. Add 4 tens, then take away 6 ones. What remains?",
         "options": [
-          "307",
-          "305",
-          "308",
-          "306"
+          "346",
+          "336",
+          "350",
+          "340"
         ],
         "answer": 3,
-        "explanation": "The place values combine to make 306.",
+        "explanation": "The number is 306. 306 + 40 − 6 = 340.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m06q097",
-        "question": "Write 3 hundreds, 2 tens and 3 ones as a number.",
+        "question": "A number has 3 hundreds, 2 tens and 3 ones. Add 7 ones, then take away 1 ten. What is the result?",
         "options": [
+          "320",
+          "330",
           "323",
-          "324",
-          "322",
-          "325"
+          "310"
         ],
         "answer": 0,
-        "explanation": "The place values combine to make 323.",
+        "explanation": "323 + 7 = 330; 330 − 10 = 320.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m06q098",
-        "question": "Write 3 hundreds, 4 tens and 0 ones as a number.",
+        "question": "A number has 3 hundreds, 4 tens and no ones. Add 2 tens and 5 ones. What number do you get?",
         "options": [
-          "342",
-          "340",
-          "341",
-          "339"
+          "360",
+          "365",
+          "345",
+          "355"
         ],
         "answer": 1,
-        "explanation": "The place values combine to make 340.",
+        "explanation": "340 + 20 + 5 = 365.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m06q099",
-        "question": "Write 3 hundreds, 5 tens and 7 ones as a number.",
+        "question": "A number has 3 hundreds, 5 tens and 7 ones. Take away 7 ones and add 4 tens. What is the result?",
         "options": [
-          "356",
-          "359",
-          "357",
-          "358"
+          "390",
+          "387",
+          "407",
+          "357"
         ],
-        "answer": 2,
-        "explanation": "The place values combine to make 357.",
+        "answer": 0,
+        "explanation": "357 − 7 = 350; 350 + 40 = 390.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m06q100",
-        "question": "Write 3 hundreds, 7 tens and 4 ones as a number.",
+        "question": "A number has 3 hundreds, 7 tens and 4 ones. Add 26, then take away 10. What is the result?",
         "options": [
-          "375",
-          "373",
-          "376",
-          "374"
+          "380",
+          "400",
+          "394",
+          "390"
         ],
         "answer": 3,
-        "explanation": "The place values combine to make 374.",
+        "explanation": "374 + 26 = 400; 400 − 10 = 390.",
         "difficulty": "Challenge"
       }
     ]
@@ -11433,80 +11433,80 @@
       },
       {
         "id": "c3m09q075",
-        "question": "Complete the pattern: 240, 250, 260, __.",
+        "question": "A number pattern starts at 240. Add 10, then 20, then 10. What is the next number?",
         "options": [
-          "269",
-          "272",
-          "270",
-          "271"
+          "280",
+          "300",
+          "290",
+          "310"
         ],
         "answer": 2,
-        "explanation": "The pattern adds 10 each time, so the next number is 270.",
+        "explanation": "The jumps alternate +10 and +20. After 280, add 10 to get 290.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q076",
-        "question": "Complete the pattern: 250, 260, 270, __.",
+        "question": "A shop counts coins in this pattern: 250, 260, 280, 290, __. What comes next?",
         "options": [
-          "281",
-          "279",
-          "282",
-          "280"
+          "300",
+          "320",
+          "330",
+          "310"
         ],
         "answer": 3,
-        "explanation": "The pattern adds 10 each time, so the next number is 280.",
+        "explanation": "The pattern alternates +10 and +20. After 290, add 20 to get 310.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q077",
-        "question": "Complete the pattern: 260, 270, 280, __.",
+        "question": "Start at 260. Add 10, add 20, then take away 5. What number do you get?",
         "options": [
+          "285",
+          "280",
           "290",
-          "291",
-          "289",
-          "292"
+          "295"
         ],
         "answer": 0,
-        "explanation": "The pattern adds 10 each time, so the next number is 290.",
+        "explanation": "260 + 10 + 20 − 5 = 285.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q078",
-        "question": "Complete the pattern: 270, 280, 290, __.",
+        "question": "A number is 270. It increases by 10, then by 20, then decreases by 5. What is the result?",
         "options": [
-          "302",
+          "290",
+          "295",
           "300",
-          "301",
-          "299"
+          "305"
         ],
         "answer": 1,
-        "explanation": "The pattern adds 10 each time, so the next number is 300.",
+        "explanation": "270 + 10 + 20 − 5 = 295.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q079",
-        "question": "Complete the pattern: 280, 290, 300, __.",
+        "question": "A score is 280. Add 10, add 20 and subtract 10. What is the final score?",
         "options": [
-          "309",
-          "312",
+          "290",
           "310",
-          "311"
+          "300",
+          "320"
         ],
         "answer": 2,
-        "explanation": "The pattern adds 10 each time, so the next number is 310.",
+        "explanation": "280 + 10 + 20 − 10 = 300.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m09q080",
-        "question": "Complete the pattern: 290, 300, 310, __.",
+        "question": "A pattern begins at 290. The first jump is +10, the second is +20, and the third is +30. What is the fourth number?",
         "options": [
-          "321",
-          "319",
-          "322",
-          "320"
+          "340",
+          "360",
+          "370",
+          "350"
         ],
         "answer": 3,
-        "explanation": "The pattern adds 10 each time, so the next number is 320.",
+        "explanation": "290 + 10 + 20 + 30 = 350.",
         "difficulty": "Challenge"
       },
       {
@@ -11693,67 +11693,67 @@
       },
       {
         "id": "c3m09q095",
-        "question": "Write 5 hundreds, 5 tens and 4 ones as a number.",
+        "question": "A number has 5 hundreds, 5 tens and 4 ones. Add 46. What is the result?",
         "options": [
-          "553",
-          "556",
-          "554",
-          "555"
+          "590",
+          "610",
+          "600",
+          "620"
         ],
         "answer": 2,
-        "explanation": "500 + 50 + 4 = 554.",
+        "explanation": "554 + 46 = 600.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q096",
-        "question": "Write 5 hundreds, 6 tens and 5 ones as a number.",
+        "question": "A number has 5 hundreds, 6 tens and 5 ones. Subtract 25, then add 10. What is the result?",
         "options": [
-          "566",
-          "564",
-          "567",
-          "565"
+          "540",
+          "560",
+          "570",
+          "550"
         ],
         "answer": 3,
-        "explanation": "500 + 60 + 5 = 565.",
+        "explanation": "565 − 25 = 540; 540 + 10 = 550.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q097",
-        "question": "Write 5 hundreds, 7 tens and 6 ones as a number.",
+        "question": "A number has 5 hundreds, 7 tens and 6 ones. Add 24, then take away 10. What is the result?",
         "options": [
-          "576",
-          "577",
-          "575",
-          "578"
+          "590",
+          "580",
+          "600",
+          "610"
         ],
         "answer": 0,
-        "explanation": "500 + 70 + 6 = 576.",
+        "explanation": "576 + 24 = 600; 600 − 10 = 590.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q098",
-        "question": "Write 5 hundreds, 8 tens and 7 ones as a number.",
+        "question": "A number has 5 hundreds, 8 tens and 7 ones. Take away 7, then add 20. What is the result?",
         "options": [
-          "589",
-          "587",
-          "588",
-          "586"
+          "590",
+          "600",
+          "610",
+          "620"
         ],
         "answer": 1,
-        "explanation": "500 + 80 + 7 = 587.",
+        "explanation": "587 − 7 = 580; 580 + 20 = 600.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q099",
-        "question": "Write 5 hundreds, 9 tens and 8 ones as a number.",
+        "question": "A number has 5 hundreds, 9 tens and 8 ones. Add 2, then take away 30. What is the result?",
         "options": [
-          "597",
-          "600",
-          "598",
-          "599"
+          "560",
+          "580",
+          "570",
+          "590"
         ],
         "answer": 2,
-        "explanation": "500 + 90 + 8 = 598.",
+        "explanation": "598 + 2 = 600; 600 − 30 = 570.",
         "difficulty": "Challenge"
       },
       {
