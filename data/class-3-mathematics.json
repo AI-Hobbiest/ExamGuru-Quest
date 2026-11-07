@@ -3715,7 +3715,7 @@
       },
       {
         "id": "c3m03q085",
-        "question": "A number has 1 hundred, 5 tens and 4 ones. What is the number?",
+        "question": "I have 1 hundred. My tens digit is 2 more than 3, and my ones digit is 1 less than 5. Which number am I?",
         "options": [
           "154",
           "155",
@@ -3723,12 +3723,12 @@
           "156"
         ],
         "answer": 0,
-        "explanation": "100 + 50 + 4 = 154.",
+        "explanation": "The tens digit is 5 and the ones digit is 4, giving 154.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m03q086",
-        "question": "A number has 1 hundred, 6 tens and 5 ones. What is the number?",
+        "question": "I have 1 hundred. My tens digit is 6, and my ones digit is 5. Which number am I?",
         "options": [
           "167",
           "165",
@@ -3741,7 +3741,7 @@
       },
       {
         "id": "c3m03q087",
-        "question": "A number has 1 hundred, 7 tens and 6 ones. What is the number?",
+        "question": "I have 1 hundred. My tens digit is 7, and my ones digit is 6. Which number am I?",
         "options": [
           "175",
           "178",
@@ -3754,7 +3754,7 @@
       },
       {
         "id": "c3m03q088",
-        "question": "A number has 1 hundred, 8 tens and 7 ones. What is the number?",
+        "question": "I have 1 hundred. My tens digit is 8, and my ones digit is 7. Which number am I?",
         "options": [
           "188",
           "186",
@@ -3767,7 +3767,7 @@
       },
       {
         "id": "c3m03q089",
-        "question": "A number has 1 hundred, 9 tens and 8 ones. What is the number?",
+        "question": "I have 2 hundreds less 1 hundred, 9 tens and 8 ones. Which number am I?",
         "options": [
           "198",
           "199",
@@ -3775,12 +3775,12 @@
           "200"
         ],
         "answer": 0,
-        "explanation": "100 + 90 + 8 = 198.",
+        "explanation": "2 hundreds less 1 hundred is 1 hundred; 100 + 90 + 8 = 198.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m03q090",
-        "question": "A number has 1 hundred, 1 ten and 9 ones. What is the number?",
+        "question": "I have 1 hundred, 2 tens fewer than 3 tens, and 9 ones. Which number am I?",
         "options": [
           "121",
           "119",
@@ -3788,7 +3788,7 @@
           "118"
         ],
         "answer": 1,
-        "explanation": "100 + 10 + 9 = 119.",
+        "explanation": "3 tens − 2 tens = 1 ten; 100 + 10 + 9 = 119.",
         "difficulty": "Challenge"
       },
       {
@@ -7119,80 +7119,80 @@
       },
       {
         "id": "c3m06q045",
-        "question": "What is 100 less than 311?",
+        "question": "A number is 100 less than 311. Then 9 is added. What is the result?",
         "options": [
+          "220",
           "211",
-          "212",
           "210",
           "213"
         ],
         "answer": 0,
-        "explanation": "311 − 100 = 211.",
+        "explanation": "311 − 100 = 211; 211 + 9 = 220.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m06q046",
-        "question": "What is 100 less than 320?",
+        "question": "A number is 100 less than 320. Then 7 is added. What is the result?",
         "options": [
           "222",
-          "220",
+          "227",
           "221",
           "219"
         ],
         "answer": 1,
-        "explanation": "320 − 100 = 220.",
+        "explanation": "320 − 100 = 220; 220 + 7 = 227.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m06q047",
-        "question": "What is 100 less than 329?",
+        "question": "A number is 100 less than 329. Then 9 is taken away. What is the result?",
         "options": [
           "228",
-          "231",
           "229",
+          "220",
           "230"
         ],
         "answer": 2,
-        "explanation": "329 − 100 = 229.",
+        "explanation": "329 − 100 = 229; 229 − 9 = 220.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m06q048",
-        "question": "What is 100 less than 338?",
+        "question": "A number is 100 less than 338. Then 12 is added. What is the result?",
         "options": [
           "239",
           "237",
           "240",
-          "238"
+          "250"
         ],
         "answer": 3,
-        "explanation": "338 − 100 = 238.",
+        "explanation": "338 − 100 = 238; 238 + 12 = 250.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m06q049",
-        "question": "What is 100 less than 347?",
+        "question": "A number is 100 less than 347. Then 13 is added. What is the result?",
         "options": [
+          "260",
           "247",
-          "248",
           "246",
           "249"
         ],
         "answer": 0,
-        "explanation": "347 − 100 = 247.",
+        "explanation": "347 − 100 = 247; 247 + 13 = 260.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m06q050",
-        "question": "What is 100 less than 356?",
+        "question": "A number is 100 less than 356. Then 16 is taken away. What is the result?",
         "options": [
           "258",
-          "256",
+          "240",
           "257",
           "255"
         ],
         "answer": 1,
-        "explanation": "356 − 100 = 256.",
+        "explanation": "356 − 100 = 256; 256 − 16 = 240.",
         "difficulty": "Challenge"
       },
       {
@@ -10809,54 +10809,54 @@
       },
       {
         "id": "c3m09q027",
-        "question": "What is 100 more than 399?",
+        "question": "A number is 100 more than 399. Then 1 is added. What is the result?",
         "options": [
           "498",
           "501",
-          "499",
+          "500",
           "500"
         ],
         "answer": 2,
-        "explanation": "399 + 100 = 499.",
+        "explanation": "399 + 100 = 499; 499 + 1 = 500.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q028",
-        "question": "What is 100 more than 412?",
+        "question": "A number is 100 more than 412. Then 12 is taken away. What is the result?",
         "options": [
           "513",
           "511",
-          "514",
-          "512"
+          "512",
+          "500"
         ],
         "answer": 3,
-        "explanation": "412 + 100 = 512.",
+        "explanation": "412 + 100 = 512; 512 − 12 = 500.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q029",
-        "question": "What is 100 more than 425?",
+        "question": "A number is 100 more than 425. Then 25 is added. What is the result?",
         "options": [
-          "525",
+          "550",
           "526",
           "524",
           "527"
         ],
         "answer": 0,
-        "explanation": "425 + 100 = 525.",
+        "explanation": "425 + 100 = 525; 525 + 25 = 550.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m09q030",
-        "question": "What is 100 more than 438?",
+        "question": "A number is 100 more than 438. Then 18 is taken away. What is the result?",
         "options": [
           "540",
-          "538",
+          "520",
           "539",
           "537"
         ],
         "answer": 1,
-        "explanation": "438 + 100 = 538.",
+        "explanation": "438 + 100 = 538; 538 − 18 = 520.",
         "difficulty": "Challenge"
       },
       {
@@ -10913,80 +10913,80 @@
       },
       {
         "id": "c3m09q035",
-        "question": "What is 10 less than 373?",
+        "question": "A number is 10 less than 373. Then 7 is added. What is the result?",
         "options": [
           "362",
           "365",
-          "363",
+          "370",
           "364"
         ],
         "answer": 2,
-        "explanation": "373 − 10 = 363.",
+        "explanation": "373 − 10 = 363; 363 + 7 = 370.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q036",
-        "question": "What is 10 less than 386?",
+        "question": "A number is 10 less than 386. Then 6 is taken away. What is the result?",
         "options": [
           "377",
           "375",
           "378",
-          "376"
+          "370"
         ],
         "answer": 3,
-        "explanation": "386 − 10 = 376.",
+        "explanation": "386 − 10 = 376; 376 − 6 = 370.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q037",
-        "question": "What is 10 less than 399?",
+        "question": "A number is 10 less than 399. Then 11 is added. What is the result?",
         "options": [
+          "400",
           "389",
           "390",
-          "388",
-          "391"
+          "388"
         ],
         "answer": 0,
-        "explanation": "399 − 10 = 389.",
+        "explanation": "399 − 10 = 389; 389 + 11 = 400.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q038",
-        "question": "What is 10 less than 412?",
+        "question": "A number is 10 less than 412. Then 12 is taken away. What is the result?",
         "options": [
           "404",
-          "402",
+          "390",
           "403",
           "401"
         ],
         "answer": 1,
-        "explanation": "412 − 10 = 402.",
+        "explanation": "412 − 10 = 402; 402 − 12 = 390.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m09q039",
-        "question": "What is 10 less than 425?",
+        "question": "A number is 10 less than 425. Then 5 is added. What is the result?",
         "options": [
           "414",
           "417",
-          "415",
+          "420",
           "416"
         ],
         "answer": 2,
-        "explanation": "425 − 10 = 415.",
+        "explanation": "425 − 10 = 415; 415 + 5 = 420.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m09q040",
-        "question": "What is 10 less than 438?",
+        "question": "A number is 10 less than 438. Then 8 is taken away. What is the result?",
         "options": [
           "429",
           "427",
-          "430",
-          "428"
+          "428",
+          "420"
         ],
         "answer": 3,
-        "explanation": "438 − 10 = 428.",
+        "explanation": "438 − 10 = 428; 428 − 8 = 420.",
         "difficulty": "Challenge"
       },
       {
