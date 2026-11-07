@@ -114,6 +114,17 @@ assert.equal(upgraded.get("c3m06q045").options[upgraded.get("c3m06q045").answer]
 assert.equal(upgraded.get("c3m09q027").options[upgraded.get("c3m09q027").answer], "500");
 assert.equal(upgraded.get("c3m09q035").options[upgraded.get("c3m09q035").answer], "370");
 
+const classOneReworkedIds = [35,36,37,38,39,40,45,46,47,48,49,50,55,56,57,58,59,60,65,66,67,68,69,70,75,76,77,78,79,80,85,86,87,88,89,90,95,96,97,98,99,100]
+  .map(number => "c3m01q" + String(number).padStart(3, "0"));
+for (const id of classOneReworkedIds) {
+  const question = upgraded.get(id);
+  assert.ok(question, id + " remains in the Class 3 data-handling bank");
+  assert.doesNotMatch(question.question,
+    /how many beads are there altogether|which tally record represents|which group is the smallest\?|how many stars are shown altogether|which friend has the longest name|how many tickets remain\?|how many are there now\?/i,
+    id + " no longer uses the repetitive one-step stem");
+  assert.equal(new Set(question.options).size, 4);
+}
+
 const context = { window: {} };
 context.globalThis = context;
 vm.createContext(context);
