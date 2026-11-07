@@ -21,6 +21,18 @@ for(const chapter of bank){
     prompts.add(question.question);
   }
 }
+const scienceDifficultyCounts=bank.flatMap(chapter=>chapter.questions).reduce((counts,question)=>{ 
+  counts[question.difficulty]=(counts[question.difficulty]||0)+1;
+  return counts;
+},{});
+assert.deepEqual(scienceDifficultyCounts,{Easy:468,Medium:132,Hard:252,Challenge:348},"Class 6 Science Core maintains the agreed 50% Hard + Challenge mix");
+for(const chapter of bank){
+  const hard=chapter.questions.filter(question=>question.difficulty==="Hard").length;
+  const challenge=chapter.questions.filter(question=>question.difficulty==="Challenge").length;
+  assert.equal(hard,21,"each Class 6 Science Core chapter has 21 Hard questions");
+  assert.equal(challenge,29,"each Class 6 Science Core chapter has 29 Challenge questions");
+  assert.equal(hard+challenge,50,"each Class 6 Science Core chapter has 50 Hard/Challenge questions");
+}
 const socialBank=JSON.parse(fs.readFileSync("data/class-6-social-science.json","utf8"));
 assert.equal(socialBank.length,14,"Class 6 Social Science follows the 14 NCERT Exploring Society chapters");
 assert.equal(socialBank.reduce((sum,chapter)=>sum+chapter.questions.length,0),1400,"Class 6 Social Science includes 100 MCQs per chapter");
