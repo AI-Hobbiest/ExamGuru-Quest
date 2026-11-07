@@ -241,15 +241,15 @@
       },
       {
         "id": "c3imo-lr-c-014",
-        "question": "There are 9 runners. Meera finishes immediately after the runner in 5th place. What is her position?",
+        "question": "Seven runners finish a race. Arjun is 2nd. Meera finishes three places after Arjun. What is Meera’s position?",
         "options": [
-          "5th",
-          "7th",
+          "4th",
           "6th",
-          "4th"
+          "5th",
+          "7th"
         ],
         "answer": 2,
-        "explanation": "Immediately after fifth place is sixth place.",
+        "explanation": "Count three places after 2nd: 3rd, 4th, 5th. Meera is 5th.",
         "difficulty": "Hard",
         "section": "Logical Reasoning",
         "syllabusClass": 3,
@@ -1487,15 +1487,15 @@
       },
       {
         "id": "c3imo-m2-c-071",
-        "question": "Which number is written as three thousand and sixty-two?",
+        "question": "A four-digit number has 3 thousands and 0 hundreds. Its tens digit is one less than 7, and its ones digit is 2 more than its tens digit. Which number is it?",
         "options": [
-          "3620",
-          "3026",
-          "3602",
-          "3062"
+          "3,068",
+          "3,086",
+          "3,0680",
+          "3,068"
         ],
         "answer": 3,
-        "explanation": "Three thousand and sixty-two is 3,062.",
+        "explanation": "The tens digit is 6 and the ones digit is 8, so the number is 3,068.",
         "difficulty": "Hard",
         "section": "Mathematical Reasoning",
         "syllabusClass": 3,
@@ -1613,15 +1613,15 @@
       },
       {
         "id": "c3imo-m2-c-078",
-        "question": "Which fraction is equal to one-half?",
+        "question": "A pizza has 12 equal slices. Rani eats one-third of the pizza and her brother eats 2 more slices. How many slices are left?",
         "options": [
-          "3/4",
-          "1/3",
-          "2/4",
-          "1/4"
+          "5",
+          "8",
+          "6",
+          "4"
         ],
         "answer": 2,
-        "explanation": "Two out of four equal parts make one-half.",
+        "explanation": "One-third of 12 is 4. They eat 4 + 2 = 6 slices, so 12 − 6 = 6 remain.",
         "difficulty": "Hard",
         "section": "Mathematical Reasoning",
         "syllabusClass": 3,
@@ -2225,15 +2225,15 @@
       },
       {
         "id": "c3imo-m2-p-112",
-        "question": "What is 10 more than 286?",
+        "question": "A number is 286. Add 3 tens, then take away 4 ones. What number do you get?",
         "options": [
-          "296",
-          "287",
-          "306",
-          "386"
+          "312",
+          "316",
+          "322",
+          "306"
         ],
         "answer": 0,
-        "explanation": "Adding one ten changes 286 to 296.",
+        "explanation": "286 + 30 = 316; 316 − 4 = 312.",
         "difficulty": "Hard",
         "section": "Mathematical Reasoning",
         "syllabusClass": 2,
