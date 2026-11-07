@@ -506,6 +506,34 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
   assert.equal(typeof class3IMO.elements.reportExcelBtn.onclick,"function");
   assert.equal(typeof class3IMO.elements.reportPdfBtn.onclick,"function");
 
+  const class3MathBank=JSON.parse(fs.readFileSync("data/class-3-mathematics.json","utf8"));
+  const class3Test=makeEnvironment(new Map(),"mathematics","3",class3MathBank);
+  await delay();
+  class3Test.modeButtons.find(button=>button.dataset.mode==="test").click();
+  class3Test.elements.startBtn.click();
+  const class3TestLedgerRow=[...class3Test.values.entries()].find(([key])=>
+    key.includes("test-attempt-ledger")&&key.endsWith("class-3-mathematics"));
+  const class3TestAttempt=JSON.parse(class3TestLedgerRow[1]).data.activeAttempt;
+  const class3TestMix=class3TestAttempt.questions.reduce((counts,question)=>{
+    counts[question.difficulty]=(counts[question.difficulty]||0)+1;return counts;
+  },{});
+  assert.equal(class3TestAttempt.questions.length,10,"Class 3 standard tests use the selected ten-question length");
+  assert.deepEqual(class3TestMix,{Easy:2,Medium:3,Hard:3,Challenge:2},
+    "Class 3 standard tests enforce a 20/30/30/20 difficulty mix instead of drawing an uncontrolled random sample");
+
+  const class3Timed=makeEnvironment(new Map(),"mathematics","3",class3MathBank);
+  await delay();
+  class3Timed.modeButtons.find(button=>button.dataset.mode==="timed").click();
+  class3Timed.elements.startBtn.click();
+  const class3TimedLedgerRow=[...class3Timed.values.entries()].find(([key])=>
+    key.includes("test-attempt-ledger")&&key.endsWith("class-3-mathematics"));
+  const class3TimedAttempt=JSON.parse(class3TimedLedgerRow[1]).data.activeAttempt;
+  const class3TimedMix=class3TimedAttempt.questions.reduce((counts,question)=>{
+    counts[question.difficulty]=(counts[question.difficulty]||0)+1;return counts;
+  },{});
+  assert.deepEqual(class3TimedMix,{Easy:2,Medium:3,Hard:3,Challenge:2},
+    "Class 3 timed exams enforce the same balanced difficulty mix");
+
   const learner=makeEnvironment();
   await delay();
   learner.elements.startBtn.click();
