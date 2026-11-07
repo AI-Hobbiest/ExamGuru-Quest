@@ -99,6 +99,21 @@ const parentDashboard = fs.readFileSync("js/parent-dashboard.js", "utf8");
 assert.ok(parentDashboard.includes('String(c)==="3"?["mathematics","mathematics-sof","english"]'),
   "parent subject history includes the Class 3 SOF IMO ledger");
 
+const upgraded = new Map(bank.flatMap(chapter => chapter.questions).map(question => [question.id, question]));
+for (const id of ["c3m03q019", "c3m06q009", "c3m06q045", "c3m09q027", "c3m09q035"]) {
+  const question = upgraded.get(id);
+  assert.ok(question, id + " remains in the Mathematics bank");
+  assert.ok(!/^What number comes immediately after|^What is 100 (less|more) than|^What is 10 (less|more) than/i.test(question.question),
+    id + " is no longer a one-step high-difficulty drill");
+  assert.equal(question.options.length, 4);
+  assert.equal(new Set(question.options).size, 4);
+}
+assert.equal(upgraded.get("c3m03q019").options[upgraded.get("c3m03q019").answer], "158");
+assert.equal(upgraded.get("c3m06q009").options[upgraded.get("c3m06q009").answer], "623");
+assert.equal(upgraded.get("c3m06q045").options[upgraded.get("c3m06q045").answer], "220");
+assert.equal(upgraded.get("c3m09q027").options[upgraded.get("c3m09q027").answer], "500");
+assert.equal(upgraded.get("c3m09q035").options[upgraded.get("c3m09q035").answer], "370");
+
 const context = { window: {} };
 context.globalThis = context;
 vm.createContext(context);
