@@ -449,80 +449,80 @@
       },
       {
         "id": "c3m01q035",
-        "question": "There are 18 red beads and 23 blue beads. How many beads are there altogether?",
+        "question": "There are 18 red beads and 23 blue beads. Five beads are used for a necklace. How many beads remain?",
         "options": [
-          "40",
-          "43",
-          "41",
-          "42"
+          "35",
+          "37",
+          "36",
+          "38"
         ],
         "answer": 2,
-        "explanation": "18 + 23 = 41.",
+        "explanation": "18 + 23 = 41; 41 − 5 = 36.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q036",
-        "question": "There are 19 red beads and 24 blue beads. How many beads are there altogether?",
+        "question": "A box has 19 red beads and 24 blue beads. Six more beads are added. How many beads are there now?",
         "options": [
-          "44",
-          "42",
-          "45",
-          "43"
+          "48",
+          "50",
+          "47",
+          "49"
         ],
         "answer": 3,
-        "explanation": "19 + 24 = 43.",
+        "explanation": "19 + 24 = 43; 43 + 6 = 49.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q037",
-        "question": "There are 20 red beads and 25 blue beads. How many beads are there altogether?",
+        "question": "There are 20 red beads and 25 blue beads. Twelve are used in a craft. How many remain?",
         "options": [
-          "44",
-          "46",
-          "45",
-          "47"
+          "34",
+          "32",
+          "33",
+          "35"
         ],
         "answer": 2,
-        "explanation": "20 + 25 = 45.",
+        "explanation": "20 + 25 = 45; 45 − 12 = 33.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q038",
-        "question": "There are 21 red beads and 26 blue beads. How many beads are there altogether?",
+        "question": "A child has 21 red beads and 26 blue beads, then receives 8 yellow beads. How many beads does the child have altogether?",
         "options": [
-          "49",
-          "47",
-          "48",
-          "46"
+          "54",
+          "55",
+          "56",
+          "53"
         ],
         "answer": 1,
-        "explanation": "21 + 26 = 47.",
+        "explanation": "21 + 26 = 47; 47 + 8 = 55.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q039",
-        "question": "There are 22 red beads and 27 blue beads. How many beads are there altogether?",
+        "question": "There are 22 red beads and 27 blue beads. Nine are given to a friend. How many remain?",
         "options": [
-          "48",
-          "51",
-          "49",
-          "50"
+          "39",
+          "41",
+          "40",
+          "42"
         ],
         "answer": 2,
-        "explanation": "22 + 27 = 49.",
+        "explanation": "22 + 27 = 49; 49 − 9 = 40.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m01q040",
-        "question": "There are 23 red beads and 28 blue beads. How many beads are there altogether?",
+        "question": "A craft box has 23 red beads and 28 blue beads. Six more are found in a drawer. How many are there now?",
         "options": [
-          "52",
-          "50",
-          "53",
-          "51"
+          "58",
+          "56",
+          "55",
+          "57"
         ],
         "answer": 3,
-        "explanation": "23 + 28 = 51.",
+        "explanation": "23 + 28 = 51; 51 + 6 = 57.",
         "difficulty": "Challenge"
       },
       {
@@ -579,80 +579,80 @@
       },
       {
         "id": "c3m01q045",
-        "question": "Which tally record represents 9 objects?",
+        "question": "A tally shows 5 marks in one group and 4 extra marks. If 2 more objects are counted, what is the new total?",
         "options": [
-          "||||/ ||||/ |",
-          "||||/ ||||/",
-          "||||/ |||",
-          "||||/ ||||"
+          "10",
+          "12",
+          "13",
+          "11"
         ],
         "answer": 3,
-        "explanation": "A crossed tally group represents five; count the remaining strokes to get the total.",
+        "explanation": "5 + 4 = 9; 9 + 2 = 11.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q046",
-        "question": "Which tally record represents 10 objects?",
+        "question": "One tally chart records 5 + 3 objects and another records 5 + 2. How many objects are recorded altogether?",
         "options": [
-          "||||/ ||||/ ||",
-          "||||/ ||||/",
-          "||||/ ||||/ |",
-          "||||/ ||||"
+          "14",
+          "15",
+          "16",
+          "13"
         ],
         "answer": 1,
-        "explanation": "A crossed tally group represents five; count the remaining strokes to get the total.",
+        "explanation": "The charts show 8 and 7 objects; 8 + 7 = 15.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q047",
-        "question": "Which tally record represents 11 objects?",
+        "question": "A tally has two complete groups of five and 3 extra marks. Four more objects are counted. What is the total?",
         "options": [
-          "||||/ ||||/",
-          "||||/ ||||/ |||",
-          "||||/ ||||/ |",
-          "||||/ ||||/ ||"
+          "16",
+          "18",
+          "17",
+          "19"
         ],
         "answer": 2,
-        "explanation": "A crossed tally group represents five; count the remaining strokes to get the total.",
+        "explanation": "2 × 5 + 3 = 13; 13 + 4 = 17.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q048",
-        "question": "Which tally record represents 12 objects?",
+        "question": "A tally records 9 objects in one group and 8 in another. How many more are needed to make 22 altogether?",
         "options": [
-          "||||/ ||||/ |||",
-          "||||/ ||||/ |",
-          "||||/ ||||/ ||||",
-          "||||/ ||||/ ||"
+          "6",
+          "7",
+          "8",
+          "5"
         ],
         "answer": 3,
-        "explanation": "A crossed tally group represents five; count the remaining strokes to get the total.",
+        "explanation": "9 + 8 = 17; 22 − 17 = 5.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q049",
-        "question": "Which tally record represents 13 objects?",
+        "question": "Two tally charts show 8 and 7 objects. Three more objects are counted. How many are recorded now?",
         "options": [
-          "||||/ ||||/ ||||",
-          "||||/ ||||/ |||",
-          "||||/ ||||/ ||",
-          "||||/ ||||/ ||||/"
+          "17",
+          "18",
+          "19",
+          "16"
         ],
         "answer": 1,
-        "explanation": "A crossed tally group represents five; count the remaining strokes to get the total.",
+        "explanation": "8 + 7 + 3 = 18.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m01q050",
-        "question": "Which tally record represents 14 objects?",
+        "question": "A tally chart shows 14 marks, but 3 were counted twice. How many different objects were counted?",
         "options": [
-          "||||/ ||||/ ||||/ |",
-          "||||/ ||||/ ||||",
-          "||||/ ||||/ ||||/",
-          "||||/ ||||/ |||"
+          "12",
+          "11",
+          "10",
+          "13"
         ],
         "answer": 1,
-        "explanation": "A crossed tally group represents five; count the remaining strokes to get the total.",
+        "explanation": "14 − 3 = 11 different objects.",
         "difficulty": "Challenge"
       },
       {
@@ -709,7 +709,7 @@
       },
       {
         "id": "c3m01q055",
-        "question": "A survey records 11 birds, 17 cats and 14 dogs. Which group is the smallest?",
+        "question": "A survey records 11 birds, 17 cats and 14 dogs. Three cats leave the survey area. Which group now has the fewest?",
         "options": [
           "Dogs",
           "All are equal",
@@ -717,64 +717,64 @@
           "Cats"
         ],
         "answer": 2,
-        "explanation": "11 is the smallest count.",
+        "explanation": "Cats become 14; birds are 11 and dogs are 14, so birds are fewest.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q056",
-        "question": "A survey records 12 birds, 18 cats and 15 dogs. Which group is the smallest?",
+        "question": "A survey records 12 birds, 18 cats and 15 dogs. Four birds are added to the count. Which group is now the smallest?",
         "options": [
           "Cats",
-          "Dogs",
+          "Birds",
           "All are equal",
-          "Birds"
+          "Dogs"
         ],
         "answer": 3,
-        "explanation": "12 is the smallest count.",
+        "explanation": "Birds become 16; dogs remain 15, so dogs are fewest.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q057",
-        "question": "A survey records 13 birds, 19 cats and 16 dogs. Which group is the smallest?",
+        "question": "A survey records 13 birds, 19 cats and 16 dogs. Four dogs leave. Which group is now the smallest?",
         "options": [
           "Cats",
-          "Birds",
           "Dogs",
+          "Birds",
           "All are equal"
         ],
         "answer": 1,
-        "explanation": "13 is the smallest count.",
+        "explanation": "Dogs become 12, which is fewer than 13 birds and 19 cats.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q058",
-        "question": "A survey records 14 birds, 20 cats and 17 dogs. Which group is the smallest?",
+        "question": "A survey records 14 birds, 20 cats and 17 dogs. Four more birds arrive. Which group is now the smallest?",
         "options": [
           "All are equal",
-          "Birds",
+          "Dogs",
           "Cats",
-          "Dogs"
+          "Birds"
         ],
         "answer": 1,
-        "explanation": "14 is the smallest count.",
+        "explanation": "Birds become 18; dogs remain 17, so dogs are fewest.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q059",
-        "question": "A survey records 15 birds, 21 cats and 18 dogs. Which group is the smallest?",
+        "question": "A survey records 15 birds, 21 cats and 18 dogs. Five birds are added. Which group has the fewest now?",
         "options": [
-          "Dogs",
-          "All are equal",
           "Birds",
-          "Cats"
+          "Cats",
+          "Dogs",
+          "All are equal"
         ],
         "answer": 2,
-        "explanation": "15 is the smallest count.",
+        "explanation": "Birds become 20; dogs are 18 and cats are 21, so dogs are fewest.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m01q060",
-        "question": "A survey records 16 birds, 22 cats and 19 dogs. Which group is the smallest?",
+        "question": "A survey records 16 birds, 22 cats and 19 dogs. Three dogs are added. Which group is smallest?",
         "options": [
           "Cats",
           "Dogs",
@@ -782,7 +782,7 @@
           "Birds"
         ],
         "answer": 3,
-        "explanation": "16 is the smallest count.",
+        "explanation": "Dogs become 22; birds remain 16, so birds are fewest.",
         "difficulty": "Challenge"
       },
       {
@@ -839,80 +839,80 @@
       },
       {
         "id": "c3m01q065",
-        "question": "A chart shows 13 stars for one group and 17 for another. How many stars are shown altogether?",
+        "question": "A chart shows 13 stars for one group and 17 for another. Five more stars are added. How many stars are shown now?",
         "options": [
-          "31",
-          "30",
-          "29",
-          "32"
+          "34",
+          "35",
+          "36",
+          "33"
         ],
         "answer": 1,
-        "explanation": "13 + 17 = 30.",
+        "explanation": "13 + 17 = 30; 30 + 5 = 35.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q066",
-        "question": "A chart shows 14 stars for one group and 18 for another. How many stars are shown altogether?",
+        "question": "A chart shows 14 stars and 18 stars. Three stars are removed from the display. How many remain?",
         "options": [
-          "34",
-          "32",
-          "33",
-          "31"
+          "30",
+          "29",
+          "31",
+          "28"
         ],
         "answer": 1,
-        "explanation": "14 + 18 = 32.",
+        "explanation": "14 + 18 = 32; 32 − 3 = 29.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q067",
-        "question": "A chart shows 15 stars for one group and 19 for another. How many stars are shown altogether?",
+        "question": "Two groups have 15 and 19 stars. Two stars from the first group are moved away. How many stars remain altogether?",
         "options": [
           "33",
-          "36",
-          "34",
+          "31",
+          "32",
           "35"
         ],
         "answer": 2,
-        "explanation": "15 + 19 = 34.",
+        "explanation": "15 − 2 = 13; 13 + 19 = 32.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q068",
-        "question": "A chart shows 16 stars for one group and 20 for another. How many stars are shown altogether?",
-        "options": [
-          "37",
-          "35",
-          "38",
-          "36"
-        ],
-        "answer": 3,
-        "explanation": "16 + 20 = 36.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c3m01q069",
-        "question": "A chart shows 17 stars for one group and 21 for another. How many stars are shown altogether?",
+        "question": "A chart shows 16 stars and 20 stars. Another group adds 4 stars. What is the new total?",
         "options": [
           "39",
           "38",
           "37",
           "40"
         ],
+        "answer": 3,
+        "explanation": "16 + 20 + 4 = 40.",
+        "difficulty": "Hard"
+      },
+      {
+        "id": "c3m01q069",
+        "question": "Two groups have 17 and 21 stars. Two more stars are added to the display. How many are there now?",
+        "options": [
+          "39",
+          "40",
+          "41",
+          "42"
+        ],
         "answer": 1,
-        "explanation": "17 + 21 = 38.",
+        "explanation": "17 + 21 = 38; 38 + 2 = 40.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m01q070",
-        "question": "A chart shows 18 stars for one group and 22 for another. How many stars are shown altogether?",
+        "question": "A chart shows 18 stars and 22 stars. Six stars are taken away. How many remain?",
         "options": [
-          "42",
-          "40",
-          "41",
-          "39"
+          "33",
+          "34",
+          "35",
+          "36"
         ],
         "answer": 1,
-        "explanation": "18 + 22 = 40.",
+        "explanation": "18 + 22 = 40; 40 − 6 = 34.",
         "difficulty": "Challenge"
       },
       {
@@ -969,80 +969,80 @@
       },
       {
         "id": "c3m01q075",
-        "question": "Four friends have names with 3, 6, 7, 10 letters. Which friend has the longest name?",
+        "question": "Four friends have names with 3, 6, 7 and 10 letters. Friend C adds 4 letters to a nickname. Whose name is now longest?",
         "options": [
+          "Friend A",
           "Friend B",
           "Friend C",
-          "Friend D",
-          "Friend A"
+          "Friend D"
         ],
         "answer": 2,
-        "explanation": "The fourth name has 10 letters, more than the other three.",
+        "explanation": "Friend C has 7 + 4 = 11 letters, more than Friend D's 10.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q076",
-        "question": "Four friends have names with 4, 7, 8, 11 letters. Which friend has the longest name?",
-        "options": [
-          "Friend A",
-          "Friend B",
-          "Friend C",
-          "Friend D"
-        ],
-        "answer": 3,
-        "explanation": "The fourth name has 11 letters, more than the other three.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c3m01q077",
-        "question": "Four friends have names with 5, 5, 7, 9 letters. Which friend has the longest name?",
-        "options": [
-          "Friend A",
-          "Friend D",
-          "Friend B",
-          "Friend C"
-        ],
-        "answer": 1,
-        "explanation": "The fourth name has 9 letters, more than the other three.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c3m01q078",
-        "question": "Four friends have names with 6, 6, 8, 10 letters. Which friend has the longest name?",
-        "options": [
-          "Friend C",
-          "Friend D",
-          "Friend A",
-          "Friend B"
-        ],
-        "answer": 1,
-        "explanation": "The fourth name has 10 letters, more than the other three.",
-        "difficulty": "Hard"
-      },
-      {
-        "id": "c3m01q079",
-        "question": "Four friends have names with 3, 7, 7, 11 letters. Which friend has the longest name?",
+        "question": "Four friends have names with 4, 7, 8 and 11 letters. Friend A adds 8 letters to a nickname. Whose name is now longest?",
         "options": [
           "Friend B",
           "Friend C",
           "Friend D",
           "Friend A"
         ],
-        "answer": 2,
-        "explanation": "The fourth name has 11 letters, more than the other three.",
-        "difficulty": "Challenge"
+        "answer": 3,
+        "explanation": "Friend A has 4 + 8 = 12 letters, more than Friend D's 11.",
+        "difficulty": "Hard"
       },
       {
-        "id": "c3m01q080",
-        "question": "Four friends have names with 4, 5, 8, 9 letters. Which friend has the longest name?",
+        "id": "c3m01q077",
+        "question": "Four friends have names with 5, 5, 7 and 9 letters. Friend B adds 5 letters to a nickname. Whose name is now longest?",
         "options": [
           "Friend A",
           "Friend B",
           "Friend C",
           "Friend D"
         ],
+        "answer": 1,
+        "explanation": "Friend B has 5 + 5 = 10 letters, more than Friend D's 9.",
+        "difficulty": "Hard"
+      },
+      {
+        "id": "c3m01q078",
+        "question": "Four friends have names with 6, 6, 8 and 10 letters. Friend D shortens a nickname by 3 letters. Whose name is now longest?",
+        "options": [
+          "Friend A",
+          "Friend C",
+          "Friend B",
+          "Friend D"
+        ],
+        "answer": 1,
+        "explanation": "Friend D has 7 letters after shortening; Friend C has 8.",
+        "difficulty": "Hard"
+      },
+      {
+        "id": "c3m01q079",
+        "question": "Four friends have names with 3, 7, 7 and 11 letters. Friend A adds 9 letters to a nickname. Whose name is now longest?",
+        "options": [
+          "Friend B",
+          "Friend C",
+          "Friend A",
+          "Friend D"
+        ],
+        "answer": 2,
+        "explanation": "Friend A has 3 + 9 = 12 letters, more than Friend D's 11.",
+        "difficulty": "Challenge"
+      },
+      {
+        "id": "c3m01q080",
+        "question": "Four friends have names with 4, 5, 8 and 9 letters. Friend C adds 3 letters to a nickname. Whose name is now longest?",
+        "options": [
+          "Friend A",
+          "Friend B",
+          "Friend D",
+          "Friend C"
+        ],
         "answer": 3,
-        "explanation": "The fourth name has 9 letters, more than the other three.",
+        "explanation": "Friend C has 8 + 3 = 11 letters, more than Friend D's 9.",
         "difficulty": "Challenge"
       },
       {
@@ -1099,80 +1099,80 @@
       },
       {
         "id": "c3m01q085",
-        "question": "There were 25 tickets on a table. 19 were taken. How many tickets remain?",
+        "question": "There are 25 tickets. Nineteen are taken, then 5 new tickets are added and 2 are taken. How many tickets remain?",
         "options": [
-          "7",
-          "6",
-          "5",
-          "8"
+          "8",
+          "9",
+          "10",
+          "7"
         ],
         "answer": 1,
-        "explanation": "25 − 19 = 6 tickets remain.",
+        "explanation": "25 − 19 = 6; 6 + 5 − 2 = 9.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q086",
-        "question": "There were 26 tickets on a table. 20 were taken. How many tickets remain?",
+        "question": "There are 26 tickets. Twenty are taken, then 3 are returned. How many tickets are on the table?",
         "options": [
           "8",
-          "6",
-          "7",
-          "5"
+          "9",
+          "10",
+          "7"
         ],
         "answer": 1,
-        "explanation": "26 − 20 = 6 tickets remain.",
+        "explanation": "26 − 20 = 6; 6 + 3 = 9.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q087",
-        "question": "There were 27 tickets on a table. 21 were taken. How many tickets remain?",
+        "question": "There are 27 tickets. Twenty-one are taken, 4 new ones arrive and 2 are used. How many remain?",
         "options": [
-          "5",
+          "7",
+          "9",
           "8",
-          "6",
-          "7"
+          "10"
         ],
         "answer": 2,
-        "explanation": "27 − 21 = 6 tickets remain.",
+        "explanation": "27 − 21 = 6; 6 + 4 − 2 = 8.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q088",
-        "question": "There were 28 tickets on a table. 22 were taken. How many tickets remain?",
+        "question": "There are 28 tickets. Twenty-two are taken, 7 are added and 4 are used. How many remain?",
         "options": [
-          "7",
-          "5",
           "8",
-          "6"
+          "7",
+          "10",
+          "9"
         ],
         "answer": 3,
-        "explanation": "28 − 22 = 6 tickets remain.",
+        "explanation": "28 − 22 = 6; 6 + 7 − 4 = 9.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q089",
-        "question": "There were 29 tickets on a table. 23 were taken. How many tickets remain?",
+        "question": "There are 29 tickets. Twenty-three are taken, then 4 are added and 2 are used. How many remain?",
         "options": [
           "7",
-          "6",
-          "5",
-          "8"
+          "8",
+          "9",
+          "10"
         ],
         "answer": 1,
-        "explanation": "29 − 23 = 6 tickets remain.",
+        "explanation": "29 − 23 = 6; 6 + 4 − 2 = 8.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m01q090",
-        "question": "There were 30 tickets on a table. 24 were taken. How many tickets remain?",
+        "question": "There are 30 tickets. Twenty-four are taken, then 2 are added and 3 are used. How many remain?",
         "options": [
-          "8",
+          "4",
+          "5",
           "6",
-          "7",
-          "5"
+          "7"
         ],
         "answer": 1,
-        "explanation": "30 − 24 = 6 tickets remain.",
+        "explanation": "30 − 24 = 6; 6 + 2 − 3 = 5.",
         "difficulty": "Challenge"
       },
       {
@@ -1229,80 +1229,80 @@
       },
       {
         "id": "c3m01q095",
-        "question": "A group has 12 objects. If 3 more are added, how many are there now?",
+        "question": "A group has 12 objects. Three more are added, then 4 are taken away. How many remain?",
         "options": [
-          "14",
-          "17",
-          "15",
-          "16"
+          "10",
+          "12",
+          "11",
+          "13"
         ],
         "answer": 2,
-        "explanation": "12 + 3 = 15.",
+        "explanation": "12 + 3 − 4 = 11.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q096",
-        "question": "A group has 13 objects. If 3 more are added, how many are there now?",
+        "question": "A group has 13 objects. Three more are added, then 5 are taken away. How many remain?",
         "options": [
-          "17",
-          "15",
-          "18",
-          "16"
+          "10",
+          "12",
+          "13",
+          "11"
         ],
         "answer": 3,
-        "explanation": "13 + 3 = 16.",
+        "explanation": "13 + 3 − 5 = 11.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q097",
-        "question": "A group has 14 objects. If 3 more are added, how many are there now?",
+        "question": "A group has 14 objects. Three more are added, then one more arrives. If the objects are put into 2 equal groups, how many are in each group?",
         "options": [
-          "18",
-          "17",
-          "16",
-          "19"
+          "8",
+          "9",
+          "10",
+          "11"
         ],
         "answer": 1,
-        "explanation": "14 + 3 = 17.",
+        "explanation": "14 + 3 + 1 = 18; 18 ÷ 2 = 9.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q098",
-        "question": "A group has 15 objects. If 3 more are added, how many are there now?",
+        "question": "A group has 15 objects. Three more are added. If 2 equal groups are made, how many are in each group?",
         "options": [
-          "20",
-          "18",
-          "19",
-          "17"
+          "8",
+          "9",
+          "10",
+          "11"
         ],
         "answer": 1,
-        "explanation": "15 + 3 = 18.",
+        "explanation": "15 + 3 = 18; 18 ÷ 2 = 9.",
         "difficulty": "Hard"
       },
       {
         "id": "c3m01q099",
-        "question": "A group has 16 objects. If 3 more are added, how many are there now?",
+        "question": "A group has 16 objects. Three more are added, then 6 more are added. How many are there now?",
         "options": [
-          "18",
-          "21",
-          "19",
-          "20"
+          "24",
+          "26",
+          "25",
+          "27"
         ],
         "answer": 2,
-        "explanation": "16 + 3 = 19.",
+        "explanation": "16 + 3 + 6 = 25.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m01q100",
-        "question": "A group has 17 objects. If 3 more are added, how many are there now?",
+        "question": "A group has 17 objects. Three more are added. The objects are arranged in 2 equal groups, with 3 left over. How many objects are there altogether?",
         "options": [
-          "21",
-          "19",
-          "22",
-          "20"
+          "41",
+          "42",
+          "43",
+          "40"
         ],
         "answer": 3,
-        "explanation": "17 + 3 = 20.",
+        "explanation": "17 + 3 = 20; two groups of 20 make 40, so use 2 equal groups without leftovers.",
         "difficulty": "Challenge"
       }
     ]
