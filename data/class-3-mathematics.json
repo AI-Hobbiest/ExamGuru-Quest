@@ -633,12 +633,12 @@
         "id": "c3m01q049",
         "question": "Which tally record represents 13 objects?",
         "options": [
-          "||||/ ||||/ |||",
           "||||/ ||||/ ||||",
+          "||||/ ||||/ |||",
           "||||/ ||||/ ||",
           "||||/ ||||/ ||||/"
         ],
-        "answer": 0,
+        "answer": 1,
         "explanation": "A crossed tally group represents five; count the remaining strokes to get the total.",
         "difficulty": "Challenge"
       },
@@ -737,12 +737,12 @@
         "id": "c3m01q057",
         "question": "A survey records 13 birds, 19 cats and 16 dogs. Which group is the smallest?",
         "options": [
-          "Birds",
           "Cats",
+          "Birds",
           "Dogs",
           "All are equal"
         ],
-        "answer": 0,
+        "answer": 1,
         "explanation": "13 is the smallest count.",
         "difficulty": "Hard"
       },
@@ -841,12 +841,12 @@
         "id": "c3m01q065",
         "question": "A chart shows 13 stars for one group and 17 for another. How many stars are shown altogether?",
         "options": [
-          "30",
           "31",
+          "30",
           "29",
           "32"
         ],
-        "answer": 0,
+        "answer": 1,
         "explanation": "13 + 17 = 30.",
         "difficulty": "Hard"
       },
@@ -893,12 +893,12 @@
         "id": "c3m01q069",
         "question": "A chart shows 17 stars for one group and 21 for another. How many stars are shown altogether?",
         "options": [
-          "38",
           "39",
+          "38",
           "37",
           "40"
         ],
-        "answer": 0,
+        "answer": 1,
         "explanation": "17 + 21 = 38.",
         "difficulty": "Challenge"
       },
@@ -997,12 +997,12 @@
         "id": "c3m01q077",
         "question": "Four friends have names with 5, 5, 7, 9 letters. Which friend has the longest name?",
         "options": [
-          "Friend D",
           "Friend A",
+          "Friend D",
           "Friend B",
           "Friend C"
         ],
-        "answer": 0,
+        "answer": 1,
         "explanation": "The fourth name has 9 letters, more than the other three.",
         "difficulty": "Hard"
       },
@@ -1101,12 +1101,12 @@
         "id": "c3m01q085",
         "question": "There were 25 tickets on a table. 19 were taken. How many tickets remain?",
         "options": [
-          "6",
           "7",
+          "6",
           "5",
           "8"
         ],
-        "answer": 0,
+        "answer": 1,
         "explanation": "25 − 19 = 6 tickets remain.",
         "difficulty": "Hard"
       },
@@ -1153,12 +1153,12 @@
         "id": "c3m01q089",
         "question": "There were 29 tickets on a table. 23 were taken. How many tickets remain?",
         "options": [
-          "6",
           "7",
+          "6",
           "5",
           "8"
         ],
-        "answer": 0,
+        "answer": 1,
         "explanation": "29 − 23 = 6 tickets remain.",
         "difficulty": "Challenge"
       },
@@ -1257,12 +1257,12 @@
         "id": "c3m01q097",
         "question": "A group has 14 objects. If 3 more are added, how many are there now?",
         "options": [
-          "17",
           "18",
+          "17",
           "16",
           "19"
         ],
-        "answer": 0,
+        "answer": 1,
         "explanation": "14 + 3 = 17.",
         "difficulty": "Hard"
       },
@@ -1421,12 +1421,12 @@
         "id": "c3m02q009",
         "question": "A toy box contains 3 cubes and 1 cylinder. How many flat faces do they have altogether?",
         "options": [
-          "20",
-          "18",
           "22",
+          "18",
+          "20",
           "24"
         ],
-        "answer": 0,
+        "answer": 2,
         "explanation": "Three cubes have 18 square faces and a cylinder has 2 circular faces: 18 + 2 = 20.",
         "difficulty": "Challenge"
       },
@@ -1564,12 +1564,12 @@
         "id": "c3m02q020",
         "question": "A shape has 6 square faces. Which description could be part of a net that folds into a cube?",
         "options": [
-          "Six squares joined edge-to-edge in a cross arrangement",
-          "Four squares only",
           "Six circles",
+          "Four squares only",
+          "Six squares joined edge-to-edge in a cross arrangement",
           "Two triangles and four circles"
         ],
-        "answer": 0,
+        "answer": 2,
         "explanation": "A cube net has six squares arranged so they fold into the six faces of the cube.",
         "difficulty": "Challenge"
       },
@@ -1681,12 +1681,12 @@
         "id": "c3m02q029",
         "question": "A square block has equal square faces. Which solid shape best matches the clue?",
         "options": [
-          "Cube",
-          "Cuboid",
           "Cylinder",
+          "Cuboid",
+          "Cube",
           "Cone"
         ],
-        "answer": 0,
+        "answer": 2,
         "explanation": "The clue describes a cube.",
         "difficulty": "Challenge"
       },
@@ -1785,12 +1785,12 @@
         "id": "c3m02q037",
         "question": "Which solid matches this description: rectangular flat faces?",
         "options": [
-          "Cuboid",
-          "Cube",
           "Cylinder",
+          "Cube",
+          "Cuboid",
           "Cone"
         ],
-        "answer": 0,
+        "answer": 2,
         "explanation": "The property \"rectangular flat faces\" identifies a cuboid.",
         "difficulty": "Hard"
       },
@@ -1889,12 +1889,12 @@
         "id": "c3m02q045",
         "question": "A display has 2 cubes and 2 cylinders. How many solids are on the display?",
         "options": [
-          "4",
-          "5",
           "3",
+          "5",
+          "4",
           "6"
         ],
-        "answer": 0,
+        "answer": 2,
         "explanation": "2 + 2 = 4 solids.",
         "difficulty": "Hard"
       },
@@ -1941,12 +1941,12 @@
         "id": "c3m02q049",
         "question": "A display has 2 cubes and 3 cylinders. How many solids are on the display?",
         "options": [
-          "5",
-          "6",
           "4",
+          "6",
+          "5",
           "7"
         ],
-        "answer": 0,
+        "answer": 2,
         "explanation": "2 + 3 = 5 solids.",
         "difficulty": "Challenge"
       },
@@ -2045,12 +2045,12 @@
         "id": "c3m02q057",
         "question": "From the front, what shape can the outline of a orange look like?",
         "options": [
-          "Circle",
-          "Triangle",
           "Hexagon",
+          "Triangle",
+          "Circle",
           "Oval"
         ],
-        "answer": 0,
+        "answer": 2,
         "explanation": "A orange may have a circle-shaped outline from this view.",
         "difficulty": "Hard"
       },
@@ -2149,12 +2149,12 @@
         "id": "c3m02q065",
         "question": "A toy shop needs a solid-shape label for the brick. Which label should it use?",
         "options": [
-          "Cuboid",
-          "Cube",
           "Cylinder",
+          "Cube",
+          "Cuboid",
           "Cone"
         ],
-        "answer": 0,
+        "answer": 2,
         "explanation": "The brick is most like a cuboid.",
         "difficulty": "Hard"
       },
@@ -2201,12 +2201,12 @@
         "id": "c3m02q069",
         "question": "A toy shop needs a solid-shape label for the ice-cream cone. Which label should it use?",
         "options": [
-          "Cone",
+          "Cylinder",
           "Cube",
           "Cuboid",
-          "Cylinder"
+          "Cone"
         ],
-        "answer": 0,
+        "answer": 3,
         "explanation": "The ice-cream cone is most like a cone.",
         "difficulty": "Challenge"
       },
@@ -2305,12 +2305,12 @@
         "id": "c3m02q077",
         "question": "A rectangular box is modelled by a cuboid. How many flat faces does the solid have?",
         "options": [
-          "6",
+          "3",
           "1",
           "2",
-          "3"
+          "6"
         ],
-        "answer": 0,
+        "answer": 3,
         "explanation": "A cuboid has six flat faces.",
         "difficulty": "Hard"
       },
@@ -2409,12 +2409,12 @@
         "id": "c3m02q085",
         "question": "A model has no flat faces. Which solid is it?",
         "options": [
-          "Sphere",
+          "Cylinder",
           "Cube",
           "Cuboid",
-          "Cylinder"
+          "Sphere"
         ],
-        "answer": 0,
+        "answer": 3,
         "explanation": "The clue \"no flat faces\" matches a sphere.",
         "difficulty": "Hard"
       },
@@ -2461,12 +2461,12 @@
         "id": "c3m02q089",
         "question": "A model has a pointed top. Which solid is it?",
         "options": [
-          "Cone",
+          "Cylinder",
           "Cube",
           "Cuboid",
-          "Cylinder"
+          "Cone"
         ],
-        "answer": 0,
+        "answer": 3,
         "explanation": "The clue \"a pointed top\" matches a cone.",
         "difficulty": "Challenge"
       },
@@ -2565,12 +2565,12 @@
         "id": "c3m02q097",
         "question": "A child draws a orange on a shape chart. Which solid name fits it best?",
         "options": [
-          "Sphere",
+          "Cylinder",
           "Cube",
           "Cuboid",
-          "Cylinder"
+          "Sphere"
         ],
-        "answer": 0,
+        "answer": 3,
         "explanation": "The familiar shape of a orange is a sphere.",
         "difficulty": "Hard"
       },
@@ -2729,12 +2729,12 @@
         "id": "c3m03q009",
         "question": "A library has 198 books. It receives 27 more and then lends 36. How many books remain?",
         "options": [
-          "189",
+          "209",
           "179",
           "199",
-          "209"
+          "189"
         ],
-        "answer": 0,
+        "answer": 3,
         "explanation": "198 + 27 = 225; 225 − 36 = 189.",
         "difficulty": "Challenge"
       },
@@ -2742,12 +2742,12 @@
         "id": "c3m03q010",
         "question": "Make the greatest three-digit number using 2, 0 and 7 once each. Then subtract the smallest three-digit number made with the same digits. What is the difference?",
         "options": [
-          "513",
+          "527",
           "495",
           "517",
-          "527"
+          "513"
         ],
-        "answer": 0,
+        "answer": 3,
         "explanation": "The greatest is 720 and the smallest is 207; 720 − 207 = 513.",
         "difficulty": "Challenge"
       },
