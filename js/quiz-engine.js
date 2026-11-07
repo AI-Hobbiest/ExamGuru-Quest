@@ -222,6 +222,33 @@ function prioritizeUnseenQuestions(pool, desiredCount){
   const required=desiredCount===0?pool.length:Math.min(desiredCount,pool.length);
   return unseen.length>=required?unseen.concat(previouslySeen):unseen.concat(previouslySeen);
 }
+function selectAssessmentMix(pool, desiredCount){
+  if(classId!=="3"||!Array.isArray(pool)||!pool.length)return pool;
+  const count=Math.min(pool.length,Math.max(1,Number(desiredCount)||pool.length));
+  const weights={Easy:0.20,Medium:0.30,Hard:0.30,Challenge:0.20};
+  const order=["Easy","Medium","Hard","Challenge"];
+  const quotas=Object.fromEntries(order.map(level=>[level,Math.floor(count*weights[level])]));
+  let remaining=count-order.reduce((sum,level)=>sum+quotas[level],0);
+  order.map(level=>({level,remainder:count*weights[level]-quotas[level]}))
+    .sort((a,b)=>b.remainder-a.remainder||order.indexOf(a.level)-order.indexOf(b.level))
+    .slice(0,remaining).forEach(item=>quotas[item.level]++);
+  const groups=Object.fromEntries(order.map(level=>[level,shuffle(pool.filter(question=>question.difficulty===level))]));
+  const selected=[],used=new Set();
+  for(const level of order){
+    for(const question of groups[level].slice(0,quotas[level])){
+      selected.push(question);used.add(keyFor(question));
+    }
+  }
+  if(selected.length<count){
+    const surplus=shuffle(pool.filter(question=>!used.has(keyFor(question))));
+    const highFirst=surplus.sort((a,b)=>{
+      const rank={Challenge:0,Hard:1,Medium:2,Easy:3};
+      return (rank[a.difficulty]??4)-(rank[b.difficulty]??4);
+    });
+    selected.push(...highFirst.slice(0,count-selected.length));
+  }
+  return shuffle(selected);
+}
 function updatePersonalBookmarkButton(question){
   const button=$("bookmarkQuestionBtn");if(!button)return;
   const saved=learningLibrary.bookmarks.some(item=>item.questionKey===keyFor(question));
@@ -482,7 +509,12 @@ function start(){
     const chosen=+$("length").value;
     if(mode==="adaptive")pool=window.C10LearningModel.adaptiveOrder(pool,learningLibrary,chosen,Math.random);
     else if(mode!=="retry"&&mode!=="bookmarks")pool=prioritizeUnseenQuestions(pool,chosen);
-    if(chosen!==0)pool=pool.slice(0,Math.min(chosen,pool.length));
+    if(chosen!==0){
+      const requested=Math.min(chosen,pool.length);
+      pool=(classId==="3"&&(mode==="test"||mode==="timed"))
+        ?selectAssessmentMix(pool,requested)
+        :pool.slice(0,requested);
+    }
   }
   if(!pool.length){setText("modeHint","No questions are available for this selection.");return;}
   session=pool;index=0;picked=null;answers=Array(session.length).fill(null);
