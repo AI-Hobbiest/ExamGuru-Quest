@@ -1419,15 +1419,15 @@
       },
       {
         "id": "c3m02q009",
-        "question": "Which solid shape is most like a ice-cream cone?",
+        "question": "A toy box contains 3 cubes and 1 cylinder. How many flat faces do they have altogether?",
         "options": [
-          "Cone",
-          "Cube",
-          "Cuboid",
-          "Cylinder"
+          "22",
+          "18",
+          "20",
+          "24"
         ],
         "answer": 0,
-        "explanation": "A ice-cream cone is commonly modelled by a cone.",
+        "explanation": "3 cubes have 18 square faces and a cylinder has 2 circular faces: 18 + 2 = 20.",
         "difficulty": "Challenge"
       },
       {
@@ -2740,15 +2740,15 @@
       },
       {
         "id": "c3m03q010",
-        "question": "Which number has 2 hundreds, 0 tens and 5 ones?",
+        "question": "Make the greatest three-digit number using 2, 0 and 7 once each. Then subtract the smallest three-digit number made with the same digits. What is the difference?",
         "options": [
-          "250",
-          "205",
-          "25",
-          "2005"
+          "513",
+          "495",
+          "517",
+          "527"
         ],
-        "answer": 1,
-        "explanation": "200 + 0 + 5 = 205.",
+        "answer": 0,
+        "explanation": "The greatest is 720 and the smallest is 207; 720 − 207 = 513.",
         "difficulty": "Challenge"
       },
       {
@@ -6651,28 +6651,28 @@
       },
       {
         "id": "c3m06q009",
-        "question": "In 327, what is the value of the hundreds digit?",
+        "question": "A number has 4 hundreds, 3 tens and 8 ones. If the tens and ones digits swap places, how much greater is the new number?",
         "options": [
-          "300",
-          "3",
-          "30",
-          "327"
+          "45",
+          "18",
+          "27",
+          "36"
         ],
         "answer": 0,
-        "explanation": "The 3 in the hundreds place represents 300.",
+        "explanation": "438 becomes 483. The difference is 483 − 438 = 45.",
         "difficulty": "Challenge"
       },
       {
         "id": "c3m06q010",
-        "question": "Count on by 100 from 246. What comes next?",
+        "question": "A number is 100 more than 276. What is the number?",
         "options": [
-          "256",
-          "346",
-          "446",
-          "246"
+          "376",
+          "366",
+          "386",
+          "396"
         ],
-        "answer": 1,
-        "explanation": "246 + 100 = 346.",
+        "answer": 0,
+        "explanation": "276 + 100 = 376.",
         "difficulty": "Challenge"
       },
       {
@@ -11896,15 +11896,15 @@
       },
       {
         "id": "c3m10q010",
-        "question": "A ribbon is 11 metres long and another is 2 metres long. What is their total length?",
+        "question": "A table is 120 cm long. A bench is 35 cm longer. How long are the table and bench together?",
         "options": [
-          "15",
-          "13",
-          "14",
-          "12"
+          "275 cm",
+          "285 cm",
+          "295 cm",
+          "305 cm"
         ],
-        "answer": 1,
-        "explanation": "11 m + 2 m = 13 m.",
+        "answer": 0,
+        "explanation": "The bench is 120 + 35 = 155 cm; total is 120 + 155 = 275 cm.",
         "difficulty": "Challenge"
       },
       {
@@ -12026,15 +12026,15 @@
       },
       {
         "id": "c3m10q020",
-        "question": "How many half-metre pieces make 11 metres?",
+        "question": "Three strips are 40 cm, 60 cm and 55 cm long. Which pair makes exactly 1 metre?",
         "options": [
-          "23",
-          "21",
-          "24",
-          "22"
+          "40 cm and 60 cm",
+          "40 cm and 55 cm",
+          "60 cm and 55 cm",
+          "All three"
         ],
-        "answer": 3,
-        "explanation": "There are two half-metres in each metre: 11 × 2 = 22.",
+        "answer": 0,
+        "explanation": "40 + 60 = 100 cm, which is 1 metre.",
         "difficulty": "Challenge"
       },
       {
@@ -14733,15 +14733,15 @@
       },
       {
         "id": "c3m12q027",
-        "question": "What number must be added to 66 to make 227?",
+        "question": "A shop bill is ₹186. The customer gives ₹200. The shopkeeper has only ₹10 and ₹2 coins. What is the fewest coins needed for the change?",
         "options": [
-          "160",
-          "163",
-          "161",
-          "162"
+          "3",
+          "4",
+          "5",
+          "6"
         ],
-        "answer": 2,
-        "explanation": "227 − 66 = 161.",
+        "answer": 0,
+        "explanation": "The change is ₹14: one ₹10 coin and two ₹2 coins, so 3 coins.",
         "difficulty": "Hard"
       },
       {
@@ -15937,15 +15937,15 @@
       },
       {
         "id": "c3m13q019",
-        "question": "How many days are in September in a common year?",
+        "question": "A month begins on Wednesday and has 30 days. What day of the week is the 30th?",
         "options": [
-          "29",
-          "32",
-          "30",
-          "31"
+          "Thursday",
+          "Wednesday",
+          "Friday",
+          "Saturday"
         ],
-        "answer": 2,
-        "explanation": "September has 30 days in a common year.",
+        "answer": 0,
+        "explanation": "The 29th is Wednesday after four full weeks; the 30th is Thursday.",
         "difficulty": "Challenge"
       },
       {
