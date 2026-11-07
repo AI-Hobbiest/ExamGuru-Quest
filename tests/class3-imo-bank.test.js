@@ -34,8 +34,24 @@ assert.ok(all.every(question => Array.isArray(question.options) && question.opti
   new Set(question.options).size === 4 && Number.isInteger(question.answer) &&
   question.answer >= 0 && question.answer < 4 && question.explanation && question.explanation.length >= 10),
   "every question has four distinct options, one indexed answer and an explanation");
-assert.ok(all.every(question => ["Easy", "Medium", "Challenge"].includes(question.difficulty)),
+assert.ok(all.every(question => ["Easy", "Medium", "Hard", "Challenge"].includes(question.difficulty)),
   "difficulty labels use the supported bank vocabulary");
+const sectionDifficulty = normalizedChapters.map(chapter => chapter.questions.reduce((counts, question) => {
+  counts[question.difficulty]++;
+  return counts;
+}, { Easy: 0, Medium: 0, Hard: 0, Challenge: 0 }));
+assert.deepEqual(sectionDifficulty, [
+  { Easy: 31, Medium: 4, Hard: 27, Challenge: 8 },
+  { Easy: 33, Medium: 2, Hard: 29, Challenge: 6 },
+  { Easy: 25, Medium: 10, Hard: 22, Challenge: 13 },
+  { Easy: 0, Medium: 8, Hard: 0, Challenge: 29 }
+], "Class 3 IMO sections maintain age-appropriate 50% or higher Hard + Challenge mix");
+const totalDifficulty = all.reduce((counts, question) => {
+  counts[question.difficulty]++;
+  return counts;
+}, { Easy: 0, Medium: 0, Hard: 0, Challenge: 0 });
+assert.deepEqual(totalDifficulty, { Easy: 89, Medium: 24, Hard: 78, Challenge: 56 },
+  "Class 3 IMO aggregate difficulty totals remain stable");
 const normalizedStem = value => String(value).toLowerCase().normalize("NFKC")
   .replace(/[’‘]/g, "'").replace(/[0-9,]+/g, "#")
   .replace(/[^a-z#₹]+/g, " ").replace(/\s+/g, " ").trim();
