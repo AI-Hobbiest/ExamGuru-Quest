@@ -69,6 +69,35 @@ assert.equal(new Set(socialQuestions.map(question=>question.questionKey)).size,1
 const englishBank=JSON.parse(fs.readFileSync("data/class-6-english.json","utf8"));
 assert.equal(englishBank.length,16,"Class 6 English follows the 16 reading pieces in Poorvi (2026-27)");
 assert.equal(englishBank.reduce((sum,chapter)=>sum+chapter.questions.length,0),1600,"Class 6 English contains 100 MCQs per reading piece");
+const englishDifficultyCounts=englishBank.flatMap(chapter=>chapter.questions).reduce((counts,question)=>{
+  counts[question.difficulty]=(counts[question.difficulty]||0)+1;
+  return counts;
+},{});
+assert.deepEqual(englishDifficultyCounts,{Easy:785,Hard:400,Challenge:400,Medium:15},"Class 6 English Core maintains the agreed 50% Hard + Challenge mix");
+for(const chapter of englishBank){
+  const hard=chapter.questions.filter(question=>question.difficulty==="Hard").length;
+  const challenge=chapter.questions.filter(question=>question.difficulty==="Challenge").length;
+  assert.equal(hard+challenge,50,"each Class 6 English Core chapter has 50 Hard/Challenge questions");
+  assert.equal(hard,25,"each Class 6 English Core chapter has 25 Hard questions");
+  assert.equal(challenge,25,"each Class 6 English Core chapter has 25 Challenge questions");
+}
+const englishSofBank=JSON.parse(fs.readFileSync("data/class-6-english-sof.json","utf8"));
+assert.equal(englishSofBank.length,12,"Class 6 English SOF has ten syllabus topics plus Spoken/Written Expression and Achievers");
+assert.equal(englishSofBank.reduce((sum,chapter)=>sum+chapter.questions.length,0),600,"Class 6 English SOF contains 600 MCQs");
+const englishSofDifficultyCounts=englishSofBank.flatMap(chapter=>chapter.questions).reduce((counts,question)=>{
+  counts[question.difficulty]=(counts[question.difficulty]||0)+1;
+  return counts;
+},{});
+assert.deepEqual(englishSofDifficultyCounts,{Easy:60,Medium:240,Hard:200,Challenge:100},"Class 6 English SOF maintains the agreed 50% Hard + Challenge mix");
+for(const chapter of englishSofBank.slice(0,10)){
+  const hard=chapter.questions.filter(question=>question.difficulty==="Hard").length;
+  const challenge=chapter.questions.filter(question=>question.difficulty==="Challenge").length;
+  assert.equal(hard,10,"each Class 6 English SOF topic has ten Hard questions");
+  assert.equal(challenge,10,"each Class 6 English SOF topic has ten Challenge questions");
+}
+assert.equal(englishSofBank[10].questions.filter(question=>question.difficulty==="Hard").length,50,"Spoken and Written Expression retains its Hard section");
+assert.equal(englishSofBank[11].questions.filter(question=>question.difficulty==="Hard").length,50,"Achievers Section retains its Hard section");
+
 const englishPrompts=new Set(),englishIds=new Set();
 for(const chapter of englishBank){
   assert.ok(chapter.title,"every English topic has a title");
