@@ -85,6 +85,18 @@ assert.equal(all.filter(question => question.syllabusOrigin === "previous-class"
   "previous-class source pool has 28 questions in each non-Achievers section");
 assert.equal(all.filter(question => question.syllabusOrigin === "current-class").length, 163,
   "current-class source pool has 42 questions in each non-Achievers section and 37 Achievers questions");
+const strengthened = new Map(all.map(question => [question.id, question]));
+for (const id of ["c3imo-lr-c-014", "c3imo-m2-c-071", "c3imo-m2-c-078", "c3imo-m2-p-112"]) {
+  const question = strengthened.get(id);
+  assert.ok(question, id + " remains in the IMO bank");
+  assert.ok(!/immediately after the runner in 5th|written as three thousand and sixty-two|equal to one-half|10 more than 286/i.test(question.question),
+    id + " no longer uses the previously flagged one-step stem");
+}
+assert.equal(strengthened.get("c3imo-lr-c-014").options[strengthened.get("c3imo-lr-c-014").answer], "5th");
+assert.equal(strengthened.get("c3imo-m2-c-071").options[strengthened.get("c3imo-m2-c-071").answer], "3,068");
+assert.equal(strengthened.get("c3imo-m2-c-078").options[strengthened.get("c3imo-m2-c-078").answer], "6");
+assert.equal(strengthened.get("c3imo-m2-p-112").options[strengthened.get("c3imo-m2-p-112").answer], "312");
+
 const answerPositions = [0, 0, 0, 0];
 raw.flatMap(chapter => chapter.questions).forEach(question => answerPositions[question.answer]++);
 assert.ok(Math.max(...answerPositions) - Math.min(...answerPositions) <= 1,
