@@ -29,11 +29,25 @@ for (const [i, chapter] of bank.entries()) {
     assert.equal(new Set(q.options).size, 4, "options are distinct");
     assert.ok(Number.isInteger(q.answer) && q.answer >= 0 && q.answer < 4, "answer index is valid");
     assert.ok(q.explanation && q.explanation.length >= 5, "explanation is present");
-    assert.ok(["Easy", "Medium", "Challenge"].includes(q.difficulty), "difficulty is supported");
+    assert.ok(["Easy", "Medium", "Hard", "Challenge"].includes(q.difficulty), "difficulty is supported");
     positions[q.answer]++;
   }
 }
 assert.equal(ids.size, 120);
+const class3Difficulty = bank.flatMap(chapter => chapter.questions).reduce((counts, q) => {
+  counts[q.difficulty]++;
+  return counts;
+}, { Easy: 0, Medium: 0, Hard: 0, Challenge: 0 });
+assert.deepEqual(class3Difficulty, { Easy: 48, Medium: 12, Hard: 24, Challenge: 36 },
+  "Class 3 English maintains the agreed 50% Hard + Challenge mix");
+for (const chapter of bank) {
+  const counts = chapter.questions.reduce((result, q) => {
+    result[q.difficulty]++;
+    return result;
+  }, { Easy: 0, Medium: 0, Hard: 0, Challenge: 0 });
+  assert.deepEqual(counts, { Easy: 4, Medium: 1, Hard: 2, Challenge: 3 },
+    chapter.title + " keeps a chapter-level 50% Hard + Challenge mix");
+}
 assert.deepEqual(positions, [30, 30, 30, 30], "answer positions are balanced");
 
 const classCatalog = JSON.parse(fs.readFileSync("data/classes.json", "utf8"));
