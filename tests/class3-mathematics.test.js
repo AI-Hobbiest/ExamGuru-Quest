@@ -17,7 +17,7 @@ assert.equal(bank.reduce((sum, chapter) => sum + chapter.questions.length, 0), 1
 const ids = new Set();
 const stems = new Set();
 const answerPositions = [0, 0, 0, 0];
-const difficulty = { Easy: 0, Medium: 0, Challenge: 0 };
+const difficulty = { Easy: 0, Medium: 0, Hard: 0, Challenge: 0 };
 for (const [chapterIndex, chapter] of bank.entries()) {
   assert.equal(chapter.chapter_no, chapterIndex + 1);
   assert.ok(chapter.key && chapter.section, "chapter metadata is present");
@@ -38,10 +38,16 @@ for (const [chapterIndex, chapter] of bank.entries()) {
     difficulty[question.difficulty]++;
     answerPositions[question.answer]++;
   }
+  const chapterDifficulty = chapter.questions.reduce((counts, question) => {
+    counts[question.difficulty]++;
+    return counts;
+  }, { Easy: 0, Medium: 0, Hard: 0, Challenge: 0 });
+  assert.deepEqual(chapterDifficulty, { Easy: 40, Medium: 10, Hard: 30, Challenge: 20 },
+    chapter.title + " maintains the agreed 50% Hard + Challenge mix");
 }
 assert.equal(ids.size, 1400);
 assert.deepEqual(answerPositions, [350, 350, 350, 350], "correct-answer positions are balanced");
-assert.deepEqual(difficulty, { Easy: 560, Medium: 560, Challenge: 280 }, "difficulty is distributed 40/40/20 per chapter");
+assert.deepEqual(difficulty, { Easy: 560, Medium: 140, Hard: 420, Challenge: 280 }, "Class 3 Mathematics maintains the agreed 50% Hard + Challenge mix");
 
 const questionsIn = title => bank.find(chapter => chapter.title === title).questions;
 assert.ok(questionsIn("Toy Joy").some(q => /six equal square faces/i.test(q.question) && q.options[q.answer] === "Cube"), "Toy Joy covers solid-shape properties");
