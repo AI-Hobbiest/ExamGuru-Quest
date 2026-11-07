@@ -120,7 +120,7 @@ for (const id of classOneReworkedIds) {
   const question = upgraded.get(id);
   assert.ok(question, id + " remains in the Class 3 data-handling bank");
   assert.doesNotMatch(question.question,
-    /how many beads are there altogether|which tally record represents|which group is the smallest\?|how many stars are shown altogether|which friend has the longest name|how many tickets remain\?|how many are there now\?/i,
+    /^There are \\d+ red beads and \\d+ blue beads\\. How many beads are there altogether\\?|^Which tally record represents \\d+ objects\\?|^A survey records .* Which group is the smallest\\?|^A chart shows .* How many stars are shown altogether\\?|^Four friends have names with .* Which friend has the longest name\\?|^There were \\d+ tickets on a table\\. \\d+ were taken\\. How many tickets remain\\?|^A group has \\d+ objects\\. If \\d+ more are added, how many are there now\\?/i,
     id + " no longer uses the repetitive one-step stem");
   assert.equal(new Set(question.options).size, 4);
 }
