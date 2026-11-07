@@ -51,6 +51,16 @@ for (const chapter of bank) {
 assert.deepEqual(positions, [30, 30, 30, 30], "answer positions are balanced");
 
 for (const chapter of bank) {
+  for (const suffix of ["001", "003", "004"]) {
+    const q = chapter.questions.find(item => item.id.endsWith("q" + suffix));
+    assert.doesNotMatch(q.question, /most closely connected with|choose the word that belongs with|complete sentence about/i,
+      chapter.title + " has no generic chapter-name filler stem");
+    assert.equal(q.options.length, 4);
+    assert.equal(new Set(q.options).size, 4);
+  }
+}
+
+for (const chapter of bank) {
   for (const suffix of ["009", "010"]) {
     const q = chapter.questions.find(item => item.id.endsWith("q" + suffix));
     assert.equal(q.difficulty, "Challenge", chapter.title + " keeps its revised Challenge items");
