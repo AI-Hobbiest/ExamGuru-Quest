@@ -69,6 +69,8 @@ function validatePaper(paper,options){
     if(n<4||n>6)errors.push("Each passage must support 4–6 questions.");
    }
   });
+  const caDomains=new Set(passages.filter(p=>p.sectionId==="current-affairs").map(p=>String(p.domain||"").trim()).filter(Boolean));
+  if(caDomains.size<4)errors.push("Current Affairs must cover at least four distinct domains in each full-length paper.");
   const passageCounts=Object.fromEntries(SECTIONS.map(s=>[s.id,passages.filter(p=>p.sectionId===s.id).length]));
   const passageRanges={english:[4,6],"current-affairs":[5,7],legal:[5,7],logical:[4,6],quantitative:[3,4]};
   Object.entries(passageRanges).forEach(([id,range])=>{if(passageCounts[id]<range[0]||passageCounts[id]>range[1])errors.push(id+" must use "+range[0]+"–"+range[1]+" passage/data sets.");});
