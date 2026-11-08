@@ -34,5 +34,6 @@ jobs:
           node --check js/clat-practice.js
           node --check tests/clat-engine.test.js
       - name: Validate CLAT paper data and scoring
-        run: node tests/clat-engine.test.js
+        run: |
+          node tests/clat-engine.test.js
           node tests/clat-full-length-draft.test.js
