@@ -12,11 +12,11 @@
       "paperId": "clat-ug27-full-001",
       "status": "draft-assembled",
       "questionCount": 120,
-      "sourceAudit": "primary-source-linked; editorial fact-check pending",
+      "sourceAudit": "primary-source-linked; independent editorial fact-check pending",
       "editorialAudit": "pending",
       "passageCount": 22,
       "automatedValidation": "passed",
-      "answerKeyAudit": "balanced and structurally valid; independent blind solve pending",
+      "answerKeyAudit": "automated structure and QT recalculation tests passed; blind solve pending",
       "releaseEligible": false
     },
     {
@@ -418,6 +418,8 @@
     "editoriallyApprovedPapers": 0,
     "publishedPapers": 0,
     "uniqueQuestionsDrafted": 120,
-    "uniqueQuestionsTarget": 6000
+    "uniqueQuestionsTarget": 6000,
+    "lastAudit": "Strict validation passed after Current Affairs breadth and independent quantitative answer checks",
+    "asOf": "2026-11-09"
   }
 }
