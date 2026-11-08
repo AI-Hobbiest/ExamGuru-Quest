@@ -26,6 +26,7 @@
     {label:"Assigned tests",group:"Assessments",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",auth:"student"},
     {label:"Assigned tests",group:"Assessments",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",auth:"student"},
     {label:"Exam Paper Practice",icon:"📝",href:"./exam-practice.html",page:"exam-practice.html",classIds:["6","10"],auth:"student"},
+    {label:"CLAT UG 2027",group:"Entrance Exams",icon:"⚖️",href:"./clat.html",page:"clat.html",auth:"student"},
     {label:"My profile",group:"My Account",icon:"👤",href:"./profile.html#profile",page:"profile.html",hash:"#profile",auth:"student"},
     {label:"Test history",group:"My Account",icon:"📈",href:"./profile.html#history",page:"profile.html",hash:"#history",auth:"student"},
     {label:"Levels & rewards",group:"My Account",icon:"🏆",href:"./dashboard.html#rewards",page:"dashboard.html",hash:"#rewards",auth:"student"},
