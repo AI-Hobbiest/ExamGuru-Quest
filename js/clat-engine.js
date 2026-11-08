@@ -66,7 +66,7 @@ function sectionScores(paper,answers){
 function createAttempt(paper,student){
  const validation=validatePaper(paper);
  if(!validation.valid)throw new Error("Cannot start an invalid CLAT paper: "+validation.errors.slice(0,3).join(" "));
- return{schemaVersion:1,kind:"clat-attempt",attemptId:"clat-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,8),paperId:paper.paperId,paperTitle:paper.title,studentId:String(student&&student.studentId||student&&student.username||"local-student"),startedAt:new Date().toISOString(),durationSeconds:DURATION_MINUTES*60,remainingSeconds:DURATION_MINUTES*60,answers:{},reviewFlags:[],status:"in-progress",paperSnapshot:clone(paper)};
+ const durationMinutes=Math.max(1,Number(paper.durationMinutes)||DURATION_MINUTES);\n return{schemaVersion:1,kind:"clat-attempt",attemptId:"clat-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,8),paperId:paper.paperId,paperTitle:paper.title,studentId:String(student&&student.studentId||student&&student.username||"local-student"),startedAt:new Date().toISOString(),durationSeconds:durationMinutes*60,remainingSeconds:durationMinutes*60,answers:{},reviewFlags:[],status:"in-progress",paperSnapshot:clone(paper)};
 }
 function finalizeAttempt(attempt,submittedAt){
  const paper=attempt&&attempt.paperSnapshot;
