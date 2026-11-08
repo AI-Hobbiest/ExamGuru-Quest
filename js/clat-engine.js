@@ -33,7 +33,7 @@ function validatePaper(paper,options){
    if(ids.some(id=>!id)||new Set(ids).size!==ids.length||!q.options.every(o=>o&&typeof o.text==="string"&&o.text.trim()))errors.push(at+" options need unique IDs and text.");
    if(!ids.includes(String(q.correctOptionId||"")))errors.push(at+" correctOptionId must match an option.");
   }
-  if(!q.explanation||typeof q.explanation!=="string")errors.push(at+" needs an explanation.");
+  if(!q.explanation||typeof q.explanation!=="string"||q.explanation.trim().length<30)errors.push(at+" needs a useful explanation (at least 30 characters).");
   const passage=passages.find(p=>p.passageId===q.passageId);
   if(passage&&passage.sectionId!==q.sectionId)errors.push(at+" section does not match its passage.");
  });
@@ -56,11 +56,17 @@ function validatePaper(paper,options){
    if(p.sectionId==="quantitative"){
     if(words<70||words>320)errors.push("Quantitative data set "+(i+1)+" should be a concise, self-contained numerical set (70–320 words).");
     if(n<3||n>4)errors.push("Each Quantitative data set must support 3–4 questions.");
+   }else if(p.sectionId==="current-affairs"){
+    if(words<350||words>450)errors.push("Current Affairs passages must stay within the official up-to-450-word format (internal acceptance band 350–450 words).");
+    if(n<4||n>6)errors.push("Each passage must support 4–6 questions.");
+    if(!p.asOf||!Array.isArray(p.sources)||p.sources.length<1)errors.push("Every Current Affairs passage must include an as-of date and source metadata.");
+    (p.sources||[]).forEach((source,j)=>{
+     if(!source.title||!source.publisher||!source.date||!/^https:\/\//.test(String(source.url||"")))errors.push("Current Affairs passage "+(i+1)+" source "+(j+1)+" needs title, publisher, date and an HTTPS URL.");
+    });
    }else{
-    if(words<380||words>520)errors.push("Passage "+(i+1)+" must be approximately 450 words (380–520 words).");
+    if(words<380||words>520)errors.push("English, Legal and Logical passages must be approximately 450 words (380–520 words).");
     if(n<4||n>6)errors.push("Each passage must support 4–6 questions.");
    }
-   if(p.sectionId==="current-affairs"&&(!Array.isArray(p.sources)||p.sources.length<1))errors.push("Every Current Affairs passage must include verifiable source metadata.");
   });
   const passageCounts=Object.fromEntries(SECTIONS.map(s=>[s.id,passages.filter(p=>p.sectionId===s.id).length]));
   const passageRanges={english:[4,6],"current-affairs":[5,7],legal:[5,7],logical:[4,6],quantitative:[3,4]};
