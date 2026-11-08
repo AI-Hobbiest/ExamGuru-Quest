@@ -10,10 +10,14 @@
     {
       "paperNumber": 1,
       "paperId": "clat-ug27-full-001",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "draft-assembled",
+      "questionCount": 120,
+      "sourceAudit": "primary-source-linked; editorial fact-check pending",
+      "editorialAudit": "pending",
+      "passageCount": 22,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "balanced and structurally valid; independent blind solve pending",
+      "releaseEligible": false
     },
     {
       "paperNumber": 2,
@@ -407,5 +411,13 @@
       "sourceAudit": "not-started",
       "editorialAudit": "not-started"
     }
-  ]
+  ],
+  "progress": {
+    "draftPapers": 1,
+    "automatedValidationPassed": 1,
+    "editoriallyApprovedPapers": 0,
+    "publishedPapers": 0,
+    "uniqueQuestionsDrafted": 120,
+    "uniqueQuestionsTarget": 6000
+  }
 }
