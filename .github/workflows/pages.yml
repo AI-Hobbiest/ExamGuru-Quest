@@ -116,7 +116,7 @@ jobs:
           cp js/quiz-engine.js _site/js/quiz-engine.js
           cp data/*.json _site/data/
           cp -R data/exam-papers _site/data/exam-papers
-          cp -R data/clat _site/data/clat
+          cp -R data/clat/. _site/data/clat/
           # Merge the maintained English topic overrides into the deployed bank.
           node <<'NODE'
           const fs = require('fs');
