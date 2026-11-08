@@ -3232,23 +3232,23 @@
       "options": [
         {
           "optionId": "o1",
-          "text": "100"
+          "text": "50"
         },
         {
           "optionId": "o2",
-          "text": "96"
+          "text": "55"
         },
         {
           "optionId": "o3",
-          "text": "88"
+          "text": "60"
         },
         {
           "optionId": "o4",
-          "text": "104"
+          "text": "70"
         }
       ],
-      "correctOptionId": "o2",
-      "explanation": "40% of 200 is 80; a 20% increase gives 80 × 1.20 = 96.",
+      "correctOptionId": "o3",
+      "explanation": "Structural work initially has 25% of 200 = 50 workers; after a 20% increase, 50 × 1.20 = 60.",
       "difficulty": "easy",
       "competency": "percentage-change"
     },
@@ -3260,23 +3260,23 @@
       "options": [
         {
           "optionId": "o1",
-          "text": "63"
+          "text": "80"
         },
         {
           "optionId": "o2",
-          "text": "70"
+          "text": "85"
         },
         {
           "optionId": "o3",
-          "text": "66"
+          "text": "90"
         },
         {
           "optionId": "o4",
-          "text": "60"
+          "text": "100"
         }
       ],
-      "correctOptionId": "o1",
-      "explanation": "Finishing initially has 35% of 200 = 70; after a 10% reduction, 70 × 0.90 = 63.",
+      "correctOptionId": "o3",
+      "explanation": "Finishing work initially has 50% of 200 = 100 workers; after a 10% reduction, 100 × 0.90 = 90.",
       "difficulty": "challenging",
       "competency": "percentage-change"
     },
