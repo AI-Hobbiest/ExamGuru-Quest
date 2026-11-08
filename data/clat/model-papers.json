@@ -1,0 +1,1443 @@
+{
+  "schemaVersion": 1,
+  "kind": "clat-model-paper-library",
+  "examId": "clat-ug-2027",
+  "examTitle": "Common Law Admission Test · Undergraduate 2027",
+  "marking": {
+    "correct": 1,
+    "incorrect": -0.25,
+    "unanswered": 0
+  },
+  "papers": [
+    {
+      "paperId": "clat-ug27-diagnostic-01",
+      "title": "CLAT UG 2027 · Diagnostic Model Paper 1",
+      "subtitle": "Foundational diagnostic · 25 questions · 25 minutes",
+      "durationMinutes": 25,
+      "passages": [
+        {
+          "passageId": "p1-eng",
+          "sectionId": "english",
+          "title": "The public library as civic infrastructure",
+          "text": "A city library is often described as a quiet building containing books. That description misses its civic role. A well-run library offers a shared space in which people can study, use digital services, attend talks and encounter ideas beyond their immediate experience. Unlike a commercial venue, it does not require a purchase before a visitor may remain. This matters in cities where homes are crowded and reliable internet access is uneven. Yet the value of a library cannot be measured only by visitor counts. A library that is busy because residents have nowhere else to go may be performing an important social function, but it may also reveal a shortage of other public spaces. Nor should digital collections be treated as a reason to close physical branches. Digital access expands reach; it does not automatically replace human assistance, accessible workspaces or the informal trust built through repeated encounters. The strongest library policy therefore treats physical and digital services as complementary, and evaluates success through access, usefulness and the range of people served."
+        },
+        {
+          "passageId": "p1-ca",
+          "sectionId": "current-affairs",
+          "title": "India's digital public infrastructure",
+          "text": "Digital public infrastructure refers to shared digital systems that allow people, businesses and public agencies to interact at scale. India's approach has combined digital identity, interoperable payment rails and consent-based data-sharing frameworks. Such systems can reduce transaction costs and make services easier to access, particularly when they are designed to work across providers. But infrastructure is not the same as inclusion. A person without a reliable device, connectivity, accessible interfaces or confidence in the system may remain excluded even when a service is technically available online. Strong governance therefore requires privacy safeguards, grievance redressal, security standards and alternatives for people who cannot use digital channels. The central policy question is not whether every service should become digital; it is how digital systems can improve public access without making essential services conditional on technology that some citizens do not possess."
+        },
+        {
+          "passageId": "p1-legal",
+          "sectionId": "legal",
+          "title": "A principle for reasonable accommodation",
+          "text": "Assume the following principle: an institution must make a reasonable adjustment for a person with a disability where the adjustment enables meaningful participation, does not fundamentally alter the essential nature of the activity and does not impose a disproportionate burden. The institution must consider the person's actual circumstances rather than rely on a blanket rule. A request may be refused if reliable evidence shows that the proposed adjustment would remove an essential safety requirement, but convenience alone is not sufficient. The duty is one of reasonable accommodation, not an obligation to provide every requested measure regardless of cost or effect. The institution should discuss workable alternatives before refusing. Apply only this principle to the situations below; do not assume any additional legal rule."
+        },
+        {
+          "passageId": "p1-log",
+          "sectionId": "logical",
+          "title": "Congestion and the city centre",
+          "text": "The city council argues that introducing a congestion charge will reduce traffic in the central district. Its report notes that cities with congestion charges often experience fewer car trips in charged zones. However, the report also observes that some drivers may divert to nearby residential streets. A residents' association concludes that the charge will therefore make the entire city less safe. That conclusion is stronger than the evidence supports: the report describes a possible displacement effect but does not establish its scale, nor does it compare the risks of diverted traffic with the risks of existing congestion. A sound assessment would measure traffic across the wider area and examine pedestrian safety, public transport use and changes in travel behaviour before drawing a city-wide conclusion."
+        },
+        {
+          "passageId": "p1-qt",
+          "sectionId": "quantitative",
+          "title": "A community transport survey",
+          "text": "A neighbourhood survey recorded the main mode of travel used by 800 respondents. Forty per cent usually travelled by bus, 25 per cent by metro, 20 per cent by two-wheeler and the remaining respondents walked or cycled. Of the bus users, one quarter said they would shift to metro if service frequency improved. The survey also found that 60 per cent of all respondents travelled at least five days each week. Treat the figures as exact for the questions below."
+        }
+      ],
+      "questions": [
+        {
+          "questionId": "clat1-english-1",
+          "passageId": "p1-eng",
+          "sectionId": "english",
+          "prompt": "The passage primarily presents libraries as:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Commercial book-lending businesses"
+            },
+            {
+              "optionId": "o2",
+              "text": "Civic spaces offering complementary physical and digital services"
+            },
+            {
+              "optionId": "o3",
+              "text": "Institutions that should replace schools"
+            },
+            {
+              "optionId": "o4",
+              "text": "Digital platforms with no need for buildings"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The author stresses the library's broader civic role and complementarity of digital and physical access.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat1-english-2",
+          "passageId": "p1-eng",
+          "sectionId": "english",
+          "prompt": "Why does the author caution against measuring library value only by visitor counts?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Visitor counts are always inaccurate"
+            },
+            {
+              "optionId": "o2",
+              "text": "A high count may reflect a lack of other public spaces"
+            },
+            {
+              "optionId": "o3",
+              "text": "Libraries should not record attendance"
+            },
+            {
+              "optionId": "o4",
+              "text": "Digital collections make counting impossible"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "High attendance may reveal unmet need for public space rather than alone proving service quality.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat1-english-3",
+          "passageId": "p1-eng",
+          "sectionId": "english",
+          "prompt": "Which statement best reflects the author's view of digital collections?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "They make physical branches unnecessary"
+            },
+            {
+              "optionId": "o2",
+              "text": "They should be restricted to researchers"
+            },
+            {
+              "optionId": "o3",
+              "text": "They expand access but do not replace all in-person functions"
+            },
+            {
+              "optionId": "o4",
+              "text": "They are less useful than printed books"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "The passage explicitly treats digital and physical services as complementary.",
+          "difficulty": "challenging"
+        },
+        {
+          "questionId": "clat1-english-4",
+          "passageId": "p1-eng",
+          "sectionId": "english",
+          "prompt": "The phrase 'shared space' most nearly implies a place that:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Is privately owned"
+            },
+            {
+              "optionId": "o2",
+              "text": "Can be used by different members of the community"
+            },
+            {
+              "optionId": "o3",
+              "text": "Requires a membership fee"
+            },
+            {
+              "optionId": "o4",
+              "text": "Is reserved for formal events"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The context describes an accessible common civic venue.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat1-english-5",
+          "passageId": "p1-eng",
+          "sectionId": "english",
+          "prompt": "Which policy measure would best align with the passage?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Close branches with low book circulation"
+            },
+            {
+              "optionId": "o2",
+              "text": "Measure only online downloads"
+            },
+            {
+              "optionId": "o3",
+              "text": "Assess accessibility, usefulness and diversity of users"
+            },
+            {
+              "optionId": "o4",
+              "text": "Replace librarians with automated systems"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "The final sentence identifies access, usefulness and range of people served as evaluation criteria.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat1-current-affairs-1",
+          "passageId": "p1-ca",
+          "sectionId": "current-affairs",
+          "prompt": "Digital public infrastructure is best described as:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "A single government website"
+            },
+            {
+              "optionId": "o2",
+              "text": "Shared digital systems enabling interactions at scale"
+            },
+            {
+              "optionId": "o3",
+              "text": "A private payment app"
+            },
+            {
+              "optionId": "o4",
+              "text": "A replacement for all public institutions"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The passage defines it as shared systems supporting people, businesses and public agencies.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat1-current-affairs-2",
+          "passageId": "p1-ca",
+          "sectionId": "current-affairs",
+          "prompt": "Which factor is identified as a barrier to genuine inclusion?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Interoperability between providers"
+            },
+            {
+              "optionId": "o2",
+              "text": "People lacking devices or connectivity"
+            },
+            {
+              "optionId": "o3",
+              "text": "Consent-based data sharing"
+            },
+            {
+              "optionId": "o4",
+              "text": "Common security standards"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The passage lists device access, connectivity, accessibility and confidence.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat1-current-affairs-3",
+          "passageId": "p1-ca",
+          "sectionId": "current-affairs",
+          "prompt": "The author would most likely support:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Making every public service online-only"
+            },
+            {
+              "optionId": "o2",
+              "text": "Removing grievance mechanisms"
+            },
+            {
+              "optionId": "o3",
+              "text": "Providing offline alternatives alongside digital services"
+            },
+            {
+              "optionId": "o4",
+              "text": "Allowing unrestricted data sharing"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "The argument is for improved access with safeguards and alternatives.",
+          "difficulty": "challenging"
+        },
+        {
+          "questionId": "clat1-current-affairs-4",
+          "passageId": "p1-ca",
+          "sectionId": "current-affairs",
+          "prompt": "Which is NOT listed as a governance requirement?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Privacy safeguards"
+            },
+            {
+              "optionId": "o2",
+              "text": "Grievance redressal"
+            },
+            {
+              "optionId": "o3",
+              "text": "Security standards"
+            },
+            {
+              "optionId": "o4",
+              "text": "Mandatory use of one private platform"
+            }
+          ],
+          "correctOptionId": "o4",
+          "explanation": "The passage does not prescribe a mandatory private platform.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat1-current-affairs-5",
+          "passageId": "p1-ca",
+          "sectionId": "current-affairs",
+          "prompt": "The central policy question concerns:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Whether technology should be banned"
+            },
+            {
+              "optionId": "o2",
+              "text": "How to digitise without excluding citizens"
+            },
+            {
+              "optionId": "o3",
+              "text": "How to replace public agencies"
+            },
+            {
+              "optionId": "o4",
+              "text": "Whether identity systems should be commercialised"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The final sentence frames the balance between digital improvement and access.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat1-legal-1",
+          "passageId": "p1-legal",
+          "sectionId": "legal",
+          "prompt": "A school refuses to provide a sign-language interpreter solely because it has never done so before. Under the stated principle, the refusal is:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Valid because past practice controls"
+            },
+            {
+              "optionId": "o2",
+              "text": "Invalid because convenience or a blanket rule is insufficient"
+            },
+            {
+              "optionId": "o3",
+              "text": "Valid in every case"
+            },
+            {
+              "optionId": "o4",
+              "text": "Automatically valid if the school is private"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The institution must consider actual circumstances; blanket practice is not enough.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat1-legal-2",
+          "passageId": "p1-legal",
+          "sectionId": "legal",
+          "prompt": "A requested adjustment would eliminate an essential laboratory safety requirement, supported by reliable evidence. The institution may:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Never refuse an adjustment"
+            },
+            {
+              "optionId": "o2",
+              "text": "Refuse without explanation"
+            },
+            {
+              "optionId": "o3",
+              "text": "Refuse that measure while considering workable alternatives"
+            },
+            {
+              "optionId": "o4",
+              "text": "Exclude the student from all activities"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "The principle allows refusal where an essential safety requirement would be removed, but alternatives should be discussed.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat1-legal-3",
+          "passageId": "p1-legal",
+          "sectionId": "legal",
+          "prompt": "A student requests accessible digital notes that require modest staff time and enable participation. The institution should:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Assess and provide the reasonable adjustment"
+            },
+            {
+              "optionId": "o2",
+              "text": "Reject it as a matter of convenience"
+            },
+            {
+              "optionId": "o3",
+              "text": "Demand that the student change courses"
+            },
+            {
+              "optionId": "o4",
+              "text": "Ignore the request"
+            }
+          ],
+          "correctOptionId": "o1",
+          "explanation": "The adjustment enables meaningful participation and does not appear disproportionate.",
+          "difficulty": "challenging"
+        },
+        {
+          "questionId": "clat1-legal-4",
+          "passageId": "p1-legal",
+          "sectionId": "legal",
+          "prompt": "Which factor is most relevant when deciding whether a burden is disproportionate?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Whether the request is unusual"
+            },
+            {
+              "optionId": "o2",
+              "text": "The institution's actual resources and the adjustment's effect"
+            },
+            {
+              "optionId": "o3",
+              "text": "Whether other students object"
+            },
+            {
+              "optionId": "o4",
+              "text": "Whether the request was made in writing"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The principle requires assessment of actual circumstances and burden.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat1-legal-5",
+          "passageId": "p1-legal",
+          "sectionId": "legal",
+          "prompt": "The duty described is best characterised as:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "An absolute duty to grant every request"
+            },
+            {
+              "optionId": "o2",
+              "text": "A duty to make reasonable adjustments after considering circumstances"
+            },
+            {
+              "optionId": "o3",
+              "text": "A duty that applies only after an accident"
+            },
+            {
+              "optionId": "o4",
+              "text": "A duty to remove every safety standard"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The passage expressly says reasonable accommodation is not unlimited.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat1-logical-1",
+          "passageId": "p1-log",
+          "sectionId": "logical",
+          "prompt": "What is the main weakness in the residents' association's conclusion?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "It relies on a survey"
+            },
+            {
+              "optionId": "o2",
+              "text": "It assumes a possible displacement effect proves city-wide harm"
+            },
+            {
+              "optionId": "o3",
+              "text": "It considers pedestrian safety"
+            },
+            {
+              "optionId": "o4",
+              "text": "It refers to traffic in the centre"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The passage says scale and comparative risk have not been established.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat1-logical-2",
+          "passageId": "p1-log",
+          "sectionId": "logical",
+          "prompt": "Which evidence would most strengthen an evaluation of the charge?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "A count of cars in one street on one day"
+            },
+            {
+              "optionId": "o2",
+              "text": "Traffic and safety data across the wider area before and after introduction"
+            },
+            {
+              "optionId": "o3",
+              "text": "Opinions only from council members"
+            },
+            {
+              "optionId": "o4",
+              "text": "The number of council meetings"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The passage recommends wider-area measurement and several outcome indicators.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat1-logical-3",
+          "passageId": "p1-log",
+          "sectionId": "logical",
+          "prompt": "The report's observation about diverted traffic is:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Proof that the charge fails"
+            },
+            {
+              "optionId": "o2",
+              "text": "A possibility requiring further measurement"
+            },
+            {
+              "optionId": "o3",
+              "text": "Irrelevant to the policy"
+            },
+            {
+              "optionId": "o4",
+              "text": "Evidence that public transport will decline"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "It is a possible effect, not a proven city-wide outcome.",
+          "difficulty": "challenging"
+        },
+        {
+          "questionId": "clat1-logical-4",
+          "passageId": "p1-log",
+          "sectionId": "logical",
+          "prompt": "Which assumption underlies the council's argument?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Car trips can respond to pricing"
+            },
+            {
+              "optionId": "o2",
+              "text": "All residents own cars"
+            },
+            {
+              "optionId": "o3",
+              "text": "Public transport is free"
+            },
+            {
+              "optionId": "o4",
+              "text": "Congestion is unrelated to travel choices"
+            }
+          ],
+          "correctOptionId": "o1",
+          "explanation": "The claim that a charge reduces trips assumes travellers respond to the cost.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat1-logical-5",
+          "passageId": "p1-log",
+          "sectionId": "logical",
+          "prompt": "The author recommends assessing:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Only the charged zone"
+            },
+            {
+              "optionId": "o2",
+              "text": "Only driver satisfaction"
+            },
+            {
+              "optionId": "o3",
+              "text": "Traffic, safety, public transport and travel behaviour across the area"
+            },
+            {
+              "optionId": "o4",
+              "text": "Only revenue collected"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "The last sentence lists these dimensions.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat1-quantitative-1",
+          "passageId": "p1-qt",
+          "sectionId": "quantitative",
+          "prompt": "How many respondents usually travel by bus?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "240"
+            },
+            {
+              "optionId": "o2",
+              "text": "300"
+            },
+            {
+              "optionId": "o3",
+              "text": "320"
+            },
+            {
+              "optionId": "o4",
+              "text": "400"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "40% of 800 = 320.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat1-quantitative-2",
+          "passageId": "p1-qt",
+          "sectionId": "quantitative",
+          "prompt": "How many respondents usually walk or cycle?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "80"
+            },
+            {
+              "optionId": "o2",
+              "text": "100"
+            },
+            {
+              "optionId": "o3",
+              "text": "120"
+            },
+            {
+              "optionId": "o4",
+              "text": "160"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "The remaining share is 15%; 15% of 800 = 120.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat1-quantitative-3",
+          "passageId": "p1-qt",
+          "sectionId": "quantitative",
+          "prompt": "How many bus users might shift to metro if frequency improves?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "64"
+            },
+            {
+              "optionId": "o2",
+              "text": "80"
+            },
+            {
+              "optionId": "o3",
+              "text": "96"
+            },
+            {
+              "optionId": "o4",
+              "text": "120"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "One quarter of 320 = 80.",
+          "difficulty": "challenging"
+        },
+        {
+          "questionId": "clat1-quantitative-4",
+          "passageId": "p1-qt",
+          "sectionId": "quantitative",
+          "prompt": "What percentage of all respondents travel at least five days a week?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "40%"
+            },
+            {
+              "optionId": "o2",
+              "text": "50%"
+            },
+            {
+              "optionId": "o3",
+              "text": "60%"
+            },
+            {
+              "optionId": "o4",
+              "text": "75%"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "The survey states 60%.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat1-quantitative-5",
+          "passageId": "p1-qt",
+          "sectionId": "quantitative",
+          "prompt": "How many respondents travel at least five days each week?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "420"
+            },
+            {
+              "optionId": "o2",
+              "text": "460"
+            },
+            {
+              "optionId": "o3",
+              "text": "480"
+            },
+            {
+              "optionId": "o4",
+              "text": "520"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "60% of 800 = 480.",
+          "difficulty": "standard"
+        }
+      ]
+    },
+    {
+      "paperId": "clat-ug27-diagnostic-02",
+      "title": "CLAT UG 2027 · Diagnostic Model Paper 2",
+      "subtitle": "Application diagnostic · 25 questions · 25 minutes",
+      "durationMinutes": 25,
+      "passages": [
+        {
+          "passageId": "p2-eng",
+          "sectionId": "english",
+          "title": "The case for slow journalism",
+          "text": "In an information environment built around speed, slow journalism asks readers to value verification, context and explanation. A breaking update can tell the public what has happened; a carefully reported account can explain why it happened, whose interests are affected and what remains uncertain. This does not mean that journalists should ignore urgency. During a disaster, timely warnings can save lives. The distinction is between speed as a tool and speed as the sole measure of quality. News organisations face commercial pressure to publish first, because attention is scarce and audience habits reward immediacy. Yet an early report that later requires substantial correction can damage trust. Slow journalism is not simply long-form writing; it is a method that makes room for checking evidence, hearing competing perspectives and acknowledging limits. Its success should be judged not by how slowly it publishes, but by whether it helps readers form a more accurate understanding."
+        },
+        {
+          "passageId": "p2-ca",
+          "sectionId": "current-affairs",
+          "title": "Climate adaptation and urban resilience",
+          "text": "Climate adaptation concerns adjustments that reduce harm from actual or expected climate impacts. In cities, this may include restoring wetlands, improving drainage, protecting heat-vulnerable residents and designing buildings for higher temperatures. Adaptation differs from mitigation: mitigation addresses the causes of climate change by reducing greenhouse-gas emissions or increasing carbon sinks, while adaptation manages consequences. The two approaches are connected. For example, urban trees can provide shade and reduce cooling demand, while also improving local air quality. However, adaptation projects can create new inequalities if benefits flow mainly to wealthier neighbourhoods or if informal settlements are displaced in the name of resilience. Effective planning therefore combines scientific risk assessment with local participation, transparent funding and safeguards for vulnerable communities."
+        },
+        {
+          "passageId": "p2-legal",
+          "sectionId": "legal",
+          "title": "A principle for protection of confidential information",
+          "text": "Assume this principle: information received in confidence for a defined purpose must not be disclosed to another person unless the information provider consents, disclosure is required by law, or disclosure is reasonably necessary to prevent a serious and imminent harm. A person relying on the harm exception must have reasonable grounds for believing the danger is serious and imminent, and should disclose only the information necessary to address it. Mere curiosity, commercial advantage or speculative concern is insufficient. Where possible, the person should first seek consent or use a less intrusive way to prevent the harm. Apply only this principle to the situations below."
+        },
+        {
+          "passageId": "p2-log",
+          "sectionId": "logical",
+          "title": "Remote work and productivity",
+          "text": "A company found that teams allowed to work remotely completed more tasks per employee during a three-month trial. Management concluded that remote work caused the increase. But the trial coincided with a period in which the company postponed several complex projects and introduced new task-management software. Either change could have affected the measured output. In addition, employees volunteered for the trial, so participants may have been more motivated than those who remained on site. The result is evidence worth investigating, but it does not isolate the effect of remote work. A stronger study would compare similar teams, account for task complexity and examine quality as well as quantity."
+        },
+        {
+          "passageId": "p2-qt",
+          "sectionId": "quantitative",
+          "title": "Scholarship allocation",
+          "text": "A foundation has a budget of ₹18,00,000 for scholarships. It allocates 40 per cent to science students, 35 per cent to humanities students and the balance to commerce students. Each scholarship is worth ₹30,000. Assume the entire budget is distributed and every scholarship has the same value."
+        }
+      ],
+      "questions": [
+        {
+          "questionId": "clat2-english-1",
+          "passageId": "p2-eng",
+          "sectionId": "english",
+          "prompt": "The central distinction made in the passage is between:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Speed and accuracy as competing absolute goals"
+            },
+            {
+              "optionId": "o2",
+              "text": "Speed as a useful tool and speed as the only measure of quality"
+            },
+            {
+              "optionId": "o3",
+              "text": "Print and digital media"
+            },
+            {
+              "optionId": "o4",
+              "text": "News and entertainment"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The author accepts urgency but rejects speed as the sole quality measure.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat2-english-2",
+          "passageId": "p2-eng",
+          "sectionId": "english",
+          "prompt": "Why can publishing first damage trust?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Readers dislike updates"
+            },
+            {
+              "optionId": "o2",
+              "text": "Early reports may later need substantial correction"
+            },
+            {
+              "optionId": "o3",
+              "text": "Long reports are always inaccurate"
+            },
+            {
+              "optionId": "o4",
+              "text": "Newsrooms cannot use sources"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The passage links premature publication and later correction to loss of trust.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat2-english-3",
+          "passageId": "p2-eng",
+          "sectionId": "english",
+          "prompt": "Slow journalism is described primarily as:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "A method prioritising verification and context"
+            },
+            {
+              "optionId": "o2",
+              "text": "A rule to publish only once a month"
+            },
+            {
+              "optionId": "o3",
+              "text": "A rejection of breaking news"
+            },
+            {
+              "optionId": "o4",
+              "text": "A style that must always be long"
+            }
+          ],
+          "correctOptionId": "o1",
+          "explanation": "It is a method that makes room for checking, perspectives and limits.",
+          "difficulty": "challenging"
+        },
+        {
+          "questionId": "clat2-english-4",
+          "passageId": "p2-eng",
+          "sectionId": "english",
+          "prompt": "Which situation best illustrates the author's preferred approach?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Publishing an unverified rumour immediately"
+            },
+            {
+              "optionId": "o2",
+              "text": "Waiting to verify a claim while issuing a necessary safety warning"
+            },
+            {
+              "optionId": "o3",
+              "text": "Avoiding all time-sensitive reporting"
+            },
+            {
+              "optionId": "o4",
+              "text": "Publishing only opinions"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The passage distinguishes urgent warnings from unverified reporting.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat2-english-5",
+          "passageId": "p2-eng",
+          "sectionId": "english",
+          "prompt": "The best measure of slow journalism's success is whether it:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Publishes after every competitor"
+            },
+            {
+              "optionId": "o2",
+              "text": "Uses the most words"
+            },
+            {
+              "optionId": "o3",
+              "text": "Helps readers understand events accurately"
+            },
+            {
+              "optionId": "o4",
+              "text": "Avoids uncertainty"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "The final sentence states this criterion.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat2-current-affairs-1",
+          "passageId": "p2-ca",
+          "sectionId": "current-affairs",
+          "prompt": "Climate adaptation primarily aims to:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Reduce harm from climate impacts"
+            },
+            {
+              "optionId": "o2",
+              "text": "Eliminate all emissions immediately"
+            },
+            {
+              "optionId": "o3",
+              "text": "Increase fossil-fuel use"
+            },
+            {
+              "optionId": "o4",
+              "text": "Replace disaster response"
+            }
+          ],
+          "correctOptionId": "o1",
+          "explanation": "The passage defines adaptation as adjustments reducing harm from climate impacts.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat2-current-affairs-2",
+          "passageId": "p2-ca",
+          "sectionId": "current-affairs",
+          "prompt": "Which is an example of mitigation rather than adaptation?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Improving urban drainage"
+            },
+            {
+              "optionId": "o2",
+              "text": "Protecting heat-vulnerable residents"
+            },
+            {
+              "optionId": "o3",
+              "text": "Reducing greenhouse-gas emissions"
+            },
+            {
+              "optionId": "o4",
+              "text": "Designing buildings for higher temperatures"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "Mitigation addresses causes by reducing emissions.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat2-current-affairs-3",
+          "passageId": "p2-ca",
+          "sectionId": "current-affairs",
+          "prompt": "Why does the passage warn about resilience projects?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "They always fail scientifically"
+            },
+            {
+              "optionId": "o2",
+              "text": "They may distribute benefits unequally or displace vulnerable residents"
+            },
+            {
+              "optionId": "o3",
+              "text": "They cannot involve local communities"
+            },
+            {
+              "optionId": "o4",
+              "text": "They only benefit rural areas"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The passage identifies unequal benefits and displacement risks.",
+          "difficulty": "challenging"
+        },
+        {
+          "questionId": "clat2-current-affairs-4",
+          "passageId": "p2-ca",
+          "sectionId": "current-affairs",
+          "prompt": "Urban trees can contribute to:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Only mitigation"
+            },
+            {
+              "optionId": "o2",
+              "text": "Only adaptation"
+            },
+            {
+              "optionId": "o3",
+              "text": "Shade, reduced cooling demand and local air-quality benefits"
+            },
+            {
+              "optionId": "o4",
+              "text": "Increased flood risk in every case"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "The passage identifies multiple co-benefits.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat2-current-affairs-5",
+          "passageId": "p2-ca",
+          "sectionId": "current-affairs",
+          "prompt": "Effective adaptation planning should combine:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Risk assessment, participation, transparent funding and safeguards"
+            },
+            {
+              "optionId": "o2",
+              "text": "Only engineering estimates"
+            },
+            {
+              "optionId": "o3",
+              "text": "Only private investment"
+            },
+            {
+              "optionId": "o4",
+              "text": "Relocation without consultation"
+            }
+          ],
+          "correctOptionId": "o1",
+          "explanation": "These elements are specified in the final sentence.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat2-legal-1",
+          "passageId": "p2-legal",
+          "sectionId": "legal",
+          "prompt": "An employee discloses confidential client data to a friend out of curiosity. Under the principle, this is:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Permitted because no money changed hands"
+            },
+            {
+              "optionId": "o2",
+              "text": "Not permitted; curiosity is not an exception"
+            },
+            {
+              "optionId": "o3",
+              "text": "Permitted if the friend is trustworthy"
+            },
+            {
+              "optionId": "o4",
+              "text": "Required by the principle"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "Curiosity is expressly insufficient to justify disclosure.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat2-legal-2",
+          "passageId": "p2-legal",
+          "sectionId": "legal",
+          "prompt": "A person has reasonable grounds to believe confidential information is needed to prevent serious imminent harm. They should:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Disclose the entire file publicly"
+            },
+            {
+              "optionId": "o2",
+              "text": "Disclose only what is necessary to address the harm"
+            },
+            {
+              "optionId": "o3",
+              "text": "Sell the information"
+            },
+            {
+              "optionId": "o4",
+              "text": "Wait until harm occurs"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The exception is narrow and limited to necessary information.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat2-legal-3",
+          "passageId": "p2-legal",
+          "sectionId": "legal",
+          "prompt": "A speculative concern about possible future embarrassment permits disclosure:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Always"
+            },
+            {
+              "optionId": "o2",
+              "text": "Only with commercial benefit"
+            },
+            {
+              "optionId": "o3",
+              "text": "No, it does not meet the serious and imminent harm threshold"
+            },
+            {
+              "optionId": "o4",
+              "text": "If the recipient asks"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "Speculative concern does not satisfy the stated exception.",
+          "difficulty": "challenging"
+        },
+        {
+          "questionId": "clat2-legal-4",
+          "passageId": "p2-legal",
+          "sectionId": "legal",
+          "prompt": "Where possible, before disclosure the person should:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Seek consent or use a less intrusive preventive method"
+            },
+            {
+              "optionId": "o2",
+              "text": "Notify social media"
+            },
+            {
+              "optionId": "o3",
+              "text": "Destroy all records"
+            },
+            {
+              "optionId": "o4",
+              "text": "Disclose to competitors"
+            }
+          ],
+          "correctOptionId": "o1",
+          "explanation": "The principle prefers consent or less intrusive methods where possible.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat2-legal-5",
+          "passageId": "p2-legal",
+          "sectionId": "legal",
+          "prompt": "The principle allows disclosure when:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "It improves a person's reputation"
+            },
+            {
+              "optionId": "o2",
+              "text": "It is required by law"
+            },
+            {
+              "optionId": "o3",
+              "text": "It is interesting to the public"
+            },
+            {
+              "optionId": "o4",
+              "text": "It may create a business opportunity"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "Disclosure required by law is an express exception.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat2-logical-1",
+          "passageId": "p2-log",
+          "sectionId": "logical",
+          "prompt": "Why does the company trial not establish that remote work caused higher output?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "The trial lasted three months"
+            },
+            {
+              "optionId": "o2",
+              "text": "Other changes and volunteer selection may explain the result"
+            },
+            {
+              "optionId": "o3",
+              "text": "Output was measured per employee"
+            },
+            {
+              "optionId": "o4",
+              "text": "The company has several teams"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The passage identifies confounding changes and self-selection.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat2-logical-2",
+          "passageId": "p2-log",
+          "sectionId": "logical",
+          "prompt": "Which is a potential confounding factor mentioned?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "A new task-management system"
+            },
+            {
+              "optionId": "o2",
+              "text": "The colour of office walls"
+            },
+            {
+              "optionId": "o3",
+              "text": "Employee commute distance"
+            },
+            {
+              "optionId": "o4",
+              "text": "The company's logo"
+            }
+          ],
+          "correctOptionId": "o1",
+          "explanation": "New task-management software coincided with the trial.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat2-logical-3",
+          "passageId": "p2-log",
+          "sectionId": "logical",
+          "prompt": "Why should quality be measured as well as quantity?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Task counts may not reflect the value or standard of work"
+            },
+            {
+              "optionId": "o2",
+              "text": "Quality is always lower remotely"
+            },
+            {
+              "optionId": "o3",
+              "text": "Quantity is impossible to measure"
+            },
+            {
+              "optionId": "o4",
+              "text": "Employees prefer quality surveys"
+            }
+          ],
+          "correctOptionId": "o1",
+          "explanation": "The passage argues output counts alone may be incomplete.",
+          "difficulty": "challenging"
+        },
+        {
+          "questionId": "clat2-logical-4",
+          "passageId": "p2-log",
+          "sectionId": "logical",
+          "prompt": "Which study design would provide stronger evidence?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Compare unlike teams without controls"
+            },
+            {
+              "optionId": "o2",
+              "text": "Compare similar teams while accounting for task complexity"
+            },
+            {
+              "optionId": "o3",
+              "text": "Ask only volunteers if they liked remote work"
+            },
+            {
+              "optionId": "o4",
+              "text": "Measure output for one day"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The author recommends comparable teams and controlling task complexity.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat2-logical-5",
+          "passageId": "p2-log",
+          "sectionId": "logical",
+          "prompt": "The company's conclusion is best described as:",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "Proven"
+            },
+            {
+              "optionId": "o2",
+              "text": "Plausible but not established by the trial"
+            },
+            {
+              "optionId": "o3",
+              "text": "Logically impossible"
+            },
+            {
+              "optionId": "o4",
+              "text": "Unrelated to the data"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The result is evidence worth investigating, but causation is not isolated.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat2-quantitative-1",
+          "passageId": "p2-qt",
+          "sectionId": "quantitative",
+          "prompt": "What amount is allocated to science scholarships?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "₹5,40,000"
+            },
+            {
+              "optionId": "o2",
+              "text": "₹6,00,000"
+            },
+            {
+              "optionId": "o3",
+              "text": "₹7,20,000"
+            },
+            {
+              "optionId": "o4",
+              "text": "₹9,00,000"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "40% of ₹18,00,000 = ₹7,20,000.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat2-quantitative-2",
+          "passageId": "p2-qt",
+          "sectionId": "quantitative",
+          "prompt": "How much is allocated to commerce scholarships?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "₹3,60,000"
+            },
+            {
+              "optionId": "o2",
+              "text": "₹4,50,000"
+            },
+            {
+              "optionId": "o3",
+              "text": "₹4,80,000"
+            },
+            {
+              "optionId": "o4",
+              "text": "₹5,40,000"
+            }
+          ],
+          "correctOptionId": "o2",
+          "explanation": "The balance is 25%; 25% of ₹18,00,000 = ₹4,50,000. Correction: option B.",
+          "difficulty": "standard"
+        },
+        {
+          "questionId": "clat2-quantitative-3",
+          "passageId": "p2-qt",
+          "sectionId": "quantitative",
+          "prompt": "How many scholarships can the science allocation fund?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "20"
+            },
+            {
+              "optionId": "o2",
+              "text": "22"
+            },
+            {
+              "optionId": "o3",
+              "text": "24"
+            },
+            {
+              "optionId": "o4",
+              "text": "26"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "₹7,20,000 ÷ ₹30,000 = 24.",
+          "difficulty": "challenging"
+        },
+        {
+          "questionId": "clat2-quantitative-4",
+          "passageId": "p2-qt",
+          "sectionId": "quantitative",
+          "prompt": "How many scholarships can the entire budget fund?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "50"
+            },
+            {
+              "optionId": "o2",
+              "text": "55"
+            },
+            {
+              "optionId": "o3",
+              "text": "60"
+            },
+            {
+              "optionId": "o4",
+              "text": "65"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "₹18,00,000 ÷ ₹30,000 = 60.",
+          "difficulty": "moderate"
+        },
+        {
+          "questionId": "clat2-quantitative-5",
+          "passageId": "p2-qt",
+          "sectionId": "quantitative",
+          "prompt": "How many humanities scholarships can be funded?",
+          "options": [
+            {
+              "optionId": "o1",
+              "text": "18"
+            },
+            {
+              "optionId": "o2",
+              "text": "20"
+            },
+            {
+              "optionId": "o3",
+              "text": "21"
+            },
+            {
+              "optionId": "o4",
+              "text": "24"
+            }
+          ],
+          "correctOptionId": "o3",
+          "explanation": "35% of ₹18,00,000 = ₹6,30,000; divided by ₹30,000 = 21.",
+          "difficulty": "standard"
+        }
+      ]
+    }
+  ]
+}
