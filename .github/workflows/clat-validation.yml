@@ -10,7 +10,7 @@ on:
       - 'tests/clat-engine.test.js'
       - '.github/workflows/clat-validation.yml'
   push:
-    branches: [feature/clat-ug-2027-engine]
+    branches: [main, feature/clat-ug-2027-engine]
     paths:
       - 'clat.html'
       - 'js/clat-engine.js'
