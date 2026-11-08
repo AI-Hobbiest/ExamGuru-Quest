@@ -2,14 +2,15 @@
 (()=>{"use strict";
 const $=id=>document.getElementById(id),engine=window.C10ClatEngine;
 const HISTORY_KEY="eg_clat_attempt_history_v1",ACTIVE_KEY="eg_clat_active_attempt_v1";
+function storageKey(base){const id=String(student&&(student.studentId||student.username)||"local-student").toLowerCase().replace(/[^a-z0-9_-]/g,"_");return base+"_"+id;}
 let library=null,paper=null,attempt=null,index=0,tick=null,student=null,submitted=false;
 const esc=value=>String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const sections=engine.sections,sectionName=id=>(sections.find(s=>s.id===id)||{}).title||id;
 function getStudent(){try{const value=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");return value&&value.role!=="parent"?value:null;}catch(_){return null;}}
 function setStatus(value){$("loadStatus").textContent=value;}
-function saveActive(){try{localStorage.setItem(ACTIVE_KEY,JSON.stringify({paperId:paper.paperId,attempt,index}));}catch(_){setStatus("Browser storage is full. Please export or clear older data before continuing.");}}
-function readHistory(){try{const value=JSON.parse(localStorage.getItem(HISTORY_KEY)||"[]");return Array.isArray(value)?value:[];}catch(_){return[];}}
-function saveHistory(record){const history=readHistory().filter(item=>item.attemptId!==record.attemptId);history.push(record);try{localStorage.setItem(HISTORY_KEY,JSON.stringify(history.slice(-50)));}catch(_){setStatus("Attempt completed, but local history could not be saved. Please download or print your result.");}}
+function saveActive(){try{localStorage.setItem(storageKey(ACTIVE_KEY),JSON.stringify({paperId:paper.paperId,attempt,index}));}catch(_){setStatus("Browser storage is full. Please export or clear older data before continuing.");}}
+function readHistory(){try{const value=JSON.parse(localStorage.getItem(storageKey(HISTORY_KEY))||"[]");return Array.isArray(value)?value:[];}catch(_){return[];}}
+function saveHistory(record){const history=readHistory().filter(item=>item.attemptId!==record.attemptId);history.push(record);try{localStorage.setItem(storageKey(HISTORY_KEY),JSON.stringify(history.slice(-50)));}catch(_){setStatus("Attempt completed, but local history could not be saved. Please download or print your result.");}}
 function renderLibrary(){
  const root=$("paperList");root.innerHTML="";
  library.papers.forEach(item=>{
@@ -56,6 +57,8 @@ function renderPalette(){
   b.setAttribute("aria-label","Question "+(i+1)+(attempt.answers[q.questionId]?", answered":"")+(attempt.reviewFlags.includes(q.questionId)?", marked for review":""));
   b.addEventListener("click",()=>{index=i;saveActive();renderQuestion();});root.appendChild(b);
  });
+ const answered=Object.keys(attempt.answers).filter(key=>attempt.answers[key]).length;
+ $("paletteSummary").textContent=answered+" answered · "+attempt.reviewFlags.length+" flagged";
 }
 function toggleFlag(){const id=paper.questions[index].questionId,at=attempt.reviewFlags.indexOf(id);if(at>=0)attempt.reviewFlags.splice(at,1);else attempt.reviewFlags.push(id);saveActive();renderQuestion();}
 function showResult(record){
@@ -74,16 +77,16 @@ function finish(auto){
  if(!auto&&!window.confirm("Submit this CLAT paper now? You will not be able to change answers after submission."))return;
  submitted=true;if(tick)clearInterval(tick);
  const record=engine.finalizeAttempt(attempt);record.submittedAt=new Date().toISOString();saveHistory(record);
- try{localStorage.removeItem(ACTIVE_KEY);}catch(_){}
+ try{localStorage.removeItem(storageKey(ACTIVE_KEY));}catch(_){}
  showResult(record);
 }
 function loadResume(){
  try{
-  const saved=JSON.parse(localStorage.getItem(ACTIVE_KEY)||"null");if(!saved||!saved.attempt)return false;
+  const saved=JSON.parse(localStorage.getItem(storageKey(ACTIVE_KEY))||"null");if(!saved||!saved.attempt)return false;
   const selected=library.papers.find(p=>p.paperId===saved.paperId);if(!selected)return false;
-  const check=engine.validatePaper(selected);if(!check.valid)return false;
+  const frozen=saved.attempt.paperSnapshot||selected,check=engine.validatePaper(frozen);if(!check.valid)return false;
   if(!window.confirm("An unfinished CLAT attempt was found. Resume it? Choose Cancel to start a new paper.")){localStorage.removeItem(ACTIVE_KEY);return false;}
-  paper=selected;attempt=saved.attempt;index=Math.max(0,Math.min(paper.questions.length-1,Number(saved.index)||0));
+  paper=frozen;attempt=saved.attempt;index=Math.max(0,Math.min(paper.questions.length-1,Number(saved.index)||0));
   $("library").classList.add("clat-hidden");$("attemptPanel").classList.remove("clat-hidden");
   $("attemptTitle").textContent=paper.title;$("timer").textContent=engine.formatDuration(attempt.remainingSeconds);renderQuestion();
   tick=setInterval(()=>{attempt.remainingSeconds=Math.max(0,attempt.remainingSeconds-1);$("timer").textContent=engine.formatDuration(attempt.remainingSeconds);if(attempt.remainingSeconds%10===0)saveActive();if(attempt.remainingSeconds<=0)finish(true);},1000);return true;
