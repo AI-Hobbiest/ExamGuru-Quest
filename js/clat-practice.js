@@ -6,7 +6,7 @@ function storageKey(base){const id=String(student&&(student.studentId||student.u
 let library=null,paper=null,attempt=null,index=0,tick=null,student=null,submitted=false;
 const esc=value=>String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const sections=engine.sections,sectionName=id=>(sections.find(s=>s.id===id)||{}).title||id;
-function getStudent(){try{const value=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");return value&&value.role!=="parent"?value:null;}catch(_){return null;}}
+function getStudent(){try{const value=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");return value&&value.role==="student"?value:null;}catch(_){return null;}}
 function setStatus(value){$("loadStatus").textContent=value;}
 function saveActive(){try{localStorage.setItem(storageKey(ACTIVE_KEY),JSON.stringify({paperId:paper.paperId,attempt,index}));}catch(_){setStatus("Browser storage is full. Please export or clear older data before continuing.");}}
 function readHistory(){try{const value=JSON.parse(localStorage.getItem(storageKey(HISTORY_KEY))||"[]");return Array.isArray(value)?value:[];}catch(_){return[];}}
@@ -85,7 +85,7 @@ function loadResume(){
   const saved=JSON.parse(localStorage.getItem(storageKey(ACTIVE_KEY))||"null");if(!saved||!saved.attempt)return false;
   const selected=library.papers.find(p=>p.paperId===saved.paperId);if(!selected)return false;
   const frozen=saved.attempt.paperSnapshot||selected,check=engine.validatePaper(frozen);if(!check.valid)return false;
-  if(!window.confirm("An unfinished CLAT attempt was found. Resume it? Choose Cancel to start a new paper.")){localStorage.removeItem(ACTIVE_KEY);return false;}
+  if(!window.confirm("An unfinished CLAT attempt was found. Resume it? Choose Cancel to start a new paper.")){localStorage.removeItem(storageKey(ACTIVE_KEY));return false;}
   paper=frozen;attempt=saved.attempt;index=Math.max(0,Math.min(paper.questions.length-1,Number(saved.index)||0));
   $("library").classList.add("clat-hidden");$("attemptPanel").classList.remove("clat-hidden");
   $("attemptTitle").textContent=paper.title;$("timer").textContent=engine.formatDuration(attempt.remainingSeconds);renderQuestion();
