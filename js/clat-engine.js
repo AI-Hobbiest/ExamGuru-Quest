@@ -71,6 +71,14 @@ function validatePaper(paper,options){
   });
   const stems=questions.map(q=>String(q.prompt||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim());
   if(new Set(stems).size!==stems.length)errors.push("Question stems must be unique within each paper.");
+  const keyCounts={o1:0,o2:0,o3:0,o4:0};
+  questions.forEach(q=>{if(Object.prototype.hasOwnProperty.call(keyCounts,q.correctOptionId))keyCounts[q.correctOptionId]++;});
+  if(Object.values(keyCounts).some(n=>n<24||n>36))errors.push("Correct-answer positions must be balanced (24–36 keys per option across 120 questions).");
+  let keyRun=1;
+  for(let i=1;i<questions.length;i++){if(questions[i].correctOptionId===questions[i-1].correctOptionId)keyRun++;else keyRun=1;if(keyRun>4){errors.push("Correct-answer positions must not repeat the same option more than four times consecutively.");break;}}
+  const difficultyCounts={easy:0,moderate:0,challenging:0};
+  questions.forEach(q=>{if(Object.prototype.hasOwnProperty.call(difficultyCounts,q.difficulty))difficultyCounts[q.difficulty]++;});
+  if(difficultyCounts.easy<18||difficultyCounts.easy>36||difficultyCounts.moderate<48||difficultyCounts.moderate>78||difficultyCounts.challenging<18||difficultyCounts.challenging>36)errors.push("Difficulty mix must be balanced across easy, moderate and challenging questions.");
   if(!paper.blueprintVersion||!paper.paperNumber)errors.push("Strict CLAT papers need blueprintVersion and paperNumber metadata.");
  }
  return{valid:errors.length===0,errors,counts,totalQuestions:questions.length,totalMarks:questions.length,fullLength};
