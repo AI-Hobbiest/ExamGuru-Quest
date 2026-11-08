@@ -33,7 +33,8 @@ function validatePaper(paper,options){
    if(ids.some(id=>!id)||new Set(ids).size!==ids.length||!q.options.every(o=>o&&typeof o.text==="string"&&o.text.trim()))errors.push(at+" options need unique IDs and text.");
    if(!ids.includes(String(q.correctOptionId||"")))errors.push(at+" correctOptionId must match an option.");
   }
-  if(!q.explanation||typeof q.explanation!=="string"||q.explanation.trim().length<30)errors.push(at+" needs a useful explanation (at least 30 characters).");
+  if(!q.explanation||typeof q.explanation!=="string")errors.push(at+" needs an explanation.");
+  else if(opts.strictCLAT&&q.explanation.trim().length<30)errors.push(at+" needs a useful explanation (at least 30 characters).");
   const passage=passages.find(p=>p.passageId===q.passageId);
   if(passage&&passage.sectionId!==q.sectionId)errors.push(at+" section does not match its passage.");
  });
