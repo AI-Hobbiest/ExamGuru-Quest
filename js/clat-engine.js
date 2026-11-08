@@ -51,7 +51,7 @@ function validatePaper(paper,options){
   SECTIONS.forEach(s=>{if(counts[s.id]!==s.target)errors.push(s.title+" must contain exactly "+s.target+" questions in the standard blueprint.");});
   const passageQuestionCounts=Object.fromEntries(passages.map(p=>[p.passageId,questions.filter(q=>q.passageId===p.passageId).length]));
   passages.forEach((p,i)=>{
-   const words=String(p.text||"").trim().split(/\\s+/).filter(Boolean).length;
+   const words=String(p.text||"").trim().split(/\s+/).filter(Boolean).length;
    const n=passageQuestionCounts[p.passageId]||0;
    if(p.sectionId==="quantitative"){
     if(words<70||words>320)errors.push("Quantitative data set "+(i+1)+" should be a concise, self-contained numerical set (70–320 words).");
