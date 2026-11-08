@@ -36,7 +36,7 @@ Public mock and study resources are catalogued as benchmarking material. Third-p
 - Answer positions balanced 30 per option.
 - Difficulty mix: 36 easy, 53 moderate, 31 challenging.
 - Every question has four options, a mapped key, an explanation and a competency tag.
-- Five Current Affairs passages have dated primary-source metadata.
+- Five Current Affairs passages have dated primary-source metadata across five domains: economy/public finance, judiciary/technology, electoral governance, international environment and monetary policy. Each passage is capped at the official up-to-450-word format.
 - GitHub Actions strict CLAT validation passed on 9 November 2026.
 
 **Status: draft only.** Automated structural checks passing does not replace independent blind solving, factual cross-checking, semantic duplicate review and editorial approval. Paper 001 is not yet released to students and does not count as an approved paper.
