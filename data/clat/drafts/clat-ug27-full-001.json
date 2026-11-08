@@ -3444,18 +3444,18 @@
         },
         {
           "optionId": "o2",
-          "text": "55"
+          "text": "60"
         },
         {
           "optionId": "o3",
-          "text": "60"
+          "text": "55"
         },
         {
           "optionId": "o4",
           "text": "70"
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o2",
       "explanation": "Structural work initially has 25% of 200 = 50 workers; after a 20% increase, 50 × 1.20 = 60.",
       "difficulty": "easy",
       "competency": "percentage-change"
@@ -3468,22 +3468,22 @@
       "options": [
         {
           "optionId": "o1",
-          "text": "80"
+          "text": "90"
         },
         {
           "optionId": "o2",
-          "text": "85"
+          "text": "80"
         },
         {
           "optionId": "o3",
-          "text": "90"
+          "text": "85"
         },
         {
           "optionId": "o4",
           "text": "100"
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "Finishing work initially has 50% of 200 = 100 workers; after a 10% reduction, 100 × 0.90 = 90.",
       "difficulty": "challenging",
       "competency": "percentage-change"
