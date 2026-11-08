@@ -1,0 +1,177 @@
+{
+  "kind": "clat-current-affairs-source-register",
+  "examId": "clat-ug-2027",
+  "asOf": "2026-11-09",
+  "policy": {
+    "lookback": "No fixed look-back window is imposed because the Consortium's FAQ does not prescribe one. Select stories for significance and continuing relevance, not merely date proximity.",
+    "primarySourceRule": "Use official records as the factual anchor. Secondary exam-preparation digests may help discover themes, but must not be the sole factual authority.",
+    "passageDesign": "Original journalistic-style passage, up to approximately 450 words; explain the event, institutional background, implications and one or more competing considerations. Test passage comprehension plus only the static GK supplied or clearly established in the passage.",
+    "prohibited": "No invented dates, office-holders, statistics, treaty outcomes, legal holdings or speculative predictions. Do not present a pending proposal as enacted law. Every changing fact needs an as-of date."
+  },
+  "topics": [
+    {
+      "id": "CA27-001",
+      "theme": "Union Budget 2026-27",
+      "asOf": "2026-02-01",
+      "facts": [
+        "Budget presented on 1 February 2026 by Finance Minister Nirmala Sitharaman.",
+        "The Budget summary described three Kartavya priorities: sustaining growth; fulfilling aspirations/building capacity; and the vision of Sabka Sath, Sabka Vikas.",
+        "The Income-tax Act, 2025 was stated to come into effect from April 2026.",
+        "The Budget included tax, customs, safe-harbour and manufacturing measures; each figure must be checked against the specific budget document before use."
+      ],
+      "primarySources": [
+        "https://www.indiabudget.gov.in/doc/budget_speech.pdf",
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2221458&lang=1&reg=24"
+      ],
+      "checks": "Do not confuse a budget announcement with later implementation rules; verify figures against the speech or Finance Bill."
+    },
+    {
+      "id": "CA27-002",
+      "theme": "Supreme Court and AI-generated fake legal citations",
+      "asOf": "2026-07-02",
+      "facts": [
+        "Pooja Ramesh Singh v Jammu and Kashmir Bank Ltd, 2026 INSC 668, dated 2 July 2026.",
+        "The Supreme Court addressed reliance on AI-generated fake or hallucinated case citations in tribunal decisions.",
+        "Questions should focus on judicial verification, authenticity of precedent and institutional responsibility; do not invent sanctions or directions not stated in the judgment."
+      ],
+      "primarySources": [
+        "https://www.sci.gov.in/landmark-judgment-summaries/"
+      ],
+      "checks": "Use the Court's summary and link through to the full judgment; carefully distinguish a case-specific outcome from general guidance."
+    },
+    {
+      "id": "CA27-003",
+      "theme": "Bihar Special Intensive Revision of electoral rolls",
+      "asOf": "2026-05-27",
+      "facts": [
+        "Association for Democratic Reforms v Election Commission of India, 2026 INSC 564, dated 27 May 2026.",
+        "The case considered the Election Commission's authority, the Representation of the People Act, 1950, proportionality and the electoral-roll revision process.",
+        "The Court discussed Articles 324, 325, 326 and 327 and Section 21(3) of the 1950 Act."
+      ],
+      "primarySources": [
+        "https://www.sci.gov.in/landmark-judgment-summaries/"
+      ],
+      "checks": "Do not overstate the ruling as a general power to determine citizenship. Questions must stick to the Court's stated scope and safeguards."
+    },
+    {
+      "id": "CA27-004",
+      "theme": "Passive euthanasia and best interests",
+      "asOf": "2026-03-11",
+      "facts": [
+        "Harish Rana v Union of India, 2026 INSC 222, dated 11 March 2026.",
+        "The Court considered withdrawal of clinically assisted nutrition and hydration and the best-interests standard for a patient lacking decision-making capacity.",
+        "The Supreme Court summary reiterates strict safeguards, medical-board assessment, palliative support and the importance of medical and non-medical factors."
+      ],
+      "primarySources": [
+        "https://www.sci.gov.in/landmark-judgment-summaries/"
+      ],
+      "checks": "Preserve the distinction between active euthanasia and withholding/withdrawing life-sustaining treatment; do not simplify the safeguards."
+    },
+    {
+      "id": "CA27-005",
+      "theme": "RBI Monetary Policy Committee, October 2026",
+      "asOf": "2026-10-07",
+      "facts": [
+        "At its 5–7 October 2026 meeting, the MPC raised the policy repo rate by 25 basis points to 5.50%.",
+        "The Standing Deposit Facility rate became 5.25%; the MSF rate and Bank Rate became 5.75%.",
+        "The MPC changed its stance to calibrated tightening; two members preferred retaining neutral stance."
+      ],
+      "primarySources": [
+        "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63839",
+        "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13727"
+      ],
+      "checks": "As-of values change. Date-stamp the rate in every passage and never treat this as a live current rate after the as-of date."
+    },
+    {
+      "id": "CA27-006",
+      "theme": "COP17 biodiversity conference and Yerevan Pathway",
+      "asOf": "2026-11-01",
+      "facts": [
+        "COP17 of the Convention on Biological Diversity took place in Yerevan, Armenia, 19–30 October 2026.",
+        "It marked the first global review of collective progress towards the Kunming-Montreal Global Biodiversity Framework.",
+        "The UN described a Yerevan Pathway to accelerate action for nature after the review found the world off track."
+      ],
+      "primarySources": [
+        "https://www.cbd.int/conferences/2026",
+        "https://www.un.org/en/cop17-nations-chart-%E2%80%98yerevan-pathway%E2%80%99-speed-action-nature"
+      ],
+      "checks": "Distinguish CBD COP from UNFCCC climate COP. Verify the final decision text before asking about any numerical target or funding commitment."
+    },
+    {
+      "id": "CA27-007",
+      "theme": "ISRO GSLV-F18 / NVS-03 mission",
+      "asOf": "2026-10-28",
+      "facts": [
+        "GSLV-F18 successfully placed NVS-03 into its intended orbit on 28 October 2026.",
+        "NVS-03 is the third satellite in the next-generation navigation satellite system intended to provide continuity of navigation services for the IRNSS series.",
+        "The satellite includes an indigenous atomic clock and L1 signal in addition to L5/S signals."
+      ],
+      "primarySources": [
+        "https://www.isro.gov.in/Mission_GSLVF18.html",
+        "https://www.isro.gov.in/LaunchMissions.html"
+      ],
+      "checks": "Do not confuse the navigation satellite with a communications or Earth-observation mission; check payload details against ISRO."
+    },
+    {
+      "id": "CA27-008",
+      "theme": "Bharat Renewable Energy Summit & Expo 2026",
+      "asOf": "2026-11-05",
+      "facts": [
+        "The four-day summit took place 2–5 November 2026 at Bharat Mandapam, New Delhi.",
+        "The stated theme was Invest. Innovate. Inspire.",
+        "PIB reported participation from 135 countries and 75,000+ visitors at the conclusion; these are organiser/government-reported figures."
+      ],
+      "primarySources": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331222&lang=1&reg=3",
+        "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2333162&lang=1&reg=1"
+      ],
+      "checks": "Attribute participation numbers to PIB/organisers and avoid treating promotional targets as independently audited outcomes."
+    },
+    {
+      "id": "CA27-009",
+      "theme": "Corporate criminal liability and attribution of mens rea",
+      "asOf": "2026-09-07",
+      "facts": [
+        "Sanofi India Ltd v Central Bureau of Investigation, 2026 INSC 957, dated 7 September 2026.",
+        "The Supreme Court summary addresses when alleged conduct and mens rea of natural persons may be attributed to a corporation.",
+        "The summary says bald allegations remain vulnerable to quashing and identifies a prima facie threshold."
+      ],
+      "primarySources": [
+        "https://www.sci.gov.in/landmark-judgment-summaries/"
+      ],
+      "checks": "Avoid treating the summary as permission to prosecute every corporation without a factual attribution foundation; verify exact paragraphs in the full decision."
+    }
+  ],
+  "publicBenchmarkResources": [
+    {
+      "name": "Careers360 CLAT 2027 free mock tests and section tests",
+      "url": "https://law.careers360.com/articles/clat-2027-mock-test-pdf-with-answer-key-and-solutions",
+      "use": "Pattern and section coverage benchmark; publicly listed full and sectional tests. Verify each download and answer key before relying on it.",
+      "restriction": "Use for benchmarking only; do not copy proprietary questions or passages."
+    },
+    {
+      "name": "Careers360 2027 study-material index",
+      "url": "https://law.careers360.com/articles/clat-2027-study-material-preparation-resources-mock-test",
+      "use": "Discovery index for monthly current-affairs material and previous-year papers.",
+      "restriction": "Secondary source; verify all facts with primary sources."
+    },
+    {
+      "name": "Surya Law Academy free study material",
+      "url": "https://suryalawacademy.co.in/free-study-material",
+      "use": "Publicly listed mock papers, answer keys and sectional sets; useful for comparing passage structure and difficulty.",
+      "restriction": "Third-party material; do not copy."
+    },
+    {
+      "name": "WhiteCoat Yatra CLAT UG practice test",
+      "url": "https://whitecoatyatra.com/mock-test-clat-ug-1",
+      "use": "60-question passage-based diagnostic; its own page says it excludes Current Affairs and is half-length.",
+      "restriction": "Not a full CLAT simulation and not a source for current-affairs coverage."
+    },
+    {
+      "name": "CLAT Gurukul free GK compendium",
+      "url": "https://clatgurukul.com/gk-compendium/",
+      "use": "Secondary theme-discovery and coverage checklist.",
+      "restriction": "Verify each factual item with original records; no copying."
+    }
+  ]
+}
