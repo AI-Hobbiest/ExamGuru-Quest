@@ -1,0 +1,3368 @@
+{
+  "schemaVersion": 1,
+  "kind": "clat-paper-draft-questions",
+  "paperNumber": 1,
+  "blueprintVersion": "CLAT-UG27-v1",
+  "questions": [
+    {
+      "questionId": "clat-ug27-p001-q001",
+      "passageId": "p001-eng-01",
+      "sectionId": "english",
+      "prompt": "Which statement best captures the passage's central claim?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A library is valuable only when it records high visitor numbers."
+        },
+        {
+          "optionId": "o2",
+          "text": "A library's primary purpose is to preserve old books unchanged."
+        },
+        {
+          "optionId": "o3",
+          "text": "A public library is civic infrastructure whose value extends beyond book circulation."
+        },
+        {
+          "optionId": "o4",
+          "text": "A library should become a commercial venue to fund its collection."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage presents libraries as open civic resources offering learning, access and shared space, not merely shelves of books.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-p001-q002",
+      "passageId": "p001-eng-01",
+      "sectionId": "english",
+      "prompt": "Why does the author describe several people using the library for different purposes?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "To suggest that visitors should be required to join organised programmes."
+        },
+        {
+          "optionId": "o2",
+          "text": "To prove that digital collections have little practical value."
+        },
+        {
+          "optionId": "o3",
+          "text": "To argue that specialist services should replace book lending."
+        },
+        {
+          "optionId": "o4",
+          "text": "To show that one public institution can support varied forms of participation."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The examples show the range of civic functions that can coexist in a library.",
+      "difficulty": "moderate",
+      "competency": "illustrative-function"
+    },
+    {
+      "questionId": "clat-ug27-p001-q003",
+      "passageId": "p001-eng-01",
+      "sectionId": "english",
+      "prompt": "What can reasonably be inferred about a library near a school?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Its service design may need to account for demand after school hours."
+        },
+        {
+          "optionId": "o2",
+          "text": "It must follow exactly the same opening schedule as every other branch."
+        },
+        {
+          "optionId": "o3",
+          "text": "It should stop lending books to adults."
+        },
+        {
+          "optionId": "o4",
+          "text": "It should measure success only through student attendance."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage says branch-level choices should respond to local patterns of use, including students arriving after classes.",
+      "difficulty": "challenging",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q004",
+      "passageId": "p001-eng-01",
+      "sectionId": "english",
+      "prompt": "Which concern does the author raise about digital collections?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Digital collections always contain less reliable information than printed books."
+        },
+        {
+          "optionId": "o2",
+          "text": "Digital access does not remove barriers involving devices, connectivity or human assistance."
+        },
+        {
+          "optionId": "o3",
+          "text": "Digital collections make all library buildings legally unnecessary."
+        },
+        {
+          "optionId": "o4",
+          "text": "Libraries should refuse to provide online borrowing."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The author explicitly notes device failures, uneven connections and the continuing value of assistance and shared space.",
+      "difficulty": "moderate",
+      "competency": "argument-detail"
+    },
+    {
+      "questionId": "clat-ug27-p001-q005",
+      "passageId": "p001-eng-01",
+      "sectionId": "english",
+      "prompt": "In the context of the passage, 'circulation database' most directly refers to records of:",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The movement of people through a public square."
+        },
+        {
+          "optionId": "o2",
+          "text": "The money spent on electricity and building maintenance."
+        },
+        {
+          "optionId": "o3",
+          "text": "The number of books available for purchase."
+        },
+        {
+          "optionId": "o4",
+          "text": "Items borrowed and returned by library users."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Circulation in a library context refers to lending activity; the author contrasts it with less easily recorded outcomes.",
+      "difficulty": "moderate",
+      "competency": "vocabulary-in-context"
+    },
+    {
+      "questionId": "clat-ug27-p001-q006",
+      "passageId": "p001-eng-01",
+      "sectionId": "english",
+      "prompt": "Which approach to evaluating a library would the author most likely support?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Combining usage data with evidence about access, local usefulness and who is served."
+        },
+        {
+          "optionId": "o2",
+          "text": "Closing branches whose digital borrowing exceeds physical borrowing."
+        },
+        {
+          "optionId": "o3",
+          "text": "Using the same programme mix in every neighbourhood."
+        },
+        {
+          "optionId": "o4",
+          "text": "Ranking branches solely by the number of loans."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The conclusion calls for multiple measures, including accessibility, local needs and independent learning.",
+      "difficulty": "moderate",
+      "competency": "author-view"
+    },
+    {
+      "questionId": "clat-ug27-p001-q007",
+      "passageId": "p001-eng-02",
+      "sectionId": "english",
+      "prompt": "What is the main reason the author rejects heat alerts as a complete response?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Alerts are too expensive for local governments to operate."
+        },
+        {
+          "optionId": "o2",
+          "text": "Residents cannot understand public warnings."
+        },
+        {
+          "optionId": "o3",
+          "text": "Alerts warn people but do not remove the physical conditions that expose them to heat."
+        },
+        {
+          "optionId": "o4",
+          "text": "Heat is unrelated to the design of streets and buildings."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage distinguishes immediate communication from long-term reduction of exposure.",
+      "difficulty": "easy",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-p001-q008",
+      "passageId": "p001-eng-02",
+      "sectionId": "english",
+      "prompt": "Why does the author question counting saplings planted?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Saplings cannot be counted accurately."
+        },
+        {
+          "optionId": "o2",
+          "text": "Planting totals do not show whether trees survive and eventually provide shade."
+        },
+        {
+          "optionId": "o3",
+          "text": "Only mature trees can improve air quality."
+        },
+        {
+          "optionId": "o4",
+          "text": "Tree planting is never useful in a dense city."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage identifies survival, species choice, water and maintenance as necessary to convert planting into canopy.",
+      "difficulty": "challenging",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q009",
+      "passageId": "p001-eng-02",
+      "sectionId": "english",
+      "prompt": "Which resident is most likely to face the combined disadvantage described in the passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A homeowner with shaded outdoor space and flexible working hours."
+        },
+        {
+          "optionId": "o2",
+          "text": "A commuter who can change travel time and route freely."
+        },
+        {
+          "optionId": "o3",
+          "text": "A resident who can work remotely in a well-insulated building."
+        },
+        {
+          "optionId": "o4",
+          "text": "A street worker in a crowded district with little shade and no flexibility to stop work."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage links high exposure with limited ability to adapt, especially for outdoor workers and poorer households.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q010",
+      "passageId": "p001-eng-02",
+      "sectionId": "english",
+      "prompt": "What does the author mean by saying that installation figures are 'inputs'?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They measure resources or activity, not whether the intended benefit has occurred."
+        },
+        {
+          "optionId": "o2",
+          "text": "They demonstrate that the programme has failed."
+        },
+        {
+          "optionId": "o3",
+          "text": "They are the final measure of public health improvement."
+        },
+        {
+          "optionId": "o4",
+          "text": "They are figures that should never be collected."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage contrasts installations with outcomes such as shade, cooling and access to water.",
+      "difficulty": "challenging",
+      "competency": "vocabulary-in-context"
+    },
+    {
+      "questionId": "clat-ug27-p001-q011",
+      "passageId": "p001-eng-02",
+      "sectionId": "english",
+      "prompt": "Which additional evidence would best test whether a tree programme is effective?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The number of press releases issued about the programme."
+        },
+        {
+          "optionId": "o2",
+          "text": "Survival rates and measured shade or temperature changes in targeted streets."
+        },
+        {
+          "optionId": "o3",
+          "text": "The total number of residents who have heard of the planting drive."
+        },
+        {
+          "optionId": "o4",
+          "text": "The number of trees ordered from suppliers, regardless of survival."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "Outcome evidence should show whether the trees persist and improve the environment experienced by residents.",
+      "difficulty": "moderate",
+      "competency": "evaluation"
+    },
+    {
+      "questionId": "clat-ug27-p001-q012",
+      "passageId": "p001-eng-02",
+      "sectionId": "english",
+      "prompt": "Which principle about heat policy follows from the passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Every neighbourhood should receive identical interventions regardless of risk."
+        },
+        {
+          "optionId": "o2",
+          "text": "Heat risk can be solved through warnings alone."
+        },
+        {
+          "optionId": "o3",
+          "text": "Investment should be directed towards places where exposure and limited adaptive capacity overlap."
+        },
+        {
+          "optionId": "o4",
+          "text": "Private air-conditioning is an adequate substitute for public planning."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage advocates mapping exposure and directing resources to the most vulnerable places.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q013",
+      "passageId": "p001-eng-03",
+      "sectionId": "english",
+      "prompt": "The passage primarily portrays translation as:",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "An interpretive craft requiring choices constrained by fidelity to the source."
+        },
+        {
+          "optionId": "o2",
+          "text": "A process in which the translator may freely rewrite the author."
+        },
+        {
+          "optionId": "o3",
+          "text": "An activity that removes all cultural differences between readers."
+        },
+        {
+          "optionId": "o4",
+          "text": "A mechanical substitution of equivalent words."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage repeatedly describes judgement bounded by responsibility to the source text.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-p001-q014",
+      "passageId": "p001-eng-03",
+      "sectionId": "english",
+      "prompt": "Why might a literal translation distort a sentence?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It always introduces facts that are absent from the original."
+        },
+        {
+          "optionId": "o2",
+          "text": "It prevents the reader from recognising the source language."
+        },
+        {
+          "optionId": "o3",
+          "text": "It may preserve structure while losing the sentence's social or rhetorical effect."
+        },
+        {
+          "optionId": "o4",
+          "text": "It necessarily changes the historical setting."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The author explains that irony, respect, humour and threat may not transfer through direct word substitution.",
+      "difficulty": "challenging",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q015",
+      "passageId": "p001-eng-03",
+      "sectionId": "english",
+      "prompt": "What is the risk when a translator 'softens' an unfamiliar custom?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The translation becomes more accurate because it is easier to read."
+        },
+        {
+          "optionId": "o2",
+          "text": "The translation may erase a distinctive feature of the author's world."
+        },
+        {
+          "optionId": "o3",
+          "text": "The original text becomes legally invalid."
+        },
+        {
+          "optionId": "o4",
+          "text": "The translator proves that the custom is universal."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage warns that taking liberties can replace the source world with the translator's preferences.",
+      "difficulty": "moderate",
+      "competency": "argument-detail"
+    },
+    {
+      "questionId": "clat-ug27-p001-q016",
+      "passageId": "p001-eng-03",
+      "sectionId": "english",
+      "prompt": "The phrase 'accountable interpreter' suggests that a translator should:",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Remove every unfamiliar feature from the translated work."
+        },
+        {
+          "optionId": "o2",
+          "text": "Treat personal preference as the only translation standard."
+        },
+        {
+          "optionId": "o3",
+          "text": "Avoid making any choices that depart from word order."
+        },
+        {
+          "optionId": "o4",
+          "text": "Be prepared to justify choices by reference to the text and its context."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Accountability means choices are made but remain explainable through textual context.",
+      "difficulty": "moderate",
+      "competency": "vocabulary-in-context"
+    },
+    {
+      "questionId": "clat-ug27-p001-q017",
+      "passageId": "p001-eng-03",
+      "sectionId": "english",
+      "prompt": "What function can a translator's note perform, according to the author?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It can clarify a cultural or historical reference that has no simple equivalent."
+        },
+        {
+          "optionId": "o2",
+          "text": "It should guarantee that every reader reaches the same interpretation."
+        },
+        {
+          "optionId": "o3",
+          "text": "It should eliminate the need for careful translation."
+        },
+        {
+          "optionId": "o4",
+          "text": "It should replace the original work with a complete commentary."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage supports limited explanatory aids that illuminate rather than overwhelm the work.",
+      "difficulty": "moderate",
+      "competency": "detail"
+    },
+    {
+      "questionId": "clat-ug27-p001-q018",
+      "passageId": "p001-eng-03",
+      "sectionId": "english",
+      "prompt": "Which translation would best accord with the passage's approach?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "One that changes the author's argument to suit current opinion."
+        },
+        {
+          "optionId": "o2",
+          "text": "One that follows word order even where the result misleads readers."
+        },
+        {
+          "optionId": "o3",
+          "text": "One that replaces unfamiliar customs with familiar local equivalents in every case."
+        },
+        {
+          "optionId": "o4",
+          "text": "One that adjusts idiom to preserve tone while retaining the source's distinctive meaning."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage balances readability with preservation of the source's character and meaning.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q019",
+      "passageId": "p001-eng-04",
+      "sectionId": "english",
+      "prompt": "Which proposition best expresses the author's view of scientific uncertainty?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A scientific claim is useful only when it predicts an exact outcome."
+        },
+        {
+          "optionId": "o2",
+          "text": "Uncertainty can communicate the limits and strength of evidence rather than negate knowledge."
+        },
+        {
+          "optionId": "o3",
+          "text": "Uncertainty proves that scientific conclusions are arbitrary."
+        },
+        {
+          "optionId": "o4",
+          "text": "Researchers should avoid revising conclusions once published."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage treats uncertainty as a disciplined account of what is known and unknown.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-p001-q020",
+      "passageId": "p001-eng-04",
+      "sectionId": "english",
+      "prompt": "Why does the author say that revision need not indicate earlier carelessness?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Earlier studies are always intentionally misleading."
+        },
+        {
+          "optionId": "o2",
+          "text": "A conclusion becomes true only after it has been repeated."
+        },
+        {
+          "optionId": "o3",
+          "text": "New or stronger evidence can rationally change the level of confidence in a conclusion."
+        },
+        {
+          "optionId": "o4",
+          "text": "Scientific findings are determined by public opinion."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The author gives the example of a small trial followed by larger studies as a reasoned basis for change.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q021",
+      "passageId": "p001-eng-04",
+      "sectionId": "english",
+      "prompt": "What distinction does the passage draw between uncertainty about size and uncertainty about direction?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The two forms of uncertainty are always identical."
+        },
+        {
+          "optionId": "o2",
+          "text": "The evidence may show that a risk increases even when its exact magnitude remains unclear."
+        },
+        {
+          "optionId": "o3",
+          "text": "Uncertainty about size means there is no evidence of an effect."
+        },
+        {
+          "optionId": "o4",
+          "text": "Uncertainty about direction can be ignored in every policy decision."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage states that evidence may strongly indicate an increase in risk without precisely quantifying it.",
+      "difficulty": "moderate",
+      "competency": "conceptual-distinction"
+    },
+    {
+      "questionId": "clat-ug27-p001-q022",
+      "passageId": "p001-eng-04",
+      "sectionId": "english",
+      "prompt": "Which communication practice does the author recommend?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "State assumptions, evidence quality and the conditions that could change the conclusion."
+        },
+        {
+          "optionId": "o2",
+          "text": "Present policy preferences as if they were laboratory findings."
+        },
+        {
+          "optionId": "o3",
+          "text": "Remove all caveats to make a message persuasive."
+        },
+        {
+          "optionId": "o4",
+          "text": "Avoid identifying evidence that may be incomplete."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "These elements are expressly identified as ways to improve public communication.",
+      "difficulty": "moderate",
+      "competency": "detail"
+    },
+    {
+      "questionId": "clat-ug27-p001-q023",
+      "passageId": "p001-eng-04",
+      "sectionId": "english",
+      "prompt": "What would be an example of using uncertainty selectively?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Explaining that an estimate has a confidence range."
+        },
+        {
+          "optionId": "o2",
+          "text": "Distinguishing scientific findings from value judgements."
+        },
+        {
+          "optionId": "o3",
+          "text": "Revising a recommendation after a larger study."
+        },
+        {
+          "optionId": "o4",
+          "text": "Demanding perfect proof for an unwelcome claim while accepting weak support for a preferred claim."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The final paragraph identifies this unequal standard as a misuse of uncertainty.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q024",
+      "passageId": "p001-eng-04",
+      "sectionId": "english",
+      "prompt": "Which conclusion is most consistent with the passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Every uncertain claim should be treated as equally credible."
+        },
+        {
+          "optionId": "o2",
+          "text": "Policy should always wait until every uncertainty has disappeared."
+        },
+        {
+          "optionId": "o3",
+          "text": "Incomplete knowledge can still support action when the decision reflects the evidence's strength and limits."
+        },
+        {
+          "optionId": "o4",
+          "text": "Scientific evidence alone determines society's values."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage concludes that action may be necessary, but confidence and revision should match the evidence.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q025",
+      "passageId": "p001-ca-01",
+      "sectionId": "current-affairs",
+      "prompt": "On what date was the Union Budget for 2026–27 presented?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "1 April 2026"
+        },
+        {
+          "optionId": "o2",
+          "text": "1 January 2026"
+        },
+        {
+          "optionId": "o3",
+          "text": "31 March 2026"
+        },
+        {
+          "optionId": "o4",
+          "text": "1 February 2026"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage identifies the presentation date as 1 February 2026.",
+      "difficulty": "moderate",
+      "competency": "date-and-event"
+    },
+    {
+      "questionId": "clat-ug27-p001-q026",
+      "passageId": "p001-ca-01",
+      "sectionId": "current-affairs",
+      "prompt": "Which phrase describes the three-part framing used in the official Budget summary?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Three Kartavya priorities"
+        },
+        {
+          "optionId": "o2",
+          "text": "Three Constitutional Schedules"
+        },
+        {
+          "optionId": "o3",
+          "text": "Three Monetary Policy pillars"
+        },
+        {
+          "optionId": "o4",
+          "text": "Three Finance Commissions"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The PIB summary expressly describes the Budget through three Kartavya priorities.",
+      "difficulty": "challenging",
+      "competency": "static-context"
+    },
+    {
+      "questionId": "clat-ug27-p001-q027",
+      "passageId": "p001-ca-01",
+      "sectionId": "current-affairs",
+      "prompt": "What implementation milestone was announced for the Income-tax Act, 2025?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It was to be implemented only after a referendum."
+        },
+        {
+          "optionId": "o2",
+          "text": "It was to come into effect from April 2026."
+        },
+        {
+          "optionId": "o3",
+          "text": "It was to replace the Constitution's tax provisions."
+        },
+        {
+          "optionId": "o4",
+          "text": "It was to come into effect from April 2027."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage reproduces the announced commencement date from the official summary.",
+      "difficulty": "easy",
+      "competency": "factual-recall"
+    },
+    {
+      "questionId": "clat-ug27-p001-q028",
+      "passageId": "p001-ca-01",
+      "sectionId": "current-affairs",
+      "prompt": "Why should a Budget announcement not automatically be treated as an implemented change?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Implementation is always completed on Budget day."
+        },
+        {
+          "optionId": "o2",
+          "text": "Every Budget proposal is merely an informal speech."
+        },
+        {
+          "optionId": "o3",
+          "text": "It may still require legislation, delegated rules or administrative action."
+        },
+        {
+          "optionId": "o4",
+          "text": "A Budget is not presented to Parliament."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage explains that proposals take different legal and administrative routes before taking effect.",
+      "difficulty": "moderate",
+      "competency": "institutional-process"
+    },
+    {
+      "questionId": "clat-ug27-p001-q029",
+      "passageId": "p001-ca-01",
+      "sectionId": "current-affairs",
+      "prompt": "Which evaluation would best distinguish an allocation from an outcome?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Assuming every allocation is fully spent in the same month."
+        },
+        {
+          "optionId": "o2",
+          "text": "Checking whether funds were released, projects completed and intended benefits achieved."
+        },
+        {
+          "optionId": "o3",
+          "text": "Comparing the Budget title with the previous year's title."
+        },
+        {
+          "optionId": "o4",
+          "text": "Counting only the number of announcements in the speech."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage distinguishes allocation, release, completion and outcome as separate stages.",
+      "difficulty": "moderate",
+      "competency": "policy-analysis"
+    },
+    {
+      "questionId": "clat-ug27-p001-q030",
+      "passageId": "p001-ca-01",
+      "sectionId": "current-affairs",
+      "prompt": "Which item is expressly mentioned in the passage as part of the 2026–27 Budget summary?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Changes concerning customs treatment of selected capital goods and critical minerals."
+        },
+        {
+          "optionId": "o2",
+          "text": "A new national election date."
+        },
+        {
+          "optionId": "o3",
+          "text": "A constitutional amendment abolishing Parliament."
+        },
+        {
+          "optionId": "o4",
+          "text": "A statutory ban on all digital payments."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage refers to customs measures for capital goods, critical minerals and battery manufacturing.",
+      "difficulty": "moderate",
+      "competency": "factual-recall"
+    },
+    {
+      "questionId": "clat-ug27-p001-q031",
+      "passageId": "p001-ca-02",
+      "sectionId": "current-affairs",
+      "prompt": "Which case is discussed in the passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Harish Rana v Union of India"
+        },
+        {
+          "optionId": "o2",
+          "text": "Sanofi India Ltd v Central Bureau of Investigation"
+        },
+        {
+          "optionId": "o3",
+          "text": "Association for Democratic Reforms v Election Commission of India"
+        },
+        {
+          "optionId": "o4",
+          "text": "Pooja Ramesh Singh v Jammu and Kashmir Bank Ltd"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage identifies the case and its neutral citation, 2026 INSC 668.",
+      "difficulty": "challenging",
+      "competency": "case-identification"
+    },
+    {
+      "questionId": "clat-ug27-p001-q032",
+      "passageId": "p001-ca-02",
+      "sectionId": "current-affairs",
+      "prompt": "How many AI-generated citations were described as nonexistent or containing nonexistent paragraphs?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Two"
+        },
+        {
+          "optionId": "o2",
+          "text": "Ten"
+        },
+        {
+          "optionId": "o3",
+          "text": "Six"
+        },
+        {
+          "optionId": "o4",
+          "text": "Four"
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The Supreme Court's official summary records six such citations.",
+      "difficulty": "challenging",
+      "competency": "factual-recall"
+    },
+    {
+      "questionId": "clat-ug27-p001-q033",
+      "passageId": "p001-ca-02",
+      "sectionId": "current-affairs",
+      "prompt": "What is the principal legal concern raised by fabricated citations?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They automatically invalidate every decision drafted electronically."
+        },
+        {
+          "optionId": "o2",
+          "text": "They prevent courts from reading printed judgments."
+        },
+        {
+          "optionId": "o3",
+          "text": "They make every use of legal technology unlawful."
+        },
+        {
+          "optionId": "o4",
+          "text": "They undermine the ability to verify the authority supporting judicial reasoning."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage explains that citations allow others to inspect the authority invoked.",
+      "difficulty": "moderate",
+      "competency": "legal-institutions"
+    },
+    {
+      "questionId": "clat-ug27-p001-q034",
+      "passageId": "p001-ca-02",
+      "sectionId": "current-affairs",
+      "prompt": "Which step is the most appropriate before relying on an AI-suggested precedent?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Ask the same AI system to confirm its earlier answer and stop there."
+        },
+        {
+          "optionId": "o2",
+          "text": "Locate the original decision and verify the exact passage and its context."
+        },
+        {
+          "optionId": "o3",
+          "text": "Quote the output without checking the court or date."
+        },
+        {
+          "optionId": "o4",
+          "text": "Assume the citation is genuine if the language sounds formal."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The verification process in the passage requires locating and checking the actual judgment.",
+      "difficulty": "challenging",
+      "competency": "source-verification"
+    },
+    {
+      "questionId": "clat-ug27-p001-q035",
+      "passageId": "p001-ca-02",
+      "sectionId": "current-affairs",
+      "prompt": "What distinction does the author make between using a tool and relying on its output?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A lawyer is relieved of responsibility when software generates a citation."
+        },
+        {
+          "optionId": "o2",
+          "text": "Any use of AI proves that the resulting work is false."
+        },
+        {
+          "optionId": "o3",
+          "text": "A tool may assist research, but the person citing the authority remains responsible for verification."
+        },
+        {
+          "optionId": "o4",
+          "text": "Digital research tools cannot assist legal work."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage permits tools for search and organisation but retains human responsibility for substantiation.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q036",
+      "passageId": "p001-ca-02",
+      "sectionId": "current-affairs",
+      "prompt": "Which conclusion is not supported by the passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Every legal document prepared with AI assistance is necessarily unreliable."
+        },
+        {
+          "optionId": "o2",
+          "text": "A citation should be traceable to an authentic judgment."
+        },
+        {
+          "optionId": "o3",
+          "text": "Public institutions need processes for checking source authenticity."
+        },
+        {
+          "optionId": "o4",
+          "text": "Fluent wording does not prove that a citation exists."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage cautions against unverified output, not against every use of AI.",
+      "difficulty": "moderate",
+      "competency": "scope-of-inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q037",
+      "passageId": "p001-ca-03",
+      "sectionId": "current-affairs",
+      "prompt": "The Supreme Court decision discussed in the passage is identified as:",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "2026 INSC 957"
+        },
+        {
+          "optionId": "o2",
+          "text": "2026 INSC 222"
+        },
+        {
+          "optionId": "o3",
+          "text": "2026 INSC 668"
+        },
+        {
+          "optionId": "o4",
+          "text": "2026 INSC 564"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage names the case as 2026 INSC 564, dated 27 May 2026.",
+      "difficulty": "easy",
+      "competency": "case-identification"
+    },
+    {
+      "questionId": "clat-ug27-p001-q038",
+      "passageId": "p001-ca-03",
+      "sectionId": "current-affairs",
+      "prompt": "Which state was directly connected with the Special Intensive Revision considered in the case?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Assam"
+        },
+        {
+          "optionId": "o2",
+          "text": "Kerala"
+        },
+        {
+          "optionId": "o3",
+          "text": "Bihar"
+        },
+        {
+          "optionId": "o4",
+          "text": "Gujarat"
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The case concerned a Special Intensive Revision of electoral rolls in Bihar.",
+      "difficulty": "moderate",
+      "competency": "factual-recall"
+    },
+    {
+      "questionId": "clat-ug27-p001-q039",
+      "passageId": "p001-ca-03",
+      "sectionId": "current-affairs",
+      "prompt": "How does the passage describe Articles 324 and 327?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "As provisions that have no relationship to electoral matters."
+        },
+        {
+          "optionId": "o2",
+          "text": "As complementary constitutional provisions concerning election administration and legislative power."
+        },
+        {
+          "optionId": "o3",
+          "text": "As provisions dealing exclusively with local taxation."
+        },
+        {
+          "optionId": "o4",
+          "text": "As provisions that both abolish the Election Commission."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The official summary explains that the provisions are complementary rather than competing.",
+      "difficulty": "challenging",
+      "competency": "constitutional-context"
+    },
+    {
+      "questionId": "clat-ug27-p001-q040",
+      "passageId": "p001-ca-03",
+      "sectionId": "current-affairs",
+      "prompt": "What does the passage identify as a statutory source for a special revision?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Section 21(3) of the Representation of the People Act, 1950"
+        },
+        {
+          "optionId": "o2",
+          "text": "Section 144 of the Code of Criminal Procedure"
+        },
+        {
+          "optionId": "o3",
+          "text": "Article 21 of the Constitution"
+        },
+        {
+          "optionId": "o4",
+          "text": "The Companies Act, 2013"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The Supreme Court summary discusses Section 21(3) as a source of power for directing a special revision.",
+      "difficulty": "moderate",
+      "competency": "statutory-context"
+    },
+    {
+      "questionId": "clat-ug27-p001-q041",
+      "passageId": "p001-ca-03",
+      "sectionId": "current-affairs",
+      "prompt": "Why is proportionality relevant to an electoral-roll revision?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It means that no administrative verification may occur."
+        },
+        {
+          "optionId": "o2",
+          "text": "It permits the authority to ignore statutory requirements."
+        },
+        {
+          "optionId": "o3",
+          "text": "It requires every revision to be identical in every state."
+        },
+        {
+          "optionId": "o4",
+          "text": "The measures used must bear a defensible relationship to the objective and the rights affected."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage explains proportionality as testing the measure's connection to its objective and its excessiveness.",
+      "difficulty": "moderate",
+      "competency": "legal-principle"
+    },
+    {
+      "questionId": "clat-ug27-p001-q042",
+      "passageId": "p001-ca-03",
+      "sectionId": "current-affairs",
+      "prompt": "Which safeguard would best address the risk of excluding an eligible voter through a record error?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Treating an address mismatch as conclusive proof of ineligibility."
+        },
+        {
+          "optionId": "o2",
+          "text": "Removing all disputed names without communication."
+        },
+        {
+          "optionId": "o3",
+          "text": "Clear notice, an accessible correction process and adequate time to respond."
+        },
+        {
+          "optionId": "o4",
+          "text": "Making the database inaccessible to affected residents."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage emphasises notice, accessible response, evidence standards and correction mechanisms.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q043",
+      "passageId": "p001-ca-04",
+      "sectionId": "current-affairs",
+      "prompt": "Where and when did COP17 of the Convention on Biological Diversity take place?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Yerevan, Armenia, from 19 to 30 October 2026"
+        },
+        {
+          "optionId": "o2",
+          "text": "New Delhi, India, from 5 to 15 September 2026"
+        },
+        {
+          "optionId": "o3",
+          "text": "Nairobi, Kenya, from 1 to 10 June 2026"
+        },
+        {
+          "optionId": "o4",
+          "text": "Paris, France, from 2 to 12 December 2026"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The CBD's official conference page gives the venue and dates as Yerevan, 19–30 October 2026.",
+      "difficulty": "moderate",
+      "competency": "date-and-venue"
+    },
+    {
+      "questionId": "clat-ug27-p001-q044",
+      "passageId": "p001-ca-04",
+      "sectionId": "current-affairs",
+      "prompt": "What did COP17 mark in relation to the Kunming–Montreal Global Biodiversity Framework?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The adoption of the Convention on Biological Diversity itself."
+        },
+        {
+          "optionId": "o2",
+          "text": "The first global review of collective progress towards its implementation."
+        },
+        {
+          "optionId": "o3",
+          "text": "The final expiry of the Framework."
+        },
+        {
+          "optionId": "o4",
+          "text": "The first meeting of the UN climate convention."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The Convention's official page describes COP17 as the first global review of progress on the Framework.",
+      "difficulty": "easy",
+      "competency": "international-framework"
+    },
+    {
+      "questionId": "clat-ug27-p001-q045",
+      "passageId": "p001-ca-04",
+      "sectionId": "current-affairs",
+      "prompt": "What did the United Nations call the roadmap agreed at the meeting?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The Yerevan Pathway"
+        },
+        {
+          "optionId": "o2",
+          "text": "The Montreal Carbon Compact"
+        },
+        {
+          "optionId": "o3",
+          "text": "The Kyoto Protocol"
+        },
+        {
+          "optionId": "o4",
+          "text": "The Nairobi Declaration"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The UN report dated 1 November 2026 refers to the Yerevan Pathway.",
+      "difficulty": "challenging",
+      "competency": "factual-recall"
+    },
+    {
+      "questionId": "clat-ug27-p001-q046",
+      "passageId": "p001-ca-04",
+      "sectionId": "current-affairs",
+      "prompt": "Why is a global progress review not equivalent to achieving the biodiversity targets?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A review automatically changes national laws."
+        },
+        {
+          "optionId": "o2",
+          "text": "A global review replaces the need for domestic action."
+        },
+        {
+          "optionId": "o3",
+          "text": "The review identifies gaps, while actual conservation depends on implementation after the meeting."
+        },
+        {
+          "optionId": "o4",
+          "text": "Targets are achieved as soon as governments discuss them."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage distinguishes diplomatic review from national budgets, laws and local implementation.",
+      "difficulty": "challenging",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q047",
+      "passageId": "p001-ca-04",
+      "sectionId": "current-affairs",
+      "prompt": "Which statement correctly distinguishes the CBD process from a climate COP?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The CBD process exclusively sets national interest rates."
+        },
+        {
+          "optionId": "o2",
+          "text": "The CBD process focuses on biodiversity conservation, sustainable use and benefit-sharing."
+        },
+        {
+          "optionId": "o3",
+          "text": "The CBD COP is a meeting of central banks."
+        },
+        {
+          "optionId": "o4",
+          "text": "The CBD COP is another name for every UN climate conference."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage explains the CBD's distinct treaty focus and warns against confusing it with the UNFCCC process.",
+      "difficulty": "moderate",
+      "competency": "institutional-distinction"
+    },
+    {
+      "questionId": "clat-ug27-p001-q048",
+      "passageId": "p001-ca-04",
+      "sectionId": "current-affairs",
+      "prompt": "Which issue commonly complicates implementation of biodiversity commitments?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Whether ecosystems are limited to one country."
+        },
+        {
+          "optionId": "o2",
+          "text": "Whether national plans are prohibited by international treaties."
+        },
+        {
+          "optionId": "o3",
+          "text": "Whether biodiversity can be measured without any scientific monitoring."
+        },
+        {
+          "optionId": "o4",
+          "text": "Disagreement about predictable finance, distribution of resources and measurement of progress."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage identifies financing, distribution and monitoring as recurring negotiating issues.",
+      "difficulty": "easy",
+      "competency": "policy-analysis"
+    },
+    {
+      "questionId": "clat-ug27-p001-q049",
+      "passageId": "p001-ca-05",
+      "sectionId": "current-affairs",
+      "prompt": "When did the RBI Monetary Policy Committee hold the meeting described in the passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "5 to 7 October 2026"
+        },
+        {
+          "optionId": "o2",
+          "text": "1 to 3 February 2026"
+        },
+        {
+          "optionId": "o3",
+          "text": "2 to 4 December 2026"
+        },
+        {
+          "optionId": "o4",
+          "text": "3 to 5 August 2026"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage gives the October meeting dates as 5–7 October 2026.",
+      "difficulty": "easy",
+      "competency": "date-and-institution"
+    },
+    {
+      "questionId": "clat-ug27-p001-q050",
+      "passageId": "p001-ca-05",
+      "sectionId": "current-affairs",
+      "prompt": "What happened to the policy repo rate in the October 2026 decision?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It remained unchanged at 5.25%."
+        },
+        {
+          "optionId": "o2",
+          "text": "It increased by 25 basis points to 5.50%."
+        },
+        {
+          "optionId": "o3",
+          "text": "It decreased by 50 basis points to 4.75%."
+        },
+        {
+          "optionId": "o4",
+          "text": "It increased by 100 basis points to 6.25%."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The RBI statement says the MPC raised the repo rate from 5.25% to 5.50%.",
+      "difficulty": "moderate",
+      "competency": "policy-rate"
+    },
+    {
+      "questionId": "clat-ug27-p001-q051",
+      "passageId": "p001-ca-05",
+      "sectionId": "current-affairs",
+      "prompt": "Which stance did the MPC adopt?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Neutral"
+        },
+        {
+          "optionId": "o2",
+          "text": "Fixed exchange-rate targeting"
+        },
+        {
+          "optionId": "o3",
+          "text": "Calibrated tightening"
+        },
+        {
+          "optionId": "o4",
+          "text": "Accommodative easing"
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The RBI statement records a change from neutral to calibrated tightening.",
+      "difficulty": "moderate",
+      "competency": "policy-stance"
+    },
+    {
+      "questionId": "clat-ug27-p001-q052",
+      "passageId": "p001-ca-05",
+      "sectionId": "current-affairs",
+      "prompt": "Following the decision, what was the Standing Deposit Facility rate?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "5.50%"
+        },
+        {
+          "optionId": "o2",
+          "text": "5.00%"
+        },
+        {
+          "optionId": "o3",
+          "text": "5.75%"
+        },
+        {
+          "optionId": "o4",
+          "text": "5.25%"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The operational notification set the SDF rate at 5.25%.",
+      "difficulty": "challenging",
+      "competency": "policy-rate"
+    },
+    {
+      "questionId": "clat-ug27-p001-q053",
+      "passageId": "p001-ca-05",
+      "sectionId": "current-affairs",
+      "prompt": "Why might a crude-oil price shock concern a central bank?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It necessarily reduces every household's expenditure."
+        },
+        {
+          "optionId": "o2",
+          "text": "It may raise transport and production costs and spread into wider price pressures."
+        },
+        {
+          "optionId": "o3",
+          "text": "It has no possible connection with inflation."
+        },
+        {
+          "optionId": "o4",
+          "text": "It directly increases domestic oil production."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage explains how energy-price shocks can affect costs and second-round inflation effects.",
+      "difficulty": "moderate",
+      "competency": "economic-reasoning"
+    },
+    {
+      "questionId": "clat-ug27-p001-q054",
+      "passageId": "p001-ca-05",
+      "sectionId": "current-affairs",
+      "prompt": "What does calibrated tightening imply in the passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Future policy choices remain conditional on growth and inflation developments."
+        },
+        {
+          "optionId": "o2",
+          "text": "The repo rate cannot change again during 2026."
+        },
+        {
+          "optionId": "o3",
+          "text": "The RBI has promised a rate increase at every subsequent meeting."
+        },
+        {
+          "optionId": "o4",
+          "text": "The RBI has abandoned its price-stability objective."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage says the stance communicates direction but not an unconditional schedule.",
+      "difficulty": "challenging",
+      "competency": "scope-of-inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q055",
+      "passageId": "p001-legal-01",
+      "sectionId": "legal",
+      "prompt": "A licensing authority refuses an application with the words 'not in the public interest' and gives no further detail. Under the passage, what is the main defect?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The phrase automatically proves personal bias."
+        },
+        {
+          "optionId": "o2",
+          "text": "Every refusal must contain a lengthy legal essay."
+        },
+        {
+          "optionId": "o3",
+          "text": "The applicant cannot understand the factual and legal basis of the refusal."
+        },
+        {
+          "optionId": "o4",
+          "text": "The authority is never permitted to refuse a licence."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "Reasons should identify material facts, the rule and the connection between them; the unexplained phrase does not do so.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q056",
+      "passageId": "p001-legal-01",
+      "sectionId": "legal",
+      "prompt": "An authority rejects a permit because it believes a street is closed, but the street reopened last week. What should the authority do?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Refuse to disclose the information relied upon."
+        },
+        {
+          "optionId": "o2",
+          "text": "Treat the original decision as final because the officer acted honestly."
+        },
+        {
+          "optionId": "o3",
+          "text": "Replace the written reasons with an unrelated policy statement."
+        },
+        {
+          "optionId": "o4",
+          "text": "Provide reasons identifying the basis and allow the factual error to be meaningfully challenged."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The principle requires understandable reasons and a meaningful opportunity to correct a material factual mistake.",
+      "difficulty": "challenging",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q057",
+      "passageId": "p001-legal-01",
+      "sectionId": "legal",
+      "prompt": "Which explanation is most likely to satisfy the principle for a routine refusal?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A statement that the officer simply disliked the applicant."
+        },
+        {
+          "optionId": "o2",
+          "text": "A concise statement identifying the relevant safety rule and the documented obstruction."
+        },
+        {
+          "optionId": "o3",
+          "text": "A copy of the statute with no explanation of its application."
+        },
+        {
+          "optionId": "o4",
+          "text": "A statement that reasons are confidential for administrative convenience."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage permits concise reasons when they are specific enough to show why the rule applies.",
+      "difficulty": "challenging",
+      "competency": "reasoning"
+    },
+    {
+      "questionId": "clat-ug27-p001-q058",
+      "passageId": "p001-legal-01",
+      "sectionId": "legal",
+      "prompt": "Why does the passage say giving reasons can improve internal decision-making?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It prevents authorities from using standard forms."
+        },
+        {
+          "optionId": "o2",
+          "text": "It guarantees that every decision will be correct."
+        },
+        {
+          "optionId": "o3",
+          "text": "It removes the need for evidence or review."
+        },
+        {
+          "optionId": "o4",
+          "text": "It encourages the officer to identify evidence and connect it to the governing rule."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage explains that the process of explaining a decision may reveal gaps or conflicts.",
+      "difficulty": "moderate",
+      "competency": "purpose-of-rule"
+    },
+    {
+      "questionId": "clat-ug27-p001-q059",
+      "passageId": "p001-legal-01",
+      "sectionId": "legal",
+      "prompt": "An authority must act immediately to prevent a serious and imminent hazard, and the governing rule permits interim action. What follows?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It must wait until a full hearing is completed in every case."
+        },
+        {
+          "optionId": "o2",
+          "text": "It may rely on urgency even if no risk exists."
+        },
+        {
+          "optionId": "o3",
+          "text": "It may act first but should record urgency and provide reasons and an opportunity to respond promptly."
+        },
+        {
+          "optionId": "o4",
+          "text": "It may permanently deny the licence without any explanation."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage allows a narrow interim exception while requiring later explanation and response.",
+      "difficulty": "moderate",
+      "competency": "exception"
+    },
+    {
+      "questionId": "clat-ug27-p001-q060",
+      "passageId": "p001-legal-01",
+      "sectionId": "legal",
+      "prompt": "Which statement best reflects the passage's approach to reason-giving?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Reasons must be sufficient in context to make the actual basis understandable and reviewable."
+        },
+        {
+          "optionId": "o2",
+          "text": "A reasoned decision cannot be challenged."
+        },
+        {
+          "optionId": "o3",
+          "text": "Administrative convenience always overrides explanation."
+        },
+        {
+          "optionId": "o4",
+          "text": "Every administrative decision requires identical wording and length."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage makes adequacy contextual and focuses on intelligibility and reviewability.",
+      "difficulty": "easy",
+      "competency": "rule-summary"
+    },
+    {
+      "questionId": "clat-ug27-p001-q061",
+      "passageId": "p001-legal-02",
+      "sectionId": "legal",
+      "prompt": "A delivery company collects a customer's address to deliver a parcel. Which use is most clearly consistent with the stated purpose?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Selling the address to an unrelated advertiser without separate disclosure."
+        },
+        {
+          "optionId": "o2",
+          "text": "Publishing the address in a public directory for marketing."
+        },
+        {
+          "optionId": "o3",
+          "text": "Creating an unrelated political profile from the address."
+        },
+        {
+          "optionId": "o4",
+          "text": "Using the address to complete the delivery."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The address is reasonably necessary for the delivery purpose stated in the passage.",
+      "difficulty": "easy",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q062",
+      "passageId": "p001-legal-02",
+      "sectionId": "legal",
+      "prompt": "A website treats a pre-ticked box as consent for optional advertising. What is the strongest objection under the principle?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Consent is valid only when given on paper."
+        },
+        {
+          "optionId": "o2",
+          "text": "A website can never collect personal information."
+        },
+        {
+          "optionId": "o3",
+          "text": "Consent must be informed, specific and freely given, not merely inferred from a pre-ticked box."
+        },
+        {
+          "optionId": "o4",
+          "text": "All advertising is prohibited even with valid consent."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The supplied rule requires clear and affirmative choice for the stated use.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q063",
+      "passageId": "p001-legal-02",
+      "sectionId": "legal",
+      "prompt": "A person declines optional analytics, but the service can still operate. The organisation threatens to deny the core service. What is the issue?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The choice may not be freely given because an optional use is made a condition of the core service."
+        },
+        {
+          "optionId": "o2",
+          "text": "The organisation is required to provide unrelated services."
+        },
+        {
+          "optionId": "o3",
+          "text": "The person has consented by visiting the website."
+        },
+        {
+          "optionId": "o4",
+          "text": "The organisation must delete every record immediately."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage says optional processing should not be forced when the core service can be delivered without it.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q064",
+      "passageId": "p001-legal-02",
+      "sectionId": "legal",
+      "prompt": "Which practice best satisfies data minimisation?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Collect every available data field in case it may become useful."
+        },
+        {
+          "optionId": "o2",
+          "text": "Collect only information reasonably necessary for the stated service purpose."
+        },
+        {
+          "optionId": "o3",
+          "text": "Ask for sensitive information even when it has no connection to the service."
+        },
+        {
+          "optionId": "o4",
+          "text": "Retain all information permanently without review."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The principle expressly requires collecting no more than reasonably necessary.",
+      "difficulty": "easy",
+      "competency": "rule-application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q065",
+      "passageId": "p001-legal-02",
+      "sectionId": "legal",
+      "prompt": "A company suffers a breach after failing to install reasonable safeguards. Which statement follows?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The company is exempt whenever an outsider is involved."
+        },
+        {
+          "optionId": "o2",
+          "text": "Any cyberattack automatically proves compliance."
+        },
+        {
+          "optionId": "o3",
+          "text": "It cannot avoid responsibility merely by pointing to the attacker."
+        },
+        {
+          "optionId": "o4",
+          "text": "A breach means consent was never required."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage states that reasonable protection remains an organisational obligation.",
+      "difficulty": "challenging",
+      "competency": "security-duty"
+    },
+    {
+      "questionId": "clat-ug27-p001-q066",
+      "passageId": "p001-legal-02",
+      "sectionId": "legal",
+      "prompt": "After withdrawal of consent for optional advertising, what should the organisation ordinarily do?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Continue advertising because consent was once given."
+        },
+        {
+          "optionId": "o2",
+          "text": "Treat withdrawal as consent to a different use."
+        },
+        {
+          "optionId": "o3",
+          "text": "Delete every record regardless of legal retention duties."
+        },
+        {
+          "optionId": "o4",
+          "text": "Stop the optional use while retaining only information that must lawfully be kept."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage distinguishes stopping optional processing from lawful limited retention.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q067",
+      "passageId": "p001-legal-03",
+      "sectionId": "legal",
+      "prompt": "An exam tests reading comprehension, but a candidate with a documented disability requests additional time because reading speed is affected. What is the best approach?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Assess whether extra time removes an irrelevant barrier without changing the skill being tested."
+        },
+        {
+          "optionId": "o2",
+          "text": "Grant any amount requested without considering the exam's purpose."
+        },
+        {
+          "optionId": "o3",
+          "text": "Reject the request automatically because all candidates must receive identical time."
+        },
+        {
+          "optionId": "o4",
+          "text": "Require the candidate to choose answers through another person."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage requires an individual assessment tied to meaningful participation and the skill assessed.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q068",
+      "passageId": "p001-legal-03",
+      "sectionId": "legal",
+      "prompt": "A candidate requests that another person select the answers in a test designed to measure independent comprehension. What concern is strongest?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The request must be granted because it is inexpensive."
+        },
+        {
+          "optionId": "o2",
+          "text": "The assistance may perform the very skill that the examination is intended to assess."
+        },
+        {
+          "optionId": "o3",
+          "text": "The authority must guarantee the candidate a passing score."
+        },
+        {
+          "optionId": "o4",
+          "text": "Any assistance is prohibited in every examination."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The principle distinguishes barrier removal from assistance that changes the essential assessed task.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q069",
+      "passageId": "p001-legal-03",
+      "sectionId": "legal",
+      "prompt": "The authority rejects a request because a form is incomplete but does not identify what is missing. Which principle is most relevant?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The candidate should ordinarily be told what information is missing and allowed to clarify."
+        },
+        {
+          "optionId": "o2",
+          "text": "The authority can disregard the request without reading it."
+        },
+        {
+          "optionId": "o3",
+          "text": "A candidate must always provide unrelated medical records."
+        },
+        {
+          "optionId": "o4",
+          "text": "An incomplete form must be accepted without any review."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage describes a fair process requiring clear requirements and a chance to supply relevant information.",
+      "difficulty": "moderate",
+      "competency": "procedural-fairness"
+    },
+    {
+      "questionId": "clat-ug27-p001-q070",
+      "passageId": "p001-legal-03",
+      "sectionId": "legal",
+      "prompt": "Which reason could justify refusing a particular adjustment under the supplied rule?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A general preference for treating everyone identically."
+        },
+        {
+          "optionId": "o2",
+          "text": "Reliable evidence that it would fundamentally alter the skill being assessed."
+        },
+        {
+          "optionId": "o3",
+          "text": "A desire to reduce administrative correspondence."
+        },
+        {
+          "optionId": "o4",
+          "text": "A claim that separate seating is inconvenient without further evidence."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "A refusal can be justified where the adjustment changes the essential nature of the test or creates disproportionate burden.",
+      "difficulty": "challenging",
+      "competency": "exception"
+    },
+    {
+      "questionId": "clat-ug27-p001-q071",
+      "passageId": "p001-legal-03",
+      "sectionId": "legal",
+      "prompt": "What is the purpose of reasonable accommodation as described?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "To remove all assessment standards for selected candidates."
+        },
+        {
+          "optionId": "o2",
+          "text": "To ensure every candidate obtains the same score."
+        },
+        {
+          "optionId": "o3",
+          "text": "To guarantee identical arrangements regardless of individual needs."
+        },
+        {
+          "optionId": "o4",
+          "text": "To provide a fair opportunity to demonstrate the ability the examination legitimately measures."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage explicitly distinguishes fair opportunity from a guaranteed outcome.",
+      "difficulty": "moderate",
+      "competency": "purpose-of-rule"
+    },
+    {
+      "questionId": "clat-ug27-p001-q072",
+      "passageId": "p001-legal-03",
+      "sectionId": "legal",
+      "prompt": "An authority can provide a requested adjustment at modest cost without affecting test integrity. What follows?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It may ignore the candidate's actual circumstances."
+        },
+        {
+          "optionId": "o2",
+          "text": "It must demand proof unrelated to the request."
+        },
+        {
+          "optionId": "o3",
+          "text": "It should ordinarily provide it if it enables meaningful participation."
+        },
+        {
+          "optionId": "o4",
+          "text": "It may refuse simply because the adjustment is not available to every candidate."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The stated principle requires reasonable adjustments unless they alter the task or impose disproportionate burden.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q073",
+      "passageId": "p001-legal-04",
+      "sectionId": "legal",
+      "prompt": "A cancellation fee appears only in a document sent after a customer pays. Under the passage, what is the strongest objection?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The term was not brought to the customer's attention before the contract was concluded."
+        },
+        {
+          "optionId": "o2",
+          "text": "The customer can never be charged for a late cancellation."
+        },
+        {
+          "optionId": "o3",
+          "text": "Every cancellation fee is prohibited."
+        },
+        {
+          "optionId": "o4",
+          "text": "A business must always refund the full price regardless of loss."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The principle makes timely disclosure a condition for enforcing the agreed cancellation term.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q074",
+      "passageId": "p001-legal-04",
+      "sectionId": "legal",
+      "prompt": "A business calls a charge an 'administration fee' but cannot explain any cost or loss. What follows?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The consumer must pay any fee stated by a business."
+        },
+        {
+          "optionId": "o2",
+          "text": "The amount is automatically a tax."
+        },
+        {
+          "optionId": "o3",
+          "text": "The charge becomes valid because the label is neutral."
+        },
+        {
+          "optionId": "o4",
+          "text": "The label alone does not establish that the charge is proportionate."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage says the business must explain the cost or loss; terminology cannot replace evidence.",
+      "difficulty": "challenging",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q075",
+      "passageId": "p001-legal-04",
+      "sectionId": "legal",
+      "prompt": "Why might a cancellation scale based on notice period be fairer than a fixed charge?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It prevents a consumer from cancelling at any time."
+        },
+        {
+          "optionId": "o2",
+          "text": "It can reflect the different losses caused by early and late cancellation."
+        },
+        {
+          "optionId": "o3",
+          "text": "It guarantees that the business earns a profit on every booking."
+        },
+        {
+          "optionId": "o4",
+          "text": "It removes the need to disclose the contract term."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage notes that late cancellation may cause greater loss than cancellation weeks earlier.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q076",
+      "passageId": "p001-legal-04",
+      "sectionId": "legal",
+      "prompt": "A hotel can resell a cancelled room but still charges the entire original price without accounting for the resale. Which concern arises?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The cancellation clause automatically becomes a criminal offence."
+        },
+        {
+          "optionId": "o2",
+          "text": "The hotel is required to pay the customer twice."
+        },
+        {
+          "optionId": "o3",
+          "text": "The hotel may be recovering more than its genuine loss."
+        },
+        {
+          "optionId": "o4",
+          "text": "The consumer has no right to notice."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage warns against double recovery and disproportionate charges.",
+      "difficulty": "challenging",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q077",
+      "passageId": "p001-legal-04",
+      "sectionId": "legal",
+      "prompt": "Which fact most strongly supports enforceability of a cancellation term under the supplied rule?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It imposes the full price regardless of timing or loss."
+        },
+        {
+          "optionId": "o2",
+          "text": "It was clearly disclosed before payment and imposes a proportionate charge linked to genuine cost."
+        },
+        {
+          "optionId": "o3",
+          "text": "It was described only verbally after the service date."
+        },
+        {
+          "optionId": "o4",
+          "text": "It was hidden in a link shown after booking."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The stated principle requires advance disclosure, proportionality and a reasonable opportunity to understand.",
+      "difficulty": "moderate",
+      "competency": "rule-summary"
+    },
+    {
+      "questionId": "clat-ug27-p001-q078",
+      "passageId": "p001-legal-04",
+      "sectionId": "legal",
+      "prompt": "What balance does the passage seek to achieve?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Protect informed consumer choice while recognising genuine business costs."
+        },
+        {
+          "optionId": "o2",
+          "text": "Eliminate every financial risk for businesses."
+        },
+        {
+          "optionId": "o3",
+          "text": "Remove contractual freedom from both parties."
+        },
+        {
+          "optionId": "o4",
+          "text": "Ensure consumers pay every amount requested."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The final paragraph states that a fair contract allocates foreseeable risks clearly and proportionately.",
+      "difficulty": "challenging",
+      "competency": "purpose-of-rule"
+    },
+    {
+      "questionId": "clat-ug27-p001-q079",
+      "passageId": "p001-legal-05",
+      "sectionId": "legal",
+      "prompt": "A proposed factory has credible evidence linking its discharge to serious wetland damage, but the exact scale is uncertain. What does the principle require?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Ignoring the evidence until damage becomes visible."
+        },
+        {
+          "optionId": "o2",
+          "text": "Automatic approval because the harm is not certain."
+        },
+        {
+          "optionId": "o3",
+          "text": "Reasonable precautionary measures and further assessment before permission is granted."
+        },
+        {
+          "optionId": "o4",
+          "text": "Automatic refusal of every industrial project near water."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The principle requires precaution where credible evidence indicates serious or irreversible harm despite incomplete certainty.",
+      "difficulty": "easy",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q080",
+      "passageId": "p001-legal-05",
+      "sectionId": "legal",
+      "prompt": "Why may the project proponent be required to produce technical information?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It is automatically guilty of causing harm."
+        },
+        {
+          "optionId": "o2",
+          "text": "The authority has no responsibility to assess evidence."
+        },
+        {
+          "optionId": "o3",
+          "text": "Only the proponent can decide what the public may know."
+        },
+        {
+          "optionId": "o4",
+          "text": "It controls much of the data about the activity and its likely effects."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage says the party controlling relevant technical data should not rely on public ignorance as proof of safety.",
+      "difficulty": "challenging",
+      "competency": "burden-of-information"
+    },
+    {
+      "questionId": "clat-ug27-p001-q081",
+      "passageId": "p001-legal-05",
+      "sectionId": "legal",
+      "prompt": "Which proposal best illustrates precaution rather than speculation?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Reject the project solely because a resident dislikes factories."
+        },
+        {
+          "optionId": "o2",
+          "text": "Require independent testing where evidence indicates that a specific discharge may alter water quality."
+        },
+        {
+          "optionId": "o3",
+          "text": "Approve the project because the company promises jobs."
+        },
+        {
+          "optionId": "o4",
+          "text": "Ban every activity that involves machinery without examining its effects."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "Precaution requires a plausible pathway between the activity and a serious harm, supported by evidence.",
+      "difficulty": "easy",
+      "competency": "distinction"
+    },
+    {
+      "questionId": "clat-ug27-p001-q082",
+      "passageId": "p001-legal-05",
+      "sectionId": "legal",
+      "prompt": "An authority approves a project but requires samples with no threshold, responsible tester or consequence for breach. What is the weakness?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Any sample requirement automatically prevents harm."
+        },
+        {
+          "optionId": "o2",
+          "text": "Monitoring is never relevant after approval."
+        },
+        {
+          "optionId": "o3",
+          "text": "The company is exempt from all other conditions."
+        },
+        {
+          "optionId": "o4",
+          "text": "The monitoring condition may be ineffective because it is not connected to enforceable action."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage says monitoring needs clear responsibility, frequency, thresholds and remedies.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q083",
+      "passageId": "p001-legal-05",
+      "sectionId": "legal",
+      "prompt": "Which consideration should form part of a reasoned environmental decision?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Whether a less harmful site, method or project scale is feasible."
+        },
+        {
+          "optionId": "o2",
+          "text": "Only the authority's administrative convenience."
+        },
+        {
+          "optionId": "o3",
+          "text": "Whether the company has used an attractive project name."
+        },
+        {
+          "optionId": "o4",
+          "text": "Only the number of jobs promised by the proponent."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The principle requires examination of alternatives and comparison of environmental risk and public benefit.",
+      "difficulty": "moderate",
+      "competency": "evaluation"
+    },
+    {
+      "questionId": "clat-ug27-p001-q084",
+      "passageId": "p001-legal-05",
+      "sectionId": "legal",
+      "prompt": "What is the best description of the precautionary principle in the passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A presumption that economic benefits always override environmental harm."
+        },
+        {
+          "optionId": "o2",
+          "text": "A rule requiring certainty before any action is taken."
+        },
+        {
+          "optionId": "o3",
+          "text": "Reasoned prevention and adaptive oversight where credible serious risk exists."
+        },
+        {
+          "optionId": "o4",
+          "text": "A blanket prohibition on all activity with any possible risk."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The final paragraph states that precaution is neither certainty at any cost nor unexamined permission.",
+      "difficulty": "moderate",
+      "competency": "rule-summary"
+    },
+    {
+      "questionId": "clat-ug27-p001-q085",
+      "passageId": "p001-log-01",
+      "sectionId": "logical",
+      "prompt": "What is the transport department's main conclusion?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The bus lane will eliminate all traffic congestion."
+        },
+        {
+          "optionId": "o2",
+          "text": "Every shop will receive more customers immediately."
+        },
+        {
+          "optionId": "o3",
+          "text": "Delivery vehicles should be prohibited from the avenue."
+        },
+        {
+          "optionId": "o4",
+          "text": "A dedicated bus lane can improve bus reliability and attract some commuters from cars."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The department argues that faster and more reliable buses may reduce car use and improve person movement.",
+      "difficulty": "easy",
+      "competency": "argument-conclusion"
+    },
+    {
+      "questionId": "clat-ug27-p001-q086",
+      "passageId": "p001-log-01",
+      "sectionId": "logical",
+      "prompt": "Which assumption is most important to the department's argument?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The avenue has no delivery traffic."
+        },
+        {
+          "optionId": "o2",
+          "text": "The bus lane will improve bus journeys enough to influence travel choices."
+        },
+        {
+          "optionId": "o3",
+          "text": "Retail activity is unrelated to transport access."
+        },
+        {
+          "optionId": "o4",
+          "text": "Every current driver already prefers public transport."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "Without a meaningful improvement in bus service, the predicted shift from cars is less plausible.",
+      "difficulty": "easy",
+      "competency": "assumption"
+    },
+    {
+      "questionId": "clat-ug27-p001-q087",
+      "passageId": "p001-log-01",
+      "sectionId": "logical",
+      "prompt": "Which evidence would most strengthen the department's case?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A pilot shows faster, more reliable buses and increased passenger numbers without major traffic displacement."
+        },
+        {
+          "optionId": "o2",
+          "text": "A business association repeats its concern about delivery delays."
+        },
+        {
+          "optionId": "o3",
+          "text": "A report counts the number of buses owned by the city."
+        },
+        {
+          "optionId": "o4",
+          "text": "A survey shows that some residents dislike buses."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The pilot would support both the mechanism and the outcome predicted by the department.",
+      "difficulty": "challenging",
+      "competency": "strengthen"
+    },
+    {
+      "questionId": "clat-ug27-p001-q088",
+      "passageId": "p001-log-01",
+      "sectionId": "logical",
+      "prompt": "Which fact would most weaken the claim that the lane reduces congestion overall?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Some commuters switch from cars to buses."
+        },
+        {
+          "optionId": "o2",
+          "text": "The lane operates during peak travel hours."
+        },
+        {
+          "optionId": "o3",
+          "text": "Traffic diverted to nearby streets increases total delay and safety risks across the area."
+        },
+        {
+          "optionId": "o4",
+          "text": "Bus passengers report improved reliability."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The wider-area effects could offset gains on the avenue and undermine the overall claim.",
+      "difficulty": "easy",
+      "competency": "weaken"
+    },
+    {
+      "questionId": "clat-ug27-p001-q089",
+      "passageId": "p001-log-01",
+      "sectionId": "logical",
+      "prompt": "Why does the passage recommend comparing similar roads before and after the pilot?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "To ensure that every road has identical traffic volumes."
+        },
+        {
+          "optionId": "o2",
+          "text": "To prove that the pilot is popular."
+        },
+        {
+          "optionId": "o3",
+          "text": "To avoid measuring bus travel times."
+        },
+        {
+          "optionId": "o4",
+          "text": "To help distinguish the bus-lane effect from unrelated changes occurring at the same time."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "A comparison can help control for outside changes such as construction or new developments.",
+      "difficulty": "moderate",
+      "competency": "methodological-reasoning"
+    },
+    {
+      "questionId": "clat-ug27-p001-q090",
+      "passageId": "p001-log-01",
+      "sectionId": "logical",
+      "prompt": "Which evaluation would be incomplete if used alone?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Measuring only bus speed while ignoring traffic displacement and access effects."
+        },
+        {
+          "optionId": "o2",
+          "text": "Recording both delivery access and person-throughput."
+        },
+        {
+          "optionId": "o3",
+          "text": "Reviewing passenger numbers and reliability after a defined pilot."
+        },
+        {
+          "optionId": "o4",
+          "text": "Measuring bus speed, passenger numbers and nearby-street traffic together."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "A single metric can miss important side effects and the public objective's wider dimensions.",
+      "difficulty": "easy",
+      "competency": "evaluation"
+    },
+    {
+      "questionId": "clat-ug27-p001-q091",
+      "passageId": "p001-log-02",
+      "sectionId": "logical",
+      "prompt": "What does the publication-count ranking directly measure?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The originality of every research project."
+        },
+        {
+          "optionId": "o2",
+          "text": "The reliability of all findings."
+        },
+        {
+          "optionId": "o3",
+          "text": "The number of publications recorded under the chosen rules."
+        },
+        {
+          "optionId": "o4",
+          "text": "The long-term social value of each department's work."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage accepts that the metric measures publication volume but not broader quality by itself.",
+      "difficulty": "moderate",
+      "competency": "argument-detail"
+    },
+    {
+      "questionId": "clat-ug27-p001-q092",
+      "passageId": "p001-log-02",
+      "sectionId": "logical",
+      "prompt": "Which assumption underlies the administration's use of publication counts?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Every discipline has identical publication cycles."
+        },
+        {
+          "optionId": "o2",
+          "text": "Publication volume is a sufficiently useful proxy for the grant programme's objective."
+        },
+        {
+          "optionId": "o3",
+          "text": "Research quality can never be assessed by experts."
+        },
+        {
+          "optionId": "o4",
+          "text": "Every paper receives the same number of citations."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The administration relies on the count as a consistent comparison of research activity.",
+      "difficulty": "easy",
+      "competency": "assumption"
+    },
+    {
+      "questionId": "clat-ug27-p001-q093",
+      "passageId": "p001-log-02",
+      "sectionId": "logical",
+      "prompt": "Which example best illustrates why raw counts may be unfair?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A researcher submits work to peer review."
+        },
+        {
+          "optionId": "o2",
+          "text": "Every department uses the same reporting period."
+        },
+        {
+          "optionId": "o3",
+          "text": "A publication is checked for factual accuracy."
+        },
+        {
+          "optionId": "o4",
+          "text": "A field requiring years of observation produces fewer papers than a field with short study cycles."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Different research timelines can affect output counts independently of quality.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q094",
+      "passageId": "p001-log-02",
+      "sectionId": "logical",
+      "prompt": "Why would replacing publication count with citation count not automatically solve the problem?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Citation counts are never measurable."
+        },
+        {
+          "optionId": "o2",
+          "text": "Citation patterns vary by discipline and may reflect criticism as well as approval."
+        },
+        {
+          "optionId": "o3",
+          "text": "Citations are assigned only by university administrators."
+        },
+        {
+          "optionId": "o4",
+          "text": "A paper cannot be cited more than once."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage identifies limits of citations as another imperfect metric.",
+      "difficulty": "challenging",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q095",
+      "passageId": "p001-log-02",
+      "sectionId": "logical",
+      "prompt": "Which additional measure would best complement publication count?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The colour of a department's annual report."
+        },
+        {
+          "optionId": "o2",
+          "text": "The number of offices allocated to each professor."
+        },
+        {
+          "optionId": "o3",
+          "text": "Peer assessment combined with field-sensitive evidence about quality and impact."
+        },
+        {
+          "optionId": "o4",
+          "text": "The age of the university's oldest building."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "A mixed method can capture dimensions that raw counts omit, with safeguards against bias.",
+      "difficulty": "moderate",
+      "competency": "strengthen"
+    },
+    {
+      "questionId": "clat-ug27-p001-q096",
+      "passageId": "p001-log-02",
+      "sectionId": "logical",
+      "prompt": "What is the central warning about rankings?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A metric becomes misleading when users forget the limited thing it measures."
+        },
+        {
+          "optionId": "o2",
+          "text": "All numerical evaluation should be abandoned."
+        },
+        {
+          "optionId": "o3",
+          "text": "Research should be funded without any stated purpose."
+        },
+        {
+          "optionId": "o4",
+          "text": "Simple indicators are always more reliable than complex ones."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage concludes that users must state what a measure does and does not show.",
+      "difficulty": "challenging",
+      "competency": "main-inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q097",
+      "passageId": "p001-log-03",
+      "sectionId": "logical",
+      "prompt": "What flaw affects the company's conclusion about office attendance?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It compares the same workers under identical conditions."
+        },
+        {
+          "optionId": "o2",
+          "text": "It assumes that employees perform any tasks at all."
+        },
+        {
+          "optionId": "o3",
+          "text": "It measures too many different employee groups."
+        },
+        {
+          "optionId": "o4",
+          "text": "It infers causation from a comparison that may reflect differences in job roles."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage identifies job composition as a possible confounding factor.",
+      "difficulty": "moderate",
+      "competency": "logical-flaw"
+    },
+    {
+      "questionId": "clat-ug27-p001-q098",
+      "passageId": "p001-log-03",
+      "sectionId": "logical",
+      "prompt": "Which alternative explanation does the employee group provide?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Office-based staff have no performance targets."
+        },
+        {
+          "optionId": "o2",
+          "text": "Senior staff doing complex work are more likely to work remotely."
+        },
+        {
+          "optionId": "o3",
+          "text": "All roles produce identical numbers of tasks."
+        },
+        {
+          "optionId": "o4",
+          "text": "Remote staff are always new employees."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "This role difference could explain the reported task-count gap without a location effect.",
+      "difficulty": "moderate",
+      "competency": "alternative-explanation"
+    },
+    {
+      "questionId": "clat-ug27-p001-q099",
+      "passageId": "p001-log-03",
+      "sectionId": "logical",
+      "prompt": "Which measure would best improve the company's productivity comparison?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Treat every task as equally valuable without checking."
+        },
+        {
+          "optionId": "o2",
+          "text": "Count only the number of entries in the task system."
+        },
+        {
+          "optionId": "o3",
+          "text": "Assess output quality and task difficulty alongside task counts."
+        },
+        {
+          "optionId": "o4",
+          "text": "Exclude difficult projects from the records."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage argues that quantity alone may reward simple or artificially divided tasks.",
+      "difficulty": "easy",
+      "competency": "strengthen"
+    },
+    {
+      "questionId": "clat-ug27-p001-q100",
+      "passageId": "p001-log-03",
+      "sectionId": "logical",
+      "prompt": "Which design would provide stronger evidence about location effects?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A pilot using comparable teams and consistent measures across different work arrangements."
+        },
+        {
+          "optionId": "o2",
+          "text": "A survey asking only the most satisfied employees."
+        },
+        {
+          "optionId": "o3",
+          "text": "A comparison of unrelated departments with different workloads."
+        },
+        {
+          "optionId": "o4",
+          "text": "A count of office access-card swipes."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "A controlled pilot can reduce differences in task, staffing and measurement.",
+      "difficulty": "moderate",
+      "competency": "methodological-reasoning"
+    },
+    {
+      "questionId": "clat-ug27-p001-q101",
+      "passageId": "p001-log-03",
+      "sectionId": "logical",
+      "prompt": "Which inference is supported about a five-day office rule?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Office attendance necessarily reduces productivity."
+        },
+        {
+          "optionId": "o2",
+          "text": "The company has no legitimate interest in collaboration."
+        },
+        {
+          "optionId": "o3",
+          "text": "Administrative uniformity does not itself establish that the rule improves performance."
+        },
+        {
+          "optionId": "o4",
+          "text": "All roles should permanently remain remote."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage says a uniform rule may be simpler but needs evidence that it serves organisational objectives.",
+      "difficulty": "easy",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q102",
+      "passageId": "p001-log-03",
+      "sectionId": "logical",
+      "prompt": "Which evidence would most weaken management's causal claim?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Remote employees have a longer commute."
+        },
+        {
+          "optionId": "o2",
+          "text": "After adjusting for role and task difficulty, the productivity difference disappears."
+        },
+        {
+          "optionId": "o3",
+          "text": "The company buys new office furniture."
+        },
+        {
+          "optionId": "o4",
+          "text": "A few employees say they like the office."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "If the observed difference disappears after controlling for role, location is less likely to be the cause.",
+      "difficulty": "moderate",
+      "competency": "weaken"
+    },
+    {
+      "questionId": "clat-ug27-p001-q103",
+      "passageId": "p001-log-04",
+      "sectionId": "logical",
+      "prompt": "What has the council directly observed?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The devices alone caused the entire reduction."
+        },
+        {
+          "optionId": "o2",
+          "text": "Every household reduced use by the same amount."
+        },
+        {
+          "optionId": "o3",
+          "text": "City-wide consumption has permanently fallen."
+        },
+        {
+          "optionId": "o4",
+          "text": "Districts receiving water-saving devices used less water on average than comparison districts."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage carefully states the observed association without claiming its cause.",
+      "difficulty": "moderate",
+      "competency": "observation"
+    },
+    {
+      "questionId": "clat-ug27-p001-q104",
+      "passageId": "p001-log-04",
+      "sectionId": "logical",
+      "prompt": "Which alternative factor could explain part of the reduction?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A drought warning issued at the same time as the programme."
+        },
+        {
+          "optionId": "o2",
+          "text": "The districts had identical weather and occupancy."
+        },
+        {
+          "optionId": "o3",
+          "text": "The devices were distributed after consumption was measured."
+        },
+        {
+          "optionId": "o4",
+          "text": "The council measured water use in both groups."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "A concurrent drought warning could change behaviour independently of the devices.",
+      "difficulty": "moderate",
+      "competency": "alternative-explanation"
+    },
+    {
+      "questionId": "clat-ug27-p001-q105",
+      "passageId": "p001-log-04",
+      "sectionId": "logical",
+      "prompt": "Why might an average conceal an important distributional effect?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "An average cannot be calculated from water data."
+        },
+        {
+          "optionId": "o2",
+          "text": "A small number of high-use properties could account for most of the change."
+        },
+        {
+          "optionId": "o3",
+          "text": "An average always identifies each household's consumption."
+        },
+        {
+          "optionId": "o4",
+          "text": "Every household necessarily uses exactly the mean amount."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage warns that the mean may hide differences between households and areas.",
+      "difficulty": "easy",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q106",
+      "passageId": "p001-log-04",
+      "sectionId": "logical",
+      "prompt": "What is a rebound effect in the context of this passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A device causes water to flow back into the reservoir."
+        },
+        {
+          "optionId": "o2",
+          "text": "The council refunds the cost of a water-saving device."
+        },
+        {
+          "optionId": "o3",
+          "text": "Households may use some of the water saved through more efficient devices for other activities."
+        },
+        {
+          "optionId": "o4",
+          "text": "Households stop using water entirely after installation."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage distinguishes technical efficiency from a one-for-one fall in total consumption.",
+      "difficulty": "moderate",
+      "competency": "concept-application"
+    },
+    {
+      "questionId": "clat-ug27-p001-q107",
+      "passageId": "p001-log-04",
+      "sectionId": "logical",
+      "prompt": "Which evidence would best strengthen the causal claim?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Comparable districts show a larger reduction after installation after adjusting for weather and occupancy."
+        },
+        {
+          "optionId": "o2",
+          "text": "The council publishes more photographs of the devices."
+        },
+        {
+          "optionId": "o3",
+          "text": "Residents say they have heard of the programme."
+        },
+        {
+          "optionId": "o4",
+          "text": "The programme receives a national award."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "A controlled comparison that accounts for alternative factors would better isolate the device effect.",
+      "difficulty": "easy",
+      "competency": "strengthen"
+    },
+    {
+      "questionId": "clat-ug27-p001-q108",
+      "passageId": "p001-log-04",
+      "sectionId": "logical",
+      "prompt": "Which conclusion is most justified by the evidence described?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The council should stop measuring consumption."
+        },
+        {
+          "optionId": "o2",
+          "text": "The devices are proven to reduce every household's use equally."
+        },
+        {
+          "optionId": "o3",
+          "text": "The programme has no value because the study is incomplete."
+        },
+        {
+          "optionId": "o4",
+          "text": "The programme is promising, but its causal effect and durability require further testing."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage supports cautious expansion or further evaluation rather than an absolute claim.",
+      "difficulty": "moderate",
+      "competency": "main-inference"
+    },
+    {
+      "questionId": "clat-ug27-p001-q109",
+      "passageId": "p001-qt-01",
+      "sectionId": "quantitative",
+      "prompt": "What were the retailer's online sales in the first quarter?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹12 lakh"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹18 lakh"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹14.4 lakh"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹16.8 lakh"
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "30% of ₹48 lakh = 0.30 × 48 = ₹14.4 lakh.",
+      "difficulty": "easy",
+      "competency": "percentages"
+    },
+    {
+      "questionId": "clat-ug27-p001-q110",
+      "passageId": "p001-qt-01",
+      "sectionId": "quantitative",
+      "prompt": "What were the retailer's operating costs in the second quarter?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹42 lakh"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹48 lakh"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹50 lakh"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹45 lakh"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Operating costs were 75% of ₹60 lakh, so 0.75 × 60 = ₹45 lakh.",
+      "difficulty": "moderate",
+      "competency": "percentages"
+    },
+    {
+      "questionId": "clat-ug27-p001-q111",
+      "passageId": "p001-qt-01",
+      "sectionId": "quantitative",
+      "prompt": "By how much did online sales increase from the first to the second quarter?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹6.6 lakh"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹5.4 lakh"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹7.8 lakh"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹4.2 lakh"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Second-quarter online sales were 35% of 60 = ₹21 lakh; increase = 21 − 14.4 = ₹6.6 lakh.",
+      "difficulty": "moderate",
+      "competency": "multi-step-arithmetic"
+    },
+    {
+      "questionId": "clat-ug27-p001-q112",
+      "passageId": "p001-qt-02",
+      "sectionId": "quantitative",
+      "prompt": "How much water remained after Month A?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "12.5 million litres"
+        },
+        {
+          "optionId": "o2",
+          "text": "11 million litres"
+        },
+        {
+          "optionId": "o3",
+          "text": "11.5 million litres"
+        },
+        {
+          "optionId": "o4",
+          "text": "10 million litres"
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "12 + 3 − 4 = 11 million litres.",
+      "difficulty": "moderate",
+      "competency": "arithmetic"
+    },
+    {
+      "questionId": "clat-ug27-p001-q113",
+      "passageId": "p001-qt-02",
+      "sectionId": "quantitative",
+      "prompt": "What was the net change during Month B?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "No change"
+        },
+        {
+          "optionId": "o2",
+          "text": "An increase of 0.5 million litres"
+        },
+        {
+          "optionId": "o3",
+          "text": "A decrease of 0.5 million litres"
+        },
+        {
+          "optionId": "o4",
+          "text": "A decrease of 1.5 million litres"
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "Month B net change = 2.5 − 3 = −0.5 million litres.",
+      "difficulty": "moderate",
+      "competency": "net-change"
+    },
+    {
+      "questionId": "clat-ug27-p001-q114",
+      "passageId": "p001-qt-02",
+      "sectionId": "quantitative",
+      "prompt": "How much water was in the reservoir at the end of Month C?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "11 million litres"
+        },
+        {
+          "optionId": "o2",
+          "text": "12 million litres"
+        },
+        {
+          "optionId": "o3",
+          "text": "10.5 million litres"
+        },
+        {
+          "optionId": "o4",
+          "text": "11.5 million litres"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The balance progresses 12 → 11 → 10.5 → 11 million litres.",
+      "difficulty": "moderate",
+      "competency": "multi-step-arithmetic"
+    },
+    {
+      "questionId": "clat-ug27-p001-q115",
+      "passageId": "p001-qt-03",
+      "sectionId": "quantitative",
+      "prompt": "How many workers were initially assigned to electrical work?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "60"
+        },
+        {
+          "optionId": "o2",
+          "text": "40"
+        },
+        {
+          "optionId": "o3",
+          "text": "70"
+        },
+        {
+          "optionId": "o4",
+          "text": "50"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "25% of 200 workers is 0.25 × 200 = 50.",
+      "difficulty": "easy",
+      "competency": "percentages"
+    },
+    {
+      "questionId": "clat-ug27-p001-q116",
+      "passageId": "p001-qt-03",
+      "sectionId": "quantitative",
+      "prompt": "After the shift, how many workers are assigned to structural work?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "100"
+        },
+        {
+          "optionId": "o2",
+          "text": "96"
+        },
+        {
+          "optionId": "o3",
+          "text": "88"
+        },
+        {
+          "optionId": "o4",
+          "text": "104"
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "40% of 200 is 80; a 20% increase gives 80 × 1.20 = 96.",
+      "difficulty": "easy",
+      "competency": "percentage-change"
+    },
+    {
+      "questionId": "clat-ug27-p001-q117",
+      "passageId": "p001-qt-03",
+      "sectionId": "quantitative",
+      "prompt": "How many workers remain in finishing work after the 10% reduction?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "63"
+        },
+        {
+          "optionId": "o2",
+          "text": "70"
+        },
+        {
+          "optionId": "o3",
+          "text": "66"
+        },
+        {
+          "optionId": "o4",
+          "text": "60"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Finishing initially has 35% of 200 = 70; after a 10% reduction, 70 × 0.90 = 63.",
+      "difficulty": "easy",
+      "competency": "percentage-change"
+    },
+    {
+      "questionId": "clat-ug27-p001-q118",
+      "passageId": "p001-qt-04",
+      "sectionId": "quantitative",
+      "prompt": "What was Group B's mean score in the first test?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "62"
+        },
+        {
+          "optionId": "o2",
+          "text": "66"
+        },
+        {
+          "optionId": "o3",
+          "text": "68"
+        },
+        {
+          "optionId": "o4",
+          "text": "64"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Total points were 200 × 68 = 13,600; Group A had 80 × 74 = 5,920; Group B mean = (13,600 − 5,920) ÷ 120 = 64.",
+      "difficulty": "moderate",
+      "competency": "weighted-average"
+    },
+    {
+      "questionId": "clat-ug27-p001-q119",
+      "passageId": "p001-qt-04",
+      "sectionId": "quantitative",
+      "prompt": "What was Group B's mean in the later test?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "70"
+        },
+        {
+          "optionId": "o2",
+          "text": "67"
+        },
+        {
+          "optionId": "o3",
+          "text": "69"
+        },
+        {
+          "optionId": "o4",
+          "text": "68"
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "Group B's mean rose by 5 marks from 64 to 69.",
+      "difficulty": "moderate",
+      "competency": "mean-change"
+    },
+    {
+      "questionId": "clat-ug27-p001-q120",
+      "passageId": "p001-qt-04",
+      "sectionId": "quantitative",
+      "prompt": "What was the overall mean in the later test?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "70"
+        },
+        {
+          "optionId": "o2",
+          "text": "70.2"
+        },
+        {
+          "optionId": "o3",
+          "text": "71.2"
+        },
+        {
+          "optionId": "o4",
+          "text": "69.2"
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "New total = 80 × 72 + 120 × 69 = 14,040; dividing by 200 gives 70.2.",
+      "difficulty": "moderate",
+      "competency": "weighted-average"
+    }
+  ]
+}
