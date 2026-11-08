@@ -1,0 +1,37 @@
+name: CLAT UG 2027 Engine Validation
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'clat.html'
+      - 'js/clat-engine.js'
+      - 'js/clat-practice.js'
+      - 'data/clat/**'
+      - 'tests/clat-engine.test.js'
+      - '.github/workflows/clat-validation.yml'
+  push:
+    branches: [feature/clat-ug-2027-engine]
+    paths:
+      - 'clat.html'
+      - 'js/clat-engine.js'
+      - 'js/clat-practice.js'
+      - 'data/clat/**'
+      - 'tests/clat-engine.test.js'
+      - '.github/workflows/clat-validation.yml'
+permissions:
+  contents: read
+jobs:
+  clat-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check CLAT JavaScript syntax
+        run: |
+          node --check js/clat-engine.js
+          node --check js/clat-practice.js
+          node --check tests/clat-engine.test.js
+      - name: Validate CLAT paper data and scoring
+        run: node tests/clat-engine.test.js
