@@ -43,9 +43,58 @@ function validatePaper(paper,options){
  });
  const counts=Object.fromEntries(SECTIONS.map(s=>[s.id,questions.filter(q=>q.sectionId===s.id).length]));
  const fullLength=questions.length===120;
- if(opts.requireFullLength&& !fullLength)errors.push("A full-length CLAT paper must contain exactly 120 questions.");
+ if(opts.requireFullLength&&!fullLength)errors.push("A full-length CLAT paper must contain exactly 120 questions.");
  if(fullLength&&SECTIONS.some(s=>counts[s.id]<s.min||counts[s.id]>s.max))errors.push("Section counts must remain within the official CLAT 2027 ranges.");
+ if(opts.strictCLAT){
+  if(!fullLength)errors.push("Strict CLAT papers must contain exactly 120 questions.");
+  if(Number(paper.durationMinutes)!==120)errors.push("Strict CLAT papers must have a 120-minute duration.");
+  SECTIONS.forEach(s=>{if(counts[s.id]!==s.target)errors.push(s.title+" must contain exactly "+s.target+" questions in the standard blueprint.");});
+  const passageQuestionCounts=Object.fromEntries(passages.map(p=>[p.passageId,questions.filter(q=>q.passageId===p.passageId).length]));
+  passages.forEach((p,i)=>{
+   const words=String(p.text||"").trim().split(/\\s+/).filter(Boolean).length;
+   const n=passageQuestionCounts[p.passageId]||0;
+   if(p.sectionId==="quantitative"){
+    if(words<70||words>320)errors.push("Quantitative data set "+(i+1)+" should be a concise, self-contained numerical set (70–320 words).");
+    if(n<3||n>4)errors.push("Each Quantitative data set must support 3–4 questions.");
+   }else{
+    if(words<380||words>520)errors.push("Passage "+(i+1)+" must be approximately 450 words (380–520 words).");
+    if(n<4||n>6)errors.push("Each passage must support 4–6 questions.");
+   }
+   if(p.sectionId==="current-affairs"&&(!Array.isArray(p.sources)||p.sources.length<1))errors.push("Every Current Affairs passage must include verifiable source metadata.");
+  });
+  const passageCounts=Object.fromEntries(SECTIONS.map(s=>[s.id,passages.filter(p=>p.sectionId===s.id).length]));
+  const passageRanges={english:[4,6],"current-affairs":[5,7],legal:[5,7],logical:[4,6],quantitative:[3,4]};
+  Object.entries(passageRanges).forEach(([id,range])=>{if(passageCounts[id]<range[0]||passageCounts[id]>range[1])errors.push(id+" must use "+range[0]+"–"+range[1]+" passage/data sets.");});
+  questions.forEach((q,i)=>{
+   if(!["easy","moderate","challenging"].includes(q.difficulty))errors.push("Question "+(i+1)+" needs a calibrated difficulty label.");
+   if(!q.competency)errors.push("Question "+(i+1)+" needs a CLAT competency tag.");
+  });
+  const stems=questions.map(q=>String(q.prompt||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim());
+  if(new Set(stems).size!==stems.length)errors.push("Question stems must be unique within each paper.");
+  if(!paper.blueprintVersion||!paper.paperNumber)errors.push("Strict CLAT papers need blueprintVersion and paperNumber metadata.");
+ }
  return{valid:errors.length===0,errors,counts,totalQuestions:questions.length,totalMarks:questions.length,fullLength};
+}
+function validateLibrary(library,options){
+ const errors=[],papers=library&&Array.isArray(library.papers)?library.papers:[];
+ if(papers.length!==(options&&options.expectedPaperCount||50))errors.push("Library must contain exactly "+((options&&options.expectedPaperCount)||50)+" full-length papers.");
+ const ids=new Set(),questionFingerprints=new Set(),passageFingerprints=new Set();
+ papers.forEach((paper,index)=>{
+  const result=validatePaper(paper,{strictCLAT:true});
+  if(!result.valid)errors.push("Paper "+(index+1)+" ("+(paper.paperId||"unnamed")+"): "+result.errors.join(" | "));
+  if(ids.has(paper.paperId))errors.push("Duplicate paperId: "+paper.paperId);ids.add(paper.paperId);
+  (paper.questions||[]).forEach(q=>{
+   const key=String(q.prompt||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+   if(questionFingerprints.has(key))errors.push("Repeated question stem across papers: "+q.questionId);
+   questionFingerprints.add(key);
+  });
+  (paper.passages||[]).forEach(p=>{
+   const key=String(p.text||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+   if(passageFingerprints.has(key))errors.push("Repeated passage across papers: "+p.passageId);
+   passageFingerprints.add(key);
+  });
+ });
+ return{valid:errors.length===0,errors,paperCount:papers.length,questionCount:papers.reduce((n,p)=>n+(p.questions||[]).length,0),uniqueQuestionStems:questionFingerprints.size,uniquePassages:passageFingerprints.size};
 }
 function score(questions,answers){
  let correct=0,wrong=0,unanswered=0;
@@ -79,7 +128,7 @@ function formatDuration(seconds){
  const s=Math.max(0,Math.floor(Number(seconds)||0)),h=Math.floor(s/3600),m=Math.floor(s%3600/60),r=s%60;
  return[h,m,r].map(n=>String(n).padStart(2,"0")).join(":");
 }
-const api=Object.freeze({sections:SECTIONS,durationMinutes:DURATION_MINUTES,maxMarks:MAX_MARKS,negativeMark:NEGATIVE_MARK,validatePaper,score,sectionScores,createAttempt,finalizeAttempt,formatDuration});
+const api=Object.freeze({sections:SECTIONS,durationMinutes:DURATION_MINUTES,maxMarks:MAX_MARKS,negativeMark:NEGATIVE_MARK,validatePaper,validateLibrary,score,sectionScores,createAttempt,finalizeAttempt,formatDuration});
 root.C10ClatEngine=api;
 if(typeof module!=="undefined"&&module.exports)module.exports=api;
 })(typeof window!=="undefined"?window:globalThis);
