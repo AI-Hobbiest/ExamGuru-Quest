@@ -138,11 +138,12 @@
     const brandCopy=node("div","c10-brand-copy");brandCopy.append(node("div","c10-brand-title","ExamGuru Quest"),node("div","c10-brand-sub","Learn · Practise · Level up"));brand.appendChild(brandCopy);sidebarTop.appendChild(brand);
     const identity=node("div","c10-user-card");
     identity.append(node("div","c10-user-name",auth.role==="guest"?"Welcome, learner":(auth.username||"Student")));
-    identity.append(node("div","c10-user-class",auth.role==="admin"?"Administrator":auth.role==="student"?"Class "+String(auth.classId||"not assigned"):auth.role==="parent"?"Parent / Guardian":"Sign in to begin"));
+    identity.append(node("div","c10-user-class",auth.role==="admin"?"Administrator":auth.role==="student"?(String(auth.classId||"").toUpperCase()==="CLAT"?"CLAT UG 2027":"Class "+String(auth.classId||"not assigned")):auth.role==="parent"?"Parent / Guardian":"Sign in to begin"));
     sidebarTop.appendChild(identity);sidebar.appendChild(sidebarTop);
     const list=node("nav","c10-nav-list");list.setAttribute("aria-label","Learning and account");
     const visibleLinks=links.filter(item=>{
       if(item.auth!==auth.role)return false;
+      if(auth.role==="student"&&String(auth.classId||"").toUpperCase()==="CLAT"&&!["CLAT UG 2027","FAQ & Guide"].includes(item.label))return false;
       if(item.subject&&subjectConfig&&!subjectConfig.subjects.includes(item.subject))return false;
       if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return false;
       return true;
@@ -187,7 +188,7 @@
     const mobileBrand=node("span","c10-topbar-brand"),mobileLogo=node("img");
     mobileLogo.src="./assets/examguru-saraswati.svg";mobileLogo.alt="";mobileLogo.width=32;mobileLogo.height=32;mobileBrand.appendChild(mobileLogo);
     const mobileCopy=node("div","c10-topbar-copy");
-    mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":auth.role==="parent"?"Parent":"Class "+String(auth.classId||"not assigned"))));
+    mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":auth.role==="parent"?"Parent":String(auth.classId||"").toUpperCase()==="CLAT"?"CLAT UG 2027":"Class "+String(auth.classId||"not assigned"))));
     mobileBar.append(toggle,mobileBrand,mobileCopy);
     if(auth.role!=="guest"){
       const logout=node("button","c10-header-signout","↪ Sign out");
