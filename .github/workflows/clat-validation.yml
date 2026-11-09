@@ -6,6 +6,8 @@ on:
       - 'clat.html'
       - 'js/clat-engine.js'
       - 'js/clat-practice.js'
+      - 'js/clat-pdf.js'
+      - 'tests/clat-pdf.test.js'
       - 'data/clat/**'
       - 'tests/clat-engine.test.js'
       - 'tests/clat-batch-01-uniqueness.test.js'
@@ -34,11 +36,14 @@ jobs:
         run: |
           node --check js/clat-engine.js
           node --check js/clat-practice.js
+          node --check js/clat-pdf.js
+          node --check tests/clat-pdf.test.js
           node --check tests/clat-engine.test.js
           node --check tests/clat-batch-01-uniqueness.test.js
       - name: Validate CLAT paper data and scoring
         run: |
           node tests/clat-engine.test.js
+          node tests/clat-pdf.test.js
           node tests/clat-full-length-draft.test.js
           node tests/clat-full-length-draft-002.test.js
           node tests/clat-full-length-draft-003.test.js
