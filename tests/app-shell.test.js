@@ -143,6 +143,15 @@ const accessScript=fs.readFileSync("js/page-access.js","utf8");
 assert.ok(loginScript.includes("C10StudentAuth.login"),"login form authenticates student accounts");
 assert.ok(loginScript.includes("ADMIN_PASSWORD_SHA256") && loginScript.includes("crypto.subtle.digest"),"temporary admin login checks the configured password hash");
 assert.ok(accessScript.includes('location.replace("./index.html")'),"unsigned dashboard visits return to login");
+
+assert.equal((nav.match(/label:"Assessment Test"/g)||[]).length,1,"student navigation defines the Assessment Test submenu only once");
+assert.ok(nav.includes('clatHref:"./clat.html#library"')&&nav.includes('clatPage:"clat.html"'),"the single Assessment Test entry routes CLAT students to their model-paper library");
+assert.ok(nav.includes('label:"CLAT UG 2027",group:"Entrance Exams"')&&nav.includes('classIds:["CLAT"]'),"the working CLAT paper library is restricted to CLAT accounts");
+assert.ok(nav.includes('disabled:true,status:"Coming soon",classIds:["10"]'),"Class 10 entrance-exam items are disabled placeholders without sample-paper links");
+for(const exam of ["JEE Main & Advanced","NEET UG","CUET UG","NDA (10+2)","IPMAT"])assert.ok(nav.includes('label:"'+exam+'"'),"Class 10 Entrance Exams includes "+exam);
+assert.ok(nav.includes('isClatStudent&&!["CLAT UG 2027","Assessment Test","Study Library","Learning Hub","FAQ & Guide"]'),"CLAT students receive the Assessment, Study Pack and Learning Hub navigation");
+assert.ok(nav.includes("applyClatAttribution")&&nav.includes("AI-Enthusiast"),"shared learning pages replace the personal attribution for CLAT students");
+assert.ok(css.includes(".c10-nav-link.is-disabled")&&css.includes(".c10-nav-link-status"),"Coming soon entrance-exam entries are visibly non-interactive");
 new Function(nav);new Function(loginScript);new Function(accessScript);
 console.log("Navigation/login tests passed: responsive sidebar, role-aware links, login form, temporary admin login, dashboard guard, subject launch cards, Science redirect, keyboard closing and profile anchors.");
 

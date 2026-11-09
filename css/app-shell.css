@@ -131,3 +131,6 @@ body.c10-shell-ready{padding-top:64px}
 .c10-nav-link-label{min-width:0}
 @media(max-width:1100px){.c10-nav-group-trigger{min-height:42px}}
 @media(prefers-reduced-motion:reduce){.c10-nav-chevron{transition:none}}
+/* Disabled entrance-exam entries are informational only until their paper libraries are released. */
+.c10-sidebar .c10-nav-link.is-disabled{color:#85899e!important;cursor:not-allowed;opacity:.9;background:transparent!important;border-color:transparent!important}
+.c10-nav-link-status{margin-left:auto;padding:3px 6px;border-radius:999px;background:#eeedf4;color:#777b91;font-size:.61rem;font-weight:850;line-height:1.2;white-space:nowrap}

@@ -21,12 +21,18 @@
     {label:"Social Science",group:"Subjects",icon:"🌍",href:"./practice.html?subject=social-science",page:"practice.html",subject:"social-science",auth:"student"},
     {label:"Hindi",group:"Subjects",icon:"📝",href:"./practice.html?subject=hindi",page:"practice.html",subject:"hindi",auth:"student"},
 
-    {label:"Study Library",group:"Study Pack",icon:"📖",href:"./study.html",page:"study.html",auth:"student"},    {label:"Learning Hub",group:"My Learning",icon:"🧠",href:"./learning.html",page:"learning.html",auth:"student"},
-    
-    {label:"Assigned tests",group:"Assessments",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",auth:"student"},
-    {label:"Assigned tests",group:"Assessments",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",auth:"student"},
+    {label:"Study Library",group:"Study Pack",icon:"📖",href:"./study.html",page:"study.html",auth:"student"},
+    {label:"Learning Hub",group:"My Learning",icon:"🧠",href:"./learning.html",page:"learning.html",auth:"student"},
+
+    {label:"Assessment Test",group:"Assessments",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",clatHref:"./clat.html#library",clatPage:"clat.html",clatHash:"#library",auth:"student"},
     {label:"Exam Paper Practice",icon:"📝",href:"./exam-practice.html",page:"exam-practice.html",classIds:["6","10"],auth:"student"},
-    {label:"CLAT UG 2027",group:"Entrance Exams",icon:"⚖️",href:"./clat.html",page:"clat.html",auth:"student"},
+    {label:"CLAT UG 2027",group:"Entrance Exams",icon:"⚖️",href:"./clat.html",page:"clat.html",classIds:["CLAT"],auth:"student"},
+    {label:"CLAT UG 2027",group:"Entrance Exams",icon:"⚖️",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
+    {label:"JEE Main & Advanced",group:"Entrance Exams",icon:"📐",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
+    {label:"NEET UG",group:"Entrance Exams",icon:"🧬",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
+    {label:"CUET UG",group:"Entrance Exams",icon:"🎓",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
+    {label:"NDA (10+2)",group:"Entrance Exams",icon:"🛡️",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
+    {label:"IPMAT",group:"Entrance Exams",icon:"📊",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
     {label:"My profile",group:"My Account",icon:"👤",href:"./profile.html#profile",page:"profile.html",hash:"#profile",auth:"student"},
     {label:"Test history",group:"My Account",icon:"📈",href:"./profile.html#history",page:"profile.html",hash:"#history",auth:"student"},
     {label:"Levels & rewards",group:"My Account",icon:"🏆",href:"./dashboard.html#rewards",page:"dashboard.html",hash:"#rewards",auth:"student"},
@@ -127,10 +133,19 @@
       if(parentSection)parentSection.hidden=true;
     }
   }
+  function applyClatAttribution(){
+    document.querySelectorAll(".brand-signature,.site-credit,.study-footer,.learning-footer").forEach(element=>{
+      element.innerHTML=element.innerHTML.replace(/\bJP Ganathe\b/g,"AI-Enthusiast");
+    });
+    const author=document.querySelector('meta[name="author"]');
+    if(author)author.setAttribute("content","AI-Enthusiast");
+  }
   async function createNav(){
     if(document.getElementById("c10Sidebar"))return;
     const current=getLocation(),auth=await authState();
-    const clatExperience=current.file==="clat.html"||current.file==="clat-login.html"||(auth.role==="student"&&String(auth.classId||"").toUpperCase()==="CLAT");
+    const isClatStudent=auth.role==="student"&&String(auth.classId||"").toUpperCase()==="CLAT";
+    const clatExperience=current.file==="clat.html"||current.file==="clat-login.html"||isClatStudent;
+    if(isClatStudent)applyClatAttribution();
     applyHelpRoleVisibility(auth);
     const subjectConfig=auth.role==="student"?await configuredSubjects(auth.classId):null;
     const sidebar=node("aside","c10-sidebar");sidebar.id="c10Sidebar";sidebar.setAttribute("aria-label","Main navigation");
@@ -144,7 +159,7 @@
     const list=node("nav","c10-nav-list");list.setAttribute("aria-label","Learning and account");
     const visibleLinks=links.filter(item=>{
       if(item.auth!==auth.role)return false;
-      if(auth.role==="student"&&String(auth.classId||"").toUpperCase()==="CLAT"&&!["CLAT UG 2027","FAQ & Guide"].includes(item.label))return false;
+      if(isClatStudent&&!["CLAT UG 2027","Assessment Test","Study Library","Learning Hub","FAQ & Guide"].includes(item.label))return false;
       if(item.subject&&subjectConfig&&!subjectConfig.subjects.includes(item.subject))return false;
       if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return false;
       return true;
@@ -152,8 +167,18 @@
     const groups=new Map();
     visibleLinks.forEach(item=>{if(item.group){if(!groups.has(item.group))groups.set(item.group,[]);groups.get(item.group).push(item);}});
     const renderLink=item=>{
-      const link=node("a","c10-nav-link");link.href=auth.role==="guest"&&current.file==="clat-login.html"&&item.label==="Sign in"?"./clat-login.html":item.href;
-      if(isActive(item,current)){link.classList.add("active");link.setAttribute("aria-current","page");}
+      if(item.disabled){
+        const link=node("div","c10-nav-link is-disabled");
+        link.setAttribute("aria-disabled","true");
+        link.append(node("span","c10-nav-icon",item.icon),node("span","c10-nav-link-label",item.label));
+        if(item.status)link.appendChild(node("span","c10-nav-link-status",item.status));
+        return link;
+      }
+      const useClatTarget=!!(clatExperience&&item.clatHref);
+      const link=node("a","c10-nav-link");
+      link.href=auth.role==="guest"&&current.file==="clat-login.html"&&item.label==="Sign in"?"./clat-login.html":useClatTarget?item.clatHref:item.href;
+      const active=useClatTarget?current.file===item.clatPage&&current.hash===item.clatHash:isActive(item,current);
+      if(active){link.classList.add("active");link.setAttribute("aria-current","page");}
       link.append(node("span","c10-nav-icon",item.icon),node("span","c10-nav-link-label",item.label));
       link.addEventListener("click",()=>closeMenu());return link;
     };
@@ -164,7 +189,7 @@
       renderedGroups.add(item.group);
       const groupItems=groups.get(item.group);
       const groupId="c10-nav-submenu-"+item.group.toLowerCase().replace(/[^a-z0-9]+/g,"-");
-      const active=groupItems.some(entry=>isActive(entry,current));
+      const active=groupItems.some(entry=>entry.clatHref&&clatExperience?current.file===entry.clatPage&&current.hash===entry.clatHash:isActive(entry,current));
       const wrapper=node("section","c10-nav-group"+(active?" is-active":""));
       const trigger=node("button","c10-nav-group-trigger");
       trigger.type="button";trigger.setAttribute("aria-expanded",String(active));trigger.setAttribute("aria-controls",groupId);
