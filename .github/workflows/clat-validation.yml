@@ -15,6 +15,7 @@ on:
       - 'tests/clat-engine.test.js'
       - 'tests/clat-dashboard.test.js'
       - 'tests/clat-batch-01-uniqueness.test.js'
+      - 'tests/clat-full-length-draft-006-010.test.js'
       - '.github/workflows/clat-validation.yml'
   push:
     branches: [main, feature/clat-ug-2027-engine]
@@ -47,6 +48,7 @@ jobs:
           node --check tests/clat-pdf.test.js
           node --check tests/clat-engine.test.js
           node --check tests/clat-batch-01-uniqueness.test.js
+          node --check tests/clat-full-length-draft-006-010.test.js
       - name: Validate CLAT paper data and scoring
         run: |
           node tests/clat-engine.test.js
@@ -58,3 +60,4 @@ jobs:
           node tests/clat-full-length-draft-004.test.js
           node tests/clat-full-length-draft-005.test.js
           node tests/clat-batch-01-uniqueness.test.js
+          node tests/clat-full-length-draft-006-010.test.js
