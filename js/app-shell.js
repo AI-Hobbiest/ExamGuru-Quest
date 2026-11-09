@@ -9,7 +9,7 @@
     {label:"Exam Paper Practice",icon:"📝",href:"./parent.html#exam-paper-practice",page:"parent.html",hash:"#exam-paper-practice",auth:"parent"},
     {label:"FAQ & Guide",icon:"❔",href:"./help.html#parent-guide",page:"help.html",auth:"parent"},
 
-    {label:"Dashboard",icon:"🏡",href:"./dashboard.html",page:"dashboard.html",auth:"student"},
+    {label:"Dashboard",icon:"🏡",href:"./dashboard.html",page:"dashboard.html",clatHref:"./clat-dashboard.html",clatPage:"clat-dashboard.html",clatHash:"",auth:"student"},
     {label:"All subjects",group:"Subjects",icon:"📚",href:"./dashboard.html#subjects",page:"dashboard.html",hash:"#subjects",auth:"student"},
 
     {label:"Science",group:"Subjects",icon:"🧪",href:"./practice.html?subject=science",page:"practice.html",subject:"science",auth:"student"},
@@ -159,7 +159,7 @@
     const list=node("nav","c10-nav-list");list.setAttribute("aria-label","Learning and account");
     const visibleLinks=links.filter(item=>{
       if(item.auth!==auth.role)return false;
-      if(isClatStudent&&!["CLAT UG 2027","Assessment Test","Study Library","Learning Hub","FAQ & Guide"].includes(item.label))return false;
+      if(isClatStudent&&!["CLAT UG 2027","Dashboard","Assessment Test","Study Library","Learning Hub","FAQ & Guide"].includes(item.label))return false;
       if(item.subject&&subjectConfig&&!subjectConfig.subjects.includes(item.subject))return false;
       if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return false;
       return true;

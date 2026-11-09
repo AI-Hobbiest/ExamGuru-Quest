@@ -10,6 +10,9 @@ const dashboard=fs.readFileSync("dashboard.html","utf8");
 const homepage=fs.readFileSync("index.html","utf8");
 const clatLogin=fs.readFileSync("clat-login.html","utf8");
 const clatPage=fs.readFileSync("clat.html","utf8");
+const clatDashboard=fs.readFileSync("clat-dashboard.html","utf8");
+const clatDashboardModel=fs.readFileSync("js/clat-dashboard-model.js","utf8");
+const clatDashboardScript=fs.readFileSync("js/clat-dashboard.js","utf8");
 const practice=fs.readFileSync("practice.html","utf8");
 const profile=fs.readFileSync("profile.html","utf8");
 const learning=fs.readFileSync("learning.html","utf8");
@@ -152,7 +155,15 @@ for(const exam of ["JEE Main & Advanced","NEET UG","CUET UG","NDA (10+2)","IPMAT
 assert.ok(nav.includes('isClatStudent&&!["CLAT UG 2027","Assessment Test","Study Library","Learning Hub","FAQ & Guide"]'),"CLAT students receive the Assessment, Study Pack and Learning Hub navigation");
 assert.ok(nav.includes("applyClatAttribution")&&nav.includes("AI-Enthusiast"),"shared learning pages replace the personal attribution for CLAT students");
 assert.ok(css.includes(".c10-nav-link.is-disabled")&&css.includes(".c10-nav-link-status"),"Coming soon entrance-exam entries are visibly non-interactive");
-new Function(nav);new Function(loginScript);new Function(accessScript);
+assert.ok(nav.includes('clatHref:"./clat-dashboard.html"')&&nav.includes('clatPage:"clat-dashboard.html"'),"CLAT students have a dedicated dashboard destination");
+assert.ok(nav.includes('["CLAT UG 2027","Dashboard","Assessment Test","Study Library","Learning Hub","FAQ & Guide"]'),"CLAT navigation exposes the dashboard, assessment, study pack and learning hub");
+assert.ok(loginScript.includes("./clat-dashboard.html"),"CLAT sign-in and restored sessions land on the CLAT dashboard");
+assert.ok(accessScript.includes('page==="clat-dashboard.html"')&&accessScript.includes('toUpperCase()!=="CLAT"'),"CLAT dashboard route is restricted to verified CLAT students");
+assert.ok(clatDashboard.includes('name="author" content="AI-Enthusiast"')&&!/JP Ganathe|Conceptualised by/i.test(clatDashboard),"CLAT dashboard uses abstracted AI-Enthusiast branding");
+for(const field of ["totalXp","levelValue","papersCompleted","streakValue","bestAccuracy","scoreTrend","sectionStrength","recentAttemptList","badgeList"])assert.ok(clatDashboard.includes('id="'+field+'"'),"CLAT dashboard includes "+field);
+assert.ok(clatDashboard.includes("./js/clat-dashboard-model.js")&&clatDashboard.includes("./js/clat-dashboard.js"),"CLAT dashboard loads its progress model and renderer");
+assert.ok(clatDashboardModel.includes("function xpFor")&&clatDashboardModel.includes("function levelFor")&&clatDashboardModel.includes("sectionStats"),"CLAT XP, levels and section performance are derived from submitted CLAT attempts");
+new Function(nav);new Function(loginScript);new Function(accessScript);new Function(clatDashboardModel);new Function(clatDashboardScript);
 console.log("Navigation/login tests passed: responsive sidebar, role-aware links, login form, temporary admin login, dashboard guard, subject launch cards, Science redirect, keyboard closing and profile anchors.");
 
 assert.ok(examPractice.includes("./js/exam-paper-generator.js")&&examPractice.includes("./js/exam-paper-self-study.js"),"self-study exam page loads generator and attempt controller");

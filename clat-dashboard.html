@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ece8fa">
+<meta name="description" content="Your CLAT UG 2027 progress dashboard, XP, paper history and section-wise performance.">
+<meta name="author" content="AI-Enthusiast">
+<title>CLAT Dashboard | ExamGuru Quest</title>
+<link rel="stylesheet" href="./css/branding.css?v=controls1">
+<link rel="stylesheet" href="./css/app-shell.css?v=20261109-clat-dashboard-v1">
+<link rel="stylesheet" href="./css/theme-roles-v2.css?v=quest3">
+<style>
+.clat-dash-wrap{max-width:1120px;margin:24px auto;padding:0 18px 52px;display:grid;gap:16px;color:#303653}
+.clat-dash-hero{border:1px solid #ddd8ee;border-radius:22px;padding:clamp(22px,4vw,32px);background:linear-gradient(118deg,#ece8fa 0%,#f7f6fc 58%,#e7f4ea 100%);box-shadow:0 13px 32px rgba(45,46,91,.08)}
+.clat-dash-kicker{font-size:.72rem;letter-spacing:.14em;font-weight:900;color:#5a4f98;text-transform:uppercase}
+.clat-dash-hero h1{margin:9px 0;color:#292e55;font-size:clamp(1.7rem,4vw,2.45rem)}
+.clat-dash-hero p{margin:0;color:#626b84;max-width:720px;line-height:1.55}
+.clat-dash-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+.clat-dash-btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:0;border-radius:11px;padding:11px 15px;background:#5143a8;color:#fff;font:inherit;font-size:.84rem;font-weight:850}
+.clat-dash-btn.secondary{background:#eeecfa;color:#38316e;border:1px solid #ddd8ee}
+.clat-xp-block{margin-top:23px}.clat-xp-line{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;color:#393d60;font-size:.82rem;font-weight:800;margin-bottom:8px}
+.clat-xp-track{height:11px;background:#e0e7e2;border-radius:99px;overflow:hidden}.clat-xp-track span{display:block;height:100%;width:0;background:linear-gradient(90deg,#75b88d 0%,#8a7ac7 68%,#edc45e 100%);transition:width .25s ease}
+.clat-stat-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px}
+.clat-stat-card,.clat-panel{background:#fff;border:1px solid #e0e4ef;border-radius:17px;padding:16px;min-width:0;box-shadow:0 7px 22px rgba(39,45,82,.04)}
+.clat-stat-card span{display:block;color:#6c748b;font-size:.76rem;font-weight:750}.clat-stat-card strong{display:block;color:#292e55;font-size:clamp(1.25rem,2.3vw,1.8rem);margin:6px 0 3px;overflow-wrap:anywhere}.clat-stat-card small{display:block;color:#7a8194;font-size:.7rem;line-height:1.35}
+.clat-dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.clat-panel h2{margin:0 0 4px;color:#292e55;font-size:1.02rem}.clat-panel>p{margin:0 0 15px;color:#6c748b;font-size:.78rem;line-height:1.45}
+.clat-trend{display:flex;gap:12px;align-items:stretch;min-height:180px;padding:8px 4px 0;overflow-x:auto}
+.clat-trend-item{flex:1;min-width:52px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:7px}
+.clat-trend-value{font-size:.7rem;font-weight:850;color:#51469c;white-space:nowrap}.clat-trend-track{height:120px;width:100%;max-width:35px;background:#edf0f6;border-radius:9px;display:flex;align-items:flex-end;overflow:hidden}
+.clat-trend-fill{width:100%;min-height:3px;background:linear-gradient(180deg,#8fc49e,#6558b2);border-radius:8px 8px 2px 2px}.clat-trend-label{font-size:.67rem;color:#7a8194}
+.clat-section-row{padding:11px 0;border-bottom:1px solid #eef0f5}.clat-section-row:last-child{border-bottom:0}
+.clat-section-heading{display:flex;justify-content:space-between;gap:10px;align-items:baseline}.clat-section-heading strong{font-size:.82rem;color:#34375c}.clat-section-heading span{font-size:.75rem;font-weight:850;color:#51469c}
+.clat-section-track{height:8px;background:#edf0f6;border-radius:99px;overflow:hidden;margin:8px 0 6px}.clat-section-track span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#6558b2,#75b88d)}
+.clat-section-row p{margin:0;color:#7a8194;font-size:.7rem;line-height:1.4}
+.clat-recent-row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #eef0f5}.clat-recent-row:last-child{border-bottom:0}
+.clat-recent-row>div:first-child{min-width:0}.clat-recent-row strong{display:block;color:#34375c;font-size:.82rem}.clat-recent-row span{display:block;color:#7a8194;font-size:.7rem;margin-top:3px}
+.clat-recent-score{text-align:right;white-space:nowrap}.clat-recent-score strong{color:#51469c;font-size:1rem}
+.clat-badges{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.clat-badge{display:grid;gap:6px;align-content:start;padding:12px;border:1px solid #e1e3ee;border-radius:13px;background:#fafaff;min-width:0}
+.clat-badge>span{font-size:1.35rem}.clat-badge strong{font-size:.76rem;color:#35385d}.clat-badge small{font-size:.67rem;line-height:1.4;color:#777e92}
+.clat-badge.locked{opacity:.53;filter:saturate(.45)}.clat-badge.earned{background:linear-gradient(150deg,#eaf6ed,#fff);border-color:#cfe6d6}
+.clat-empty{display:grid;place-items:center;min-height:110px;text-align:center;color:#7a8194;font-size:.82rem;line-height:1.5;padding:14px}
+.clat-dash-footer{text-align:center;color:#737a8e;font-size:.72rem;padding:6px 0 12px}
+@media(max-width:900px){.clat-stat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.clat-badges{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:620px){.clat-dash-grid{grid-template-columns:1fr}.clat-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.clat-badges{grid-template-columns:repeat(2,minmax(0,1fr))}.clat-dash-hero h1{font-size:1.7rem}.clat-recent-row{align-items:flex-start}}
+@media print{.c10-sidebar,.c10-mobilebar,.c10-nav-scrim,.clat-dash-actions{display:none!important}.clat-dash-wrap{margin:0;max-width:none}.clat-stat-card,.clat-panel{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body class="c10-theme-quest">
+<main class="clat-dash-wrap">
+<section class="clat-dash-hero">
+ <div class="clat-dash-kicker">AI-ENTHUSIAST · CLAT UG 2027</div>
+ <h1>Welcome back, <span id="candidateName">Candidate</span></h1>
+ <p>Your preparation dashboard. Every completed paper builds your experience, reveals stronger sections and shows where to focus next.</p>
+ <div class="clat-dash-actions">
+  <a class="clat-dash-btn" href="./clat.html#library">⚖️ Browse model papers</a>
+  <a class="clat-dash-btn secondary" href="./study.html">📚 Study Pack</a>
+  <a class="clat-dash-btn secondary" href="./learning.html">🧠 Learning Hub</a>
+ </div>
+ <div class="clat-xp-block">
+  <div class="clat-xp-line"><span id="levelTitle">🌱 Curious Starter</span><span id="xpProgressLabel">0 / 100 XP</span></div>
+  <div class="clat-xp-track" role="progressbar" aria-label="Progress to next level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="levelProgressFill"></span></div>
+  <div class="clat-xp-line" style="margin-top:8px;margin-bottom:0"><span id="xpNextHint">Complete your first paper to earn XP.</span><span id="averageAccuracy">0.0% average accuracy</span></div>
+ </div>
+</section>
+<section class="clat-stat-grid" aria-label="CLAT progress summary">
+ <article class="clat-stat-card"><span>Total XP</span><strong id="totalXp">0</strong><small>Earned from completed papers and correct answers</small></article>
+ <article class="clat-stat-card"><span>Current level</span><strong id="levelValue">1</strong><small>Keep practising to level up</small></article>
+ <article class="clat-stat-card"><span>Completed papers</span><strong id="papersCompleted">0</strong><small>Submitted CLAT practice papers</small></article>
+ <article class="clat-stat-card"><span>Practice streak</span><strong id="streakValue">0 days</strong><small>Consecutive days with a completed paper</small></article>
+ <article class="clat-stat-card"><span>Best accuracy</span><strong id="bestAccuracy">0.0%</strong><small id="bestScore">Best score: —</small></article>
+</section>
+<section class="clat-dash-grid">
+ <article class="clat-panel"><h2>Score journey</h2><p>Last completed papers, in chronological order.</p><div id="scoreTrend" class="clat-trend"><div class="clat-empty">Your completed paper scores will appear here.</div></div></article>
+ <article class="clat-panel"><h2>Section strength</h2><p>Accuracy in each CLAT section, based on all submitted papers.</p><div id="sectionStrength"><div class="clat-empty">Section results will appear after your first paper.</div></div></article>
+ <article class="clat-panel"><h2>Recent attempts</h2><p>Your latest submitted CLAT papers and results.</p><div id="recentAttemptList"><div class="clat-empty">No completed papers yet.</div></div></article>
+ <article class="clat-panel"><h2>Achievements</h2><p id="badgeCount">0 badges unlocked</p><div id="badgeList" class="clat-badges"></div></article>
+</section>
+<p id="dashboardStatus" class="clat-dash-footer" role="status" aria-live="polite">Progress is saved on this browser and device.</p>
+<footer class="clat-dash-footer">ExamGuru Quest · CLAT UG 2027 · AI-Enthusiast</footer>
+</main>
+<script src="./js/student-auth.js"></script>
+<script src="./js/page-access.js"></script>
+<script src="./js/clat-dashboard-model.js?v=20261109-clat-dashboard-v1"></script>
+<script src="./js/clat-dashboard.js?v=20261109-clat-dashboard-v1"></script>
+<script src="./js/app-shell.js?v=20261109-clat-dashboard-v1"></script>
+</body></html>

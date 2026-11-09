@@ -4,12 +4,16 @@ on:
     branches: [main]
     paths:
       - 'clat.html'
+      - 'clat-dashboard.html'
       - 'js/clat-engine.js'
       - 'js/clat-practice.js'
+      - 'js/clat-dashboard-model.js'
+      - 'js/clat-dashboard.js'
       - 'js/clat-pdf.js'
       - 'tests/clat-pdf.test.js'
       - 'data/clat/**'
       - 'tests/clat-engine.test.js'
+      - 'tests/clat-dashboard.test.js'
       - 'tests/clat-batch-01-uniqueness.test.js'
       - '.github/workflows/clat-validation.yml'
   push:
@@ -36,6 +40,9 @@ jobs:
         run: |
           node --check js/clat-engine.js
           node --check js/clat-practice.js
+          node --check js/clat-dashboard-model.js
+          node --check js/clat-dashboard.js
+          node --check tests/clat-dashboard.test.js
           node --check js/clat-pdf.js
           node --check tests/clat-pdf.test.js
           node --check tests/clat-engine.test.js
@@ -43,6 +50,7 @@ jobs:
       - name: Validate CLAT paper data and scoring
         run: |
           node tests/clat-engine.test.js
+          node tests/clat-dashboard.test.js
           node tests/clat-pdf.test.js
           node tests/clat-full-length-draft.test.js
           node tests/clat-full-length-draft-002.test.js
