@@ -87,12 +87,12 @@
       '@media screen and (max-width:700px){.sheet{margin:12px auto;padding:0 12px}.meta{grid-template-columns:1fr 1fr}.candidate{grid-template-columns:1fr}.options{grid-template-columns:1fr}}'+
       '</style></head><body><div class="print-hint">In the print window, choose <strong>Save as PDF</strong> as the destination to download this paper as a PDF. The document contains questions only, with no answer key or explanations.</div>'+
       '<main class="sheet"><header class="masthead"><div class="brand">AI-ENTHUSIAST</div><div class="series">CLAT UG 2027<br>Practice Series</div></header>'+
-      '<h1 class="title">'+paperTitle+'</h1><p class="subtitle">Full-length CLAT practice paper · Candidate copy</p>'+
+      '<h1 class="title">'+paperTitle+'</h1><p class="subtitle">Independent full-length practice pilot · Not an official Consortium of NLUs paper</p>'+
       '<div class="meta"><div><b>Questions</b><span>'+total+'</span></div><div><b>Duration</b><span>'+duration+' minutes</span></div><div><b>Maximum marks</b><span>'+maxMarks+'</span></div><div><b>Marking</b><span>+1 / −0.25</span></div></div>'+
       '<div class="candidate"><div class="line">Candidate name:</div><div class="line">Roll number:</div><div class="line">Date:</div></div>'+
       '<section class="instructions"><h2>Instructions</h2><ul><li>Read each passage carefully and answer the questions that follow.</li><li>Select one option only for each question.</li><li>Each correct answer carries 1 mark; each incorrect answer attracts a penalty of 0.25 mark.</li><li>Unanswered questions receive zero marks.</li><li>Suggested examination time: '+duration+' minutes. Use the answer recording sheet at the end if required.</li></ul></section>'+
       passagesHtml+buildAnswerSheet(total)+
-      '<div class="pdf-footer">AI-Enthusiast · CLAT UG 2027 Practice Series · '+escapeHtml(paper.paperId||"")+'</div></main></body></html>';
+      '<div class="pdf-footer">AI-Enthusiast · CLAT UG 2027 Independent Practice · Not an official Consortium paper · '+escapeHtml(paper.paperId||"")+'</div></main></body></html>';
   }
 
   function printPaper(paper){
