@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ece8fa">
+<meta name="description" content="Sign in to ExamGuru Quest CLAT UG 2027 passage-led practice.">
+<title>CLAT UG 2027 Sign in | ExamGuru Quest</title>
+<link rel="stylesheet" href="./css/branding.css?v=controls1">
+<link rel="stylesheet" href="./css/theme-roles-v2.css?v=quest3">
+<link rel="stylesheet" href="./css/app-shell.css?v=20261106-persistent-topbar-v1">
+<style>
+.login-page{max-width:1040px;margin:0 auto;padding:clamp(24px,5vw,58px) 20px 46px;min-height:calc(100vh - 70px);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(310px,.9fr);gap:clamp(28px,6vw,76px);align-items:center}
+.login-story{padding:8px 0}
+.login-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;background:#efedff;color:#5140b7;font-size:.76rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
+.login-story h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.02;letter-spacing:-.045em;margin:18px 0 17px;max-width:620px}
+.login-story h1 span{color:var(--c10-primary)}
+.login-story>p{max-width:540px;color:var(--c10-muted);font-size:1.08rem;line-height:1.75}
+.login-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:27px;max-width:570px}
+.login-highlight{padding:13px;border:1px solid var(--c10-line);background:rgba(255,255,255,.78);border-radius:15px}
+.login-highlight b{display:block;font-size:1.15rem}.login-highlight span{display:block;color:var(--c10-muted);font-size:.75rem;line-height:1.4;margin-top:4px}
+.login-card{background:#fff;border:1px solid var(--c10-line);border-radius:25px;padding:clamp(22px,4vw,34px);box-shadow:0 22px 65px rgba(48,35,111,.12)}
+.login-card-mark{width:58px;height:58px;display:grid;place-items:center;border-radius:18px;background:#f6f3ff;border:1px solid #ded6ff;overflow:hidden;box-shadow:0 5px 15px rgba(48,35,111,.12)}.login-card-mark img{display:block;width:58px;height:58px;object-fit:contain}
+.login-card h2{font-size:1.55rem;margin:18px 0 5px}.login-subtitle{color:var(--c10-muted);font-size:.88rem;line-height:1.55;margin:0 0 23px}
+.login-field{display:grid;gap:7px;margin:15px 0}.login-field label{font-size:.83rem;font-weight:800}.login-field input{width:100%;min-height:48px;border:1px solid var(--c10-line);border-radius:12px;padding:12px 13px;font:inherit;background:#fff;color:var(--c10-ink)}
+.login-submit{width:100%;min-height:49px;margin-top:7px;cursor:pointer}
+.login-status{margin:13px 0 0;font-size:.82rem;line-height:1.5;color:var(--c10-muted)}.login-status.error{color:#a52c44}.login-status.success{color:#18724f}
+.login-divider{display:flex;align-items:center;gap:10px;color:#9893ae;font-size:.72rem;margin:18px 0 12px}.login-divider:before,.login-divider:after{content:"";height:1px;flex:1;background:var(--c10-line)}
+.github-admin{display:flex;width:100%;align-items:center;justify-content:center;gap:9px;border:1px solid #ded9ee;background:#fff;color:var(--c10-ink);border-radius:11px;min-height:43px;padding:9px 12px;font:inherit;font-size:.82rem;font-weight:800;cursor:pointer}
+.github-admin:hover{background:#f7f5ff}.github-admin small{font-size:.72rem;font-weight:650;color:var(--c10-muted)}
+/* Keep the legacy admin form as a compatibility target, but expose only the shared sign-in fields. */
+#adminLoginForm,.login-divider{display:none!important}
+.login-footnote{font-size:.72rem;color:var(--c10-muted);line-height:1.55;margin-top:14px}
+.login-footer{padding:0 20px 24px;text-align:center;color:var(--c10-muted);font-size:.78rem}
+@media(max-width:760px){.login-page{grid-template-columns:1fr;gap:25px;max-width:520px;padding-top:30px}.login-story h1{font-size:clamp(2.5rem,12vw,3.6rem)}.login-story>p{font-size:.97rem}.login-highlights{margin-top:18px}.login-card{padding:23px}.login-footer{padding-bottom:22px}}
+@media(max-width:390px){.login-highlights{grid-template-columns:1fr}.login-highlight{display:flex;align-items:center;gap:12px}.login-highlight span{margin-top:0}}
+
+/* Sign-in experience follows the same calm indigo + botanical pastel identity. */
+.login-eyebrow{background:#ece8fa!important;color:#403b8c!important;border:1px solid #ddd6f0}
+.login-story h1{color:#25285a!important}.login-story h1 span{color:#5b50aa!important}.login-story>p{color:#626b84!important}
+.login-highlight:nth-child(1){background:linear-gradient(145deg,#f0ecfb,#fff)!important}.login-highlight:nth-child(2){background:linear-gradient(145deg,#eaf6ee,#fff)!important}.login-highlight:nth-child(3){background:linear-gradient(145deg,#fff6dd,#fff)!important}
+.login-card{border-color:#e0e4ef!important;box-shadow:0 20px 55px rgba(37,43,82,.095)!important}.login-card-mark{background:#efecfa!important;border-color:#ddd6f0!important}.login-field input{border-color:#d8deeb!important;color:#252b46!important}
+.github-admin{border-color:#dfe3ef!important;color:#303653!important}.github-admin:hover{background:#f5f3fb!important}.login-status.success{color:#286b49!important}
+</style>
+<link rel="stylesheet" href="./css/theme-roles-v2.css?v=quest3">
+</head>
+<body class="c10-theme-quest">
+<header style="padding:18px max(18px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:15px">
+  <div style="font-weight:950;letter-spacing:-.02em">ExamGuru <span style="color:#bff3df">●</span></div>
+  <div class="brand-signature" style="margin:0">An initiative by <strong>AI-Enthusiast</strong></div>
+</header>
+<main class="login-page">
+  <section class="login-story">
+    <div class="login-eyebrow">✦ CLAT UG 2027 practice</div>
+    <h1>Prepare smart.<br><span>Think with confidence.</span></h1>
+    <p>Welcome to ExamGuru Quest CLAT UG 2027 — your focused space for passage-led practice across English, Current Affairs, Legal Reasoning, Logical Reasoning and Quantitative Techniques. Sign in to continue.</p>
+    <div class="login-highlights" aria-label="Learning features">
+      <div class="login-highlight"><b>⚖️ 5</b><span>CLAT exam sections</span></div>
+      <div class="login-highlight"><b>📖 Read</b><span>Passage-led reasoning practice</span></div>
+      <div class="login-highlight"><b>⏱️ Timed</b><span>Build exam-time confidence</span></div>
+    </div>
+  </section>
+  <section class="login-card" aria-labelledby="loginTitle">
+    <div class="login-card-mark" aria-hidden="true"><img src="./assets/examguru-saraswati.svg" alt="" width="49" height="49"></div>
+    <h2 id="loginTitle">CLAT UG 2027 candidate sign in</h2>
+    <p class="login-subtitle">Use the CLAT practice username and password issued by the administrator. Sign-in opens the CLAT model-paper library.</p>
+    <form id="studentLoginForm" novalidate>
+      <div class="login-field"><label for="username">Username</label><input id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="32" required placeholder="Enter your username"></div>
+      <div class="login-field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" maxlength="256" required placeholder="Enter your password"></div>
+      <button class="btn login-submit" id="loginSubmit" type="submit">Sign in to ExamGuru <span aria-hidden="true">→</span></button>
+    </form>
+    <div class="login-divider">ADMIN ACCESS</div>
+    <form id="adminLoginForm" novalidate>
+      <div class="login-field"><label for="adminUsername">Admin username</label><input id="adminUsername" name="adminUsername" type="email" autocomplete="username" spellcheck="false" required placeholder="Admin email"></div>
+      <div class="login-field"><label for="adminPassword">Admin password</label><input id="adminPassword" name="adminPassword" type="password" autocomplete="current-password" maxlength="256" required placeholder="Admin password"></div>
+      <button class="github-admin" id="adminLoginSubmit" type="submit"><span aria-hidden="true">🔐</span><span>Sign in as administrator</span></button>
+    </form>
+    <p id="loginStatus" class="login-status" role="status" aria-live="polite">CLAT practice accounts are issued by the administrator.</p>
+    <p class="login-footnote">Temporary MVP admin sign-in only. This browser-side check is not secure authentication; do not use it to protect sensitive data. Server-side authentication will be added after core functionality is complete.</p>
+  </section>
+</main>
+<footer class="login-footer">ExamGuru Quest · CLAT UG 2027 practice · AI-Enthusiast</footer>
+<script>
+/* Route the shared login fields to the existing admin verifier when the entered ID is the admin account. */
+(() => {
+  const studentForm = document.getElementById("studentLoginForm");
+  const sharedUser = document.getElementById("username");
+  const sharedPassword = document.getElementById("password");
+  const adminForm = document.getElementById("adminLoginForm");
+  const adminUser = document.getElementById("adminUsername");
+  const adminPassword = document.getElementById("adminPassword");
+  const ADMIN_ID = "Jayaprakashganathe@gmail.com";
+  studentForm.addEventListener("submit", event => {
+    if (sharedUser.value.trim().toLowerCase() !== ADMIN_ID.toLowerCase()) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    adminUser.value = sharedUser.value.trim();
+    adminPassword.value = sharedPassword.value;
+    sharedPassword.value = "";
+    adminForm.requestSubmit();
+    adminPassword.value = "";
+  }, true);
+})();
+</script>
+<script src="./js/student-auth.js"></script>
+<script src="./js/api-config.js"></script>
+<script src="./js/api-client.js"></script>
+<script src="./js/login-page.js"></script>
+<script src="./js/app-shell.js?v=20261106-persistent-topbar-v1"></script>
+</body>
+</html>
