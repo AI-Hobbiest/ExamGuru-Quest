@@ -145,7 +145,7 @@ const loginScript=fs.readFileSync("js/login-page.js","utf8");
 const accessScript=fs.readFileSync("js/page-access.js","utf8");
 assert.ok(loginScript.includes("C10StudentAuth.login"),"login form authenticates student accounts");
 assert.ok(loginScript.includes("ADMIN_PASSWORD_SHA256") && loginScript.includes("crypto.subtle.digest"),"temporary admin login checks the configured password hash");
-assert.ok(accessScript.includes('location.replace("./index.html")'),"unsigned dashboard visits return to login");
+assert.ok(accessScript.includes("signInTarget")&&accessScript.includes("clat-login.html")&&accessScript.includes("./index.html"),"unsigned routes use the correct sign-in page");
 
 assert.equal((nav.match(/label:"Assessment Test"/g)||[]).length,1,"student navigation defines the Assessment Test submenu only once");
 assert.ok(nav.includes('clatHref:"./clat.html#library"')&&nav.includes('clatPage:"clat.html"'),"the single Assessment Test entry routes CLAT students to their model-paper library");
