@@ -18,6 +18,7 @@ on:
       - 'js/clat-practice.js'
       - 'data/clat/**'
       - 'tests/clat-engine.test.js'
+      - 'tests/clat-batch-01-uniqueness.test.js'
       - '.github/workflows/clat-validation.yml'
 permissions:
   contents: read
