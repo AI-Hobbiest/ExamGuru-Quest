@@ -1,0 +1,369 @@
+{
+  "schemaVersion": 1,
+  "kind": "clat-model-paper",
+  "paperId": "clat-ug27-full-007",
+  "paperNumber": 7,
+  "title": "CLAT UG 2027 · Full-Length Model Paper 007",
+  "subtitle": "Rebuilt full-length practice draft · original passages and questions",
+  "blueprintVersion": "CLAT-UG27-v1",
+  "durationMinutes": 120,
+  "status": "draft-unpublished",
+  "asOf": "2026-11-09",
+  "marking": {
+    "correct": 1,
+    "incorrect": -0.25,
+    "unanswered": 0
+  },
+  "passages": [
+    {
+      "passageId": "r007-english-01",
+      "sectionId": "english",
+      "title": "The clinic that measured the waiting room",
+      "text": "A district hospital once reported its outpatient performance using a single figure: the average time between registration and consultation. The number improved after the hospital installed a token display and moved several clerks to the registration desk. Managers described the change as a reduction in waiting time. Patients, however, continued to complain that they spent long periods in the building. A nurse suggested measuring the entire visit, including the time spent finding the correct counter, waiting for a test and returning to collect a report.\n\nThe wider measure revealed that the registration change had shifted rather than removed some delays. The average consultation queue became shorter, but patients who needed a laboratory test often returned to a second queue that was not included in the original report. The hospital also discovered that elderly patients and people unfamiliar with the building were more likely to ask staff for directions. Their time was not recorded anywhere. The new measure therefore exposed work that was invisible in the management dashboard.\n\nThere was a reasonable objection. Recording every movement could create an expensive monitoring system and distract staff from care. The team did not propose tracking individuals continuously. It sampled visits at different times, asked patients to report broad stages of the process and compared the results with existing token data. It also separated the time a patient spent receiving care from the time spent waiting for an administrative decision. The distinction mattered because a long consultation may be clinically necessary, while a long unexplained queue may signal a process problem.\n\nThe hospital made two changes after the pilot. It placed a help desk near the entrance and scheduled laboratory collection windows for patients who had already completed a consultation. Neither measure reduced every delay, and some clinics still had limited staff. But the hospital could now identify where waiting occurred rather than relying on a single average that concealed different experiences.\n\nThe episode illustrates a general difficulty in performance measurement. An indicator is useful only to the extent that it represents the outcome people actually experience. A dashboard may be accurate about the activity it counts and still misleading about the service it claims to describe. Better measurement does not require measuring everything. It requires asking what the chosen number leaves out and whether the omitted part changes the conclusion."
+    },
+    {
+      "passageId": "r007-english-02",
+      "sectionId": "english",
+      "title": "The letter that changed the map",
+      "text": "When a coastal village was added to a district development map, the official boundary followed a road that residents rarely used. The market, school and fishing landing site lay on the other side of a tidal creek. During the dry season, residents crossed by a footbridge; during high tide, they used a longer route through a neighbouring ward. The map was not technically inaccurate: it showed the administrative boundary. Yet the map was being used to decide where a health sub-centre and a bus stop should be located.\n\nA schoolteacher wrote to the planning office with a hand-drawn route map. Rather than arguing that the boundary should be moved, she marked the paths residents used at different times of the year, the location of the boat landing and the homes of people who could not easily cross the creek. The planning office initially treated the letter as anecdotal. A field team later walked the routes with residents and found that the proposed bus stop would be inaccessible to many households during the monsoon.\n\nThe office added a second layer to its map showing seasonal access routes. The administrative boundary remained unchanged. The revised planning map helped the department distinguish legal jurisdiction from practical connectivity. It also changed the bus-stop proposal: the stop was moved to higher ground and a small feeder service was planned for the period when the footbridge was unusable.\n\nThe teacher’s letter did not replace technical data. The field team still used elevation measurements, traffic counts and engineering drawings. But the letter identified a question those datasets had not been designed to answer: how people actually moved through the area over a year. The planning office began inviting local groups to annotate draft maps before a project site was finalised. It did not promise to accept every suggested route; it promised to record why a suggestion was accepted or rejected.\n\nA map is a model of a place, not the place itself. Its usefulness depends on the decision it is intended to support. A legal boundary can be the right representation for tax administration and a poor guide to where a child can reach a clinic. The lesson is not to abandon official maps, but to avoid using one layer as though it answered every planning question."
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "clat-ug27-r007-q001",
+      "passageId": "r007-english-01",
+      "sectionId": "english",
+      "prompt": "Which proposition best captures the passage’s central argument? (Passage: “The clinic that measured the waiting room”)",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Service indicators should represent the full experience relevant to the outcome being claimed."
+        },
+        {
+          "optionId": "o2",
+          "text": "Hospitals should record every movement made by every patient."
+        },
+        {
+          "optionId": "o3",
+          "text": "Average registration time is always a misleading measure."
+        },
+        {
+          "optionId": "o4",
+          "text": "Administrative performance should be judged only by patient complaints."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The original figure measured one queue but did not describe the entire visit.",
+      "difficulty": "easy",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r007-q002",
+      "passageId": "r007-english-01",
+      "sectionId": "english",
+      "prompt": "Why did the wider measure reveal work that was previously invisible? (Passage: “The clinic that measured the waiting room”)",
+      "options": [
+        {
+          "optionId": "o2",
+          "text": "It counted only clinical consultation time."
+        },
+        {
+          "optionId": "o1",
+          "text": "It included directions, laboratory queues and report collection omitted from the original indicator."
+        },
+        {
+          "optionId": "o3",
+          "text": "It removed all differences between patient groups."
+        },
+        {
+          "optionId": "o4",
+          "text": "It replaced token data with continuous individual tracking."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage lists stages not included in the registration-to-consultation figure.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r007-q003",
+      "passageId": "r007-english-01",
+      "sectionId": "english",
+      "prompt": "How did the team respond to the cost objection? (Passage: “The clinic that measured the waiting room”)",
+      "options": [
+        {
+          "optionId": "o3",
+          "text": "It required each patient to carry a location device."
+        },
+        {
+          "optionId": "o2",
+          "text": "It abandoned the measurement exercise entirely."
+        },
+        {
+          "optionId": "o1",
+          "text": "It used sampling and broad process stages instead of continuous tracking of individuals."
+        },
+        {
+          "optionId": "o4",
+          "text": "It treated all consultation time as administrative delay."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The team limited the burden by sampling visits and distinguishing waiting from care.",
+      "difficulty": "moderate",
+      "competency": "purpose"
+    },
+    {
+      "questionId": "clat-ug27-r007-q004",
+      "passageId": "r007-english-01",
+      "sectionId": "english",
+      "prompt": "Which finding would most weaken the claim that the new system improved patient experience? (Passage: “The clinic that measured the waiting room”)",
+      "options": [
+        {
+          "optionId": "o4",
+          "text": "The hospital identified a previously uncounted delay."
+        },
+        {
+          "optionId": "o2",
+          "text": "Patients could find the help desk more easily."
+        },
+        {
+          "optionId": "o3",
+          "text": "The laboratory collection schedule reduced repeat queuing."
+        },
+        {
+          "optionId": "o1",
+          "text": "The registration queue fell, but total visit time and access barriers remained unchanged."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The central claim concerns the entire experience, so unchanged total time would undercut it.",
+      "difficulty": "challenging",
+      "competency": "weaken"
+    },
+    {
+      "questionId": "clat-ug27-r007-q005",
+      "passageId": "r007-english-01",
+      "sectionId": "english",
+      "prompt": "The phrase “a dashboard may be accurate about the activity it counts” implies that: (Passage: “The clinic that measured the waiting room”)",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "accurate data can still support a misleading conclusion if the indicator is too narrow."
+        },
+        {
+          "optionId": "o2",
+          "text": "dashboards should never be used in public services."
+        },
+        {
+          "optionId": "o3",
+          "text": "patients are unable to report their experience reliably."
+        },
+        {
+          "optionId": "o4",
+          "text": "every performance indicator must include all possible variables."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "A figure can be technically correct yet fail to represent the broader service outcome.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r007-q006",
+      "passageId": "r007-english-01",
+      "sectionId": "english",
+      "prompt": "Which measurement choice is most consistent with the author’s reasoning? (Passage: “The clinic that measured the waiting room”)",
+      "options": [
+        {
+          "optionId": "o2",
+          "text": "Replace all performance data with a satisfaction poll."
+        },
+        {
+          "optionId": "o1",
+          "text": "Track the full sequence of service stages using proportionate sampling and patient feedback."
+        },
+        {
+          "optionId": "o3",
+          "text": "Use only the time spent at the registration desk."
+        },
+        {
+          "optionId": "o4",
+          "text": "Compare hospitals by the number of tokens printed."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The author supports fit-for-purpose measurement that reveals omitted stages without excessive surveillance.",
+      "difficulty": "easy",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r007-q007",
+      "passageId": "r007-english-02",
+      "sectionId": "english",
+      "prompt": "What did the teacher’s letter contribute to the planning process? (Passage: “The letter that changed the map”)",
+      "options": [
+        {
+          "optionId": "o3",
+          "text": "It replaced the need for engineering measurements."
+        },
+        {
+          "optionId": "o2",
+          "text": "It established that the district boundary was legally invalid."
+        },
+        {
+          "optionId": "o1",
+          "text": "It showed seasonal routes and practical access patterns missing from the administrative map."
+        },
+        {
+          "optionId": "o4",
+          "text": "It proved that residents used only one route throughout the year."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The letter identified seasonal movement and access constraints absent from the official boundary layer.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r007-q008",
+      "passageId": "r007-english-02",
+      "sectionId": "english",
+      "prompt": "Why did the office keep the administrative boundary unchanged? (Passage: “The letter that changed the map”)",
+      "options": [
+        {
+          "optionId": "o4",
+          "text": "The planning office rejected every part of the letter."
+        },
+        {
+          "optionId": "o2",
+          "text": "Residents had no reliable knowledge of their own routes."
+        },
+        {
+          "optionId": "o3",
+          "text": "The field team found seasonal access irrelevant."
+        },
+        {
+          "optionId": "o1",
+          "text": "The letter concerned practical connectivity rather than the legal location of the boundary."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The revised map added a functional layer without changing the legal boundary.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r007-q009",
+      "passageId": "r007-english-02",
+      "sectionId": "english",
+      "prompt": "Which statement best describes the role of local knowledge? (Passage: “The letter that changed the map”)",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It identifies questions and patterns that technical datasets may not have been designed to capture."
+        },
+        {
+          "optionId": "o2",
+          "text": "It should replace measurements and engineering drawings."
+        },
+        {
+          "optionId": "o3",
+          "text": "It is useful only when it changes a legal boundary."
+        },
+        {
+          "optionId": "o4",
+          "text": "It can determine every final planning decision without review."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The field team combined residents’ route knowledge with technical evidence.",
+      "difficulty": "challenging",
+      "competency": "function"
+    },
+    {
+      "questionId": "clat-ug27-r007-q010",
+      "passageId": "r007-english-02",
+      "sectionId": "english",
+      "prompt": "Which additional finding would most strongly support the revised bus-stop location? (Passage: “The letter that changed the map”)",
+      "options": [
+        {
+          "optionId": "o2",
+          "text": "The old stop was closer to the district office."
+        },
+        {
+          "optionId": "o1",
+          "text": "The elevated location remains reachable by the largest number of households during high tide."
+        },
+        {
+          "optionId": "o3",
+          "text": "The new stop requires a longer name on the map."
+        },
+        {
+          "optionId": "o4",
+          "text": "Residents prefer a different bus colour."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The problem was seasonal inaccessibility, so year-round reach is decisive.",
+      "difficulty": "moderate",
+      "competency": "evidence"
+    },
+    {
+      "questionId": "clat-ug27-r007-q011",
+      "passageId": "r007-english-02",
+      "sectionId": "english",
+      "prompt": "The passage distinguishes a map’s accuracy from its: (Passage: “The letter that changed the map”)",
+      "options": [
+        {
+          "optionId": "o3",
+          "text": "usefulness for tax administration."
+        },
+        {
+          "optionId": "o2",
+          "text": "ability to display official boundaries."
+        },
+        {
+          "optionId": "o1",
+          "text": "fitness for a particular planning decision."
+        },
+        {
+          "optionId": "o4",
+          "text": "scale and printing quality."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "An accurate boundary map may still be inadequate for planning practical access.",
+      "difficulty": "easy",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r007-q012",
+      "passageId": "r007-english-02",
+      "sectionId": "english",
+      "prompt": "Which practice best follows the planning office’s revised approach? (Passage: “The letter that changed the map”)",
+      "options": [
+        {
+          "optionId": "o4",
+          "text": "Stop using elevation and traffic data in site selection."
+        },
+        {
+          "optionId": "o2",
+          "text": "Allow every suggested route to override engineering standards."
+        },
+        {
+          "optionId": "o3",
+          "text": "Publish only the administrative boundary layer."
+        },
+        {
+          "optionId": "o1",
+          "text": "Invite residents to annotate draft maps and record reasons for accepting or rejecting their proposals."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The office combines local annotation with technical review and transparent reasons.",
+      "difficulty": "moderate",
+      "competency": "application"
+    }
+  ]
+}
