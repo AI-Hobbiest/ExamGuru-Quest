@@ -31,6 +31,8 @@ function validatePaper(paper,options){
   else{
    const ids=q.options.map(o=>String(o&&o.optionId||""));
    if(ids.some(id=>!id)||new Set(ids).size!==ids.length||!q.options.every(o=>o&&typeof o.text==="string"&&o.text.trim()))errors.push(at+" options need unique IDs and text.");
+   const optionTexts=q.options.map(o=>String(o&&o.text||"").toLowerCase().replace(/\s+/g," ").trim());
+   if(new Set(optionTexts).size!==4)errors.push(at+" options must have distinct text.");
    if(!ids.includes(String(q.correctOptionId||"")))errors.push(at+" correctOptionId must match an option.");
   }
   if(!q.explanation||typeof q.explanation!=="string")errors.push(at+" needs an explanation.");
