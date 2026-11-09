@@ -38,3 +38,4 @@ jobs:
           node tests/clat-engine.test.js
           node tests/clat-full-length-draft.test.js
           node tests/clat-full-length-draft-002.test.js
+          node tests/clat-full-length-draft-003.test.js
