@@ -26,6 +26,18 @@
       "sectionId": "english",
       "title": "The letter that changed the map",
       "text": "When a coastal village was added to a district development map, the official boundary followed a road that residents rarely used. The market, school and fishing landing site lay on the other side of a tidal creek. During the dry season, residents crossed by a footbridge; during high tide, they used a longer route through a neighbouring ward. The map was not technically inaccurate: it showed the administrative boundary. Yet the map was being used to decide where a health sub-centre and a bus stop should be located.\n\nA schoolteacher wrote to the planning office with a hand-drawn route map. Rather than arguing that the boundary should be moved, she marked the paths residents used at different times of the year, the location of the boat landing and the homes of people who could not easily cross the creek. The planning office initially treated the letter as anecdotal. A field team later walked the routes with residents and found that the proposed bus stop would be inaccessible to many households during the monsoon.\n\nThe office added a second layer to its map showing seasonal access routes. The administrative boundary remained unchanged. The revised planning map helped the department distinguish legal jurisdiction from practical connectivity. It also changed the bus-stop proposal: the stop was moved to higher ground and a small feeder service was planned for the period when the footbridge was unusable.\n\nThe teacher’s letter did not replace technical data. The field team still used elevation measurements, traffic counts and engineering drawings. But the letter identified a question those datasets had not been designed to answer: how people actually moved through the area over a year. The planning office began inviting local groups to annotate draft maps before a project site was finalised. It did not promise to accept every suggested route; it promised to record why a suggestion was accepted or rejected.\n\nA map is a model of a place, not the place itself. Its usefulness depends on the decision it is intended to support. A legal boundary can be the right representation for tax administration and a poor guide to where a child can reach a clinic. The lesson is not to abandon official maps, but to avoid using one layer as though it answered every planning question."
+    },
+    {
+      "passageId": "r007-english-03",
+      "sectionId": "english",
+      "title": "A museum ticket is not a measure of memory",
+      "text": "A regional museum celebrated a rise in annual visitor numbers after introducing free entry on the first Sunday of each month. The director described the increase as proof that more people were engaging with local history. Teachers welcomed the larger crowds, but museum educators noticed that many visitors spent only a few minutes in the galleries. Some rooms were crowded while others remained nearly empty. The visitor count could not show whether the new audience encountered the collections in a meaningful way.\n\nThe museum conducted a small study. It asked visitors which object they remembered after leaving, whether they had read the display text and whether they had attended a guided activity. The study was not designed to grade visitors or to suggest that every visit must be educational. It was intended to understand whether the museum’s layout and interpretation served people who arrived without a tour. The results indicated that labels were difficult to read in crowded rooms and that families often missed the galleries at the end of the route.\n\nThe museum tested several changes. It introduced shorter labels in two languages, placed seating near objects requiring longer attention and created a quiet route for visitors who preferred not to join a group. A digital guide remained available, but staff did not assume that every visitor wanted to use a phone. The museum also asked local historians to review descriptions of objects linked to contested events. Their comments did not always produce a single agreed interpretation; the museum added context explaining where evidence was uncertain or disputed.\n\nThe director retained visitor numbers because they helped estimate staffing and building capacity. But the annual report began presenting them beside measures of access, participation and visitor feedback. Free entry had widened the door, while changes to interpretation helped people spend time with the material once inside. Neither measure alone could establish whether the museum had fulfilled its public purpose.\n\nThe passage argues against confusing scale with depth. A crowded gallery may indicate popularity, but it does not automatically show learning. Conversely, a visitor who spends ten minutes with one object may have had a valuable experience. Public institutions need indicators, but the indicators should reflect the plurality of outcomes they exist to support."
+    },
+    {
+      "passageId": "r007-english-04",
+      "sectionId": "english",
+      "title": "When a warning becomes noise",
+      "text": "A river authority issued daily alerts during an unusually wet season. At first, the messages were specific: they named the affected villages, stated the likely time of a rise in water level and advised which roads should be avoided. As the season continued, the authority began sending the same broad warning to every district, even when expected conditions differed. Residents initially paid close attention, but many later stopped reading the messages. Local volunteers reported that some households had missed an important warning because it looked like the routine notices that preceded it.\n\nThe authority’s communication team believed that frequent alerts demonstrated caution. Hydrologists disagreed. They explained that a warning has value only if it changes a decision. A message that does not distinguish a watch from an evacuation instruction may create unnecessary movement or, worse, teach people to ignore later messages. The team therefore designed a three-level system. A watch indicated that conditions were being monitored; an advisory named a likely local impact and a precaution; an evacuation message identified the area, deadline and safe route.\n\nThe new system also addressed uncertainty. River forecasts could change as rainfall moved upstream, and the authority did not want to give an impression of precision it did not possess. Each alert included a time of issue, an expected period of validity and a note identifying what could change the forecast. Local radio repeated the message in languages used in affected settlements. Volunteers were asked to help households that did not receive digital messages, but the authority remained responsible for issuing the official warning.\n\nThe change required restraint. The team stopped sending routine messages when there was no meaningful change in risk. It also published corrections when an earlier forecast proved wrong. Some residents disliked receiving fewer updates because they had come to equate frequency with protection. The authority explained that fewer, more actionable messages were intended to preserve attention for moments when action mattered.\n\nWarnings cannot remove a flood or make every forecast accurate. Their purpose is to support decisions under uncertainty. A trustworthy system says what is known, what remains uncertain and what a recipient should do. A message that sounds urgent every day may eventually communicate nothing at all."
     }
   ],
   "questions": [
@@ -364,6 +376,342 @@
       "explanation": "The office combines local annotation with technical review and transparent reasons.",
       "difficulty": "moderate",
       "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r007-q013",
+      "passageId": "r007-english-03",
+      "sectionId": "english",
+      "prompt": "What does the museum’s study attempt to understand? (Passage: “A museum ticket is not a measure of memory”)",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Whether layout and interpretation help visitors engage with collections beyond simply entering the building."
+        },
+        {
+          "optionId": "o2",
+          "text": "Whether visitors should be required to attend guided tours."
+        },
+        {
+          "optionId": "o3",
+          "text": "Whether free admission should be withdrawn."
+        },
+        {
+          "optionId": "o4",
+          "text": "Whether every object can be remembered by every visitor."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The study looks at interpretation, recall and access rather than counting entry alone.",
+      "difficulty": "moderate",
+      "competency": "purpose"
+    },
+    {
+      "questionId": "clat-ug27-r007-q014",
+      "passageId": "r007-english-03",
+      "sectionId": "english",
+      "prompt": "Why did the museum not require every visitor to use a digital guide? (Passage: “A museum ticket is not a measure of memory”)",
+      "options": [
+        {
+          "optionId": "o2",
+          "text": "The digital guide contained no collection information."
+        },
+        {
+          "optionId": "o1",
+          "text": "It recognised that visitors have different preferences and may not want to use a phone."
+        },
+        {
+          "optionId": "o3",
+          "text": "The museum had removed all staff from the galleries."
+        },
+        {
+          "optionId": "o4",
+          "text": "Visitors were prohibited from carrying devices."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The digital guide remained optional rather than being treated as a universal solution.",
+      "difficulty": "challenging",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r007-q015",
+      "passageId": "r007-english-03",
+      "sectionId": "english",
+      "prompt": "How did the museum address disagreement about contested objects? (Passage: “A museum ticket is not a measure of memory”)",
+      "options": [
+        {
+          "optionId": "o3",
+          "text": "It selected whichever interpretation was most popular online."
+        },
+        {
+          "optionId": "o2",
+          "text": "It removed all contested objects from the collection."
+        },
+        {
+          "optionId": "o1",
+          "text": "It added context about uncertainty and disputed evidence rather than forcing a single interpretation."
+        },
+        {
+          "optionId": "o4",
+          "text": "It stopped consulting local historians."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The museum disclosed evidentiary uncertainty instead of suppressing disagreement.",
+      "difficulty": "moderate",
+      "competency": "detail"
+    },
+    {
+      "questionId": "clat-ug27-r007-q016",
+      "passageId": "r007-english-03",
+      "sectionId": "english",
+      "prompt": "Which conclusion is best supported? (Passage: “A museum ticket is not a measure of memory”)",
+      "options": [
+        {
+          "optionId": "o4",
+          "text": "A museum should measure success only through object recall."
+        },
+        {
+          "optionId": "o2",
+          "text": "Visitor counts should be removed from all annual reports."
+        },
+        {
+          "optionId": "o3",
+          "text": "Free admission necessarily reduces educational value."
+        },
+        {
+          "optionId": "o1",
+          "text": "Visitor numbers are useful for capacity planning but insufficient as a measure of meaningful engagement."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The director retained counts but supplemented them with access and participation measures.",
+      "difficulty": "easy",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r007-q017",
+      "passageId": "r007-english-03",
+      "sectionId": "english",
+      "prompt": "What is the main contrast in the final paragraph? (Passage: “A museum ticket is not a measure of memory”)",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Scale of attendance versus depth and variety of visitor experience."
+        },
+        {
+          "optionId": "o2",
+          "text": "Free admission versus paid admission."
+        },
+        {
+          "optionId": "o3",
+          "text": "Digital guides versus printed labels."
+        },
+        {
+          "optionId": "o4",
+          "text": "Local history versus international history."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The conclusion warns against treating popularity as identical to learning.",
+      "difficulty": "moderate",
+      "competency": "structure"
+    },
+    {
+      "questionId": "clat-ug27-r007-q018",
+      "passageId": "r007-english-03",
+      "sectionId": "english",
+      "prompt": "Which proposal would best align with the author’s view? (Passage: “A museum ticket is not a measure of memory”)",
+      "options": [
+        {
+          "optionId": "o2",
+          "text": "Rank every gallery by the number of photographs visitors take."
+        },
+        {
+          "optionId": "o1",
+          "text": "Report attendance alongside accessibility, participation and qualitative visitor feedback."
+        },
+        {
+          "optionId": "o3",
+          "text": "Require every visitor to complete a test before leaving."
+        },
+        {
+          "optionId": "o4",
+          "text": "Measure only the average time spent in the building."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The author advocates multiple measures reflecting the different outcomes museums support.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r007-q019",
+      "passageId": "r007-english-04",
+      "sectionId": "english",
+      "prompt": "What caused residents to pay less attention to the alerts? (Passage: “When a warning becomes noise”)",
+      "options": [
+        {
+          "optionId": "o3",
+          "text": "Hydrologists refused to provide rainfall information."
+        },
+        {
+          "optionId": "o2",
+          "text": "The authority stopped issuing all river forecasts."
+        },
+        {
+          "optionId": "o1",
+          "text": "Broad, repetitive messages made materially different warnings resemble routine notices."
+        },
+        {
+          "optionId": "o4",
+          "text": "The messages were sent only through local radio."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage links message repetition and lack of differentiation to alert fatigue.",
+      "difficulty": "challenging",
+      "competency": "causation"
+    },
+    {
+      "questionId": "clat-ug27-r007-q020",
+      "passageId": "r007-english-04",
+      "sectionId": "english",
+      "prompt": "What is the purpose of the three-level warning system? (Passage: “When a warning becomes noise”)",
+      "options": [
+        {
+          "optionId": "o4",
+          "text": "To guarantee that forecasts never change."
+        },
+        {
+          "optionId": "o2",
+          "text": "To increase the number of messages sent each day."
+        },
+        {
+          "optionId": "o3",
+          "text": "To replace local volunteers with hydrologists."
+        },
+        {
+          "optionId": "o1",
+          "text": "To distinguish monitoring, precautionary advice and evacuation instructions by the action required."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The categories separate different levels of risk and recipient response.",
+      "difficulty": "moderate",
+      "competency": "function"
+    },
+    {
+      "questionId": "clat-ug27-r007-q021",
+      "passageId": "r007-english-04",
+      "sectionId": "english",
+      "prompt": "Why did the authority include validity periods and uncertainty notes? (Passage: “When a warning becomes noise”)",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "To prevent recipients from treating changing forecasts as exact and permanent predictions."
+        },
+        {
+          "optionId": "o2",
+          "text": "To avoid identifying when a warning was issued."
+        },
+        {
+          "optionId": "o3",
+          "text": "To shift responsibility for official alerts to radio stations."
+        },
+        {
+          "optionId": "o4",
+          "text": "To make all messages identical across districts."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Forecasts can change, so time and uncertainty information improve interpretation.",
+      "difficulty": "easy",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r007-q022",
+      "passageId": "r007-english-04",
+      "sectionId": "english",
+      "prompt": "Which practice would most undermine the new system? (Passage: “When a warning becomes noise”)",
+      "options": [
+        {
+          "optionId": "o2",
+          "text": "Issuing a correction when a forecast changes."
+        },
+        {
+          "optionId": "o1",
+          "text": "Sending the highest-level evacuation instruction for every minor change in rainfall."
+        },
+        {
+          "optionId": "o3",
+          "text": "Naming the affected settlement and safe route."
+        },
+        {
+          "optionId": "o4",
+          "text": "Stopping routine alerts when risk has not materially changed."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "Unnecessary high-level alerts would erase the distinctions the system was designed to preserve.",
+      "difficulty": "moderate",
+      "competency": "weaken"
+    },
+    {
+      "questionId": "clat-ug27-r007-q023",
+      "passageId": "r007-english-04",
+      "sectionId": "english",
+      "prompt": "The phrase “a message that sounds urgent every day may eventually communicate nothing” means: (Passage: “When a warning becomes noise”)",
+      "options": [
+        {
+          "optionId": "o3",
+          "text": "residents cannot understand technical forecasts."
+        },
+        {
+          "optionId": "o2",
+          "text": "urgent messages should never be issued more than once."
+        },
+        {
+          "optionId": "o1",
+          "text": "excessive urgency can reduce attention to genuinely critical warnings."
+        },
+        {
+          "optionId": "o4",
+          "text": "warnings are useful only when every prediction is exact."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage describes alert fatigue caused by repeated, uncalibrated urgency.",
+      "difficulty": "moderate",
+      "competency": "interpretation"
+    },
+    {
+      "questionId": "clat-ug27-r007-q024",
+      "passageId": "r007-english-04",
+      "sectionId": "english",
+      "prompt": "Which principle best summarises the author’s view of public warnings? (Passage: “When a warning becomes noise”)",
+      "options": [
+        {
+          "optionId": "o4",
+          "text": "Forecast uncertainty should be hidden from recipients."
+        },
+        {
+          "optionId": "o2",
+          "text": "The safest policy is to issue the maximum number of messages."
+        },
+        {
+          "optionId": "o3",
+          "text": "Authorities should avoid corrections to preserve confidence."
+        },
+        {
+          "optionId": "o1",
+          "text": "Communications should be calibrated to evidence and linked to a clear action."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The conclusion emphasises transparency about knowledge, uncertainty and action.",
+      "difficulty": "challenging",
+      "competency": "central-idea"
     }
   ]
 }
