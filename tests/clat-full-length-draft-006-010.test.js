@@ -59,7 +59,7 @@ for (const paper of batch) {
   );
   for (const q of qt) {
     const answer = q.options.find(o => o.optionId === q.correctOptionId).text;
-    const normalise = s => s.toLowerCase().replace(/\\bworking\\s+/g," ").replace(/\\s+/g," ").trim();
+    const normalise = s => s.toLowerCase().replace(/\bworking\s+/g," ").replace(/\s+/g," ").trim();
     assert.ok(normalise(q.explanation).includes(normalise(answer)), q.questionId);
   }
 }
