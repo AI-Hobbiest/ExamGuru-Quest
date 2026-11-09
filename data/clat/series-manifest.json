@@ -419,7 +419,7 @@
     "publishedPapers": 0,
     "uniqueQuestionsDrafted": 600,
     "uniqueQuestionsTarget": 6000,
-    "lastAudit": "Live batch audit reconciled to committed paper files; editorial QA remains pending.",
+    "lastAudit": "Batch 1 files reconciled; all new drafts remain unpublished pending editorial QA.",
     "asOf": "2026-11-09"
   },
   "batchProduction": {
@@ -431,10 +431,11 @@
       4,
       5
     ],
-    "status": "drafts-assembled-editorial-qa-pending",
+    "status": "drafts-assembled",
     "draftFilesPresent": 5,
     "fullLengthDrafts": 5,
-    "structuralChecksPassing": 4,
+    "localStructuralChecksPassing": 5,
+    "latestWorkflowConclusion": "failure",
     "editorialApproval": 0,
     "studentFacing": 0
   }
