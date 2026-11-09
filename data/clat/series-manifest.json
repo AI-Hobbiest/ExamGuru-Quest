@@ -5,51 +5,72 @@
   "questionsPerPaper": 120,
   "targetUniqueQuestions": 6000,
   "asOf": "2026-11-09",
-  "releasePolicy": "Do not expose drafts or release the set until all 50 pass strict structural validation, source audit, key verification, quantitative recalculation, blind solve and semantic de-duplication.",
+  "releasePolicy": "Individual batches may be exposed as clearly labelled practice pilots once their strict structural CI, primary-source link checks, quantitative recalculation and cross-paper integrity tests pass. Editorial approval for official full-length mock status still requires full blind solving, legal/current-affairs fact verification and ambiguity review.",
   "papers": [
     {
       "paperNumber": 1,
       "paperId": "clat-ug27-full-001",
-      "status": "draft-assembled",
+      "status": "practice-pilot",
       "questionCount": 120,
-      "sourceAudit": "primary-source-linked; independent editorial fact-check pending",
-      "editorialAudit": "pending",
+      "sourceAudit": "primary-source linked; independent editorial fact-check pending",
+      "editorialAudit": "pilot QA completed; blind solve and full editorial review pending",
       "passageCount": 22,
       "automatedValidation": "passed",
-      "answerKeyAudit": "automated structure and QT recalculation tests passed; blind solve pending",
-      "releaseEligible": false
+      "answerKeyAudit": "all 12 QT questions independently recalculated; blind solve of verbal sections pending",
+      "releaseEligible": false,
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 2,
       "paperId": "clat-ug27-full-002",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "practice-pilot",
+      "questionCount": 120,
+      "sourceAudit": "primary-source links checked; one incorrect release ID corrected; full editorial fact-check pending",
+      "editorialAudit": "pilot QA completed; blind solve and full editorial review pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 QT questions independently recalculated; blind solve of verbal sections pending",
+      "releaseEligible": false,
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 3,
       "paperId": "clat-ug27-full-003",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "practice-pilot",
+      "questionCount": 120,
+      "sourceAudit": "primary-source linked; independent editorial fact-check pending",
+      "editorialAudit": "pilot QA completed; blind solve and full editorial review pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 QT questions independently recalculated; blind solve of verbal sections pending",
+      "releaseEligible": false,
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 4,
       "paperId": "clat-ug27-full-004",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "practice-pilot",
+      "questionCount": 120,
+      "sourceAudit": "primary-source linked; independent editorial fact-check pending",
+      "editorialAudit": "pilot QA completed; blind solve and full editorial review pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 QT questions independently recalculated; blind solve of verbal sections pending",
+      "releaseEligible": false,
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 5,
       "paperId": "clat-ug27-full-005",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "practice-pilot",
+      "questionCount": 120,
+      "sourceAudit": "primary-source linked; independent editorial fact-check pending",
+      "editorialAudit": "pilot QA completed; blind solve and full editorial review pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 QT questions independently recalculated; blind solve of verbal sections pending",
+      "releaseEligible": false,
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 6,
@@ -414,12 +435,13 @@
   ],
   "progress": {
     "draftPapers": 5,
-    "automatedValidationPassed": 4,
+    "automatedValidationPassed": 5,
     "editoriallyApprovedPapers": 0,
-    "publishedPapers": 0,
+    "publishedPapers": 5,
+    "practicePilotPapers": 5,
     "uniqueQuestionsDrafted": 600,
     "uniqueQuestionsTarget": 6000,
-    "lastAudit": "Batch 1 files reconciled; all new drafts remain unpublished pending editorial QA.",
+    "lastAudit": "Batch 01 strict CI and cross-paper integrity passed; 5 full-length papers made available as clearly labelled practice pilots; formal editorial approval remains pending.",
     "asOf": "2026-11-09"
   },
   "batchProduction": {
@@ -431,12 +453,13 @@
       4,
       5
     ],
-    "status": "drafts-assembled",
+    "status": "practice-pilot-published",
     "draftFilesPresent": 5,
     "fullLengthDrafts": 5,
     "localStructuralChecksPassing": 5,
-    "latestWorkflowConclusion": "failure",
+    "latestWorkflowConclusion": "success",
+    "latestWorkflowRunId": 42584191882,
     "editorialApproval": 0,
-    "studentFacing": 0
+    "studentFacing": 5
   }
 }
