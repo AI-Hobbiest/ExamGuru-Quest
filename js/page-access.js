@@ -4,7 +4,11 @@
   const key="c10playground_static_student_v1";
   let session=null;
   try{session=JSON.parse(sessionStorage.getItem(key)||"null");}catch(_){}
-  if(!session||typeof session.username!=="string"){location.replace("./index.html");return;}
+  if(!session||typeof session.username!=="string"){
+    const page=location.pathname.split("/").filter(Boolean).pop()||"index.html";
+    location.replace(page==="clat.html"?"./clat-login.html":"./index.html");
+    return;
+  }
   if(session.role==="parent"){location.replace("./parent.html");return;}
   if(window.C10StudentAuth&&window.C10StudentAuth.restoreSession){
     window.C10StudentAuth.restoreSession().then(account=>{
