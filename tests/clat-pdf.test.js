@@ -14,6 +14,7 @@ for(const paper of papers){
   assert.ok(html.includes("AI-ENTHUSIAST"));
   assert.ok(html.includes("Answer Recording Sheet"));
   assert.ok(html.includes("Save as PDF"));
+  assert.ok(html.includes("Not an official Consortium of NLUs paper"),"PDF must be identified as an independent practice pilot");
   assert.ok(html.includes("120 minutes"));
   assert.ok(!html.includes("correctOptionId"),"the question PDF must not expose answer-key fields");
   assert.ok(!html.includes('class="explanation"'),"the question PDF must not expose explanation blocks");
