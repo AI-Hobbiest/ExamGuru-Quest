@@ -195,5 +195,77 @@
       "explanationErrors": [],
       "status": "draft-unpublished"
     }
+  ],
+  "latestCi": [
+    {
+      "run": 42570864821,
+      "sha": "a301e25a949e061aded288e39bc1fe7f2ca64bfa",
+      "status": "completed",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 129007663029,
+          "name": "clat-validation",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "run": 42570859238,
+      "sha": "c27fd5adf3ccad801f40c6b4a0e3ee91051755a9",
+      "status": "completed",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 129007645156,
+          "name": "clat-validation",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "run": 42570853415,
+      "sha": "d3b89ff18fdb46adc0d358cbc57e2e5ec400a66a",
+      "status": "completed",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 129007625581,
+          "name": "clat-validation",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "run": 42570799820,
+      "sha": "0c533b2a95a4c48427d22bf4eb77a2db0e2fe7ae",
+      "status": "completed",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 129007457288,
+          "name": "clat-validation",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "run": 42570081531,
+      "sha": "ccce650c2c1174e2ad260b807fd3f8b5336d1db8",
+      "status": "completed",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 129005196993,
+          "name": "clat-validation",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    }
   ]
 }
