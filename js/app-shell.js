@@ -130,12 +130,13 @@
   async function createNav(){
     if(document.getElementById("c10Sidebar"))return;
     const current=getLocation(),auth=await authState();
+    const clatExperience=current.file==="clat.html"||current.file==="clat-login.html"||(auth.role==="student"&&String(auth.classId||"").toUpperCase()==="CLAT");
     applyHelpRoleVisibility(auth);
     const subjectConfig=auth.role==="student"?await configuredSubjects(auth.classId):null;
     const sidebar=node("aside","c10-sidebar");sidebar.id="c10Sidebar";sidebar.setAttribute("aria-label","Main navigation");
     const sidebarTop=node("div","c10-sidebar-top");
     const brand=node("div","c10-brand");const mark=node("div","c10-brand-mark");const logo=node("img");logo.src="./assets/examguru-saraswati.svg";logo.alt="";logo.width=38;logo.height=38;mark.appendChild(logo);brand.appendChild(mark);
-    const brandCopy=node("div","c10-brand-copy");brandCopy.append(node("div","c10-brand-title","ExamGuru Quest"),node("div","c10-brand-sub","Learn · Practise · Level up"));brand.appendChild(brandCopy);sidebarTop.appendChild(brand);
+    const brandCopy=node("div","c10-brand-copy");brandCopy.append(node("div","c10-brand-title","ExamGuru Quest"),node("div","c10-brand-sub",clatExperience?"AI-Enthusiast":"Learn · Practise · Level up"));brand.appendChild(brandCopy);sidebarTop.appendChild(brand);
     const identity=node("div","c10-user-card");
     identity.append(node("div","c10-user-name",auth.role==="guest"?"Welcome, learner":(auth.username||"Student")));
     identity.append(node("div","c10-user-class",auth.role==="admin"?"Administrator":auth.role==="student"?(String(auth.classId||"").toUpperCase()==="CLAT"?"CLAT UG 2027":"Class "+String(auth.classId||"not assigned")):auth.role==="parent"?"Parent / Guardian":"Sign in to begin"));
@@ -151,7 +152,7 @@
     const groups=new Map();
     visibleLinks.forEach(item=>{if(item.group){if(!groups.has(item.group))groups.set(item.group,[]);groups.get(item.group).push(item);}});
     const renderLink=item=>{
-      const link=node("a","c10-nav-link");link.href=item.href;
+      const link=node("a","c10-nav-link");link.href=auth.role==="guest"&&current.file==="clat-login.html"&&item.label==="Sign in"?"./clat-login.html":item.href;
       if(isActive(item,current)){link.classList.add("active");link.setAttribute("aria-current","page");}
       link.append(node("span","c10-nav-icon",item.icon),node("span","c10-nav-link-label",item.label));
       link.addEventListener("click",()=>closeMenu());return link;
@@ -188,7 +189,7 @@
     const mobileBrand=node("span","c10-topbar-brand"),mobileLogo=node("img");
     mobileLogo.src="./assets/examguru-saraswati.svg";mobileLogo.alt="";mobileLogo.width=32;mobileLogo.height=32;mobileBrand.appendChild(mobileLogo);
     const mobileCopy=node("div","c10-topbar-copy");
-    mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":auth.role==="parent"?"Parent":String(auth.classId||"").toUpperCase()==="CLAT"?"CLAT UG 2027":"Class "+String(auth.classId||"not assigned"))));
+    mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",clatExperience?"AI-Enthusiast · CLAT UG 2027":auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":auth.role==="parent"?"Parent":"Class "+String(auth.classId||"not assigned"))));
     mobileBar.append(toggle,mobileBrand,mobileCopy);
     if(auth.role!=="guest"){
       const logout=node("button","c10-header-signout","↪ Sign out");
@@ -198,7 +199,7 @@
         try{if(window.C10Api&&window.C10Api.isAuthenticated())await window.C10Api.logout();}catch(_){}
         if(window.C10StudentAuth&&window.C10StudentAuth.logout)window.C10StudentAuth.logout();
         try{sessionStorage.removeItem("c10playground_static_student_v1");sessionStorage.removeItem("c10playground_api_session");sessionStorage.removeItem("examguru_mvp_admin_session_v1");}catch(_){}
-        location.replace("./index.html");
+        location.replace(clatExperience?"./clat-login.html":"./index.html");
       });
       mobileBar.appendChild(logout);
     }
