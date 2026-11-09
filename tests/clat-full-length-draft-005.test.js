@@ -13,6 +13,8 @@ assert.equal(new Set(paper.passages.map(p=>p.passageId)).size,23);
 assert.ok(new Set(paper.passages.filter(p=>p.sectionId==="current-affairs").map(p=>p.domain)).size>=4);
 for(const q of paper.questions){assert.equal(new Set(q.options.map(o=>o.optionId)).size,4);assert.ok(q.explanation.trim().length>=30,q.questionId);}
 assert.deepEqual(Object.fromEntries(["o1","o2","o3","o4"].map(k=>[k,paper.questions.filter(q=>q.correctOptionId===k).length])),{o1:30,o2:30,o3:30,o4:30});
+assert.deepEqual(Object.fromEntries(["easy","moderate","challenging"].map(k=>[k,paper.questions.filter(q=>q.difficulty===k).length])),{easy:27,moderate:72,challenging:21});
+for(const q of paper.questions){assert.equal(new Set(q.options.map(o=>o.text.toLowerCase().replace(/\s+/g," ").trim())).size,4,"duplicate option text: "+q.questionId);}
 let run=1;for(let i=1;i<paper.questions.length;i++){run=paper.questions[i].correctOptionId===paper.questions[i-1].correctOptionId?run+1:1;assert.ok(run<=4);}
 const answer=id=>{const q=paper.questions.find(x=>x.questionId==="clat-ug27-p005-q"+id);return q.options.find(o=>o.optionId===q.correctOptionId).text;};
 assert.equal(answer("109"),"₹57,417 crore.");
