@@ -18,8 +18,8 @@ function renderLibrary(){
   const title=document.createElement("h3");title.textContent=item.title;
   const desc=document.createElement("p");desc.className="clat-muted";desc.textContent=item.subtitle||"CLAT practice paper";
   const meta=document.createElement("div");meta.className="clat-meta";meta.textContent=item.questions.length+" questions · "+(item.durationMinutes||120)+" minutes";
-  const btn=document.createElement("button");btn.className="clat-btn";btn.textContent="Start diagnostic";btn.disabled=!validation.valid;btn.addEventListener("click",()=>start(item));
-  const note=document.createElement("p");note.className="clat-muted";note.textContent=validation.valid?"Original practice material · answer explanations included":validation.errors.slice(0,2).join(" ");
+  const btn=document.createElement("button");btn.className="clat-btn";btn.textContent=item.questions.length===120?"Start full-length practice":"Start diagnostic";btn.disabled=!validation.valid;btn.addEventListener("click",()=>start(item));
+  const note=document.createElement("p");note.className="clat-muted";note.textContent=validation.valid?(item.questions.length===120?"Full-length practice pilot · answer explanations included":"Diagnostic practice · answer explanations included"):validation.errors.slice(0,2).join(" ");
   card.append(title,desc,meta,btn,note);root.appendChild(card);
  });
 }
@@ -97,7 +97,7 @@ async function init(){
  try{
   const response=await fetch("./data/clat/model-papers.json",{cache:"no-store"});if(!response.ok)throw Error("Model paper library returned HTTP "+response.status);
   library=await response.json();if(library.kind!=="clat-model-paper-library"||!Array.isArray(library.papers))throw Error("CLAT model paper library is invalid.");
-  renderLibrary();setStatus("Loaded "+library.papers.length+" diagnostic papers. Full-length CLAT mocks will use the same 120-question engine.");
+  renderLibrary();setStatus("Loaded "+library.papers.length+" CLAT practice papers, including "+library.papers.filter(p=>p.questions.length===120).length+" full-length practice pilots.");
   loadResume();
  }catch(error){setStatus("Unable to load CLAT practice: "+error.message);}
 }
