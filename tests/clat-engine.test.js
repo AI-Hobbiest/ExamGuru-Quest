@@ -10,15 +10,22 @@ assert.equal(engine.negativeMark,-0.25);
 assert.equal(engine.sections.length,5);
 assert.equal(typeof engine.validateLibrary,"function");
 assert.deepEqual(engine.sections.map(s=>s.target),[24,30,30,24,12]);
-assert.equal(library.papers.length,2);
+assert.equal(library.papers.length,7);
 for(const paper of library.papers){
  const result=engine.validatePaper(paper);
  assert.equal(result.valid,true,result.errors.join("; "));
- assert.equal(result.totalQuestions,25);
- const strict=engine.validatePaper(paper,{strictCLAT:true});
- assert.equal(strict.valid,false,"Short diagnostics must never pass as full CLAT papers");
- assert.ok(strict.errors.some(message=>message.includes("exactly 120 questions")));
- assert.deepEqual(Object.values(result.counts),[5,5,5,5,5]);
+ if(paper.durationMinutes===25){
+  assert.equal(result.totalQuestions,25);
+  const strict=engine.validatePaper(paper,{strictCLAT:true});
+  assert.equal(strict.valid,false,"Short diagnostics must never pass as full CLAT papers");
+  assert.ok(strict.errors.some(message=>message.includes("exactly 120 questions")));
+  assert.deepEqual(Object.values(result.counts),[5,5,5,5,5]);
+ }else{
+  assert.equal(result.totalQuestions,120);
+  const strict=engine.validatePaper(paper,{strictCLAT:true});
+  assert.equal(strict.valid,true,strict.errors.join("; "));
+  assert.deepEqual(Object.values(result.counts),[24,30,30,24,12]);
+ }
 }
 const paper=library.papers[0],questions=paper.questions.slice(0,4);
 const answers={
