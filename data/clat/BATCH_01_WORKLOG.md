@@ -1,27 +1,54 @@
-# CLAT UG 2027 — Batch 01 Work Log
+# CLAT UG 2027 — Batch 01 Review & Practice Pilot
 
 **Batch:** Papers 001–005  
-**Target:** 5 full-length papers / 600 questions  
-**As of:** 9 November 2026
+**As of:** 9 November 2026  
+**Practice release:** 5 full-length papers / 600 questions
 
-## Live repository audit
+## Completed corrections and verification
 
-- Draft files present: 5 of 5.
-- Full-length files with exactly 120 questions: 5 of 5.
-- Files passing the local structure audit (section split, keys, passage word bands and explanation length): 4.
-- Total questions present in the five target files: 600.
-- Editorially approved: 0.
-- Student-facing: 0.
+- Confirmed five full-length JSON papers, each with 120 questions, 120 minutes and +1 / −0.25 / 0 marking.
+- Confirmed the selected 24 / 30 / 30 / 24 / 12 section split in all five papers; this sits within the Consortium's published section ranges.
+- Confirmed 30 answer keys per option in every paper.
+- Recalculated all 60 Quantitative Techniques answers from their supplied tables/data sets; no answer-key arithmetic discrepancy remained.
+- Checked 600 question stems and 114 passages for exact duplicates; all are unique after correction.
+- Corrected Paper 005 Q112's duplicated option text.
+- Reworded the repeated generic logical-reasoning question stem in Papers 002, 003 and 005.
+- Recalibrated Paper 005 difficulty to 27 easy / 72 moderate / 21 challenging.
+- Corrected Paper 002's Fast Track Special Courts PIB source URL to release ID 2332483.
+- Added strict duplicate-option validation and a five-paper cross-bank integrity test.
 
-## Paper-level results
-- Paper 1: 120 questions; 22 passages/data sets; section counts {"english":24,"current-affairs":30,"legal":30,"logical":24,"quantitative":12}; key counts {"o1":30,"o2":30,"o3":30,"o4":30}; passage-band errors 0; short explanations 0.
-- Paper 2: 120 questions; 23 passages/data sets; section counts {"english":24,"current-affairs":30,"legal":30,"logical":24,"quantitative":12}; key counts {"o1":30,"o2":30,"o3":30,"o4":30}; passage-band errors 0; short explanations 0.
-- Paper 3: 120 questions; 23 passages/data sets; section counts {"english":24,"current-affairs":30,"legal":30,"logical":24,"quantitative":12}; key counts {"o1":30,"o2":30,"o3":30,"o4":30}; passage-band errors 0; short explanations 0.
-- Paper 4: 120 questions; 23 passages/data sets; section counts {"english":24,"current-affairs":30,"legal":30,"logical":24,"quantitative":12}; key counts {"o1":30,"o2":30,"o3":30,"o4":30}; passage-band errors 0; short explanations 0.
-- Paper 5: 120 questions; 23 passages/data sets; section counts {"english":24,"current-affairs":30,"legal":30,"logical":24,"quantitative":12}; key counts {"o1":30,"o2":30,"o3":30,"o4":30}; passage-band errors 0; short explanations 0.
+## Batch metrics
 
-## Remaining acceptance gates
-Automated structural checks do not constitute editorial approval. Each paper still requires source verification, independent blind solving, legal/current-affairs fact checks, independent recalculation of quantitative items, ambiguity and answer-leakage review, and semantic duplicate review across the 6,000-question series. No draft is published to students before all release gates pass.
+| Metric | Result |
+|---|---:|
+| Full-length papers | 5 |
+| Questions | 600 |
+| Passages/data sets | 114 |
+| Exact duplicate question stems | 0 |
+| Exact duplicate passage texts | 0 |
+| Duplicate option text | 0 |
+| QT items independently recalculated | 60 / 60 |
+| Strict automated validation | 5 / 5 |
+| Editorially approved as official mocks | 0 |
+| Student-facing practice pilots | 5 |
+
+## Paper difficulty
+
+| Paper | Easy | Moderate | Challenging |
+|---|---:|---:|---:|
+| 001 | 36 | 53 | 31 |
+| 002 | 28 | 60 | 32 |
+| 003 | 29 | 60 | 31 |
+| 004 | 30 | 59 | 31 |
+| 005 | 27 | 72 | 21 |
+
+## Important editorial caveat
+
+These five papers are available as clearly labelled **practice pilots**, not certified or formally approved full-length mock exams. The automated gate, structure, answer distribution, quantitative calculations and exact uniqueness checks pass. A complete independent blind solve of all 480 verbal/current-affairs questions, full legal reasoning review and semantic near-duplicate review remain outside this automated release gate and must continue as editorial QA.
+
+Current-affairs coverage is weighted heavily toward Indian government announcements and factual recall. Batch 02 authoring must broaden world affairs, international institutions, arts/culture, science and historically significant events, and use more inference/application questions rather than relying on fact lookup.
 
 ## CI
-Recent workflow runs are recorded in `data/clat/BATCH_01_AUDIT.json`. A passing run is required before the batch is considered structurally validated.
+
+- Latest strict CLAT validation run: [42584191882](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42584191882) — **success**.
+- Cross-paper test passed: 600 unique stems, 114 unique passages, distinct option text.
