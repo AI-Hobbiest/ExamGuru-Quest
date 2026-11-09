@@ -14,12 +14,12 @@
 
 | Metric | Current result |
 |---|---:|
-| Full-length papers drafted | 5 |
-| Questions drafted | 600 |
-| Strict automated validation | 5 / 5 |
-| Cross-paper unique question stems | 600 / 600 |
-| Unique passages | 114 / 114 |
-| Quantitative items independently recalculated | 60 / 60 |
+| Full-length papers drafted | 10 |
+| Questions drafted | 1,200 |
+| Strict automated validation | 10 / 10 |
+| Cross-paper unique question stems | 1,200 / 1,200 |
+| Unique passages | 229 / 229 |
+| Quantitative items independently recalculated | 120 / 120 |
 | Practice pilots available to students | 5 |
 | Editorially approved official mock papers | 0 |
 | Target full-length papers | 50 |
@@ -49,3 +49,22 @@ A complete independent blind solve of all 540 English, Current Affairs, Legal an
 - Reduce direct fact-recall dependence by testing implications, institutions, context and competing arguments.
 - Enforce unique stems, unique option texts, answer-key balance and the calibrated difficulty band at generation time.
 - Keep QT data sets and calculations independently checkable.
+
+
+## Batch 02 — Papers 006–010
+
+- Five additional full-length drafts, 120 questions each; 600 new questions.
+- Exact section split in each paper: English 24; Current Affairs & GK 30; Legal Reasoning 30; Logical Reasoning 24; Quantitative Techniques 12.
+- 23 passages/data sets per paper; CA passages span multiple domains and include dated source metadata.
+- Answer-key positions balanced at 30 per option per paper; difficulty mix is 24 easy / 72 moderate / 24 challenging.
+- All 60 QT answers were recalculated from the supplied datasets and checked against the answer key and rationale.
+- Exact question-stem and passage uniqueness passed against Papers 001–005 and within Papers 006–010.
+- Primary-source metadata corrections include the Woman Farmer and Quantum Year resolution dates, India–New Zealand FTA in-force status, India–EU FTA announcement, India–Oman CEPA in-force status and Indigenous participation resolution link.
+- Dedicated regression test: `tests/clat-full-length-draft-006-010.test.js`.
+- Strict CLAT CI passed on [GitHub Actions run 42617857546](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42617857546).
+
+**Release status:** Papers 006–010 are committed as `draft-unpublished` JSONs. The student-facing library remains unchanged at five practice pilots. Blind solving, semantic near-duplicate review, distractor-quality review, and full source/fact adjudication remain open. Automated structural success is not editorial approval.
+
+## Next production target
+
+Proceed with Papers 011–015. The 50-paper series is now at **10 / 50 papers (1,200 / 6,000 questions)**.
