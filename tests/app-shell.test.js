@@ -152,7 +152,7 @@ assert.ok(nav.includes('clatHref:"./clat.html#library"')&&nav.includes('clatPage
 assert.ok(nav.includes('label:"CLAT UG 2027",group:"Entrance Exams"')&&nav.includes('classIds:["CLAT"]'),"the working CLAT paper library is restricted to CLAT accounts");
 assert.ok(nav.includes('disabled:true,status:"Coming soon",classIds:["10"]'),"Class 10 entrance-exam items are disabled placeholders without sample-paper links");
 for(const exam of ["JEE Main & Advanced","NEET UG","CUET UG","NDA (10+2)","IPMAT"])assert.ok(nav.includes('label:"'+exam+'"'),"Class 10 Entrance Exams includes "+exam);
-assert.ok(nav.includes('isClatStudent&&!["CLAT UG 2027","Assessment Test","Study Library","Learning Hub","FAQ & Guide"]'),"CLAT students receive the Assessment, Study Pack and Learning Hub navigation");
+assert.ok(nav.includes('isClatStudent&&!["CLAT UG 2027","Dashboard","Assessment Test","Study Library","Learning Hub","FAQ & Guide"]'),"CLAT students receive the Assessment, Study Pack and Learning Hub navigation");
 assert.ok(nav.includes("applyClatAttribution")&&nav.includes("AI-Enthusiast"),"shared learning pages replace the personal attribution for CLAT students");
 assert.ok(css.includes(".c10-nav-link.is-disabled")&&css.includes(".c10-nav-link-status"),"Coming soon entrance-exam entries are visibly non-interactive");
 assert.ok(nav.includes('clatHref:"./clat-dashboard.html"')&&nav.includes('clatPage:"clat-dashboard.html"'),"CLAT students have a dedicated dashboard destination");
