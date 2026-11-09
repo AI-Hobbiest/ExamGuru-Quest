@@ -26,6 +26,7 @@ jobs:
       - name: Run quiz regression tests
         run: |
           node tests/clat-engine.test.js
+          node tests/clat-pdf.test.js
           node tests/olympiad-blueprints.test.js
           node tests/class3-english.test.js
           node tests/class3-mathematics.test.js
@@ -94,6 +95,7 @@ jobs:
           cp js/exam-paper-self-study.js _site/js/exam-paper-self-study.js
           cp js/clat-engine.js _site/js/clat-engine.js
           cp js/clat-practice.js _site/js/clat-practice.js
+          cp js/clat-pdf.js _site/js/clat-pdf.js
           cp js/session-model.js _site/js/session-model.js
           cp js/learning-model.js _site/js/learning-model.js
           cp js/learning-center.js _site/js/learning-center.js
