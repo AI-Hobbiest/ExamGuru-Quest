@@ -421,5 +421,19 @@
     "uniqueQuestionsTarget": 6000,
     "lastAudit": "Strict validation passed after Current Affairs breadth and independent quantitative answer checks",
     "asOf": "2026-11-09"
+  },
+  "batchProduction": {
+    "batchNumber": 1,
+    "paperNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "status": "in-progress",
+    "startedOn": "2026-11-09",
+    "completionRule": "All five papers must pass strict automated validation, source audit, independent key review, quantitative recalculation, blind solve, editorial review and cross-paper duplicate review before batch closure.",
+    "notes": "Paper 001 is an existing assembled draft and remains unaudited editorially. Papers 002–005 are not yet created. No paper in this batch is approved or student-facing."
   }
 }
