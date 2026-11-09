@@ -3,7 +3,7 @@
 **Batch:** Papers 006–015  
 **Target:** 10 full-length papers / 1,200 original questions  
 **Blueprint:** CLAT-UG27-v1  
-**Status:** Planned; no Paper 006–015 draft is approved or student-facing yet.
+**Status:** Papers 006–010 are committed as unpublished drafts and pass strict structural CI; Papers 011–015 remain planned. No Batch 02 paper is student-facing or editorially approved.
 
 ## Non-negotiable paper blueprint
 
@@ -43,3 +43,21 @@ Batch 01 already covered many PIB announcements and Indian administrative releas
 6. Only then append the paper to the student practice-pilot library. Draft files remain unpublished.
 
 The ten papers will be committed as separate draft JSON files, then released together only after the entire batch-level integrity test passes. This plan is a production map, not a claim that any of Papers 006–015 has been completed.
+
+
+## Actual production status — 9 November 2026
+
+| Item | Current state |
+|---|---|
+| Papers 006–010 | Draft JSONs committed |
+| Papers 011–015 | Planned |
+| Questions in Papers 006–010 | 600 |
+| Strict paper validation | 5 / 5 passed |
+| Exact cross-paper uniqueness across 001–010 | 1,200 stems / 229 passages |
+| QT recalculation | 60 / 60 new items |
+| Student-facing Batch 02 papers | 0 |
+| Editorially approved Batch 02 papers | 0 |
+
+The five committed files remain marked `draft-unpublished`. The student-facing library has not been changed. The automated gate verifies the chosen blueprint, source metadata shape, answer-key and difficulty distributions, exact uniqueness and QT answer/rationale matching. It does **not** replace a blind solve, semantic near-duplicate review, legal/current-affairs fact adjudication or distractor-quality review.
+
+See `data/clat/BATCH_02_WORKLOG.md` for the commit and audit record.
