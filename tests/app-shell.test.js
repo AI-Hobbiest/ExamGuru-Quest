@@ -95,7 +95,7 @@ assert.ok(clatLogin.includes('id="studentLoginForm"')&&clatLogin.includes("login
 assert.ok(clatPage.includes("AI-Enthusiast")&&!/JP Ganathe|Conceptualised by/i.test(clatPage),"the CLAT practice page contains no personal attribution");
 assert.ok(nav.includes('current.file==="clat-login.html"')&&nav.includes('location.replace(clatExperience?"./clat-login.html":"./index.html")'),"CLAT guests and sign-outs remain within the separate CLAT entry route");
 assert.ok(nav.includes('clatExperience?"AI-Enthusiast":"Learn · Practise · Level up"')&&nav.includes('clatExperience?"AI-Enthusiast · CLAT UG 2027"'),"desktop and mobile CLAT navigation display the abstracted brand");
-assert.ok(pageAccess.includes('page==="clat.html"?"./clat-login.html":"./index.html"'),"unauthenticated CLAT visitors are routed to the CLAT-specific login page");
+assert.ok(pageAccess.includes('const clatRoute=page==="clat.html"||page==="clat-dashboard.html"')&&pageAccess.includes('const signInTarget=clatRoute?"./clat-login.html":"./index.html"'),"unauthenticated CLAT visitors are routed to the CLAT-specific login page");
 assert.ok(homepage.includes('id="adminLoginForm"'),"landing page offers the temporary admin username/password form");
 assert.ok(homepage.includes('login-page.js'),"landing page loads the login flow");
 assert.ok(homepage.includes('Sign in as administrator'),"admin sign-in has a clear submit action");
