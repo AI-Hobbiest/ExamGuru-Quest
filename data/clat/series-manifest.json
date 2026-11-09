@@ -75,42 +75,67 @@
     {
       "paperNumber": 6,
       "paperId": "clat-ug27-full-006",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "draft-unpublished",
+      "questionCount": 120,
+      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; comprehensive fact/link adjudication pending",
+      "editorialAudit": "blind solve, semantic near-duplicate, distractor-quality and ambiguity review pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 QT questions independently recalculated and matched to keyed answers and rationales",
+      "releaseEligible": false,
+      "practicePilotAvailable": false
     },
     {
       "paperNumber": 7,
       "paperId": "clat-ug27-full-007",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "draft-unpublished",
+      "questionCount": 120,
+      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; comprehensive fact/link adjudication pending",
+      "editorialAudit": "blind solve, semantic near-duplicate, distractor-quality and ambiguity review pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 QT questions independently recalculated and matched to keyed answers and rationales",
+      "releaseEligible": false,
+      "practicePilotAvailable": false
     },
     {
       "paperNumber": 8,
       "paperId": "clat-ug27-full-008",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "draft-unpublished",
+      "questionCount": 120,
+      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; comprehensive fact/link adjudication pending",
+      "editorialAudit": "blind solve, semantic near-duplicate, distractor-quality and ambiguity review pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 QT questions independently recalculated and matched to keyed answers and rationales",
+      "releaseEligible": false,
+      "practicePilotAvailable": false
     },
     {
       "paperNumber": 9,
       "paperId": "clat-ug27-full-009",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "draft-unpublished",
+      "questionCount": 120,
+      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; comprehensive fact/link adjudication pending",
+      "editorialAudit": "blind solve, semantic near-duplicate, distractor-quality and ambiguity review pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 QT questions independently recalculated and matched to keyed answers and rationales",
+      "releaseEligible": false,
+      "practicePilotAvailable": false
     },
     {
       "paperNumber": 10,
       "paperId": "clat-ug27-full-010",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "draft-unpublished",
+      "questionCount": 120,
+      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; comprehensive fact/link adjudication pending",
+      "editorialAudit": "blind solve, semantic near-duplicate, distractor-quality and ambiguity review pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 QT questions independently recalculated and matched to keyed answers and rationales",
+      "releaseEligible": false,
+      "practicePilotAvailable": false
     },
     {
       "paperNumber": 11,
@@ -434,32 +459,75 @@
     }
   ],
   "progress": {
-    "draftPapers": 5,
-    "automatedValidationPassed": 5,
+    "draftPapers": 10,
+    "automatedValidationPassed": 10,
     "editoriallyApprovedPapers": 0,
     "publishedPapers": 5,
     "practicePilotPapers": 5,
-    "uniqueQuestionsDrafted": 600,
+    "uniqueQuestionsDrafted": 1200,
     "uniqueQuestionsTarget": 6000,
-    "lastAudit": "Batch 01 strict CI and cross-paper integrity passed; 5 full-length papers made available as clearly labelled practice pilots; formal editorial approval remains pending.",
+    "lastAudit": "Batch 02 Papers 006–010 committed as unpublished drafts; strict structural CI and cross-paper exact integrity passed; full editorial and source adjudication remain pending.",
     "asOf": "2026-11-09"
   },
   "batchProduction": {
-    "batchNumber": 1,
+    "batchNumber": 2,
     "paperNumbers": [
-      1,
-      2,
-      3,
-      4,
-      5
+      6,
+      7,
+      8,
+      9,
+      10
     ],
-    "status": "practice-pilot-published",
+    "status": "draft-unpublished",
     "draftFilesPresent": 5,
     "fullLengthDrafts": 5,
     "localStructuralChecksPassing": 5,
     "latestWorkflowConclusion": "success",
-    "latestWorkflowRunId": 42584191882,
+    "latestWorkflowRunId": 42617857546,
     "editorialApproval": 0,
-    "studentFacing": 5
-  }
+    "studentFacing": 0,
+    "questionsDrafted": 600,
+    "exactUniqueStemsAcrossSeries": 1200,
+    "uniquePassagesAcrossSeries": 229
+  },
+  "batchHistory": [
+    {
+      "batchNumber": 1,
+      "paperNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "status": "practice-pilot-published",
+      "draftFilesPresent": 5,
+      "fullLengthDrafts": 5,
+      "localStructuralChecksPassing": 5,
+      "latestWorkflowConclusion": "success",
+      "latestWorkflowRunId": 42584191882,
+      "editorialApproval": 0,
+      "studentFacing": 5,
+      "questionsDrafted": 600
+    },
+    {
+      "batchNumber": 2,
+      "paperNumbers": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "status": "draft-unpublished",
+      "draftFilesPresent": 5,
+      "fullLengthDrafts": 5,
+      "localStructuralChecksPassing": 5,
+      "latestWorkflowConclusion": "success",
+      "latestWorkflowRunId": 42617857546,
+      "editorialApproval": 0,
+      "studentFacing": 0,
+      "questionsDrafted": 600
+    }
+  ]
 }
