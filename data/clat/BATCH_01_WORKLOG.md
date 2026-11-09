@@ -44,7 +44,7 @@
 
 ## Important editorial caveat
 
-These five papers are available as clearly labelled **practice pilots**, not certified or formally approved full-length mock exams. The automated gate, structure, answer distribution, quantitative calculations and exact uniqueness checks pass. A complete independent blind solve of all 480 verbal/current-affairs questions, full legal reasoning review and semantic near-duplicate review remain outside this automated release gate and must continue as editorial QA.
+These five papers are available as clearly labelled **practice pilots**, not certified or formally approved full-length mock exams. The automated gate, structure, answer distribution, quantitative calculations and exact uniqueness checks pass. A complete independent blind solve of all 540 verbal/current-affairs questions, full legal reasoning review and semantic near-duplicate review remain outside this automated release gate and must continue as editorial QA.
 
 Current-affairs coverage is weighted heavily toward Indian government announcements and factual recall. Batch 02 authoring must broaden world affairs, international institutions, arts/culture, science and historically significant events, and use more inference/application questions rather than relying on fact lookup.
 
