@@ -158,6 +158,7 @@ assert.ok(css.includes(".c10-nav-link.is-disabled")&&css.includes(".c10-nav-link
 assert.ok(nav.includes('clatHref:"./clat-dashboard.html"')&&nav.includes('clatPage:"clat-dashboard.html"'),"CLAT students have a dedicated dashboard destination");
 assert.ok(nav.includes('["CLAT UG 2027","Dashboard","Assessment Test","Study Library","Learning Hub","FAQ & Guide"]'),"CLAT navigation exposes the dashboard, assessment, study pack and learning hub");
 assert.ok(loginScript.includes("./clat-dashboard.html"),"CLAT sign-in and restored sessions land on the CLAT dashboard");
+assert.ok(loginScript.includes('String(result.account&&result.account.classId||"").toUpperCase()==="CLAT"?"./clat-dashboard.html":"./dashboard.html"'),"newly authenticated CLAT students land on the CLAT dashboard");
 assert.ok(accessScript.includes('page==="clat-dashboard.html"')&&accessScript.includes('toUpperCase()!=="CLAT"'),"CLAT dashboard route is restricted to verified CLAT students");
 assert.ok(clatDashboard.includes('name="author" content="AI-Enthusiast"')&&!/JP Ganathe|Conceptualised by/i.test(clatDashboard),"CLAT dashboard uses abstracted AI-Enthusiast branding");
 for(const field of ["totalXp","levelValue","papersCompleted","streakValue","bestAccuracy","scoreTrend","sectionStrength","recentAttemptList","badgeList"])assert.ok(clatDashboard.includes('id="'+field+'"'),"CLAT dashboard includes "+field);
