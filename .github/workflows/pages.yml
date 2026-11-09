@@ -57,6 +57,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/index.html
+          cp clat-login.html _site/clat-login.html
           cp science.html _site/science.html
           cp practice.html _site/practice.html
           cp profile.html _site/profile.html
