@@ -23,12 +23,17 @@
       },
       "bandErrors": [],
       "shortExplanations": [],
-      "structural": true
+      "structural": true,
+      "difficultyCounts": {
+        "easy": 36,
+        "moderate": 53,
+        "challenging": 31
+      }
     },
     {
       "paper": 2,
       "path": "data/clat/drafts/clat-ug27-full-002.json",
-      "sha": "e30279c6afcc18062eda44c9e4d4187043d27675",
+      "sha": "9340458721e63bcdeb716830cea8a054e8f94773",
       "questions": 120,
       "passages": 23,
       "counts": {
@@ -46,12 +51,18 @@
       },
       "bandErrors": [],
       "shortExplanations": [],
-      "structural": true
+      "structural": true,
+      "difficultyCounts": {
+        "easy": 28,
+        "moderate": 60,
+        "challenging": 32
+      },
+      "sourceUrlCorrection": "Fast Track Special Courts release ID corrected to 2332483"
     },
     {
       "paper": 3,
       "path": "data/clat/drafts/clat-ug27-full-003.json",
-      "sha": "a918bd9ee6e61f8b5112834f76e2dcfd11f60ecf",
+      "sha": "50390db833dc5707d2659f068971b8526f318788",
       "questions": 120,
       "passages": 23,
       "counts": {
@@ -69,7 +80,12 @@
       },
       "bandErrors": [],
       "shortExplanations": [],
-      "structural": true
+      "structural": true,
+      "difficultyCounts": {
+        "easy": 29,
+        "moderate": 60,
+        "challenging": 31
+      }
     },
     {
       "paper": 4,
@@ -92,12 +108,17 @@
       },
       "bandErrors": [],
       "shortExplanations": [],
-      "structural": true
+      "structural": true,
+      "difficultyCounts": {
+        "easy": 30,
+        "moderate": 59,
+        "challenging": 31
+      }
     },
     {
       "paper": 5,
       "path": "data/clat/drafts/clat-ug27-full-005.json",
-      "sha": "2fc9ea8a1b664d8a7dca7ceedd8776e7a91dfa16",
+      "sha": "2bba5de6262f8fbaa712d4f8a6b6e2696f134267",
       "questions": 120,
       "passages": 23,
       "counts": {
@@ -115,7 +136,14 @@
       },
       "bandErrors": [],
       "shortExplanations": [],
-      "structural": true
+      "structural": true,
+      "difficultyCounts": {
+        "easy": 27,
+        "moderate": 72,
+        "challenging": 21
+      },
+      "duplicateOptionTextCorrections": 1,
+      "difficultyCalibration": "27 easy / 72 moderate / 21 challenging"
     }
   ],
   "summary": {
@@ -123,25 +151,21 @@
     "fullLengthDrafts": 5,
     "structuralCheckPasses": 5,
     "questions": 600,
+    "uniqueQuestionStems": 600,
+    "uniquePassages": 114,
+    "quantitativeQuestionsRecalculated": 60,
+    "duplicateOptionTextAfterCorrections": 0,
     "editoriallyApproved": 0,
-    "studentFacing": 0
+    "studentFacingPracticePilots": 5
   },
   "test005Present": true,
   "workflowIncludesTest005": true,
   "latestWorkflow": {
-    "id": 42570908314,
+    "id": 42584191882,
     "status": "completed",
-    "conclusion": "failure",
-    "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42570908314",
-    "headSha": "6a71ae4343ca6d7528006fad8eff4c52cb6fda68",
-    "jobs": [
-      {
-        "name": "clat-validation",
-        "status": "completed",
-        "conclusion": "failure",
-        "id": 129007808700
-      }
-    ]
+    "conclusion": "success",
+    "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42584191882",
+    "headSha": "be9bca53214da1bb377f4cf3c0d1a2b019d2b75e"
   },
   "recentRuns": [
     {
@@ -199,6 +223,35 @@
       "conclusion": "success",
       "sha": "eda868dcb9e28a8c16baf33ee103fef531e4ac79",
       "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42570005921"
+    }
+  ],
+  "integrityCorrections": [
+    {
+      "issue": "Duplicate option text",
+      "paper": 5,
+      "questionId": "clat-ug27-p005-q112",
+      "resolution": "Changed duplicated o2 option to Bihar and Maharashtra; correct keyed option remains Madhya Pradesh and Maharashtra."
+    },
+    {
+      "issue": "Repeated logical question stem across papers",
+      "papers": [
+        2,
+        3,
+        5
+      ],
+      "questionIdSuffix": "q108",
+      "resolution": "Reworded all three prompts to be passage-specific."
+    },
+    {
+      "issue": "Difficulty mix",
+      "paper": 5,
+      "resolution": "Recalibrated difficulty labels to 27 easy, 72 moderate and 21 challenging."
+    },
+    {
+      "issue": "Broken current-affairs source link",
+      "paper": 2,
+      "passageId": "p002-ca-01",
+      "resolution": "Corrected PIB Fast Track Special Courts release URL to PRID 2332483."
     }
   ]
 }
