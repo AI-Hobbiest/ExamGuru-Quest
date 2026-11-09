@@ -7,13 +7,14 @@ let library=null,paper=null,attempt=null,index=0,tick=null,student=null,submitte
 const esc=value=>String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const sections=engine.sections,sectionName=id=>(sections.find(s=>s.id===id)||{}).title||id;
 function getStudent(){try{const value=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");return value&&value.role==="student"?value:null;}catch(_){return null;}}
+function availablePapers(){return String(student&&student.classId||"").toUpperCase()==="CLAT"?library.papers.filter(item=>item.questions.length===120):library.papers;}
 function setStatus(value){$("loadStatus").textContent=value;}
 function saveActive(){try{localStorage.setItem(storageKey(ACTIVE_KEY),JSON.stringify({paperId:paper.paperId,attempt,index}));}catch(_){setStatus("Browser storage is full. Please export or clear older data before continuing.");}}
 function readHistory(){try{const value=JSON.parse(localStorage.getItem(storageKey(HISTORY_KEY))||"[]");return Array.isArray(value)?value:[];}catch(_){return[];}}
 function saveHistory(record){const history=readHistory().filter(item=>item.attemptId!==record.attemptId);history.push(record);try{localStorage.setItem(storageKey(HISTORY_KEY),JSON.stringify(history.slice(-50)));}catch(_){setStatus("Attempt completed, but local history could not be saved. Please download or print your result.");}}
 function renderLibrary(){
  const root=$("paperList");root.innerHTML="";
- library.papers.forEach(item=>{
+ availablePapers().forEach(item=>{
   const validation=engine.validatePaper(item),card=document.createElement("article");card.className="clat-paper";
   const title=document.createElement("h3");title.textContent=item.title;
   const desc=document.createElement("p");desc.className="clat-muted";desc.textContent=item.subtitle||"CLAT practice paper";
@@ -83,7 +84,7 @@ function finish(auto){
 function loadResume(){
  try{
   const saved=JSON.parse(localStorage.getItem(storageKey(ACTIVE_KEY))||"null");if(!saved||!saved.attempt)return false;
-  const selected=library.papers.find(p=>p.paperId===saved.paperId);if(!selected)return false;
+  const selected=availablePapers().find(p=>p.paperId===saved.paperId);if(!selected)return false;
   const frozen=saved.attempt.paperSnapshot||selected,check=engine.validatePaper(frozen);if(!check.valid)return false;
   if(!window.confirm("An unfinished CLAT attempt was found. Resume it? Choose Cancel to start a new paper.")){localStorage.removeItem(storageKey(ACTIVE_KEY));return false;}
   paper=frozen;attempt=saved.attempt;index=Math.max(0,Math.min(paper.questions.length-1,Number(saved.index)||0));
@@ -97,7 +98,7 @@ async function init(){
  try{
   const response=await fetch("./data/clat/model-papers.json",{cache:"no-store"});if(!response.ok)throw Error("Model paper library returned HTTP "+response.status);
   library=await response.json();if(library.kind!=="clat-model-paper-library"||!Array.isArray(library.papers))throw Error("CLAT model paper library is invalid.");
-  renderLibrary();setStatus("Loaded "+library.papers.length+" CLAT practice papers, including "+library.papers.filter(p=>p.questions.length===120).length+" full-length practice pilots.");
+  renderLibrary();setStatus("Loaded "+availablePapers().length+" CLAT practice papers, including "+availablePapers().filter(p=>p.questions.length===120).length+" full-length practice pilots.");
   loadResume();
  }catch(error){setStatus("Unable to load CLAT practice: "+error.message);}
 }
