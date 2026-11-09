@@ -40,7 +40,7 @@
 
 ## Remaining editorial work
 
-A complete independent blind solve of all 480 English, Current Affairs, Legal and Logical questions, deeper legal accuracy and ambiguity review, and semantic near-duplicate analysis still need to be completed. Current Affairs coverage in Batch 01 is weighted toward Indian government/PIB releases and factual recall. The next batch must broaden international affairs, global institutions, arts and culture, science and historically significant events and increase passage-based inference/application.
+A complete independent blind solve of all 540 English, Current Affairs, Legal and Logical questions, deeper legal accuracy and ambiguity review, and semantic near-duplicate analysis still need to be completed. Current Affairs coverage in Batch 01 is weighted toward Indian government/PIB releases and factual recall. The next batch must broaden international affairs, global institutions, arts and culture, science and historically significant events and increase passage-based inference/application.
 
 ## Batch 02 authoring controls
 
