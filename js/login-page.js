@@ -13,7 +13,7 @@
   const say=(message,type="")=>{status.textContent=message;status.className="login-status"+(type?" "+type:"");};
   function hasStudentSession(){try{return !!JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null")?.username;}catch(_){return false;}}
   if(hasStudentSession()&&window.C10StudentAuth){
-    window.C10StudentAuth.restoreSession().then(account=>{if(account)location.replace(account.role==="parent"?"./parent.html":"./dashboard.html");});
+    window.C10StudentAuth.restoreSession().then(account=>{if(account)location.replace(account.role==="parent"?"./parent.html":String(account.classId||"").toUpperCase()==="CLAT"?"./clat.html":"./dashboard.html");});
   }
   form.addEventListener("submit",async event=>{
     event.preventDefault();
@@ -27,7 +27,7 @@
       if(!window.C10StudentAuth)throw new Error("Student sign-in is unavailable. Please reload the page.");
       const result=await window.C10StudentAuth.login(username.value,password.value);
       password.value="";
-      const destination=result.account&&result.account.role==="parent"?"./parent.html":"./dashboard.html";
+      const destination=result.account&&result.account.role==="parent"?"./parent.html":String(result.account&&result.account.classId||"").toUpperCase()==="CLAT"?"./clat.html":"./dashboard.html";
       say("Signed in. Opening your workspace…","success");
       location.assign(destination);
     }catch(error){say(error&&error.message?error.message:"Unable to sign in. Check your username and password.","error");}
