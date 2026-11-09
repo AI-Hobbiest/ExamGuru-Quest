@@ -1,0 +1,239 @@
+{
+  "batch": 1,
+  "asOf": "2026-11-09",
+  "papers": [
+    {
+      "paper": 1,
+      "paperId": "clat-ug27-full-001",
+      "exists": true,
+      "sha": "fb626760409f2e620c33a9848f519387b068ab45",
+      "status": "draft-unpublished",
+      "questions": 120,
+      "passages": 22,
+      "counts": {
+        "english": 24,
+        "current-affairs": 30,
+        "legal": 30,
+        "logical": 24,
+        "quantitative": 12
+      },
+      "keys": {
+        "o1": 30,
+        "o2": 30,
+        "o3": 30,
+        "o4": 30
+      },
+      "passageBandsPass": true,
+      "passageIssues": [],
+      "shortExplanations": []
+    },
+    {
+      "paper": 2,
+      "paperId": "clat-ug27-full-002",
+      "exists": true,
+      "sha": "e30279c6afcc18062eda44c9e4d4187043d27675",
+      "status": "draft-unpublished",
+      "questions": 120,
+      "passages": 23,
+      "counts": {
+        "english": 24,
+        "current-affairs": 30,
+        "legal": 30,
+        "logical": 24,
+        "quantitative": 12
+      },
+      "keys": {
+        "o1": 30,
+        "o2": 30,
+        "o3": 30,
+        "o4": 30
+      },
+      "passageBandsPass": true,
+      "passageIssues": [],
+      "shortExplanations": []
+    },
+    {
+      "paper": 3,
+      "paperId": "clat-ug27-full-003",
+      "exists": true,
+      "sha": "a918bd9ee6e61f8b5112834f76e2dcfd11f60ecf",
+      "status": "draft-unpublished",
+      "questions": 120,
+      "passages": 23,
+      "counts": {
+        "english": 24,
+        "current-affairs": 30,
+        "legal": 30,
+        "logical": 24,
+        "quantitative": 12
+      },
+      "keys": {
+        "o1": 30,
+        "o2": 30,
+        "o3": 30,
+        "o4": 30
+      },
+      "passageBandsPass": true,
+      "passageIssues": [],
+      "shortExplanations": []
+    },
+    {
+      "paper": 4,
+      "paperId": "clat-ug27-full-004",
+      "exists": true,
+      "sha": "354d6fcf2fa06459250ef77c7ebbd574cb6ef524",
+      "status": "draft-unpublished",
+      "questions": 120,
+      "passages": 23,
+      "counts": {
+        "english": 24,
+        "current-affairs": 30,
+        "legal": 30,
+        "logical": 24,
+        "quantitative": 12
+      },
+      "keys": {
+        "o1": 30,
+        "o2": 30,
+        "o3": 30,
+        "o4": 30
+      },
+      "passageBandsPass": true,
+      "passageIssues": [],
+      "shortExplanations": []
+    },
+    {
+      "paper": 5,
+      "paperId": "clat-ug27-full-005",
+      "exists": true,
+      "sha": "2fc9ea8a1b664d8a7dca7ceedd8776e7a91dfa16",
+      "status": "draft-unpublished",
+      "questions": 120,
+      "passages": 23,
+      "counts": {
+        "english": 24,
+        "current-affairs": 30,
+        "legal": 30,
+        "logical": 24,
+        "quantitative": 12
+      },
+      "keys": {
+        "o1": 30,
+        "o2": 30,
+        "o3": 30,
+        "o4": 30
+      },
+      "passageBandsPass": true,
+      "passageIssues": [],
+      "shortExplanations": []
+    }
+  ],
+  "ciRuns": [
+    {
+      "id": 42570081531,
+      "status": "completed",
+      "conclusion": "failure",
+      "sha": "ccce650c2c1174e2ad260b807fd3f8b5336d1db8",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42570081531"
+    },
+    {
+      "id": 42570039661,
+      "status": "completed",
+      "conclusion": "failure",
+      "sha": "c7753dc1cb3d32e9bb55fff6068dfb153fd9585e",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42570039661"
+    },
+    {
+      "id": 42570005921,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "eda868dcb9e28a8c16baf33ee103fef531e4ac79",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42570005921"
+    },
+    {
+      "id": 42569432114,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "ebd375fe5d1e1779d26e102b9b707fe482890272",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42569432114"
+    },
+    {
+      "id": 42569415157,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "caf615672679c1a018c1e731022204c96ef32ba9",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42569415157"
+    },
+    {
+      "id": 42569393319,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "b8c898e764ddbde3de0305103a9c0d3590fbdea6",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42569393319"
+    },
+    {
+      "id": 42569338808,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "01b17e46a66107966f1e722dbce48bddb50e9fb2",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42569338808"
+    },
+    {
+      "id": 42569099507,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "41115e69ba8124a6467e48c40471c31952fcbc3a",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42569099507"
+    },
+    {
+      "id": 42569075622,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "0663ecce08da3decc13cc710c9a73914f73be633",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42569075622"
+    },
+    {
+      "id": 42569060901,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "353a3dd346f200b71e59e2d8fe88b38aa08456e3",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42569060901"
+    },
+    {
+      "id": 42569005913,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "dbc15b99e7213cf6ca35ec5aabfe99b151687359",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42569005913"
+    },
+    {
+      "id": 42568722084,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "ff73987a785c28bf5cad4b1ab4d86d329170214d",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42568722084"
+    },
+    {
+      "id": 42568693219,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "0be76580d4ee9ea5d24d6715b7b8540ab8c955dc",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42568693219"
+    },
+    {
+      "id": 42568641003,
+      "status": "completed",
+      "conclusion": "failure",
+      "sha": "27d8073cd162e9741b87c7c87c48e06246640917",
+      "url": "https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42568641003"
+    }
+  ],
+  "summary": {
+    "draftFiles": 5,
+    "questions": 600,
+    "allHave120": true,
+    "allStrictStructural": true,
+    "editoriallyApproved": 0,
+    "studentFacing": 0
+  }
+}
