@@ -59,6 +59,18 @@
       "createdAt": "2026-10-27T12:59:00.000Z",
       "updatedAt": "2026-10-30T20:37:00+04:00",
       "studentId": "student-srivatsav"
+    },
+    {
+      "username": "akshaya",
+      "studentId": "student-akshaya-clat",
+      "displayName": "Akshaya",
+      "classId": "CLAT",
+      "salt": "WZTcdYG2SO49MgUdwYEqvg==",
+      "passwordHash": "hK7h0uCnM/L6hUUCP3xm0vpGUNilszNxk5oRtb5TiJc=",
+      "iterations": 600000,
+      "active": true,
+      "createdAt": "2026-11-09T00:00:00+08:00",
+      "updatedAt": "2026-11-09T00:00:00+08:00"
     }
   ]
 }
