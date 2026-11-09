@@ -26,6 +26,7 @@ on:
       - 'data/clat/**'
       - 'tests/clat-engine.test.js'
       - 'tests/clat-batch-01-uniqueness.test.js'
+      - 'tests/clat-full-length-draft-006-010.test.js'
       - '.github/workflows/clat-validation.yml'
 permissions:
   contents: read
