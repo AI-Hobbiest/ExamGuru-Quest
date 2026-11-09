@@ -1,0 +1,30 @@
+"use strict";
+const assert=require("node:assert/strict");
+const fs=require("node:fs");
+const engine=require("../js/clat-engine.js");
+const paper=JSON.parse(fs.readFileSync("data/clat/drafts/clat-ug27-full-004.json","utf8"));
+const result=engine.validatePaper(paper,{strictCLAT:true});
+assert.equal(result.valid,true,result.errors.join("\n"));
+assert.equal(result.totalQuestions,120);
+assert.equal(paper.passages.length,23);
+assert.deepEqual(result.counts,{english:24,"current-affairs":30,legal:30,logical:24,quantitative:12});
+assert.equal(new Set(paper.questions.map(q=>q.questionId)).size,120);
+assert.equal(new Set(paper.passages.map(p=>p.passageId)).size,23);
+assert.ok(new Set(paper.passages.filter(p=>p.sectionId==="current-affairs").map(p=>p.domain)).size>=4);
+for(const q of paper.questions){assert.equal(new Set(q.options.map(o=>o.optionId)).size,4);assert.ok(q.explanation.trim().length>=30,q.questionId);}
+assert.deepEqual(Object.fromEntries(["o1","o2","o3","o4"].map(k=>[k,paper.questions.filter(q=>q.correctOptionId===k).length])),{o1:30,o2:30,o3:30,o4:30});
+let run=1;for(let i=1;i<paper.questions.length;i++){run=paper.questions[i].correctOptionId===paper.questions[i-1].correctOptionId?run+1:1;assert.ok(run<=4);}
+const answer=id=>{const q=paper.questions.find(x=>x.questionId==="clat-ug27-p004-q"+id);return q.options.find(o=>o.optionId===q.correctOptionId).text;};
+assert.equal(answer("109"),"900 thousand tonnes.");
+assert.equal(answer("110"),"1,000 thousand tonnes.");
+assert.equal(answer("111"),"11.11 per cent.");
+assert.equal(answer("112"),"30 thousand tonnes.");
+assert.equal(answer("113"),"₹28.8 lakh.");
+assert.equal(answer("114"),"₹10.8 lakh.");
+assert.equal(answer("115"),"₹81 lakh.");
+assert.equal(answer("116"),"₹23.4 lakh.");
+assert.equal(answer("117"),"60,000 items.");
+assert.equal(answer("118"),"36,000 items.");
+assert.equal(answer("119"),"15,000 items.");
+assert.equal(answer("120"),"9,000 items.");
+console.log("CLAT Paper 004 strict validation passed: 120 questions, 23 passage/data sets, five sections, sourced CA, answer balance, explanations and QT recalculation.");
