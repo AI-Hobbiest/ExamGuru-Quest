@@ -50,6 +50,6 @@ Every question must have:
 9. Only papers passing every gate may be exposed to students. Drafts and rejected items remain unpublished.
 
 ## Release discipline
-- Build and audit in batches, but publish the library only when all 50 papers are present and the full-bank uniqueness and integrity checks pass.
+- The default final release remains a 50-paper library after full-bank uniqueness and integrity checks. A user-authorised individual practice pilot may be added earlier only after it passes the full paper-level acceptance gates, independent answer-key review and editorial sign-off. Such a paper must be labelled `practice-pilot`, not an official mock.
 - Keep the two existing 25-question diagnostic papers labelled as diagnostics. They do not count towards the 50 full-length papers and do not meet the full-length passage specification.
 - No Cloud DB or email changes are part of this work.
