@@ -3901,7 +3901,7 @@
         "180 hours",
         "198 hours"
       ],
-      "explanation": "36 × 4.5 = 162 hours.",
+      "explanation": "There are 36 satellites and each requires 4.5 contact hours daily; 36 × 4.5 = 162 station-hours per day.",
       "competency": "multiplication",
       "passageId": "r013-quantitative-01",
       "sectionId": "quantitative",
@@ -3935,7 +3935,7 @@
         "135 hours",
         "144 hours"
       ],
-      "explanation": "9 × 14 = 126 hours.",
+      "explanation": "Nine stations each provide 14 hours of availability, so total daily capacity is 9 × 14 = 126 station-hours.",
       "competency": "multiplication",
       "passageId": "r013-quantitative-01",
       "sectionId": "quantitative",
@@ -3969,7 +3969,7 @@
         "42 hours",
         "54 hours"
       ],
-      "explanation": "162 − 126 = 36 hours.",
+      "explanation": "The first phase requires 162 station-hours but capacity is 126, leaving a shortfall of 162 − 126 = 36 hours.",
       "competency": "subtraction",
       "passageId": "r013-quantitative-01",
       "sectionId": "quantitative",
