@@ -28,6 +28,26 @@ function renderLibrary(){
   card.append(title,desc,meta,actions,note);root.appendChild(card);
  });
 }
+
+function renderActualPapers(items){
+ const root=$("actualPaperList");root.innerHTML="";
+ items.slice().sort((a,b)=>Number(b.examYear)-Number(a.examYear)).forEach(item=>{
+  const card=document.createElement("article");card.className="clat-paper";
+  const title=document.createElement("h3");title.textContent=item.title;
+  const meta=document.createElement("div");meta.className="clat-meta";
+  meta.textContent=item.questionCount+" questions · "+item.durationMinutes+" minutes · evaluated out of "+item.evaluatedOutOf+" marks";
+  const desc=document.createElement("p");desc.className="clat-muted";desc.textContent=item.formatNote;
+  const scoring=document.createElement("p");scoring.className="clat-muted";scoring.textContent=item.scoringNote;
+  const set=document.createElement("p");set.className="clat-muted";set.textContent=item.setNote;
+  const actions=document.createElement("div");actions.className="clat-paper-actions";
+  const paperLink=document.createElement("a");paperLink.className="clat-btn";paperLink.href=item.questionUrl;paperLink.target="_blank";paperLink.rel="noopener noreferrer";paperLink.textContent="Open Question Paper PDF";
+  const keyLink=document.createElement("a");keyLink.className="clat-btn secondary";keyLink.href=item.answerKeyUrl;keyLink.target="_blank";keyLink.rel="noopener noreferrer";keyLink.textContent=item.answerKeyLabel||"Open Final Answer Key";
+  actions.append(paperLink,keyLink);
+  const source=document.createElement("a");source.className="clat-pyq-source";source.href=item.sourceArchiveUrl;source.target="_blank";source.rel="noopener noreferrer";source.textContent="Consortium source archive";
+  card.append(title,meta,desc,scoring,set,actions,source);root.appendChild(card);
+ });
+}
+
 function start(selected){
  if(tick)clearInterval(tick);
  paper=selected;attempt=engine.createAttempt(paper,student);index=0;submitted=false;
@@ -126,7 +146,21 @@ async function init(){
    batchThreeIds.add(item.paperId);
   });
   library.papers.push(...batchThree.papers);
-  renderLibrary();setStatus("Loaded "+availablePapers().length+" CLAT practice papers, including "+availablePapers().filter(p=>p.questions.length===120).length+" full-length practice pilots.");
+  renderLibrary();
+  try{
+   const pyqResponse=await fetch("./data/clat/actual-papers.json",{cache:"no-store"});
+   if(!pyqResponse.ok)throw Error("Actual-paper catalogue returned HTTP "+pyqResponse.status);
+   const pyqCatalog=await pyqResponse.json();
+   if(pyqCatalog.kind!=="clat-actual-papers-catalog"||!Array.isArray(pyqCatalog.papers)||pyqCatalog.papers.length!==5)throw Error("Actual-paper catalogue is invalid.");
+   const years=pyqCatalog.papers.map(item=>Number(item.examYear));
+   if(![2022,2023,2024,2025,2026].every(year=>years.includes(year)))throw Error("Actual-paper catalogue is missing one of the five latest completed CLAT editions.");
+   pyqCatalog.papers.forEach(item=>{
+    if(!item.title||!item.examDate||!item.questionCount||!item.evaluatedOutOf||!/^https:\/\//.test(item.questionUrl)||!/^https:\/\//.test(item.answerKeyUrl)||!/^https:\/\//.test(item.sourceArchiveUrl))throw Error("Actual-paper record is incomplete for CLAT "+item.examYear);
+   });
+   renderActualPapers(pyqCatalog.papers);
+   $("pyqStatus").textContent="Loaded five Consortium-issued UG papers. PDFs open in a new tab; external PDF attempts are not stored in the ExamGuru attempt history.";
+  }catch(pyqError){$("pyqStatus").textContent="Actual previous-year papers could not be loaded: "+pyqError.message;}
+  setStatus("Loaded "+availablePapers().length+" CLAT practice papers, including "+availablePapers().filter(p=>p.questions.length===120).length+" full-length practice pilots.");
   loadResume();
  }catch(error){setStatus("Unable to load CLAT practice: "+error.message);}
 }
