@@ -7055,18 +7055,18 @@
           "answer": "The objective must relate to the statutory purpose, use a defined indicator and allow the recipient to understand what evidence is required.",
           "wrong": "A grant can be withheld whenever a ministry changes its policy.",
           "competency": "principle-identification",
-          "explanation": "The governing rule is: The objective must relate to the statutory purpose, use a defined indicator and allow the recipient to understand what evidence is required.",
+          "explanation": "The rule ties each grant condition to the statutory purpose and requires a defined, understandable indicator.",
           "passageId": "r012-legal-05",
           "sectionId": "legal",
           "questionId": "clat-ug27-r012-q075",
           "options": [
             {
               "optionId": "o1",
-              "text": "A"
+              "text": "A grant may be withheld whenever the ministry changes its policy."
             },
             {
               "optionId": "o2",
-              "text": " "
+              "text": "A ministry may use an undefined indicator without explaining the evidence required."
             },
             {
               "optionId": "o3",
@@ -7074,127 +7074,127 @@
             },
             {
               "optionId": "o4",
-              "text": "g"
+              "text": "The Act requires every provider to receive an identical grant amount."
             }
           ],
           "correctOptionId": "o3",
           "difficulty": "moderate"
         },
         {
-          "prompt": "What condition must precede the exercise of power in “The grant tied to a measurable outcome”?",
+          "prompt": "What must the ministry consider before relying on an outcome indicator under “The grant tied to a measurable outcome”?",
           "answer": "The ministry must consider whether the indicator can be measured consistently across different local conditions and must not penalise a recipient for factors outside its control without adjustment.",
           "wrong": "A grant can be withheld whenever a ministry changes its policy.",
           "competency": "rule-and-condition",
-          "explanation": "The rule makes the following condition necessary: The ministry must consider whether the indicator can be measured consistently across different local conditions and must not penalise a recipient for factors outside its control without adjustment.",
+          "explanation": "The passage requires consistent measurement and protection against penalising recipients for factors outside their control.",
           "passageId": "r012-legal-05",
           "sectionId": "legal",
           "questionId": "clat-ug27-r012-q076",
           "options": [
             {
               "optionId": "o1",
-              "text": "A"
+              "text": "Whether local differences can be ignored in every case."
             },
             {
               "optionId": "o2",
-              "text": " "
+              "text": "Whether a recipient should be penalised for any external event without adjustment."
             },
             {
               "optionId": "o3",
-              "text": "g"
+              "text": "Whether the indicator can be changed after results are known."
             },
             {
               "optionId": "o4",
-              "text": "The ministry must consider whether the indicator can be measured consistently across different local conditions and must not penalise a recipient for factors outside its control without adjustment."
+              "text": "Whether the indicator can be measured consistently across local conditions and whether factors outside a recipient's control require adjustment."
             }
           ],
           "correctOptionId": "o4",
           "difficulty": "easy"
         },
         {
-          "prompt": "A decision-maker encounters the situation in “The grant tied to a measurable outcome”. Which legal assessment follows?",
+          "prompt": "A flood disrupts data collection although the funded service continues. Which assessment follows under “The grant tied to a measurable outcome”?",
           "answer": "A ministry withholds the entire grant because a flood disrupted the data collection even though the funded service continued.",
           "wrong": "A grant can be withheld whenever a ministry changes its policy.",
           "competency": "application",
-          "explanation": "The hypothetical must be tested against the rule's facts: A ministry withholds the entire grant because a flood disrupted the data collection even though the funded service continued.",
+          "explanation": "The procedure allows providers to explain exceptional conditions and requires a reasoned decision before a payment is withheld.",
           "passageId": "r012-legal-05",
           "sectionId": "legal",
           "questionId": "clat-ug27-r012-q077",
           "options": [
             {
               "optionId": "o1",
-              "text": "A ministry withholds the entire grant because a flood disrupted the data collection even though the funded service continued."
+              "text": "The ministry must consider the exceptional event, allow an explanation and give reasons before withholding payment."
             },
             {
               "optionId": "o2",
-              "text": "A"
+              "text": "The entire grant must be cancelled automatically whenever data collection is interrupted."
             },
             {
               "optionId": "o3",
-              "text": " "
+              "text": "The provider must lose payment even if the service continued."
             },
             {
               "optionId": "o4",
-              "text": "g"
+              "text": "The flood makes the statutory purpose irrelevant."
             }
           ],
           "correctOptionId": "o1",
           "difficulty": "moderate"
         },
         {
-          "prompt": "Which remedy or review is provided by “The grant tied to a measurable outcome”?",
+          "prompt": "Which review or remedy is available under “The grant tied to a measurable outcome”?",
           "answer": "A review panel can correct an indicator error or require a reassessment, but cannot authorise spending outside the grant's statutory purpose.",
           "wrong": "A grant can be withheld whenever a ministry changes its policy.",
           "competency": "remedies",
-          "explanation": "The available review is limited to: A review panel can correct an indicator error or require a reassessment, but cannot authorise spending outside the grant's statutory purpose.",
+          "explanation": "The review panel can correct an error or require reassessment, but cannot authorise spending outside the grant's purpose.",
           "passageId": "r012-legal-05",
           "sectionId": "legal",
           "questionId": "clat-ug27-r012-q078",
           "options": [
             {
               "optionId": "o1",
-              "text": "A"
+              "text": "The panel must approve spending outside the statutory purpose."
             },
             {
               "optionId": "o2",
-              "text": "A review panel can correct an indicator error or require a reassessment, but cannot authorise spending outside the grant's statutory purpose."
+              "text": "A review panel may correct an indicator error or require a reassessment, within the grant's statutory purpose."
             },
             {
               "optionId": "o3",
-              "text": " "
+              "text": "The panel may rewrite the Act's funding objective."
             },
             {
               "optionId": "o4",
-              "text": "g"
+              "text": "The panel has no authority to review a payment decision."
             }
           ],
           "correctOptionId": "o2",
           "difficulty": "moderate"
         },
         {
-          "prompt": "Which limit prevents the power in “The grant tied to a measurable outcome” from being unrestricted?",
+          "prompt": "Which limitation restricts the ministry's power under “The grant tied to a measurable outcome”?",
           "answer": "A condition cannot be changed retroactively after a recipient has reasonably relied on the published rule.",
           "wrong": "A grant can be withheld whenever a ministry changes its policy.",
           "competency": "scope-and-limits",
-          "explanation": "The statutory boundary is: A condition cannot be changed retroactively after a recipient has reasonably relied on the published rule.",
+          "explanation": "The passage prevents a ministry from retroactively changing a condition after reasonable reliance on the published rule.",
           "passageId": "r012-legal-05",
           "sectionId": "legal",
           "questionId": "clat-ug27-r012-q079",
           "options": [
             {
               "optionId": "o1",
-              "text": "A"
+              "text": "The ministry may change indicators at any time without notice."
             },
             {
               "optionId": "o2",
-              "text": " "
+              "text": "A new condition applies retroactively even where the provider relied on the published rule."
             },
             {
               "optionId": "o3",
-              "text": "A condition cannot be changed retroactively after a recipient has reasonably relied on the published rule."
+              "text": "A published grant condition cannot be changed retroactively after a recipient has reasonably relied on it."
             },
             {
               "optionId": "o4",
-              "text": "g"
+              "text": "A recipient may ignore all grant conditions after applying."
             }
           ],
           "correctOptionId": "o3",
