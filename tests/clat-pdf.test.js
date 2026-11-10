@@ -7,7 +7,7 @@ const escape=value=>String(value??"").replace(/[&<>"']/g,char=>({
   "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
 }[char]));
 const papers=library.papers.filter(paper=>paper.questions.length===120);
-assert.equal(papers.length,5,"five full-length CLAT practice pilots should be exportable");
+assert.equal(papers.length,6,"six full-length CLAT practice pilots should be exportable");
 for(const paper of papers){
   const html=pdf.buildHtml(paper);
   assert.ok(html.startsWith("<!doctype html>"));
@@ -32,4 +32,4 @@ const safe=pdf.buildHtml(sample);
 assert.ok(safe.includes("&lt;script&gt;alert(&quot;x&quot;)&lt;/script&gt; &amp; CLAT"));
 assert.ok(!safe.includes('<script>alert("x")</script>'));
 assert.equal(typeof pdf.printPaper,"function");
-console.log("CLAT PDF export tests passed: five full-length papers, all passages/questions/options, blank answer sheet, no answer keys or explanations, and escaped content.");
+console.log("CLAT PDF export tests passed: six full-length papers, all passages/questions/options, blank answer sheet, no answer keys or explanations, and escaped content.");
