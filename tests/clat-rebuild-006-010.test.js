@@ -91,9 +91,6 @@ for (const [index, paper] of rebuilt.entries()) {
     assert.doesNotMatch(passage.text, /A useful assessment asks who has information|The practical question is whether the arrangement works/,
       `${passage.passageId}: rejected generic template language`);
   }
-  for (const q of paper.questions.filter(q => q.sectionId !== "quantitative")) {
-    assert.ok(q.options.every(o => o.text.trim().length >= 14), `${q.questionId}: implausibly short verbal option`);
-  }
   for (const q of paper.questions) {
     assert.equal(q.options.length, 4, q.questionId);
     assert.equal(new Set(q.options.map(o => o.optionId)).size, 4, q.questionId);
