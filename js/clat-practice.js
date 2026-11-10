@@ -9,6 +9,26 @@ const sections=engine.sections,sectionName=id=>(sections.find(s=>s.id===id)||{})
 function getStudent(){try{const value=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");return value&&value.role==="student"?value:null;}catch(_){return null;}}
 function availablePapers(){return String(student&&student.classId||"").toUpperCase()==="CLAT"?library.papers.filter(item=>item.questions.length===120):library.papers;}
 function setStatus(value){$("loadStatus").textContent=value;}
+function selectLibraryTab(which){
+ const actual=which==="actual";
+ $("actualPapersTab").setAttribute("aria-selected",String(actual));
+ $("actualPapersTab").tabIndex=actual?0:-1;
+ $("modelPapersTab").setAttribute("aria-selected",String(!actual));
+ $("modelPapersTab").tabIndex=actual?-1:0;
+ $("actual-papers").hidden=!actual;
+ $("model-papers").hidden=actual;
+}
+function wireLibraryTab(id,which){
+ const button=$(id);
+ button.addEventListener("click",()=>selectLibraryTab(which));
+ button.addEventListener("keydown",event=>{
+  if(event.key!=="ArrowLeft"&&event.key!=="ArrowRight")return;
+  event.preventDefault();
+  const next=which==="actual"?"model":"actual";
+  selectLibraryTab(next);
+  $(next==="actual"?"actualPapersTab":"modelPapersTab").focus();
+ });
+}
 function saveActive(){try{localStorage.setItem(storageKey(ACTIVE_KEY),JSON.stringify({paperId:paper.paperId,attempt,index}));}catch(_){setStatus("Browser storage is full. Please export or clear older data before continuing.");}}
 function readHistory(){try{const value=JSON.parse(localStorage.getItem(storageKey(HISTORY_KEY))||"[]");return Array.isArray(value)?value:[];}catch(_){return[];}}
 function saveHistory(record){const history=readHistory().filter(item=>item.attemptId!==record.attemptId);history.push(record);try{localStorage.setItem(storageKey(HISTORY_KEY),JSON.stringify(history.slice(-50)));}catch(_){setStatus("Attempt completed, but local history could not be saved. Please download or print your result.");}}
@@ -160,6 +180,7 @@ async function init(){
   });
   library.papers.push(...batchFour.papers);
   renderLibrary();
+  $("modelPaperCount").textContent=String(availablePapers().length);
   try{
    const pyqResponse=await fetch("./data/clat/actual-papers.json",{cache:"no-store"});
    if(!pyqResponse.ok)throw Error("Actual-paper catalogue returned HTTP "+pyqResponse.status);
@@ -171,9 +192,10 @@ async function init(){
     if(!item.title||!item.examDate||!item.questionCount||!item.evaluatedOutOf||!/^https:\/\//.test(item.questionUrl)||!/^https:\/\//.test(item.answerKeyUrl)||!/^https:\/\//.test(item.sourceArchiveUrl))throw Error("Actual-paper record is incomplete for CLAT "+item.examYear);
    });
    renderActualPapers(pyqCatalog.papers);
+   $("actualPaperCount").textContent=String(pyqCatalog.papers.length);
    $("pyqStatus").textContent="Loaded five Consortium-issued UG papers. PDFs open in a new tab; external PDF attempts are not stored in the ExamGuru attempt history.";
-  }catch(pyqError){$("pyqStatus").textContent="Actual previous-year papers could not be loaded: "+pyqError.message;}
-  setStatus("Loaded "+availablePapers().length+" CLAT practice papers, including "+availablePapers().filter(p=>p.questions.length===120).length+" full-length practice pilots.");
+  }catch(pyqError){$("actualPaperCount").textContent="0";$("pyqStatus").textContent="Actual previous-year papers could not be loaded: "+pyqError.message;}
+  setStatus("Loaded "+availablePapers().length+" CLAT model papers, including "+availablePapers().filter(p=>p.questions.length===120).length+" full-length practice pilots.");
   loadResume();
  }catch(error){setStatus("Unable to load CLAT practice: "+error.message);}
 }
@@ -182,6 +204,9 @@ $("nextBtn").addEventListener("click",()=>{if(index<paper.questions.length-1){in
 $("flagBtn").addEventListener("click",toggleFlag);
 $("submitBtn").addEventListener("click",()=>finish(false));
 $("printResultBtn").addEventListener("click",()=>window.print());
-$("backLibraryBtn").addEventListener("click",()=>{if(tick)clearInterval(tick);$("resultPanel").classList.add("clat-hidden");$("library").classList.remove("clat-hidden");});
+$("backLibraryBtn").addEventListener("click",()=>{if(tick)clearInterval(tick);$("resultPanel").classList.add("clat-hidden");$("library").classList.remove("clat-hidden");selectLibraryTab("model");});
+wireLibraryTab("actualPapersTab","actual");
+wireLibraryTab("modelPapersTab","model");
+selectLibraryTab(location.hash==="#actual-papers"?"actual":"model");
 init();
 })();
