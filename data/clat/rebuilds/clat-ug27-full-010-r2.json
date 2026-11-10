@@ -1753,22 +1753,22 @@
       "options": [
         {
           "optionId": "o1",
-          "text": "A separate written permission covering commercial use of the dataset."
-        },
-        {
-          "optionId": "o2",
           "text": "Only a new attribution line naming the consortium."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "A certificate from one of the factories buying the service."
+        },
+        {
+          "optionId": "o3",
+          "text": "A separate written permission covering commercial use of the dataset."
         },
         {
           "optionId": "o4",
           "text": "A statement that the model weights were developed independently."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "The licence allowed research and teaching use but prohibited commercial use without separate written permission.",
       "difficulty": "challenging",
       "competency": "rule-application"
@@ -1809,22 +1809,22 @@
       "options": [
         {
           "optionId": "o1",
-          "text": "The model's parameters do not by themselves answer whether the training use complied with the dataset licence."
-        },
-        {
-          "optionId": "o2",
           "text": "A model is automatically exempt from every licence once its weights are saved."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "A dataset licence always transfers ownership of trained model weights."
+        },
+        {
+          "optionId": "o3",
+          "text": "The model's parameters do not by themselves answer whether the training use complied with the dataset licence."
         },
         {
           "optionId": "o4",
           "text": "A developer's independent work automatically permits any commercial use of inputs."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "The rule examines the use of the dataset during training separately from the form of the resulting model parameters.",
       "difficulty": "moderate",
       "competency": "conceptual-distinction"
@@ -1865,22 +1865,22 @@
       "options": [
         {
           "optionId": "o1",
-          "text": "Use the dataset for non-commercial research within the original licence."
-        },
-        {
-          "optionId": "o2",
           "text": "Sell subscriptions because the request has already been submitted."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Share the dataset with factories for their own commercial training."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "Treat the consortium's silence as permanent approval."
+        },
+        {
+          "optionId": "o4",
+          "text": "Use the dataset for non-commercial research within the original licence."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o4",
       "explanation": "The original permission continues to cover non-commercial research, but the pending request is not approval for commercial use.",
       "difficulty": "moderate",
       "competency": "rule-application"
