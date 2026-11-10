@@ -4,18 +4,18 @@ const fs = require("node:fs");
 const engine = require("../js/clat-engine.js");
 
 const legacy = [1,2,3,4,5].map(n => JSON.parse(fs.readFileSync(
-  \`data/clat/drafts/clat-ug27-full-\${String(n).padStart(3,"0")}.json\`, "utf8"
+  `data/clat/drafts/clat-ug27-full-${String(n).padStart(3,"0")}.json`, "utf8"
 )));
 const rebuilt = [6,7,8,9,10].map(n => JSON.parse(fs.readFileSync(
-  \`data/clat/rebuilds/clat-ug27-full-\${String(n).padStart(3,"0")}-r2.json\`, "utf8"
+  `data/clat/rebuilds/clat-ug27-full-${String(n).padStart(3,"0")}-r2.json`, "utf8"
 )));
 assert.equal(rebuilt.length, 5);
 
 for (const [index, paper] of rebuilt.entries()) {
   const number = index + 6;
   const result = engine.validatePaper(paper, { strictCLAT: true });
-  assert.equal(result.valid, true, \`Paper \${number}: \${result.errors.join(" | ")}\`);
-  assert.equal(paper.paperId, \`clat-ug27-full-\${String(number).padStart(3,"0")}\`);
+  assert.equal(result.valid, true, `Paper ${number}: ${result.errors.join(" | ")}`);
+  assert.equal(paper.paperId, `clat-ug27-full-${String(number).padStart(3,"0")}`);
   assert.equal(paper.status, number === 6 ? "practice-pilot" : "draft-unpublished");
   assert.equal(paper.durationMinutes, 120);
   assert.equal(paper.questions.length, 120);
@@ -43,7 +43,7 @@ for (const [index, paper] of rebuilt.entries()) {
     run = paper.questions[i].correctOptionId === paper.questions[i-1].correctOptionId ? run + 1 : 1;
     maxRun = Math.max(maxRun, run);
   }
-  assert.ok(maxRun <= 4, \`Paper \${number}: answer run of \${maxRun}\`);
+  assert.ok(maxRun <= 4, `Paper ${number}: answer run of ${maxRun}`);
 
   const difficulty = Object.fromEntries(["easy","moderate","challenging"].map(d =>
     [d, paper.questions.filter(q => q.difficulty === d).length]
@@ -63,13 +63,13 @@ for (const [index, paper] of rebuilt.entries()) {
 
   for (const passage of paper.passages) {
     const words = passage.text.trim().split(/\s+/).length;
-    if (passage.sectionId === "quantitative") assert.ok(words >= 70 && words <= 320, \`\${passage.passageId}: \${words} words\`);
-    else if (passage.sectionId === "current-affairs") assert.ok(words >= 350 && words <= 450, \`\${passage.passageId}: \${words} words\`);
-    else assert.ok(words >= 380 && words <= 520, \`\${passage.passageId}: \${words} words\`);
+    if (passage.sectionId === "quantitative") assert.ok(words >= 70 && words <= 320, `${passage.passageId}: ${words} words`);
+    else if (passage.sectionId === "current-affairs") assert.ok(words >= 350 && words <= 450, `${passage.passageId}: ${words} words`);
+    else assert.ok(words >= 380 && words <= 520, `${passage.passageId}: ${words} words`);
   }
 
   const explanations = paper.questions.map(q => q.explanation.trim());
-  assert.equal(new Set(explanations).size, 120, \`Paper \${number}: repeated explanations\`);
+  assert.equal(new Set(explanations).size, 120, `Paper ${number}: repeated explanations`);
   for (const q of paper.questions) {
     assert.equal(q.options.length, 4, q.questionId);
     assert.equal(new Set(q.options.map(o => o.optionId)).size, 4, q.questionId);
@@ -92,7 +92,7 @@ for (const paper of rebuilt) {
   assert.deepEqual(
     qt.map(q => q.options.find(o => o.optionId === q.correctOptionId).text),
     expectedQT[paper.paperNumber],
-    \`Paper \${paper.paperNumber}: independently checked QT keys\`
+    `Paper ${paper.paperNumber}: independently checked QT keys`
   );
   for (const q of qt) {
     const answer = q.options.find(o => o.optionId === q.correctOptionId).text.toLowerCase();
