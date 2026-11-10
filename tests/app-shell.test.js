@@ -10,6 +10,7 @@ const dashboard=fs.readFileSync("dashboard.html","utf8");
 const homepage=fs.readFileSync("index.html","utf8");
 const clatLogin=fs.readFileSync("clat-login.html","utf8");
 const clatPage=fs.readFileSync("clat.html","utf8");
+const clatPracticeScript=fs.readFileSync("js/clat-practice.js","utf8");
 const clatDashboard=fs.readFileSync("clat-dashboard.html","utf8");
 const clatDashboardModel=fs.readFileSync("js/clat-dashboard-model.js","utf8");
 const clatDashboardScript=fs.readFileSync("js/clat-dashboard.js","utf8");
@@ -94,7 +95,7 @@ assert.ok(clatLogin.includes("AI-Enthusiast")&&!/JP Ganathe|Conceptualised by/i.
 assert.ok(clatLogin.includes('id="studentLoginForm"')&&clatLogin.includes("login-page.js"),"the CLAT login reuses the existing student authentication flow");
 assert.ok(clatPage.includes("AI-Enthusiast")&&!/JP Ganathe|Conceptualised by/i.test(clatPage),"the CLAT practice page contains no personal attribution");
 assert.ok(clatPage.includes('id="actual-papers"')&&clatPage.includes('id="model-papers"'),"CLAT actual and model paper sections have dedicated navigation anchors");
-assert.ok(clatPage.includes(".clat-pyq-open{color:#fff!important")&&clatPage.includes("Open Question Paper (PDF)"),"previous-year PDF action has a readable high-contrast label");
+assert.ok(clatPage.includes(".clat-pyq-open{color:#fff!important")&&clatPracticeScript.includes('paperLink.textContent="Open Question Paper (PDF)"')&&clatPracticeScript.includes('paperLink.className="clat-btn clat-pyq-open"'),"previous-year PDF action has a readable high-contrast label");
 assert.ok(nav.includes('current.file==="clat-login.html"')&&nav.includes('location.replace(clatExperience?"./clat-login.html":"./index.html")'),"CLAT guests and sign-outs remain within the separate CLAT entry route");
 assert.ok(nav.includes('clatExperience?"AI-Enthusiast":"Learn · Practise · Level up"')&&nav.includes('clatExperience?"AI-Enthusiast · CLAT UG 2027"'),"desktop and mobile CLAT navigation display the abstracted brand");
 assert.ok(pageAccess.includes('const clatRoute=page==="clat.html"||page==="clat-dashboard.html"')&&pageAccess.includes('const signInTarget=clatRoute?"./clat-login.html":"./index.html"'),"unauthenticated CLAT visitors are routed to the CLAT-specific login page");
