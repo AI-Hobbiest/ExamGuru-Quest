@@ -232,5 +232,3366 @@
       "text": "An archive has 12,000 photographs. Team A digitises 18% of the collection in Week 1; Team B digitises 15% of the photographs remaining after Week 1. A later grant funds 1,500 additional scans from an uncatalogued collection. Of the combined digitised and newly scanned images, 8% require metadata correction. Each correction takes 12 minutes. Assume the numbers are exact. The archive processes correction work in teams of six staff members. Each staff member can spend 90 minutes per day on metadata corrections. If a question asks for workdays, assume all six staff members work at the same rate and ignore breaks or other duties."
     }
   ],
-  "questions": []
+  "questions": [
+    {
+      "questionId": "clat-ug27-r009-q001",
+      "passageId": "r009-english-01",
+      "sectionId": "english",
+      "prompt": "Which issue makes the lamp's provenance disputed?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The museum's gift account is complicated by an archival note describing removal from the temple store."
+        },
+        {
+          "optionId": "o2",
+          "text": "The museum cannot identify the metal used to make the lamp."
+        },
+        {
+          "optionId": "o3",
+          "text": "The family has admitted that the lamp was sold at auction."
+        },
+        {
+          "optionId": "o4",
+          "text": "The committee disputes the date on which the temple was built."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The museum's register records a gift, while the district note records removal during a period of reduced temple supervision.",
+      "difficulty": "easy",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q002",
+      "passageId": "r009-english-01",
+      "sectionId": "english",
+      "prompt": "What is the main purpose of the shared condition survey?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "To decide legal title by measuring the lamp."
+        },
+        {
+          "optionId": "o2",
+          "text": "To determine which party has the larger collection."
+        },
+        {
+          "optionId": "o3",
+          "text": "To establish common evidence about the object's material condition before deciding care and access."
+        },
+        {
+          "optionId": "o4",
+          "text": "To prove that the museum's catalogue must be deleted."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The survey is the agreed first step; it informs conservation and later negotiation without deciding ownership.",
+      "difficulty": "moderate",
+      "competency": "author-purpose"
+    },
+    {
+      "questionId": "clat-ug27-r009-q003",
+      "passageId": "r009-english-01",
+      "sectionId": "english",
+      "prompt": "Which proposition best captures the author's view of expertise?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Only professional conservators can interpret an artefact's meaning."
+        },
+        {
+          "optionId": "o2",
+          "text": "Conservation knowledge and community knowledge make different contributions to responsible stewardship."
+        },
+        {
+          "optionId": "o3",
+          "text": "Community knowledge is sufficient to determine material treatment."
+        },
+        {
+          "optionId": "o4",
+          "text": "The two forms of knowledge are interchangeable."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage says technical conservation and ritual knowledge answer distinct questions and should not be treated as substitutes.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q004",
+      "passageId": "r009-english-01",
+      "sectionId": "english",
+      "prompt": "Why did neither party settle the object's final location in advance?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The deposit agreement prohibited any further discussion."
+        },
+        {
+          "optionId": "o2",
+          "text": "The lamp had already been transferred to a third museum."
+        },
+        {
+          "optionId": "o3",
+          "text": "The committee no longer regarded the object as significant."
+        },
+        {
+          "optionId": "o4",
+          "text": "The parties wanted evidence-led discussion of return, access and conservation options."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The renewable loan was one option within a process, not a predetermined result.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q005",
+      "passageId": "r009-english-01",
+      "sectionId": "english",
+      "prompt": "What does the passage imply about public access?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Public access always overrides source-community claims."
+        },
+        {
+          "optionId": "o2",
+          "text": "Access is an important consideration but does not, by itself, resolve a provenance claim."
+        },
+        {
+          "optionId": "o3",
+          "text": "An object should never be displayed outside its original location."
+        },
+        {
+          "optionId": "o4",
+          "text": "Access matters only when an artefact has commercial value."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The museum's access concern is recognised, but the passage treats it alongside history, ritual use and care.",
+      "difficulty": "challenging",
+      "competency": "interpretation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q006",
+      "passageId": "r009-english-01",
+      "sectionId": "english",
+      "prompt": "Which statement would the author most likely reject?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "That a museum's conservation work may be valuable."
+        },
+        {
+          "optionId": "o2",
+          "text": "That acquisition history can require continuing examination."
+        },
+        {
+          "optionId": "o3",
+          "text": "That affected communities may hold relevant knowledge."
+        },
+        {
+          "optionId": "o4",
+          "text": "That long-term physical conservation alone is enough to establish responsible stewardship."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The conclusion expressly expands stewardship beyond physical preservation to provenance and community participation.",
+      "difficulty": "easy",
+      "competency": "argument-evaluation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q007",
+      "passageId": "r009-english-02",
+      "sectionId": "english",
+      "prompt": "Why did the organisers preserve local spellings alongside a shared index?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "To remove all differences among settlements."
+        },
+        {
+          "optionId": "o2",
+          "text": "To prevent learners from locating audio recordings."
+        },
+        {
+          "optionId": "o3",
+          "text": "To make the archive searchable without declaring one local variety the only correct form."
+        },
+        {
+          "optionId": "o4",
+          "text": "To replace spoken language with a single written standard."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage says a single spelling could marginalise speakers; the index was a search aid, not a replacement.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q008",
+      "passageId": "r009-english-02",
+      "sectionId": "english",
+      "prompt": "What risk did contributors raise about unrestricted online access?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Some recordings contained material that speakers did not want publicly searchable."
+        },
+        {
+          "optionId": "o2",
+          "text": "The archive would automatically change speakers' voices."
+        },
+        {
+          "optionId": "o3",
+          "text": "The recordings could not be stored outside the hills."
+        },
+        {
+          "optionId": "o4",
+          "text": "The language had no words for contemporary subjects."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The organisers distinguished permission to record from the scope of later access.",
+      "difficulty": "moderate",
+      "competency": "detail-inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q009",
+      "passageId": "r009-english-02",
+      "sectionId": "english",
+      "prompt": "Which activity best reflects the project's understanding of a living language?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Limiting the archive to ceremonial expressions."
+        },
+        {
+          "optionId": "o2",
+          "text": "Removing vocabulary that describes current technology."
+        },
+        {
+          "optionId": "o3",
+          "text": "Recording discussion of work, sport and mobile-phone use as well as older knowledge."
+        },
+        {
+          "optionId": "o4",
+          "text": "Requiring every speaker to use one pronunciation."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage says the archive deliberately included contemporary life rather than only material outsiders viewed as ancient.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q010",
+      "passageId": "r009-english-02",
+      "sectionId": "english",
+      "prompt": "What does the author imply about digital archives?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They can support language use, but cannot replace everyday opportunities to speak it."
+        },
+        {
+          "optionId": "o2",
+          "text": "They automatically reverse language decline."
+        },
+        {
+          "optionId": "o3",
+          "text": "They are useful only when all speakers agree on a standard spelling."
+        },
+        {
+          "optionId": "o4",
+          "text": "They remove the need for intergenerational teaching."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The final paragraph says home, school, work and public life remain essential spaces for language use.",
+      "difficulty": "challenging",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q011",
+      "passageId": "r009-english-02",
+      "sectionId": "english",
+      "prompt": "Why were original audio recordings retained?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The group planned to delete all written records."
+        },
+        {
+          "optionId": "o2",
+          "text": "Audio was the only format permitted by law."
+        },
+        {
+          "optionId": "o3",
+          "text": "The organisers wanted to avoid identifying the settlement."
+        },
+        {
+          "optionId": "o4",
+          "text": "They preserved the speaker's own form and context even when search captions used an index."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The archive retained audio while recording settlement and spelling variants to avoid flattening speech.",
+      "difficulty": "easy",
+      "competency": "detail-inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q012",
+      "passageId": "r009-english-02",
+      "sectionId": "english",
+      "prompt": "Which concern about standardisation is explicit in the passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Standardisation makes all language teaching impossible."
+        },
+        {
+          "optionId": "o2",
+          "text": "One spelling might cause speakers of other local varieties to feel their speech is incorrect."
+        },
+        {
+          "optionId": "o3",
+          "text": "Different pronunciations cannot coexist in an archive."
+        },
+        {
+          "optionId": "o4",
+          "text": "Search tools always privilege spoken language over text."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage describes the concern that an official spelling could elevate one variety above others.",
+      "difficulty": "moderate",
+      "competency": "author-attitude"
+    },
+    {
+      "questionId": "clat-ug27-r009-q013",
+      "passageId": "r009-english-03",
+      "sectionId": "english",
+      "prompt": "What did residents' materials add to the first exhibition draft?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They proved the dam had no public benefit."
+        },
+        {
+          "optionId": "o2",
+          "text": "They replaced all technical records with personal memories."
+        },
+        {
+          "optionId": "o3",
+          "text": "They established that every household opposed the project."
+        },
+        {
+          "optionId": "o4",
+          "text": "They revealed household and community effects absent from the engineering-centred account."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The school register, railway worker's account and compensation maps brought in effects the original narrative omitted.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q014",
+      "passageId": "r009-english-03",
+      "sectionId": "english",
+      "prompt": "Why did the curator want to identify the kind of source beside each item?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Because only official records can be historically reliable."
+        },
+        {
+          "optionId": "o2",
+          "text": "Because a map, oral recollection and court record do not establish the same kinds of facts."
+        },
+        {
+          "optionId": "o3",
+          "text": "Because visitors cannot understand more than one source type."
+        },
+        {
+          "optionId": "o4",
+          "text": "Because all sources needed to be given identical weight."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage stresses the distinct evidentiary roles and limits of different records.",
+      "difficulty": "moderate",
+      "competency": "conceptual-distinction"
+    },
+    {
+      "questionId": "clat-ug27-r009-q015",
+      "passageId": "r009-english-03",
+      "sectionId": "english",
+      "prompt": "How did the revised exhibition handle conflicting accounts?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It described the disagreement and explained what each source could and could not establish."
+        },
+        {
+          "optionId": "o2",
+          "text": "It removed the account that criticised the dam."
+        },
+        {
+          "optionId": "o3",
+          "text": "It presented every account as equally conclusive."
+        },
+        {
+          "optionId": "o4",
+          "text": "It selected the account with the greatest number of supporters."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The museum did not manufacture consensus where evidence supported different interpretations.",
+      "difficulty": "challenging",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q016",
+      "passageId": "r009-english-03",
+      "sectionId": "english",
+      "prompt": "What does the phrase 'curatorial selection remained unavoidable' suggest?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A museum can display every document ever created."
+        },
+        {
+          "optionId": "o2",
+          "text": "Curatorial decisions are automatically neutral."
+        },
+        {
+          "optionId": "o3",
+          "text": "A museum must make choices, but can make the basis for those choices visible."
+        },
+        {
+          "optionId": "o4",
+          "text": "Community participation removes the need for judgment."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage recognises selection as inevitable while advocating transparency about it.",
+      "difficulty": "easy",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q017",
+      "passageId": "r009-english-03",
+      "sectionId": "english",
+      "prompt": "Which follow-up would best test whether the exhibition represents residents meaningfully?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Ask represented residents whether their accounts are recognisable and review labels when new evidence appears."
+        },
+        {
+          "optionId": "o2",
+          "text": "Count only total visitor entries."
+        },
+        {
+          "optionId": "o3",
+          "text": "Measure the size of the engineering drawings."
+        },
+        {
+          "optionId": "o4",
+          "text": "Compare the gallery's electricity costs."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage's review plan focuses on whether people recognise their accounts and whether evidence changes labels.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q018",
+      "passageId": "r009-english-03",
+      "sectionId": "english",
+      "prompt": "What distinction does the passage draw between authenticity and completeness?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Authenticity is irrelevant to historical interpretation."
+        },
+        {
+          "optionId": "o2",
+          "text": "An exhibition is complete whenever each object is genuine."
+        },
+        {
+          "optionId": "o3",
+          "text": "Authentic objects can still form an incomplete narrative if their relationships are not examined."
+        },
+        {
+          "optionId": "o4",
+          "text": "Multiple perspectives make evidence unnecessary."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The conclusion explicitly says genuine objects can still be arranged into an incomplete account.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q019",
+      "passageId": "r009-english-04",
+      "sectionId": "english",
+      "prompt": "What made the original catalogue description harmful as well as inaccurate?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It omitted the photograph's dimensions."
+        },
+        {
+          "optionId": "o2",
+          "text": "It repeated a demeaning institutional label and obscured the community's identity."
+        },
+        {
+          "optionId": "o3",
+          "text": "It was written in a language no researcher could read."
+        },
+        {
+          "optionId": "o4",
+          "text": "It listed the survey office as the photographer."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The description called a named community primitive and misrepresented the road's timing.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q020",
+      "passageId": "r009-english-04",
+      "sectionId": "english",
+      "prompt": "Why did the archive preserve the earlier wording in a historical note?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "To keep the old phrase as the preferred public title."
+        },
+        {
+          "optionId": "o2",
+          "text": "To prevent researchers from locating the corrected item."
+        },
+        {
+          "optionId": "o3",
+          "text": "To avoid identifying the institution that created the record."
+        },
+        {
+          "optionId": "o4",
+          "text": "To show how the survey office had classified the community and how the catalogue later changed."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The archive wanted to correct current use without hiding how the earlier description entered the record.",
+      "difficulty": "challenging",
+      "competency": "author-purpose"
+    },
+    {
+      "questionId": "clat-ug27-r009-q021",
+      "passageId": "r009-english-04",
+      "sectionId": "english",
+      "prompt": "What does the layered record distinguish?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The photograph's market value from its insurance value."
+        },
+        {
+          "optionId": "o2",
+          "text": "The current supported description from the earlier institutional wording and its provenance."
+        },
+        {
+          "optionId": "o3",
+          "text": "The archive building from the survey office building."
+        },
+        {
+          "optionId": "o4",
+          "text": "The visitor's opinion from the photographer's signature."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The public-facing title was corrected while the original wording was retained with context.",
+      "difficulty": "easy",
+      "competency": "detail-inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q022",
+      "passageId": "r009-english-04",
+      "sectionId": "english",
+      "prompt": "Why did the archivist avoid identifying a person without evidence?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The archive was forbidden to name communities."
+        },
+        {
+          "optionId": "o2",
+          "text": "The image had no historical significance."
+        },
+        {
+          "optionId": "o3",
+          "text": "The former catalogue entry was legally binding."
+        },
+        {
+          "optionId": "o4",
+          "text": "A correction should not introduce a new unsupported claim."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage says the archivist did not invent an identity where evidence was lacking.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q023",
+      "passageId": "r009-english-04",
+      "sectionId": "english",
+      "prompt": "What role did the stable identifier serve?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It prevented the item from being revised in future."
+        },
+        {
+          "optionId": "o2",
+          "text": "It replaced the need to preserve evidence."
+        },
+        {
+          "optionId": "o3",
+          "text": "It kept citations using the earlier catalogue reference traceable after correction."
+        },
+        {
+          "optionId": "o4",
+          "text": "It automatically granted download permission."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The identifier connected earlier scholarship to the corrected record without treating the error as current fact.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q024",
+      "passageId": "r009-english-04",
+      "sectionId": "english",
+      "prompt": "Which principle best captures the archive's method?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Correct present information while retaining an auditable account of how the description changed."
+        },
+        {
+          "optionId": "o2",
+          "text": "Delete every earlier version whenever terminology changes."
+        },
+        {
+          "optionId": "o3",
+          "text": "Keep the old wording as the only searchable title."
+        },
+        {
+          "optionId": "o4",
+          "text": "Avoid correction until every uncertainty disappears."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage combines current accuracy with transparency about institutional revision.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q025",
+      "passageId": "r009-current-affairs-01",
+      "sectionId": "current-affairs",
+      "prompt": "When and where did UNESCO's twentieth intangible heritage committee session take place?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Busan, 19–29 July 2026."
+        },
+        {
+          "optionId": "o2",
+          "text": "Paris, 8–12 December 2025."
+        },
+        {
+          "optionId": "o3",
+          "text": "New Delhi, 8–12 December 2025."
+        },
+        {
+          "optionId": "o4",
+          "text": "New Delhi, 8–12 December 2026."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The UNESCO session record identifies New Delhi and the dates 8–12 December 2025.",
+      "difficulty": "challenging",
+      "competency": "date-and-event"
+    },
+    {
+      "questionId": "clat-ug27-r009-q026",
+      "passageId": "r009-current-affairs-01",
+      "sectionId": "current-affairs",
+      "prompt": "Which matters fall within the Committee's work under the 2003 Convention?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Nominations, urgent safeguarding needs and reports from States Parties."
+        },
+        {
+          "optionId": "o2",
+          "text": "Setting international copyright tariffs."
+        },
+        {
+          "optionId": "o3",
+          "text": "Electing all UNESCO member governments."
+        },
+        {
+          "optionId": "o4",
+          "text": "Licensing every cultural performance."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage describes the Committee's responsibilities under the intangible heritage Convention.",
+      "difficulty": "easy",
+      "competency": "fact-comprehension"
+    },
+    {
+      "questionId": "clat-ug27-r009-q027",
+      "passageId": "r009-current-affairs-01",
+      "sectionId": "current-affairs",
+      "prompt": "Why does inscription not guarantee that a cultural practice will continue?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Inscription transfers ownership of the practice to UNESCO."
+        },
+        {
+          "optionId": "o2",
+          "text": "The Committee prohibits changes to listed practices."
+        },
+        {
+          "optionId": "o3",
+          "text": "International recognition removes all local risks."
+        },
+        {
+          "optionId": "o4",
+          "text": "Transmission depends on practitioners and the conditions in which they use the practice."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage states that inscription does not replace community participation or ongoing practice.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q028",
+      "passageId": "r009-current-affairs-01",
+      "sectionId": "current-affairs",
+      "prompt": "What is the distinction between inscription and urgent safeguarding?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They are identical procedures."
+        },
+        {
+          "optionId": "o2",
+          "text": "Inscription recognises an element; urgent safeguarding addresses risks to its continued viability."
+        },
+        {
+          "optionId": "o3",
+          "text": "Urgent safeguarding transfers ownership."
+        },
+        {
+          "optionId": "o4",
+          "text": "Inscription proves that no risk exists."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage identifies different procedures and purposes for the two mechanisms.",
+      "difficulty": "moderate",
+      "competency": "conceptual-distinction"
+    },
+    {
+      "questionId": "clat-ug27-r009-q029",
+      "passageId": "r009-current-affairs-01",
+      "sectionId": "current-affairs",
+      "prompt": "Which statement best describes UNESCO's institutional role in this context?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It replaces communities as custodians."
+        },
+        {
+          "optionId": "o2",
+          "text": "It owns all listed cultural elements."
+        },
+        {
+          "optionId": "o3",
+          "text": "It guarantees every nominated practice will survive."
+        },
+        {
+          "optionId": "o4",
+          "text": "The Committee applies Convention procedures; communities continue to practise and transmit the heritage."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The text distinguishes international oversight from the community activity that sustains a practice.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q030",
+      "passageId": "r009-current-affairs-02",
+      "sectionId": "current-affairs",
+      "prompt": "Where and when was the 48th World Heritage Committee session held?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "New Delhi, 8–12 December 2025."
+        },
+        {
+          "optionId": "o2",
+          "text": "Busan, Republic of Korea, 19–29 July 2026."
+        },
+        {
+          "optionId": "o3",
+          "text": "Paris, 19–29 July 2025."
+        },
+        {
+          "optionId": "o4",
+          "text": "Busan, 1–10 July 2026."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The UNESCO World Heritage Centre record confirms Busan and the July 2026 dates.",
+      "difficulty": "challenging",
+      "competency": "date-and-event"
+    },
+    {
+      "questionId": "clat-ug27-r009-q031",
+      "passageId": "r009-current-affairs-02",
+      "sectionId": "current-affairs",
+      "prompt": "How many States Parties are represented on the World Heritage Committee?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Twenty-one."
+        },
+        {
+          "optionId": "o2",
+          "text": "Six."
+        },
+        {
+          "optionId": "o3",
+          "text": "Twelve."
+        },
+        {
+          "optionId": "o4",
+          "text": "One hundred and ninety-five."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The Committee consists of representatives of 21 elected States Parties.",
+      "difficulty": "easy",
+      "competency": "fact-comprehension"
+    },
+    {
+      "questionId": "clat-ug27-r009-q032",
+      "passageId": "r009-current-affairs-02",
+      "sectionId": "current-affairs",
+      "prompt": "What does the World Heritage List identify?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Tourist attractions ranked by annual visitors."
+        },
+        {
+          "optionId": "o2",
+          "text": "Properties that require no further management."
+        },
+        {
+          "optionId": "o3",
+          "text": "Properties considered to have Outstanding Universal Value under the Convention's criteria."
+        },
+        {
+          "optionId": "o4",
+          "text": "Objects whose ownership transfers to UNESCO."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage explains the List's purpose and the criteria and documentation for nominations.",
+      "difficulty": "moderate",
+      "competency": "conceptual-distinction"
+    },
+    {
+      "questionId": "clat-ug27-r009-q033",
+      "passageId": "r009-current-affairs-02",
+      "sectionId": "current-affairs",
+      "prompt": "Why are state-of-conservation reports important?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They allow threats to listed properties to be considered after inscription."
+        },
+        {
+          "optionId": "o2",
+          "text": "They replace all new nominations."
+        },
+        {
+          "optionId": "o3",
+          "text": "They automatically remove sites from the List."
+        },
+        {
+          "optionId": "o4",
+          "text": "They set admission fees at heritage properties."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The Committee's work includes monitoring risks as well as considering new nominations.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q034",
+      "passageId": "r009-current-affairs-02",
+      "sectionId": "current-affairs",
+      "prompt": "What is the best interpretation of World Heritage recognition?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It completes all conservation work."
+        },
+        {
+          "optionId": "o2",
+          "text": "It guarantees higher income for every resident."
+        },
+        {
+          "optionId": "o3",
+          "text": "It creates visibility and responsibility, not a guarantee that damage will disappear."
+        },
+        {
+          "optionId": "o4",
+          "text": "It removes national management duties."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage distinguishes recognition from the continuing obligation to manage and conserve a property.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q035",
+      "passageId": "r009-current-affairs-03",
+      "sectionId": "current-affairs",
+      "prompt": "Which resolution concerns enhanced Indigenous participation in relevant UN meetings?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A/RES/78/287."
+        },
+        {
+          "optionId": "o2",
+          "text": "A/RES/80/303."
+        },
+        {
+          "optionId": "o3",
+          "text": "A/RES/80/310."
+        },
+        {
+          "optionId": "o4",
+          "text": "A/RES/79/1."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The UN Mandate Registry identifies A/RES/80/303 as the Indigenous participation resolution.",
+      "difficulty": "challenging",
+      "competency": "fact-comprehension"
+    },
+    {
+      "questionId": "clat-ug27-r009-q036",
+      "passageId": "r009-current-affairs-03",
+      "sectionId": "current-affairs",
+      "prompt": "What does the resolution establish at this stage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A general Indigenous voting right in the General Assembly."
+        },
+        {
+          "optionId": "o2",
+          "text": "A new category of UN Member State."
+        },
+        {
+          "optionId": "o3",
+          "text": "An automatic veto over decisions affecting Indigenous lands."
+        },
+        {
+          "optionId": "o4",
+          "text": "A process for considering further procedural measures, including co-facilitators and Indigenous advisers."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage says the resolution establishes a process and does not immediately change voting or membership rights.",
+      "difficulty": "easy",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q037",
+      "passageId": "r009-current-affairs-03",
+      "sectionId": "current-affairs",
+      "prompt": "Why may a meeting seat alone be insufficient for meaningful participation?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The UN does not hold public meetings."
+        },
+        {
+          "optionId": "o2",
+          "text": "Representatives may lack timely documents, interpretation, travel support or a chance to influence decisions."
+        },
+        {
+          "optionId": "o3",
+          "text": "All representatives have identical resources."
+        },
+        {
+          "optionId": "o4",
+          "text": "A representative's location cannot affect participation."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage lists practical conditions needed to contribute meaningfully.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q038",
+      "passageId": "r009-current-affairs-03",
+      "sectionId": "current-affairs",
+      "prompt": "Which distinction should a reader preserve?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "All three mean an automatic voting right."
+        },
+        {
+          "optionId": "o2",
+          "text": "Consultation has more legal force than UN membership."
+        },
+        {
+          "optionId": "o3",
+          "text": "Participation is the same as treaty ratification."
+        },
+        {
+          "optionId": "o4",
+          "text": "Consultation, participation and decision-making authority describe different levels of influence."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage warns against treating these terms as interchangeable.",
+      "difficulty": "moderate",
+      "competency": "conceptual-distinction"
+    },
+    {
+      "questionId": "clat-ug27-r009-q039",
+      "passageId": "r009-current-affairs-03",
+      "sectionId": "current-affairs",
+      "prompt": "Which statement about A/RES/80/303 is best supported?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It completed a redesign of UN organs."
+        },
+        {
+          "optionId": "o2",
+          "text": "It granted Indigenous institutions Member State status."
+        },
+        {
+          "optionId": "o3",
+          "text": "Its practical effect depends on subsequent processes and procedures."
+        },
+        {
+          "optionId": "o4",
+          "text": "It removed the need for Member State involvement."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The resolution is described as a procedural step rather than a completed institutional redesign.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q040",
+      "passageId": "r009-current-affairs-04",
+      "sectionId": "current-affairs",
+      "prompt": "What period does the International Decade of Indigenous Languages cover?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "2022–2032."
+        },
+        {
+          "optionId": "o2",
+          "text": "2020–2030."
+        },
+        {
+          "optionId": "o3",
+          "text": "2025–2035."
+        },
+        {
+          "optionId": "o4",
+          "text": "2024–2033."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "UNESCO identifies 2022–2032 as the International Decade.",
+      "difficulty": "challenging",
+      "competency": "date-and-event"
+    },
+    {
+      "questionId": "clat-ug27-r009-q041",
+      "passageId": "r009-current-affairs-04",
+      "sectionId": "current-affairs",
+      "prompt": "Why does the Global Action Plan involve more than documentation?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It treats dictionaries as sufficient for revitalisation."
+        },
+        {
+          "optionId": "o2",
+          "text": "It limits use to ceremonial settings."
+        },
+        {
+          "optionId": "o3",
+          "text": "It connects language use with education, public services, technology and community action."
+        },
+        {
+          "optionId": "o4",
+          "text": "It requires one spelling for every language."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage explains that revitalisation needs everyday opportunities in several settings.",
+      "difficulty": "easy",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q042",
+      "passageId": "r009-current-affairs-04",
+      "sectionId": "current-affairs",
+      "prompt": "Which example illustrates a limitation of digital language tools?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Automatic transcription performs poorly because little training data exists for a small language."
+        },
+        {
+          "optionId": "o2",
+          "text": "An elder teaches children at home."
+        },
+        {
+          "optionId": "o3",
+          "text": "A school schedules optional classes."
+        },
+        {
+          "optionId": "o4",
+          "text": "A speaker uses a local word in conversation."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage notes that tools designed for majority languages may not work well for smaller languages.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q043",
+      "passageId": "r009-current-affairs-04",
+      "sectionId": "current-affairs",
+      "prompt": "Which indicator would most directly show intergenerational transmission?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The number of dictionaries printed."
+        },
+        {
+          "optionId": "o2",
+          "text": "The number of social-media accounts created."
+        },
+        {
+          "optionId": "o3",
+          "text": "The number of official meetings held."
+        },
+        {
+          "optionId": "o4",
+          "text": "Evidence that children use the language with older speakers in everyday settings."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage identifies communication between generations as an important outcome.",
+      "difficulty": "moderate",
+      "competency": "evaluation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q044",
+      "passageId": "r009-current-affairs-04",
+      "sectionId": "current-affairs",
+      "prompt": "What is the Decade's underlying approach to language preservation?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Freeze every language in a single historical form."
+        },
+        {
+          "optionId": "o2",
+          "text": "Support conditions in which communities choose to use and transmit their languages."
+        },
+        {
+          "optionId": "o3",
+          "text": "Transfer language ownership to UNESCO."
+        },
+        {
+          "optionId": "o4",
+          "text": "Replace local varieties with one international standard."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage rejects museum-like preservation in favour of living community use.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q045",
+      "passageId": "r009-current-affairs-05",
+      "sectionId": "current-affairs",
+      "prompt": "When was UNESCO's 1970 Convention on illicit cultural-property transfers adopted?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "24 April 1972."
+        },
+        {
+          "optionId": "o2",
+          "text": "9 May 1972."
+        },
+        {
+          "optionId": "o3",
+          "text": "14 November 1972."
+        },
+        {
+          "optionId": "o4",
+          "text": "14 November 1970."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The UNESCO legal-affairs page identifies 14 November 1970 as the adoption date.",
+      "difficulty": "challenging",
+      "competency": "date-and-event"
+    },
+    {
+      "questionId": "clat-ug27-r009-q046",
+      "passageId": "r009-current-affairs-05",
+      "sectionId": "current-affairs",
+      "prompt": "What problem does the Convention address?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "All lawful museum loans."
+        },
+        {
+          "optionId": "o2",
+          "text": "Illicit import, export and transfer of ownership of cultural property."
+        },
+        {
+          "optionId": "o3",
+          "text": "Disagreement over modern artistic styles."
+        },
+        {
+          "optionId": "o4",
+          "text": "Ownership of every newly created artwork."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The Convention's title and provisions concern illicit movement and transfer of cultural property.",
+      "difficulty": "easy",
+      "competency": "fact-comprehension"
+    },
+    {
+      "questionId": "clat-ug27-r009-q047",
+      "passageId": "r009-current-affairs-05",
+      "sectionId": "current-affairs",
+      "prompt": "Why is provenance research relevant?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It examines an object's ownership and movement history to assess how it entered a collection."
+        },
+        {
+          "optionId": "o2",
+          "text": "It automatically establishes market price."
+        },
+        {
+          "optionId": "o3",
+          "text": "It determines the language used on a label."
+        },
+        {
+          "optionId": "o4",
+          "text": "It replaces national ownership laws."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage describes provenance as evidence about ownership and movement, not a price-setting tool.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q048",
+      "passageId": "r009-current-affairs-05",
+      "sectionId": "current-affairs",
+      "prompt": "Which inference about the Convention is correct?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It guarantees return of every object claimed by a State."
+        },
+        {
+          "optionId": "o2",
+          "text": "It prohibits all international movement of cultural property."
+        },
+        {
+          "optionId": "o3",
+          "text": "It provides a framework for cooperation but does not automatically resolve every restitution dispute."
+        },
+        {
+          "optionId": "o4",
+          "text": "It replaces domestic laws in every State Party."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage says the Convention operates through its provisions and domestic measures.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q049",
+      "passageId": "r009-current-affairs-05",
+      "sectionId": "current-affairs",
+      "prompt": "What challenge can online marketplaces create?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Objects may be offered across borders while sellers and provenance are difficult to verify."
+        },
+        {
+          "optionId": "o2",
+          "text": "They prevent cultural objects from being photographed."
+        },
+        {
+          "optionId": "o3",
+          "text": "They remove the need for customs cooperation."
+        },
+        {
+          "optionId": "o4",
+          "text": "They make ownership histories easier in every case."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage identifies online trade as a reason to strengthen provenance research and cooperation.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q050",
+      "passageId": "r009-current-affairs-06",
+      "sectionId": "current-affairs",
+      "prompt": "How many official languages does the United Nations have?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Four."
+        },
+        {
+          "optionId": "o2",
+          "text": "Five."
+        },
+        {
+          "optionId": "o3",
+          "text": "Six."
+        },
+        {
+          "optionId": "o4",
+          "text": "Eight."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage lists Arabic, Chinese, English, French, Russian and Spanish.",
+      "difficulty": "challenging",
+      "competency": "fact-comprehension"
+    },
+    {
+      "questionId": "clat-ug27-r009-q051",
+      "passageId": "r009-current-affairs-06",
+      "sectionId": "current-affairs",
+      "prompt": "When was General Assembly resolution 80/310 on multilingualism adopted?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "31 August 2026."
+        },
+        {
+          "optionId": "o2",
+          "text": "4 September 2026."
+        },
+        {
+          "optionId": "o3",
+          "text": "22 September 2024."
+        },
+        {
+          "optionId": "o4",
+          "text": "7 June 2024."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The General Assembly resolution record lists adoption on 4 September 2026.",
+      "difficulty": "easy",
+      "competency": "date-and-event"
+    },
+    {
+      "questionId": "clat-ug27-r009-q052",
+      "passageId": "r009-current-affairs-06",
+      "sectionId": "current-affairs",
+      "prompt": "Why do six official languages not guarantee complete linguistic access?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The UN has no interpreters."
+        },
+        {
+          "optionId": "o2",
+          "text": "Official languages are not used in meetings."
+        },
+        {
+          "optionId": "o3",
+          "text": "Every Member State uses only one language."
+        },
+        {
+          "optionId": "o4",
+          "text": "Not every communication is translated into every language spoken by affected communities."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage distinguishes UN official-language arrangements from practical access to local-language information.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q053",
+      "passageId": "r009-current-affairs-06",
+      "sectionId": "current-affairs",
+      "prompt": "Which example shows multilingualism as a participation issue?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A museum stores a sculpture in a climate-controlled room."
+        },
+        {
+          "optionId": "o2",
+          "text": "A resident cannot use a public service because the notice is unavailable in a language they understand."
+        },
+        {
+          "optionId": "o3",
+          "text": "An archive assigns a stable catalogue identifier."
+        },
+        {
+          "optionId": "o4",
+          "text": "A committee counts nomination forms."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage explains that language access affects whether people can understand and use services.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q054",
+      "passageId": "r009-current-affairs-06",
+      "sectionId": "current-affairs",
+      "prompt": "What should be measured to assess practical progress?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Only the number of languages named in a resolution."
+        },
+        {
+          "optionId": "o2",
+          "text": "Only the number of speeches delivered in English."
+        },
+        {
+          "optionId": "o3",
+          "text": "Only the printing cost of official documents."
+        },
+        {
+          "optionId": "o4",
+          "text": "Both institutional compliance and accessibility of information to the people who need it."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The conclusion distinguishes formal compliance from real-world accessibility.",
+      "difficulty": "moderate",
+      "competency": "evaluation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q055",
+      "passageId": "r009-legal-01",
+      "sectionId": "legal",
+      "prompt": "What does the deposit agreement give the museum?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Permanent title to every object in the collection."
+        },
+        {
+          "optionId": "o2",
+          "text": "An unlimited right to publish images."
+        },
+        {
+          "optionId": "o3",
+          "text": "Possession for the stated purposes, not ownership."
+        },
+        {
+          "optionId": "o4",
+          "text": "Ownership after three months of display."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The fictional rule distinguishes custody under a deposit from a transfer of title.",
+      "difficulty": "challenging",
+      "competency": "rule-application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q056",
+      "passageId": "r009-legal-01",
+      "sectionId": "legal",
+      "prompt": "The museum paid for conservation. What does that establish by itself?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It may support reimbursement if provided for, but does not create ownership."
+        },
+        {
+          "optionId": "o2",
+          "text": "It automatically transfers title."
+        },
+        {
+          "optionId": "o3",
+          "text": "It gives a permanent display right."
+        },
+        {
+          "optionId": "o4",
+          "text": "It cancels the family's right to end the deposit."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Conservation expenditure does not convert custody into title under the stated rule.",
+      "difficulty": "easy",
+      "competency": "principle-identification"
+    },
+    {
+      "questionId": "clat-ug27-r009-q057",
+      "passageId": "r009-legal-01",
+      "sectionId": "legal",
+      "prompt": "Immediate return would expose the objects to a documented flood risk. What may the museum do?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Refuse return permanently because visitors value the objects."
+        },
+        {
+          "optionId": "o2",
+          "text": "Sell the objects to fund storage."
+        },
+        {
+          "optionId": "o3",
+          "text": "Delay return briefly for safe transfer while explaining the risk and arranging a date."
+        },
+        {
+          "optionId": "o4",
+          "text": "Ignore the notice without giving reasons."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The rule allows reasonable temporary protection, not a permanent refusal.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q058",
+      "passageId": "r009-legal-01",
+      "sectionId": "legal",
+      "prompt": "The agreement allows display for three months each year. The museum proposes six months. What is required?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Fresh permission for the longer display."
+        },
+        {
+          "optionId": "o2",
+          "text": "No permission because the museum conserved the objects."
+        },
+        {
+          "optionId": "o3",
+          "text": "Automatic approval if the exhibition is educational."
+        },
+        {
+          "optionId": "o4",
+          "text": "Approval from visitors rather than the family."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The museum must respect the display limit unless new permission is given.",
+      "difficulty": "moderate",
+      "competency": "rule-application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q059",
+      "passageId": "r009-legal-01",
+      "sectionId": "legal",
+      "prompt": "Which evidence is most decisive in a dispute over ownership?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The number of years the museum held the object."
+        },
+        {
+          "optionId": "o2",
+          "text": "The number of visitors to the display."
+        },
+        {
+          "optionId": "o3",
+          "text": "The cost of conservation materials."
+        },
+        {
+          "optionId": "o4",
+          "text": "The agreement and any later written consent to transfer title."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The rule points to the agreement and later written consent, not length of possession or popularity.",
+      "difficulty": "moderate",
+      "competency": "evidence-evaluation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q060",
+      "passageId": "r009-legal-02",
+      "sectionId": "legal",
+      "prompt": "What does permission to scan letters permit?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Unlimited commercial reuse."
+        },
+        {
+          "optionId": "o2",
+          "text": "Making preservation copies for the agreed purpose, not automatically publishing them online."
+        },
+        {
+          "optionId": "o3",
+          "text": "Transfer of copyright to the archive."
+        },
+        {
+          "optionId": "o4",
+          "text": "Publication of every private detail."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The rule separates preservation copying from public or commercial uses.",
+      "difficulty": "challenging",
+      "competency": "rule-application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q061",
+      "passageId": "r009-legal-02",
+      "sectionId": "legal",
+      "prompt": "Why consider copyright and privacy separately from physical ownership?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A physical letter cannot contain personal information."
+        },
+        {
+          "optionId": "o2",
+          "text": "Custody always transfers copyright."
+        },
+        {
+          "optionId": "o3",
+          "text": "Privacy ends when a document enters an archive."
+        },
+        {
+          "optionId": "o4",
+          "text": "The depositor may transfer custody without transferring every right in the content or third-party information."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage identifies distinct interests in the paper, its text and information about living people.",
+      "difficulty": "easy",
+      "competency": "conceptual-distinction"
+    },
+    {
+      "questionId": "clat-ug27-r009-q062",
+      "passageId": "r009-legal-02",
+      "sectionId": "legal",
+      "prompt": "The family permits selected letters to be published. What should the archive record?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Only the date the letters were scanned."
+        },
+        {
+          "optionId": "o2",
+          "text": "The scope of permission, including downloading, reuse and alteration."
+        },
+        {
+          "optionId": "o3",
+          "text": "A promise that all future letters can be published."
+        },
+        {
+          "optionId": "o4",
+          "text": "An assurance that copyright no longer matters."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The rule requires the archive to record the scope of permission for new uses.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q063",
+      "passageId": "r009-legal-02",
+      "sectionId": "legal",
+      "prompt": "The agreement permits supervised consultation but not public publication. What may the archive do?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Provide supervised consultation while withholding unrestricted online release."
+        },
+        {
+          "optionId": "o2",
+          "text": "Publish all scans automatically."
+        },
+        {
+          "optionId": "o3",
+          "text": "Reject all research access."
+        },
+        {
+          "optionId": "o4",
+          "text": "Transfer the originals to the researcher."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Access and publication are distinct; the rule permits the agreed reading-room access.",
+      "difficulty": "moderate",
+      "competency": "scope-of-permission"
+    },
+    {
+      "questionId": "clat-ug27-r009-q064",
+      "passageId": "r009-legal-02",
+      "sectionId": "legal",
+      "prompt": "What is the central question in an online release request?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Whether the letters are historically interesting."
+        },
+        {
+          "optionId": "o2",
+          "text": "Whether the scan resolution is high enough."
+        },
+        {
+          "optionId": "o3",
+          "text": "Whether the public use falls within the permission granted for preservation."
+        },
+        {
+          "optionId": "o4",
+          "text": "Whether the archive has a public website."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "Scanning permission is not necessarily publication permission under the stated rule.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q065",
+      "passageId": "r009-legal-03",
+      "sectionId": "legal",
+      "prompt": "What makes consultation meaningful under the rule?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It occurs before the decision is fixed and gives understandable information about effects and alternatives."
+        },
+        {
+          "optionId": "o2",
+          "text": "It occurs after construction begins."
+        },
+        {
+          "optionId": "o3",
+          "text": "It is limited to attendance at a meeting."
+        },
+        {
+          "optionId": "o4",
+          "text": "It records objections without allowing influence."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The rule requires timely information and a genuine opportunity to influence design.",
+      "difficulty": "challenging",
+      "competency": "procedural-fairness"
+    },
+    {
+      "questionId": "clat-ug27-r009-q066",
+      "passageId": "r009-legal-03",
+      "sectionId": "legal",
+      "prompt": "Does the community have an automatic veto over the road?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Yes, any objection automatically stops the project."
+        },
+        {
+          "optionId": "o2",
+          "text": "Yes, because every cultural practice overrides infrastructure."
+        },
+        {
+          "optionId": "o3",
+          "text": "No; the authority may proceed for an important purpose if it considers evidence and explains why less harmful alternatives are impracticable."
+        },
+        {
+          "optionId": "o4",
+          "text": "No, because cultural practice is irrelevant."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The rule rejects both an automatic veto and a blanket public-interest justification.",
+      "difficulty": "easy",
+      "competency": "rule-application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q067",
+      "passageId": "r009-legal-03",
+      "sectionId": "legal",
+      "prompt": "The only meeting occurred after the design was effectively fixed. What is the likely defect?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The authority must cancel every future project."
+        },
+        {
+          "optionId": "o2",
+          "text": "The opportunity to participate may not have been genuine because it could not influence the options."
+        },
+        {
+          "optionId": "o3",
+          "text": "Residents automatically own the road corridor."
+        },
+        {
+          "optionId": "o4",
+          "text": "The authority complied simply by recording attendance."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The rule focuses on timing and real opportunity to affect the decision.",
+      "difficulty": "moderate",
+      "competency": "procedural-fairness"
+    },
+    {
+      "questionId": "clat-ug27-r009-q068",
+      "passageId": "r009-legal-03",
+      "sectionId": "legal",
+      "prompt": "A twenty-metre shift is technically possible but costs more. What should the authority assess?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Whether the contractor prefers the original route."
+        },
+        {
+          "optionId": "o2",
+          "text": "Whether residents can fund the road."
+        },
+        {
+          "optionId": "o3",
+          "text": "Whether the meeting lasted an hour."
+        },
+        {
+          "optionId": "o4",
+          "text": "Whether the extra cost is disproportionate to the recurring access and cultural effects avoided."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The rule requires assessment of less harmful alternatives and proportionate mitigation.",
+      "difficulty": "moderate",
+      "competency": "proportionality"
+    },
+    {
+      "questionId": "clat-ug27-r009-q069",
+      "passageId": "r009-legal-03",
+      "sectionId": "legal",
+      "prompt": "Which evidence best supports a finding that an alternative route is impracticable?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A general assertion that the preferred route is cheaper."
+        },
+        {
+          "optionId": "o2",
+          "text": "Engineering and utility-corridor records explaining the constraints."
+        },
+        {
+          "optionId": "o3",
+          "text": "A list of meeting attendees."
+        },
+        {
+          "optionId": "o4",
+          "text": "A statement that the project has political support."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The rule requires evidence explaining why alternatives cannot work.",
+      "difficulty": "moderate",
+      "competency": "evidence-evaluation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q070",
+      "passageId": "r009-legal-04",
+      "sectionId": "legal",
+      "prompt": "What must a conservator do before using a treatment that may irreversibly damage a surface?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Apply it to the entire ceiling immediately."
+        },
+        {
+          "optionId": "o2",
+          "text": "Rely only on the supplier's assurance."
+        },
+        {
+          "optionId": "o3",
+          "text": "Wait until all original pigment is lost."
+        },
+        {
+          "optionId": "o4",
+          "text": "Test it on a small area or obtain equivalent reliable evidence."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The rule requires evidence before potentially irreversible intervention.",
+      "difficulty": "challenging",
+      "competency": "rule-application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q071",
+      "passageId": "r009-legal-04",
+      "sectionId": "legal",
+      "prompt": "Why may a test on one corner be insufficient?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The contractor has not received payment."
+        },
+        {
+          "optionId": "o2",
+          "text": "The ceiling is too high to photograph."
+        },
+        {
+          "optionId": "o3",
+          "text": "Different areas may contain different pigments or earlier repairs."
+        },
+        {
+          "optionId": "o4",
+          "text": "The client has not selected a paint colour."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage notes that material variation limits what one test can establish.",
+      "difficulty": "easy",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q072",
+      "passageId": "r009-legal-04",
+      "sectionId": "legal",
+      "prompt": "The contractor hides a test result showing pigment damage. What is the effect on client approval?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The approval is not based on the material evidence the rule requires."
+        },
+        {
+          "optionId": "o2",
+          "text": "Approval automatically validates the treatment."
+        },
+        {
+          "optionId": "o3",
+          "text": "The hidden result transfers liability to the museum."
+        },
+        {
+          "optionId": "o4",
+          "text": "The contractor may proceed because the test was confidential."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The rule requires disclosure of material risks before informed approval.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q073",
+      "passageId": "r009-legal-04",
+      "sectionId": "legal",
+      "prompt": "Which record best supports future conservation decisions?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Only the supplier's product catalogue."
+        },
+        {
+          "optionId": "o2",
+          "text": "A photograph of the contractor's equipment."
+        },
+        {
+          "optionId": "o3",
+          "text": "The location, concentration, duration and observed result of each test and treatment."
+        },
+        {
+          "optionId": "o4",
+          "text": "A list of visitor comments."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The rule requires treatment and test evidence to be documented for future conservators.",
+      "difficulty": "moderate",
+      "competency": "evidence-selection"
+    },
+    {
+      "questionId": "clat-ug27-r009-q074",
+      "passageId": "r009-legal-04",
+      "sectionId": "legal",
+      "prompt": "What balance does the rule require?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Compare the risk of intervention with the risk of leaving damage untreated."
+        },
+        {
+          "optionId": "o2",
+          "text": "Avoid every intervention regardless of consequences."
+        },
+        {
+          "optionId": "o3",
+          "text": "Choose the fastest treatment in every case."
+        },
+        {
+          "optionId": "o4",
+          "text": "Preserve appearance even if original material is lost."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage says delay can also cause harm, so action and inaction both require assessment.",
+      "difficulty": "moderate",
+      "competency": "proportionality"
+    },
+    {
+      "questionId": "clat-ug27-r009-q075",
+      "passageId": "r009-legal-05",
+      "sectionId": "legal",
+      "prompt": "What is the principal defect in the auction catalogue?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It gives the auction time in the wrong zone."
+        },
+        {
+          "optionId": "o2",
+          "text": "It contains too many photographs."
+        },
+        {
+          "optionId": "o3",
+          "text": "It identifies the object as wooden."
+        },
+        {
+          "optionId": "o4",
+          "text": "It cites an inventory that may refer to a different object without disclosing the uncertainty."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The cited inventory appears to describe a different panel with a similar motif.",
+      "difficulty": "challenging",
+      "competency": "evidence-evaluation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q076",
+      "passageId": "r009-legal-05",
+      "sectionId": "legal",
+      "prompt": "What does 'attributed to' require under the rule?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A guarantee that the attribution is certain."
+        },
+        {
+          "optionId": "o2",
+          "text": "A basis that supports the stated uncertainty and honest disclosure of limitations."
+        },
+        {
+          "optionId": "o3",
+          "text": "No evidence because the term is cautious."
+        },
+        {
+          "optionId": "o4",
+          "text": "An endorsement by the highest bidder."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "Qualified language is permitted only when the evidence supports that degree of confidence.",
+      "difficulty": "easy",
+      "competency": "rule-application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q077",
+      "passageId": "r009-legal-05",
+      "sectionId": "legal",
+      "prompt": "The specialist learns before sale that the cited inventory refers to another panel. What must the auction house do?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Wait until after the sale to disclose the information."
+        },
+        {
+          "optionId": "o2",
+          "text": "Remove all historical references."
+        },
+        {
+          "optionId": "o3",
+          "text": "Continue without correction because inspection is possible."
+        },
+        {
+          "optionId": "o4",
+          "text": "Correct the catalogue and notify bidders who may have relied on the earlier description."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The rule requires correction of a material description and notice to affected bidders.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q078",
+      "passageId": "r009-legal-05",
+      "sectionId": "legal",
+      "prompt": "Why preserve the earlier version of the catalogue?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "To keep the incorrect description as current."
+        },
+        {
+          "optionId": "o2",
+          "text": "To show what bidders saw and when the correction was made."
+        },
+        {
+          "optionId": "o3",
+          "text": "To avoid notifying bidders."
+        },
+        {
+          "optionId": "o4",
+          "text": "To create a second sale record with a higher price."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "A version record helps determine whether the correction reached bidders in time.",
+      "difficulty": "moderate",
+      "competency": "purpose"
+    },
+    {
+      "questionId": "clat-ug27-r009-q079",
+      "passageId": "r009-legal-05",
+      "sectionId": "legal",
+      "prompt": "Which principle does the rule protect?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Honest separation of documentary evidence from expert inference."
+        },
+        {
+          "optionId": "o2",
+          "text": "A guarantee that every attribution is correct."
+        },
+        {
+          "optionId": "o3",
+          "text": "The intermediary's right to avoid all liability."
+        },
+        {
+          "optionId": "o4",
+          "text": "A buyer's duty to accept every catalogue claim."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The rule requires intermediaries to distinguish evidence from inference and disclose uncertainty.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q080",
+      "passageId": "r009-legal-06",
+      "sectionId": "legal",
+      "prompt": "What does consent to record not necessarily include?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Permission to capture any sound."
+        },
+        {
+          "optionId": "o2",
+          "text": "Permission to store a master copy for the agreed purpose."
+        },
+        {
+          "optionId": "o3",
+          "text": "Consent to publish, download or make the recording permanently searchable."
+        },
+        {
+          "optionId": "o4",
+          "text": "Permission to identify the event's date."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The rule separates recording from later access and use.",
+      "difficulty": "challenging",
+      "competency": "scope-of-permission"
+    },
+    {
+      "questionId": "clat-ug27-r009-q081",
+      "passageId": "r009-legal-06",
+      "sectionId": "legal",
+      "prompt": "What should an archive do if a recording contains information about non-consenting people?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Consider limiting access or removing identifying details."
+        },
+        {
+          "optionId": "o2",
+          "text": "Publish it because the main speaker consented."
+        },
+        {
+          "optionId": "o3",
+          "text": "Delete every recording from the event."
+        },
+        {
+          "optionId": "o4",
+          "text": "Transfer control to the platform provider."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The rule requires consideration of people who did not consent.",
+      "difficulty": "easy",
+      "competency": "privacy"
+    },
+    {
+      "questionId": "clat-ug27-r009-q082",
+      "passageId": "r009-legal-06",
+      "sectionId": "legal",
+      "prompt": "A song may be heard only during a particular season. What is an appropriate response?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Delete the recording in every case."
+        },
+        {
+          "optionId": "o2",
+          "text": "Make it permanently public because it is preserved."
+        },
+        {
+          "optionId": "o3",
+          "text": "Retain the master recording but restrict public access to the agreed period."
+        },
+        {
+          "optionId": "o4",
+          "text": "Ignore the community protocol."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The rule permits preservation while implementing community access conditions.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q083",
+      "passageId": "r009-legal-06",
+      "sectionId": "legal",
+      "prompt": "A researcher seeks supervised access under the agreed process. What follows?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The researcher receives unrestricted download rights."
+        },
+        {
+          "optionId": "o2",
+          "text": "The request may be considered through that process; research interest does not automatically override the conditions."
+        },
+        {
+          "optionId": "o3",
+          "text": "The archive must refuse all scholarly access."
+        },
+        {
+          "optionId": "o4",
+          "text": "The recording automatically enters the public domain."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "Research access may be considered, but the community conditions remain relevant.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q084",
+      "passageId": "r009-legal-06",
+      "sectionId": "legal",
+      "prompt": "What is the central principle?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The archive must publish everything it records."
+        },
+        {
+          "optionId": "o2",
+          "text": "Community protocols are irrelevant to digital collections."
+        },
+        {
+          "optionId": "o3",
+          "text": "Every recording must be deleted after one objection."
+        },
+        {
+          "optionId": "o4",
+          "text": "Preservation duties do not justify unlimited disclosure of community knowledge."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The final paragraph distinguishes preservation from unrestricted public access.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q085",
+      "passageId": "r009-logical-01",
+      "sectionId": "logical",
+      "prompt": "What does the count of forty buildings establish?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "That every building has been repaired."
+        },
+        {
+          "optionId": "o2",
+          "text": "The number entered in the register, not their conservation condition."
+        },
+        {
+          "optionId": "o3",
+          "text": "That each site has legal protection."
+        },
+        {
+          "optionId": "o4",
+          "text": "That all owners received funding."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage distinguishes documentation as an output from protection as an outcome.",
+      "difficulty": "challenging",
+      "competency": "scope-of-evidence"
+    },
+    {
+      "questionId": "clat-ug27-r009-q086",
+      "passageId": "r009-logical-01",
+      "sectionId": "logical",
+      "prompt": "Which evidence would most strengthen the claim of improved protection?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "More photographs in the register."
+        },
+        {
+          "optionId": "o2",
+          "text": "A high number of website visitors."
+        },
+        {
+          "optionId": "o3",
+          "text": "Attendance at the launch event."
+        },
+        {
+          "optionId": "o4",
+          "text": "Condition assessments and evidence that high-risk sites receive timely repairs."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "These measures connect documentation to actual management and repair outcomes.",
+      "difficulty": "easy",
+      "competency": "evidence-selection"
+    },
+    {
+      "questionId": "clat-ug27-r009-q087",
+      "passageId": "r009-logical-01",
+      "sectionId": "logical",
+      "prompt": "Why is combining different buildings into one count misleading?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "All buildings are structurally identical."
+        },
+        {
+          "optionId": "o2",
+          "text": "A register cannot contain photographs."
+        },
+        {
+          "optionId": "o3",
+          "text": "They face different risks, ownership arrangements and maintenance responsibilities."
+        },
+        {
+          "optionId": "o4",
+          "text": "Privately owned buildings cannot be heritage sites."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage contrasts public, private, stable and high-risk buildings.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q088",
+      "passageId": "r009-logical-01",
+      "sectionId": "logical",
+      "prompt": "Which policy would best connect the register to planning decisions?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Require risk assessment before approving projects that may affect listed sites."
+        },
+        {
+          "optionId": "o2",
+          "text": "Publish the same photograph in several formats."
+        },
+        {
+          "optionId": "o3",
+          "text": "Count each building under multiple headings."
+        },
+        {
+          "optionId": "o4",
+          "text": "Measure time spent on the website."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The register should inform planning and maintenance decisions rather than remain static.",
+      "difficulty": "moderate",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q089",
+      "passageId": "r009-logical-01",
+      "sectionId": "logical",
+      "prompt": "What is the flaw in the minister's conclusion?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It uses a number instead of a narrative."
+        },
+        {
+          "optionId": "o2",
+          "text": "It mentions public ownership."
+        },
+        {
+          "optionId": "o3",
+          "text": "It infers protection from an input measure of documentation."
+        },
+        {
+          "optionId": "o4",
+          "text": "It includes geographic coordinates."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The number of entries does not show whether the sites are protected or maintained.",
+      "difficulty": "moderate",
+      "competency": "flaw-identification"
+    },
+    {
+      "questionId": "clat-ug27-r009-q090",
+      "passageId": "r009-logical-01",
+      "sectionId": "logical",
+      "prompt": "Which conclusion is best supported?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "An inventory is useful when it triggers risk-based decisions and assigned responsibility."
+        },
+        {
+          "optionId": "o2",
+          "text": "A register alone prevents deterioration."
+        },
+        {
+          "optionId": "o3",
+          "text": "Funding should be divided equally among all sites."
+        },
+        {
+          "optionId": "o4",
+          "text": "Entry count is an adequate final measure."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage says the value of information depends on whether it changes decisions.",
+      "difficulty": "challenging",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q091",
+      "passageId": "r009-logical-02",
+      "sectionId": "logical",
+      "prompt": "What does the 40 per cent increase in enrolment directly measure?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "More students use the language daily."
+        },
+        {
+          "optionId": "o2",
+          "text": "The language is transmitted across generations."
+        },
+        {
+          "optionId": "o3",
+          "text": "Every student speaks fluently."
+        },
+        {
+          "optionId": "o4",
+          "text": "More students registered for optional language classes."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The office counts registrations, not regular attendance or everyday use.",
+      "difficulty": "easy",
+      "competency": "scope-of-evidence"
+    },
+    {
+      "questionId": "clat-ug27-r009-q092",
+      "passageId": "r009-logical-02",
+      "sectionId": "logical",
+      "prompt": "Which fact would most weaken the claim that the language is being revived?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Some students create recordings."
+        },
+        {
+          "optionId": "o2",
+          "text": "Many enrolled students rarely attend and do not use the language outside class."
+        },
+        {
+          "optionId": "o3",
+          "text": "Older speakers teach vocabulary at home."
+        },
+        {
+          "optionId": "o4",
+          "text": "The school offers several levels."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "This evidence separates registration from the actual use and transmission the claim concerns.",
+      "difficulty": "moderate",
+      "competency": "weaken-argument"
+    },
+    {
+      "questionId": "clat-ug27-r009-q093",
+      "passageId": "r009-logical-02",
+      "sectionId": "logical",
+      "prompt": "Which measure best addresses intergenerational transmission?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The number of printed textbooks."
+        },
+        {
+          "optionId": "o2",
+          "text": "The size of the education office."
+        },
+        {
+          "optionId": "o3",
+          "text": "The annual cost of furniture."
+        },
+        {
+          "optionId": "o4",
+          "text": "How often children communicate with older speakers in the language."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Communication between generations is a direct indicator of continued use.",
+      "difficulty": "moderate",
+      "competency": "evidence-selection"
+    },
+    {
+      "questionId": "clat-ug27-r009-q094",
+      "passageId": "r009-logical-02",
+      "sectionId": "logical",
+      "prompt": "Why should the evaluation distinguish age groups?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "All age groups learn at identical rates."
+        },
+        {
+          "optionId": "o2",
+          "text": "Adult enrolment and communication between children and grandparents may have different effects."
+        },
+        {
+          "optionId": "o3",
+          "text": "Adults cannot contribute to language use."
+        },
+        {
+          "optionId": "o4",
+          "text": "Schools should not offer optional classes."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "A single enrolment count can conceal very different learning and use patterns.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q095",
+      "passageId": "r009-logical-02",
+      "sectionId": "logical",
+      "prompt": "Which recommendation best follows?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Combine enrolment data with evidence about use in homes, schools and community settings."
+        },
+        {
+          "optionId": "o2",
+          "text": "Replace language classes with one standard test."
+        },
+        {
+          "optionId": "o3",
+          "text": "Use enrolment as the only success measure."
+        },
+        {
+          "optionId": "o4",
+          "text": "Stop collecting attendance information."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage asks for broader evaluation while allowing communities to define meaningful use.",
+      "difficulty": "challenging",
+      "competency": "conclusion"
+    },
+    {
+      "questionId": "clat-ug27-r009-q096",
+      "passageId": "r009-logical-02",
+      "sectionId": "logical",
+      "prompt": "Which assumption underlies the office's conclusion?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Textbooks can contain written vocabulary."
+        },
+        {
+          "optionId": "o2",
+          "text": "Students may learn more than one language."
+        },
+        {
+          "optionId": "o3",
+          "text": "Class registration is a reliable proxy for sustained language use."
+        },
+        {
+          "optionId": "o4",
+          "text": "Classes require trained teachers."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The conclusion equates enrolment with the wider outcome of revival.",
+      "difficulty": "easy",
+      "competency": "assumption-identification"
+    },
+    {
+      "questionId": "clat-ug27-r009-q097",
+      "passageId": "r009-logical-03",
+      "sectionId": "logical",
+      "prompt": "Why is the twelve-minute average insufficient to prove deep engagement?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It combines different visitor behaviours and does not measure comprehension."
+        },
+        {
+          "optionId": "o2",
+          "text": "Average dwell time cannot be calculated."
+        },
+        {
+          "optionId": "o3",
+          "text": "Every visitor must read every label."
+        },
+        {
+          "optionId": "o4",
+          "text": "The exhibition contains no photographs."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Group movement and waiting can increase time without showing understanding.",
+      "difficulty": "moderate",
+      "competency": "flaw-identification"
+    },
+    {
+      "questionId": "clat-ug27-r009-q098",
+      "passageId": "r009-logical-03",
+      "sectionId": "logical",
+      "prompt": "Which measure most directly tests understanding of source types?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Count catalogue purchases."
+        },
+        {
+          "optionId": "o2",
+          "text": "Measure gallery size."
+        },
+        {
+          "optionId": "o3",
+          "text": "Ask visitors to identify what each source can and cannot establish."
+        },
+        {
+          "optionId": "o4",
+          "text": "Count bold labels."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "This tests whether visitors distinguish maps, testimony, editorials and legal records.",
+      "difficulty": "moderate",
+      "competency": "evidence-selection"
+    },
+    {
+      "questionId": "clat-ug27-r009-q099",
+      "passageId": "r009-logical-03",
+      "sectionId": "logical",
+      "prompt": "What is the problem with treating all sources as interchangeable?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "All sources are created by the same institution."
+        },
+        {
+          "optionId": "o2",
+          "text": "They provide different kinds of evidence and answer different questions."
+        },
+        {
+          "optionId": "o3",
+          "text": "Oral testimony is always inaccurate."
+        },
+        {
+          "optionId": "o4",
+          "text": "Court records describe every social consequence."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "A map, oral account and court record cannot be assumed to prove the same facts.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q100",
+      "passageId": "r009-logical-03",
+      "sectionId": "logical",
+      "prompt": "Which evaluation would be more robust?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Use dwell time alone."
+        },
+        {
+          "optionId": "o2",
+          "text": "Count only school groups."
+        },
+        {
+          "optionId": "o3",
+          "text": "Remove source labels."
+        },
+        {
+          "optionId": "o4",
+          "text": "Compare visitor understanding before and after the guided exhibition."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "A before-and-after test can assess whether the exhibition improves source comprehension.",
+      "difficulty": "challenging",
+      "competency": "methodology"
+    },
+    {
+      "questionId": "clat-ug27-r009-q101",
+      "passageId": "r009-logical-03",
+      "sectionId": "logical",
+      "prompt": "What can gallery layout influence?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The legal status of a source."
+        },
+        {
+          "optionId": "o2",
+          "text": "The authority visitors assign to sources through size and placement."
+        },
+        {
+          "optionId": "o3",
+          "text": "Whether a document is historically authentic."
+        },
+        {
+          "optionId": "o4",
+          "text": "Whether an oral account is always true."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage notes that visual prominence can confer apparent authority.",
+      "difficulty": "easy",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q102",
+      "passageId": "r009-logical-03",
+      "sectionId": "logical",
+      "prompt": "Which conclusion is best supported?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A long visit proves the exhibition is balanced."
+        },
+        {
+          "optionId": "o2",
+          "text": "A survey replaces source analysis."
+        },
+        {
+          "optionId": "o3",
+          "text": "Museums should avoid disputed histories."
+        },
+        {
+          "optionId": "o4",
+          "text": "Visitor attention and historical understanding are related but separate outcomes."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The text distinguishes dwell time from comprehension and representation.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q103",
+      "passageId": "r009-logical-04",
+      "sectionId": "logical",
+      "prompt": "What is lost when the archive deletes the earlier entry?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The physical photograph is lost."
+        },
+        {
+          "optionId": "o2",
+          "text": "The revised title becomes unsearchable."
+        },
+        {
+          "optionId": "o3",
+          "text": "Researchers cannot trace how the description entered the record or was used."
+        },
+        {
+          "optionId": "o4",
+          "text": "The original source is invalidated."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The specialist is concerned that erasing the prior description removes its institutional history.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q104",
+      "passageId": "r009-logical-04",
+      "sectionId": "logical",
+      "prompt": "Why distinguish factual correction from a change in interpretation?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They have different evidentiary bases and require different explanations."
+        },
+        {
+          "optionId": "o2",
+          "text": "All catalogue revisions are equally certain."
+        },
+        {
+          "optionId": "o3",
+          "text": "Interpretation can never change."
+        },
+        {
+          "optionId": "o4",
+          "text": "A date cannot be corrected by evidence."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage gives examples of factual and interpretive changes requiring distinct treatment.",
+      "difficulty": "moderate",
+      "competency": "conceptual-distinction"
+    },
+    {
+      "questionId": "clat-ug27-r009-q105",
+      "passageId": "r009-logical-04",
+      "sectionId": "logical",
+      "prompt": "Which practice best supports transparency?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Delete previous descriptions after each update."
+        },
+        {
+          "optionId": "o2",
+          "text": "Allow title changes without recording why."
+        },
+        {
+          "optionId": "o3",
+          "text": "Maintain a version history, supporting evidence and a stable item identifier."
+        },
+        {
+          "optionId": "o4",
+          "text": "Replace every identifier after a spelling change."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The proposed method links each amendment to its date, responsible person and evidence.",
+      "difficulty": "challenging",
+      "competency": "methodology"
+    },
+    {
+      "questionId": "clat-ug27-r009-q106",
+      "passageId": "r009-logical-04",
+      "sectionId": "logical",
+      "prompt": "What should the archive say when a change reflects interpretation rather than factual error?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Record that it is interpretive and explain its basis."
+        },
+        {
+          "optionId": "o2",
+          "text": "Describe it as a verified factual correction."
+        },
+        {
+          "optionId": "o3",
+          "text": "Avoid documenting it."
+        },
+        {
+          "optionId": "o4",
+          "text": "Delete the earlier record without explanation."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage explicitly says the record should distinguish interpretive revisions.",
+      "difficulty": "easy",
+      "competency": "application"
+    },
+    {
+      "questionId": "clat-ug27-r009-q107",
+      "passageId": "r009-logical-04",
+      "sectionId": "logical",
+      "prompt": "Why is the claim that all known errors are corrected too strong?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Archives cannot correct any error."
+        },
+        {
+          "optionId": "o2",
+          "text": "Stable identifiers prevent new evidence."
+        },
+        {
+          "optionId": "o3",
+          "text": "All historical descriptions are subjective."
+        },
+        {
+          "optionId": "o4",
+          "text": "New evidence and interpretations may emerge after the current review."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Historical knowledge is not final; the review date and process should be described.",
+      "difficulty": "moderate",
+      "competency": "inference"
+    },
+    {
+      "questionId": "clat-ug27-r009-q108",
+      "passageId": "r009-logical-04",
+      "sectionId": "logical",
+      "prompt": "Which principle best captures the passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Retain old descriptions as current fact."
+        },
+        {
+          "optionId": "o2",
+          "text": "Update current information while preserving an auditable record of change."
+        },
+        {
+          "optionId": "o3",
+          "text": "Never revise catalogue descriptions."
+        },
+        {
+          "optionId": "o4",
+          "text": "Treat a database as final authority."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage supports visible, evidence-based revision rather than erasure or permanent acceptance of error.",
+      "difficulty": "moderate",
+      "competency": "central-idea"
+    },
+    {
+      "questionId": "clat-ug27-r009-q109",
+      "passageId": "r009-quantitative-01",
+      "sectionId": "quantitative",
+      "prompt": "How many visitors paid the standard admission fee?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "9,000 visitors"
+        },
+        {
+          "optionId": "o2",
+          "text": "4,500 visitors"
+        },
+        {
+          "optionId": "o3",
+          "text": "7,200 visitors"
+        },
+        {
+          "optionId": "o4",
+          "text": "10,800 visitors"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "60% of 18,000 = 10,800.",
+      "difficulty": "moderate",
+      "competency": "percentage-calculation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q110",
+      "passageId": "r009-quantitative-01",
+      "sectionId": "quantitative",
+      "prompt": "How many visitors paid the reduced admission fee?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "3,600 visitors"
+        },
+        {
+          "optionId": "o2",
+          "text": "4,500 visitors"
+        },
+        {
+          "optionId": "o3",
+          "text": "5,400 visitors"
+        },
+        {
+          "optionId": "o4",
+          "text": "6,000 visitors"
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "25% of 18,000 = 4,500.",
+      "difficulty": "challenging",
+      "competency": "percentage-calculation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q111",
+      "passageId": "r009-quantitative-01",
+      "sectionId": "quantitative",
+      "prompt": "What were the total admission receipts?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹5.22 lakh"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹4.80 lakh"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹5.40 lakh"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹6.00 lakh"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Standard receipts: 10,800 × ₹40 = ₹4,32,000. Reduced receipts: 4,500 × ₹20 = ₹90,000. Total = ₹5,22,000.",
+      "difficulty": "easy",
+      "competency": "multi-step-arithmetic"
+    },
+    {
+      "questionId": "clat-ug27-r009-q112",
+      "passageId": "r009-quantitative-01",
+      "sectionId": "quantitative",
+      "prompt": "Including workshop fees and sponsorship, what was the total revenue before operating costs?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹12.50 lakh"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹13.50 lakh"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹13.005 lakh"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹14.10 lakh"
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "Paying visitors = 15,300; 30% attend workshops = 4,590. Workshop fees = 4,590 × ₹150 = ₹6,88,500. Add admissions ₹5,22,000 and sponsorship ₹90,000 = ₹13,00,500, or ₹13.005 lakh.",
+      "difficulty": "moderate",
+      "competency": "multi-step-arithmetic"
+    },
+    {
+      "questionId": "clat-ug27-r009-q113",
+      "passageId": "r009-quantitative-02",
+      "sectionId": "quantitative",
+      "prompt": "How much was allocated to structural stabilisation?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹9.6 crore"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹8.4 crore"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹6 crore"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹10.8 crore"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "40% of ₹24 crore = ₹9.6 crore.",
+      "difficulty": "moderate",
+      "competency": "percentage-calculation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q114",
+      "passageId": "r009-quantitative-02",
+      "sectionId": "quantitative",
+      "prompt": "How much of the roof and drainage allocation was spent?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹4.8 crore"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹2.4 crore"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹3.6 crore"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹5.0 crore"
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "Roof allocation = 25% × ₹24 crore = ₹6 crore. Sixty per cent spent = ₹3.6 crore.",
+      "difficulty": "moderate",
+      "competency": "multi-step-arithmetic"
+    },
+    {
+      "questionId": "clat-ug27-r009-q115",
+      "passageId": "r009-quantitative-02",
+      "sectionId": "quantitative",
+      "prompt": "What amount was allocated to training local craftspeople?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹4.8 crore"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹3.6 crore"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹2.4 crore"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹6 crore"
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The first three categories account for 85%; the remaining 15% of ₹24 crore is ₹3.6 crore.",
+      "difficulty": "challenging",
+      "competency": "percentage-calculation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q116",
+      "passageId": "r009-quantitative-02",
+      "sectionId": "quantitative",
+      "prompt": "How much remains unspent in structural stabilisation and roof work combined?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹5.4 crore"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹3.6 crore"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹6 crore"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹4.8 crore"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Structural unspent = 25% of ₹9.6 crore = ₹2.4 crore. Roof unspent = ₹6 − ₹3.6 = ₹2.4 crore. Total = ₹4.8 crore.",
+      "difficulty": "easy",
+      "competency": "multi-step-arithmetic"
+    },
+    {
+      "questionId": "clat-ug27-r009-q117",
+      "passageId": "r009-quantitative-03",
+      "sectionId": "quantitative",
+      "prompt": "How many photographs did Team A digitise in Week 1?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "1,800 photographs"
+        },
+        {
+          "optionId": "o2",
+          "text": "2,160 photographs"
+        },
+        {
+          "optionId": "o3",
+          "text": "2,400 photographs"
+        },
+        {
+          "optionId": "o4",
+          "text": "2,700 photographs"
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "18% of 12,000 = 2,160.",
+      "difficulty": "moderate",
+      "competency": "percentage-calculation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q118",
+      "passageId": "r009-quantitative-03",
+      "sectionId": "quantitative",
+      "prompt": "How many photographs remained after Week 1?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "9,600 photographs"
+        },
+        {
+          "optionId": "o2",
+          "text": "10,200 photographs"
+        },
+        {
+          "optionId": "o3",
+          "text": "9,240 photographs"
+        },
+        {
+          "optionId": "o4",
+          "text": "9,840 photographs"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "12,000 − 2,160 = 9,840.",
+      "difficulty": "moderate",
+      "competency": "subtraction"
+    },
+    {
+      "questionId": "clat-ug27-r009-q119",
+      "passageId": "r009-quantitative-03",
+      "sectionId": "quantitative",
+      "prompt": "How many photographs did Team B digitise in Week 2?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "1,620 photographs"
+        },
+        {
+          "optionId": "o2",
+          "text": "1,230 photographs"
+        },
+        {
+          "optionId": "o3",
+          "text": "1,476 photographs"
+        },
+        {
+          "optionId": "o4",
+          "text": "1,500 photographs"
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "15% of the 9,840 photographs remaining after Week 1 = 1,476.",
+      "difficulty": "moderate",
+      "competency": "percentage-calculation"
+    },
+    {
+      "questionId": "clat-ug27-r009-q120",
+      "passageId": "r009-quantitative-03",
+      "sectionId": "quantitative",
+      "prompt": "How many staff-hours are required to correct metadata errors after the 1,500 new scans are included?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "82.176 staff-hours"
+        },
+        {
+          "optionId": "o2",
+          "text": "72 staff-hours"
+        },
+        {
+          "optionId": "o3",
+          "text": "90 staff-hours"
+        },
+        {
+          "optionId": "o4",
+          "text": "96 staff-hours"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Total scans = 2,160 + 1,476 + 1,500 = 5,136. Eight per cent require correction = 410.88; at 12 minutes each = 4,930.56 minutes = 82.176 staff-hours.",
+      "difficulty": "challenging",
+      "competency": "multi-step-arithmetic"
+    }
+  ]
 }
