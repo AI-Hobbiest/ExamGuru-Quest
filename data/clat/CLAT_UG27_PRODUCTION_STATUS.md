@@ -14,13 +14,13 @@
 
 | Metric | Current result |
 |---|---:|
-| Full-length papers drafted | 10 |
-| Questions drafted | 1,200 |
-| Strict automated validation | 10 / 10 |
-| Cross-paper unique question stems | 1,200 / 1,200 |
-| Unique passages | 229 / 229 |
-| Quantitative items independently recalculated | 120 / 120 |
-| Practice pilots available to students | 10 |
+| Full-length papers drafted | 15 |
+| Questions drafted | 1,800 |
+| Strict automated validation | 15 / 15 |
+| Cross-paper unique question stems | 1,800 / 1,800 |
+| Unique passages | 344 / 344 |
+| Quantitative items independently recalculated | 180 / 180 |
+| Practice pilots available to students | 15 |
 | Editorially approved official mock papers | 0 |
 | Target full-length papers | 50 |
 | Target unique questions | 6,000 |
@@ -40,7 +40,7 @@
 
 ## Remaining editorial work
 
-A complete independent blind solve of all 1,080 English, Current Affairs, Legal and Logical questions, deeper legal/current-affairs fact adjudication, ambiguity review, distractor-quality review and semantic near-duplicate analysis still need to be completed. Current Affairs coverage in Batch 01 is weighted toward Indian government/PIB releases and factual recall. The next batch must broaden international affairs, global institutions, arts and culture, science and historically significant events and increase passage-based inference/application.
+A complete independent blind solve of all 1,620 English, Current Affairs, Legal and Logical questions, deeper legal/current-affairs fact adjudication, ambiguity review, distractor-quality review and semantic near-duplicate analysis still need to be completed. Current Affairs coverage in Batch 01 is weighted toward Indian government/PIB releases and factual recall. The next batch must broaden international affairs, global institutions, arts and culture, science and historically significant events and increase passage-based inference/application.
 
 ## Batch 02 authoring controls
 
@@ -67,4 +67,17 @@ A complete independent blind solve of all 1,080 English, Current Affairs, Legal 
 
 ## Next production target
 
-Proceed with Papers 011–015. The 50-paper series is now at **10 / 50 papers (1,200 / 6,000 questions)**, with all ten currently available as practice pilots.
+Proceed with Papers 011–015. The 50-paper series is now at **15 / 50 papers (1,800 / 6,000 questions)**, with all fifteen available as practice pilots.
+
+
+## Batch 03 — Papers 011–015
+
+- Five additional full-length papers, 120 questions each; 600 new questions.
+- Section split per paper: English 24; Current Affairs & GK 30; Legal Reasoning 30; Logical Reasoning 24; Quantitative Techniques 12.
+- Each paper contains 23 passages/data sets, including six dated Current Affairs passages spanning multiple domains.
+- Topic coverage: water and climate adaptation; fiscal federalism and accountability; space governance and research; sports integrity and mega-event legacy; global growth, youth work, digital trade, environment and public health.
+- Answer positions: 30 per displayed option per paper; difficulty distribution: 24 easy / 72 moderate / 24 challenging.
+- All 60 Quantitative Techniques answers in this batch independently recalculated against the data sets and rationales.
+- Cross-paper exact integrity target: 1,800 unique question stems across Papers 001–015 and 344 unique passages; automated regression test added for final verification.
+
+**Release status (10 November 2026):** Papers 011–015 are loaded from `data/clat/model-papers-batch-03.json` as clearly labelled `practice-pilot` papers. They are not approved as official mocks. Blind solving, semantic near-duplicate review, distractor-quality review and comprehensive source/fact adjudication remain pending. Automated validation is not editorial approval.

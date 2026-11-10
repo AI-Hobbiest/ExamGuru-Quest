@@ -113,6 +113,19 @@ async function init(){
    batchIds.add(item.paperId);
   });
   library.papers.push(...batch.papers);
+  const batchThreeResponse=await fetch("./data/clat/model-papers-batch-03.json",{cache:"no-store"});
+  if(!batchThreeResponse.ok)throw Error("CLAT practice batch 03 returned HTTP "+batchThreeResponse.status);
+  const batchThree=await batchThreeResponse.json();
+  if(batchThree.kind!=="clat-model-paper-batch"||batchThree.batchNumber!==3||!Array.isArray(batchThree.papers)||batchThree.papers.length!==5)throw Error("CLAT practice batch 03 is invalid.");
+  const knownBatchThreeIds=new Set(library.papers.map(item=>item.paperId));
+  const batchThreeIds=new Set();
+  batchThree.papers.forEach((item,index)=>{
+   if(Number(item.paperNumber)!==index+11||item.status!=="practice-pilot")throw Error("CLAT practice batch 03 has an unexpected paper or release status.");
+   if(knownBatchThreeIds.has(item.paperId)||batchThreeIds.has(item.paperId))throw Error("Duplicate CLAT paper ID: "+item.paperId);
+   const check=engine.validatePaper(item,{strictCLAT:true});if(!check.valid)throw Error("Paper "+item.paperNumber+" failed strict validation: "+check.errors.slice(0,3).join(" "));
+   batchThreeIds.add(item.paperId);
+  });
+  library.papers.push(...batchThree.papers);
   renderLibrary();setStatus("Loaded "+availablePapers().length+" CLAT practice papers, including "+availablePapers().filter(p=>p.questions.length===120).length+" full-length practice pilots.");
   loadResume();
  }catch(error){setStatus("Unable to load CLAT practice: "+error.message);}
