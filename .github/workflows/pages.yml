@@ -490,5 +490,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          timeout: 1200
-          reporting_interval: 15
+          timeout: 1200000
+          reporting_interval: 15000
