@@ -3,6 +3,7 @@ const assert=require("node:assert/strict");
 const fs=require("node:fs");
 const branding=fs.readFileSync("css/branding.css","utf8");
 const roleTheme=fs.readFileSync("css/theme-roles-v2.css","utf8");
+const softSpectrum=fs.readFileSync("css/theme-soft-spectrum.css","utf8");
 const nav=fs.readFileSync("js/app-shell.js","utf8");
 const studentAuth=fs.readFileSync("js/student-auth.js","utf8");
 const css=fs.readFileSync("css/app-shell.css","utf8");
@@ -117,6 +118,11 @@ assert.ok(roleTheme.includes("body.c10-theme-quest"),"student-facing pages have 
 assert.ok(roleTheme.includes("body.c10-theme-admin"),"Admin Workspace has a dedicated Lavender theme");
 assert.ok(roleTheme.includes("#f0a82e"),"Quest quiz primary action uses the yellow-orange accent");
 assert.ok(roleTheme.includes("#e4f4e7")&&roleTheme.includes("#eee9ff")&&roleTheme.includes("#fff0c8"),"Quest palette includes green, lavender and yellow");
+assert.ok(nav.includes('themeLink.href="./css/theme-soft-spectrum.css?v=soft-spectrum-v1"')&&nav.includes('themeColor.setAttribute("content","#F8FAFC")'),"shared app shell loads Soft Spectrum after legacy styles and updates browser theme colour");
+assert.ok(softSpectrum.includes("--ss-blue:#2F78B7")&&softSpectrum.includes("--ss-lavender:#F1ECFC")&&softSpectrum.includes("--ss-coral-soft:#FFF0ED")&&softSpectrum.includes("--ss-mint:#E8F6EF"),"Soft Spectrum defines the approved light pastel palette");
+assert.ok(softSpectrum.includes("body.c10-shell-ready .c10-sidebar")&&softSpectrum.includes("body.c10-theme-admin .admin-hero")&&softSpectrum.includes("body.c10-theme-quest .clat-hero"),"Soft Spectrum covers shared navigation and role-specific parent/admin/CLAT surfaces");
+assert.ok(softSpectrum.includes(".opt.selected:not(.correct):not(.wrong)")&&softSpectrum.includes(".opt.correct")&&softSpectrum.includes(".opt.wrong"),"Soft Spectrum retains distinct selected, correct and incorrect quiz answer states");
+assert.ok(workflow.includes("cp css/theme-soft-spectrum.css _site/css/theme-soft-spectrum.css")&&workflow.includes("'css/theme-soft-spectrum.css'"),"Pages deployment copies and verifies the Soft Spectrum stylesheet");
 for(const [name,html,theme] of [["homepage",homepage,"c10-theme-quest"],["practice",practice,"c10-theme-quest"],["profile",profile,"c10-theme-quest"],["dashboard",dashboard,"c10-theme-quest"],["learning",learning,"c10-theme-quest"],["study",study,"c10-theme-quest"],["admin",admin,"c10-theme-admin"]]){
  assert.ok(/\.\/css\/theme-roles-v2\.css\?v=quest\d+/.test(html),name+" loads a versioned role-specific theme");
  assert.ok(html.includes('class="'+theme)||html.includes('class="eg-quiz-page '+theme),name+" is assigned the correct theme");

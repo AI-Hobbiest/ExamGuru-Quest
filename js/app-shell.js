@@ -1,6 +1,16 @@
 /* Responsive, session-aware navigation for ExamGuru Quest. */
 (() => {
   "use strict";
+  /* Load the shared Quest 2.0 light theme after legacy/page-local styles. */
+  const softThemeId="c10SoftSpectrumTheme";
+  if(!document.getElementById(softThemeId)){
+    const themeLink=document.createElement("link");
+    themeLink.id=softThemeId;themeLink.rel="stylesheet";
+    themeLink.href="./css/theme-soft-spectrum.css?v=soft-spectrum-v1";
+    document.head.appendChild(themeLink);
+  }
+  const themeColor=document.querySelector('meta[name="theme-color"]');
+  if(themeColor)themeColor.setAttribute("content","#F8FAFC");
   const links=[
     {label:"Sign in",icon:"🔐",href:"./index.html",page:"index.html",auth:"guest"},
 
