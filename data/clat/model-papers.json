@@ -19391,7 +19391,7 @@
               "title": "BBNJ Agreement",
               "publisher": "United Nations",
               "date": "2026-01-17",
-              "url": "https://treaties.un.org/pages/ViewDetails.aspx?chapter=21&clang=_en&mtdsg_no=XXI-10&src=TREATY"
+              "url": "https://www.un.org/bbnjagreement/en"
             }
           ]
         },
@@ -19471,7 +19471,7 @@
               "title": "Digital Rupee (e₹) – FAQs",
               "publisher": "Reserve Bank of India",
               "date": "2026-10-01",
-              "url": "https://www.rbi.org.in/scripts/FS_FAQs.aspx?Id=169"
+              "url": "https://www.rbi.org.in/Scripts/FAQView.aspx?Id=169"
             }
           ]
         },
@@ -22614,11 +22614,11 @@
           "prompt": "What amount is reserved for community warning systems? (Dataset: “A district's flood-resilience budget”)",
           "options": [
             {
-              "optionId": "o2",
+              "optionId": "o1",
               "text": "₹12 crore"
             },
             {
-              "optionId": "o1",
+              "optionId": "o2",
               "text": "₹9.6 crore"
             },
             {
@@ -22631,7 +22631,7 @@
             }
           ],
           "correctOptionId": "o2",
-          "explanation": "The first three heads use 35% + 25% + 20% = 80% of the ₹48 crore budget. The remaining 20% is ₹9.6 crore.",
+          "explanation": "The first three allocations use 80% of ₹48 crore. The remaining 20% for community warning systems is 0.20 × ₹48 crore = ₹9.6 crore.",
           "difficulty": "moderate",
           "competency": "remainder"
         },
@@ -22642,7 +22642,7 @@
           "prompt": "How much of the drainage and wetland allocations remains unspent after the first quarter? (Dataset: “A district's flood-resilience budget”)",
           "options": [
             {
-              "optionId": "o3",
+              "optionId": "o1",
               "text": "₹9.24 crore"
             },
             {
@@ -22650,7 +22650,7 @@
               "text": "₹10.44 crore"
             },
             {
-              "optionId": "o1",
+              "optionId": "o3",
               "text": "₹12.72 crore"
             },
             {
@@ -22659,7 +22659,7 @@
             }
           ],
           "correctOptionId": "o3",
-          "explanation": "Drainage unspent is 40% of ₹16.8 crore = ₹6.72 crore. Wetland unspent is 50% of ₹12 crore = ₹6 crore. Combined unspent = ₹12.72 crore.",
+          "explanation": "Drainage unspent = 40% of ₹16.8 crore = ₹6.72 crore. Wetland unspent = 50% of ₹12 crore = ₹6 crore. Combined unspent = ₹12.72 crore.",
           "difficulty": "easy",
           "competency": "multi-step-arithmetic"
         },
@@ -22670,7 +22670,7 @@
           "prompt": "The district spends ₹6 crore on electrical work. What percentage of that allocation remains? (Dataset: “A district's flood-resilience budget”)",
           "options": [
             {
-              "optionId": "o4",
+              "optionId": "o1",
               "text": "62.5%"
             },
             {
@@ -22682,12 +22682,12 @@
               "text": "40%"
             },
             {
-              "optionId": "o1",
+              "optionId": "o4",
               "text": "37.5%"
             }
           ],
           "correctOptionId": "o4",
-          "explanation": "The electrical allocation is 20% of ₹48 crore = ₹9.6 crore. After spending ₹6 crore, ₹3.6 crore remains; ₹3.6 ÷ ₹9.6 = 37.5%.",
+          "explanation": "Electrical allocation = 20% of ₹48 crore = ₹9.6 crore. After spending ₹6 crore, ₹3.6 crore remains; ₹3.6 ÷ ₹9.6 × 100 = 37.5%.",
           "difficulty": "moderate",
           "competency": "percentage-calculation"
         },
@@ -22726,11 +22726,11 @@
           "prompt": "How many patients are allocated to village A under the stated full-day share? (Dataset: “A mobile health outreach schedule”)",
           "options": [
             {
-              "optionId": "o2",
+              "optionId": "o1",
               "text": "10"
             },
             {
-              "optionId": "o1",
+              "optionId": "o2",
               "text": "12"
             },
             {
@@ -22754,7 +22754,7 @@
           "prompt": "How many patients can be seen during the final half-day? (Dataset: “A mobile health outreach schedule”)",
           "options": [
             {
-              "optionId": "o3",
+              "optionId": "o1",
               "text": "36"
             },
             {
@@ -22762,7 +22762,7 @@
               "text": "24"
             },
             {
-              "optionId": "o1",
+              "optionId": "o3",
               "text": "30"
             },
             {
@@ -22782,7 +22782,7 @@
           "prompt": "If the half-day follow-up list has 24 patients, what proportion of its capacity remains unused? (Dataset: “A mobile health outreach schedule”)",
           "options": [
             {
-              "optionId": "o4",
+              "optionId": "o1",
               "text": "30%"
             },
             {
@@ -22794,12 +22794,12 @@
               "text": "25%"
             },
             {
-              "optionId": "o1",
+              "optionId": "o4",
               "text": "20%"
             }
           ],
           "correctOptionId": "o4",
-          "explanation": "Capacity is 30 and the list contains 24 patients, leaving 6 unused places. 6 ÷ 30 × 100 = 20%.",
+          "explanation": "Unused capacity is 30 − 24 = 6 places. The unused share is 6 ÷ 30 × 100 = 20%.",
           "difficulty": "easy",
           "competency": "ratio"
         },
@@ -22838,11 +22838,11 @@
           "prompt": "How many documentary-only containers were cleared on the same day? (Dataset: “A port's container inspection data”)",
           "options": [
             {
-              "optionId": "o2",
+              "optionId": "o1",
               "text": "480"
             },
             {
-              "optionId": "o1",
+              "optionId": "o2",
               "text": "432"
             },
             {
@@ -22866,7 +22866,7 @@
           "prompt": "How many physical-only containers were not cleared on the same day? (Dataset: “A port's container inspection data”)",
           "options": [
             {
-              "optionId": "o3",
+              "optionId": "o1",
               "text": "144"
             },
             {
@@ -22874,7 +22874,7 @@
               "text": "108"
             },
             {
-              "optionId": "o1",
+              "optionId": "o3",
               "text": "126"
             },
             {
@@ -22883,7 +22883,7 @@
             }
           ],
           "correctOptionId": "o3",
-          "explanation": "The physical-only group is 30% of 1,200 = 360 containers. If 65% are cleared, 35% are not: 0.35 × 360 = 126.",
+          "explanation": "The physical-only group is 30% of 1,200 = 360 containers. Since 65% are cleared, 35% are not: 0.35 × 360 = 126.",
           "difficulty": "challenging",
           "competency": "multi-step-arithmetic"
         },
@@ -22894,7 +22894,7 @@
           "prompt": "What was the total number cleared on the same day across the three groups? (Dataset: “A port's container inspection data”)",
           "options": [
             {
-              "optionId": "o4",
+              "optionId": "o1",
               "text": "846"
             },
             {
@@ -22906,7 +22906,7 @@
               "text": "810"
             },
             {
-              "optionId": "o1",
+              "optionId": "o4",
               "text": "786"
             }
           ],
