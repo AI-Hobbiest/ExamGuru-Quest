@@ -45,6 +45,22 @@ for (const [index, paper] of rebuilt.entries()) {
   }
   assert.ok(maxRun <= 4, `Paper ${number}: answer run of ${maxRun}`);
 
+  // Verify the actual displayed answer position, not merely the internal option ID.
+  const displayedPositions = [0,0,0,0];
+  let visibleRun = 1, maxVisibleRun = 1, previousPosition = -1;
+  for (const q of paper.questions) {
+    const position = q.options.findIndex(o => o.optionId === q.correctOptionId);
+    assert.ok(position >= 0, `${q.questionId}: key does not map to a displayed option`);
+    displayedPositions[position]++;
+    visibleRun = position === previousPosition ? visibleRun + 1 : 1;
+    maxVisibleRun = Math.max(maxVisibleRun, visibleRun);
+    previousPosition = position;
+  }
+  assert.ok(displayedPositions.every(n => n >= 24 && n <= 36),
+    `Paper ${number}: displayed answer positions ${displayedPositions.join("/")}`);
+  assert.ok(maxVisibleRun <= 4, `Paper ${number}: visible answer-position run of ${maxVisibleRun}`);
+
+
   const difficulty = Object.fromEntries(["easy","moderate","challenging"].map(d =>
     [d, paper.questions.filter(q => q.difficulty === d).length]
   ));
@@ -70,6 +86,14 @@ for (const [index, paper] of rebuilt.entries()) {
 
   const explanations = paper.questions.map(q => q.explanation.trim());
   assert.equal(new Set(explanations).size, 120, `Paper ${number}: repeated explanations`);
+  for (const passage of paper.passages) {
+    assert.doesNotMatch(passage.text, /\.\.|, ,|;;/, `${passage.passageId}: punctuation anomaly`);
+    assert.doesNotMatch(passage.text, /A useful assessment asks who has information|The practical question is whether the arrangement works/,
+      `${passage.passageId}: rejected generic template language`);
+  }
+  for (const q of paper.questions.filter(q => q.sectionId !== "quantitative")) {
+    assert.ok(q.options.every(o => o.text.trim().length >= 14), `${q.questionId}: implausibly short verbal option`);
+  }
   for (const q of paper.questions) {
     assert.equal(q.options.length, 4, q.questionId);
     assert.equal(new Set(q.options.map(o => o.optionId)).size, 4, q.questionId);
