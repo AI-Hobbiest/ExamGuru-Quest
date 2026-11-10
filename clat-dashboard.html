@@ -17,6 +17,14 @@
 .clat-dash-hero p{margin:0;color:#626b84;max-width:720px;line-height:1.55}
 .clat-dash-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
 .clat-dash-btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:0;border-radius:11px;padding:11px 15px;background:#5143a8;color:#fff;font:inherit;font-size:.84rem;font-weight:850}
+/* Keep dashboard CTA contrast isolated from the global Quest anchor colour rule. */
+body.c10-theme-quest .clat-dash-actions a.clat-dash-btn:not(.secondary),
+body.c10-theme-quest .clat-dash-actions a.clat-dash-btn:not(.secondary):visited,
+body.c10-theme-quest .clat-dash-actions a.clat-dash-btn:not(.secondary):hover,
+body.c10-theme-quest .clat-dash-actions a.clat-dash-btn:not(.secondary):focus-visible,
+body.c10-theme-quest .clat-dash-actions a.clat-dash-btn:not(.secondary):active{color:#fff!important}
+body.c10-theme-quest .clat-dash-actions a.clat-dash-btn.secondary,
+body.c10-theme-quest .clat-dash-actions a.clat-dash-btn.secondary:visited{color:#38316e!important}
 .clat-dash-btn.secondary{background:#eeecfa;color:#38316e;border:1px solid #ddd8ee}
 .clat-xp-block{margin-top:23px}.clat-xp-line{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;color:#393d60;font-size:.82rem;font-weight:800;margin-bottom:8px}
 .clat-xp-track{height:11px;background:#e0e7e2;border-radius:99px;overflow:hidden}.clat-xp-track span{display:block;height:100%;width:0;background:linear-gradient(90deg,#75b88d 0%,#8a7ac7 68%,#edc45e 100%);transition:width .25s ease}
