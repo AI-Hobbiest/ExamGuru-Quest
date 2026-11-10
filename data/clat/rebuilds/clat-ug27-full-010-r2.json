@@ -156,8 +156,8 @@
     {
       "passageId": "r010-legal-01",
       "sectionId": "legal",
-      "title": "A score cannot make the final eligibility decision",
-      "text": "A public scholarship office uses a software tool to rank applications for manual review. The system compares academic records, household income, attendance and previous scholarship history. Under the office's fictional rule, the score may help identify applications that require clarification, but eligibility must be decided by an officer applying the published criteria. A score alone cannot justify rejection or suspension.\n\nThe applicant must be told which category of information has created a concern and be given a practical way to correct an inaccurate record. A notice that says only “risk level: high” is insufficient because the student cannot know whether the concern relates to income, attendance or a missing document. The office need not disclose source code or security-sensitive details, but it must provide the material facts that allow a meaningful response.\n\nA trained officer must review the relevant record and the applicant's explanation before an adverse decision. The officer may accept that a mismatch is harmless, such as an income entry recorded in a different month or an attendance record updated after a medical absence. If the officer rejects the explanation, the written decision must identify the evidence relied upon and explain why the response did not resolve the concern. Repeating the score without independent reasoning is not a review.\n\nThe rule allows urgent temporary action where credible independent evidence shows an immediate risk of misuse of funds. Even then, the office must record reasons, set a short review date and provide a prompt appeal route. A software flag by itself is not independent evidence of wrongdoing. If the office discovers that a source database has a systematic error, decisions relying on that field must be paused until a reliable correction process exists.\n\nThe rule does not prohibit automated tools. It requires the public institution to remain responsible for decisions made in its name. A model may help organise attention, but eligibility, explanation and appeal remain functions of the office. The affected student must be able to understand and challenge the relevant facts rather than being told that a numerical score has already settled the matter.\n\nWhere the applicant is a minor, the notice may also need to be directed to a parent or guardian under the office's procedures. This does not remove the student's interest in understanding the decision. The explanation should be suitable for the people expected to respond and should identify any deadline for submitting a correction or appeal."
+      "title": "A model licence does not erase the dataset terms",
+      "text": "A research consortium releases a collection of annotated engineering images to help universities study defects in manufactured components. The collection is accompanied by a licence that permits research and teaching use, requires attribution to the consortium and prohibits commercial use without a separate written permission. A start-up downloads the collection, trains a defect-detection model and later offers the model to factories on a paid subscription. The start-up argues that the model weights are its own work and that the original images are no longer visible in the finished product.\n\nFor this fictional problem, apply the following rule. A person who obtains material under a licence must comply with the conditions governing the use of that material. Permission to download or adapt a dataset for research does not automatically include permission to use it for commercial training. Attribution is a separate condition: naming the source does not cure a use that the licence prohibits. A user who wishes to move beyond the permitted purpose must obtain the required permission before doing so.\n\nThe rule also distinguishes the dataset from a model trained with it. The fact that a model's parameters are not ordinary copies of the original images does not, by itself, answer whether the training activity complied with the licence. That question concerns the use made of the dataset during development. Whether a particular model output reproduces protected material is a separate question that depends on the output and the applicable terms; it should not be assumed either that every output is restricted or that no output can raise a rights issue.\n\nThe consortium offers the start-up a route to seek a commercial licence. It asks the company to identify the version of the dataset used, describe the training purpose and explain whether the resulting model will be offered to paying customers. The start-up may continue using the images for non-commercial research within the original licence while the application is considered, but it must not treat the pending request as approval for commercial use. If permission is refused, it must stop the prohibited commercial use of the dataset and assess what steps are required for its existing service.\n\nThe rule does not prohibit commercial model development or require every research dataset to remain non-commercial forever. It requires a user to respect the scope of permission actually granted and to obtain new permission before crossing a material boundary. A developer's contribution to the model may be valuable, but it does not retrospectively expand the rights attached to the input material. The decisive issue is the permitted use of the dataset at the time it was used, not merely whether the final model contains a recognisable image."
     },
     {
       "passageId": "r010-legal-02",
@@ -1749,27 +1749,27 @@
       "questionId": "clat-ug27-r010-q055",
       "passageId": "r010-legal-01",
       "sectionId": "legal",
-      "prompt": "What may the model score do under the fictional scholarship rule?",
+      "prompt": "Under the stated rule, what permission did the start-up need before using the dataset for paid subscriptions?",
       "options": [
         {
           "optionId": "o1",
-          "text": "Automatically reject every high-scoring applicant."
+          "text": "A separate written permission covering commercial use of the dataset."
         },
         {
           "optionId": "o2",
-          "text": "Replace the published eligibility criteria."
+          "text": "Only a new attribution line naming the consortium."
         },
         {
           "optionId": "o3",
-          "text": "Trigger clarification or review, but not decide eligibility by itself."
+          "text": "A certificate from one of the factories buying the service."
         },
         {
           "optionId": "o4",
-          "text": "Transfer the decision to the software vendor."
+          "text": "A statement that the model weights were developed independently."
         }
       ],
-      "correctOptionId": "o3",
-      "explanation": "The rule limits the score to identifying applications for review.",
+      "correctOptionId": "o1",
+      "explanation": "The licence allowed research and teaching use but prohibited commercial use without separate written permission.",
       "difficulty": "challenging",
       "competency": "rule-application"
     },
@@ -1777,113 +1777,113 @@
       "questionId": "clat-ug27-r010-q056",
       "passageId": "r010-legal-01",
       "sectionId": "legal",
-      "prompt": "Why is a notice that says only 'risk level: high' insufficient?",
+      "prompt": "Why does adding attribution not cure the start-up's commercial-use problem?",
       "options": [
         {
           "optionId": "o1",
-          "text": "It does not identify the category of information the applicant needs to correct."
+          "text": "Attribution is a separate condition and does not expand the permitted purpose."
         },
         {
           "optionId": "o2",
-          "text": "It reveals too much source code."
+          "text": "Attribution is forbidden when a model is sold to a factory."
         },
         {
           "optionId": "o3",
-          "text": "It gives too much response time."
+          "text": "Attribution transfers ownership of the dataset to the start-up."
         },
         {
           "optionId": "o4",
-          "text": "It automatically discloses third-party information."
+          "text": "Attribution applies only to images that remain visible in the model."
         }
       ],
       "correctOptionId": "o1",
-      "explanation": "The rule requires material facts that allow a meaningful response.",
+      "explanation": "The rule treats attribution and permitted purpose as separate requirements; naming the source does not authorise a prohibited commercial use.",
       "difficulty": "easy",
-      "competency": "procedural-fairness"
+      "competency": "principle-identification"
     },
     {
       "questionId": "clat-ug27-r010-q057",
       "passageId": "r010-legal-01",
       "sectionId": "legal",
-      "prompt": "A student explains that income was recorded in a different month. What should the officer do?",
+      "prompt": "What does the passage say about the relationship between dataset use and model weights?",
       "options": [
         {
           "optionId": "o1",
-          "text": "Repeat the score as the final reason."
+          "text": "The model's parameters do not by themselves answer whether the training use complied with the dataset licence."
         },
         {
           "optionId": "o2",
-          "text": "Reject the application automatically."
+          "text": "A model is automatically exempt from every licence once its weights are saved."
         },
         {
           "optionId": "o3",
-          "text": "Review the explanation and underlying record before making an adverse decision."
+          "text": "A dataset licence always transfers ownership of trained model weights."
         },
         {
           "optionId": "o4",
-          "text": "Ask software to make a second score without review."
+          "text": "A developer's independent work automatically permits any commercial use of inputs."
         }
       ],
-      "correctOptionId": "o3",
-      "explanation": "A trained officer must assess the response independently.",
+      "correctOptionId": "o1",
+      "explanation": "The rule examines the use of the dataset during training separately from the form of the resulting model parameters.",
       "difficulty": "moderate",
-      "competency": "application"
+      "competency": "conceptual-distinction"
     },
     {
       "questionId": "clat-ug27-r010-q058",
       "passageId": "r010-legal-01",
       "sectionId": "legal",
-      "prompt": "The office finds a systematic error in its source database. What must it do?",
+      "prompt": "Which statement about a model output is supported by the passage?",
       "options": [
         {
           "optionId": "o1",
-          "text": "Pause decisions relying on that field until a reliable correction process exists."
+          "text": "Whether an output raises a rights issue depends on the output and the applicable terms."
         },
         {
           "optionId": "o2",
-          "text": "Continue decisions based on old data."
+          "text": "Every output from a trained model is necessarily prohibited."
         },
         {
           "optionId": "o3",
-          "text": "Delete all pending scholarship applications without checking their records."
+          "text": "No output can ever reproduce material used for training."
         },
         {
           "optionId": "o4",
-          "text": "Transfer responsibility to applicants."
+          "text": "Output questions are decided solely by the model developer."
         }
       ],
       "correctOptionId": "o1",
-      "explanation": "The rule requires a pause where known source-data errors could drive adverse outcomes.",
+      "explanation": "The passage says output questions are separate and should not be assumed either restricted or unrestricted in every case.",
       "difficulty": "moderate",
-      "competency": "rule-application"
+      "competency": "inference"
     },
     {
       "questionId": "clat-ug27-r010-q059",
       "passageId": "r010-legal-01",
       "sectionId": "legal",
-      "prompt": "Which statement best describes an urgent temporary measure?",
+      "prompt": "What may the start-up continue doing while its commercial licence request is pending?",
       "options": [
         {
           "optionId": "o1",
-          "text": "A software flag alone is enough."
+          "text": "Use the dataset for non-commercial research within the original licence."
         },
         {
           "optionId": "o2",
-          "text": "No reasons are required if funds are involved."
+          "text": "Sell subscriptions because the request has already been submitted."
         },
         {
           "optionId": "o3",
-          "text": "The measure may continue indefinitely."
+          "text": "Share the dataset with factories for their own commercial training."
         },
         {
           "optionId": "o4",
-          "text": "It requires independent evidence, recorded reasons, a short review date and a prompt appeal route."
+          "text": "Treat the consortium's silence as permanent approval."
         }
       ],
-      "correctOptionId": "o4",
-      "explanation": "The rule retains safeguards even where temporary action is justified.",
+      "correctOptionId": "o1",
+      "explanation": "The original permission continues to cover non-commercial research, but the pending request is not approval for commercial use.",
       "difficulty": "moderate",
-      "competency": "procedural-fairness"
+      "competency": "rule-application"
     },
     {
       "questionId": "clat-ug27-r010-q060",
