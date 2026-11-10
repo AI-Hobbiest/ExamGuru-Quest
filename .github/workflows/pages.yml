@@ -28,6 +28,7 @@ jobs:
           node tests/clat-engine.test.js
           node tests/clat-pdf.test.js
           node tests/clat-dashboard.test.js
+          node tests/clat-rebuild-011-015.test.js
           node tests/olympiad-blueprints.test.js
           node tests/class3-english.test.js
           node tests/class3-mathematics.test.js
