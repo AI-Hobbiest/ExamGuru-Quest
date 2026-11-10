@@ -3281,7 +3281,7 @@
         }
       ],
       "correctOptionId": "o4",
-      "explanation": "35% of 1,200 = 420 accelerator-hours.",
+      "explanation": "University A receives 35% of the 1,200 accelerator-hour weekly capacity. Therefore 0.35 × 1,200 = 420 hours.",
       "difficulty": "moderate",
       "competency": "percentage-calculation"
     },
@@ -3421,7 +3421,7 @@
         }
       ],
       "correctOptionId": "o3",
-      "explanation": "Bill payments are 30% × 80,000 = 24,000; 2% reversed = 480.",
+      "explanation": "Bill payments are 30% × 80,000 = 24,000 transactions. Two per cent are reversed, so 0.02 × 24,000 = 480 transactions.",
       "difficulty": "moderate",
       "competency": "multi-step-arithmetic"
     },
@@ -3449,7 +3449,7 @@
         }
       ],
       "correctOptionId": "o2",
-      "explanation": "Merchant reversals = 4% of 36,000 = 1,440; bill reversals = 480; P2P reversals = 1% of 20,000 = 200. Total = 2,120.",
+      "explanation": "Merchant reversals total 1,440 transactions; bill reversals total 480; person-to-person reversals total 200. Combined reversals = 1,440 + 480 + 200 = 2,120 transactions.",
       "difficulty": "challenging",
       "competency": "multi-step-arithmetic"
     },
@@ -3505,7 +3505,7 @@
         }
       ],
       "correctOptionId": "o2",
-      "explanation": "High-priority alerts are 30% of the 2,400 alerts received. Therefore 0.30 × 2,400 = 720 high-priority alerts.",
+      "explanation": "High-priority alerts are 30% of 2,400. Therefore 0.30 × 2,400 = 720 high-priority alerts.",
       "difficulty": "moderate",
       "competency": "percentage-calculation"
     },
@@ -3533,7 +3533,7 @@
         }
       ],
       "correctOptionId": "o4",
-      "explanation": "Medium alerts = 45% of 2,400 = 1,080; 75% resolved = 810.",
+      "explanation": "Medium-priority alerts total 45% × 2,400 = 1,080. Seventy-five per cent resolved within target time gives 0.75 × 1,080 = 810 alerts.",
       "difficulty": "moderate",
       "competency": "multi-step-arithmetic"
     },
@@ -3561,7 +3561,7 @@
         }
       ],
       "correctOptionId": "o3",
-      "explanation": "High: 720 × 80% = 576; medium: 1,080 × 75% = 810; low: 600 × 90% = 540. Total = 1,926.",
+      "explanation": "Resolved alerts total 576 high-priority, 810 medium-priority and 540 low-priority. Adding them gives 576 + 810 + 540 = 1,926 alerts.",
       "difficulty": "moderate",
       "competency": "multi-step-arithmetic"
     },
