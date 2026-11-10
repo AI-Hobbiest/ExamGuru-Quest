@@ -26,9 +26,7 @@
 
     {label:"Assessment Test",group:"Assessments",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",clatHref:"./clat.html#library",clatPage:"clat.html",clatHash:"#library",auth:"student"},
     {label:"Exam Paper Practice",icon:"📝",href:"./exam-practice.html",page:"exam-practice.html",classIds:["6","10"],auth:"student"},
-    {label:"Actual Papers",group:"CLAT EXAM",icon:"📄",href:"./clat.html#actual-papers",page:"clat.html",hash:"#actual-papers",classIds:["CLAT"],auth:"student"},
-    {label:"Model Papers",group:"CLAT EXAM",icon:"📝",href:"./clat.html#model-papers",page:"clat.html",hash:"#model-papers",classIds:["CLAT"],auth:"student"},
-    {label:"CLAT UG 2027",group:"Entrance Exams",icon:"⚖️",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
+    {label:"CLAT UG 2027",group:"Entrance Exams",icon:"⚖️",href:"./clat.html#library",page:"clat.html",clatHref:"./clat.html#library",clatPage:"clat.html",clatHash:"#library",classIds:["CLAT"],auth:"student"},
     {label:"JEE Main & Advanced",group:"Entrance Exams",icon:"📐",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
     {label:"NEET UG",group:"Entrance Exams",icon:"🧬",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
     {label:"CUET UG",group:"Entrance Exams",icon:"🎓",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
@@ -160,7 +158,7 @@
     const list=node("nav","c10-nav-list");list.setAttribute("aria-label","Learning and account");
     const visibleLinks=links.filter(item=>{
       if(item.auth!==auth.role)return false;
-      if(isClatStudent&&!["Actual Papers","Model Papers","Dashboard","Assessment Test","Study Library","Learning Hub","FAQ & Guide"].includes(item.label))return false;
+      if(isClatStudent&&!["CLAT UG 2027","Dashboard","Assessment Test","Study Library","Learning Hub","FAQ & Guide"].includes(item.label))return false;
       if(item.subject&&subjectConfig&&!subjectConfig.subjects.includes(item.subject))return false;
       if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return false;
       return true;
