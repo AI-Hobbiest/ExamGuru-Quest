@@ -200,6 +200,24 @@
       "sectionId": "logical",
       "title": "Two suppliers, one vulnerability",
       "text": "A manufacturer claims to have diversified procurement because it now buys a critical chemical from two companies rather than one. The first supplier ships from a plant in Country X; the second ships from Country Y. A disruption in one country should therefore leave the manufacturer with an alternative. An internal risk review finds, however, that both suppliers purchase the key precursor from the same refinery and use the same shipping channel through a narrow strait.\n\nThe company has reduced its dependence on a single contracting party but not necessarily on a single source of supply. A supplier may have a different address, ownership structure or sales team while sharing the same upstream producer. Likewise, two routes on a map may depend on the same port, insurance market or energy network. Counting direct suppliers misses those common dependencies.\n\nThe review team proposes a tiered map. It traces the material from final seller back to the producer of the precursor and identifies shared infrastructure, ownership and transport links. The map is not perfect: a supplier may be unable to disclose every subcontractor, and commercial confidentiality can limit visibility. But partial information can still identify the most serious concentration points.\n\nThe company then considers three responses. It could qualify a supplier using a different precursor, hold a buffer stock for the period required to switch, or redesign the product to use an alternative material. Each response has a different cost and lead time. A second vendor is useful if it is genuinely independent or if it provides a faster path to substitution. It is less useful if it fails at exactly the same upstream point.\n\nThe central inference is that diversification must be assessed across the chain, not only at the level of the invoice. A count of vendors is an incomplete proxy for resilience. The relevant questions are whether their upstream sources are distinct, whether alternative routes work under stress and how long the buyer needs to adapt. The company cannot map every relationship perfectly, but it can begin with inputs whose failure would stop production and ask suppliers for enough evidence to test common-source risks."
+    },
+    {
+      "passageId": "r008-quantitative-01",
+      "sectionId": "quantitative",
+      "title": "Export cargo and preferential tariff use",
+      "text": "An exporter ships 2,400 tonnes of processed food in a quarter. Forty per cent goes to Market A, 35% to Market B and the rest to Market C. Of Market A shipments, 75% claim a tariff preference; for Market B the share is 60%; for Market C it is 50%. The average freight cost is ₹8,000 per tonne for all three markets. Treat percentages as exact and ignore taxes and insurance."
+    },
+    {
+      "passageId": "r008-quantitative-02",
+      "sectionId": "quantitative",
+      "title": "Critical mineral import cost",
+      "text": "A manufacturer imports 500 tonnes of mineral concentrate at ₹1.8 lakh per tonne. The supplier offers a 12% discount on the first 200 tonnes and a 7% discount on the remaining 300 tonnes. Freight and insurance add ₹18 lakh to the invoice. The buyer must also pay a testing fee of ₹2.4 lakh. Calculate total landed cost using the stated amounts; assume all fees are fixed and no other charges apply."
+    },
+    {
+      "passageId": "r008-quantitative-03",
+      "sectionId": "quantitative",
+      "title": "Warehouse stock and replenishment",
+      "text": "A regional warehouse begins with 3,600 units of a component. It issues 25% of the opening stock in Week 1 and 30% of the remaining stock in Week 2. At the end of Week 2, a delivery of 1,200 units arrives. The warehouse then reserves 15% of its available stock for emergency orders. All percentages apply to the stock at the stated stage and there is no damage or loss."
     }
   ],
   "questions": []
