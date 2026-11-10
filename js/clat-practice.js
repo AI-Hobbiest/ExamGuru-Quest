@@ -40,7 +40,7 @@ function renderActualPapers(items){
   const scoring=document.createElement("p");scoring.className="clat-muted";scoring.textContent=item.scoringNote;
   const set=document.createElement("p");set.className="clat-muted";set.textContent=item.setNote;
   const actions=document.createElement("div");actions.className="clat-paper-actions";
-  const paperLink=document.createElement("a");paperLink.className="clat-btn";paperLink.href=item.questionUrl;paperLink.target="_blank";paperLink.rel="noopener noreferrer";paperLink.textContent="Open Question Paper PDF";
+  const paperLink=document.createElement("a");paperLink.className="clat-btn clat-pyq-open";paperLink.href=item.questionUrl;paperLink.target="_blank";paperLink.rel="noopener noreferrer";paperLink.textContent="Open Question Paper (PDF)";
   const keyLink=document.createElement("a");keyLink.className="clat-btn secondary";keyLink.href=item.answerKeyUrl;keyLink.target="_blank";keyLink.rel="noopener noreferrer";keyLink.textContent=item.answerKeyLabel||"Open Final Answer Key";
   actions.append(paperLink,keyLink);
   const source=document.createElement("a");source.className="clat-pyq-source";source.href=item.sourceArchiveUrl;source.target="_blank";source.rel="noopener noreferrer";source.textContent="Consortium source archive";
