@@ -4,7 +4,7 @@
   "targetPapers": 50,
   "questionsPerPaper": 120,
   "targetUniqueQuestions": 6000,
-  "asOf": "2026-11-09",
+  "asOf": "2026-11-10",
   "releasePolicy": "Individual batches may be exposed as clearly labelled practice pilots once their strict structural CI, primary-source link checks, quantitative recalculation and cross-paper integrity tests pass. Editorial approval for official full-length mock status still requires full blind solving, legal/current-affairs fact verification and ambiguity review.",
   "papers": [
     {
@@ -75,67 +75,67 @@
     {
       "paperNumber": 6,
       "paperId": "clat-ug27-full-006",
-      "status": "draft-unpublished",
+      "status": "practice-pilot",
       "questionCount": 120,
-      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; comprehensive fact/link adjudication pending",
-      "editorialAudit": "blind solve, semantic near-duplicate, distractor-quality and ambiguity review pending",
+      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; independent comprehensive fact/link adjudication remains pending",
+      "editorialAudit": "practice-pilot release; blind solve, semantic near-duplicate, distractor-quality and ambiguity review remain pending",
       "passageCount": 23,
       "automatedValidation": "passed",
-      "answerKeyAudit": "all 12 QT questions independently recalculated and matched to keyed answers and rationales",
+      "answerKeyAudit": "all 12 quantitative questions independently recalculated and matched to keyed answers and rationales",
       "releaseEligible": false,
-      "practicePilotAvailable": false
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 7,
       "paperId": "clat-ug27-full-007",
-      "status": "draft-unpublished",
+      "status": "practice-pilot",
       "questionCount": 120,
-      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; comprehensive fact/link adjudication pending",
-      "editorialAudit": "blind solve, semantic near-duplicate, distractor-quality and ambiguity review pending",
+      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; independent comprehensive fact/link adjudication remains pending",
+      "editorialAudit": "practice-pilot release; blind solve, semantic near-duplicate, distractor-quality and ambiguity review remain pending",
       "passageCount": 23,
       "automatedValidation": "passed",
-      "answerKeyAudit": "all 12 QT questions independently recalculated and matched to keyed answers and rationales",
+      "answerKeyAudit": "all 12 quantitative questions independently recalculated and matched to keyed answers and rationales",
       "releaseEligible": false,
-      "practicePilotAvailable": false
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 8,
       "paperId": "clat-ug27-full-008",
-      "status": "draft-unpublished",
+      "status": "practice-pilot",
       "questionCount": 120,
-      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; comprehensive fact/link adjudication pending",
-      "editorialAudit": "blind solve, semantic near-duplicate, distractor-quality and ambiguity review pending",
+      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; independent comprehensive fact/link adjudication remains pending",
+      "editorialAudit": "practice-pilot release; blind solve, semantic near-duplicate, distractor-quality and ambiguity review remain pending",
       "passageCount": 23,
       "automatedValidation": "passed",
-      "answerKeyAudit": "all 12 QT questions independently recalculated and matched to keyed answers and rationales",
+      "answerKeyAudit": "all 12 quantitative questions independently recalculated and matched to keyed answers and rationales",
       "releaseEligible": false,
-      "practicePilotAvailable": false
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 9,
       "paperId": "clat-ug27-full-009",
-      "status": "draft-unpublished",
+      "status": "practice-pilot",
       "questionCount": 120,
-      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; comprehensive fact/link adjudication pending",
-      "editorialAudit": "blind solve, semantic near-duplicate, distractor-quality and ambiguity review pending",
+      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; independent comprehensive fact/link adjudication remains pending",
+      "editorialAudit": "practice-pilot release; blind solve, semantic near-duplicate, distractor-quality and ambiguity review remain pending",
       "passageCount": 23,
       "automatedValidation": "passed",
-      "answerKeyAudit": "all 12 QT questions independently recalculated and matched to keyed answers and rationales",
+      "answerKeyAudit": "all 12 quantitative questions independently recalculated and matched to keyed answers and rationales",
       "releaseEligible": false,
-      "practicePilotAvailable": false
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 10,
       "paperId": "clat-ug27-full-010",
-      "status": "draft-unpublished",
+      "status": "practice-pilot",
       "questionCount": 120,
-      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; comprehensive fact/link adjudication pending",
-      "editorialAudit": "blind solve, semantic near-duplicate, distractor-quality and ambiguity review pending",
+      "sourceAudit": "official source metadata attached; selected source URLs and dates corrected; independent comprehensive fact/link adjudication remains pending",
+      "editorialAudit": "practice-pilot release; blind solve, semantic near-duplicate, distractor-quality and ambiguity review remain pending",
       "passageCount": 23,
       "automatedValidation": "passed",
-      "answerKeyAudit": "all 12 QT questions independently recalculated and matched to keyed answers and rationales",
+      "answerKeyAudit": "all 12 quantitative questions independently recalculated and matched to keyed answers and rationales",
       "releaseEligible": false,
-      "practicePilotAvailable": false
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 11,
@@ -462,12 +462,12 @@
     "draftPapers": 10,
     "automatedValidationPassed": 10,
     "editoriallyApprovedPapers": 0,
-    "publishedPapers": 5,
-    "practicePilotPapers": 5,
+    "publishedPapers": 10,
+    "practicePilotPapers": 10,
     "uniqueQuestionsDrafted": 1200,
     "uniqueQuestionsTarget": 6000,
-    "lastAudit": "Batch 02 Papers 006–010 committed as unpublished drafts; strict structural CI and cross-paper exact integrity passed; full editorial and source adjudication remain pending.",
-    "asOf": "2026-11-09"
+    "lastAudit": "Papers 006–010 are student-visible as clearly labelled practice pilots; strict automated validation and cross-paper exact integrity passed; independent editorial/source adjudication remains pending.",
+    "asOf": "2026-11-10"
   },
   "batchProduction": {
     "batchNumber": 2,
@@ -478,14 +478,14 @@
       9,
       10
     ],
-    "status": "draft-unpublished",
+    "status": "practice-pilot-published",
     "draftFilesPresent": 5,
     "fullLengthDrafts": 5,
     "localStructuralChecksPassing": 5,
     "latestWorkflowConclusion": "success",
-    "latestWorkflowRunId": 42617857546,
+    "latestWorkflowRunId": 42786850097,
     "editorialApproval": 0,
-    "studentFacing": 0,
+    "studentFacing": 5,
     "questionsDrafted": 600,
     "exactUniqueStemsAcrossSeries": 1200,
     "uniquePassagesAcrossSeries": 229
@@ -519,14 +519,14 @@
         9,
         10
       ],
-      "status": "draft-unpublished",
+      "status": "practice-pilot-published",
       "draftFilesPresent": 5,
       "fullLengthDrafts": 5,
       "localStructuralChecksPassing": 5,
       "latestWorkflowConclusion": "success",
       "latestWorkflowRunId": 42617857546,
       "editorialApproval": 0,
-      "studentFacing": 0,
+      "studentFacing": 5,
       "questionsDrafted": 600
     }
   ]

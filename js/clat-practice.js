@@ -101,6 +101,17 @@ async function init(){
  try{
   const response=await fetch("./data/clat/model-papers.json",{cache:"no-store"});if(!response.ok)throw Error("Model paper library returned HTTP "+response.status);
   library=await response.json();if(library.kind!=="clat-model-paper-library"||!Array.isArray(library.papers))throw Error("CLAT model paper library is invalid.");
+  const batchResponse=await fetch("./data/clat/model-papers-batch-02.json",{cache:"no-store"});if(!batchResponse.ok)throw Error("CLAT practice batch 02 returned HTTP "+batchResponse.status);
+  const batch=await batchResponse.json();if(batch.kind!=="clat-model-paper-batch"||batch.batchNumber!==2||!Array.isArray(batch.papers)||batch.papers.length!==4)throw Error("CLAT practice batch 02 is invalid.");
+  const knownIds=new Set(library.papers.map(item=>item.paperId));
+  const batchIds=new Set();
+  batch.papers.forEach((item,index)=>{
+   if(Number(item.paperNumber)!==index+7||item.status!=="practice-pilot")throw Error("CLAT practice batch 02 has an unexpected paper or release status.");
+   if(knownIds.has(item.paperId)||batchIds.has(item.paperId))throw Error("Duplicate CLAT paper ID: "+item.paperId);
+   const check=engine.validatePaper(item,{strictCLAT:true});if(!check.valid)throw Error("Paper "+item.paperNumber+" failed strict validation: "+check.errors.slice(0,3).join(" "));
+   batchIds.add(item.paperId);
+  });
+  library.papers.push(...batch.papers);
   renderLibrary();setStatus("Loaded "+availablePapers().length+" CLAT practice papers, including "+availablePapers().filter(p=>p.questions.length===120).length+" full-length practice pilots.");
   loadResume();
  }catch(error){setStatus("Unable to load CLAT practice: "+error.message);}

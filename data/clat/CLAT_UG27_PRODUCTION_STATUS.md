@@ -1,6 +1,6 @@
 # CLAT UG 2027 Question Bank — Production Status
 
-**As of:** 9 November 2026  
+**As of:** 10 November 2026  
 **Target:** 50 original full-length papers × 120 questions = 6,000 questions.
 
 ## Verified examination contract
@@ -20,7 +20,7 @@
 | Cross-paper unique question stems | 1,200 / 1,200 |
 | Unique passages | 229 / 229 |
 | Quantitative items independently recalculated | 120 / 120 |
-| Practice pilots available to students | 5 |
+| Practice pilots available to students | 10 |
 | Editorially approved official mock papers | 0 |
 | Target full-length papers | 50 |
 | Target unique questions | 6,000 |
@@ -40,7 +40,7 @@
 
 ## Remaining editorial work
 
-A complete independent blind solve of all 540 English, Current Affairs, Legal and Logical questions, deeper legal accuracy and ambiguity review, and semantic near-duplicate analysis still need to be completed. Current Affairs coverage in Batch 01 is weighted toward Indian government/PIB releases and factual recall. The next batch must broaden international affairs, global institutions, arts and culture, science and historically significant events and increase passage-based inference/application.
+A complete independent blind solve of all 1,080 English, Current Affairs, Legal and Logical questions, deeper legal/current-affairs fact adjudication, ambiguity review, distractor-quality review and semantic near-duplicate analysis still need to be completed. Current Affairs coverage in Batch 01 is weighted toward Indian government/PIB releases and factual recall. The next batch must broaden international affairs, global institutions, arts and culture, science and historically significant events and increase passage-based inference/application.
 
 ## Batch 02 authoring controls
 
@@ -63,8 +63,8 @@ A complete independent blind solve of all 540 English, Current Affairs, Legal an
 - Dedicated regression test: `tests/clat-full-length-draft-006-010.test.js`.
 - Strict CLAT CI passed on [GitHub Actions run 42617857546](https://github.com/AI-Hobbiest/ExamGuru-Quest/actions/runs/42617857546).
 
-**Release status:** Papers 006–010 are committed as `draft-unpublished` JSONs. The student-facing library remains unchanged at five practice pilots. Blind solving, semantic near-duplicate review, distractor-quality review, and full source/fact adjudication remain open. Automated structural success is not editorial approval.
+**Release status (10 November 2026):** Papers 006–010 are now available in the student-facing CLAT library as clearly labelled `practice-pilot` papers. Papers 007–010 are loaded from `data/clat/model-papers-batch-02.json`; the source rebuild files remain preserved under `data/clat/rebuilds/`. All five papers remain explicitly unapproved as official mocks. Blind solving, semantic near-duplicate review, distractor-quality review, and full source/fact adjudication remain open. Automated structural success is not editorial approval.
 
 ## Next production target
 
-Proceed with Papers 011–015. The 50-paper series is now at **10 / 50 papers (1,200 / 6,000 questions)**.
+Proceed with Papers 011–015. The 50-paper series is now at **10 / 50 papers (1,200 / 6,000 questions)**, with all ten currently available as practice pilots.
