@@ -205,42 +205,67 @@
     {
       "paperNumber": 16,
       "paperId": "clat-ug27-full-016",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "practice-pilot",
+      "questionCount": 120,
+      "sourceAudit": "official source metadata attached; factual claims linked to primary government and regulator records; full independent source adjudication pending",
+      "editorialAudit": "practice-pilot release; full blind solve, semantic near-duplicate, distractor-quality and ambiguity review remain pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 quantitative answers independently recalculated; displayed answer-position balance verified",
+      "releaseEligible": false,
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 17,
       "paperId": "clat-ug27-full-017",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "practice-pilot",
+      "questionCount": 120,
+      "sourceAudit": "official source metadata attached; factual claims linked to primary government and regulator records; full independent source adjudication pending",
+      "editorialAudit": "practice-pilot release; full blind solve, semantic near-duplicate, distractor-quality and ambiguity review remain pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 quantitative answers independently recalculated; displayed answer-position balance verified",
+      "releaseEligible": false,
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 18,
       "paperId": "clat-ug27-full-018",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "practice-pilot",
+      "questionCount": 120,
+      "sourceAudit": "official source metadata attached; factual claims linked to primary government and regulator records; full independent source adjudication pending",
+      "editorialAudit": "practice-pilot release; full blind solve, semantic near-duplicate, distractor-quality and ambiguity review remain pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 quantitative answers independently recalculated; displayed answer-position balance verified",
+      "releaseEligible": false,
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 19,
       "paperId": "clat-ug27-full-019",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "practice-pilot",
+      "questionCount": 120,
+      "sourceAudit": "official source metadata attached; factual claims linked to primary government and regulator records; full independent source adjudication pending",
+      "editorialAudit": "practice-pilot release; full blind solve, semantic near-duplicate, distractor-quality and ambiguity review remain pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 quantitative answers independently recalculated; displayed answer-position balance verified",
+      "releaseEligible": false,
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 20,
       "paperId": "clat-ug27-full-020",
-      "status": "planned",
-      "questionCount": 0,
-      "sourceAudit": "not-started",
-      "editorialAudit": "not-started"
+      "status": "practice-pilot",
+      "questionCount": 120,
+      "sourceAudit": "official source metadata attached; factual claims linked to primary government and regulator records; full independent source adjudication pending",
+      "editorialAudit": "practice-pilot release; full blind solve, semantic near-duplicate, distractor-quality and ambiguity review remain pending",
+      "passageCount": 23,
+      "automatedValidation": "passed",
+      "answerKeyAudit": "all 12 quantitative answers independently recalculated; displayed answer-position balance verified",
+      "releaseEligible": false,
+      "practicePilotAvailable": true
     },
     {
       "paperNumber": 21,
@@ -484,14 +509,14 @@
     }
   ],
   "progress": {
-    "draftPapers": 10,
-    "automatedValidationPassed": 10,
+    "draftPapers": 20,
+    "automatedValidationPassed": 20,
     "editoriallyApprovedPapers": 0,
-    "publishedPapers": 10,
-    "practicePilotPapers": 10,
-    "uniqueQuestionsDrafted": 1200,
+    "publishedPapers": 20,
+    "practicePilotPapers": 20,
+    "uniqueQuestionsDrafted": 2400,
     "uniqueQuestionsTarget": 6000,
-    "lastAudit": "Papers 006–010 are student-visible as clearly labelled practice pilots; strict automated validation and cross-paper exact integrity passed; independent editorial/source adjudication remains pending.",
+    "lastAudit": "Papers 016–020 added as student-visible practice pilots; strict CLAT blueprint, source metadata, passage-length, answer-key, difficulty, and cross-paper exact-integrity checks passed for 2,400 questions across papers 001–020. Independent editorial/source adjudication and blind solving remain pending.",
     "asOf": "2026-11-10"
   },
   "batchProduction": {

@@ -146,6 +146,19 @@ async function init(){
    batchThreeIds.add(item.paperId);
   });
   library.papers.push(...batchThree.papers);
+  const batchFourResponse=await fetch("./data/clat/model-papers-batch-04.json",{cache:"no-store"});
+  if(!batchFourResponse.ok)throw Error("CLAT practice batch 04 returned HTTP "+batchFourResponse.status);
+  const batchFour=await batchFourResponse.json();
+  if(batchFour.kind!=="clat-model-paper-batch"||batchFour.batchNumber!==4||!Array.isArray(batchFour.papers)||batchFour.papers.length!==5)throw Error("CLAT practice batch 04 is invalid.");
+  const knownBatchFourIds=new Set(library.papers.map(item=>item.paperId));
+  const batchFourIds=new Set();
+  batchFour.papers.forEach((item,index)=>{
+   if(Number(item.paperNumber)!==index+16||item.status!=="practice-pilot")throw Error("CLAT practice batch 04 has an unexpected paper or release status.");
+   if(knownBatchFourIds.has(item.paperId)||batchFourIds.has(item.paperId))throw Error("Duplicate CLAT paper ID: "+item.paperId);
+   const check=engine.validatePaper(item,{strictCLAT:true});if(!check.valid)throw Error("Paper "+item.paperNumber+" failed strict validation: "+check.errors.slice(0,3).join(" "));
+   batchFourIds.add(item.paperId);
+  });
+  library.papers.push(...batchFour.papers);
   renderLibrary();
   try{
    const pyqResponse=await fetch("./data/clat/actual-papers.json",{cache:"no-store"});
