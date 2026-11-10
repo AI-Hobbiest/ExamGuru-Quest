@@ -577,11 +577,11 @@
       "options": [
         {
           "optionId": "o1",
-          "text": "Cash from cheques."
+          "text": "The distinction between cash payments and cheque-based transactions."
         },
         {
           "optionId": "o2",
-          "text": "Banks from customers."
+          "text": "The distinction between the institutions holding accounts and the people using them."
         },
         {
           "optionId": "o3",
@@ -1845,7 +1845,7 @@
         },
         {
           "optionId": "o3",
-          "text": "Delete all applications."
+          "text": "Delete all pending scholarship applications without checking their records."
         },
         {
           "optionId": "o4",
@@ -2145,7 +2145,7 @@
       "options": [
         {
           "optionId": "o1",
-          "text": "Delete all logs."
+          "text": "Delete the incident logs before the suspected exploitation can be examined."
         },
         {
           "optionId": "o2",
@@ -2173,7 +2173,7 @@
       "options": [
         {
           "optionId": "o1",
-          "text": "Only voice similarity."
+          "text": "Only whether the recorded voice resembles the candidate's voice."
         },
         {
           "optionId": "o2",
