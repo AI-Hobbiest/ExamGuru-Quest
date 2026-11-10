@@ -2005,7 +2005,7 @@
         },
         {
           "optionId": "o4",
-          "text": "Automatic compensation."
+          "text": "A guaranteed replacement slot regardless of the published priority criteria."
         }
       ],
       "correctOptionId": "o3",
@@ -2165,15 +2165,15 @@
         },
         {
           "optionId": "o2",
-          "text": "Both countries equally."
+          "text": "Country A and Country B share origin equally."
         },
         {
           "optionId": "o3",
-          "text": "The destination country."
+          "text": "The country to which the tiles are ultimately shipped."
         },
         {
           "optionId": "o4",
-          "text": "Country A."
+          "text": "Country A, where the tiles were substantially manufactured."
         }
       ],
       "correctOptionId": "o4",
@@ -2221,7 +2221,7 @@
         },
         {
           "optionId": "o2",
-          "text": "Made in B."
+          "text": "Entirely manufactured in Country B."
         },
         {
           "optionId": "o3",
@@ -2445,7 +2445,7 @@
         },
         {
           "optionId": "o2",
-          "text": "A commercial advertisement."
+          "text": "A promotional brochure with no production or origin records."
         },
         {
           "optionId": "o3",
@@ -2749,7 +2749,7 @@
       "options": [
         {
           "optionId": "o1",
-          "text": "Certified tonnes produced."
+          "text": "The volume of certified material already produced at commercial scale."
         },
         {
           "optionId": "o2",
@@ -2777,7 +2777,7 @@
       "options": [
         {
           "optionId": "o1",
-          "text": "A completed building."
+          "text": "A completed factory building with installed machinery but no production records."
         },
         {
           "optionId": "o2",
@@ -2785,7 +2785,7 @@
         },
         {
           "optionId": "o3",
-          "text": "An approved subsidy."
+          "text": "A government-approved subsidy for a facility that has not started production."
         },
         {
           "optionId": "o4",
@@ -3121,11 +3121,11 @@
         },
         {
           "optionId": "o3",
-          "text": "Count contract signatures."
+          "text": "Count the number of contracts signed by each immediate vendor."
         },
         {
           "optionId": "o4",
-          "text": "Review vendors' advertisements."
+          "text": "Compare the marketing material published by each direct supplier."
         }
       ],
       "correctOptionId": "o1",
