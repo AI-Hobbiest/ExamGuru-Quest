@@ -10,7 +10,7 @@ assert.equal(engine.negativeMark,-0.25);
 assert.equal(engine.sections.length,5);
 assert.equal(typeof engine.validateLibrary,"function");
 assert.deepEqual(engine.sections.map(s=>s.target),[24,30,30,24,12]);
-assert.equal(library.papers.length,7);
+assert.equal(library.papers.length,8);
 for(const paper of library.papers){
  const result=engine.validatePaper(paper);
  assert.equal(result.valid,true,result.errors.join("; "));
