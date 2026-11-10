@@ -19,31 +19,31 @@
       "passageId": "r008-english-01",
       "sectionId": "english",
       "title": "The missing fastener",
-      "text": "A manufacturer of irrigation pumps discovered that its assembly line stopped whenever a small imported fastener failed to arrive. The fastener cost less than one per cent of a finished pump's value. It was not technically complicated, yet only one approved supplier could deliver the specified grade within the required tolerance. The factory held only a few days of stock because warehouse space was expensive and the supplier's delivery record had usually been reliable.\n\nWhen a port inspection delayed a shipment, production stopped. Managers initially described the event as a transport problem. A later review found that the vulnerability had been designed into the purchasing system. Engineers had approved a single specification without testing whether an alternative material would perform safely. Procurement had measured unit price and delivery time but not the cost of interruption. Finance had treated inventory as an avoidable expense without estimating the value of production protected by a reserve.\n\nThe review did not conclude that every component should be purchased from several suppliers. A second supplier may be costly, may use the same upstream producer or may not meet the necessary quality standard. Nor would a large stockpile solve every risk: materials can become obsolete, deteriorate or tie up cash that a small firm needs for wages. The more useful question was which dependencies could stop the entire line and how long a substitute would take to qualify.\n\nThe company began mapping components by criticality, substitution time and common upstream exposure. It tested whether two apparently separate vendors depended on the same processor. For a few essential parts it paid for a second qualified source; for others it arranged a small rotating reserve and an emergency engineering review. The measures differed because the risks differed.\n\nThe case illustrates why resilience cannot be read from the size of a warehouse or the number of vendors alone. A buyer needs to know where a failure travels through a production system, which alternatives are genuinely independent and what a disruption costs at each stage. Resilience is not the elimination of trade. It is the deliberate management of the dependencies on which trade and production rely."
+      "text": "A manufacturer of irrigation pumps discovered that its assembly line stopped whenever a small imported fastener failed to arrive. The fastener cost less than one per cent of a finished pump's value. It was not technically complicated, yet only one approved supplier could deliver the specified grade within the required tolerance. The factory held only a few days of stock because warehouse space was expensive and the supplier's delivery record had usually been reliable.\n\nWhen a port inspection delayed a shipment, production stopped. Managers initially described the event as a transport problem. A later review found that the vulnerability had been designed into the purchasing system. Engineers had approved a single specification without testing whether an alternative material would perform safely. Procurement had measured unit price and delivery time but not the cost of interruption. Finance had treated inventory as an avoidable expense without estimating the value of production protected by a reserve.\n\nThe review did not conclude that every component should be purchased from several suppliers. A second supplier may be costly, may use the same upstream producer or may not meet the necessary quality standard. Nor would a large stockpile solve every risk: materials can become obsolete, deteriorate or tie up cash that a small firm needs for wages. The more useful question was which dependencies could stop the entire line and how long a substitute would take to qualify.\n\nThe company began mapping components by criticality, substitution time and common upstream exposure. It tested whether two apparently separate vendors depended on the same processor. For a few essential parts it paid for a second qualified source; for others it arranged a small rotating reserve and an emergency engineering review. The measures differed because the risks differed.\n\nThe case illustrates why resilience cannot be read from the size of a warehouse or the number of vendors alone. A buyer needs to know where a failure travels through a production system, which alternatives are genuinely independent and what a disruption costs at each stage. Resilience is not the elimination of trade. It is the deliberate management of the dependencies on which trade and production rely.\n\nThe firm also began asking suppliers to report the source of critical subcomponents rather than only the address from which an invoice was issued. That information revealed whether apparently separate vendors depended on the same processor. The purchasing team could then compare the cost of a reserve with the time required to qualify another source."
     },
     {
       "passageId": "r008-english-02",
       "sectionId": "english",
       "title": "A port changes the bargaining table",
-      "text": "A new deep-water terminal shortened the voyage time for large container ships serving a coastal region. The terminal could receive vessels that had previously called at two smaller ports, and a logistics company began routing most long-distance cargo through the new facility. Its public report highlighted the reduction in sailing time and the number of containers handled per day. For large exporters with regular volumes, the new route lowered freight costs and made delivery schedules easier to coordinate.\n\nThe gain was not distributed evenly. Smaller ports lost calls and some local shipping agents saw fewer bookings. Inland businesses that relied on a nearby depot faced longer road journeys, even when the ocean leg became faster. Truck traffic concentrated around the new terminal, where congestion during peak hours sometimes erased the time saved at sea. A port's efficiency therefore depends on the whole journey from factory gate to final customer, not just the speed of a crane.\n\nThe terminal also changed bargaining power. Large carriers could negotiate volume discounts because they controlled more cargo. Small exporters had less leverage and were sometimes charged for storage or documentation services that were bundled into larger contracts. A common facility can reduce duplicated infrastructure, but if access terms are opaque it may create a new point of dependence. The issue is not whether a large port is inherently unfair. It is whether smaller users can obtain predictable access and whether the rules for charges, slots and complaints are visible.\n\nRegional planners began comparing the terminal with the smaller ports rather than treating them as failed competitors. A smaller facility might serve coastal feeder routes, specialised cargo or emergency diversion when the main terminal is disrupted. Public investment decisions needed to account for road and rail links, local employment, environmental effects and the cost of maintaining spare capacity.\n\nThe episode shows that transport infrastructure redistributes opportunity as well as reducing physical distance. A headline throughput figure cannot tell whether an exporter reached the market more cheaply, whether an inland worker lost access to employment or whether the network has become more fragile because too much cargo depends on one gate. The right unit of analysis is the connected logistics system."
+      "text": "A new deep-water terminal shortened the voyage time for large container ships serving a coastal region. The terminal could receive vessels that had previously called at two smaller ports, and a logistics company began routing most long-distance cargo through the new facility. Its public report highlighted the reduction in sailing time and the number of containers handled per day. For large exporters with regular volumes, the new route lowered freight costs and made delivery schedules easier to coordinate.\n\nThe gain was not distributed evenly. Smaller ports lost calls and some local shipping agents saw fewer bookings. Inland businesses that relied on a nearby depot faced longer road journeys, even when the ocean leg became faster. Truck traffic concentrated around the new terminal, where congestion during peak hours sometimes erased the time saved at sea. A port's efficiency therefore depends on the whole journey from factory gate to final customer, not just the speed of a crane.\n\nThe terminal also changed bargaining power. Large carriers could negotiate volume discounts because they controlled more cargo. Small exporters had less leverage and were sometimes charged for storage or documentation services that were bundled into larger contracts. A common facility can reduce duplicated infrastructure, but if access terms are opaque it may create a new point of dependence. The issue is not whether a large port is inherently unfair. It is whether smaller users can obtain predictable access and whether the rules for charges, slots and complaints are visible.\n\nRegional planners began comparing the terminal with the smaller ports rather than treating them as failed competitors. A smaller facility might serve coastal feeder routes, specialised cargo or emergency diversion when the main terminal is disrupted. Public investment decisions needed to account for road and rail links, local employment, environmental effects and the cost of maintaining spare capacity.\n\nThe episode shows that transport infrastructure redistributes opportunity as well as reducing physical distance. A headline throughput figure cannot tell whether an exporter reached the market more cheaply, whether an inland worker lost access to employment or whether the network has become more fragile because too much cargo depends on one gate. The right unit of analysis is the connected logistics system.\n\nA planner therefore mapped the full route, including road connections, warehouse transfers and customs checks. The smaller ports retained value for nearby producers even when they could not receive the largest vessels. Treating them as redundant would have removed a fallback and increased the distance between some factories and their nearest export route."
     },
     {
       "passageId": "r008-english-03",
       "sectionId": "english",
       "title": "Autonomy without isolation",
-      "text": "A government reviewing critical industrial inputs faced an uncomfortable choice. Domestic factories depended on imported chemicals, specialised machine tools and electronic components. A sudden export restriction abroad could interrupt production, but replacing every imported input with a domestically made version would require years of investment and might raise prices for downstream industries. Some products could be made locally with existing skills; others depended on technology, minerals or equipment that the country did not possess.\n\nThe policy debate used the phrase strategic autonomy, but participants meant different things by it. One group treated autonomy as self-sufficiency. Another argued that the real objective should be the ability to withstand disruption, which could be achieved through diversified imports, trusted partnerships, domestic research and carefully chosen reserves. A third warned that subsidies could preserve inefficient plants if support continued without productivity or quality targets.\n\nThe distinction matters because dependence is not binary. A factory may import a small but irreplaceable sensor while producing most of its output locally. A country may buy the same material from three suppliers that all depend on one mine or refining facility. Conversely, an imported component may be easy to replace if several technically compatible producers exist and qualification takes only a few weeks. Counting import shares alone can therefore give a misleading picture of exposure.\n\nThe ministry proposed a capability review before selecting incentives. Firms would identify critical inputs, substitution times, intellectual-property constraints and the location of upstream processing. Public support would focus on gaps where domestic research or production could create durable capabilities. For inputs better sourced through trade, the government would diversify partners and improve customs and logistics reliability. Any subsidy would include milestones for quality, productivity and eventual commercial viability.\n\nThe policy was not a promise to close the economy. It recognised that international specialisation can lower costs and spread knowledge, while excessive concentration creates leverage for a supplier or a point of failure. Strategic autonomy is best understood as the capacity to make choices under pressure, not as the absence of foreign connections."
+      "text": "A government reviewing critical industrial inputs faced an uncomfortable choice. Domestic factories depended on imported chemicals, specialised machine tools and electronic components. A sudden export restriction abroad could interrupt production, but replacing every imported input with a domestically made version would require years of investment and might raise prices for downstream industries. Some products could be made locally with existing skills; others depended on technology, minerals or equipment that the country did not possess.\n\nThe policy debate used the phrase strategic autonomy, but participants meant different things by it. One group treated autonomy as self-sufficiency. Another argued that the real objective should be the ability to withstand disruption, which could be achieved through diversified imports, trusted partnerships, domestic research and carefully chosen reserves. A third warned that subsidies could preserve inefficient plants if support continued without productivity or quality targets.\n\nThe distinction matters because dependence is not binary. A factory may import a small but irreplaceable sensor while producing most of its output locally. A country may buy the same material from three suppliers that all depend on one mine or refining facility. Conversely, an imported component may be easy to replace if several technically compatible producers exist and qualification takes only a few weeks. Counting import shares alone can therefore give a misleading picture of exposure.\n\nThe ministry proposed a capability review before selecting incentives. Firms would identify critical inputs, substitution times, intellectual-property constraints and the location of upstream processing. Public support would focus on gaps where domestic research or production could create durable capabilities. For inputs better sourced through trade, the government would diversify partners and improve customs and logistics reliability. Any subsidy would include milestones for quality, productivity and eventual commercial viability.\n\nThe policy was not a promise to close the economy. It recognised that international specialisation can lower costs and spread knowledge, while excessive concentration creates leverage for a supplier or a point of failure. Strategic autonomy is best understood as the capacity to make choices under pressure, not as the absence of foreign connections.\n\nA capability review must also distinguish a temporary production target from a lasting advantage. A plant that operates only while receiving subsidised energy or guaranteed public orders may not remain viable when support ends. A smaller research programme that improves testing or process engineering, by contrast, may benefit several downstream firms."
     },
     {
       "passageId": "r008-english-04",
       "sectionId": "english",
       "title": "Standards that travel",
-      "text": "An exporter of processed food found that demand was growing in several markets, but each buyer asked for a different set of certificates. One market required detailed traceability from farm to factory. Another emphasised residue testing. A third demanded a label format that small producers found difficult to interpret. The exporter already met India's domestic requirements, yet that did not automatically satisfy every foreign regulator or private retailer.\n\nThe company first treated the requests as paperwork. It later discovered that the evidence required by a standard could change how suppliers stored inputs, recorded batch numbers and separated products during processing. Traceability made it easier to identify a contaminated lot, but only if the records were accurate and the farm or processor could be linked to the batch. A certificate issued without a reliable underlying process offered little protection to consumers and little confidence to buyers.\n\nStandards can serve legitimate aims: food safety, environmental protection, product quality and truthful information. They can also create barriers where requirements are unclear, duplicated or disproportionate to the risk. A small exporter may face high fixed costs for laboratory tests, audits and digital systems. If buyers recognise equivalent evidence from trusted domestic institutions, the cost can fall. If every market insists on its own format, compliance may become a fixed expense that favours large firms.\n\nThe exporter worked with a laboratory and a producer group to create a common record system. The group retained batch details and test results but allowed market-specific labels to be generated from the same verified record. It did not claim that one certificate guaranteed access everywhere. It used international reference standards where they were relevant and checked the importing market's actual rules before shipment.\n\nThe experience reveals a difference between a standard and the evidence that proves compliance. Common standards can make trade more predictable, but they do not remove the need for inspection, competent regulators or remedies when a product fails. Good regulation asks whether the requirement protects a real interest, whether a smaller producer can meet it and whether equivalent evidence should be accepted without lowering the level of protection."
+      "text": "An exporter of processed food found that demand was growing in several markets, but each buyer asked for a different set of certificates. One market required detailed traceability from farm to factory. Another emphasised residue testing. A third demanded a label format that small producers found difficult to interpret. The exporter already met India's domestic requirements, yet that did not automatically satisfy every foreign regulator or private retailer.\n\nThe company first treated the requests as paperwork. It later discovered that the evidence required by a standard could change how suppliers stored inputs, recorded batch numbers and separated products during processing. Traceability made it easier to identify a contaminated lot, but only if the records were accurate and the farm or processor could be linked to the batch. A certificate issued without a reliable underlying process offered little protection to consumers and little confidence to buyers.\n\nStandards can serve legitimate aims: food safety, environmental protection, product quality and truthful information. They can also create barriers where requirements are unclear, duplicated or disproportionate to the risk. A small exporter may face high fixed costs for laboratory tests, audits and digital systems. If buyers recognise equivalent evidence from trusted domestic institutions, the cost can fall. If every market insists on its own format, compliance may become a fixed expense that favours large firms.\n\nThe exporter worked with a laboratory and a producer group to create a common record system. The group retained batch details and test results but allowed market-specific labels to be generated from the same verified record. It did not claim that one certificate guaranteed access everywhere. It used international reference standards where they were relevant and checked the importing market's actual rules before shipment.\n\nThe experience reveals a difference between a standard and the evidence that proves compliance. Common standards can make trade more predictable, but they do not remove the need for inspection, competent regulators or remedies when a product fails. Good regulation asks whether the requirement protects a real interest, whether a smaller producer can meet it and whether equivalent evidence should be accepted without lowering the level of protection.\n\nThe producer group needed a method for correcting an inaccurate batch record. If one farm's lot were entered under another supplier's code, a traceability system could point a recall toward the wrong producer. A useful standard therefore requires records that can be audited, corrected and connected to the physical product as it moves through the chain."
     },
     {
       "passageId": "r008-current-affairs-01",
       "sectionId": "current-affairs",
       "title": "The WTO's October trade outlook",
-      "text": "The World Trade Organization's October 2026 update to its Global Trade Outlook and Statistics revises forecasts for world merchandise and commercial-services trade in 2026 and 2027. It also provides regional and sectoral breakdowns and examines trade in goods that enable artificial intelligence. The report is a forecast, not a customs count of what has already crossed borders. Its projections depend on information available at the time of preparation and can change when new tariffs, conflicts, demand shifts or shipping constraints emerge.\n\nTrade forecasts are sensitive to both price and volume. A rise in the value of exports may reflect higher prices rather than more goods being shipped. Conversely, a fall in trade value may partly reflect lower commodity prices even when physical quantities are stable. Analysts therefore need to distinguish merchandise trade from services and nominal values from real volumes. A headline global figure can conceal different trajectories among regions and industries.\n\nThe report's attention to AI-enabling goods is significant because the technology debate is connected to physical supply chains. Semiconductors, servers, power equipment and specialised components move through networks involving design, fabrication, assembly and logistics. An increase in demand for one category can benefit exporters of equipment or materials while placing pressure on energy systems and transport capacity. The trade implications are not confined to software services.\n\nA forecast should not be read as a guarantee that every exporting country will gain. Market access depends on product mix, standards, logistics, financing and the ability of firms to meet buyer requirements. Countries concentrated in a narrow set of products may be more exposed to a downturn in one sector than countries with a wider export base. Trade statistics help identify those patterns, but they do not by themselves explain the domestic distribution of gains.\n\nThe useful lesson is methodological: forecasts describe a conditional outlook, not a verdict. Policymakers should examine the assumptions, sectoral composition and uncertainty ranges before turning a global projection into a national industrial strategy. A change in world trade may create opportunity, but firms and workers experience it through specific products, contracts and supply relationships.",
+      "text": "The World Trade Organization's October 2026 update to its Global Trade Outlook and Statistics revises forecasts for world merchandise and commercial-services trade in 2026 and 2027. It also provides regional and sectoral breakdowns and examines trade in goods that enable artificial intelligence. The report is a forecast, not a customs count of what has already crossed borders. Its projections depend on information available at the time of preparation and can change when new tariffs, conflicts, demand shifts or shipping constraints emerge.\n\nTrade forecasts are sensitive to both price and volume. A rise in the value of exports may reflect higher prices rather than more goods being shipped. Conversely, a fall in trade value may partly reflect lower commodity prices even when physical quantities are stable. Analysts therefore need to distinguish merchandise trade from services and nominal values from real volumes. A headline global figure can conceal different trajectories among regions and industries.\n\nThe report's attention to AI-enabling goods is significant because the technology debate is connected to physical supply chains. Semiconductors, servers, power equipment and specialised components move through networks involving design, fabrication, assembly and logistics. An increase in demand for one category can benefit exporters of equipment or materials while placing pressure on energy systems and transport capacity. The trade implications are not confined to software services.\n\nA forecast should not be read as a guarantee that every exporting country will gain. Market access depends on product mix, standards, logistics, financing and the ability of firms to meet buyer requirements. Countries concentrated in a narrow set of products may be more exposed to a downturn in one sector than countries with a wider export base. Trade statistics help identify those patterns, but they do not by themselves explain the domestic distribution of gains.\n\nThe useful lesson is methodological: forecasts describe a conditional outlook, not a verdict. Policymakers should examine the assumptions, sectoral composition and uncertainty ranges before turning a global projection into a national industrial strategy. A change in world trade may create opportunity, but firms and workers experience it through specific products, contracts and supply relationships.\n\nThe WTO publication separates merchandise trade from commercial services and includes regional and sector-level material. Policymakers should therefore avoid lifting a percentage from the summary without checking what is being measured. Goods, services and AI-related equipment may respond to different shocks, and their combined movement can conceal a sharp divergence between industries.",
       "asOf": "2026-11-10",
       "domain": "international trade",
       "sources": [
@@ -81,7 +81,7 @@
       "passageId": "r008-current-affairs-03",
       "sectionId": "current-affairs",
       "title": "India–EU FTA conclusion",
-      "text": "India and the European Union announced the conclusion of negotiations on a Free Trade Agreement at the 16th India–EU Summit on 27 January 2026. The announcement marked a major political milestone, but conclusion of negotiations is not the same as entry into force. The text must be legally reviewed, finalised and taken through the approval and ratification procedures required by each side. Until those steps are completed, businesses cannot assume that every negotiated tariff concession or regulatory provision is already available.\n\nThe agreement is intended to widen market access and make trade more predictable across goods and services. Negotiated outcomes include tariff arrangements, rules of origin, customs procedures, services commitments and cooperation in areas relevant to modern trade. The schedules matter because a general commitment may be phased in over time or apply only to a defined product category. Sensitive sectors may receive special treatment, exclusions or longer transition periods.\n\nIndia's public announcement highlighted opportunities for exporters while also describing safeguards for sensitive agricultural products and the dairy sector. Such provisions illustrate that trade negotiations are exchanges between policy goals, not a simple decision to remove every barrier. A government may seek export growth in textiles, engineering or pharmaceuticals while preserving policy space in sectors linked to rural livelihoods or food security.\n\nThe agreement also includes a framework for professional mobility and business services. That framework should not be confused with unrestricted movement. The details of eligibility, recognition of qualifications, duration and administrative requirements determine whether a commitment can be used by an individual worker or service provider. Implementation procedures matter as much as the diplomatic announcement.\n\nThe conclusion of negotiations allows both sides to move toward the formal legal stages and prepares firms for future opportunities. It does not, by itself, establish that all tariff schedules are effective. A careful reader distinguishes political announcement, text finalisation, legal scrutiny, signature, domestic approval and entry into force. Each stage carries a different consequence for exporters, investors and regulators.",
+      "text": "India and the European Union announced the conclusion of negotiations on a Free Trade Agreement at the 16th India–EU Summit on 27 January 2026. The announcement marked a major political milestone, but conclusion of negotiations is not the same as entry into force. The text must be legally reviewed, finalised and taken through the approval and ratification procedures required by each side. Until those steps are completed, businesses cannot assume that every negotiated tariff concession or regulatory provision is already available.\n\nThe agreement is intended to widen market access and make trade more predictable across goods and services. Negotiated outcomes include tariff arrangements, rules of origin, customs procedures, services commitments and cooperation in areas relevant to modern trade. The schedules matter because a general commitment may be phased in over time or apply only to a defined product category. Sensitive sectors may receive special treatment, exclusions or longer transition periods.\n\nIndia's public announcement highlighted opportunities for exporters while also describing safeguards for sensitive agricultural products and the dairy sector. Such provisions illustrate that trade negotiations are exchanges between policy goals, not a simple decision to remove every barrier. A government may seek export growth in textiles, engineering or pharmaceuticals while preserving policy space in sectors linked to rural livelihoods or food security.\n\nThe agreement also includes a framework for professional mobility and business services. That framework should not be confused with unrestricted movement. The details of eligibility, recognition of qualifications, duration and administrative requirements determine whether a commitment can be used by an individual worker or service provider. Implementation procedures matter as much as the diplomatic announcement.\n\nThe conclusion of negotiations allows both sides to move toward the formal legal stages and prepares firms for future opportunities. It does not, by itself, establish that all tariff schedules are effective. A careful reader distinguishes political announcement, text finalisation, legal scrutiny, signature, domestic approval and entry into force. Each stage carries a different consequence for exporters, investors and regulators.\n\nA tariff schedule may provide a reduction over several years, while a sensitive product remains subject to a quota or other condition. A services chapter may state a broad commitment but reserve specific activities in its annexes. The legal text and schedules, rather than a press summary alone, determine when a firm may rely on a negotiated benefit.",
       "asOf": "2026-11-10",
       "domain": "international economic relations",
       "sources": [
@@ -97,7 +97,7 @@
       "passageId": "r008-current-affairs-04",
       "sectionId": "current-affairs",
       "title": "IMF October 2026 outlook",
-      "text": "The International Monetary Fund's October 2026 World Economic Outlook, titled “Resilience Under Strain, Urgent Choices”, projects global growth to slow to 3.1 per cent in 2026 before reaching 3.4 per cent in 2027. It projects global headline inflation at 4.7 per cent in 2026, easing to 4.1 per cent in 2027. The report says the outlook is subject to downside risks, including conflict escalation, renewed trade tensions, fiscal vulnerabilities and a reassessment of expectations surrounding artificial intelligence investment.\n\nA forecast is a conditional estimate rather than a promise. The IMF notes that its projections are based on statistical information available through 1 October 2026 and may not reflect every later development. That qualification matters in a period when energy prices, shipping routes, financial conditions and technology investment can change quickly. An estimate published in October may not incorporate events that occurred after the data cut-off.\n\nThe report also identifies differences between economies. Energy-importing countries outside the technology value chain face particular pressure because they may pay more for fuel while receiving less of the immediate investment associated with advanced technology supply chains. Countries with stronger buffers, diversified exports or access to financing may be better able to absorb a shock. A single world growth rate cannot describe those different exposures.\n\nThe report's treatment of artificial intelligence is not simply optimistic or pessimistic. Higher investment can support productivity and growth, but a reassessment of expected returns could reduce spending and affect firms, investors and countries connected to the technology cycle. The distribution of gains depends on skills, infrastructure, competition and the ability of firms to adopt new tools.\n\nThe outlook is useful for policymakers because it connects global aggregates with risks that may require different responses. It does not tell a government exactly how much to spend or which sector to subsidise. Rather, it provides assumptions and scenarios that can inform stress testing, fiscal planning and external-sector monitoring. A responsible reader asks what the forecast assumes, which risks could change it and how exposed the domestic economy is to those risks.",
+      "text": "The International Monetary Fund's October 2026 World Economic Outlook, titled “Resilience Under Strain, Urgent Choices”, projects global growth to slow to 3.1 per cent in 2026 before reaching 3.4 per cent in 2027. It projects global headline inflation at 4.7 per cent in 2026, easing to 4.1 per cent in 2027. The report says the outlook is subject to downside risks, including conflict escalation, renewed trade tensions, fiscal vulnerabilities and a reassessment of expectations surrounding artificial intelligence investment.\n\nA forecast is a conditional estimate rather than a promise. The IMF notes that its projections are based on statistical information available through 1 October 2026 and may not reflect every later development. That qualification matters in a period when energy prices, shipping routes, financial conditions and technology investment can change quickly. An estimate published in October may not incorporate events that occurred after the data cut-off.\n\nThe report also identifies differences between economies. Energy-importing countries outside the technology value chain face particular pressure because they may pay more for fuel while receiving less of the immediate investment associated with advanced technology supply chains. Countries with stronger buffers, diversified exports or access to financing may be better able to absorb a shock. A single world growth rate cannot describe those different exposures.\n\nThe report's treatment of artificial intelligence is not simply optimistic or pessimistic. Higher investment can support productivity and growth, but a reassessment of expected returns could reduce spending and affect firms, investors and countries connected to the technology cycle. The distribution of gains depends on skills, infrastructure, competition and the ability of firms to adopt new tools.\n\nThe outlook is useful for policymakers because it connects global aggregates with risks that may require different responses. It does not tell a government exactly how much to spend or which sector to subsidise. Rather, it provides assumptions and scenarios that can inform stress testing, fiscal planning and external-sector monitoring. A responsible reader asks what the forecast assumes, which risks could change it and how exposed the domestic economy is to those risks.\n\nAn energy-importing economy with limited fiscal buffers may face a higher import bill when prices rise. A country with stronger reserves, diversified exports or access to financing may absorb the same shock more easily. These differences explain why a global average is an input to national analysis rather than a forecast for every economy.",
       "asOf": "2026-11-10",
       "domain": "global macroeconomy",
       "sources": [
@@ -113,7 +113,7 @@
       "passageId": "r008-current-affairs-05",
       "sectionId": "current-affairs",
       "title": "India's CPI base year becomes 2024",
-      "text": "India's Ministry of Statistics and Programme Implementation released the first Consumer Price Index series with base year 2024=100 in February 2026, replacing the previous 2012 base. The revision uses the Household Consumption Expenditure Survey 2023–24 to update the basket and weights. It also reorganises the classification into twelve divisions aligned with the Classification of Individual Consumption According to Purpose, rather than the earlier six broad groups.\n\nA consumer price index attempts to track changes in the prices of a representative basket of household consumption. The basket and weights matter because households do not spend the same proportion of income on every category. If housing, online services or other forms of consumption become more important over time, an old basket may represent current behaviour less accurately. The revised series adds categories such as online media services and streaming services and includes items that were not prominent in the previous basket.\n\nThe first release reported January 2026 inflation using the new base. For the all-India combined index, year-on-year general CPI inflation was 2.75 per cent on a provisional basis. That number must be read with its reference period and provisional status. It is not directly interchangeable with a rate from an older base unless the statistical office provides a comparable series or bridge for the relevant period.\n\nA base-year change does not itself make households richer or poorer and does not cause prices to rise. It changes the statistical lens through which price movements are measured. If the measured inflation rate changes after a revision, the reason may be an updated basket, new weights, more granular categories or revised source data. Analysts should not infer manipulation merely because the new series differs from the old one.\n\nThe CPI is important for monetary policy, wage discussions and public understanding, but it remains an average. Different households experience different inflation depending on location, income and spending patterns. The revised series improves representation, while household-specific pressures may still require separate analysis.",
+      "text": "India's Ministry of Statistics and Programme Implementation released the first Consumer Price Index series with base year 2024=100 in February 2026, replacing the previous 2012 base. The revision uses the Household Consumption Expenditure Survey 2023–24 to update the basket and weights. It also reorganises the classification into twelve divisions aligned with the Classification of Individual Consumption According to Purpose, rather than the earlier six broad groups.\n\nA consumer price index attempts to track changes in the prices of a representative basket of household consumption. The basket and weights matter because households do not spend the same proportion of income on every category. If housing, online services or other forms of consumption become more important over time, an old basket may represent current behaviour less accurately. The revised series adds categories such as online media services and streaming services and includes items that were not prominent in the previous basket.\n\nThe first release reported January 2026 inflation using the new base. For the all-India combined index, year-on-year general CPI inflation was 2.75 per cent on a provisional basis. That number must be read with its reference period and provisional status. It is not directly interchangeable with a rate from an older base unless the statistical office provides a comparable series or bridge for the relevant period.\n\nA base-year change does not itself make households richer or poorer and does not cause prices to rise. It changes the statistical lens through which price movements are measured. If the measured inflation rate changes after a revision, the reason may be an updated basket, new weights, more granular categories or revised source data. Analysts should not infer manipulation merely because the new series differs from the old one.\n\nThe CPI is important for monetary policy, wage discussions and public understanding, but it remains an average. Different households experience different inflation depending on location, income and spending patterns. The revised series improves representation, while household-specific pressures may still require separate analysis.\n\nA basket revision can change the contribution of individual categories to the headline rate. If food has a different weight, a given food-price movement may influence the combined index differently from the previous series. Analysts must therefore understand the basket and weights before comparing a rate released under the new base with one from the old base.",
       "asOf": "2026-11-10",
       "domain": "statistics and monetary policy",
       "sources": [
@@ -129,7 +129,7 @@
       "passageId": "r008-current-affairs-06",
       "sectionId": "current-affairs",
       "title": "India–Oman CEPA enters into force",
-      "text": "The India–Oman Comprehensive Economic Partnership Agreement entered into force on 1 June 2026 after the two governments completed their internal processes. The agreement had been signed on 18 December 2025. Its entry into force created preferential arrangements across goods and services and expanded the framework for bilateral economic cooperation. The first consignments using preferential tariff benefits included agricultural goods and gems and jewellery exports from Indian ports.\n\nOman occupies a strategic position for Indian businesses because of its location near major shipping routes and its links to the wider Gulf market. The agreement offers immediate duty-free access for specified Indian textile and apparel tariff lines, while other commitments and exclusions are governed by the detailed schedules. The headline benefit should not be mistaken for a rule that every product is automatically exempt from every requirement. Rules of origin, product standards, customs documentation and any applicable safeguards continue to matter.\n\nA preferential tariff is useful only if the exporter can demonstrate that the product qualifies. Origin rules may require a minimum level of regional value content, a change in tariff classification or compliance with a product-specific process. These rules prevent goods from third countries from being routed through a party solely to claim a preference. Firms therefore need records of inputs, production and sourcing.\n\nThe CEPA also covers services and mobility, areas that matter to professionals and firms beyond merchandise exporters. Commitments in those fields remain subject to the schedules and domestic rules. A services firm must still understand licensing conditions and whether a particular activity is covered by a negotiated commitment.\n\nThe agreement's impact will depend on utilisation. Export growth, diversification of products, participation by small firms and the time required for customs clearance are more informative than the existence of a signed document alone. A trade agreement creates a framework; businesses, regulators and support institutions determine whether its opportunities become commercially usable.",
+      "text": "The India–Oman Comprehensive Economic Partnership Agreement entered into force on 1 June 2026 after the two governments completed their internal processes. The agreement had been signed on 18 December 2025. Its entry into force created preferential arrangements across goods and services and expanded the framework for bilateral economic cooperation. The first consignments using preferential tariff benefits included agricultural goods and gems and jewellery exports from Indian ports.\n\nOman occupies a strategic position for Indian businesses because of its location near major shipping routes and its links to the wider Gulf market. The agreement offers immediate duty-free access for specified Indian textile and apparel tariff lines, while other commitments and exclusions are governed by the detailed schedules. The headline benefit should not be mistaken for a rule that every product is automatically exempt from every requirement. Rules of origin, product standards, customs documentation and any applicable safeguards continue to matter.\n\nA preferential tariff is useful only if the exporter can demonstrate that the product qualifies. Origin rules may require a minimum level of regional value content, a change in tariff classification or compliance with a product-specific process. These rules prevent goods from third countries from being routed through a party solely to claim a preference. Firms therefore need records of inputs, production and sourcing.\n\nThe CEPA also covers services and mobility, areas that matter to professionals and firms beyond merchandise exporters. Commitments in those fields remain subject to the schedules and domestic rules. A services firm must still understand licensing conditions and whether a particular activity is covered by a negotiated commitment.\n\nThe agreement's impact will depend on utilisation. Export growth, diversification of products, participation by small firms and the time required for customs clearance are more informative than the existence of a signed document alone. A trade agreement creates a framework; businesses, regulators and support institutions determine whether its opportunities become commercially usable.\n\nA customs authority can support small exporters by publishing product-level guidance and offering advance clarification. A small firm may not have an in-house trade lawyer, so an unclear origin test can make a formal preference too costly to claim. The agreement's practical value is higher when rules are predictable before a shipment leaves the factory.",
       "asOf": "2026-11-10",
       "domain": "Gulf trade and economic relations",
       "sources": [
@@ -157,7 +157,7 @@
       "passageId": "r008-legal-03",
       "sectionId": "legal",
       "title": "Drawings shared for one project",
-      "text": "An engineering firm supplies technical drawings to a fabricator for the construction of a specialised conveyor. The project letter allows the fabricator to use the drawings to manufacture the agreed units and to share them with a named subcontractor for machining. It prohibits copying them for a different customer or using them to create a competing product. After completing the order, the fabricator keeps a digital copy and uses it to quote for a similar conveyor for another buyer.\n\nFor this fictional problem, apply the following rule. Permission to use a protected work for a stated project does not transfer ownership and does not automatically grant a broader licence. The scope of permission is determined by the words of the licence, the purpose communicated by the parties and any limits on copying or disclosure. A use outside that scope requires additional consent unless the use falls within an exception expressly provided by the rule. A person who receives a limited licence cannot enlarge it merely because the work remains on a device or because the original project has ended.\n\nThe fabricator argues that it did not sell the drawings and that the later quote used only its own manufacturing experience. The distinction matters. General skill and knowledge retained by workers are not the same as reproducing protected dimensions or technical layouts from the original file. A decision-maker applying the rule would ask whether the second quote depended on the protected drawings or on independent measurements and expertise. The existence of a digital copy is relevant evidence, but it is not conclusive proof of use.\n\nThe named subcontractor was permitted to see the drawings only to perform machining for the original order. That permission does not authorise the subcontractor to retain or reuse the file after the task is complete. The fabricator must also take reasonable steps to prevent unauthorised access where the project letter makes confidentiality a condition.\n\nThe principle balances legitimate project collaboration with the rights attached to the technical work. Complex manufacturing often requires sharing information across several firms, but a narrow operational permission does not become a general commercial licence. The decisive issue is the purpose and scope of the consent, not whether the recipient found the drawings useful for another opportunity."
+      "text": "An engineering firm supplies technical drawings to a fabricator for the construction of a specialised conveyor. The project letter allows the fabricator to use the drawings to manufacture the agreed units and to share them with a named subcontractor for machining. It prohibits copying them for a different customer or using them to create a competing product. After completing the order, the fabricator keeps a digital copy and uses it to quote for a similar conveyor for another buyer.\n\nFor this fictional problem, apply the following rule. Permission to use a protected work for a stated project does not transfer ownership and does not automatically grant a broader licence. The scope of permission is determined by the words of the licence, the purpose communicated by the parties and any limits on copying or disclosure. A use outside that scope requires additional consent unless the use falls within an exception expressly provided by the rule. A person who receives a limited licence cannot enlarge it merely because the work remains on a device or because the original project has ended.\n\nThe fabricator argues that it did not sell the drawings and that the later quote used only its own manufacturing experience. The distinction matters. General skill and knowledge retained by workers are not the same as reproducing protected dimensions or technical layouts from the original file. A decision-maker applying the rule would ask whether the second quote depended on the protected drawings or on independent measurements and expertise. The existence of a digital copy is relevant evidence, but it is not conclusive proof of use.\n\nThe named subcontractor was permitted to see the drawings only to perform machining for the original order. That permission does not authorise the subcontractor to retain or reuse the file after the task is complete. The fabricator must also take reasonable steps to prevent unauthorised access where the project letter makes confidentiality a condition.\n\nThe principle balances legitimate project collaboration with the rights attached to the technical work. Complex manufacturing often requires sharing information across several firms, but a narrow operational permission does not become a general commercial licence. The decisive issue is the purpose and scope of the consent, not whether the recipient found the drawings useful for another opportunity.\n\nA regulator may ask whether the same safety objective could be achieved through a performance test rather than a fixed input specification. Such an alternative is acceptable only if its evidence is reliable and the method is disclosed to every bidder. Flexibility in procurement is not permission to negotiate a hidden advantage after competition begins."
     },
     {
       "passageId": "r008-legal-04",
@@ -181,25 +181,25 @@
       "passageId": "r008-logical-01",
       "sectionId": "logical",
       "title": "Inventory is not independence",
-      "text": "A ministry reports that its strategic reserve contains six months of critical industrial materials. The figure is used to support the claim that domestic manufacturers can withstand a prolonged import disruption. Yet the reserve is not evenly distributed across firms, and some materials require specialised processing before they can be used. A warehouse figure therefore measures stored volume, not the time required to turn that volume into functioning components.\n\nA group of manufacturers points out that several essential inputs are absent from the reserve. Others are present but stored in forms that cannot be substituted directly into existing production lines. Some firms have been unable to obtain access because release rules prioritise a small number of public projects. The ministry replies that the reserve was designed for national emergencies rather than routine commercial use.\n\nA second issue concerns replenishment. If a reserve is drawn down during a disruption, the country may have to compete with other buyers for the same material. A reserve can bridge a short interruption, but it cannot replace a refinery, a skilled workforce or a qualified supplier. Its value depends on whether the material is relevant, accessible, safe to store and usable in the production process for which it is intended.\n\nThe ministry proposes publishing a vulnerability map that links each reserve item to the industries that use it, the time needed to process it and the firms permitted to draw it. It will also test whether alternative materials can meet safety standards. The exercise may show that some stock should be increased, while other items are better secured through long-term supply agreements or research into substitution.\n\nThe headline six-month figure is not false. It simply does not answer the question that firms care about: how long could they continue producing a specified good if a specific input stopped arriving? A meaningful resilience measure must connect inventory to process capability, access rules and replenishment risk. The ministry should publish the assumptions behind the headline figure, including which firms qualify for access and how quickly released stock reaches their production lines. These details may reveal that a smaller but well-targeted reserve offers greater protection than a larger store that cannot be converted into usable material."
+      "text": "A ministry reports that its strategic reserve contains six months of critical industrial materials. The figure is used to support the claim that domestic manufacturers can withstand a prolonged import disruption. Yet the reserve is not evenly distributed across firms, and some materials require specialised processing before they can be used. A warehouse figure therefore measures stored volume, not the time required to turn that volume into functioning components.\n\nA group of manufacturers points out that several essential inputs are absent from the reserve. Others are present but stored in forms that cannot be substituted directly into existing production lines. Some firms have been unable to obtain access because release rules prioritise a small number of public projects. The ministry replies that the reserve was designed for national emergencies rather than routine commercial use.\n\nA second issue concerns replenishment. If a reserve is drawn down during a disruption, the country may have to compete with other buyers for the same material. A reserve can bridge a short interruption, but it cannot replace a refinery, a skilled workforce or a qualified supplier. Its value depends on whether the material is relevant, accessible, safe to store and usable in the production process for which it is intended.\n\nThe ministry proposes publishing a vulnerability map that links each reserve item to the industries that use it, the time needed to process it and the firms permitted to draw it. It will also test whether alternative materials can meet safety standards. The exercise may show that some stock should be increased, while other items are better secured through long-term supply agreements or research into substitution.\n\nThe headline six-month figure is not false. It simply does not answer the question that firms care about: how long could they continue producing a specified good if a specific input stopped arriving? A meaningful resilience measure must connect inventory to process capability, access rules and replenishment risk. The ministry should publish the assumptions behind the headline figure, including which firms qualify for access and how quickly released stock reaches their production lines. These details may reveal that a smaller but well-targeted reserve offers greater protection than a larger store that cannot be converted into usable material.\n\nA reserve audit should report usable coverage by input and by industry, not simply the total value or weight of material in storage. It should identify how much stock is accessible, what processing remains and whether the material is compatible with existing equipment. A company can then compare the reserve with its actual interruption tolerance."
     },
     {
       "passageId": "r008-logical-02",
       "sectionId": "logical",
       "title": "Subsidy counts and capability",
-      "text": "A state government offers a capital subsidy to companies that build facilities for processing critical minerals. After three years, the number of approved projects has doubled and the government announces that domestic capability has doubled as well. The announcement counts projects that received approval, not plants operating at commercial scale. Some recipients have completed construction but not secured long-term feedstock; others have installed equipment but are still qualifying output with customers.\n\nThe difference matters because mineral processing involves more than a building and a machine. A plant needs reliable ore or recycled inputs, electricity, water, waste management, skilled technicians and buyers willing to test its material. A line that produces a sample once may not deliver consistent quality at the volume required by an electronics or battery manufacturer. Environmental permissions and safe handling are part of operating capability, not separate administrative details.\n\nThe government argues that approved projects are leading indicators. That may be true: investment and construction can precede production by several years. But the count cannot support a claim about output or supply security until the plants operate. An honest dashboard would separate announced investment, construction, trial production, certified output and repeat commercial deliveries.\n\nA second question is whether supported facilities create independent supply. If several plants import the same intermediate material from one overseas source, domestic processing may improve value addition without reducing upstream vulnerability. If they use different sources, recycling or locally recovered material, they may diversify risk. The origin and reliability of feedstock therefore matter alongside the number of plants.\n\nThe correct inference is not that subsidies have failed. It is that a leading indicator should not be presented as a completed outcome. Capability is demonstrated through safe, reliable production that meets customer specifications and continues when public support declines. The government should track the steps between approval and sustained output before declaring that strategic dependence has been reduced. Project announcements may help investors understand government priorities, but they should not be added to output figures. A transparent evaluation would publish how many facilities have delivered certified products for more than one production cycle and how much feedstock they can secure independently."
+      "text": "A state government offers a capital subsidy to companies that build facilities for processing critical minerals. After three years, the number of approved projects has doubled and the government announces that domestic capability has doubled as well. The announcement counts projects that received approval, not plants operating at commercial scale. Some recipients have completed construction but not secured long-term feedstock; others have installed equipment but are still qualifying output with customers.\n\nThe difference matters because mineral processing involves more than a building and a machine. A plant needs reliable ore or recycled inputs, electricity, water, waste management, skilled technicians and buyers willing to test its material. A line that produces a sample once may not deliver consistent quality at the volume required by an electronics or battery manufacturer. Environmental permissions and safe handling are part of operating capability, not separate administrative details.\n\nThe government argues that approved projects are leading indicators. That may be true: investment and construction can precede production by several years. But the count cannot support a claim about output or supply security until the plants operate. An honest dashboard would separate announced investment, construction, trial production, certified output and repeat commercial deliveries.\n\nA second question is whether supported facilities create independent supply. If several plants import the same intermediate material from one overseas source, domestic processing may improve value addition without reducing upstream vulnerability. If they use different sources, recycling or locally recovered material, they may diversify risk. The origin and reliability of feedstock therefore matter alongside the number of plants.\n\nThe correct inference is not that subsidies have failed. It is that a leading indicator should not be presented as a completed outcome. Capability is demonstrated through safe, reliable production that meets customer specifications and continues when public support declines. The government should track the steps between approval and sustained output before declaring that strategic dependence has been reduced. Project announcements may help investors understand government priorities, but they should not be added to output figures. A transparent evaluation would publish how many facilities have delivered certified products for more than one production cycle and how much feedstock they can secure independently.\n\nA project dashboard could show successive milestones: trial production, certified output, repeat delivery and the share of inputs obtained independently. These measures would make the public claim correspond more closely to demonstrated capability. They would also reveal whether public support is creating a durable industrial process or merely funding construction activity."
     },
     {
       "passageId": "r008-logical-03",
       "sectionId": "logical",
       "title": "A port that exports delay",
-      "text": "A port authority invests in automated gates to reduce the time trucks spend entering a container terminal. The average gate transaction falls from six minutes to two. The authority concludes that cargo now moves three times faster. Exporters report a different experience: trucks still queue outside the port because document checks, weighbridge capacity and customs inspection appointments have not changed.\n\nThe gate is one stage in a longer process. A truck may arrive early because its booking slot is uncertain, wait for a document correction, enter the terminal and then queue again for loading. Faster processing at the gate can increase the rate at which vehicles reach the next bottleneck. If the yard cannot receive them, the queue simply moves from the public road to an internal holding area. The local improvement is real, but the system-level result may be small.\n\nThe authority says that the new system was not intended to solve customs or shipping schedules. That is a fair limitation. However, a claim about overall cargo speed should not be inferred from a measure of gate processing. Appropriate measures would include truck turnaround time, container dwell time, missed vessel cut-offs, inspection delays and the share of bookings completed within the stated slot.\n\nThe port could use arrival data to spread bookings, add document pre-checks and coordinate inspection capacity. It could also publish the share of cargo delayed at each stage. Such a dashboard would help exporters determine whether a problem lies with a carrier, customs process, terminal operator or incomplete paperwork. It would also prevent one agency from claiming the full benefit of a change that shifts work to another.\n\nThe example illustrates a common measurement error: optimising a visible component can be mistaken for improving the entire service. A port's performance depends on hand-offs between institutions. The cargo journey, not the gate alone, is the relevant unit when the authority makes a claim about how quickly trade moves. A fair evaluation should compare similar cargo types and time periods, because an export container requiring inspection may not be comparable to a sealed container cleared electronically. Otherwise, a change in cargo mix can make the average appear faster even when the underlying process has not improved."
+      "text": "A port authority invests in automated gates to reduce the time trucks spend entering a container terminal. The average gate transaction falls from six minutes to two. The authority concludes that cargo now moves three times faster. Exporters report a different experience: trucks still queue outside the port because document checks, weighbridge capacity and customs inspection appointments have not changed.\n\nThe gate is one stage in a longer process. A truck may arrive early because its booking slot is uncertain, wait for a document correction, enter the terminal and then queue again for loading. Faster processing at the gate can increase the rate at which vehicles reach the next bottleneck. If the yard cannot receive them, the queue simply moves from the public road to an internal holding area. The local improvement is real, but the system-level result may be small.\n\nThe authority says that the new system was not intended to solve customs or shipping schedules. That is a fair limitation. However, a claim about overall cargo speed should not be inferred from a measure of gate processing. Appropriate measures would include truck turnaround time, container dwell time, missed vessel cut-offs, inspection delays and the share of bookings completed within the stated slot.\n\nThe port could use arrival data to spread bookings, add document pre-checks and coordinate inspection capacity. It could also publish the share of cargo delayed at each stage. Such a dashboard would help exporters determine whether a problem lies with a carrier, customs process, terminal operator or incomplete paperwork. It would also prevent one agency from claiming the full benefit of a change that shifts work to another.\n\nThe example illustrates a common measurement error: optimising a visible component can be mistaken for improving the entire service. A port's performance depends on hand-offs between institutions. The cargo journey, not the gate alone, is the relevant unit when the authority makes a claim about how quickly trade moves. A fair evaluation should compare similar cargo types and time periods, because an export container requiring inspection may not be comparable to a sealed container cleared electronically. Otherwise, a change in cargo mix can make the average appear faster even when the underlying process has not improved.\n\nThe authority could publish separate waiting-time distributions for trucks with complete documents and those requiring corrections. This would reveal whether automation reduced a genuine processing delay or shifted work to another desk. Peak-period information matters because exporters plan around vessel cut-offs, not an average weekday."
     },
     {
       "passageId": "r008-logical-04",
       "sectionId": "logical",
       "title": "Two suppliers, one vulnerability",
-      "text": "A manufacturer claims to have diversified procurement because it now buys a critical chemical from two companies rather than one. The first supplier ships from a plant in Country X; the second ships from Country Y. A disruption in one country should therefore leave the manufacturer with an alternative. An internal risk review finds, however, that both suppliers purchase the key precursor from the same refinery and use the same shipping channel through a narrow strait.\n\nThe company has reduced its dependence on a single contracting party but not necessarily on a single source of supply. A supplier may have a different address, ownership structure or sales team while sharing the same upstream producer. Likewise, two routes on a map may depend on the same port, insurance market or energy network. Counting direct suppliers misses those common dependencies.\n\nThe review team proposes a tiered map. It traces the material from final seller back to the producer of the precursor and identifies shared infrastructure, ownership and transport links. The map is not perfect: a supplier may be unable to disclose every subcontractor, and commercial confidentiality can limit visibility. But partial information can still identify the most serious concentration points.\n\nThe company then considers three responses. It could qualify a supplier using a different precursor, hold a buffer stock for the period required to switch, or redesign the product to use an alternative material. Each response has a different cost and lead time. A second vendor is useful if it is genuinely independent or if it provides a faster path to substitution. It is less useful if it fails at exactly the same upstream point.\n\nThe central inference is that diversification must be assessed across the chain, not only at the level of the invoice. A count of vendors is an incomplete proxy for resilience. The relevant questions are whether their upstream sources are distinct, whether alternative routes work under stress and how long the buyer needs to adapt. The company cannot map every relationship perfectly, but it can begin with inputs whose failure would stop production and ask suppliers for enough evidence to test common-source risks."
+      "text": "A manufacturer claims to have diversified procurement because it now buys a critical chemical from two companies rather than one. The first supplier ships from a plant in Country X; the second ships from Country Y. A disruption in one country should therefore leave the manufacturer with an alternative. An internal risk review finds, however, that both suppliers purchase the key precursor from the same refinery and use the same shipping channel through a narrow strait.\n\nThe company has reduced its dependence on a single contracting party but not necessarily on a single source of supply. A supplier may have a different address, ownership structure or sales team while sharing the same upstream producer. Likewise, two routes on a map may depend on the same port, insurance market or energy network. Counting direct suppliers misses those common dependencies.\n\nThe review team proposes a tiered map. It traces the material from final seller back to the producer of the precursor and identifies shared infrastructure, ownership and transport links. The map is not perfect: a supplier may be unable to disclose every subcontractor, and commercial confidentiality can limit visibility. But partial information can still identify the most serious concentration points.\n\nThe company then considers three responses. It could qualify a supplier using a different precursor, hold a buffer stock for the period required to switch, or redesign the product to use an alternative material. Each response has a different cost and lead time. A second vendor is useful if it is genuinely independent or if it provides a faster path to substitution. It is less useful if it fails at exactly the same upstream point.\n\nThe central inference is that diversification must be assessed across the chain, not only at the level of the invoice. A count of vendors is an incomplete proxy for resilience. The relevant questions are whether their upstream sources are distinct, whether alternative routes work under stress and how long the buyer needs to adapt. The company cannot map every relationship perfectly, but it can begin with inputs whose failure would stop production and ask suppliers for enough evidence to test common-source risks.\n\nThe risk review should prioritise components whose failure would stop production. A low-cost input with no substitute may deserve more attention than an expensive item available from many independent sources. Purchasing records must therefore be combined with engineering knowledge about the consequence of failure."
     },
     {
       "passageId": "r008-quantitative-01",
@@ -220,5 +220,3366 @@
       "text": "A regional warehouse begins with 3,600 units of a component. It issues 25% of the opening stock in Week 1 and 30% of the remaining stock in Week 2. At the end of Week 2, a delivery of 1,200 units arrives. The warehouse then reserves 15% of its available stock for emergency orders. All percentages apply to the stock at the stated stage and there is no damage or loss."
     }
   ],
-  "questions": []
+  "questions": [
+    {
+      "questionId": "clat-ug27-r008-q001",
+      "passageId": "r008-english-01",
+      "sectionId": "english",
+      "prompt": "Which weakness did the later review identify in the factory's purchasing system?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It measured purchase price and delivery time without pricing the loss caused by an interruption."
+        },
+        {
+          "optionId": "o2",
+          "text": "It required every part to have a domestic substitute."
+        },
+        {
+          "optionId": "o3",
+          "text": "It assumed that warehouse space could be expanded without cost."
+        },
+        {
+          "optionId": "o4",
+          "text": "It bought finished pumps instead of assembling them."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The fastener was inexpensive but could stop the entire line; the purchasing system had ignored that interruption cost.",
+      "difficulty": "easy",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q002",
+      "passageId": "r008-english-01",
+      "sectionId": "english",
+      "prompt": "Why did the review reject multiple suppliers as a universal solution?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A second vendor always makes quality worse."
+        },
+        {
+          "optionId": "o2",
+          "text": "A second vendor is prohibited under trade agreements."
+        },
+        {
+          "optionId": "o3",
+          "text": "A second vendor may share the same upstream source or fail the required technical standard."
+        },
+        {
+          "optionId": "o4",
+          "text": "Multiple vendors make inventory records impossible."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage says that separate vendors are not necessarily independent and may not meet the required grade.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q003",
+      "passageId": "r008-english-01",
+      "sectionId": "english",
+      "prompt": "Which variable became part of the company's component map?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The marketing budget of the supplier."
+        },
+        {
+          "optionId": "o2",
+          "text": "The time needed to qualify a substitute."
+        },
+        {
+          "optionId": "o3",
+          "text": "The colour of the fastener's packaging."
+        },
+        {
+          "optionId": "o4",
+          "text": "The number of invoices raised each month."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The company mapped criticality, substitution time and common upstream exposure.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q004",
+      "passageId": "r008-english-01",
+      "sectionId": "english",
+      "prompt": "What is the passage's central claim about resilience?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It requires domestic manufacture of every input."
+        },
+        {
+          "optionId": "o2",
+          "text": "It is achieved by selecting the cheapest supplier."
+        },
+        {
+          "optionId": "o3",
+          "text": "It is measured by warehouse size alone."
+        },
+        {
+          "optionId": "o4",
+          "text": "It requires managing dependencies that can interrupt production, not simply accumulating stock."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The closing lines define resilience as deliberate management of trade and production dependencies.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q005",
+      "passageId": "r008-english-01",
+      "sectionId": "english",
+      "prompt": "Which inference about the fastener is strongest?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Its technical simplicity made it impossible to inspect."
+        },
+        {
+          "optionId": "o2",
+          "text": "Its low unit price concealed a disproportionate potential cost to the factory."
+        },
+        {
+          "optionId": "o3",
+          "text": "Its supplier was necessarily unreliable."
+        },
+        {
+          "optionId": "o4",
+          "text": "Its price proved that a reserve would be wasteful."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "A low-value component caused an expensive production stop, making unit price an incomplete risk measure.",
+      "difficulty": "challenging",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q006",
+      "passageId": "r008-english-01",
+      "sectionId": "english",
+      "prompt": "Which finding would most weaken the argument for a second supplier?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The factory holds a small rotating reserve."
+        },
+        {
+          "optionId": "o2",
+          "text": "The component has a strict tolerance specification."
+        },
+        {
+          "optionId": "o3",
+          "text": "The current supplier has a good delivery record."
+        },
+        {
+          "optionId": "o4",
+          "text": "The proposed second vendor uses the same processor and shipping route as the original vendor."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The proposed second source would preserve the very upstream exposure the firm is trying to reduce.",
+      "difficulty": "easy",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q007",
+      "passageId": "r008-english-02",
+      "sectionId": "english",
+      "prompt": "Why were the benefits of the deep-water terminal uneven?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The terminal could not receive large container ships."
+        },
+        {
+          "optionId": "o2",
+          "text": "Large exporters were prohibited from using the terminal."
+        },
+        {
+          "optionId": "o3",
+          "text": "Some inland businesses faced longer road journeys, while smaller exporters had less bargaining power."
+        },
+        {
+          "optionId": "o4",
+          "text": "The smaller ports received every new international call."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage describes distributional effects on local agents, inland firms and small exporters.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q008",
+      "passageId": "r008-english-02",
+      "sectionId": "english",
+      "prompt": "Which measure best tests whether the whole logistics journey improved?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Door-to-door time and cost, including road links and terminal delays."
+        },
+        {
+          "optionId": "o2",
+          "text": "The number of cranes at the terminal."
+        },
+        {
+          "optionId": "o3",
+          "text": "The sailing speed of the largest ships."
+        },
+        {
+          "optionId": "o4",
+          "text": "The number of containers processed in one peak hour."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage insists that the factory-to-customer journey, not just the ocean leg, is the relevant unit.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q009",
+      "passageId": "r008-english-02",
+      "sectionId": "english",
+      "prompt": "Which function may justify retaining a smaller port?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Setting national tariff policy."
+        },
+        {
+          "optionId": "o2",
+          "text": "Replacing every deep-water terminal."
+        },
+        {
+          "optionId": "o3",
+          "text": "Feeder routes, specialised cargo and emergency diversion."
+        },
+        {
+          "optionId": "o4",
+          "text": "Guaranteeing identical freight rates for all firms."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage identifies specialised and fallback roles for smaller facilities.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q010",
+      "passageId": "r008-english-02",
+      "sectionId": "english",
+      "prompt": "What is the author's concern about opaque access terms at the new terminal?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A common facility can become a concentrated point of dependence for smaller users."
+        },
+        {
+          "optionId": "o2",
+          "text": "It necessarily makes shipping slower for every carrier."
+        },
+        {
+          "optionId": "o3",
+          "text": "It prevents large carriers from negotiating discounts."
+        },
+        {
+          "optionId": "o4",
+          "text": "It eliminates the need for local road investment."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The text recognises efficiency gains but warns that unclear slots, charges and complaint procedures can create dependence.",
+      "difficulty": "challenging",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q011",
+      "passageId": "r008-english-02",
+      "sectionId": "english",
+      "prompt": "Which conclusion best captures the final paragraph?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A high throughput figure proves that all local workers gain."
+        },
+        {
+          "optionId": "o2",
+          "text": "Small ports are always more efficient than large ones."
+        },
+        {
+          "optionId": "o3",
+          "text": "Road and rail connections are irrelevant to exporters."
+        },
+        {
+          "optionId": "o4",
+          "text": "Infrastructure changes the distribution of opportunity as well as physical travel time."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The final paragraph explicitly includes employment, inland access and network fragility in the evaluation.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q012",
+      "passageId": "r008-english-02",
+      "sectionId": "english",
+      "prompt": "Which evidence would most directly test whether small exporters bear higher charges?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The number of ships using the harbour."
+        },
+        {
+          "optionId": "o2",
+          "text": "A comparison of storage and documentation fees by shipment volume."
+        },
+        {
+          "optionId": "o3",
+          "text": "The total length of the new quay."
+        },
+        {
+          "optionId": "o4",
+          "text": "The annual value of exports from an unrelated region."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The concern is unequal bargaining power and bundled charges, so fee comparisons by firm size are relevant.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q013",
+      "passageId": "r008-english-03",
+      "sectionId": "english",
+      "prompt": "Which definition of strategic autonomy is preferred?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The elimination of all imports."
+        },
+        {
+          "optionId": "o2",
+          "text": "The use of only publicly owned factories."
+        },
+        {
+          "optionId": "o3",
+          "text": "The permanent subsidisation of local production."
+        },
+        {
+          "optionId": "o4",
+          "text": "The ability to withstand disruption and make choices under pressure."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage contrasts self-sufficiency with the capacity to keep functioning during disruption.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q014",
+      "passageId": "r008-english-03",
+      "sectionId": "english",
+      "prompt": "Why can import shares alone give a misleading picture of exposure?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Customs authorities cannot count imported goods."
+        },
+        {
+          "optionId": "o2",
+          "text": "A small import may be irreplaceable while a large import may have several qualified alternatives."
+        },
+        {
+          "optionId": "o3",
+          "text": "All imported goods have identical substitution times."
+        },
+        {
+          "optionId": "o4",
+          "text": "Domestic firms never depend on foreign equipment."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage says criticality and substitutability matter more than aggregate import share by itself.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q015",
+      "passageId": "r008-english-03",
+      "sectionId": "english",
+      "prompt": "What condition does the ministry attach to subsidies?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Milestones for quality, productivity and eventual commercial viability."
+        },
+        {
+          "optionId": "o2",
+          "text": "Automatic renewal regardless of performance."
+        },
+        {
+          "optionId": "o3",
+          "text": "A guarantee to buy all output permanently."
+        },
+        {
+          "optionId": "o4",
+          "text": "A requirement to stop exporting."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The proposed capability review makes support conditional on measurable performance.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q016",
+      "passageId": "r008-english-03",
+      "sectionId": "english",
+      "prompt": "Which situation best illustrates a hidden strategic vulnerability?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A firm uses several local packaging vendors."
+        },
+        {
+          "optionId": "o2",
+          "text": "A manufacturer sells to three export markets."
+        },
+        {
+          "optionId": "o3",
+          "text": "A factory makes most of its output locally but imports one irreplaceable sensor."
+        },
+        {
+          "optionId": "o4",
+          "text": "A company stores components that are easy to replace."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage gives a similar example of a small imported input creating disproportionate exposure.",
+      "difficulty": "easy",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q017",
+      "passageId": "r008-english-03",
+      "sectionId": "english",
+      "prompt": "Which policy would the author be most sceptical of?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "An incentive that preserves inefficient plants without productivity or quality targets."
+        },
+        {
+          "optionId": "o2",
+          "text": "Research support for testing and process engineering."
+        },
+        {
+          "optionId": "o3",
+          "text": "Diversifying trade partners for inputs better sourced abroad."
+        },
+        {
+          "optionId": "o4",
+          "text": "A reserve for components with long qualification times."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage expressly warns against subsidies that preserve inefficient plants.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q018",
+      "passageId": "r008-english-03",
+      "sectionId": "english",
+      "prompt": "What is the author's view of international specialisation?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It is incompatible with domestic research."
+        },
+        {
+          "optionId": "o2",
+          "text": "It makes supply-chain mapping unnecessary."
+        },
+        {
+          "optionId": "o3",
+          "text": "It can lower costs and spread knowledge, while excessive concentration creates risk."
+        },
+        {
+          "optionId": "o4",
+          "text": "It guarantees national self-sufficiency."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The author treats trade and strategic autonomy as compatible when vulnerabilities are managed.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q019",
+      "passageId": "r008-english-04",
+      "sectionId": "english",
+      "prompt": "What practical benefit did traceability provide?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It guaranteed access to every overseas market."
+        },
+        {
+          "optionId": "o2",
+          "text": "It helped identify a contaminated batch by linking suppliers, records and tests."
+        },
+        {
+          "optionId": "o3",
+          "text": "It removed the need for food-safety inspections."
+        },
+        {
+          "optionId": "o4",
+          "text": "It allowed the exporter to ignore importing rules."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "Traceability is useful because the source and batch of a product can be identified when a problem arises.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q020",
+      "passageId": "r008-english-04",
+      "sectionId": "english",
+      "prompt": "Why can multiple certificate formats burden small producers?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They remove the need to identify suppliers."
+        },
+        {
+          "optionId": "o2",
+          "text": "They guarantee automatic acceptance by every buyer."
+        },
+        {
+          "optionId": "o3",
+          "text": "They make the product cheaper to transport."
+        },
+        {
+          "optionId": "o4",
+          "text": "They create repeated fixed costs for audits, laboratories and record systems."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage identifies compliance costs that may favour firms with larger resources.",
+      "difficulty": "challenging",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q021",
+      "passageId": "r008-english-04",
+      "sectionId": "english",
+      "prompt": "How did the exporter reduce duplication without claiming one certificate worked everywhere?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It stopped recording farm and batch information."
+        },
+        {
+          "optionId": "o2",
+          "text": "It retained verified batch records and generated labels suited to each market."
+        },
+        {
+          "optionId": "o3",
+          "text": "It asked buyers to waive all standards."
+        },
+        {
+          "optionId": "o4",
+          "text": "It used an unverified certificate for every destination."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The company reused a common verified record while still checking the importing market's actual rules.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q022",
+      "passageId": "r008-english-04",
+      "sectionId": "english",
+      "prompt": "What distinguishes a standard from evidence of compliance?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A certificate automatically changes the product's composition."
+        },
+        {
+          "optionId": "o2",
+          "text": "Standards and evidence are interchangeable terms."
+        },
+        {
+          "optionId": "o3",
+          "text": "Evidence is unnecessary when a buyer recognises a logo."
+        },
+        {
+          "optionId": "o4",
+          "text": "The standard states the requirement; records and tests show whether the product meets it."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage distinguishes the rule from the reliable underlying process that proves compliance.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q023",
+      "passageId": "r008-english-04",
+      "sectionId": "english",
+      "prompt": "Which case best supports accepting equivalent evidence?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A seller supplies an unsigned assurance with no batch records."
+        },
+        {
+          "optionId": "o2",
+          "text": "A producer asks to skip testing because audits cost money."
+        },
+        {
+          "optionId": "o3",
+          "text": "A trusted laboratory uses a reliable method to test the same safety outcome."
+        },
+        {
+          "optionId": "o4",
+          "text": "An importer cannot identify the source of a product."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "Equivalent evidence may reduce duplication where it achieves the same legitimate protection reliably.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q024",
+      "passageId": "r008-english-04",
+      "sectionId": "english",
+      "prompt": "What is the author's attitude toward trade standards?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They can protect consumers, but should be clear and proportionate to the risk."
+        },
+        {
+          "optionId": "o2",
+          "text": "They mainly exist to exclude small exporters."
+        },
+        {
+          "optionId": "o3",
+          "text": "They should be identical in format worldwide."
+        },
+        {
+          "optionId": "o4",
+          "text": "They have no value unless every shipment is tested physically."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The author recognises legitimate aims while warning about unclear, duplicated or disproportionate requirements.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q025",
+      "passageId": "r008-current-affairs-01",
+      "sectionId": "current-affairs",
+      "prompt": "What kind of document is the WTO October 2026 update?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A final customs count of all completed shipments."
+        },
+        {
+          "optionId": "o2",
+          "text": "A binding tariff schedule for WTO members."
+        },
+        {
+          "optionId": "o3",
+          "text": "A conditional forecast of world merchandise and services trade for 2026 and 2027."
+        },
+        {
+          "optionId": "o4",
+          "text": "A list of every national export licence."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage describes the report as a forecast, not a count of goods already crossing borders.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q026",
+      "passageId": "r008-current-affairs-01",
+      "sectionId": "current-affairs",
+      "prompt": "Why should analysts distinguish trade value from physical volume?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A change in prices can alter trade value even if quantities move differently."
+        },
+        {
+          "optionId": "o2",
+          "text": "Services are not recorded in economic statistics."
+        },
+        {
+          "optionId": "o3",
+          "text": "Physical quantities always equal monetary values."
+        },
+        {
+          "optionId": "o4",
+          "text": "Commodity prices affect only domestic sales."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage explains that higher export value may reflect higher prices rather than more shipments.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q027",
+      "passageId": "r008-current-affairs-01",
+      "sectionId": "current-affairs",
+      "prompt": "What does the focus on AI-enabling goods reveal?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "AI growth is limited to software services."
+        },
+        {
+          "optionId": "o2",
+          "text": "Semiconductors are excluded from merchandise trade."
+        },
+        {
+          "optionId": "o3",
+          "text": "Power equipment has no connection with technology investment."
+        },
+        {
+          "optionId": "o4",
+          "text": "AI-related trade also depends on physical equipment and supply chains."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage identifies semiconductors, servers and power equipment as AI-related traded goods.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q028",
+      "passageId": "r008-current-affairs-01",
+      "sectionId": "current-affairs",
+      "prompt": "Which country is more exposed to a downturn under the reasoning in the passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A country whose exports span several sectors and markets."
+        },
+        {
+          "optionId": "o2",
+          "text": "A country whose exports are concentrated in a narrow product range."
+        },
+        {
+          "optionId": "o3",
+          "text": "A country that tracks trade volumes separately from prices."
+        },
+        {
+          "optionId": "o4",
+          "text": "A country with multiple product categories and buyers."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "A narrow export base exposes a country more sharply to a downturn in the concentrated sector.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q029",
+      "passageId": "r008-current-affairs-01",
+      "sectionId": "current-affairs",
+      "prompt": "What should a policymaker examine before using the WTO forecast?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Only the headline growth percentage."
+        },
+        {
+          "optionId": "o2",
+          "text": "The number of charts in the report."
+        },
+        {
+          "optionId": "o3",
+          "text": "The nationality of the report's editor."
+        },
+        {
+          "optionId": "o4",
+          "text": "Its assumptions, sector composition and uncertainty."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The closing lines caution against turning a conditional outlook into a national strategy without examining assumptions.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q030",
+      "passageId": "r008-current-affairs-02",
+      "sectionId": "current-affairs",
+      "prompt": "When did the India–New Zealand FTA enter into force?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "27 April 2026."
+        },
+        {
+          "optionId": "o2",
+          "text": "20 October 2026."
+        },
+        {
+          "optionId": "o3",
+          "text": "21 September 2026."
+        },
+        {
+          "optionId": "o4",
+          "text": "27 January 2026."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage distinguishes signing on 27 April from entry into force on 20 October.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q031",
+      "passageId": "r008-current-affairs-02",
+      "sectionId": "current-affairs",
+      "prompt": "Why does duty-free access not remove every requirement?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Exporters must still meet rules of origin, standards and customs documentation."
+        },
+        {
+          "optionId": "o2",
+          "text": "All imported inputs automatically become Indian-origin."
+        },
+        {
+          "optionId": "o3",
+          "text": "Tariff classification is no longer required."
+        },
+        {
+          "optionId": "o4",
+          "text": "Domestic product rules cease to apply."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage explains that preference claims depend on origin and compliance rules.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q032",
+      "passageId": "r008-current-affairs-02",
+      "sectionId": "current-affairs",
+      "prompt": "A good is assembled in India from imported materials. What determines whether it qualifies?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The nationality of the exporter’s director."
+        },
+        {
+          "optionId": "o2",
+          "text": "The location of the exporter's bank account."
+        },
+        {
+          "optionId": "o3",
+          "text": "The product-specific rule of origin in the agreement."
+        },
+        {
+          "optionId": "o4",
+          "text": "The country where the shipping container was built."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The text states that origin depends on the applicable rule rather than final assembly alone.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q033",
+      "passageId": "r008-current-affairs-02",
+      "sectionId": "current-affairs",
+      "prompt": "Which measure best captures whether small firms benefit?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The number and value of small-firm exports actually claiming preferences."
+        },
+        {
+          "optionId": "o2",
+          "text": "The number of people at the signing ceremony."
+        },
+        {
+          "optionId": "o3",
+          "text": "The number of pages in the treaty."
+        },
+        {
+          "optionId": "o4",
+          "text": "The number of announcements made by the ministries."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Actual utilisation is more informative than the headline access commitment.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q034",
+      "passageId": "r008-current-affairs-02",
+      "sectionId": "current-affairs",
+      "prompt": "What limitation applies to professional mobility commitments?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They create unrestricted movement for every worker."
+        },
+        {
+          "optionId": "o2",
+          "text": "They eliminate all domestic licensing."
+        },
+        {
+          "optionId": "o3",
+          "text": "Eligibility, qualification and administrative procedures still matter."
+        },
+        {
+          "optionId": "o4",
+          "text": "They apply only to goods exporters."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage warns against interpreting a framework as an unconditional right to operate.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q035",
+      "passageId": "r008-current-affairs-03",
+      "sectionId": "current-affairs",
+      "prompt": "What did the 27 January 2026 announcement mark?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Completion of ratification by both sides."
+        },
+        {
+          "optionId": "o2",
+          "text": "Conclusion of negotiations, not entry into force."
+        },
+        {
+          "optionId": "o3",
+          "text": "Immediate application of every tariff concession."
+        },
+        {
+          "optionId": "o4",
+          "text": "Replacement of all existing customs laws."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage distinguishes negotiation conclusion from legal review, approval and entry into force.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q036",
+      "passageId": "r008-current-affairs-03",
+      "sectionId": "current-affairs",
+      "prompt": "Why might a negotiated tariff concession not yet be usable?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The FTA concerns only services."
+        },
+        {
+          "optionId": "o2",
+          "text": "Exporters determine the entry-into-force date individually."
+        },
+        {
+          "optionId": "o3",
+          "text": "All tariff schedules are automatically provisional forever."
+        },
+        {
+          "optionId": "o4",
+          "text": "The text and schedules must pass legal and domestic procedures."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Negotiation conclusion precedes legal scrutiny and approval procedures.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q037",
+      "passageId": "r008-current-affairs-03",
+      "sectionId": "current-affairs",
+      "prompt": "What do safeguards for sensitive agricultural products illustrate?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "All agricultural products are excluded from every FTA."
+        },
+        {
+          "optionId": "o2",
+          "text": "Trade negotiations balance market access with domestic policy concerns."
+        },
+        {
+          "optionId": "o3",
+          "text": "A government cannot negotiate services commitments."
+        },
+        {
+          "optionId": "o4",
+          "text": "Every tariff must be eliminated on the signing date."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage describes negotiated outcomes as balancing exports with rural livelihoods and food security.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q038",
+      "passageId": "r008-current-affairs-03",
+      "sectionId": "current-affairs",
+      "prompt": "What does a professional-mobility framework not guarantee by itself?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "That service commitments are included at all."
+        },
+        {
+          "optionId": "o2",
+          "text": "That administrative rules can affect access."
+        },
+        {
+          "optionId": "o3",
+          "text": "That schedules may contain specific conditions."
+        },
+        {
+          "optionId": "o4",
+          "text": "Unrestricted movement without qualification or eligibility checks."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage says eligibility, recognition, duration and administrative requirements govern use.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q039",
+      "passageId": "r008-current-affairs-03",
+      "sectionId": "current-affairs",
+      "prompt": "Which sequence correctly reflects the stages identified?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Entry into force, negotiation conclusion, signature, scrutiny, ratification."
+        },
+        {
+          "optionId": "o2",
+          "text": "Signature, entry into force, negotiation, legal scrutiny, approval."
+        },
+        {
+          "optionId": "o3",
+          "text": "Negotiation conclusion, legal finalisation and scrutiny, signature, domestic approval, entry into force."
+        },
+        {
+          "optionId": "o4",
+          "text": "Domestic approval, negotiations, entry into force, signature, text finalisation."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The final paragraph explicitly distinguishes these stages and their consequences.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q040",
+      "passageId": "r008-current-affairs-04",
+      "sectionId": "current-affairs",
+      "prompt": "Which global growth rates does the IMF project for 2026 and 2027?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "3.1 per cent and 3.4 per cent."
+        },
+        {
+          "optionId": "o2",
+          "text": "4.7 per cent and 4.1 per cent."
+        },
+        {
+          "optionId": "o3",
+          "text": "3.4 per cent and 3.1 per cent."
+        },
+        {
+          "optionId": "o4",
+          "text": "2.7 per cent and 3.9 per cent."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage distinguishes growth projections from headline inflation projections of 4.7% and 4.1%.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q041",
+      "passageId": "r008-current-affairs-04",
+      "sectionId": "current-affairs",
+      "prompt": "Why is the IMF's 1 October 2026 cut-off important?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It is the date the IMF was established."
+        },
+        {
+          "optionId": "o2",
+          "text": "It guarantees the projections cannot be revised."
+        },
+        {
+          "optionId": "o3",
+          "text": "Developments after that date may not be reflected in the estimates."
+        },
+        {
+          "optionId": "o4",
+          "text": "It is India's CPI base date."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage notes that a forecast may not reflect later developments after its information cut-off.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q042",
+      "passageId": "r008-current-affairs-04",
+      "sectionId": "current-affairs",
+      "prompt": "Which economy faces the pressure emphasised in the passage?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "An energy importer outside the technology value chain with limited buffers."
+        },
+        {
+          "optionId": "o2",
+          "text": "An energy exporter with diversified trade and strong reserves."
+        },
+        {
+          "optionId": "o3",
+          "text": "A country insulated from energy prices and finance."
+        },
+        {
+          "optionId": "o4",
+          "text": "An economy whose exports are entirely unaffected by AI investment."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The IMF passage identifies energy-importing economies outside the technology value chain as most exposed.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q043",
+      "passageId": "r008-current-affairs-04",
+      "sectionId": "current-affairs",
+      "prompt": "How does the passage characterise AI investment?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It guarantees equal gains for every economy."
+        },
+        {
+          "optionId": "o2",
+          "text": "It affects only software developers."
+        },
+        {
+          "optionId": "o3",
+          "text": "It eliminates downside risks to global growth."
+        },
+        {
+          "optionId": "o4",
+          "text": "It may support productivity, but a reassessment of expected returns can reduce spending."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The text describes both productivity potential and the risk of weaker investment expectations.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q044",
+      "passageId": "r008-current-affairs-04",
+      "sectionId": "current-affairs",
+      "prompt": "What is the most appropriate use of the outlook?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Treating the world average as a guaranteed national growth rate."
+        },
+        {
+          "optionId": "o2",
+          "text": "Stress-testing domestic exposure under alternative external conditions."
+        },
+        {
+          "optionId": "o3",
+          "text": "Replacing domestic data with one global number."
+        },
+        {
+          "optionId": "o4",
+          "text": "Using the inflation forecast as a tariff rate."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage describes the report as an input for stress testing and policy planning.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q045",
+      "passageId": "r008-current-affairs-05",
+      "sectionId": "current-affairs",
+      "prompt": "What changed in India's CPI series in February 2026?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The CPI stopped tracking household consumption."
+        },
+        {
+          "optionId": "o2",
+          "text": "All prices were reset to their 2024 values."
+        },
+        {
+          "optionId": "o3",
+          "text": "CPI was replaced by GDP."
+        },
+        {
+          "optionId": "o4",
+          "text": "The base moved from 2012 to 2024=100, with a revised basket and classification."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage describes the revised base, weights and classification system.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q046",
+      "passageId": "r008-current-affairs-05",
+      "sectionId": "current-affairs",
+      "prompt": "Why does a CPI basket need periodic revision?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It lets statisticians choose any inflation result."
+        },
+        {
+          "optionId": "o2",
+          "text": "Household consumption patterns change, making old weights less representative."
+        },
+        {
+          "optionId": "o3",
+          "text": "It ensures that every household has identical spending."
+        },
+        {
+          "optionId": "o4",
+          "text": "It removes the need to collect price data."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage explains that relative spending patterns change over time.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q047",
+      "passageId": "r008-current-affairs-05",
+      "sectionId": "current-affairs",
+      "prompt": "What is the status of the 2.75 per cent figure?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Provisional combined year-on-year CPI inflation for January 2026 under the new base."
+        },
+        {
+          "optionId": "o2",
+          "text": "A permanent annual rate for every household."
+        },
+        {
+          "optionId": "o3",
+          "text": "India's GDP growth for 2026."
+        },
+        {
+          "optionId": "o4",
+          "text": "The final inflation figure for the whole year."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage gives the reference month, base and provisional status of the number.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q048",
+      "passageId": "r008-current-affairs-05",
+      "sectionId": "current-affairs",
+      "prompt": "What should analysts check before comparing old- and new-base inflation rates?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Whether the two headline rates look similar."
+        },
+        {
+          "optionId": "o2",
+          "text": "Whether the new base is politically popular."
+        },
+        {
+          "optionId": "o3",
+          "text": "Whether a comparable series or bridge exists for the relevant period."
+        },
+        {
+          "optionId": "o4",
+          "text": "Whether the old basket had fewer categories."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "A valid comparison requires a comparable measure rather than direct substitution of unlike series.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q049",
+      "passageId": "r008-current-affairs-05",
+      "sectionId": "current-affairs",
+      "prompt": "Which limitation of CPI is recognised?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It is an average that may not represent an individual household's experience."
+        },
+        {
+          "optionId": "o2",
+          "text": "It cannot include services."
+        },
+        {
+          "optionId": "o3",
+          "text": "It measures only export prices."
+        },
+        {
+          "optionId": "o4",
+          "text": "It has no use in wage or monetary-policy discussions."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage notes variation by location, income and spending patterns.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q050",
+      "passageId": "r008-current-affairs-06",
+      "sectionId": "current-affairs",
+      "prompt": "When did the India–Oman CEPA enter into force?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "18 December 2025."
+        },
+        {
+          "optionId": "o2",
+          "text": "27 January 2026."
+        },
+        {
+          "optionId": "o3",
+          "text": "1 June 2026."
+        },
+        {
+          "optionId": "o4",
+          "text": "20 October 2026."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage identifies 18 December 2025 as the signing date and 1 June 2026 as entry into force.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q051",
+      "passageId": "r008-current-affairs-06",
+      "sectionId": "current-affairs",
+      "prompt": "Why are rules of origin important in a preferential agreement?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They allow any third-country good to be relabelled."
+        },
+        {
+          "optionId": "o2",
+          "text": "They ensure that goods claiming a preference satisfy the agreed origin conditions."
+        },
+        {
+          "optionId": "o3",
+          "text": "They replace product safety standards."
+        },
+        {
+          "optionId": "o4",
+          "text": "They determine the nationality of the carrier."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage explains that origin requirements prevent simple routing through a treaty partner.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q052",
+      "passageId": "r008-current-affairs-06",
+      "sectionId": "current-affairs",
+      "prompt": "Which statement about duty-free treatment is most accurate?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Every product enters Oman without conditions."
+        },
+        {
+          "optionId": "o2",
+          "text": "Only services receive preferences."
+        },
+        {
+          "optionId": "o3",
+          "text": "Customs documentation is no longer needed."
+        },
+        {
+          "optionId": "o4",
+          "text": "It applies according to the relevant schedules and remains subject to requirements."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage warns that headline access does not mean every product is automatically exempt.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q053",
+      "passageId": "r008-current-affairs-06",
+      "sectionId": "current-affairs",
+      "prompt": "Which evidence best measures the agreement's practical effect?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The number of officials attending the signing."
+        },
+        {
+          "optionId": "o2",
+          "text": "Use of preferences and resulting exports, including by smaller firms."
+        },
+        {
+          "optionId": "o3",
+          "text": "The length of the legal text."
+        },
+        {
+          "optionId": "o4",
+          "text": "The date of the first press release."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage says utilisation, diversification and clearance experience are more informative than the existence of an agreement.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q054",
+      "passageId": "r008-current-affairs-06",
+      "sectionId": "current-affairs",
+      "prompt": "What remains true for services commitments under the CEPA?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They remove every domestic professional requirement."
+        },
+        {
+          "optionId": "o2",
+          "text": "They apply only to goods exporters."
+        },
+        {
+          "optionId": "o3",
+          "text": "They create automatic permanent residence rights."
+        },
+        {
+          "optionId": "o4",
+          "text": "Their use depends on the schedules and applicable domestic licensing rules."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage states that negotiated services commitments operate within schedules and domestic regulation.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q055",
+      "passageId": "r008-legal-01",
+      "sectionId": "legal",
+      "prompt": "What must a decision-maker examine before enforcing an exclusive-purchase term?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Whether the contract is longer than one page."
+        },
+        {
+          "optionId": "o2",
+          "text": "Whether the supplier's office is in the same district."
+        },
+        {
+          "optionId": "o3",
+          "text": "Whether it forecloses practical alternatives and is reasonably necessary for a legitimate benefit."
+        },
+        {
+          "optionId": "o4",
+          "text": "Whether the price is stated in local currency."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The fictional rule asks about market power, practical access and necessity, not form alone.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q056",
+      "passageId": "r008-legal-01",
+      "sectionId": "legal",
+      "prompt": "A five-year exclusive term protects equipment investment, but a one-year minimum quantity would do the same. What follows?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The five-year restraint may be broader than reasonably necessary."
+        },
+        {
+          "optionId": "o2",
+          "text": "All exclusivity is automatically lawful."
+        },
+        {
+          "optionId": "o3",
+          "text": "The buyer has no legitimate interest in recovering investment."
+        },
+        {
+          "optionId": "o4",
+          "text": "The contract is invalid because it contains a quantity clause."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "A less restrictive alternative may protect investment while reducing foreclosure.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q057",
+      "passageId": "r008-legal-01",
+      "sectionId": "legal",
+      "prompt": "Which fact most strongly supports the buyer's justification?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It wants to prevent every supplier from dealing with competitors."
+        },
+        {
+          "optionId": "o2",
+          "text": "It dislikes negotiating with other buyers."
+        },
+        {
+          "optionId": "o3",
+          "text": "It financed specialised equipment whose cost depends on a predictable minimum volume."
+        },
+        {
+          "optionId": "o4",
+          "text": "It has a larger advertising budget than competitors."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "A specific sunk investment can be legitimate, though the scope of the restriction still requires review.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q058",
+      "passageId": "r008-legal-01",
+      "sectionId": "legal",
+      "prompt": "Farmers can switch buyers without losing essential services or incurring high transport costs. What does this suggest?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The risk that exclusivity forecloses practical market access may be lower."
+        },
+        {
+          "optionId": "o2",
+          "text": "The contract is immune from review."
+        },
+        {
+          "optionId": "o3",
+          "text": "The processor necessarily has no market power."
+        },
+        {
+          "optionId": "o4",
+          "text": "The agreement must be extended automatically."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Realistic alternatives reduce the foreclosure concern identified in the rule.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q059",
+      "passageId": "r008-legal-01",
+      "sectionId": "legal",
+      "prompt": "Which distinction is central to the rule?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Oral versus written agreements only."
+        },
+        {
+          "optionId": "o2",
+          "text": "Domestic versus foreign ownership."
+        },
+        {
+          "optionId": "o3",
+          "text": "Fixed versus variable price."
+        },
+        {
+          "optionId": "o4",
+          "text": "Protecting a legitimate investment versus restricting competition more broadly than needed."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage balances the buyer's legitimate interest against the scope and market effect of exclusivity.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q060",
+      "passageId": "r008-legal-02",
+      "sectionId": "legal",
+      "prompt": "What is the purpose of the fictional port-slot rule?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "To prefer the largest exporter automatically."
+        },
+        {
+          "optionId": "o2",
+          "text": "To allocate scarce capacity by published safety and urgency criteria."
+        },
+        {
+          "optionId": "o3",
+          "text": "To let staff decide privately without records."
+        },
+        {
+          "optionId": "o4",
+          "text": "To award slots by political influence."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The rule creates neutral, public criteria for scarce terminal access.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q061",
+      "passageId": "r008-legal-02",
+      "sectionId": "legal",
+      "prompt": "A port gives a slot to a minister's relative outside the criteria. What is the defect?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The cargo is necessarily unsafe."
+        },
+        {
+          "optionId": "o2",
+          "text": "The slot must be allocated by a lottery in every case."
+        },
+        {
+          "optionId": "o3",
+          "text": "The authority must close the terminal."
+        },
+        {
+          "optionId": "o4",
+          "text": "The authority has displaced the published rules with personal favouritism."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Personal relationships are not an authorised priority criterion.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q062",
+      "passageId": "r008-legal-02",
+      "sectionId": "legal",
+      "prompt": "Two eligible shipments have equal priority and no differentiating factor. What should happen?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Choose the exporter with the highest annual turnover."
+        },
+        {
+          "optionId": "o2",
+          "text": "The port should apply the disclosed neutral tie-break and record the outcome."
+        },
+        {
+          "optionId": "o3",
+          "text": "Allow the carrier to select the winner."
+        },
+        {
+          "optionId": "o4",
+          "text": "Leave the decision unrecorded."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "Where eligible claims are equal, the rule calls for a neutral and recorded tie-break.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q063",
+      "passageId": "r008-legal-02",
+      "sectionId": "legal",
+      "prompt": "A perishable shipment lacks a mandatory safety certificate. Can urgency alone require priority?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "No; the shipment must first satisfy the safety threshold."
+        },
+        {
+          "optionId": "o2",
+          "text": "Yes; perishability overrides every safety requirement."
+        },
+        {
+          "optionId": "o3",
+          "text": "Yes, if the exporter pays an extra fee."
+        },
+        {
+          "optionId": "o4",
+          "text": "No; perishable goods are prohibited from ports."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Urgency is relevant only among shipments that meet the required safety conditions.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q064",
+      "passageId": "r008-legal-02",
+      "sectionId": "legal",
+      "prompt": "What should an exporter receive after a slot is denied?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A guaranteed same-day slot."
+        },
+        {
+          "optionId": "o2",
+          "text": "Personal details of all competing exporters."
+        },
+        {
+          "optionId": "o3",
+          "text": "Reasons under the published criteria and a route to correct factual errors."
+        },
+        {
+          "optionId": "o4",
+          "text": "Automatic compensation."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The fictional rule protects transparency and correction, not a guarantee of a favourable decision.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q065",
+      "passageId": "r008-legal-03",
+      "sectionId": "legal",
+      "prompt": "What must a supplier prove to invoke the force-majeure clause?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A covered event directly prevented performance despite reasonable alternatives, with prompt notice and mitigation."
+        },
+        {
+          "optionId": "o2",
+          "text": "That performance became more expensive."
+        },
+        {
+          "optionId": "o3",
+          "text": "That some disruption occurred somewhere in its country."
+        },
+        {
+          "optionId": "o4",
+          "text": "That another supplier also faced delays."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The rule requires direct prevention and compliance with notice and mitigation duties.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q066",
+      "passageId": "r008-legal-03",
+      "sectionId": "legal",
+      "prompt": "The alternative warehouse lacks specialised lifting equipment. What must be assessed?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Whether its rent is higher."
+        },
+        {
+          "optionId": "o2",
+          "text": "Whether the buyer prefers the usual warehouse."
+        },
+        {
+          "optionId": "o3",
+          "text": "Whether it is genuinely unsuitable for safe storage and whether a safe alternative can be arranged."
+        },
+        {
+          "optionId": "o4",
+          "text": "Whether the supplier has a large workforce."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The clause does not require reckless or unsafe performance; suitability must be evidenced.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q067",
+      "passageId": "r008-legal-03",
+      "sectionId": "legal",
+      "prompt": "The supplier waited a month to notify the buyer despite knowing of the flood. What may follow?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The contract renews automatically."
+        },
+        {
+          "optionId": "o2",
+          "text": "It may fail the prompt-notice condition even if the flood affected delivery."
+        },
+        {
+          "optionId": "o3",
+          "text": "The buyer must pay every increased cost."
+        },
+        {
+          "optionId": "o4",
+          "text": "The flood becomes a planned event."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The clause makes prompt notice a condition of relief.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q068",
+      "passageId": "r008-legal-03",
+      "sectionId": "legal",
+      "prompt": "Only one stage was prevented for ten days. What relief is consistent with the rule?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A permanent release from every contractual duty."
+        },
+        {
+          "optionId": "o2",
+          "text": "An extension for the whole contract term."
+        },
+        {
+          "optionId": "o3",
+          "text": "A right to increase the price of unrelated items."
+        },
+        {
+          "optionId": "o4",
+          "text": "A limited extension for the affected work and the proven period of prevention."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Relief is limited to the part and time directly affected.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q069",
+      "passageId": "r008-legal-03",
+      "sectionId": "legal",
+      "prompt": "Which evidence most directly supports the claim that no safe alternative warehouse existed?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A general statement that weather was severe."
+        },
+        {
+          "optionId": "o2",
+          "text": "Capacity and safety records for both facilities, together with transport options."
+        },
+        {
+          "optionId": "o3",
+          "text": "The supplier's advertising brochure."
+        },
+        {
+          "optionId": "o4",
+          "text": "An invoice showing higher fuel prices."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The relevant issue is whether reasonable safe alternatives were available.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q070",
+      "passageId": "r008-legal-04",
+      "sectionId": "legal",
+      "prompt": "Tiles imported from A and only glazed and repackaged in B retain their essential character. What is their origin under the rule?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Country B because the trader is located there."
+        },
+        {
+          "optionId": "o2",
+          "text": "Both countries equally."
+        },
+        {
+          "optionId": "o3",
+          "text": "The destination country."
+        },
+        {
+          "optionId": "o4",
+          "text": "Country A."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Minor finishing and repackaging do not constitute substantial transformation under the stated rule.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q071",
+      "passageId": "r008-legal-04",
+      "sectionId": "legal",
+      "prompt": "Why is value added by glazing not decisive on its own?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The rule prohibits surface finishing."
+        },
+        {
+          "optionId": "o2",
+          "text": "Origin is determined by the retailer's address."
+        },
+        {
+          "optionId": "o3",
+          "text": "The rule asks whether the process substantially transforms the product's essential character."
+        },
+        {
+          "optionId": "o4",
+          "text": "All finishing operations are legally irrelevant."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage distinguishes value addition from substantial transformation.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q072",
+      "passageId": "r008-legal-04",
+      "sectionId": "legal",
+      "prompt": "Which label is most consistent with the facts?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Finished in B; manufactured in A."
+        },
+        {
+          "optionId": "o2",
+          "text": "Made in B."
+        },
+        {
+          "optionId": "o3",
+          "text": "Manufactured entirely in B."
+        },
+        {
+          "optionId": "o4",
+          "text": "Origin B with no qualification."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Truthful disclosure may identify the finishing location while distinguishing it from manufacturing origin.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q073",
+      "passageId": "r008-legal-04",
+      "sectionId": "legal",
+      "prompt": "A process changes the material's composition and function into a distinct article. What must be shown?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "That the trader's address is in B."
+        },
+        {
+          "optionId": "o2",
+          "text": "That the packaging is printed in B."
+        },
+        {
+          "optionId": "o3",
+          "text": "That the operation amounts to substantial transformation under the applicable origin test."
+        },
+        {
+          "optionId": "o4",
+          "text": "That the final price is higher."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage allows a different conclusion where essential character or classification changes, but the trader must prove it.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q074",
+      "passageId": "r008-legal-04",
+      "sectionId": "legal",
+      "prompt": "Why should the whole label be considered?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Technically accurate words can still create a misleading overall impression about origin."
+        },
+        {
+          "optionId": "o2",
+          "text": "Only the invoice is relevant."
+        },
+        {
+          "optionId": "o3",
+          "text": "A brand name always determines origin."
+        },
+        {
+          "optionId": "o4",
+          "text": "Consumers are assumed to know the trader's address."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The ordinary buyer's likely understanding of the complete presentation matters.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q075",
+      "passageId": "r008-legal-05",
+      "sectionId": "legal",
+      "prompt": "What is most relevant to whether exclusivity forecloses real alternatives for farmers?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Whether the processor's brand is popular."
+        },
+        {
+          "optionId": "o2",
+          "text": "Whether crates are painted red."
+        },
+        {
+          "optionId": "o3",
+          "text": "Whether the contract is printed on one page."
+        },
+        {
+          "optionId": "o4",
+          "text": "Whether other buyers can collect comparable quantities at realistic transport cost and speed."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The rule makes practical market access, not theoretical alternatives, central.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q076",
+      "passageId": "r008-legal-05",
+      "sectionId": "legal",
+      "prompt": "Why can crate credit be a legitimate commercial objective?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It automatically justifies a three-season ban."
+        },
+        {
+          "optionId": "o2",
+          "text": "It represents an investment that may warrant proportionate protection."
+        },
+        {
+          "optionId": "o3",
+          "text": "It proves that market power is absent."
+        },
+        {
+          "optionId": "o4",
+          "text": "It eliminates the need to examine effects."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage recognises investment recovery as legitimate but requires assessment of narrower means.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q077",
+      "passageId": "r008-legal-05",
+      "sectionId": "legal",
+      "prompt": "Which term could protect the crate investment while restricting farmers less?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A lifetime ban on using another buyer."
+        },
+        {
+          "optionId": "o2",
+          "text": "An obligation covering every crop produced by the farmer."
+        },
+        {
+          "optionId": "o3",
+          "text": "A prohibition on competing buyers entering the district."
+        },
+        {
+          "optionId": "o4",
+          "text": "A repayment obligation or shorter commitment linked to the credit."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage identifies narrower terms as possible alternatives to lengthy exclusivity.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q078",
+      "passageId": "r008-legal-05",
+      "sectionId": "legal",
+      "prompt": "The processor controls the only cold-storage facility. Why does this matter?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It proves the processor has no market power."
+        },
+        {
+          "optionId": "o2",
+          "text": "A theoretical alternative buyer may not be practical for perishable produce."
+        },
+        {
+          "optionId": "o3",
+          "text": "It means every farmer must accept any price."
+        },
+        {
+          "optionId": "o4",
+          "text": "It makes market structure irrelevant."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The ability to switch depends on realistic storage and transport options before produce spoils.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q079",
+      "passageId": "r008-legal-05",
+      "sectionId": "legal",
+      "prompt": "What must the authority connect before finding the clause objectionable?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Market power, foreclosure risk and lack of a reasonably necessary justification."
+        },
+        {
+          "optionId": "o2",
+          "text": "The farmers' dislike of the processor's brand."
+        },
+        {
+          "optionId": "o3",
+          "text": "The mere presence of an exclusivity clause."
+        },
+        {
+          "optionId": "o4",
+          "text": "A single instance of a higher price elsewhere."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The rule rejects automatic condemnation and requires a market-effect and justification analysis.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q080",
+      "passageId": "r008-legal-06",
+      "sectionId": "legal",
+      "prompt": "What must a trader provide to support a claim that goods qualify for a preference?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "An informal statement from a freight forwarder."
+        },
+        {
+          "optionId": "o2",
+          "text": "A commercial advertisement."
+        },
+        {
+          "optionId": "o3",
+          "text": "Records that link the shipment to the relevant production and origin requirements."
+        },
+        {
+          "optionId": "o4",
+          "text": "A request to avoid inspection."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The fictional rule requires contemporaneous records connected to the actual shipment.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q081",
+      "passageId": "r008-legal-06",
+      "sectionId": "legal",
+      "prompt": "A certificate refers to a different production batch. What is the main problem?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It may not establish that the consignment satisfies the origin rule."
+        },
+        {
+          "optionId": "o2",
+          "text": "It automatically proves origin for all future shipments."
+        },
+        {
+          "optionId": "o3",
+          "text": "It requires customs to approve the claim without review."
+        },
+        {
+          "optionId": "o4",
+          "text": "It makes the tariff schedule invalid."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Evidence must correspond to the specific goods being shipped.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q082",
+      "passageId": "r008-legal-06",
+      "sectionId": "legal",
+      "prompt": "When may a preference be rejected despite a formal certificate?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Whenever the exporter is small."
+        },
+        {
+          "optionId": "o2",
+          "text": "Whenever goods arrive by road."
+        },
+        {
+          "optionId": "o3",
+          "text": "Where reliable evidence shows the goods do not meet the rule or the certificate does not match the consignment."
+        },
+        {
+          "optionId": "o4",
+          "text": "Whenever the importer has a high profit margin."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "A certificate is evidence, not an irrebuttable substitute for the origin conditions.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q083",
+      "passageId": "r008-legal-06",
+      "sectionId": "legal",
+      "prompt": "Which process would best assist small exporters?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Changing origin rules after shipment."
+        },
+        {
+          "optionId": "o2",
+          "text": "Published product guidance and an accessible advance-ruling process."
+        },
+        {
+          "optionId": "o3",
+          "text": "Unpublished standards applied at each officer's discretion."
+        },
+        {
+          "optionId": "o4",
+          "text": "A requirement to hire a full-time lawyer."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "Authoritative guidance allows firms to assess eligibility before exporting.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q084",
+      "passageId": "r008-legal-06",
+      "sectionId": "legal",
+      "prompt": "What is the relationship between preferential treatment and compliance?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A preference removes every customs check."
+        },
+        {
+          "optionId": "o2",
+          "text": "A preference follows whenever buyer and seller are from partner countries."
+        },
+        {
+          "optionId": "o3",
+          "text": "A preference depends only on the port of export."
+        },
+        {
+          "optionId": "o4",
+          "text": "The reduced tariff is conditional on satisfying the agreement's origin and documentary rules."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage makes the benefit conditional on evidence and the agreed rules.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q085",
+      "passageId": "r008-logical-01",
+      "sectionId": "logical",
+      "prompt": "What is the main flaw in the ministry's six-month resilience claim?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It counts stock in a foreign currency."
+        },
+        {
+          "optionId": "o2",
+          "text": "It treats stored volume as equivalent to usable production continuity."
+        },
+        {
+          "optionId": "o3",
+          "text": "It records materials by their warehouse location."
+        },
+        {
+          "optionId": "o4",
+          "text": "It compares different fiscal years."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "Some items are inaccessible, incompatible or need processing before firms can use them.",
+      "difficulty": "challenging",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q086",
+      "passageId": "r008-logical-01",
+      "sectionId": "logical",
+      "prompt": "Which measure best matches the question manufacturers need answered?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Total floor area of the warehouses."
+        },
+        {
+          "optionId": "o2",
+          "text": "Number of government announcements."
+        },
+        {
+          "optionId": "o3",
+          "text": "Market value of stock regardless of use."
+        },
+        {
+          "optionId": "o4",
+          "text": "Usable production days for each critical input, including access and processing time."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage recommends connecting reserve items to actual industry needs and conversion time.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q087",
+      "passageId": "r008-logical-01",
+      "sectionId": "logical",
+      "prompt": "If only two public projects can draw from the reserve, what follows?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Every firm has six months of accessible stock."
+        },
+        {
+          "optionId": "o2",
+          "text": "The stock has no value for any purpose."
+        },
+        {
+          "optionId": "o3",
+          "text": "The national headline figure may not protect many commercial manufacturers."
+        },
+        {
+          "optionId": "o4",
+          "text": "Release rules increase factory output automatically."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "Access restrictions mean the aggregate quantity does not describe coverage for all firms.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q088",
+      "passageId": "r008-logical-01",
+      "sectionId": "logical",
+      "prompt": "Which evidence would strengthen the reserve's claimed usefulness?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A trial showing released stock reaches manufacturers and becomes compatible inputs within days."
+        },
+        {
+          "optionId": "o2",
+          "text": "A warehouse near the capital."
+        },
+        {
+          "optionId": "o3",
+          "text": "An increase in total stored weight."
+        },
+        {
+          "optionId": "o4",
+          "text": "An insurance policy for the building."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The evidence addresses the key gap between stored material and usable production inputs.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q089",
+      "passageId": "r008-logical-01",
+      "sectionId": "logical",
+      "prompt": "Why does replenishment matter even when a reserve is large?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It determines the label on each container."
+        },
+        {
+          "optionId": "o2",
+          "text": "It proves all suppliers are unreliable."
+        },
+        {
+          "optionId": "o3",
+          "text": "A disruption may prevent the material from being replaced after the reserve is consumed."
+        },
+        {
+          "optionId": "o4",
+          "text": "It eliminates the value of any buffer."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage says reserves bridge short interruptions but cannot replace long-term supply capability.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q090",
+      "passageId": "r008-logical-01",
+      "sectionId": "logical",
+      "prompt": "Which conclusion follows?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A smaller targeted reserve may protect production better than a larger inaccessible stockpile."
+        },
+        {
+          "optionId": "o2",
+          "text": "Reserves should be judged only by market value."
+        },
+        {
+          "optionId": "o3",
+          "text": "Every firm should receive identical quantities of every material."
+        },
+        {
+          "optionId": "o4",
+          "text": "Research into substitutes is unnecessary."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The final paragraph argues that targeted, usable reserves may outperform larger unusable stores.",
+      "difficulty": "challenging",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q091",
+      "passageId": "r008-logical-02",
+      "sectionId": "logical",
+      "prompt": "What does the government's project count actually measure?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Certified tonnes produced."
+        },
+        {
+          "optionId": "o2",
+          "text": "The share of input sourced domestically."
+        },
+        {
+          "optionId": "o3",
+          "text": "Repeat deliveries to customers."
+        },
+        {
+          "optionId": "o4",
+          "text": "Approved projects, not operating commercial output."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage says the count includes facilities not yet operating at commercial scale.",
+      "difficulty": "easy",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q092",
+      "passageId": "r008-logical-02",
+      "sectionId": "logical",
+      "prompt": "Which evidence best demonstrates sustained processing capability?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "A completed building."
+        },
+        {
+          "optionId": "o2",
+          "text": "Repeated deliveries of certified material meeting customer specifications."
+        },
+        {
+          "optionId": "o3",
+          "text": "An approved subsidy."
+        },
+        {
+          "optionId": "o4",
+          "text": "A single sample run without quality records."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage defines capability through safe, reliable and repeatable output.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q093",
+      "passageId": "r008-logical-02",
+      "sectionId": "logical",
+      "prompt": "Why does common feedstock matter when assessing several domestic plants?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It proves that plants cannot run at the same time."
+        },
+        {
+          "optionId": "o2",
+          "text": "It makes material quality irrelevant."
+        },
+        {
+          "optionId": "o3",
+          "text": "It means that local processing adds no value."
+        },
+        {
+          "optionId": "o4",
+          "text": "The plants may still depend on the same upstream supplier."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "Domestic processing does not necessarily remove a common vulnerability at the input stage.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q094",
+      "passageId": "r008-logical-02",
+      "sectionId": "logical",
+      "prompt": "Which dashboard would best avoid overstating success?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "One count of all approved projects."
+        },
+        {
+          "optionId": "o2",
+          "text": "Separate construction, trial production, certified output and repeat commercial deliveries."
+        },
+        {
+          "optionId": "o3",
+          "text": "A list of subsidy amounts only."
+        },
+        {
+          "optionId": "o4",
+          "text": "A count of factory buildings regardless of status."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage recommends showing successive milestones rather than treating approval as an outcome.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q095",
+      "passageId": "r008-logical-02",
+      "sectionId": "logical",
+      "prompt": "A plant produces at scale but imports its feedstock from one source. What has it demonstrated?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Domestic processing capability, but not necessarily upstream supply security."
+        },
+        {
+          "optionId": "o2",
+          "text": "Complete independence from foreign supply."
+        },
+        {
+          "optionId": "o3",
+          "text": "No creation of domestic capability."
+        },
+        {
+          "optionId": "o4",
+          "text": "That all subsidies should immediately stop."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The passage distinguishes processing capability from diversified input supply.",
+      "difficulty": "challenging",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q096",
+      "passageId": "r008-logical-02",
+      "sectionId": "logical",
+      "prompt": "What is the strongest criticism of the claim that capability doubled?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Leading indicators are always useless."
+        },
+        {
+          "optionId": "o2",
+          "text": "Governments should never publish project numbers."
+        },
+        {
+          "optionId": "o3",
+          "text": "The evidence counts approvals while the claim concerns actual production and resilience."
+        },
+        {
+          "optionId": "o4",
+          "text": "All mineral plants require equal subsidies."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The measure and the conclusion describe different stages of industrial development.",
+      "difficulty": "easy",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q097",
+      "passageId": "r008-logical-03",
+      "sectionId": "logical",
+      "prompt": "What does the reduction from six minutes to two minutes establish?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The average gate transaction became faster."
+        },
+        {
+          "optionId": "o2",
+          "text": "The whole cargo journey became three times faster."
+        },
+        {
+          "optionId": "o3",
+          "text": "Customs inspections became unnecessary."
+        },
+        {
+          "optionId": "o4",
+          "text": "Every truck reached its vessel on time."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The authority measured one process stage, not overall cargo movement.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q098",
+      "passageId": "r008-logical-03",
+      "sectionId": "logical",
+      "prompt": "Why might the queue outside the port remain unchanged?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Gate automation necessarily increases sea travel time."
+        },
+        {
+          "optionId": "o2",
+          "text": "Truck drivers stop using bookings."
+        },
+        {
+          "optionId": "o3",
+          "text": "Document checks, weighbridge capacity and inspection appointments remain bottlenecks."
+        },
+        {
+          "optionId": "o4",
+          "text": "The port no longer receives containers."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage identifies other stages that continue to delay vehicles.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q099",
+      "passageId": "r008-logical-03",
+      "sectionId": "logical",
+      "prompt": "Which statistic best supports a claim about overall cargo movement?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Number of automated barriers installed."
+        },
+        {
+          "optionId": "o2",
+          "text": "Truck turnaround time and container dwell time across the full process."
+        },
+        {
+          "optionId": "o3",
+          "text": "Time taken by the gate alone."
+        },
+        {
+          "optionId": "o4",
+          "text": "Length of the annual report."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The passage lists whole-journey measures rather than an isolated gate statistic.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q100",
+      "passageId": "r008-logical-03",
+      "sectionId": "logical",
+      "prompt": "How could faster gate processing worsen internal congestion?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "The terminal automatically reduces its capacity."
+        },
+        {
+          "optionId": "o2",
+          "text": "Customs must close every inspection lane."
+        },
+        {
+          "optionId": "o3",
+          "text": "The port stops serving smaller exporters."
+        },
+        {
+          "optionId": "o4",
+          "text": "More vehicles may reach a downstream bottleneck faster than the yard can receive them."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage explains that queues can shift to the next stage of the process.",
+      "difficulty": "challenging",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q101",
+      "passageId": "r008-logical-03",
+      "sectionId": "logical",
+      "prompt": "Why compare similar cargo and time periods?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "All cargo requires identical inspection."
+        },
+        {
+          "optionId": "o2",
+          "text": "A different cargo mix may make the average appear faster without improving the underlying process."
+        },
+        {
+          "optionId": "o3",
+          "text": "Seasonal demand must be ignored."
+        },
+        {
+          "optionId": "o4",
+          "text": "Cargo type determines the shipping flag."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "Inspection-heavy cargo may not be comparable to cargo cleared electronically.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q102",
+      "passageId": "r008-logical-03",
+      "sectionId": "logical",
+      "prompt": "What is the passage's central argument?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Every local improvement is misleading."
+        },
+        {
+          "optionId": "o2",
+          "text": "Only customs affects port performance."
+        },
+        {
+          "optionId": "o3",
+          "text": "Automated gates should always be abandoned."
+        },
+        {
+          "optionId": "o4",
+          "text": "A local process gain should not be represented as a system-wide improvement without wider evidence."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage accepts the gate improvement but challenges the larger claim about the complete logistics chain.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q103",
+      "passageId": "r008-logical-04",
+      "sectionId": "logical",
+      "prompt": "Why are two direct suppliers not necessarily independent?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "They issue invoices in different currencies."
+        },
+        {
+          "optionId": "o2",
+          "text": "They have different sales teams."
+        },
+        {
+          "optionId": "o3",
+          "text": "They may share an upstream precursor source or transport channel."
+        },
+        {
+          "optionId": "o4",
+          "text": "They deliver at different times."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The example shows two vendors relying on the same refinery and shipping strait.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q104",
+      "passageId": "r008-logical-04",
+      "sectionId": "logical",
+      "prompt": "Which investigation best reveals shared dependencies?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Trace the input through vendors to processors, precursor sources and transport infrastructure."
+        },
+        {
+          "optionId": "o2",
+          "text": "Compare only the names on purchase orders."
+        },
+        {
+          "optionId": "o3",
+          "text": "Count contract signatures."
+        },
+        {
+          "optionId": "o4",
+          "text": "Review vendors' advertisements."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "The proposed tiered map looks beyond the immediate seller to upstream relationships.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q105",
+      "passageId": "r008-logical-04",
+      "sectionId": "logical",
+      "prompt": "What limitation does the review team acknowledge?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "Suppliers must disclose prices to competitors."
+        },
+        {
+          "optionId": "o2",
+          "text": "Upstream relationships never change."
+        },
+        {
+          "optionId": "o3",
+          "text": "Commercial confidentiality may restrict visibility into every subcontractor."
+        },
+        {
+          "optionId": "o4",
+          "text": "A map can predict every disruption."
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "The passage notes incomplete disclosure but argues that partial information still helps identify concentration points.",
+      "difficulty": "challenging",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q106",
+      "passageId": "r008-logical-04",
+      "sectionId": "logical",
+      "prompt": "A third vendor uses a different precursor but the same shipping strait. What does this imply?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "One source risk falls, but the common transport vulnerability remains."
+        },
+        {
+          "optionId": "o2",
+          "text": "All supply concentration disappears."
+        },
+        {
+          "optionId": "o3",
+          "text": "The third vendor is identical in every respect."
+        },
+        {
+          "optionId": "o4",
+          "text": "The supplier is necessarily unreliable."
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Diversification can reduce one dependency while leaving another shared bottleneck.",
+      "difficulty": "easy",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q107",
+      "passageId": "r008-logical-04",
+      "sectionId": "logical",
+      "prompt": "Why combine purchasing records with engineering knowledge?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "It removes the need for supplier checks."
+        },
+        {
+          "optionId": "o2",
+          "text": "It makes contracts unnecessary."
+        },
+        {
+          "optionId": "o3",
+          "text": "It proves the most expensive component is always most critical."
+        },
+        {
+          "optionId": "o4",
+          "text": "It identifies which low-cost components could stop production and how difficult they are to replace."
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "The passage explains that a cheap irreplaceable part may be more critical than a high-value substitutable item.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q108",
+      "passageId": "r008-logical-04",
+      "sectionId": "logical",
+      "prompt": "Which conclusion is strongest?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "One supplier is always preferable."
+        },
+        {
+          "optionId": "o2",
+          "text": "Vendor count is incomplete; resilience depends on upstream independence and practical substitution."
+        },
+        {
+          "optionId": "o3",
+          "text": "Every supply chain can be made fully transparent."
+        },
+        {
+          "optionId": "o4",
+          "text": "Transport routes do not affect component supply."
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "The closing paragraph says resilience must be assessed across the chain, not only at invoice level.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q109",
+      "passageId": "r008-quantitative-01",
+      "sectionId": "quantitative",
+      "prompt": "How many tonnes were shipped to Market A?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "840 tonnes"
+        },
+        {
+          "optionId": "o2",
+          "text": "600 tonnes"
+        },
+        {
+          "optionId": "o3",
+          "text": "1,080 tonnes"
+        },
+        {
+          "optionId": "o4",
+          "text": "960 tonnes"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "40% of 2,400 = 960 tonnes.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q110",
+      "passageId": "r008-quantitative-01",
+      "sectionId": "quantitative",
+      "prompt": "How many tonnes shipped to Market B claimed a preference?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "480 tonnes"
+        },
+        {
+          "optionId": "o2",
+          "text": "504 tonnes"
+        },
+        {
+          "optionId": "o3",
+          "text": "560 tonnes"
+        },
+        {
+          "optionId": "o4",
+          "text": "600 tonnes"
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "Market B received 35% × 2,400 = 840 tonnes. Sixty per cent of 840 = 504 tonnes.",
+      "difficulty": "challenging",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q111",
+      "passageId": "r008-quantitative-01",
+      "sectionId": "quantitative",
+      "prompt": "What was the total freight cost?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹1.92 crore"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹1.80 crore"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹2.04 crore"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹2.16 crore"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "2,400 tonnes × ₹8,000 = ₹1,92,00,000 = ₹1.92 crore.",
+      "difficulty": "easy",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q112",
+      "passageId": "r008-quantitative-01",
+      "sectionId": "quantitative",
+      "prompt": "How many tonnes across all markets claimed tariff preferences?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "1,560 tonnes"
+        },
+        {
+          "optionId": "o2",
+          "text": "1,620 tonnes"
+        },
+        {
+          "optionId": "o3",
+          "text": "1,524 tonnes"
+        },
+        {
+          "optionId": "o4",
+          "text": "1,680 tonnes"
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "Market A: 960 × 75% = 720; Market B: 840 × 60% = 504; Market C: 600 × 50% = 300. Total = 1,524 tonnes.",
+      "difficulty": "moderate",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q113",
+      "passageId": "r008-quantitative-02",
+      "sectionId": "quantitative",
+      "prompt": "What was the undiscounted invoice value of 500 tonnes?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹9 crore"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹8.5 crore"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹9.5 crore"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹10 crore"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "500 × ₹1.8 lakh = ₹900 lakh = ₹9 crore.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q114",
+      "passageId": "r008-quantitative-02",
+      "sectionId": "quantitative",
+      "prompt": "What was the discount on the first 200 tonnes?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹36 lakh"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹30 lakh"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹43.2 lakh"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹21.6 lakh"
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "200 × ₹1.8 lakh = ₹360 lakh. Twelve per cent of ₹360 lakh = ₹43.2 lakh.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q115",
+      "passageId": "r008-quantitative-02",
+      "sectionId": "quantitative",
+      "prompt": "What was the discount on the remaining 300 tonnes?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹32.4 lakh"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹37.8 lakh"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹35 lakh"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹40.5 lakh"
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "300 × ₹1.8 lakh = ₹540 lakh. Seven per cent of ₹540 lakh = ₹37.8 lakh.",
+      "difficulty": "challenging",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q116",
+      "passageId": "r008-quantitative-02",
+      "sectionId": "quantitative",
+      "prompt": "What was the total landed cost after discounts and fees?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "₹8.20 crore"
+        },
+        {
+          "optionId": "o2",
+          "text": "₹8.40 crore"
+        },
+        {
+          "optionId": "o3",
+          "text": "₹8.45 crore"
+        },
+        {
+          "optionId": "o4",
+          "text": "₹8.394 crore"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "₹900 lakh − ₹43.2 lakh − ₹37.8 lakh + ₹18 lakh + ₹2.4 lakh = ₹839.4 lakh = ₹8.394 crore.",
+      "difficulty": "easy",
+      "competency": "challenging"
+    },
+    {
+      "questionId": "clat-ug27-r008-q117",
+      "passageId": "r008-quantitative-03",
+      "sectionId": "quantitative",
+      "prompt": "How many units were issued in Week 1?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "720 units"
+        },
+        {
+          "optionId": "o2",
+          "text": "900 units"
+        },
+        {
+          "optionId": "o3",
+          "text": "1,080 units"
+        },
+        {
+          "optionId": "o4",
+          "text": "1,200 units"
+        }
+      ],
+      "correctOptionId": "o2",
+      "explanation": "25% of 3,600 = 900 units.",
+      "difficulty": "moderate",
+      "competency": "easy"
+    },
+    {
+      "questionId": "clat-ug27-r008-q118",
+      "passageId": "r008-quantitative-03",
+      "sectionId": "quantitative",
+      "prompt": "How many units remained after the Week 2 issue?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "1,800 units"
+        },
+        {
+          "optionId": "o2",
+          "text": "1,710 units"
+        },
+        {
+          "optionId": "o3",
+          "text": "1,980 units"
+        },
+        {
+          "optionId": "o4",
+          "text": "1,890 units"
+        }
+      ],
+      "correctOptionId": "o4",
+      "explanation": "After Week 1, 2,700 remain. Week 2 issues 30% × 2,700 = 810, leaving 1,890.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q119",
+      "passageId": "r008-quantitative-03",
+      "sectionId": "quantitative",
+      "prompt": "How many units were available after replenishment?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "2,990 units"
+        },
+        {
+          "optionId": "o2",
+          "text": "3,000 units"
+        },
+        {
+          "optionId": "o3",
+          "text": "3,090 units"
+        },
+        {
+          "optionId": "o4",
+          "text": "3,190 units"
+        }
+      ],
+      "correctOptionId": "o3",
+      "explanation": "1,890 + 1,200 = 3,090 units.",
+      "difficulty": "moderate",
+      "competency": "moderate"
+    },
+    {
+      "questionId": "clat-ug27-r008-q120",
+      "passageId": "r008-quantitative-03",
+      "sectionId": "quantitative",
+      "prompt": "How many units remained outside the 15% emergency reserve?",
+      "options": [
+        {
+          "optionId": "o1",
+          "text": "2,626.5 units"
+        },
+        {
+          "optionId": "o2",
+          "text": "2,540 units"
+        },
+        {
+          "optionId": "o3",
+          "text": "2,600 units"
+        },
+        {
+          "optionId": "o4",
+          "text": "2,700 units"
+        }
+      ],
+      "correctOptionId": "o1",
+      "explanation": "Fifteen per cent of 3,090 = 463.5. Non-reserved stock = 3,090 − 463.5 = 2,626.5 units.",
+      "difficulty": "challenging",
+      "competency": "challenging"
+    }
+  ]
 }
