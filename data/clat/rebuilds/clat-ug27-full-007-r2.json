@@ -43,7 +43,7 @@
       "passageId": "r007-current-affairs-01",
       "sectionId": "current-affairs",
       "title": "A global agreement for future pandemics",
-      "text": "On 20 May 2025, the World Health Assembly adopted the WHO Pandemic Agreement by consensus. The agreement followed more than three years of negotiations shaped by weaknesses exposed during the COVID-19 pandemic, including unequal access to vaccines, diagnostics and treatments. Its stated purpose is to strengthen prevention, preparedness and response while making international cooperation more equitable.\n\nAdoption did not mean that every part of the agreement was ready for immediate operation. WHO Member States established an intergovernmental working group to continue work on the Pathogen Access and Benefit-Sharing system, often abbreviated as PABS. The system is intended to address the relationship between access to pathogens with pandemic potential and the sharing of benefits arising from their use, such as vaccines, diagnostics and treatments. This issue had been a central point of negotiation because countries want timely access to information and samples while also seeking a fair share of the products developed from them.\n\nThe agreement places emphasis on stronger health systems, sustainable financing, research and development, technology transfer and supply-chain resilience. These elements reflect a broader understanding of preparedness. A State may identify a pathogen quickly but still lack laboratories, trained personnel, manufacturing capacity or reliable distribution. International rules can encourage cooperation, but domestic infrastructure remains essential to an effective response.\n\nThe agreement was adopted under the WHO Constitution. The next stages involve completing the PABS work and the steps required to open the instrument for signature and ratification. Adoption by the Assembly is a major political and legal milestone, but it should not be confused with a treaty already ratified by every Member State or a fully functioning global distribution system.\n\nThe agreement’s significance lies in its attempt to connect information-sharing with fairness in the benefits that follow. A future outbreak will test whether governments can share samples rapidly, make research results usable and ensure that products are not reserved only for countries with the greatest purchasing power. The text creates a framework for cooperation; implementation will determine whether that framework changes outcomes.\n\nThe distinction between a global commitment and a domestic capability is particularly important for countries with limited public-health budgets. Even if samples and data move quickly across borders, a State may need investment in laboratories, cold storage, trained epidemiologists and procurement systems before those inputs can improve health outcomes. The agreement can support common expectations, but it cannot remove the need for long-term institutional investment.",
+      "text": "On 20 May 2025, the World Health Assembly adopted the WHO Pandemic Agreement by consensus. The agreement followed more than three years of negotiations shaped by weaknesses exposed during the COVID-19 pandemic, including unequal access to vaccines, diagnostics and treatments. Its stated purpose is to strengthen prevention, preparedness and response while making international cooperation more equitable.\n\nAdoption did not mean that every part of the agreement was ready for immediate operation. WHO Member States established an intergovernmental working group to continue work on the Pathogen Access and Benefit-Sharing system, often abbreviated as PABS. The system is intended to address the relationship between access to pathogens with pandemic potential and the sharing of benefits arising from their use, such as vaccines, diagnostics and treatments. This issue had been a central point of negotiation because countries want timely access to information and samples while also seeking a fair share of the products developed from them.\n\nThe agreement places emphasis on stronger health systems, sustainable financing, research and development, technology transfer and supply-chain resilience. These elements reflect a broader understanding of preparedness. A State may identify a pathogen quickly but still lack laboratories, trained personnel, manufacturing capacity or reliable distribution. International rules can encourage cooperation, but domestic infrastructure remains essential to an effective response.\n\nThe agreement was adopted under Article 19 of the WHO Constitution. As of 9 November 2026, negotiations on the PABS annex were still continuing: the eighth meeting of the Intergovernmental Working Group advanced the talks in September, and its ninth meeting was scheduled for 2–13 November 2026. WHO stated that the outcome would be submitted for consideration to the Eightieth World Health Assembly in May 2027. Adoption by the Assembly is therefore a major political and legal milestone, but it should not be confused with a completed PABS system, a treaty already ratified by every Member State or a fully functioning global distribution mechanism.\n\nThe agreement’s significance lies in its attempt to connect information-sharing with fairness in the benefits that follow. A future outbreak will test whether governments can share samples rapidly, make research results usable and ensure that products are not reserved only for countries with the greatest purchasing power. The text creates a framework for cooperation; implementation will determine whether that framework changes outcomes.\n\nThe distinction between a global commitment and a domestic capability is particularly important for countries with limited public-health budgets. Even if samples and data move quickly across borders, a State may need investment in laboratories, cold storage, trained epidemiologists and procurement systems before those inputs can improve health outcomes. The agreement can support common expectations, but it cannot remove the need for long-term institutional investment.",
       "domain": "international health governance",
       "asOf": "2026-11-09",
       "sources": [
@@ -52,6 +52,12 @@
           "publisher": "World Health Organization",
           "date": "2025-05-20",
           "url": "https://www.who.int/news/item/20-05-2025-world-health-assembly-adopts-historic-pandemic-agreement-to-make-the-world-more-equitable-and-safer-from-future-pandemics"
+        },
+        {
+          "title": "Intergovernmental Working Group on the WHO Pandemic Agreement",
+          "publisher": "World Health Organization",
+          "date": "2026-11-02",
+          "url": "https://www.who.int/about/governance/world-health-assembly/intergovernmental-working-group-on-the-who-pandemic-agreement"
         }
       ]
     },
@@ -112,10 +118,10 @@
       "asOf": "2026-11-09",
       "sources": [
         {
-          "title": "Emergency preparedness and public health readiness — operational guidance",
+          "title": "Framework for health emergency preparedness and response capabilities for national public health agencies",
           "publisher": "World Health Organization",
-          "date": "2025-01-01",
-          "url": "https://www.who.int/health-topics/emergencies"
+          "date": "2026-03-23",
+          "url": "https://www.who.int/publications/i/item/B09726"
         }
       ]
     },
@@ -128,10 +134,10 @@
       "asOf": "2026-11-09",
       "sources": [
         {
-          "title": "2025 International Year of Cooperatives — Concept Note",
-          "publisher": "United Nations Department of Economic and Social Affairs",
-          "date": "2025-07-01",
-          "url": "https://social.desa.un.org/sites/default/files/2025-07/Concept-Note-VNRLabHLPF-15July.pdf"
+          "title": "UN General Assembly announces launch of the 2025 International Year of Cooperatives",
+          "publisher": "United Nations Sustainable Development",
+          "date": "2024-06-20",
+          "url": "https://www.un.org/sustainabledevelopment/blog/2024/06/press-release-iyc2025/"
         }
       ]
     },
@@ -250,11 +256,11 @@
       "prompt": "Why did the wider measure reveal work that was previously invisible? (Passage: “The clinic that measured the waiting room”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "It included directions, laboratory queues and report collection omitted from the original indicator."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "It counted only clinical consultation time."
         },
         {
@@ -282,11 +288,11 @@
           "text": "It abandoned the measurement exercise entirely."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "It used sampling and broad process stages instead of continuous tracking of individuals."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "It required each patient to carry a location device."
         },
         {
@@ -314,17 +320,17 @@
           "text": "The laboratory collection schedule reduced repeat queuing."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "The registration queue fell, but total visit time and access barriers remained unchanged."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "The hospital identified a previously uncounted delay."
         }
       ],
       "correctOptionId": "o4",
       "explanation": "The central claim concerns the entire experience, so unchanged total time would undercut it.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "weaken"
     },
     {
@@ -352,7 +358,7 @@
       ],
       "correctOptionId": "o1",
       "explanation": "A figure can be technically correct yet fail to represent the broader service outcome.",
-      "difficulty": "moderate",
+      "difficulty": "challenging",
       "competency": "inference"
     },
     {
@@ -362,11 +368,11 @@
       "prompt": "Which measurement choice is most consistent with the author’s reasoning? (Passage: “The clinic that measured the waiting room”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Track the full sequence of service stages using proportionate sampling and patient feedback."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "Replace all performance data with a satisfaction poll."
         },
         {
@@ -394,11 +400,11 @@
           "text": "It established that the district boundary was legally invalid."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "It showed seasonal routes and practical access patterns missing from the administrative map."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "It replaced the need for engineering measurements."
         },
         {
@@ -426,11 +432,11 @@
           "text": "The field team found seasonal access irrelevant."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "The letter concerned practical connectivity rather than the legal location of the boundary."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "The planning office rejected every part of the letter."
         }
       ],
@@ -464,7 +470,7 @@
       ],
       "correctOptionId": "o1",
       "explanation": "The field team combined residents’ route knowledge with technical evidence.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "function"
     },
     {
@@ -474,11 +480,11 @@
       "prompt": "Which additional finding would most strongly support the revised bus-stop location? (Passage: “The letter that changed the map”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "The elevated location remains reachable by the largest number of households during high tide."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "The old stop was closer to the district office."
         },
         {
@@ -492,7 +498,7 @@
       ],
       "correctOptionId": "o2",
       "explanation": "The problem was seasonal inaccessibility, so year-round reach is decisive.",
-      "difficulty": "moderate",
+      "difficulty": "challenging",
       "competency": "evidence"
     },
     {
@@ -506,11 +512,11 @@
           "text": "ability to display official boundaries."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "fitness for a particular planning decision."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "usefulness for tax administration."
         },
         {
@@ -538,11 +544,11 @@
           "text": "Publish only the administrative boundary layer."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Invite residents to annotate draft maps and record reasons for accepting or rejecting their proposals."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "Stop using elevation and traffic data in site selection."
         }
       ],
@@ -586,11 +592,11 @@
       "prompt": "Why did the museum not require every visitor to use a digital guide? (Passage: “A museum ticket is not a measure of memory”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "It recognised that visitors have different preferences and may not want to use a phone."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "The digital guide contained no collection information."
         },
         {
@@ -604,7 +610,7 @@
       ],
       "correctOptionId": "o2",
       "explanation": "The digital guide remained optional rather than being treated as a universal solution.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "inference"
     },
     {
@@ -618,11 +624,11 @@
           "text": "It removed all contested objects from the collection."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "It added context about uncertainty and disputed evidence rather than forcing a single interpretation."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "It selected whichever interpretation was most popular online."
         },
         {
@@ -632,7 +638,7 @@
       ],
       "correctOptionId": "o3",
       "explanation": "The museum disclosed evidentiary uncertainty instead of suppressing disagreement.",
-      "difficulty": "moderate",
+      "difficulty": "challenging",
       "competency": "detail"
     },
     {
@@ -650,11 +656,11 @@
           "text": "Free admission necessarily reduces educational value."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Visitor numbers are useful for capacity planning but insufficient as a measure of meaningful engagement."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "A museum should measure success only through object recall."
         }
       ],
@@ -698,11 +704,11 @@
       "prompt": "Which proposal would best align with the author’s view? (Passage: “A museum ticket is not a measure of memory”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Report attendance alongside accessibility, participation and qualitative visitor feedback."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "Rank every gallery by the number of photographs visitors take."
         },
         {
@@ -730,11 +736,11 @@
           "text": "The authority stopped issuing all river forecasts."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Broad, repetitive messages made materially different warnings resemble routine notices."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Hydrologists refused to provide rainfall information."
         },
         {
@@ -744,7 +750,7 @@
       ],
       "correctOptionId": "o3",
       "explanation": "The passage links message repetition and lack of differentiation to alert fatigue.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "causation"
     },
     {
@@ -762,17 +768,17 @@
           "text": "To replace local volunteers with hydrologists."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "To distinguish monitoring, precautionary advice and evacuation instructions by the action required."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "To guarantee that forecasts never change."
         }
       ],
       "correctOptionId": "o4",
       "explanation": "The categories separate different levels of risk and recipient response.",
-      "difficulty": "moderate",
+      "difficulty": "challenging",
       "competency": "function"
     },
     {
@@ -810,11 +816,11 @@
       "prompt": "Which practice would most undermine the new system? (Passage: “When a warning becomes noise”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Sending the highest-level evacuation instruction for every minor change in rainfall."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "Issuing a correction when a forecast changes."
         },
         {
@@ -842,11 +848,11 @@
           "text": "urgent messages should never be issued more than once."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "excessive urgency can reduce attention to genuinely critical warnings."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "residents cannot understand technical forecasts."
         },
         {
@@ -874,17 +880,17 @@
           "text": "Authorities should avoid corrections to preserve confidence."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Communications should be calibrated to evidence and linked to a clear action."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "Forecast uncertainty should be hidden from recipients."
         }
       ],
       "correctOptionId": "o4",
       "explanation": "The conclusion emphasises transparency about knowledge, uncertainty and action.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "central-idea"
     },
     {
@@ -912,7 +918,7 @@
       ],
       "correctOptionId": "o1",
       "explanation": "The official account connects negotiations to weaknesses and inequities in the COVID-19 response.",
-      "difficulty": "moderate",
+      "difficulty": "challenging",
       "competency": "purpose"
     },
     {
@@ -922,11 +928,11 @@
       "prompt": "What is the PABS system intended to address? (Passage: “A global agreement for future pandemics”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "The relationship between access to pathogens and sharing benefits from products developed using them."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "The licensing of all private hospitals."
         },
         {
@@ -954,11 +960,11 @@
           "text": "International cooperation makes national health systems unnecessary."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Detection alone is insufficient without laboratories, trained staff, production and distribution capacity."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "The agreement prohibits cross-border research."
         },
         {
@@ -986,11 +992,11 @@
           "text": "The PABS system was fully operational before adoption."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "It was adopted in May 2025, while further work and treaty steps remained necessary."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "It replaced the WHO Constitution."
         }
       ],
@@ -1024,7 +1030,7 @@
       ],
       "correctOptionId": "o1",
       "explanation": "The passage connects information-sharing with equitable access to resulting benefits.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "application"
     },
     {
@@ -1034,11 +1040,11 @@
       "prompt": "What is the primary function of designating 2026 the International Year of the Woman Farmer? (Passage: “The woman farmer year puts invisible work on the agenda”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "To raise awareness and direct policy attention to barriers faced by women across agrifood systems."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "To create an immediately enforceable global land-ownership rule."
         },
         {
@@ -1052,7 +1058,7 @@
       ],
       "correctOptionId": "o2",
       "explanation": "The resolution is agenda-setting and invites policy attention.",
-      "difficulty": "moderate",
+      "difficulty": "challenging",
       "competency": "purpose"
     },
     {
@@ -1066,11 +1072,11 @@
           "text": "Women do not participate in processing or livestock care."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Official records and support systems may recognise formal ownership more readily than work actually performed."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Agricultural statistics exclude all household activity by definition."
         },
         {
@@ -1098,11 +1104,11 @@
           "text": "Use only land-title records to identify who farms."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Review access to extension, credit, irrigation and training using evidence about women’s circumstances."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "Offer identical training schedules regardless of care responsibilities."
         }
       ],
@@ -1146,11 +1152,11 @@
       "prompt": "Which indicator would best measure the year’s practical success? (Passage: “The woman farmer year puts invisible work on the agenda”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Improved access to resources and decision-making for women in varied farming roles."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "The total number of commemorative posters distributed."
         },
         {
@@ -1164,7 +1170,7 @@
       ],
       "correctOptionId": "o2",
       "explanation": "The passage calls for outcomes beyond ceremonial activities.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "evaluation"
     },
     {
@@ -1178,11 +1184,11 @@
           "text": "All 29 earlier labour laws were abolished without replacement."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "The four Labour Codes were made effective from that date."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Every worker received an identical social-security payment."
         },
         {
@@ -1192,7 +1198,7 @@
       ],
       "correctOptionId": "o3",
       "explanation": "The official release states that the four codes were made effective from the stated date.",
-      "difficulty": "moderate",
+      "difficulty": "challenging",
       "competency": "detail"
     },
     {
@@ -1210,11 +1216,11 @@
           "text": "The Industrial Relations Code, 2020."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "The Code on Social Security, 2020."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "The Occupational Safety, Health and Working Conditions Code, 2020."
         }
       ],
@@ -1258,11 +1264,11 @@
       "prompt": "Why is portability important for platform workers? (Passage: “Four labour codes and the problem of implementation”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "They may move between work providers and lack one long-term employer through whom benefits can be maintained."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "They are prohibited from changing employers."
         },
         {
@@ -1290,11 +1296,11 @@
           "text": "The number of sections in each code."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Data on coverage, timely wages, safety, dispute resolution and access to social protection."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "The number of press conferences held after commencement."
         },
         {
@@ -1304,7 +1310,7 @@
       ],
       "correctOptionId": "o3",
       "explanation": "The concluding paragraph sets implementation outcomes as the relevant tests.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "evaluation"
     },
     {
@@ -1322,17 +1328,17 @@
           "text": "The inability of permanent employees to receive monthly salaries."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Gaps in coverage when workers move between short contracts, platforms and self-employment."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "The lack of any relationship between work and social security."
         }
       ],
       "correctOptionId": "o4",
       "explanation": "The passage focuses on continuity of benefits across changing work arrangements.",
-      "difficulty": "moderate",
+      "difficulty": "challenging",
       "competency": "concept"
     },
     {
@@ -1370,11 +1376,11 @@
       "prompt": "Why are correction procedures important? (Passage: “Social protection needs to follow workers across changing jobs”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Work details, contact information and location may change, making records inaccurate over time."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "A registry should prevent workers from changing occupations."
         },
         {
@@ -1402,11 +1408,11 @@
           "text": "Workers with irregular income cannot receive public support."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Fixed monthly contributions may be difficult to maintain when income varies."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Aggregators must always pay the entire cost."
         },
         {
@@ -1434,17 +1440,17 @@
           "text": "The number of press releases about registration."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Whether correctly recorded workers can update details and actually receive eligible benefits."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "The frequency with which a database logo is displayed."
         }
       ],
       "correctOptionId": "o4",
       "explanation": "The passage defines success through usable access and delivery, not record count alone.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "evaluation"
     },
     {
@@ -1472,7 +1478,7 @@
       ],
       "correctOptionId": "o1",
       "explanation": "The passage explains that stock alone does not ensure usable delivery.",
-      "difficulty": "moderate",
+      "difficulty": "challenging",
       "competency": "inference"
     },
     {
@@ -1482,11 +1488,11 @@
       "prompt": "Why should stock lists differ by local risk? (Passage: “Preparedness requires more than a stockpile”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Hazards and population needs vary, so a uniform list may not match the response required."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "All districts face identical hazards."
         },
         {
@@ -1514,11 +1520,11 @@
           "text": "Counting only the number of cartons purchased."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Testing generators and tracking expiry or condition of stored goods."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Leaving release authority undefined."
         },
         {
@@ -1546,11 +1552,11 @@
           "text": "Households should be responsible for warehouse inventory."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Supplies are ineffective unless people know how and where to use them safely."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "Digital alerts are always more reliable than field support."
         }
       ],
@@ -1584,7 +1590,7 @@
       ],
       "correctOptionId": "o1",
       "explanation": "The conclusion emphasises tested delivery capability rather than stored quantity.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "evaluation"
     },
     {
@@ -1594,11 +1600,11 @@
       "prompt": "What was the central purpose of the International Year of Cooperatives? (Passage: “Cooperatives as a people-owned model of enterprise”)",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "To highlight the role of cooperatives in inclusive and sustainable development."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "To require every private company to become member-owned."
         },
         {
@@ -1612,7 +1618,7 @@
       ],
       "correctOptionId": "o2",
       "explanation": "The UN year promoted recognition of cooperatives’ contribution rather than mandating a universal ownership form.",
-      "difficulty": "moderate",
+      "difficulty": "challenging",
       "competency": "purpose"
     },
     {
@@ -1626,11 +1632,11 @@
           "text": "It must operate only in agriculture."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Member participation and shared economic purpose form part of its governance model."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "It cannot earn a surplus."
         },
         {
@@ -1658,11 +1664,11 @@
           "text": "The cooperative provides training for new members."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "A small group controls information and decisions despite formal membership rules."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "The enterprise adopts transparent governance procedures."
         }
       ],
@@ -1723,8 +1729,8 @@
         }
       ],
       "correctOptionId": "o2",
-      "explanation": "The final paragraphs describe benefits as conditional on ongoing accountability and capability.",
-      "difficulty": "challenging",
+      "explanation": "The passage argues that cooperative ownership can support inclusion, but results depend on governance, finance and active member participation.",
+      "difficulty": "moderate",
       "competency": "evaluation"
     },
     {
@@ -1734,15 +1740,15 @@
       "prompt": "A trader has missed a payment but has not received a reminder. What is normally required before final cancellation?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "Written particulars and at least seven working days to respond."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "Immediate cancellation without notice."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "A vote by every trader in the market."
         },
         {
@@ -1750,9 +1756,9 @@
           "text": "A police report in every case."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "The code requires written particulars and at least seven working days for a response before final cancellation.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "rule-application"
     },
     {
@@ -1766,21 +1772,21 @@
           "text": "A trader requests a different space."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "An officer records fuel leaking beside a live electrical panel."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "A competitor disputes the trader's price."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "A trader misses a single deadline after paying the fee."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "A recorded fuel leak beside electrical equipment is a concrete and imminent danger; the other facts do not establish such a danger.",
-      "difficulty": "moderate",
+      "difficulty": "easy",
       "competency": "risk-assessment"
     },
     {
@@ -1790,15 +1796,15 @@
       "prompt": "What must the officer do within forty-eight hours of an emergency suspension?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Publish the trader's private financial records."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Ask the other traders to vote."
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "Review the measure and provide an opportunity to respond before deciding whether it continues."
         },
         {
@@ -1806,7 +1812,7 @@
           "text": "Treat the suspension as a final cancellation."
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "The code requires review within forty-eight hours and a chance for the trader to respond before continuation is decided.",
       "difficulty": "moderate",
       "competency": "procedural-fairness"
@@ -1822,19 +1828,19 @@
           "text": "The town can never cancel a permit."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "The photographs must automatically determine the outcome."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "The officer must accept every explanation."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "The decision fails to explain how relevant material was considered."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "The final decision must identify the evidence considered and explain why the response did or did not change the officer's view.",
       "difficulty": "moderate",
       "competency": "reasoning-from-principle"
@@ -1846,15 +1852,15 @@
       "prompt": "An exit was blocked once by accident and cleared immediately. Which outcome best fits the code?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "The review panel may consider a proportionate shorter suspension or restore the permit."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "Cancellation is mandatory for any obstruction."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "The trader must be excluded permanently."
         },
         {
@@ -1862,7 +1868,7 @@
           "text": "The panel must ignore the trader's explanation."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "The review panel may vary the outcome and must consider proportionality; the code does not make every obstruction an automatic cancellation.",
       "difficulty": "moderate",
       "competency": "proportionality"
@@ -1878,21 +1884,21 @@
           "text": "Give it to the association with the most social-media followers."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "Use a witnessed lottery and record the result."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Allow the caretaker to choose privately."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "Reject both applications automatically."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "The rule specifies a witnessed lottery where applicants are tied on the published criteria.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "rule-application"
     },
     {
@@ -1902,15 +1908,15 @@
       "prompt": "The caretaker has promised several dates to a familiar association before applications open. Which requirement is most directly undermined?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "The requirement to protect every prior applicant's identity."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "The accessibility adjustment duty."
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "The requirement to publish dates and allocate through the stated application process."
         },
         {
@@ -1918,9 +1924,9 @@
           "text": "The ability to cancel for urgent safety danger."
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "Advance private allocations bypass the published dates and application window, undermining the transparent process.",
-      "difficulty": "moderate",
+      "difficulty": "easy",
       "competency": "flaw-identification"
     },
     {
@@ -1934,19 +1940,19 @@
           "text": "An automatic booking for every weekend."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "A refund of all trust funds."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "A new allocation rule written for that applicant."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "Correction of the factual entry in the register."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "The rule permits an applicant to request correction of factual mistakes in the register.",
       "difficulty": "moderate",
       "competency": "rule-application"
@@ -1958,15 +1964,15 @@
       "prompt": "A timely request seeks an accessible route, and a comparable safe route is reasonably available. What follows?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "The trust must consider the adjustment or a comparable room."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "The trust may refuse because identical arrangements are required."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "The applicant must pay any amount demanded."
         },
         {
@@ -1974,7 +1980,7 @@
           "text": "The booking must be transferred to the caretaker."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "The rule recognises that equal treatment may require a reasonable accessibility adjustment where it is available.",
       "difficulty": "moderate",
       "competency": "reasoning-from-principle"
@@ -1990,19 +1996,19 @@
           "text": "Wait until the next quarterly schedule."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "Cancel immediately, record reasons and address the breach."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Continue because notice is always required."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "Use a lottery to decide who may remain."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "Immediate cancellation is permitted if continuing the event creates an urgent safety danger, provided reasons are recorded.",
       "difficulty": "moderate",
       "competency": "rule-application"
@@ -2014,15 +2020,15 @@
       "prompt": "A screenshot shows an edited message but omits earlier replies. What should the investigator examine?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Whether the student has a high academic score."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Whether the screenshot has a colourful interface."
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "Its completeness, provenance and what it is actually capable of showing."
         },
         {
@@ -2030,9 +2036,9 @@
           "text": "Whether the sender has apologised."
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "The procedure requires assessment of what the electronic record proves, including omissions and who supplied or controlled it.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "evidence-evaluation"
     },
     {
@@ -2046,21 +2052,21 @@
           "text": "Provide no information to the accused student."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Publish the private detail to the whole class."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "End the inquiry immediately."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "Give an informative summary and assess whether the hidden detail is necessary."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "The procedure permits privacy protection but requires enough information to respond and consideration of necessity.",
-      "difficulty": "moderate",
+      "difficulty": "easy",
       "competency": "procedural-fairness"
     },
     {
@@ -2070,15 +2076,15 @@
       "prompt": "Metadata shows a file changed at 4:10 p.m. What does it not necessarily establish?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "Who made the change or why it was made."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "That a file existed at some point."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "That a saved version can be examined."
         },
         {
@@ -2086,7 +2092,7 @@
           "text": "That the file's metadata has a timestamp."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "A timestamp records a file event but does not by itself identify the user or establish intent.",
       "difficulty": "moderate",
       "competency": "inference"
@@ -2102,19 +2108,19 @@
           "text": "Why one student's marks are higher."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "Why one account or record is more dependable than the other."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Why electronic evidence is always superior."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "Why the accused student must prove innocence."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "The procedure requires a reasoned explanation for preferring one conflicting account over another.",
       "difficulty": "moderate",
       "competency": "reasoning-from-principle"
@@ -2126,15 +2132,15 @@
       "prompt": "The evidence shows a minor file-management mistake, not deliberate removal of a teammate's work. Which response is most consistent?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Expulsion for every digital mistake."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "No correction of the project."
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "Correction or instruction may be more appropriate than punishment."
         },
         {
@@ -2142,7 +2148,7 @@
           "text": "Treat the mistake as proof of intentional misconduct."
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "The passage distinguishes an accidental mistake from intentional removal and allows a corrective response.",
       "difficulty": "moderate",
       "competency": "proportionality"
@@ -2158,21 +2164,21 @@
           "text": "The bidder's familiarity with the board."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "The number of advertisements the bidder placed."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Only the initial purchase price."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "Total five-year cost and compliance with published requirements."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "The code makes lifecycle cost and required maintenance relevant; lowest initial price is not decisive.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "rule-application"
     },
     {
@@ -2182,15 +2188,15 @@
       "prompt": "An evaluator has a financial relationship with a bidder. What is required?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "Disclosure and application of the independent ethics-officer process."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "Silence unless another supplier complains."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Automatic cancellation of all bids."
         },
         {
@@ -2198,9 +2204,9 @@
           "text": "Publication of the evaluator's bank account."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "The evaluator must disclose the relationship and follow the prescribed independent assessment of the conflict.",
-      "difficulty": "moderate",
+      "difficulty": "easy",
       "competency": "procedural-fairness"
     },
     {
@@ -2214,19 +2220,19 @@
           "text": "The board compared maintenance costs."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "The material requirements were altered after bids, undermining equal competition."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "The board published aggregate scores."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "The board examined delivery capability."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "Changing a mandatory requirement after seeing bids departs from the published competition rules and disadvantages others.",
       "difficulty": "moderate",
       "competency": "rule-application"
@@ -2238,15 +2244,15 @@
       "prompt": "A bidder alleges a clerical scoring error. What can the review officer do?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Accept a new bid after the deadline."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Award the contract without a calculation."
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "Check the arithmetic and consistent use of published criteria."
         },
         {
@@ -2254,7 +2260,7 @@
           "text": "Replace the evaluation criteria."
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "The review officer may correct a clerical error but cannot rewrite the competition or accept a late bid.",
       "difficulty": "moderate",
       "competency": "rule-application"
@@ -2270,19 +2276,19 @@
           "text": "Award the contract immediately to the favoured supplier."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Ignore the defect because prices are known."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Change the winning price privately."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "Cancel and restart with corrected requirements."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "A serious defect that may have affected participation or ranking can justify cancellation and a fresh competition.",
       "difficulty": "moderate",
       "competency": "reasoning-from-principle"
@@ -2294,15 +2300,15 @@
       "prompt": "A pollution reading is unusually high after one afternoon near construction. How should it be reported?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "As an observation with sampling conditions and limitations clearly stated."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "As the area's annual average."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "As proof that construction caused every local reading."
         },
         {
@@ -2310,9 +2316,9 @@
           "text": "Delete it because it may concern parents."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "The rule requires a distinction between measurement and interpretation, including sampling duration and conditions.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "evidence-evaluation"
     },
     {
@@ -2326,21 +2332,21 @@
           "text": "Yes, if a public authority requests it."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "No; political discomfort is not a permitted reason to delete a result."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Yes, if the average looks more favourable."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "No; all private monitor locations must be published."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "The agreement does not allow removal merely because a result is politically uncomfortable.",
-      "difficulty": "moderate",
+      "difficulty": "easy",
       "competency": "rule-application"
     },
     {
@@ -2350,15 +2356,15 @@
       "prompt": "A household monitor's exact location could expose its owner to harassment. What may the centre do?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Publish the full address with the resident's name."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Delete every result in the neighbourhood."
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "Aggregate or mask the location while retaining enough detail to assess the evidence."
         },
         {
@@ -2366,7 +2372,7 @@
           "text": "Withhold the entire study."
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "The rule permits masking or aggregation for privacy while preserving useful geographic and methodological detail.",
       "difficulty": "moderate",
       "competency": "balancing-interests"
@@ -2382,19 +2388,19 @@
           "text": "Publish it as certain regardless."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Replace it silently with a lower nearby reading."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Remove the correction history."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "Label it uncertain and explain the technical issue."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "The agreement requires uncertainty and corrections to be disclosed rather than hidden.",
       "difficulty": "moderate",
       "competency": "rule-application"
@@ -2406,15 +2412,15 @@
       "prompt": "A community group believes a whole area was withheld without a privacy reason. What can it seek?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "A review and, where suitable, publication in a less identifying form."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "Automatic access to every resident's name."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Cancellation of all research funding."
         },
         {
@@ -2422,7 +2428,7 @@
           "text": "A guarantee that every measurement is annual."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "The agreement permits review and release in a form that protects identity while preserving meaningful information.",
       "difficulty": "moderate",
       "competency": "procedural-fairness"
@@ -2438,21 +2444,21 @@
           "text": "Automatically terminate the benefit."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "Trigger a clarification request but not alone justify refusal or suspension."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Prevent correction of source records."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "Replace the trained officer's review."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "The flag is a screening tool; an adverse outcome requires independent human review.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "rule-application"
     },
     {
@@ -2462,15 +2468,15 @@
       "prompt": "Why is a notice that says only “risk score exceeded” insufficient?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "It reveals the software's entire source code."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "It is not printed on paper."
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "It gives no meaningful indication of the mismatch or how to respond."
         },
         {
@@ -2478,9 +2484,9 @@
           "text": "It proves the applicant has committed fraud."
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "The applicant must be told the material category of inconsistency and how to correct or explain it.",
-      "difficulty": "moderate",
+      "difficulty": "easy",
       "competency": "procedural-fairness"
     },
     {
@@ -2494,19 +2500,19 @@
           "text": "Reject the explanation because the software flagged it."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Repeat the score as the only reason."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Suspend the benefit until the next year."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "Assess whether the mismatch is harmless in light of the records and response."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "The officer must independently evaluate whether the mismatch is explained by timing or another harmless difference.",
       "difficulty": "moderate",
       "competency": "rule-application"
@@ -2518,15 +2524,15 @@
       "prompt": "A department discovers a known error in a database field used in many applications. What must happen?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "Pause decisions depending on that field until a reliable correction process is available."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "Continue all decisions to avoid delay."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Make applicants prove every unrelated entry."
         },
         {
@@ -2534,7 +2540,7 @@
           "text": "Delete all applications containing the field."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "The rule requires decisions that depend on a known erroneous field to pause pending a reliable correction process.",
       "difficulty": "moderate",
       "competency": "risk-assessment"
@@ -2550,19 +2556,19 @@
           "text": "No explanation or review."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "Reasons, a short review date and a prompt appeal route."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "A permanent suspension."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "Disclosure of confidential source code."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "Even an urgent temporary measure requires reasons, timely review and a prompt appeal process.",
       "difficulty": "moderate",
       "competency": "procedural-fairness"
@@ -2574,15 +2580,15 @@
       "prompt": "What is the principal weakness in the authority's causal claim?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "The routes are all operated by public agencies."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "The number of passengers was not published in a newspaper."
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "The railway operator changed its transfer window at the same time."
         },
         {
@@ -2590,9 +2596,9 @@
           "text": "Passengers generally prefer trains to buses."
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "The concurrent transfer-window change is a plausible alternative cause of fewer missed connections.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "causal-inference"
     },
     {
@@ -2606,21 +2612,21 @@
           "text": "A national opinion poll about buses."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "A list of the buses' registration numbers."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "The number of posters at the railway station."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "Observed connection outcomes on treated and comparable untreated routes."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "A matched route comparison and direct observation help isolate the timetable's effect from other changes.",
-      "difficulty": "moderate",
+      "difficulty": "easy",
       "competency": "evidence-selection"
     },
     {
@@ -2630,15 +2636,15 @@
       "prompt": "If only revised routes improve while similar unchanged routes do not, what is strengthened?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "The inference that the timetable contributed to the improvement."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "The claim that every train is delayed."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "The view that complaints measure all travel failures."
         },
         {
@@ -2646,7 +2652,7 @@
           "text": "The argument that route-level data are unnecessary."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "A differential improvement between treated and comparison routes supports a causal contribution from the timetable change.",
       "difficulty": "moderate",
       "competency": "causal-inference"
@@ -2662,19 +2668,19 @@
           "text": "They automatically count every missed connection."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "Some affected passengers may not complain or may abandon the journey."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "They show the precise cause of every delay."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "They include people who stopped using the service."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "Complaint data omit unreported failures and people who stop using the service, so they may not represent all missed connections.",
       "difficulty": "moderate",
       "competency": "measurement"
@@ -2686,15 +2692,15 @@
       "prompt": "Which conclusion is best supported at this stage?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Apply the same timetable everywhere immediately."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Conclude that the revision had no effect."
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "Continue a limited trial while collecting comparison data and observing actual journeys."
         },
         {
@@ -2702,7 +2708,7 @@
           "text": "Use complaints as the only measure in future."
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "The decline is encouraging but does not isolate the timetable's effect or show that every route will respond similarly.",
       "difficulty": "moderate",
       "competency": "conclusion"
@@ -2718,21 +2724,21 @@
           "text": "All trains have the same platform length."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "No passenger ever changes travel behaviour."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "The railway operator will never alter its schedule again."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "The three trial routes are sufficiently similar to routes not yet tested."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "The proposed generalisation assumes the trial routes represent the wider network, which the report has not established.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "assumption-identification"
     },
     {
@@ -2742,15 +2748,15 @@
       "prompt": "What is the committee's central inferential error?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "Treating every extra entry as evidence of access by more distinct residents."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "Assuming that libraries can host study programmes."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Counting visits separately at each branch."
         },
         {
@@ -2758,9 +2764,9 @@
           "text": "Using opening hours as a policy variable."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "Repeated visits by the same examination group can increase entries without showing that more distinct people gained access.",
-      "difficulty": "moderate",
+      "difficulty": "easy",
       "competency": "flaw-identification"
     },
     {
@@ -2774,19 +2780,19 @@
           "text": "Unique users increased at all six extended-hour branches."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "Most additional entries occurred at branches whose hours did not change."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Users said evening opening was useful."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "The new catalogue system reduced search time."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "If the rise occurred mainly at unchanged branches, longer hours cannot explain most of the network-wide increase.",
       "difficulty": "moderate",
       "competency": "weaken-argument"
@@ -2798,15 +2804,15 @@
       "prompt": "Which measure most directly tests whether more distinct residents gained access?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "The total number of books held in storage."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "The number of lights installed in each branch."
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "The number of unique users who visited at least once."
         },
         {
@@ -2814,7 +2820,7 @@
           "text": "The length of the cultural committee's report."
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "Unique-user counts distinguish additional residents from repeated visits by existing users.",
       "difficulty": "moderate",
       "competency": "evidence-selection"
@@ -2830,19 +2836,19 @@
           "text": "The earlier attendance register was false."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "The catalogue change must have caused all visits."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "No more evaluation is required."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "Evidence for a sustained access benefit becomes stronger."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "Persistent first-time use after the temporary programme ends addresses two important alternative explanations.",
       "difficulty": "moderate",
       "competency": "inference"
@@ -2854,15 +2860,15 @@
       "prompt": "Why do network-wide totals conceal an important distinction?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "They do not show whether the increase occurred at the branches whose hours changed."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "Every branch necessarily has the same user profile."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "The total is mathematically impossible to calculate."
         },
         {
@@ -2870,9 +2876,9 @@
           "text": "The total excludes all examination students."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "Branch-level data are needed to connect the reported effect to the six branches receiving the intervention.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "measurement"
     },
     {
@@ -2886,21 +2892,21 @@
           "text": "Attendance is irrelevant to a library's public value."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "Attendance matters, but branch patterns, distinct users and additional costs are needed before expansion."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Every branch should close if visits are low."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "Longer hours always reduce costs."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "The passage treats attendance as relevant but insufficient for the broader access and rollout conclusions.",
-      "difficulty": "moderate",
+      "difficulty": "easy",
       "competency": "conclusion"
     },
     {
@@ -2910,15 +2916,15 @@
       "prompt": "What is the principal weakness in the agency's retrofit claim?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Reflective coatings cannot reduce energy use."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Electricity meters are incapable of recording consumption."
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "The comparison does not account for weather, occupancy and other upgrades."
         },
         {
@@ -2926,7 +2932,7 @@
           "text": "The project included only ten buildings."
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "Cooler weather, vacancies and refrigerator replacements could explain part of the decline independently of the retrofit package.",
       "difficulty": "moderate",
       "competency": "flaw-identification"
@@ -2942,19 +2948,19 @@
           "text": "Compare the largest and smallest buildings."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Ignore the temperature records."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Count only the number of lights installed."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "Use weather-adjusted readings over comparable seasonal periods."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "Weather adjustment or like-for-like seasonal comparison helps distinguish retrofit effects from temperature-driven demand.",
       "difficulty": "moderate",
       "competency": "methodology"
@@ -2966,15 +2972,15 @@
       "prompt": "If treated buildings use less electricity per occupied apartment than comparable untreated buildings under similar weather, what is strengthened?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "The case that the retrofit contributed to lower use."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "The claim that vacancies explain the entire reduction."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "The assertion that maintenance is free."
         },
         {
@@ -2982,7 +2988,7 @@
           "text": "The claim that residents did not change behaviour."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "A comparable per-occupied-apartment measure under similar weather addresses two major alternative explanations.",
       "difficulty": "moderate",
       "competency": "causal-inference"
@@ -2998,21 +3004,21 @@
           "text": "They establish the number of residents."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "They are part of the lifecycle cost of achieving the savings."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "They prove electricity use has increased."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "They are unrelated to the intervention."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "The economic value of the programme depends on full lifecycle costs, not just lower energy bills.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "evaluation"
     },
     {
@@ -3022,15 +3028,15 @@
       "prompt": "What risk arises from using total electricity alone?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Total electricity cannot ever be measured accurately."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "It automatically exaggerates all savings."
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "A reduction may reflect fewer occupied apartments rather than greater efficiency."
         },
         {
@@ -3038,9 +3044,9 @@
           "text": "It already adjusts for occupancy."
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "Total consumption can fall because fewer people use the building, so occupancy should be considered.",
-      "difficulty": "moderate",
+      "difficulty": "easy",
       "competency": "inference"
     },
     {
@@ -3054,19 +3060,19 @@
           "text": "Roll out immediately because the percentage is positive."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Reject the retrofit without further evidence."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "Use only residents' memories of their bills."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "Use a staged or matched comparison accounting for weather, occupancy and other upgrades."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "A staged or matched design can distinguish the package's effect from seasonal, occupancy and maintenance changes.",
       "difficulty": "moderate",
       "competency": "methodology"
@@ -3078,15 +3084,15 @@
       "prompt": "What does the 62 per cent survey result directly establish?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "The share of responding households reporting use during the previous three months."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "The share of all residents who can independently use services."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "The share of applications that were successfully completed."
         },
         {
@@ -3094,7 +3100,7 @@
           "text": "The share of people who want help desks closed."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "The question measured self-reported recent use, not independent capability, completion or policy preference.",
       "difficulty": "moderate",
       "competency": "reading-comprehension"
@@ -3110,19 +3116,19 @@
           "text": "The survey asked about a defined three-month period."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "Households without registered mobile contacts were less likely to be reached."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "The survey covered 1,200 households."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "The survey asked about a public service."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "The contact list may omit residents with weaker connectivity and lower digital access, creating coverage bias.",
       "difficulty": "moderate",
       "competency": "sampling-bias"
@@ -3134,15 +3140,15 @@
       "prompt": "Which question would better measure independent use?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "Have you heard the service's name?"
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "Do you own any paper documents?"
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "Did you complete the task without assistance, and was it successful?"
         },
         {
@@ -3150,9 +3156,9 @@
           "text": "How many offices are in the district?"
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "Asking about assistance and successful completion measures the capability that the original survey did not test.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "evidence-selection"
     },
     {
@@ -3166,21 +3172,21 @@
           "text": "The telephone survey becomes representative of every household."
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "The service must be discontinued."
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "The help desk is unnecessary."
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "The original figure may overstate independent capability across the district."
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "Lower capability among under-reached households suggests that the telephone sample did not capture the whole distribution.",
-      "difficulty": "challenging",
+      "difficulty": "easy",
       "competency": "inference"
     },
     {
@@ -3190,15 +3196,15 @@
       "prompt": "Which conclusion best follows?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "Use is not the same as independent successful use; a help-desk pilot should precede closure."
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "A help desk should close because most households have tried a digital service."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "Telephone surveys are never useful."
         },
         {
@@ -3206,9 +3212,9 @@
           "text": "Every resident should be required to use the digital channel."
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "The measured outcome is weaker than the conclusion about capability, so the effect of reducing assistance should be tested.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "conclusion"
     },
     {
@@ -3222,21 +3228,21 @@
           "text": "They eliminate all need for personal-data safeguards."
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "They can reveal completion and error patterns beyond self-reported use."
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "They measure only public opinion."
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "They make a survey response rate irrelevant."
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "Transaction samples provide behavioural evidence about successful completion and help needs, subject to privacy protection.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "methodology"
     },
     {
@@ -3246,15 +3252,15 @@
       "prompt": "How many vaccinations can all three teams complete during the first two full days?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "240"
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "264"
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "252"
         },
         {
@@ -3262,9 +3268,9 @@
           "text": "228"
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "Two full days at 48 + 42 + 36 = 126 per day give 2 × 126 = 252 vaccinations.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "multi-step-arithmetic"
     },
     {
@@ -3278,21 +3284,21 @@
           "text": "84"
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "96"
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "102"
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "90"
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "Team C is unavailable, so the total is Team A's 48 plus Team B's 42 = 90.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "data-interpretation"
     },
     {
@@ -3302,15 +3308,15 @@
       "prompt": "How many vaccinations can the teams complete on the fourth day?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "102"
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "108"
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "96"
         },
         {
@@ -3318,9 +3324,9 @@
           "text": "114"
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "Team A works half a day (24), while B and C work full days (42 and 36): 24 + 42 + 36 = 102.",
-      "difficulty": "challenging",
+      "difficulty": "easy",
       "competency": "multi-step-arithmetic"
     },
     {
@@ -3334,21 +3340,21 @@
           "text": "516"
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "534"
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "546"
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "528"
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "The schedule gives 252 in the first two days, 90 on day three, 102 on day four and 90 follow-ups: total 534.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "multi-step-arithmetic"
     },
     {
@@ -3358,15 +3364,15 @@
       "prompt": "How much grain is initially placed in Warehouse North?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "450 tonnes"
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "550 tonnes"
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "500 tonnes"
         },
         {
@@ -3374,9 +3380,9 @@
           "text": "475 tonnes"
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "North receives 40% of 1,250 tonnes: 0.40 × 1,250 = 500 tonnes.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "percentage-calculation"
     },
     {
@@ -3390,21 +3396,21 @@
           "text": "15 tonnes"
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "20 tonnes"
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "22.5 tonnes"
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "17.5 tonnes"
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "South holds 35% × 1,250 = 437.5 tonnes. Four per cent issued is 17.5 tonnes.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "percentage-calculation"
     },
     {
@@ -3414,15 +3420,15 @@
       "prompt": "How much grain remains in the smaller depot after its release?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o3",
           "text": "240.5 tonnes"
         },
         {
-          "optionId": "o2",
+          "optionId": "o1",
           "text": "232.5 tonnes"
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "248 tonnes"
         },
         {
@@ -3430,9 +3436,9 @@
           "text": "252.5 tonnes"
         }
       ],
-      "correctOptionId": "o1",
+      "correctOptionId": "o3",
       "explanation": "The depot receives the remaining 25% of 1,250 = 312.5 tonnes. After releasing 72 tonnes, 240.5 tonnes remain.",
-      "difficulty": "easy",
+      "difficulty": "challenging",
       "competency": "multi-step-arithmetic"
     },
     {
@@ -3446,21 +3452,21 @@
           "text": "21.84 tonnes"
         },
         {
-          "optionId": "o2",
+          "optionId": "o4",
           "text": "22.41 tonnes"
         },
         {
-          "optionId": "o3",
+          "optionId": "o2",
           "text": "23.10 tonnes"
         },
         {
-          "optionId": "o4",
+          "optionId": "o3",
           "text": "20.96 tonnes"
         }
       ],
-      "correctOptionId": "o2",
+      "correctOptionId": "o4",
       "explanation": "Remaining stock is (500 − 40) + (437.5 − 17.5) + (312.5 − 72) = 1,120.5 tonnes. Two per cent is 22.41 tonnes.",
-      "difficulty": "challenging",
+      "difficulty": "easy",
       "competency": "percentage-calculation"
     },
     {
@@ -3470,15 +3476,15 @@
       "prompt": "What distance does the fleet travel in one operating day?",
       "options": [
         {
-          "optionId": "o1",
+          "optionId": "o2",
           "text": "4,200 km"
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "4,500 km"
         },
         {
-          "optionId": "o3",
+          "optionId": "o1",
           "text": "4,320 km"
         },
         {
@@ -3486,9 +3492,9 @@
           "text": "4,080 km"
         }
       ],
-      "correctOptionId": "o3",
+      "correctOptionId": "o1",
       "explanation": "Twenty-four buses each travel 180 km: 24 × 180 = 4,320 km per day.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "multiplication"
     },
     {
@@ -3502,21 +3508,21 @@
           "text": "25,200 L"
         },
         {
-          "optionId": "o2",
+          "optionId": "o3",
           "text": "24,000 L"
         },
         {
-          "optionId": "o3",
+          "optionId": "o4",
           "text": "26,400 L"
         },
         {
-          "optionId": "o4",
+          "optionId": "o2",
           "text": "27,000 L"
         }
       ],
-      "correctOptionId": "o4",
+      "correctOptionId": "o2",
       "explanation": "Monthly distance is 4,320 × 25 = 108,000 km. At 4 km per litre, consumption is 27,000 litres.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "ratio-and-rate"
     },
     {
@@ -3544,7 +3550,7 @@
       ],
       "correctOptionId": "o3",
       "explanation": "Fuel cost is 27,000 × ₹96 = ₹25,92,000, or ₹25.92 lakh.",
-      "difficulty": "challenging",
+      "difficulty": "moderate",
       "competency": "percentage-calculation"
     },
     {
