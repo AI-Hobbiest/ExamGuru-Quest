@@ -7,8 +7,8 @@
   "subtitle": "Rebuilt full-length practice draft · original passages and questions",
   "blueprintVersion": "CLAT-UG27-v1",
   "durationMinutes": 120,
-  "status": "draft-unpublished",
-  "asOf": "2026-11-09",
+  "status": "practice-pilot",
+  "asOf": "2026-11-10",
   "marking": {
     "correct": 1,
     "incorrect": -0.25,
@@ -51,7 +51,7 @@
           "title": "BBNJ Agreement",
           "publisher": "United Nations",
           "date": "2026-01-17",
-          "url": "https://www.un.org/bbnjagreement/en"
+          "url": "https://treaties.un.org/pages/ViewDetails.aspx?chapter=21&clang=_en&mtdsg_no=XXI-10&src=TREATY"
         }
       ]
     },
@@ -99,7 +99,7 @@
           "title": "Press Note on New Series of GDP Estimates with Base Year 2022-23",
           "publisher": "Ministry of Statistics and Programme Implementation, Government of India",
           "date": "2026-02-27",
-          "url": "https://mospi.gov.in/uploads/latestReleases/latest_release_1772189865181_f040336d-bc57-4aed-b80f-586d9ccb279e_Press_Note_on_New_Series_of_GDP_Estimates_with_Base_Year_2022-23_27022026.pdf"
+          "url": "https://mospi.gov.in/uploads/release_calendar/1772190058170_Press_Note_on_New_Series_of_GDP_Estimates_with_Base_Year_2022-23_27022026.pdf"
         }
       ]
     },
@@ -3291,7 +3291,7 @@
         }
       ],
       "correctOptionId": "o2",
-      "explanation": "The first three allocations total 80%; the remaining 20% of ₹48 crore is ₹9.6 crore.",
+      "explanation": "The first three heads use 35% + 25% + 20% = 80% of the ₹48 crore budget. The remaining 20% is ₹9.6 crore.",
       "difficulty": "moderate",
       "competency": "remainder"
     },
@@ -3319,7 +3319,7 @@
         }
       ],
       "correctOptionId": "o3",
-      "explanation": "Drainage unspent = 40% of ₹16.8 crore = ₹6.72 crore; wetland unspent = 50% of ₹12 crore = ₹6 crore; total = ₹12.72 crore.",
+      "explanation": "Drainage unspent is 40% of ₹16.8 crore = ₹6.72 crore. Wetland unspent is 50% of ₹12 crore = ₹6 crore. Combined unspent = ₹12.72 crore.",
       "difficulty": "easy",
       "competency": "multi-step-arithmetic"
     },
@@ -3347,7 +3347,7 @@
         }
       ],
       "correctOptionId": "o4",
-      "explanation": "Electrical allocation = 20% of ₹48 crore = ₹9.6 crore; ₹3.6 crore remains, or 37.5%.",
+      "explanation": "The electrical allocation is 20% of ₹48 crore = ₹9.6 crore. After spending ₹6 crore, ₹3.6 crore remains; ₹3.6 ÷ ₹9.6 = 37.5%.",
       "difficulty": "moderate",
       "competency": "percentage-calculation"
     },
@@ -3403,7 +3403,7 @@
         }
       ],
       "correctOptionId": "o2",
-      "explanation": "25% of the 48-patient full-day capacity is 12 patients.",
+      "explanation": "Village A receives 25% of the 48-patient full-day capacity: 0.25 × 48 = 12 patients.",
       "difficulty": "challenging",
       "competency": "percentage-calculation"
     },
@@ -3431,7 +3431,7 @@
         }
       ],
       "correctOptionId": "o3",
-      "explanation": "The passage specifies 30 patients for the final half-day.",
+      "explanation": "The dataset states that the final half-day is planned for 30 follow-up visits.",
       "difficulty": "moderate",
       "competency": "data-interpretation"
     },
@@ -3459,7 +3459,7 @@
         }
       ],
       "correctOptionId": "o4",
-      "explanation": "Unused capacity is 6 of 30 places; 6 ÷ 30 = 20%.",
+      "explanation": "Capacity is 30 and the list contains 24 patients, leaving 6 unused places. 6 ÷ 30 × 100 = 20%.",
       "difficulty": "easy",
       "competency": "ratio"
     },
@@ -3515,7 +3515,7 @@
         }
       ],
       "correctOptionId": "o2",
-      "explanation": "Documentary-only group = 45% of 1,200 = 540; 80% of 540 = 432.",
+      "explanation": "The documentary-only group is 45% of 1,200 = 540 containers. Of these, 80% are cleared: 0.80 × 540 = 432.",
       "difficulty": "moderate",
       "competency": "multi-step-arithmetic"
     },
@@ -3543,7 +3543,7 @@
         }
       ],
       "correctOptionId": "o3",
-      "explanation": "Physical-only group = 30% of 1,200 = 360; 35% not cleared = 126.",
+      "explanation": "The physical-only group is 30% of 1,200 = 360 containers. If 65% are cleared, 35% are not: 0.35 × 360 = 126.",
       "difficulty": "challenging",
       "competency": "multi-step-arithmetic"
     },
@@ -3571,7 +3571,7 @@
         }
       ],
       "correctOptionId": "o4",
-      "explanation": "432 documentary + 234 physical + 120 combined = 786.",
+      "explanation": "Same-day clearances total 432 documentary-only + 234 physical-only (65% of 360) + 120 combined-check containers = 786.",
       "difficulty": "moderate",
       "competency": "data-interpretation"
     }
