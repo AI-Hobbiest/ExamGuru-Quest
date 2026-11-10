@@ -22,7 +22,8 @@ function renderLibrary(){
   const actions=document.createElement("div");actions.className="clat-paper-actions";
   const btn=document.createElement("button");btn.type="button";btn.className="clat-btn";btn.textContent=item.questions.length===120?"Start full-length practice":"Start diagnostic";btn.disabled=!validation.valid;btn.addEventListener("click",()=>start(item));
   const pdfBtn=document.createElement("button");pdfBtn.type="button";pdfBtn.className="clat-btn secondary";pdfBtn.textContent="Download PDF";pdfBtn.disabled=!validation.valid||!window.C10ClatPdf;pdfBtn.addEventListener("click",()=>{const result=window.C10ClatPdf.printPaper(item);setStatus(result.message);});
-  actions.append(btn,pdfBtn);
+  const keyBtn=document.createElement("button");keyBtn.type="button";keyBtn.className="clat-btn secondary";keyBtn.textContent="Download Answer Key";keyBtn.disabled=!validation.valid||!window.C10ClatPdf||typeof window.C10ClatPdf.printAnswerKey!=="function";keyBtn.addEventListener("click",()=>{const result=window.C10ClatPdf.printAnswerKey(item);setStatus(result.message);});
+  actions.append(btn,pdfBtn,keyBtn);
   const note=document.createElement("p");note.className="clat-muted";note.textContent=validation.valid?(item.questions.length===120?"Full-length practice pilot · answer explanations included":"Diagnostic practice · answer explanations included"):validation.errors.slice(0,2).join(" ");
   card.append(title,desc,meta,actions,note);root.appendChild(card);
  });
