@@ -840,3 +840,41 @@ body.eg-theme-dark.c10-shell-ready .admin-bank-metric span{color:#B0BECC!importa
 body.eg-theme-dark.c10-shell-ready .admin-feature p{color:#B0BECC!important}
 body.eg-theme-dark.c10-shell-ready :is(.clat-dash-wrap,.clat-wrap,.exam-wrap,.paper-wrap,.test-wrap,
 .help-wrap,.study-wrap,.learning-wrap,.profile-wrap,.parent-wrap,.admin-wrap){background:transparent!important}
+
+
+/* Dynamic assessment and review components (rendered after a paper is opened). */
+body.eg-theme-dark.c10-shell-ready :is(.exam-question,.test-question,.clat-review-item){
+  border-color:#4A5D6E!important;color:#E8EEF4!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.exam-question h3,.test-question h3,.clat-review-item strong,
+.exam-choice legend,.exam-choice-panel h4){color:#E8EEF4!important}
+body.eg-theme-dark.c10-shell-ready :is(.exam-option,.test-option){
+  background:#344555!important;border:1px solid #526477!important;color:#E6EDF4!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.exam-option:has(input:checked),.test-option:has(input:checked)){
+  background:#354F65!important;border-color:#81B2D7!important;color:#E2F1FC!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.exam-option input,.test-option input){accent-color:#83BCE4!important}
+body.eg-theme-dark.c10-shell-ready .exam-subquestion{
+  border-color:#4A5D6E!important;
+}
+body.eg-theme-dark.c10-shell-ready .exam-choice-panel{
+  background:#354657!important;border:1px solid #4A5D6E!important;border-radius:11px!important;padding:12px!important;
+}
+body.eg-theme-dark.c10-shell-ready .attempt-any-note{
+  background:#51483A!important;border-color:#766447!important;color:#F0D9AC!important;
+}
+body.eg-theme-dark.c10-shell-ready .clat-review-item{
+  background:#354657!important;border-bottom:1px solid #4A5D6E!important;padding:14px!important;border-radius:10px;
+}
+body.eg-theme-dark.c10-shell-ready .clat-review-item p{color:#D0DCE6!important}
+body.eg-theme-dark.c10-shell-ready .clat-empty{
+  background:#354657!important;border:1px dashed #526578!important;border-radius:12px!important;color:#B0BECC!important;
+}
+body.eg-theme-dark.c10-shell-ready .clat-trend-item{color:#D5E2ED!important}
+body.eg-theme-dark.c10-shell-ready .clat-table th,
+body.eg-theme-dark.c10-shell-ready .clat-table td{border-bottom-color:#465767!important}
+body.eg-theme-dark.c10-shell-ready .clat-table tr:hover td{background:#354657!important}
+body.eg-theme-dark.c10-shell-ready :is(.exam-question,.test-question) textarea{
+  background:#344454!important;color:#E8EEF4!important;border-color:#526578!important;
+}

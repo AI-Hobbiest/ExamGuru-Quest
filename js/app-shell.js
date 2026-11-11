@@ -6,7 +6,7 @@
   if(!document.getElementById(softThemeId)){
     const themeLink=document.createElement("link");
     themeLink.id=softThemeId;themeLink.rel="stylesheet";
-    themeLink.href="./css/theme-soft-spectrum.css?v=soft-spectrum-v4";
+    themeLink.href="./css/theme-soft-spectrum.css?v=soft-spectrum-v5";
     document.head.appendChild(themeLink);
   }
   const themeColor=document.querySelector('meta[name="theme-color"]');
