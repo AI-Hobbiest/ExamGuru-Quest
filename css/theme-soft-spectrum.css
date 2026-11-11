@@ -1018,3 +1018,17 @@ body.eg-theme-dark.c10-shell-ready{
   background:#263442!important;background-color:#263442!important;background-attachment:fixed!important;
   overflow-x:hidden!important;
 }
+
+
+/* Study Library summary metrics — keep every metric tile slate in Evening Spectrum. */
+body.eg-theme-dark.c10-shell-ready.c10-theme-quest .study-summary > *{
+  background:linear-gradient(145deg,#354657 0%,#2F3E4D 100%)!important;
+  border:1px solid #526578!important;border-top:3px solid #6D9BBE!important;
+  color:#E8EEF4!important;box-shadow:0 7px 18px rgba(14,24,34,.14)!important;
+}
+body.eg-theme-dark.c10-shell-ready.c10-theme-quest .study-summary > * strong{
+  color:#F1F6FA!important;
+}
+body.eg-theme-dark.c10-shell-ready.c10-theme-quest .study-summary > * span{
+  color:#B9C7D4!important;
+}
