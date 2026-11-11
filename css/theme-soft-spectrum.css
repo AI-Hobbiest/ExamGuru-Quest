@@ -968,3 +968,53 @@ body.eg-theme-dark.c10-shell-ready.c10-theme-quest .achievement.earned :is(stron
 body.eg-theme-dark.c10-shell-ready.c10-theme-quest .achievement-emoji{
   filter:none!important;opacity:1!important;
 }
+
+
+/* Shared top bar: keep the theme and sign-out actions as separate flex items.
+   branding.css positions page-header sign-out buttons absolutely, so explicitly
+   neutralise that legacy rule when the same button lives inside the app bar. */
+body.c10-shell-ready .c10-mobilebar .c10-header-signout{
+  position:static!important;inset:auto!important;top:auto!important;right:auto!important;
+  z-index:auto!important;transform:none!important;flex:0 0 auto!important;
+  min-width:max-content!important;margin:0!important;white-space:nowrap!important;
+}
+body.c10-shell-ready .c10-mobilebar .c10-theme-toggle{
+  position:relative!important;inset:auto!important;z-index:2!important;
+  display:inline-grid!important;place-items:center!important;flex:0 0 38px!important;
+  width:38px!important;min-width:38px!important;height:38px!important;
+  margin:0!important;visibility:visible!important;opacity:1!important;
+}
+body.c10-shell-ready .c10-mobilebar .c10-topbar-copy{
+  min-width:0!important;flex:1 1 auto!important;overflow:hidden!important;
+}
+body.c10-shell-ready .c10-mobilebar :is(.c10-mobile-title,.c10-mobile-sub){
+  max-width:100%!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;
+}
+@media(max-width:520px){
+  body.c10-shell-ready .c10-mobilebar{gap:7px!important;padding-left:10px!important;padding-right:10px!important}
+  body.c10-shell-ready .c10-mobilebar .c10-theme-toggle{
+    flex-basis:36px!important;width:36px!important;min-width:36px!important;height:36px!important;
+  }
+  body.c10-shell-ready .c10-mobilebar .c10-header-signout{
+    padding:6px 8px!important;font-size:.72rem!important;min-height:34px!important;
+  }
+}
+@media(max-width:380px){
+  body.c10-shell-ready .c10-mobilebar .c10-topbar-copy{min-width:42px!important}
+  body.c10-shell-ready .c10-mobilebar .c10-mobile-sub{display:none!important}
+}
+
+/* The page body is not the document canvas. Keep the root canvas in sync too,
+   so the html surface cannot show through at the right or below short pages. */
+html.eg-theme-dark{
+  min-height:100%!important;background:#263442!important;background-color:#263442!important;
+  color-scheme:dark!important;overflow-x:hidden!important;
+}
+html.eg-theme-dark body.eg-theme-dark{
+  min-height:100vh!important;background:#263442!important;background-color:#263442!important;
+}
+body.eg-theme-dark.c10-shell-ready{
+  box-sizing:border-box!important;min-height:100vh!important;width:auto!important;max-width:100%!important;
+  background:#263442!important;background-color:#263442!important;background-attachment:fixed!important;
+  overflow-x:hidden!important;
+}
