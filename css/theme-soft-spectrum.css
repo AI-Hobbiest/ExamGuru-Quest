@@ -392,6 +392,7 @@ body.c10-shell-ready{
 body.c10-theme-quest,body.c10-theme-admin,body.c10-shell-ready{background:#FFFFFF!important}
 body.c10-shell-ready{background-color:#FFFFFF!important}
 body.c10-shell-ready .c10-mobilebar{
+  display:flex!important;
   background:rgba(255,255,255,.97)!important;color:#42586C!important;
   border-bottom:1px solid #E3EAF2!important;box-shadow:0 4px 16px rgba(55,79,105,.045)!important;
 }
