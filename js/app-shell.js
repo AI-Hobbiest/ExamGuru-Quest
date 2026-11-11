@@ -6,7 +6,7 @@
   if(!document.getElementById(softThemeId)){
     const themeLink=document.createElement("link");
     themeLink.id=softThemeId;themeLink.rel="stylesheet";
-    themeLink.href="./css/theme-soft-spectrum.css?v=soft-spectrum-v1";
+    themeLink.href="./css/theme-soft-spectrum.css?v=soft-spectrum-v2";
     document.head.appendChild(themeLink);
   }
   const themeColor=document.querySelector('meta[name="theme-color"]');
@@ -151,6 +151,8 @@
   }
   async function createNav(){
     if(document.getElementById("c10Sidebar"))return;
+    /* Reserve the shell columns before auth/config reads to avoid first-paint overlap. */
+    document.body.classList.add("c10-shell-ready");
     const current=getLocation(),auth=await authState();
     const isClatStudent=auth.role==="student"&&String(auth.classId||"").toUpperCase()==="CLAT";
     const clatExperience=current.file==="clat.html"||current.file==="clat-login.html"||isClatStudent;

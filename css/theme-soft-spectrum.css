@@ -341,3 +341,47 @@ body.c10-theme-quest .profile-grid :is(.profile-section,.profile-card){backgroun
     transition-duration:.01ms!important;animation-duration:.01ms!important;
   }
 }
+
+
+/* Shell geometry correction: the sidebar and top bar share one exact column boundary.
+   Explicit border-box sizing prevents the sidebar's 28px horizontal padding from
+   extending underneath the fixed top bar on desktop and compact laptop widths. */
+:root{
+  --c10-shell-topbar-height:64px;
+}
+body.c10-shell-ready{
+  box-sizing:border-box;
+  padding-top:var(--c10-shell-topbar-height)!important;
+  padding-left:var(--c10-sidebar-width)!important;
+}
+.c10-sidebar{
+  box-sizing:border-box!important;
+  width:var(--c10-sidebar-width)!important;
+  min-width:0;
+}
+.c10-sidebar-top{box-sizing:border-box}
+.c10-mobilebar{
+  box-sizing:border-box!important;
+  left:var(--c10-sidebar-width)!important;
+  right:0!important;
+  width:auto!important;
+  height:var(--c10-shell-topbar-height)!important;
+}
+@media(max-width:1100px){
+  body.c10-shell-ready{
+    padding-left:0!important;
+    padding-top:var(--c10-shell-topbar-height)!important;
+  }
+  .c10-sidebar{
+    box-sizing:border-box!important;
+    width:min(290px,86vw)!important;
+    left:0!important;
+    top:var(--c10-shell-topbar-height)!important;
+    bottom:0!important;
+  }
+  .c10-mobilebar{
+    left:0!important;
+    right:0!important;
+    width:100%!important;
+  }
+}
