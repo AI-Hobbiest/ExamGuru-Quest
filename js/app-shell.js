@@ -6,11 +6,30 @@
   if(!document.getElementById(softThemeId)){
     const themeLink=document.createElement("link");
     themeLink.id=softThemeId;themeLink.rel="stylesheet";
-    themeLink.href="./css/theme-soft-spectrum.css?v=soft-spectrum-v2";
+    themeLink.href="./css/theme-soft-spectrum.css?v=soft-spectrum-v3";
     document.head.appendChild(themeLink);
   }
   const themeColor=document.querySelector('meta[name="theme-color"]');
-  if(themeColor)themeColor.setAttribute("content","#F8FAFC");
+  const themeStorageKey="examguru_theme_preference_v1";
+  function readThemePreference(){
+    try{return localStorage.getItem(themeStorageKey)==="dark"?"dark":"light";}catch(_){return "light";}
+  }
+  function updateThemeButton(button,dark){
+    button.textContent=dark?"☀":"☾";
+    button.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme");
+    button.setAttribute("aria-pressed",String(dark));
+    button.title=dark?"Switch to light theme":"Switch to dark theme";
+  }
+  function applyTheme(mode,persist=true){
+    const dark=mode==="dark";
+    document.documentElement.classList.toggle("eg-theme-dark",dark);
+    if(document.body)document.body.classList.toggle("eg-theme-dark",dark);
+    if(themeColor)themeColor.setAttribute("content",dark?"#2B3948":"#FFFFFF");
+    if(persist){try{localStorage.setItem(themeStorageKey,dark?"dark":"light");}catch(_){}}
+    const button=document.getElementById("c10ThemeToggle");
+    if(button)updateThemeButton(button,dark);
+  }
+  applyTheme(readThemePreference(),false);
   const links=[
     {label:"Sign in",icon:"🔐",href:"./index.html",page:"index.html",auth:"guest"},
 
@@ -153,6 +172,7 @@
     if(document.getElementById("c10Sidebar"))return;
     /* Reserve the shell columns before auth/config reads to avoid first-paint overlap. */
     document.body.classList.add("c10-shell-ready");
+    applyTheme(readThemePreference(),false);
     const current=getLocation(),auth=await authState();
     const isClatStudent=auth.role==="student"&&String(auth.classId||"").toUpperCase()==="CLAT";
     const clatExperience=current.file==="clat.html"||current.file==="clat-login.html"||isClatStudent;
@@ -226,7 +246,11 @@
     mobileLogo.src="./assets/examguru-saraswati.svg";mobileLogo.alt="";mobileLogo.width=32;mobileLogo.height=32;mobileBrand.appendChild(mobileLogo);
     const mobileCopy=node("div","c10-topbar-copy");
     mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",clatExperience?"AI-Enthusiast · CLAT UG 2027":auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":auth.role==="parent"?"Parent":"Class "+String(auth.classId||"not assigned"))));
-    mobileBar.append(toggle,mobileBrand,mobileCopy);
+    const themeToggle=node("button","c10-theme-toggle",document.body.classList.contains("eg-theme-dark")?"☀":"☾");
+    themeToggle.id="c10ThemeToggle";themeToggle.type="button";
+    updateThemeButton(themeToggle,document.body.classList.contains("eg-theme-dark"));
+    themeToggle.addEventListener("click",()=>applyTheme(document.body.classList.contains("eg-theme-dark")?"light":"dark"));
+    mobileBar.append(toggle,mobileBrand,mobileCopy,themeToggle);
     if(auth.role!=="guest"){
       const logout=node("button","c10-header-signout","↪ Sign out");
       logout.id="c10HeaderSignout";logout.type="button";logout.setAttribute("aria-label","Sign out of ExamGuru");

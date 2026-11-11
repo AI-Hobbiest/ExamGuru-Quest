@@ -3,7 +3,7 @@
    This file is injected by app-shell.js after page-local styles so it is the active layer. */
 :root{
   color-scheme:light;
-  --ss-page:#F8FAFC;--ss-surface:#FFFFFF;--ss-surface-soft:#F4F8FC;
+  --ss-page:#FFFFFF;--ss-surface:#FFFFFF;--ss-surface-soft:#F7FAFD;
   --ss-ink:#344558;--ss-muted:#68798D;--ss-line:#E3EAF2;
   --ss-blue:#2F78B7;--ss-blue-soft:#EAF4FC;
   --ss-lavender:#F1ECFC;--ss-lavender-ink:#68559C;
@@ -15,6 +15,7 @@
   --ss-radius:16px;
 }
 html{color-scheme:light}
+html.eg-theme-dark{color-scheme:dark}
 body.c10-theme-quest,body.c10-theme-admin,body.c10-shell-ready{
   color:var(--ss-ink)!important;background:var(--ss-page)!important;
   font-family:"Aptos","Segoe UI",Inter,system-ui,-apple-system,sans-serif!important;
@@ -385,3 +386,239 @@ body.c10-shell-ready{
     width:100%!important;
   }
 }
+
+
+/* Default light workspace: let the white canvas flow continuously behind the cards. */
+body.c10-theme-quest,body.c10-theme-admin,body.c10-shell-ready{background:#FFFFFF!important}
+body.c10-shell-ready{background-color:#FFFFFF!important}
+body.c10-shell-ready .c10-mobilebar{
+  background:rgba(255,255,255,.97)!important;color:#42586C!important;
+  border-bottom:1px solid #E3EAF2!important;box-shadow:0 4px 16px rgba(55,79,105,.045)!important;
+}
+body.c10-shell-ready .c10-theme-toggle{
+  display:inline-grid;place-items:center;flex:none;width:38px;height:38px;
+  border:1px solid #DCE6EF!important;border-radius:11px!important;
+  background:#F4F8FC!important;color:#477BA5!important;
+  font:inherit;font-size:1.14rem;line-height:1;cursor:pointer;box-shadow:none!important;
+}
+body.c10-shell-ready .c10-theme-toggle:hover,
+body.c10-shell-ready .c10-theme-toggle:focus-visible{
+  background:#EAF4FC!important;border-color:#BFD9ED!important;outline:2px solid rgba(47,120,183,.18);outline-offset:2px;
+}
+/* Keep the sidebar scrollable while removing the visible scrollbar track/thumb. */
+body.c10-shell-ready .c10-sidebar{
+  scrollbar-width:none!important;-ms-overflow-style:none!important;overflow-y:auto!important;
+}
+body.c10-shell-ready .c10-sidebar::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
+
+/* ==========================================================================
+   Evening Spectrum — optional dark appearance.
+   Soft slate/blue-grey surfaces, never pure black. User choice is persisted.
+   ========================================================================== */
+html.eg-theme-dark{color-scheme:dark}
+body.eg-theme-dark{
+  --ss-page:#263442;--ss-surface:#2F3E4D;--ss-surface-soft:#354657;
+  --ss-ink:#E8EEF4;--ss-muted:#B0BECC;--ss-line:#465767;
+  --ss-blue:#397EAF;--ss-blue-soft:#354D61;
+  --ss-lavender:#45445E;--ss-lavender-ink:#D8CFF2;
+  --ss-coral:#F09C91;--ss-coral-soft:#523F43;
+  --ss-mint:#2E4C43;--ss-mint-ink:#B6E1C8;
+  --ss-cream:#51483A;--ss-cream-ink:#F0D9AC;
+  --ss-shadow:0 8px 24px rgba(15,25,36,.16);--ss-shadow-hover:0 13px 30px rgba(15,25,36,.24);
+  color:var(--ss-ink)!important;background:var(--ss-page)!important;
+}
+body.eg-theme-dark.c10-theme-quest,body.eg-theme-dark.c10-theme-admin,
+body.eg-theme-dark.c10-shell-ready{color:var(--ss-ink)!important;background:var(--ss-page)!important}
+body.eg-theme-dark.c10-shell-ready :is(h1,h2,h3,h4,h5,h6){color:var(--ss-ink)!important}
+body.eg-theme-dark.c10-shell-ready :is(p,label,.muted,.admin-muted,.exam-muted,.clat-muted,.dash-help,
+.family-note,.assignment-help,.admin-inline-help,.study-meta){color:var(--ss-muted)!important}
+body.eg-theme-dark.c10-shell-ready a:not(.btn):not(.admin-btn):not(.exam-btn):not(.paper-btn):not(.test-btn):not(.clat-btn){color:#A8CDED}
+body.eg-theme-dark.c10-shell-ready :is(input,select,textarea,.admin-control){
+  color:var(--ss-ink)!important;background:#344454!important;border-color:var(--ss-line)!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(input,select,textarea,.admin-control):focus{
+  outline:3px solid rgba(128,183,222,.22)!important;border-color:#83B5D9!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(input,select,textarea)::placeholder{color:#A0B0BF!important}
+body.eg-theme-dark.c10-shell-ready select option{background:#344454;color:var(--ss-ink)}
+body.eg-theme-dark.c10-shell-ready table th{background:#37495A!important;color:#D5E2ED!important}
+body.eg-theme-dark.c10-shell-ready table td{border-color:var(--ss-line)!important;color:var(--ss-ink)!important}
+body.eg-theme-dark.c10-shell-ready :is(.dash-panel,.subject-launch,.family-card,.child-detail,.report-panel,
+.assessment-intro,.admin-panel,.admin-tabs,.admin-stat,.admin-feature,.paper-card,.test-card,
+.exam-card,.study-panel,.study-stat,.clat-card,.clat-panel,.clat-stat-card,.clat-paper,
+.help-section,.profile-card,.learning-panel,.learning-card,.quiz,.panel){
+  background:var(--ss-surface)!important;border-color:var(--ss-line)!important;box-shadow:var(--ss-shadow)!important;color:var(--ss-ink)!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.btn,.admin-btn:not(.secondary):not(.danger),.exam-btn:not(.secondary),
+.paper-btn:not(.secondary),.test-btn:not(.secondary),.report-button:not(.secondary),
+.clat-btn:not(.secondary),.clat-dash-btn:not(.secondary),.study-actions a:not(.secondary),
+.learning-actions a:not(.secondary)){
+  background:#397EAF!important;border-color:#5594C1!important;color:#fff!important;box-shadow:0 4px 13px rgba(16,35,52,.22)!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.btn.secondary,.admin-btn.secondary,.exam-btn.secondary,.paper-btn.secondary,
+.test-btn.secondary,.report-button.secondary,.clat-btn.secondary,.clat-dash-btn.secondary,
+.study-actions button,.learning-actions button,.chapter-picker-actions button,.chapter-picker-trigger,.learning-hub-link){
+  background:#3A4D60!important;border-color:#506579!important;color:#D7EAF8!important;box-shadow:none!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.admin-btn.danger,.danger,.btn.danger){
+  background:#553E43!important;border-color:#80535A!important;color:#FFD6D2!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.btn,.admin-btn,.exam-btn,.paper-btn,.test-btn,.report-button,
+.clat-btn,.clat-dash-btn,.study-actions a,.study-actions button,.learning-actions a,
+.learning-actions button,.chapter-picker-actions button,.chapter-picker-trigger,.learning-hub-link):focus-visible{
+  outline:3px solid rgba(151,198,232,.32)!important;outline-offset:3px!important;
+}
+
+/* Dark navigation remains part of the page, rather than a separate black rail. */
+body.eg-theme-dark.c10-shell-ready .c10-sidebar{
+  background:#2B3947!important;color:#E7EEF5!important;border-right:1px solid #425363!important;
+  box-shadow:6px 0 22px rgba(14,24,34,.16)!important;
+}
+body.eg-theme-dark.c10-shell-ready .c10-sidebar-top{background:#2B3947!important}
+body.eg-theme-dark.c10-shell-ready .c10-brand{border-bottom-color:#445565!important}
+body.eg-theme-dark.c10-shell-ready .c10-brand-title{color:#E8EEF5!important}
+body.eg-theme-dark.c10-shell-ready .c10-brand-sub,
+body.eg-theme-dark.c10-shell-ready .c10-user-class,
+body.eg-theme-dark.c10-shell-ready .c10-nav-label,
+body.eg-theme-dark.c10-shell-ready .c10-sidebar-bottom{color:#AFBDCB!important}
+body.eg-theme-dark.c10-shell-ready .c10-user-card{background:#344454!important;border-color:#4A5D70!important}
+body.eg-theme-dark.c10-shell-ready .c10-user-name{color:#F1F5F8!important}
+body.eg-theme-dark.c10-shell-ready .c10-sidebar a.c10-nav-link,
+body.eg-theme-dark.c10-shell-ready .c10-sidebar a.c10-nav-link:visited,
+body.eg-theme-dark.c10-shell-ready .c10-nav-group-trigger{color:#D0DCE6!important}
+body.eg-theme-dark.c10-shell-ready .c10-sidebar a.c10-nav-link:hover,
+body.eg-theme-dark.c10-shell-ready .c10-sidebar a.c10-nav-link:focus-visible,
+body.eg-theme-dark.c10-shell-ready .c10-nav-group-trigger:hover,
+body.eg-theme-dark.c10-shell-ready .c10-nav-group-trigger:focus-visible{
+  color:#F2F7FB!important;background:#35495B!important;border-color:#4A6074!important;
+}
+body.eg-theme-dark.c10-shell-ready .c10-sidebar a.c10-nav-link.active,
+body.eg-theme-dark.c10-shell-ready .c10-sidebar a.c10-nav-link.active:visited{
+  color:#EAF5FC!important;background:#3B5368!important;border-color:#58748D!important;box-shadow:inset 3px 0 0 #94C7EB!important;
+}
+body.eg-theme-dark.c10-shell-ready .c10-nav-divider{background:#465868!important}
+body.eg-theme-dark.c10-shell-ready .c10-mobilebar{
+  background:rgba(43,57,71,.97)!important;color:#E8EEF5!important;border-bottom:1px solid #465868!important;
+  box-shadow:0 5px 18px rgba(14,24,34,.18)!important;
+}
+body.eg-theme-dark.c10-shell-ready .c10-mobile-title{color:#E8EEF5!important}
+body.eg-theme-dark.c10-shell-ready .c10-mobile-sub{color:#B6C4D1!important}
+body.eg-theme-dark.c10-shell-ready .c10-menu-toggle,
+body.eg-theme-dark.c10-shell-ready .c10-header-signout,
+body.eg-theme-dark.c10-shell-ready .c10-theme-toggle{
+  background:#394C5E!important;border-color:#52687B!important;color:#DCECF8!important;
+}
+body.eg-theme-dark.c10-shell-ready .c10-theme-toggle:hover,
+body.eg-theme-dark.c10-shell-ready .c10-theme-toggle:focus-visible{background:#455B70!important;border-color:#7391A9!important}
+body.eg-theme-dark.c10-shell-ready .c10-nav-scrim.visible{background:rgba(14,24,34,.48)!important}
+
+/* Hero panels: gentle dusk gradient, no black slabs. */
+body.eg-theme-dark.c10-shell-ready :is(.dash-hero,.parent-hero,.login-story,.study-hero,.clat-dash-hero,
+.clat-hero,.exam-hero,.paper-hero,.test-hero,.admin-hero,.learning-hero,.profile-hero,.help-hero){
+  color:#EAF0F5!important;background:linear-gradient(118deg,#35485A 0%,#3B4357 60%,#51454A 100%)!important;
+  border:1px solid #536477!important;box-shadow:0 12px 28px rgba(14,24,34,.18)!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.dash-hero h1,.parent-hero h1,.login-story h1,.study-hero h1,
+.clat-dash-hero h1,.clat-hero h1,.exam-hero h1,.paper-hero h1,.test-hero h1,.admin-hero h1,
+.learning-hero h1,.profile-hero h1,.help-hero h1){color:#F1F5F8!important}
+body.eg-theme-dark.c10-shell-ready :is(.dash-hero p,.parent-hero p,.login-story p,.study-hero p,
+.clat-dash-hero p,.clat-hero p,.exam-hero p,.paper-hero p,.test-hero p,.admin-hero p,
+.learning-hero p,.profile-hero p,.help-hero p){color:#D0DCE6!important}
+body.eg-theme-dark.c10-shell-ready :is(.dash-kicker,.clat-kicker,.clat-dash-kicker,.exam-kicker,.admin-kicker){color:#C1D4E7!important}
+body.eg-theme-dark.c10-theme-quest .level-orb{background:#45445E!important;color:#E4DAF7!important;border-color:#625C7E!important}
+body.eg-theme-dark.c10-theme-quest .level-orb strong,
+body.eg-theme-dark.c10-theme-quest .level-orb span{color:#E4DAF7!important}
+body.eg-theme-dark.c10-theme-quest :is(.xp-line,.dash-stat strong,.dash-panel h2,.dash-panel h3,.subject-launch h2){color:#E4ECF3!important}
+body.eg-theme-dark.c10-theme-quest .xp-track{background:#48596A!important}
+body.eg-theme-dark.c10-theme-quest .xp-track i{background:linear-gradient(90deg,#83C7E9,#B5A7E7,#F0A39A)!important}
+body.eg-theme-dark.c10-theme-quest .dash-stat{background:#324252!important;border-color:#4A5D6F!important}
+body.eg-theme-dark.c10-theme-quest .dash-stat:nth-child(n){border-top-color:#789FC0!important}
+body.eg-theme-dark.c10-theme-quest .dash-tag{background:#45445E!important;color:#E0D8F4!important}
+body.eg-theme-dark.c10-theme-quest :is(.trend-track,.week-track,.subject-track){background:#405161!important}
+body.eg-theme-dark.c10-theme-quest .trend-bar{background:linear-gradient(180deg,#B3A7E4,#887CC7)!important}
+body.eg-theme-dark.c10-theme-quest .week-fill{background:linear-gradient(90deg,#8FD3AE,#62B68C)!important}
+body.eg-theme-dark.c10-theme-quest .subject-fill{background:linear-gradient(90deg,#83C4E8,#B5A6E4)!important}
+body.eg-theme-dark.c10-theme-quest .trend-value,
+body.eg-theme-dark.c10-theme-quest .subject-percent{color:#C9BAF2!important}
+body.eg-theme-dark.c10-theme-quest .achievement.earned{background:#2F4C42!important;border-color:#4D7966!important}
+body.eg-theme-dark.c10-theme-quest .achievement.locked{background:#334150!important}
+body.eg-theme-dark.c10-theme-quest .subject-launch-card{border-color:#4A5C6E!important;box-shadow:none!important}
+body.eg-theme-dark.c10-theme-quest .subject-launch-card:nth-child(4n+1){background:#34495A!important}
+body.eg-theme-dark.c10-theme-quest .subject-launch-card:nth-child(4n+2){background:#304A43!important}
+body.eg-theme-dark.c10-theme-quest .subject-launch-card:nth-child(4n+3){background:#514346!important}
+body.eg-theme-dark.c10-theme-quest .subject-launch-card:nth-child(4n){background:#414058!important}
+body.eg-theme-dark.c10-theme-quest .subject-launch-card h2,
+body.eg-theme-dark.c10-theme-quest .subject-launch-card strong{color:#E9F0F6!important}
+body.eg-theme-dark.c10-theme-quest .subject-launch-card span:last-child{color:#B9C7D4!important}
+
+/* Practice answer states remain unmistakable in Evening Spectrum. */
+body.eg-theme-dark.eg-quiz-page :is(.topstats .stat,.panel,.quiz){background:#2F3E4D!important;border-color:#4A5D6E!important;color:#E8EEF4!important}
+body.eg-theme-dark.eg-quiz-page :is(.qtext,.quiz h2,.panel h2){color:#E8EEF4!important}
+body.eg-theme-dark.eg-quiz-page .opt{background:#344555!important;border-color:#526477!important;color:#E6EDF4!important}
+body.eg-theme-dark.eg-quiz-page .opt.selected:not(.correct):not(.wrong){background:#354F65!important;border-color:#81B2D7!important;color:#E2F1FC!important}
+body.eg-theme-dark.eg-quiz-page .opt.correct{background:#2D4C42!important;border-color:#6DAF8D!important;color:#C2EBD2!important}
+body.eg-theme-dark.eg-quiz-page .opt.wrong{background:#543D42!important;border-color:#B8797C!important;color:#FFD8D5!important}
+body.eg-theme-dark.eg-quiz-page .letter{background:#45445E!important;color:#E1D8F5!important}
+body.eg-theme-dark.eg-quiz-page .hint{background:#51483A!important;border-color:#766447!important;color:#F0D9AC!important}
+body.eg-theme-dark.eg-quiz-page .time-controls{background:#354454!important;border-color:#4C6072!important}
+body.eg-theme-dark.eg-quiz-page .quiztop .pill{background:#45445E!important;border-color:#5B5878!important;color:#E1D8F5!important}
+body.eg-theme-dark.eg-quiz-page .quiztop #chapterPill{background:#2E4C43!important;border-color:#4A7766!important;color:#C0E8D0!important}
+body.eg-theme-dark.eg-quiz-page .progress{background:#465767!important}
+body.eg-theme-dark.eg-quiz-page .progress i{background:linear-gradient(90deg,#83C4E8,#B5A6E4,#F0A39A)!important}
+body.eg-theme-dark.eg-quiz-page #timerPill{background:#354D61!important;border-color:#58758E!important;color:#D8EEFC!important}
+body.eg-theme-dark.eg-quiz-page #questionTimerPill{background:#51483A!important;border-color:#766447!important;color:#F0D9AC!important}
+body.eg-theme-dark.eg-quiz-page .question-nav-dock{background:rgba(43,57,71,.98)!important;border-top-color:#4A5D6E!important}
+body.eg-theme-dark.eg-quiz-page .question-nav-sheet{background:#2F3E4D!important;border-color:#4A5D6E!important;color:#E8EEF4!important}
+body.eg-theme-dark.eg-quiz-page .question-nav-heading h2{color:#E8EEF4!important}
+body.eg-theme-dark.eg-quiz-page .question-nav-item{background:#344555!important;border-color:#526477!important;color:#D5E0E9!important}
+body.eg-theme-dark.eg-quiz-page .question-nav-item.answered{background:#2E4C43!important;border-color:#5A8D75!important;color:#C0E8D0!important}
+body.eg-theme-dark.eg-quiz-page .question-nav-item.skipped{background:#51483A!important;border-color:#766447!important;color:#F0D9AC!important}
+body.eg-theme-dark.eg-quiz-page .question-nav-item.current{background:#354F65!important;border-color:#81B2D7!important;color:#E2F1FC!important}
+body.eg-theme-dark.eg-quiz-page .score{background:#2D4C42!important;border-color:#4D7966!important;color:#D2EFDE!important}
+body.eg-theme-dark.eg-quiz-page .good{background:#2E4C43!important;color:#C0E8D0!important}
+body.eg-theme-dark.eg-quiz-page .bad{background:#543D42!important;color:#FFD8D5!important}
+
+/* Parent, Admin, CLAT and content workspaces follow the same Evening Spectrum surfaces. */
+body.eg-theme-dark.c10-theme-quest :is(.family-level,.family-metric,.subject-row,.assessment-composer,.assignment-topics,.assignment-row){
+  background:#354555!important;border-color:#4A5D6E!important;color:#E2EAF1!important;
+}
+body.eg-theme-dark.c10-theme-quest .family-level strong,
+body.eg-theme-dark.c10-theme-quest .family-metric strong{color:#D6E8F5!important}
+body.eg-theme-dark.c10-theme-quest .insight{background:#414058!important;border-color:#595675!important}
+body.eg-theme-dark.c10-theme-quest .insight h4{color:#DED5F5!important}
+body.eg-theme-dark.c10-theme-quest .assignment-topic{background:#354555!important;color:#DCE5ED!important}
+body.eg-theme-dark.c10-theme-quest .assignment-topic:hover{background:#3D5367!important;border-color:#607A91!important}
+body.eg-theme-dark.c10-theme-quest .assignment-topic input{accent-color:#83BCE4!important}
+body.eg-theme-dark.c10-theme-admin .admin-notice{background:#51483A!important;border-color:#766447!important;color:#F0D9AC!important}
+body.eg-theme-dark.c10-theme-admin .admin-notice strong{color:#F7E8C8!important}
+body.eg-theme-dark.c10-theme-admin .admin-tabs{background:#2F3E4D!important;border-color:#46596A!important}
+body.eg-theme-dark.c10-theme-admin .admin-tab-button{color:#D1DCE5!important}
+body.eg-theme-dark.c10-theme-admin .admin-tab-button.active{background:#354D61!important;border-color:#58758E!important;color:#D8EEFC!important}
+body.eg-theme-dark.c10-theme-admin .admin-stat{background:#354555!important;border-color:#4A5D6E!important}
+body.eg-theme-dark.c10-theme-admin .admin-stat strong{color:#E6EDF4!important}
+body.eg-theme-dark.c10-theme-admin .admin-field label{color:#C7D3DE!important}
+body.eg-theme-dark.c10-theme-admin .admin-status{background:#45445E!important;color:#E1D8F5!important}
+body.eg-theme-dark.c10-theme-admin .admin-status.success,
+body.eg-theme-dark.c10-theme-admin .admin-chip.good{background:#2E4C43!important;color:#C0E8D0!important}
+body.eg-theme-dark.c10-theme-admin .admin-status.error{background:#543D42!important;color:#FFD8D5!important}
+body.eg-theme-dark.c10-theme-admin .admin-chip{background:#45445E!important;color:#E1D8F5!important}
+body.eg-theme-dark.c10-theme-admin .admin-chip.warning{background:#51483A!important;color:#F0D9AC!important}
+body.eg-theme-dark.c10-theme-admin .admin-table th{background:#3A4D5F!important;color:#D7E4ED!important}
+body.eg-theme-dark.c10-theme-admin .admin-image-row,
+body.eg-theme-dark.c10-theme-admin .admin-list-item{background:#344555!important;border-color:#4A5D6E!important;color:#E2EAF1!important}
+body.eg-theme-dark.c10-theme-admin .admin-list-item.active{background:#354D61!important;border-color:#58758E!important;color:#D8EEFC!important}
+body.eg-theme-dark.c10-theme-quest :is(.clat-pill,.clat-stat,.clat-passage){background:#354555!important;border-color:#4A5D6E!important;color:#D8E4ED!important}
+body.eg-theme-dark.c10-theme-quest .clat-library-tabs{background:#2E3D4B!important;border-color:#46596A!important}
+body.eg-theme-dark.c10-theme-quest .clat-library-tab{color:#D1DCE5!important}
+body.eg-theme-dark.c10-theme-quest .clat-library-tab[aria-selected="true"]{background:#354D61!important;border-color:#58758E!important;color:#D8EEFC!important}
+body.eg-theme-dark.c10-theme-quest .clat-library-count{background:#40566B!important;color:#D8EEFC!important}
+body.eg-theme-dark.c10-theme-quest .clat-option{background:#344555!important;border-color:#526477!important;color:#E6EDF4!important}
+body.eg-theme-dark.c10-theme-quest .clat-option:has(input:checked){background:#354F65!important;border-color:#81B2D7!important;color:#E2F1FC!important}
+body.eg-theme-dark.c10-theme-quest .clat-option input{accent-color:#83BCE4!important}
+body.eg-theme-dark.c10-theme-quest :is(.study-resource,.learning-item,.help-nav a){background:#344555!important;border-color:#4A5D6E!important;color:#DCE5ED!important}
+body.eg-theme-dark.c10-theme-quest .help-callout{background:#51483A!important;border-color:#766447!important;color:#F0D9AC!important}
+body.eg-theme-dark.c10-theme-quest :is(.paper-status,.test-status,.exam-result){background:#354D61!important;border-color:#58758E!important;color:#D8EEFC!important}
+body.eg-theme-dark.c10-theme-quest .profile-grid :is(.profile-section,.profile-card){background:#2F3E4D!important;border-color:#46596A!important}
+body.eg-theme-dark.c10-theme-quest .study-summary .study-stat,
+body.eg-theme-dark.c10-theme-quest .study-stat{background:#354555!important}
+@media(max-width:520px){body.c10-shell-ready .c10-theme-toggle{width:36px;height:36px}}

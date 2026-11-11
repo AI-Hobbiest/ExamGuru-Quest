@@ -118,10 +118,14 @@ assert.ok(roleTheme.includes("body.c10-theme-quest"),"student-facing pages have 
 assert.ok(roleTheme.includes("body.c10-theme-admin"),"Admin Workspace has a dedicated Lavender theme");
 assert.ok(roleTheme.includes("#f0a82e"),"Quest quiz primary action uses the yellow-orange accent");
 assert.ok(roleTheme.includes("#e4f4e7")&&roleTheme.includes("#eee9ff")&&roleTheme.includes("#fff0c8"),"Quest palette includes green, lavender and yellow");
-assert.ok(nav.includes('themeLink.href="./css/theme-soft-spectrum.css?v=soft-spectrum-v2"')&&nav.includes('themeColor.setAttribute("content","#F8FAFC")'),"shared app shell loads Soft Spectrum after legacy styles and updates browser theme colour");
+assert.ok(nav.includes('themeLink.href="./css/theme-soft-spectrum.css?v=soft-spectrum-v3"')&&nav.includes('themeColor.setAttribute("content","#FFFFFF")'),"shared app shell loads Soft Spectrum after legacy styles and updates browser theme colour");
 assert.ok(nav.includes('themeLink.href="./css/theme-soft-spectrum.css?v=soft-spectrum-v2"')&&nav.indexOf('document.body.classList.add("c10-shell-ready")')<nav.indexOf("const current=getLocation(),auth=await authState();"),"shell reserves layout space before asynchronous authentication/config reads");
 assert.ok(softSpectrum.includes(".c10-sidebar{\n  box-sizing:border-box!important;\n  width:var(--c10-sidebar-width)!important;")&&softSpectrum.includes(".c10-mobilebar{\n  box-sizing:border-box!important;\n  left:var(--c10-sidebar-width)!important;"),"desktop sidebar and top bar share a border-box column boundary without overlap");
 assert.ok(softSpectrum.includes("width:min(290px,86vw)!important")&&softSpectrum.includes("width:100%!important"),"compact viewport drawer and top bar remain within the viewport");
+assert.ok(nav.includes('const themeStorageKey="examguru_theme_preference_v1"')&&nav.includes('localStorage.setItem(themeStorageKey,dark?"dark":"light")')&&nav.includes('id="c10ThemeToggle"')&&nav.includes('button.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme")'),"theme control persists the user's choice with accessible labels");
+assert.ok(softSpectrum.includes("--ss-page:#FFFFFF")&&softSpectrum.includes("background:#FFFFFF!important"),"Soft Spectrum default canvas is white");
+assert.ok(softSpectrum.includes("scrollbar-width:none!important")&&softSpectrum.includes("::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}")&&softSpectrum.includes("overflow-y:auto!important"),"sidebar scrollbar is visually hidden without disabling scrolling");
+assert.ok(softSpectrum.includes("Evening Spectrum — optional dark appearance")&&softSpectrum.includes("body.eg-theme-dark")&&softSpectrum.includes("--ss-page:#263442")&&softSpectrum.includes("--ss-surface:#2F3E4D"),"optional dark theme uses soft blue-grey surfaces rather than black");
 assert.ok(softSpectrum.includes("--ss-blue:#2F78B7")&&softSpectrum.includes("--ss-lavender:#F1ECFC")&&softSpectrum.includes("--ss-coral-soft:#FFF0ED")&&softSpectrum.includes("--ss-mint:#E8F6EF"),"Soft Spectrum defines the approved light pastel palette");
 assert.ok(softSpectrum.includes("body.c10-shell-ready .c10-sidebar")&&softSpectrum.includes("body.c10-theme-admin .admin-hero")&&softSpectrum.includes("body.c10-theme-quest :is(.clat-hero,.clat-dash-hero)"),"Soft Spectrum covers shared navigation and role-specific parent/admin/CLAT surfaces");
 assert.ok(softSpectrum.includes(".opt.selected:not(.correct):not(.wrong)")&&softSpectrum.includes(".opt.correct")&&softSpectrum.includes(".opt.wrong"),"Soft Spectrum retains distinct selected, correct and incorrect quiz answer states");
@@ -131,7 +135,7 @@ for(const [name,html,theme] of [["homepage",homepage,"c10-theme-quest"],["practi
  assert.ok(html.includes('class="'+theme)||html.includes('class="eg-quiz-page '+theme),name+" is assigned the correct theme");
 }
 assert.ok(css.includes(".c10-sidebar a.c10-nav-link:visited"),"sidebar link color overrides the global anchor theme");
-assert.ok(css.includes(".c10-sidebar a.c10-nav-link.active:visited"),"active link remains readable on the dark sidebar");
+assert.ok(css.includes(".c10-sidebar a.c10-nav-link.active:visited"),"active link retains a dedicated state in the shared sidebar");
 assert.ok(css.includes(".c10-sidebar.open"));
 assert.ok(css.includes("Persistent ExamGuru top bar")&&css.includes("position:fixed;inset:0 0 auto var(--c10-sidebar-width)")&&css.includes(".c10-mobilebar{left:0"),"branded top bar remains fixed across desktop, tablet and mobile");
 assert.ok(nav.includes("c10-topbar-brand")&&nav.includes("c10HeaderSignout")&&nav.includes("mobileBar.appendChild(logout)"),"persistent top bar includes branding and role-aware sign-out");
