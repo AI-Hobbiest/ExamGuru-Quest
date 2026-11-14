@@ -201,3 +201,16 @@ console.log("Navigation/login tests passed: responsive sidebar, role-aware links
 
 assert.ok(examPractice.includes("./js/exam-paper-generator.js")&&examPractice.includes("./js/exam-paper-self-study.js"),"self-study exam page loads generator and attempt controller");
 assert.ok(examPracticeScript.includes("startTimer")&&examPracticeScript.includes("submit")&&examPracticeScript.includes("eg_exam_last_result_v1"),"self-study exam supports timed attempts, submission and local result storage");
+
+const pyqPage=fs.readFileSync("pyq-library.html","utf8");
+const pyqScript=fs.readFileSync("js/pyq-library.js","utf8");
+const pyqData=JSON.parse(fs.readFileSync("data/cbse-class10-pyq.json","utf8"));
+assert.ok(nav.includes('label:"CBSE Previous Year Papers"')&&nav.includes('href:"./pyq-library.html"')&&nav.includes('classIds:["10"]'),"Class 10 navigation exposes a dedicated CBSE previous-year paper library");
+assert.ok(pyqPage.includes('id="pyqSubject"')&&pyqPage.includes('id="pyqYear"')&&pyqPage.includes('id="pyqList"'),"Class 10 PYQ library exposes subject/year filters and paper list");
+assert.ok(pyqPage.includes("./js/pyq-library.js")&&pyqPage.includes("./js/page-access.js"),"PYQ library loads its catalogue and student route guard");
+assert.ok(pyqScript.includes("questionPaperArchive")&&pyqScript.includes("markingSchemeArchive")&&pyqScript.includes("CBSE Marking Scheme"),"PYQ library provides separate official question-paper and marking-scheme archive actions");
+assert.ok(accessScript.includes('page==="pyq-library.html"')&&accessScript.includes('class10Route&&String(session.classId||"")!=="10"'),"PYQ library route is restricted to Class 10 students");
+assert.deepEqual(pyqData.subjects.map(item=>item.id),["science","mathematics-standard","mathematics-basic","social-science","english","hindi-a","hindi-b"],"PYQ catalogue contains only ExamGuru-supported Class 10 subjects");
+assert.ok(pyqData.years.some(item=>item.year==="2022"&&item.note.includes("Split-term")),"2022 papers are explicitly labelled as a split-term year");
+assert.ok(pyqData.questionPaperArchive.includes("cbse.gov.in")&&pyqData.markingSchemeArchive.includes("cbse.gov.in"),"PYQ and marking-scheme sources are official CBSE archive pages");
+new Function(pyqScript);

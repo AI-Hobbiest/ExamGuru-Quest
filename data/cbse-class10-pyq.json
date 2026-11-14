@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "source": "Central Board of Secondary Education (CBSE)",
+  "questionPaperArchive": "https://www.cbse.gov.in/cbsenew/question-paper.html",
+  "markingSchemeArchive": "https://www.cbse.gov.in/cbsenew/marking-scheme.html",
+  "subjects": [
+    {
+      "id": "science",
+      "name": "Science",
+      "code": "086"
+    },
+    {
+      "id": "mathematics-standard",
+      "name": "Mathematics Standard",
+      "code": "041"
+    },
+    {
+      "id": "mathematics-basic",
+      "name": "Mathematics Basic",
+      "code": "241"
+    },
+    {
+      "id": "social-science",
+      "name": "Social Science",
+      "code": "087"
+    },
+    {
+      "id": "english",
+      "name": "English Language & Literature",
+      "code": "184"
+    },
+    {
+      "id": "hindi-a",
+      "name": "Hindi Course A",
+      "code": "002"
+    },
+    {
+      "id": "hindi-b",
+      "name": "Hindi Course B",
+      "code": "085"
+    }
+  ],
+  "years": [
+    {
+      "year": "2026",
+      "label": "2026 · Main Board",
+      "note": "Current-year main examination"
+    },
+    {
+      "year": "2026-second",
+      "label": "2026 · Second Board",
+      "note": "Second Board Examination"
+    },
+    {
+      "year": "2025",
+      "label": "2025 · Main Board",
+      "note": "Main examination"
+    },
+    {
+      "year": "2024",
+      "label": "2024 · Main Board",
+      "note": "Main examination"
+    },
+    {
+      "year": "2023",
+      "label": "2023 · Main Board",
+      "note": "Main examination"
+    },
+    {
+      "year": "2022",
+      "label": "2022 · Term-based",
+      "note": "Split-term examination year; check the term printed on the paper"
+    }
+  ]
+}

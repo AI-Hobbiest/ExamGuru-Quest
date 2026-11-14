@@ -44,7 +44,7 @@ jobs:
           node tests/exam-paper-renderer.test.js
           node tests/assessment-manager.test.js
           node tests/assessment-analytics.test.js
-          for file in js/clat-engine.js js/clat-practice.js js/clat-dashboard-model.js js/clat-dashboard.js js/report-print.js js/app-shell.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js; do node --check "$file"; done
+          for file in js/clat-engine.js js/clat-practice.js js/clat-dashboard-model.js js/clat-dashboard.js js/report-print.js js/app-shell.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js js/pyq-library.js; do node --check "$file"; done
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
           node tests/learning-model.test.js
@@ -73,6 +73,7 @@ jobs:
           cp study.html _site/study.html
           cp parent.html _site/parent.html
           cp exam-practice.html _site/exam-practice.html
+          cp pyq-library.html _site/pyq-library.html
           cp clat.html _site/clat.html
           cp help.html _site/help.html
           cp assigned-test.html _site/assigned-test.html
@@ -99,6 +100,7 @@ jobs:
           cp js/assigned-tests-dashboard.js _site/js/assigned-tests-dashboard.js
           cp js/parent-assessments.js _site/js/parent-assessments.js
           cp js/exam-paper-self-study.js _site/js/exam-paper-self-study.js
+          cp js/pyq-library.js _site/js/pyq-library.js
           cp js/clat-engine.js _site/js/clat-engine.js
           cp js/clat-dashboard-model.js _site/js/clat-dashboard-model.js
           cp js/clat-dashboard.js _site/js/clat-dashboard.js
@@ -126,6 +128,7 @@ jobs:
           cp js/dashboard-manager.js _site/js/dashboard-manager.js
           cp js/quiz-engine.js _site/js/quiz-engine.js
           cp data/*.json _site/data/
+          cp data/cbse-class10-pyq.json _site/data/cbse-class10-pyq.json
           cp -R data/exam-papers _site/data/exam-papers
           cp -R data/clat/. _site/data/clat/
           # Merge the maintained English topic overrides into the deployed bank.
@@ -437,6 +440,10 @@ jobs:
           for (const slug of ['subject=science','subject=mathematics','subject=english','subject=social-science','subject=hindi','subject=mathematics-sof','subject=science-sof']) {
             if (!dashboardLanding.includes(slug)) throw new Error('Dashboard subject launch link is missing '+slug);
           }
+          const pyqPage=fs.readFileSync('_site/pyq-library.html','utf8');
+          const pyqScript=fs.readFileSync('_site/js/pyq-library.js','utf8');
+          const pyqData=JSON.parse(fs.readFileSync('_site/data/cbse-class10-pyq.json','utf8'));
+          if (!pyqPage.includes('./js/pyq-library.js') || !pyqScript.includes('markingSchemeArchive') || pyqData.subjects.length !== 7) throw new Error('Class 10 CBSE PYQ library or official marking-scheme catalogue is incomplete.');
           const sciencePage=fs.readFileSync('_site/science.html','utf8');
           if (!sciencePage.includes('practice.html?subject=science')) throw new Error('Science compatibility route does not forward to the shared engine.');
           const quizEngine=fs.readFileSync('_site/js/quiz-engine.js','utf8');

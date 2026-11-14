@@ -55,6 +55,7 @@
 
     {label:"Assessment Test",group:"Assessments",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",clatHref:"./clat.html#library",clatPage:"clat.html",clatHash:"#library",auth:"student"},
     {label:"Exam Paper Practice",icon:"📝",href:"./exam-practice.html",page:"exam-practice.html",classIds:["6","10"],auth:"student"},
+    {label:"CBSE Previous Year Papers",group:"Assessments",icon:"📚",href:"./pyq-library.html",page:"pyq-library.html",classIds:["10"],auth:"student"},
     {label:"CLAT UG 2027",group:"Entrance Exams",icon:"⚖️",href:"./clat.html#library",page:"clat.html",clatHref:"./clat.html#library",clatPage:"clat.html",clatHash:"#library",classIds:["CLAT"],auth:"student"},
     {label:"JEE Main & Advanced",group:"Entrance Exams",icon:"📐",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
     {label:"NEET UG",group:"Entrance Exams",icon:"🧬",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},

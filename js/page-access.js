@@ -4,6 +4,7 @@
   const key="c10playground_static_student_v1";
   const page=location.pathname.split("/").filter(Boolean).pop()||"index.html";
   const clatRoute=page==="clat.html"||page==="clat-dashboard.html";
+  const class10Route=page==="pyq-library.html";
   const signInTarget=clatRoute?"./clat-login.html":"./index.html";
   let session=null;
   try{session=JSON.parse(sessionStorage.getItem(key)||"null");}catch(_){}
@@ -12,10 +13,12 @@
     return;
   }
   if(session.role==="parent"){location.replace("./parent.html");return;}
+  if(class10Route&&String(session.classId||"")!=="10"){location.replace("./dashboard.html");return;}
   if(window.C10StudentAuth&&window.C10StudentAuth.restoreSession){
     window.C10StudentAuth.restoreSession().then(account=>{
       if(!account||account.role!=="student")location.replace(account&&account.role==="parent"?"./parent.html":signInTarget);
       else if(clatRoute&&String(account.classId||"").toUpperCase()!=="CLAT")location.replace("./dashboard.html");
+      else if(class10Route&&String(account.classId||"")!=="10")location.replace("./dashboard.html");
     }).catch(()=>location.replace(signInTarget));
   }
 })();
