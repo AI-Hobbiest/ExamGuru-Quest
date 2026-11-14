@@ -1,8 +1,14 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "kind": "cbse-class10-pyq-catalog",
+  "classId": "10",
   "source": "Central Board of Secondary Education (CBSE)",
-  "questionPaperArchive": "https://www.cbse.gov.in/cbsenew/question-paper.html",
-  "markingSchemeArchive": "https://www.cbse.gov.in/cbsenew/marking-scheme.html",
+  "lastVerified": "2026-11-14",
+  "archives": {
+    "questionPapers": "https://www.cbse.gov.in/cbsenew/question-paper.html",
+    "markingSchemes": "https://www.cbse.gov.in/cbsenew/marking-scheme.html"
+  },
+  "packageNotice": "CBSE currently serves these paper and marking-scheme files as subject-wise ZIP packages. Download and extract the ZIP to access the included PDFs. ExamGuru does not rehost or alter CBSE files.",
   "subjects": [
     {
       "id": "science",
@@ -43,33 +49,469 @@
   "years": [
     {
       "year": "2026",
-      "label": "2026 · Main Board",
-      "note": "Current-year main examination"
-    },
-    {
-      "year": "2026-second",
-      "label": "2026 · Second Board",
-      "note": "Second Board Examination"
+      "label": "2026",
+      "examTypes": [
+        "Main Board"
+      ]
     },
     {
       "year": "2025",
-      "label": "2025 · Main Board",
-      "note": "Main examination"
+      "label": "2025",
+      "examTypes": [
+        "Main Board"
+      ]
     },
     {
       "year": "2024",
-      "label": "2024 · Main Board",
-      "note": "Main examination"
+      "label": "2024",
+      "examTypes": [
+        "Main Board"
+      ]
     },
     {
       "year": "2023",
-      "label": "2023 · Main Board",
-      "note": "Main examination"
+      "label": "2023",
+      "examTypes": [
+        "Main Board"
+      ]
     },
     {
       "year": "2022",
-      "label": "2022 · Term-based",
-      "note": "Split-term examination year; check the term printed on the paper"
+      "label": "2022",
+      "examTypes": [
+        "Term II"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "2026-main-board-science",
+      "year": "2026",
+      "examType": "Main Board",
+      "subjectId": "science",
+      "subjectName": "Science",
+      "subjectCode": "086",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026/X/Science.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026/X/086_SCIENCE.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2026-main-board-mathematics-standard",
+      "year": "2026",
+      "examType": "Main Board",
+      "subjectId": "mathematics-standard",
+      "subjectName": "Mathematics Standard",
+      "subjectCode": "041",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026/X/Mathematics_Standard.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026/X/041_MATHEMATICS_STANDARD.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP",
+      "paperNote": "CBSE publishes one combined Mathematics Basic + Standard question-paper package for this year."
+    },
+    {
+      "id": "2026-main-board-mathematics-basic",
+      "year": "2026",
+      "examType": "Main Board",
+      "subjectId": "mathematics-basic",
+      "subjectName": "Mathematics Basic",
+      "subjectCode": "241",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026/X/Mathematics_Standard.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026/X/241_MATHEMATICS_BASIC.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP",
+      "paperNote": "CBSE publishes one combined Mathematics Basic + Standard question-paper package for this year."
+    },
+    {
+      "id": "2026-main-board-social-science",
+      "year": "2026",
+      "examType": "Main Board",
+      "subjectId": "social-science",
+      "subjectName": "Social Science",
+      "subjectCode": "087",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026/X/Social_Science.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026/X/087_SOCIAL_SCIENCE.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2026-main-board-english",
+      "year": "2026",
+      "examType": "Main Board",
+      "subjectId": "english",
+      "subjectName": "English Language & Literature",
+      "subjectCode": "184",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026/X/English_Language_Literature.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026/X/184_ENGLISH_LANGUAGE_AND_LITERATURE.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2026-main-board-hindi-a",
+      "year": "2026",
+      "examType": "Main Board",
+      "subjectId": "hindi-a",
+      "subjectName": "Hindi Course A",
+      "subjectCode": "002",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026/X/Hindi_Course_A_UPD.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026/X/002_HINDI_COURSE_A.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2026-main-board-hindi-b",
+      "year": "2026",
+      "examType": "Main Board",
+      "subjectId": "hindi-b",
+      "subjectName": "Hindi Course B",
+      "subjectCode": "085",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026/X/Hindi_Course_B_UPD.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026/X/085_HINDI_COURSE-B.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2025-main-board-science",
+      "year": "2025",
+      "examType": "Main Board",
+      "subjectId": "science",
+      "subjectName": "Science",
+      "subjectCode": "086",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2025/X/086_Science.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2025/X/Science.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2025-main-board-mathematics-standard",
+      "year": "2025",
+      "examType": "Main Board",
+      "subjectId": "mathematics-standard",
+      "subjectName": "Mathematics Standard",
+      "subjectCode": "041",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2025/X/041_Mathematics_Standard.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2025/X/Math.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP",
+      "schemeNote": "CBSE's official Mathematics marking-scheme ZIP is shared for Basic and Standard."
+    },
+    {
+      "id": "2025-main-board-mathematics-basic",
+      "year": "2025",
+      "examType": "Main Board",
+      "subjectId": "mathematics-basic",
+      "subjectName": "Mathematics Basic",
+      "subjectCode": "241",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2025/X/241_Mathematics_Basic.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2025/X/Math.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP",
+      "schemeNote": "CBSE's official Mathematics marking-scheme ZIP is shared for Basic and Standard."
+    },
+    {
+      "id": "2025-main-board-social-science",
+      "year": "2025",
+      "examType": "Main Board",
+      "subjectId": "social-science",
+      "subjectName": "Social Science",
+      "subjectCode": "087",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2025/X/087_Social_Science.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2025/X/Social%20Science.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2025-main-board-english",
+      "year": "2025",
+      "examType": "Main Board",
+      "subjectId": "english",
+      "subjectName": "English Language & Literature",
+      "subjectCode": "184",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2025/X/184_English_Language_and_Literature.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2025/X/English.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2025-main-board-hindi-a",
+      "year": "2025",
+      "examType": "Main Board",
+      "subjectId": "hindi-a",
+      "subjectName": "Hindi Course A",
+      "subjectCode": "002",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2025/X/002_Hindi_Course_A.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2025/X/Hindi.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP",
+      "schemeNote": "CBSE's official Hindi marking-scheme ZIP is shared for Course A and Course B."
+    },
+    {
+      "id": "2025-main-board-hindi-b",
+      "year": "2025",
+      "examType": "Main Board",
+      "subjectId": "hindi-b",
+      "subjectName": "Hindi Course B",
+      "subjectCode": "085",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2025/X/085_Hindi_Course_B.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2025/X/Hindi.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP",
+      "schemeNote": "CBSE's official Hindi marking-scheme ZIP is shared for Course A and Course B."
+    },
+    {
+      "id": "2024-main-board-science",
+      "year": "2024",
+      "examType": "Main Board",
+      "subjectId": "science",
+      "subjectName": "Science",
+      "subjectCode": "086",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2024-main-board-mathematics-standard",
+      "year": "2024",
+      "examType": "Main Board",
+      "subjectId": "mathematics-standard",
+      "subjectName": "Mathematics Standard",
+      "subjectCode": "041",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/MATHEMATICS_STANDARD.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Mathematics_Standard.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2024-main-board-mathematics-basic",
+      "year": "2024",
+      "examType": "Main Board",
+      "subjectId": "mathematics-basic",
+      "subjectName": "Mathematics Basic",
+      "subjectCode": "241",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/MATHEMATICS_BASIC.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Mathematics.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2024-main-board-social-science",
+      "year": "2024",
+      "examType": "Main Board",
+      "subjectId": "social-science",
+      "subjectName": "Social Science",
+      "subjectCode": "087",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SOCIAL_SCIENCE.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Social_Science.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2024-main-board-english",
+      "year": "2024",
+      "examType": "Main Board",
+      "subjectId": "english",
+      "subjectName": "English Language & Literature",
+      "subjectCode": "184",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/ENGLISH_L%26L.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/English_Language_Lit.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2024-main-board-hindi-a",
+      "year": "2024",
+      "examType": "Main Board",
+      "subjectId": "hindi-a",
+      "subjectName": "Hindi Course A",
+      "subjectCode": "002",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/HINDI_A.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/HINDI_A.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2024-main-board-hindi-b",
+      "year": "2024",
+      "examType": "Main Board",
+      "subjectId": "hindi-b",
+      "subjectName": "Hindi Course B",
+      "subjectCode": "085",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/HINDI_B.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/HINDI_B.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2023-main-board-science",
+      "year": "2023",
+      "examType": "Main Board",
+      "subjectId": "science",
+      "subjectName": "Science",
+      "subjectCode": "086",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2023/X/SCIENCE.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2023/X/Science_English_Medium.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP",
+      "schemeNote": "The published marking-scheme package is labelled English Medium."
+    },
+    {
+      "id": "2023-main-board-mathematics-standard",
+      "year": "2023",
+      "examType": "Main Board",
+      "subjectId": "mathematics-standard",
+      "subjectName": "Mathematics Standard",
+      "subjectCode": "041",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2023/X/MATHEMATICS_STANDARD.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2023/X/Maths_Standard.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2023-main-board-mathematics-basic",
+      "year": "2023",
+      "examType": "Main Board",
+      "subjectId": "mathematics-basic",
+      "subjectName": "Mathematics Basic",
+      "subjectCode": "241",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2023/X/MATHEMATICS_BASIC.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2023/X/Math_Basic.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2023-main-board-social-science",
+      "year": "2023",
+      "examType": "Main Board",
+      "subjectId": "social-science",
+      "subjectName": "Social Science",
+      "subjectCode": "087",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2023/X/SOCIAL_SCIENCE.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2023/X/Social_Science_English_Medium.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP",
+      "schemeNote": "The published marking-scheme package is labelled English Medium."
+    },
+    {
+      "id": "2023-main-board-english",
+      "year": "2023",
+      "examType": "Main Board",
+      "subjectId": "english",
+      "subjectName": "English Language & Literature",
+      "subjectCode": "184",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2023/X/English_Language_Literature.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2023/X/English_Language_Lit.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2023-main-board-hindi-a",
+      "year": "2023",
+      "examType": "Main Board",
+      "subjectId": "hindi-a",
+      "subjectName": "Hindi Course A",
+      "subjectCode": "002",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2023/X/HINDI_A.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2023/X/Hindi_A.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2023-main-board-hindi-b",
+      "year": "2023",
+      "examType": "Main Board",
+      "subjectId": "hindi-b",
+      "subjectName": "Hindi Course B",
+      "subjectCode": "085",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2023/X/HINDI_B.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2023/X/Hindi_B.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2022-term-ii-science",
+      "year": "2022",
+      "examType": "Term II",
+      "subjectId": "science",
+      "subjectName": "Science",
+      "subjectCode": "086",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2022/X/Scince.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2022/X/science.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP",
+      "paperNote": "CBSE archive filename is spelled “Scince.zip”; the download is linked exactly as published."
+    },
+    {
+      "id": "2022-term-ii-mathematics-standard",
+      "year": "2022",
+      "examType": "Term II",
+      "subjectId": "mathematics-standard",
+      "subjectName": "Mathematics Standard",
+      "subjectCode": "041",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2022/X/Math_S.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2022/X/Mathematic_Standard.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2022-term-ii-mathematics-basic",
+      "year": "2022",
+      "examType": "Term II",
+      "subjectId": "mathematics-basic",
+      "subjectName": "Mathematics Basic",
+      "subjectCode": "241",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2022/X/Math_B.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2022/X/Mathematics_basic.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2022-term-ii-social-science",
+      "year": "2022",
+      "examType": "Term II",
+      "subjectId": "social-science",
+      "subjectName": "Social Science",
+      "subjectCode": "087",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2022/X/SST.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2022/X/social_science.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2022-term-ii-english",
+      "year": "2022",
+      "examType": "Term II",
+      "subjectId": "english",
+      "subjectName": "English Language & Literature",
+      "subjectCode": "184",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2022/X/English_%26_Lit.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2022/X/English_Language_%26_Literature.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2022-term-ii-hindi-a",
+      "year": "2022",
+      "examType": "Term II",
+      "subjectId": "hindi-a",
+      "subjectName": "Hindi Course A",
+      "subjectCode": "002",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2022/X/Hindi_A.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2022/X/Hindi_A.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2022-term-ii-hindi-b",
+      "year": "2022",
+      "examType": "Term II",
+      "subjectId": "hindi-b",
+      "subjectName": "Hindi Course B",
+      "subjectCode": "085",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2022/X/Hindi_B.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2022/X/hindi_B.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
     }
   ]
 }
