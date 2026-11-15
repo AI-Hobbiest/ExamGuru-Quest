@@ -210,7 +210,8 @@ assert.ok(pyqPage.includes('id="pyqSubject"')&&pyqPage.includes('id="pyqYear"')&
 assert.ok(pyqPage.includes("./js/pyq-library.js")&&pyqPage.includes("./js/page-access.js"),"PYQ library loads its catalogue and student route guard");
 assert.equal(pyqData.schemaVersion,2,"PYQ catalogue uses the verified record schema");
 assert.deepEqual(pyqData.subjects.map(item=>item.id),["science","mathematics-standard","mathematics-basic","social-science","english","hindi-a","hindi-b"],"PYQ catalogue contains only ExamGuru-supported Class 10 subjects");
-assert.equal(pyqData.records.length,35,"PYQ catalogue includes five supported exam-years across seven subjects");
+assert.equal(pyqData.records.length,42,"PYQ catalogue includes five years of Main Board papers plus seven 2026 Second Board records");
+assert.equal(pyqData.records.filter(item=>item.year==="2026"&&item.examType==="Second Board").length,7,"all seven supported subjects include the 2026 Second Board papers");
 assert.ok(pyqData.records.some(item=>item.year==="2022"&&item.examType==="Term II"),"2022 papers are explicitly labelled Term II");
 assert.ok(pyqData.records.every(item=>item.paperUrl.startsWith("https://www.cbse.gov.in/")&&item.paperUrl.endsWith(".zip")),"Every paper link points to a CBSE-hosted ZIP package");
 assert.ok(pyqData.records.every(item=>!item.markingSchemeUrl||(item.markingSchemeUrl.startsWith("https://www.cbse.gov.in/")&&item.markingSchemeUrl.endsWith(".zip"))),"Every marking-scheme link points to a CBSE-hosted ZIP package");
