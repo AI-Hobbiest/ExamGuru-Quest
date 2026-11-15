@@ -591,5 +591,36 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
   assert.equal(difficultyEmpty.elements.session.classList.contains("hide"),true,
     "difficulty selection with no matching questions does not silently substitute another level");
 
+  const duplicateBank=[{
+    chapter_no:1,title:"Duplicate question pool",key:"duplicate-pool",
+    questions:[
+      {id:"dup-1",question:"Which value is 2 + 2?",options:["3","4","5","6"],answer:1,explanation:"Four.",difficulty:"Hard"},
+      {id:"dup-2",question:"Which value is 2+2?",options:["6","5","4","3"],answer:2,explanation:"Four.",difficulty:"Hard"},
+      {id:"unique-3",question:"Which value is 3 + 3?",options:["4","5","6","7"],answer:2,explanation:"Six.",difficulty:"Hard"}
+    ]
+  }];
+  const noDuplicateTest=makeEnvironment(new Map(),"mathematics","10",duplicateBank);
+  await delay();
+  noDuplicateTest.modeButtons.find(button=>button.dataset.mode==="test").click();
+  noDuplicateTest.elements.difficultyFilter.value="Hard";
+  noDuplicateTest.elements.length.value="10";
+  noDuplicateTest.elements.startBtn.click();
+  const duplicateTestRow=[...noDuplicateTest.values.entries()].find(([key])=>key.includes("test-attempt-ledger")&&key.endsWith("mathematics"));
+  const duplicateTestAttempt=JSON.parse(duplicateTestRow[1]).data.activeAttempt;
+  assert.equal(duplicateTestAttempt.questions.length,2,"same-stem questions with reordered options are deduplicated before building a test");
+  assert.equal(new Set(duplicateTestAttempt.questionIds).size,2,"one test contains no repeated question IDs");
+  assert.match(noDuplicateTest.elements.modeHint.textContent,/Only 2 unique questions match this selection/,"a short pool explains the available unique question count instead of silently padding the test");
+  const contentKeys=duplicateTestAttempt.questions.map(question=>
+    String(question.question).toLowerCase().replace(/[^a-z0-9]+/g," ").trim()+"::"+
+    question.options.map(option=>String(option).toLowerCase().trim()).sort().join("|"));
+  assert.equal(new Set(contentKeys).size,2,"a test contains no repeated question content");
+  noDuplicateTest.elements.submitBtn.click();
+  noDuplicateTest.elements.againBtn.click();
+  const repeatedTestRow=[...noDuplicateTest.values.entries()].find(([key])=>key.includes("test-attempt-ledger")&&key.endsWith("mathematics"));
+  const repeatedTestAttempt=JSON.parse(repeatedTestRow[1]).data.activeAttempt;
+  assert.equal(repeatedTestAttempt.questions.length,2,"a later test can reuse the same unique pool");
+  assert.deepEqual([...repeatedTestAttempt.questionIds].sort(),[...duplicateTestAttempt.questionIds].sort(),
+    "question reuse across separate tests remains allowed when the available pool is small");
+
   console.log("Quiz integration tests passed: mobile question focus and navigator, timers, autosave/recovery, review downloads, NSO, IMO and IEO mock construction, section navigation and section-wise results.");
 })().catch(error=>{console.error(error);process.exitCode=1;});
