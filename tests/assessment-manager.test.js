@@ -26,6 +26,21 @@ assert.equal(pool[0].competency,"application");
 assert.equal(pool[0].competencyTagStatus,"inferred");
 assert.equal(manager.buildQuestionPool(chapters,["ch-b"],"all").length,1);
 assert.equal(manager.selectQuestions(pool,10).length,1);
+const cbseQuestion={
+ id:"CBSE-2023-086-Q1",question:"Which gas is released during photosynthesis?",
+ options:["Nitrogen","Oxygen","Hydrogen","Methane"],answer:1,difficulty:"Medium",
+ explanation:"Photosynthesis releases oxygen.",
+ source:{type:"CBSE_PYQ",reference:"CBSE 2023 Main Board Science · Q1",year:"2023",
+  examType:"Main Board",paperId:"2023-main-board-science",questionNumber:"Q1",subjectCode:"086"}
+};
+const cbseParentPool=manager.buildQuestionPool([
+ {key:"plant-life",title:"Plant Life",questions:[cbseQuestion]}
+],["plant-life"],"all");
+assert.equal(cbseParentPool[0].source.year,"2023","Parent-created test pools preserve CBSE source provenance");
+assert.equal(cbseParentPool[0].source.questionNumber,"Q1");
+assert.ok(fs.readFileSync("js/assigned-test.js","utf8").includes("CBSE-")&&fs.readFileSync("js/assigned-test.js","utf8").includes("question-source-wrap"),
+ "Parent-assigned student tests display the same CBSE year badge");
+
 const duplicateChapters=[
  {key:"dup-a",title:"Duplicate A",questions:[{id:"dup-a1",question:"Which planet is known as the Red Planet?",options:["Earth","Mars","Venus","Jupiter"],answer:1,difficulty:"Medium",explanation:"Mars appears red."}]},
  {key:"dup-b",title:"Duplicate B",questions:[{id:"dup-b1",question:"Which planet is known as the Red Planet?",options:["Jupiter","Venus","Mars","Earth"],answer:2,difficulty:"Medium",explanation:"Mars appears red."}]}
