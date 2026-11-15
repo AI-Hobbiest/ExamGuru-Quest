@@ -78,7 +78,7 @@ function sourceBadgeFor(question){
   const source=question&&question.source&&typeof question.source==="object"?question.source:null;
   if(!source||String(source.type||"").toUpperCase()!=="CBSE_PYQ")return null;
   const year=String(source.year||"").trim();
-  if(!/^20\\d{2}$/.test(year))return null;
+  if(!/^20\d{2}$/.test(year))return null;
   const meta=[source.examType,source.subjectCode?"Subject "+source.subjectCode:"",source.questionNumber?"Q"+source.questionNumber:""]
     .filter(Boolean).join(" · ");
   return {label:"CBSE-"+year+" Question",meta};
