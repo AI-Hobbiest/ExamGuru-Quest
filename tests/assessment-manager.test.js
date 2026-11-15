@@ -32,6 +32,12 @@ const duplicateChapters=[
 ];
 const deduplicatedParentPool=manager.buildQuestionPool(duplicateChapters,["dup-a","dup-b"],"all");
 assert.equal(deduplicatedParentPool.length,1,"parent assignment pool removes duplicate prompts even when IDs and option order differ");
+const sameLocalIdDifferentQuestions=manager.buildQuestionPool([
+ {key:"same-id-a",title:"First",questions:[{id:"q1",question:"What is photosynthesis?",options:["A","B","C","D"],answer:0,difficulty:"Medium",explanation:"Plant food production."}]},
+ {key:"same-id-b",title:"Second",questions:[{id:"q1",question:"Which gas is released by plants?",options:["Oxygen","Nitrogen","Hydrogen","Carbon dioxide"],answer:0,difficulty:"Medium",explanation:"Plants release oxygen."}]}
+],["same-id-a","same-id-b"],"all");
+assert.equal(sameLocalIdDifferentQuestions.length,2,"reused local question IDs in different chapters do not hide distinct questions");
+
 assert.equal(manager.selectQuestions([...deduplicatedParentPool,...deduplicatedParentPool],10).length,1,
  "random selection cannot introduce duplicate questions from a repeated input pool");
 assert.throws(()=>manager.createMcqAssignment({
