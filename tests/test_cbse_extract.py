@@ -6,8 +6,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from extract_cbse_papers import extract_pdf_members, safe_pdf_name
 
-pdf_one = b"%PDF-1.4\n% original bytes unchanged\n%%EOF"
-pdf_two = b"%PDF-1.7\n% another original PDF\n%%EOF"
+pdf_one = b"%PDF-1.4" + bytes([10]) + b"% original bytes unchanged" + bytes([10]) + b"%%EOF"
+pdf_two = b"%PDF-1.7" + bytes([10]) + b"% another original PDF" + bytes([10]) + b"%%EOF"
 nested = io.BytesIO()
 with zipfile.ZipFile(nested, "w", zipfile.ZIP_DEFLATED) as z:
     z.writestr("Nested/second paper.pdf", pdf_two)
