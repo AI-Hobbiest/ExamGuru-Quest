@@ -46,7 +46,7 @@ function questionSourceHtml(question){
  return '<div class="cbse-source-tag"><strong>CBSE-'+esc(year)+' Question</strong>'+(meta?'<span>'+esc(meta)+'</span>':"")+'</div>';
 }
 function questionHtml(q,teacher){
- let h=questionSourceHtml(q)+'<article class="question"><div class="question-heading"><b>Q'+esc(q.paperQuestionNumber)+'.</b> '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></div>';'<article class="question"><div class="question-heading"><b>Q'+esc(q.paperQuestionNumber)+'.</b> '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></div>';
+ let h='<article class="question">'+questionSourceHtml(q)+'<div class="question-heading"><b>Q'+esc(q.paperQuestionNumber)+'.</b> '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></div>';'<article class="question"><div class="question-heading"><b>Q'+esc(q.paperQuestionNumber)+'.</b> '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></div>';
  if(q.stimulus)h+='<div class="stimulus">'+esc(q.stimulus)+'</div>';
  h+=visualDataHtml(q.visualData);
  if(Number.isInteger(q.attemptAny))h+='<p class="attempt-any-note"><strong>Attempt any '+esc(q.attemptAny)+' of the '+esc(q.parts?.length||0)+' items.</strong></p>';
