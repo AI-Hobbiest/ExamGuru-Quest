@@ -217,7 +217,7 @@ assert.ok(pyqData.records.every(item=>item.paperUrl.startsWith("https://www.cbse
 assert.ok(pyqData.records.every(item=>!item.markingSchemeUrl||(item.markingSchemeUrl.startsWith("https://www.cbse.gov.in/")&&item.markingSchemeUrl.endsWith(".zip"))),"Every marking-scheme link points to a CBSE-hosted ZIP package");
 assert.ok(pyqData.records.every(item=>item.subjectName&&item.subjectCode&&item.examType),"Every record identifies subject, code and examination type");
 assert.ok(pyqData.archives.questionPapers.includes("cbse.gov.in")&&pyqData.archives.markingSchemes.includes("cbse.gov.in"),"PYQ and marking-scheme source notes link to the official CBSE archives");
-assert.ok(pyqPage.includes("original CBSE question-paper PDFs")&&pyqPage.includes("extracted from the original archive package without modification")&&pyqPage.includes("CBSE Website Policy"),"The portal explains that unchanged source PDFs are extracted and attributed in the portal");
-assert.ok(pyqScript.includes("Download Question Paper (.ZIP)")&&pyqScript.includes("Official Marking Scheme (.ZIP)")&&pyqScript.includes("safeExternalLink"),"PYQ cards validate and provide separate direct paper and marking-scheme package actions");
+assert.ok(pyqPage.includes("original CBSE question-paper PDFs")&&pyqPage.includes("served unchanged")&&pyqPage.includes("CBSE Website Policy"),"The portal explains that unchanged source PDFs are extracted and attributed in the portal");
+assert.ok(pyqScript.includes("Open PDF")&&pyqScript.includes("Download PDF")&&pyqScript.includes("safeLocalPdf"),"PYQ cards validate and provide separate in-portal PDF open and download actions");
 assert.ok(accessScript.includes('page==="pyq-library.html"')&&accessScript.includes('class10Route&&String(session.classId||"")!=="10"'),"PYQ library route is restricted to Class 10 students");
 new Function(pyqScript);
