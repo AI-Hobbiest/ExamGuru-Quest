@@ -246,6 +246,7 @@ def main() -> int:
             f"{len(result['markingSchemeFiles'])} marking-scheme PDF(s)"
         )
 
+    total_unique_pdf_bytes = sum(item["sizeBytes"] for item in global_file_index.values())
     manifest = {
         "schemaVersion": 1,
         "kind": "cbse-class10-pyq-pdf-manifest",
@@ -261,7 +262,7 @@ def main() -> int:
         "downloadedPackageCount": downloaded_packages,
         "cachedPackageCount": cached_packages,
         "uniquePdfFileCount": len(global_file_index),
-        "totalPdfBytes": sum(item["sizeBytes"] for item in global_file_index.values()),
+        "totalPdfBytes": total_unique_pdf_bytes,
         "records": manifest_records,
     }
     args.manifest.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
