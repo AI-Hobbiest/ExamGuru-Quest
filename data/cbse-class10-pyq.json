@@ -8,7 +8,7 @@
     "questionPapers": "https://www.cbse.gov.in/cbsenew/question-paper.html",
     "markingSchemes": "https://www.cbse.gov.in/cbsenew/marking-scheme.html"
   },
-  "packageNotice": "CBSE publishes these paper and marking-scheme packages as subject-wise ZIP files. Download and extract a package to access its PDFs. ExamGuru links to the original CBSE-hosted files and does not rehost or alter them.",
+  "packageNotice": "ExamGuru extracts the individual PDF files from CBSE's official subject-wise ZIP packages so students can open or download each PDF directly. The PDF payloads are preserved byte-for-byte; ExamGuru does not alter, watermark, merge, OCR, or reformat the papers or marking schemes.",
   "subjects": [
     {
       "id": "science",
@@ -598,5 +598,10 @@
       "paperFormat": "ZIP",
       "markingSchemeFormat": "ZIP"
     }
-  ]
+  ],
+  "reproductionPolicy": {
+    "name": "CBSE Website Policy — Copyright Policy, section B",
+    "handling": "Material is reproduced accurately and without derogatory or misleading context. CBSE is prominently acknowledged on each paper card.",
+    "exclusion": "Items explicitly identified as copyright of CBSE, an implementation partner, or a third party are outside this general reproduction permission and must not be republished without the relevant rights-holder authorisation."
+  }
 }
