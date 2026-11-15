@@ -87,7 +87,7 @@
                 throw new Error("CBSE source metadata field " + field + " is missing in " + chapter.title + ", question " + id + ".");
               }
             }
-            if (!/^20\\d{2}$/.test(String(source.year))) {
+            if (!/^20\d{2}$/.test(String(source.year))) {
               throw new Error("CBSE source year is invalid in " + chapter.title + ", question " + id + ".");
             }
           }
