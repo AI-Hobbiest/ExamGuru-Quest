@@ -470,7 +470,7 @@ jobs:
           if (mcqReview.kind!=='cbse-class10-mcq-review-queue' || mcqReview.classId!=='10' || mcqReview.candidateCount!==mcqReview.candidates.length) throw new Error('CBSE MCQ review queue is incomplete.');
           for (const candidate of mcqReview.candidates) {
             if (candidate.reviewStatus!=='pending-human-review' || candidate.correctOptionId!==null || candidate.source?.type!=='CBSE_PYQ' ||
-              !/^20\\d{2}$/.test(String(candidate.source.year||'')) || !candidate.source.paperId || !candidate.source.questionNumber ||
+              !/^20\d{2}$/.test(String(candidate.source.year||'')) || !candidate.source.paperId || !candidate.source.questionNumber ||
               !Array.isArray(candidate.options) || candidate.options.length!==4 || !candidate.sourceOccurrences?.length) {
               throw new Error('CBSE MCQ candidate bypassed review or lost provenance: '+candidate.candidateId);
             }
