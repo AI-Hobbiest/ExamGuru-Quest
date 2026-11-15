@@ -130,7 +130,7 @@
   }
 
   function setTab(name){
-    const protectedTabs=new Set(["banks","classes","knowledge","students","leaderboard","operations","exam-papers"]);
+    const protectedTabs=new Set(["banks","cbse-review","classes","knowledge","students","leaderboard","operations","exam-papers"]);
     const apiReady=!!(window.C10Api&&window.C10Api.isConfigured());
     if(apiReady&&protectedTabs.has(name)&&!isAdminAuthenticated()){
       setAccountStatus("This section is locked. Sign in with an approved GitHub administrator to continue.","error");
@@ -143,7 +143,7 @@
   }
   function initTabs(){
     document.querySelectorAll(".admin-tab-button").forEach(item=>item.addEventListener("click",()=>setTab(item.dataset.tab)));
-    const validTabs=new Set(["overview","banks","classes","knowledge","students","leaderboard","access","operations","exam-papers"]);
+    const validTabs=new Set(["overview","banks","cbse-review","classes","knowledge","students","leaderboard","access","operations","exam-papers"]);
     const syncTabFromHash=()=>{const hash=typeof location!=="undefined"?location.hash:"";const name=hash.replace(/^#tab-/,"");if(validTabs.has(name))setTab(name);};
     if(typeof window.addEventListener==="function")window.addEventListener("hashchange",syncTabFromHash);
     syncTabFromHash();
