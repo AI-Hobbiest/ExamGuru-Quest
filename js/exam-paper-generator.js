@@ -465,7 +465,7 @@ function adaptChapterMcqBank(practiceChapters,bp,options={}){
     options:opts,correctOptionId:correct.optionId,
     answerKey:{modelAnswer:letter+". "+correct.text,explanation:String(q.explanation||q.rationale).trim()},
     markingScheme:[{criterion:"Correct option selected: "+letter,marks:1}],
-    source:{type:"practice-bank",reference:String(bp.title||("Class "+bp.classId+" "+bp.subjectId))+" · "+title+" · "+qid}
+    source:q.source&&String(q.source.type||"").toUpperCase()==="CBSE_PYQ"?clone(q.source):{type:"practice-bank",reference:String(bp.title||("Class "+bp.classId+" "+bp.subjectId))+" · "+title+" · "+qid}
    };
    if(chapterUnit)question.unitId=chapterUnit;
    if(Array.isArray(q.images)&&q.images.length)question.images=clone(q.images);
