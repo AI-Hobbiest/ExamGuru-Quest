@@ -260,7 +260,7 @@ function responseContent(item,i){
 }
 function questionMarkup(q,i){
  const source=q.source&&String(q.source.type||"").toUpperCase()==="CBSE_PYQ"?q.source:null;
- const sourceLabel=source&&/^20\\d{2}$/.test(String(source.year||""))?"CBSE-"+esc(source.year)+" Question":"";
+ const sourceLabel=source&&/^20\d{2}$/.test(String(source.year||""))?"CBSE-"+esc(source.year)+" Question":"";
  const sourceMeta=source?[source.examType,source.subjectCode?"Subject "+source.subjectCode:"",source.questionNumber?"Q"+source.questionNumber:""].filter(Boolean).map(esc).join(" · "):"";
  const sourceTag=sourceLabel?'<div class="question-source-wrap"><span class="cbse-question-source-tag">'+sourceLabel+'</span><span class="cbse-question-source-meta">'+sourceMeta+'</span></div>':"";
  let html='<article class="exam-question" data-q="'+i+'">'+sourceTag+'<h3>Q'+(q.paperQuestionNumber||i+1)+'. '+esc(q.prompt)+' <span class="exam-muted">['+q.marks+' marks]</span></h3>';
