@@ -259,7 +259,11 @@ function responseContent(item,i){
  return html;
 }
 function questionMarkup(q,i){
- let html='<article class="exam-question" data-q="'+i+'"><h3>Q'+(q.paperQuestionNumber||i+1)+'. '+esc(q.prompt)+' <span class="exam-muted">['+q.marks+' marks]</span></h3>';
+ const source=q.source&&String(q.source.type||"").toUpperCase()==="CBSE_PYQ"?q.source:null;
+ const sourceLabel=source&&/^20\\d{2}$/.test(String(source.year||""))?"CBSE-"+esc(source.year)+" Question":"";
+ const sourceMeta=source?[source.examType,source.subjectCode?"Subject "+source.subjectCode:"",source.questionNumber?"Q"+source.questionNumber:""].filter(Boolean).map(esc).join(" · "):"";
+ const sourceTag=sourceLabel?'<div class="question-source-wrap"><span class="cbse-question-source-tag">'+sourceLabel+'</span><span class="cbse-question-source-meta">'+sourceMeta+'</span></div>':"";
+ let html='<article class="exam-question" data-q="'+i+'">'+sourceTag+'<h3>Q'+(q.paperQuestionNumber||i+1)+'. '+esc(q.prompt)+' <span class="exam-muted">['+q.marks+' marks]</span></h3>';
  if(q.type==="mcq"||q.type==="assertion-reason"){
   html+='<div class="exam-options">'+(q.options||[]).map(o=>'<label class="exam-option"><input type="radio" name="q'+i+'" value="'+esc(o.optionId)+'"><span>'+esc(o.text)+'</span></label>').join("")+'</div>';
  }else if(q.alternatives?.length){
