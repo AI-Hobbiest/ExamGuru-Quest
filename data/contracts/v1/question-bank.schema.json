@@ -144,6 +144,24 @@
                     },
                     "reference": {
                       "type": "string"
+                    },
+                    "year": {
+                      "type": "string",
+                      "pattern": "^20[0-9]{2}$"
+                    },
+                    "examType": {
+                      "type": "string"
+                    },
+                    "paperId": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "questionNumber": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "subjectCode": {
+                      "type": "string"
                     }
                   },
                   "additionalProperties": false
@@ -204,7 +222,42 @@
                   "maximum": 1
                 }
               },
-              "additionalProperties": false
+              "additionalProperties": false,
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "source": {
+                        "properties": {
+                          "type": {
+                            "const": "CBSE_PYQ"
+                          }
+                        },
+                        "required": [
+                          "type"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "source"
+                    ]
+                  },
+                  "then": {
+                    "properties": {
+                      "source": {
+                        "required": [
+                          "type",
+                          "year",
+                          "examType",
+                          "paperId",
+                          "questionNumber",
+                          "subjectCode"
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
             }
           }
         },
