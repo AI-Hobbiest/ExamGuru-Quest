@@ -21,7 +21,8 @@ import zipfile
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 
-USER_AGENT = "ExamGuru-Quest-CBSE-PYQ-Extractor/1.0 (+https://ai-hobbiest.github.io/ExamGuru-Quest/)"
+USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36"
+PACKAGE_REQUEST_DELAY_SECONDS = 1.5
 MAX_DOWNLOAD_BYTES = 300 * 1024 * 1024
 MAX_MEMBER_BYTES = 150 * 1024 * 1024
 MAX_TOTAL_UNCOMPRESSED_BYTES = 700 * 1024 * 1024
@@ -63,16 +64,29 @@ def download_package(url: str, cache_dir: Path) -> tuple[bytes, bool]:
             return payload, True
         cache_file.unlink(missing_ok=True)
 
+    archive_page = "https://www.cbse.gov.in/cbsenew/marking-scheme.html" if "/marking-scheme/" in url.lower() else "https://www.cbse.gov.in/cbsenew/question-paper.html"
     request = urllib.request.Request(
         url,
         headers={
             "User-Agent": USER_AGENT,
-            "Accept": "application/zip, application/octet-stream, */*",
+            "Accept": "application/zip, application/x-zip-compressed, application/octet-stream, */*",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept-Encoding": "identity",
+            "Referer": archive_page,
+            "Origin": "https://www.cbse.gov.in",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "same-origin",
+            "Connection": "keep-alive",
         },
     )
     last_error = None
     for attempt in range(1, 5):
         try:
+            if attempt == 1:
+                time.sleep(PACKAGE_REQUEST_DELAY_SECONDS)
+            else:
+                time.sleep(attempt * 3)
             with urllib.request.urlopen(request, timeout=90) as response:
                 final_url = response.geturl()
                 if urllib.parse.urlparse(final_url).hostname != "www.cbse.gov.in":
