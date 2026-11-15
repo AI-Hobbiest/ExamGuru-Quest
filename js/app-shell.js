@@ -70,6 +70,7 @@
 
     {label:"Overview",group:"Workspace",icon:"🏠",href:"./admin.html#tab-overview",page:"admin.html",hash:"#tab-overview",auth:"admin"},
     {label:"Question banks",group:"Workspace",icon:"🧩",href:"./admin.html#tab-banks",page:"admin.html",hash:"#tab-banks",auth:"admin"},
+    {label:"CBSE PYQ review",group:"Workspace",icon:"📘",href:"./admin.html#tab-cbse-review",page:"admin.html",hash:"#tab-cbse-review",auth:"admin"},
     {label:"Classes & subjects",group:"Workspace",icon:"🏫",href:"./admin.html#tab-classes",page:"admin.html",hash:"#tab-classes",auth:"admin"},
     {label:"Exam Paper Studio",group:"Assessment tools",icon:"📝",href:"./admin.html#tab-exam-papers",page:"admin.html",hash:"#tab-exam-papers",auth:"admin"},
     {label:"Knowledge base",group:"Workspace",icon:"📚",href:"./admin.html#tab-knowledge",page:"admin.html",hash:"#tab-knowledge",auth:"admin"},
