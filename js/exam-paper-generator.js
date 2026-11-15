@@ -208,6 +208,10 @@ function questionContentIds(question){
  function visit(node,fallback){
   if(!obj(node))return;
   const id=String(node.questionId||fallback||"").trim();if(id)ids.add(id);
+  const stem=normalizeStem(node.prompt||node.question||node.text||"");
+  const options=(Array.isArray(node.options)?node.options:[])
+   .map(option=>normalizeStem(option&&typeof option==="object"?option.text:option)).filter(Boolean).sort();
+  if(stem)ids.add("content:"+stem+"::"+options.join("|"));
   (Array.isArray(node.parts)?node.parts:[]).forEach((part,index)=>visit(part,(id||fallback||"question")+"#part:"+(part&&part.partId||index+1)));
   (Array.isArray(node.alternatives)?node.alternatives:[]).forEach((alternative,index)=>visit(alternative,(id||fallback||"question")+"#alternative:"+(index+1)));
  }
