@@ -54,7 +54,7 @@ jobs:
           node tests/exam-paper-renderer.test.js
           node tests/assessment-manager.test.js
           node tests/assessment-analytics.test.js
-          for file in js/clat-engine.js js/clat-practice.js js/clat-dashboard-model.js js/clat-dashboard.js js/report-print.js js/app-shell.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js js/pyq-library.js; do node --check "$file"; done
+          for file in js/clat-engine.js js/clat-practice.js js/clat-dashboard-model.js js/clat-dashboard.js js/report-print.js js/app-shell.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js js/pyq-library.js js/cbse-review-manager.js; do node --check "$file"; done
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
           node tests/learning-model.test.js
@@ -129,6 +129,7 @@ jobs:
           cp js/api-client.js _site/js/api-client.js
           cp js/profile-manager.js _site/js/profile-manager.js
           cp js/admin-manager.js _site/js/admin-manager.js
+          cp js/cbse-review-manager.js _site/js/cbse-review-manager.js
           cp js/static-account-admin.js _site/js/static-account-admin.js
           cp js/family-access-admin.js _site/js/family-access-admin.js
           cp js/parent-dashboard.js _site/js/parent-dashboard.js
