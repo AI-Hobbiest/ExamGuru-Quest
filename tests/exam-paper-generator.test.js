@@ -67,6 +67,15 @@ assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q6-SA-10").pr
 assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q26-SA-10").prompt,socialBank.questions.find(q=>q.questionId==="SST10-Q25-VSA-13").prompt,"the caste short-answer stem must be distinct from the VSA stem");
 const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
 assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
+const duplicateContentBank={...socialBank,questions:[
+ {...socialBank.questions[0]},
+ {...socialBank.questions[0],questionId:"DUPLICATE-CONTENT-WITH-NEW-ID"}
+]};
+const duplicateContentCheck=m.validateQuestionBank(duplicateContentBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
+assert.equal(duplicateContentCheck.valid,false,"Exam Paper Studio rejects duplicate question content even when a copied item receives a new ID");
+assert.ok(duplicateContentCheck.errors.some(error=>error.includes("Duplicate question content ID: content:")),
+ "duplicate content is identified separately from duplicate question IDs");
+
 assert.equal(socialBank.questions.length,827,"Social Science bank contains 407 MCQs, 60 Assertion–Reason, 80 VSA, 100 short-answer, 60 case-based, 80 long-answer and 40 map-skill candidates");
 assert.equal(new Set(socialBank.questions.map(q=>q.questionId)).size,827,"Social Science question IDs must be unique");
 assert.equal(socialBank.questions.filter(q=>q.type==="very-short-answer").length,80);
