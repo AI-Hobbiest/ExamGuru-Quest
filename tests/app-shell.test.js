@@ -219,5 +219,6 @@ assert.ok(pyqData.records.every(item=>item.subjectName&&item.subjectCode&&item.e
 assert.ok(pyqData.archives.questionPapers.includes("cbse.gov.in")&&pyqData.archives.markingSchemes.includes("cbse.gov.in"),"PYQ and marking-scheme source notes link to the official CBSE archives");
 assert.ok(pyqPage.includes("original CBSE question-paper PDFs")&&pyqPage.includes("served unchanged")&&pyqPage.includes("CBSE Website Policy"),"The portal explains that unchanged source PDFs are extracted and attributed in the portal");
 assert.ok(pyqScript.includes("Open PDF")&&pyqScript.includes("Download PDF")&&pyqScript.includes("safeLocalPdf"),"PYQ cards validate and provide separate in-portal PDF open and download actions");
+assert.ok(pyqScript.includes("paperDownloadError")&&pyqScript.includes("Open official CBSE ZIP package")&&pyqScript.includes("!(withheld||[]).length"),"temporary extraction failures keep a source ZIP fallback but never bypass rights-review withholding");
 assert.ok(accessScript.includes('page==="pyq-library.html"')&&accessScript.includes('class10Route&&String(session.classId||"")!=="10"'),"PYQ library route is restricted to Class 10 students");
 new Function(pyqScript);

@@ -5,12 +5,13 @@ const vm=require("node:vm");
 
 const read=path=>fs.readFileSync(path,"utf8");
 const html=read("admin.html"),manager=read("js/admin-manager.js"),css=read("css/admin.css");
+assert.ok(html.includes('data-tab="cbse-review"')&&html.includes('id="tab-cbse-review"')&&html.includes('id="cbseReviewApprove"'),"Admin includes a dedicated CBSE question review and approval workspace");
 assert.ok(html.includes("Admin publishing:") && html.includes("trusted repository maintainer"),"GitHub repository permissions control publishing");
 assert.ok(html.includes("<option>Challenge</option>")&&html.includes("multi-step reasoning"),"Admin exposes Challenge as the highest difficulty tier with authoring guidance");
 assert.ok(manager.includes('["Easy","Medium","Hard","Challenge","Unspecified"]'),"editing a Challenge question must preserve its difficulty instead of silently downgrading it");
 assert.ok(html.includes('id="centralStudentUsername"'),"admin can assign a distinct student username");
 assert.ok(manager.includes("apiReady&&protectedTabs.has(name)&&!isAdminAuthenticated()"),"authoring and report tabs require an authenticated administrator");
-for(const section of ["overview","banks","classes","knowledge","students","leaderboard","access","operations","exam-papers"])assert.ok(html.includes('data-tab="'+section+'"'),"missing Admin section "+section);
+for(const section of ["overview","banks","cbse-review","classes","knowledge","students","leaderboard","access","operations","exam-papers"])assert.ok(html.includes('data-tab="'+section+'"'),"missing Admin section "+section);
 for(const item of ["id=\"bankClass\"","id=\"bankSubject\"","id=\"bankTargetTitle\"","id=\"questionList\"","id=\"imageFile\"","id=\"addClassBtn\"","id=\"resourceFile\"","id=\"studentBackups\"","id=\"exportReportBtn\"","id=\"leaderboardTable\"","id=\"paperBlueprintSummary\"","id=\"paperPoolFile\"","id=\"generatePaperBtn\""])assert.ok(html.includes(item),"missing Admin control "+item);
 assert.ok(html.includes("data/student-accounts.json") && html.includes("not secure authentication"),"flat-file account limits are disclosed");
 assert.ok(html.includes("staticAccountClass") && html.includes("updateStaticAccountClassBtn") && html.includes("students cannot edit their assigned class"),"flat-file account creation and admin-only class promotion controls exist");
@@ -49,8 +50,8 @@ const ids=[
 ];
 const elements={};ids.forEach(id=>elements[id]=new FakeElement(id));
 elements.bankSubject.value="science";elements.bankChapter.value="0";
-const tabButtons=["overview","banks","classes","knowledge","students","leaderboard","access","operations"].map(tab=>{const e=new FakeElement("tab-button-"+tab);e.dataset.tab=tab;return e;});
-const panels=["overview","banks","classes","knowledge","students","leaderboard","access","operations"].map(tab=>{const e=new FakeElement("tab-"+tab);return e;});
+const tabButtons=["overview","banks","cbse-review","classes","knowledge","students","leaderboard","access","operations"].map(tab=>{const e=new FakeElement("tab-button-"+tab);e.dataset.tab=tab;return e;});
+const panels=["overview","banks","cbse-review","classes","knowledge","students","leaderboard","access","operations"].map(tab=>{const e=new FakeElement("tab-"+tab);return e;});
 const body=new FakeElement("body");
 const document={
  body,
@@ -142,6 +143,43 @@ elements.bankClass.value="6";elements.bankClass.dispatch("change");
  assert.equal(exportedBank[0].questions[2].competency,"knowledge-understanding");
  assert.equal(exportedBank[0].questions[2].competencyTagStatus,"author-confirmed");
  assert.ok(exportedBank[0].questions[2].competencyTagReason);
+
+
+ // CBSE question review requires explicit answer/source confirmation and preserves provenance.
+ const cbseState=await context.window.C10AdminQuestionBanks.loadForCbseSubject("science");
+ assert.equal(cbseState.classId,"10","CBSE review maps into the Class 10 bank");
+ assert.equal(cbseState.subjectId,"science");
+ const cbseCandidate={
+  candidateId:"CBSE-MCQ-2023-APPROVAL-01",classId:"10",subjectId:"science",
+  prompt:"Which gas is released by green plants during photosynthesis?",
+  options:[{optionId:"A",text:"Nitrogen"},{optionId:"B",text:"Oxygen"},{optionId:"C",text:"Hydrogen"},{optionId:"D",text:"Methane"}],
+  correctOptionId:null,reviewStatus:"pending-human-review",
+  source:{type:"CBSE_PYQ",reference:"CBSE 2023 Main Board Science · Science Set · Q4",year:"2023",examType:"Main Board",paperId:"2023-main-board-science",questionNumber:"Q4",subjectCode:"086"}
+ };
+ assert.throws(()=>context.window.C10AdminQuestionBanks.approveCbseCandidate(cbseCandidate,{
+  chapterKey:cbseState.chapters[0].key,correctOptionId:"B",difficulty:"Medium",competency:"application",
+  explanation:"Photosynthesis releases oxygen.",confirmed:false
+ }),/checked|confirm/i,"a candidate cannot be promoted without explicit source verification");
+ const cbseAdded=context.window.C10AdminQuestionBanks.approveCbseCandidate(cbseCandidate,{
+  chapterKey:cbseState.chapters[0].key,correctOptionId:"B",difficulty:"Medium",competency:"application",
+  explanation:"Photosynthesis releases oxygen.",confirmed:true
+ });
+ assert.equal(cbseAdded.source.type,"CBSE_PYQ","approved question retains its source classification");
+ assert.equal(cbseAdded.source.year,"2023","approved question retains its CBSE year");
+ assert.equal(cbseAdded.questionCount,3,"approved CBSE MCQ is appended to the local Class 10 bank");
+ assert.throws(()=>context.window.C10AdminQuestionBanks.approveCbseCandidate({
+  ...cbseCandidate,candidateId:"CBSE-MCQ-2023-DUPLICATE-02",
+  options:[...cbseCandidate.options].reverse()
+ },{
+  chapterKey:cbseState.chapters[0].key,correctOptionId:"B",difficulty:"Medium",competency:"application",
+  explanation:"Photosynthesis releases oxygen.",confirmed:true
+ }),/already exists|duplicate/i,"the CBSE review path blocks duplicate question content");
+ context.window.C10AdminQuestionBanks.exportCurrentBank();
+ const cbseExport=JSON.parse(await context.lastBlob.text());
+ const exportedCbse=cbseExport.flatMap(chapter=>chapter.questions).find(question=>question.id==="CBSE-MCQ-2023-APPROVAL-01");
+ assert.equal(exportedCbse.source.type,"CBSE_PYQ","bank export keeps provenance for the student-facing source badge");
+ assert.equal(exportedCbse.source.questionNumber,"Q4");
+ assert.equal(exportedCbse.competencyTagStatus,"author-confirmed");
 
  // Add a new class and make sure it is included in the export.
  elements.classId.value="5";elements.classLabel.value="Class 5";elements.addClassBtn.click();

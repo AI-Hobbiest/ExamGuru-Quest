@@ -7,6 +7,7 @@ watermark, OCR, or content conversion is performed.
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import hashlib
 import io
 import json
@@ -22,7 +23,10 @@ from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36"
-PACKAGE_REQUEST_DELAY_SECONDS = 1.5
+PACKAGE_REQUEST_DELAY_SECONDS = 0.5
+PACKAGE_DOWNLOAD_ATTEMPTS = 2
+PACKAGE_REQUEST_TIMEOUT_SECONDS = 35
+PACKAGE_DOWNLOAD_WORKERS = 5
 MAX_DOWNLOAD_BYTES = 300 * 1024 * 1024
 MAX_MEMBER_BYTES = 150 * 1024 * 1024
 MAX_TOTAL_UNCOMPRESSED_BYTES = 700 * 1024 * 1024
@@ -81,13 +85,13 @@ def download_package(url: str, cache_dir: Path) -> tuple[bytes, bool]:
         },
     )
     last_error = None
-    for attempt in range(1, 5):
+    for attempt in range(1, PACKAGE_DOWNLOAD_ATTEMPTS + 1):
         try:
             if attempt == 1:
                 time.sleep(PACKAGE_REQUEST_DELAY_SECONDS)
             else:
-                time.sleep(attempt * 3)
-            with urllib.request.urlopen(request, timeout=90) as response:
+                time.sleep(attempt * 2)
+            with urllib.request.urlopen(request, timeout=PACKAGE_REQUEST_TIMEOUT_SECONDS) as response:
                 final_url = response.geturl()
                 if urllib.parse.urlparse(final_url).hostname != "www.cbse.gov.in":
                     raise ValueError(f"CBSE archive redirected outside cbse.gov.in: {final_url}")
@@ -115,9 +119,28 @@ def download_package(url: str, cache_dir: Path) -> tuple[bytes, bool]:
             last_error = exc
             if isinstance(exc, ValueError) and "not a valid ZIP" in str(exc):
                 raise
-            if attempt < 4:
+            if attempt < PACKAGE_DOWNLOAD_ATTEMPTS:
                 time.sleep(attempt * 2)
     raise RuntimeError(f"Unable to download CBSE package after retries: {url}: {last_error}")
+
+
+
+def prefetch_packages(urls: list[str], cache_dir: Path) -> tuple[dict[str, tuple[bytes, bool]], dict[str, str]]:
+    """Fetch unique packages concurrently; isolate individual URL failures for the manifest."""
+    package_cache: dict[str, tuple[bytes, bool]] = {}
+    package_errors: dict[str, str] = {}
+    unique_urls = sorted(set(urls))
+    with ThreadPoolExecutor(max_workers=PACKAGE_DOWNLOAD_WORKERS) as executor:
+        futures = {executor.submit(download_package, url, cache_dir): url for url in unique_urls}
+        for future in as_completed(futures):
+            url = futures[future]
+            try:
+                package_cache[url] = future.result()
+            except Exception as exc:
+                message = f"{type(exc).__name__}: {exc}"
+                package_errors[url] = message[:300]
+                print(f"[CBSE] PACKAGE UNAVAILABLE: {url} · {message[:200]}", file=sys.stderr)
+    return package_cache, package_errors
 
 
 def _safe_member_name(name: str) -> bool:
@@ -238,11 +261,17 @@ def main() -> int:
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
     args.manifest.parent.mkdir(parents=True, exist_ok=True)
-    package_cache: dict[str, tuple[bytes, bool]] = {}
+    package_urls = sorted({
+        str(url)
+        for record in records
+        for url in (record.get("paperUrl"), record.get("markingSchemeUrl"))
+        if url
+    })
+    package_cache, package_errors = prefetch_packages(package_urls, args.cache_dir)
     global_file_index: dict[str, dict] = {}
     manifest_records = []
-    downloaded_packages = 0
-    cached_packages = 0
+    downloaded_packages = sum(1 for _, from_cache in package_cache.values() if not from_cache)
+    cached_packages = sum(1 for _, from_cache in package_cache.values() if from_cache)
 
     for record in records:
         record_id = str(record.get("id", "")).strip()
@@ -269,18 +298,20 @@ def main() -> int:
             "markingSchemeWithheldFiles": [],
         }
         for kind, url in kinds:
+            error_field = "paperDownloadError" if kind == "paper" else "markingSchemeDownloadError"
             if url not in package_cache:
-                payload, from_cache = download_package(url, args.cache_dir)
-                package_cache[url] = (payload, from_cache)
-                if from_cache:
-                    cached_packages += 1
-                else:
-                    downloaded_packages += 1
+                result[error_field] = package_errors.get(url, "The official CBSE ZIP could not be downloaded.")
+                continue
             payload, _ = package_cache[url]
-            pdfs = extract_pdf_members(payload)
-            if not pdfs:
-                raise ValueError(f"No PDF files were found in the {kind} ZIP package for {record_id}: {url}")
-            files, withheld = store_pdf_files(pdfs, args.output_dir, global_file_index)
+            try:
+                pdfs = extract_pdf_members(payload)
+                if not pdfs:
+                    result[error_field] = "The official ZIP contained no extractable PDF files."
+                    continue
+                files, withheld = store_pdf_files(pdfs, args.output_dir, global_file_index)
+            except Exception as exc:
+                result[error_field] = f"{type(exc).__name__}: {exc}"[:300]
+                continue
             result["paperFiles" if kind == "paper" else "markingSchemeFiles"] = files
             result["paperWithheldFiles" if kind == "paper" else "markingSchemeWithheldFiles"] = withheld
         manifest_records.append(result)
@@ -302,7 +333,9 @@ def main() -> int:
             "attribution": "Every paper card identifies CBSE as the source and displays the year and examination type.",
             "copyrightPreflight": "PDFs with explicit copyright markers or no extractable text for review are withheld from public redistribution pending rights-holder review.",
         },
-        "packageCount": len(package_cache),
+        "packageCount": len(package_urls),
+        "failedPackageCount": len(package_errors),
+        "downloadFailures": [{"url": url, "error": error} for url, error in sorted(package_errors.items())],
         "downloadedPackageCount": downloaded_packages,
         "cachedPackageCount": cached_packages,
         "uniquePdfFileCount": len(global_file_index),
@@ -313,7 +346,7 @@ def main() -> int:
     args.manifest.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
         f"[CBSE] Extraction complete: {len(manifest_records)} records, "
-        f"{len(package_cache)} ZIP packages ({downloaded_packages} downloaded, {cached_packages} cached), "
+        f"{len(package_urls)} ZIP packages ({downloaded_packages} downloaded, {cached_packages} cached, {len(package_errors)} unavailable), "
         f"{len(global_file_index)} unique PDFs."
     )
     return 0

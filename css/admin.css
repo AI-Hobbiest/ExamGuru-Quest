@@ -96,3 +96,17 @@
 .admin-bank-metric span{font-size:.74rem;color:var(--c10-muted)}
 .admin-bank-metric:nth-child(3) strong{font-size:.95rem}
 @media(max-width:600px){.admin-bank-selection{padding:11px}.admin-bank-metrics{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.admin-bank-metric{padding:9px 7px}.admin-bank-metric strong{font-size:1rem}.admin-bank-metric span{font-size:.68rem}.admin-bank-toolbar .admin-actions{width:100%}.admin-bank-toolbar .admin-btn{flex:1}}
+
+/* CBSE source-paper review queue and educator approval workflow. */
+.cbse-review-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:14px;align-items:start}
+.cbse-review-source,.cbse-review-editor{display:grid;gap:12px;min-width:0;padding:15px;border:1px solid var(--c10-line);border-radius:15px;background:#fff}
+.cbse-review-prompt{margin:0;padding:13px;border:1px solid #e5e0f4;border-radius:12px;background:#faf9ff;color:var(--c10-ink);font-weight:750;line-height:1.55;white-space:pre-wrap}
+.cbse-review-options{display:grid;gap:8px;margin:0;padding-left:25px}
+.cbse-review-options li{padding:8px 10px;border:1px solid #e8e5f2;border-radius:9px;color:var(--c10-ink);line-height:1.45}
+.cbse-review-proposals{display:grid;gap:7px}
+.cbse-review-proposal{padding:9px 10px;border:1px dashed #d9c994;border-radius:10px;background:#fffaf0;color:#71521c;font-size:.8rem;line-height:1.45}
+.cbse-review-confirm{display:flex;align-items:flex-start;gap:10px;padding:12px;border:1px solid #d9eadf;border-radius:11px;background:#f4fbf6;color:#285c40;font-size:.82rem;line-height:1.5;font-weight:700}
+.cbse-review-confirm input{margin:2px 0 0;flex:none;width:18px;height:18px;accent-color:#248052}
+.cbse-review-source .admin-actions{margin:0}
+.cbse-review-source .admin-actions a{max-width:100%;overflow-wrap:anywhere}
+@media(max-width:860px){.cbse-review-layout{grid-template-columns:1fr}}

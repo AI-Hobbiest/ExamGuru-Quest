@@ -130,7 +130,7 @@
   }
 
   function setTab(name){
-    const protectedTabs=new Set(["banks","classes","knowledge","students","leaderboard","operations","exam-papers"]);
+    const protectedTabs=new Set(["banks","cbse-review","classes","knowledge","students","leaderboard","operations","exam-papers"]);
     const apiReady=!!(window.C10Api&&window.C10Api.isConfigured());
     if(apiReady&&protectedTabs.has(name)&&!isAdminAuthenticated()){
       setAccountStatus("This section is locked. Sign in with an approved GitHub administrator to continue.","error");
@@ -143,7 +143,7 @@
   }
   function initTabs(){
     document.querySelectorAll(".admin-tab-button").forEach(item=>item.addEventListener("click",()=>setTab(item.dataset.tab)));
-    const validTabs=new Set(["overview","banks","classes","knowledge","students","leaderboard","access","operations","exam-papers"]);
+    const validTabs=new Set(["overview","banks","cbse-review","classes","knowledge","students","leaderboard","access","operations","exam-papers"]);
     const syncTabFromHash=()=>{const hash=typeof location!=="undefined"?location.hash:"";const name=hash.replace(/^#tab-/,"");if(validTabs.has(name))setTab(name);};
     if(typeof window.addEventListener==="function")window.addEventListener("hashchange",syncTabFromHash);
     syncTabFromHash();
@@ -174,7 +174,7 @@
           id:q.id,question:q.question,options:q.options,answer:q.answer,
           explanation:q.explanation,difficulty:q.difficulty,images:q.images||[],
           competency:q.competency,competencyTagStatus:q.competencyTagStatus,
-          competencyTagReason:q.competencyTagReason,competencyTaggerVersion:q.competencyTaggerVersion
+          competencyTagReason:q.competencyTagReason,competencyTaggerVersion:q.competencyTaggerVersion,source:q.source&&typeof q.source==="object"?structuredCloneSafe(q.source):null
         },{subjectId:subject,section:chapter.section,chapterTitle:chapter.title,chapterId:chapter.chapterKey}))
       }));
     }
@@ -196,6 +196,14 @@
         if(!Number.isInteger(Number(q.answer))||Number(q.answer)<0||Number(q.answer)>=q.options.length)throw new Error(label+" has an invalid correct-answer index.");
         if(!String(q.explanation||"").trim())throw new Error(label+" needs an explanation.");
         const competencyProblem=window.C10CompetencyTagger.validate(q);if(competencyProblem)throw new Error(label+": "+competencyProblem);
+        if(q.source&&String(q.source.type||"").toUpperCase()==="CBSE_PYQ"){
+          const source=q.source;
+          for(const field of ["year","examType","paperId","questionNumber","subjectCode","reference"]){
+            if(source[field]==null||!String(source[field]).trim())throw new Error(label+" is missing CBSE provenance: "+field+".");
+          }
+          const year=Number(source.year);
+          if(String(source.year).length!==4||!Number.isInteger(year)||year<2000||year>2099)throw new Error(label+" has an invalid CBSE source year.");
+        }
         q.images=window.C10QuestionBank.normalizeImages(q.images||[]);
       });
     });
@@ -987,6 +995,85 @@
       "c10-live-leaderboard-"+new Date().toISOString().slice(0,10)+".csv");
   }
 
+
+  function cbseBankSubject(subjectId){
+    const value=String(subjectId||"").trim().toLowerCase();
+    if(value==="mathematics-basic"||value==="mathematics-standard")return "mathematics";
+    if(value==="hindi-a"||value==="hindi-b")return "hindi";
+    return value;
+  }
+  function adminQuestionFingerprint(prompt,options){
+    const norm=value=>String(value==null?"":value).normalize("NFKC").toLocaleLowerCase()
+      .replace(/[^\p{L}\p{N}]+/gu," ").trim();
+    return norm(prompt)+"::"+(Array.isArray(options)?options.map(norm).filter(Boolean).sort().join("|"):"");
+  }
+  function getAdminQuestionBankState(){
+    return {loaded:bankLoaded,dirty:bankDirty,classId:String(bankClassId),subjectId:bankSubject,
+      questionCount:bankLoaded?questionCount():0,
+      chapters:bankLoaded?bank.map(chapter=>({key:String(chapter.key||slug(chapter.title)),title:chapter.title,
+        chapterNo:chapter.chapter_no,questionCount:(chapter.questions||[]).length})):[]};
+  }
+  async function loadCbseReviewBank(subjectId){
+    const targetSubject=cbseBankSubject(subjectId),definition=bankDefinition("10",targetSubject);
+    if(!definition)throw new Error("No Class 10 question bank is configured for CBSE subject "+subjectId+".");
+    if(bankLoaded&&String(bankClassId)==="10"&&bankSubject===targetSubject)return getAdminQuestionBankState();
+    if(bankDirty)throw new Error("Export the current bank draft before switching to another subject. Your unexported edits are protected.");
+    renderBankSelectors("10");$("bankClass").value="10";$("bankSubject").value=targetSubject;
+    await loadBank();
+    if(!bankLoaded||String(bankClassId)!=="10"||bankSubject!==targetSubject)
+      throw new Error($("bankStatus").textContent||"The selected Class 10 bank could not be loaded.");
+    return getAdminQuestionBankState();
+  }
+  function addReviewedCbseCandidate(candidate,fields){
+    if(!bankLoaded||String(bankClassId)!=="10")throw new Error("Load the matching Class 10 bank before approving a CBSE question.");
+    if(!candidate||String(candidate.classId)!=="10"||!candidate.source||String(candidate.source.type||"").toUpperCase()!=="CBSE_PYQ")
+      throw new Error("This is not a valid Class 10 CBSE PYQ candidate.");
+    if(cbseBankSubject(candidate.subjectId)!==bankSubject)throw new Error("The loaded subject bank does not match this CBSE question.");
+    if(candidate.reviewStatus!=="pending-human-review")throw new Error("Only pending CBSE candidates can be approved.");
+    if(!fields||fields.confirmed!==true)throw new Error("Confirm that the original paper and marking scheme have been checked.");
+    const prompt=String(candidate.prompt||"").trim();
+    const options=Array.isArray(candidate.options)?candidate.options.map(option=>({
+      optionId:String(option&&option.optionId||"").trim(),text:String(option&&option.text||"").trim()
+    })):[];
+    if(!prompt||options.length!==4||options.some(option=>!option.optionId||!option.text)||
+       new Set(options.map(option=>option.optionId)).size!==4)throw new Error("The candidate must contain a complete question and four labelled options.");
+    const answer=options.findIndex(option=>option.optionId===String(fields.correctOptionId||""));
+    if(answer<0)throw new Error("Choose the correct option after checking the official marking scheme.");
+    const explanation=String(fields.explanation||"").trim();
+    if(!explanation)throw new Error("Add an explanation before approving this question.");
+    const difficulty=String(fields.difficulty||"");
+    if(!["Easy","Medium","Hard","Challenge","Unspecified"].includes(difficulty))throw new Error("Choose a valid difficulty.");
+    const competency=String(fields.competency||"");
+    if(!window.C10CompetencyTagger.isValid(competency))throw new Error("Choose a valid cognitive competency.");
+    const chapterIndex=bank.findIndex(chapter=>String(chapter.key||slug(chapter.title))===String(fields.chapterKey||""));
+    if(chapterIndex<0)throw new Error("Choose a chapter in the loaded question bank.");
+    const source=candidate.source;
+    for(const field of ["year","examType","paperId","questionNumber","subjectCode","reference"])
+      if(source[field]==null||!String(source[field]).trim())throw new Error("CBSE provenance is incomplete: "+field+".");
+    const year=Number(source.year);
+    if(String(source.year).length!==4||!Number.isInteger(year)||year<2000||year>2099)throw new Error("CBSE source year is invalid.");
+    const id=String(candidate.candidateId||"").trim();
+    if(!id||bank.some(chapter=>(chapter.questions||[]).some(question=>String(question.id)===id)))
+      throw new Error("Candidate ID is missing or already exists in this bank.");
+    const fingerprint=adminQuestionFingerprint(prompt,options.map(option=>option.text));
+    if(bank.some(chapter=>(chapter.questions||[]).some(question=>
+      adminQuestionFingerprint(question.question||question.prompt,question.options)===fingerprint)))
+      throw new Error("This question already exists in the selected bank. Similar source material must not be added twice.");
+    const question={
+      id,question:prompt,options:options.map(option=>option.text),answer,explanation,difficulty,images:[],
+      source:structuredCloneSafe(source),competency,competencyTagStatus:"author-confirmed",
+      competencyTagReason:"Educator verified the original CBSE paper and corresponding official marking scheme in the ExamGuru review workflow.",
+      competencyTaggerVersion:window.C10CompetencyTagger.version
+    };
+    bank[chapterIndex].questions.push(question);
+    try{validateBank(bank);}catch(error){bank[chapterIndex].questions.pop();throw error;}
+    selectedChapter=chapterIndex;selectedQuestion=bank[chapterIndex].questions.length-1;
+    renderChapters();renderQuestions();selectQuestion(selectedQuestion);
+    setBankDirty("Added "+id+" as a CBSE-sourced question in the local bank draft. Export the bank JSON before publishing.");
+    return {questionId:id,chapterKey:bank[chapterIndex].key,chapterTitle:bank[chapterIndex].title,
+      questionCount:questionCount(),source:structuredCloneSafe(source)};
+  }
+
   function init(){
     initTabs();
     initAdminAuth();
@@ -1054,5 +1141,10 @@
     });
     loadClasses();loadManifest();loadBank();loadPublishedQuestionSummary();renderStudents();renderKnowledgeTable();renderPendingResources();renderPendingAssets();updateSummary();
   }
+  window.C10AdminQuestionBanks=Object.freeze({
+    getState:getAdminQuestionBankState,mapCbseSubject:cbseBankSubject,
+    loadForCbseSubject:loadCbseReviewBank,approveCbseCandidate:addReviewedCbseCandidate,
+    exportCurrentBank:exportBank,questionFingerprint:adminQuestionFingerprint
+  });
   init();
 })();

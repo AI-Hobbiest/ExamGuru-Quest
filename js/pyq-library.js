@@ -20,7 +20,7 @@ function makePdfLink(file,label,download){
  else a.target="_blank";
  return a;
 }
-function fileGroup(title,files,withheld){
+function fileGroup(title,files,withheld,fallbackUrl,downloadError){
  const section=document.createElement("details");section.className="pyq-file-group";
  if(Array.isArray(files)&&files.length===1)section.open=true;
  const summary=document.createElement("summary");summary.textContent=title+" ("+(files||[]).length+")";
@@ -38,7 +38,17 @@ function fileGroup(title,files,withheld){
   row.append(copy,actions);list.appendChild(row);
  });
  if(!(files||[]).length){
-  const empty=document.createElement("p");empty.className="pyq-note";empty.textContent="No PDF is currently published for this file group.";list.appendChild(empty);
+  const empty=document.createElement("p");empty.className="pyq-note";
+  empty.textContent=downloadError
+   ?"The original PDF could not be extracted in this build. "+String(downloadError).slice(0,180)
+   :"No PDF is currently published for this file group.";
+  list.appendChild(empty);
+  // Never link the complete ZIP when any member is withheld for rights review.
+  if(downloadError&&!(withheld||[]).length&&safeExternalLink(fallbackUrl)){
+   const link=document.createElement("a");link.className="pyq-link secondary";
+   link.href=fallbackUrl;link.target="_blank";link.rel="noopener noreferrer";
+   link.textContent="Open official CBSE ZIP package";list.appendChild(link);
+  }
  }
  if((withheld||[]).length){
   const note=document.createElement("p");note.className="pyq-review-note";
@@ -67,9 +77,9 @@ function render(){
   source.textContent="Source: Central Board of Secondary Education (CBSE) · "+item.year+" "+item.examType+" · Class X";
   card.append(meta,title,format,paperNote);
   if(files){
-   card.appendChild(fileGroup("Question paper PDFs",files.paperFiles||[],files.paperWithheldFiles||[]));
-   if((files.markingSchemeFiles||[]).length||(files.markingSchemeWithheldFiles||[]).length){
-    card.appendChild(fileGroup("Official marking-scheme PDFs",files.markingSchemeFiles||[],files.markingSchemeWithheldFiles||[]));
+   card.appendChild(fileGroup("Question paper PDFs",files.paperFiles||[],files.paperWithheldFiles||[],item.paperUrl,files.paperDownloadError));
+   if((files.markingSchemeFiles||[]).length||(files.markingSchemeWithheldFiles||[]).length||files.markingSchemeDownloadError){
+    card.appendChild(fileGroup("Official marking-scheme PDFs",files.markingSchemeFiles||[],files.markingSchemeWithheldFiles||[],item.markingSchemeUrl,files.markingSchemeDownloadError));
    }else{
     const missing=document.createElement("p");missing.className="pyq-note";
     missing.textContent="No matching marking-scheme PDF is listed for this catalogue record.";card.appendChild(missing);
