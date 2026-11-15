@@ -48,6 +48,7 @@
     <nav class="admin-tabs" aria-label="Admin workspace sections">
       <button class="admin-tab-button active" data-tab="overview" type="button"><span class="admin-tab-icon">🏠</span>Overview</button>
       <button class="admin-tab-button" data-tab="banks" type="button"><span class="admin-tab-icon">🧩</span>Question banks</button>
+      <button class="admin-tab-button" data-tab="cbse-review" type="button"><span class="admin-tab-icon">📘</span>CBSE PYQ review</button>
       <button class="admin-tab-button" data-tab="classes" type="button"><span class="admin-tab-icon">🏫</span>Classes</button>
       <button class="admin-tab-button" data-tab="exam-papers" type="button"><span class="admin-tab-icon">📝</span>Exam Paper Studio</button>
       <button class="admin-tab-button" data-tab="knowledge" type="button"><span class="admin-tab-icon">📚</span>Knowledge base</button>
@@ -140,6 +141,44 @@
         </div>
       </section>
 
+      <section class="admin-panel" id="tab-cbse-review">
+        <h2>CBSE previous-year question review</h2>
+        <p class="admin-muted">Review-only candidates extracted from unchanged CBSE Class X papers. Nothing in this queue is a live student question yet. Verify every question and answer against the original PDF and matching official marking scheme before approval.</p>
+        <div class="admin-notice"><strong>Important:</strong> a detected answer from a marking-scheme PDF is only a proposal. You must independently confirm the correct option, map the question to the current ExamGuru chapter, set difficulty and competency, and write an explanation. Approved questions are added to a local bank draft only. The live student bank remains unchanged until an authorised maintainer reviews and publishes the exported bank JSON.</div>
+        <div class="admin-form-grid cbse-review-toolbar">
+          <div class="admin-field"><label for="cbseReviewSubject">Subject</label><select id="cbseReviewSubject"><option value="all">All subjects</option><option value="science">Science</option><option value="mathematics">Mathematics</option><option value="social-science">Social Science</option><option value="english">English</option><option value="hindi">Hindi</option></select></div>
+          <div class="admin-field"><label for="cbseReviewStatus">Review status</label><select id="cbseReviewStatus"><option value="pending">Pending review</option><option value="approved">Approved locally</option><option value="all">All candidates</option></select></div>
+          <div class="admin-field full"><label for="cbseReviewSearch">Search candidates</label><input id="cbseReviewSearch" placeholder="Question text, CBSE year, subject code or paper ID"></div>
+        </div>
+        <div class="admin-review-stats">
+          <div class="admin-stat"><strong id="cbseReviewTotal">—</strong><span>Extracted candidates</span></div>
+          <div class="admin-stat"><strong id="cbseReviewPending">—</strong><span>Pending human review</span></div>
+          <div class="admin-stat"><strong id="cbseReviewApproved">0</strong><span>Approved in this browser</span></div>
+        </div>
+        <div id="cbseReviewStatusMessage" class="admin-status" role="status" aria-live="polite">Loading the CBSE MCQ review queue…</div>
+        <div class="admin-review-layout">
+          <div class="admin-review-list-panel"><h3>Candidate list</h3><div id="cbseReviewCandidateList" class="admin-review-candidate-list"><div class="admin-empty">Loading extracted candidates…</div></div></div>
+          <div class="admin-review-editor-panel">
+            <div id="cbseReviewEmpty" class="admin-empty">Choose a candidate to inspect its source PDF and review the question.</div>
+            <section id="cbseReviewEditor" hidden>
+              <div class="admin-review-source-head"><span class="cbse-question-source-tag" id="cbseReviewSourceTag">CBSE-2023 Question</span><span id="cbseReviewSourceMeta" class="cbse-question-source-meta"></span></div>
+              <h3 id="cbseReviewQuestion">Question text</h3><div id="cbseReviewOptions" class="admin-review-options"></div>
+              <h4>Original sources and answer-key proposals</h4><div id="cbseReviewSourceFiles" class="admin-review-source-files"></div>
+              <div class="admin-form-grid">
+                <div class="admin-field"><label for="cbseReviewAnswer">Verified correct answer</label><select id="cbseReviewAnswer"><option value="">Choose after checking the official marking scheme</option><option value="A">Option A</option><option value="B">Option B</option><option value="C">Option C</option><option value="D">Option D</option></select></div>
+                <div class="admin-field"><label for="cbseReviewChapter">ExamGuru chapter / topic</label><select id="cbseReviewChapter"><option value="">Select a subject first</option></select></div>
+                <div class="admin-field"><label for="cbseReviewDifficulty">Difficulty</label><select id="cbseReviewDifficulty"><option value="">Choose difficulty</option><option>Easy</option><option>Medium</option><option>Hard</option><option>Challenge</option></select></div>
+                <div class="admin-field"><label for="cbseReviewCompetency">Cognitive competency</label><select id="cbseReviewCompetency"><option value="">Choose competency</option><option value="knowledge-understanding">Knowledge &amp; Understanding</option><option value="application">Application</option><option value="analysis-evaluation-creation">Analysis / Evaluation / Creation</option></select></div>
+                <div class="admin-field full"><label for="cbseReviewExplanation">Verified explanation</label><textarea id="cbseReviewExplanation" rows="4" placeholder="Explain why the verified answer is correct. Do not copy an unverified answer-key guess."></textarea></div>
+                <div class="admin-field full"><label class="admin-review-confirm"><input type="checkbox" id="cbseReviewConfirm"> I checked the original CBSE question and matching official marking scheme, and verified the answer, chapter, difficulty and competency.</label></div>
+              </div>
+              <div class="admin-actions"><button class="admin-btn" type="button" id="cbseReviewApproveBtn">Approve and add to local bank draft</button><button class="admin-btn secondary" type="button" id="cbseReviewExportBtn" disabled>Download reviewed subject bank JSON</button></div>
+              <p class="admin-inline-help" id="cbseReviewEditorStatus">An approval stays in this browser until you download the updated bank JSON and publish it through an authorised GitHub review.</p>
+            </section>
+          </div>
+        </div>
+        <div class="admin-actions"><a class="admin-btn secondary" href="./data/cbse-class10-mcq-review-queue.json" download="cbse-class10-mcq-review-queue.json">Download full CBSE review queue (JSON)</a></div>
+      </section>
       <section class="admin-panel" id="tab-classes">
         <h2>Class catalogue</h2>
         <p class="admin-muted">The catalogue drives the Student Profile class dropdown. Export the file and publish it to <code>data/classes.json</code> via GitHub after review. Removing a class does not delete any historic student records.</p>
@@ -405,6 +444,7 @@
 <script src="./js/session-model.js"></script>
 <script src="./js/profile-model.js"></script>
 <script src="./js/admin-manager.js"></script>
+<script src="./js/cbse-review-manager.js"></script>
 <script src="./js/exam-paper-generator.js?v=20261106-math-competency-alignment-v3"></script>
 <script src="./js/exam-paper-renderer.js"></script>
 <script src="./js/exam-paper-studio.js?v=20261106-math-integrated-pool-v2"></script>
