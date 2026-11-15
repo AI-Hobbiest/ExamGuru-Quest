@@ -3,12 +3,12 @@
   "kind": "cbse-class10-pyq-catalog",
   "classId": "10",
   "source": "Central Board of Secondary Education (CBSE)",
-  "lastVerified": "2026-11-14",
+  "lastVerified": "2026-11-15",
   "archives": {
     "questionPapers": "https://www.cbse.gov.in/cbsenew/question-paper.html",
     "markingSchemes": "https://www.cbse.gov.in/cbsenew/marking-scheme.html"
   },
-  "packageNotice": "CBSE currently serves these paper and marking-scheme files as subject-wise ZIP packages. Download and extract the ZIP to access the included PDFs. ExamGuru does not rehost or alter CBSE files.",
+  "packageNotice": "CBSE publishes these paper and marking-scheme packages as subject-wise ZIP files. Download and extract a package to access its PDFs. ExamGuru links to the original CBSE-hosted files and does not rehost or alter them.",
   "subjects": [
     {
       "id": "science",
@@ -51,7 +51,8 @@
       "year": "2026",
       "label": "2026",
       "examTypes": [
-        "Main Board"
+        "Main Board",
+        "Second Board"
       ]
     },
     {
@@ -84,6 +85,90 @@
     }
   ],
   "records": [
+    {
+      "id": "2026-second-board-hindi-b",
+      "year": "2026",
+      "examType": "Second Board",
+      "subjectId": "hindi-b",
+      "subjectName": "Hindi Course B",
+      "subjectCode": "085",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026-COMPTT/Second_Board_X/Hindi_Coursse_B.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026-COMPTT/Second_Board_X/Hindi_course_B.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2026-second-board-hindi-a",
+      "year": "2026",
+      "examType": "Second Board",
+      "subjectId": "hindi-a",
+      "subjectName": "Hindi Course A",
+      "subjectCode": "002",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026-COMPTT/Second_Board_X/Hindi_Coursse_A.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026-COMPTT/Second_Board_X/Hindi_Course_A.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2026-second-board-english",
+      "year": "2026",
+      "examType": "Second Board",
+      "subjectId": "english",
+      "subjectName": "English Language & Literature",
+      "subjectCode": "184",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026-COMPTT/Second_Board_X/English_L_%26_L.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026-COMPTT/Second_Board_X/English_Language_Literature.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2026-second-board-social-science",
+      "year": "2026",
+      "examType": "Second Board",
+      "subjectId": "social-science",
+      "subjectName": "Social Science",
+      "subjectCode": "087",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026-COMPTT/Second_Board_X/Social_Science.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026-COMPTT/Second_Board_X/Social_Science.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2026-second-board-mathematics-standard",
+      "year": "2026",
+      "examType": "Second Board",
+      "subjectId": "mathematics-standard",
+      "subjectName": "Mathematics Standard",
+      "subjectCode": "041",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026-COMPTT/Second_Board_X/Mathmatics_Std.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026-COMPTT/Second_Board_X/Mathematics_Standard.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2026-second-board-mathematics-basic",
+      "year": "2026",
+      "examType": "Second Board",
+      "subjectId": "mathematics-basic",
+      "subjectName": "Mathematics Basic",
+      "subjectCode": "241",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026-COMPTT/Second_Board_X/Mathmatics_Basic.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026-COMPTT/Second_Board_X/Mathematics_Basic.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
+    {
+      "id": "2026-second-board-science",
+      "year": "2026",
+      "examType": "Second Board",
+      "subjectId": "science",
+      "subjectName": "Science",
+      "subjectCode": "086",
+      "paperUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2026-COMPTT/Second_Board_X/Science.zip",
+      "markingSchemeUrl": "https://www.cbse.gov.in/cbsenew/marking-scheme/2026-COMPTT/Second_Board_X/Science.zip",
+      "paperFormat": "ZIP",
+      "markingSchemeFormat": "ZIP"
+    },
     {
       "id": "2026-main-board-science",
       "year": "2026",
