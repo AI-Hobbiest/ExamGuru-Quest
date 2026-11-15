@@ -79,7 +79,7 @@ function render(){
    missing.textContent="PDF extraction is unavailable for this record in the current publication.";card.appendChild(missing);
   }
   if(item.schemeNote){const note=document.createElement("p");note.className="pyq-note";note.textContent=item.schemeNote;card.appendChild(note);}
-  card.append(source,source);
+  card.appendChild(source);
   list.appendChild(card);
  });
 }
