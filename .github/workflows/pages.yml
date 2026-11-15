@@ -469,8 +469,8 @@ jobs:
           let publishedPdfCount=0;
           for (const row of pyqFiles.records) {
             for (const file of [...(row.paperFiles||[]),...(row.markingSchemeFiles||[])]) {
-              if (!file.unchanged || !/^\\.\\/cbse-papers\\/files\\/[a-f0-9]{24}-.+\\.pdf$/i.test(file.path)) throw new Error('Unsafe or modified CBSE PDF manifest item: '+row.id);
-              const localPath='_site/'+file.path.replace(/^\\.\\//,'');
+              if (!file.unchanged || !/^\.\/cbse-papers\/files\/[a-f0-9]{24}-.+\.pdf$/i.test(file.path)) throw new Error('Unsafe or modified CBSE PDF manifest item: '+row.id);
+              const localPath='_site/'+file.path.replace(/^\.\//,'');
               if (!fs.existsSync(localPath)) throw new Error('Extracted CBSE PDF is missing: '+localPath);
               const digest=crypto.createHash('sha256').update(fs.readFileSync(localPath)).digest('hex');
               if (digest!==file.sha256) throw new Error('Extracted CBSE PDF checksum mismatch: '+localPath);
