@@ -40,7 +40,9 @@
   function uniqueQuestionPool(rows) {
     const seenIds = new Set(), seenContent = new Set(), unique = [];
     for (const question of Array.isArray(rows) ? rows : []) {
-      const id = String(question.questionId || question.questionKey || question.id || "").trim();
+      const rawId = String(question.questionKey || question.questionId || question.id || "").trim();
+      const scope = String(question.chapterId || question.chapterKey || question.chapter_no || "").trim();
+      const id = question.questionKey ? rawId : (scope && rawId ? scope + "/" + rawId : rawId);
       const fingerprint = questionContentFingerprint(question);
       if ((id && seenIds.has(id)) || (fingerprint && seenContent.has(fingerprint))) continue;
       if (id) seenIds.add(id);
