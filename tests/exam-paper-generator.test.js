@@ -67,9 +67,10 @@ assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q6-SA-10").pr
 assert.notEqual(socialBank.questions.find(q=>q.questionId==="SST10-Q26-SA-10").prompt,socialBank.questions.find(q=>q.questionId==="SST10-Q25-VSA-13").prompt,"the caste short-answer stem must be distinct from the VSA stem");
 const socialBankCheck=m.validateQuestionBank(socialBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
 assert.equal(socialBankCheck.valid,true,socialBankCheck.errors.join("; "));
+const duplicateMcq=socialBank.questions.find(question=>question.type==="mcq");
 const duplicateContentBank={...socialBank,questions:[
- {...socialBank.questions[0]},
- {...socialBank.questions[0],questionId:"DUPLICATE-CONTENT-WITH-NEW-ID"}
+ {...duplicateMcq},
+ {...duplicateMcq,questionId:"DUPLICATE-CONTENT-WITH-NEW-ID"}
 ]};
 const duplicateContentCheck=m.validateQuestionBank(duplicateContentBank,{classId:"10",subjectId:"social-science",academicYear:"2026-27"});
 assert.equal(duplicateContentCheck.valid,false,"Exam Paper Studio rejects duplicate question content even when a copied item receives a new ID");
