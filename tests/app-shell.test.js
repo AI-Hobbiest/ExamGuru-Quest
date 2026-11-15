@@ -50,6 +50,7 @@ assert.ok(nav.includes('auth:"guest"'),"guest navigation is separated from stude
 assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"')&&nav.includes('group:"Assessment tools"'),"admin navigation exposes Exam Paper Studio in a grouped submenu");
 assert.ok(nav.includes('label:"CBSE PYQ review"')&&nav.includes('href:"./admin.html#tab-cbse-review"')&&nav.includes('auth:"admin"'),"CBSE PYQ review is visible only to Admin navigation");
+assert.ok(nav.includes('label:"CBSE PYQ review"')&&nav.includes('href:"./admin.html#tab-cbse-review"')&&nav.includes('auth:"admin"'),"CBSE PYQ review is visible only to Admin navigation");
 assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"')&&nav.includes('group:"Family"'),"parent navigation is isolated to the Family submenu");
 assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"Class 10 students can open full-paper self-study practice");
 assert.ok(nav.includes('classIds:["6","10"]')&&nav.includes('if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return false;'),
