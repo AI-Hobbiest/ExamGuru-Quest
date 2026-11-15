@@ -146,6 +146,11 @@ jobs:
             --output-dir _site/cbse-papers \
             --manifest _site/data/cbse-class10-pyq-files.json \
             --cache-dir .cache/cbse-pyq
+          # Candidate extraction is review-only; no question is promoted into a live student bank.
+          python3 scripts/extract_cbse_mcq_candidates.py \
+            --manifest _site/data/cbse-class10-pyq-files.json \
+            --output _site/data/cbse-class10-mcq-review-queue.json \
+            --site-root _site
           cp -R data/exam-papers _site/data/exam-papers
           cp -R data/clat/. _site/data/clat/
           # Merge the maintained English topic overrides into the deployed bank.
@@ -461,6 +466,16 @@ jobs:
           const pyqScript=fs.readFileSync('_site/js/pyq-library.js','utf8');
           const pyqData=JSON.parse(fs.readFileSync('_site/data/cbse-class10-pyq.json','utf8'));
           const pyqFiles=JSON.parse(fs.readFileSync('_site/data/cbse-class10-pyq-files.json','utf8'));
+          const mcqReview=JSON.parse(fs.readFileSync('_site/data/cbse-class10-mcq-review-queue.json','utf8'));
+          if (mcqReview.kind!=='cbse-class10-mcq-review-queue' || mcqReview.classId!=='10' || mcqReview.candidateCount!==mcqReview.candidates.length) throw new Error('CBSE MCQ review queue is incomplete.');
+          for (const candidate of mcqReview.candidates) {
+            if (candidate.reviewStatus!=='pending-human-review' || candidate.correctOptionId!==null || candidate.source?.type!=='CBSE_PYQ' ||
+              !/^20\\d{2}$/.test(String(candidate.source.year||'')) || !candidate.source.paperId || !candidate.source.questionNumber ||
+              !Array.isArray(candidate.options) || candidate.options.length!==4 || !candidate.sourceOccurrences?.length) {
+              throw new Error('CBSE MCQ candidate bypassed review or lost provenance: '+candidate.candidateId);
+            }
+            if ((candidate.proposedAnswers||[]).some(answer=>answer.verificationStatus!=='unverified')) throw new Error('CBSE answer-key proposal was marked verified without review.');
+          }
           const pyqIds=new Set();
           if (!pyqPage.includes('./js/pyq-library.js') || !pyqScript.includes('safeLocalPdf') || pyqData.schemaVersion!==2 || pyqData.kind!=='cbse-class10-pyq-catalog' || pyqData.records.length!==42) throw new Error('Class 10 CBSE PYQ portal catalogue is incomplete.');
           if (pyqFiles.schemaVersion!==1 || pyqFiles.kind!=='cbse-class10-pyq-pdf-manifest' || pyqFiles.classId!=='10' || pyqFiles.records.length!==42) throw new Error('Extracted CBSE PDF manifest is incomplete.');

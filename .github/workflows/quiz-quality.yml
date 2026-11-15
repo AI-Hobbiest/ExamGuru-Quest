@@ -33,7 +33,7 @@ jobs:
       - name: Validate CBSE PYQ catalogue and Second Board coverage
         run: node tests/pyq-catalog.test.js
       - name: Validate exact CBSE PDF extraction
-        run: python3 -m pip install --quiet pypdf && python3 -m py_compile scripts/extract_cbse_papers.py && python3 tests/test_cbse_extract.py
+        run: python3 -m pip install --quiet pypdf && python3 -m py_compile scripts/extract_cbse_papers.py && python3 tests/test_cbse_extract.py && python3 -m py_compile scripts/extract_cbse_mcq_candidates.py && python3 tests/test_cbse_mcq_candidates.py
       - name: Validate Stage D Study Library model and rendering
         run: node tests/study-model.test.js
       - name: Validate Stage C backup compatibility and restore flow

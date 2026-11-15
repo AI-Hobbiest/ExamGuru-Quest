@@ -86,7 +86,7 @@ def parse_mcq_blocks(page_text: str) -> list[dict]:
         if len(option_matches) != 4 or labels != ["A", "B", "C", "D"]:
             continue
 
-        stem_end = option_matches[0].start(1) if option_matches[0].group(1) else option_matches[0].start(2)
+        stem_end = option_matches[0].start()
         prompt = normalise_text(block[:stem_end])
         prompt = QUESTION_START.sub("", prompt, count=1).strip()
         if len(prompt) < 12:
@@ -95,9 +95,7 @@ def parse_mcq_blocks(page_text: str) -> list[dict]:
         options = []
         for option_index, marker in enumerate(option_matches):
             start = marker.end()
-            stop = option_matches[option_index + 1].start(1) if option_index + 1 < 4 and option_matches[option_index + 1].group(1) else (
-                option_matches[option_index + 1].start(2) if option_index + 1 < 4 else len(block)
-            )
+            stop = option_matches[option_index + 1].start() if option_index + 1 < 4 else len(block)
             option_text = normalise_text(block[start:stop])
             if not option_text or len(option_text) > 500:
                 options = []

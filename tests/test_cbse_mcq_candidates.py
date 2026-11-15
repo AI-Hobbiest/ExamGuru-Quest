@@ -18,6 +18,7 @@ assert len(parsed) == 1, parsed
 assert parsed[0]["questionNumber"] == "1"
 assert parsed[0]["prompt"] == "Which of the following statements is correct?"
 assert [o["optionId"] for o in parsed[0]["options"]] == ["A","B","C","D"]
+assert [o["text"] for o in parsed[0]["options"]] == ["Statement A","Statement B","Statement C","Statement D"]
 
 with tempfile.TemporaryDirectory() as tmp:
     root = Path(tmp)
