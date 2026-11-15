@@ -152,15 +152,40 @@ def extract_pdf_members(
     return found
 
 
+def reproduction_preflight(pdf_bytes: bytes) -> tuple[bool, str]:
+    """Hold back files with an explicit copyright notice or no readable rights check."""
+    try:
+        from pypdf import PdfReader
+        reader = PdfReader(io.BytesIO(pdf_bytes), strict=False)
+        text = "\n".join((page.extract_text() or "") for page in reader.pages)
+    except Exception as exc:
+        return False, "PDF text preflight could not be completed: " + str(exc)[:180]
+    if not text.strip():
+        return False, "No extractable text was available for the copyright-notice preflight."
+    if re.search(r"(?:©|\bcopyright\b|\ball rights reserved\b)", text, flags=re.IGNORECASE):
+        return False, "An explicit copyright marker was found; rights-holder review is required."
+    return True, "No explicit copyright marker was found in extracted PDF text."
+
+
 def store_pdf_files(
     extracted: list[tuple[str, bytes]],
     output_dir: Path,
     global_file_index: dict[str, dict],
-) -> list[dict]:
+) -> tuple[list[dict], list[dict]]:
     rows = []
+    withheld = []
     files_dir = output_dir / "files"
     files_dir.mkdir(parents=True, exist_ok=True)
     for original_name, payload in extracted:
+        eligible, reason = reproduction_preflight(payload)
+        if not eligible:
+            withheld.append({
+                "filename": safe_pdf_name(original_name),
+                "archivePath": original_name.replace("\\", "/"),
+                "reason": reason,
+                "published": False,
+            })
+            continue
         digest = sha256_bytes(payload)
         filename = safe_pdf_name(original_name)
         relative_path = f"cbse-papers/files/{digest[:24]}-{filename}"
@@ -174,12 +199,13 @@ def store_pdf_files(
             "sizeBytes": len(payload),
             "sha256": digest,
             "unchanged": True,
+            "copyrightPreflight": "no-explicit-marker-found",
         }
         global_file_index[digest] = row
         rows.append(row)
     rows.sort(key=lambda item: (item["filename"].lower(), item["sha256"]))
-    return rows
-
+    withheld.sort(key=lambda item: item["filename"].lower())
+    return rows, withheld
 
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -225,6 +251,8 @@ def main() -> int:
             "subjectCode": str(record.get("subjectCode", "")),
             "paperFiles": [],
             "markingSchemeFiles": [],
+            "paperWithheldFiles": [],
+            "markingSchemeWithheldFiles": [],
         }
         for kind, url in kinds:
             if url not in package_cache:
@@ -238,8 +266,9 @@ def main() -> int:
             pdfs = extract_pdf_members(payload)
             if not pdfs:
                 raise ValueError(f"No PDF files were found in the {kind} ZIP package for {record_id}: {url}")
-            files = store_pdf_files(pdfs, args.output_dir, global_file_index)
+            files, withheld = store_pdf_files(pdfs, args.output_dir, global_file_index)
             result["paperFiles" if kind == "paper" else "markingSchemeFiles"] = files
+            result["paperWithheldFiles" if kind == "paper" else "markingSchemeWithheldFiles"] = withheld
         manifest_records.append(result)
         print(
             f"[CBSE] {record_id}: {len(result['paperFiles'])} question PDF(s), "
@@ -257,12 +286,14 @@ def main() -> int:
             "extraction": "PDF files extracted from CBSE ZIP packages.",
             "preservation": "Each extracted PDF is published byte-for-byte as contained in the ZIP. No watermark, merge, page edit, re-compression, OCR, or content conversion is applied.",
             "attribution": "Every paper card identifies CBSE as the source and displays the year and examination type.",
+            "copyrightPreflight": "PDFs with explicit copyright markers or no extractable text for review are withheld from public redistribution pending rights-holder review.",
         },
         "packageCount": len(package_cache),
         "downloadedPackageCount": downloaded_packages,
         "cachedPackageCount": cached_packages,
         "uniquePdfFileCount": len(global_file_index),
         "totalPdfBytes": total_unique_pdf_bytes,
+        "withheldPdfCount": sum(len(row["paperWithheldFiles"]) + len(row["markingSchemeWithheldFiles"]) for row in manifest_records),
         "records": manifest_records,
     }
     args.manifest.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
