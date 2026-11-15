@@ -5,25 +5,29 @@
 <meta name="theme-color" content="#FFFFFF">
 <meta name="description" content="Class 10 CBSE previous-year question papers and official marking schemes, curated inside ExamGuru Quest.">
 <title>Class 10 Previous Year Papers | ExamGuru Quest</title>
-<link rel="stylesheet" href="./css/branding.css?v=controls1">
-<link rel="stylesheet" href="./css/app-shell.css?v=20261109-clat-navigation-v1">
+<link rel="stylesheet" href="./css/branding.css?v=quest-theme-20261115-pyq-v1">
+<link rel="stylesheet" href="./css/app-shell.css?v=20261115-pyq-theme-v1">
 <style>
-.pyq-wrap{max-width:1120px;margin:24px auto;padding:0 18px 48px;display:grid;gap:16px;color:#303653}
-.pyq-hero{border-radius:22px;padding:clamp(22px,4vw,30px);background:linear-gradient(130deg,#284B68,#5684A5);color:#fff}
-.pyq-hero h1{margin:8px 0;color:#fff;font-size:clamp(1.55rem,4vw,2.25rem)}.pyq-hero p{margin:0;max-width:760px;color:#edf6fc;line-height:1.6}
-.pyq-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.pyq-pill{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.12);padding:7px 10px;border-radius:99px;font-size:.78rem;font-weight:800}
-.pyq-card{background:#fff;border:1px solid #e1e3ee;border-radius:18px;padding:clamp(16px,3vw,22px);box-shadow:0 7px 25px rgba(40,40,80,.05)}
+.pyq-wrap{max-width:1120px;margin:24px auto;padding:0 18px 48px;display:grid;gap:16px;color:var(--c10-ink,#252b46);font-family:Aptos,"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,sans-serif}
+.pyq-wrap *{font-family:inherit}
+.pyq-wrap h1,.pyq-wrap h2,.pyq-wrap h3{font-family:inherit;letter-spacing:-.02em}
+.pyq-wrap h2{color:var(--c10-indigo-deep,#25285a);font-size:1.2rem;margin:0 0 14px}
+.pyq-wrap a{font-family:inherit}
+.pyq-hero{border:1px solid #e0e2ed;border-radius:22px;padding:clamp(22px,4vw,30px);background:linear-gradient(112deg,#eeebfa 0%,#fbfbfe 54%,#edf6ef 100%);color:var(--c10-ink,#252b46);box-shadow:0 9px 26px rgba(37,43,82,.055)}
+.pyq-hero h1{margin:8px 0;color:var(--c10-indigo-deep,#25285a);font-size:clamp(1.55rem,4vw,2.25rem);font-weight:850}.pyq-hero p{margin:0;max-width:760px;color:#626b84;line-height:1.65}
+.pyq-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.pyq-pill{border:1px solid #dcd6f0;background:#efecfa;color:#403b8c;padding:7px 10px;border-radius:99px;font-size:.76rem;font-weight:800}
+.pyq-card{background:#fff;border:1px solid var(--c10-line,#e0e4ef);border-radius:18px;padding:clamp(16px,3vw,22px);box-shadow:0 9px 26px rgba(37,43,82,.055)}
 .pyq-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.pyq-field{display:grid;gap:6px;font-weight:800;color:#48536b}.pyq-field select{width:100%;padding:11px 12px;border:1px solid #cfd8e3;border-radius:10px;background:#fff;color:#26384b;font:inherit}
+.pyq-field{display:grid;gap:6px;font-weight:800;color:#4b506f}.pyq-field select{box-sizing:border-box;width:100%;min-height:44px;padding:11px 12px;border:1px solid #d8deeb;border-radius:11px;background:#fff;color:var(--c10-ink,#252b46);font:inherit}
 .pyq-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:13px}
-.pyq-item{border:1px solid #e2e5ed;border-radius:15px;padding:17px;background:#fafbfe;display:grid;gap:10px;align-content:start}
-.pyq-item h3{margin:0;font-size:1.02rem;color:#2e455b}.pyq-meta{font-size:.82rem;color:#58677a;font-weight:800}
-.pyq-item p{margin:0;color:#68788a;font-size:.87rem;line-height:1.5}
-.pyq-actions{display:flex;flex-wrap:wrap;gap:8px}.pyq-link{display:inline-flex;align-items:center;justify-content:center;flex:1 1 145px;min-height:42px;padding:10px 12px;border-radius:10px;text-decoration:none;font-weight:850;text-align:center;background:#2f78a9;color:#fff}.pyq-link:visited,.pyq-link:hover,.pyq-link:focus-visible{color:#fff}.pyq-link.secondary{background:#e7eff6;color:#2b5879}.pyq-link.secondary:visited,.pyq-link.secondary:hover,.pyq-link.secondary:focus-visible{color:#2b5879}
-.pyq-source{font-size:.8rem;color:#2b648f;font-weight:750;text-decoration:underline;text-underline-offset:3px}
+.pyq-item{border:1px solid #e0e4ef;border-radius:15px;padding:17px;background:linear-gradient(145deg,#fff,#fbfbfe);display:grid;gap:10px;align-content:start;box-shadow:0 5px 15px rgba(37,43,82,.035)}
+.pyq-item h3{margin:0;font-size:1.02rem;color:#302f68;font-weight:800}.pyq-meta{font-size:.8rem;color:#6b6e8d;font-weight:800}
+.pyq-item p{margin:0;color:#66708a;font-size:.87rem;line-height:1.55}
+.pyq-actions{display:flex;flex-wrap:wrap;gap:8px}.pyq-link{display:inline-flex;align-items:center;justify-content:center;flex:1 1 145px;min-height:42px;padding:10px 12px;border:1px solid #51439a;border-radius:12px;text-decoration:none;font-weight:800;text-align:center;background:linear-gradient(118deg,#51439a,#6758b7);color:#fff;box-shadow:0 5px 13px rgba(68,57,139,.15)}.pyq-link:visited,.pyq-link:hover,.pyq-link:focus-visible{color:#fff}.pyq-link.secondary{border:1px solid #dcd6f0;background:#f0edfa;color:#4d438c;box-shadow:none}.pyq-link.secondary:visited,.pyq-link.secondary:hover,.pyq-link.secondary:focus-visible{color:#4d438c}
+.pyq-source{font-size:.8rem;color:#51439a;font-weight:750;text-decoration:underline;text-underline-offset:3px}
 .pyq-note{font-size:.9rem;line-height:1.6;color:#657286}.pyq-empty{padding:18px;border:1px dashed #c9d5df;border-radius:12px;color:#637386}
-.pyq-format{display:inline-flex;align-items:center;gap:5px;width:max-content;border-radius:99px;padding:5px 9px;background:#e9f0f6;color:#345d79;font-size:.72rem;font-weight:900;letter-spacing:.02em}
-@media(max-width:720px){.pyq-filters{grid-template-columns:1fr}.pyq-list{grid-template-columns:1fr}}
+.pyq-format{display:inline-flex;align-items:center;gap:5px;width:max-content;border:1px solid #d9eadf;border-radius:99px;padding:5px 9px;background:#e4f4e9;color:#286b49;font-size:.7rem;font-weight:900;letter-spacing:.035em}
+@media(max-width:720px){.pyq-filters{grid-template-columns:1fr}.pyq-list{grid-template-columns:1fr}.pyq-wrap{margin-top:16px}}
 @media print{.c10-sidebar,.c10-mobilebar,.c10-nav-scrim,.pyq-filters,.pyq-actions{display:none!important}}
 </style>
 </head>
