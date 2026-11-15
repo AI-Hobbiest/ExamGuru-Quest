@@ -269,7 +269,7 @@ def main() -> int:
     print(
         f"[CBSE] Extraction complete: {len(manifest_records)} records, "
         f"{len(package_cache)} ZIP packages ({downloaded_packages} downloaded, {cached_packages} cached), "
-        f"{len(global_file_index)} unique PDFs, {sum(item[\"sizeBytes\"] for item in global_file_index.values()) / (1024 * 1024):.1f} MiB."
+        f"{len(global_file_index)} unique PDFs."
     )
     return 0
 
