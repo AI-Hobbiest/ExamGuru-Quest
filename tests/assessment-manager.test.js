@@ -26,6 +26,19 @@ assert.equal(pool[0].competency,"application");
 assert.equal(pool[0].competencyTagStatus,"inferred");
 assert.equal(manager.buildQuestionPool(chapters,["ch-b"],"all").length,1);
 assert.equal(manager.selectQuestions(pool,10).length,1);
+const duplicateChapters=[
+ {key:"dup-a",title:"Duplicate A",questions:[{id:"dup-a1",question:"Which planet is known as the Red Planet?",options:["Earth","Mars","Venus","Jupiter"],answer:1,difficulty:"Medium",explanation:"Mars appears red."}]},
+ {key:"dup-b",title:"Duplicate B",questions:[{id:"dup-b1",question:"Which planet is known as the Red Planet?",options:["Jupiter","Venus","Mars","Earth"],answer:2,difficulty:"Medium",explanation:"Mars appears red."}]}
+];
+const deduplicatedParentPool=manager.buildQuestionPool(duplicateChapters,["dup-a","dup-b"],"all");
+assert.equal(deduplicatedParentPool.length,1,"parent assignment pool removes duplicate prompts even when IDs and option order differ");
+assert.equal(manager.selectQuestions([...deduplicatedParentPool,...deduplicatedParentPool],10).length,1,
+ "random selection cannot introduce duplicate questions from a repeated input pool");
+assert.throws(()=>manager.createMcqAssignment({
+ studentId:"student-duplicate",classId:"6",subjectId:"science",
+ questions:[{...deduplicatedParentPool[0]},{...deduplicatedParentPool[0],questionId:"copy-with-new-id"}]
+}),/duplicate questions/i,"assignment creation rejects duplicate content even when question IDs differ");
+
 const assignment=manager.createMcqAssignment({
  studentId:"student-1",studentName:"Learner",parentId:"parent-1",createdBy:"parent",
  classId:"6",subjectId:"science",subjectTitle:"Science",title:"Chapter A test",
