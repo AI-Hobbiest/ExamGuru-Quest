@@ -74,6 +74,9 @@ def download_package(url: str, cache_dir: Path) -> tuple[bytes, bool]:
     for attempt in range(1, 5):
         try:
             with urllib.request.urlopen(request, timeout=90) as response:
+                final_url = response.geturl()
+                if urllib.parse.urlparse(final_url).hostname != "www.cbse.gov.in":
+                    raise ValueError(f"CBSE archive redirected outside cbse.gov.in: {final_url}")
                 declared_length = response.headers.get("Content-Length")
                 if declared_length and int(declared_length) > MAX_DOWNLOAD_BYTES:
                     raise ValueError(f"CBSE package exceeds the {MAX_DOWNLOAD_BYTES // (1024 * 1024)} MB safety limit: {url}")
@@ -200,7 +203,6 @@ def main() -> int:
     manifest_records = []
     downloaded_packages = 0
     cached_packages = 0
-    total_pdf_bytes = 0
 
     for record in records:
         record_id = str(record.get("id", "")).strip()
@@ -237,7 +239,6 @@ def main() -> int:
             if not pdfs:
                 raise ValueError(f"No PDF files were found in the {kind} ZIP package for {record_id}: {url}")
             files = store_pdf_files(pdfs, args.output_dir, global_file_index)
-            total_pdf_bytes += sum(item["sizeBytes"] for item in files)
             result["paperFiles" if kind == "paper" else "markingSchemeFiles"] = files
         manifest_records.append(result)
         print(
@@ -260,14 +261,14 @@ def main() -> int:
         "downloadedPackageCount": downloaded_packages,
         "cachedPackageCount": cached_packages,
         "uniquePdfFileCount": len(global_file_index),
-        "totalPdfBytes": total_pdf_bytes,
+        "totalPdfBytes": sum(item["sizeBytes"] for item in global_file_index.values()),
         "records": manifest_records,
     }
     args.manifest.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
         f"[CBSE] Extraction complete: {len(manifest_records)} records, "
         f"{len(package_cache)} ZIP packages ({downloaded_packages} downloaded, {cached_packages} cached), "
-        f"{len(global_file_index)} unique PDFs, {total_pdf_bytes / (1024 * 1024):.1f} MiB."
+        f"{len(global_file_index)} unique PDFs, {sum(item[\"sizeBytes\"] for item in global_file_index.values()) / (1024 * 1024):.1f} MiB."
     )
     return 0
 
