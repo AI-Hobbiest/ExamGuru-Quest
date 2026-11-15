@@ -86,6 +86,7 @@
           competencyTagStatus: q.competencyTagStatus || null,
           competencyTagReason: q.competencyTagReason || null,
           competencyTaggerVersion: q.competencyTaggerVersion || null,
+          source: q.source && typeof q.source === "object" ? clone(q.source) : null,
           images: Array.isArray(q.images) ? clone(q.images) : []
         });
       });
