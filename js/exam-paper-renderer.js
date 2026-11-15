@@ -36,8 +36,17 @@ function alternativeHtml(a,teacher){
  if(teacher)h+=teacherAnswerHtml(a.answerKey,a.markingScheme);
  return h;
 }
+function questionSourceHtml(question){
+ const source=question&&question.source&&String(question.source.type||"").toUpperCase()==="CBSE_PYQ"?question.source:null;
+ const year=String(source&&source.year||"");
+ if(!source||!/^20\d{2}$/.test(year))return"";
+ const number=String(source.questionNumber||"").trim();
+ const questionLabel=number?(/^q/i.test(number)?number:"Q"+number):"";
+ const meta=[source.examType,source.subjectCode?"Subject "+source.subjectCode:"",questionLabel].filter(Boolean).join(" · ");
+ return '<div class="cbse-source-tag"><strong>CBSE-'+esc(year)+' Question</strong>'+(meta?'<span>'+esc(meta)+'</span>':"")+'</div>';
+}
 function questionHtml(q,teacher){
- let h='<article class="question"><div class="question-heading"><b>Q'+esc(q.paperQuestionNumber)+'.</b> '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></div>';
+ let h=questionSourceHtml(q)+'<article class="question"><div class="question-heading"><b>Q'+esc(q.paperQuestionNumber)+'.</b> '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></div>';'<article class="question"><div class="question-heading"><b>Q'+esc(q.paperQuestionNumber)+'.</b> '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></div>';
  if(q.stimulus)h+='<div class="stimulus">'+esc(q.stimulus)+'</div>';
  h+=visualDataHtml(q.visualData);
  if(Number.isInteger(q.attemptAny))h+='<p class="attempt-any-note"><strong>Attempt any '+esc(q.attemptAny)+' of the '+esc(q.parts?.length||0)+' items.</strong></p>';
@@ -62,7 +71,7 @@ function buildDocumentHtml(paper,mode,baseHref){
  const sections=(paper.blueprintSnapshot.sections||[]).map(s=>'<section><h2>'+esc(s.title)+' <small>('+esc(s.totalMarks)+' marks)</small></h2>'+paper.questions.filter(q=>q.sectionId===s.sectionId).map(q=>questionHtml(q,teacher)).join("")+"</section>").join("");
  const instructions=list(paper.blueprintSnapshot.generalInstructions);
  return'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(paper.title)+'</title>'+(baseHref?'<base href="'+esc(baseHref)+'">':"")+'<style>'+
- 'body{font:11pt Arial,sans-serif;color:#171717;max-width:850px;margin:28px auto;padding:0 24px;line-height:1.45}h1{text-align:center;font-size:19pt;margin:0 0 5px}h2{font-size:14pt;border-bottom:1px solid #777;padding-bottom:5px;margin:24px 0 12px}.subtitle{text-align:center}.meta{display:flex;justify-content:space-between;border-block:1px solid #777;padding:9px 0;margin:14px 0}.instructions{margin:12px 0 20px}.question{break-inside:avoid;margin:0 0 15px}.marks{float:right;font-weight:600}.options{margin:7px 0 7px 25px;columns:2}.part{margin:7px 0 7px 18px}.stimulus{border:1px solid #999;padding:10px;margin:9px 0;white-space:pre-line}.data-visual{border:1px solid #999;padding:10px;margin:9px 0;break-inside:avoid}.data-visual h3{font-size:11pt;margin:0 0 7px}.data-table{width:100%;border-collapse:collapse;font-size:10pt}.data-table th,.data-table td{border:1px solid #999;padding:5px;text-align:left}.data-table th{background:#eee}.data-caption{font-size:9pt;color:#555;margin:6px 0 0}.diagram{margin:10px 18px;break-inside:avoid}.diagram img{display:block;max-width:100%;max-height:420px;object-fit:contain}.diagram figcaption{font-size:9pt;color:#555}.or{text-align:center;font-weight:bold;margin:10px}.answer,.marking{background:#f3f3f3;padding:9px;margin:8px 0}.answer pre{white-space:pre-wrap;font:10pt Arial}.footer{border-top:1px solid #777;margin-top:30px;padding-top:8px;text-align:center}@media print{body{margin:0 auto;padding:0 12mm;max-width:none}h2{break-after:avoid}.question{break-inside:avoid}}</style></head><body>'+
+ 'body{font:11pt Arial,sans-serif;color:#171717;max-width:850px;margin:28px auto;padding:0 24px;line-height:1.45}h1{text-align:center;font-size:19pt;margin:0 0 5px}h2{font-size:14pt;border-bottom:1px solid #777;padding-bottom:5px;margin:24px 0 12px}.subtitle{text-align:center}.meta{display:flex;justify-content:space-between;border-block:1px solid #777;padding:9px 0;margin:14px 0}.instructions{margin:12px 0 20px}.question{break-inside:avoid;margin:0 0 15px}.marks{float:right;font-weight:600}.options{margin:7px 0 7px 25px;columns:2}.part{margin:7px 0 7px 18px}.stimulus{border:1px solid #999;padding:10px;margin:9px 0;white-space:pre-line}.data-visual{border:1px solid #999;padding:10px;margin:9px 0;break-inside:avoid}.data-visual h3{font-size:11pt;margin:0 0 7px}.data-table{width:100%;border-collapse:collapse;font-size:10pt}.data-table th,.data-table td{border:1px solid #999;padding:5px;text-align:left}.data-table th{background:#eee}.data-caption{font-size:9pt;color:#555;margin:6px 0 0}.diagram{margin:10px 18px;break-inside:avoid}.diagram img{display:block;max-width:100%;max-height:420px;object-fit:contain}.diagram figcaption{font-size:9pt;color:#555}.or{text-align:center;font-weight:bold;margin:10px}.answer,.marking{background:#f3f3f3;padding:9px;margin:8px 0}.answer pre{white-space:pre-wrap;font:10pt Arial}.cbse-source-tag{display:flex;align-items:center;gap:8px;margin:0 0 6px;color:#3d2c7a;font-size:9pt}.cbse-source-tag strong{display:inline-block;border:1px solid #b9a6e5;border-radius:999px;background:#eee8fb;padding:3px 8px;font-size:8.5pt}.cbse-source-tag span{color:#555;font-size:8.5pt}.footer{border-top:1px solid #777;margin-top:30px;padding-top:8px;text-align:center}@media print{body{margin:0 auto;padding:0 12mm;max-width:none}h2{break-after:avoid}.question{break-inside:avoid}}</style></head><body>'+
  '<h1>'+esc(paper.title)+'</h1><div class="subtitle">'+esc(profileLabel(paper))+' · '+esc(paper.academicYear)+(teacher?" · TEACHER COPY":"")+'</div><div class="meta"><span>Time: '+esc(paper.durationMinutes)+' minutes</span><span>Maximum Marks: '+esc(paper.totalMarks)+'</span><span>Questions: '+esc(paper.totalQuestions)+'</span></div>'+
  (instructions.length?'<div class="instructions"><b>General Instructions</b><ol>'+instructions.map(x=>"<li>"+esc(x)+"</li>").join("")+"</ol></div>":"")+sections+'<div class="footer">End of Question Paper</div></body></html>';
 }
@@ -79,7 +88,7 @@ function buildAnswerBookletHtml(paper,baseHref){
     const partOptions=Array.isArray(part.options)?'<ol class="options" type="A">'+part.options.map(option=>"<li>"+esc(option.text)+"</li>").join("")+'</ol>':linesFor(part.marks);
     return'<div class="answer-part"><b>('+esc(part.partId||"")+')</b> '+esc(part.prompt)+' <span class="marks">['+esc(part.marks)+' marks]</span></div>'+partChoice+partOptions;
    }).join(""):linesFor(q.marks);
-   return'<article class="answer-space"><h3>Q'+esc(q.paperQuestionNumber)+'. '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></h3>'+questionChoice+attemptAnyNote+responseSpace+'</article>';
+   return'<article class="answer-space">'+questionSourceHtml(q)+'<h3>Q'+esc(q.paperQuestionNumber)+'. '+esc(q.prompt)+' <span class="marks">['+esc(q.marks)+' marks]</span></h3>'+questionChoice+attemptAnyNote+responseSpace+'</article>';
   }).join("");
   return'<section><h2>'+esc(section.title)+' · '+esc(section.totalMarks)+' marks</h2>'+questions+'</section>';
  }).join("");
