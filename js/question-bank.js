@@ -42,6 +42,7 @@
           difficulty: question.difficulty,
           questionId: question.questionId,
           images: question.images || [],
+          source: question.source || null,
           competency:question.competency,
           competencyTagStatus:question.competencyTagStatus,
           competencyTagReason:question.competencyTagReason,
@@ -78,6 +79,17 @@
           }
           if (!question.explanation) {
             throw new Error("Explanation is missing in " + chapter.title + ", question " + id + ".");
+          }
+          if (question.source && String(question.source.type || "").toUpperCase() === "CBSE_PYQ") {
+            const source = question.source;
+            for (const field of ["year","examType","paperId","questionNumber","subjectCode"]) {
+              if (source[field] == null || !String(source[field]).trim()) {
+                throw new Error("CBSE source metadata field " + field + " is missing in " + chapter.title + ", question " + id + ".");
+              }
+            }
+            if (!/^20\\d{2}$/.test(String(source.year))) {
+              throw new Error("CBSE source year is invalid in " + chapter.title + ", question " + id + ".");
+            }
           }
           const optionIds = Array.isArray(question.options)
             ? question.options.map((option, index) => typeof option === "string"
