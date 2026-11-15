@@ -55,7 +55,14 @@
       const options = q.options.map(o => '<label class="test-option"><input type="radio" name="q-' + esc(q.questionId) +
         '" value="' + esc(o.optionId) + '"' + (answers[q.questionId] === o.optionId ? " checked" : "") +
         '><span>' + esc(o.text) + '</span></label>').join("");
-      return '<article class="test-question"><h3>Q' + (i + 1) + '. ' + esc(q.prompt) +
+      const source=q.source&&String(q.source.type||"").toUpperCase()==="CBSE_PYQ"?q.source:null;
+      const sourceLabel=source&&/^20\\d{2}$/.test(String(source.year||""))
+        ?"CBSE-"+esc(source.year)+" Question":"";
+      const sourceMeta=source?[source.examType,source.subjectCode?"Subject "+source.subjectCode:"",source.questionNumber?"Q"+source.questionNumber:""].filter(Boolean).map(esc).join(" · "):"";
+      const sourceBadge=sourceLabel
+        ?'<div class="question-source-wrap"><span class="cbse-question-source-tag">'+sourceLabel+'</span><span class="cbse-question-source-meta">'+sourceMeta+'</span></div>'
+        :"";
+      return '<article class="test-question">'+sourceBadge+'<h3>Q' + (i + 1) + '. ' + esc(q.prompt) +
         '</h3><div class="test-options">' + options + '</div></article>';
     }).join("");
     $("testAttempt").hidden = false;
