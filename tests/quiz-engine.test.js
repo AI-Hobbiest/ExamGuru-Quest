@@ -630,8 +630,8 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
       options:["0.25","√2","3/4","0.125"],answer:1,
       explanation:"The square root of 2 cannot be expressed as a ratio of two integers.",
       difficulty:"Medium",
-      source:{type:"CBSE_PYQ",reference:"CBSE 2023 Main Board Science · Q1",year:"2023",
-        examType:"Main Board",paperId:"2023-main-board-science",questionNumber:"Q1",subjectCode:"086"}
+      source:{type:"CBSE_PYQ",reference:"CBSE 2023 Main Board Mathematics · Q1",year:"2023",
+        examType:"Main Board",paperId:"2023-main-board-mathematics-standard",questionNumber:"Q1",subjectCode:"041"}
     }]
   }];
   const cbseQuiz=makeEnvironment(new Map(),"mathematics","10",cbseTaggedBank);
@@ -639,13 +639,13 @@ const delay=()=>new Promise(resolve=>setImmediate(resolve));
   cbseQuiz.elements.startBtn.click();
   assert.equal(cbseQuiz.elements.questionSourceBadge.textContent,"CBSE-2023 Question",
     "CBSE source year is shown as a prominent and consistent question badge");
-  assert.equal(cbseQuiz.elements.questionSourceMeta.textContent,"Main Board · Subject 086 · Q1",
+  assert.equal(cbseQuiz.elements.questionSourceMeta.textContent,"Main Board · Subject 041 · Q1",
     "CBSE exam type, subject code and original question number remain visible");
   assert.equal(cbseQuiz.elements.questionSourceBadgeWrap.classList.contains("hide"),false,
     "source badge is visible for a CBSE-sourced MCQ");
   const cbseAttemptRow=[...cbseQuiz.values.entries()].find(([key])=>key.includes("test-attempt-ledger")&&key.endsWith("mathematics"));
   const cbseAttempt=JSON.parse(cbseAttemptRow[1]).data.activeAttempt;
-  assert.equal(cbseAttempt.questions[0].source.paperId,"2023-main-board-science",
+  assert.equal(cbseAttempt.questions[0].source.paperId,"2023-main-board-mathematics-standard",
     "CBSE provenance survives question-bank normalization and the saved quiz snapshot");
 
   console.log("Quiz integration tests passed: mobile question focus and navigator, timers, autosave/recovery, review downloads, NSO, IMO and IEO mock construction, section navigation and section-wise results.");
