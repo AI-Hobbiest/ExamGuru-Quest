@@ -211,8 +211,11 @@ function questionContentIds(question){
   const stem=normalizeStem(node.prompt||node.question||node.text||"");
   const options=(Array.isArray(node.options)?node.options:[])
    .map(option=>normalizeStem(option&&typeof option==="object"?option.text:option)).filter(Boolean).sort();
-  if(stem&&(node.type==="mcq"||node.type==="assertion-reason"||options.length>=2)){
-   ids.add("content:"+stem+"::"+options.join("|"));
+  const context=normalizeStem(node.stimulus||node.passage||node.context||"");
+  const assertion=normalizeStem(node.assertionReason&&node.assertionReason.assertion||"");
+  const reason=normalizeStem(node.assertionReason&&node.assertionReason.reason||"");
+  if(stem&&(node.type==="mcq"||node.type==="assertion-reason")){
+   ids.add("content:"+stem+"::"+options.join("|")+"::"+context+"::"+assertion+"::"+reason);
   }
   (Array.isArray(node.parts)?node.parts:[]).forEach((part,index)=>visit(part,(id||fallback||"question")+"#part:"+(part&&part.partId||index+1)));
   (Array.isArray(node.alternatives)?node.alternatives:[]).forEach((alternative,index)=>visit(alternative,(id||fallback||"question")+"#alternative:"+(index+1)));
