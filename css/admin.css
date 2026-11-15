@@ -96,3 +96,28 @@
 .admin-bank-metric span{font-size:.74rem;color:var(--c10-muted)}
 .admin-bank-metric:nth-child(3) strong{font-size:.95rem}
 @media(max-width:600px){.admin-bank-selection{padding:11px}.admin-bank-metrics{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.admin-bank-metric{padding:9px 7px}.admin-bank-metric strong{font-size:1rem}.admin-bank-metric span{font-size:.68rem}.admin-bank-toolbar .admin-actions{width:100%}.admin-bank-toolbar .admin-btn{flex:1}}
+
+.admin-review-toolbar{margin:16px 0}
+.admin-review-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.admin-review-layout{display:grid;grid-template-columns:minmax(260px,.82fr) minmax(0,1.55fr);gap:14px;align-items:start;margin:14px 0}
+.admin-review-list-panel,.admin-review-editor-panel{min-width:0;border:1px solid var(--c10-line);border-radius:14px;padding:14px;background:#fff}
+.admin-review-candidate-list{display:grid;gap:8px;max-height:760px;overflow:auto}
+.admin-review-candidate{display:grid;gap:6px;text-align:left;width:100%;border:1px solid var(--c10-line);border-radius:11px;padding:11px;background:#fbfaff;color:var(--c10-ink);cursor:pointer}
+.admin-review-candidate.active{border-color:#7561d5;background:#f1edff;box-shadow:0 0 0 2px rgba(117,97,213,.12)}
+.admin-review-candidate strong{font-size:.8rem;line-height:1.4}
+.admin-review-candidate small{font-size:.7rem;color:var(--c10-muted)}
+.admin-review-candidate .admin-chip{width:max-content}
+.admin-review-source-head{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.admin-review-editor-panel h3{margin:8px 0 14px;line-height:1.45}
+.admin-review-editor-panel h4{margin:18px 0 8px;color:var(--c10-indigo-deep)}
+.admin-review-options{display:grid;gap:7px}
+.admin-review-option{display:grid;grid-template-columns:28px minmax(0,1fr);gap:9px;padding:10px;border:1px solid var(--c10-line);border-radius:10px;background:#fcfbff}
+.admin-review-option b{color:#51439a}
+.admin-review-source-files{display:grid;gap:8px}
+.admin-review-source-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 10px;border:1px solid var(--c10-line);border-radius:10px;background:#faf9ff}
+.admin-review-source-row small{display:block;color:var(--c10-muted);font-size:.72rem}
+.admin-review-confirm{display:flex;align-items:flex-start;gap:9px;line-height:1.45;font-weight:650}
+.admin-review-confirm input{margin-top:3px}
+.admin-review-editor-panel textarea{min-height:105px}
+@media(max-width:900px){.admin-review-layout{grid-template-columns:1fr}.admin-review-candidate-list{max-height:380px}}
+@media(max-width:600px){.admin-review-stats{grid-template-columns:1fr}.admin-review-source-row{align-items:flex-start;flex-direction:column}}
