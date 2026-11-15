@@ -27,7 +27,7 @@
   }
   function normalizeQuestionContent(value) {
     return String(value == null ? "" : value).normalize("NFKC").toLocaleLowerCase()
-      .replace(/[^\\p{L}\\p{N}]+/gu, " ").trim();
+      .replace(/[^\p{L}\p{N}]+/gu, " ").trim();
   }
   function questionContentFingerprint(question) {
     const prompt = normalizeQuestionContent(question && (question.prompt || question.question));
