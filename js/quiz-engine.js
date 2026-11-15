@@ -79,7 +79,9 @@ function sourceBadgeFor(question){
   if(!source||String(source.type||"").toUpperCase()!=="CBSE_PYQ")return null;
   const year=String(source.year||"").trim();
   if(!/^20\d{2}$/.test(year))return null;
-  const meta=[source.examType,source.subjectCode?"Subject "+source.subjectCode:"",source.questionNumber?"Q"+source.questionNumber:""]
+  const questionNumber=String(source.questionNumber||"").trim();
+  const questionLabel=questionNumber?( /^q/i.test(questionNumber)?questionNumber:"Q"+questionNumber):"";
+  const meta=[source.examType,source.subjectCode?"Subject "+source.subjectCode:"",questionLabel]
     .filter(Boolean).join(" · ");
   return {label:"CBSE-"+year+" Question",meta};
 }
