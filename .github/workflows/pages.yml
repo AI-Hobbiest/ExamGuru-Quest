@@ -23,6 +23,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Cache CBSE source ZIP packages
+        uses: actions/cache@v4
+        with:
+          path: .cache/cbse-pyq
+          key: cbse-pyq-${{ hashFiles('data/cbse-class10-pyq.json') }}
+      - name: Prepare exact CBSE PDF extraction
+        run: |
+          python3 -m pip install --quiet pypdf
+          python3 -m py_compile scripts/extract_cbse_papers.py
+          python3 tests/test_cbse_extract.py
       - name: Run quiz regression tests
         run: |
           node tests/clat-engine.test.js
@@ -129,6 +139,13 @@ jobs:
           cp js/quiz-engine.js _site/js/quiz-engine.js
           cp data/*.json _site/data/
           cp data/cbse-class10-pyq.json _site/data/cbse-class10-pyq.json
+          # Extract individual PDFs byte-for-byte from the official CBSE ZIP packages.
+          # Files with explicit copyright markers or unreadable rights-check text are withheld.
+          python3 scripts/extract_cbse_papers.py \
+            --catalogue _site/data/cbse-class10-pyq.json \
+            --output-dir _site/cbse-papers \
+            --manifest _site/data/cbse-class10-pyq-files.json \
+            --cache-dir .cache/cbse-pyq
           cp -R data/exam-papers _site/data/exam-papers
           cp -R data/clat/. _site/data/clat/
           # Merge the maintained English topic overrides into the deployed bank.
@@ -443,8 +460,25 @@ jobs:
           const pyqPage=fs.readFileSync('_site/pyq-library.html','utf8');
           const pyqScript=fs.readFileSync('_site/js/pyq-library.js','utf8');
           const pyqData=JSON.parse(fs.readFileSync('_site/data/cbse-class10-pyq.json','utf8'));
+          const pyqFiles=JSON.parse(fs.readFileSync('_site/data/cbse-class10-pyq-files.json','utf8'));
           const pyqIds=new Set();
-          if (!pyqPage.includes('./js/pyq-library.js') || !pyqScript.includes('safeExternalLink') || pyqData.schemaVersion!==2 || pyqData.kind!=='cbse-class10-pyq-catalog' || pyqData.records.length!==42) throw new Error('Class 10 CBSE PYQ portal catalogue is incomplete.');
+          if (!pyqPage.includes('./js/pyq-library.js') || !pyqScript.includes('safeLocalPdf') || pyqData.schemaVersion!==2 || pyqData.kind!=='cbse-class10-pyq-catalog' || pyqData.records.length!==42) throw new Error('Class 10 CBSE PYQ portal catalogue is incomplete.');
+          if (pyqFiles.schemaVersion!==1 || pyqFiles.kind!=='cbse-class10-pyq-pdf-manifest' || pyqFiles.classId!=='10' || pyqFiles.records.length!==42) throw new Error('Extracted CBSE PDF manifest is incomplete.');
+          const crypto=require('crypto');
+          const pyqFileRecords=new Map(pyqFiles.records.map(row=>[row.id,row]));
+          let publishedPdfCount=0;
+          for (const row of pyqFiles.records) {
+            for (const file of [...(row.paperFiles||[]),...(row.markingSchemeFiles||[])]) {
+              if (!file.unchanged || !/^\\.\\/cbse-papers\\/files\\/[a-f0-9]{24}-.+\\.pdf$/i.test(file.path)) throw new Error('Unsafe or modified CBSE PDF manifest item: '+row.id);
+              const localPath='_site/'+file.path.replace(/^\\.\\//,'');
+              if (!fs.existsSync(localPath)) throw new Error('Extracted CBSE PDF is missing: '+localPath);
+              const digest=crypto.createHash('sha256').update(fs.readFileSync(localPath)).digest('hex');
+              if (digest!==file.sha256) throw new Error('Extracted CBSE PDF checksum mismatch: '+localPath);
+              publishedPdfCount++;
+            }
+            if (!(row.paperFiles||[]).length && !(row.paperWithheldFiles||[]).length) throw new Error('CBSE question paper has neither a published PDF nor a withheld rights-review record: '+row.id);
+          }
+          if (!publishedPdfCount && !pyqFiles.withheldPdfCount) throw new Error('No CBSE PDF files or explicit rights-review records were produced.');
           if (pyqData.records.filter(item=>item.year==='2026'&&item.examType==='Second Board').length!==7) throw new Error('Class 10 CBSE PYQ catalogue is missing the seven 2026 Second Board records.');
           for (const item of pyqData.records) {
             if (pyqIds.has(item.id) || !pyqData.subjects.some(subject=>subject.id===item.subjectId)) throw new Error('Duplicate or unsupported CBSE PYQ record: '+item.id);
