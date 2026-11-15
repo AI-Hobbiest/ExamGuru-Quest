@@ -23,3 +23,9 @@
   .image-viewer-image{max-height:75vh}
 }
 @media(prefers-reduced-motion:reduce){.question-image-trigger{transition:none}}
+
+/* Source provenance shown when a question is reproduced from an official paper. */
+.question-source-wrap{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 11px}
+.question-source-wrap.hide{display:none!important}
+.cbse-question-source-tag{display:inline-flex;align-items:center;border:1px solid #b9a6e5;border-radius:999px;padding:6px 11px;background:#eee8fb;color:#33266f;font-size:.78rem;font-weight:900;letter-spacing:.01em}
+.cbse-question-source-meta{color:var(--c10-muted,#6e6a87);font-size:.76rem;font-weight:700}
