@@ -74,6 +74,30 @@ const shuffle = array => {
   return copy;
 };
 const keyFor = question => window.C10QuestionBank.keyFor(question,bankId);
+function normalizeQuestionContent(value){
+  return String(value==null?"":value).normalize("NFKC").toLocaleLowerCase()
+    .replace(/[^\\p{L}\\p{N}]+/gu," ").trim();
+}
+function questionContentFingerprint(question){
+  const prompt=normalizeQuestionContent(question&&(question.question||question.prompt));
+  if(!prompt)return "";
+  const options=(Array.isArray(question.options)?question.options:[])
+    .map(option=>normalizeQuestionContent(option&&typeof option==="object"?option.text:option))
+    .filter(Boolean).sort();
+  return prompt+"::"+options.join("|");
+}
+function uniqueQuestionPool(rows){
+  const seenIds=new Set(),seenContent=new Set(),unique=[];
+  for(const question of Array.isArray(rows)?rows:[]){
+    const id=String(question.questionKey||question.questionId||question.id||"").trim();
+    const fingerprint=questionContentFingerprint(question);
+    if((id&&seenIds.has(id))||(fingerprint&&seenContent.has(fingerprint)))continue;
+    if(id)seenIds.add(id);
+    if(fingerprint)seenContent.add(fingerprint);
+    unique.push(question);
+  }
+  return unique;
+}
 const clone = value => JSON.parse(JSON.stringify(value));
 function show(id){
   ["welcome","session","results","review"].forEach(name=>$(name).classList.toggle("hide",name!==id));
@@ -209,6 +233,7 @@ function currentPool(){
     const savedKeys=new Set(learningLibrary.bookmarks.filter(item=>item.subjectId===subject).map(item=>item.questionKey));
     selectedQuestions=selectedQuestions.filter(question=>savedKeys.has(keyFor(question)));
   }
+  selectedQuestions=uniqueQuestionPool(selectedQuestions);
   const difficulty=$("difficultyFilter")?$("difficultyFilter").value:"all";
   return window.C10LearningModel.filterByDifficulty(selectedQuestions,difficulty);
 }
@@ -516,7 +541,13 @@ function start(){
         :pool.slice(0,requested);
     }
   }
-  if(!pool.length){setText("modeHint","No questions are available for this selection.");return;}
+  pool=uniqueQuestionPool(pool);
+  if(!pool.length){setText("modeHint","No unique questions are available for this selection. Try another difficulty or topic.");return;}
+  const requestedCount=mode==="olympiad"?pool.length:+$("length").value;
+  if(mode!=="olympiad"&&requestedCount>pool.length){
+    const difficulty=$("difficultyFilter")?$("difficultyFilter").value:"all";
+    setText("modeHint","Only "+pool.length+" unique questions match this selection (requested "+requestedCount+"). This test will use the available questions without repeating any. Broaden the topics or difficulty for a longer test.");
+  }
   session=pool;index=0;picked=null;answers=Array(session.length).fill(null);
   currentAttempt=buildAttempt(session,examPlan);completedAttempt=null;
   ledger.activeAttempt=currentAttempt;saveLedger();
