@@ -74,6 +74,15 @@ const shuffle = array => {
   return copy;
 };
 const keyFor = question => window.C10QuestionBank.keyFor(question,bankId);
+function sourceBadgeFor(question){
+  const source=question&&question.source&&typeof question.source==="object"?question.source:null;
+  if(!source||String(source.type||"").toUpperCase()!=="CBSE_PYQ")return null;
+  const year=String(source.year||"").trim();
+  if(!/^20\\d{2}$/.test(year))return null;
+  const meta=[source.examType,source.subjectCode?"Subject "+source.subjectCode:"",source.questionNumber?"Q"+source.questionNumber:""]
+    .filter(Boolean).join(" · ");
+  return {label:"CBSE-"+year+" Question",meta};
+}
 function normalizeQuestionContent(value){
   return String(value==null?"":value).normalize("NFKC").toLocaleLowerCase()
     .replace(/[^\p{L}\p{N}]+/gu," ").trim();
@@ -647,6 +656,12 @@ function renderQuestion(){
   if(sectionPill){
     if(question.examSectionId){sectionPill.textContent="Section "+question.examSectionNumber+" · "+question.sectionQuestionNumber+"/"+question.sectionQuestionCount;sectionPill.classList.remove("hide");}
     else sectionPill.classList.add("hide");
+  }
+  const sourceTag=sourceBadgeFor(question),sourceWrap=$("questionSourceBadgeWrap");
+  if(sourceWrap){
+    sourceWrap.classList.toggle("hide",!sourceTag);
+    setText("questionSourceBadge",sourceTag?sourceTag.label:"");
+    setText("questionSourceMeta",sourceTag?sourceTag.meta:"");
   }
   setText("questionText",question.question);
   updatePersonalBookmarkButton(question);
