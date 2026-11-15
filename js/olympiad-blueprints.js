@@ -79,6 +79,31 @@
     return blueprint;
   }
 
+  function normalizeQuestionContent(value) {
+    return String(value == null ? "" : value).normalize("NFKC").toLocaleLowerCase()
+      .replace(/[^\\p{L}\\p{N}]+/gu, " ").trim();
+  }
+  function questionContentFingerprint(question) {
+    const prompt = normalizeQuestionContent(question && (question.question || question.prompt));
+    if (!prompt) return "";
+    const options = (Array.isArray(question.options) ? question.options : [])
+      .map(option => normalizeQuestionContent(option && typeof option === "object" ? option.text : option))
+      .filter(Boolean).sort();
+    return prompt + "::" + options.join("|");
+  }
+  function uniqueQuestionPool(rows) {
+    const seenIds = new Set(), seenContent = new Set(), unique = [];
+    for (const question of rows) {
+      const id = String(question.questionKey || question.questionId || question.id || "").trim();
+      const fingerprint = questionContentFingerprint(question);
+      if ((id && seenIds.has(id)) || (fingerprint && seenContent.has(fingerprint))) continue;
+      if (id) seenIds.add(id);
+      if (fingerprint) seenContent.add(fingerprint);
+      unique.push(question);
+    }
+    return unique;
+  }
+
   function buildPaper(chapters, blueprintId, random = Math.random, options = {}) {
     const blueprint = getBlueprint(blueprintId);
     if (!Array.isArray(chapters)) throw new TypeError("A chapter array is required.");
@@ -90,9 +115,10 @@
         chapterTitle: question.chapterTitle || chapter.title
       }))
     );
+    const uniqueQuestions = uniqueQuestionPool(allQuestions);
     const selected = [];
     const sectionBlueprint = blueprint.sections.map((section, sectionIndex) => {
-      const pool = allQuestions.filter(question => String(question.section || "").trim() === section.sourceSection);
+      const pool = uniqueQuestions.filter(question => String(question.section || "").trim() === section.sourceSection);
       const recentIds = new Set((options.recentQuestionIds || []).map(String));
       const originQuotas = section.syllabusOriginQuotas || null;
       let chosen = [];
