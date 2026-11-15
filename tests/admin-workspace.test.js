@@ -160,5 +160,11 @@ elements.bankClass.value="6";elements.bankClass.dispatch("change");
  assert.equal(exportedManifest.resources.length,1);
  assert.equal(exportedManifest.resources[0].path,"knowledge/science/science-notes.pdf");
 
- console.log("Admin Workspace tests passed: sections/security notices, question-bank load/edit/export, class catalogue export and knowledge-base manifest export.");
+ const cbseReviewPage=fs.readFileSync("admin.html","utf8");
+const cbseReviewScript=fs.readFileSync("js/cbse-review-manager.js","utf8");
+assert.ok(cbseReviewPage.includes('data-tab="cbse-review"')&&cbseReviewPage.includes('id="tab-cbse-review"'),"Admin Workspace contains a dedicated CBSE PYQ review panel");
+assert.ok(cbseReviewPage.includes('./js/cbse-review-manager.js')&&cbseReviewPage.includes('Download full CBSE review queue'),"CBSE candidate review manager and queue download are exposed in Admin");
+assert.ok(cbseReviewScript.includes('author-confirmed')&&cbseReviewScript.includes('source:JSON.parse(JSON.stringify(candidate.source))'),"CBSE promotion requires reviewer-confirmed competency and preserves source provenance");
+assert.ok(cbseReviewScript.includes('matching official marking scheme')&&cbseReviewScript.includes('live student bank is unchanged'),"Review workflow separates unverified proposals from live student bank publication");
+console.log("Admin Workspace tests passed: sections/security notices, question-bank load/edit/export, class catalogue export and knowledge-base manifest export.");
 })().catch(error=>{console.error(error);process.exitCode=1;});

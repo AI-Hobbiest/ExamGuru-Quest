@@ -55,7 +55,7 @@ def extract_pdf_text(path: Path) -> list[str]:
     return [(page.extract_text() or "") for page in reader.pages]
 
 
-def parse_answer_key(pages: list[str], source_file: str) -> dict[str, list[dict]]:
+def parse_answer_key(pages: list[str], source_file: str, source_path: str = "") -> dict[str, list[dict]]:
     answers: dict[str, list[dict]] = defaultdict(list)
     for page_number, page in enumerate(pages, start=1):
         for line in (page or "").splitlines():
@@ -69,6 +69,7 @@ def parse_answer_key(pages: list[str], source_file: str) -> dict[str, list[dict]
             answers[question_number].append({
                 "proposedOptionId": answer,
                 "markingSchemeFile": source_file,
+                "markingSchemeFilePath": source_path,
                 "pageNumber": page_number,
                 "verificationStatus": "unverified",
             })
@@ -141,7 +142,7 @@ def build_queue(manifest: dict, root_dir: Path) -> dict:
                 rejected["missing_marking_scheme_pdf"] += 1
                 continue
             try:
-                for qnum, matches in parse_answer_key(extract_pdf_text(scheme_path), scheme_file.get("filename", scheme_path.name)).items():
+                for qnum, matches in parse_answer_key(extract_pdf_text(scheme_path), scheme_file.get("filename", scheme_path.name), scheme_file.get("path", "")).items():
                     answer_map[qnum].extend(matches)
             except Exception:
                 rejected["unreadable_marking_scheme_pdf"] += 1
@@ -175,7 +176,9 @@ def build_queue(manifest: dict, root_dir: Path) -> dict:
                     occurrence = {
                         "source": source,
                         "paperFile": paper_file.get("filename", ""),
+                        "paperFilePath": paper_file.get("path", ""),
                         "paperFileSha256": file_digest,
+                        "options": parsed["options"],
                         "pageNumber": page_number,
                         "answerKeyCandidates": answer_map.get(qnum, []),
                     }
