@@ -25,6 +25,30 @@
     if (!allowed.includes(subject)) throw new Error("This subject is not available for the selected class.");
     return "./data/" + (cls === "10" ? subject : "class-" + cls + "-" + subject) + ".json";
   }
+  function normalizeQuestionContent(value) {
+    return String(value == null ? "" : value).normalize("NFKC").toLocaleLowerCase()
+      .replace(/[^\\p{L}\\p{N}]+/gu, " ").trim();
+  }
+  function questionContentFingerprint(question) {
+    const prompt = normalizeQuestionContent(question && (question.prompt || question.question));
+    if (!prompt) return "";
+    const options = (Array.isArray(question.options) ? question.options : [])
+      .map(option => normalizeQuestionContent(option && typeof option === "object" ? option.text : option))
+      .filter(Boolean).sort();
+    return prompt + "::" + options.join("|");
+  }
+  function uniqueQuestionPool(rows) {
+    const seenIds = new Set(), seenContent = new Set(), unique = [];
+    for (const question of Array.isArray(rows) ? rows : []) {
+      const id = String(question.questionId || question.questionKey || question.id || "").trim();
+      const fingerprint = questionContentFingerprint(question);
+      if ((id && seenIds.has(id)) || (fingerprint && seenContent.has(fingerprint))) continue;
+      if (id) seenIds.add(id);
+      if (fingerprint) seenContent.add(fingerprint);
+      unique.push(question);
+    }
+    return unique;
+  }
   function normalizeDifficulty(value) {
     const raw = String(value || "medium").toLowerCase();
     if (raw.includes("challenge")) return "challenge";
@@ -64,10 +88,10 @@
         });
       });
     });
-    return pool.filter(q => q.prompt);
+    return uniqueQuestionPool(pool.filter(q => q.prompt));
   }
   function selectQuestions(pool, count, random = Math.random) {
-    const rows = pool.slice();
+    const rows = uniqueQuestionPool(pool);
     for (let i = rows.length - 1; i > 0; i--) {
       const j = Math.floor(random() * (i + 1));
       [rows[i], rows[j]] = [rows[j], rows[i]];
@@ -79,6 +103,9 @@
     if (!String(args.studentId || "").trim()) throw new Error("A student must be selected before assigning a test.");
     if (!questions.length || questions.some(q => !q.questionId || !q.prompt || !Array.isArray(q.options) || q.options.length < 2 || !q.options.some(o => o.optionId === q.correctOptionId))) {
       throw new Error("The test needs valid MCQs with answer keys.");
+    }
+    if (uniqueQuestionPool(questions).length !== questions.length) {
+      throw new Error("This test contains duplicate questions. Remove duplicates before assigning it.");
     }
     const createdAt = now();
     const assignment = {
