@@ -56,7 +56,7 @@
         '" value="' + esc(o.optionId) + '"' + (answers[q.questionId] === o.optionId ? " checked" : "") +
         '><span>' + esc(o.text) + '</span></label>').join("");
       const source=q.source&&String(q.source.type||"").toUpperCase()==="CBSE_PYQ"?q.source:null;
-      const sourceLabel=source&&/^20\\d{2}$/.test(String(source.year||""))
+      const sourceLabel=source&&/^20\d{2}$/.test(String(source.year||""))
         ?"CBSE-"+esc(source.year)+" Question":"";
       const sourceMeta=source?[source.examType,source.subjectCode?"Subject "+source.subjectCode:"",source.questionNumber?"Q"+source.questionNumber:""].filter(Boolean).map(esc).join(" · "):"";
       const sourceBadge=sourceLabel
