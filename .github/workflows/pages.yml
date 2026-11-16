@@ -4,6 +4,12 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      refresh_cbse:
+        description: "Force a fresh CBSE PDF extraction and review-queue rebuild"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -23,16 +29,77 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Cache CBSE source ZIP packages
+        with:
+          fetch-depth: 0
+      - name: Detect CBSE content refresh
+        id: cbse-refresh
+        shell: bash
+        run: |
+          refresh=false
+          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
+            if [ "${{ inputs.refresh_cbse }}" = "true" ]; then refresh=true; fi
+          else
+            before="${{ github.event.before }}"
+            if [ -z "$before" ] || [[ "$before" =~ ^0+$ ]]; then
+              refresh=true
+            elif ! git diff --quiet "$before" "$GITHUB_SHA" -- \
+              data/cbse-class10-pyq.json \
+              scripts/extract_cbse_papers.py \
+              scripts/extract_cbse_mcq_candidates.py; then
+              refresh=true
+            fi
+          fi
+          echo "refresh=$refresh" >> "$GITHUB_OUTPUT"
+          echo "CBSE refresh required: $refresh"
+      - name: Cache CBSE published assets and source ZIPs
         uses: actions/cache@v4
         with:
-          path: .cache/cbse-pyq
-          key: cbse-pyq-${{ hashFiles('data/cbse-class10-pyq.json') }}
-      - name: Prepare exact CBSE PDF extraction
+          path: |
+            .cache/cbse-pyq
+            .cache/cbse-pyq-output
+          key: cbse-pyq-output-v2-${{ hashFiles('data/cbse-class10-pyq.json', 'scripts/extract_cbse_papers.py', 'scripts/extract_cbse_mcq_candidates.py') }}-${{ steps.cbse-refresh.outputs.refresh == 'true' && github.run_id || 'stable' }}
+      - name: Prepare CBSE PDF assets only when required
+        shell: bash
+        env:
+          CBSE_REFRESH: ${{ steps.cbse-refresh.outputs.refresh }}
         run: |
-          python3 -m pip install --quiet pypdf
-          python3 -m py_compile scripts/extract_cbse_papers.py
-          python3 tests/test_cbse_extract.py
+          set -euo pipefail
+          output=".cache/cbse-pyq-output"
+          manifest="$output/data/cbse-class10-pyq-files.json"
+          queue="$output/data/cbse-class10-mcq-review-queue.json"
+          if [ "$CBSE_REFRESH" = "true" ]; then
+            echo "CBSE source or extraction logic changed; rebuilding the published PDF assets."
+            rm -rf "$output"
+          elif [ -s "$manifest" ] && [ -s "$queue" ]; then
+            echo "Reusing cached CBSE PDF assets; skipping ZIP downloads and PDF parsing."
+          else
+            echo "No CBSE output cache found; restoring the last published, checksum-verified assets."
+            if ! python3 scripts/restore_cbse_assets.py \
+              --base-url "https://ai-hobbiest.github.io/ExamGuru-Quest/" \
+              --catalogue data/cbse-class10-pyq.json \
+              --output-dir "$output"; then
+              echo "Published assets could not be restored; falling back to a full CBSE rebuild."
+              rm -rf "$output"
+              CBSE_REFRESH=true
+            fi
+          fi
+          if [ "$CBSE_REFRESH" = "true" ] || [ ! -s "$manifest" ] || [ ! -s "$queue" ]; then
+            python3 -m pip install --quiet pypdf
+            python3 -m py_compile scripts/extract_cbse_papers.py scripts/extract_cbse_mcq_candidates.py
+            python3 tests/test_cbse_extract.py
+            mkdir -p "$output/data"
+            python3 scripts/extract_cbse_papers.py \
+              --catalogue data/cbse-class10-pyq.json \
+              --output-dir "$output/cbse-papers" \
+              --manifest "$manifest" \
+              --cache-dir .cache/cbse-pyq
+            python3 scripts/extract_cbse_mcq_candidates.py \
+              --manifest "$manifest" \
+              --output "$queue" \
+              --site-root "$output"
+          fi
+          test -s "$manifest"
+          test -s "$queue"
       - name: Run quiz regression tests
         run: |
           node tests/clat-engine.test.js
@@ -141,18 +208,12 @@ jobs:
           cp js/quiz-engine.js _site/js/quiz-engine.js
           cp data/*.json _site/data/
           cp data/cbse-class10-pyq.json _site/data/cbse-class10-pyq.json
-          # Extract individual PDFs byte-for-byte from the official CBSE ZIP packages.
-          # Files with explicit copyright markers or unreadable rights-check text are withheld.
-          python3 scripts/extract_cbse_papers.py \
-            --catalogue _site/data/cbse-class10-pyq.json \
-            --output-dir _site/cbse-papers \
-            --manifest _site/data/cbse-class10-pyq-files.json \
-            --cache-dir .cache/cbse-pyq
-          # Candidate extraction is review-only; no question is promoted into a live student bank.
-          python3 scripts/extract_cbse_mcq_candidates.py \
-            --manifest _site/data/cbse-class10-pyq-files.json \
-            --output _site/data/cbse-class10-mcq-review-queue.json \
-            --site-root _site
+          # Reuse the separately prepared CBSE assets. Ordinary website changes never
+          # download CBSE ZIPs, extract PDFs, or rebuild the review-only MCQ queue.
+          mkdir -p _site/cbse-papers
+          cp -R .cache/cbse-pyq-output/cbse-papers/. _site/cbse-papers/
+          cp .cache/cbse-pyq-output/data/cbse-class10-pyq-files.json _site/data/cbse-class10-pyq-files.json
+          cp .cache/cbse-pyq-output/data/cbse-class10-mcq-review-queue.json _site/data/cbse-class10-mcq-review-queue.json
           cp -R data/exam-papers _site/data/exam-papers
           cp -R data/clat/. _site/data/clat/
           # Merge the maintained English topic overrides into the deployed bank.
