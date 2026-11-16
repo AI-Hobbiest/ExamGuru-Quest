@@ -67,3 +67,15 @@ const pagesWorkflow=fs.readFileSync(".github/workflows/pages.yml","utf8");
 assert.ok(page.includes(".vrb-card::before")&&page.includes(".vrb-card::after"),"sticky revision notes must render a pushpin head and stem");
 assert.ok(pagesWorkflow.includes("ordinary website deployments will not download ZIPs")&&pagesWorkflow.includes("Run the explicit CBSE refresh workflow"),"ordinary website deploys must not fall back to CBSE PDF extraction");
 console.log("Visual Revision pin and CBSE deployment-isolation checks passed.");
+
+const class10Boards=visual.boards.filter(board=>String(board.classId)==="10");
+const expectedClass10=["mathematics","science","social-science","english","hindi-course-a","hindi-course-b"];
+for(const subject of expectedClass10){
+  const matches=class10Boards.filter(board=>board.subject===subject);
+  assert.equal(matches.length,1,"Class 10 must have exactly one board for "+subject);
+  assert.ok(matches[0].chapters.length>=10,"Class 10 "+subject+" must have broad chapter coverage");
+  assert.ok(matches[0].chapters.every(ch=>ch.cards.length>=3),"Each Class 10 chapter needs at least three quick-reference cards");
+}
+assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.length,0),117,"Class 10 board must contain all chapter/topic boards");
+assert.ok(!class10Boards.find(b=>b.subject==="hindi-course-a").chapters.some(ch=>/जॉर्ज पंचम की नाक|एही ठैयाँ|छाया मत छूना|कन्यादान|स्त्री-शिक्षा|मानवीय करुणा/.test(ch.title)),"Hindi A excluded texts must not appear");
+assert.ok(!class10Boards.find(b=>b.subject==="hindi-course-b").chapters.some(ch=>/गिरगिट|बिहारी|मधुर-मधुर/.test(ch.title)),"Hindi B excluded texts must not appear");
