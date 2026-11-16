@@ -81,7 +81,7 @@ jobs:
               --base-url "https://ai-hobbiest.github.io/ExamGuru-Quest/" \
               --catalogue data/cbse-class10-pyq.json \
               --output-dir "$output" || {
-                echo "::error::Previously published CBSE assets could not be restored. Run the explicit CBSE refresh workflow; ordinary website deployments will not download ZIPs, extract PDFs, or regenerate MCQ candidates."
+                echo "::error::Previously published CBSE assets could not be restored. Manually dispatch this Pages workflow with refresh_cbse=true; ordinary website deployments will not download ZIPs, extract PDFs, or regenerate MCQ candidates."
                 exit 1
               }
           fi
