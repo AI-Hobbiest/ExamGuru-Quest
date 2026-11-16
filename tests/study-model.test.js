@@ -59,6 +59,6 @@ for(const board of visual.boards){
 }
 assert.ok(page.includes('id="visualRevisionBoard"'));
 assert.ok(page.includes('id="vrbGrid"')&&page.includes('id="vrbSubject"')&&page.includes('id="vrbChapter"'));
-assert.ok(page.includes("visual-revision.json"));
+assert.ok(script.includes("visual-revision.json"));
 assert.ok(!page.includes('id="studyStatus" class="study-meta"'),"study load status must not duplicate the progress filter ID");
 assert.ok(script.includes("loadVisualRevision")&&script.includes("renderVisualCards"));
