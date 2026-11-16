@@ -77,14 +77,13 @@ jobs:
             echo "Reusing cached CBSE PDF assets; skipping ZIP downloads and PDF parsing."
           else
             echo "No CBSE output cache found; restoring the last published, checksum-verified assets."
-            if ! python3 scripts/restore_cbse_assets.py \
+            python3 scripts/restore_cbse_assets.py \
               --base-url "https://ai-hobbiest.github.io/ExamGuru-Quest/" \
               --catalogue data/cbse-class10-pyq.json \
-              --output-dir "$output"; then
-              echo "Published assets could not be restored; falling back to a full CBSE rebuild."
-              rm -rf "$output"
-              CBSE_REFRESH=true
-            fi
+              --output-dir "$output" || {
+                echo "::error::Previously published CBSE assets could not be restored. Run the explicit CBSE refresh workflow; ordinary website deployments will not download ZIPs, extract PDFs, or regenerate MCQ candidates."
+                exit 1
+              }
           fi
           if [ "$CBSE_REFRESH" = "true" ] || [ ! -s "$manifest" ] || [ ! -s "$queue" ]; then
             python3 -m pip install --quiet pypdf
