@@ -60,6 +60,7 @@ jobs:
           key: cbse-pyq-output-v2-${{ hashFiles('data/cbse-class10-pyq.json', 'scripts/extract_cbse_papers.py', 'scripts/extract_cbse_mcq_candidates.py') }}-${{ steps.cbse-refresh.outputs.refresh == 'true' && github.run_id || 'stable' }}
           restore-keys: |
             cbse-pyq-output-v2-${{ hashFiles('data/cbse-class10-pyq.json', 'scripts/extract_cbse_papers.py', 'scripts/extract_cbse_mcq_candidates.py') }}-
+            cbse-pyq-${{ hashFiles('data/cbse-class10-pyq.json') }}
       - name: Prepare CBSE PDF assets only when required
         shell: bash
         env:
