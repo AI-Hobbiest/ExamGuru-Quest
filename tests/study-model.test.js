@@ -34,3 +34,31 @@ assert.ok(page.includes("study-model.js")&&page.includes("study-library.js"));
 assert.ok(script.includes('status==="published"')||script.includes("visibleResources"));
 new Function(fs.readFileSync("js/study-library.js","utf8"));
 console.log("Study Library tests passed: manifest validation, class visibility, publication filtering, search, safe relative paths and local progress.");
+
+
+const visual=JSON.parse(fs.readFileSync("data/visual-revision.json","utf8"));
+assert.equal(visual.schemaVersion,1);
+assert.equal(visual.kind,"visual-revision-manifest");
+assert.ok(Array.isArray(visual.boards)&&visual.boards.length>0);
+for(const board of visual.boards){
+  assert.ok(/^\\d+$/.test(String(board.classId)));
+  assert.ok(typeof board.subject==="string"&&Array.isArray(board.chapters));
+  for(const chapter of board.chapters){
+    assert.ok(chapter.title&&chapter.chapterKey&&Array.isArray(chapter.cards));
+    const ids=new Set();
+    for(const card of chapter.cards){
+      assert.ok(card.id&&card.title&&["concept","steps","compare","exam-alert","fact","recall","mnemonic"].includes(card.type));
+      assert.ok(!ids.has(card.id),"revision card IDs must be unique within a chapter");
+      ids.add(card.id);
+      if(card.type==="steps")assert.ok(Array.isArray(card.steps)&&card.steps.length>0);
+      if(card.type==="compare")assert.ok(card.left&&card.right);
+      if(card.type==="fact")assert.ok(Array.isArray(card.facts)&&card.facts.length>0);
+      if(card.type==="recall")assert.ok(card.question&&card.answer);
+    }
+  }
+}
+assert.ok(page.includes('id="visualRevisionBoard"'));
+assert.ok(page.includes('id="vrbGrid"')&&page.includes('id="vrbSubject"')&&page.includes('id="vrbChapter"'));
+assert.ok(page.includes("visual-revision.json"));
+assert.ok(!page.includes('id="studyStatus" class="study-meta"'),"study load status must not duplicate the progress filter ID");
+assert.ok(script.includes("loadVisualRevision")&&script.includes("renderVisualCards"));
