@@ -62,3 +62,8 @@ assert.ok(page.includes('id="vrbGrid"')&&page.includes('id="vrbSubject"')&&page.
 assert.ok(script.includes("visual-revision.json"));
 assert.ok(!page.includes('id="studyStatus" class="study-meta"'),"study load status must not duplicate the progress filter ID");
 assert.ok(script.includes("loadVisualRevision")&&script.includes("renderVisualCards"));
+
+const pagesWorkflow=fs.readFileSync(".github/workflows/pages.yml","utf8");
+assert.ok(page.includes(".vrb-card::before")&&page.includes(".vrb-card::after"),"sticky revision notes must render a pushpin head and stem");
+assert.ok(pagesWorkflow.includes("ordinary website deployments will not download ZIPs")&&pagesWorkflow.includes("Run the explicit CBSE refresh workflow"),"ordinary website deploys must not fall back to CBSE PDF extraction");
+console.log("Visual Revision pin and CBSE deployment-isolation checks passed.");
