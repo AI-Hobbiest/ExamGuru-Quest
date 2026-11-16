@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "kind": "visual-revision-manifest",
+  "version": "1.0.0",
+  "boards": [
+    {
+      "classId": "6",
+      "subject": "science",
+      "subjectLabel": "Science",
+      "chapters": [
+        {
+          "chapterNo": 5,
+          "chapterKey": "measurement-of-length-and-motion",
+          "title": "Measurement of Length and Motion",
+          "subtitle": "Units, careful measurement and types of motion",
+          "cards": [
+            {
+              "id": "c6s05-vr-001",
+              "type": "concept",
+              "title": "Length and its standard unit",
+              "content": "Length tells us how far apart two points are. The standard SI unit of length is the metre (m). Smaller lengths are commonly measured in centimetres (cm) or millimetres (mm).",
+              "highlight": "1 m = 100 cm; 1 cm = 10 mm",
+              "tags": [
+                "length",
+                "SI unit",
+                "metre"
+              ]
+            },
+            {
+              "id": "c6s05-vr-002",
+              "type": "steps",
+              "title": "How to measure length correctly",
+              "content": "Follow these steps when using a ruler or metre scale:",
+              "steps": [
+                "Place the scale along the object, with the zero mark at one end.",
+                "Keep the scale parallel to the length being measured.",
+                "Look vertically above the other end and note the reading.",
+                "If the zero mark is damaged, start from another clear mark and subtract the starting reading from the final reading."
+              ],
+              "note": "Write the number together with its unit.",
+              "tags": [
+                "measurement",
+                "ruler",
+                "method"
+              ]
+            },
+            {
+              "id": "c6s05-vr-003",
+              "type": "exam-alert",
+              "title": "Avoid parallax error",
+              "content": "Your eye should be directly above the mark being read. Looking from an angle can make the reading appear different. This is called parallax error.",
+              "examTip": "Keep your line of sight perpendicular to the scale at the point you are reading.",
+              "tags": [
+                "parallax",
+                "observation",
+                "common error"
+              ]
+            },
+            {
+              "id": "c6s05-vr-004",
+              "type": "compare",
+              "title": "Different kinds of motion",
+              "left": {
+                "heading": "Rectilinear motion",
+                "content": "Movement along a straight line. Example: a car moving along a straight road."
+              },
+              "right": {
+                "heading": "Circular motion",
+                "content": "Movement along a circular path. Example: the tip of a fan blade while the fan rotates."
+              },
+              "note": "The path followed by an object helps us describe its motion.",
+              "tags": [
+                "motion",
+                "rectilinear",
+                "circular"
+              ]
+            },
+            {
+              "id": "c6s05-vr-005",
+              "type": "concept",
+              "title": "Periodic motion",
+              "content": "A motion that repeats itself after equal intervals of time is called periodic motion.",
+              "highlight": "Example: the to-and-fro motion of a swing.",
+              "tags": [
+                "periodic motion",
+                "repetition"
+              ]
+            },
+            {
+              "id": "c6s05-vr-006",
+              "type": "fact",
+              "title": "Quick unit conversions",
+              "facts": [
+                [
+                  "1 kilometre",
+                  "1,000 metres"
+                ],
+                [
+                  "1 metre",
+                  "100 centimetres"
+                ],
+                [
+                  "1 centimetre",
+                  "10 millimetres"
+                ]
+              ],
+              "note": "Convert to the same unit before comparing or adding lengths.",
+              "tags": [
+                "conversion",
+                "units"
+              ]
+            },
+            {
+              "id": "c6s05-vr-007",
+              "type": "recall",
+              "title": "Check your recall",
+              "question": "A student reads a ruler while looking at the mark from a slanting angle. What error may occur, and how can it be avoided?",
+              "answer": "Parallax error may occur. Keep the eye directly above the mark and look perpendicular to the scale.",
+              "tags": [
+                "self-check",
+                "parallax"
+              ]
+            },
+            {
+              "id": "c6s05-vr-008",
+              "type": "recall",
+              "title": "Classify the motion",
+              "question": "A point on the edge of a rotating bicycle wheel follows what kind of path?",
+              "answer": "A circular path, so it shows circular motion.",
+              "tags": [
+                "self-check",
+                "circular motion"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
