@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "visual-revision-manifest",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "boards": [
     {
       "classId": "6",
@@ -4723,5 +4723,21 @@
         }
       ]
     }
-  ]
+  ],
+  "contentScope": {
+    "academicYear": "2026-27",
+    "classId": "10",
+    "curriculumSources": [
+      "https://cbseacademic.nic.in/curriculum_2027.html",
+      "https://cbseacademic.nic.in/web_material/CurriculumMain27/SecPart1/Hindi_A_SecP1_2026-27.pdf",
+      "https://cbseacademic.nic.in/web_material/CurriculumMain27/SecPart1/Hindi_B_SecP1_2026-27.pdf",
+      "https://cbseacademic.nic.in/web_material/CurriculumMain26/Sec/English_LL_2025-26.pdf"
+    ],
+    "notes": [
+      "Hindi Course A and Course B are maintained as separate boards; chapters excluded in the Class 10 Hindi syllabus map are not included.",
+      "Social Science excludes legacy enrichment/project-only entries from the chapter bank.",
+      "Science includes the Class X 2026-27 CBSE reading-material topics Periodic Classification of Elements and Heredity and Evolution alongside the maintained chapter coverage.",
+      "English literature coverage follows the CBSE prescribed First Flight and Footprints Without Feet chapter list; verify any school-specific rationalised exclusions before the final exam."
+    ]
+  }
 }
