@@ -188,7 +188,7 @@ assert.ok(nav.includes('isClatStudent&&!["CLAT UG 2027","Dashboard","Assessment 
 assert.ok(nav.includes("applyClatAttribution")&&nav.includes("AI-Enthusiast"),"shared learning pages replace the personal attribution for CLAT students");
 assert.ok(css.includes(".c10-nav-link.is-disabled")&&css.includes(".c10-nav-link-status"),"Coming soon entrance-exam entries are visibly non-interactive");
 assert.ok(nav.includes('clatHref:"./clat-dashboard.html"')&&nav.includes('clatPage:"clat-dashboard.html"'),"CLAT students have a dedicated dashboard destination");
-assert.ok(nav.includes('["CLAT UG 2027","Dashboard","Assessment Test","Study Library","Learning Hub","FAQ & Guide"]'),"CLAT navigation exposes CLAT UG 2027, dashboard, assessment, study pack and learning hub");
+assert.ok(nav.includes('["CLAT UG 2027","Dashboard","Assessment Test","Study Library","My Learning","FAQ & Guide"]'),"CLAT navigation exposes CLAT UG 2027, dashboard, assessment, study pack and learning hub");
 assert.ok(loginScript.includes("./clat-dashboard.html"),"CLAT sign-in and restored sessions land on the CLAT dashboard");
 assert.ok(loginScript.includes('String(result.account&&result.account.classId||"").toUpperCase()==="CLAT"?"./clat-dashboard.html":"./dashboard.html"'),"newly authenticated CLAT students land on the CLAT dashboard");
 assert.ok(accessScript.includes('page==="clat-dashboard.html"')&&accessScript.includes('toUpperCase()!=="CLAT"'),"CLAT dashboard route is restricted to verified CLAT students");
