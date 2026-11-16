@@ -9,6 +9,67 @@
 <link rel="stylesheet" href="./css/app-shell.css?v=20261109-clat-navigation-v1">
 <link rel="stylesheet" href="./css/theme-roles-v2.css?v=quest2">
 <style>
+
+/* Visual Revision Board — hybrid sticky-note cards, balanced reading density. */
+.vrb-board{margin:0 0 18px;padding:19px;border:1px solid #dedff0;border-radius:19px;background:linear-gradient(135deg,#fbfaff 0%,#f6fbf8 100%);box-shadow:0 8px 24px rgba(39,45,82,.045)}
+.vrb-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.vrb-kicker{font-size:.68rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#7168a8}
+.vrb-title{margin:5px 0 4px;color:#292e55;font-size:1.25rem}
+.vrb-intro{margin:0;color:#667087;font-size:.84rem;line-height:1.55;max-width:680px}
+.vrb-count{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:#e9e6fb;color:#4c438f;font-size:.73rem;font-weight:850;white-space:nowrap}
+.vrb-toolbar{display:grid;grid-template-columns:minmax(150px,1fr) minmax(180px,1.35fr) minmax(160px,1.2fr);gap:9px;margin:16px 0 13px}
+.vrb-toolbar input,.vrb-toolbar select{width:100%;min-height:41px;padding:9px 11px;border:1px solid #d9deeb;border-radius:11px;background:#fff;color:#303653;font:inherit;font-size:.83rem}
+.vrb-topic-line{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 12px}
+.vrb-topic-line h3{margin:0;color:#343765;font-size:1rem}
+.vrb-topic-line p{margin:3px 0 0;color:#737b90;font-size:.76rem}
+.vrb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:stretch}
+.vrb-card{--vrb-bg:#fff2cf;--vrb-ink:#58451d;--vrb-accent:#9a7530;min-width:0;padding:15px 16px;border:1px solid color-mix(in srgb,var(--vrb-accent) 17%,white);border-radius:15px;background:var(--vrb-bg);color:var(--vrb-ink);box-shadow:0 5px 15px rgba(39,45,82,.045);display:flex;flex-direction:column;gap:9px;transition:transform .16s ease,box-shadow .16s ease}
+.vrb-card:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(39,45,82,.08)}
+.vrb-card.vrb-steps{--vrb-bg:#e9efff;--vrb-ink:#303f79;--vrb-accent:#5266ae}
+.vrb-card.vrb-compare{--vrb-bg:#e4f3e9;--vrb-ink:#294d37;--vrb-accent:#4b8a60}
+.vrb-card.vrb-exam-alert{--vrb-bg:#fce8e8;--vrb-ink:#713b42;--vrb-accent:#b65b65}
+.vrb-card.vrb-fact{--vrb-bg:#eee9fb;--vrb-ink:#493d78;--vrb-accent:#7865b2}
+.vrb-card.vrb-recall{--vrb-bg:#e6f3f5;--vrb-ink:#28535a;--vrb-accent:#4b8991}
+.vrb-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.vrb-type{font-size:.66rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase;color:var(--vrb-accent)}
+.vrb-card h4{margin:0;font-size:1rem;line-height:1.35;color:var(--vrb-ink)}
+.vrb-card p{margin:0;font-size:.84rem;line-height:1.58;color:var(--vrb-ink)}
+.vrb-highlight{padding:9px 11px;border-radius:10px;background:rgba(255,255,255,.55);font-size:.84rem;font-weight:850;line-height:1.45;color:var(--vrb-ink)}
+.vrb-steps-list{margin:0;padding-left:20px;display:grid;gap:7px}
+.vrb-steps-list li{font-size:.82rem;line-height:1.5;padding-left:2px;color:var(--vrb-ink)}
+.vrb-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vrb-compare-side{padding:10px;border-radius:11px;background:rgba(255,255,255,.58);min-width:0}
+.vrb-compare-side strong{display:block;margin-bottom:5px;font-size:.78rem;color:var(--vrb-ink)}
+.vrb-compare-side p{font-size:.78rem}
+.vrb-note{padding-top:8px;border-top:1px solid color-mix(in srgb,var(--vrb-accent) 22%,transparent);font-size:.76rem!important;font-weight:750}
+.vrb-fact-list{display:grid;gap:6px}
+.vrb-fact-row{display:flex;justify-content:space-between;gap:10px;padding:8px 10px;border-radius:9px;background:rgba(255,255,255,.58);font-size:.8rem}
+.vrb-fact-row strong{font-weight:900;text-align:right}
+.vrb-recall-question{font-weight:800!important}
+.vrb-reveal{align-self:flex-start;min-height:35px;padding:7px 11px;border:1px solid color-mix(in srgb,var(--vrb-accent) 35%,white);border-radius:9px;background:rgba(255,255,255,.65);color:var(--vrb-ink);font:inherit;font-size:.76rem;font-weight:850;cursor:pointer}
+.vrb-answer{padding:10px;border-radius:10px;background:rgba(255,255,255,.65);font-size:.82rem;line-height:1.55;color:var(--vrb-ink)}
+.vrb-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:3px}
+.vrb-tag{padding:4px 7px;border-radius:999px;background:rgba(255,255,255,.48);font-size:.65rem;font-weight:750;color:var(--vrb-accent)}
+.vrb-empty{grid-column:1/-1;padding:22px 16px;border:1px dashed #d8deea;border-radius:13px;background:rgba(255,255,255,.58);text-align:center;color:#71798f;font-size:.84rem;line-height:1.55}
+.vrb-footer{margin-top:12px;color:#798197;font-size:.72rem;line-height:1.5}
+body.eg-theme-dark .vrb-board{background:linear-gradient(135deg,#202d3b,#243442);border-color:#405365;box-shadow:none}
+body.eg-theme-dark .vrb-kicker{color:#b7a9f4}
+body.eg-theme-dark .vrb-title,body.eg-theme-dark .vrb-topic-line h3{color:#edf2fa}
+body.eg-theme-dark .vrb-intro,body.eg-theme-dark .vrb-topic-line p,body.eg-theme-dark .vrb-footer{color:#b9c7d5}
+body.eg-theme-dark .vrb-count{background:#3b4262;color:#e2dcff}
+body.eg-theme-dark .vrb-toolbar input,body.eg-theme-dark .vrb-toolbar select{background:#263746;border-color:#4b6071;color:#eef4fa}
+body.eg-theme-dark .vrb-card{--vrb-bg:#344352;--vrb-ink:#eef3f8;--vrb-accent:#c3b7ff;border-color:#536579;box-shadow:none}
+body.eg-theme-dark .vrb-card.vrb-steps{--vrb-bg:#2e4057;--vrb-ink:#edf3ff;--vrb-accent:#b4c6ff}
+body.eg-theme-dark .vrb-card.vrb-compare{--vrb-bg:#2c493f;--vrb-ink:#e8f8ed;--vrb-accent:#a7dfb8}
+body.eg-theme-dark .vrb-card.vrb-exam-alert{--vrb-bg:#50383f;--vrb-ink:#fff0f1;--vrb-accent:#ffb8c0}
+body.eg-theme-dark .vrb-card.vrb-fact{--vrb-bg:#403b58;--vrb-ink:#f2edff;--vrb-accent:#d0c2ff}
+body.eg-theme-dark .vrb-card.vrb-recall{--vrb-bg:#2d4850;--vrb-ink:#e8f8fb;--vrb-accent:#a8e2e9}
+body.eg-theme-dark .vrb-highlight,body.eg-theme-dark .vrb-compare-side,body.eg-theme-dark .vrb-fact-row,body.eg-theme-dark .vrb-answer,body.eg-theme-dark .vrb-reveal,body.eg-theme-dark .vrb-tag{background:rgba(10,18,28,.28);color:var(--vrb-ink)}
+body.eg-theme-dark .vrb-empty{background:#263746;border-color:#4b6071;color:#c3cfdb}
+@media(max-width:760px){.vrb-grid{grid-template-columns:1fr}.vrb-toolbar{grid-template-columns:1fr 1fr}.vrb-toolbar input{grid-column:1/-1}}
+@media(max-width:480px){.vrb-toolbar{grid-template-columns:1fr}.vrb-toolbar input{grid-column:auto}.vrb-board{padding:14px}.vrb-compare-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.vrb-card{transition:none}.vrb-card:hover{transform:none}}
+
 body{margin:0;background:#f6f8fc;color:#252b46;font-family:var(--c10-font,Inter,system-ui,sans-serif)}
 .study-hero{padding:25px max(18px,calc((100vw - 1120px)/2));background:linear-gradient(115deg,#ece8fa,#f7fbff 58%,#eaf6ee);border-bottom:1px solid #e0e4ef}
 .study-hero a{color:#51469c;text-decoration:none;font-weight:800}
@@ -55,6 +116,28 @@ body{margin:0;background:#f6f8fc;color:#252b46;font-family:var(--c10-font,Inter,
     <article class="study-stat"><strong id="studyCompleted">0</strong><span>Marked completed</span></article>
     <article class="study-stat"><strong id="studySaved">0</strong><span>Saved for later</span></article>
   </section>
+  <section class="vrb-board" id="visualRevisionBoard" aria-labelledby="vrbTitle">
+    <div class="vrb-heading">
+      <div>
+        <div class="vrb-kicker">Quick exam reference · Visual learning</div>
+        <h2 class="vrb-title" id="vrbTitle">Visual Revision Board</h2>
+        <p class="vrb-intro">Chapter-wise concepts, comparisons, processes and exam reminders in one quick-reference board. Choose a subject and chapter, then search the cards.</p>
+      </div>
+      <span class="vrb-count" id="vrbCount">Loading revision cards…</span>
+    </div>
+    <div class="vrb-toolbar">
+      <input id="vrbSearch" type="search" placeholder="Find a concept or keyword…" aria-label="Search revision cards">
+      <select id="vrbSubject" aria-label="Choose subject"><option value="">Loading subjects…</option></select>
+      <select id="vrbChapter" aria-label="Choose chapter"><option value="">Loading chapters…</option></select>
+    </div>
+    <div class="vrb-topic-line">
+      <div><h3 id="vrbChapterTitle">Preparing your revision board…</h3><p id="vrbChapterSubtitle">Concise notes for quick recall</p></div>
+      <span class="study-meta" id="vrbFilteredCount"></span>
+    </div>
+    <div id="vrbGrid" class="vrb-grid" aria-live="polite"><div class="vrb-empty">Loading revision cards…</div></div>
+    <p class="vrb-footer" id="vrbStatus" role="status">Revision content is served from the ExamGuru JSON catalogue. Image-based visual packs will be added in a later phase.</p>
+  </section>
+
   <section class="study-panel">
     <h2 style="margin:0;color:#292e55;font-size:1.08rem">Browse learning material</h2>
     <p class="study-meta" style="margin:5px 0 0">Only resources published by the administrator for your class appear here.</p>
