@@ -171,7 +171,7 @@ assert.ok(learning.includes('id="mistakes"')&&learning.includes('id="bookmarkLis
 assert.ok(learning.includes("./js/learning-model.js")&&learning.includes("./js/learning-center.js"),"Learning Hub loads its data model and rendering controller");
 assert.ok(study.includes('id="studyResourceList"')&&study.includes("./js/study-model.js")&&study.includes("./js/study-library.js"),"Study Library displays published learning resources");
 assert.ok(dashboard.includes('href="./study.html"'),"dashboard links to the Study Library");
-assert.ok(nav.includes('group:"My Learning"')&&nav.includes('group:"Study Pack"'),"Study Library and Learning Hub are grouped under their learning destinations");
+assert.ok(nav.includes('label:"Study Library",group:"Learning Hub"')&&nav.includes('label:"My Learning",group:"Learning Hub"'),"Study Library and My Learning are grouped under the unified Learning Hub navigation");
 const loginScript=fs.readFileSync("js/login-page.js","utf8");
 const accessScript=fs.readFileSync("js/page-access.js","utf8");
 assert.ok(loginScript.includes("C10StudentAuth.login"),"login form authenticates student accounts");
