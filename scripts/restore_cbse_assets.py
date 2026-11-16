@@ -8,7 +8,7 @@ import hashlib
 import json
 import urllib.request
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import quote, urljoin
 
 USER_AGENT = "ExamGuru-Quest-CBSE-asset-restore/1.0"
 TIMEOUT_SECONDS = 45
@@ -59,7 +59,8 @@ def main() -> int:
 
     def restore(item: dict) -> tuple[str, bytes]:
         relative = str(item["path"])
-        url = urljoin(base, relative.removeprefix("./"))
+        encoded_path = quote(relative.removeprefix("./"), safe="/-_.()")
+        url = urljoin(base, encoded_path)
         payload = fetch(url)
         digest = hashlib.sha256(payload).hexdigest()
         if digest != item.get("sha256"):
@@ -67,10 +68,13 @@ def main() -> int:
         return relative, payload
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
-        for relative, payload in pool.map(restore, files.values()):
+        futures = [pool.submit(restore, item) for item in files.values()]
+        for completed, future in enumerate(concurrent.futures.as_completed(futures), start=1):
+            relative, payload = future.result()
             destination = output / relative.removeprefix("./")
             destination.parent.mkdir(parents=True, exist_ok=True)
             destination.write_bytes(payload)
+            print(f"[CBSE restore] {completed}/{len(files)} verified PDFs restored.", flush=True)
 
     print(
         f"Restored published CBSE assets: {len(manifest['records'])} records, "
