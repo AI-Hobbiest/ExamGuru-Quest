@@ -135,6 +135,1769 @@
           ]
         }
       ]
+    },
+    {
+      "classId": "10",
+      "subject": "mathematics",
+      "subjectLabel": "Mathematics",
+      "academicYear": "2026-27",
+      "chapters": [
+        {
+          "chapterNo": 1,
+          "chapterKey": "real-numbers",
+          "title": "Real Numbers",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-01-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Use prime factorisation to understand HCF and LCM. The Fundamental Theorem of Arithmetic says every composite integer has a unique prime factorisation, apart from order.",
+              "highlight": "HCF × LCM = a × b",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-01-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "For two positive integers, HCF × LCM = product of the numbers. Use prime exponents carefully.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-01-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Real Numbers”?",
+              "answer": "Use prime factorisation to understand HCF and LCM. The Fundamental Theorem of Arithmetic says every composite integer has a unique prime factorisation, apart from order.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 2,
+          "chapterKey": "polynomials",
+          "title": "Polynomials",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-02-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "A polynomial is an algebraic expression in which the powers of the variable are non-negative integers. Its zeroes are the values that make it equal to zero.",
+              "highlight": "α + β = −b/a; αβ = c/a",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-02-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "For ax² + bx + c, sum of zeroes = −b/a and product = c/a.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-02-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Polynomials”?",
+              "answer": "A polynomial is an algebraic expression in which the powers of the variable are non-negative integers. Its zeroes are the values that make it equal to zero.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 3,
+          "chapterKey": "pair-of-linear-equations-in-two-variables",
+          "title": "Pair of Linear Equations in Two Variables",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-03-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "A pair of linear equations represents two straight lines. Their intersection gives the common solution; parallel or coincident lines explain the other cases.",
+              "highlight": "Unique: a₁/a₂ ≠ b₁/b₂",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-03-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "For a₁x+b₁y+c₁=0 and a₂x+b₂y+c₂=0, compare coefficient ratios to identify unique, no or infinitely many solutions.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-03-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Pair of Linear Equations in Two Variables”?",
+              "answer": "A pair of linear equations represents two straight lines. Their intersection gives the common solution; parallel or coincident lines explain the other cases.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 4,
+          "chapterKey": "quadratic-equations",
+          "title": "Quadratic Equations",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-04-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "A quadratic equation has the form ax²+bx+c=0, where a≠0. Its roots can be found by factorisation, completing the square or the quadratic formula.",
+              "highlight": "x = (−b ± √D)/(2a)",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-04-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "The discriminant D=b²−4ac determines the nature of roots: positive, zero or negative.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-04-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Quadratic Equations”?",
+              "answer": "A quadratic equation has the form ax²+bx+c=0, where a≠0. Its roots can be found by factorisation, completing the square or the quadratic formula.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 5,
+          "chapterKey": "arithmetic-progressions",
+          "title": "Arithmetic Progressions",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-05-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "An arithmetic progression has a constant common difference between consecutive terms. The nth term and sum depend on the first term and common difference.",
+              "highlight": "aₙ = a+(n−1)d; Sₙ = n/2[2a+(n−1)d]",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-05-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Check the common difference before applying formulas; the sum formula uses the number of terms, not the final term.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-05-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Arithmetic Progressions”?",
+              "answer": "An arithmetic progression has a constant common difference between consecutive terms. The nth term and sum depend on the first term and common difference.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 6,
+          "chapterKey": "triangles",
+          "title": "Triangles",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-06-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Similarity means corresponding angles are equal and corresponding sides are proportional. Similar triangles have the same shape but may differ in size.",
+              "highlight": "(side₁/side₂) ratios are equal",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-06-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Use AA, SAS or SSS similarity criteria. In a right triangle, the Pythagoras theorem links the hypotenuse to the other two sides.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-06-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Triangles”?",
+              "answer": "Similarity means corresponding angles are equal and corresponding sides are proportional. Similar triangles have the same shape but may differ in size.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 7,
+          "chapterKey": "coordinate-geometry",
+          "title": "Coordinate Geometry",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-07-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Coordinate geometry connects algebra and geometry using ordered pairs. Distance, section and area formulas help describe points and figures on the plane.",
+              "highlight": "d = √[(x₂−x₁)²+(y₂−y₁)²]",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-07-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Keep x-coordinates with x and y-coordinates with y; use brackets carefully when subtracting negative values.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-07-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Coordinate Geometry”?",
+              "answer": "Coordinate geometry connects algebra and geometry using ordered pairs. Distance, section and area formulas help describe points and figures on the plane.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 8,
+          "chapterKey": "introduction-to-trigonometry",
+          "title": "Introduction to Trigonometry",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-08-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Trigonometric ratios relate an acute angle in a right triangle to its sides: sine, cosine and tangent, with reciprocal ratios cosec, sec and cot.",
+              "highlight": "sin²θ + cos²θ = 1",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-08-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Memorise opposite/hypotenuse, adjacent/hypotenuse and opposite/adjacent relative to the chosen angle.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-08-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Introduction to Trigonometry”?",
+              "answer": "Trigonometric ratios relate an acute angle in a right triangle to its sides: sine, cosine and tangent, with reciprocal ratios cosec, sec and cot.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 9,
+          "chapterKey": "some-applications-of-trigonometry",
+          "title": "Some Applications of Trigonometry",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-09-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Heights and distances problems use angles of elevation and depression with right-triangle trigonometry.",
+              "highlight": "tan θ = height / horizontal distance",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-09-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Draw and label a right triangle first. Decide which side is opposite, adjacent and hypotenuse before selecting a ratio.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-09-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Some Applications of Trigonometry”?",
+              "answer": "Heights and distances problems use angles of elevation and depression with right-triangle trigonometry.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 10,
+          "chapterKey": "circles",
+          "title": "Circles",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-10-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "A tangent touches a circle at exactly one point. The radius drawn to the point of contact is perpendicular to the tangent.",
+              "highlight": "OT ⟂ PT; PA = PB",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-10-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Tangents from an external point to a circle are equal in length. Distinguish a tangent from a secant.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-10-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Circles”?",
+              "answer": "A tangent touches a circle at exactly one point. The radius drawn to the point of contact is perpendicular to the tangent.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 11,
+          "chapterKey": "areas-related-to-circles",
+          "title": "Areas Related to Circles",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-11-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Sector and segment areas are fractions of the full circle based on the central angle. Arc length is the corresponding fraction of circumference.",
+              "highlight": "Sector area = (θ/360°)πr²",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-11-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Check whether the question asks for a sector, segment, ring or shaded region; subtract areas only after identifying the required shape.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-11-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Areas Related to Circles”?",
+              "answer": "Sector and segment areas are fractions of the full circle based on the central angle. Arc length is the corresponding fraction of circumference.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 12,
+          "chapterKey": "surface-areas-and-volumes",
+          "title": "Surface Areas and Volumes",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-12-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Mensuration combines surface area and volume formulas for solids such as cylinders, cones, spheres and combinations of solids.",
+              "highlight": "Cylinder V=πr²h; sphere V=4/3πr³",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-12-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Convert all measurements to the same unit. For a combined solid, add or subtract only the surfaces that are actually exposed.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-12-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Surface Areas and Volumes”?",
+              "answer": "Mensuration combines surface area and volume formulas for solids such as cylinders, cones, spheres and combinations of solids.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 13,
+          "chapterKey": "statistics",
+          "title": "Statistics",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-13-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Grouped data can be summarised using mean, median and mode. The median depends on cumulative frequency and the median class.",
+              "highlight": "Median = l + [(N/2−cf)/f]h",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-13-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "For grouped median, identify N/2, locate the median class and substitute its lower boundary, cumulative frequency, frequency and class width correctly.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-13-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Statistics”?",
+              "answer": "Grouped data can be summarised using mean, median and mode. The median depends on cumulative frequency and the median class.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 14,
+          "chapterKey": "probability",
+          "title": "Probability",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-math-14-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "For equally likely outcomes, probability is favourable outcomes divided by total possible outcomes. Probability lies between 0 and 1.",
+              "highlight": "P(E)=favourable/total; P(not E)=1−P(E)",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-math-14-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Count distinct equally likely outcomes and avoid counting the same outcome twice.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-math-14-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Probability”?",
+              "answer": "For equally likely outcomes, probability is favourable outcomes divided by total possible outcomes. Probability lies between 0 and 1.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "classId": "10",
+      "subject": "science",
+      "subjectLabel": "Science",
+      "academicYear": "2026-27",
+      "chapters": [
+        {
+          "chapterNo": 1,
+          "chapterKey": "chemical-reactions-and-equations",
+          "title": "Chemical Reactions and Equations",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-01-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "A chemical reaction rearranges atoms to form new substances. A balanced equation has the same number of each type of atom on both sides, obeying conservation of mass.",
+              "highlight": "Reactants → Products",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-01-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Identify the reaction type—combination, decomposition, displacement, double displacement or redox—and balance by changing coefficients, never subscripts.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-01-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Chemical Reactions and Equations”?",
+              "answer": "A chemical reaction rearranges atoms to form new substances. A balanced equation has the same number of each type of atom on both sides, obeying conservation of mass.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 2,
+          "chapterKey": "acids-bases-and-salts",
+          "title": "Acids, Bases and Salts",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-02-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Acids produce H⁺/H₃O⁺ ions in aqueous solution; bases produce OH⁻ ions. Neutralisation forms salt and water.",
+              "highlight": "pH < 7 acid; pH = 7 neutral; pH > 7 base",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-02-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Use indicators and pH to compare solutions. Strong/weak describes ionisation; concentrated/dilute describes amount per volume.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-02-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Acids, Bases and Salts”?",
+              "answer": "Acids produce H⁺/H₃O⁺ ions in aqueous solution; bases produce OH⁻ ions. Neutralisation forms salt and water.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 3,
+          "chapterKey": "metals-and-non-metals",
+          "title": "Metals and Non-metals",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-03-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Metals generally lose electrons to form cations; non-metals generally gain or share electrons. Reactivity determines displacement and extraction methods.",
+              "highlight": "More reactive metal displaces a less reactive metal",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-03-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Remember that reactivity series predicts displacement. Ionic compounds conduct when molten or dissolved, not as solids.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-03-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Metals and Non-metals”?",
+              "answer": "Metals generally lose electrons to form cations; non-metals generally gain or share electrons. Reactivity determines displacement and extraction methods.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 4,
+          "chapterKey": "carbon-and-its-compounds",
+          "title": "Carbon and its Compounds",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-04-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Carbon forms covalent bonds and long chains because of tetravalency and catenation. Saturated compounds have single bonds; unsaturated compounds contain double or triple bonds.",
+              "highlight": "Carbon valency = 4",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-04-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Know homologous series, functional groups, combustion, oxidation, addition and substitution reactions; draw structural formulas clearly.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-04-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Carbon and its Compounds”?",
+              "answer": "Carbon forms covalent bonds and long chains because of tetravalency and catenation. Saturated compounds have single bonds; unsaturated compounds contain double or triple bonds.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 5,
+          "chapterKey": "periodic-classification-of-elements",
+          "title": "Periodic Classification of Elements",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-05-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "The modern periodic table arranges elements by increasing atomic number. Elements in a group share valence-electron patterns; periods indicate occupied shells.",
+              "highlight": "18 groups · 7 periods",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-05-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Across a period, atomic size generally decreases and metallic character decreases; down a group, atomic size generally increases.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-05-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Periodic Classification of Elements”?",
+              "answer": "The modern periodic table arranges elements by increasing atomic number. Elements in a group share valence-electron patterns; periods indicate occupied shells.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 6,
+          "chapterKey": "life-processes",
+          "title": "Life Processes",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-06-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Living organisms maintain themselves through nutrition, respiration, transport and excretion. These processes exchange matter and energy with the environment.",
+              "highlight": "Nutrition · Respiration · Transport · Excretion",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-06-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Trace the pathway, organ and function for each process; compare autotrophic and heterotrophic nutrition and aerobic and anaerobic respiration.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-06-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Life Processes”?",
+              "answer": "Living organisms maintain themselves through nutrition, respiration, transport and excretion. These processes exchange matter and energy with the environment.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 7,
+          "chapterKey": "control-and-coordination",
+          "title": "Control and Coordination",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-07-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Nervous and hormonal systems coordinate responses. Neurons transmit impulses; hormones act as chemical messengers through target organs.",
+              "highlight": "Stimulus → receptor → coordinator → effector → response",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-07-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Reflex actions are rapid and often involve the spinal cord. Plant hormones coordinate growth and tropic responses.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-07-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Control and Coordination”?",
+              "answer": "Nervous and hormonal systems coordinate responses. Neurons transmit impulses; hormones act as chemical messengers through target organs.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 8,
+          "chapterKey": "how-do-organisms-reproduce",
+          "title": "How do Organisms Reproduce?",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-08-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Reproduction produces new individuals. Asexual reproduction uses one parent; sexual reproduction involves gametes and fertilisation, generating variation.",
+              "highlight": "Gametes fuse to form a zygote",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-08-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Distinguish pollination from fertilisation in plants and identify the roles of testes, ovaries, uterus and placenta in humans.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-08-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “How do Organisms Reproduce?”?",
+              "answer": "Reproduction produces new individuals. Asexual reproduction uses one parent; sexual reproduction involves gametes and fertilisation, generating variation.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 9,
+          "chapterKey": "heredity-and-evolution",
+          "title": "Heredity and Evolution",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-09-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Heredity passes traits through genes carried on chromosomes. Variations arise through changes and recombination; natural selection can change trait frequencies over generations.",
+              "highlight": "Genes → inherited traits; variation fuels evolution",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-09-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Separate inherited traits from acquired traits. Evolution describes population change over generations, not a ladder of progress.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-09-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Heredity and Evolution”?",
+              "answer": "Heredity passes traits through genes carried on chromosomes. Variations arise through changes and recombination; natural selection can change trait frequencies over generations.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 10,
+          "chapterKey": "light-reflection-and-refraction",
+          "title": "Light: Reflection and Refraction",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-10-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Reflection changes the direction of light at a surface; refraction occurs when light changes speed between media. Spherical mirrors and lenses form images.",
+              "highlight": "Mirror: 1/f=1/v+1/u; lens: 1/f=1/v−1/u",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-10-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Use the correct sign convention and draw principal rays. Distinguish real/inverted from virtual/erect images.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-10-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Light: Reflection and Refraction”?",
+              "answer": "Reflection changes the direction of light at a surface; refraction occurs when light changes speed between media. Spherical mirrors and lenses form images.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 11,
+          "chapterKey": "the-human-eye-and-the-colourful-world",
+          "title": "The Human Eye and the Colourful World",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-11-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "The eye focuses light on the retina. Accommodation changes lens curvature; scattering and refraction explain several atmospheric optical effects.",
+              "highlight": "Myopia: concave · Hypermetropia: convex",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-11-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Myopia is corrected with a concave lens; hypermetropia with a convex lens. Know dispersion, scattering and the blue appearance of the sky.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-11-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “The Human Eye and the Colourful World”?",
+              "answer": "The eye focuses light on the retina. Accommodation changes lens curvature; scattering and refraction explain several atmospheric optical effects.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 12,
+          "chapterKey": "electricity",
+          "title": "Electricity",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-12-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Electric current is the rate of flow of charge. Potential difference drives current; resistance opposes it. Series and parallel combinations behave differently.",
+              "highlight": "V=IR; P=VI=I²R=V²/R",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-12-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Use V=IR and P=VI. In series, current is common; in parallel, potential difference is common.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-12-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Electricity”?",
+              "answer": "Electric current is the rate of flow of charge. Potential difference drives current; resistance opposes it. Series and parallel combinations behave differently.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 13,
+          "chapterKey": "magnetic-effects-of-electric-current",
+          "title": "Magnetic Effects of Electric Current",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-13-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "A current-carrying conductor produces a magnetic field. Motors convert electrical energy to mechanical energy; electromagnetic induction produces current from changing magnetic flux.",
+              "highlight": "Motor: electrical → mechanical",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-13-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Use Fleming’s left-hand rule for motor force and right-hand rule for induced current. A split-ring commutator reverses coil current each half-turn.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-13-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Magnetic Effects of Electric Current”?",
+              "answer": "A current-carrying conductor produces a magnetic field. Motors convert electrical energy to mechanical energy; electromagnetic induction produces current from changing magnetic flux.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 14,
+          "chapterKey": "our-environment",
+          "title": "Our Environment",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sci-14-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Ecosystems contain producers, consumers and decomposers. Energy flows through trophic levels while materials are recycled.",
+              "highlight": "Energy flow is one-way; nutrients cycle",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sci-14-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Only a small fraction of energy passes to the next trophic level; biomagnification increases concentration of persistent pollutants up food chains.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sci-14-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Our Environment”?",
+              "answer": "Ecosystems contain producers, consumers and decomposers. Energy flows through trophic levels while materials are recycled.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "classId": "10",
+      "subject": "social-science",
+      "subjectLabel": "Social Science",
+      "academicYear": "2026-27",
+      "chapters": [
+        {
+          "chapterNo": 1,
+          "chapterKey": "the-rise-of-nationalism-in-europe",
+          "title": "The Rise of Nationalism in Europe",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-01-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "The French Revolution popularised citizenship and the nation as a source of sovereignty. Liberalism, cultural movements and political struggles shaped nineteenth-century nationalism.",
+              "highlight": "German unification: Prussian leadership · Bismarck",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-01-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Connect unification of Germany and Italy with key leaders, events and the role of conservative powers; distinguish nation-state from empire.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-01-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “The Rise of Nationalism in Europe”?",
+              "answer": "The French Revolution popularised citizenship and the nation as a source of sovereignty. Liberalism, cultural movements and political struggles shaped nineteenth-century nationalism.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 2,
+          "chapterKey": "nationalism-in-india",
+          "title": "Nationalism in India",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-02-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Indian nationalism grew through anti-colonial movements, mass mobilisation and shared symbols. Gandhi linked local grievances to broader satyagraha campaigns.",
+              "highlight": "Satyagraha = truth-force / non-violent resistance",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-02-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Keep the chronology clear: Rowlatt Act, Jallianwala Bagh, Non-Cooperation, Civil Disobedience and Quit India; note participation and limits across groups.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-02-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Nationalism in India”?",
+              "answer": "Indian nationalism grew through anti-colonial movements, mass mobilisation and shared symbols. Gandhi linked local grievances to broader satyagraha campaigns.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 3,
+          "chapterKey": "the-making-of-a-global-world",
+          "title": "The Making of a Global World",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-03-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Globalisation has a long history shaped by trade, migration, conquest, labour and capital flows. The nineteenth century connected economies in new ways.",
+              "highlight": "Global links pre-date modern globalisation",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-03-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Use examples such as silk routes, indentured labour, colonial trade and the Great Depression to explain global interdependence.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-03-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “The Making of a Global World”?",
+              "answer": "Globalisation has a long history shaped by trade, migration, conquest, labour and capital flows. The nineteenth century connected economies in new ways.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 4,
+          "chapterKey": "print-culture-and-the-modern-world",
+          "title": "Print Culture and the Modern World",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-04-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Printing transformed the circulation of ideas, literacy, religious debate and political discussion. Print culture developed differently across societies.",
+              "highlight": "Print expanded access to ideas and debate",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-04-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Explain how print affected reform, public debate and nationalism; distinguish manuscript culture from mass print.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-04-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Print Culture and the Modern World”?",
+              "answer": "Printing transformed the circulation of ideas, literacy, religious debate and political discussion. Print culture developed differently across societies.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 5,
+          "chapterKey": "resources-and-development",
+          "title": "Resources and Development",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-05-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Resources become useful through technology, institutions and human effort. Sustainable development balances present needs with future generations.",
+              "highlight": "Sustainable use = present needs + future capacity",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-05-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Classify resources by origin, exhaustibility, ownership and status; connect resource planning with conservation and land degradation.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-05-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Resources and Development”?",
+              "answer": "Resources become useful through technology, institutions and human effort. Sustainable development balances present needs with future generations.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 6,
+          "chapterKey": "forest-and-wildlife-resources",
+          "title": "Forest and Wildlife Resources",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-06-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Biodiversity supports ecological balance and livelihoods. Habitat loss, hunting and development pressures threaten species and forest ecosystems.",
+              "highlight": "In-situ conservation protects species in natural habitats",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-06-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Know conservation categories and community-led examples; distinguish endangered, vulnerable and endemic species.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-06-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Forest and Wildlife Resources”?",
+              "answer": "Biodiversity supports ecological balance and livelihoods. Habitat loss, hunting and development pressures threaten species and forest ecosystems.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 7,
+          "chapterKey": "water-resources",
+          "title": "Water Resources",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-07-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Freshwater is limited and unevenly distributed. Multipurpose river projects support irrigation and power but can also cause social and ecological impacts.",
+              "highlight": "Rainwater harvesting improves local water security",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-07-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Compare dams’ benefits and costs; explain rainwater harvesting and watershed management with local examples.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-07-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Water Resources”?",
+              "answer": "Freshwater is limited and unevenly distributed. Multipurpose river projects support irrigation and power but can also cause social and ecological impacts.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 8,
+          "chapterKey": "agriculture",
+          "title": "Agriculture",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-08-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Agriculture depends on climate, soil, technology, labour and markets. Cropping seasons and farming types vary across India.",
+              "highlight": "Kharif: monsoon · Rabi: winter · Zaid: short summer",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-08-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Compare Kharif, Rabi and Zaid crops; link crop requirements to temperature, rainfall and soil.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-08-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Agriculture”?",
+              "answer": "Agriculture depends on climate, soil, technology, labour and markets. Cropping seasons and farming types vary across India.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 9,
+          "chapterKey": "minerals-and-energy-resources",
+          "title": "Minerals and Energy Resources",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-09-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Minerals occur in different geological formations and are essential for industry. Energy resources are renewable or non-renewable.",
+              "highlight": "Conservation reduces depletion and environmental cost",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-09-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Connect mineral type to mode of occurrence and conservation; distinguish conventional and non-conventional energy sources.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-09-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Minerals and Energy Resources”?",
+              "answer": "Minerals occur in different geological formations and are essential for industry. Energy resources are renewable or non-renewable.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 10,
+          "chapterKey": "manufacturing-industries",
+          "title": "Manufacturing Industries",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-10-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Manufacturing adds value to raw materials and supports employment, trade and economic development. Industrial location depends on several factors.",
+              "highlight": "Industry location: raw material + power + labour + market + transport",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-10-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Explain agglomeration, industrial pollution and control measures; use examples of major industries and their location factors.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-10-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Manufacturing Industries”?",
+              "answer": "Manufacturing adds value to raw materials and supports employment, trade and economic development. Industrial location depends on several factors.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 11,
+          "chapterKey": "power-sharing",
+          "title": "Power Sharing",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-11-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Power sharing reduces conflict and strengthens democracy by distributing authority among organs, levels and social groups.",
+              "highlight": "Power sharing is both prudent and morally desirable",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-11-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Compare Belgium’s accommodation with Sri Lanka’s majoritarian policies; identify horizontal and vertical power sharing.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-11-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Power Sharing”?",
+              "answer": "Power sharing reduces conflict and strengthens democracy by distributing authority among organs, levels and social groups.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 12,
+          "chapterKey": "federalism",
+          "title": "Federalism",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-12-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Federalism divides power between levels of government, with constitutionally protected jurisdictions. India combines a strong Union with state and local governments.",
+              "highlight": "Union List · State List · Concurrent List",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-12-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Remember the three lists and the role of decentralisation, linguistic states and local self-government.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-12-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Federalism”?",
+              "answer": "Federalism divides power between levels of government, with constitutionally protected jurisdictions. India combines a strong Union with state and local governments.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 13,
+          "chapterKey": "gender-religion-and-caste",
+          "title": "Gender, Religion and Caste",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-13-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Social divisions shape political life. Democracy requires equal citizenship and safeguards against discrimination and domination.",
+              "highlight": "Secular state: no official religion; equal treatment",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-13-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Distinguish gender division, communalism and caste inequality; explain when social differences enrich or threaten democracy.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-13-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Gender, Religion and Caste”?",
+              "answer": "Social divisions shape political life. Democracy requires equal citizenship and safeguards against discrimination and domination.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 14,
+          "chapterKey": "political-parties",
+          "title": "Political Parties",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-14-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Political parties contest elections, form governments, shape policies and connect citizens with institutions. They are essential to representative democracy.",
+              "highlight": "Parties organise political competition and accountability",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-14-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Know party functions, challenges such as dynastic succession and money power, and reforms to improve internal democracy.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-14-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Political Parties”?",
+              "answer": "Political parties contest elections, form governments, shape policies and connect citizens with institutions. They are essential to representative democracy.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 15,
+          "chapterKey": "outcomes-of-democracy",
+          "title": "Outcomes of Democracy",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-15-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Democracy is evaluated through accountable government, responsive decision-making, legitimacy, economic outcomes and social equality.",
+              "highlight": "Democracy promises accountability, not instant perfection",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-15-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Avoid claiming democracy automatically removes inequality; assess outcomes using evidence and multiple dimensions.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-15-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Outcomes of Democracy”?",
+              "answer": "Democracy is evaluated through accountable government, responsive decision-making, legitimacy, economic outcomes and social equality.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 16,
+          "chapterKey": "development",
+          "title": "Development",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-16-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Development has different goals for different people. Income matters, but health, education, security, freedom and sustainability also matter.",
+              "highlight": "Per capita income = total income ÷ population",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-16-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Compare per capita income with human development indicators; understand public facilities and sustainable development.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-16-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Development”?",
+              "answer": "Development has different goals for different people. Income matters, but health, education, security, freedom and sustainability also matter.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 17,
+          "chapterKey": "sectors-of-the-indian-economy",
+          "title": "Sectors of the Indian Economy",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-17-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Economic activities are grouped into primary, secondary and tertiary sectors. Employment and output shares can differ across sectors.",
+              "highlight": "Primary → natural resources; Secondary → manufacturing; Tertiary → services",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-17-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Distinguish organised/unorganised and public/private sectors; explain underemployment and the role of MGNREGA.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-17-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Sectors of the Indian Economy”?",
+              "answer": "Economic activities are grouped into primary, secondary and tertiary sectors. Employment and output shares can differ across sectors.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 18,
+          "chapterKey": "money-and-credit",
+          "title": "Money and Credit",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-18-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Money acts as a medium of exchange and removes the need for double coincidence of wants. Credit can support activity but may create debt traps.",
+              "highlight": "Formal credit is regulated; informal credit often costs more",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-18-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Compare formal and informal credit; explain collateral, terms of credit, SHGs and the role of the RBI.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-18-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Money and Credit”?",
+              "answer": "Money acts as a medium of exchange and removes the need for double coincidence of wants. Credit can support activity but may create debt traps.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 19,
+          "chapterKey": "globalisation-and-the-indian-economy",
+          "title": "Globalisation and the Indian Economy",
+          "subtitle": "Quick recall · key ideas · exam focus",
+          "cards": [
+            {
+              "id": "c10-sst-19-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Globalisation integrates markets through trade, investment, technology and multinational production. Its effects differ among workers, producers and consumers.",
+              "highlight": "MNCs organise production across countries",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c10-sst-19-02",
+              "type": "exam-alert",
+              "title": "Exam focus",
+              "content": "Explain MNCs, foreign investment, liberalisation and WTO; weigh benefits against unequal gains and labour insecurity.",
+              "tags": [
+                "exam focus"
+              ]
+            },
+            {
+              "id": "c10-sst-19-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the key idea to remember from “Globalisation and the Indian Economy”?",
+              "answer": "Globalisation integrates markets through trade, investment, technology and multinational production. Its effects differ among workers, producers and consumers.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
