@@ -41,7 +41,7 @@ assert.equal(visual.schemaVersion,1);
 assert.equal(visual.kind,"visual-revision-manifest");
 assert.ok(Array.isArray(visual.boards)&&visual.boards.length>0);
 for(const board of visual.boards){
-  assert.ok(/^\\d+$/.test(String(board.classId)));
+  assert.ok(/^\d+$/.test(String(board.classId)));
   assert.ok(typeof board.subject==="string"&&Array.isArray(board.chapters));
   for(const chapter of board.chapters){
     assert.ok(chapter.title&&chapter.chapterKey&&Array.isArray(chapter.cards));
