@@ -50,8 +50,8 @@
     {label:"Social Science",group:"Subjects",icon:"🌍",href:"./practice.html?subject=social-science",page:"practice.html",subject:"social-science",auth:"student"},
     {label:"Hindi",group:"Subjects",icon:"📝",href:"./practice.html?subject=hindi",page:"practice.html",subject:"hindi",auth:"student"},
 
-    {label:"Study Library",group:"Study Pack",icon:"📖",href:"./study.html",page:"study.html",auth:"student"},
-    {label:"Learning Hub",group:"My Learning",icon:"🧠",href:"./learning.html",page:"learning.html",auth:"student"},
+    {label:"Study Library",group:"Learning Hub",icon:"📖",href:"./study.html",page:"study.html",auth:"student"},
+    {label:"My Learning",group:"Learning Hub",icon:"🧠",href:"./learning.html",page:"learning.html",auth:"student"},
 
     {label:"Assessment Test",group:"Assessments",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",clatHref:"./clat.html#library",clatPage:"clat.html",clatHash:"#library",auth:"student"},
     {label:"Exam Paper Practice",icon:"📝",href:"./exam-practice.html",page:"exam-practice.html",classIds:["6","10"],auth:"student"},
@@ -191,7 +191,7 @@
     const list=node("nav","c10-nav-list");list.setAttribute("aria-label","Learning and account");
     const visibleLinks=links.filter(item=>{
       if(item.auth!==auth.role)return false;
-      if(isClatStudent&&!["CLAT UG 2027","Dashboard","Assessment Test","Study Library","Learning Hub","FAQ & Guide"].includes(item.label))return false;
+      if(isClatStudent&&!["CLAT UG 2027","Dashboard","Assessment Test","Study Library","My Learning","FAQ & Guide"].includes(item.label))return false;
       if(item.subject&&subjectConfig&&!subjectConfig.subjects.includes(item.subject))return false;
       if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return false;
       return true;
