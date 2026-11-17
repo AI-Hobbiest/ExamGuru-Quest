@@ -21,7 +21,7 @@
       "report.class.read","report.student.read"
     ]),
     parent: new Set(["institution.read","report.student.read"]),
-    student: new Set(["institution.read","question_bank.platform.read"]),
+    student: new Set(["institution.read","question_bank.platform.read","report.student.read"]),
     institution_viewer: new Set(["institution.read","question_bank.platform.read","report.institution.read"])
   });
   const READ_PERMISSIONS = new Set([
