@@ -257,6 +257,83 @@ async function saveStudentAttempt(request,env,who) {
   await writeAudit(env,who.user_id,"test-attempt-saved",id,{subjectId:subject,score,maxScore});
   return json(request,env,{ok:true,attemptId:id,percentage:Math.round(score/maxScore*10000)/100},201);
 }
+
+async function v2Identity(request,env,who) {
+  const memberships=await env.DB.prepare(
+    "SELECT m.membership_id AS membershipId,m.institution_id AS institutionId,i.name AS institutionName,i.status AS institutionStatus,m.role,m.status,m.all_branches AS allBranches,m.created_at AS joinedAt FROM institution_memberships m JOIN institutions i ON i.institution_id=m.institution_id WHERE m.user_id=? AND m.status='active' AND i.status='active' ORDER BY i.name,m.role"
+  ).bind(who.user_id).all();
+  const scopes=await env.DB.prepare(
+    "SELECT s.membership_id AS membershipId,s.branch_id AS branchId,b.name AS branchName FROM membership_branch_scopes s JOIN branches b ON b.branch_id=s.branch_id AND b.institution_id=s.institution_id WHERE s.membership_id IN (SELECT membership_id FROM institution_memberships WHERE user_id=? AND status='active') AND b.status='active' ORDER BY b.name"
+  ).bind(who.user_id).all();
+  const roles=await env.DB.prepare("SELECT role FROM platform_roles WHERE user_id=? AND revoked_at IS NULL ORDER BY role").bind(who.user_id).all();
+  const session=await env.DB.prepare("SELECT active_institution_id,active_membership_id,active_branch_id FROM auth_sessions WHERE token_hash=?").bind(await sha256((request.headers.get("Authorization")||"").slice(7))).first();
+  const branchScopes=scopes.results||[];
+  const current=(memberships.results||[]).find(m=>m.membershipId===session?.active_membership_id&&m.institutionId===session?.active_institution_id)||null;
+  const activeBranch=current&&session?.active_branch_id&&branchScopes.some(s=>s.membershipId===current.membershipId&&s.branchId===session.active_branch_id)?session.active_branch_id:null;
+  return json(request,env,{ok:true,version:2,identity:{user:{id:who.user_id,username:who.username,displayName:who.display_name||who.github_login||who.username},platformRoles:(roles.results||[]).map(r=>r.role),memberships:(memberships.results||[]).map(m=>({...m,allBranches:Number(m.allBranches)===1,branchScopes:branchScopes.filter(s=>s.membershipId===m.membershipId).map(s=>({branchId:s.branchId,branchName:s.branchName}))})),context:{institutionId:current?.institutionId||null,membershipId:current?.membershipId||null,branchId:activeBranch}}});
+}
+async function v2SelectContext(request,env,who) {
+  const body=await readJson(request),institutionId=String(body.institutionId||""),membershipId=String(body.membershipId||""),branchId=body.branchId==null||body.branchId===""?null:String(body.branchId);
+  if(!institutionId||!membershipId)return fail(request,env,400,"Choose an institution membership.");
+  const membership=await env.DB.prepare("SELECT m.membership_id,m.institution_id,m.all_branches,i.status AS institution_status,m.status AS membership_status FROM institution_memberships m JOIN institutions i ON i.institution_id=m.institution_id WHERE m.membership_id=? AND m.institution_id=? AND m.user_id=?").bind(membershipId,institutionId,who.user_id).first();
+  if(!membership||membership.membership_status!=="active"||membership.institution_status!=="active")return fail(request,env,403,"That active institution membership is not available to this account.");
+  if(branchId){
+    const branch=await env.DB.prepare("SELECT status FROM branches WHERE branch_id=? AND institution_id=?").bind(branchId,institutionId).first();
+    const scoped=Number(membership.all_branches)===1||!!(await env.DB.prepare("SELECT 1 AS ok FROM membership_branch_scopes WHERE membership_id=? AND institution_id=? AND branch_id=?").bind(membershipId,institutionId,branchId).first());
+    if(!branch||branch.status!=="active"||!scoped)return fail(request,env,403,"That branch is outside this membership's active scope.");
+  }
+  await env.DB.prepare("UPDATE auth_sessions SET active_institution_id=?,active_membership_id=?,active_branch_id=?,last_seen_at=? WHERE token_hash=?")
+    .bind(institutionId,membershipId,branchId,isoNow(),await sha256((request.headers.get("Authorization")||"").slice(7))).run();
+  await writeAudit(env,who.user_id,"identity-context-selected",membershipId,{institutionId,branchId});
+  return json(request,env,{ok:true,context:{institutionId,membershipId,branchId}});
+}
+async function v2CreateInvitation(request,env,who) {
+  // M2 provisioning is deliberately restricted to the existing allow-listed
+  // platform-admin identity. Scoped School Admin delegation is a later policy slice.
+  if(who.role!=="admin"||!adminAllowed(env,who.github_login))return fail(request,env,403,"Platform administrator approval is required to issue invitations in M2.");
+  const body=await readJson(request),institutionId=String(body.institutionId||""),targetUserId=String(body.targetUserId||""),role=String(body.role||"");
+  const allowedRoles=new Set(["school_admin","teacher","parent","student","institution_viewer"]);
+  const institution=await env.DB.prepare("SELECT institution_id FROM institutions WHERE institution_id=? AND status='active'").bind(institutionId).first();
+  const target=await env.DB.prepare("SELECT id FROM users WHERE id=? AND enabled=1").bind(targetUserId).first();
+  if(!institution||!target||!allowedRoles.has(role))return fail(request,env,400,"Select an active institution, an existing enabled account and a supported membership role.");
+  let branchIds=Array.isArray(body.branchIds)?[...new Set(body.branchIds.map(String))]:[];
+  const allBranches=body.allBranches===true;
+  if(allBranches&&role!=="school_admin")return fail(request,env,400,"All-branch scope is reserved for School Admin memberships.");
+  if(allBranches&&branchIds.length)return fail(request,env,400,"Choose all branches or specific branches, not both.");
+  if(branchIds.length>100||branchIds.some(id=>!/^[A-Za-z0-9_-]{1,80}$/.test(id)))return fail(request,env,400,"Invalid branch scope.");
+  for(const id of branchIds){const branch=await env.DB.prepare("SELECT branch_id FROM branches WHERE branch_id=? AND institution_id=? AND status='active'").bind(id,institutionId).first();if(!branch)return fail(request,env,400,"Every invited branch must be active and belong to the selected institution.");}
+  const existing=await env.DB.prepare("SELECT membership_id FROM institution_memberships WHERE user_id=? AND institution_id=? AND role=? AND status IN ('active','invited')").bind(targetUserId,institutionId,role).first();
+  if(existing)return fail(request,env,409,"This account already has an active or invited membership for that role.");
+  const token=randomToken(32),now=isoNow(),expires=new Date(Date.now()+7*86400000).toISOString(),invitationId=uid();
+  await env.DB.prepare("INSERT INTO membership_invitations(invitation_id,token_hash,institution_id,target_user_id,role,branch_ids_json,all_branches,invited_by_user_id,status,expires_at,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,'pending',?,?,?)")
+    .bind(invitationId,await sha256(token),institutionId,targetUserId,role,JSON.stringify(branchIds),allBranches?1:0,who.user_id,expires,now,now).run();
+  await writeAudit(env,who.user_id,"membership-invitation-created",invitationId,{institutionId,targetUserId,role,branchCount:branchIds.length});
+  return json(request,env,{ok:true,invitation:{invitationId,institutionId,targetUserId,role,branchIds,expiresAt:expires},acceptanceToken:token},201);
+}
+async function v2AcceptInvitation(request,env,who) {
+  const body=await readJson(request),token=String(body.token||"");
+  if(!/^[A-Za-z0-9_-]{30,100}$/.test(token))return fail(request,env,400,"A valid invitation token is required.");
+  const invite=await env.DB.prepare("SELECT * FROM membership_invitations WHERE token_hash=?").bind(await sha256(token)).first();
+  if(!invite||invite.target_user_id!==who.user_id||invite.status!=="pending")return fail(request,env,404,"Invitation is invalid, already used or not assigned to this account.");
+  const now=isoNow();
+  if(invite.expires_at<=now){await env.DB.prepare("UPDATE membership_invitations SET status='expired',updated_at=? WHERE invitation_id=? AND status='pending'").bind(now,invite.invitation_id).run();return fail(request,env,410,"This invitation has expired.");}
+  const institution=await env.DB.prepare("SELECT status FROM institutions WHERE institution_id=?").bind(invite.institution_id).first();
+  if(!institution||institution.status!=="active")return fail(request,env,403,"The institution is not currently active.");
+  const membershipId=uid(),branchIds=JSON.parse(invite.branch_ids_json||"[]");
+  try{
+    await env.DB.prepare("INSERT INTO institution_memberships(membership_id,user_id,institution_id,role,status,all_branches,created_by,created_at,updated_at) VALUES(?,?,?,?,'active',?,?,?,?)")
+      .bind(membershipId,who.user_id,invite.institution_id,invite.role,Number(invite.all_branches)===1?1:0,invite.invited_by_user_id,now,now).run();
+    for(const branchId of branchIds)await env.DB.prepare("INSERT INTO membership_branch_scopes(membership_id,institution_id,branch_id,created_at) VALUES(?,?,?,?)").bind(membershipId,invite.institution_id,branchId,now).run();
+    const result=await env.DB.prepare("UPDATE membership_invitations SET status='accepted',accepted_at=?,accepted_membership_id=?,updated_at=? WHERE invitation_id=? AND status='pending' AND expires_at>?").bind(now,membershipId,now,invite.invitation_id,now).run();
+    if(Number(result.meta?.changes||0)!==1)throw new Error("Invitation was already consumed.");
+  }catch(_){
+    await env.DB.prepare("DELETE FROM institution_memberships WHERE membership_id=?").bind(membershipId).run();
+    return fail(request,env,409,"Invitation could not be accepted; it may have been used or the membership already exists.");
+  }
+  await writeAudit(env,who.user_id,"membership-invitation-accepted",invite.invitation_id,{institutionId:invite.institution_id,membershipId,role:invite.role});
+  return json(request,env,{ok:true,membership:{membershipId,institutionId:invite.institution_id,role:invite.role,status:"active"}},201);
+}
+
 async function health(request,env) {
   if(!env.DB)return fail(request,env,503,"D1 database binding DB is not configured.");
   try{await env.DB.prepare("SELECT 1 AS ok").first();return json(request,env,{ok:true,service:"c10-playground-api",database:"connected"});}
@@ -357,12 +434,6 @@ async function adminLeaderboard(request,env) {
   const rows=await env.DB.prepare("SELECT p.student_id AS studentId,p.display_name AS displayName,p.school,p.class_id AS classId,COUNT(a.attempt_id) AS testsCompleted,ROUND(AVG(a.percentage),1) AS averageScore,MAX(a.percentage) AS bestScore,MAX(a.submitted_at) AS lastActivity FROM student_profiles p JOIN users u ON u.id=p.user_id JOIN attempts a ON a.user_id=u.id WHERE "+clauses.join(" AND ")+" GROUP BY p.user_id ORDER BY averageScore DESC,testsCompleted DESC,p.display_name ASC LIMIT 500").bind(...binds).all();
   return json(request,env,{ok:true,filters:{classId,subjectId:subject},leaderboard:(rows.results||[]).map((r,i)=>({...r,rank:i+1}))});
 }
-async function health(request,env) {
-  if(!env.DB)return fail(request,env,503,"D1 database binding DB is not configured.");
-  try{await env.DB.prepare("SELECT 1 AS ok").first();return json(request,env,{ok:true,service:"c10-playground-api",database:"connected"});}
-  catch(_){return fail(request,env,503,"D1 is not initialised. Apply cloudflare/schema.sql first.");}
-}
-
 export default {
   async fetch(request,env) {
     const url=new URL(request.url),path=url.pathname,method=request.method.toUpperCase();
@@ -378,7 +449,17 @@ export default {
       if(path==="/api/auth/exchange"&&method==="POST")return await exchangeGithubCode(request,env);
       if(path==="/api/student/login"&&method==="POST")return await studentLogin(request,env);
 
+      if(path.startsWith("/api/v2/")&&!env.DB)return fail(request,env,503,"D1 database binding DB is not configured.");
+      if(path==="/api/v2/invitations/accept"&&method==="POST"){
+        const auth=await requireAuth(request,env);if(auth.error)return auth.error;return await v2AcceptInvitation(request,env,auth.who);
+      }
+
+
       const auth=await requireAuth(request,env);if(auth.error)return auth.error;const who=auth.who;
+      if(path==="/api/v2/auth/me"&&method==="GET")return await v2Identity(request,env,who);
+      if(path==="/api/v2/auth/context"&&method==="POST")return await v2SelectContext(request,env,who);
+      if(path==="/api/v2/invitations"&&method==="POST")return await v2CreateInvitation(request,env,who);
+
       if(who.role==="student"&&Number(who.must_change_password)===1&&
          !((path==="/api/auth/me"&&method==="GET")||(path==="/api/auth/logout"&&method==="POST")||(path==="/api/student/change-password"&&method==="POST"))) {
         return fail(request,env,403,"Change your temporary password before accessing student data.");

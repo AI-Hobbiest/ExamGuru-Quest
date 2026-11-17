@@ -153,3 +153,14 @@ The current application does not yet call these modules; M1 establishes and test
 
 ## M0 exit criteria
 Current boundaries documented; additive schemas/migration exist; legacy login/API schema unchanged; tests cover new contracts and compatibility; no production role or route behaviour changes in this architecture-only phase.
+
+
+## M2 implementation — identity and session foundation
+
+M2 adds a versioned Worker identity API over the existing authenticated session. It resolves active memberships and platform grants from D1, supports selecting a validated membership/branch context, and issues/accepts single-use invitations for pre-provisioned accounts. Session context is explicitly a navigation hint, not an authorization grant.
+
+The additive `0004_identity_session_context.sql` migration adds nullable institution/membership/branch context to `auth_sessions` and a membership invitation table. Invitation tokens are stored as SHA-256 hashes, target one existing enabled account, expire after seven days, and are consumed once. A database trigger rejects invitation branch IDs that do not belong to the invitation institution.
+
+For M2, invitation creation is limited to the existing allow-listed Platform Admin. Public registration, email verification/delivery, delegated School Admin invitation authority and tenant business operations are not enabled. Existing legacy authentication and API routes remain unchanged. HOD is not a global login role; department/HOD appointments are deferred to M3.
+
+See `docs/m2-identity-session.md` for endpoint contracts, security boundaries, deployment prerequisites and test coverage.
