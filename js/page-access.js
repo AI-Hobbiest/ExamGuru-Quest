@@ -14,7 +14,7 @@
     if(isAdminSession()){window.C10StudyViewerRole="admin";return;}
     if(!session||typeof session.username!=="string"){location.replace(signInTarget);return;}
     if(!window.C10StudentAuth||!window.C10StudentAuth.restoreSession){location.replace(signInTarget);return;}
-    window.C10StudentAuth.restoreSession().then(async account=>{
+    window.C10StudyAccessReady=window.C10StudentAuth.restoreSession().then(async account=>{
       if(!account){location.replace(signInTarget);return;}
       if(account.role==="student"){window.C10StudyViewerRole="student";return;}
       if(account.role==="parent"){
