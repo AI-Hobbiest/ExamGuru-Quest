@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/department.schema.json",
+  "title": "ExamGuru Department v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "departmentId",
+    "institutionId",
+    "name",
+    "code",
+    "status",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "kind": {
+      "const": "department"
+    },
+    "departmentId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "institutionId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "parentDepartmentId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "code": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 32
+    },
+    "subjectIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 80
+      }
+    },
+    "classGroupIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 8,
+        "maxLength": 80
+      }
+    },
+    "status": {
+      "enum": [
+        "active",
+        "inactive",
+        "archived"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

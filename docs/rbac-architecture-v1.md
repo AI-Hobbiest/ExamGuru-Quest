@@ -164,3 +164,12 @@ The additive `0004_identity_session_context.sql` migration adds nullable institu
 For M2, invitation creation is limited to the existing allow-listed Platform Admin. Public registration, email verification/delivery, delegated School Admin invitation authority and tenant business operations are not enabled. Existing legacy authentication and API routes remain unchanged. HOD is not a global login role; department/HOD appointments are deferred to M3.
 
 See `docs/m2-identity-session.md` for endpoint contracts, security boundaries, deployment prerequisites and test coverage.
+
+
+## M3 implementation — academic organisation
+
+M3 introduces institution-owned departments, department subjects, department class scopes, multi-department memberships, effective-dated HOD appointments and appointment-specific class scopes. A teacher may belong to multiple departments and hold an HOD appointment in one while remaining an ordinary member in another. HOD is not a global login role or institution membership role.
+
+The additive migration `0005_academic_organisation.sql` adds these tables and extends `teacher_assignments` with a nullable `department_id` for backwards compatibility. New department-aware assignments must match an active department membership, the department's subject list and its class-group scope. Database triggers enforce tenant consistency and active membership. One active HOD appointment per department is enforced by a partial unique index.
+
+See `docs/m3-academic-organisation.md` for the model, scope rules, compatibility boundaries and test coverage. This migration is not applied to live D1 by the GitHub change.

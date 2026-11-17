@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/department-head-appointment.schema.json",
+  "title": "ExamGuru Department Head Appointment v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "appointmentId",
+    "institutionId",
+    "departmentId",
+    "departmentMembershipId",
+    "scopeAllDepartmentClasses",
+    "classGroupIds",
+    "status",
+    "effectiveFrom",
+    "appointedByUserId",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "kind": {
+      "const": "department-head-appointment"
+    },
+    "appointmentId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "institutionId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "departmentId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "departmentMembershipId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "scopeAllDepartmentClasses": {
+      "type": "boolean"
+    },
+    "classGroupIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 8,
+        "maxLength": 80
+      }
+    },
+    "status": {
+      "enum": [
+        "scheduled",
+        "active",
+        "ended",
+        "revoked"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "effectiveTo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "appointedByUserId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "scopeAllDepartmentClasses": {
+            "const": true
+          }
+        },
+        "required": [
+          "scopeAllDepartmentClasses"
+        ]
+      },
+      "then": {
+        "properties": {
+          "classGroupIds": {
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "scopeAllDepartmentClasses": {
+            "const": false
+          }
+        },
+        "required": [
+          "scopeAllDepartmentClasses"
+        ]
+      },
+      "then": {
+        "properties": {
+          "classGroupIds": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}
