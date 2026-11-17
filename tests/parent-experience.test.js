@@ -22,4 +22,18 @@ assert.ok(parent.includes('report.addEventListener("click",()=>openReport(s,z))'
 assert.ok(parent.includes("learning progress"),"The detail heading identifies the selected child");
 const reportTests=fs.readFileSync("tests/report-print.test.js","utf8");
 assert.ok(reportTests.includes("popup-blocked")&&parent.includes("C10ReportPrint.open"),"PDF report print fallback and popup-blocked handling are covered by report regression tests");
+
+const studyPage=fs.readFileSync("study.html","utf8");
+const studyAccess=fs.readFileSync("js/page-access.js","utf8");
+const studyLibrary=fs.readFileSync("js/study-library.js","utf8");
+const dashboard=fs.readFileSync("dashboard.html","utf8");
+const admin=fs.readFileSync("admin.html","utf8");
+const parentPage=fs.readFileSync("parent.html","utf8");
+assert.ok(dashboard.includes('href="./study.html"')&&dashboard.includes('id="study-library-launch"'),"Student dashboard exposes the Study Library in the Learning Hub");
+assert.ok(parent.includes('href="./study.html?childId="+encodeURIComponent(s.studentId)'),"Each linked parent child card opens the Study Library for that child");
+assert.ok(parentPage.includes("Each linked child card includes a Study Library link"),"Parent dashboard explains the child-scoped Study Library entry");
+assert.ok(admin.includes('id="openStudyLibraryPreview"')&&admin.includes('id="studyLibraryPreviewClass"'),"Admin Knowledge Base exposes a class-selectable Study Library preview");
+assert.ok(studyPage.includes('./js/page-access.js')&&studyPage.includes('./js/study-library.js'),"Study Library loads route access and its content renderer");
+assert.ok(studyAccess.includes('if(page==="study.html")')&&studyAccess.includes('window.C10StudyAccessReady')&&studyAccess.includes('getLinkedChildren()')&&studyAccess.includes('isAdminSession()'),"Study Library route validates student, linked-parent and Admin preview access before rendering");
+assert.ok(studyLibrary.includes('await window.C10StudyAccessReady')&&studyLibrary.includes('readOnlyView')&&studyLibrary.includes('await readClass()'),"Parent/Admin previews wait for role validation, resolve the selected class and remain read-only");
 console.log("Package 2 parent/student experience checks passed: help sections, role-based navigation, child selection refresh, child-specific report binding and print fallback coverage.");
