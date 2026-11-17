@@ -1288,3 +1288,18 @@ body.eg-theme-dark.c10-shell-ready .study-summary > .eg-metric-card{
 }
 body.eg-theme-dark.c10-shell-ready :is(.study-stat,.eg-metric-card) :is(strong,b){color:#F1F6FA!important}
 body.eg-theme-dark.c10-shell-ready :is(.study-stat,.eg-metric-card) :is(span,small,p){color:#B9C7D4!important}
+
+
+/* One generic surface utility shared by static and dynamically rendered pages. */
+body.c10-shell-ready .eg-surface{
+  box-sizing:border-box;min-width:0;background:var(--ss-surface)!important;
+  border:1px solid var(--ss-line)!important;border-radius:var(--ss-radius)!important;
+  color:var(--ss-ink)!important;box-shadow:var(--ss-shadow)!important;
+}
+body.eg-theme-dark.c10-shell-ready .eg-surface{
+  background:linear-gradient(155deg,#354657 0%,#2F3E4D 100%)!important;
+  border-color:#526578!important;color:#E8EEF4!important;
+  box-shadow:0 7px 18px rgba(14,24,34,.14)!important;
+}
+body.eg-theme-dark.c10-shell-ready .eg-surface :is(h1,h2,h3,h4,h5,strong,b,label){color:#F1F6FA!important}
+body.eg-theme-dark.c10-shell-ready .eg-surface :is(p,small,.muted,.help-muted,.study-meta){color:#B9C7D4!important}
