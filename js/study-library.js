@@ -3,7 +3,7 @@
   const $=id=>document.getElementById(id);
   const empty=()=>({schemaVersion:1,kind:"study-library-progress",completedResourceIds:[],bookmarkedResourceIds:[]});
   let resources=[],progress=empty(),classId="10";
-  let visualBoards=[],activeChapter=null;
+  let visualBoards=[],activeChapter=null,readOnlyView=false;
   const store=window.C10Storage.createLocalStore({
     kind:"study-library-progress",recordId:"resource-library",defaults:empty,
     validate:value=>!!value&&value.schemaVersion===1&&value.kind==="study-library-progress"&&
@@ -21,16 +21,17 @@
   };
   const esc=value=>String(value??"").replace(/[&<>"]/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[char]));
   const typeLabel=type=>window.C10StudyModel.TYPES[type]||"Study resource";
-  function readClass(){
-    try{
-      const user=window.C10StudentAuth&&window.C10StudentAuth.currentUser?window.C10StudentAuth.currentUser():null;
-      if(user&&user.classId)return String(user.classId);
-    }catch(_){}
-    try{
-      const user=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");
-      if(user&&user.classId)return String(user.classId);
-    }catch(_){}
-    return "10";
+  async function readClass(){
+    const params=new URLSearchParams(location.search);
+    if(window.C10StudyViewerRole==="admin")return String(params.get("classId")||"10");
+    if(window.C10StudyViewerRole==="parent"){
+      const children=await window.C10StudentAuth.getLinkedChildren();
+      const child=children.find(item=>String(item.studentId)===String(window.C10StudyChildId));
+      if(!child)throw new Error("The selected child is no longer linked to this parent account.");
+      return String(child.classId||"10");
+    }
+    const user=window.C10StudentAuth&&window.C10StudentAuth.currentUser?window.C10StudentAuth.currentUser():null;
+    return String(user&&user.classId||"10");
   }
   function populateFilters(){
     const subjects=[...new Set(resources.map(item=>String(item.subject||"")).filter(Boolean))].sort();
@@ -44,7 +45,7 @@
       $("studyType").appendChild(option);
     });
   }
-  function saveProgress(){progress=window.C10StudyModel.normalizeProgress(progress);store.save(progress);renderResources();}
+  function saveProgress(){if(readOnlyView)return;progress=window.C10StudyModel.normalizeProgress(progress);store.save(progress);renderResources();}
   function toggleBookmark(id){progress.bookmarkedResourceIds=window.C10StudyModel.toggleId(progress.bookmarkedResourceIds,id);saveProgress();}
   function toggleCompleted(id){progress.completedResourceIds=window.C10StudyModel.toggleId(progress.completedResourceIds,id);saveProgress();}
   function renderResources(){
@@ -80,12 +81,14 @@
       const open=document.createElement("a");
       open.href="./"+item.path;open.target="_blank";open.rel="noopener noreferrer";open.textContent="Open resource ↗";
       actions.appendChild(open);
-      const saved=progress.bookmarkedResourceIds.includes(item.resourceId);
-      const bookmark=document.createElement("button");bookmark.type="button";bookmark.textContent=saved?"✓ Saved":"☆ Save";
-      bookmark.setAttribute("aria-pressed",String(saved));bookmark.addEventListener("click",()=>toggleBookmark(item.resourceId));actions.appendChild(bookmark);
-      const completed=progress.completedResourceIds.includes(item.resourceId);
-      const done=document.createElement("button");done.type="button";done.textContent=completed?"Undo completed":"Mark completed";
-      done.setAttribute("aria-pressed",String(completed));done.addEventListener("click",()=>toggleCompleted(item.resourceId));actions.appendChild(done);
+      if(!readOnlyView){
+        const saved=progress.bookmarkedResourceIds.includes(item.resourceId);
+        const bookmark=document.createElement("button");bookmark.type="button";bookmark.textContent=saved?"✓ Saved":"☆ Save";
+        bookmark.setAttribute("aria-pressed",String(saved));bookmark.addEventListener("click",()=>toggleBookmark(item.resourceId));actions.appendChild(bookmark);
+        const completed=progress.completedResourceIds.includes(item.resourceId);
+        const done=document.createElement("button");done.type="button";done.textContent=completed?"Undo completed":"Mark completed";
+        done.setAttribute("aria-pressed",String(completed));done.addEventListener("click",()=>toggleCompleted(item.resourceId));actions.appendChild(done);
+      }
       card.append(head,title,meta,summary,actions);list.appendChild(card);
     });
   }
@@ -226,11 +229,12 @@
     }
   }
   async function init(){
-    classId=readClass();progress=window.C10StudyModel.normalizeProgress(store.load());
+    classId=await readClass();readOnlyView=window.C10StudyViewerRole==="parent"||window.C10StudyViewerRole==="admin";progress=readOnlyView?empty():window.C10StudyModel.normalizeProgress(store.load());
     ["studySearch","studySubject","studyType","studyStatus"].forEach(id=>$(id).addEventListener(id==="studySearch"?"input":"change",renderResources));
     $("vrbSubject").addEventListener("change",populateVisualChapters);
     $("vrbChapter").addEventListener("change",renderVisualCards);
     $("vrbSearch").addEventListener("input",renderVisualCards);
+    if(readOnlyView)$("studyLoadStatus").textContent="Preview mode · Class "+classId+" · Progress controls are disabled.";
     loadVisualRevision();
     try{
       const response=await fetch("./data/knowledge-base.json",{cache:"no-store"});
