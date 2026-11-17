@@ -22,20 +22,20 @@
 <body class="c10-theme-quest">
 <main class="exam-wrap">
 <section class="exam-hero"><div class="exam-kicker">EXAMGURU QUEST · SELF STUDY</div><h1>Exam Paper Practice</h1><p>Attempt a timed CBSE-style paper, save your answers in this browser, and review your work after submission.</p></section>
-<section class="exam-card" id="setup">
+<section class="exam-card eg-surface" id="setup">
 <div id="profileSelectWrap" hidden><label for="profileSelect">Exam profile</label> <select id="profileSelect" class="exam-btn secondary" aria-label="Choose exam profile"></select></div>
 <h2 id="profileTitle">Loading exam profile…</h2><div id="profileMeta" class="exam-meta"></div>
 <p id="profileDescription" class="exam-muted">Preparing the selected exam profile.</p>
 <div id="loadStatus" class="exam-muted" role="status">Loading approved blueprint and question pool…</div>
 <div class="exam-actions"><button class="exam-btn" id="startBtn" disabled>Generate & start paper</button></div>
 </section>
-<section class="exam-card exam-hidden" id="attempt">
+<section class="exam-card exam-hidden eg-surface" id="attempt">
 <div class="exam-meta"><span id="paperTitle">Practice paper</span><span id="progress">0 / — answered</span><span class="exam-timer" id="timer">--:--:--</span></div>
 <p class="exam-muted">Your answers are saved locally in this browser while you attempt the paper. Descriptive answers are self-reviewed after submission.</p><p id="historyStatus" class="exam-muted" role="status"></p>
 <div id="questions"></div>
 <div class="exam-actions"><button class="exam-btn" id="submitBtn">Submit paper</button><button class="exam-btn secondary" id="printBtn">Print blank copy</button></div>
 </section>
-<section class="exam-card exam-hidden" id="review">
+<section class="exam-card exam-hidden eg-surface" id="review">
 <h2>Attempt submitted</h2><div id="score" class="exam-result"></div><p class="exam-muted">MCQ results are scored automatically. Written and diagram answers need self-review against the model points. This static-site MVP stores results only in this browser.</p>
 <div id="reviewAnswers"></div>
 <div class="exam-actions"><button class="exam-btn secondary" id="newBtn">Start another attempt</button></div>
