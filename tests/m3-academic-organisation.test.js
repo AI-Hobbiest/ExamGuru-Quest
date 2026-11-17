@@ -14,7 +14,7 @@ assert.deepEqual(departmentMembershipSchema.properties.departmentRole.enum,["mem
 assert.equal(headSchema.properties.kind.const,"department-head-appointment");
 assert.ok(headSchema.allOf.length===2,"HOD contract must require class scope when not all department classes are covered");
 const appointments=[
- {appointmentId:"science-hod",departmentId:"science",status:"active",effectiveFrom:"2026-04-01",scopeAllDepartmentClasses:false,classIds:["class-6a","class-7a"]},
+ {appointmentId:"science-hod",departmentId:"science",status:"active",effectiveFrom:"2026-04-01",scopeAllDepartmentClasses:false,classIds:["class-6a"]},
  {appointmentId:"math-hod",departmentId:"maths",status:"active",effectiveFrom:"2026-04-01",scopeAllDepartmentClasses:true,classIds:[]}
 ];
 assert.equal(policy.isDepartmentHead(appointments,"science","class-6a","2026-11-18T00:00:00.000Z"),true);
