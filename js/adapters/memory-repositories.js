@@ -6,7 +6,7 @@
   function createMemoryRepositories(seed) {
     const data = seed || {};
     const users = rows(data.users), memberships = rows(data.memberships), platformRoles = rows(data.platformRoles);
-    const institutions = rows(data.institutions), branches = rows(data.branches);
+    const institutions = rows(data.institutions), branches = rows(data.branches), institutionClasses = rows(data.institutionClasses);
     const branchScopes = rows(data.branchScopes), teacherAssignments = rows(data.teacherAssignments);
     const studentEnrollments = rows(data.studentEnrollments), parentStudentLinks = rows(data.parentStudentLinks);
     const identity = Object.freeze({
@@ -17,6 +17,7 @@
     const institution = Object.freeze({
       async getInstitution(id) { return clone(institutions.find(x => x.institutionId === id) || null); },
       async getBranch(id) { return clone(branches.find(x => x.branchId === id) || null); },
+      async getInstitutionClass(id) { return clone(institutionClasses.find(x => x.institutionClassId === id) || null); },
       async listBranches(institutionId) { return clone(branches.filter(x => x.institutionId === institutionId)); },
       async listMembershipBranchScopes(membershipId) { return clone(branchScopes.filter(x => x.membershipId === membershipId)); }
     });
