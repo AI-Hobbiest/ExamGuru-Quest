@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/institution-membership.schema.json",
+  "title": "ExamGuru Institution Membership v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "membershipId",
+    "userId",
+    "institutionId",
+    "role",
+    "status",
+    "branchScope",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "kind": {
+      "const": "institution-membership"
+    },
+    "membershipId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "userId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "institutionId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "role": {
+      "enum": [
+        "school_admin",
+        "teacher",
+        "parent",
+        "student",
+        "institution_viewer"
+      ]
+    },
+    "status": {
+      "enum": [
+        "invited",
+        "active",
+        "suspended",
+        "ended"
+      ]
+    },
+    "branchScope": {
+      "type": "object",
+      "required": [
+        "allBranches",
+        "branchIds"
+      ],
+      "properties": {
+        "allBranches": {
+          "type": "boolean"
+        },
+        "branchIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 8
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "createdBy": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}
