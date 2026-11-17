@@ -116,3 +116,14 @@ npx wrangler d1 execute examguru-quest --remote --file=./migrations/0004_identit
 ```
 
 Migration 0004 is a one-time schema change because it adds columns to `auth_sessions`; do not rerun it after those columns exist. The migration is not applied to any live database by the GitHub code change.
+
+
+## M3 academic organisation migration (when explicitly approved)
+
+After the M2 migration has been applied and a fresh D1 backup is available, apply:
+
+```sh
+npx wrangler d1 execute c10-playground --remote --file=./migrations/0005_academic_organisation.sql
+```
+
+Migration 0005 is a one-time schema change because it adds `teacher_assignments.department_id`. Do not rerun it after that column exists. M3 adds the department model and constraints but does not itself deploy new Worker routes or expose department administration in the public portal.
