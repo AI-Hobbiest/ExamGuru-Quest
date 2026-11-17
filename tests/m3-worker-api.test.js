@@ -8,7 +8,7 @@ for(const route of [
   'headPath&&method==="PATCH"'
 ])assert.ok(worker.includes(route),"missing M3 runtime route: "+route);
 for(const helper of ["v2DepartmentContext","v2DepartmentAdmin","v2Departments","v2DepartmentSubresources","v2EndDepartmentHead"])assert.ok(worker.includes("async function "+helper),"missing handler "+helper);
-assert.match(worker,/SELECT m\.membership_id,m\.institution_id,m\.role,m\.status,m\.all_branches AS all_branches,i\.status AS institution_status/);
+assert.match(worker,/SELECT m\.membership_id,m\.institution_id,m\.role,m\.status,m\.all_branches,i\.status AS institution_status/);
 assert.match(worker,/m\.user_id=\?"/,"membership must be bound to authenticated user");
 assert.match(worker,/ctx\.membership\.role!=="school_admin"/,"department mutations must require School Admin");
 assert.match(worker,/role='teacher'/,"department members must be teacher institution memberships");
