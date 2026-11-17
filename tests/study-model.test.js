@@ -33,6 +33,15 @@ assert.ok(page.includes('id="studyResourceList"')&&page.includes('id="studySearc
 assert.ok(page.includes("study-model.js")&&page.includes("study-library.js"));
 assert.ok(script.includes('status==="published"')||script.includes("visibleResources"));
 new Function(fs.readFileSync("js/study-library.js","utf8"));
+const theme=read("css/theme-soft-spectrum.css");
+assert.ok(page.includes('class="study-summary eg-metric-grid"'),"Study Library metric wrapper must use the shared grid component");
+assert.ok(page.includes('class="study-stat eg-metric-card"'),"Study Library metric tiles must use the shared metric card component");
+assert.ok(page.includes('class="eg-preview-banner"')&&!page.includes('id="studyPreviewNotice" hidden style='),"Admin preview banner must use the shared banner component without inline theme styles");
+assert.ok(theme.includes("body.c10-shell-ready .eg-metric-grid{")&&theme.includes("background:transparent!important"),"shared metric grid wrapper must remain transparent");
+assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .eg-metric-grid > .eg-metric-card"),"shared metric cards must have a dark-mode surface");
+assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .eg-preview-banner"),"Admin preview banner must have a dark-mode surface");
+assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .study-panel"),"Study Library panels must use dark-mode surfaces");
+assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .study-card"),"Study Library resource cards must use dark-mode surfaces");
 console.log("Study Library tests passed: manifest validation, class visibility, publication filtering, search, safe relative paths and local progress.");
 
 
