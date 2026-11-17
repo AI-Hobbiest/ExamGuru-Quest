@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/branch.schema.json",
+  "title": "ExamGuru Branch v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "branchId",
+    "institutionId",
+    "name",
+    "code",
+    "status",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "kind": {
+      "const": "branch"
+    },
+    "branchId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "institutionId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 160
+    },
+    "code": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 32
+    },
+    "status": {
+      "enum": [
+        "active",
+        "inactive",
+        "closed"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}
