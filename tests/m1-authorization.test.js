@@ -9,6 +9,7 @@ const seed={
  users:["admin","school","teacher","student","parent","other"].map(userId=>({userId,status:"active"})),
  institutions:[{institutionId:"i1",status:"active"},{institutionId:"i2",status:"active"}],
  branches:[{branchId:"b1",institutionId:"i1",status:"active"},{branchId:"b2",institutionId:"i1",status:"active"},{branchId:"b3",institutionId:"i2",status:"active"}],
+ institutionClasses:[{institutionClassId:"c6a",institutionId:"i1",branchId:"b1"},{institutionClassId:"c6b",institutionId:"i1",branchId:"b2"},{institutionClassId:"c6-other",institutionId:"i2",branchId:"b3"}],
  memberships:[
   {membershipId:"m-school",userId:"school",institutionId:"i1",role:"school_admin",status:"active",allBranches:false},
   {membershipId:"m-teacher",userId:"teacher",institutionId:"i1",role:"teacher",status:"active",allBranches:false},
@@ -35,6 +36,7 @@ const seed={
  assert.equal((await authorize(repos,{userId:"teacher"},"assessment.create",{institutionId:"i1",branchId:"b1",institutionClassId:"c6a",subjectId:"science"})).allowed,true);
  assert.equal((await authorize(repos,{userId:"teacher"},"assessment.create",{institutionId:"i1",branchId:"b1",institutionClassId:"c6a",subjectId:"mathematics"})).allowed,false);
  assert.equal((await authorize(repos,{userId:"teacher"},"assessment.create",{institutionId:"i1",branchId:"b2",institutionClassId:"c6a",subjectId:"science"})).allowed,false);
+ assert.equal((await authorize(repos,{userId:"school"},"class.manage",{institutionId:"i1",branchId:"b1",institutionClassId:"c6-other"})).reason,"class-tenant-or-branch-mismatch");
  assert.equal((await authorize(repos,{userId:"parent"},"report.student.read",{institutionId:"i1",branchId:"b1",studentMembershipId:"m-student"})).allowed,true);
  assert.equal((await authorize(repos,{userId:"parent"},"report.student.read",{institutionId:"i1",branchId:"b1",studentMembershipId:"someone-else"})).allowed,false);
  assert.equal((await authorize(repos,{userId:"student"},"report.student.read",{institutionId:"i1",branchId:"b1",studentMembershipId:"m-parent"})).allowed,false);
