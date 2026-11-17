@@ -132,7 +132,7 @@ BEGIN
     WHERE im.membership_id=NEW.institution_membership_id
       AND im.institution_id=NEW.institution_id
       AND im.status='active' AND im.role='teacher'
-  ) THEN RAISE(ABORT,'department membership requires an active teacher or school admin membership') END;
+  ) THEN RAISE(ABORT,'department membership requires an active teacher membership') END;
 END;
 
 CREATE TRIGGER IF NOT EXISTS trg_department_class_scope_valid
@@ -159,8 +159,8 @@ BEGIN
     WHERE dm.department_membership_id=NEW.department_membership_id
       AND dm.department_id=NEW.department_id
       AND dm.institution_id=NEW.institution_id
-      AND dm.status='active' AND im.status='active'
-  ) THEN RAISE(ABORT,'HOD appointment requires active membership in the appointed department') END;
+      AND dm.status='active' AND im.status='active' AND im.role='teacher'
+  ) THEN RAISE(ABORT,'HOD appointment requires an active teacher membership in the appointed department') END;
 END;
 
 CREATE TRIGGER IF NOT EXISTS trg_hod_class_scope_valid
