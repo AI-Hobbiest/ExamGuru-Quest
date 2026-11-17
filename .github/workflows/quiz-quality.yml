@@ -48,6 +48,8 @@ jobs:
         run: node tests/session-model.test.js
       - name: Validate multi-tenant RBAC contracts and legacy compatibility
         run: python3 tests/rbac-migration.test.py && node tests/rbac-contract.test.js
+      - name: Validate M1 provider-neutral repositories and authorization
+        run: node --check js/domain/repository-contracts.js && node --check js/domain/authorization.js && node --check js/adapters/memory-repositories.js && node --check js/adapters/static-prototype-repositories.js && node tests/m1-authorization.test.js
       - name: Validate Stage A LMS integrations
         run: node tests/stage-a-integration.test.js
       - name: Validate quiz timers, navigation and result flow
