@@ -4,7 +4,7 @@ const worker=fs.readFileSync("cloudflare/worker.js","utf8");
 for(const route of [
   'path==="/api/v2/departments"&&(method==="GET"||method==="POST")',
   'departmentPath&&method==="PATCH"',
-  '/subjects|classes|members|heads',
+  '(subjects|classes|members|heads)',
   'headPath&&method==="PATCH"'
 ])assert.ok(worker.includes(route),"missing M3 runtime route: "+route);
 for(const helper of ["v2DepartmentContext","v2DepartmentAdmin","v2Departments","v2DepartmentSubresources","v2EndDepartmentHead"])assert.ok(worker.includes("async function "+helper),"missing handler "+helper);
