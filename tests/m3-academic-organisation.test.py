@@ -19,6 +19,7 @@ for mid,uid,iid,role in [("m-admin","u-admin","ins-a","school_admin"),("m-t1","u
 db.execute("INSERT INTO institution_classes(institution_class_id,institution_id,branch_id,grade_id,section_code,academic_year,created_at,updated_at) VALUES('ic-6a','ins-a','br-a','6','A','2026-27',?,?)",(now,now))
 db.execute("INSERT INTO institution_classes(institution_class_id,institution_id,branch_id,grade_id,section_code,academic_year,created_at,updated_at) VALUES('ic-7a','ins-a','br-a','7','A','2026-27',?,?)",(now,now))
 db.execute("INSERT INTO institution_classes(institution_class_id,institution_id,branch_id,grade_id,section_code,academic_year,created_at,updated_at) VALUES('ic-other','ins-b','br-b','6','A','2026-27',?,?)",(now,now))
+db.execute("INSERT INTO institution_classes(institution_class_id,institution_id,branch_id,grade_id,section_code,academic_year,created_at,updated_at) VALUES('ic-8a','ins-a','br-a','8','A','2026-27',?,?)",(now,now))
 for did,name,code in [("dept-sci","Science","SCI"),("dept-math","Mathematics","MATH")]:
  db.execute("INSERT INTO departments(department_id,institution_id,name,code,created_at,updated_at) VALUES(?,'ins-a',?,?,?,?)",(did,name,code,now,now))
 db.execute("INSERT INTO departments(department_id,institution_id,name,code,created_at,updated_at) VALUES('dept-other','ins-b','Science','SCI',?,?)",(now,now))
@@ -42,7 +43,7 @@ def reject(sql,params):
 reject("INSERT INTO departments(department_id,institution_id,name,code,created_at,updated_at) VALUES('dup','ins-a','Dup','SCI',?,?)",(now,now))
 reject("INSERT INTO department_memberships(department_membership_id,institution_id,department_id,institution_membership_id,created_at,updated_at) VALUES('bad-dm','ins-a','dept-sci','m-admin',?,?)",(now,now))
 reject("INSERT INTO department_class_scopes VALUES('dept-sci','ins-a','ic-other',?)",(now,))
-reject("INSERT INTO department_head_class_scopes VALUES('hod-sci','ins-a','ic-7a',?)",(now,))
+reject("INSERT INTO department_head_class_scopes VALUES('hod-sci','ins-a','ic-8a',?)",(now,))
 reject("INSERT INTO teacher_assignments(assignment_id,institution_id,teacher_membership_id,institution_class_id,subject_id,department_id,created_at,updated_at) VALUES('bad-ta','ins-a','m-t1','ic-6a','mathematics','dept-sci',?,?)",(now,now))
 reject("INSERT INTO department_head_appointments(appointment_id,institution_id,department_id,department_membership_id,status,effective_from,appointed_by_user_id,created_at,updated_at) VALUES('hod-sci-2','ins-a','dept-sci','dm-t2-sci','active','2026-04-01','u-admin',?,?)",(now,now))
 assert db.execute("SELECT COUNT(*) FROM department_memberships WHERE institution_membership_id='m-t1' AND status='active'").fetchone()[0]==2
