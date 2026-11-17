@@ -76,6 +76,23 @@ for(const subject of expectedClass10){
   assert.ok(matches[0].chapters.length>=10,"Class 10 "+subject+" must have broad chapter coverage");
   assert.ok(matches[0].chapters.every(ch=>ch.cards.length>=3),"Each Class 10 chapter needs at least three quick-reference cards");
 }
-assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.length,0),117,"Class 10 board must contain all chapter/topic boards");
+assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.length,0),118,"Class 10 board must contain all chapter/topic and map-work boards");
+assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.reduce((m,ch)=>m+ch.cards.length,0),0),354,"Class 10 must contain three revision cards per chapter/topic board");
+for(const subject of ["mathematics","science","social-science"]){
+  const recalls=class10Boards.find(b=>b.subject===subject).chapters.map(ch=>ch.cards.find(card=>card.type==="recall"));
+  assert.ok(recalls.every(card=>card&&card.question&&card.answer&&!card.question.startsWith("What is the key idea to remember from")),"Core subject recall prompts must be chapter-specific for "+subject);
+  assert.equal(new Set(recalls.map(card=>card.question)).size,recalls.length,"Recall prompts must be unique within "+subject);
+}
+const sst=class10Boards.find(b=>b.subject==="social-science");
+assert.ok(sst.chapters.find(ch=>ch.title==="Lifelines of National Economy (Map Work)"),"Map-only Lifelines chapter must be represented");
+assert.ok(sst.chapters.find(ch=>ch.title==="The Making of a Global World").cards.some(card=>(card.note||"").includes("Project-only scope")),"Global World project-only topics must be distinguished from board scope");
+const science=class10Boards.find(b=>b.subject==="science");
+assert.ok(science.chapters.find(ch=>ch.title==="Periodic Classification of Elements").cards.some(card=>(card.note||"").includes("formative/portfolio only")),"Periodic Classification must be marked formative-only");
+assert.ok(science.chapters.find(ch=>ch.title.startsWith("Heredity (Evolution")).cards.some(card=>(card.note||"").includes("formative enrichment")),"Evolution must be marked formative-only");
+for(const subject of ["hindi-course-a","hindi-course-b"]){
+ const cards=class10Boards.find(b=>b.subject===subject).chapters.flatMap(ch=>ch.cards);
+ assert.ok(cards.every(card=>!["Core idea","What to write in an answer","Quick self-check"].includes(card.title)),"Hindi card titles must be localised");
+ assert.ok(cards.filter(card=>card.type==="recall").every(card=>card.revealLabel==="उत्तर देखें"&&card.hideLabel==="उत्तर छिपाएँ"),"Hindi answer controls must be localised");
+}
 assert.ok(!class10Boards.find(b=>b.subject==="hindi-course-a").chapters.some(ch=>/जॉर्ज पंचम की नाक|एही ठैयाँ|छाया मत छूना|कन्यादान|स्त्री-शिक्षा|मानवीय करुणा/.test(ch.title)),"Hindi A excluded texts must not appear");
 assert.ok(!class10Boards.find(b=>b.subject==="hindi-course-b").chapters.some(ch=>/गिरगिट|बिहारी|मधुर-मधुर/.test(ch.title)),"Hindi B excluded texts must not appear");
