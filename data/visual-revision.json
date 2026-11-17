@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "visual-revision-manifest",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "boards": [
     {
       "classId": "6",
@@ -5496,10 +5496,11 @@
       "chapters": [
         {
           "chapterNo": 1,
-          "chapterLabel": "Place value · number systems · estimation",
+          "chapterLabel": "Chapter 1",
           "chapterKey": "ganita-1",
           "title": "Large Numbers Around Us",
-          "subtitle": [
+          "subtitle": "Place value · number systems · estimation · real-life numbers",
+          "cards": [
             {
               "id": "c6-math-01-01",
               "type": "concept",
@@ -5515,19 +5516,19 @@
               "title": "Indian place-value periods",
               "facts": [
                 [
-                  "Ones period",
+                  "Ones",
                   "Ones, tens, hundreds"
                 ],
                 [
-                  "Thousands period",
+                  "Thousands",
                   "Thousand, ten thousand"
                 ],
                 [
-                  "Lakhs period",
+                  "Lakhs",
                   "Lakh, ten lakh"
                 ],
                 [
-                  "Crores period",
+                  "Crores",
                   "Crore, ten crore"
                 ]
               ],
@@ -5541,19 +5542,19 @@
               "title": "International place-value periods",
               "facts": [
                 [
-                  "Ones period",
+                  "Ones",
                   "Ones, tens, hundreds"
                 ],
                 [
-                  "Thousands period",
+                  "Thousands",
                   "Thousand, ten thousand, hundred thousand"
                 ],
                 [
-                  "Millions period",
+                  "Millions",
                   "Million, ten million, hundred million"
                 ],
                 [
-                  "Billions period",
+                  "Billions",
                   "Billion and higher places"
                 ]
               ],
@@ -5574,7 +5575,7 @@
                 "content": "Group digits in threes from the right: 123,456,789."
               },
               "tags": [
-                "quick reference"
+                "compare"
               ]
             },
             {
@@ -5613,14 +5614,14 @@
               "type": "steps",
               "title": "Read and write large numbers",
               "steps": [
-                "Group digits using the chosen place-value system.",
+                "Group digits using the chosen number system.",
                 "Place commas at the correct boundaries.",
                 "Read each group with its period name.",
-                "Write zero placeholders wherever a place has no value.",
+                "Keep zero placeholders wherever a place has no value.",
                 "Check that the written number has the same digits as the original."
               ],
               "tags": [
-                "quick reference"
+                "method"
               ]
             },
             {
@@ -5639,12 +5640,12 @@
               "steps": [
                 "Identify the place to which you are rounding.",
                 "Look at the digit immediately to its right.",
-                "If that digit is 0–4, keep the rounding digit unchanged; if it is 5–9, increase it by one.",
+                "If it is 0–4, keep the rounding digit; if it is 5–9, increase it by one.",
                 "Replace all digits to the right with zeroes.",
-                "Check that the rounded number is close to the original."
+                "Check that the rounded value is close to the original."
               ],
               "tags": [
-                "quick reference"
+                "method"
               ]
             },
             {
@@ -5654,7 +5655,7 @@
               "question": "In 7,35,42,816, what is the place value of 5?",
               "answer": "5,00,000; the 5 is in the lakhs place.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -5664,7 +5665,7 @@
               "question": "Write 4,08,05,019 in words using the Indian system.",
               "answer": "Four crore eight lakh five thousand nineteen.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -5672,19 +5673,20 @@
               "type": "recall",
               "title": "Estimation check",
               "question": "Round 8,76,549 to the nearest ten thousand.",
-              "answer": "8,80,000; the thousands digit is 6, so the ten-thousands digit increases from 7 to 8.",
+              "answer": "8,80,000; the thousands digit is 6, so 7 increases to 8.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             }
           ]
         },
         {
           "chapterNo": 2,
-          "chapterLabel": "Operations · brackets · order of operations",
+          "chapterLabel": "Chapter 2",
           "chapterKey": "ganita-2",
           "title": "Arithmetic Expressions",
-          "subtitle": [
+          "subtitle": "Operations · brackets · order of operations · mental calculation",
+          "cards": [
             {
               "id": "c6-math-02-01",
               "type": "concept",
@@ -5724,7 +5726,7 @@
               "id": "c6-math-02-03",
               "type": "concept",
               "title": "Order of operations",
-              "content": "Evaluate grouping symbols first, then multiplication and division from left to right, then addition and subtraction from left to right. Multiplication does not automatically come before division; they share priority.",
+              "content": "Evaluate grouping symbols first, then multiplication and division from left to right, then addition and subtraction from left to right. Multiplication and division share priority.",
               "tags": [
                 "quick reference"
               ]
@@ -5732,22 +5734,22 @@
             {
               "id": "c6-math-02-04",
               "type": "steps",
-              "title": "Evaluate a bracketed expression",
+              "title": "Evaluate an expression",
               "steps": [
                 "Work inside the innermost brackets first.",
                 "Complete multiplication and division from left to right.",
                 "Complete addition and subtraction from left to right.",
-                "Show intermediate steps so the order is clear.",
+                "Show intermediate steps clearly.",
                 "Check the result using an estimate or inverse operation."
               ],
               "tags": [
-                "quick reference"
+                "method"
               ]
             },
             {
               "id": "c6-math-02-05",
               "type": "compare",
-              "title": "Bracket placement changes the value",
+              "title": "Bracket placement changes value",
               "left": {
                 "heading": "With brackets",
                 "content": "(12 + 8) ÷ 4 = 20 ÷ 4 = 5."
@@ -5757,7 +5759,7 @@
                 "content": "12 + 8 ÷ 4 = 12 + 2 = 14."
               },
               "tags": [
-                "quick reference"
+                "compare"
               ]
             },
             {
@@ -5779,7 +5781,7 @@
                 ],
                 [
                   "Associative multiplication",
-                  "(a × b) × c = a × (b × c)"
+                  "(a × b) × c = (a × b) × c"
                 ],
                 [
                   "Distributive property",
@@ -5793,7 +5795,7 @@
             {
               "id": "c6-math-02-07",
               "type": "concept",
-              "title": "Mental calculation strategies",
+              "title": "Mental calculation",
               "content": "Make tens or hundreds, split a number into convenient parts, use known multiplication facts and apply operation properties when they preserve the value.",
               "tags": [
                 "quick reference"
@@ -5802,7 +5804,7 @@
             {
               "id": "c6-math-02-08",
               "type": "exam-alert",
-              "title": "Common order-of-operations mistake",
+              "title": "Common order mistake",
               "content": "Do not calculate strictly left to right when operations have different priority. Multiplication and division have equal priority; addition and subtraction have equal priority.",
               "tags": [
                 "quick reference"
@@ -5815,7 +5817,7 @@
               "question": "Evaluate 18 − 6 ÷ 3.",
               "answer": "16. Divide first: 6 ÷ 3 = 2; then 18 − 2 = 16.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -5825,17 +5827,17 @@
               "question": "Evaluate (18 − 6) ÷ 3.",
               "answer": "4. First 18 − 6 = 12; then 12 ÷ 3 = 4.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
               "id": "c6-math-02-11",
               "type": "recall",
-              "title": "Distributive property check",
+              "title": "Distributive property",
               "question": "Calculate 7 × 19 using a convenient split.",
               "answer": "7 × (20 − 1) = 140 − 7 = 133.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -5845,17 +5847,18 @@
               "question": "Evaluate 15 + 9 × 2.",
               "answer": "33. Multiply first: 9 × 2 = 18; then add 15.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             }
           ]
         },
         {
           "chapterNo": 3,
-          "chapterLabel": "Decimals · place value · comparison · operations",
+          "chapterLabel": "Chapter 3",
           "chapterKey": "ganita-3",
           "title": "A Peek Beyond the Point",
-          "subtitle": [
+          "subtitle": "Decimals · place value · comparison · operations",
+          "cards": [
             {
               "id": "c6-math-03-01",
               "type": "concept",
@@ -5907,11 +5910,11 @@
               "steps": [
                 "Read the whole-number part first.",
                 "Identify the place value of the final digit after the decimal point.",
-                "Use tenths, hundredths or thousandths to state the fractional part precisely.",
-                "Do not confuse 0.5 with 0.05; the zero changes the place value."
+                "Use tenths, hundredths or thousandths to state the fractional part.",
+                "Do not confuse 0.5 with 0.05; the zero changes place value."
               ],
               "tags": [
-                "quick reference"
+                "method"
               ]
             },
             {
@@ -5927,7 +5930,7 @@
                 "content": "Fifty-six hundredths. Therefore 0.60 > 0.56."
               },
               "tags": [
-                "quick reference"
+                "compare"
               ]
             },
             {
@@ -5935,14 +5938,14 @@
               "type": "steps",
               "title": "Add or subtract decimals",
               "steps": [
-                "Write numbers one below the other with decimal points aligned.",
+                "Write numbers with decimal points aligned.",
                 "Add zeroes at the end if needed, for example 2.5 = 2.50.",
                 "Add or subtract as with whole numbers.",
                 "Place the decimal point directly below the other decimal points.",
                 "Check the answer with an estimate."
               ],
               "tags": [
-                "quick reference"
+                "method"
               ]
             },
             {
@@ -5996,7 +5999,7 @@
               "question": "What is the value of 6 in 4.263?",
               "answer": "Six hundredths, or 0.06.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6006,7 +6009,7 @@
               "question": "Which is greater: 0.7 or 0.65?",
               "answer": "0.7 is greater because 0.70 > 0.65.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6016,17 +6019,18 @@
               "question": "Calculate 3.45 + 1.8.",
               "answer": "5.25. Write 1.8 as 1.80 before adding.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             }
           ]
         },
         {
           "chapterNo": 4,
-          "chapterLabel": "Variables · coefficients · substitution · patterns",
+          "chapterLabel": "Chapter 4",
           "chapterKey": "ganita-4",
           "title": "Expressions using Letter-Numbers",
-          "subtitle": [
+          "subtitle": "Variables · coefficients · substitution · patterns",
+          "cards": [
             {
               "id": "c6-math-04-01",
               "type": "concept",
@@ -6039,7 +6043,7 @@
             {
               "id": "c6-math-04-02",
               "type": "fact",
-              "title": "Parts of an algebraic expression",
+              "title": "Parts of an expression",
               "facts": [
                 [
                   "Variable",
@@ -6070,7 +6074,7 @@
               "id": "c6-math-04-03",
               "type": "concept",
               "title": "Translate words into expressions",
-              "content": "'Five more than n' is n + 5; 'five times n' is 5n; 'n decreased by five' is n − 5. The order of words changes the operation and sometimes the order.",
+              "content": "'Five more than n' is n + 5; 'five times n' is 5n; 'n decreased by five' is n − 5. The order of words can change the operation.",
               "tags": [
                 "quick reference"
               ]
@@ -6088,7 +6092,7 @@
                 "content": "Three more than x. If x = 4, the value is 7."
               },
               "tags": [
-                "quick reference"
+                "compare"
               ]
             },
             {
@@ -6100,10 +6104,10 @@
                 "Replace every occurrence of the variable with that value.",
                 "Use brackets when substituting a negative number.",
                 "Follow the order of operations and simplify.",
-                "Check by substituting the value again."
+                "Check by substituting again."
               ],
               "tags": [
-                "quick reference"
+                "method"
               ]
             },
             {
@@ -6166,7 +6170,7 @@
               "question": "Write '7 more than p' as an expression.",
               "answer": "p + 7.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6176,7 +6180,7 @@
               "question": "In 8m + 3, identify the variable, coefficient and constant.",
               "answer": "Variable: m; coefficient: 8; constant: 3.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6186,17 +6190,18 @@
               "question": "Find 4a − 1 when a = 5.",
               "answer": "4 × 5 − 1 = 19.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             }
           ]
         },
         {
           "chapterNo": 5,
-          "chapterLabel": "Lines · rays · segments · angles · perpendicularity",
+          "chapterLabel": "Chapter 5",
           "chapterKey": "ganita-5",
           "title": "Parallel and Intersecting Lines",
-          "subtitle": [
+          "subtitle": "Lines · rays · segments · angles · perpendicularity",
+          "cards": [
             {
               "id": "c6-math-05-01",
               "type": "concept",
@@ -6245,7 +6250,7 @@
                 "content": "The lines meet at one point. If they meet at 90°, they are perpendicular."
               },
               "tags": [
-                "quick reference"
+                "compare"
               ]
             },
             {
@@ -6295,18 +6300,18 @@
                 "Place the protractor's centre mark exactly on the vertex.",
                 "Align its baseline with one arm of the angle.",
                 "Read the scale that starts at 0° on that arm.",
-                "Check whether the result matches the angle's apparent size.",
+                "Check whether the result matches the apparent size.",
                 "Write the degree symbol with the measurement."
               ],
               "tags": [
-                "quick reference"
+                "method"
               ]
             },
             {
               "id": "c6-math-05-07",
               "type": "concept",
               "title": "Estimate before measuring",
-              "content": "First decide whether an angle is acute, right, obtuse or straight. Estimation helps detect a wrong protractor scale or incorrect alignment.",
+              "content": "First decide whether an angle is acute, right, obtuse or straight. Estimation helps detect a wrong scale or incorrect alignment.",
               "tags": [
                 "quick reference"
               ]
@@ -6327,7 +6332,7 @@
               "question": "What is the difference between perpendicular and parallel lines?",
               "answer": "Perpendicular lines intersect at 90°; parallel lines in the same plane never intersect.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6337,7 +6342,7 @@
               "question": "An angle measures 125°. What type is it?",
               "answer": "Obtuse, because it is greater than 90° and less than 180°.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6347,7 +6352,7 @@
               "question": "How many endpoints does a ray have?",
               "answer": "One endpoint. It extends endlessly in one direction.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6357,17 +6362,18 @@
               "question": "Where should the centre mark of a protractor be placed?",
               "answer": "Exactly on the vertex of the angle.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             }
           ]
         },
         {
           "chapterNo": 6,
-          "chapterLabel": "Divisibility · factors · multiples · prime numbers · patterns",
+          "chapterLabel": "Chapter 6",
           "chapterKey": "ganita-6",
           "title": "Number Play",
-          "subtitle": [
+          "subtitle": "Divisibility · factors · multiples · prime numbers · patterns",
+          "cards": [
             {
               "id": "c6-math-06-01",
               "type": "concept",
@@ -6411,7 +6417,7 @@
               "id": "c6-math-06-03",
               "type": "concept",
               "title": "Factors and multiples",
-              "content": "A factor divides a number exactly. A multiple is obtained by multiplying a number by a whole number. For example, 4 is a factor of 20; 20 and 24 are multiples of 4.",
+              "content": "A factor divides a number exactly. A multiple is obtained by multiplying a number by a whole number. Four is a factor of 20; 20 and 24 are multiples of 4.",
               "tags": [
                 "quick reference"
               ]
@@ -6429,7 +6435,7 @@
                 "content": "A whole number greater than 1 with more than two factors. Example: 12."
               },
               "tags": [
-                "quick reference"
+                "compare"
               ]
             },
             {
@@ -6473,7 +6479,7 @@
                 "Example: 4,326 has digit sum 15, so it is divisible by 3."
               ],
               "tags": [
-                "quick reference"
+                "method"
               ]
             },
             {
@@ -6510,7 +6516,7 @@
               "question": "Is 7,452 divisible by 3?",
               "answer": "Yes. Its digit sum is 7 + 4 + 5 + 2 = 18, which is divisible by 3.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6520,7 +6526,7 @@
               "question": "Why is 2 the only even prime number?",
               "answer": "Every other even number is divisible by 2 and has at least three factors: 1, 2 and itself.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6530,17 +6536,18 @@
               "question": "List all positive factors of 18.",
               "answer": "1, 2, 3, 6, 9 and 18.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             }
           ]
         },
         {
           "chapterNo": 7,
-          "chapterLabel": "Triangles · angle relationships · classification · reasoning",
+          "chapterLabel": "Chapter 7",
           "chapterKey": "ganita-7",
           "title": "A Tale of Three Intersecting Lines",
-          "subtitle": [
+          "subtitle": "Triangles · angle relationships · classification · reasoning",
+          "cards": [
             {
               "id": "c6-math-07-01",
               "type": "concept",
@@ -6589,7 +6596,7 @@
                 "content": "At least two sides are equal; angles opposite equal sides are equal."
               },
               "tags": [
-                "quick reference"
+                "compare"
               ]
             },
             {
@@ -6628,13 +6635,13 @@
               "type": "steps",
               "title": "Find an unknown triangle angle",
               "steps": [
-                "Write the two known interior angles.",
+                "Write the known interior angles.",
                 "Add the known angles.",
                 "Subtract their sum from 180°.",
                 "Check that all three angles total 180°."
               ],
               "tags": [
-                "quick reference"
+                "method"
               ]
             },
             {
@@ -6671,7 +6678,7 @@
               "question": "A triangle has angles 45° and 65°. Find the third angle.",
               "answer": "70°, because 180° − (45° + 65°) = 70°.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6681,7 +6688,7 @@
               "question": "A triangle has sides 5 cm, 5 cm and 8 cm. Classify it by sides.",
               "answer": "Isosceles, because two sides are equal.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6691,17 +6698,18 @@
               "question": "What is the relationship between vertically opposite angles?",
               "answer": "They are equal.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             }
           ]
         },
         {
           "chapterNo": 8,
-          "chapterLabel": "Parts of a whole · equivalence · comparison · operations",
+          "chapterLabel": "Chapter 8",
           "chapterKey": "ganita-8",
           "title": "Working with Fractions",
-          "subtitle": [
+          "subtitle": "Parts of a whole · equivalence · comparison · operations",
+          "cards": [
             {
               "id": "c6-math-08-01",
               "type": "concept",
@@ -6757,7 +6765,7 @@
                 "Check that the value has not changed."
               ],
               "tags": [
-                "quick reference"
+                "method"
               ]
             },
             {
@@ -6773,7 +6781,7 @@
                 "content": "Different denominators, such as 1/3 and 2/5. Use equivalent fractions or a common denominator."
               },
               "tags": [
-                "quick reference"
+                "compare"
               ]
             },
             {
@@ -6796,7 +6804,7 @@
                 "Simplify the answer if possible."
               ],
               "tags": [
-                "quick reference"
+                "method"
               ]
             },
             {
@@ -6846,7 +6854,7 @@
               "question": "Write an equivalent fraction for 3/5 with denominator 20.",
               "answer": "12/20. Multiply numerator and denominator by 4.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6856,7 +6864,7 @@
               "question": "Simplify 18/24.",
               "answer": "3/4. Divide numerator and denominator by 6.",
               "tags": [
-                "quick reference"
+                "active recall"
               ]
             },
             {
@@ -6866,17 +6874,7 @@
               "question": "Calculate 2/7 + 3/7.",
               "answer": "5/7.",
               "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-08-14",
-              "type": "recall",
-              "title": "Fraction of a quantity",
-              "question": "Find 2/3 of 18.",
-              "answer": "12. Divide 18 by 3 to get 6, then multiply by 2.",
-              "tags": [
-                "quick reference"
+                "active recall"
               ]
             }
           ]
