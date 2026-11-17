@@ -1,13 +1,166 @@
 {
   "schemaVersion": 1,
   "kind": "visual-revision-manifest",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "boards": [
     {
       "classId": "6",
       "subject": "science",
       "subjectLabel": "Science",
       "chapters": [
+        {
+          "chapterNo": 1,
+          "chapterLabel": "Chapter 1",
+          "chapterKey": "the-wonderful-world-of-science",
+          "title": "The Wonderful World of Science",
+          "subtitle": "Curiosity · quick recall and observation",
+          "cards": [
+            {
+              "id": "c6-sci-01-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Science is a way of asking questions about the world, observing carefully, testing ideas and using evidence to explain what happens.",
+              "tags": [
+                "quick reference"
+              ],
+              "note": "NCERT describes this opening chapter as an introductory, non-evaluative chapter; use it to build curiosity rather than memorise it for a test."
+            },
+            {
+              "id": "c6-sci-01-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Notice something around you, ask a testable question, make a prediction and plan a fair observation or investigation.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-sci-01-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What makes an explanation scientific?",
+              "answer": "It is based on observations or evidence and can be checked through investigation.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 2,
+          "chapterLabel": "Chapter 2",
+          "chapterKey": "diversity-in-the-living-world",
+          "title": "Diversity in the Living World",
+          "subtitle": "Curiosity · quick recall and observation",
+          "cards": [
+            {
+              "id": "c6-sci-02-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Living things show great diversity in their shapes, sizes, habitats and ways of life. Grouping organisms by shared features helps us study them.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-02-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Observe visible features such as body covering, movement, habitat and leaf or stem form. Group by a clear feature and explain your choice.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-sci-02-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "Why do scientists group living organisms?",
+              "answer": "Grouping makes the huge variety of organisms easier to study and helps us recognise similarities and differences.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 3,
+          "chapterLabel": "Chapter 3",
+          "chapterKey": "mindful-eating-a-path-to-a-healthy-body",
+          "title": "Mindful Eating: A Path to a Healthy Body",
+          "subtitle": "Curiosity · quick recall and observation",
+          "cards": [
+            {
+              "id": "c6-sci-03-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Food provides nutrients and energy. A balanced diet includes different food groups in suitable amounts, along with safe food and healthy eating habits.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-03-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Choose a variety of foods, drink clean water and pay attention to hygiene, freshness and how food is stored.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-sci-03-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "Why is eating a variety of foods better than depending on only one food?",
+              "answer": "Different foods provide different nutrients; variety helps the body get what it needs for growth, energy and health.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 4,
+          "chapterLabel": "Chapter 4",
+          "chapterKey": "exploring-magnets",
+          "title": "Exploring Magnets",
+          "subtitle": "Curiosity · quick recall and observation",
+          "cards": [
+            {
+              "id": "c6-sci-04-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Magnets attract some materials, especially iron-containing materials. Every magnet has a north pole and a south pole; like poles repel and unlike poles attract.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-04-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Test materials one at a time and record the result. A freely suspended magnet settles approximately in the north–south direction.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-sci-04-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What happens when the north pole of one magnet is brought near the south pole of another?",
+              "answer": "They attract because unlike magnetic poles attract.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
         {
           "chapterNo": 5,
           "chapterKey": "measurement-of-length-and-motion",
@@ -133,8 +286,276 @@
               ]
             }
           ]
+        },
+        {
+          "chapterNo": 6,
+          "chapterLabel": "Chapter 6",
+          "chapterKey": "materials-around-us",
+          "title": "Materials Around Us",
+          "subtitle": "Curiosity · quick recall and observation",
+          "cards": [
+            {
+              "id": "c6-sci-06-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Objects are made from materials with different properties such as hardness, flexibility, transparency, solubility and ability to float or sink.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-06-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Choose a material for a purpose by matching its properties to the job. One material may be useful for one purpose but unsuitable for another.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-sci-06-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "Why is glass useful for a window but not usually for a school bag?",
+              "answer": "Glass is transparent and rigid but brittle; a bag needs a flexible, strong material that can withstand handling.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 7,
+          "chapterLabel": "Chapter 7",
+          "chapterKey": "temperature-and-its-measurement",
+          "title": "Temperature and its Measurement",
+          "subtitle": "Curiosity · quick recall and observation",
+          "cards": [
+            {
+              "id": "c6-sci-07-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Temperature tells us how hot or cold something is. A thermometer measures temperature; the Celsius scale is commonly used in everyday settings.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-07-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Use a suitable thermometer, read it at eye level and follow safety instructions. Do not use touch alone to judge exact temperature.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-sci-07-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the usual unit used to report everyday temperature in the Celsius scale?",
+              "answer": "Degree Celsius (°C).",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 8,
+          "chapterLabel": "Chapter 8",
+          "chapterKey": "a-journey-through-states-of-water",
+          "title": "A Journey through States of Water",
+          "subtitle": "Curiosity · quick recall and observation",
+          "cards": [
+            {
+              "id": "c6-sci-08-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Water exists as solid ice, liquid water and water vapour. Heating and cooling cause changes of state such as melting, freezing, evaporation and condensation.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-08-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Evaporation can happen below the boiling point and is faster with more heat, moving air and a larger exposed surface.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-sci-08-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What change of state occurs when water vapour cools and forms tiny liquid droplets?",
+              "answer": "Condensation.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 9,
+          "chapterLabel": "Chapter 9",
+          "chapterKey": "methods-of-separation-in-everyday-life",
+          "title": "Methods of Separation in Everyday Life",
+          "subtitle": "Curiosity · quick recall and observation",
+          "cards": [
+            {
+              "id": "c6-sci-09-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Mixtures contain two or more substances that can often be separated using differences in size, solubility, magnetism or settling behaviour.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-09-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Choose a method based on the property that differs: sieving for particle size, filtration for insoluble solids, evaporation for dissolved solids and magnetic separation for magnetic materials.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-sci-09-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "How would you separate sand from water?",
+              "answer": "Use filtration: the sand remains on the filter while water passes through.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 10,
+          "chapterLabel": "Chapter 10",
+          "chapterKey": "living-creatures-exploring-their-characteristics",
+          "title": "Living Creatures: Exploring their Characteristics",
+          "subtitle": "Curiosity · quick recall and observation",
+          "cards": [
+            {
+              "id": "c6-sci-10-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Living organisms carry out life processes such as nutrition, growth, response to surroundings and reproduction. A single feature alone may not always identify life.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-10-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Compare several characteristics and observe an organism over time. Movement by itself does not prove that something is living.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-sci-10-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "Why is a moving toy not considered a living organism?",
+              "answer": "It does not carry out life processes such as nutrition, growth, respiration and reproduction; its movement is produced mechanically.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 11,
+          "chapterLabel": "Chapter 11",
+          "chapterKey": "nature-s-treasures",
+          "title": "Nature’s Treasures",
+          "subtitle": "Curiosity · quick recall and observation",
+          "cards": [
+            {
+              "id": "c6-sci-11-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Air, water, soil, rocks, minerals and living organisms are natural resources. They support life and must be used carefully so that they remain available.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-11-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Reduce waste, reuse materials, save water and energy, and protect local habitats. Notice how natural resources are connected.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-sci-11-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "Why should we avoid wasting fresh water?",
+              "answer": "Usable fresh water is limited and is essential for people, plants and animals; careful use helps protect supplies for the future.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 12,
+          "chapterLabel": "Chapter 12",
+          "chapterKey": "beyond-earth",
+          "title": "Beyond Earth",
+          "subtitle": "Curiosity · quick recall and observation",
+          "cards": [
+            {
+              "id": "c6-sci-12-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Earth is part of the Solar System. The Sun is a star; planets orbit it, while the Moon is Earth's natural satellite. Stars appear as points of light because they are very far away.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-12-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Use a simple model or sky observation to distinguish a star, a planet and a natural satellite. Remember that the apparent daily motion of the sky is mainly due to Earth's rotation.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-sci-12-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "Why does the Sun look much larger and brighter than other stars?",
+              "answer": "The Sun is a star much closer to Earth than the other stars, so it appears larger and brighter.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
         }
-      ]
+      ],
+      "academicYear": "2026-27",
+      "bookTitle": "Curiosity"
     },
     {
       "classId": "10",
@@ -5061,6 +5482,395 @@
               "typeLabel": "अभ्यास प्रश्न",
               "revealLabel": "उत्तर देखें",
               "hideLabel": "उत्तर छिपाएँ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "classId": "6",
+      "subject": "mathematics",
+      "subjectLabel": "Mathematics",
+      "academicYear": "2026-27",
+      "bookTitle": "Ganita Prakash",
+      "chapters": [
+        {
+          "chapterNo": 1,
+          "chapterKey": "patterns-in-mathematics",
+          "title": "Patterns in Mathematics",
+          "subtitle": "Ganita Prakash · quick recall and concept connections",
+          "chapterLabel": "Chapter 1",
+          "cards": [
+            {
+              "id": "c6-math-01-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Mathematics is full of patterns: number sequences, shape patterns and repeating arrangements. A pattern can be described by a rule that helps us predict what comes next.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-01-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Look for what changes and what stays the same. Explain the rule in words before using it to find a missing term.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-math-01-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "A pattern is 3, 6, 9, 12, … What is the rule and the next two terms?",
+              "answer": "Add 3 each time; the next two terms are 15 and 18.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 2,
+          "chapterKey": "lines-and-angles",
+          "title": "Lines and Angles",
+          "subtitle": "Ganita Prakash · quick recall and concept connections",
+          "chapterLabel": "Chapter 2",
+          "cards": [
+            {
+              "id": "c6-math-02-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "A point marks a position; a line extends endlessly in both directions, a line segment has two endpoints, and a ray starts at one point and extends endlessly in one direction.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-02-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "An angle is formed by two rays with a common endpoint. Measure it from the zero line of a protractor and read the correct scale.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-math-02-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "What is the difference between a line segment and a ray?",
+              "answer": "A line segment has two endpoints and a fixed length; a ray has one endpoint and continues endlessly in one direction.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 3,
+          "chapterKey": "number-play",
+          "title": "Number Play",
+          "subtitle": "Ganita Prakash · quick recall and concept connections",
+          "chapterLabel": "Chapter 3",
+          "cards": [
+            {
+              "id": "c6-math-03-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Numbers can be explored through puzzles, divisibility patterns, remainders and games. A useful strategy is to test small cases and look for a rule.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-03-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "When a puzzle involves repeated steps, record each result in a table and check whether the pattern continues.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-math-03-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "If a number leaves remainder 0 when divided by 2, what can you say about it?",
+              "answer": "It is an even number; its ones digit is 0, 2, 4, 6 or 8.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 4,
+          "chapterKey": "data-handling-and-presentation",
+          "title": "Data Handling and Presentation",
+          "subtitle": "Ganita Prakash · quick recall and concept connections",
+          "chapterLabel": "Chapter 4",
+          "cards": [
+            {
+              "id": "c6-math-04-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Data are facts or observations collected to answer a question. Tables, tally marks, pictographs and bar graphs help organise and communicate data.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-04-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Give a graph a clear title, label both axes and use a consistent scale. Each symbol in a pictograph must have a stated key.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-math-04-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "Why must a pictograph include a key?",
+              "answer": "The key tells how many items each picture or symbol represents, so the reader can interpret the data correctly.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 5,
+          "chapterKey": "prime-time",
+          "title": "Prime Time",
+          "subtitle": "Ganita Prakash · quick recall and concept connections",
+          "chapterLabel": "Chapter 5",
+          "cards": [
+            {
+              "id": "c6-math-05-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "A prime number has exactly two factors: 1 and itself. A composite number has more than two factors. The number 1 is neither prime nor composite.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-05-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Use divisibility tests and factor pairs to decide whether a number is prime. Prime factorisation expresses a composite number as a product of primes.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-math-05-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "Is 29 prime? Explain briefly.",
+              "answer": "Yes. Its only positive factors are 1 and 29; it is not divisible by 2, 3 or 5.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 6,
+          "chapterKey": "perimeter-and-area",
+          "title": "Perimeter and Area",
+          "subtitle": "Ganita Prakash · quick recall and concept connections",
+          "chapterLabel": "Chapter 6",
+          "cards": [
+            {
+              "id": "c6-math-06-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Perimeter measures the distance around a closed shape. Area measures the surface covered inside it. Perimeter uses linear units; area uses square units.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-06-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "For a rectangle, perimeter = 2 × (length + breadth) and area = length × breadth. Keep the units appropriate to each measure.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-math-06-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "A rectangle is 8 cm long and 3 cm wide. Find its perimeter and area.",
+              "answer": "Perimeter = 2 × (8+3) = 22 cm; area = 8 × 3 = 24 cm².",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 7,
+          "chapterKey": "fractions",
+          "title": "Fractions",
+          "subtitle": "Ganita Prakash · quick recall and concept connections",
+          "chapterLabel": "Chapter 7",
+          "cards": [
+            {
+              "id": "c6-math-07-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "A fraction represents equal parts of a whole or a collection. The denominator tells the number of equal parts; the numerator tells how many are considered.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-07-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Use equivalent fractions to compare or add fractions. For addition and subtraction, first express them with a common denominator.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-math-07-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "Why are 1/2 and 2/4 equivalent?",
+              "answer": "They represent the same amount: multiplying the numerator and denominator of 1/2 by 2 gives 2/4.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 8,
+          "chapterKey": "playing-with-constructions",
+          "title": "Playing with Constructions",
+          "subtitle": "Ganita Prakash · quick recall and concept connections",
+          "chapterLabel": "Chapter 8",
+          "cards": [
+            {
+              "id": "c6-math-08-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Geometric constructions use tools such as a ruler, compass and protractor to draw figures accurately. A compass keeps a fixed radius while drawing arcs or circles.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-08-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Keep the compass opening unchanged when transferring a length. Mark intersection points clearly before joining them with a ruler.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-math-08-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "Which tool helps you draw a circle with a fixed radius?",
+              "answer": "A compass. Its pointed end stays at the centre while the pencil end traces the circle.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 9,
+          "chapterKey": "symmetry",
+          "title": "Symmetry",
+          "subtitle": "Ganita Prakash · quick recall and concept connections",
+          "chapterLabel": "Chapter 9",
+          "cards": [
+            {
+              "id": "c6-math-09-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "A shape has line symmetry if it can be folded along a line so that the two halves match exactly. The fold line is called the line of symmetry.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-09-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "Check symmetry by imagining a fold or using tracing paper. A shape can have more than one line of symmetry.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-math-09-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "How many lines of symmetry does a square have?",
+              "answer": "Four: one vertical, one horizontal and the two diagonals.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 10,
+          "chapterKey": "the-other-side-of-zero",
+          "title": "The Other Side of Zero",
+          "subtitle": "Ganita Prakash · quick recall and concept connections",
+          "chapterLabel": "Chapter 10",
+          "cards": [
+            {
+              "id": "c6-math-10-01",
+              "type": "concept",
+              "title": "Core idea",
+              "content": "Zero separates positive and negative numbers. Negative numbers can describe values below zero, such as temperatures below freezing or floors below ground level.",
+              "tags": [
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-10-02",
+              "type": "exam-alert",
+              "title": "Try and apply",
+              "content": "On a number line, numbers increase as you move right and decrease as you move left. The number farther right is always greater.",
+              "typeLabel": "Practice focus",
+              "tags": [
+                "think and apply"
+              ]
+            },
+            {
+              "id": "c6-math-10-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "Which is greater, −2 or −5?",
+              "answer": "−2 is greater because it lies to the right of −5 on the number line.",
+              "tags": [
+                "active recall"
+              ]
             }
           ]
         }
