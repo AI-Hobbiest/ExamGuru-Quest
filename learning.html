@@ -72,28 +72,28 @@ body{margin:0;background:var(--c10-bg,#f5f6fb);color:var(--c10-ink,#25233e);font
 <main class="learning-wrap">
   <div id="learningStatus" class="learning-help" role="status" aria-live="polite">Loading your learning history…</div>
   <section class="learning-summary" aria-label="Learning summary">
-    <article class="learning-stat"><strong id="openMistakeCount">0</strong><span>Open mistakes</span></article>
-    <article class="learning-stat"><strong id="bookmarkCount">0</strong><span>Saved questions</span></article>
-    <article class="learning-stat"><strong id="weakTopicCount">0</strong><span>Topics to strengthen</span></article>
-    <article class="learning-stat"><strong id="masteredTopicCount">0</strong><span>Strong / mastered topics</span></article>
+    <article class="learning-stat eg-surface"><strong id="openMistakeCount">0</strong><span>Open mistakes</span></article>
+    <article class="learning-stat eg-surface"><strong id="bookmarkCount">0</strong><span>Saved questions</span></article>
+    <article class="learning-stat eg-surface"><strong id="weakTopicCount">0</strong><span>Topics to strengthen</span></article>
+    <article class="learning-stat eg-surface"><strong id="masteredTopicCount">0</strong><span>Strong / mastered topics</span></article>
   </section>
-  <section class="learning-panel" id="recommendations">
-    <div class="learning-panel-head"><div><h2>Recommended next steps</h2><p class="learning-help">Recommendations are based on your saved answers, mistakes and topic performance.</p></div></div>
+  <section class="learning-panel eg-surface" id="recommendations">
+    <div class="learning-panel-head eg-surface"><div><h2>Recommended next steps</h2><p class="learning-help">Recommendations are based on your saved answers, mistakes and topic performance.</p></div></div>
     <div id="recommendationList" class="learning-recommendations"><div class="learning-empty">Your recommendations will appear here once your history is loaded.</div></div>
   </section>
-  <section class="learning-panel" id="mistakes">
-    <div class="learning-panel-head">
+  <section class="learning-panel eg-surface" id="mistakes">
+    <div class="learning-panel-head eg-surface">
       <div><h2>Consolidated Mistake Book</h2><p class="learning-help">Incorrect and skipped questions from your subjects, brought together for review. Mark an item mastered when you are confident with it.</p></div>
       <div class="learning-filters"><select id="mistakeStatusFilter" aria-label="Mistake status"><option value="open">Open mistakes</option><option value="all">All mistakes</option><option value="mastered">Mastered</option></select><select id="mistakeSubjectFilter" aria-label="Mistake subject"><option value="all">All subjects</option></select></div>
     </div>
     <div id="mistakeList" class="learning-list"><div class="learning-empty">No mistakes recorded yet. Incorrect and skipped responses will appear here.</div></div>
   </section>
-  <section class="learning-panel" id="bookmarks">
-    <div class="learning-panel-head"><div><h2>Personal bookmarks</h2><p class="learning-help">Your own saved questions, separate from exam-time “Mark for review”.</p></div></div>
+  <section class="learning-panel eg-surface" id="bookmarks">
+    <div class="learning-panel-head eg-surface"><div><h2>Personal bookmarks</h2><p class="learning-help">Your own saved questions, separate from exam-time “Mark for review”.</p></div></div>
     <div id="bookmarkList" class="learning-list"><div class="learning-empty">You have not saved any questions yet. Use “Save question” while practising.</div></div>
   </section>
-  <section class="learning-panel" id="mastery">
-    <div class="learning-panel-head"><div><h2>Topic mastery</h2><p class="learning-help">Mastery uses your latest recorded outcome per distinct question. Small samples are labelled as building evidence rather than mastery.</p></div></div>
+  <section class="learning-panel eg-surface" id="mastery">
+    <div class="learning-panel-head eg-surface"><div><h2>Topic mastery</h2><p class="learning-help">Mastery uses your latest recorded outcome per distinct question. Small samples are labelled as building evidence rather than mastery.</p></div></div>
     <div id="topicMasteryList" class="topic-mastery"><div class="learning-empty">Topic mastery will build as you answer questions.</div></div>
   </section>
   <div class="learning-footer">Learning records and bookmarks are stored on this browser and device. Export a student backup from My Profile before changing devices.<br>Conceptualised by JP Ganathe · ExamGuru Quest</div>
