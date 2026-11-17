@@ -235,6 +235,15 @@
     $("vrbSubject").addEventListener("change",populateVisualChapters);
     $("vrbChapter").addEventListener("change",renderVisualCards);
     $("vrbSearch").addEventListener("input",renderVisualCards);
+    if(window.C10StudyViewerRole==="admin"){
+      const back=$("studyBackLink"),title=$("studyPageTitle"),intro=$("studyPageIntro"),notice=$("studyPreviewNotice");
+      if(back){back.href="./admin.html#tab-knowledge";back.textContent="← Back to Admin · Knowledge Base";}
+      if(title)title.textContent="Study Library Preview";
+      if(intro)intro.textContent="Student-facing Study Library for Class "+classId+". This is a read-only preview; no student progress or account data is changed.";
+      if(notice){notice.hidden=false;notice.style.display="block";notice.textContent="ADMIN PREVIEW · Class "+classId+" · Student experience · Read-only";}
+    }else if(window.C10StudyViewerRole==="parent"){
+      const back=$("studyBackLink");if(back){back.href="./parent.html";back.textContent="← Back to Family Dashboard";}
+    }
     if(readOnlyView)$("studyLoadStatus").textContent="Preview mode · Class "+classId+" · Progress controls are disabled.";
     loadVisualRevision();
     try{
