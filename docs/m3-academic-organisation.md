@@ -17,7 +17,7 @@ Status: implemented in the M3 feature branch; migration and domain policy requir
 - `departments`: institution-owned departments with unique institution code and optional parent department.
 - `department_subjects`: subjects owned by each department.
 - `department_class_scopes`: institution class groups covered by each department.
-- `department_memberships`: links an existing active teacher or School Admin institution membership to a department; supports multiple departments per person.
+- `department_memberships`: links an existing active teacher institution membership to a department; supports multiple departments per person.
 - `department_head_appointments`: effective-dated HOD appointment for one department membership; one active HOD appointment per department at a time.
 - `department_head_class_scopes`: optional class subset for an HOD appointment.
 - `teacher_assignments.department_id`: nullable compatibility extension. Existing legacy assignments remain valid; department-aware assignments must match department membership, subject and class scope.
