@@ -47,7 +47,7 @@ jobs:
       - name: Validate session timing, weighted marks and summary model
         run: node tests/session-model.test.js
       - name: Validate multi-tenant RBAC contracts and legacy compatibility
-        run: node tests/rbac-contract.test.js
+        run: python3 tests/rbac-migration.test.py && node tests/rbac-contract.test.js
       - name: Validate Stage A LMS integrations
         run: node tests/stage-a-integration.test.js
       - name: Validate quiz timers, navigation and result flow
