@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS membership_invitations (
   target_user_id TEXT NOT NULL REFERENCES users(id) ON DELETE RESTRICT,
   role TEXT NOT NULL CHECK(role IN ('school_admin','teacher','parent','student','institution_viewer')),
   branch_ids_json TEXT NOT NULL DEFAULT '[]',
+  all_branches INTEGER NOT NULL DEFAULT 0 CHECK(all_branches IN (0,1)),
   invited_by_user_id TEXT NOT NULL REFERENCES users(id) ON DELETE RESTRICT,
   status TEXT NOT NULL DEFAULT 'pending' CHECK(status IN ('pending','accepted','revoked','expired')),
   expires_at TEXT NOT NULL,
