@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "visual-revision-manifest",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "boards": [
     {
       "classId": "6",
@@ -8484,6 +8484,134 @@
               "tags": [
                 "active recall"
               ]
+            },
+            {
+              "id": "c6-sst-01-04",
+              "type": "fact",
+              "title": "Main elements of a map",
+              "facts": [
+                [
+                  "Title",
+                  "Tells what area or theme the map shows."
+                ],
+                [
+                  "Direction",
+                  "Often shown using a north arrow or compass rose."
+                ],
+                [
+                  "Scale",
+                  "Relates map distance to actual ground distance."
+                ],
+                [
+                  "Symbols and legend",
+                  "Explain how features are represented."
+                ],
+                [
+                  "Grid and coordinates",
+                  "Help locate places precisely."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-01-05",
+              "type": "concept",
+              "title": "Types of maps",
+              "content": "Physical maps show natural features such as mountains and rivers; political maps show boundaries and administrative units; thematic maps show a selected topic such as rainfall or population.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-01-06",
+              "type": "fact",
+              "title": "The four cardinal directions",
+              "facts": [
+                [
+                  "North",
+                  "Usually shown at the top of a conventional map."
+                ],
+                [
+                  "South",
+                  "Opposite north."
+                ],
+                [
+                  "East",
+                  "To the right when facing north."
+                ],
+                [
+                  "West",
+                  "To the left when facing north."
+                ],
+                [
+                  "Intermediate directions",
+                  "North-east, south-east, south-west and north-west."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-01-07",
+              "type": "concept",
+              "title": "Latitudes",
+              "content": "Latitudes are imaginary parallel circles around Earth. The Equator is 0° latitude; values increase northwards and southwards up to 90° at the poles.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-01-08",
+              "type": "concept",
+              "title": "Longitudes",
+              "content": "Longitudes are imaginary semicircles joining the poles. The Prime Meridian is 0° longitude; longitudes are measured east and west up to 180°.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-01-09",
+              "type": "compare",
+              "title": "Latitude and longitude",
+              "left": {
+                "heading": "Latitude",
+                "content": "Measures angular distance north or south of the Equator; lines run east–west and remain parallel."
+              },
+              "right": {
+                "heading": "Longitude",
+                "content": "Measures angular distance east or west of the Prime Meridian; lines meet at the poles."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-01-10",
+              "type": "recall",
+              "title": "Map scale",
+              "question": "Why is a map scale important?",
+              "answer": "It helps convert a measured distance on the map into the corresponding real-world distance.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-01-11",
+              "type": "recall",
+              "title": "Coordinate check",
+              "question": "What is the latitude of the Equator?",
+              "answer": "0° latitude.",
+              "tags": [
+                "active recall"
+              ]
             }
           ]
         },
@@ -8519,6 +8647,132 @@
               "title": "Quick self-check",
               "question": "Name the five oceans.",
               "answer": "Pacific, Atlantic, Indian, Southern and Arctic Oceans.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-02-04",
+              "type": "fact",
+              "title": "The seven continents",
+              "facts": [
+                [
+                  "Asia",
+                  "Largest continent by area."
+                ],
+                [
+                  "Africa",
+                  "Crossed by the Equator and known for great climatic and ecological diversity."
+                ],
+                [
+                  "North America",
+                  "Lies mainly in the Northern and Western Hemispheres."
+                ],
+                [
+                  "South America",
+                  "Contains the Amazon Basin and the Andes."
+                ],
+                [
+                  "Antarctica",
+                  "Surrounds the South Pole and is extremely cold."
+                ],
+                [
+                  "Europe",
+                  "A relatively small continent west of Asia."
+                ],
+                [
+                  "Australia",
+                  "Smallest continent; often considered with nearby islands as Oceania."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-02-05",
+              "type": "fact",
+              "title": "The five oceans",
+              "facts": [
+                [
+                  "Pacific",
+                  "Largest and deepest ocean."
+                ],
+                [
+                  "Atlantic",
+                  "Separates the Americas from Europe and Africa."
+                ],
+                [
+                  "Indian",
+                  "Lies between Africa, Asia, Australia and the Southern Ocean."
+                ],
+                [
+                  "Southern",
+                  "Surrounds Antarctica."
+                ],
+                [
+                  "Arctic",
+                  "Smallest ocean around the North Pole."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-02-06",
+              "type": "concept",
+              "title": "Continents and oceans are connected",
+              "content": "Oceans connect distant coasts and support trade, climate systems and marine life. Continents contain varied landscapes, ecosystems and human communities.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-02-07",
+              "type": "concept",
+              "title": "Hemispheres",
+              "content": "The Equator divides Earth into Northern and Southern Hemispheres. The Prime Meridian and 180° meridian help divide it into Eastern and Western Hemispheres.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-02-08",
+              "type": "compare",
+              "title": "Island and continent",
+              "left": {
+                "heading": "Island",
+                "content": "A land area surrounded by water, generally smaller than a continent."
+              },
+              "right": {
+                "heading": "Continent",
+                "content": "One of Earth's very large continuous landmasses, recognised as a major geographical division."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-02-09",
+              "type": "recall",
+              "title": "Ocean check",
+              "question": "Which is the largest ocean?",
+              "answer": "The Pacific Ocean.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-02-10",
+              "type": "recall",
+              "title": "Continents check",
+              "question": "Which continent contains the South Pole?",
+              "answer": "Antarctica.",
               "tags": [
                 "active recall"
               ]
@@ -8560,6 +8814,118 @@
               "tags": [
                 "active recall"
               ]
+            },
+            {
+              "id": "c6-sst-03-04",
+              "type": "fact",
+              "title": "Three major landforms",
+              "facts": [
+                [
+                  "Mountains",
+                  "High areas with steep slopes and peaks."
+                ],
+                [
+                  "Plateaus",
+                  "Elevated areas with relatively flat tops."
+                ],
+                [
+                  "Plains",
+                  "Broad areas of low relief, often suitable for farming and settlement."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-03-05",
+              "type": "concept",
+              "title": "How landforms affect life",
+              "content": "Relief influences climate, farming, transport, settlement, clothing and house design. People adapt their livelihoods and buildings to local conditions.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-03-06",
+              "type": "compare",
+              "title": "Mountains and plains",
+              "left": {
+                "heading": "Mountains",
+                "content": "Steep slopes, varied altitude, cooler conditions at higher elevations and more difficult transport."
+              },
+              "right": {
+                "heading": "Plains",
+                "content": "Generally flatter land, often easier to farm, build roads and establish large settlements."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-03-07",
+              "type": "fact",
+              "title": "Landforms and livelihoods",
+              "facts": [
+                [
+                  "Mountains",
+                  "Terrace farming, pastoralism, tourism and forestry in suitable areas."
+                ],
+                [
+                  "Plateaus",
+                  "Mining, grazing, farming and waterfalls or river valleys."
+                ],
+                [
+                  "Plains",
+                  "Intensive agriculture, transport networks and dense settlements."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-03-08",
+              "type": "concept",
+              "title": "Rivers shape landscapes",
+              "content": "Rivers can erode rock, carry sediment and deposit it downstream. Over time they form valleys, floodplains and deltas.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-03-09",
+              "type": "concept",
+              "title": "Human adaptation",
+              "content": "People use local materials and knowledge to adapt to heat, cold, slopes, water availability and natural hazards. Adaptation differs from trying to make every place identical.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-03-10",
+              "type": "recall",
+              "title": "Landform check",
+              "question": "Which major landform is elevated and has a relatively flat top?",
+              "answer": "A plateau.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-03-11",
+              "type": "recall",
+              "title": "Settlement check",
+              "question": "Why are many large settlements found on plains or river valleys?",
+              "answer": "Flatter land, water, fertile soils and easier transport often support farming, construction and trade.",
+              "tags": [
+                "active recall"
+              ]
             }
           ]
         },
@@ -8595,6 +8961,131 @@
               "title": "Quick self-check",
               "question": "Why do historians use more than one type of source?",
               "answer": "Different sources provide different clues and can support, question or add detail to one another, giving a fuller and more reliable picture of the past.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-04-04",
+              "type": "fact",
+              "title": "Sources used by historians",
+              "facts": [
+                [
+                  "Archaeological",
+                  "Tools, pottery, buildings, coins, bones and other material remains."
+                ],
+                [
+                  "Literary",
+                  "Written works such as manuscripts, inscriptions and books."
+                ],
+                [
+                  "Oral",
+                  "Stories, songs, memories and traditions passed by speaking."
+                ],
+                [
+                  "Visual and artistic",
+                  "Paintings, sculptures, monuments and images."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-04-05",
+              "type": "concept",
+              "title": "Chronology",
+              "content": "Chronology arranges events in the order in which they happened. A timeline helps compare events and understand what came before or after another event.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-04-06",
+              "type": "fact",
+              "title": "Dating the past",
+              "facts": [
+                [
+                  "BCE",
+                  "Before the Common Era; years count backwards towards 1 CE."
+                ],
+                [
+                  "CE",
+                  "Common Era; years count forwards."
+                ],
+                [
+                  "Century",
+                  "A period of 100 years."
+                ],
+                [
+                  "Millennium",
+                  "A period of 1,000 years."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-04-07",
+              "type": "compare",
+              "title": "Primary and later accounts",
+              "left": {
+                "heading": "Contemporary source",
+                "content": "Created during or close to the time being studied; may provide direct evidence but still needs interpretation."
+              },
+              "right": {
+                "heading": "Later account",
+                "content": "Created afterwards using earlier sources; may offer analysis but can reflect later viewpoints."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-04-08",
+              "type": "concept",
+              "title": "Sources need interpretation",
+              "content": "A source may be incomplete, damaged, biased or created for a particular purpose. Historians compare different kinds of evidence rather than accepting one source uncritically.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-04-09",
+              "type": "steps",
+              "title": "How to examine a historical source",
+              "steps": [
+                "Identify what the source is and when it was created.",
+                "Ask who created it and for whom.",
+                "Consider why it was made and what it shows.",
+                "Notice whose voices or experiences may be missing.",
+                "Compare it with other evidence before drawing a conclusion."
+              ],
+              "tags": [
+                "method"
+              ]
+            },
+            {
+              "id": "c6-sst-04-10",
+              "type": "recall",
+              "title": "Timeline check",
+              "question": "What is chronology?",
+              "answer": "The arrangement of events in the order in which they happened.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-04-11",
+              "type": "recall",
+              "title": "Source check",
+              "question": "Why should historians compare more than one source?",
+              "answer": "Different sources provide different clues and can confirm, challenge or add detail to one another.",
               "tags": [
                 "active recall"
               ]
@@ -8636,6 +9127,126 @@
               "tags": [
                 "active recall"
               ]
+            },
+            {
+              "id": "c6-sst-05-04",
+              "type": "fact",
+              "title": "Names in historical sources",
+              "facts": [
+                [
+                  "Bharat",
+                  "A name used in ancient texts and traditions for the land and its people."
+                ],
+                [
+                  "India",
+                  "A name that developed through historical and geographical usage."
+                ],
+                [
+                  "Jambudvipa",
+                  "A term found in ancient Indian texts and traditions."
+                ],
+                [
+                  "Bharatavarsha",
+                  "A term used in several historical and cultural sources."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-05-05",
+              "type": "concept",
+              "title": "Names change across time",
+              "content": "Different texts, languages and periods use different names for regions and communities. A historical name should be understood in the context in which it appears.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-05-06",
+              "type": "concept",
+              "title": "Geography and identity",
+              "content": "The Himalayas, rivers, seas, plains and routes have shaped connections among regions. Geography influenced movement, trade, pilgrimage and cultural exchange.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-05-07",
+              "type": "fact",
+              "title": "Sources for understanding Bharat",
+              "facts": [
+                [
+                  "Texts",
+                  "Ancient literary and religious works preserve names and ideas."
+                ],
+                [
+                  "Inscriptions",
+                  "Record rulers, donations, events and languages."
+                ],
+                [
+                  "Maps",
+                  "Help compare geographical understanding and boundaries."
+                ],
+                [
+                  "Traditions",
+                  "Preserve memories, stories and cultural connections."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-05-08",
+              "type": "compare",
+              "title": "Historical regions and modern states",
+              "left": {
+                "heading": "Historical region",
+                "content": "Boundaries and meanings could change with kingdoms, cultures and periods."
+              },
+              "right": {
+                "heading": "Modern state",
+                "content": "Has defined political boundaries, constitutional institutions and citizenship."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-05-09",
+              "type": "concept",
+              "title": "Unity with regional diversity",
+              "content": "People across the subcontinent developed varied languages, customs and political systems while also sharing routes, ideas, stories and cultural practices.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-05-10",
+              "type": "recall",
+              "title": "Name check",
+              "question": "Why should we examine the context of a name such as Bharat?",
+              "answer": "Because names can have different meanings and uses in different texts, languages and historical periods.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-05-11",
+              "type": "recall",
+              "title": "Geography check",
+              "question": "Name two geographical features that have shaped connections in the Indian subcontinent.",
+              "answer": "Examples include the Himalayas, rivers, plains, deserts and surrounding seas.",
+              "tags": [
+                "active recall"
+              ]
             }
           ]
         },
@@ -8671,6 +9282,145 @@
               "title": "Quick self-check",
               "question": "Name two features that show planned urban life in Harappan cities.",
               "answer": "Well-planned streets and drainage systems are two important examples; standardised weights and organised craft areas also provide evidence.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-06-04",
+              "type": "fact",
+              "title": "Archaeological evidence of the Harappan civilisation",
+              "facts": [
+                [
+                  "Town planning",
+                  "Streets and neighbourhoods laid out in organised patterns."
+                ],
+                [
+                  "Drainage",
+                  "Drains and water-management features in many settlements."
+                ],
+                [
+                  "Crafts",
+                  "Beads, pottery, ornaments, metalwork and seals."
+                ],
+                [
+                  "Weights",
+                  "Standardised weights used in trade and measurement."
+                ],
+                [
+                  "Trade",
+                  "Evidence of exchange within the region and with distant areas."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-06-05",
+              "type": "concept",
+              "title": "Urban planning",
+              "content": "Many Harappan settlements show planned streets, buildings and drainage. These features suggest organisation and shared civic practices.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-06-06",
+              "type": "concept",
+              "title": "Crafts and trade",
+              "content": "Craft specialists produced objects such as beads, pottery, ornaments and tools. Standardised weights and seals provide clues about exchange and economic activity.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-06-07",
+              "type": "fact",
+              "title": "Important archaeological sites",
+              "facts": [
+                [
+                  "Harappa",
+                  "One of the sites from which the civilisation gets its name."
+                ],
+                [
+                  "Mohenjo-daro",
+                  "Known for its planned settlement and Great Bath."
+                ],
+                [
+                  "Dholavira",
+                  "Known for its city layout and water-management structures."
+                ],
+                [
+                  "Lothal",
+                  "Associated with craft production and trade; often discussed for its dock-like structure."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-06-08",
+              "type": "compare",
+              "title": "What artefacts can and cannot tell us",
+              "left": {
+                "heading": "What they can show",
+                "content": "Materials, technology, trade, diet, settlement patterns and aspects of daily life."
+              },
+              "right": {
+                "heading": "What remains uncertain",
+                "content": "The exact meaning of the undeciphered script and many details of political organisation or beliefs."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-06-09",
+              "type": "concept",
+              "title": "Why the script matters",
+              "content": "The Harappan script has not been conclusively deciphered. This limits what can be said from written records, so archaeology and comparison of material evidence are especially important.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-06-10",
+              "type": "steps",
+              "title": "Interpret an archaeological object",
+              "steps": [
+                "Describe its material, shape and markings without guessing its purpose.",
+                "Compare it with similar objects found elsewhere.",
+                "Look at where and with what it was found.",
+                "Consider more than one possible use.",
+                "State what the evidence supports and what remains uncertain."
+              ],
+              "tags": [
+                "method"
+              ]
+            },
+            {
+              "id": "c6-sst-06-11",
+              "type": "recall",
+              "title": "Site check",
+              "question": "Which Harappan site is famous for the Great Bath?",
+              "answer": "Mohenjo-daro.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-06-12",
+              "type": "recall",
+              "title": "Evidence check",
+              "question": "Why are standardised weights important evidence?",
+              "answer": "They suggest common systems of measurement and organised trade or exchange.",
               "tags": [
                 "active recall"
               ]
@@ -8712,6 +9462,116 @@
               "tags": [
                 "active recall"
               ]
+            },
+            {
+              "id": "c6-sst-07-04",
+              "type": "fact",
+              "title": "Ideas and traditions in India's cultural roots",
+              "facts": [
+                [
+                  "Vedic traditions",
+                  "Texts, chants, rituals and philosophical questions."
+                ],
+                [
+                  "Shramana traditions",
+                  "Paths of renunciation and inquiry, including Buddhism and Jainism."
+                ],
+                [
+                  "Philosophical ideas",
+                  "Questions about life, knowledge, duty and the nature of reality."
+                ],
+                [
+                  "Oral traditions",
+                  "Stories, songs and teachings transmitted across generations."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-07-05",
+              "type": "concept",
+              "title": "Culture develops through exchange",
+              "content": "Cultural traditions grow through contact, debate, travel, teaching and adaptation. They are not frozen; practices may change while retaining important meanings.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-07-06",
+              "type": "compare",
+              "title": "Vedic and Shramana traditions",
+              "left": {
+                "heading": "Vedic traditions",
+                "content": "Connected with Vedic texts, ritual practices, recitation and later philosophical inquiry."
+              },
+              "right": {
+                "heading": "Shramana traditions",
+                "content": "Included renunciant movements that explored liberation, ethical conduct and disciplined ways of life."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-07-07",
+              "type": "fact",
+              "title": "Ways culture is transmitted",
+              "facts": [
+                [
+                  "Language and literature",
+                  "Stories, poems, texts and oral recitation."
+                ],
+                [
+                  "Arts",
+                  "Music, dance, painting, sculpture and architecture."
+                ],
+                [
+                  "Festivals and practices",
+                  "Shared celebrations, rituals and community customs."
+                ],
+                [
+                  "Learning",
+                  "Teachers, families, institutions and public discussion."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-07-08",
+              "type": "concept",
+              "title": "Respectful study of beliefs",
+              "content": "When studying traditions, describe their ideas accurately and respectfully. Distinguish historical evidence from later interpretations and avoid assuming every person follows the same practice.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-07-09",
+              "type": "recall",
+              "title": "Tradition check",
+              "question": "Name two ways cultural knowledge can pass from one generation to another.",
+              "answer": "Through oral stories, language, literature, music, dance, festivals, family practices and teaching.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-07-10",
+              "type": "recall",
+              "title": "Change and continuity",
+              "question": "Can a cultural tradition change and still remain meaningful?",
+              "answer": "Yes. Traditions may adapt to new places and times while retaining important ideas or practices.",
+              "tags": [
+                "active recall"
+              ]
             }
           ]
         },
@@ -8747,6 +9607,120 @@
               "title": "Quick self-check",
               "question": "How can a country show unity while its people follow different languages and customs?",
               "answer": "People can respect different ways of life while sharing common civic values, institutions, experiences and a sense of belonging.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-08-04",
+              "type": "fact",
+              "title": "Examples of India's diversity",
+              "facts": [
+                [
+                  "Languages",
+                  "Many languages and dialects are used across regions."
+                ],
+                [
+                  "Food",
+                  "Local ingredients and climates shape regional cuisines."
+                ],
+                [
+                  "Clothing",
+                  "Dress varies with climate, occupation, history and custom."
+                ],
+                [
+                  "Festivals",
+                  "Communities celebrate different religious, seasonal and regional events."
+                ],
+                [
+                  "Arts",
+                  "Music, dance, crafts and architecture show regional styles."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-08-05",
+              "type": "concept",
+              "title": "Unity in diversity",
+              "content": "Unity does not mean everyone is the same. People can have different languages, foods and customs while sharing institutions, rights, responsibilities and a sense of belonging.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-08-06",
+              "type": "concept",
+              "title": "Cultural exchange",
+              "content": "Trade, travel, migration, pilgrimage, education and media allow ideas, words, foods, music and artistic styles to move between regions.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-08-07",
+              "type": "compare",
+              "title": "Sameness and unity",
+              "left": {
+                "heading": "Sameness",
+                "content": "Everyone follows the same language, custom or lifestyle; this is not required for unity."
+              },
+              "right": {
+                "heading": "Unity",
+                "content": "People respect differences and cooperate through shared values, rights, responsibilities and institutions."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-08-08",
+              "type": "fact",
+              "title": "How to study diversity fairly",
+              "facts": [
+                [
+                  "Use specific examples",
+                  "Avoid generalising about an entire state or community."
+                ],
+                [
+                  "Respect differences",
+                  "Do not rank cultures as superior or inferior."
+                ],
+                [
+                  "Notice shared practices",
+                  "Look for connections as well as differences."
+                ],
+                [
+                  "Check evidence",
+                  "Use reliable sources rather than stereotypes."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-08-09",
+              "type": "recall",
+              "title": "Unity check",
+              "question": "Does unity in diversity mean that everyone has identical customs?",
+              "answer": "No. It means people with different customs and identities can live together with mutual respect and shared civic values.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-08-10",
+              "type": "recall",
+              "title": "Example check",
+              "question": "Give two examples of cultural diversity in India.",
+              "answer": "Examples include languages, regional foods, clothing, festivals, music, dance and art forms.",
               "tags": [
                 "active recall"
               ]
@@ -8788,6 +9762,122 @@
               "tags": [
                 "active recall"
               ]
+            },
+            {
+              "id": "c6-sst-09-04",
+              "type": "concept",
+              "title": "Family and community",
+              "content": "A family is a group of people connected through relationships and care. A community is a wider group connected by place, interests, identity or shared responsibilities.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-09-05",
+              "type": "fact",
+              "title": "Different forms of support",
+              "facts": [
+                [
+                  "Emotional support",
+                  "Care, listening and encouragement."
+                ],
+                [
+                  "Practical support",
+                  "Helping with daily tasks and responsibilities."
+                ],
+                [
+                  "Knowledge sharing",
+                  "Passing on skills, language and experience."
+                ],
+                [
+                  "Community services",
+                  "Shared facilities and organised support."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-09-06",
+              "type": "concept",
+              "title": "Families can differ",
+              "content": "Families may be nuclear, extended, single-parent, blended or organised in other ways. What matters is care, respect, safety and responsibility, not one single family pattern.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-09-07",
+              "type": "compare",
+              "title": "Family and community",
+              "left": {
+                "heading": "Family",
+                "content": "Usually a close network of care and responsibility among related or chosen members."
+              },
+              "right": {
+                "heading": "Community",
+                "content": "A wider group that may include many families and individuals who share a place, interest or goal."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-09-08",
+              "type": "concept",
+              "title": "Interdependence",
+              "content": "People rely on others for food, education, transport, healthcare, safety and emotional support. Communities work better when people cooperate and include everyone.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-09-09",
+              "type": "fact",
+              "title": "Shared responsibilities",
+              "facts": [
+                [
+                  "At home",
+                  "Share age-appropriate tasks and care for belongings."
+                ],
+                [
+                  "At school",
+                  "Respect others, cooperate and care for shared spaces."
+                ],
+                [
+                  "In the neighbourhood",
+                  "Keep public spaces clean and help protect common resources."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-09-10",
+              "type": "recall",
+              "title": "Community check",
+              "question": "How can a community help people meet needs that one family may not meet alone?",
+              "answer": "People share knowledge, services, resources and support; cooperation helps solve common problems.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-09-11",
+              "type": "recall",
+              "title": "Inclusion check",
+              "question": "Why should community activities include people with different needs and abilities?",
+              "answer": "Inclusion allows everyone to participate, contribute and access shared opportunities with dignity.",
+              "tags": [
+                "active recall"
+              ]
             }
           ]
         },
@@ -8823,6 +9913,103 @@
               "title": "Quick self-check",
               "question": "What does accountability mean in a democracy?",
               "answer": "People in authority must explain their decisions and can be questioned or held responsible for their actions.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-10-04",
+              "type": "concept",
+              "title": "What is governance?",
+              "content": "Governance is the way decisions are made, rules are applied and public services are organised. It involves institutions, processes and people.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-10-05",
+              "type": "fact",
+              "title": "Principles of good governance",
+              "facts": [
+                [
+                  "Participation",
+                  "People can take part in decisions."
+                ],
+                [
+                  "Accountability",
+                  "Decision-makers explain and answer for their actions."
+                ],
+                [
+                  "Transparency",
+                  "Information and processes are open and understandable."
+                ],
+                [
+                  "Rule of law",
+                  "Rules apply fairly and protect rights."
+                ],
+                [
+                  "Responsiveness",
+                  "Institutions address people's needs."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-10-06",
+              "type": "concept",
+              "title": "Democracy and participation",
+              "content": "Democracy is more than voting. People participate by discussing issues, asking questions, sharing views, attending local meetings and holding representatives accountable.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-10-07",
+              "type": "compare",
+              "title": "Direct and representative participation",
+              "left": {
+                "heading": "Direct participation",
+                "content": "People discuss or decide matters themselves, such as in a Gram Sabha meeting."
+              },
+              "right": {
+                "heading": "Representative participation",
+                "content": "People elect representatives who make decisions and work on their behalf."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-10-08",
+              "type": "concept",
+              "title": "Why local governance matters",
+              "content": "Local institutions are closer to residents and can respond to local needs such as roads, water, sanitation, schools and community facilities.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-10-09",
+              "type": "recall",
+              "title": "Governance check",
+              "question": "What does accountability mean in a democracy?",
+              "answer": "People in authority must explain their decisions and can be questioned or held responsible for their actions.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-10-10",
+              "type": "recall",
+              "title": "Participation check",
+              "question": "Name two ways people can participate in democracy besides voting.",
+              "answer": "They can attend public meetings, raise local issues, submit suggestions, ask questions and monitor services.",
               "tags": [
                 "active recall"
               ]
@@ -8864,6 +10051,127 @@
               "tags": [
                 "active recall"
               ]
+            },
+            {
+              "id": "c6-sst-11-04",
+              "type": "fact",
+              "title": "Three tiers of rural local government",
+              "facts": [
+                [
+                  "Village level",
+                  "Gram Panchayat."
+                ],
+                [
+                  "Block or intermediate level",
+                  "Panchayat Samiti or equivalent block-level body."
+                ],
+                [
+                  "District level",
+                  "Zila Parishad."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-11-05",
+              "type": "concept",
+              "title": "Gram Sabha",
+              "content": "The Gram Sabha includes all adult voters registered in the village or Gram Panchayat area. It provides a forum to discuss local needs, plans and the work of the Panchayat.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-11-06",
+              "type": "fact",
+              "title": "Typical Gram Panchayat responsibilities",
+              "facts": [
+                [
+                  "Civic services",
+                  "Local roads, drains, sanitation and street lighting."
+                ],
+                [
+                  "Water",
+                  "Village water supply and maintenance of local sources."
+                ],
+                [
+                  "Development",
+                  "Local works and village development plans."
+                ],
+                [
+                  "Records and support",
+                  "Local records and coordination with public schemes, as assigned by law."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-11-07",
+              "type": "steps",
+              "title": "How a local issue can be raised",
+              "steps": [
+                "Identify the issue and the people affected.",
+                "Discuss it with neighbours or the relevant ward or village representative.",
+                "Raise it in the Gram Sabha or appropriate public forum.",
+                "Ask what action, responsibility and timeline are proposed.",
+                "Follow up and review the result."
+              ],
+              "tags": [
+                "method"
+              ]
+            },
+            {
+              "id": "c6-sst-11-08",
+              "type": "compare",
+              "title": "Gram Sabha and Gram Panchayat",
+              "left": {
+                "heading": "Gram Sabha",
+                "content": "The assembly of all registered adult voters in the village or Gram Panchayat area."
+              },
+              "right": {
+                "heading": "Gram Panchayat",
+                "content": "The elected local governing body that carries out assigned functions and works for the village area."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-11-09",
+              "type": "concept",
+              "title": "Why decentralisation helps",
+              "content": "Decentralisation shares decision-making across levels of government. Local people can explain their needs directly and monitor local work.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-11-10",
+              "type": "recall",
+              "title": "Gram Sabha check",
+              "question": "Who are the members of a Gram Sabha?",
+              "answer": "All adult voters registered in the village or Gram Panchayat area.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-11-11",
+              "type": "recall",
+              "title": "Rural tier check",
+              "question": "Which institution works at the district level in the rural Panchayati Raj system?",
+              "answer": "The Zila Parishad.",
+              "tags": [
+                "active recall"
+              ]
             }
           ]
         },
@@ -8899,6 +10207,120 @@
               "title": "Quick self-check",
               "question": "Name two services commonly managed by an urban local body.",
               "answer": "Examples include waste collection, sanitation, local roads, street lighting and water supply.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-12-04",
+              "type": "fact",
+              "title": "Urban local bodies",
+              "facts": [
+                [
+                  "Nagar Panchayat",
+                  "For a transitional area moving from rural to urban."
+                ],
+                [
+                  "Municipal Council or Municipality",
+                  "For a smaller urban area or town."
+                ],
+                [
+                  "Municipal Corporation",
+                  "For a larger city."
+                ],
+                [
+                  "Ward",
+                  "A local area represented by an elected councillor."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-12-05",
+              "type": "fact",
+              "title": "Common urban civic services",
+              "facts": [
+                [
+                  "Water supply",
+                  "Providing and maintaining local water services."
+                ],
+                [
+                  "Sanitation",
+                  "Drainage, public toilets and cleanliness."
+                ],
+                [
+                  "Waste management",
+                  "Collection, transport and disposal or processing of waste."
+                ],
+                [
+                  "Roads and lights",
+                  "Local streets, footpaths and street lighting."
+                ],
+                [
+                  "Public health",
+                  "Local health and disease-prevention responsibilities."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-12-06",
+              "type": "concept",
+              "title": "Ward councillors",
+              "content": "A city or town is divided into wards. Residents elect councillors to represent ward concerns and participate in the urban local body.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-12-07",
+              "type": "compare",
+              "title": "Municipality and Municipal Corporation",
+              "left": {
+                "heading": "Municipality",
+                "content": "Usually governs a smaller urban area or town."
+              },
+              "right": {
+                "heading": "Municipal Corporation",
+                "content": "Usually governs a larger city with a broader administrative structure and service needs."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-12-08",
+              "type": "concept",
+              "title": "Citizens and city services",
+              "content": "Urban services work best when residents use facilities responsibly, separate waste where required, avoid littering, conserve water and report faults through the correct channels.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-12-09",
+              "type": "recall",
+              "title": "Urban service check",
+              "question": "Name two services commonly managed by an urban local body.",
+              "answer": "Examples include waste collection, sanitation, local roads, street lighting and water supply.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-12-10",
+              "type": "recall",
+              "title": "Ward check",
+              "question": "Who represents residents of a ward in an urban local body?",
+              "answer": "An elected ward councillor.",
               "tags": [
                 "active recall"
               ]
@@ -8940,6 +10362,99 @@
               "tags": [
                 "active recall"
               ]
+            },
+            {
+              "id": "c6-sst-13-04",
+              "type": "concept",
+              "title": "Paid and unpaid work",
+              "content": "Paid work earns wages or income. Unpaid work may include caring for family members, cooking, cleaning, helping neighbours or volunteering. Both can create value.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-13-05",
+              "type": "fact",
+              "title": "Types of work",
+              "facts": [
+                [
+                  "Care work",
+                  "Looking after children, older people or someone who is unwell."
+                ],
+                [
+                  "Household work",
+                  "Cooking, cleaning, repairing and organising a home."
+                ],
+                [
+                  "Community work",
+                  "Volunteering, helping neighbours and maintaining shared spaces."
+                ],
+                [
+                  "Market work",
+                  "Producing or providing goods and services for payment."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-13-06",
+              "type": "concept",
+              "title": "Why care work matters",
+              "content": "Care work supports health, learning, safety and everyday life. It often goes unnoticed because it is unpaid, but communities and economies depend on it.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-13-07",
+              "type": "compare",
+              "title": "Paid and unpaid work",
+              "left": {
+                "heading": "Paid work",
+                "content": "Usually receives wages, salary or payment for a service or product."
+              },
+              "right": {
+                "heading": "Unpaid work",
+                "content": "May not earn money, but still takes time, effort and skill and benefits people or communities."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-13-08",
+              "type": "concept",
+              "title": "Respect every occupation",
+              "content": "Work should not be judged by status or income alone. Different occupations require knowledge, effort and skill and contribute to society in different ways.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-13-09",
+              "type": "recall",
+              "title": "Work value check",
+              "question": "Why is unpaid care work valuable to society?",
+              "answer": "It supports people's health, learning and daily life, helping families and communities function.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-13-10",
+              "type": "recall",
+              "title": "Work classification",
+              "question": "A person volunteers to clean a neighbourhood park without payment. What kind of work is this?",
+              "answer": "Unpaid community work or volunteering.",
+              "tags": [
+                "active recall"
+              ]
             }
           ]
         },
@@ -8975,6 +10490,135 @@
               "title": "Quick self-check",
               "question": "What is the difference between a good and a service?",
               "answer": "A good is a physical item that can be used, while a service is an activity or help provided to meet someone's need.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-14-04",
+              "type": "fact",
+              "title": "Economic activities",
+              "facts": [
+                [
+                  "Production",
+                  "Making goods or providing services."
+                ],
+                [
+                  "Distribution",
+                  "Moving goods and services to where people need them."
+                ],
+                [
+                  "Exchange",
+                  "Buying, selling or trading."
+                ],
+                [
+                  "Consumption",
+                  "Using goods and services to meet needs and wants."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-14-05",
+              "type": "concept",
+              "title": "Goods and services",
+              "content": "Goods are physical items that people can use, such as books, clothes or food. Services are activities or help provided to meet a need, such as teaching, transport or healthcare.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-14-06",
+              "type": "steps",
+              "title": "Follow a product's journey",
+              "steps": [
+                "Identify the raw materials needed.",
+                "Find out who produces or grows them.",
+                "Trace processing or manufacturing.",
+                "Follow transport, storage and sale.",
+                "Identify the consumer and how the product is used."
+              ],
+              "tags": [
+                "method"
+              ]
+            },
+            {
+              "id": "c6-sst-14-07",
+              "type": "fact",
+              "title": "People involved in an economy",
+              "facts": [
+                [
+                  "Producer",
+                  "Makes or grows a good or provides a service."
+                ],
+                [
+                  "Worker",
+                  "Contributes labour and skills."
+                ],
+                [
+                  "Trader",
+                  "Buys and sells goods."
+                ],
+                [
+                  "Transporter",
+                  "Moves goods or people."
+                ],
+                [
+                  "Consumer",
+                  "Uses goods and services."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-14-08",
+              "type": "concept",
+              "title": "Interdependence in economic life",
+              "content": "A single product often depends on many people and activities. Farmers, factory workers, drivers, shopkeepers and consumers are connected through production and exchange.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sst-14-09",
+              "type": "compare",
+              "title": "Needs and wants",
+              "left": {
+                "heading": "Needs",
+                "content": "Things essential for life and basic well-being, such as food, water, shelter and healthcare."
+              },
+              "right": {
+                "heading": "Wants",
+                "content": "Things people would like to have; they vary with preferences, culture and circumstances."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sst-14-10",
+              "type": "recall",
+              "title": "Goods or services?",
+              "question": "Is a haircut a good or a service?",
+              "answer": "A service, because it is an activity provided to a customer.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sst-14-11",
+              "type": "recall",
+              "title": "Economic activity check",
+              "question": "What is the difference between a producer and a consumer?",
+              "answer": "A producer makes goods or provides services; a consumer uses them.",
               "tags": [
                 "active recall"
               ]
