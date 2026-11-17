@@ -68,6 +68,10 @@
         const branch = await repos.institution.getBranch(c.branchId);
         if (!branch || branch.institutionId !== c.institutionId || branch.status !== ACTIVE) return deny("branch-tenant-mismatch");
       }
+      if (c.institutionClassId) {
+        const classGroup = await repos.institution.getInstitutionClass(c.institutionClassId);
+        if (!classGroup || classGroup.institutionId !== c.institutionId || (c.branchId && classGroup.branchId !== c.branchId)) return deny("class-tenant-or-branch-mismatch");
+      }
       if (role === "teacher") {
         if (!c.institutionClassId) return deny("teacher-class-scope-required");
         const assignments = await repos.academic.listTeacherAssignments(membership.membershipId);
