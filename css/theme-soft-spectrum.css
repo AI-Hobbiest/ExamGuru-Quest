@@ -1075,6 +1075,7 @@ body.c10-shell-ready .eg-metric-grid > .eg-metric-card{
 body.c10-shell-ready .eg-metric-grid > .eg-metric-card:nth-child(4n+2){border-top-color:#B6A7DF!important}
 body.c10-shell-ready .eg-metric-grid > .eg-metric-card:nth-child(4n+3){border-top-color:#82B99C!important}
 body.c10-shell-ready .eg-metric-grid > .eg-metric-card:nth-child(4n){border-top-color:#D9A49A!important}
+body.c10-shell-ready .eg-preview-banner[hidden]{display:none!important}
 body.c10-shell-ready .eg-preview-banner{
   display:block;margin:12px 0 0;padding:11px 14px;
   border:1px solid var(--ss-line)!important;border-radius:12px!important;
