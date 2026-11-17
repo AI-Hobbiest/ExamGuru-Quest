@@ -137,5 +137,19 @@ Add classes, assignments, enrolments and parent links; shared/institution bank o
 - New API contracts use versioned routes (e.g. `/api/v2`) rather than silently changing legacy routes.
 - Every legacy contract change requires fixtures and a documented migration.
 
+
+## M1 implementation — repository and authorization core
+
+Implemented on the M1 feature branch:
+- `js/domain/repository-contracts.js` defines asynchronous Identity, Institution and Academic repository contracts and validates adapter shape.
+- `js/adapters/memory-repositories.js` supplies a deterministic, clone-isolated test/development adapter.
+- `js/adapters/static-prototype-repositories.js` supplies a read-only snapshot adapter with an explicit `prototype-only-read-only` assurance label. It accepts an injected loader and has no dependency on GitHub Pages, localStorage or fetch.
+- `js/domain/authorization.js` centralizes default-deny decisions for platform admins, School Admins, Teachers, Parents, Students and institution viewers. It checks institution status, membership, branch scope, teacher class/subject assignments, student enrolment/self scope and parent-child links.
+- `tests/m1-authorization.test.js` exercises cross-tenant denial, branch mismatch, subject mismatch, linked-child scope, student self-scope, unknown permissions and platform-admin grants.
+
+The authorization engine is deliberately a domain policy component, not an authentication provider or a production security boundary by itself. A trusted API must authenticate the actor, derive the resource's true tenant ownership, call this policy and enforce the result on every protected operation. Client-supplied institution IDs and browser route checks remain untrusted. Static JSON/browser authentication remains prototype-only.
+
+The current application does not yet call these modules; M1 establishes and tests the seam without changing existing login, storage or page behaviour. Next integration stage must add server-side authenticated identity/session context and tenant-scoped API routes before any institution user is enabled.
+
 ## M0 exit criteria
 Current boundaries documented; additive schemas/migration exist; legacy login/API schema unchanged; tests cover new contracts and compatibility; no production role or route behaviour changes in this architecture-only phase.
