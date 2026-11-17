@@ -66,5 +66,15 @@ const repos={
  assert.equal(wrongTenant.allowed,false);
  const unauth=await policy.authorize(repos,null,"department.report.read",{institutionId:"inst-1",departmentId:"science"});
  assert.equal(unauth.allowed,false);
- console.log("M3 academic organisation tests passed: scoped and effective HOD authority, multi-department memberships, tenant isolation and default-deny policy.");
+ const multiRepos={...repos,identity:{...repos.identity,listMemberships:async()=>[
+  {membershipId:"inst-mem-1",institutionId:"inst-1",role:"teacher",status:"active",allBranches:true},
+  {membershipId:"inst-admin-1",institutionId:"inst-1",role:"school_admin",status:"active",allBranches:true}
+ ]},academicOrganisation:{...repos.academicOrganisation,listDepartmentMemberships:async(id)=>id==="inst-mem-1"?[
+  {departmentMembershipId:"dm-science",departmentId:"science",status:"active"}
+ ]:[]}};
+ const ambiguous=await policy.authorize(multiRepos,{userId:"teacher-1"},"department.read",{institutionId:"inst-1",departmentId:"science"});
+ assert.equal(ambiguous.allowed,false);assert.equal(ambiguous.reason,"institution-membership-context-required");
+ const adminManage=await policy.authorize(multiRepos,{userId:"teacher-1"},"department.manage",{institutionId:"inst-1",departmentId:"science",institutionMembershipId:"inst-admin-1"});
+ assert.equal(adminManage.allowed,true);
+ console.log("M3 academic organisation tests passed: scoped and effective HOD authority, multi-department memberships, explicit institutional role context, tenant isolation and default-deny policy.");
 })().catch(error=>{console.error(error);process.exitCode=1;});
