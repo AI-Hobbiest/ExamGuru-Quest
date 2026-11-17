@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "visual-revision-manifest",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "boards": [
     {
       "classId": "6",
@@ -8218,7 +8218,12 @@
               "id": "c6-math-07-08",
               "type": "fact",
               "title": "Triangle inequality",
-              "facts": "The sum of the lengths of any two sides of a triangle must be greater than the length of the third side.",
+              "facts": [
+                [
+                  "Key point",
+                  "The sum of the lengths of any two sides of a triangle must be greater than the length of the third side."
+                ]
+              ],
               "tags": [
                 "quick reference"
               ]
@@ -10724,16 +10729,16 @@
               "id": "c6-eng-01-07",
               "type": "steps",
               "title": "Retell the story in sequence",
-              "content": [
+              "tags": [
+                "reading notes",
+                "quick reference"
+              ],
+              "steps": [
                 "Rama Natha believes a potion can make him rich.",
                 "The sage gives him a task involving dew on banana leaves.",
                 "Rama Natha grows and cares for banana plants.",
                 "Madhumati sells the harvested bananas.",
                 "The family gains wealth through steady work, not magic."
-              ],
-              "tags": [
-                "reading notes",
-                "quick reference"
               ]
             },
             {
@@ -10960,16 +10965,16 @@
               "id": "c6-eng-03-07",
               "type": "steps",
               "title": "Write a clear plot summary",
-              "content": [
+              "tags": [
+                "reading notes",
+                "quick reference"
+              ],
+              "steps": [
                 "Introduce the main characters and situation.",
                 "Explain the misunderstanding without skipping the clue.",
                 "Describe how each character reacts.",
                 "State how the misunderstanding is resolved.",
                 "End with the result of the rescue."
-              ],
-              "tags": [
-                "reading notes",
-                "quick reference"
               ]
             },
             {
@@ -11306,16 +11311,16 @@
               "id": "c6-eng-06-07",
               "type": "steps",
               "title": "Analyse a character's behaviour",
-              "content": [
+              "tags": [
+                "reading notes",
+                "quick reference"
+              ],
+              "steps": [
                 "Identify what the character says.",
                 "Notice what the character actually does.",
                 "Look at how the action affects another person.",
                 "Compare behaviour across the story.",
                 "Use evidence from events to support your judgement."
-              ],
-              "tags": [
-                "reading notes",
-                "quick reference"
               ]
             },
             {
@@ -13162,15 +13167,15 @@
               "type": "steps",
               "title": "दोहा का भावार्थ कैसे लिखें",
               "typeLabel": "मुख्य विचार",
-              "content": [
+              "tags": [
+                "पाठ-सार",
+                "त्वरित संदर्भ"
+              ],
+              "steps": [
                 "दोहा ध्यान से पढ़ें और कठिन शब्दों का अर्थ समझें।",
                 "कवि किस व्यवहार या जीवन-मूल्य की बात कर रहे हैं, पहचानें।",
                 "भाव को सरल भाषा में अपने शब्दों में लिखें।",
                 "एक छोटा उदाहरण देकर संदेश स्पष्ट करें।"
-              ],
-              "tags": [
-                "पाठ-सार",
-                "त्वरित संदर्भ"
               ]
             },
             {
@@ -13285,15 +13290,15 @@
               "type": "steps",
               "title": "चरित्र-चित्रण लिखें",
               "typeLabel": "मुख्य विचार",
-              "content": [
+              "tags": [
+                "पाठ-सार",
+                "त्वरित संदर्भ"
+              ],
+              "steps": [
                 "पात्र के दो या तीन प्रमुख गुण चुनें।",
                 "हर गुण के समर्थन में पाठ का एक प्रसंग बताएं।",
                 "बताएं कि उस व्यवहार से कौन-सा गुण प्रकट होता है।",
                 "अंत में पात्र का समग्र प्रभाव लिखें।"
-              ],
-              "tags": [
-                "पाठ-सार",
-                "त्वरित संदर्भ"
               ]
             },
             {
@@ -13796,16 +13801,16 @@
               "type": "steps",
               "title": "घटना-क्रम याद रखें",
               "typeLabel": "मुख्य विचार",
-              "content": [
+              "tags": [
+                "पाठ-सार",
+                "त्वरित संदर्भ"
+              ],
+              "steps": [
                 "देवगढ़ के लिए नए दीवान का चयन होना है।",
                 "उम्मीदवारों का व्यवहार और गुण परखे जाते हैं।",
                 "एक किसान की गाड़ी दलदल में फँस जाती है।",
                 "जानकीनाथ स्वयं घायल होने के बावजूद सहायता करते हैं।",
                 "उनके व्यवहार से उनके मानवीय गुण प्रकट होते हैं और उनका चयन होता है।"
-              ],
-              "tags": [
-                "पाठ-सार",
-                "त्वरित संदर्भ"
               ]
             },
             {
