@@ -1141,3 +1141,150 @@ body.eg-theme-dark.c10-shell-ready .study-type{background:#45445E!important;colo
 body.eg-theme-dark.c10-shell-ready .study-actions button[aria-pressed="true"]{
   background:#29483B!important;border-color:#477A63!important;color:#B6E1C8!important;
 }
+
+
+/* ==========================================================================
+   Global semantic component layer — every workspace uses the same surfaces.
+   Page styles may define layout, but shared components own surface, border,
+   text and control colours in both appearance modes.
+   ========================================================================== */
+body.c10-shell-ready :is(
+  .dash-panel,.subject-launch,.family-card,.child-detail,.report-panel,
+  .assessment-intro,.admin-panel,.admin-tabs,.admin-stat,.admin-feature,
+  .paper-card,.test-card,.exam-card,.study-panel,.study-stat,
+  .clat-card,.clat-panel,.clat-stat-card,.clat-paper,
+  .help-section,.profile-card,.profile-panel,.learning-panel,.learning-card,
+  .pyq-card,.login-card,.assigned-test-card,.section-result-card,
+  .chapter-picker-panel,.question-nav-sheet,.time-controls,.topic,
+  .paper-summary,.paper-preview,.exam-summary,.exam-section,
+  .family-empty,.assignment-topics,.assignment-row,.assignment-topic-picker,
+  .vrb-card,.revision-card,.study-resource,.learning-item
+){
+  border-color:var(--ss-line)!important;
+  border-radius:var(--ss-radius)!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(
+  .dash-panel,.subject-launch,.family-card,.child-detail,.report-panel,
+  .assessment-intro,.admin-panel,.admin-tabs,.admin-stat,.admin-feature,
+  .paper-card,.test-card,.exam-card,.study-panel,.study-stat,
+  .clat-card,.clat-panel,.clat-stat-card,.clat-paper,
+  .help-section,.profile-card,.profile-panel,.learning-panel,.learning-card,
+  .pyq-card,.login-card,.assigned-test-card,.section-result-card,
+  .chapter-picker-panel,.question-nav-sheet,.time-controls,.topic,
+  .paper-summary,.paper-preview,.exam-summary,.exam-section,
+  .family-empty,.assignment-topics,.assignment-row,.assignment-topic-picker,
+  .study-resource,.learning-item
+){
+  background:linear-gradient(155deg,#354657 0%,#2F3E4D 100%)!important;
+  border-color:#526578!important;color:#E8EEF4!important;
+  box-shadow:0 7px 18px rgba(14,24,34,.14)!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(
+  .dash-panel,.subject-launch,.family-card,.child-detail,.report-panel,
+  .assessment-intro,.admin-panel,.admin-tabs,.admin-stat,.admin-feature,
+  .paper-card,.test-card,.exam-card,.study-panel,.study-stat,
+  .clat-card,.clat-panel,.clat-stat-card,.clat-paper,
+  .help-section,.profile-card,.profile-panel,.learning-panel,.learning-card,
+  .pyq-card,.login-card,.assigned-test-card,.section-result-card,
+  .chapter-picker-panel,.question-nav-sheet,.time-controls,.topic,
+  .paper-summary,.paper-preview,.exam-summary,.exam-section,
+  .family-empty,.assignment-topics,.assignment-row,.assignment-topic-picker,
+  .study-resource,.learning-item
+) :is(h1,h2,h3,h4,h5,strong,b,label){
+  color:#F1F6FA!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(
+  .dash-panel,.subject-launch,.family-card,.child-detail,.report-panel,
+  .assessment-intro,.admin-panel,.admin-tabs,.admin-stat,.admin-feature,
+  .paper-card,.test-card,.exam-card,.study-panel,.study-stat,
+  .clat-card,.clat-panel,.clat-stat-card,.clat-paper,
+  .help-section,.profile-card,.profile-panel,.learning-panel,.learning-card,
+  .pyq-card,.login-card,.assigned-test-card,.section-result-card,
+  .chapter-picker-panel,.question-nav-sheet,.time-controls,.topic,
+  .paper-summary,.paper-preview,.exam-summary,.exam-section,
+  .family-empty,.assignment-topics,.assignment-row,.assignment-topic-picker,
+  .study-resource,.learning-item
+) :is(p,small,.muted,.help-muted,.study-meta,.learning-muted,.profile-muted){
+  color:#B9C7D4!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(
+  .vrb-board,.vrb-card,.revision-card
+){
+  border-color:#526578!important;
+}
+body.eg-theme-dark.c10-shell-ready .vrb-board{
+  background-color:#303D4C!important;
+  background-image:radial-gradient(#526274 1px,transparent 1px)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 8px 24px rgba(14,24,34,.16)!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.vrb-kicker,.vrb-title,.vrb-intro){color:#E8EEF4!important}
+body.eg-theme-dark.c10-shell-ready .vrb-card{
+  background:linear-gradient(155deg,#3C4B5B 0%,#354353 100%)!important;
+  color:#E8EEF4!important;box-shadow:0 8px 20px rgba(14,24,34,.2)!important;
+}
+body.eg-theme-dark.c10-shell-ready .vrb-card :is(h3,p,li,strong){color:#E8EEF4!important}
+body.eg-theme-dark.c10-shell-ready .vrb-card :is(small,.muted){color:#B9C7D4!important}
+body.eg-theme-dark.c10-shell-ready :is(
+  .study-toolbar,.learning-filters,.pyq-field,.assignment-field,.field,
+  .login-field,.difficulty-filter,.chapter-picker-toolbar
+) :is(input,select,textarea){
+  background:#344454!important;border-color:#526578!important;color:#E8EEF4!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(
+  .chapter-option,.mode button,.question-nav-item,.clat-option,.clat-palette button,
+  .assignment-row,.assignment-topic,.study-actions button,.learning-actions button,
+  .github-admin,.profile-summary-tile,.summary-tile,.history-row
+){
+  background:#344454!important;border-color:#526578!important;color:#E8EEF4!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(
+  .chapter-option:hover,.mode button:hover,.question-nav-item:hover,
+  .clat-option:hover,.clat-palette button:hover
+){background:#3D5062!important;border-color:#71869A!important;color:#F1F6FA!important}
+body.eg-theme-dark.c10-shell-ready :is(
+  .mode button.active,.question-nav-item.answered,.achievement.earned,
+  .summary-tile:nth-child(1),.summary-tile:nth-child(2),.summary-tile:nth-child(3)
+){
+  background:#29483B!important;border-color:#477A63!important;color:#CDEBDD!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(
+  .hint,.note,.notice,.admin-notice,.help-callout,.pyq-review-note,
+  .bookmark-question-btn[aria-pressed="true"],.mark-review-btn[aria-pressed="true"]
+){
+  background:#51483A!important;border-color:#806D4A!important;color:#F0D9AC!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.good,.opt.correct,.clat-option.correct){
+  background:#29483B!important;border-color:#67977D!important;color:#D5F0E0!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.bad,.opt.wrong,.clat-option.wrong){
+  background:#523F43!important;border-color:#94666A!important;color:#FFD9D6!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.c10-mobilebar,.c10-sidebar,.c10-sidebar-top){
+  background:#2F3E4D!important;color:#E8EEF4!important;border-color:#465767!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.c10-brand-title,.c10-mobile-title,.c10-user-name,.c10-nav-link,.c10-nav-group-trigger){
+  color:#E8EEF4!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.c10-nav-link.active,.c10-nav-group-trigger:hover,.c10-nav-link:hover){
+  background:#354D61!important;color:#D7EAF8!important;border-color:#526578!important;
+}
+body.eg-theme-dark.c10-shell-ready .c10-user-card{background:#354657!important;border-color:#526578!important}
+body.eg-theme-dark.c10-shell-ready .c10-theme-toggle,
+body.eg-theme-dark.c10-shell-ready .c10-menu-toggle,
+body.eg-theme-dark.c10-shell-ready .c10-header-signout{
+  background:#354D61!important;border-color:#526578!important;color:#D7EAF8!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.study-hero,.learning-hero,.profile-hero,.help-hero,.login-story){
+  background:linear-gradient(116deg,#344454 0%,#303B50 58%,#34483F 100%)!important;
+  border-color:#526578!important;color:#E8EEF4!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.study-hero,.learning-hero,.profile-hero,.help-hero,.login-story) :is(h1,h2,p,.eyebrow){
+  color:#E8EEF4!important;
+}
+body.eg-theme-dark.c10-shell-ready .study-summary{background:transparent!important;border-color:transparent!important;box-shadow:none!important}
+body.eg-theme-dark.c10-shell-ready .study-summary > .eg-metric-card{
+  background:linear-gradient(145deg,#354657 0%,#2F3E4D 100%)!important;
+  border-color:#526578!important;color:#F1F6FA!important;
+}
+body.eg-theme-dark.c10-shell-ready :is(.study-stat,.eg-metric-card) :is(strong,b){color:#F1F6FA!important}
+body.eg-theme-dark.c10-shell-ready :is(.study-stat,.eg-metric-card) :is(span,small,p){color:#B9C7D4!important}
