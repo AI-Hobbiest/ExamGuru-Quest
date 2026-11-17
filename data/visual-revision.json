@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "visual-revision-manifest",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "boards": [
     {
       "classId": "6",
@@ -7059,172 +7059,174 @@
           "chapterNo": 1,
           "chapterLabel": "Chapter 1",
           "chapterKey": "ganita-1",
-          "title": "Large Numbers Around Us",
-          "subtitle": "Place value · number systems · estimation · real-life numbers",
+          "title": "Patterns in Mathematics",
+          "subtitle": "Patterns in numbers · shape sequences · triangular, square and cube numbers",
           "cards": [
             {
               "id": "c6-math-01-01",
               "type": "concept",
-              "title": "Why large numbers matter",
-              "content": "Large numbers describe populations, distances, money, data and quantities too large to count individually. Place-value notation makes them readable, comparable and useful for estimation.",
+              "title": "Mathematics is the study of patterns",
+              "content": "Mathematics helps us notice patterns, describe relationships and explain why they work. Patterns appear in numbers, shapes, nature, movement, music and everyday arrangements.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-01-02",
-              "type": "fact",
-              "title": "Indian place-value periods",
-              "facts": [
-                [
-                  "Ones",
-                  "Ones, tens, hundreds"
-                ],
-                [
-                  "Thousands",
-                  "Thousand, ten thousand"
-                ],
-                [
-                  "Lakhs",
-                  "Lakh, ten lakh"
-                ],
-                [
-                  "Crores",
-                  "Crore, ten crore"
-                ]
-              ],
+              "type": "concept",
+              "title": "Number sequences",
+              "content": "A number sequence is an ordered list that follows a rule. To continue it, identify how one term changes into the next and check that the same rule works for several terms.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-01-03",
               "type": "fact",
-              "title": "International place-value periods",
+              "title": "Common number sequences",
               "facts": [
                 [
-                  "Ones",
-                  "Ones, tens, hundreds"
+                  "Counting numbers",
+                  "0, 1, 2, 3, 4, …"
                 ],
                 [
-                  "Thousands",
-                  "Thousand, ten thousand, hundred thousand"
+                  "Odd numbers",
+                  "1, 3, 5, 7, 9, …"
                 ],
                 [
-                  "Millions",
-                  "Million, ten million, hundred million"
+                  "Even numbers",
+                  "0, 2, 4, 6, 8, …"
                 ],
                 [
-                  "Billions",
-                  "Billion and higher places"
+                  "Square numbers",
+                  "1, 4, 9, 16, 25, …"
+                ],
+                [
+                  "Cube numbers",
+                  "1, 8, 27, 64, 125, …"
                 ]
               ],
               "tags": [
+                "key facts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-01-04",
-              "type": "compare",
-              "title": "Comma grouping",
-              "left": {
-                "heading": "Indian system",
-                "content": "Group the last three digits, then groups of two: 12,34,56,789."
-              },
-              "right": {
-                "heading": "International system",
-                "content": "Group digits in threes from the right: 123,456,789."
-              },
+              "type": "fact",
+              "title": "Figurate numbers",
+              "facts": [
+                [
+                  "Triangular numbers",
+                  "1, 3, 6, 10, 15, …; dots can be arranged as triangles."
+                ],
+                [
+                  "Square numbers",
+                  "1, 4, 9, 16, 25, …; dots form square arrays."
+                ],
+                [
+                  "Cube numbers",
+                  "1, 8, 27, 64, …; represent cubes of whole numbers."
+                ],
+                [
+                  "Hexagonal numbers",
+                  "A sequence formed by arranging dots in hexagonal patterns."
+                ]
+              ],
               "tags": [
-                "compare"
+                "key facts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-01-05",
               "type": "concept",
-              "title": "Face value and place value",
-              "content": "Face value is the digit itself. Place value depends on position. In 5,42,318, the digit 4 has face value 4 and place value 40,000.",
+              "title": "Triangular numbers",
+              "content": "Triangular numbers are formed by adding consecutive counting numbers: 1; 1+2=3; 1+2+3=6; 1+2+3+4=10. Each term adds the next counting number.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-01-06",
-              "type": "fact",
-              "title": "Expanded form",
-              "facts": [
-                [
-                  "Number",
-                  "3,06,04,025"
-                ],
-                [
-                  "Expanded form",
-                  "3,00,00,000 + 6,00,000 + 4,000 + 20 + 5"
-                ],
-                [
-                  "Zero",
-                  "A zero is a placeholder; do not drop an empty place."
-                ]
-              ],
+              "type": "concept",
+              "title": "Square numbers and odd-number sums",
+              "content": "Adding consecutive odd numbers gives square numbers: 1=1², 1+3=4, 1+3+5=9, 1+3+5+7=16. The pattern can be visualised by adding an L-shaped layer to a square.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-01-07",
-              "type": "steps",
-              "title": "Read and write large numbers",
-              "steps": [
-                "Group digits using the chosen number system.",
-                "Place commas at the correct boundaries.",
-                "Read each group with its period name.",
-                "Keep zero placeholders wherever a place has no value.",
-                "Check that the written number has the same digits as the original."
-              ],
+              "type": "concept",
+              "title": "Virahanka numbers",
+              "content": "In this sequence, each term after the first two is the sum of the previous two: 1, 2, 3, 5, 8, 13, 21, … . The same recurrence rule continues the pattern.",
               "tags": [
-                "method"
+                "key concepts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-01-08",
               "type": "concept",
-              "title": "Compare large numbers",
-              "content": "First compare the number of digits. If the counts match, compare from the leftmost digit until the first difference. The larger digit at that position decides the greater number.",
+              "title": "Patterns in shapes",
+              "content": "A shape sequence changes according to a rule, such as adding one side, one row of dots or one repeated unit. Describe both what changes and what stays the same.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-01-09",
-              "type": "steps",
-              "title": "Round to a chosen place",
-              "steps": [
-                "Identify the place to which you are rounding.",
-                "Look at the digit immediately to its right.",
-                "If it is 0–4, keep the rounding digit; if it is 5–9, increase it by one.",
-                "Replace all digits to the right with zeroes.",
-                "Check that the rounded value is close to the original."
+              "type": "fact",
+              "title": "Regular polygons",
+              "facts": [
+                [
+                  "Polygon",
+                  "A closed plane shape made from straight line segments."
+                ],
+                [
+                  "Regular polygon",
+                  "All sides are equal and all interior angles are equal."
+                ],
+                [
+                  "Triangle",
+                  "3 sides"
+                ],
+                [
+                  "Quadrilateral",
+                  "4 sides"
+                ],
+                [
+                  "Pentagon / hexagon",
+                  "5 / 6 sides"
+                ]
               ],
               "tags": [
-                "method"
+                "key facts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-01-10",
-              "type": "recall",
-              "title": "Place-value check",
-              "question": "In 7,35,42,816, what is the place value of 5?",
-              "answer": "5,00,000; the 5 is in the lakhs place.",
+              "type": "concept",
+              "title": "Patterns can grow in different ways",
+              "content": "A sequence may grow by adding a fixed number, multiplying by a fixed number, adding successive numbers or repeating a shape unit. Always test a proposed rule against more than one term.",
               "tags": [
-                "active recall"
+                "key concepts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-01-11",
               "type": "recall",
-              "title": "Number-name check",
-              "question": "Write 4,08,05,019 in words using the Indian system.",
-              "answer": "Four crore eight lakh five thousand nineteen.",
+              "title": "Triangular-number check",
+              "question": "What are the first five triangular numbers?",
+              "answer": "1, 3, 6, 10 and 15. Add 2, then 3, then 4, then 5.",
               "tags": [
                 "active recall"
               ]
@@ -7232,9 +7234,19 @@
             {
               "id": "c6-math-01-12",
               "type": "recall",
-              "title": "Estimation check",
-              "question": "Round 8,76,549 to the nearest ten thousand.",
-              "answer": "8,80,000; the thousands digit is 6, so 7 increases to 8.",
+              "title": "Square-pattern check",
+              "question": "Why does 1 + 3 + 5 + 7 equal 16?",
+              "answer": "The sum of the first four odd numbers is 4² = 16; each new odd number adds an L-shaped layer to form the next square.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-01-13",
+              "type": "recall",
+              "title": "Sequence reasoning",
+              "question": "Continue 1, 2, 3, 5, 8, __, __ and state the rule.",
+              "answer": "13, 21; each term is the sum of the two terms immediately before it.",
               "tags": [
                 "active recall"
               ]
@@ -7245,79 +7257,102 @@
           "chapterNo": 2,
           "chapterLabel": "Chapter 2",
           "chapterKey": "ganita-2",
-          "title": "Arithmetic Expressions",
-          "subtitle": "Operations · brackets · order of operations · mental calculation",
+          "title": "Lines and Angles",
+          "subtitle": "Points · lines · rays · segments · angle types · measuring and drawing",
           "cards": [
             {
               "id": "c6-math-02-01",
               "type": "concept",
-              "title": "Expression or equation?",
-              "content": "An arithmetic expression combines numbers and operation signs, such as 24 + 6 × 3. An equation states that two expressions are equal and includes an equals sign.",
+              "title": "Point, line, segment and ray",
+              "content": "A point marks an exact position. A line extends endlessly in both directions. A line segment has two endpoints and a fixed length. A ray has one endpoint and extends endlessly in one direction.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-02-02",
               "type": "fact",
-              "title": "Four basic operations",
+              "title": "Basic geometry vocabulary",
               "facts": [
                 [
-                  "Addition (+)",
-                  "Combines quantities; result is the sum."
+                  "Endpoint",
+                  "A point at the end of a segment or the starting point of a ray."
                 ],
                 [
-                  "Subtraction (−)",
-                  "Finds a difference or what remains."
+                  "Vertex",
+                  "The common endpoint of the arms of an angle."
                 ],
                 [
-                  "Multiplication (×)",
-                  "Equal groups or repeated addition."
+                  "Arms",
+                  "The two rays that form an angle."
                 ],
                 [
-                  "Division (÷)",
-                  "Equal sharing or finding the number of groups."
+                  "Line segment",
+                  "A part of a line with two endpoints."
+                ],
+                [
+                  "Ray",
+                  "A part of a line with one endpoint."
                 ]
               ],
               "tags": [
+                "key facts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-02-03",
               "type": "concept",
-              "title": "Order of operations",
-              "content": "Evaluate grouping symbols first, then multiplication and division from left to right, then addition and subtraction from left to right. Multiplication and division share priority.",
+              "title": "What is an angle?",
+              "content": "An angle is formed when two rays share a common endpoint. The amount of turn between the rays determines the size of the angle.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-02-04",
-              "type": "steps",
-              "title": "Evaluate an expression",
-              "steps": [
-                "Work inside the innermost brackets first.",
-                "Complete multiplication and division from left to right.",
-                "Complete addition and subtraction from left to right.",
-                "Show intermediate steps clearly.",
-                "Check the result using an estimate or inverse operation."
+              "type": "fact",
+              "title": "Types of angles",
+              "facts": [
+                [
+                  "Acute",
+                  "Greater than 0° and less than 90°."
+                ],
+                [
+                  "Right",
+                  "Exactly 90°."
+                ],
+                [
+                  "Obtuse",
+                  "Greater than 90° and less than 180°."
+                ],
+                [
+                  "Straight",
+                  "Exactly 180°."
+                ],
+                [
+                  "Reflex",
+                  "Greater than 180° and less than 360°."
+                ]
               ],
               "tags": [
-                "method"
+                "key facts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-02-05",
               "type": "compare",
-              "title": "Bracket placement changes value",
+              "title": "Angle size and rotation",
               "left": {
-                "heading": "With brackets",
-                "content": "(12 + 8) ÷ 4 = 20 ÷ 4 = 5."
+                "heading": "Smaller angle",
+                "content": "A smaller turn between the arms; for example, 40° is acute."
               },
               "right": {
-                "heading": "Without brackets",
-                "content": "12 + 8 ÷ 4 = 12 + 2 = 14."
+                "heading": "Larger angle",
+                "content": "A larger turn; for example, 130° is obtuse. Angle size is about the turn, not the length of the drawn arms."
               },
               "tags": [
                 "compare"
@@ -7325,78 +7360,93 @@
             },
             {
               "id": "c6-math-02-06",
-              "type": "fact",
-              "title": "Useful properties",
-              "facts": [
-                [
-                  "Commutative addition",
-                  "a + b = b + a"
-                ],
-                [
-                  "Commutative multiplication",
-                  "a × b = b × a"
-                ],
-                [
-                  "Associative addition",
-                  "(a + b) + c = a + (b + c)"
-                ],
-                [
-                  "Associative multiplication",
-                  "(a × b) × c = (a × b) × c"
-                ],
-                [
-                  "Distributive property",
-                  "a × (b + c) = a×b + a×c"
-                ]
-              ],
+              "type": "concept",
+              "title": "Comparing angles",
+              "content": "To compare two angles, compare the amount of turn between their arms. The length of the arms or the size of the drawing does not determine the angle.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-02-07",
-              "type": "concept",
-              "title": "Mental calculation",
-              "content": "Make tens or hundreds, split a number into convenient parts, use known multiplication facts and apply operation properties when they preserve the value.",
+              "type": "steps",
+              "title": "Measure an angle using a protractor",
+              "steps": [
+                "Place the protractor's centre mark exactly on the vertex.",
+                "Align the baseline with one arm of the angle.",
+                "Read the scale that starts at 0° on that arm.",
+                "Check whether the result matches the apparent size of the angle.",
+                "Write the degree symbol with the measurement."
+              ],
               "tags": [
+                "method",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-02-08",
-              "type": "exam-alert",
-              "title": "Common order mistake",
-              "content": "Do not calculate strictly left to right when operations have different priority. Multiplication and division have equal priority; addition and subtraction have equal priority.",
+              "type": "steps",
+              "title": "Draw an angle of a given measure",
+              "steps": [
+                "Draw one ray and mark its endpoint as the vertex.",
+                "Place the protractor's centre on the vertex and align its baseline with the ray.",
+                "Mark the required degree measure on the correct scale.",
+                "Remove the protractor and draw a second ray through the mark.",
+                "Label the angle and its measure."
+              ],
               "tags": [
+                "method",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-02-09",
-              "type": "recall",
-              "title": "Order check",
-              "question": "Evaluate 18 − 6 ÷ 3.",
-              "answer": "16. Divide first: 6 ÷ 3 = 2; then 18 − 2 = 16.",
+              "type": "concept",
+              "title": "Rotating arms",
+              "content": "An angle can be understood as the amount one arm rotates from an initial position to a final position around the vertex. A complete turn is 360°.",
               "tags": [
-                "active recall"
+                "key concepts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-02-10",
-              "type": "recall",
-              "title": "Bracket check",
-              "question": "Evaluate (18 − 6) ÷ 3.",
-              "answer": "4. First 18 − 6 = 12; then 12 ÷ 3 = 4.",
+              "type": "fact",
+              "title": "Useful angle facts",
+              "facts": [
+                [
+                  "Quarter turn",
+                  "90°"
+                ],
+                [
+                  "Half turn",
+                  "180°"
+                ],
+                [
+                  "Three-quarter turn",
+                  "270°"
+                ],
+                [
+                  "Full turn",
+                  "360°"
+                ],
+                [
+                  "Straight line",
+                  "Forms 180°"
+                ]
+              ],
               "tags": [
-                "active recall"
+                "key facts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-02-11",
               "type": "recall",
-              "title": "Distributive property",
-              "question": "Calculate 7 × 19 using a convenient split.",
-              "answer": "7 × (20 − 1) = 140 − 7 = 133.",
+              "title": "Angle classification",
+              "question": "An angle measures 145°. What type is it?",
+              "answer": "Obtuse, because it is greater than 90° and less than 180°.",
               "tags": [
                 "active recall"
               ]
@@ -7404,9 +7454,19 @@
             {
               "id": "c6-math-02-12",
               "type": "recall",
-              "title": "Expression check",
-              "question": "Evaluate 15 + 9 × 2.",
-              "answer": "33. Multiply first: 9 × 2 = 18; then add 15.",
+              "title": "Protractor check",
+              "question": "Why must the correct 0° scale be read on a protractor?",
+              "answer": "A protractor has two scales running in opposite directions. Reading from the scale that begins on the aligned arm avoids choosing the supplementary or incorrect angle.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-02-13",
+              "type": "recall",
+              "title": "Arms and vertex",
+              "question": "What is the common endpoint of the two rays forming an angle called?",
+              "answer": "The vertex.",
               "tags": [
                 "active recall"
               ]
@@ -7417,168 +7477,185 @@
           "chapterNo": 3,
           "chapterLabel": "Chapter 3",
           "chapterKey": "ganita-3",
-          "title": "A Peek Beyond the Point",
-          "subtitle": "Decimals · place value · comparison · operations",
+          "title": "Number Play",
+          "subtitle": "Number patterns · digit puzzles · palindromes · estimation · reasoning games",
           "cards": [
             {
               "id": "c6-math-03-01",
               "type": "concept",
-              "title": "Meaning of the decimal point",
-              "content": "The decimal point separates the whole-number part from the fractional part. To its right are tenths, hundredths, thousandths and smaller place values.",
+              "title": "Numbers tell stories",
+              "content": "Numbers can reveal patterns about dates, clocks, scores, quantities and arrangements. Mathematical play develops reasoning by asking what changes, what stays fixed and why.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-03-02",
-              "type": "fact",
-              "title": "Decimal place-value chart",
-              "facts": [
-                [
-                  "Ones",
-                  "1"
-                ],
-                [
-                  "Tenths",
-                  "1/10 = 0.1"
-                ],
-                [
-                  "Hundredths",
-                  "1/100 = 0.01"
-                ],
-                [
-                  "Thousandths",
-                  "1/1000 = 0.001"
-                ]
-              ],
+              "type": "concept",
+              "title": "Supercells",
+              "content": "In a row or grid of numbers, a supercell is a cell whose number is greater than the numbers in its neighbouring cells, according to the rule used in the activity. Check the neighbours before deciding.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-03-03",
               "type": "concept",
-              "title": "Decimals as fractions",
-              "content": "A decimal can represent a fraction with denominator 10, 100, 1000 and so on. For example, 0.37 means 37 hundredths, or 37/100.",
+              "title": "Patterns on a number line",
+              "content": "A number line places numbers in order at equal intervals. Moving right increases the value; moving left decreases it. Equal steps represent equal differences.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-03-04",
-              "type": "steps",
-              "title": "Read a decimal",
-              "steps": [
-                "Read the whole-number part first.",
-                "Identify the place value of the final digit after the decimal point.",
-                "Use tenths, hundredths or thousandths to state the fractional part.",
-                "Do not confuse 0.5 with 0.05; the zero changes place value."
+              "type": "fact",
+              "title": "Digit place and number formation",
+              "facts": [
+                [
+                  "Digit",
+                  "One of the symbols 0 to 9."
+                ],
+                [
+                  "Place value",
+                  "The value a digit represents because of its position."
+                ],
+                [
+                  "Rearranging digits",
+                  "Can create different numbers from the same digits."
+                ],
+                [
+                  "Leading zero",
+                  "Does not change the value of a number and is not used at the start of a standard whole-number numeral."
+                ]
               ],
               "tags": [
-                "method"
+                "key facts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-03-05",
-              "type": "compare",
-              "title": "Compare 0.6 and 0.56",
-              "left": {
-                "heading": "0.6",
-                "content": "Six tenths = 0.60 = 60 hundredths."
-              },
-              "right": {
-                "heading": "0.56",
-                "content": "Fifty-six hundredths. Therefore 0.60 > 0.56."
-              },
+              "type": "concept",
+              "title": "Palindromic numbers",
+              "content": "A palindrome reads the same forwards and backwards, such as 121, 1331 or 4554. Digit patterns can be explored by reversing a number and comparing or combining the results.",
               "tags": [
-                "compare"
+                "key concepts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-03-06",
-              "type": "steps",
-              "title": "Add or subtract decimals",
-              "steps": [
-                "Write numbers with decimal points aligned.",
-                "Add zeroes at the end if needed, for example 2.5 = 2.50.",
-                "Add or subtract as with whole numbers.",
-                "Place the decimal point directly below the other decimal points.",
-                "Check the answer with an estimate."
-              ],
+              "type": "concept",
+              "title": "Kaprekar-style digit play",
+              "content": "A number puzzle can repeatedly rearrange digits in descending and ascending order and subtract. For four-digit numbers with at least two different digits, the familiar routine reaches 6174 (using leading zeroes when needed); the routine has conditions and is not true for every number.",
               "tags": [
-                "method"
+                "key concepts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-03-07",
               "type": "fact",
-              "title": "Equivalent decimal forms",
+              "title": "Clock and calendar patterns",
               "facts": [
                 [
-                  "0.4",
-                  "0.40 = 4/10 = 40/100"
+                  "Clock",
+                  "A 12-hour clock repeats its hour labels after 12 hours."
                 ],
                 [
-                  "0.07",
-                  "7/100"
+                  "Calendar",
+                  "Dates form regular weekly patterns in rows and columns."
                 ],
                 [
-                  "1.25",
-                  "1 + 25/100"
+                  "Remainder idea",
+                  "Repeated cycles can be understood using remainders."
                 ],
                 [
-                  "3.5",
-                  "3 + 5/10"
+                  "Check",
+                  "State clearly whether a time is AM/PM or use 24-hour time."
                 ]
               ],
               "tags": [
+                "key facts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-03-08",
               "type": "concept",
-              "title": "Decimals in daily life",
-              "content": "Decimals are used for money, length, mass, capacity and measurements. Always check the unit and required precision before calculating.",
+              "title": "Mental mathematics",
+              "content": "Mental calculation uses number facts, place value, estimation, splitting and regrouping. Choose a method that makes the calculation easier while preserving its value.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-03-09",
-              "type": "exam-alert",
-              "title": "Do not compare by digit count",
-              "content": "A decimal with more digits is not automatically greater. Compare place values: 0.8 = 0.80, which is greater than 0.75.",
+              "type": "steps",
+              "title": "Estimate before calculating",
+              "steps": [
+                "Round the numbers to convenient values.",
+                "Perform the simpler calculation mentally.",
+                "Use the estimate to predict the size of the exact answer.",
+                "Calculate exactly and compare with the estimate.",
+                "If the results are very different, check the calculation."
+              ],
               "tags": [
+                "method",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-03-10",
-              "type": "recall",
-              "title": "Place-value check",
-              "question": "What is the value of 6 in 4.263?",
-              "answer": "Six hundredths, or 0.06.",
+              "type": "concept",
+              "title": "Collatz sequence exploration",
+              "content": "Start with a positive whole number: if it is even, divide it by 2; if it is odd, multiply it by 3 and add 1. Repeat. Many tested sequences reach 1, but the statement that every positive integer does so remains an unsolved conjecture.",
               "tags": [
-                "active recall"
+                "key concepts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-03-11",
-              "type": "recall",
-              "title": "Comparison check",
-              "question": "Which is greater: 0.7 or 0.65?",
-              "answer": "0.7 is greater because 0.70 > 0.65.",
+              "type": "concept",
+              "title": "Games and winning strategies",
+              "content": "A winning strategy is a plan that works because of the structure of the game, not just luck. Look for safe positions, repeating patterns and moves that leave the opponent with fewer choices.",
               "tags": [
-                "active recall"
+                "key concepts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-03-12",
               "type": "recall",
-              "title": "Addition check",
-              "question": "Calculate 3.45 + 1.8.",
-              "answer": "5.25. Write 1.8 as 1.80 before adding.",
+              "title": "Palindrome check",
+              "question": "Is 2442 a palindrome? Why?",
+              "answer": "Yes. Its digits read 2-4-4-2 in both directions.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-03-13",
+              "type": "recall",
+              "title": "Collatz step",
+              "question": "Starting at 7, what are the next two numbers in the Collatz sequence?",
+              "answer": "22, then 11. Since 7 is odd, 3×7+1=22; since 22 is even, 22÷2=11.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-03-14",
+              "type": "recall",
+              "title": "Number-line check",
+              "question": "On a number line, which is greater: 18 or 13?",
+              "answer": "18, because it lies to the right of 13.",
               "tags": [
                 "active recall"
               ]
@@ -7589,167 +7666,197 @@
           "chapterNo": 4,
           "chapterLabel": "Chapter 4",
           "chapterKey": "ganita-4",
-          "title": "Expressions using Letter-Numbers",
-          "subtitle": "Variables · coefficients · substitution · patterns",
+          "title": "Data Handling and Presentation",
+          "subtitle": "Collecting data · tables · tally marks · pictographs · bar graphs",
           "cards": [
             {
               "id": "c6-math-04-01",
               "type": "concept",
-              "title": "Letters represent numbers",
-              "content": "A letter used in mathematics can stand for an unknown or changing number. It is called a variable. For example, n can represent the number of objects in a group.",
+              "title": "What is data?",
+              "content": "Data are facts, observations or measurements collected to answer a question. Data handling involves collecting, organising, representing and interpreting information.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-04-02",
-              "type": "fact",
-              "title": "Parts of an expression",
-              "facts": [
-                [
-                  "Variable",
-                  "A letter representing a number, such as x."
-                ],
-                [
-                  "Constant",
-                  "A fixed number, such as 7."
-                ],
-                [
-                  "Coefficient",
-                  "The number multiplying a variable; in 5a it is 5."
-                ],
-                [
-                  "Term",
-                  "A part separated by plus or minus signs."
-                ],
-                [
-                  "Expression",
-                  "A combination of numbers, variables and operations."
-                ]
+              "type": "steps",
+              "title": "Collect and organise data",
+              "steps": [
+                "Decide the question you want to answer.",
+                "Choose whom or what to observe and how to collect responses.",
+                "Record each response accurately using a tally or table.",
+                "Check for missing or repeated entries.",
+                "Organise the totals before drawing a graph."
               ],
               "tags": [
+                "method",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-04-03",
-              "type": "concept",
-              "title": "Translate words into expressions",
-              "content": "'Five more than n' is n + 5; 'five times n' is 5n; 'n decreased by five' is n − 5. The order of words can change the operation.",
+              "type": "fact",
+              "title": "Tally marks",
+              "facts": [
+                [
+                  "Purpose",
+                  "Record counts as data are collected."
+                ],
+                [
+                  "Grouping",
+                  "Make groups of five for quick counting."
+                ],
+                [
+                  "Accuracy",
+                  "Add one tally for each observation; do not skip or double-count."
+                ],
+                [
+                  "Total",
+                  "Count complete groups and remaining marks."
+                ]
+              ],
               "tags": [
+                "key facts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-04-04",
+              "type": "concept",
+              "title": "Frequency table",
+              "content": "A frequency table lists each category or value and the number of times it occurs. Frequency is the count for that category.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-04-05",
+              "type": "concept",
+              "title": "Pictographs",
+              "content": "A pictograph represents data using pictures or symbols. A key explains how many items one picture represents; part of a symbol may be used when the key allows it.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-04-06",
+              "type": "steps",
+              "title": "Read a pictograph",
+              "steps": [
+                "Read the title to understand what the data describe.",
+                "Check the categories or labels.",
+                "Read the key to find the value of one symbol.",
+                "Count full and partial symbols as required.",
+                "Compare categories and calculate totals carefully."
+              ],
+              "tags": [
+                "method",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-04-07",
+              "type": "concept",
+              "title": "Bar graphs",
+              "content": "A bar graph uses rectangular bars to compare quantities across categories. Bars have equal width and are separated by equal gaps; their heights or lengths represent the values.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-04-08",
+              "type": "steps",
+              "title": "Draw a bar graph",
+              "steps": [
+                "Write a clear title.",
+                "Label the horizontal and vertical axes.",
+                "Choose a suitable, even scale for the numerical axis.",
+                "Draw bars of equal width with equal gaps.",
+                "Check that each bar reaches the correct value and label the units."
+              ],
+              "tags": [
+                "method",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-04-09",
+              "type": "fact",
+              "title": "Good graph presentation",
+              "facts": [
+                [
+                  "Title",
+                  "States what the graph shows."
+                ],
+                [
+                  "Labels",
+                  "Identify categories and quantities."
+                ],
+                [
+                  "Scale",
+                  "Uses equal intervals and begins at an appropriate value."
+                ],
+                [
+                  "Bars",
+                  "Have equal width and consistent spacing."
+                ],
+                [
+                  "Key",
+                  "Explains symbols in a pictograph."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-04-10",
               "type": "compare",
-              "title": "3x is not x + 3",
+              "title": "Pictograph and bar graph",
               "left": {
-                "heading": "3x",
-                "content": "Three times x. If x = 4, the value is 12."
+                "heading": "Pictograph",
+                "content": "Uses pictures or symbols; a key is essential to interpret the value of each symbol."
               },
               "right": {
-                "heading": "x + 3",
-                "content": "Three more than x. If x = 4, the value is 7."
+                "heading": "Bar graph",
+                "content": "Uses bars whose lengths or heights show values; a numerical scale is needed."
               },
               "tags": [
                 "compare"
               ]
             },
             {
-              "id": "c6-math-04-05",
-              "type": "steps",
-              "title": "Evaluate by substitution",
-              "steps": [
-                "Write the value given for each variable.",
-                "Replace every occurrence of the variable with that value.",
-                "Use brackets when substituting a negative number.",
-                "Follow the order of operations and simplify.",
-                "Check by substituting again."
-              ],
-              "tags": [
-                "method"
-              ]
-            },
-            {
-              "id": "c6-math-04-06",
-              "type": "concept",
-              "title": "Expressions describe patterns",
-              "content": "A rule such as 'add 4 each time' can be described with a variable. If the starting number is n, the next number is n + 4.",
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-04-07",
-              "type": "fact",
-              "title": "Multiplication notation",
-              "facts": [
-                [
-                  "a × b",
-                  "Often written as ab."
-                ],
-                [
-                  "1 × x",
-                  "Written as x."
-                ],
-                [
-                  "x + x + x",
-                  "Can be written as 3x."
-                ],
-                [
-                  "x × x",
-                  "Written as x² when square notation is introduced."
-                ]
-              ],
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-04-08",
-              "type": "concept",
-              "title": "Equality means balance",
-              "content": "An equation says that two expressions have the same value. The equals sign means 'is equal to'; it does not simply mean 'write the answer next'.",
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-04-09",
-              "type": "exam-alert",
-              "title": "Do not confuse 2x and x²",
-              "content": "2x means 2 multiplied by x. x² means x multiplied by itself. If x = 3, then 2x = 6 but x² = 9.",
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-04-10",
-              "type": "recall",
-              "title": "Translate a phrase",
-              "question": "Write '7 more than p' as an expression.",
-              "answer": "p + 7.",
-              "tags": [
-                "active recall"
-              ]
-            },
-            {
               "id": "c6-math-04-11",
-              "type": "recall",
-              "title": "Identify parts",
-              "question": "In 8m + 3, identify the variable, coefficient and constant.",
-              "answer": "Variable: m; coefficient: 8; constant: 3.",
+              "type": "concept",
+              "title": "Interpret, do not just read",
+              "content": "A graph can answer questions such as which category is greatest, how much larger one value is than another, and what the total is. State conclusions using the displayed data.",
               "tags": [
-                "active recall"
+                "key concepts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-04-12",
               "type": "recall",
-              "title": "Substitution check",
-              "question": "Find 4a − 1 when a = 5.",
-              "answer": "4 × 5 − 1 = 19.",
+              "title": "Pictograph key",
+              "question": "If one symbol represents 5 students, what do 4 symbols represent?",
+              "answer": "20 students.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-04-13",
+              "type": "recall",
+              "title": "Bar graph scale",
+              "question": "Why should the scale intervals on a bar graph be equal?",
+              "answer": "Equal intervals make the bar heights comparable and prevent the graph from misleading the reader.",
               "tags": [
                 "active recall"
               ]
@@ -7760,198 +7867,125 @@
           "chapterNo": 5,
           "chapterLabel": "Chapter 5",
           "chapterKey": "ganita-5",
-          "title": "Parallel and Intersecting Lines",
-          "subtitle": "Lines · rays · segments · angles · perpendicularity",
+          "title": "Prime Time",
+          "subtitle": "Factors · multiples · primes · co-primes · factorisation · divisibility",
           "cards": [
             {
               "id": "c6-math-05-01",
               "type": "concept",
-              "title": "Point, line, segment and ray",
-              "content": "A point marks an exact position. A line extends endlessly in both directions. A line segment has two endpoints. A ray has one endpoint and continues endlessly in one direction.",
+              "title": "Factors and multiples",
+              "content": "A factor divides a number exactly with no remainder. A multiple is obtained by multiplying a number by a whole number. For example, 6 is a factor of 24; 24, 30 and 36 are multiples of 6.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-05-02",
-              "type": "fact",
-              "title": "Line relationships",
-              "facts": [
-                [
-                  "Parallel lines",
-                  "Lines in the same plane that never meet."
-                ],
-                [
-                  "Intersecting lines",
-                  "Lines that cross at a common point."
-                ],
-                [
-                  "Perpendicular lines",
-                  "Intersecting lines that form 90°."
-                ],
-                [
-                  "Transversal",
-                  "A line that crosses two or more lines."
-                ]
+              "type": "steps",
+              "title": "Find all factors of a number",
+              "steps": [
+                "Start with 1 and the number itself.",
+                "Test smaller whole numbers to see which divide exactly.",
+                "Record factor pairs together, such as 2×12 and 3×8 for 24.",
+                "Stop when the factor pairs begin repeating.",
+                "List each factor once."
               ],
               "tags": [
+                "method",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-05-03",
-              "type": "compare",
-              "title": "Parallel and intersecting lines",
-              "left": {
-                "heading": "Parallel",
-                "content": "The perpendicular distance between the lines remains constant; they do not meet."
-              },
-              "right": {
-                "heading": "Intersecting",
-                "content": "The lines meet at one point. If they meet at 90°, they are perpendicular."
-              },
+              "type": "concept",
+              "title": "Prime and composite numbers",
+              "content": "A prime number is a whole number greater than 1 with exactly two factors: 1 and itself. A composite number has more than two factors. The number 1 is neither prime nor composite.",
               "tags": [
-                "compare"
+                "key concepts",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-05-04",
-              "type": "concept",
-              "title": "How an angle is formed",
-              "content": "An angle is formed by two rays with a common endpoint. The common endpoint is the vertex and the rays are the arms of the angle.",
+              "type": "fact",
+              "title": "Important prime-number facts",
+              "facts": [
+                [
+                  "2",
+                  "The only even prime number."
+                ],
+                [
+                  "1",
+                  "Neither prime nor composite."
+                ],
+                [
+                  "Smallest prime",
+                  "2."
+                ],
+                [
+                  "Prime factorisation",
+                  "Writing a composite number as a product of primes."
+                ],
+                [
+                  "Co-prime numbers",
+                  "Two numbers whose only common factor is 1."
+                ]
+              ],
               "tags": [
+                "key facts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-05-05",
-              "type": "fact",
-              "title": "Types of angles",
-              "facts": [
-                [
-                  "Acute",
-                  "Less than 90°"
-                ],
-                [
-                  "Right",
-                  "Exactly 90°"
-                ],
-                [
-                  "Obtuse",
-                  "Greater than 90° and less than 180°"
-                ],
-                [
-                  "Straight",
-                  "Exactly 180°"
-                ],
-                [
-                  "Reflex",
-                  "Greater than 180° and less than 360°"
-                ]
-              ],
+              "type": "concept",
+              "title": "Common factors and common multiples",
+              "content": "A common factor divides each of two or more numbers. A common multiple is a multiple shared by them. The smallest positive common multiple is the least common multiple (LCM).",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-05-06",
               "type": "steps",
-              "title": "Measure an angle with a protractor",
+              "title": "Find a common factor",
               "steps": [
-                "Place the protractor's centre mark exactly on the vertex.",
-                "Align its baseline with one arm of the angle.",
-                "Read the scale that starts at 0° on that arm.",
-                "Check whether the result matches the apparent size.",
-                "Write the degree symbol with the measurement."
+                "List the factors of each number.",
+                "Identify the factors that appear in every list.",
+                "The greatest common factor is the largest shared factor.",
+                "Check that it divides each number exactly."
               ],
               "tags": [
-                "method"
+                "method",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-05-07",
-              "type": "concept",
-              "title": "Estimate before measuring",
-              "content": "First decide whether an angle is acute, right, obtuse or straight. Estimation helps detect a wrong scale or incorrect alignment.",
+              "type": "steps",
+              "title": "Prime factorisation using a factor tree",
+              "steps": [
+                "Split the number into two factors.",
+                "Continue splitting any composite factor.",
+                "Stop when every branch ends in a prime number.",
+                "Write the product of all prime factors.",
+                "Check by multiplying the primes back together."
+              ],
               "tags": [
+                "method",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-05-08",
-              "type": "exam-alert",
-              "title": "Drawing lines correctly",
-              "content": "A line segment has two endpoints; a line has no endpoints. Use arrowheads at both ends of a drawn line to show that it continues.",
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-05-09",
-              "type": "recall",
-              "title": "Line relationship check",
-              "question": "What is the difference between perpendicular and parallel lines?",
-              "answer": "Perpendicular lines intersect at 90°; parallel lines in the same plane never intersect.",
-              "tags": [
-                "active recall"
-              ]
-            },
-            {
-              "id": "c6-math-05-10",
-              "type": "recall",
-              "title": "Angle type check",
-              "question": "An angle measures 125°. What type is it?",
-              "answer": "Obtuse, because it is greater than 90° and less than 180°.",
-              "tags": [
-                "active recall"
-              ]
-            },
-            {
-              "id": "c6-math-05-11",
-              "type": "recall",
-              "title": "Ray check",
-              "question": "How many endpoints does a ray have?",
-              "answer": "One endpoint. It extends endlessly in one direction.",
-              "tags": [
-                "active recall"
-              ]
-            },
-            {
-              "id": "c6-math-05-12",
-              "type": "recall",
-              "title": "Protractor check",
-              "question": "Where should the centre mark of a protractor be placed?",
-              "answer": "Exactly on the vertex of the angle.",
-              "tags": [
-                "active recall"
-              ]
-            }
-          ]
-        },
-        {
-          "chapterNo": 6,
-          "chapterLabel": "Chapter 6",
-          "chapterKey": "ganita-6",
-          "title": "Number Play",
-          "subtitle": "Divisibility · factors · multiples · prime numbers · patterns",
-          "cards": [
-            {
-              "id": "c6-math-06-01",
-              "type": "concept",
-              "title": "Look for number structure",
-              "content": "Number puzzles become easier when we examine place value, odd and even numbers, factors, multiples, remainders and repeating patterns instead of guessing.",
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-06-02",
               "type": "fact",
               "title": "Divisibility tests",
               "facts": [
                 [
                   "2",
-                  "Last digit is 0, 2, 4, 6 or 8."
+                  "Last digit is even."
                 ],
                 [
                   "3",
@@ -7968,114 +8002,224 @@
                 [
                   "10",
                   "Last digit is 0."
+                ],
+                [
+                  "4",
+                  "The number formed by the last two digits is divisible by 4."
                 ]
               ],
               "tags": [
+                "key facts",
                 "quick reference"
               ]
             },
             {
-              "id": "c6-math-06-03",
-              "type": "concept",
-              "title": "Factors and multiples",
-              "content": "A factor divides a number exactly. A multiple is obtained by multiplying a number by a whole number. Four is a factor of 20; 20 and 24 are multiples of 4.",
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-06-04",
+              "id": "c6-math-05-09",
               "type": "compare",
-              "title": "Prime and composite numbers",
+              "title": "Prime and co-prime",
               "left": {
-                "heading": "Prime",
-                "content": "A whole number greater than 1 with exactly two factors: 1 and itself. Example: 13."
+                "heading": "Prime number",
+                "content": "A number greater than 1 with exactly two factors."
               },
               "right": {
-                "heading": "Composite",
-                "content": "A whole number greater than 1 with more than two factors. Example: 12."
+                "heading": "Co-prime pair",
+                "content": "Two numbers whose only common factor is 1; each number need not itself be prime. For example, 8 and 15 are co-prime."
               },
               "tags": [
                 "compare"
               ]
             },
             {
-              "id": "c6-math-06-05",
+              "id": "c6-math-05-10",
+              "type": "concept",
+              "title": "Why prime factorisation is useful",
+              "content": "Every composite whole number greater than 1 can be expressed as a product of prime numbers. Prime factorisation helps identify common factors and common multiples.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-05-11",
+              "type": "recall",
+              "title": "Prime check",
+              "question": "Is 29 prime?",
+              "answer": "Yes. It has only two positive factors: 1 and 29.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-05-12",
+              "type": "recall",
+              "title": "Co-prime check",
+              "question": "Are 8 and 15 co-prime?",
+              "answer": "Yes. Their only common factor is 1.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-05-13",
+              "type": "recall",
+              "title": "Divisibility check",
+              "question": "Is 7,452 divisible by 3?",
+              "answer": "Yes. Its digit sum is 18, which is divisible by 3.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 6,
+          "chapterLabel": "Chapter 6",
+          "chapterKey": "ganita-6",
+          "title": "Perimeter and Area",
+          "subtitle": "Boundary length · surface covered · units · rectangles and squares",
+          "cards": [
+            {
+              "id": "c6-math-06-01",
+              "type": "concept",
+              "title": "Perimeter",
+              "content": "Perimeter is the total distance around the boundary of a closed shape. Add the lengths of all its sides. Perimeter is measured in linear units such as cm or m.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-06-02",
+              "type": "concept",
+              "title": "Area",
+              "content": "Area measures the amount of surface covered by a flat shape. It is measured in square units such as cm² or m².",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-06-03",
               "type": "fact",
-              "title": "Special numbers",
+              "title": "Perimeter formulas",
               "facts": [
                 [
-                  "1",
-                  "Neither prime nor composite."
+                  "Square",
+                  "4 × side"
                 ],
                 [
-                  "2",
-                  "The only even prime number."
+                  "Rectangle",
+                  "2 × (length + breadth)"
                 ],
                 [
-                  "0",
-                  "Not a prime number."
+                  "Triangle",
+                  "Sum of its three side lengths"
                 ],
                 [
-                  "Even numbers",
-                  "Divisible by 2."
-                ],
-                [
-                  "Odd numbers",
-                  "Not divisible by 2."
+                  "Regular polygon",
+                  "Number of sides × one side length"
                 ]
               ],
               "tags": [
+                "key facts",
                 "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-06-04",
+              "type": "fact",
+              "title": "Area formulas",
+              "facts": [
+                [
+                  "Square",
+                  "side × side"
+                ],
+                [
+                  "Rectangle",
+                  "length × breadth"
+                ],
+                [
+                  "Unit square",
+                  "A square of side 1 unit has area 1 square unit."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-06-05",
+              "type": "compare",
+              "title": "Perimeter and area",
+              "left": {
+                "heading": "Perimeter",
+                "content": "Measures the boundary or distance around a shape; use units such as cm or m."
+              },
+              "right": {
+                "heading": "Area",
+                "content": "Measures the surface inside a shape; use square units such as cm² or m²."
+              },
+              "tags": [
+                "compare"
               ]
             },
             {
               "id": "c6-math-06-06",
               "type": "steps",
-              "title": "Test divisibility by 3",
+              "title": "Find the perimeter of a rectangle",
               "steps": [
-                "Add all the digits of the number.",
-                "Check whether the digit sum is divisible by 3.",
-                "If it is, the original number is divisible by 3.",
-                "Example: 4,326 has digit sum 15, so it is divisible by 3."
+                "Identify its length and breadth.",
+                "Add length and breadth.",
+                "Multiply the sum by 2 because opposite sides are equal.",
+                "Write the answer in a linear unit."
               ],
               "tags": [
-                "method"
+                "method",
+                "quick reference"
               ]
             },
             {
               "id": "c6-math-06-07",
-              "type": "concept",
-              "title": "Number patterns",
-              "content": "A sequence follows a rule. The rule may add, subtract, multiply, alternate operations or use a relationship between shapes and numbers.",
+              "type": "steps",
+              "title": "Find area using unit squares",
+              "steps": [
+                "Cover the shape with equal unit squares without gaps or overlaps.",
+                "Count the complete unit squares.",
+                "Combine partial squares where the activity permits.",
+                "State the result in square units."
+              ],
               "tags": [
+                "method",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-06-08",
               "type": "concept",
-              "title": "Remainders",
-              "content": "The remainder is what is left after making as many equal groups as possible. It is always smaller than the divisor.",
+              "title": "Same perimeter, different area",
+              "content": "Shapes can have the same perimeter but different areas. Changing the arrangement of side lengths can change the amount of surface enclosed.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-06-09",
-              "type": "exam-alert",
-              "title": "Factor is not the same as multiple",
-              "content": "A factor divides a number; a multiple is produced by multiplying. Five is a factor of 20, while 20, 25 and 30 are multiples of 5.",
+              "type": "concept",
+              "title": "Choosing suitable units",
+              "content": "Use cm or m for side lengths and cm² or m² for area. Do not write an area in centimetres alone; the square unit is essential.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-06-10",
               "type": "recall",
-              "title": "Divisibility check",
-              "question": "Is 7,452 divisible by 3?",
-              "answer": "Yes. Its digit sum is 7 + 4 + 5 + 2 = 18, which is divisible by 3.",
+              "title": "Rectangle calculation",
+              "question": "A rectangle is 8 cm long and 3 cm wide. Find its perimeter and area.",
+              "answer": "Perimeter = 2×(8+3) = 22 cm. Area = 8×3 = 24 cm².",
               "tags": [
                 "active recall"
               ]
@@ -8083,9 +8227,9 @@
             {
               "id": "c6-math-06-11",
               "type": "recall",
-              "title": "Prime number check",
-              "question": "Why is 2 the only even prime number?",
-              "answer": "Every other even number is divisible by 2 and has at least three factors: 1, 2 and itself.",
+              "title": "Square calculation",
+              "question": "A square has side 6 cm. Find its perimeter and area.",
+              "answer": "Perimeter = 4×6 = 24 cm. Area = 6×6 = 36 cm².",
               "tags": [
                 "active recall"
               ]
@@ -8093,9 +8237,9 @@
             {
               "id": "c6-math-06-12",
               "type": "recall",
-              "title": "Factor check",
-              "question": "List all positive factors of 18.",
-              "answer": "1, 2, 3, 6, 9 and 18.",
+              "title": "Concept check",
+              "question": "Can two different shapes have the same perimeter but different areas?",
+              "answer": "Yes. The boundary lengths can add to the same total while the enclosed areas differ.",
               "tags": [
                 "active recall"
               ]
@@ -8106,187 +8250,21 @@
           "chapterNo": 7,
           "chapterLabel": "Chapter 7",
           "chapterKey": "ganita-7",
-          "title": "A Tale of Three Intersecting Lines",
-          "subtitle": "Triangles · angle relationships · classification · reasoning",
+          "title": "Fractions",
+          "subtitle": "Parts of a whole · equivalent fractions · comparison · operations",
           "cards": [
             {
               "id": "c6-math-07-01",
               "type": "concept",
-              "title": "Three lines can form a triangle",
-              "content": "When three non-parallel lines intersect pairwise at three distinct points, they can enclose a triangular region. The intersection points are its vertices.",
+              "title": "Meaning of a fraction",
+              "content": "A fraction represents equal parts of a whole or collection. In a/b, a is the numerator and b is the denominator; the denominator cannot be zero.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
               "id": "c6-math-07-02",
-              "type": "fact",
-              "title": "Parts of a triangle",
-              "facts": [
-                [
-                  "Sides",
-                  "The three line segments forming its boundary."
-                ],
-                [
-                  "Vertices",
-                  "The three corner points."
-                ],
-                [
-                  "Angles",
-                  "The three interior angles."
-                ],
-                [
-                  "Perimeter",
-                  "The sum of the lengths of all three sides."
-                ]
-              ],
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-07-03",
-              "type": "compare",
-              "title": "Classify triangles by sides",
-              "left": {
-                "heading": "Equilateral",
-                "content": "All three sides are equal; each interior angle is 60°."
-              },
-              "right": {
-                "heading": "Isosceles",
-                "content": "At least two sides are equal; angles opposite equal sides are equal."
-              },
-              "tags": [
-                "compare"
-              ]
-            },
-            {
-              "id": "c6-math-07-04",
-              "type": "fact",
-              "title": "Classify triangles by angles",
-              "facts": [
-                [
-                  "Acute-angled",
-                  "All three angles are less than 90°."
-                ],
-                [
-                  "Right-angled",
-                  "One angle is exactly 90°."
-                ],
-                [
-                  "Obtuse-angled",
-                  "One angle is greater than 90°."
-                ]
-              ],
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-07-05",
-              "type": "concept",
-              "title": "Angle sum of a triangle",
-              "content": "The three interior angles of every triangle add up to 180°. If two angles are known, subtract their sum from 180° to find the third.",
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-07-06",
-              "type": "steps",
-              "title": "Find an unknown triangle angle",
-              "steps": [
-                "Write the known interior angles.",
-                "Add the known angles.",
-                "Subtract their sum from 180°.",
-                "Check that all three angles total 180°."
-              ],
-              "tags": [
-                "method"
-              ]
-            },
-            {
-              "id": "c6-math-07-07",
-              "type": "concept",
-              "title": "Vertically opposite angles",
-              "content": "When two straight lines intersect, vertically opposite angles are equal. Adjacent angles on a straight line add up to 180°.",
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-07-08",
-              "type": "fact",
-              "title": "Triangle inequality",
-              "facts": [
-                [
-                  "Key point",
-                  "The sum of the lengths of any two sides of a triangle must be greater than the length of the third side."
-                ]
-              ],
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-07-09",
-              "type": "exam-alert",
-              "title": "Not every three lengths form a triangle",
-              "content": "Lengths 2 cm, 3 cm and 6 cm cannot form a triangle because 2 + 3 is not greater than 6.",
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-07-10",
-              "type": "recall",
-              "title": "Angle-sum check",
-              "question": "A triangle has angles 45° and 65°. Find the third angle.",
-              "answer": "70°, because 180° − (45° + 65°) = 70°.",
-              "tags": [
-                "active recall"
-              ]
-            },
-            {
-              "id": "c6-math-07-11",
-              "type": "recall",
-              "title": "Classify by sides",
-              "question": "A triangle has sides 5 cm, 5 cm and 8 cm. Classify it by sides.",
-              "answer": "Isosceles, because two sides are equal.",
-              "tags": [
-                "active recall"
-              ]
-            },
-            {
-              "id": "c6-math-07-12",
-              "type": "recall",
-              "title": "Vertically opposite angles",
-              "question": "What is the relationship between vertically opposite angles?",
-              "answer": "They are equal.",
-              "tags": [
-                "active recall"
-              ]
-            }
-          ]
-        },
-        {
-          "chapterNo": 8,
-          "chapterLabel": "Chapter 8",
-          "chapterKey": "ganita-8",
-          "title": "Working with Fractions",
-          "subtitle": "Parts of a whole · equivalence · comparison · operations",
-          "cards": [
-            {
-              "id": "c6-math-08-01",
-              "type": "concept",
-              "title": "Meaning of a fraction",
-              "content": "A fraction represents equal parts of a whole or collection. In a/b, a is the numerator and b is the denominator; the denominator cannot be zero.",
-              "tags": [
-                "quick reference"
-              ]
-            },
-            {
-              "id": "c6-math-08-02",
               "type": "fact",
               "title": "Types of fractions",
               "facts": [
@@ -8308,20 +8286,22 @@
                 ]
               ],
               "tags": [
+                "key facts",
                 "quick reference"
               ]
             },
             {
-              "id": "c6-math-08-03",
+              "id": "c6-math-07-03",
               "type": "concept",
               "title": "Equivalent fractions",
               "content": "Fractions are equivalent when they represent the same quantity. Multiply or divide both numerator and denominator by the same non-zero number to make an equivalent fraction.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
-              "id": "c6-math-08-04",
+              "id": "c6-math-07-04",
               "type": "steps",
               "title": "Simplify a fraction",
               "steps": [
@@ -8331,11 +8311,12 @@
                 "Check that the value has not changed."
               ],
               "tags": [
-                "method"
+                "method",
+                "quick reference"
               ]
             },
             {
-              "id": "c6-math-08-05",
+              "id": "c6-math-07-05",
               "type": "compare",
               "title": "Like and unlike fractions",
               "left": {
@@ -8351,39 +8332,43 @@
               ]
             },
             {
-              "id": "c6-math-08-06",
+              "id": "c6-math-07-06",
               "type": "concept",
-              "title": "Compare fractions with the same denominator",
-              "content": "When denominators are equal, compare numerators. The larger numerator represents more equal-sized parts of the same whole.",
+              "title": "Compare fractions",
+              "content": "With equal denominators, compare numerators. With equal numerators, the fraction with the smaller denominator is larger. Otherwise, use equivalent fractions or a visual model.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
-              "id": "c6-math-08-07",
+              "id": "c6-math-07-07",
               "type": "steps",
-              "title": "Add fractions with unlike denominators",
+              "title": "Add or subtract fractions",
               "steps": [
-                "Find a common denominator.",
+                "For like denominators, add or subtract the numerators and keep the denominator.",
+                "For unlike denominators, find a common denominator.",
                 "Rewrite each fraction as an equivalent fraction.",
-                "Add the numerators and keep the common denominator.",
-                "Simplify the answer if possible."
+                "Add or subtract the numerators.",
+                "Simplify the result if possible."
               ],
               "tags": [
-                "method"
+                "method",
+                "quick reference"
               ]
             },
             {
-              "id": "c6-math-08-08",
+              "id": "c6-math-07-08",
               "type": "concept",
               "title": "Fractions on a number line",
               "content": "Divide each unit interval into as many equal parts as the denominator. Count the numerator's parts from zero to locate the fraction.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
-              "id": "c6-math-08-09",
+              "id": "c6-math-07-09",
               "type": "fact",
               "title": "Fraction of a quantity",
               "facts": [
@@ -8401,20 +8386,22 @@
                 ]
               ],
               "tags": [
+                "key facts",
                 "quick reference"
               ]
             },
             {
-              "id": "c6-math-08-10",
+              "id": "c6-math-07-10",
               "type": "exam-alert",
               "title": "Do not add denominators",
               "content": "For same-denominator fractions, 1/4 + 2/4 = 3/4, not 3/8. The denominator describes the size of each part.",
               "tags": [
+                "key concepts",
                 "quick reference"
               ]
             },
             {
-              "id": "c6-math-08-11",
+              "id": "c6-math-07-11",
               "type": "recall",
               "title": "Equivalent fraction check",
               "question": "Write an equivalent fraction for 3/5 with denominator 20.",
@@ -8424,7 +8411,7 @@
               ]
             },
             {
-              "id": "c6-math-08-12",
+              "id": "c6-math-07-12",
               "type": "recall",
               "title": "Simplify check",
               "question": "Simplify 18/24.",
@@ -8434,11 +8421,554 @@
               ]
             },
             {
-              "id": "c6-math-08-13",
+              "id": "c6-math-07-13",
               "type": "recall",
               "title": "Addition check",
               "question": "Calculate 2/7 + 3/7.",
               "answer": "5/7.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 8,
+          "chapterLabel": "Chapter 8",
+          "chapterKey": "ganita-8",
+          "title": "Playing with Constructions",
+          "subtitle": "Geometry tools · accurate drawing · circles · perpendiculars and angles",
+          "cards": [
+            {
+              "id": "c6-math-08-01",
+              "type": "fact",
+              "title": "Geometry instruments and their uses",
+              "facts": [
+                [
+                  "Ruler",
+                  "Draws straight line segments and measures lengths."
+                ],
+                [
+                  "Compass",
+                  "Draws circles and arcs and transfers a fixed distance."
+                ],
+                [
+                  "Divider",
+                  "Compares or transfers distances."
+                ],
+                [
+                  "Protractor",
+                  "Measures and draws angles."
+                ],
+                [
+                  "Set squares",
+                  "Help draw specific angles and perpendicular or parallel lines."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-08-02",
+              "type": "concept",
+              "title": "Accuracy in constructions",
+              "content": "A geometric construction is a precise drawing made with suitable instruments and a sequence of steps. Accuracy matters more than a freehand appearance.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-08-03",
+              "type": "steps",
+              "title": "Draw a circle with a compass",
+              "steps": [
+                "Mark the centre point.",
+                "Set the compass opening to the required radius using a ruler if needed.",
+                "Keep the pointed end fixed at the centre.",
+                "Rotate the pencil leg smoothly through a full turn.",
+                "Check that the circle is closed and the radius remains constant."
+              ],
+              "tags": [
+                "method",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-08-04",
+              "type": "concept",
+              "title": "Radius and diameter",
+              "content": "The radius is the distance from the centre of a circle to its boundary. The diameter passes through the centre and joins two points on the circle; it is twice the radius.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-08-05",
+              "type": "steps",
+              "title": "Construct a perpendicular line using a set square",
+              "steps": [
+                "Place one edge of the set square along the given line.",
+                "Use the perpendicular edge as the guide.",
+                "Draw the line through the required point.",
+                "Check that the angle formed is a right angle (90°)."
+              ],
+              "tags": [
+                "method",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-08-06",
+              "type": "compare",
+              "title": "Freehand drawing and construction",
+              "left": {
+                "heading": "Freehand",
+                "content": "Useful for a quick sketch or idea; measurements and angles may not be exact."
+              },
+              "right": {
+                "heading": "Construction",
+                "content": "Uses instruments and repeatable steps to make lengths, angles and shapes accurate."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-math-08-07",
+              "type": "fact",
+              "title": "Construction habits",
+              "facts": [
+                [
+                  "Mark points",
+                  "Label points clearly."
+                ],
+                [
+                  "Keep compass radius",
+                  "Do not change the opening when transferring the same length."
+                ],
+                [
+                  "Use light lines",
+                  "Keep construction arcs visible until the final shape is checked."
+                ],
+                [
+                  "Show steps",
+                  "A clear construction can be repeated by another person."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-08-08",
+              "type": "concept",
+              "title": "Why arcs are used",
+              "content": "A compass arc marks points at a fixed distance from its centre. Intersections of arcs can locate a point that satisfies two distance conditions at once.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-08-09",
+              "type": "recall",
+              "title": "Instrument check",
+              "question": "Which instrument is used to draw a circle of a fixed radius?",
+              "answer": "A compass.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-08-10",
+              "type": "recall",
+              "title": "Circle vocabulary",
+              "question": "If a circle has radius 4 cm, what is its diameter?",
+              "answer": "8 cm; diameter is twice the radius.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-08-11",
+              "type": "recall",
+              "title": "Construction reasoning",
+              "question": "Why should the compass opening remain unchanged when transferring a length?",
+              "answer": "Keeping the opening fixed preserves the exact distance being copied.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 9,
+          "chapterLabel": "Chapter 9",
+          "chapterKey": "ganita-9",
+          "title": "Symmetry",
+          "subtitle": "Line symmetry · mirror halves · patterns · rotational ideas",
+          "cards": [
+            {
+              "id": "c6-math-09-01",
+              "type": "concept",
+              "title": "What is symmetry?",
+              "content": "A shape has symmetry when parts match according to a transformation such as reflection or rotation. In line symmetry, the two sides match when folded along a line.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-09-02",
+              "type": "concept",
+              "title": "Line of symmetry",
+              "content": "A line of symmetry divides a shape into two matching halves. If the shape is folded along this line, the halves coincide exactly.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-09-03",
+              "type": "fact",
+              "title": "Examples of line symmetry",
+              "facts": [
+                [
+                  "Square",
+                  "4 lines of symmetry."
+                ],
+                [
+                  "Rectangle (not a square)",
+                  "2 lines of symmetry."
+                ],
+                [
+                  "Equilateral triangle",
+                  "3 lines of symmetry."
+                ],
+                [
+                  "Circle",
+                  "Infinitely many lines of symmetry."
+                ],
+                [
+                  "Scalene triangle",
+                  "No line of symmetry."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-09-04",
+              "type": "steps",
+              "title": "Check for line symmetry",
+              "steps": [
+                "Imagine folding the shape along a possible line.",
+                "Check whether every point on one side matches a point on the other side.",
+                "If the two halves coincide exactly, the line is a line of symmetry.",
+                "Try other fold directions to find additional lines."
+              ],
+              "tags": [
+                "method",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-09-05",
+              "type": "concept",
+              "title": "Mirror-image idea",
+              "content": "A reflection produces a mirror image. Points on the line of reflection stay in place; matching points lie at equal perpendicular distances on opposite sides.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-09-06",
+              "type": "compare",
+              "title": "Symmetric and asymmetric shapes",
+              "left": {
+                "heading": "Symmetric",
+                "content": "Has at least one line that divides it into matching mirror halves."
+              },
+              "right": {
+                "heading": "Asymmetric",
+                "content": "Has no line of symmetry."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-math-09-07",
+              "type": "concept",
+              "title": "Symmetry in patterns",
+              "content": "Repeated motifs in rangoli, textiles, leaves, buildings and designs can show symmetry. Identify the smallest repeated unit and the way it is reflected or repeated.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-09-08",
+              "type": "fact",
+              "title": "Rotational symmetry idea",
+              "facts": [
+                [
+                  "Rotation",
+                  "Turning a shape around a fixed point."
+                ],
+                [
+                  "Centre",
+                  "The point about which the shape turns."
+                ],
+                [
+                  "Match",
+                  "A shape has rotational symmetry if it looks unchanged at a turn smaller than a full 360°."
+                ],
+                [
+                  "Order",
+                  "The number of times it matches during one full turn."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-09-09",
+              "type": "steps",
+              "title": "Complete a symmetrical drawing",
+              "steps": [
+                "Draw or identify the line of symmetry.",
+                "Measure the perpendicular distance of a point from the line.",
+                "Mark its matching point the same distance on the other side.",
+                "Repeat for all key points.",
+                "Join the points smoothly and check the mirror match."
+              ],
+              "tags": [
+                "method",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-09-10",
+              "type": "recall",
+              "title": "Square symmetry",
+              "question": "How many lines of symmetry does a square have?",
+              "answer": "Four: one vertical, one horizontal and the two diagonals.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-09-11",
+              "type": "recall",
+              "title": "Rectangle symmetry",
+              "question": "How many lines of symmetry does a non-square rectangle have?",
+              "answer": "Two: the horizontal and vertical lines through its centre.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-09-12",
+              "type": "recall",
+              "title": "Symmetry definition",
+              "question": "What must happen when a shape is folded along a line of symmetry?",
+              "answer": "The two halves must coincide exactly.",
+              "tags": [
+                "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 10,
+          "chapterLabel": "Chapter 10",
+          "chapterKey": "ganita-10",
+          "title": "The Other Side of Zero",
+          "subtitle": "Negative numbers · number line · ordering · opposite values · real contexts",
+          "cards": [
+            {
+              "id": "c6-math-10-01",
+              "type": "concept",
+              "title": "Numbers below zero",
+              "content": "Negative numbers are less than zero. They are useful for describing values below a reference point, such as temperatures below 0°C, floors below ground level or money owed.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-10-02",
+              "type": "concept",
+              "title": "Positive numbers, zero and negative numbers",
+              "content": "Positive numbers lie to the right of zero on a number line; negative numbers lie to the left. Zero is neither positive nor negative.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-10-03",
+              "type": "fact",
+              "title": "Number-line direction",
+              "facts": [
+                [
+                  "Move right",
+                  "Numbers become greater."
+                ],
+                [
+                  "Move left",
+                  "Numbers become smaller."
+                ],
+                [
+                  "Zero",
+                  "Separates positive and negative numbers."
+                ],
+                [
+                  "Opposites",
+                  "Numbers equally far from zero on opposite sides, such as +4 and −4."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-10-04",
+              "type": "compare",
+              "title": "Compare negative numbers",
+              "left": {
+                "heading": "−2",
+                "content": "Lies to the right of −5, so −2 is greater."
+              },
+              "right": {
+                "heading": "−5",
+                "content": "Lies farther left and is smaller than −2."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-math-10-05",
+              "type": "concept",
+              "title": "Distance from zero",
+              "content": "The distance of a number from zero is its absolute distance. For example, +6 and −6 are both 6 units from zero, though they are on opposite sides.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-10-06",
+              "type": "fact",
+              "title": "Real-life uses",
+              "facts": [
+                [
+                  "Temperature",
+                  "−3°C is three degrees below 0°C."
+                ],
+                [
+                  "Buildings",
+                  "A basement level may be represented as −1 or −2."
+                ],
+                [
+                  "Money",
+                  "A negative balance can represent an amount owed."
+                ],
+                [
+                  "Sea level",
+                  "A location below sea level can be shown with a negative height."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-10-07",
+              "type": "steps",
+              "title": "Place integers on a number line",
+              "steps": [
+                "Draw a straight line and mark zero.",
+                "Choose equal spacing for each unit.",
+                "Mark positive numbers to the right of zero.",
+                "Mark negative numbers to the left of zero.",
+                "Check that the spacing is equal on both sides."
+              ],
+              "tags": [
+                "method",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-10-08",
+              "type": "concept",
+              "title": "Ordering negative and positive numbers",
+              "content": "Any positive number is greater than zero and every negative number. Among negative numbers, the one closer to zero is greater; for example, −1 > −4.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-10-09",
+              "type": "concept",
+              "title": "Opposite numbers",
+              "content": "Opposite numbers have the same distance from zero but lie on opposite sides. Their sum is zero, such as 5 + (−5) = 0.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-10-10",
+              "type": "exam-alert",
+              "title": "A common negative-number mistake",
+              "content": "Do not assume that a number with a larger digit is always greater when it is negative. On a number line, −8 is less than −3 because it lies farther left.",
+              "tags": [
+                "key concepts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-math-10-11",
+              "type": "recall",
+              "title": "Compare negatives",
+              "question": "Which is greater, −2 or −5?",
+              "answer": "−2 is greater because it lies to the right of −5 on the number line.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-10-12",
+              "type": "recall",
+              "title": "Opposite number",
+              "question": "What is the opposite of −7?",
+              "answer": "+7.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-math-10-13",
+              "type": "recall",
+              "title": "Real-life interpretation",
+              "question": "The temperature is −4°C. How many degrees below zero is it?",
+              "answer": "4 degrees below zero.",
               "tags": [
                 "active recall"
               ]
