@@ -1032,3 +1032,28 @@ body.eg-theme-dark.c10-shell-ready.c10-theme-quest .study-summary > * strong{
 body.eg-theme-dark.c10-shell-ready.c10-theme-quest .study-summary > * span{
   color:#B9C7D4!important;
 }
+
+/* Generic metric component — shared by dashboards, practice and Study Library.
+   Keep visual states here so a page cannot accidentally retain a light metric tile. */
+body.c10-shell-ready .eg-metric-card{
+  box-sizing:border-box!important;min-width:0;
+  background:var(--ss-surface)!important;border:1px solid var(--ss-line)!important;
+  border-top:3px solid #8FB9D8!important;border-radius:var(--ss-radius)!important;
+  color:var(--ss-ink)!important;box-shadow:var(--ss-shadow)!important;
+}
+body.c10-shell-ready .eg-metric-card:nth-child(4n+2){border-top-color:#B6A7DF!important}
+body.c10-shell-ready .eg-metric-card:nth-child(4n+3){border-top-color:#82B99C!important}
+body.c10-shell-ready .eg-metric-card:nth-child(4n){border-top-color:#D9A49A!important}
+body.c10-shell-ready .eg-metric-card :is(strong,b){color:var(--ss-ink)!important}
+body.c10-shell-ready .eg-metric-card :is(span,small,p){color:var(--ss-muted)!important}
+
+body.eg-theme-dark.c10-shell-ready .eg-metric-card{
+  background:linear-gradient(145deg,#354657 0%,#2F3E4D 100%)!important;
+  border:1px solid #526578!important;border-top:3px solid #6D9BBE!important;
+  color:#E8EEF4!important;box-shadow:0 7px 18px rgba(14,24,34,.14)!important;
+}
+body.eg-theme-dark.c10-shell-ready .eg-metric-card:nth-child(4n+2){border-top-color:#9B8CCB!important}
+body.eg-theme-dark.c10-shell-ready .eg-metric-card:nth-child(4n+3){border-top-color:#6FAF8C!important}
+body.eg-theme-dark.c10-shell-ready .eg-metric-card:nth-child(4n){border-top-color:#C28E86!important}
+body.eg-theme-dark.c10-shell-ready .eg-metric-card :is(strong,b){color:#F1F6FA!important}
+body.eg-theme-dark.c10-shell-ready .eg-metric-card :is(span,small,p){color:#B9C7D4!important}
