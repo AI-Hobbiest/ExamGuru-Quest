@@ -6,8 +6,8 @@
  "use strict";
  const ACTIVE="active";
  const ROLES=Object.freeze({
-  school_admin:new Set(["department.read","department.manage","department.member.manage","department.head.appoint","department.assignment.manage","department.report.read"]),
-  teacher:new Set(["department.read","department.assignment.read","department.report.read"]),
+  school_admin:new Set(["department.read","department.manage","department.member.manage","department.head.appoint","department.head.read","department.assignment.manage","department.report.read"]),
+  teacher:new Set(["department.read","department.head.read","department.assignment.read","department.report.read"]),
   institution_viewer:new Set(["department.read"])
  });
  const deny=reason=>Object.freeze({allowed:false,reason});
@@ -64,15 +64,14 @@
    if(permission==="department.report.read"&&institutionMembership.role==="teacher"){
     if(!dm)return deny("department-membership-required");
     if(!c.institutionClassId)return deny("department-class-scope-required");
+    const departmentClasses=await repositories.academicOrganisation.listDepartmentClassScopes(c.departmentId);
+    if(!(departmentClasses||[]).some(x=>x.institutionClassId===c.institutionClassId))return deny("department-class-scope-denied");
     const appointments=await repositories.academicOrganisation.listActiveHeadAppointments(dm.departmentMembershipId);
-    const isHead=isDepartmentHead(appointments,c.departmentId,c.institutionClassId,c.at||new Date().toISOString());
-    if(isHead){
-     const departmentClasses=await repositories.academicOrganisation.listDepartmentClassScopes(c.departmentId);
-     if(!(departmentClasses||[]).some(x=>x.institutionClassId===c.institutionClassId))return deny("department-class-scope-denied");
-     return allow("department-head-scoped",dm.departmentMembershipId,(appointments||[]).find(a=>a.departmentId===c.departmentId&&a.status==="active")?.appointmentId||null);
-    }
+    const headAppointment=(appointments||[]).find(a=>a.departmentId===c.departmentId&&isDepartmentHead([a],c.departmentId,c.institutionClassId,c.at||new Date().toISOString()));
+    if(headAppointment)return allow("department-head-scoped",dm.departmentMembershipId,headAppointment.appointmentId||null);
     const assignments=await repositories.academic.listTeacherAssignments(institutionMembership.membershipId);
-    if(!(assignments||[]).some(a=>a.status==="active"&&a.departmentId===c.departmentId&&a.institutionClassId===c.institutionClassId&&a.institutionId===c.institutionId))return deny("teacher-assignment-required");
+    if(!(assignments||[]).some(a=>a.status==="active"&&a.departmentId===c.departmentId&&a.institutionClassId===c.institutionClassId&&a.institutionId===c.institutionId&&(!c.subjectId||a.subjectId===c.subjectId)&&(!c.branchId||a.branchId===c.branchId)))return deny("teacher-assignment-required");
+    return allow("teacher-assignment",dm.departmentMembershipId);
    }
    return allow("department-membership",dm?.departmentMembershipId||null);
   }catch(_){return deny("authorization-evaluation-failed");}
