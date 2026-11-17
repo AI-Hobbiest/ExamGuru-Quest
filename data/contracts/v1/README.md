@@ -21,6 +21,9 @@ These contracts are the platform's portable data model. They are provider-neutra
 | `answer-record.schema.json` | An answer to one question in one attempt |
 | `test-attempt.schema.json` | One complete practice/test session |
 | `local-store-envelope.schema.json` | Versioned storage adapter envelope |
+| `institution.schema.json` | Tenant/institution identity contract |
+| `branch.schema.json` | Institution-owned campus/branch contract |
+| `institution-membership.schema.json` | Multi-institution role membership and branch scope |
 
 ## Stable question identity
 
@@ -33,3 +36,7 @@ UI and quiz logic should use a small storage interface (`load`, `save`, `clear`,
 ## MCQ cognitive competency
 
 Every new MCQ must include `competency`, `competencyTagStatus`, and `competencyTagReason`. The only valid categories are `knowledge-understanding`, `application`, and `analysis-evaluation-creation`. Difficulty remains a separate field. Newly authored questions saved through the Admin Question Bank Editor are marked `author-confirmed`; legacy MCQs are migrated with `inferred` or `needs-review` status and must not be described as educator-verified. See `docs/mcq-competency-tagging-standard.md` for the authoring rubric.
+
+## Multi-tenant RBAC contracts
+
+These additive v1 contracts separate user identity from role grants and keep institution/branch scope explicit. See `docs/rbac-architecture-v1.md` for the target model, permission rules, compatibility requirements and migration sequence. The additive D1 foundation is `cloudflare/migrations/0003_multitenant_rbac_foundation.sql`; it deliberately leaves the current `users.role` and Worker route semantics unchanged until a separately tested API cutover.
