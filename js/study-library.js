@@ -66,7 +66,7 @@
       emptyNode.append(title,detail);list.appendChild(emptyNode);return;
     }
     matches.forEach(item=>{
-      const card=document.createElement("article");card.className="study-card";
+      const card=document.createElement("article");card.className="study-card eg-surface-card";
       const head=document.createElement("div");head.className="study-card-head";
       const kind=document.createElement("span");kind.className="study-type";kind.textContent=typeLabel(item.type);
       const state=document.createElement("span");state.className="study-chip";
