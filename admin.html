@@ -237,6 +237,11 @@
       <section class="admin-panel" id="tab-knowledge">
         <h2>Knowledge base and source files</h2>
         <p class="admin-muted">Track books, course notes, revision guides and visual references separately from MCQ banks. Published resources appear in the student Study Library. Add an optional class list and learner-facing description; leave classes blank to make a resource available to every class. Only publish after the file is committed at its exact path and redistribution rights are confirmed.</p>
+        <div class="admin-content" style="margin:14px 0;padding:14px;border:1px solid var(--c10-line);border-radius:14px">
+          <h3 style="margin-top:0">Study Library · Admin preview</h3>
+          <p class="admin-muted">Preview the published student-facing revision board and learning resources for any supported class. This opens a read-only preview.</p>
+          <div class="admin-actions"><label class="admin-field">Preview class <select id="studyLibraryPreviewClass"><option value="3">Class 3</option><option value="6">Class 6</option><option value="10" selected>Class 10</option></select></label><a class="admin-btn" id="openStudyLibraryPreview" href="./study.html?classId=10">Open Study Library preview ↗</a></div>
+        </div>
         <div class="admin-notice"><strong>Public-repository warning:</strong> a PDF or image committed to this repository will be publicly downloadable. Only publish resources you own or are permitted to redistribute. Do not put private student data here.</div>
         <div class="admin-form-grid">
           <div class="admin-field full"><label for="resourceFile">Select resource file</label><input class="admin-file" type="file" id="resourceFile" accept=".pdf,application/pdf,image/png,image/jpeg,image/webp,.txt,.md,.json"></div>
@@ -446,6 +451,7 @@
 <script src="./js/session-model.js"></script>
 <script src="./js/profile-model.js"></script>
 <script src="./js/admin-manager.js"></script>
+<script>(()=>{const s=document.getElementById("studyLibraryPreviewClass"),a=document.getElementById("openStudyLibraryPreview");if(!s||!a)return;const sync=()=>{a.href="./study.html?classId="+encodeURIComponent(s.value);};s.addEventListener("change",sync);sync();})();</script>
 <script src="./js/cbse-mcq-review.js?v=20261115-cbse-review-v1"></script>
 <script src="./js/exam-paper-generator.js?v=20261106-math-competency-alignment-v3"></script>
 <script src="./js/exam-paper-renderer.js"></script>
