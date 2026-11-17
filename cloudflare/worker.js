@@ -297,13 +297,16 @@ async function v2CreateInvitation(request,env,who) {
   const target=await env.DB.prepare("SELECT id FROM users WHERE id=? AND enabled=1").bind(targetUserId).first();
   if(!institution||!target||!allowedRoles.has(role))return fail(request,env,400,"Select an active institution, an existing enabled account and a supported membership role.");
   let branchIds=Array.isArray(body.branchIds)?[...new Set(body.branchIds.map(String))]:[];
+  const allBranches=body.allBranches===true;
+  if(allBranches&&role!=="school_admin")return fail(request,env,400,"All-branch scope is reserved for School Admin memberships.");
+  if(allBranches&&branchIds.length)return fail(request,env,400,"Choose all branches or specific branches, not both.");
   if(branchIds.length>100||branchIds.some(id=>!/^[A-Za-z0-9_-]{1,80}$/.test(id)))return fail(request,env,400,"Invalid branch scope.");
   for(const id of branchIds){const branch=await env.DB.prepare("SELECT branch_id FROM branches WHERE branch_id=? AND institution_id=? AND status='active'").bind(id,institutionId).first();if(!branch)return fail(request,env,400,"Every invited branch must be active and belong to the selected institution.");}
   const existing=await env.DB.prepare("SELECT membership_id FROM institution_memberships WHERE user_id=? AND institution_id=? AND role=? AND status IN ('active','invited')").bind(targetUserId,institutionId,role).first();
   if(existing)return fail(request,env,409,"This account already has an active or invited membership for that role.");
   const token=randomToken(32),now=isoNow(),expires=new Date(Date.now()+7*86400000).toISOString(),invitationId=uid();
-  await env.DB.prepare("INSERT INTO membership_invitations(invitation_id,token_hash,institution_id,target_user_id,role,branch_ids_json,invited_by_user_id,status,expires_at,created_at,updated_at) VALUES(?,?,?,?,?,?,?,'pending',?,?,?)")
-    .bind(invitationId,await sha256(token),institutionId,targetUserId,role,JSON.stringify(branchIds),who.user_id,expires,now,now).run();
+  await env.DB.prepare("INSERT INTO membership_invitations(invitation_id,token_hash,institution_id,target_user_id,role,branch_ids_json,all_branches,invited_by_user_id,status,expires_at,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,'pending',?,?,?)")
+    .bind(invitationId,await sha256(token),institutionId,targetUserId,role,JSON.stringify(branchIds),allBranches?1:0,who.user_id,expires,now,now).run();
   await writeAudit(env,who.user_id,"membership-invitation-created",invitationId,{institutionId,targetUserId,role,branchCount:branchIds.length});
   return json(request,env,{ok:true,invitation:{invitationId,institutionId,targetUserId,role,branchIds,expiresAt:expires},acceptanceToken:token},201);
 }
@@ -318,8 +321,8 @@ async function v2AcceptInvitation(request,env,who) {
   if(!institution||institution.status!=="active")return fail(request,env,403,"The institution is not currently active.");
   const membershipId=uid(),branchIds=JSON.parse(invite.branch_ids_json||"[]");
   try{
-    await env.DB.prepare("INSERT INTO institution_memberships(membership_id,user_id,institution_id,role,status,all_branches,created_by,created_at,updated_at) VALUES(?,?,?,?,'active',0,?,?,?)")
-      .bind(membershipId,who.user_id,invite.institution_id,invite.role,invite.invited_by_user_id,now,now).run();
+    await env.DB.prepare("INSERT INTO institution_memberships(membership_id,user_id,institution_id,role,status,all_branches,created_by,created_at,updated_at) VALUES(?,?,?,?,'active',?,?,?,?)")
+      .bind(membershipId,who.user_id,invite.institution_id,invite.role,Number(invite.all_branches)===1?1:0,invite.invited_by_user_id,now,now).run();
     for(const branchId of branchIds)await env.DB.prepare("INSERT INTO membership_branch_scopes(membership_id,institution_id,branch_id,created_at) VALUES(?,?,?,?)").bind(membershipId,invite.institution_id,branchId,now).run();
     const result=await env.DB.prepare("UPDATE membership_invitations SET status='accepted',accepted_at=?,accepted_membership_id=?,updated_at=? WHERE invitation_id=? AND status='pending' AND expires_at>?").bind(now,membershipId,now,invite.invitation_id,now).run();
     if(Number(result.meta?.changes||0)!==1)throw new Error("Invitation was already consumed.");
