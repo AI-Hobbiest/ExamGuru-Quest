@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "visual-revision-manifest",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "boards": [
     {
       "classId": "6",
@@ -171,8 +171,8 @@
               "id": "c10-math-01-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Real Numbers”?",
-              "answer": "Use prime factorisation to understand HCF and LCM. The Fundamental Theorem of Arithmetic says every composite integer has a unique prime factorisation, apart from order.",
+              "question": "How does prime factorisation help find the HCF and LCM of two numbers?",
+              "answer": "Write each number as a product of primes. For the HCF take the smallest common powers; for the LCM take the greatest powers of every prime present.",
               "tags": [
                 "active recall"
               ]
@@ -208,8 +208,8 @@
               "id": "c10-math-02-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Polynomials”?",
-              "answer": "A polynomial is an algebraic expression in which the powers of the variable are non-negative integers. Its zeroes are the values that make it equal to zero.",
+              "question": "For a quadratic polynomial ax² + bx + c, what do the sum and product of its zeroes equal?",
+              "answer": "Sum = −b/a and product = c/a, where a is non-zero.",
               "tags": [
                 "active recall"
               ]
@@ -245,8 +245,8 @@
               "id": "c10-math-03-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Pair of Linear Equations in Two Variables”?",
-              "answer": "A pair of linear equations represents two straight lines. Their intersection gives the common solution; parallel or coincident lines explain the other cases.",
+              "question": "What do the coefficient ratios tell you about a pair of linear equations?",
+              "answer": "For a₁x+b₁y+c₁=0 and a₂x+b₂y+c₂=0: a₁/a₂ ≠ b₁/b₂ gives a unique solution; if a₁/a₂=b₁/b₂≠c₁/c₂ there is no solution; if all three ratios are equal there are infinitely many solutions.",
               "tags": [
                 "active recall"
               ]
@@ -282,8 +282,8 @@
               "id": "c10-math-04-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Quadratic Equations”?",
-              "answer": "A quadratic equation has the form ax²+bx+c=0, where a≠0. Its roots can be found by factorisation, completing the square or the quadratic formula.",
+              "question": "How does the discriminant predict the roots of ax²+bx+c=0?",
+              "answer": "For D=b²−4ac: D>0 gives two distinct real roots, D=0 gives equal real roots, and D<0 gives no real roots.",
               "tags": [
                 "active recall"
               ]
@@ -319,8 +319,8 @@
               "id": "c10-math-05-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Arithmetic Progressions”?",
-              "answer": "An arithmetic progression has a constant common difference between consecutive terms. The nth term and sum depend on the first term and common difference.",
+              "question": "What is the nth term of an AP, and what does d represent?",
+              "answer": "aₙ=a+(n−1)d; a is the first term and d is the common difference.",
               "tags": [
                 "active recall"
               ]
@@ -356,8 +356,8 @@
               "id": "c10-math-06-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Triangles”?",
-              "answer": "Similarity means corresponding angles are equal and corresponding sides are proportional. Similar triangles have the same shape but may differ in size.",
+              "question": "State the Basic Proportionality Theorem (Thales theorem) for a triangle.",
+              "answer": "A line drawn parallel to one side of a triangle divides the other two sides in the same ratio.",
               "tags": [
                 "active recall"
               ]
@@ -393,8 +393,8 @@
               "id": "c10-math-07-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Coordinate Geometry”?",
-              "answer": "Coordinate geometry connects algebra and geometry using ordered pairs. Distance, section and area formulas help describe points and figures on the plane.",
+              "question": "How do you find the distance between (x₁,y₁) and (x₂,y₂)?",
+              "answer": "Use √[(x₂−x₁)²+(y₂−y₁)²]. Keep the coordinate differences inside brackets, especially when negatives occur.",
               "tags": [
                 "active recall"
               ]
@@ -430,8 +430,8 @@
               "id": "c10-math-08-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Introduction to Trigonometry”?",
-              "answer": "Trigonometric ratios relate an acute angle in a right triangle to its sides: sine, cosine and tangent, with reciprocal ratios cosec, sec and cot.",
+              "question": "In a right triangle, what are sin θ, cos θ and tan θ?",
+              "answer": "sin θ = opposite/hypotenuse; cos θ = adjacent/hypotenuse; tan θ = opposite/adjacent.",
               "tags": [
                 "active recall"
               ]
@@ -467,8 +467,8 @@
               "id": "c10-math-09-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Some Applications of Trigonometry”?",
-              "answer": "Heights and distances problems use angles of elevation and depression with right-triangle trigonometry.",
+              "question": "What is the difference between an angle of elevation and an angle of depression?",
+              "answer": "Elevation is measured upward from the horizontal to an object; depression is measured downward from the horizontal to an object.",
               "tags": [
                 "active recall"
               ]
@@ -504,8 +504,8 @@
               "id": "c10-math-10-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Circles”?",
-              "answer": "A tangent touches a circle at exactly one point. The radius drawn to the point of contact is perpendicular to the tangent.",
+              "question": "What is the relationship between a tangent and the radius at the point of contact?",
+              "answer": "The tangent is perpendicular to the radius drawn to the point of contact. Tangents from the same external point are equal in length.",
               "tags": [
                 "active recall"
               ]
@@ -541,8 +541,8 @@
               "id": "c10-math-11-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Areas Related to Circles”?",
-              "answer": "Sector and segment areas are fractions of the full circle based on the central angle. Arc length is the corresponding fraction of circumference.",
+              "question": "How is the area of a sector with central angle θ calculated (θ in degrees)?",
+              "answer": "Sector area = (θ/360°) × πr². The corresponding arc length is (θ/360°) × 2πr.",
               "tags": [
                 "active recall"
               ]
@@ -578,8 +578,8 @@
               "id": "c10-math-12-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Surface Areas and Volumes”?",
-              "answer": "Mensuration combines surface area and volume formulas for solids such as cylinders, cones, spheres and combinations of solids.",
+              "question": "What is the volume of a cone, and how does it compare with a cylinder of the same base and height?",
+              "answer": "Cone volume = (1/3)πr²h; it is one-third of the volume of a cylinder with the same base radius and height.",
               "tags": [
                 "active recall"
               ]
@@ -615,8 +615,8 @@
               "id": "c10-math-13-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Statistics”?",
-              "answer": "Grouped data can be summarised using mean, median and mode. The median depends on cumulative frequency and the median class.",
+              "question": "Which quantities are needed in the grouped-data median formula?",
+              "answer": "Median = l + [(N/2 − cf)/f] × h, where l is the lower boundary of the median class, cf the cumulative frequency before it, f its frequency and h the class width.",
               "tags": [
                 "active recall"
               ]
@@ -652,8 +652,8 @@
               "id": "c10-math-14-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Probability”?",
-              "answer": "For equally likely outcomes, probability is favourable outcomes divided by total possible outcomes. Probability lies between 0 and 1.",
+              "question": "What is the probability of an event, and what are its limits?",
+              "answer": "For equally likely outcomes, P(E)=number of favourable outcomes/total outcomes; 0≤P(E)≤1.",
               "tags": [
                 "active recall"
               ]
@@ -697,8 +697,8 @@
               "id": "c10-sci-01-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Chemical Reactions and Equations”?",
-              "answer": "A chemical reaction rearranges atoms to form new substances. A balanced equation has the same number of each type of atom on both sides, obeying conservation of mass.",
+              "question": "Why must a chemical equation be balanced?",
+              "answer": "It must show the same number of atoms of each element on both sides, reflecting conservation of mass. Change coefficients, never subscripts, when balancing.",
               "tags": [
                 "active recall"
               ]
@@ -734,8 +734,8 @@
               "id": "c10-sci-02-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Acids, Bases and Salts”?",
-              "answer": "Acids produce H⁺/H₃O⁺ ions in aqueous solution; bases produce OH⁻ ions. Neutralisation forms salt and water.",
+              "question": "What does the pH scale indicate, and how do acids and bases compare?",
+              "answer": "pH below 7 is acidic, 7 is neutral and above 7 is basic. In aqueous solution acids furnish H⁺/H₃O⁺ ions and bases furnish OH⁻ ions.",
               "tags": [
                 "active recall"
               ]
@@ -771,8 +771,8 @@
               "id": "c10-sci-03-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Metals and Non-metals”?",
-              "answer": "Metals generally lose electrons to form cations; non-metals generally gain or share electrons. Reactivity determines displacement and extraction methods.",
+              "question": "Why can ionic compounds conduct electricity when molten or dissolved but not as solids?",
+              "answer": "In solids, ions are fixed in a lattice. When molten or dissolved, ions are free to move and carry electric charge.",
               "tags": [
                 "active recall"
               ]
@@ -808,8 +808,8 @@
               "id": "c10-sci-04-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Carbon and its Compounds”?",
-              "answer": "Carbon forms covalent bonds and long chains because of tetravalency and catenation. Saturated compounds have single bonds; unsaturated compounds contain double or triple bonds.",
+              "question": "What are catenation and tetravalency, and why are they important for carbon?",
+              "answer": "Catenation is carbon's ability to bond with itself to form chains/rings; tetravalency means it forms four covalent bonds. Together they allow a huge variety of compounds.",
               "tags": [
                 "active recall"
               ]
@@ -830,7 +830,8 @@
               "highlight": "18 groups · 7 periods",
               "tags": [
                 "quick reference"
-              ]
+              ],
+              "note": "2026–27 CBSE scope: formative/portfolio learning only; not assessed in the year-end examination."
             },
             {
               "id": "c10-sci-05-02",
@@ -845,8 +846,8 @@
               "id": "c10-sci-05-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Periodic Classification of Elements”?",
-              "answer": "The modern periodic table arranges elements by increasing atomic number. Elements in a group share valence-electron patterns; periods indicate occupied shells.",
+              "question": "What determines an element's position in the modern periodic table?",
+              "answer": "Increasing atomic number determines the order. Elements in a group have similar valence-electron configurations and often similar chemical properties.",
               "tags": [
                 "active recall"
               ]
@@ -882,8 +883,8 @@
               "id": "c10-sci-06-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Life Processes”?",
-              "answer": "Living organisms maintain themselves through nutrition, respiration, transport and excretion. These processes exchange matter and energy with the environment.",
+              "question": "Name the four basic life processes that maintain an organism.",
+              "answer": "Nutrition, respiration, transportation and excretion.",
               "tags": [
                 "active recall"
               ]
@@ -919,8 +920,8 @@
               "id": "c10-sci-07-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Control and Coordination”?",
-              "answer": "Nervous and hormonal systems coordinate responses. Neurons transmit impulses; hormones act as chemical messengers through target organs.",
+              "question": "How does a reflex action differ from a voluntary action?",
+              "answer": "A reflex is a rapid, automatic response often coordinated through the spinal cord; a voluntary action is consciously initiated and controlled by the brain.",
               "tags": [
                 "active recall"
               ]
@@ -956,8 +957,8 @@
               "id": "c10-sci-08-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “How do Organisms Reproduce?”?",
-              "answer": "Reproduction produces new individuals. Asexual reproduction uses one parent; sexual reproduction involves gametes and fertilisation, generating variation.",
+              "question": "What is the key difference between asexual and sexual reproduction?",
+              "answer": "Asexual reproduction involves one parent and no fusion of gametes; sexual reproduction involves male and female gametes and fertilisation.",
               "tags": [
                 "active recall"
               ]
@@ -967,24 +968,25 @@
         {
           "chapterNo": 9,
           "chapterKey": "heredity-and-evolution",
-          "title": "Heredity and Evolution",
+          "title": "Heredity (Evolution – formative enrichment)",
           "subtitle": "Quick recall · key ideas · exam focus",
           "cards": [
             {
               "id": "c10-sci-09-01",
               "type": "concept",
               "title": "Core idea",
-              "content": "Heredity passes traits through genes carried on chromosomes. Variations arise through changes and recombination; natural selection can change trait frequencies over generations.",
-              "highlight": "Genes → inherited traits; variation fuels evolution",
+              "content": "Heredity is the transmission of traits from parents to offspring through genes. Mendel's experiments explain inheritance patterns, including dominant and recessive traits; sex determination is also introduced.",
+              "highlight": "Genes carry inherited information",
               "tags": [
                 "quick reference"
-              ]
+              ],
+              "note": "Evolution topics in the 2026–27 reading material are formative enrichment and are not assessed in the year-end examination."
             },
             {
               "id": "c10-sci-09-02",
               "type": "exam-alert",
               "title": "Exam focus",
-              "content": "Separate inherited traits from acquired traits. Evolution describes population change over generations, not a ladder of progress.",
+              "content": "Focus on Mendel's contribution, laws/patterns of inheritance and the brief introduction to sex determination. Treat evolution subtopics as formative enrichment.",
               "tags": [
                 "exam focus"
               ]
@@ -993,8 +995,8 @@
               "id": "c10-sci-09-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Heredity and Evolution”?",
-              "answer": "Heredity passes traits through genes carried on chromosomes. Variations arise through changes and recombination; natural selection can change trait frequencies over generations.",
+              "question": "What did Mendel's experiments establish about inheritance?",
+              "answer": "Traits are passed through discrete factors (now called genes); alternative forms can show dominant and recessive patterns. The 2026–27 year-end focus is heredity; evolution topics are formative enrichment.",
               "tags": [
                 "active recall"
               ]
@@ -1030,8 +1032,8 @@
               "id": "c10-sci-10-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Light: Reflection and Refraction”?",
-              "answer": "Reflection changes the direction of light at a surface; refraction occurs when light changes speed between media. Spherical mirrors and lenses form images.",
+              "question": "State the mirror formula and the lens formula used in Class 10 ray optics.",
+              "answer": "Using the Cartesian sign convention: 1/f = 1/v + 1/u for spherical mirrors and thin lenses. Apply the correct sign to u, v and f.",
               "tags": [
                 "active recall"
               ]
@@ -1067,8 +1069,8 @@
               "id": "c10-sci-11-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “The Human Eye and the Colourful World”?",
-              "answer": "The eye focuses light on the retina. Accommodation changes lens curvature; scattering and refraction explain several atmospheric optical effects.",
+              "question": "Which lenses correct myopia and hypermetropia?",
+              "answer": "Myopia (distant objects appear blurred) is corrected by a concave lens; hypermetropia (near objects appear blurred) is corrected by a convex lens.",
               "tags": [
                 "active recall"
               ]
@@ -1104,8 +1106,8 @@
               "id": "c10-sci-12-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Electricity”?",
-              "answer": "Electric current is the rate of flow of charge. Potential difference drives current; resistance opposes it. Series and parallel combinations behave differently.",
+              "question": "How are current, potential difference and resistance related?",
+              "answer": "Ohm's law: V=IR. Current is charge per unit time; potential difference is work per unit charge; resistance is the opposition to current.",
               "tags": [
                 "active recall"
               ]
@@ -1132,17 +1134,18 @@
               "id": "c10-sci-13-02",
               "type": "exam-alert",
               "title": "Exam focus",
-              "content": "Use Fleming’s left-hand rule for motor force and right-hand rule for induced current. A split-ring commutator reverses coil current each half-turn.",
+              "content": "Revise magnetic fields around conductors and solenoids, force on a current-carrying conductor, Fleming's left-hand rule, direct and alternating current, frequency and domestic circuits.",
               "tags": [
                 "exam focus"
-              ]
+              ],
+              "note": "Motor, electromagnetic induction and electric generator are formative-only topics in the 2026–27 year-end scope."
             },
             {
               "id": "c10-sci-13-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Magnetic Effects of Electric Current”?",
-              "answer": "A current-carrying conductor produces a magnetic field. Motors convert electrical energy to mechanical energy; electromagnetic induction produces current from changing magnetic flux.",
+              "question": "Which rule gives the direction of force on a current-carrying conductor in a magnetic field?",
+              "answer": "Fleming's left-hand rule. The thumb, forefinger and middle finger of the left hand are held mutually perpendicular for force, field and current respectively.",
               "tags": [
                 "active recall"
               ]
@@ -1178,8 +1181,8 @@
               "id": "c10-sci-14-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Our Environment”?",
-              "answer": "Ecosystems contain producers, consumers and decomposers. Energy flows through trophic levels while materials are recycled.",
+              "question": "Why does energy decrease at successive trophic levels?",
+              "answer": "Only a small fraction (about 10%) of energy is transferred to the next trophic level; most is used in life processes or lost as heat.",
               "tags": [
                 "active recall"
               ]
@@ -1223,8 +1226,8 @@
               "id": "c10-sst-01-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “The Rise of Nationalism in Europe”?",
-              "answer": "The French Revolution popularised citizenship and the nation as a source of sovereignty. Liberalism, cultural movements and political struggles shaped nineteenth-century nationalism.",
+              "question": "What did the French Revolution contribute to the growth of nationalism in Europe?",
+              "answer": "It promoted ideas of citizenship, popular sovereignty and the nation as a community of citizens, challenging dynastic rule and privilege.",
               "tags": [
                 "active recall"
               ]
@@ -1251,7 +1254,7 @@
               "id": "c10-sst-02-02",
               "type": "exam-alert",
               "title": "Exam focus",
-              "content": "Keep the chronology clear: Rowlatt Act, Jallianwala Bagh, Non-Cooperation, Civil Disobedience and Quit India; note participation and limits across groups.",
+              "content": "Keep the sequence clear: Rowlatt Act and Jallianwala Bagh, Khilafat and Non-Cooperation, then Civil Disobedience and the Salt March. Track how different groups participated and where their aims differed.",
               "tags": [
                 "exam focus"
               ]
@@ -1260,8 +1263,8 @@
               "id": "c10-sst-02-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Nationalism in India”?",
-              "answer": "Indian nationalism grew through anti-colonial movements, mass mobilisation and shared symbols. Gandhi linked local grievances to broader satyagraha campaigns.",
+              "question": "Which major movements followed the Rowlatt Act and Jallianwala Bagh, and what was the key later mass campaign?",
+              "answer": "The Khilafat and Non-Cooperation movements followed; later Gandhi launched the Civil Disobedience Movement with the Salt March. Do not confuse this chapter's timeline with the 1942 Quit India Movement.",
               "tags": [
                 "active recall"
               ]
@@ -1278,8 +1281,8 @@
               "id": "c10-sst-03-01",
               "type": "concept",
               "title": "Core idea",
-              "content": "Globalisation has a long history shaped by trade, migration, conquest, labour and capital flows. The nineteenth century connected economies in new ways.",
-              "highlight": "Global links pre-date modern globalisation",
+              "content": "The board-exam portion covers the pre-modern world: long-distance trade routes, the movement of food and crops, and how conquest, disease and trade connected and transformed societies.",
+              "highlight": "Board exam scope: subtopics 1–1.3",
               "tags": [
                 "quick reference"
               ]
@@ -1288,17 +1291,18 @@
               "id": "c10-sst-03-02",
               "type": "exam-alert",
               "title": "Exam focus",
-              "content": "Use examples such as silk routes, indentured labour, colonial trade and the Great Depression to explain global interdependence.",
+              "content": "Revise the Silk Routes, food travels (such as potatoes and other crops), and the effects of conquest, disease and trade. Later sections are for the interdisciplinary project, not the board theory paper.",
               "tags": [
                 "exam focus"
-              ]
+              ],
+              "note": "Project-only scope: subtopics 2–4.4 (nineteenth century to post-war globalisation)."
             },
             {
               "id": "c10-sst-03-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “The Making of a Global World”?",
-              "answer": "Globalisation has a long history shaped by trade, migration, conquest, labour and capital flows. The nineteenth century connected economies in new ways.",
+              "question": "For the board-exam portion (subtopics 1–1.3), name two examples of pre-modern global connections.",
+              "answer": "The Silk Routes linked regions through trade and cultural exchange; food crops travelled across continents, while conquest, disease and trade reshaped societies.",
               "tags": [
                 "active recall"
               ]
@@ -1334,8 +1338,8 @@
               "id": "c10-sst-04-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Print Culture and the Modern World”?",
-              "answer": "Printing transformed the circulation of ideas, literacy, religious debate and political discussion. Print culture developed differently across societies.",
+              "question": "How did print culture change the circulation of ideas?",
+              "answer": "Printing made texts more reproducible and accessible, expanded reading publics and stimulated religious reform, debate and political discussion.",
               "tags": [
                 "active recall"
               ]
@@ -1371,8 +1375,8 @@
               "id": "c10-sst-05-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Resources and Development”?",
-              "answer": "Resources become useful through technology, institutions and human effort. Sustainable development balances present needs with future generations.",
+              "question": "Why is resource planning important in India?",
+              "answer": "Resources are unevenly distributed and can be depleted or degraded. Planning helps match technology, institutions and skills to judicious, sustainable use.",
               "tags": [
                 "active recall"
               ]
@@ -1408,8 +1412,8 @@
               "id": "c10-sst-06-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Forest and Wildlife Resources”?",
-              "answer": "Biodiversity supports ecological balance and livelihoods. Habitat loss, hunting and development pressures threaten species and forest ecosystems.",
+              "question": "Why is biodiversity conservation important?",
+              "answer": "Biodiversity maintains ecological balance and supports livelihoods; conservation protects habitats, species and ecosystem services for future generations.",
               "tags": [
                 "active recall"
               ]
@@ -1445,8 +1449,8 @@
               "id": "c10-sst-07-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Water Resources”?",
-              "answer": "Freshwater is limited and unevenly distributed. Multipurpose river projects support irrigation and power but can also cause social and ecological impacts.",
+              "question": "Give one benefit and one concern associated with multipurpose river projects.",
+              "answer": "They can provide irrigation, hydroelectricity and flood control; they can also displace communities and disrupt river ecosystems.",
               "tags": [
                 "active recall"
               ]
@@ -1482,8 +1486,8 @@
               "id": "c10-sst-08-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Agriculture”?",
-              "answer": "Agriculture depends on climate, soil, technology, labour and markets. Cropping seasons and farming types vary across India.",
+              "question": "How do Kharif and Rabi cropping seasons differ?",
+              "answer": "Kharif crops are generally sown with the monsoon and harvested in autumn; Rabi crops are sown in winter and harvested in spring.",
               "tags": [
                 "active recall"
               ]
@@ -1519,8 +1523,8 @@
               "id": "c10-sst-09-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Minerals and Energy Resources”?",
-              "answer": "Minerals occur in different geological formations and are essential for industry. Energy resources are renewable or non-renewable.",
+              "question": "Why should minerals and energy resources be used carefully?",
+              "answer": "Many are finite and take geological time to form; conservation, efficient use and suitable renewable alternatives support long-term development.",
               "tags": [
                 "active recall"
               ]
@@ -1556,8 +1560,8 @@
               "id": "c10-sst-10-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Manufacturing Industries”?",
-              "answer": "Manufacturing adds value to raw materials and supports employment, trade and economic development. Industrial location depends on several factors.",
+              "question": "Name two major factors that influence the location of an industry.",
+              "answer": "Access to raw materials, power, labour, capital, transport, markets and supporting infrastructure influence industrial location.",
               "tags": [
                 "active recall"
               ]
@@ -1593,8 +1597,8 @@
               "id": "c10-sst-11-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Power Sharing”?",
-              "answer": "Power sharing reduces conflict and strengthens democracy by distributing authority among organs, levels and social groups.",
+              "question": "Why is power sharing desirable in a democracy?",
+              "answer": "It reduces the possibility of social conflict and ensures political stability; it is also valuable because people have a right to be consulted in how they are governed.",
               "tags": [
                 "active recall"
               ]
@@ -1630,8 +1634,8 @@
               "id": "c10-sst-12-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Federalism”?",
-              "answer": "Federalism divides power between levels of government, with constitutionally protected jurisdictions. India combines a strong Union with state and local governments.",
+              "question": "What makes a government system federal?",
+              "answer": "Power is constitutionally divided between at least two levels of government, and each level has its own jurisdiction that the other cannot unilaterally change.",
               "tags": [
                 "active recall"
               ]
@@ -1667,8 +1671,8 @@
               "id": "c10-sst-13-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Gender, Religion and Caste”?",
-              "answer": "Social divisions shape political life. Democracy requires equal citizenship and safeguards against discrimination and domination.",
+              "question": "When can social differences become a threat to democracy?",
+              "answer": "When they are used to create hierarchy, exclusion or domination; democratic politics should protect equal citizenship and allow differences to be expressed without discrimination.",
               "tags": [
                 "active recall"
               ]
@@ -1704,8 +1708,8 @@
               "id": "c10-sst-14-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Political Parties”?",
-              "answer": "Political parties contest elections, form governments, shape policies and connect citizens with institutions. They are essential to representative democracy.",
+              "question": "State three important functions of political parties.",
+              "answer": "They contest elections, form and run governments, and shape public policy; they also represent interests and connect citizens with institutions.",
               "tags": [
                 "active recall"
               ]
@@ -1741,8 +1745,8 @@
               "id": "c10-sst-15-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Outcomes of Democracy”?",
-              "answer": "Democracy is evaluated through accountable government, responsive decision-making, legitimacy, economic outcomes and social equality.",
+              "question": "Name two ways to assess the outcomes of democracy.",
+              "answer": "Assess whether government is accountable, responsive and legitimate, and whether democracy protects equality, dignity and freedom; economic equality is not automatic.",
               "tags": [
                 "active recall"
               ]
@@ -1778,8 +1782,8 @@
               "id": "c10-sst-16-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Development”?",
-              "answer": "Development has different goals for different people. Income matters, but health, education, security, freedom and sustainability also matter.",
+              "question": "Why is per capita income not enough to measure development?",
+              "answer": "It is an average and hides inequality; health, education, security, freedom, public facilities and sustainability also matter.",
               "tags": [
                 "active recall"
               ]
@@ -1815,8 +1819,8 @@
               "id": "c10-sst-17-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Sectors of the Indian Economy”?",
-              "answer": "Economic activities are grouped into primary, secondary and tertiary sectors. Employment and output shares can differ across sectors.",
+              "question": "How are the primary, secondary and tertiary sectors distinguished?",
+              "answer": "Primary activities obtain natural products; secondary activities manufacture or process them; tertiary activities provide services.",
               "tags": [
                 "active recall"
               ]
@@ -1852,8 +1856,8 @@
               "id": "c10-sst-18-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Money and Credit”?",
-              "answer": "Money acts as a medium of exchange and removes the need for double coincidence of wants. Credit can support activity but may create debt traps.",
+              "question": "How does money solve the problem of double coincidence of wants?",
+              "answer": "Money acts as a commonly accepted medium of exchange, so each person can sell and buy without needing to find someone who wants exactly what they offer.",
               "tags": [
                 "active recall"
               ]
@@ -1870,8 +1874,8 @@
               "id": "c10-sst-19-01",
               "type": "concept",
               "title": "Core idea",
-              "content": "Globalisation integrates markets through trade, investment, technology and multinational production. Its effects differ among workers, producers and consumers.",
-              "highlight": "MNCs organise production across countries",
+              "content": "Globalisation is the growing integration of economies through cross-border trade and investment, supported by technology and policy changes.",
+              "highlight": "Board exam scope: What is globalisation?",
               "tags": [
                 "quick reference"
               ]
@@ -1880,19 +1884,71 @@
               "id": "c10-sst-19-02",
               "type": "exam-alert",
               "title": "Exam focus",
-              "content": "Explain MNCs, foreign investment, liberalisation and WTO; weigh benefits against unequal gains and labour insecurity.",
+              "content": "Explain globalisation and the factors that enabled it, especially improvements in technology and liberalisation of trade and investment. Production across countries, WTO and fair globalisation are interdisciplinary-project topics.",
               "tags": [
                 "exam focus"
-              ]
+              ],
+              "note": "Project topics are not part of the listed board-theory subtopics."
             },
             {
               "id": "c10-sst-19-03",
               "type": "recall",
               "title": "Quick self-check",
-              "question": "What is the key idea to remember from “Globalisation and the Indian Economy”?",
-              "answer": "Globalisation integrates markets through trade, investment, technology and multinational production. Its effects differ among workers, producers and consumers.",
+              "question": "What is globalisation, and name two factors that have enabled it?",
+              "answer": "Globalisation is the integration of production and markets across countries. Improved technology and liberalisation of trade and investment policies have enabled it.",
               "tags": [
                 "active recall"
+              ]
+            }
+          ]
+        },
+        {
+          "chapterNo": 20,
+          "chapterKey": "lifelines-of-national-economy",
+          "title": "Lifelines of National Economy (Map Work)",
+          "subtitle": "Map identification and location practice · map-only board assessment",
+          "cards": [
+            {
+              "id": "c10-sst-20-01",
+              "type": "concept",
+              "title": "What to locate",
+              "content": "For the 2026–27 board examination, this Geography chapter is assessed through map pointing only. Practise identifying major sea ports and international airports as listed in the official map-work syllabus.",
+              "highlight": "Map work only · no theory chapter assessment",
+              "tags": [
+                "geography",
+                "map work",
+                "board scope"
+              ]
+            },
+            {
+              "id": "c10-sst-20-02",
+              "type": "fact",
+              "title": "Map-work checklist",
+              "facts": [
+                [
+                  "Transport",
+                  "Major sea ports and international airports"
+                ],
+                [
+                  "Preparation",
+                  "Locate, label and identify each prescribed point on an outline map"
+                ]
+              ],
+              "note": "Use the exact current CBSE map-work list supplied by the school.",
+              "tags": [
+                "map practice",
+                "revision"
+              ]
+            },
+            {
+              "id": "c10-sst-20-03",
+              "type": "recall",
+              "title": "Quick self-check",
+              "question": "How is Lifelines of National Economy assessed in the 2026–27 board examination?",
+              "answer": "Only map pointing is assessed. Practise the prescribed major sea ports and international airports; check the current CBSE map-work list for the exact locations.",
+              "tags": [
+                "active recall",
+                "map work"
               ]
             }
           ]
@@ -3053,7 +3109,7 @@
             {
               "id": "c10-hia-01-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "कैप्टन की देशभक्ति और मूर्ति पर चश्मा लगाने के प्रसंग का अर्थ स्पष्ट करें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3064,7 +3120,7 @@
             {
               "id": "c10-hia-01-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "कहानी में चश्मा किसका प्रतीक है?",
               "answer": "चश्मा नेताजी के प्रति सम्मान, देशभक्ति और आदर्शों को जीवित रखने का प्रतीक है।",
               "tags": [
@@ -3093,7 +3149,7 @@
             {
               "id": "c10-hia-02-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "उनके व्यवहार में कबीरपंथी विचार और सामाजिक रूढ़ियों से अलग दृष्टि पहचानें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3104,7 +3160,7 @@
             {
               "id": "c10-hia-02-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "बालगोबिन भगत की जीवन-दृष्टि कैसी थी?",
               "answer": "वे सरल, श्रमशील, भक्तिमय और रूढ़ियों से मुक्त जीवन जीते थे।",
               "tags": [
@@ -3133,7 +3189,7 @@
             {
               "id": "c10-hia-03-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "लेखक की भाषा, संवाद और खीरे के प्रसंग से हास्य कैसे बनता है, समझें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3144,7 +3200,7 @@
             {
               "id": "c10-hia-03-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "लेखक किस प्रवृत्ति पर व्यंग्य करते हैं?",
               "answer": "बनावटी शिष्टाचार, दिखावे और वास्तविकता से अधिक छवि को महत्व देने की प्रवृत्ति पर।",
               "tags": [
@@ -3173,7 +3229,7 @@
             {
               "id": "c10-hia-04-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "पिता के व्यक्तित्व और लेखिका की स्वतंत्र पहचान के बीच तनाव को समझें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3184,7 +3240,7 @@
             {
               "id": "c10-hia-04-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "लेखिका अपने व्यक्तित्व के निर्माण में किन प्रभावों को याद करती हैं?",
               "answer": "पारिवारिक वातावरण, पिता का प्रभाव, शिक्षा और अपने अनुभव उनके व्यक्तित्व को आकार देते हैं।",
               "tags": [
@@ -3213,7 +3269,7 @@
             {
               "id": "c10-hia-05-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "शहनाई, बनारस और गंगा-जमुनी संस्कृति के प्रतीकात्मक महत्व को जोड़ें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3224,7 +3280,7 @@
             {
               "id": "c10-hia-05-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "बिस्मिल्ला खाँ किस मूल्य के प्रतीक हैं?",
               "answer": "संगीत-साधना, विनम्रता, परंपरा और सांस्कृतिक समन्वय के।",
               "tags": [
@@ -3253,7 +3309,7 @@
             {
               "id": "c10-hia-06-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "उदाहरणों से स्पष्ट करें कि तकनीकी उन्नति अपने-आप सांस्कृतिक उन्नति नहीं है।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3264,7 +3320,7 @@
             {
               "id": "c10-hia-06-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "संस्कृति किसे कहा गया है?",
               "answer": "मानव की सृजनशील, मूल्यपरक और उदात्त चेतना को संस्कृति कहा गया है।",
               "tags": [
@@ -3293,7 +3349,7 @@
             {
               "id": "c10-hia-07-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "कृष्ण की बाल-चेष्टाओं और यशोदा की प्रतिक्रिया से भाव-सौंदर्य समझें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3304,7 +3360,7 @@
             {
               "id": "c10-hia-07-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "पदों में प्रमुख रस कौन-सा है?",
               "answer": "वात्सल्य रस प्रमुख है; कृष्ण की बाल-लीलाएँ और यशोदा का स्नेह केंद्र में हैं।",
               "tags": [
@@ -3333,7 +3389,7 @@
             {
               "id": "c10-hia-08-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "संवाद के माध्यम से स्वभाव, भाषा और वीर रस के तत्व पहचानें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3344,7 +3400,7 @@
             {
               "id": "c10-hia-08-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "राम और लक्ष्मण के स्वभाव में क्या अंतर है?",
               "answer": "लक्ष्मण तीखे और व्यंग्यपूर्ण हैं; राम शांत, विनम्र और मर्यादित हैं।",
               "tags": [
@@ -3373,7 +3429,7 @@
             {
               "id": "c10-hia-09-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "कवि के संकोच और अनुभवों की गहराई को भाव के आधार पर समझें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3384,7 +3440,7 @@
             {
               "id": "c10-hia-09-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "कवि आत्मकथा कहने में संकोच क्यों करता है?",
               "answer": "व्यक्तिगत पीड़ा, स्मृतियों और जीवन की जटिलताओं को शब्दों में पूरी तरह व्यक्त करना कठिन है।",
               "tags": [
@@ -3413,7 +3469,7 @@
             {
               "id": "c10-hia-10-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "प्रकृति-चित्रण और क्रांति/नवजीवन के प्रतीकात्मक अर्थ को जोड़ें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3424,7 +3480,7 @@
             {
               "id": "c10-hia-10-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "बादल किसका प्रतीक हैं?",
               "answer": "नवजीवन, ऊर्जा, परिवर्तन और सृजनात्मक शक्ति के।",
               "tags": [
@@ -3453,7 +3509,7 @@
             {
               "id": "c10-hia-11-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "रंग, प्रकाश और दृश्य-चित्रण से उत्पन्न भाव को पहचानें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3464,7 +3520,7 @@
             {
               "id": "c10-hia-11-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "कवि के लिए प्रकृति का सौंदर्य कैसा है?",
               "answer": "इतना व्यापक और मनोहारी कि वह उसे शब्दों में समेट नहीं पाता।",
               "tags": [
@@ -3493,7 +3549,7 @@
             {
               "id": "c10-hia-12-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "कवि की दृष्टि में शिशु की मुस्कान का प्रभाव समझें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3504,7 +3560,7 @@
             {
               "id": "c10-hia-12-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "मुस्कान कवि को क्यों आकर्षित करती है?",
               "answer": "उसमें सहजता, निष्कपटता और जीवन को सुंदर बनाने वाली ऊर्जा है।",
               "tags": [
@@ -3533,7 +3589,7 @@
             {
               "id": "c10-hia-13-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "फसल के निर्माण में जल, मिट्टी, हवा, धूप और किसान के श्रम की भूमिका बताएं।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3544,7 +3600,7 @@
             {
               "id": "c10-hia-13-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "फसल किनके संयुक्त योगदान से बनती है?",
               "answer": "प्रकृति के तत्वों और किसानों/श्रमिकों के सामूहिक परिश्रम से।",
               "tags": [
@@ -3573,7 +3629,7 @@
             {
               "id": "c10-hia-14-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "मुख्य गायक और संगतकार के संबंध से श्रेय और सहयोग का प्रश्न समझें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3584,7 +3640,7 @@
             {
               "id": "c10-hia-14-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "संगतकार का योगदान क्यों महत्वपूर्ण है?",
               "answer": "वह मुख्य गायक को स्वर, लय और सहारा देता है; उसकी भूमिका प्रस्तुति को पूर्ण बनाती है।",
               "tags": [
@@ -3613,7 +3669,7 @@
             {
               "id": "c10-hia-15-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "बालक के अनुभवों में पिता, माँ और ग्रामीण परिवेश की भूमिका पहचानें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3624,7 +3680,7 @@
             {
               "id": "c10-hia-15-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "शीर्षक का प्रतीकात्मक अर्थ क्या है?",
               "answer": "माँ का आँचल सुरक्षा, ममता और संकट में मिलने वाले आश्रय का प्रतीक है।",
               "tags": [
@@ -3653,7 +3709,7 @@
             {
               "id": "c10-hia-16-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "प्रकृति-वर्णन के साथ स्थानीय लोगों के जीवन और पर्यावरणीय संवेदनशीलता को जोड़ें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3664,7 +3720,7 @@
             {
               "id": "c10-hia-16-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "यात्रा-वृत्तांत केवल दृश्य-वर्णन क्यों नहीं है?",
               "answer": "यह स्थानीय जीवन, संस्कृति, कठिनाइयों और प्रकृति के साथ मनुष्य के संबंध को भी समझाता है।",
               "tags": [
@@ -3693,7 +3749,7 @@
             {
               "id": "c10-hia-17-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "लेखक के अनुभव, संवेदना और लिखने की अनिवार्यता के संबंध को समझें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3704,7 +3760,7 @@
             {
               "id": "c10-hia-17-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "लेखक के अनुसार लिखने की प्रेरणा कहाँ से आती है?",
               "answer": "भीतर के अनुभव, संवेदना और अभिव्यक्ति की अनिवार्य आवश्यकता से।",
               "tags": [
@@ -3733,7 +3789,7 @@
             {
               "id": "c10-hia-18-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "रचना के आधार पर वाक्य के तीन भेद कौन-से हैं?",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3744,7 +3800,7 @@
             {
               "id": "c10-hia-18-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "सरल, संयुक्त और मिश्र वाक्य।",
               "answer": "क्षितिज/व्याकरण",
               "tags": [
@@ -3773,7 +3829,7 @@
             {
               "id": "c10-hia-19-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "कर्मवाच्य में किसकी प्रधानता होती है?",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3784,7 +3840,7 @@
             {
               "id": "c10-hia-19-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "कर्म की प्रधानता होती है; क्रिया का रूप कर्म के अनुसार बदलता है।",
               "answer": "व्याकरण",
               "tags": [
@@ -3813,7 +3869,7 @@
             {
               "id": "c10-hia-20-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "पद-परिचय में क्या बताया जाता है?",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3824,7 +3880,7 @@
             {
               "id": "c10-hia-20-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "शब्द-भेद और वाक्य में उसका व्याकरणिक रूप/कार्य।",
               "answer": "व्याकरण",
               "tags": [
@@ -3853,7 +3909,7 @@
             {
               "id": "c10-hia-21-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "मानवीकरण किसे कहते हैं?",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3864,7 +3920,7 @@
             {
               "id": "c10-hia-21-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "निर्जीव या अमानवीय वस्तु को मानवीय गुण या क्रिया देना।",
               "answer": "व्याकरण",
               "tags": [
@@ -3901,7 +3957,7 @@
             {
               "id": "c10-hib-01-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "बड़े भाई की सीख और छोटे भाई की खेलप्रियता के बीच संतुलन समझें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3912,7 +3968,7 @@
             {
               "id": "c10-hib-01-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "कहानी का मुख्य व्यंग्य किस पर है?",
               "answer": "रटने, दिखावटी अनुशासन और केवल परीक्षा-केंद्रित पढ़ाई पर।",
               "tags": [
@@ -3941,7 +3997,7 @@
             {
               "id": "c10-hib-02-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "घटना, तारीख, जनता की प्रतिक्रिया और औपनिवेशिक दमन को क्रम से याद रखें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3952,7 +4008,7 @@
             {
               "id": "c10-hib-02-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "डायरी का रूप किस प्रभाव को मजबूत करता है?",
               "answer": "घटनाओं की तात्कालिकता, प्रत्यक्ष अनुभव और ऐतिहासिक सजीवता।",
               "tags": [
@@ -3981,7 +4037,7 @@
             {
               "id": "c10-hib-03-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "कथा के लोक-सांस्कृतिक परिवेश और त्रासद परिणाम को जोड़ें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -3992,7 +4048,7 @@
             {
               "id": "c10-hib-03-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "कथा का केंद्रीय संघर्ष क्या है?",
               "answer": "व्यक्तिगत प्रेम और कठोर सामाजिक परंपराओं के बीच संघर्ष।",
               "tags": [
@@ -4021,7 +4077,7 @@
             {
               "id": "c10-hib-04-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "शैलेंद्र के गीतों और फिल्म के निर्माण में उनकी दृष्टि को जोड़ें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4032,7 +4088,7 @@
             {
               "id": "c10-hib-04-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "शैलेंद्र को संवेदनशील कलाकार क्यों कहा गया?",
               "answer": "उनकी रचनाओं में मानवीय पीड़ा, सहजता और सामाजिक संवेदना प्रमुख हैं।",
               "tags": [
@@ -4061,7 +4117,7 @@
             {
               "id": "c10-hib-05-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "लेखक के उदाहरणों से संवेदनहीनता और पर्यावरणीय जिम्मेदारी समझें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4072,7 +4128,7 @@
             {
               "id": "c10-hib-05-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "शीर्षक किस सामाजिक चिंता को व्यक्त करता है?",
               "answer": "दूसरों के दुख के प्रति मनुष्य की घटती संवेदनशीलता।",
               "tags": [
@@ -4101,7 +4157,7 @@
             {
               "id": "c10-hib-06-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "प्रसंगों के संदेश को अलग-अलग पहचानें और साझा जीवन-दृष्टि बताएं।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4112,7 +4168,7 @@
             {
               "id": "c10-hib-06-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "पाठ जीवन में किस संतुलन पर बल देता है?",
               "answer": "आदर्शों, व्यवहारिकता, आत्म-अनुशासन और मानसिक शांति के संतुलन पर।",
               "tags": [
@@ -4141,7 +4197,7 @@
             {
               "id": "c10-hib-07-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "वज़ीर अली के निर्णयों और अंग्रेज अधिकारियों की प्रतिक्रिया से चरित्र की दृढ़ता समझें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4152,7 +4208,7 @@
             {
               "id": "c10-hib-07-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "वज़ीर अली की प्रमुख विशेषताएँ क्या हैं?",
               "answer": "साहसी, चतुर, आत्मसम्मानी और जोखिम उठाने वाला।",
               "tags": [
@@ -4181,7 +4237,7 @@
             {
               "id": "c10-hib-08-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "हर साखी का भावार्थ अपने शब्दों में लिखें; केवल शब्दार्थ न दें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4192,7 +4248,7 @@
             {
               "id": "c10-hib-08-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "कबीर किसका विरोध करते हैं?",
               "answer": "पाखंड, अहंकार और केवल बाहरी धार्मिक आडंबर का।",
               "tags": [
@@ -4221,7 +4277,7 @@
             {
               "id": "c10-hib-09-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "भक्त और आराध्य के संबंध में प्रेम, विरह और विश्वास पहचानें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4232,7 +4288,7 @@
             {
               "id": "c10-hib-09-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "मीरा की भक्ति की विशेषता क्या है?",
               "answer": "कृष्ण के प्रति पूर्ण, व्यक्तिगत और निर्भीक समर्पण।",
               "tags": [
@@ -4261,7 +4317,7 @@
             {
               "id": "c10-hib-10-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "कविता के उदाहरणों से बताएं कि केवल जीवित रहना पर्याप्त क्यों नहीं।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4272,7 +4328,7 @@
             {
               "id": "c10-hib-10-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "कवि के अनुसार मनुष्य महान कब बनता है?",
               "answer": "जब वह दूसरों के लिए करुणा, सेवा और त्याग का भाव रखता है।",
               "tags": [
@@ -4301,7 +4357,7 @@
             {
               "id": "c10-hib-11-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "बादल, झरने, धुंध और पर्वत के बदलते रूपों से उत्पन्न चित्र पहचानें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4312,7 +4368,7 @@
             {
               "id": "c10-hib-11-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "कविता में प्रकृति का कौन-सा रूप उभरता है?",
               "answer": "वर्षा में पर्वतीय प्रदेश का गतिशील, रहस्यमय और सुंदर रूप।",
               "tags": [
@@ -4341,7 +4397,7 @@
             {
               "id": "c10-hib-12-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "वर्तमान में बच्चों और चिड़ियों की उपस्थिति से अर्थ में आया बदलाव समझें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4352,7 +4408,7 @@
             {
               "id": "c10-hib-12-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "तोप आज किस बात का प्रतीक है?",
               "answer": "बीती सत्ता और हिंसा की निष्प्रभावी स्मृति का।",
               "tags": [
@@ -4381,7 +4437,7 @@
             {
               "id": "c10-hib-13-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "वक्ता की आवाज़ और भावी पीढ़ी को सौंपे गए कर्तव्य पर ध्यान दें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4392,7 +4448,7 @@
             {
               "id": "c10-hib-13-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "कविता का मुख्य संदेश क्या है?",
               "answer": "देश की स्वतंत्रता और सम्मान की रक्षा के लिए जिम्मेदारी निभाना।",
               "tags": [
@@ -4421,7 +4477,7 @@
             {
               "id": "c10-hib-14-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "प्रार्थना में निर्भयता, आत्मविश्वास और नैतिक दृढ़ता पहचानें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4432,7 +4488,7 @@
             {
               "id": "c10-hib-14-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "कवि ईश्वर से क्या माँगता है?",
               "answer": "कठिनाइयों से लड़ने का साहस, आत्मबल और नैतिक शक्ति।",
               "tags": [
@@ -4461,7 +4517,7 @@
             {
               "id": "c10-hib-15-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "परिवार और महंत के व्यवहार की तुलना करें; हरिहर काका की इच्छा को केंद्र में रखें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4472,7 +4528,7 @@
             {
               "id": "c10-hib-15-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "हरिहर काका की स्थिति किस समस्या को दिखाती है?",
               "answer": "बुजुर्गों की असुरक्षा और संपत्ति के लिए रिश्तों/धार्मिक प्रभाव का दुरुपयोग।",
               "tags": [
@@ -4501,7 +4557,7 @@
             {
               "id": "c10-hib-16-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "वर्णन में हास्य और संवेदना के मेल को पहचानें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4512,7 +4568,7 @@
             {
               "id": "c10-hib-16-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "शीर्षक में ‘सपनों’ का भाव क्या है?",
               "answer": "बचपन की यादों का मोहक, कभी सुखद तो कभी कठिन स्मृति-रूप।",
               "tags": [
@@ -4541,7 +4597,7 @@
             {
               "id": "c10-hib-17-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "दोस्ती, परिवार और समाज के पूर्वाग्रहों के बीच तनाव समझें।",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4552,7 +4608,7 @@
             {
               "id": "c10-hib-17-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "टोपी और इफ़्फ़न की मित्रता क्या संदेश देती है?",
               "answer": "मानवीय संबंध धर्म और सामाजिक पहचान से बड़े हो सकते हैं।",
               "tags": [
@@ -4581,7 +4637,7 @@
             {
               "id": "c10-hib-18-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "पदबंध किसे कहते हैं?",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4592,7 +4648,7 @@
             {
               "id": "c10-hib-18-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "शब्दों का ऐसा समूह जो वाक्य में एक पद का कार्य करे।",
               "answer": "व्याकरण",
               "tags": [
@@ -4621,7 +4677,7 @@
             {
               "id": "c10-hib-19-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "वाक्य-रूपांतरण में सबसे जरूरी शर्त क्या है?",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4632,7 +4688,7 @@
             {
               "id": "c10-hib-19-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "मूल अर्थ और तार्किक संबंध सुरक्षित रखना।",
               "answer": "व्याकरण",
               "tags": [
@@ -4661,7 +4717,7 @@
             {
               "id": "c10-hib-20-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "समास-विग्रह क्या है?",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4672,7 +4728,7 @@
             {
               "id": "c10-hib-20-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "समस्त पद को उसके विस्तृत शब्द-समूह में खोलना।",
               "answer": "व्याकरण",
               "tags": [
@@ -4701,7 +4757,7 @@
             {
               "id": "c10-hib-21-02",
               "type": "exam-alert",
-              "title": "What to write in an answer",
+              "title": "उत्तर में क्या लिखें",
               "content": "मुहावरे का अर्थ शाब्दिक क्यों नहीं होता?",
               "examTip": "Answer the question asked; support interpretations with specific textual details, not a retelling of the whole chapter.",
               "tags": [
@@ -4712,7 +4768,7 @@
             {
               "id": "c10-hib-21-03",
               "type": "recall",
-              "title": "Quick self-check",
+              "title": "त्वरित स्व-जाँच",
               "question": "उसका अर्थ रूढ़ और प्रचलित प्रयोग से तय होता है, शब्दों के सीधे अर्थ से नहीं।",
               "answer": "व्याकरण",
               "tags": [
