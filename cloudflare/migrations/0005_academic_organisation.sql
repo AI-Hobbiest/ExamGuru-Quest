@@ -131,7 +131,7 @@ BEGIN
       AND d.institution_id=NEW.institution_id AND d.status='active'
     WHERE im.membership_id=NEW.institution_membership_id
       AND im.institution_id=NEW.institution_id
-      AND im.status='active' AND im.role IN ('teacher','school_admin')
+      AND im.status='active' AND im.role='teacher'
   ) THEN RAISE(ABORT,'department membership requires an active teacher or school admin membership') END;
 END;
 
@@ -215,4 +215,61 @@ BEGIN
     WHERE d.department_id=NEW.department_id
       AND d.institution_id=NEW.institution_id AND d.status='active'
   ) THEN RAISE(ABORT,'department assignment requires active department membership, subject and class scope') END;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_department_membership_role_update
+BEFORE UPDATE OF institution_id,department_id,institution_membership_id,status ON department_memberships
+WHEN NEW.status='active'
+BEGIN
+  SELECT CASE WHEN NOT EXISTS (
+    SELECT 1 FROM institution_memberships im
+    JOIN departments d ON d.department_id=NEW.department_id
+      AND d.institution_id=NEW.institution_id AND d.status='active'
+    WHERE im.membership_id=NEW.institution_membership_id
+      AND im.institution_id=NEW.institution_id
+      AND im.status='active' AND im.role='teacher'
+  ) THEN RAISE(ABORT,'active department membership requires an active teacher institution membership') END;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_department_class_scope_valid_update
+BEFORE UPDATE OF department_id,institution_id,institution_class_id ON department_class_scopes
+BEGIN
+  SELECT CASE WHEN NOT EXISTS (
+    SELECT 1 FROM departments d
+    JOIN institution_classes ic ON ic.institution_class_id=NEW.institution_class_id
+      AND ic.institution_id=NEW.institution_id AND ic.status='active'
+    WHERE d.department_id=NEW.department_id
+      AND d.institution_id=NEW.institution_id AND d.status='active'
+  ) THEN RAISE(ABORT,'department class scope must reference an active class in the same institution') END;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_hod_appointment_membership_update
+BEFORE UPDATE OF institution_id,department_id,department_membership_id,status ON department_head_appointments
+WHEN NEW.status IN ('scheduled','active')
+BEGIN
+  SELECT CASE WHEN NOT EXISTS (
+    SELECT 1 FROM department_memberships dm
+    JOIN departments d ON d.department_id=dm.department_id
+      AND d.institution_id=dm.institution_id AND d.status='active'
+    JOIN institution_memberships im ON im.membership_id=dm.institution_membership_id
+      AND im.institution_id=dm.institution_id
+    WHERE dm.department_membership_id=NEW.department_membership_id
+      AND dm.department_id=NEW.department_id
+      AND dm.institution_id=NEW.institution_id
+      AND dm.status='active' AND im.status='active' AND im.role='teacher'
+  ) THEN RAISE(ABORT,'HOD appointment requires an active teacher membership in the appointed department') END;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_hod_class_scope_valid_update
+BEFORE UPDATE OF appointment_id,institution_id,institution_class_id ON department_head_class_scopes
+BEGIN
+  SELECT CASE WHEN NOT EXISTS (
+    SELECT 1 FROM department_head_appointments a
+    JOIN department_class_scopes dcs ON dcs.department_id=a.department_id
+      AND dcs.institution_id=a.institution_id
+      AND dcs.institution_class_id=NEW.institution_class_id
+    WHERE a.appointment_id=NEW.appointment_id
+      AND a.institution_id=NEW.institution_id
+      AND a.scope_all_department_classes=0
+  ) THEN RAISE(ABORT,'HOD class scope must be an explicitly assigned class of the department') END;
 END;
