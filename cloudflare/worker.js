@@ -434,6 +434,122 @@ async function adminLeaderboard(request,env) {
   const rows=await env.DB.prepare("SELECT p.student_id AS studentId,p.display_name AS displayName,p.school,p.class_id AS classId,COUNT(a.attempt_id) AS testsCompleted,ROUND(AVG(a.percentage),1) AS averageScore,MAX(a.percentage) AS bestScore,MAX(a.submitted_at) AS lastActivity FROM student_profiles p JOIN users u ON u.id=p.user_id JOIN attempts a ON a.user_id=u.id WHERE "+clauses.join(" AND ")+" GROUP BY p.user_id ORDER BY averageScore DESC,testsCompleted DESC,p.display_name ASC LIMIT 500").bind(...binds).all();
   return json(request,env,{ok:true,filters:{classId,subjectId:subject},leaderboard:(rows.results||[]).map((r,i)=>({...r,rank:i+1}))});
 }
+
+async function v2DepartmentContext(request,env,who) {
+  const token=(request.headers.get("Authorization")||"").slice(7);
+  const session=await env.DB.prepare("SELECT active_institution_id,active_membership_id FROM auth_sessions WHERE token_hash=? AND expires_at>?").bind(await sha256(token),isoNow()).first();
+  if(!session?.active_institution_id||!session?.active_membership_id)return {error:fail(request,env,409,"Select an active institution membership before managing academic departments.")};
+  const membership=await env.DB.prepare("SELECT m.membership_id,m.institution_id,m.role,m.status,m.all_branches,i.status AS institution_status FROM institution_memberships m JOIN institutions i ON i.institution_id=m.institution_id WHERE m.membership_id=? AND m.institution_id=? AND m.user_id=?").bind(session.active_membership_id,session.active_institution_id,who.user_id).first();
+  if(!membership||membership.status!=="active"||membership.institution_status!=="active")return {error:fail(request,env,403,"Active institution membership required.")};
+  return {institutionId:membership.institution_id,membership};
+}
+async function v2DepartmentAdmin(request,env,who,ctx) {
+  if(ctx.membership.role!=="school_admin"&&!(who.role==="admin"&&adminAllowed(env,who.github_login)))return fail(request,env,403,"School Admin permission is required to manage academic departments.");
+  return null;
+}
+function validDepartmentText(value,max=80){return typeof value==="string"&&value.trim().length>0&&value.trim().length<=max&&!/[<>]/.test(value);}
+async function v2Departments(request,env,who,method) {
+  const ctx=await v2DepartmentContext(request,env,who);if(ctx.error)return ctx.error;
+  const institutionId=ctx.institutionId;
+  if(method==="GET"){
+    const isAdmin=ctx.membership.role==="school_admin"||(who.role==="admin"&&adminAllowed(env,who.github_login));
+    const rows=await env.DB.prepare(isAdmin
+      ?"SELECT d.department_id AS departmentId,d.name,d.code,d.status,d.parent_department_id AS parentDepartmentId,d.created_at AS createdAt,d.updated_at AS updatedAt FROM departments d WHERE d.institution_id=? ORDER BY d.name"
+      :"SELECT DISTINCT d.department_id AS departmentId,d.name,d.code,d.status,d.parent_department_id AS parentDepartmentId,d.created_at AS createdAt,d.updated_at AS updatedAt FROM departments d JOIN department_memberships dm ON dm.department_id=d.department_id AND dm.institution_id=d.institution_id AND dm.status='active' JOIN institution_memberships im ON im.membership_id=dm.institution_membership_id AND im.user_id=? AND im.status='active' WHERE d.institution_id=? AND d.status='active' ORDER BY d.name")
+      .bind(...(isAdmin?[institutionId]:[who.user_id,institutionId])).all();
+    const departments=[];
+    for(const d of rows.results||[]){
+      const [subjects,classes,members,heads]=await Promise.all([
+        env.DB.prepare("SELECT subject_id AS subjectId FROM department_subjects WHERE institution_id=? AND department_id=? ORDER BY subject_id").bind(institutionId,d.departmentId).all(),
+        env.DB.prepare("SELECT institution_class_id AS classId FROM department_class_scopes WHERE institution_id=? AND department_id=? ORDER BY institution_class_id").bind(institutionId,d.departmentId).all(),
+        env.DB.prepare("SELECT dm.department_membership_id AS departmentMembershipId,im.membership_id AS institutionMembershipId,u.id AS userId,u.username,u.role,dm.department_role AS departmentRole,dm.status FROM department_memberships dm JOIN institution_memberships im ON im.membership_id=dm.institution_membership_id JOIN users u ON u.id=im.user_id WHERE dm.institution_id=? AND dm.department_id=? ORDER BY u.username").bind(institutionId,d.departmentId).all(),
+        env.DB.prepare("SELECT a.appointment_id AS appointmentId,a.department_membership_id AS departmentMembershipId,a.status,a.effective_from AS effectiveFrom,a.effective_to AS effectiveTo,a.scope_all_department_classes AS scopeAllDepartmentClasses FROM department_head_appointments a WHERE a.institution_id=? AND a.department_id=? ORDER BY a.effective_from DESC").bind(institutionId,d.departmentId).all()
+      ]);
+      departments.push({...d,subjects:subjects.results||[],classScopes:classes.results||[],members:members.results||[],headAppointments:(heads.results||[]).map(a=>({...a,scopeAllDepartmentClasses:Number(a.scopeAllDepartmentClasses)===1}))});
+    }
+    return json(request,env,{ok:true,institutionId,departments});
+  }
+  const denied=await v2DepartmentAdmin(request,env,who,ctx);if(denied)return denied;
+  const body=await readJson(request),now=isoNow();
+  if(method==="POST"){
+    const name=String(body.name||"").trim(),code=String(body.code||"").trim().toUpperCase(),id=uid();
+    if(!validDepartmentText(name,100)||! /^[A-Z0-9_-]{2,20}$/.test(code))return fail(request,env,400,"Provide a department name and a 2–20 character code (letters, numbers, _ or -).");
+    const parent=body.parentDepartmentId?String(body.parentDepartmentId):null;
+    if(parent&&!await env.DB.prepare("SELECT 1 FROM departments WHERE department_id=? AND institution_id=? AND status='active'").bind(parent,institutionId).first())return fail(request,env,400,"Parent department must be active in the selected institution.");
+    try{await env.DB.prepare("INSERT INTO departments(department_id,institution_id,parent_department_id,name,code,status,created_at,updated_at) VALUES(?,?,?,?,?,'active',?,?)").bind(id,institutionId,parent,name,code,now,now).run();}
+    catch(_){return fail(request,env,409,"Department code already exists or the department could not be created.");}
+    await writeAudit(env,who.user_id,"department-created",id,{institutionId,code});
+    return json(request,env,{ok:true,departmentId:id},201);
+  }
+  const match=new URL(request.url).pathname.match(/^\/api\/v2\/departments\/([A-Za-z0-9_-]+)$/);
+  if(match&&method==="PATCH"){
+    const id=decodeURIComponent(match[1]),current=await env.DB.prepare("SELECT department_id FROM departments WHERE department_id=? AND institution_id=?").bind(id,institutionId).first();
+    if(!current)return fail(request,env,404,"Department not found in the selected institution.");
+    const name=body.name===undefined?null:String(body.name).trim(),status=body.status===undefined?null:String(body.status);
+    if(name!==null&&!validDepartmentText(name,100))return fail(request,env,400,"Invalid department name.");
+    if(status!==null&&!["active","inactive","archived"].includes(status))return fail(request,env,400,"Invalid department status.");
+    await env.DB.prepare("UPDATE departments SET name=COALESCE(?,name),status=COALESCE(?,status),updated_at=? WHERE department_id=? AND institution_id=?").bind(name,status,now,id,institutionId).run();
+    await writeAudit(env,who.user_id,"department-updated",id,{institutionId,status});
+    return json(request,env,{ok:true,departmentId:id});
+  }
+  return fail(request,env,405,"Unsupported department operation.");
+}
+async function v2DepartmentSubresources(request,env,who) {
+  const match=new URL(request.url).pathname.match(/^\/api\/v2\/departments\/([A-Za-z0-9_-]+)\/(subjects|classes|members|heads)$/);
+  if(!match)return null;
+  const ctx=await v2DepartmentContext(request,env,who);if(ctx.error)return ctx.error;
+  const denied=await v2DepartmentAdmin(request,env,who,ctx);if(denied)return denied;
+  const [,departmentId,kind]=match,inst=ctx.institutionId,body=await readJson(request),now=isoNow();
+  const dept=await env.DB.prepare("SELECT department_id FROM departments WHERE department_id=? AND institution_id=? AND status='active'").bind(departmentId,inst).first();
+  if(!dept)return fail(request,env,404,"Active department not found in the selected institution.");
+  if(kind==="subjects"){
+    const ids=Array.isArray(body.subjectIds)?[...new Set(body.subjectIds.map(String))]:[];
+    if(ids.length>30||ids.some(x=>!SUBJECTS.has(x)))return fail(request,env,400,"One or more subject IDs are invalid.");
+    await env.DB.prepare("DELETE FROM department_subjects WHERE institution_id=? AND department_id=?").bind(inst,departmentId).run();
+    for(const id of ids)await env.DB.prepare("INSERT INTO department_subjects(institution_id,department_id,subject_id,created_at) VALUES(?,?,?,?)").bind(inst,departmentId,id,now).run();
+  } else if(kind==="classes"){
+    const ids=Array.isArray(body.classIds)?[...new Set(body.classIds.map(String))]:[];
+    if(ids.length>100)return fail(request,env,400,"Too many class scopes.");
+    for(const id of ids)if(!await env.DB.prepare("SELECT 1 FROM institution_classes WHERE institution_id=? AND institution_class_id=? AND status='active'").bind(inst,id).first())return fail(request,env,400,"Every class scope must be active in the selected institution.");
+    await env.DB.prepare("DELETE FROM department_class_scopes WHERE institution_id=? AND department_id=?").bind(inst,departmentId).run();
+    for(const id of ids)await env.DB.prepare("INSERT INTO department_class_scopes(institution_id,department_id,institution_class_id,created_at) VALUES(?,?,?,?)").bind(inst,departmentId,id,now).run();
+  } else if(kind==="members"){
+    const institutionMembershipId=String(body.institutionMembershipId||"");
+    const im=await env.DB.prepare("SELECT membership_id FROM institution_memberships WHERE membership_id=? AND institution_id=? AND status='active' AND role='teacher'").bind(institutionMembershipId,inst).first();
+    if(!im)return fail(request,env,400,"Select an active teacher membership in this institution.");
+    const role=body.departmentRole==="coordinator"?"coordinator":"member",id=uid();
+    try{await env.DB.prepare("INSERT INTO department_memberships(department_membership_id,institution_id,department_id,institution_membership_id,status,department_role,created_by_user_id,created_at,updated_at) VALUES(?,?,?,?,'active',?,?,?,?)").bind(id,inst,departmentId,institutionMembershipId,role,who.user_id,now,now).run();}
+    catch(_){return fail(request,env,409,"Teacher is already a department member or could not be added.");}
+    await writeAudit(env,who.user_id,"department-member-added",id,{institutionId:inst,departmentId});
+    return json(request,env,{ok:true,departmentMembershipId:id},201);
+  } else if(kind==="heads"){
+    const departmentMembershipId=String(body.departmentMembershipId||""),effectiveFrom=String(body.effectiveFrom||now.slice(0,10)),effectiveTo=body.effectiveTo?String(body.effectiveTo):null;
+    const member=await env.DB.prepare("SELECT department_membership_id FROM department_memberships WHERE department_membership_id=? AND institution_id=? AND department_id=? AND status='active'").bind(departmentMembershipId,inst,departmentId).first();
+    if(!member||!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(effectiveFrom)||(effectiveTo&&!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(effectiveTo))||(effectiveTo&&effectiveTo<=effectiveFrom))return fail(request,env,400,"Select an active department member and valid appointment dates.");
+    const all=body.scopeAllDepartmentClasses===true,classes=Array.isArray(body.classIds)?[...new Set(body.classIds.map(String))]:[];
+    if(!all&&!classes.length)return fail(request,env,400,"Choose all department classes or at least one explicit class.");
+    if(!all)for(const id of classes)if(!await env.DB.prepare("SELECT 1 FROM department_class_scopes WHERE institution_id=? AND department_id=? AND institution_class_id=?").bind(inst,departmentId,id).first())return fail(request,env,400,"HOD class scope must be within this department's class scope.");
+    const id=uid(),status=effectiveFrom>now.slice(0,10)?"scheduled":"active";
+    try{
+      await env.DB.prepare("INSERT INTO department_head_appointments(appointment_id,institution_id,department_id,department_membership_id,scope_all_department_classes,status,effective_from,effective_to,appointed_by_user_id,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?)").bind(id,inst,departmentId,departmentMembershipId,all?1:0,status,effectiveFrom,effectiveTo,who.user_id,now,now).run();
+      if(!all)for(const classId of classes)await env.DB.prepare("INSERT INTO department_head_class_scopes(appointment_id,institution_id,institution_class_id,created_at) VALUES(?,?,?,?)").bind(id,inst,classId,now).run();
+    }catch(_){return fail(request,env,409,"An active HOD may already be appointed, or the appointment scope is invalid.");}
+    await writeAudit(env,who.user_id,"department-head-appointed",id,{institutionId:inst,departmentId,departmentMembershipId,all,classIds:classes});
+    return json(request,env,{ok:true,appointmentId:id,status},201);
+  }
+  await writeAudit(env,who.user_id,"department-scope-updated",departmentId,{institutionId:inst,kind});
+  return json(request,env,{ok:true,departmentId,kind});
+}
+async function v2EndDepartmentHead(request,env,who,appointmentId) {
+  const ctx=await v2DepartmentContext(request,env,who);if(ctx.error)return ctx.error;
+  const denied=await v2DepartmentAdmin(request,env,who,ctx);if(denied)return denied;
+  const body=await readJson(request),status=body.status==="revoked"?"revoked":"ended",now=isoNow();
+  const result=await env.DB.prepare("UPDATE department_head_appointments SET status=?,effective_to=COALESCE(?,date('now')),updated_at=? WHERE appointment_id=? AND institution_id=? AND status IN ('active','scheduled')").bind(status,body.effectiveTo||null,now,appointmentId,ctx.institutionId).run();
+  if(!result.meta?.changes)return fail(request,env,404,"Active or scheduled HOD appointment not found.");
+  await writeAudit(env,who.user_id,"department-head-"+status,appointmentId,{institutionId:ctx.institutionId});
+  return json(request,env,{ok:true,appointmentId,status});
+}
+
 export default {
   async fetch(request,env) {
     const url=new URL(request.url),path=url.pathname,method=request.method.toUpperCase();
@@ -459,6 +575,14 @@ export default {
       if(path==="/api/v2/auth/me"&&method==="GET")return await v2Identity(request,env,who);
       if(path==="/api/v2/auth/context"&&method==="POST")return await v2SelectContext(request,env,who);
       if(path==="/api/v2/invitations"&&method==="POST")return await v2CreateInvitation(request,env,who);
+
+      if(path==="/api/v2/departments"&&(method==="GET"||method==="POST"))return await v2Departments(request,env,who,method);
+      const departmentPath=path.match(/^\/api\/v2\/departments\/([A-Za-z0-9_-]+)$/);
+      if(departmentPath&&method==="PATCH")return await v2Departments(request,env,who,method);
+      if(/^\/api\/v2\/departments\/[A-Za-z0-9_-]+\/(subjects|classes|members|heads)$/.test(path)&&method==="POST")return await v2DepartmentSubresources(request,env,who);
+      const headPath=path.match(/^\/api\/v2\/department-heads\/([A-Za-z0-9_-]+)$/);
+      if(headPath&&method==="PATCH")return await v2EndDepartmentHead(request,env,who,decodeURIComponent(headPath[1]));
+
 
       if(who.role==="student"&&Number(who.must_change_password)===1&&
          !((path==="/api/auth/me"&&method==="GET")||(path==="/api/auth/logout"&&method==="POST")||(path==="/api/student/change-password"&&method==="POST"))) {
