@@ -199,7 +199,7 @@
       $("vrbCount").textContent="0 cards";$("vrbFilteredCount").textContent="";
       grid.appendChild(createText("div","vrb-empty","No revision cards are available for this selection yet."));return;
     }
-    $("vrbChapterTitle").textContent="Chapter "+chapter.chapterNo+" · "+chapter.title;
+    $("vrbChapterTitle").textContent=(chapter.chapterLabel||("Chapter "+chapter.chapterNo))+" · "+chapter.title;
     $("vrbChapterSubtitle").textContent=chapter.subtitle||"Quick chapter reference";
     const query=$("vrbSearch").value.trim().toLowerCase();
     const cards=(chapter.cards||[]).filter(card=>!query||JSON.stringify(card).toLowerCase().includes(query));
