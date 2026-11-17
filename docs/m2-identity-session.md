@@ -5,7 +5,7 @@ Status: implemented on the M2 feature branch; requires review/merge and a separa
 ## Implemented
 - `GET /api/v2/auth/me`: returns the authenticated account, active institution memberships, platform grants, institution names and branch scopes.
 - `POST /api/v2/auth/context`: selects a membership belonging to the authenticated user and validates the institution and optional branch. The selection is stored on the current server session as a navigation hint.
-- `POST /api/v2/invitations`: allow-listed Platform Admin provisions an existing enabled account into an institution with an approved role and optional branch scopes.
+- `POST /api/v2/invitations`: allow-listed Platform Admin provisions an existing enabled account into an institution with an approved role and optional branch scopes. School Admin invitations may explicitly request `allBranches: true` instead of listing branches.
 - `POST /api/v2/invitations/accept`: authenticated, pre-provisioned target account accepts its invitation. Tokens are random, stored only as SHA-256 hashes, expire after seven days, and are consumed once.
 - Migration `0004_identity_session_context.sql` adds nullable context fields to `auth_sessions` and a membership invitation table. A DB trigger rejects branch IDs from another institution.
 - Existing `/api/auth/*`, Student and Admin routes and the legacy `users.role` check are unchanged.
