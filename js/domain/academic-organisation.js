@@ -35,8 +35,10 @@
    const department=await repositories.academicOrganisation.getDepartment(c.departmentId);
    if(!institution||institution.status!=="active"||!department||department.status!=="active"||department.institutionId!==c.institutionId)return deny("department-tenant-mismatch");
    const memberships=await repositories.identity.listMemberships(actor.userId);
-   const institutionMembership=(memberships||[]).find(m=>m&&m.status==="active"&&m.institutionId===c.institutionId&&ROLES[m.role]);
-   if(!institutionMembership||!ROLES[institutionMembership.role].has(permission))return deny("institution-role-permission-denied");
+   const eligible=(memberships||[]).filter(m=>m&&m.status==="active"&&m.institutionId===c.institutionId&&ROLES[m.role]&&ROLES[m.role].has(permission)&&(!c.institutionMembershipId||m.membershipId===c.institutionMembershipId));
+   if(!eligible.length)return deny("institution-role-permission-denied");
+   if(!c.institutionMembershipId&&eligible.length>1)return deny("institution-membership-context-required");
+   const institutionMembership=eligible[0];
    if(institutionMembership.allBranches!==true){
     const scopes=await repositories.institution.listMembershipBranchScopes(institutionMembership.membershipId);
     const allowed=new Set((scopes||[]).map(x=>x.branchId));
@@ -48,7 +50,7 @@
    }
    const departmentMemberships=await repositories.academicOrganisation.listDepartmentMemberships(institutionMembership.membershipId);
    const dm=(departmentMemberships||[]).find(x=>x&&x.status==="active"&&x.departmentId===c.departmentId);
-   if(institutionMembership.role!=="school_admin"&&!dm)return deny("department-membership-required");
+   if(institutionMembership.role!=="school_admin"&&institutionMembership.role!=="institution_viewer"&&!dm)return deny("department-membership-required");
    if(permission==="department.head.appoint"||permission==="department.member.manage"||permission==="department.manage"){
     if(institutionMembership.role!=="school_admin")return deny("school-admin-required");
    }
