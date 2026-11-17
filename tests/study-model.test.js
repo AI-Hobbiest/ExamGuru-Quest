@@ -33,7 +33,7 @@ assert.ok(page.includes('id="studyResourceList"')&&page.includes('id="studySearc
 assert.ok(page.includes("study-model.js")&&page.includes("study-library.js"));
 assert.ok(script.includes('status==="published"')||script.includes("visibleResources"));
 new Function(fs.readFileSync("js/study-library.js","utf8"));
-const theme=read("css/theme-soft-spectrum.css");
+const theme=fs.readFileSync("css/theme-soft-spectrum.css","utf8");
 assert.ok(page.includes('class="study-summary eg-metric-grid"'),"Study Library metric wrapper must use the shared grid component");
 assert.ok(page.includes('class="study-stat eg-metric-card"'),"Study Library metric tiles must use the shared metric card component");
 assert.ok(page.includes('class="eg-preview-banner"')&&!page.includes('id="studyPreviewNotice" hidden style='),"Admin preview banner must use the shared banner component without inline theme styles");
