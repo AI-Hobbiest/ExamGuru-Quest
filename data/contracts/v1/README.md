@@ -23,7 +23,7 @@ These contracts are the platform's portable data model. They are provider-neutra
 | `local-store-envelope.schema.json` | Versioned storage adapter envelope |
 | `institution.schema.json` | Tenant/institution identity contract |
 | `branch.schema.json` | Institution-owned campus/branch contract |
-| `institution-membership.schema.json` | Multi-institution role membership and branch scope |
+| `institution-membership.schema.json` | Multi-institution role membership and branch scope |\n| `department.schema.json` | Institution-owned academic department |\n| `department-membership.schema.json` | A teacher's membership in one department |\n| `department-head-appointment.schema.json` | Effective-dated HOD appointment and class scope |
 
 ## Stable question identity
 
@@ -39,4 +39,4 @@ Every new MCQ must include `competency`, `competencyTagStatus`, and `competencyT
 
 ## Multi-tenant RBAC contracts
 
-These additive v1 contracts separate user identity from role grants and keep institution/branch scope explicit. See `docs/rbac-architecture-v1.md` for the target model, permission rules, compatibility requirements and migration sequence. The additive D1 foundation is `cloudflare/migrations/0003_multitenant_rbac_foundation.sql`; it deliberately leaves the current `users.role` and Worker route semantics unchanged until a separately tested API cutover.
+These additive v1 contracts separate user identity from role grants and keep institution/branch scope explicit. See `docs/rbac-architecture-v1.md` for the target model, permission rules, compatibility requirements and migration sequence. The additive D1 foundation is `cloudflare/migrations/0003_multitenant_rbac_foundation.sql`; M2 adds identity/session context in migration 0004, and M3 adds departments and scoped HOD appointments in migration 0005. These migrations deliberately leave the current `users.role` and legacy Worker route semantics unchanged until a separately tested API cutover.
