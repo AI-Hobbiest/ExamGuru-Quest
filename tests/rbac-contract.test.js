@@ -10,7 +10,7 @@ assert.ok(m.properties.branchScope.properties.allBranches&&m.properties.branchSc
 for(const t of ["institutions","platform_roles","branches","institution_memberships","membership_branch_scopes","institution_classes","teacher_assignments","student_enrollments","parent_student_links","question_banks","audit_events"])assert.ok(sql.includes("CREATE TABLE IF NOT EXISTS "+t),"missing additive table "+t);
 assert.ok(sql.includes("FOREIGN KEY(institution_id,branch_id)"),"branch relationship must be tenant-composite");
 assert.ok(sql.includes("source_bank_id"),"custom bank must preserve shared source provenance");
-assert.ok(/role TEXT NOT NULL CHECK\(role IN \('admin','student'\)\)/.test(legacy),"legacy D1 role constraint must remain unchanged in M0");
+assert.ok(/role TEXT NOT NULL CHECK\s*\(role IN \('admin','student'\)\)/.test(legacy),"legacy D1 role constraint must remain unchanged in M0");
 assert.ok(worker.includes("u.role='student'")&&worker.includes('who.role!=="admin"'),"legacy API role semantics remain unchanged");
 assert.ok(auth.includes("c10playground_static_student_v1")&&access.includes("C10StudyAccessReady"),"legacy login/access contract remains");
 assert.ok(storage.includes("createLocalStore")&&storage.includes("syncPending"),"local-first storage/outbox remains");
