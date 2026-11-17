@@ -51,11 +51,15 @@ const repos={
 };
 (async()=>{
  const head=await policy.authorize(repos,{userId:"teacher-1"},"department.report.read",{institutionId:"inst-1",departmentId:"science",institutionClassId:"class-6a"});
- assert.equal(head.allowed,true);assert.equal(head.reason,"department-head-scoped");\n const headInfo=await policy.authorize(repos,{userId:"teacher-1"},"department.head.read",{institutionId:"inst-1",departmentId:"science"});\n assert.equal(headInfo.allowed,true);assert.equal(headInfo.reason,"department-head-appointment");
+ assert.equal(head.allowed,true);assert.equal(head.reason,"department-head-scoped");
+ const headInfo=await policy.authorize(repos,{userId:"teacher-1"},"department.head.read",{institutionId:"inst-1",departmentId:"science"});
+ assert.equal(headInfo.allowed,true);assert.equal(headInfo.reason,"department-head-appointment");
  const outOfScope=await policy.authorize(repos,{userId:"teacher-1"},"department.report.read",{institutionId:"inst-1",departmentId:"science",institutionClassId:"class-8a"});
  assert.equal(outOfScope.allowed,true);assert.equal(outOfScope.reason,"teacher-assignment");
  const unassigned=await policy.authorize(repos,{userId:"teacher-1"},"department.report.read",{institutionId:"inst-1",departmentId:"science",institutionClassId:"class-7a"});
- assert.equal(unassigned.allowed,false);assert.equal(unassigned.reason,"teacher-assignment-required");\n const noAssignmentList=await policy.authorize(repos,{userId:"teacher-1"},"department.assignment.read",{institutionId:"inst-1",departmentId:"science"});\n assert.equal(noAssignmentList.allowed,false);assert.equal(noAssignmentList.reason,"teacher-class-scope-required");
+ assert.equal(unassigned.allowed,false);assert.equal(unassigned.reason,"teacher-assignment-required");
+ const noAssignmentList=await policy.authorize(repos,{userId:"teacher-1"},"department.assignment.read",{institutionId:"inst-1",departmentId:"science"});
+ assert.equal(noAssignmentList.allowed,false);assert.equal(noAssignmentList.reason,"teacher-class-scope-required");
  const maths=await policy.authorize(repos,{userId:"teacher-1"},"department.report.read",{institutionId:"inst-1",departmentId:"maths",institutionClassId:"class-9a"});
  assert.equal(maths.allowed,true);assert.equal(maths.reason,"teacher-assignment");
  const wrongTenant=await policy.authorize(repos,{userId:"teacher-1"},"department.report.read",{institutionId:"inst-2",departmentId:"science",institutionClassId:"class-6a"});
