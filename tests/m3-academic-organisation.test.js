@@ -39,16 +39,18 @@ const repos={
    {departmentMembershipId:"dm-maths",departmentId:"maths",status:"active"}
   ],
   listActiveHeadAppointments:async(dm)=>dm==="dm-science"?appointments.slice(0,1):[],
-  listDepartmentClassScopes:async()=>[{institutionClassId:"class-6a"},{institutionClassId:"class-7a"}]
+  listDepartmentClassScopes:async(id)=>id==="science"?[{institutionClassId:"class-6a"},{institutionClassId:"class-7a"},{institutionClassId:"class-8a"}]:[{institutionClassId:"class-9a"}]
  }
 };
 (async()=>{
  const head=await policy.authorize(repos,{userId:"teacher-1"},"department.report.read",{institutionId:"inst-1",departmentId:"science",institutionClassId:"class-6a"});
  assert.equal(head.allowed,true);assert.equal(head.reason,"department-head-scoped");
  const outOfScope=await policy.authorize(repos,{userId:"teacher-1"},"department.report.read",{institutionId:"inst-1",departmentId:"science",institutionClassId:"class-8a"});
- assert.equal(outOfScope.allowed,true);assert.equal(outOfScope.reason,"department-membership");
+ assert.equal(outOfScope.allowed,true);assert.equal(outOfScope.reason,"teacher-assignment");
+ const unassigned=await policy.authorize(repos,{userId:"teacher-1"},"department.report.read",{institutionId:"inst-1",departmentId:"science",institutionClassId:"class-7a"});
+ assert.equal(unassigned.allowed,false);assert.equal(unassigned.reason,"teacher-assignment-required");
  const maths=await policy.authorize(repos,{userId:"teacher-1"},"department.report.read",{institutionId:"inst-1",departmentId:"maths",institutionClassId:"class-9a"});
- assert.equal(maths.allowed,true);assert.equal(maths.reason,"department-membership");
+ assert.equal(maths.allowed,true);assert.equal(maths.reason,"teacher-assignment");
  const wrongTenant=await policy.authorize(repos,{userId:"teacher-1"},"department.report.read",{institutionId:"inst-2",departmentId:"science",institutionClassId:"class-6a"});
  assert.equal(wrongTenant.allowed,false);
  const unauth=await policy.authorize(repos,null,"department.report.read",{institutionId:"inst-1",departmentId:"science"});
