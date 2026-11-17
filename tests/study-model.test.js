@@ -62,6 +62,8 @@ assert.ok(page.includes('id="vrbGrid"')&&page.includes('id="vrbSubject"')&&page.
 assert.ok(script.includes("visual-revision.json"));
 assert.ok(!page.includes('id="studyStatus" class="study-meta"'),"study load status must not duplicate the progress filter ID");
 assert.ok(script.includes("loadVisualRevision")&&script.includes("renderVisualCards"));
+assert.ok(script.includes("card.typeLabel||type.label")&&script.includes("card.revealLabel||\"Reveal answer\""),"revision cards must support localised labels and answer controls");
+assert.ok(script.includes("chapter.chapterLabel||(\"Chapter \"+chapter.chapterNo))","revision board must display syllabus-aware chapter labels");
 
 const pagesWorkflow=fs.readFileSync(".github/workflows/pages.yml","utf8");
 assert.ok(page.includes(".vrb-card::before")&&page.includes(".vrb-card::after"),"sticky revision notes must render a pushpin head and stem");
@@ -89,6 +91,9 @@ assert.ok(sst.chapters.find(ch=>ch.title==="The Making of a Global World").cards
 const science=class10Boards.find(b=>b.subject==="science");
 assert.ok(science.chapters.find(ch=>ch.title==="Periodic Classification of Elements").cards.some(card=>(card.note||"").includes("formative/portfolio only")),"Periodic Classification must be marked formative-only");
 assert.ok(science.chapters.find(ch=>ch.title.startsWith("Heredity (Evolution")).cards.some(card=>(card.note||"").includes("formative enrichment")),"Evolution must be marked formative-only");
+assert.equal(science.chapters.find(ch=>ch.title==="Life Processes").chapterLabel,"Chapter 5","Science chapter numbering must follow the 2026-27 syllabus");
+assert.equal(science.chapters.find(ch=>ch.title==="Our Environment").chapterLabel,"Chapter 13","Science chapter numbering must follow the 2026-27 syllabus");
+assert.ok(sst.chapters.every(ch=>ch.chapterLabel),"Social Science topics must show their subject-specific textbook chapter labels");
 for(const subject of ["hindi-course-a","hindi-course-b"]){
  const cards=class10Boards.find(b=>b.subject===subject).chapters.flatMap(ch=>ch.cards);
  assert.ok(cards.every(card=>!["Core idea","What to write in an answer","Quick self-check"].includes(card.title)),"Hindi card titles must be localised");
