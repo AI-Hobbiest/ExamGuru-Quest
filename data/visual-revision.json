@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "visual-revision-manifest",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "boards": [
     {
       "classId": "6",
@@ -44,6 +44,118 @@
               "tags": [
                 "active recall"
               ]
+            },
+            {
+              "id": "c6-sci-01-04",
+              "type": "fact",
+              "title": "Science investigation cycle",
+              "facts": [
+                [
+                  "Observe",
+                  "Notice a pattern or event carefully."
+                ],
+                [
+                  "Question",
+                  "Ask a clear question that can be investigated."
+                ],
+                [
+                  "Predict",
+                  "Suggest what may happen and why."
+                ],
+                [
+                  "Test",
+                  "Plan a fair observation or experiment."
+                ],
+                [
+                  "Record",
+                  "Write observations and measurements."
+                ],
+                [
+                  "Conclude",
+                  "Use evidence to explain what happened."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-01-05",
+              "type": "concept",
+              "title": "Observation and inference",
+              "content": "An observation is information gathered using senses or instruments. An inference is an explanation or interpretation based on observations. Keep the two separate in a science record.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-01-06",
+              "type": "concept",
+              "title": "Fair testing",
+              "content": "A fair test changes one factor at a time while keeping other relevant conditions the same. This helps identify which factor caused a change in the result.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-01-07",
+              "type": "fact",
+              "title": "Ways to collect evidence",
+              "facts": [
+                [
+                  "Direct observation",
+                  "Watching or examining an event or object."
+                ],
+                [
+                  "Measurement",
+                  "Using a suitable instrument and unit."
+                ],
+                [
+                  "Comparison",
+                  "Checking similarities and differences."
+                ],
+                [
+                  "Repeated trials",
+                  "Repeating observations to see whether a result is consistent."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-01-08",
+              "type": "recall",
+              "title": "Observation or inference?",
+              "question": "A leaf is green. Is this an observation or an inference?",
+              "answer": "It is an observation because it describes something directly seen.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-01-09",
+              "type": "recall",
+              "title": "Plan a fair test",
+              "question": "If you want to test whether sunlight affects plant growth, what should you keep the same?",
+              "answer": "Use the same plant type, soil, pot size and water amount; change only the light exposure and measure growth over a set time.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-01-10",
+              "type": "concept",
+              "title": "Science and everyday life",
+              "content": "Scientific thinking uses evidence, careful questions and willingness to revise an idea when new observations do not support it. A guess becomes a useful explanation only after it is tested.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
             }
           ]
         },
@@ -81,6 +193,134 @@
               "answer": "Grouping makes the huge variety of organisms easier to study and helps us recognise similarities and differences.",
               "tags": [
                 "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-02-04",
+              "type": "fact",
+              "title": "Ways to group living things",
+              "facts": [
+                [
+                  "Habitat",
+                  "Where an organism lives."
+                ],
+                [
+                  "Body structure",
+                  "Visible features such as legs, wings, roots or stems."
+                ],
+                [
+                  "Food",
+                  "What an organism obtains energy from."
+                ],
+                [
+                  "Movement",
+                  "How an organism moves or remains fixed."
+                ],
+                [
+                  "Reproduction",
+                  "How new individuals are produced."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-02-05",
+              "type": "concept",
+              "title": "Habitat and adaptation",
+              "content": "A habitat provides an organism with food, water, shelter and suitable conditions. Adaptations are features or behaviours that help an organism survive in its habitat.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-02-06",
+              "type": "compare",
+              "title": "Terrestrial and aquatic habitats",
+              "left": {
+                "heading": "Terrestrial",
+                "content": "Land habitats such as forests, deserts, grasslands and mountains. Organisms need adaptations for temperature, water availability and movement on land."
+              },
+              "right": {
+                "heading": "Aquatic",
+                "content": "Water habitats such as ponds, rivers, lakes and seas. Organisms may have streamlined bodies, fins or other features suited to moving and living in water."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sci-02-07",
+              "type": "fact",
+              "title": "Plant variety",
+              "facts": [
+                [
+                  "Herbs",
+                  "Usually small plants with soft, green stems."
+                ],
+                [
+                  "Shrubs",
+                  "Medium-sized woody plants with branches near the base."
+                ],
+                [
+                  "Trees",
+                  "Tall plants with a strong woody trunk."
+                ],
+                [
+                  "Climbers",
+                  "Plants with weak stems that need support."
+                ],
+                [
+                  "Creepers",
+                  "Plants with weak stems that spread along the ground."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-02-08",
+              "type": "concept",
+              "title": "Classification is based on evidence",
+              "content": "A useful group is based on a feature that can be observed consistently. Avoid grouping organisms only because they look alike from far away.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-02-09",
+              "type": "recall",
+              "title": "Habitat check",
+              "question": "Why do fish have features such as fins and streamlined bodies?",
+              "answer": "These features help them move efficiently through water and survive in an aquatic habitat.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-02-10",
+              "type": "recall",
+              "title": "Plant groups",
+              "question": "A plant has a weak stem and grows along the ground. What is it commonly called?",
+              "answer": "A creeper.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-02-11",
+              "type": "concept",
+              "title": "Biodiversity matters",
+              "content": "Biodiversity means the variety of living organisms in an area or on Earth. Different organisms are connected through food, shelter, pollination, decomposition and other ecological relationships.",
+              "tags": [
+                "key concept",
+                "quick reference"
               ]
             }
           ]
@@ -120,6 +360,158 @@
               "tags": [
                 "active recall"
               ]
+            },
+            {
+              "id": "c6-sci-03-04",
+              "type": "fact",
+              "title": "Major nutrient groups",
+              "facts": [
+                [
+                  "Carbohydrates",
+                  "Main source of energy."
+                ],
+                [
+                  "Proteins",
+                  "Growth and repair of body tissues."
+                ],
+                [
+                  "Fats",
+                  "Stored energy and insulation; also help absorb some vitamins."
+                ],
+                [
+                  "Vitamins",
+                  "Needed in small amounts for body functions."
+                ],
+                [
+                  "Minerals",
+                  "Support functions such as bones, blood and nerves."
+                ],
+                [
+                  "Water",
+                  "Transport, temperature regulation and many body processes."
+                ],
+                [
+                  "Dietary fibre",
+                  "Helps food move through the digestive system."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-03-05",
+              "type": "concept",
+              "title": "Balanced diet",
+              "content": "A balanced diet supplies nutrients, fibre and water in suitable amounts for a person's age, activity and health. No single food provides everything the body needs.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-03-06",
+              "type": "fact",
+              "title": "Food sources",
+              "facts": [
+                [
+                  "Cereals and millets",
+                  "Often provide carbohydrates and some fibre."
+                ],
+                [
+                  "Pulses and beans",
+                  "Important plant sources of protein."
+                ],
+                [
+                  "Milk and curd",
+                  "Provide protein and minerals such as calcium."
+                ],
+                [
+                  "Fruits and vegetables",
+                  "Provide vitamins, minerals, water and fibre."
+                ],
+                [
+                  "Nuts and seeds",
+                  "Provide fats, protein and minerals."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-03-07",
+              "type": "compare",
+              "title": "Macronutrients and micronutrients",
+              "left": {
+                "heading": "Macronutrients",
+                "content": "Carbohydrates, proteins and fats are needed in larger amounts and supply energy or building material."
+              },
+              "right": {
+                "heading": "Micronutrients",
+                "content": "Vitamins and minerals are needed in smaller amounts but are essential for normal body functions."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sci-03-08",
+              "type": "concept",
+              "title": "Food safety and hygiene",
+              "content": "Wash hands before preparing or eating food, use clean water, keep food covered, separate raw and cooked items and store perishable food safely.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-03-09",
+              "type": "steps",
+              "title": "Build a balanced meal",
+              "steps": [
+                "Include a variety of food groups rather than relying on one food.",
+                "Add vegetables and fruit for vitamins, minerals and fibre.",
+                "Include suitable protein sources such as pulses, dairy, eggs or other available foods.",
+                "Choose grains or millets for energy.",
+                "Drink safe water and adjust portions to age and activity."
+              ],
+              "tags": [
+                "process",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-03-10",
+              "type": "recall",
+              "title": "Nutrient function",
+              "question": "Which nutrient is especially important for growth and repair of body tissues?",
+              "answer": "Protein.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-03-11",
+              "type": "recall",
+              "title": "Fibre check",
+              "question": "Why is dietary fibre important?",
+              "answer": "It supports healthy digestion and helps food move through the digestive system.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-03-12",
+              "type": "concept",
+              "title": "Food choices and health",
+              "content": "Food needs vary with age, activity, health and availability. Traditional foods can be nutritious; variety, balance, hygiene and moderation matter more than labelling a single food as a complete diet.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
             }
           ]
         },
@@ -155,6 +547,136 @@
               "title": "Quick self-check",
               "question": "What happens when the north pole of one magnet is brought near the south pole of another?",
               "answer": "They attract because unlike magnetic poles attract.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-04-04",
+              "type": "fact",
+              "title": "Magnet basics",
+              "facts": [
+                [
+                  "Poles",
+                  "Every magnet has a north pole and a south pole."
+                ],
+                [
+                  "Attraction",
+                  "Unlike poles attract."
+                ],
+                [
+                  "Repulsion",
+                  "Like poles repel."
+                ],
+                [
+                  "Magnetic force",
+                  "Can act without direct contact."
+                ],
+                [
+                  "Magnetic field",
+                  "The region around a magnet where magnetic effects can be detected."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-04-05",
+              "type": "concept",
+              "title": "Magnetic and non-magnetic materials",
+              "content": "Materials such as iron are attracted strongly by ordinary magnets. Many materials such as wood, plastic, paper and glass are not attracted by a magnet.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-04-06",
+              "type": "steps",
+              "title": "Test whether an object is magnetic",
+              "steps": [
+                "Bring a magnet near the object without touching it first.",
+                "Observe whether the object is attracted.",
+                "Repeat from different sides if necessary.",
+                "Record results for each material and compare them.",
+                "Do not assume every metal is magnetic."
+              ],
+              "tags": [
+                "process",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-04-07",
+              "type": "concept",
+              "title": "Magnetic poles",
+              "content": "The magnetic effect is strongest near the two ends of a bar magnet, called its poles. If a magnet is freely suspended, it tends to align approximately in the north–south direction.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-04-08",
+              "type": "compare",
+              "title": "Attraction and repulsion",
+              "left": {
+                "heading": "Attraction",
+                "content": "Opposite poles (north and south) pull towards one another."
+              },
+              "right": {
+                "heading": "Repulsion",
+                "content": "Similar poles (north–north or south–south) push away from one another."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sci-04-09",
+              "type": "fact",
+              "title": "Using a compass",
+              "facts": [
+                [
+                  "Needle",
+                  "A small magnet that can rotate freely."
+                ],
+                [
+                  "Direction",
+                  "The needle settles approximately along the north–south direction."
+                ],
+                [
+                  "Use",
+                  "Helps identify directions and navigate."
+                ],
+                [
+                  "Care",
+                  "Keep away from strong magnets and magnetic objects while taking a reading."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-04-10",
+              "type": "recall",
+              "title": "Pole interaction",
+              "question": "What happens when the north pole of one magnet is brought near the north pole of another?",
+              "answer": "They repel because like poles repel.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-04-11",
+              "type": "recall",
+              "title": "Material test",
+              "question": "A plastic ruler is brought near a bar magnet. What do you expect?",
+              "answer": "It is not attracted because ordinary plastic is non-magnetic.",
               "tags": [
                 "active recall"
               ]
@@ -284,6 +806,120 @@
                 "self-check",
                 "circular motion"
               ]
+            },
+            {
+              "id": "c6-sci-05-09",
+              "type": "fact",
+              "title": "Common units of length",
+              "facts": [
+                [
+                  "Kilometre (km)",
+                  "1 km = 1,000 m"
+                ],
+                [
+                  "Metre (m)",
+                  "Standard SI unit of length."
+                ],
+                [
+                  "Centimetre (cm)",
+                  "1 m = 100 cm"
+                ],
+                [
+                  "Millimetre (mm)",
+                  "1 cm = 10 mm"
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-05-10",
+              "type": "concept",
+              "title": "Motion and reference point",
+              "content": "An object is in motion when its position changes with time relative to a chosen reference point. An object may appear at rest to one observer and moving to another.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-05-11",
+              "type": "fact",
+              "title": "Types of motion",
+              "facts": [
+                [
+                  "Rectilinear",
+                  "Along a straight line."
+                ],
+                [
+                  "Circular",
+                  "Along a circular path."
+                ],
+                [
+                  "Periodic",
+                  "Repeats after equal intervals of time."
+                ],
+                [
+                  "Oscillatory",
+                  "To-and-fro motion about a mean position."
+                ],
+                [
+                  "Rotational",
+                  "Spinning about an axis."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-05-12",
+              "type": "compare",
+              "title": "Uniform and non-uniform motion",
+              "left": {
+                "heading": "Uniform motion",
+                "content": "An object covers equal distances in equal intervals of time."
+              },
+              "right": {
+                "heading": "Non-uniform motion",
+                "content": "An object covers unequal distances in equal intervals, or its speed changes."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sci-05-13",
+              "type": "recall",
+              "title": "Length conversion",
+              "question": "Convert 2.5 m into centimetres.",
+              "answer": "250 cm, because 1 m = 100 cm.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-05-14",
+              "type": "recall",
+              "title": "Motion classification",
+              "question": "A swing moves to and fro repeatedly. What type of motion is this?",
+              "answer": "Oscillatory motion; if the movement repeats at equal time intervals, it is also periodic.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-05-15",
+              "type": "recall",
+              "title": "Reference point",
+              "question": "A passenger sitting in a moving bus is at rest relative to what, and moving relative to what?",
+              "answer": "At rest relative to the bus seat and other passengers; moving relative to the road or a stationary tree.",
+              "tags": [
+                "active recall"
+              ]
             }
           ]
         },
@@ -319,6 +955,126 @@
               "title": "Quick self-check",
               "question": "Why is glass useful for a window but not usually for a school bag?",
               "answer": "Glass is transparent and rigid but brittle; a bag needs a flexible, strong material that can withstand handling.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-06-04",
+              "type": "fact",
+              "title": "Properties used to describe materials",
+              "facts": [
+                [
+                  "Appearance",
+                  "Colour, lustre and texture."
+                ],
+                [
+                  "Hardness",
+                  "How easily a material can be scratched or pressed."
+                ],
+                [
+                  "Solubility",
+                  "Whether it dissolves in a liquid such as water."
+                ],
+                [
+                  "Transparency",
+                  "How much light passes through."
+                ],
+                [
+                  "Floatation",
+                  "Whether it floats or sinks in a liquid."
+                ],
+                [
+                  "Flexibility",
+                  "How easily it bends without breaking."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-06-05",
+              "type": "compare",
+              "title": "Transparent, translucent and opaque",
+              "left": {
+                "heading": "Transparent",
+                "content": "Allows light through so objects can be seen clearly, e.g. clear glass."
+              },
+              "right": {
+                "heading": "Translucent",
+                "content": "Allows some light through but objects appear blurred, e.g. frosted glass."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sci-06-06",
+              "type": "concept",
+              "title": "One material, many uses",
+              "content": "A material is selected according to the properties needed for a purpose. Metal may be chosen for strength, glass for transparency, rubber for flexibility and wood for many structural uses.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-06-07",
+              "type": "fact",
+              "title": "Soluble and insoluble",
+              "facts": [
+                [
+                  "Soluble",
+                  "A substance dissolves in a liquid to form a solution, e.g. salt in water."
+                ],
+                [
+                  "Insoluble",
+                  "A substance does not dissolve appreciably, e.g. sand in water."
+                ],
+                [
+                  "Important",
+                  "Dissolving does not mean a substance disappears; its particles spread through the liquid."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-06-08",
+              "type": "steps",
+              "title": "Compare materials fairly",
+              "steps": [
+                "Choose one property to test.",
+                "Use similar-sized samples when possible.",
+                "Keep test conditions the same, such as water volume and temperature.",
+                "Record observations in a table.",
+                "Repeat if the result is uncertain."
+              ],
+              "tags": [
+                "process",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-06-09",
+              "type": "recall",
+              "title": "Transparency check",
+              "question": "Which material is suitable for a window if a clear view is needed: transparent or opaque?",
+              "answer": "Transparent material, such as clear glass.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-06-10",
+              "type": "recall",
+              "title": "Solubility check",
+              "question": "What happens when salt dissolves in water?",
+              "answer": "Salt particles spread throughout the water to form a solution; the salt has not vanished.",
               "tags": [
                 "active recall"
               ]
@@ -360,6 +1116,109 @@
               "tags": [
                 "active recall"
               ]
+            },
+            {
+              "id": "c6-sci-07-04",
+              "type": "fact",
+              "title": "Temperature and units",
+              "facts": [
+                [
+                  "Temperature",
+                  "A measure of how hot or cold something is."
+                ],
+                [
+                  "Celsius",
+                  "Common everyday temperature scale, written °C."
+                ],
+                [
+                  "Thermometer",
+                  "Instrument used to measure temperature."
+                ],
+                [
+                  "Clinical thermometer",
+                  "Designed to measure human body temperature."
+                ],
+                [
+                  "Laboratory thermometer",
+                  "Used for measuring temperatures in experiments."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-07-05",
+              "type": "concept",
+              "title": "Why touch is unreliable",
+              "content": "Our sense of touch can be misleading because the same object may feel warm or cool depending on what our skin touched before. A thermometer gives a more reliable measurement.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-07-06",
+              "type": "compare",
+              "title": "Clinical and laboratory thermometers",
+              "left": {
+                "heading": "Clinical thermometer",
+                "content": "Used for body temperature; has a narrow range suited to human body readings and is handled hygienically."
+              },
+              "right": {
+                "heading": "Laboratory thermometer",
+                "content": "Used in experiments; has a wider range for different substances and should be read while its bulb is in the material being measured."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sci-07-07",
+              "type": "steps",
+              "title": "Read a thermometer correctly",
+              "steps": [
+                "Use a thermometer suitable for the substance and temperature range.",
+                "Place the bulb as instructed; do not let it touch the container if measuring liquid temperature.",
+                "Wait for the reading to stabilise.",
+                "Keep your eye level with the liquid column or display.",
+                "Record the value with its unit."
+              ],
+              "tags": [
+                "process",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-07-08",
+              "type": "concept",
+              "title": "Safe thermometer use",
+              "content": "Handle glass thermometers carefully. Do not use a laboratory thermometer to measure body temperature. Follow teacher guidance and avoid touching hot containers or liquids.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-07-09",
+              "type": "recall",
+              "title": "Unit check",
+              "question": "What unit is commonly used for everyday temperature?",
+              "answer": "Degree Celsius (°C).",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-07-10",
+              "type": "recall",
+              "title": "Instrument choice",
+              "question": "Which thermometer is suitable for measuring the temperature of water during an experiment?",
+              "answer": "A laboratory thermometer, using the correct range and safe handling.",
+              "tags": [
+                "active recall"
+              ]
             }
           ]
         },
@@ -395,6 +1254,140 @@
               "title": "Quick self-check",
               "question": "What change of state occurs when water vapour cools and forms tiny liquid droplets?",
               "answer": "Condensation.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-08-04",
+              "type": "fact",
+              "title": "Changes of state",
+              "facts": [
+                [
+                  "Melting",
+                  "Solid changes into liquid."
+                ],
+                [
+                  "Freezing",
+                  "Liquid changes into solid."
+                ],
+                [
+                  "Evaporation",
+                  "Liquid changes into vapour from its surface."
+                ],
+                [
+                  "Boiling",
+                  "Rapid vaporisation throughout a liquid at its boiling point."
+                ],
+                [
+                  "Condensation",
+                  "Vapour changes into liquid."
+                ],
+                [
+                  "Sublimation",
+                  "Some solids change directly into vapour and back."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-08-05",
+              "type": "concept",
+              "title": "Water cycle",
+              "content": "The Sun heats water and causes evaporation. Water vapour rises, cools and condenses into tiny droplets forming clouds. Water returns as precipitation and collects in rivers, lakes, oceans and the ground.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-08-06",
+              "type": "compare",
+              "title": "Evaporation and boiling",
+              "left": {
+                "heading": "Evaporation",
+                "content": "Occurs at the surface and can happen at temperatures below the boiling point; it is usually gradual."
+              },
+              "right": {
+                "heading": "Boiling",
+                "content": "Occurs throughout the liquid at a particular temperature for a given pressure; bubbles form rapidly."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sci-08-07",
+              "type": "fact",
+              "title": "Factors affecting evaporation",
+              "facts": [
+                [
+                  "Temperature",
+                  "Higher temperature usually increases evaporation."
+                ],
+                [
+                  "Surface area",
+                  "Larger exposed surface increases evaporation."
+                ],
+                [
+                  "Wind",
+                  "Moving air carries away water vapour and speeds evaporation."
+                ],
+                [
+                  "Humidity",
+                  "High humidity slows evaporation."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-08-08",
+              "type": "concept",
+              "title": "Condensation in daily life",
+              "content": "Water droplets on the outside of a cold glass form when water vapour in the surrounding air cools and condenses. The droplets do not leak through the glass.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-08-09",
+              "type": "steps",
+              "title": "Explain the water cycle",
+              "steps": [
+                "Heat from the Sun causes evaporation from water bodies and wet surfaces.",
+                "Water vapour rises and cools.",
+                "Condensation forms tiny droplets and clouds.",
+                "Droplets combine and fall as precipitation.",
+                "Water collects and flows back into water bodies; the cycle continues."
+              ],
+              "tags": [
+                "process",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-08-10",
+              "type": "recall",
+              "title": "State change",
+              "question": "What is the change of state when water vapour cools into liquid droplets?",
+              "answer": "Condensation.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-08-11",
+              "type": "recall",
+              "title": "Evaporation factor",
+              "question": "Why do wet clothes dry faster on a windy day?",
+              "answer": "Moving air carries water vapour away from the clothes, allowing more water to evaporate.",
               "tags": [
                 "active recall"
               ]
@@ -436,6 +1429,137 @@
               "tags": [
                 "active recall"
               ]
+            },
+            {
+              "id": "c6-sci-09-04",
+              "type": "fact",
+              "title": "Methods of separation",
+              "facts": [
+                [
+                  "Handpicking",
+                  "Removing visible unwanted pieces by hand."
+                ],
+                [
+                  "Threshing",
+                  "Separating grains from stalks."
+                ],
+                [
+                  "Winnowing",
+                  "Using wind or moving air to separate lighter husk from heavier grains."
+                ],
+                [
+                  "Sieving",
+                  "Separating particles of different sizes."
+                ],
+                [
+                  "Sedimentation",
+                  "Heavier insoluble particles settle at the bottom."
+                ],
+                [
+                  "Decantation",
+                  "Carefully pouring off the upper liquid."
+                ],
+                [
+                  "Filtration",
+                  "Passing a mixture through a filter to retain insoluble solids."
+                ],
+                [
+                  "Evaporation",
+                  "Removing liquid to obtain a dissolved solid."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-09-05",
+              "type": "concept",
+              "title": "Choose a method by property",
+              "content": "Separation works because components differ in size, weight, solubility, magnetism or boiling behaviour. Identify the property first, then select the method.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-09-06",
+              "type": "steps",
+              "title": "Separate sand and water",
+              "steps": [
+                "Allow the mixture to stand so heavier sand settles, or filter it directly.",
+                "Place filter paper in a funnel.",
+                "Pour the mixture carefully.",
+                "Sand remains on the filter while water passes through.",
+                "Dry the sand if a dry sample is needed."
+              ],
+              "tags": [
+                "process",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-09-07",
+              "type": "steps",
+              "title": "Separate salt from salt water",
+              "steps": [
+                "Pour salt water into a suitable evaporating dish.",
+                "Heat gently under supervision or leave in a safe place for evaporation.",
+                "Water changes into vapour.",
+                "Salt remains as solid crystals or residue.",
+                "Do not taste laboratory samples."
+              ],
+              "tags": [
+                "process",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-09-08",
+              "type": "compare",
+              "title": "Sedimentation and filtration",
+              "left": {
+                "heading": "Sedimentation",
+                "content": "Uses gravity to let heavier insoluble particles settle at the bottom."
+              },
+              "right": {
+                "heading": "Filtration",
+                "content": "Uses a porous filter to separate insoluble solids from a liquid more directly."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sci-09-09",
+              "type": "concept",
+              "title": "Can dissolved salt be filtered out?",
+              "content": "No. Dissolved salt particles pass through ordinary filter paper with the water. Evaporation or another suitable method is needed to recover the salt.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-09-10",
+              "type": "recall",
+              "title": "Method selection",
+              "question": "How would you separate iron filings from sand?",
+              "answer": "Use a magnet to attract and remove the iron filings.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-09-11",
+              "type": "recall",
+              "title": "Method selection",
+              "question": "How would you separate tea leaves from prepared tea?",
+              "answer": "Filtration using a strainer.",
+              "tags": [
+                "active recall"
+              ]
             }
           ]
         },
@@ -471,6 +1595,144 @@
               "title": "Quick self-check",
               "question": "Why is a moving toy not considered a living organism?",
               "answer": "It does not carry out life processes such as nutrition, growth, respiration and reproduction; its movement is produced mechanically.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-10-04",
+              "type": "fact",
+              "title": "Characteristics of living organisms",
+              "facts": [
+                [
+                  "Nutrition",
+                  "Obtaining food or nutrients."
+                ],
+                [
+                  "Respiration",
+                  "Releasing energy from food."
+                ],
+                [
+                  "Growth",
+                  "Increasing in size or developing."
+                ],
+                [
+                  "Excretion",
+                  "Removing waste products."
+                ],
+                [
+                  "Response",
+                  "Reacting to changes in the surroundings."
+                ],
+                [
+                  "Reproduction",
+                  "Producing new individuals."
+                ],
+                [
+                  "Movement",
+                  "Changing position or moving body parts."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-10-05",
+              "type": "concept",
+              "title": "Living, once-living and non-living",
+              "content": "A wooden table came from a living tree but is no longer alive. A stone was never living. A seed may appear inactive but can germinate under suitable conditions.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-10-06",
+              "type": "compare",
+              "title": "Growth in living and non-living things",
+              "left": {
+                "heading": "Living organisms",
+                "content": "Grow from within through biological processes and use nutrients and energy."
+              },
+              "right": {
+                "heading": "Non-living objects",
+                "content": "May become larger by external addition, such as a pile of sand, but do not grow biologically."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sci-10-07",
+              "type": "concept",
+              "title": "Response to stimuli",
+              "content": "Living things respond to changes such as light, touch, temperature, sound or the presence of food. Plants also respond, even though they do not move from place to place like animals.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-10-08",
+              "type": "fact",
+              "title": "Plant responses",
+              "facts": [
+                [
+                  "Shoot growth",
+                  "Shoots generally grow towards light."
+                ],
+                [
+                  "Root growth",
+                  "Roots generally grow downwards and towards water."
+                ],
+                [
+                  "Touch response",
+                  "Some plants show movement when touched."
+                ],
+                [
+                  "Important",
+                  "Plant responses may be slow and are easier to observe over time."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-10-09",
+              "type": "steps",
+              "title": "Observe whether something is living",
+              "steps": [
+                "Look for several life processes, not just movement.",
+                "Consider whether it obtains nutrients and uses energy.",
+                "Observe growth or response over time.",
+                "Remember that some living things are stationary or temporarily inactive.",
+                "Use more than one piece of evidence before deciding."
+              ],
+              "tags": [
+                "process",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-10-10",
+              "type": "recall",
+              "title": "Living or non-living",
+              "question": "Why is a moving toy not considered a living organism?",
+              "answer": "It does not carry out life processes such as nutrition, respiration, growth and reproduction; its movement is mechanical.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-10-11",
+              "type": "recall",
+              "title": "Plant response",
+              "question": "Do plants respond to their surroundings? Give one example.",
+              "answer": "Yes. A shoot generally grows towards light, showing a response to its surroundings.",
               "tags": [
                 "active recall"
               ]
@@ -512,6 +1774,144 @@
               "tags": [
                 "active recall"
               ]
+            },
+            {
+              "id": "c6-sci-11-04",
+              "type": "fact",
+              "title": "Natural resources",
+              "facts": [
+                [
+                  "Air",
+                  "Needed for respiration and many natural processes."
+                ],
+                [
+                  "Water",
+                  "Essential for life, farming, industry and ecosystems."
+                ],
+                [
+                  "Soil",
+                  "Supports plant growth and provides habitat for organisms."
+                ],
+                [
+                  "Forests",
+                  "Provide habitat, resources, protect soil and influence the water cycle."
+                ],
+                [
+                  "Minerals",
+                  "Used in buildings, tools, transport and technology."
+                ],
+                [
+                  "Sunlight",
+                  "Provides energy and supports photosynthesis."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-11-05",
+              "type": "concept",
+              "title": "Renewable and non-renewable resources",
+              "content": "Renewable resources are replenished naturally on a relatively short timescale when managed well. Non-renewable resources form very slowly and can be depleted by use.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-11-06",
+              "type": "compare",
+              "title": "Renewable and non-renewable examples",
+              "left": {
+                "heading": "Renewable",
+                "content": "Sunlight, wind and sustainably managed forests or water supplies can renew naturally, although local supplies can still be damaged."
+              },
+              "right": {
+                "heading": "Non-renewable",
+                "content": "Coal, petroleum and many minerals take very long periods to form and are finite on human timescales."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sci-11-07",
+              "type": "concept",
+              "title": "Soil is a living resource",
+              "content": "Soil contains mineral particles, organic matter, water, air and living organisms. It supports plant roots and stores water and nutrients.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-11-08",
+              "type": "fact",
+              "title": "Ways to conserve resources",
+              "facts": [
+                [
+                  "Water",
+                  "Fix leaks, avoid waste and harvest rainwater where suitable."
+                ],
+                [
+                  "Energy",
+                  "Switch off unused lights and use energy efficiently."
+                ],
+                [
+                  "Forests",
+                  "Protect habitats, plant suitable native species and reduce unnecessary cutting."
+                ],
+                [
+                  "Materials",
+                  "Reduce, reuse, repair and recycle."
+                ],
+                [
+                  "Soil",
+                  "Prevent erosion and maintain vegetation cover."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-11-09",
+              "type": "steps",
+              "title": "Think sustainably before using a resource",
+              "steps": [
+                "Ask whether the resource can be renewed and how quickly.",
+                "Estimate the amount needed and avoid waste.",
+                "Consider effects on habitats, water, soil and people.",
+                "Choose reusable or lower-impact alternatives where practical.",
+                "Protect the resource for future users."
+              ],
+              "tags": [
+                "process",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-11-10",
+              "type": "recall",
+              "title": "Resource check",
+              "question": "Why is coal considered non-renewable?",
+              "answer": "It takes millions of years to form and cannot be replaced on a human timescale at the rate it is used.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-11-11",
+              "type": "recall",
+              "title": "Conservation check",
+              "question": "Name two ways to conserve water at home or school.",
+              "answer": "Repair leaking taps and avoid leaving taps running; rainwater harvesting and reusing suitable water are other examples.",
+              "tags": [
+                "active recall"
+              ]
             }
           ]
         },
@@ -547,6 +1947,167 @@
               "title": "Quick self-check",
               "question": "Why does the Sun look much larger and brighter than other stars?",
               "answer": "The Sun is a star much closer to Earth than the other stars, so it appears larger and brighter.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-12-04",
+              "type": "fact",
+              "title": "Earth's place in space",
+              "facts": [
+                [
+                  "Earth",
+                  "A planet that orbits the Sun."
+                ],
+                [
+                  "Sun",
+                  "A star at the centre of our Solar System."
+                ],
+                [
+                  "Moon",
+                  "Earth's natural satellite."
+                ],
+                [
+                  "Solar System",
+                  "The Sun and the objects that orbit it."
+                ],
+                [
+                  "Galaxy",
+                  "A huge collection of stars, gas and dust; the Solar System is in the Milky Way."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-12-05",
+              "type": "fact",
+              "title": "The eight planets",
+              "facts": [
+                [
+                  "Inner planets",
+                  "Mercury, Venus, Earth and Mars."
+                ],
+                [
+                  "Outer planets",
+                  "Jupiter, Saturn, Uranus and Neptune."
+                ],
+                [
+                  "Order from the Sun",
+                  "Mercury → Venus → Earth → Mars → Jupiter → Saturn → Uranus → Neptune."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-12-06",
+              "type": "concept",
+              "title": "Rotation and revolution",
+              "content": "Earth rotates on its axis, producing day and night. Earth revolves around the Sun; one revolution takes about a year.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-12-07",
+              "type": "compare",
+              "title": "Stars, planets and satellites",
+              "left": {
+                "heading": "Stars",
+                "content": "Hot objects that produce their own light, such as the Sun."
+              },
+              "right": {
+                "heading": "Planets",
+                "content": "Do not make their own visible light; they reflect starlight and orbit a star."
+              },
+              "tags": [
+                "compare"
+              ]
+            },
+            {
+              "id": "c6-sci-12-08",
+              "type": "fact",
+              "title": "Moon phases",
+              "facts": [
+                [
+                  "New Moon",
+                  "The Moon's sunlit side is mostly turned away from Earth."
+                ],
+                [
+                  "Crescent",
+                  "A small curved part appears illuminated."
+                ],
+                [
+                  "Quarter",
+                  "About half of the visible disc appears lit."
+                ],
+                [
+                  "Full Moon",
+                  "The side facing Earth appears fully illuminated."
+                ],
+                [
+                  "Cycle",
+                  "The pattern of phases repeats in about 29.5 days."
+                ]
+              ],
+              "tags": [
+                "key facts",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-12-09",
+              "type": "concept",
+              "title": "Why stars look tiny",
+              "content": "Stars are extremely far away. The Sun appears much larger and brighter than other stars because it is much closer to Earth.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-12-10",
+              "type": "concept",
+              "title": "Constellations",
+              "content": "A constellation is a recognised pattern of stars as seen from Earth. The stars in a pattern may be at very different distances from us.",
+              "tags": [
+                "key concept",
+                "quick reference"
+              ]
+            },
+            {
+              "id": "c6-sci-12-11",
+              "type": "recall",
+              "title": "Solar System order",
+              "question": "Which planet is known as the Red Planet?",
+              "answer": "Mars.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-12-12",
+              "type": "recall",
+              "title": "Day and night",
+              "question": "What causes day and night on Earth?",
+              "answer": "Earth's rotation on its axis.",
+              "tags": [
+                "active recall"
+              ]
+            },
+            {
+              "id": "c6-sci-12-13",
+              "type": "recall",
+              "title": "Sun and stars",
+              "question": "Why does the Sun look much larger and brighter than other stars?",
+              "answer": "The Sun is a star much closer to Earth than the other stars.",
               "tags": [
                 "active recall"
               ]
