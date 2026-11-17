@@ -125,5 +125,5 @@ assert.equal(class6Boards.find(board=>board.subject==="social-science").chapters
 assert.equal(class6Boards.find(board=>board.subject==="english").chapters.length,16,"Poorvi must cover all 16 reading texts");
 assert.equal(class6Boards.find(board=>board.subject==="hindi").chapters.length,13,"Malhar must cover all 13 chapters");
 const hindi6Cards=class6Boards.find(board=>board.subject==="hindi").chapters.flatMap(ch=>ch.cards);
-assert.ok(hindi6Cards.every(card=>card.typeLabel&&(!card.type==="recall"||(card.revealLabel&&card.hideLabel))),"Class 6 Hindi cards must use Hindi labels");
+assert.ok(hindi6Cards.every(card=>card.typeLabel&&(card.type!=="recall"||(card.revealLabel&&card.hideLabel))),"Class 6 Hindi cards must use Hindi labels");
 
