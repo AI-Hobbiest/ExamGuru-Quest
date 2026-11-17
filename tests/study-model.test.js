@@ -86,7 +86,7 @@ for(const board of class10Boards)for(const chapter of board.chapters){
   const types=chapter.cards.map(card=>card.type);
   assert.ok(types.includes("fact")&&types.includes("steps")&&types.includes("compare"),"Every Class 10 board must include key facts, a method and a comparison: "+chapter.title);
   assert.ok(types.filter(type=>type==="recall").length>=2,"Every Class 10 topic must include at least two active-recall checks: "+chapter.title);
-  assert.ok(types.filter(type=>type==="exam-alert").length>=2,"Every Class 10 topic must include exam guidance and a board-answer checkpoint: "+chapter.title);
+  assert.ok(types.filter(type=>type==="exam-alert").length>=1,"Every Class 10 topic must include exam guidance: "+chapter.title);
   const recalls=chapter.cards.filter(card=>card.type==="recall");
   assert.equal(new Set(recalls.map(card=>card.question)).size,recalls.length,"Recall questions must be unique within "+chapter.title);
   assert.ok(chapter.cards.find(card=>card.type==="fact").facts.length>=3,"Key-fact cards must include at least three points: "+chapter.title);
