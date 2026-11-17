@@ -129,6 +129,7 @@ BEGIN
     SELECT 1 FROM institution_memberships im
     JOIN departments d ON d.department_id=NEW.department_id
       AND d.institution_id=NEW.institution_id AND d.status='active'
+    JOIN institutions i ON i.institution_id=d.institution_id AND i.status='active'
     WHERE im.membership_id=NEW.institution_membership_id
       AND im.institution_id=NEW.institution_id
       AND im.status='active' AND im.role='teacher'
@@ -142,6 +143,7 @@ BEGIN
     SELECT 1 FROM departments d
     JOIN institution_classes ic ON ic.institution_class_id=NEW.institution_class_id
       AND ic.institution_id=NEW.institution_id AND ic.status='active'
+    JOIN institutions i ON i.institution_id=d.institution_id AND i.status='active'
     WHERE d.department_id=NEW.department_id
       AND d.institution_id=NEW.institution_id AND d.status='active'
   ) THEN RAISE(ABORT,'department class scope must reference an active class in the same institution') END;
@@ -156,6 +158,7 @@ BEGIN
       AND d.institution_id=dm.institution_id AND d.status='active'
     JOIN institution_memberships im ON im.membership_id=dm.institution_membership_id
       AND im.institution_id=dm.institution_id
+    JOIN institutions i ON i.institution_id=dm.institution_id AND i.status='active'
     WHERE dm.department_membership_id=NEW.department_membership_id
       AND dm.department_id=NEW.department_id
       AND dm.institution_id=NEW.institution_id
@@ -192,6 +195,9 @@ BEGIN
       AND dm.institution_id=d.institution_id
       AND dm.institution_membership_id=NEW.teacher_membership_id
       AND dm.status='active'
+    JOIN institution_memberships im ON im.membership_id=dm.institution_membership_id
+      AND im.institution_id=dm.institution_id AND im.status='active' AND im.role='teacher'
+    JOIN institutions i ON i.institution_id=d.institution_id AND i.status='active'
     WHERE d.department_id=NEW.department_id
       AND d.institution_id=NEW.institution_id AND d.status='active'
   ) THEN RAISE(ABORT,'department assignment requires active department membership, subject and class scope') END;
@@ -272,4 +278,26 @@ BEGIN
       AND a.institution_id=NEW.institution_id
       AND a.scope_all_department_classes=0
   ) THEN RAISE(ABORT,'HOD class scope must be an explicitly assigned class of the department') END;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_department_subject_valid
+BEFORE INSERT ON department_subjects
+BEGIN
+  SELECT CASE WHEN NOT EXISTS (
+    SELECT 1 FROM departments d JOIN institutions i
+      ON i.institution_id=d.institution_id AND i.status='active'
+    WHERE d.department_id=NEW.department_id
+      AND d.institution_id=NEW.institution_id AND d.status='active'
+  ) THEN RAISE(ABORT,'department subject requires an active department and institution') END;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_department_subject_valid_update
+BEFORE UPDATE OF institution_id,department_id,subject_id ON department_subjects
+BEGIN
+  SELECT CASE WHEN NOT EXISTS (
+    SELECT 1 FROM departments d JOIN institutions i
+      ON i.institution_id=d.institution_id AND i.status='active'
+    WHERE d.department_id=NEW.department_id
+      AND d.institution_id=NEW.institution_id AND d.status='active'
+  ) THEN RAISE(ABORT,'department subject requires an active department and institution') END;
 END;
