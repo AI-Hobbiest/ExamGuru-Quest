@@ -110,17 +110,18 @@ const expectedClass6=["mathematics","science","social-science","english","hindi"
 for(const subject of expectedClass6){
  const matches=class6Boards.filter(board=>board.subject===subject);
  assert.equal(matches.length,1,"Class 6 must have exactly one board for "+subject);
- assert.ok(matches[0].chapters.every(ch=>ch.cards.length>=3),"Every Class 6 topic needs at least three revision cards");
+ assert.ok(matches[0].chapters.every(ch=>ch.cards.length>=8),"Every Class 6 topic needs a complete multi-card quick reference");
 }
 assert.deepEqual(class6Boards.map(board=>board.subject).sort(),expectedClass6.slice().sort(),"Class 6 core subjects must be complete");
-assert.equal(class6Boards.reduce((n,b)=>n+b.chapters.length,0),65,"Class 6 must cover all 65 core subject topics");
-assert.equal(class6Boards.reduce((n,b)=>n+b.chapters.reduce((m,ch)=>m+ch.cards.length,0),0),200,"Class 6 must contain 200 revision cards including the existing Science chapter bank");
+assert.equal(class6Boards.reduce((n,b)=>n+b.chapters.length,0),63,"Class 6 must cover all 63 core subject topics and reading texts");
+assert.equal(class6Boards.reduce((n,b)=>n+b.chapters.reduce((m,ch)=>m+ch.cards.length,0),0),614,"Class 6 must contain comprehensive chapter quick-reference cards");
 const class6CardIds=class6Boards.flatMap(board=>board.chapters.flatMap(ch=>ch.cards.map(card=>card.id)));
 assert.equal(new Set(class6CardIds).size,class6CardIds.length,"Class 6 revision card IDs must be globally unique");
 const class6Science=class6Boards.find(board=>board.subject==="science");
 assert.equal(class6Science.chapters.length,12,"Curiosity Science must cover all 12 chapters");
 assert.ok(class6Science.chapters.find(ch=>ch.title==="The Wonderful World of Science").cards.some(card=>(card.note||"").includes("non-evaluative")),"The opening Science chapter must be labelled non-evaluative");
-assert.equal(class6Boards.find(board=>board.subject==="mathematics").chapters.length,10,"Ganita Prakash must cover all 10 chapters");
+assert.equal(class6Boards.find(board=>board.subject==="mathematics").chapters.length,8,"Ganita Prakash 2026-27 must cover all 8 chapters");
+assert.deepEqual(class6Boards.find(board=>board.subject==="mathematics").chapters.map(ch=>ch.title),["Large Numbers Around Us","Arithmetic Expressions","A Peek Beyond the Point","Expressions using Letter-Numbers","Parallel and Intersecting Lines","Number Play","A Tale of Three Intersecting Lines","Working with Fractions"],"Ganita Prakash chapters must match the 2026-27 NCERT contents");
 assert.equal(class6Boards.find(board=>board.subject==="social-science").chapters.length,14,"Exploring Society must cover all 14 chapters");
 assert.equal(class6Boards.find(board=>board.subject==="english").chapters.length,16,"Poorvi must cover all 16 reading texts");
 assert.equal(class6Boards.find(board=>board.subject==="hindi").chapters.length,13,"Malhar must cover all 13 chapters");
