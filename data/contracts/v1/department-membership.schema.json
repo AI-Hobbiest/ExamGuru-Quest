@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/department-membership.schema.json",
+  "title": "ExamGuru Department Membership v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "departmentMembershipId",
+    "institutionId",
+    "departmentId",
+    "institutionMembershipId",
+    "status",
+    "departmentRole",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "kind": {
+      "const": "department-membership"
+    },
+    "departmentMembershipId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "institutionId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "departmentId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "institutionMembershipId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "status": {
+      "enum": [
+        "active",
+        "suspended",
+        "ended"
+      ]
+    },
+    "departmentRole": {
+      "enum": [
+        "member",
+        "coordinator"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}
