@@ -25,7 +25,7 @@
   <div class="admin-notice">
     <strong>Admin publishing:</strong> this workspace creates local drafts and downloadable JSON files. It has no in-app admin authentication or GitHub write token. Only a trusted repository maintainer should commit changes to GitHub. Student sign-in uses a public flat file and is a convenience feature, not secure access control. Never use personal or reused passwords.
   </div>
-  <section class="admin-panel active" id="adminAuthBanner" style="gap:12px">
+  <section class="admin-panel active eg-surface" id="adminAuthBanner" style="gap:12px">
     <div class="admin-form-grid">
       <div style="grid-column:1/-1">
         <h2>Publishing permissions</h2>
@@ -40,9 +40,9 @@
     <div id="adminAuthStatus" class="admin-status" role="status" aria-live="polite">In-app admin sign-in is deferred. GitHub repository permissions control publishing.</div>
   </section>
   <div class="admin-grid" aria-label="Workspace summary">
-    <div class="admin-stat"><strong id="statQuestions">—</strong><span>Questions across published banks</span></div>
-    <div class="admin-stat"><strong id="statClasses">—</strong><span>Active classes</span></div>
-    <div class="admin-stat"><strong id="statStudents">0</strong><span>Student backups loaded in this session</span></div>
+    <div class="admin-stat eg-surface"><strong id="statQuestions">—</strong><span>Questions across published banks</span></div>
+    <div class="admin-stat eg-surface"><strong id="statClasses">—</strong><span>Active classes</span></div>
+    <div class="admin-stat eg-surface"><strong id="statStudents">0</strong><span>Student backups loaded in this session</span></div>
   </div>
   <div class="admin-workspace">
     <nav class="admin-tabs" aria-label="Admin workspace sections">
@@ -58,7 +58,7 @@
       <button class="admin-tab-button" data-tab="operations" type="button"><span class="admin-tab-icon">🛠️</span>Operations</button>
     </nav>
     <div class="admin-content">
-      <section class="admin-panel active" id="tab-overview">
+      <section class="admin-panel active eg-surface" id="tab-overview">
         <h2>Workspace overview</h2>
         <p class="admin-muted">Use this workbench to prepare, validate and export content. Publishing is a separate, authorised GitHub action.</p>
         <div class="admin-feature-list">
@@ -71,7 +71,7 @@
         <div id="overviewStatus" class="admin-status" role="status">Loading class catalogue and resource manifest…</div>
       </section>
 
-      <section class="admin-panel" id="tab-banks">
+      <section class="admin-panel eg-surface" id="tab-banks">
         <h2>Question banks</h2>
         <p class="admin-muted">Browse the banks by class first, then subject. Each published class–subject combination points to its own JSON file. Edits stay local until you export the bank and publish the file through GitHub.</p>
         <div class="admin-bank-selection">
@@ -141,7 +141,7 @@
         </div>
       </section>
 
-      <section class="admin-panel" id="tab-cbse-review">
+      <section class="admin-panel eg-surface" id="tab-cbse-review">
         <h2>CBSE question review</h2>
         <p class="admin-muted">Review MCQ candidates extracted from the original CBSE Class 10 papers. The parser only proposes possible question blocks. It does not decide the answer, chapter, difficulty or competency. Nothing enters a student bank until an educator checks the source PDF and official marking scheme and approves it here.</p>
         <div class="admin-notice"><strong>Source and redistribution:</strong> questions accepted here retain CBSE year, examination, subject code, paper ID and original question number. Original PDFs are extracted byte-for-byte. Files carrying explicit copyright notices or unreadable rights checks are withheld from redistribution pending review.</div>
@@ -181,7 +181,7 @@
         <div id="cbseReviewWorkStatus" class="admin-status" role="status" aria-live="polite"></div>
       </section>
 
-      <section class="admin-panel" id="tab-classes">
+      <section class="admin-panel eg-surface" id="tab-classes">
         <h2>Class catalogue</h2>
         <p class="admin-muted">The catalogue drives the Student Profile class dropdown. Export the file and publish it to <code>data/classes.json</code> via GitHub after review. Removing a class does not delete any historic student records.</p>
         <div class="admin-form-grid">
@@ -194,7 +194,7 @@
         <div id="classesTable" class="admin-table-wrap"></div>
       </section>
 
-      <section class="admin-panel" id="tab-exam-papers">
+      <section class="admin-panel eg-surface" id="tab-exam-papers">
         <h2>Exam Paper Studio</h2>
         <p class="admin-muted">Create and validate examination papers from enabled profiles in the shared exam-profile registry. Each profile supplies its own blueprint, approved question pool and optional chapter-wise practice bank.</p>
         <div class="admin-notice"><strong>Profile-driven workflow:</strong> select an enabled examination profile below. The Studio loads its matching blueprint and question banks, validates class/subject/year metadata, and checks every paper slot before enabling generation.</div>
@@ -234,7 +234,7 @@
         <div id="paperResultActions" class="admin-actions" hidden><button class="admin-btn secondary" type="button" id="downloadPaperJsonBtn">Download paper JSON</button><button class="admin-btn secondary" type="button" id="openPaperOnlineBtn">Open online exam</button><button class="admin-btn secondary" type="button" id="printStudentPaperBtn">Print / Save question paper PDF</button><button class="admin-btn secondary" type="button" id="printAnswerBookletBtn">Print / Save answer booklet PDF</button><button class="admin-btn secondary" type="button" id="printTeacherPaperBtn">Print evaluator copy / Save PDF</button></div>
         <div class="admin-footnote">Imported question pools and generated drafts are stored in this browser using ExamGuru’s versioned local storage adapter. They are not committed to GitHub automatically. Do not import confidential examination content into this public-repository MVP.</div>
       </section>
-      <section class="admin-panel" id="tab-knowledge">
+      <section class="admin-panel eg-surface" id="tab-knowledge">
         <h2>Knowledge base and source files</h2>
         <p class="admin-muted">Track books, course notes, revision guides and visual references separately from MCQ banks. Published resources appear in the student Study Library. Add an optional class list and learner-facing description; leave classes blank to make a resource available to every class. Only publish after the file is committed at its exact path and redistribution rights are confirmed.</p>
         <div class="admin-content" style="margin:14px 0;padding:14px;border:1px solid var(--c10-line);border-radius:14px">
@@ -265,7 +265,7 @@
         <div id="knowledgeTable" class="admin-table-wrap"></div>
       </section>
 
-      <section class="admin-panel" id="tab-students">
+      <section class="admin-panel eg-surface" id="tab-students">
         <section class="admin-content" id="flatFileAccountsPanel" style="border:1px solid var(--c10-line);border-radius:14px;padding:14px">
           <h3>Student accounts · GitHub JSON database</h3>
           <p class="admin-muted">Create and manage student accounts here. The portal generates the updated JSON file; because GitHub Pages is static, an authorised maintainer must publish that file to GitHub for accounts to become available to all students.</p>
@@ -366,7 +366,7 @@
         <div class="admin-footnote">Student backup files contain personal profile and performance data. Keep them private. This page does not upload them to GitHub or any server.</div>
       </section>
 
-      <section class="admin-panel" id="tab-leaderboard">
+      <section class="admin-panel eg-surface" id="tab-leaderboard">
         <h2>Leaderboards</h2>
         <p class="admin-muted">Rankings below are calculated from student backup JSON files that the administrator imports. Cross-device live rankings are deferred.</p>
         <section class="admin-content" style="border:1px solid var(--c10-line);border-radius:14px;padding:14px" hidden>
@@ -389,7 +389,7 @@
         <div class="admin-footnote">Use class/subject reports for support, not as the only measure of a student's ability. Only imported data appears here; there is no cross-device sync yet.</div>
       </section>
 
-      <section class="admin-panel" id="tab-access">
+      <section class="admin-panel eg-surface" id="tab-access">
         <h2>Admin access and account security</h2>
         <p class="admin-muted">The Admin Workspace contains no GitHub write token or server-side authentication. Publishing account files and content is controlled by GitHub repository permissions.</p>
         <div class="admin-feature-list">
@@ -399,7 +399,7 @@
         <div class="admin-notice"><strong>Student passwords:</strong> only salted hashes are committed in <code>data/student-accounts.json</code>. Because the file is public and verification happens in the browser, this is not a secure login system. Use unique classroom-only passwords, never reuse passwords, and migrate to a server-side verifier before using accounts for protected data.</div>
       </section>
 
-      <section class="admin-panel" id="tab-operations">
+      <section class="admin-panel eg-surface" id="tab-operations">
         <h2>Operations and release checklist</h2>
         <div class="admin-feature-list">
           <div class="admin-feature"><strong>Before publishing</strong><p>Export changed bank JSON, download each new image/resource file, upload every file to the exact referenced path, and check that all image references resolve.</p></div>
@@ -414,7 +414,7 @@
   </div>
 </main>
 <div id="profileEditorModal" class="image-viewer hide" role="dialog" aria-modal="true" aria-labelledby="profileEditorTitle">
-  <div class="image-viewer-card" style="width:min(650px,100%);">
+  <div class="image-viewer-card eg-surface" style="width:min(650px,100%);">
     <button type="button" class="image-viewer-close" id="closeProfileEditor" aria-label="Close student profile editor">×</button>
     <h2 id="profileEditorTitle">Edit imported student profile</h2>
     <p class="admin-muted">This changes only the backup currently loaded in this workbench. The student must import the revised backup to update their own device.</p>
@@ -430,7 +430,7 @@
   </div>
 </div>
 <div id="centralStudentEditorModal" class="image-viewer hide" role="dialog" aria-modal="true" aria-labelledby="centralStudentEditorTitle">
-  <div class="image-viewer-card" style="width:min(650px,100%)">
+  <div class="image-viewer-card eg-surface" style="width:min(650px,100%)">
     <button type="button" class="image-viewer-close" id="closeCentralStudentEditor" aria-label="Close student account editor">×</button>
     <h2 id="centralStudentEditorTitle">Edit central student account</h2>
     <div class="admin-form-grid">
