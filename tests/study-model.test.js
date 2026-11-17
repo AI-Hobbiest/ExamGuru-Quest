@@ -45,6 +45,13 @@ assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .study-card"),"Stud
 assert.ok(script.includes('card.className="study-card eg-surface-card"'),"resource cards must use the shared surface component");
 assert.ok(page.includes('class="study-panel eg-surface-panel"'),"resource browser panel must use the shared surface component");
 assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .eg-surface-card"),"shared surface cards must have a dark-mode surface");
+assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .eg-surface{"),"generic surface utility must own dark-mode surfaces");
+for(const path of ["admin.html","assigned-paper.html","assigned-test.html","clat-dashboard.html","clat-login.html","clat.html","dashboard.html","exam-practice.html","index.html","learning.html","parent.html","practice.html","profile.html","pyq-library.html","study.html"]){
+ const html=fs.readFileSync(path,"utf8");
+ assert.ok(html.includes("eg-surface"),path+" must adopt the shared surface component where static surfaces exist");
+}
+assert.ok(theme.includes("Global semantic component layer")&&theme.includes("body.eg-theme-dark.c10-shell-ready :is("),"all-workspace semantic dark theme layer must be centralized");
+
 console.log("Study Library tests passed: manifest validation, class visibility, publication filtering, search, safe relative paths and local progress.");
 
 
