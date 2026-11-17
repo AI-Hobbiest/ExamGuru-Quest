@@ -58,8 +58,14 @@
      if(c.institutionClassId){
       const assignments=await repositories.academic.listTeacherAssignments(institutionMembership.membershipId);
       if(!(assignments||[]).some(a=>a.status==="active"&&a.departmentId===c.departmentId&&a.institutionId===c.institutionId&&a.institutionClassId===c.institutionClassId&&(!c.subjectId||a.subjectId===c.subjectId)))return deny("teacher-department-assignment-required");
-     }else if(permission==="department.assignment.manage")return deny("teacher-class-scope-required");
+     }else return deny("teacher-class-scope-required");
     }
+   }
+   if(permission==="department.head.read"&&institutionMembership.role==="teacher"){
+    if(!dm)return deny("department-membership-required");
+    const appointments=await repositories.academicOrganisation.listActiveHeadAppointments(dm.departmentMembershipId);
+    if(!(appointments||[]).some(a=>a.departmentId===c.departmentId&&a.status==="active"&&(!a.effectiveFrom||a.effectiveFrom<=(c.at||new Date().toISOString()))&&(!a.effectiveTo||a.effectiveTo>(c.at||new Date().toISOString()))))return deny("active-head-appointment-required");
+    return allow("department-head-appointment",dm.departmentMembershipId);
    }
    if(permission==="department.report.read"&&institutionMembership.role==="teacher"){
     if(!dm)return deny("department-membership-required");
