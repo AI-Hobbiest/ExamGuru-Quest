@@ -1058,3 +1058,66 @@ body.eg-theme-dark.c10-shell-ready .eg-metric-card:nth-child(4n+3){border-top-co
 body.eg-theme-dark.c10-shell-ready .eg-metric-card:nth-child(4n){border-top-color:#C28E86!important}
 body.eg-theme-dark.c10-shell-ready .eg-metric-card :is(strong,b){color:#F1F6FA!important}
 body.eg-theme-dark.c10-shell-ready .eg-metric-card :is(span,small,p){color:#B9C7D4!important}
+
+
+/* Study Library shared component hardening.
+   Keep layout wrappers transparent; surfaces belong to their reusable child cards. */
+body.c10-shell-ready .eg-metric-grid{
+  display:grid!important;gap:12px!important;min-width:0;
+  background:transparent!important;border:0!important;box-shadow:none!important;
+  color:inherit!important;
+}
+body.c10-shell-ready .eg-metric-grid > .eg-metric-card{
+  background:var(--ss-surface)!important;border:1px solid var(--ss-line)!important;
+  border-top:3px solid #8FB9D8!important;border-radius:var(--ss-radius)!important;
+  color:var(--ss-ink)!important;box-shadow:var(--ss-shadow)!important;
+}
+body.c10-shell-ready .eg-metric-grid > .eg-metric-card:nth-child(4n+2){border-top-color:#B6A7DF!important}
+body.c10-shell-ready .eg-metric-grid > .eg-metric-card:nth-child(4n+3){border-top-color:#82B99C!important}
+body.c10-shell-ready .eg-metric-grid > .eg-metric-card:nth-child(4n){border-top-color:#D9A49A!important}
+body.c10-shell-ready .eg-preview-banner{
+  display:block;margin:12px 0 0;padding:11px 14px;
+  border:1px solid var(--ss-line)!important;border-radius:12px!important;
+  background:var(--ss-blue-soft)!important;color:var(--ss-ink)!important;
+  font-weight:800;line-height:1.45;box-shadow:none!important;
+}
+body.eg-theme-dark.c10-shell-ready .eg-metric-grid{background:transparent!important}
+body.eg-theme-dark.c10-shell-ready .eg-metric-grid > .eg-metric-card{
+  background:linear-gradient(145deg,#354657 0%,#2F3E4D 100%)!important;
+  border:1px solid #526578!important;border-top:3px solid #6D9BBE!important;
+  color:#F1F6FA!important;box-shadow:0 7px 18px rgba(14,24,34,.14)!important;
+}
+body.eg-theme-dark.c10-shell-ready .eg-metric-grid > .eg-metric-card:nth-child(4n+2){border-top-color:#9B8CCB!important}
+body.eg-theme-dark.c10-shell-ready .eg-metric-grid > .eg-metric-card:nth-child(4n+3){border-top-color:#6FAF8C!important}
+body.eg-theme-dark.c10-shell-ready .eg-metric-grid > .eg-metric-card:nth-child(4n){border-top-color:#C28E86!important}
+body.eg-theme-dark.c10-shell-ready .eg-metric-grid > .eg-metric-card :is(strong,b){color:#F1F6FA!important}
+body.eg-theme-dark.c10-shell-ready .eg-metric-grid > .eg-metric-card :is(span,small,p){color:#B9C7D4!important}
+body.eg-theme-dark.c10-shell-ready .eg-preview-banner{
+  border-color:#526578!important;background:#354657!important;color:#E8EEF4!important;
+}
+body.eg-theme-dark.c10-shell-ready .study-hero{
+  background:linear-gradient(116deg,#344454 0%,#303B50 58%,#34483F 100%)!important;
+  border-color:#526578!important;color:#E8EEF4!important;
+}
+body.eg-theme-dark.c10-shell-ready .study-hero :is(h1,.eyebrow){color:#F1F6FA!important}
+body.eg-theme-dark.c10-shell-ready .study-hero p{color:#C2CFDB!important}
+body.eg-theme-dark.c10-shell-ready .study-hero a{color:#B9D8F1!important}
+body.eg-theme-dark.c10-shell-ready .study-panel{
+  background:var(--ss-surface)!important;border-color:var(--ss-line)!important;color:var(--ss-ink)!important;
+}
+body.eg-theme-dark.c10-shell-ready .study-panel :is(h2,h3){color:var(--ss-ink)!important}
+body.eg-theme-dark.c10-shell-ready .study-toolbar :is(input,select),
+body.eg-theme-dark.c10-shell-ready .study-actions :is(a,button){
+  background:#344454!important;border-color:#526578!important;color:#E8EEF4!important;
+}
+body.eg-theme-dark.c10-shell-ready .study-card{
+  background:linear-gradient(155deg,#354657,#2F3E4D)!important;
+  border-color:#526578!important;color:#E8EEF4!important;
+}
+body.eg-theme-dark.c10-shell-ready .study-card :is(h2,.study-meta,.study-summary-text){color:#D3DEE8!important}
+body.eg-theme-dark.c10-shell-ready .study-chip{background:#29483B!important;color:#B6E1C8!important}
+body.eg-theme-dark.c10-shell-ready .study-empty{
+  background:#344454!important;border-color:#526578!important;color:#C2CFDB!important;
+}
+body.eg-theme-dark.c10-shell-ready .study-empty strong{color:#F1F6FA!important}
+body.eg-theme-dark.c10-shell-ready .study-footer{color:#AEBECD!important}
