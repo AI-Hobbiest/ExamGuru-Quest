@@ -78,8 +78,8 @@ for(const subject of expectedClass10){
   assert.ok(matches[0].chapters.length>=10,"Class 10 "+subject+" must have broad chapter coverage");
   assert.ok(matches[0].chapters.every(ch=>ch.cards.length>=3),"Each Class 10 chapter needs at least three quick-reference cards");
 }
-assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.length,0),118,"Class 10 board must contain all chapter/topic and map-work boards");
-assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.reduce((m,ch)=>m+ch.cards.length,0),0),354,"Class 10 must contain three revision cards per chapter/topic board");
+assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.length,0),119,"Class 10 board must contain all chapter/topic and map-work boards");
+assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.reduce((m,ch)=>m+ch.cards.length,0),0),357,"Class 10 must contain three revision cards per chapter/topic board");
 for(const subject of ["mathematics","science","social-science"]){
   const recalls=class10Boards.find(b=>b.subject===subject).chapters.map(ch=>ch.cards.find(card=>card.type==="recall"));
   assert.ok(recalls.every(card=>card&&card.question&&card.answer&&!card.question.startsWith("What is the key idea to remember from")),"Core subject recall prompts must be chapter-specific for "+subject);
@@ -87,6 +87,7 @@ for(const subject of ["mathematics","science","social-science"]){
 }
 const sst=class10Boards.find(b=>b.subject==="social-science");
 assert.ok(sst.chapters.find(ch=>ch.title==="Lifelines of National Economy (Map Work)"),"Map-only Lifelines chapter must be represented");
+assert.ok(sst.chapters.find(ch=>ch.title==="The Age of Industrialisation").cards.some(card=>(card.note||"").includes("Periodic Assessment only")),"Periodic-assessment-only History topic must be included and labelled");
 assert.ok(sst.chapters.find(ch=>ch.title==="The Making of a Global World").cards.some(card=>(card.note||"").includes("Project-only scope")),"Global World project-only topics must be distinguished from board scope");
 const science=class10Boards.find(b=>b.subject==="science");
 assert.ok(science.chapters.find(ch=>ch.title==="Periodic Classification of Elements").cards.some(card=>(card.note||"").includes("formative/portfolio only")),"Periodic Classification must be marked formative-only");
