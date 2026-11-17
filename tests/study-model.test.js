@@ -42,6 +42,9 @@ assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .eg-metric-grid > .
 assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .eg-preview-banner"),"Admin preview banner must have a dark-mode surface");
 assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .study-panel"),"Study Library panels must use dark-mode surfaces");
 assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .study-card"),"Study Library resource cards must use dark-mode surfaces");
+assert.ok(script.includes('card.className="study-card eg-surface-card"'),"resource cards must use the shared surface component");
+assert.ok(page.includes('class="study-panel eg-surface-panel"'),"resource browser panel must use the shared surface component");
+assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .eg-surface-card"),"shared surface cards must have a dark-mode surface");
 console.log("Study Library tests passed: manifest validation, class visibility, publication filtering, search, safe relative paths and local progress.");
 
 
