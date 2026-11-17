@@ -26,6 +26,7 @@
     const institution = Object.freeze({
       async getInstitution(id) { const s=await snapshot(); return clone(rows(s.institutions).find(x=>x.institutionId===id)||null); },
       async getBranch(id) { const s=await snapshot(); return clone(rows(s.branches).find(x=>x.branchId===id)||null); },
+      async getInstitutionClass(id) { const s=await snapshot(); return clone(rows(s.institutionClasses).find(x=>x.institutionClassId===id)||null); },
       async listBranches(id) { const s=await snapshot(); return clone(rows(s.branches).filter(x=>x.institutionId===id)); },
       async listMembershipBranchScopes(id) { const s=await snapshot(); return clone(rows(s.branchScopes).filter(x=>x.membershipId===id)); }
     });
