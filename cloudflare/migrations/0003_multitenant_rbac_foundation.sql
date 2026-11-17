@@ -113,3 +113,39 @@ CREATE TABLE IF NOT EXISTS audit_events (
 );
 CREATE INDEX IF NOT EXISTS idx_audit_events_institution_time ON audit_events(institution_id,occurred_at DESC);
 CREATE INDEX IF NOT EXISTS idx_audit_events_actor_time ON audit_events(actor_user_id,occurred_at DESC);
+
+-- Enforce membership role and active state at the database boundary as well as
+-- in the Worker authorization service. API checks still validate branch/class scope.
+CREATE TRIGGER IF NOT EXISTS trg_teacher_assignment_role
+BEFORE INSERT ON teacher_assignments
+BEGIN
+ SELECT CASE WHEN NOT EXISTS (
+  SELECT 1 FROM institution_memberships m
+  WHERE m.membership_id=NEW.teacher_membership_id
+    AND m.institution_id=NEW.institution_id
+    AND m.role='teacher' AND m.status='active'
+ ) THEN RAISE(ABORT,'teacher assignment requires an active teacher membership') END;
+END;
+CREATE TRIGGER IF NOT EXISTS trg_student_enrollment_role
+BEFORE INSERT ON student_enrollments
+BEGIN
+ SELECT CASE WHEN NOT EXISTS (
+  SELECT 1 FROM institution_memberships m
+  WHERE m.membership_id=NEW.student_membership_id
+    AND m.institution_id=NEW.institution_id
+    AND m.role='student' AND m.status='active'
+ ) THEN RAISE(ABORT,'enrollment requires an active student membership') END;
+END;
+CREATE TRIGGER IF NOT EXISTS trg_parent_student_link_roles
+BEFORE INSERT ON parent_student_links
+BEGIN
+ SELECT CASE WHEN NOT EXISTS (
+  SELECT 1 FROM institution_memberships p
+  JOIN institution_memberships s ON s.institution_id=p.institution_id
+  WHERE p.membership_id=NEW.parent_membership_id
+    AND s.membership_id=NEW.student_membership_id
+    AND p.institution_id=NEW.institution_id
+    AND p.role='parent' AND p.status='active'
+    AND s.role='student' AND s.status='active'
+ ) THEN RAISE(ABORT,'parent link requires active parent and student memberships in the same institution') END;
+END;
