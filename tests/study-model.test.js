@@ -35,7 +35,7 @@ assert.ok(script.includes('status==="published"')||script.includes("visibleResou
 new Function(fs.readFileSync("js/study-library.js","utf8"));
 const theme=fs.readFileSync("css/theme-soft-spectrum.css","utf8");
 assert.ok(page.includes('class="study-summary eg-metric-grid"'),"Study Library metric wrapper must use the shared grid component");
-assert.ok(page.includes('class="study-stat eg-metric-card"'),"Study Library metric tiles must use the shared metric card component");
+assert.ok(page.includes('class="study-stat eg-metric-card eg-surface"'),"Study Library metric tiles must use the shared metric card component");
 assert.ok(page.includes('class="eg-preview-banner"')&&!page.includes('id="studyPreviewNotice" hidden style='),"Admin preview banner must use the shared banner component without inline theme styles");
 assert.ok(theme.includes("body.c10-shell-ready .eg-metric-grid{")&&theme.includes("background:transparent!important"),"shared metric grid wrapper must remain transparent");
 assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .eg-metric-grid > .eg-metric-card"),"shared metric cards must have a dark-mode surface");
@@ -43,7 +43,7 @@ assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .eg-preview-banner"
 assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .study-panel"),"Study Library panels must use dark-mode surfaces");
 assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .study-card"),"Study Library resource cards must use dark-mode surfaces");
 assert.ok(script.includes('card.className="study-card eg-surface-card"'),"resource cards must use the shared surface component");
-assert.ok(page.includes('class="study-panel eg-surface-panel"'),"resource browser panel must use the shared surface component");
+assert.ok(page.includes('class="study-panel eg-surface-panel eg-surface"'),"resource browser panel must use the shared surface component");
 assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .eg-surface-card"),"shared surface cards must have a dark-mode surface");
 assert.ok(theme.includes("body.eg-theme-dark.c10-shell-ready .eg-surface{"),"generic surface utility must own dark-mode surfaces");
 for(const path of ["admin.html","assigned-paper.html","assigned-test.html","clat-dashboard.html","clat-login.html","clat.html","dashboard.html","exam-practice.html","index.html","learning.html","parent.html","practice.html","profile.html","pyq-library.html","study.html"]){
