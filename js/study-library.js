@@ -229,6 +229,7 @@
     }
   }
   async function init(){
+    if(window.C10StudyAccessReady)await window.C10StudyAccessReady;
     classId=await readClass();readOnlyView=window.C10StudyViewerRole==="parent"||window.C10StudyViewerRole==="admin";progress=readOnlyView?empty():window.C10StudyModel.normalizeProgress(store.load());
     ["studySearch","studySubject","studyType","studyStatus"].forEach(id=>$(id).addEventListener(id==="studySearch"?"input":"change",renderResources));
     $("vrbSubject").addEventListener("change",populateVisualChapters);
