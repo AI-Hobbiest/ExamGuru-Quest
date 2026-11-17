@@ -155,15 +155,15 @@
 <body class="eg-quiz-page c10-theme-quest">
 <header><a href="./">← All subjects</a><div class="eyebrow" id="classEyebrow">ExamGuru Quest · CBSE Class 10</div><h1><span id="subjectIcon">📚</span> <span id="subjectTitle">Practice</span></h1><p id="subjectSubtitle">Choose a chapter and practise at your pace.</p><div class="brand-signature">Conceptualised by <strong>JP Ganathe</strong></div></header>
 <main class="wrap">
-<div class="topstats eg-metric-grid"><div class="stat eg-metric-card"><strong id="chapterTotal">—</strong><span>chapters / topics</span></div><div class="stat eg-metric-card"><strong id="questionTotal">—</strong><span>MCQs in practice bank</span></div><div class="stat eg-metric-card"><strong id="overallStat">0%</strong><span>accuracy on this device</span></div></div>
+<div class="topstats eg-metric-grid"><div class="stat eg-metric-card eg-surface"><strong id="chapterTotal">—</strong><span>chapters / topics</span></div><div class="stat eg-metric-card eg-surface"><strong id="questionTotal">—</strong><span>MCQs in practice bank</span></div><div class="stat eg-metric-card eg-surface"><strong id="overallStat">0%</strong><span>accuracy on this device</span></div></div>
 <div class="layout" id="practiceLayout">
-<aside class="panel"><h2>Set up practice</h2><div id="chapterControls">
+<aside class="panel eg-surface"><h2>Set up practice</h2><div id="chapterControls">
 <label class="label" for="chapterPickerToggle">Choose chapters / topics</label>
 <div class="chapter-picker" id="chapterPicker">
   <button class="chapter-picker-trigger" type="button" id="chapterPickerToggle" aria-expanded="false" aria-controls="chapterPickerPanel">
     <span class="chapter-picker-trigger-copy"><strong id="chapterPickerSummary">Loading chapters…</strong><small id="chapterPickerCount">Please wait</small></span><span class="chapter-picker-chevron" aria-hidden="true">⌄</span>
   </button>
-  <div class="chapter-picker-panel" id="chapterPickerPanel" hidden>
+  <div class="chapter-picker-panel eg-surface" id="chapterPickerPanel" hidden>
     <div class="chapter-picker-actions"><span>Choose one or more</span><div><button type="button" id="selectAllChapters">Select all</button><button type="button" id="clearChapters">Clear</button></div></div>
     <div class="chapter-options" id="chapterOptions"><p class="muted">Loading chapters…</p></div>
   </div>
@@ -173,7 +173,7 @@
 </div>
 <label class="label">Practice mode</label><div class="mode"><button class="active" data-mode="learn">Learn</button><button data-mode="test">Test</button><button data-mode="retry">Retry missed</button><button data-mode="bookmarks">Saved questions</button><button data-mode="adaptive">Adaptive practice</button><button data-mode="random">Mixed practice</button><button data-mode="timed">Timed exam</button><button id="olympiadModeBtn" class="hide" data-mode="olympiad">🏅 SOF full mock</button></div>
 <div class="difficulty-filter"><label class="label" for="difficultyFilter">Question difficulty</label><select id="difficultyFilter"><option value="all">All difficulty levels</option><option value="Easy">Easy</option><option value="Medium">Medium</option><option value="Hard">Hard</option><option value="Challenge">Challenge</option></select><p class="muted">Difficulty filters use the question bank’s existing labels. Some subjects have fewer questions at particular levels.</p></div>
-<div id="olympiadBlueprintPanel" class="olympiad-blueprint-panel hide" aria-live="polite">
+<div id="olympiadBlueprintPanel" class="olympiad-blueprint-panel hide eg-surface" aria-live="polite">
   <h3 id="olympiadBlueprintTitle">SOF Olympiad Level 1 · Full Mock</h3>
   <p id="olympiadBlueprintDescription">50 questions · 60 minutes · 60 marks. The paper is assembled to the selected Olympiad's official section blueprint.</p>
   <div class="olympiad-blueprint-grid" id="olympiadBlueprintGrid"></div>
@@ -238,7 +238,7 @@
   </section>
 </div>
 <div id="imageViewer" class="image-viewer hide" role="dialog" aria-modal="true" aria-label="Enlarged question image" tabindex="-1">
-<div class="image-viewer-card">
+<div class="image-viewer-card eg-surface">
 <button type="button" id="imageViewerClose" class="image-viewer-close" aria-label="Close enlarged image">×</button>
 <img id="imageViewerImage" class="image-viewer-image" alt="">
 <p id="imageViewerCaption" class="image-viewer-caption"></p>
