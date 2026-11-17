@@ -15,6 +15,6 @@ assert.match(worker,/role='teacher'/,"department members must be teacher institu
 assert.match(worker,/scope_all_department_classes/,"HOD scope must be explicit");
 assert.match(worker,/writeAudit\(env,who\.user_id,"department-head-appointed"/,"HOD appointment must be audited");
 assert.match(worker,/writeAudit\(env,who\.user_id,"department-created"/,"department creation must be audited");
-assert.match(worker,/department-head-\$\{status\}/,"HOD termination must be audited");
+assert.match(worker,/writeAudit\(env,who\.user_id,"department-head-"\+status/,"HOD termination must be audited");
 assert.doesNotMatch(worker,/role\s*=\s*["']hod["']/i,"HOD must not become a global role");
 console.log("M3 Worker API contract checks passed: authenticated institution context, School Admin mutation gate, teacher-only membership, scoped HOD appointments and audit events.");
