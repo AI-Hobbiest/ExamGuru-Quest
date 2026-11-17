@@ -80,6 +80,8 @@ for(const subject of expectedClass10){
 }
 assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.length,0),119,"Class 10 board must contain all chapter/topic and map-work boards");
 assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.reduce((m,ch)=>m+ch.cards.length,0),0),357,"Class 10 must contain three revision cards per chapter/topic board");
+const class10CardIds=class10Boards.flatMap(board=>board.chapters.flatMap(ch=>ch.cards.map(card=>card.id)));
+assert.equal(new Set(class10CardIds).size,class10CardIds.length,"Class 10 revision card IDs must be globally unique");
 for(const subject of ["mathematics","science","social-science"]){
   const recalls=class10Boards.find(b=>b.subject===subject).chapters.map(ch=>ch.cards.find(card=>card.type==="recall"));
   assert.ok(recalls.every(card=>card&&card.question&&card.answer&&!card.question.startsWith("What is the key idea to remember from")),"Core subject recall prompts must be chapter-specific for "+subject);
