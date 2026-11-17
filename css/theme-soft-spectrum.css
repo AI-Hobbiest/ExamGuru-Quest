@@ -1303,3 +1303,15 @@ body.eg-theme-dark.c10-shell-ready .eg-surface{
 }
 body.eg-theme-dark.c10-shell-ready .eg-surface :is(h1,h2,h3,h4,h5,strong,b,label){color:#F1F6FA!important}
 body.eg-theme-dark.c10-shell-ready .eg-surface :is(p,small,.muted,.help-muted,.study-meta){color:#B9C7D4!important}
+
+/* Preserve metric accent rails when a card also opts into .eg-surface. */
+body.c10-shell-ready .eg-surface.eg-metric-card,
+body.c10-shell-ready .eg-surface.dash-stat,
+body.c10-shell-ready .eg-surface.study-stat{
+  border-top-width:3px!important;
+}
+body.eg-theme-dark.c10-shell-ready .eg-surface.eg-metric-card,
+body.eg-theme-dark.c10-shell-ready .eg-surface.dash-stat,
+body.eg-theme-dark.c10-shell-ready .eg-surface.study-stat{
+  border-top-width:3px!important;
+}
