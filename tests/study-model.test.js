@@ -63,7 +63,7 @@ assert.ok(script.includes("visual-revision.json"));
 assert.ok(!page.includes('id="studyStatus" class="study-meta"'),"study load status must not duplicate the progress filter ID");
 assert.ok(script.includes("loadVisualRevision")&&script.includes("renderVisualCards"));
 assert.ok(script.includes("card.typeLabel||type.label")&&script.includes("card.revealLabel||\"Reveal answer\""),"revision cards must support localised labels and answer controls");
-assert.ok(script.includes("chapter.chapterLabel||(\"Chapter \"+chapter.chapterNo))","revision board must display syllabus-aware chapter labels");
+assert.ok(script.includes('chapter.chapterLabel||("Chapter "+chapter.chapterNo)'),"revision board must display syllabus-aware chapter labels");
 
 const pagesWorkflow=fs.readFileSync(".github/workflows/pages.yml","utf8");
 assert.ok(page.includes(".vrb-card::before")&&page.includes(".vrb-card::after"),"sticky revision notes must render a pushpin head and stem");
