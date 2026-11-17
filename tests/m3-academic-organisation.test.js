@@ -1,11 +1,11 @@
 "use strict";
 const assert=require("node:assert/strict"),fs=require("node:fs");
-const sql=fs.readFileSync("cloudflare/migrations/0005_academic_organisation.sql","utf8");
+const sql=fs.readFileSync("cloudflare/migrations/0005_academic_organisation.sql","utf8");\nconst departmentSchema=JSON.parse(fs.readFileSync("data/contracts/v1/department.schema.json","utf8"));\nconst departmentMembershipSchema=JSON.parse(fs.readFileSync("data/contracts/v1/department-membership.schema.json","utf8"));\nconst headSchema=JSON.parse(fs.readFileSync("data/contracts/v1/department-head-appointment.schema.json","utf8"));
 const policy=require("../js/domain/academic-organisation.js");
 for(const t of ["departments","department_subjects","department_class_scopes","department_memberships","department_head_appointments","department_head_class_scopes"])assert.ok(sql.includes("CREATE TABLE IF NOT EXISTS "+t),"missing "+t);
 for(const s of ["idx_one_active_hod_per_department","trg_department_membership_role","trg_hod_appointment_membership","trg_hod_class_scope_valid","trg_teacher_assignment_department_insert","trg_teacher_assignment_department_update"])assert.ok(sql.includes(s),"missing integrity control "+s);
 for(const s of ["department.member.manage","department.head.appoint","department.head.read","department.assignment.manage","department.report.read","scopeAllDepartmentClasses","departmentClassIds","isDepartmentHead"])assert.ok(fs.readFileSync("js/domain/academic-organisation.js","utf8").includes(s),"missing policy contract "+s);
-assert.ok(!/ROLE_PERMISSIONS\\s*\\[[^\\]]*hod/i.test(fs.readFileSync("js/domain/academic-organisation.js","utf8")),"HOD must not be a global membership role");
+assert.ok(!/ROLE_PERMISSIONS\\s*\\[[^\\]]*hod/i.test(fs.readFileSync("js/domain/academic-organisation.js","utf8")),"HOD must not be a global membership role");\nassert.equal(departmentSchema.properties.kind.const,"department");\nassert.deepEqual(departmentMembershipSchema.properties.departmentRole.enum,["member","coordinator"]);\nassert.equal(headSchema.properties.kind.const,"department-head-appointment");\nassert.ok(headSchema.allOf.length===2,"HOD contract must require class scope when not all department classes are covered");
 const appointments=[
  {appointmentId:"science-hod",departmentId:"science",status:"active",effectiveFrom:"2026-04-01",scopeAllDepartmentClasses:false,classIds:["class-6a","class-7a"]},
  {appointmentId:"math-hod",departmentId:"maths",status:"active",effectiveFrom:"2026-04-01",scopeAllDepartmentClasses:true,classIds:[]}
