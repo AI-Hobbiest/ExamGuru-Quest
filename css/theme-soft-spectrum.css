@@ -1034,6 +1034,7 @@ body.eg-theme-dark.c10-shell-ready.c10-theme-quest .study-summary > * span{
 }
 
 /* Generic metric component — shared by dashboards, practice and Study Library.
+body.c10-shell-ready .eg-metric-grid{display:grid;gap:12px;min-width:0;}
    Keep visual states here so a page cannot accidentally retain a light metric tile. */
 body.c10-shell-ready .eg-metric-card{
   box-sizing:border-box!important;min-width:0;
