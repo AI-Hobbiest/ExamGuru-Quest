@@ -1122,3 +1122,22 @@ body.eg-theme-dark.c10-shell-ready .study-empty{
 }
 body.eg-theme-dark.c10-shell-ready .study-empty strong{color:#F1F6FA!important}
 body.eg-theme-dark.c10-shell-ready .study-footer{color:#AEBECD!important}
+
+
+/* Shared surface primitives for reusable content panels and resource cards. */
+body.c10-shell-ready .eg-surface-panel,
+body.c10-shell-ready .eg-surface-card{
+  box-sizing:border-box;min-width:0;background:var(--ss-surface)!important;
+  border:1px solid var(--ss-line)!important;border-radius:var(--ss-radius)!important;
+  color:var(--ss-ink)!important;box-shadow:var(--ss-shadow)!important;
+}
+body.eg-theme-dark.c10-shell-ready .eg-surface-panel,
+body.eg-theme-dark.c10-shell-ready .eg-surface-card{
+  background:linear-gradient(155deg,#354657,#2F3E4D)!important;
+  border-color:#526578!important;color:#E8EEF4!important;
+  box-shadow:0 7px 18px rgba(14,24,34,.14)!important;
+}
+body.eg-theme-dark.c10-shell-ready .study-type{background:#45445E!important;color:#D8CFF2!important}
+body.eg-theme-dark.c10-shell-ready .study-actions button[aria-pressed="true"]{
+  background:#29483B!important;border-color:#477A63!important;color:#B6E1C8!important;
+}
