@@ -434,12 +434,6 @@ async function adminLeaderboard(request,env) {
   const rows=await env.DB.prepare("SELECT p.student_id AS studentId,p.display_name AS displayName,p.school,p.class_id AS classId,COUNT(a.attempt_id) AS testsCompleted,ROUND(AVG(a.percentage),1) AS averageScore,MAX(a.percentage) AS bestScore,MAX(a.submitted_at) AS lastActivity FROM student_profiles p JOIN users u ON u.id=p.user_id JOIN attempts a ON a.user_id=u.id WHERE "+clauses.join(" AND ")+" GROUP BY p.user_id ORDER BY averageScore DESC,testsCompleted DESC,p.display_name ASC LIMIT 500").bind(...binds).all();
   return json(request,env,{ok:true,filters:{classId,subjectId:subject},leaderboard:(rows.results||[]).map((r,i)=>({...r,rank:i+1}))});
 }
-async function health(request,env) {
-  if(!env.DB)return fail(request,env,503,"D1 database binding DB is not configured.");
-  try{await env.DB.prepare("SELECT 1 AS ok").first();return json(request,env,{ok:true,service:"c10-playground-api",database:"connected"});}
-  catch(_){return fail(request,env,503,"D1 is not initialised. Apply cloudflare/schema.sql first.");}
-}
-
 export default {
   async fetch(request,env) {
     const url=new URL(request.url),path=url.pathname,method=request.method.toUpperCase();
