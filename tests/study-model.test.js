@@ -76,12 +76,22 @@ for(const subject of expectedClass10){
   const matches=class10Boards.filter(board=>board.subject===subject);
   assert.equal(matches.length,1,"Class 10 must have exactly one board for "+subject);
   assert.ok(matches[0].chapters.length>=10,"Class 10 "+subject+" must have broad chapter coverage");
-  assert.ok(matches[0].chapters.every(ch=>ch.cards.length>=3),"Each Class 10 chapter needs at least three quick-reference cards");
+  assert.ok(matches[0].chapters.every(ch=>ch.cards.length>=8),"Each Class 10 chapter needs a complete multi-card quick reference");
 }
 assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.length,0),119,"Class 10 board must contain all chapter/topic and map-work boards");
-assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.reduce((m,ch)=>m+ch.cards.length,0),0),357,"Class 10 must contain three revision cards per chapter/topic board");
+assert.equal(class10Boards.reduce((n,b)=>n+b.chapters.reduce((m,ch)=>m+ch.cards.length,0),0),952,"Class 10 must contain eight revision cards per chapter/topic board");
 const class10CardIds=class10Boards.flatMap(board=>board.chapters.flatMap(ch=>ch.cards.map(card=>card.id)));
 assert.equal(new Set(class10CardIds).size,class10CardIds.length,"Class 10 revision card IDs must be globally unique");
+for(const board of class10Boards)for(const chapter of board.chapters){
+  const types=chapter.cards.map(card=>card.type);
+  assert.ok(types.includes("fact")&&types.includes("steps")&&types.includes("compare"),"Every Class 10 board must include key facts, a method and a comparison: "+chapter.title);
+  assert.ok(types.filter(type=>type==="recall").length>=2,"Every Class 10 topic must include at least two active-recall checks: "+chapter.title);
+  assert.ok(types.filter(type=>type==="exam-alert").length>=2,"Every Class 10 topic must include exam guidance and a board-answer checkpoint: "+chapter.title);
+  const recalls=chapter.cards.filter(card=>card.type==="recall");
+  assert.equal(new Set(recalls.map(card=>card.question)).size,recalls.length,"Recall questions must be unique within "+chapter.title);
+  assert.ok(chapter.cards.find(card=>card.type==="fact").facts.length>=3,"Key-fact cards must include at least three points: "+chapter.title);
+  assert.ok(chapter.cards.find(card=>card.type==="steps").steps.length>=3,"Method cards must include at least three steps: "+chapter.title);
+}
 for(const subject of ["mathematics","science","social-science"]){
   const recalls=class10Boards.find(b=>b.subject===subject).chapters.map(ch=>ch.cards.find(card=>card.type==="recall"));
   assert.ok(recalls.every(card=>card&&card.question&&card.answer&&!card.question.startsWith("What is the key idea to remember from")),"Core subject recall prompts must be chapter-specific for "+subject);
@@ -101,6 +111,7 @@ for(const subject of ["hindi-course-a","hindi-course-b"]){
  const cards=class10Boards.find(b=>b.subject===subject).chapters.flatMap(ch=>ch.cards);
  assert.ok(cards.every(card=>!["Core idea","What to write in an answer","Quick self-check"].includes(card.title)),"Hindi card titles must be localised");
  assert.ok(cards.filter(card=>card.type==="recall").every(card=>card.revealLabel==="उत्तर देखें"&&card.hideLabel==="उत्तर छिपाएँ"),"Hindi answer controls must be localised");
+  assert.ok(cards.filter(card=>/c10-(hia|hib)-/.test(card.id)).every(card=>!["Key points at a glance","Build a strong answer","Think one step further","Board-answer checkpoint"].includes(card.title)),"New Hindi quick-reference cards must use Hindi titles");
 }
 assert.ok(!class10Boards.find(b=>b.subject==="hindi-course-a").chapters.some(ch=>/जॉर्ज पंचम की नाक|एही ठैयाँ|छाया मत छूना|कन्यादान|स्त्री-शिक्षा|मानवीय करुणा/.test(ch.title)),"Hindi A excluded texts must not appear");
 assert.ok(!class10Boards.find(b=>b.subject==="hindi-course-b").chapters.some(ch=>/गिरगिट|बिहारी|मधुर-मधुर/.test(ch.title)),"Hindi B excluded texts must not appear");
