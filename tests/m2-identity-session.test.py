@@ -14,13 +14,13 @@ db.execute("INSERT INTO institution_memberships(membership_id,user_id,institutio
 db.execute("INSERT INTO membership_branch_scopes VALUES('m-a','ins-a','branch-a',?)",(now,))
 db.execute("INSERT INTO auth_sessions(token_hash,user_id,expires_at,created_at,last_seen_at,active_institution_id,active_membership_id,active_branch_id) VALUES('hash','u-shared','2099-01-01',?,?, 'ins-a','m-a','branch-a')",(now,now))
 assert db.execute("SELECT active_institution_id,active_membership_id,active_branch_id FROM auth_sessions").fetchone()==("ins-a","m-a","branch-a")
-db.execute("""INSERT INTO membership_invitations(invitation_id,token_hash,institution_id,target_user_id,role,branch_ids_json,invited_by_user_id,status,expires_at,created_at,updated_at) VALUES('invite-1','token-hash','ins-a','u-target','teacher','["branch-a"]','u-admin','pending','2099-01-01',?,?)""",(now,now))
+db.execute("""INSERT INTO membership_invitations(invitation_id,token_hash,institution_id,target_user_id,role,branch_ids_json,all_branches,invited_by_user_id,status,expires_at,created_at,updated_at) VALUES('invite-1','token-hash','ins-a','u-target','teacher','["branch-a"]',0,'u-admin','pending','2099-01-01',?,?)""",(now,now))
 assert db.execute("SELECT target_user_id,role,status FROM membership_invitations").fetchone()==("u-target","teacher","pending")
 def reject(sql,params):
  try: db.execute(sql,params)
  except sqlite3.IntegrityError:return
  raise AssertionError("expected DB constraint to reject invalid invitation")
-reject("""INSERT INTO membership_invitations(invitation_id,token_hash,institution_id,target_user_id,role,branch_ids_json,invited_by_user_id,status,expires_at,created_at,updated_at) VALUES('bad-branch','bad-hash','ins-a','u-target','teacher','["branch-x"]','u-admin','pending','2099-01-01',?,?)""",(now,now))
+reject("""INSERT INTO membership_invitations(invitation_id,token_hash,institution_id,target_user_id,role,branch_ids_json,all_branches,invited_by_user_id,status,expires_at,created_at,updated_at) VALUES('bad-branch','bad-hash','ins-a','u-target','teacher','["branch-x"]',0,'u-admin','pending','2099-01-01',?,?)""",(now,now))
 reject("""INSERT INTO membership_invitations(invitation_id,token_hash,institution_id,target_user_id,role,invited_by_user_id,status,expires_at,created_at,updated_at) VALUES('bad-role','bad-role','ins-a','u-target','hod','u-admin','pending','2099-01-01',?,?)""",(now,now))
 reject("""INSERT INTO membership_invitations(invitation_id,token_hash,institution_id,target_user_id,role,invited_by_user_id,status,expires_at,created_at,updated_at) VALUES('bad-user','bad-user','ins-a','missing','teacher','u-admin','pending','2099-01-01',?,?)""",(now,now))
 print("M2 identity migration tests passed: multi-membership, session context, invitation target/role constraints and cross-institution branch rejection.")
