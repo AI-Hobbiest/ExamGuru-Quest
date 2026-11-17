@@ -50,6 +50,6 @@ const seed={
  assert.equal(staticRepo.assurance,"prototype-only-read-only");
  assert.equal((await staticRepo.identity.getUserById("teacher")).userId,"teacher");
  assert.equal((await authorize(staticRepo,{userId:"teacher"},"assessment.create",{institutionId:"i1",branchId:"b1",institutionClassId:"c6a",subjectId:"science"})).allowed,true);
- await assert.rejects(()=>contracts.assertRepositories({identity:{},institution:{},academic:{}}));
+ assert.throws(()=>contracts.assertRepositories({identity:{},institution:{},academic:{}}));
  console.log("M1 repository/authorization tests passed: provider contracts, memory/static adapters, default-deny, tenant isolation, branch scopes, teacher assignments, parent-child links, student self-scope and platform admin.");
 })().catch(error=>{console.error(error);process.exitCode=1;});
