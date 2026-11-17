@@ -104,3 +104,15 @@ Use dummy student data during the initial checks. Never share a temporary passwo
 - Question-bank and class-list edits in this version are still exported and published through an authorised GitHub repository change. The website does not contain a GitHub write token and cannot safely commit repository files by itself.
 - Existing browser-local history is not automatically connected to a newly created central account. Keep a private JSON backup and reconcile it deliberately if you need to migrate past records.
 - A future Google OAuth migration for students can be considered as a separate phase. It is not needed for the current username/password flow.
+
+
+## M2 migration (when explicitly approved)
+
+After taking a D1 backup, apply the additive migrations in order. For a database already initialised from `schema.sql`, run:
+
+```sh
+npx wrangler d1 execute examguru-quest --remote --file=./migrations/0003_multitenant_rbac_foundation.sql
+npx wrangler d1 execute examguru-quest --remote --file=./migrations/0004_identity_session_context.sql
+```
+
+Migration 0004 is a one-time schema change because it adds columns to `auth_sessions`; do not rerun it after those columns exist. The migration is not applied to any live database by the GitHub code change.
