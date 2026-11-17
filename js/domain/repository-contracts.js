@@ -6,7 +6,7 @@
   "use strict";
   const METHODS = Object.freeze({
     identity: ["getUserById", "listMemberships", "listPlatformRoles"],
-    institution: ["getInstitution", "getBranch", "listBranches", "listMembershipBranchScopes"],
+    institution: ["getInstitution", "getBranch", "getInstitutionClass", "listBranches", "listMembershipBranchScopes"],
     academic: ["listTeacherAssignments", "listStudentEnrollments", "listParentStudentLinks"]
   });
   function assertRepository(name, repository) {
