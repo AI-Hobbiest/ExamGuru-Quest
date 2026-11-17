@@ -117,6 +117,15 @@ assert.equal(class6Boards.reduce((n,b)=>n+b.chapters.length,0),65,"Class 6 must 
 assert.equal(class6Boards.reduce((n,b)=>n+b.chapters.reduce((m,ch)=>m+ch.cards.length,0),0),644,"Class 6 must contain comprehensive chapter quick-reference cards");
 const class6CardIds=class6Boards.flatMap(board=>board.chapters.flatMap(ch=>ch.cards.map(card=>card.id)));
 assert.equal(new Set(class6CardIds).size,class6CardIds.length,"Class 6 revision card IDs must be globally unique");
+
+for(const board of class6Boards)for(const chapter of board.chapters){
+ const types=chapter.cards.map(card=>card.type);
+ assert.ok(types.filter(type=>type==="recall").length>=2,"Each Class 6 chapter must include multiple active-recall checks: "+chapter.title);
+ assert.ok(types.includes("concept")&&types.includes("fact"),"Each Class 6 chapter must include core concepts and key facts: "+chapter.title);
+}
+const everyCardId=visual.boards.flatMap(board=>board.chapters.flatMap(ch=>ch.cards.map(card=>card.id)));
+assert.equal(new Set(everyCardId).size,everyCardId.length,"Revision card IDs must be unique across all classes and subjects");
+
 const class6Science=class6Boards.find(board=>board.subject==="science");
 assert.equal(class6Science.chapters.length,12,"Curiosity Science must cover all 12 chapters");
 assert.ok(class6Science.chapters.find(ch=>ch.title==="The Wonderful World of Science").cards.some(card=>(card.note||"").includes("non-evaluative")),"The opening Science chapter must be labelled non-evaluative");
