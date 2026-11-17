@@ -143,7 +143,7 @@
     const type=VISUAL_TYPES[card.type]||{label:"Revision note",icon:"✦"};
     const article=createText("article","vrb-card vrb-"+String(card.type||"concept"));
     const top=createText("div","vrb-card-top");
-    top.append(createText("span","vrb-type",type.icon+"  "+type.label));
+    top.append(createText("span","vrb-type",type.icon+"  "+(card.typeLabel||type.label)));
     article.append(top,createText("h4","",card.title||"Revision note"));
     if(card.type==="steps"){
       addParagraph(article,card.content);
@@ -167,11 +167,11 @@
       article.appendChild(facts);
     }else if(card.type==="recall"){
       addParagraph(article,card.question,"vrb-recall-question");
-      const reveal=createText("button","vrb-reveal","Reveal answer");
+      const reveal=createText("button","vrb-reveal",card.revealLabel||"Reveal answer");
       reveal.type="button";reveal.setAttribute("aria-expanded","false");
       const answer=createText("div","vrb-answer",card.answer||"");answer.hidden=true;
       reveal.addEventListener("click",()=>{
-        const open=answer.hidden;answer.hidden=!open;reveal.textContent=open?"Hide answer":"Reveal answer";
+        const open=answer.hidden;answer.hidden=!open;reveal.textContent=open?(card.hideLabel||"Hide answer"):(card.revealLabel||"Reveal answer");
         reveal.setAttribute("aria-expanded",String(open));
       });
       article.append(reveal,answer);
