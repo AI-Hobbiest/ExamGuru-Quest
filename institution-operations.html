@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Institution Operations | ExamGuru Quest</title>
 <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/app-shell.css?v=20261118-institution-ops-shell-v1">
 <style>
 :root{color-scheme:light}body{margin:0;background:#f5f4fb;color:#211b48;font:15px/1.5 system-ui,sans-serif}.wrap{max-width:1100px;margin:32px auto;padding:0 18px}.hero,.panel{background:#fff;border:1px solid #e5e1f2;border-radius:16px;padding:22px;margin:16px 0;box-shadow:0 8px 28px #211b480b}.hero h1{margin:4px 0}.muted{color:#706b83}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.field{display:grid;gap:5px;margin:10px 0}.field label{font-size:.85rem;font-weight:700}.field input,.field select{width:100%;padding:10px;border:1px solid #d9d4e9;border-radius:9px;font:inherit}.btn{border:0;border-radius:9px;background:#6250d9;color:#fff;font-weight:750;padding:10px 14px;cursor:pointer}.btn:disabled{opacity:.5}.status{padding:10px;border-radius:9px;background:#f0edff;margin:12px 0}.status.error{background:#fff0f0;color:#9a2525}.list{display:grid;gap:6px;margin-top:12px}.item{padding:9px 11px;border:1px solid #e7e3f0;border-radius:9px;overflow-wrap:anywhere}.section{border-top:1px solid #eeeaf5;margin-top:16px;padding-top:12px}a{color:#5140bd}
 </style></head><body><main class="wrap">
@@ -14,5 +15,5 @@
 <section class="panel"><h2>Parent / guardian links</h2><p class="muted">Visible and manageable by School Admin only.</p><div class="grid"><div class="field"><label>Parent membership ID</label><input id="parentMembership"></div><div class="field"><label>Student membership ID</label><input id="linkedStudentMembership"></div><div class="field"><label>Relationship</label><input id="relationship" value="parent/guardian" maxlength="60"></div></div><button class="btn" id="linkParent">Create guardian link</button><div id="parentLinkList" class="list"></div></section>
 <section class="panel"><h2>Delegated branch administrators</h2><p class="muted">School Admin can appoint an active teacher or institution-viewer membership to administer one branch.</p><div class="grid"><div class="field"><label>Branch ID</label><input id="adminBranch"></div><div class="field"><label>Membership ID</label><input id="adminMembership"></div></div><button class="btn" id="appointBranchAdmin">Appoint branch administrator</button><div id="branchAdminList" class="list"></div></section>
 </main>
-<script src="./js/api-config.js"></script><script src="./js/api-client.js"></script><script src="./js/m4-operations.js"></script>
+<script src="./js/api-config.js"></script><script src="./js/api-client.js"></script><script src="./js/m4-operations.js"></script><script src="./js/app-shell.js?v=20261118-institution-ops-shell-v1"></script>
 </body></html>
