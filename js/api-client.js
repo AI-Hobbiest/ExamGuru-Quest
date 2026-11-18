@@ -102,6 +102,7 @@
     updateBranch:(id,entry)=>request("/api/v2/branches/"+encodeURIComponent(id),{method:"PATCH",body:entry}),
     institutionClasses:()=>request("/api/v2/classes"),
     createInstitutionClass:entry=>request("/api/v2/classes",{method:"POST",body:entry}),
+    updateInstitutionClass:(id,entry)=>request("/api/v2/classes/"+encodeURIComponent(id),{method:"PATCH",body:entry}),
     teacherAssignments:()=>request("/api/v2/teacher-assignments"),
     createTeacherAssignment:entry=>request("/api/v2/teacher-assignments",{method:"POST",body:entry}),
     updateTeacherAssignment:(id,entry)=>request("/api/v2/teacher-assignments/"+encodeURIComponent(id),{method:"PATCH",body:entry}),
@@ -112,6 +113,7 @@
     createParentLink:entry=>request("/api/v2/parent-links",{method:"POST",body:entry}),
     updateParentLink:(id,entry)=>request("/api/v2/parent-links/"+encodeURIComponent(id),{method:"PATCH",body:entry}),
     branchAdmins:()=>request("/api/v2/branch-admins"),
-    appointBranchAdmin:entry=>request("/api/v2/branch-admins",{method:"POST",body:entry})
+    appointBranchAdmin:entry=>request("/api/v2/branch-admins",{method:"POST",body:entry}),
+    updateBranchAdmin:(id,entry)=>request("/api/v2/branch-admins/"+encodeURIComponent(id),{method:"PATCH",body:entry})
   });
 })();
