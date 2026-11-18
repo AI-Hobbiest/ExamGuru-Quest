@@ -57,3 +57,11 @@ Before institutional roles can be used with real students, the following activat
 ## Validation
 
 The CI workflow is the acceptance gate for the RBAC contract, SQLite migration, M1 policy, M2 identity/session, M3 department/HOD, M4 institutional operations and existing LMS regression suites. The PR check result must be reviewed before merging.
+
+## Local Platform Admin test mapping (Cloudflare deferred)
+
+The legacy Admin login `Jayaprakashganathe@gmail.com` is mapped to a **local-only Platform Admin test identity** after its existing password check succeeds. The session carries `platformRoles: ["platform_admin"]` and `rbacTestMode: "local-platform-admin"`.
+
+When the central API is not configured, Institution Operations recognizes this explicit test marker and opens a demo workspace. Branches, classes, assignments, enrolments, guardian links and delegated branch admins can be exercised as temporary in-memory records. Refreshing the page clears those demo records. This path does not call the Worker, create D1 rows, or grant production privileges.
+
+This is deliberately a UI/workflow test harness, not secure authorization: browser session storage and client code can be modified by the user. Production Platform Admin remains the GitHub OAuth + D1-backed role grant described above. Remove or disable the local test mapping when central authentication is activated and verified.
