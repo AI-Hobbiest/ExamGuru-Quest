@@ -1,3 +1,4 @@
+import { handleM4 } from "./m4.js";
 const SUBJECTS = new Set(["science","mathematics","english","social-science","hindi","science-sof","mathematics-sof","english-sof"]);
 const PASSWORD_ITERATIONS = 210000;
 const SESSION_HOURS = 8;
@@ -572,6 +573,7 @@ export default {
 
 
       const auth=await requireAuth(request,env);if(auth.error)return auth.error;const who=auth.who;
+      const m4Response=await handleM4(request,env,who);if(m4Response)return m4Response;
       if(path==="/api/v2/auth/me"&&method==="GET")return await v2Identity(request,env,who);
       if(path==="/api/v2/auth/context"&&method==="POST")return await v2SelectContext(request,env,who);
       if(path==="/api/v2/invitations"&&method==="POST")return await v2CreateInvitation(request,env,who);
