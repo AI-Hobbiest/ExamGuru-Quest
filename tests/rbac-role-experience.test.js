@@ -22,4 +22,8 @@ assert.equal(learnerProgress[3],"scope");
 const assessments=model.capabilities.find(x=>x[0]==="Create / assign assessments")[1];
 assert.equal(assessments[3],"linked");
 assert.equal(assessments[5],"no");
+const exams=model.capabilities.find(x=>x[0]==="Take practice and examinations")[1];
+assert.deepEqual(Array.from(exams),["no","no","no","no","own","no"]);
+const assignmentManagement=model.capabilities.find(x=>x[0]==="Manage teacher assignments and enrolments")[1];
+assert.equal(assignmentManagement[2],"no");
 console.log("Role experience matrix model: all checks passed.");
