@@ -1,0 +1,16 @@
+"use strict";
+const assert=require("node:assert/strict");
+const fs=require("node:fs");
+const shell=fs.readFileSync("js/app-shell.js","utf8");
+const ops=fs.readFileSync("js/m4-operations.js","utf8");
+assert.match(shell,/examguru_rbac_test_role_v1/);
+assert.match(shell,/institutionRoles:\["school_admin"\]/);
+assert.match(shell,/institutionRoles:\["teacher"\]/);
+assert.match(shell,/institutionRoles:\["institution_viewer"\]/);
+assert.match(shell,/Teaching assignments/);
+assert.match(shell,/Assigned exam papers/);
+assert.match(ops,/function applyLocalPersonaAccess/);
+assert.match(ops,/Only Platform Admin can appoint another Institution Admin/);
+assert.match(ops,/role==="institution_viewer"/);
+assert.match(ops,/examguru_rbac_test_role_v1/);
+console.log("Role-aware navigation and local action policy: all checks passed.");
