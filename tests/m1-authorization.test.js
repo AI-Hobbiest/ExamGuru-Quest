@@ -46,10 +46,17 @@ const seed={
  assert.equal((await authorize(repos,{userId:"school"},"unknown.permission",{institutionId:"i1",branchId:"b1"})).allowed,false);
  assert.equal((await authorize(repos,null,"institution.read",{institutionId:"i1",branchId:"b1"})).reason,"unauthenticated");
  assert.equal((await authorize(repos,{userId:"admin"},"institution.manage",{institutionId:"i2"})).allowed,true);
+ const multiRoleRepos=createMemoryRepositories({...seed,memberships:[
+  ...seed.memberships,
+  {membershipId:"m-school-secondary",userId:"teacher",institutionId:"i1",role:"school_admin",status:"active",allBranches:true}
+ ]});
+ assert.equal((await authorize(multiRoleRepos,{userId:"teacher"},"class.manage",{institutionId:"i1",branchId:"b1"})).reason,"institution-membership-context-required");
+ assert.equal((await authorize(multiRoleRepos,{userId:"teacher"},"class.manage",{institutionId:"i1",branchId:"b1",membershipId:"m-school-secondary"})).allowed,true);
+ assert.equal((await authorize(multiRoleRepos,{userId:"teacher"},"assessment.create",{institutionId:"i1",branchId:"b1",institutionClassId:"c6a",subjectId:"science",membershipId:"m-teacher"})).allowed,true);
  const staticRepo=createStaticPrototypeRepositories(async()=>({schemaVersion:1,kind:"examguru-rbac-prototype-snapshot",...seed}));
  assert.equal(staticRepo.assurance,"prototype-only-read-only");
  assert.equal((await staticRepo.identity.getUserById("teacher")).userId,"teacher");
  assert.equal((await authorize(staticRepo,{userId:"teacher"},"assessment.create",{institutionId:"i1",branchId:"b1",institutionClassId:"c6a",subjectId:"science"})).allowed,true);
  assert.throws(()=>contracts.assertRepositories({identity:{},institution:{},academic:{}}));
- console.log("M1 repository/authorization tests passed: provider contracts, memory/static adapters, default-deny, tenant isolation, branch scopes, teacher assignments, parent-child links, student self-scope and platform admin.");
+ console.log("M1 repository/authorization tests passed: provider contracts, memory/static adapters, default-deny, tenant isolation, branch scopes, teacher assignments, parent-child links, student self-scope, explicit multi-role membership context and platform admin.");
 })().catch(error=>{console.error(error);process.exitCode=1;});
