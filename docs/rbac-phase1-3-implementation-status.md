@@ -82,3 +82,10 @@ This is deliberately a UI/workflow test harness, not secure authorization: brows
 - The matrix is a product/acceptance contract only. It does not hide or secure routes, and persona selection does not change authentication or authorization on other pages.
 - The next production-boundary work is to apply the matrix to authenticated route entry, navigation and action controls, then enforce every data operation in the Worker using server-derived institution, branch, assignment and linked-child scopes.
 - Added automated contract checks for all six roles, key navigation destinations and privilege boundaries.
+
+
+## Role-aware navigation and local action preview
+
+- The shared app shell now derives the local RBAC test persona from the legacy admin session marker plus a session-scoped active-role selector. Platform Admin retains the admin workspace; Institution Admin, Teacher and Institution Viewer receive role-specific institutional navigation. Parent and Student personas receive their corresponding learning/family navigation.
+- The local Institution Operations preview now persists the selected persona across page navigation and adjusts available sections and controls. Institution Admin can manage institution operations and assign permitted institution roles, but cannot appoint another Institution Admin. Teacher sees a limited read-only teaching view; Institution Viewer is read-only; Parent and Student do not receive institutional operations navigation.
+- This is client-side UX/testing only. It is not an authorization boundary: static pages and browser storage can be manipulated. Production enforcement remains in the authenticated Worker/API and must validate every request against server-resolved membership, branch, class, teacher-assignment and parent-child scope.
