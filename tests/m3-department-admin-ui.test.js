@@ -1,0 +1,14 @@
+"use strict";
+const assert=require("node:assert/strict"),fs=require("node:fs");
+const html=fs.readFileSync("admin.html","utf8"),manager=fs.readFileSync("js/admin-manager.js","utf8"),api=fs.readFileSync("js/api-client.js","utf8"),ui=fs.readFileSync("js/department-admin.js","utf8"),css=fs.readFileSync("css/admin.css","utf8");
+assert.match(html,/data-tab="departments"/);
+assert.match(html,/id="tab-departments"/);
+assert.match(html,/js\/department-admin\.js/);
+assert.match(manager,/"departments"/);
+for(const id of ["departmentMembership","departmentName","departmentCode","departmentSubjects","departmentClasses","departmentTeacherMembership","hodDepartmentMember","hodEffectiveFrom","appointHodBtn"])assert.ok(html.includes('id="'+id+'"'),"missing UI control "+id);
+for(const method of ["identityV2","selectInstitutionContext","departments","createDepartment","updateDepartment","setDepartmentSubjects","setDepartmentClasses","addDepartmentTeacher","appointDepartmentHead","endDepartmentHead"])assert.ok(api.includes(method+":"),"missing API client method "+method);
+for(const action of ["loadDepartments","createDepartment","saveScopes","addTeacher","appointHod"])assert.ok(ui.includes("async function "+action),"missing UI action "+action);
+assert.match(ui,/role==="school_admin"/,"UI must restrict management to School Admin membership");
+assert.match(ui,/textContent/,"render untrusted labels with textContent");
+assert.match(css,/department-list/);
+console.log("M3 School Admin UI contract checks passed: navigation, API bindings, membership context, department scopes, teacher membership and HOD appointment controls.");

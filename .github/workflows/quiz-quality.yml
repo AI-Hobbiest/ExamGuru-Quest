@@ -53,7 +53,7 @@ jobs:
       - name: Validate M2 identity, sessions and invitations
         run: node --check cloudflare/worker.js && python3 tests/m2-identity-session.test.py && node tests/m2-worker-contract.test.js
       - name: Validate M3 academic organisation and HOD scopes
-        run: node --check js/domain/academic-organisation.js && python3 tests/m3-academic-organisation.test.py && node tests/m3-academic-organisation.test.js && node --check cloudflare/worker.js && node tests/m3-worker-api.test.js
+        run: node --check js/domain/academic-organisation.js && python3 tests/m3-academic-organisation.test.py && node tests/m3-academic-organisation.test.js && node --check cloudflare/worker.js && node tests/m3-worker-api.test.js && node --check js/department-admin.js && node tests/m3-department-admin-ui.test.js
       - name: Validate Stage A LMS integrations
         run: node tests/stage-a-integration.test.js
       - name: Validate quiz timers, navigation and result flow

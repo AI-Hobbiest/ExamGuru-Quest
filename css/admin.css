@@ -110,3 +110,14 @@
 .cbse-review-source .admin-actions{margin:0}
 .cbse-review-source .admin-actions a{max-width:100%;overflow-wrap:anywhere}
 @media(max-width:860px){.cbse-review-layout{grid-template-columns:1fr}}
+
+
+/* M3 academic department administration */
+.department-list{display:grid;gap:9px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));align-items:start}
+.department-list>.admin-list-item{min-height:64px;text-align:left}
+.department-tools{display:grid;gap:12px;border:1px solid var(--c10-line);border-radius:15px;padding:16px;background:#fbfaff}
+.department-hod-list{grid-column:1/-1;display:grid;gap:7px;padding:12px;border:1px solid var(--c10-line);border-radius:12px;background:#fff}
+.department-hod-list>.admin-list-item{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.department-hod-list .admin-btn{flex:0 0 auto}
+#tab-departments .admin-rule{width:100%;border:0;border-top:1px solid var(--c10-line);margin:8px 0}
+@media(max-width:620px){.department-tools{padding:12px}.department-hod-list>.admin-list-item{align-items:flex-start;flex-direction:column}}

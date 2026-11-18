@@ -49,6 +49,7 @@
       <button class="admin-tab-button active" data-tab="overview" type="button"><span class="admin-tab-icon">🏠</span>Overview</button>
       <button class="admin-tab-button" data-tab="banks" type="button"><span class="admin-tab-icon">🧩</span>Question banks</button>
       <button class="admin-tab-button" data-tab="cbse-review" type="button"><span class="admin-tab-icon">📄</span>CBSE review</button>
+      <button class="admin-tab-button" data-tab="departments" type="button"><span class="admin-tab-icon">🏛️</span>Departments &amp; HOD</button>
       <button class="admin-tab-button" data-tab="classes" type="button"><span class="admin-tab-icon">🏫</span>Classes</button>
       <button class="admin-tab-button" data-tab="exam-papers" type="button"><span class="admin-tab-icon">📝</span>Exam Paper Studio</button>
       <button class="admin-tab-button" data-tab="knowledge" type="button"><span class="admin-tab-icon">📚</span>Knowledge base</button>
@@ -180,6 +181,40 @@
         </div>
         <div id="cbseReviewWorkStatus" class="admin-status" role="status" aria-live="polite"></div>
       </section>
+
+      <section class="admin-panel eg-surface" id="tab-departments">
+  <h2>Academic departments</h2>
+  <p class="admin-muted">Manage institution departments, subjects, class coverage, teacher membership and scoped HOD appointments. Your selected institution membership controls access.</p>
+  <div class="admin-form-grid">
+    <div class="admin-field full"><label for="departmentMembership">Institution membership</label><select id="departmentMembership"><option value="">Load your memberships…</option></select></div>
+    <div class="admin-field"><label for="departmentName">Department name</label><input id="departmentName" maxlength="100" placeholder="e.g. Science"></div>
+    <div class="admin-field"><label for="departmentCode">Department code</label><input id="departmentCode" maxlength="20" placeholder="e.g. SCI"></div>
+    <div class="admin-field full"><label for="departmentParent">Parent department ID (optional)</label><input id="departmentParent" placeholder="Leave blank for a top-level department"></div>
+  </div>
+  <div class="admin-actions"><button class="admin-btn" id="loadDepartmentsBtn" type="button">Load departments</button><button class="admin-btn" id="createDepartmentBtn" type="button">＋ Create department</button></div>
+  <div id="departmentStatus" class="admin-status" role="status">Sign in with a School Admin account, then load your institution memberships.</div>
+  <div id="departmentList" class="department-list"><div class="admin-empty">No departments loaded.</div></div>
+  <div class="department-tools">
+    <h3 id="departmentSelectedTitle">Department setup</h3>
+    <p class="admin-muted">Select a department above. Use comma-separated IDs for the subject catalogue and institution class-group IDs. These are IDs, not display labels.</p>
+    <div class="admin-form-grid">
+      <div class="admin-field"><label for="departmentSubjects">Subject IDs</label><input id="departmentSubjects" placeholder="science, mathematics"></div>
+      <div class="admin-field"><label for="departmentClasses">Institution class-group IDs</label><input id="departmentClasses" placeholder="class-6-a, class-7-a"></div>
+      <div class="admin-field full"><label for="departmentTeacherMembership">Teacher institution membership ID</label><input id="departmentTeacherMembership" placeholder="Membership ID from the institution directory"></div>
+      <div class="admin-field"><label for="departmentRole">Department role</label><select id="departmentRole"><option value="member">Member</option><option value="coordinator">Coordinator</option></select></div>
+    </div>
+    <div class="admin-actions"><button class="admin-btn secondary" id="saveDepartmentScopesBtn" type="button">Save subjects &amp; class scope</button><button class="admin-btn secondary" id="addDepartmentTeacherBtn" type="button">Add teacher</button></div>
+    <hr class="admin-rule">
+    <h3>Appoint Head of Department</h3>
+    <div class="admin-form-grid">
+      <div class="admin-field full"><label for="hodDepartmentMember">Department member</label><select id="hodDepartmentMember"><option value="">Load a department first</option></select></div>
+      <div class="admin-field"><label for="hodEffectiveFrom">Effective from</label><input id="hodEffectiveFrom" type="date"></div>
+      <div class="admin-field"><label for="hodEffectiveTo">Effective to (optional)</label><input id="hodEffectiveTo" type="date"></div>
+      <div class="admin-field full"><label for="hodClasses">HOD class IDs (blank = all department classes)</label><input id="hodClasses" placeholder="class-6-a, class-7-a"></div>
+    </div>
+    <div class="admin-actions"><button class="admin-btn" id="appointHodBtn" type="button">Appoint HOD</button></div>
+  </div>
+</section>
 
       <section class="admin-panel eg-surface" id="tab-classes">
         <h2>Class catalogue</h2>
@@ -451,6 +486,7 @@
 <script src="./js/session-model.js"></script>
 <script src="./js/profile-model.js"></script>
 <script src="./js/admin-manager.js"></script>
+<script src="./js/department-admin.js?v=m3-ui-v1"></script>
 <script>(()=>{const s=document.getElementById("studyLibraryPreviewClass"),a=document.getElementById("openStudyLibraryPreview");if(!s||!a)return;const sync=()=>{a.href="./study.html?classId="+encodeURIComponent(s.value);};s.addEventListener("change",sync);sync();})();</script>
 <script src="./js/cbse-mcq-review.js?v=20261115-cbse-review-v1"></script>
 <script src="./js/exam-paper-generator.js?v=20261106-math-competency-alignment-v3"></script>
