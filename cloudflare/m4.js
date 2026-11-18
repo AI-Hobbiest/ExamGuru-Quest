@@ -18,7 +18,7 @@ async function context(request,env,who){
 }
 const isSchoolAdmin=c=>c.membership.role==="school_admin";
 const canBranch=(c,b)=>isSchoolAdmin(c)?(Number(c.membership.all_branches)===1||c.scopedBranches.includes(b)):c.adminBranches.includes(b);
-const canManage=(c,b)=>isSchoolAdmin(c)||c.adminBranches.includes(b);
+const canManage=(c,b)=>canBranch(c,b);
 async function audit(env,who,c,action,type,target,branchId,meta={}){await env.DB.prepare("INSERT INTO audit_events(event_id,actor_user_id,institution_id,branch_id,action,target_type,target_id,request_id,metadata_json,occurred_at) VALUES(?,?,?,?,?,?,?,?,?,?)").bind(id(),who.user_id,c.institutionId,branchId||null,action,type,target||null,null,JSON.stringify(meta),iso()).run();}
 async function classRow(env,c,classId){return env.DB.prepare("SELECT * FROM institution_classes WHERE institution_id=? AND institution_class_id=?").bind(c.institutionId,classId).first();}
 async function member(env,c,membershipId,role){return env.DB.prepare("SELECT membership_id,user_id,role,status FROM institution_memberships WHERE institution_id=? AND membership_id=? AND role=? AND status='active'").bind(c.institutionId,membershipId,role).first();}
@@ -46,7 +46,14 @@ async function branchPatch(request,env,who,c,branchId){
  await audit(env,who,c,"branch-updated","branch",branchId,branchId,{status});
  return ok(request,env,{branchId,status});
 }
-async function classes(request,env,who,method,c){
+async function classes(request,env,who,method,c,classId){
+ if(method==="PATCH"){
+  const current=await classRow(env,c,classId);if(!current)return fail(request,env,404,"Class section not found.");
+  if(!canManage(c,current.branch_id))return fail(request,env,403,"Branch administration scope required.");
+  const b=await read(request),status=b.status||"archived";if(!["active","archived"].includes(status))return fail(request,env,400,"Invalid class status.");
+  await env.DB.prepare("UPDATE institution_classes SET status=?,updated_at=? WHERE institution_id=? AND institution_class_id=?").bind(status,iso(),c.institutionId,classId).run();
+  await audit(env,who,c,"class-section-updated","institution_class",classId,current.branch_id,{status});return ok(request,env,{classId,status});
+ }
  if(method==="GET"){
   const rows=await env.DB.prepare("SELECT c.institution_class_id classId,c.branch_id branchId,c.grade_id gradeId,g.label gradeLabel,c.section_code sectionCode,c.academic_year academicYear,c.status FROM institution_classes c LEFT JOIN classes g ON g.class_id=c.grade_id WHERE c.institution_id=? ORDER BY c.academic_year DESC,c.branch_id,c.grade_id,c.section_code").bind(c.institutionId).all();
   return ok(request,env,{classes:(rows.results||[]).filter(x=>canBranch(c,x.branchId))});
@@ -133,8 +140,15 @@ async function parentLinks(request,env,who,method,c,linkId){
  await audit(env,who,c,"parent-linked","parent_student_link",link,null,{parentMembershipId:parent,studentMembershipId:student});
  return ok(request,env,{linkId:link},201);
 }
-async function branchAdmins(request,env,who,method,c){
+async function branchAdmins(request,env,who,method,c,appointmentId){
  if(!isSchoolAdmin(c))return fail(request,env,403,"Only School Admin can delegate branch administration.");
+ if(method==="PATCH"){
+  const b=await read(request),status=b.status==="active"?"active":"revoked";
+  const row=await env.DB.prepare("SELECT branch_id FROM branch_admin_appointments WHERE institution_id=? AND appointment_id=?").bind(c.institutionId,appointmentId).first();
+  if(!row)return fail(request,env,404,"Branch administrator appointment not found.");
+  await env.DB.prepare("UPDATE branch_admin_appointments SET status=?,updated_at=? WHERE institution_id=? AND appointment_id=?").bind(status,iso(),c.institutionId,appointmentId).run();
+  await audit(env,who,c,"branch-admin-"+status,"branch_admin_appointment",appointmentId,row.branch_id,{status});return ok(request,env,{appointmentId,status});
+ }
  if(method==="GET"){
   const rows=await env.DB.prepare("SELECT a.appointment_id appointmentId,a.branch_id branchId,a.membership_id membershipId,a.status,u.username,m.role FROM branch_admin_appointments a JOIN institution_memberships m ON m.membership_id=a.membership_id JOIN users u ON u.id=m.user_id WHERE a.institution_id=? ORDER BY a.created_at DESC").bind(c.institutionId).all();
   return ok(request,env,{branchAdmins:rows.results||[]});
@@ -156,11 +170,11 @@ export async function handleM4(request,env,who){
  const [,resource,resourceId]=route;
  try{
   if(resource==="branches")return resourceId?(method==="PATCH"?await branchPatch(request,env,who,c,resourceId):fail(request,env,405,"Method not allowed.")):await branches(request,env,who,method,c);
-  if(resource==="classes")return resourceId?fail(request,env,405,"Method not allowed."):await classes(request,env,who,method,c);
+  if(resource==="classes")return await classes(request,env,who,method,c,resourceId);
   if(resource==="teacher-assignments")return await assignments(request,env,who,method,c,resourceId);
   if(resource==="enrollments")return await enrollments(request,env,who,method,c,resourceId);
   if(resource==="parent-links")return await parentLinks(request,env,who,method,c,resourceId);
-  if(resource==="branch-admins")return await branchAdmins(request,env,who,method,c);
+  if(resource==="branch-admins")return await branchAdmins(request,env,who,method,c,resourceId);
   return null;
  }catch(e){if(/JSON|body/i.test(e.message||""))return fail(request,env,400,e.message);return fail(request,env,500,"Institution operation failed. Check Worker logs.");}
 }
