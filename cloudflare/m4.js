@@ -17,15 +17,21 @@ async function context(request,env,who){
  return {institutionId:m.institution_id,membership:m,scopedBranches:(scopes.results||[]).map(x=>x.branch_id),adminBranches:(appointments.results||[]).map(x=>x.branch_id)};
 }
 const isSchoolAdmin=c=>c.membership.role==="school_admin";
-const canBranch=(c,b)=>isSchoolAdmin(c)?(Number(c.membership.all_branches)===1||c.scopedBranches.includes(b)):c.adminBranches.includes(b);
-const canManage=(c,b)=>canBranch(c,b);
+const isTeacher=c=>c.membership.role==="teacher";
+const canViewBranch=(c,b)=>Number(c.membership.all_branches)===1||c.scopedBranches.includes(b)||c.adminBranches.includes(b);
+const canManage=(c,b)=>(isSchoolAdmin(c)&&(Number(c.membership.all_branches)===1||c.scopedBranches.includes(b)))||c.adminBranches.includes(b);
+async function teacherClassIds(env,c){
+ if(!isTeacher(c))return null;
+ const rows=await env.DB.prepare("SELECT institution_class_id classId FROM teacher_assignments WHERE institution_id=? AND teacher_membership_id=? AND status='active'").bind(c.institutionId,c.membership.membership_id).all();
+ return new Set((rows.results||[]).map(x=>x.classId));
+}
 async function audit(env,who,c,action,type,target,branchId,meta={}){await env.DB.prepare("INSERT INTO audit_events(event_id,actor_user_id,institution_id,branch_id,action,target_type,target_id,request_id,metadata_json,occurred_at) VALUES(?,?,?,?,?,?,?,?,?,?)").bind(id(),who.user_id,c.institutionId,branchId||null,action,type,target||null,null,JSON.stringify(meta),iso()).run();}
 async function classRow(env,c,classId){return env.DB.prepare("SELECT * FROM institution_classes WHERE institution_id=? AND institution_class_id=?").bind(c.institutionId,classId).first();}
 async function member(env,c,membershipId,role){return env.DB.prepare("SELECT membership_id,user_id,role,status FROM institution_memberships WHERE institution_id=? AND membership_id=? AND role=? AND status='active'").bind(c.institutionId,membershipId,role).first();}
 async function branches(request,env,who,method,c){
  if(method==="GET"){
   const rows=await env.DB.prepare("SELECT branch_id branchId,name,code,status,created_at createdAt FROM branches WHERE institution_id=? ORDER BY name").bind(c.institutionId).all();
-  return ok(request,env,{branches:(rows.results||[]).filter(b=>canBranch(c,b.branchId))});
+  return ok(request,env,{branches:(rows.results||[]).filter(b=>canViewBranch(c,b.branchId))});
  }
  if(!isSchoolAdmin(c))return fail(request,env,403,"Only School Admin can create branches.");
  const b=await read(request),name=String(b.name||"").trim(),code=String(b.code||"").trim().toUpperCase();
@@ -56,7 +62,7 @@ async function classes(request,env,who,method,c,classId){
  }
  if(method==="GET"){
   const rows=await env.DB.prepare("SELECT c.institution_class_id classId,c.branch_id branchId,c.grade_id gradeId,g.label gradeLabel,c.section_code sectionCode,c.academic_year academicYear,c.status FROM institution_classes c LEFT JOIN classes g ON g.class_id=c.grade_id WHERE c.institution_id=? ORDER BY c.academic_year DESC,c.branch_id,c.grade_id,c.section_code").bind(c.institutionId).all();
-  return ok(request,env,{classes:(rows.results||[]).filter(x=>canBranch(c,x.branchId))});
+  const assigned=await teacherClassIds(env,c);return ok(request,env,{classes:(rows.results||[]).filter(x=>canViewBranch(c,x.branchId)&&(!assigned||assigned.has(x.classId)))});
  }
  const b=await read(request),branchId=String(b.branchId||""),gradeId=String(b.gradeId||""),section=String(b.sectionCode||"").trim().toUpperCase(),year=String(b.academicYear||"").trim();
  if(!canManage(c,branchId))return fail(request,env,403,"Branch administration scope required.");
@@ -72,7 +78,7 @@ async function classes(request,env,who,method,c,classId){
 async function assignments(request,env,who,method,c,assignmentId){
  if(method==="GET"){
   const rows=await env.DB.prepare("SELECT a.assignment_id assignmentId,a.teacher_membership_id teacherMembershipId,a.institution_class_id classId,a.subject_id subjectId,a.status,c.branch_id branchId FROM teacher_assignments a JOIN institution_classes c ON c.institution_id=a.institution_id AND c.institution_class_id=a.institution_class_id WHERE a.institution_id=? ORDER BY c.branch_id,a.subject_id").bind(c.institutionId).all();
-  return ok(request,env,{assignments:(rows.results||[]).filter(x=>canBranch(c,x.branchId))});
+  return ok(request,env,{assignments:(rows.results||[]).filter(x=>canViewBranch(c,x.branchId)&&(!isTeacher(c)||x.teacherMembershipId===c.membership.membership_id))});
  }
  const b=await read(request);
  if(method==="PATCH"){
@@ -97,7 +103,7 @@ async function assignments(request,env,who,method,c,assignmentId){
 async function enrollments(request,env,who,method,c,enrollmentId){
  if(method==="GET"){
   const rows=await env.DB.prepare("SELECT e.enrollment_id enrollmentId,e.student_membership_id studentMembershipId,e.institution_class_id classId,e.academic_year academicYear,e.status,e.enrolled_at enrolledAt,c.branch_id branchId FROM student_enrollments e JOIN institution_classes c ON c.institution_id=e.institution_id AND c.institution_class_id=e.institution_class_id WHERE e.institution_id=? ORDER BY e.enrolled_at DESC").bind(c.institutionId).all();
-  return ok(request,env,{enrollments:(rows.results||[]).filter(x=>canBranch(c,x.branchId))});
+  const assigned=await teacherClassIds(env,c);return ok(request,env,{enrollments:(rows.results||[]).filter(x=>canViewBranch(c,x.branchId)&&(!assigned||assigned.has(x.classId)))});
  }
  const b=await read(request);
  if(method==="PATCH"){
@@ -152,7 +158,7 @@ async function branchAdmins(request,env,who,method,c,appointmentId){
  }
  if(method==="GET"){
   const rows=await env.DB.prepare("SELECT a.appointment_id appointmentId,a.branch_id branchId,a.membership_id membershipId,a.status,u.username,m.role FROM branch_admin_appointments a JOIN institution_memberships m ON m.membership_id=a.membership_id JOIN users u ON u.id=m.user_id WHERE a.institution_id=? ORDER BY a.created_at DESC").bind(c.institutionId).all();
-  return ok(request,env,{branchAdmins:(rows.results||[]).filter(x=>canBranch(c,x.branchId))});
+  return ok(request,env,{branchAdmins:(rows.results||[]).filter(x=>canViewBranch(c,x.branchId))});
  }
  const b=await read(request),branchId=String(b.branchId||""),membershipId=String(b.membershipId||"");
  if(!canManage(c,branchId))return fail(request,env,403,"Branch administration scope required.");
