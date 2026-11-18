@@ -50,7 +50,7 @@ function applyLocalPersonaAccess(){
  const statusHost=$( "m4Status" );if(statusHost&&statusHost.parentElement)statusHost.insertAdjacentElement("afterend",banner);
  const hide=(el,value)=>{if(el)el.hidden=value;};
  const setControls=(section,enabled)=>{if(!section)return;section.querySelectorAll("input,select,textarea,button").forEach(el=>{el.disabled=!enabled;});};
- hide(rolePanel,["teacher","parent","student","institution_viewer"].includes(role));
+ hide(rolePanel,false);
  hide(branch,["teacher","parent","student"].includes(role));
  hide(classes,["parent","student"].includes(role));
  hide(assignments,["parent","student"].includes(role));
@@ -61,6 +61,12 @@ function applyLocalPersonaAccess(){
  [branch,classes,assignments,enrolments,parents,delegates].forEach(s=>setControls(s,canManage));
  if(role==="teacher"){setControls(classes,false);setControls(assignments,false);}
  if(role==="institution_viewer"){[branch,classes,assignments,enrolments,parents,delegates].forEach(s=>setControls(s,false));}
+ const roleUser=$( "roleUser" ),roleSelect=$( "institutionRole" );
+ if(roleUser)roleUser.disabled=!canManage;
+ if(roleSelect)roleSelect.disabled=!canManage;
+ const roleGrid=rolePanel?.querySelector(".grid");
+ if(roleGrid)roleGrid.hidden=!canManage;
+ const roleList=$( "roleAssignmentList" );if(roleList)roleList.hidden=!canManage;
  const assignButton=$( "assignInstitutionRole" );
  if(assignButton)assignButton.disabled=!canManage;
  const roleSelect=$( "institutionRole" );
