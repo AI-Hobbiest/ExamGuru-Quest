@@ -65,3 +65,11 @@ The legacy Admin login `Jayaprakashganathe@gmail.com` is mapped to a **local-onl
 When the central API is not configured, Institution Operations recognizes this explicit test marker and opens a demo workspace. Branches, classes, assignments, enrolments, guardian links and delegated branch admins can be exercised as temporary in-memory records. Refreshing the page clears those demo records. This path does not call the Worker, create D1 rows, or grant production privileges.
 
 This is deliberately a UI/workflow test harness, not secure authorization: browser session storage and client code can be modified by the user. Production Platform Admin remains the GitHub OAuth + D1-backed role grant described above. Remove or disable the local test mapping when central authentication is activated and verified.
+
+## Multi-role account model and institution delegation
+
+- A canonical user account may hold multiple platform roles and multiple institution memberships. The same user may have distinct memberships such as teacher and parent within one institution, or different roles across institutions. The database uniqueness key is per user + institution + role, not per user alone.
+- Platform roles remain separate from institution memberships. Institution Admin cannot grant or revoke platform roles.
+- Institution Admin may invite existing enabled accounts into permitted institution roles within the active institution and only within the admin's branch scope. Institution Admin cannot appoint another Institution Admin or grant all-branch scope; those escalations remain Platform Admin actions.
+- Platform Admin may appoint Institution Admin and grant all-branch scope. Each role remains a separate membership and must be selected explicitly as the active context when a request depends on that role.
+- Local RBAC test mode exposes a role switcher for Platform Admin, Institution Admin, Teacher, Parent, Student and Institution Viewer. The current demo identity is seeded with all institution roles so each UI persona can be exercised. Role assignments and demo records are in-memory only and are not real authorization.
