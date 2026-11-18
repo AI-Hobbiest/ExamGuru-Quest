@@ -69,7 +69,6 @@ function applyLocalPersonaAccess(){
  const roleList=$( "roleAssignmentList" );if(roleList)roleList.hidden=!canManage;
  const assignButton=$( "assignInstitutionRole" );
  if(assignButton)assignButton.disabled=!canManage;
- const roleSelect=$( "institutionRole" );
  if(roleSelect){
   Array.from(roleSelect.options).forEach(o=>{if(o.value==="school_admin")o.disabled=role!=="platform_admin";});
  }
