@@ -301,20 +301,30 @@ async function v2SelectContext(request,env,who) {
   return json(request,env,{ok:true,context:{institutionId,membershipId,branchId}});
 }
 async function v2CreateInvitation(request,env,who) {
-  // M2 provisioning is deliberately restricted to the existing allow-listed
-  // platform-admin identity. Scoped School Admin delegation is a later policy slice.
-  if(!(await hasPlatformAdminGrant(env,who)))return fail(request,env,403,"Active Platform Admin grant is required to issue invitations in M2.");
   const body=await readJson(request),institutionId=String(body.institutionId||""),targetUserId=String(body.targetUserId||""),role=String(body.role||"");
   const allowedRoles=new Set(["school_admin","teacher","parent","student","institution_viewer"]);
   const institution=await env.DB.prepare("SELECT institution_id FROM institutions WHERE institution_id=? AND status='active'").bind(institutionId).first();
   const target=await env.DB.prepare("SELECT id FROM users WHERE id=? AND enabled=1").bind(targetUserId).first();
   if(!institution||!target||!allowedRoles.has(role))return fail(request,env,400,"Select an active institution, an existing enabled account and a supported membership role.");
+  const isPlatformAdmin=await hasPlatformAdminGrant(env,who);
+  const sessionHash=await sha256((request.headers.get("Authorization")||"").slice(7));
+  const active=await env.DB.prepare("SELECT m.membership_id,m.institution_id,m.role,m.all_branches FROM auth_sessions s JOIN institution_memberships m ON m.membership_id=s.active_membership_id AND m.institution_id=s.active_institution_id WHERE s.token_hash=? AND s.user_id=? AND m.user_id=? AND m.status='active' AND s.active_institution_id=?").bind(sessionHash,who.user_id,who.user_id,institutionId).first();
+  const isInstitutionAdmin=!!active&&active.role==="school_admin";
+  if(!isPlatformAdmin&&!isInstitutionAdmin)return fail(request,env,403,"An active Institution Admin membership for this institution or a Platform Admin grant is required.");
+  if(role==="school_admin"&&!isPlatformAdmin)return fail(request,env,403,"Only Platform Admin can appoint another Institution Admin.");
   let branchIds=Array.isArray(body.branchIds)?[...new Set(body.branchIds.map(String))]:[];
   const allBranches=body.allBranches===true;
   if(allBranches&&role!=="school_admin")return fail(request,env,400,"All-branch scope is reserved for School Admin memberships.");
   if(allBranches&&branchIds.length)return fail(request,env,400,"Choose all branches or specific branches, not both.");
+  if(allBranches&&!isPlatformAdmin)return fail(request,env,403,"Only Platform Admin can grant all-branch scope.");
   if(branchIds.length>100||branchIds.some(id=>!/^[A-Za-z0-9_-]{1,80}$/.test(id)))return fail(request,env,400,"Invalid branch scope.");
-  for(const id of branchIds){const branch=await env.DB.prepare("SELECT branch_id FROM branches WHERE branch_id=? AND institution_id=? AND status='active'").bind(id,institutionId).first();if(!branch)return fail(request,env,400,"Every invited branch must be active and belong to the selected institution.");}
+  const adminScopes=active&&Number(active.all_branches)===1?null:await env.DB.prepare("SELECT branch_id FROM membership_branch_scopes WHERE membership_id=? AND institution_id=?").bind(active?.membership_id||"",institutionId).all();
+  const allowedBranchIds=new Set((adminScopes?.results||[]).map(x=>x.branch_id));
+  for(const id of branchIds){
+    const branch=await env.DB.prepare("SELECT branch_id FROM branches WHERE branch_id=? AND institution_id=? AND status='active'").bind(id,institutionId).first();
+    if(!branch)return fail(request,env,400,"Every invited branch must be active and belong to the selected institution.");
+    if(!isPlatformAdmin&&Number(active?.all_branches)!==1&&!allowedBranchIds.has(id))return fail(request,env,403,"Institution Admin can assign roles only within their own branch scope.");
+  }
   const existing=await env.DB.prepare("SELECT membership_id FROM institution_memberships WHERE user_id=? AND institution_id=? AND role=? AND status IN ('active','invited')").bind(targetUserId,institutionId,role).first();
   if(existing)return fail(request,env,409,"This account already has an active or invited membership for that role.");
   const token=randomToken(32),now=isoNow(),expires=new Date(Date.now()+7*86400000).toISOString(),invitationId=uid();
