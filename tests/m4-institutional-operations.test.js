@@ -13,7 +13,7 @@ for(const item of ["Branches","Class sections","Teacher assignments","Student en
 assert(api.includes("active_institution_id")&&api.includes("active_membership_id"),"M4 must require selected session context");
 assert(api.includes("const canViewBranch=")&&api.includes("const canManage=")&&api.includes("institutionId"),"M4 must separate branch visibility from management scope");
 assert(api.includes("teacherClassIds")&&api.includes("x.teacherMembershipId===c.membership.membership_id"),"Teachers must see only their own assignments and assigned classes");
-assert(api.includes("(!assigned||assigned.has(x.classId))"),"Teacher enrolment visibility must be limited to assigned classes");
+assert(api.includes("c.adminBranches.includes(x.branchId)||assigned.has(x.classId)"),"Teacher enrolment visibility must be limited to assigned classes");
 assert(api.includes("c.scopedBranches.includes(b)")&&api.includes("c.adminBranches.includes(b)"),"Branch visibility must include explicit membership scopes and delegated branch appointments");
 assert(api.includes("INSERT OR IGNORE INTO membership_branch_scopes")&&api.includes("c.membership.membership_id"),"New branches must be added to the creating School Admin's explicit scope when all-branches access is off");
 assert(api.includes("async function branchAdmins")&&api.includes("method===\"PATCH\""),"Branch administrator lifecycle operations missing");
