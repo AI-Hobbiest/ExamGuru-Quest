@@ -3,7 +3,41 @@ const $=id=>document.getElementById(id),state={identity:null};
 const status=(m,error=false)=>{$("m4Status").textContent=m;$("m4Status").className="status"+(error?" error":"");};
 const list=(id,rows,format)=>{const host=$(id);host.replaceChildren();(rows||[]).forEach(r=>{const d=document.createElement("div");d.className="item";d.textContent=format(r);host.append(d);});if(!rows?.length){const d=document.createElement("div");d.className="item muted";d.textContent="No records yet.";host.append(d);}};
 const run=async fn=>{try{status("Working…");await fn();status("Saved.");}catch(e){status(e.message||"Operation failed.",true);}};
+function isLocalPlatformAdminTest(){
+ try{
+  const s=JSON.parse(sessionStorage.getItem("examguru_mvp_admin_session_v1")||"null");
+  return !!(s&&s.role==="admin"&&String(s.username||"").toLowerCase()==="jayaprakashganathe@gmail.com"&&s.rbacTestMode==="local-platform-admin");
+ }catch(_){return false;}
+}
+const demo={branches:[],classes:[],assignments:[],enrollments:[],parentLinks:[],branchAdmins:[]};
+function renderDemo(){
+ list("branchList",demo.branches,x=>x.name+" · "+x.code+" · "+x.branchId+" · "+x.status);
+ list("classList",demo.classes,x=>x.gradeLabel+" "+x.sectionCode+" · "+x.academicYear+" · "+x.branchId+" · "+x.classId);
+ list("assignmentList",demo.assignments,x=>x.subjectId+" · teacher "+x.teacherMembershipId+" · class "+x.classId+" · "+x.status);
+ list("enrollmentList",demo.enrollments,x=>"student "+x.studentMembershipId+" · class "+x.classId+" · "+x.academicYear+" · "+x.status);
+ list("parentLinkList",demo.parentLinks,x=>x.relationship+" · parent "+x.parentMembershipId+" → student "+x.studentMembershipId+" · "+x.status);
+ list("branchAdminList",demo.branchAdmins,x=>x.username+" · "+x.branchId+" · "+x.status);
+}
+function initLocalPlatformAdminTest(){
+ state.identity={user:{username:"Jayaprakashganathe@gmail.com"},platformRoles:["platform_admin"],memberships:[{membershipId:"TEST-INSTITUTION-001",institutionId:"TEST-INSTITUTION-001",institutionName:"Demo Academy (test only)",role:"school_admin"}],context:{membershipId:"TEST-INSTITUTION-001"}};
+ const select=$("m4Membership");select.replaceChildren();
+ const o=document.createElement("option");o.value="TEST-INSTITUTION-001";o.textContent="Demo Academy (test only) · school_admin";select.append(o);
+ const banner=document.createElement("div");banner.className="status";banner.style.cssText="background:#fff4d8;color:#684900;border:1px solid #e7c76a";
+ banner.textContent="LOCAL RBAC TEST MODE — signed in as the mapped Platform Admin. Demo records exist only in this browser tab and are discarded on refresh. This is not production authentication or a real institution.";
+ $("m4Status").replaceWith(banner);banner.id="m4Status";
+ const add=(id,fn)=>$(id).addEventListener("click",()=>{try{fn();renderDemo();status("Demo action completed. Changes are temporary and not saved to a server.");}catch(e){status(e.message||"Demo action failed.",true);}});
+ add("m4Refresh",renderDemo);
+ add("createBranch",()=>{if(!$("branchName").value.trim()||!$("branchCode").value.trim())throw Error("Enter a branch name and code.");demo.branches.push({name:$("branchName").value.trim(),code:$("branchCode").value.trim(),branchId:"DEMO-BR-"+(demo.branches.length+1),status:"active"});});
+ add("createClass",()=>{if(!$("classBranch").value.trim()||!$("gradeId").value.trim()||!$("sectionCode").value.trim())throw Error("Enter branch, grade and section.");demo.classes.push({branchId:$("classBranch").value.trim(),gradeLabel:"Grade "+$("gradeId").value.trim(),sectionCode:$("sectionCode").value.trim(),academicYear:$("academicYear").value.trim(),classId:"DEMO-CLASS-"+(demo.classes.length+1)});});
+ add("assignTeacher",()=>{if(!$("teacherMembership").value.trim()||!$("assignmentClass").value.trim()||!$("assignmentSubject").value.trim())throw Error("Enter teacher, class and subject IDs.");demo.assignments.push({teacherMembershipId:$("teacherMembership").value.trim(),classId:$("assignmentClass").value.trim(),subjectId:$("assignmentSubject").value.trim(),status:"active"});});
+ add("enrollStudent",()=>{if(!$("studentMembership").value.trim()||!$("enrollmentClass").value.trim())throw Error("Enter student and class IDs.");demo.enrollments.push({studentMembershipId:$("studentMembership").value.trim(),classId:$("enrollmentClass").value.trim(),academicYear:$("enrollmentYear").value.trim(),status:"active"});});
+ add("linkParent",()=>{if(!$("parentMembership").value.trim()||!$("linkedStudentMembership").value.trim())throw Error("Enter parent and student membership IDs.");demo.parentLinks.push({parentMembershipId:$("parentMembership").value.trim(),studentMembershipId:$("linkedStudentMembership").value.trim(),relationship:$("relationship").value.trim(),status:"active"});});
+ add("appointBranchAdmin",()=>{if(!$("adminBranch").value.trim()||!$("adminMembership").value.trim())throw Error("Enter branch and membership IDs.");demo.branchAdmins.push({branchId:$("adminBranch").value.trim(),username:$("adminMembership").value.trim(),status:"active"});});
+ select.addEventListener("change",()=>status("Demo institution context selected."));
+ renderDemo();
+}
 async function load(){
+ if(isLocalPlatformAdminTest()){initLocalPlatformAdminTest();return;}
  if(!window.C10Api?.isAuthenticated())throw Error("Sign in with the central account service first.");
  const data=await C10Api.identityV2();state.identity=data.identity;
  const select=$("m4Membership");select.replaceChildren();
