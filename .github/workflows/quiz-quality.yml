@@ -55,7 +55,7 @@ jobs:
       - name: Validate M3 academic organisation and HOD scopes
         run: node --check js/domain/academic-organisation.js && python3 tests/m3-academic-organisation.test.py && node tests/m3-academic-organisation.test.js && node --check cloudflare/worker.js && node tests/m3-worker-api.test.js && node --check js/department-admin.js && node tests/m3-department-admin-ui.test.js
       - name: Validate M4 institutional operations
-        run: node --check cloudflare/worker.js && node --check cloudflare/m4.js && node --check js/api-client.js && node --check js/m4-operations.js && node tests/m4-institutional-operations.test.js
+        run: node --check cloudflare/worker.js && node --check cloudflare/m4.js && node --check js/api-client.js && node --check js/m4-operations.js && node tests/m4-institutional-operations.test.js && python3 tests/m4-institutional-operations-migration.test.py
       - name: Validate Stage A LMS integrations
         run: node tests/stage-a-integration.test.js
       - name: Validate quiz timers, navigation and result flow
