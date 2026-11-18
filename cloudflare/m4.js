@@ -64,7 +64,7 @@ async function classes(request,env,who,method,c,classId){
  }
  if(method==="GET"){
   const rows=await env.DB.prepare("SELECT c.institution_class_id classId,c.branch_id branchId,c.grade_id gradeId,g.label gradeLabel,c.section_code sectionCode,c.academic_year academicYear,c.status FROM institution_classes c LEFT JOIN classes g ON g.class_id=c.grade_id WHERE c.institution_id=? ORDER BY c.academic_year DESC,c.branch_id,c.grade_id,c.section_code").bind(c.institutionId).all();
-  const assigned=await teacherClassIds(env,c);return ok(request,env,{classes:(rows.results||[]).filter(x=>canViewBranch(c,x.branchId)&&(!assigned||assigned.has(x.classId)))});
+  const assigned=await teacherClassIds(env,c);return ok(request,env,{classes:(rows.results||[]).filter(x=>canViewBranch(c,x.branchId)&&(!isTeacher(c)||c.adminBranches.includes(x.branchId)||assigned.has(x.classId)))});
  }
  const b=await read(request),branchId=String(b.branchId||""),gradeId=String(b.gradeId||""),section=String(b.sectionCode||"").trim().toUpperCase(),year=String(b.academicYear||"").trim();
  if(!canManage(c,branchId))return fail(request,env,403,"Branch administration scope required.");
@@ -80,7 +80,7 @@ async function classes(request,env,who,method,c,classId){
 async function assignments(request,env,who,method,c,assignmentId){
  if(method==="GET"){
   const rows=await env.DB.prepare("SELECT a.assignment_id assignmentId,a.teacher_membership_id teacherMembershipId,a.institution_class_id classId,a.subject_id subjectId,a.status,c.branch_id branchId FROM teacher_assignments a JOIN institution_classes c ON c.institution_id=a.institution_id AND c.institution_class_id=a.institution_class_id WHERE a.institution_id=? ORDER BY c.branch_id,a.subject_id").bind(c.institutionId).all();
-  return ok(request,env,{assignments:(rows.results||[]).filter(x=>canViewBranch(c,x.branchId)&&(!isTeacher(c)||x.teacherMembershipId===c.membership.membership_id))});
+  return ok(request,env,{assignments:(rows.results||[]).filter(x=>canViewBranch(c,x.branchId)&&(!isTeacher(c)||c.adminBranches.includes(x.branchId)||x.teacherMembershipId===c.membership.membership_id))});
  }
  const b=await read(request);
  if(method==="PATCH"){
