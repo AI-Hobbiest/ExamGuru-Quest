@@ -123,7 +123,7 @@ jobs:
           node tests/exam-paper-renderer.test.js
           node tests/assessment-manager.test.js
           node tests/assessment-analytics.test.js
-          for file in js/clat-engine.js js/clat-practice.js js/clat-dashboard-model.js js/clat-dashboard.js js/report-print.js js/app-shell.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js js/pyq-library.js js/cbse-mcq-review.js; do node --check "$file"; done
+          for file in js/clat-engine.js js/clat-practice.js js/clat-dashboard-model.js js/clat-dashboard.js js/report-print.js js/app-shell.js js/m4-operations.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js js/pyq-library.js js/cbse-mcq-review.js; do node --check "$file"; done
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
           node tests/learning-model.test.js
@@ -158,6 +158,8 @@ jobs:
           cp help.html _site/help.html
           cp assigned-test.html _site/assigned-test.html
           cp assigned-paper.html _site/assigned-paper.html
+          cp institution-operations.html _site/institution-operations.html
+          cp rbac-role-matrix.html _site/rbac-role-matrix.html
           cp .nojekyll _site/.nojekyll
           mkdir -p _site/js _site/data _site/css _site/data/contracts/v1 _site/data/clat
           cp css/branding.css _site/css/branding.css
@@ -197,6 +199,7 @@ jobs:
           cp js/page-access.js _site/js/page-access.js
           cp js/api-config.js _site/js/api-config.js
           cp js/api-client.js _site/js/api-client.js
+          cp js/m4-operations.js _site/js/m4-operations.js
           cp js/profile-manager.js _site/js/profile-manager.js
           cp js/admin-manager.js _site/js/admin-manager.js
           cp js/cbse-mcq-review.js _site/js/cbse-mcq-review.js
@@ -457,6 +460,11 @@ jobs:
           for (const asset of ['nephron-filtration.svg','alveolus-gas-exchange.svg','parallel-circuit-6-3.svg','parallel-circuit-4-12.svg','hypermetropia-correction.svg','prism-dispersion-spectrum.svg']) {
             if (!fs.existsSync('_site/assets/exam-papers/science/'+asset)) throw new Error('Science exam diagram is missing from deployment: '+asset);
           }
+          for (const file of ['institution-operations.html','rbac-role-matrix.html','js/m4-operations.js']) {
+            if (!fs.existsSync('_site/'+file)) throw new Error('Institution/RBAC page dependency was not packaged: '+file);
+          }
+          const institutionPage=fs.readFileSync('_site/institution-operations.html','utf8');
+          if (!institutionPage.includes('./js/m4-operations.js') || !institutionPage.includes('./js/app-shell.js')) throw new Error('Institution Operations page is missing its operations controller or shared navigation shell.');
           const admin=fs.readFileSync('_site/admin.html','utf8');
           for (const required of ['data-tab="banks"','data-tab="classes"','data-tab="knowledge"','data-tab="students"','data-tab="leaderboard"','data-tab="access"','data-tab="operations"']) {
             if (!admin.includes(required)) throw new Error('Admin workspace section missing: '+required);
