@@ -11,10 +11,14 @@ assert(worker.includes("handleM4(request,env,who)"),"Worker must dispatch authen
 for(const method of ["branches","createBranch","institutionClasses","createInstitutionClass","teacherAssignments","createTeacherAssignment","enrollments","createEnrollment","parentLinks","createParentLink","branchAdmins","appointBranchAdmin"])assert(client.includes(method+":"),"Missing API client method "+method);
 for(const item of ["Branches","Class sections","Teacher assignments","Student enrolments","Parent / guardian links","Delegated branch administrators"])assert(ui.includes(item),"Missing M4 UI section "+item);
 assert(api.includes("active_institution_id")&&api.includes("active_membership_id"),"M4 must require selected session context");
-assert(api.includes("const canManage=(c,b)=>canBranch(c,b)")&&api.includes("institutionId"),"M4 must enforce explicit branch and tenant scope");
+assert(api.includes("const canViewBranch=")&&api.includes("const canManage=")&&api.includes("institutionId"),"M4 must separate branch visibility from management scope");
+assert(api.includes("teacherClassIds")&&api.includes("x.teacherMembershipId===c.membership.membership_id"),"Teachers must see only their own assignments and assigned classes");
+assert(api.includes("c.adminBranches.includes(x.branchId)||assigned.has(x.classId)"),"Teacher enrolment visibility must be limited to assigned classes");
+assert(api.includes("c.scopedBranches.includes(b)")&&api.includes("c.adminBranches.includes(b)"),"Branch visibility must include explicit membership scopes and delegated branch appointments");
+assert(api.includes("INSERT OR IGNORE INTO membership_branch_scopes")&&api.includes("c.membership.membership_id"),"New branches must be added to the creating School Admin's explicit scope when all-branches access is off");
 assert(api.includes("async function branchAdmins")&&api.includes("method===\"PATCH\""),"Branch administrator lifecycle operations missing");
 assert(api.includes("Parent and guardian links are restricted to School Admin"),"Parent links must be School Admin only");
 assert(migration.includes("branch_admin_appointments")&&migration.includes("trg_branch_admin_appointment_role"),"Delegated branch admins need DB constraints");
 assert(migration.includes("trg_enrollment_active_class")&&migration.includes("trg_parent_link_membership_update"),"M4 integrity triggers missing");
 assert(!/UPDATE student_enrollments SET[^;]*institution_class_id=CASE/i.test(api),"Enrollment update must not silently move classes");
-console.log("M4 Worker/API/UI/migration contract checks passed.");
+console.log("M4 Worker/API/UI/migration contract checks passed, including teacher read scope, branch view/manage separation, and creator scope continuity.");

@@ -48,6 +48,8 @@ assert.ok(nav.includes('href:"./dashboard.html"'));
 assert.ok(nav.includes('href:"./dashboard.html#rewards"'));
 assert.ok(nav.includes('auth:"guest"'),"guest navigation is separated from student navigation");
 assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
+assert.ok(nav.includes('auth:"institution"')&&nav.includes('identityV2()')&&nav.includes('role:"institution"'),"institution memberships resolve into a separate navigation role without conflating them with platform Admin");
+assert.ok(nav.includes('institutionRole:membership.role')&&nav.includes('label:"Institution Operations"'),"institution members receive the Institution Operations navigation entry");
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"')&&nav.includes('group:"Assessment tools"'),"admin navigation exposes Exam Paper Studio in a grouped submenu");
 assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"')&&nav.includes('group:"Family"'),"parent navigation is isolated to the Family submenu");
 assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"Class 10 students can open full-paper self-study practice");

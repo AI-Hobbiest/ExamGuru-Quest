@@ -77,6 +77,7 @@
     {label:"Leaderboards",group:"People & insights",icon:"🏆",href:"./admin.html#tab-leaderboard",page:"admin.html",hash:"#tab-leaderboard",auth:"admin"},
     {label:"Admin access",group:"System",icon:"🔐",href:"./admin.html#tab-access",page:"admin.html",hash:"#tab-access",auth:"admin"},
     {label:"Institution Operations",group:"System",icon:"🏢",href:"./institution-operations.html",page:"institution-operations.html",auth:"admin"},
+    {label:"Institution Operations",group:"Institution",icon:"🏢",href:"./institution-operations.html",page:"institution-operations.html",auth:"institution"},
     {label:"Operations",group:"System",icon:"⚙️",href:"./admin.html#tab-operations",page:"admin.html",hash:"#tab-operations",auth:"admin"}
   ];
   function node(tag,className,text){const element=document.createElement(tag);if(className)element.className=className;if(text!==undefined)element.textContent=text;return element;}
@@ -98,8 +99,17 @@
       try{
         const result=await window.C10Api.currentUser();
         if(result&&result.user&&result.user.role==="admin")return {role:"admin",username:result.user.githubLogin||result.user.username||""};
-        if(result&&result.user&&result.user.role==="student")return {role:"student",username:result.user.username||"",classId:String(result.user.classId||"")};
-        if(result&&result.user&&result.user.role==="parent")return {role:"parent",username:result.user.username||"",displayName:result.user.displayName||result.user.username||""};
+        if(result&&result.user){
+          try{
+            const v2=await window.C10Api.identityV2(),identity=v2.identity||{},memberships=identity.memberships||[];
+            const active=memberships.find(m=>m.membershipId===identity.context?.membershipId&&m.institutionId===identity.context?.institutionId);
+            const eligible=memberships.filter(m=>["school_admin","teacher","institution_viewer"].includes(m.role));
+            const membership=active&&["school_admin","teacher","institution_viewer"].includes(active.role)?active:eligible[0];
+            if(membership)return {role:"institution",institutionRole:membership.role,institutionId:membership.institutionId,membershipId:membership.membershipId,username:identity.user?.displayName||identity.user?.username||result.user.username||""};
+          }catch(_){}
+          if(result.user.role==="student")return {role:"student",username:result.user.username||"",classId:String(result.user.classId||"")};
+          if(result.user.role==="parent")return {role:"parent",username:result.user.username||"",displayName:result.user.displayName||result.user.username||""};
+        }
       }catch(_){}
     }
     const student=readStaticStudent();
@@ -187,7 +197,7 @@
     const brandCopy=node("div","c10-brand-copy");brandCopy.append(node("div","c10-brand-title","ExamGuru Quest"),node("div","c10-brand-sub",clatExperience?"AI-Enthusiast":"Learn · Practise · Level up"));brand.appendChild(brandCopy);sidebarTop.appendChild(brand);
     const identity=node("div","c10-user-card");
     identity.append(node("div","c10-user-name",auth.role==="guest"?"Welcome, learner":(auth.username||"Student")));
-    identity.append(node("div","c10-user-class",auth.role==="admin"?"Administrator":auth.role==="student"?(String(auth.classId||"").toUpperCase()==="CLAT"?"CLAT UG 2027":"Class "+String(auth.classId||"not assigned")):auth.role==="parent"?"Parent / Guardian":"Sign in to begin"));
+    identity.append(node("div","c10-user-class",auth.role==="admin"?"Administrator":auth.role==="student"?(String(auth.classId||"").toUpperCase()==="CLAT"?"CLAT UG 2027":"Class "+String(auth.classId||"not assigned")):auth.role==="parent"?"Parent / Guardian":auth.role==="institution"?(auth.institutionRole||"Institution member").replace(/_/g," "):"Sign in to begin"));
     sidebarTop.appendChild(identity);sidebar.appendChild(sidebarTop);
     const list=node("nav","c10-nav-list");list.setAttribute("aria-label","Learning and account");
     const visibleLinks=links.filter(item=>{
