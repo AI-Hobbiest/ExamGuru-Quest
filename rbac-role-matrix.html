@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#211b48"><title>Role Experience Matrix | ExamGuru Quest</title>
+<link rel="stylesheet" href="./css/branding.css?v=controls1">
+<link rel="stylesheet" href="./css/app-shell.css?v=20261106-persistent-topbar-v1">
+<style>
+:root{color-scheme:light}body{margin:0;background:#f5f4fb;color:#211b48;font:15px/1.5 system-ui,sans-serif}.wrap{max-width:1180px;margin:28px auto;padding:0 18px 50px}.hero,.panel{background:#fff;border:1px solid #e5e1f2;border-radius:18px;padding:22px;margin:15px 0;box-shadow:0 8px 28px #211b480b}.hero h1{margin:5px 0}.muted{color:#706b83}.notice{padding:12px 14px;border-radius:11px;background:#fff4d8;color:#684900;border:1px solid #e7c76a;margin-top:14px}.toolbar{display:flex;gap:12px;align-items:end;flex-wrap:wrap}.field{display:grid;gap:5px;min-width:240px}.field label{font-size:.82rem;font-weight:800}.field select{padding:10px;border:1px solid #d9d4e9;border-radius:9px;font:inherit}.role-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.role-card{border:1px solid #e6e2f1;border-radius:13px;padding:15px;background:#fff}.role-card.active{border-color:#7665d7;box-shadow:0 0 0 2px #7665d71a}.role-card h3{margin:0 0 5px}.role-card p{margin:0;color:#706b83;font-size:.83rem}.tag{display:inline-block;margin-top:10px;padding:4px 8px;border-radius:99px;background:#efedff;color:#5140bd;font-size:.72rem;font-weight:800}.matrix-wrap{overflow-x:auto}.matrix{width:100%;border-collapse:collapse;min-width:680px}.matrix th,.matrix td{padding:11px 12px;text-align:left;border-bottom:1px solid #eeeaf5;vertical-align:top}.matrix th{font-size:.78rem;color:#625b79;background:#faf9fd}.matrix td{font-size:.84rem}.yes{color:#16734b;font-weight:800}.no{color:#a33a3a;font-weight:800}.scope{color:#6952b8;font-weight:800}.nav-list{display:flex;gap:8px;flex-wrap:wrap}.nav-list a{display:inline-block;padding:9px 12px;border:1px solid #e3def2;border-radius:10px;text-decoration:none;color:#493b9b;background:#faf9ff;font-weight:700;font-size:.84rem}.nav-list a:hover{background:#f0edff}.small{font-size:.78rem}.btn{border:0;border-radius:9px;background:#6250d9;color:#fff;font-weight:750;padding:10px 14px;cursor:pointer}
+</style></head>
+<body><main class="wrap">
+<section class="hero">
+<a href="./admin.html">← Admin Workspace</a> · <a href="./institution-operations.html">Institution Operations</a>
+<h1>Role Experience Matrix</h1>
+<p class="muted">A single place to preview the intended navigation, workspace and action boundaries for each ExamGuru role.</p>
+<div class="notice"><strong>Local preview only.</strong> Switching personas changes this page's preview, not the signed-in identity or permissions on other pages. GitHub Pages has no server-enforced RBAC yet. Never treat hidden links or this matrix as security controls.</div>
+</section>
+<section class="panel">
+<div class="toolbar"><div class="field"><label for="rolePicker">Preview role</label><select id="rolePicker"></select></div><div><div id="roleScope" class="tag">Platform scope</div><p id="roleDescription" class="muted small"></p></div></div>
+<h2 id="roleTitle">Platform Admin</h2><p id="roleSummary" class="muted"></p>
+<h3>Workspace navigation preview</h3><div id="roleNavigation" class="nav-list"></div>
+</section>
+<section class="panel"><h2>Permission and action matrix</h2><p class="muted small">“Allowed” below is the intended product policy. Actual enforcement for institutional data must be implemented and tested in the authenticated Worker/API before production use.</p>
+<div class="matrix-wrap"><table class="matrix"><thead><tr><th>Capability</th><th>Platform Admin</th><th>Institution Admin</th><th>Teacher</th><th>Parent</th><th>Student</th><th>Institution Viewer</th></tr></thead><tbody id="matrixBody"></tbody></table></div>
+</section>
+<section class="panel"><h2>Next implementation boundary</h2><p class="muted">This experience map is the product contract for the next integration step: apply role-aware navigation, page entry checks and action-level controls, then move every data read/write behind server-side scope checks. The current local preview is deliberately not a substitute for that work.</p></section>
+</main>
+<script src="./js/rbac-role-experience.js"></script>
+</body></html>
