@@ -6,6 +6,13 @@ Last reviewed: 2026-11-18
 
 Cloudflare D1 provisioning, Worker deployment and live migrations are deferred until a suitable desktop/laptop session. Development continues against provider-neutral domain contracts, deterministic in-memory repositories, SQLite migration tests and Worker API contract tests. No production institution data is created in GitHub Pages or browser storage.
 
+## Initial Platform Admin bootstrap
+
+- The initial global Platform Admin is the GitHub identity `AI-Hobbiest`, corresponding to the existing owner/admin account used for the ExamGuru repository.
+- The legacy static Admin username `Jayaprakashganathe@gmail.com` remains a prototype-only login and is not itself a trusted RBAC identity. On central GitHub OAuth sign-in, the Worker creates or refreshes the `platform_admin` grant only for GitHub logins explicitly listed in `PLATFORM_ADMIN_GITHUB_USERS`.
+- Platform Admin API authorization checks require both the configured allowlist and an active `platform_roles` database grant. Merely having the legacy `users.role=admin` value is insufficient.
+- This bootstrap becomes effective only after migration 0003 is applied to D1 and the updated Worker is deployed. It does not activate the role on GitHub Pages while `C10_API_BASE` is blank.
+
 ## Phase 1 — RBAC foundation
 
 Existing baseline retained:
