@@ -17,4 +17,6 @@ API_PUBLIC_URL = "https://REPLACE_WITH_WORKER_SUBDOMAIN.workers.dev"
 # Server-side allowlist only. Add other app-authorised GitHub usernames explicitly, comma-separated.
 # GitHub collaborators are not automatically app admins.
 ADMIN_GITHUB_USERS = "AI-Hobbiest"
+# Explicit bootstrap list for the global platform_admin RBAC grant (GitHub login, not email).
+PLATFORM_ADMIN_GITHUB_USERS = "AI-Hobbiest"
 GITHUB_CLIENT_ID = "REPLACE_WITH_GITHUB_OAUTH_CLIENT_ID"
