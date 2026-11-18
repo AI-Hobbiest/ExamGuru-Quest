@@ -15,9 +15,13 @@ for mid,uid,role,iid in [("ma","u-admin","school_admin","i1"),("mt","u-teacher",
  db.execute("INSERT INTO institution_memberships(membership_id,user_id,institution_id,role,status,all_branches,created_at,updated_at) VALUES(?,?,?,?,'active',0,?,?)",(mid,uid,iid,role,now,now))
 db.execute("INSERT INTO membership_branch_scopes VALUES('ma','i1','b1',?)",(now,))
 db.execute("INSERT INTO membership_branch_scopes VALUES('ma','i1','b2',?)",(now,))
-db.execute("INSERT INTO classes(class_id,label,sort_order,active,created_at,updated_at) VALUES('6','Class 6',6,1,?,?)",(now,now))
-db.execute("INSERT INTO institution_classes(institution_class_id,institution_id,branch_id,grade_id,section_code,academic_year,created_at,updated_at) VALUES('c1','i1','b1','6','A','2026-27',?,?)",(now,now))
-db.execute("INSERT INTO institution_classes(institution_class_id,institution_id,branch_id,grade_id,section_code,academic_year,created_at,updated_at) VALUES('c2','i2','b-other','6','A','2026-27',?,?)",(now,now))
+grade=db.execute("SELECT class_id FROM classes WHERE active=1 ORDER BY sort_order LIMIT 1").fetchone()
+if not grade:
+ db.execute("INSERT INTO classes(class_id,label,sort_order,active,created_at,updated_at) VALUES('m4-grade','M4 Test Grade',6,1,?,?)",(now,now))
+ grade=('m4-grade',)
+grade_id=grade[0]
+db.execute("INSERT INTO institution_classes(institution_class_id,institution_id,branch_id,grade_id,section_code,academic_year,created_at,updated_at) VALUES('c1','i1','b1',?,'A','2026-27',?,?)",(grade_id,now,now))
+db.execute("INSERT INTO institution_classes(institution_class_id,institution_id,branch_id,grade_id,section_code,academic_year,created_at,updated_at) VALUES('c2','i2','b-other',?,'A','2026-27',?,?)",(grade_id,now,now))
 db.execute("INSERT INTO branch_admin_appointments(appointment_id,institution_id,branch_id,membership_id,appointed_by_user_id,created_at,updated_at) VALUES('ba1','i1','b1','mv','u-admin',?,?)",(now,now))
 db.execute("INSERT INTO teacher_assignments(assignment_id,institution_id,teacher_membership_id,institution_class_id,subject_id,created_at,updated_at) VALUES('ta1','i1','mt','c1','science',?,?)",(now,now))
 db.execute("INSERT INTO student_enrollments(enrollment_id,institution_id,student_membership_id,institution_class_id,academic_year,enrolled_at,created_at) VALUES('e1','i1','ms','c1','2026-27',?,?)",(now,now))
