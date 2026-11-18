@@ -98,7 +98,7 @@ async function enrollments(request,env,who,method,c,enrollmentId){
   if(!row)return fail(request,env,404,"Enrollment not found.");
   if(!canManage(c,row.branch_id))return fail(request,env,403,"Branch administration scope required.");
   const status=b.status||"withdrawn";if(!["active","transferred","completed","withdrawn"].includes(status))return fail(request,env,400,"Invalid enrollment status.");
-  await env.DB.prepare("UPDATE student_enrollments SET status=?,ended_at=?,institution_class_id=CASE WHEN ? IS NULL THEN institution_class_id ELSE ? END WHERE institution_id=? AND enrollment_id=?").bind(status,status==="active"?null:iso(),b.classId||null,b.classId||null,c.institutionId,enrollmentId).run();
+  await env.DB.prepare("UPDATE student_enrollments SET status=?,ended_at=? WHERE institution_id=? AND enrollment_id=?").bind(status,status==="active"?null:iso(),c.institutionId,enrollmentId).run();
   await audit(env,who,c,"enrollment-updated","student_enrollment",enrollmentId,row.branch_id,{status});
   return ok(request,env,{enrollmentId,status});
  }
@@ -112,6 +112,7 @@ async function enrollments(request,env,who,method,c,enrollmentId){
  return ok(request,env,{enrollmentId:eid},201);
 }
 async function parentLinks(request,env,who,method,c,linkId){
+ if(!isSchoolAdmin(c))return fail(request,env,403,"Parent and guardian links are restricted to School Admin.");
  if(method==="GET"){
   const rows=await env.DB.prepare("SELECT l.link_id linkId,l.parent_membership_id parentMembershipId,l.student_membership_id studentMembershipId,l.relationship,l.status,l.created_at createdAt FROM parent_student_links l WHERE l.institution_id=? ORDER BY l.created_at DESC").bind(c.institutionId).all();
   return ok(request,env,{links:rows.results||[]});
