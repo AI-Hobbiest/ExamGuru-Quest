@@ -146,14 +146,16 @@ async function branchAdmins(request,env,who,method,c,appointmentId){
   const b=await read(request),status=b.status==="active"?"active":"revoked";
   const row=await env.DB.prepare("SELECT branch_id FROM branch_admin_appointments WHERE institution_id=? AND appointment_id=?").bind(c.institutionId,appointmentId).first();
   if(!row)return fail(request,env,404,"Branch administrator appointment not found.");
+  if(!canManage(c,row.branch_id))return fail(request,env,403,"Branch administration scope required.");
   await env.DB.prepare("UPDATE branch_admin_appointments SET status=?,updated_at=? WHERE institution_id=? AND appointment_id=?").bind(status,iso(),c.institutionId,appointmentId).run();
   await audit(env,who,c,"branch-admin-"+status,"branch_admin_appointment",appointmentId,row.branch_id,{status});return ok(request,env,{appointmentId,status});
  }
  if(method==="GET"){
   const rows=await env.DB.prepare("SELECT a.appointment_id appointmentId,a.branch_id branchId,a.membership_id membershipId,a.status,u.username,m.role FROM branch_admin_appointments a JOIN institution_memberships m ON m.membership_id=a.membership_id JOIN users u ON u.id=m.user_id WHERE a.institution_id=? ORDER BY a.created_at DESC").bind(c.institutionId).all();
-  return ok(request,env,{branchAdmins:rows.results||[]});
+  return ok(request,env,{branchAdmins:(rows.results||[]).filter(x=>canBranch(c,x.branchId))});
  }
  const b=await read(request),branchId=String(b.branchId||""),membershipId=String(b.membershipId||"");
+ if(!canManage(c,branchId))return fail(request,env,403,"Branch administration scope required.");
  if(!await env.DB.prepare("SELECT 1 FROM branches WHERE institution_id=? AND branch_id=? AND status='active'").bind(c.institutionId,branchId).first())return fail(request,env,400,"Select an active branch.");
  if(!await member(env,c,membershipId,"teacher")&&!await member(env,c,membershipId,"institution_viewer"))return fail(request,env,400,"Delegate must have an active teacher or institution-viewer membership.");
  const appointment=id(),now=iso();
