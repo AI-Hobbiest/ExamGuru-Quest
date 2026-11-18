@@ -50,7 +50,7 @@
       if(enteredUsername!==ADMIN_USERNAME.toLowerCase()||enteredHash!==ADMIN_PASSWORD_SHA256){
         throw new Error("Admin username or password is incorrect.");
       }
-      sessionStorage.setItem("examguru_mvp_admin_session_v1",JSON.stringify({username:ADMIN_USERNAME,role:"admin",signedInAt:Date.now()}));
+      sessionStorage.setItem("examguru_mvp_admin_session_v1",JSON.stringify({username:ADMIN_USERNAME,role:"admin",platformRoles:["platform_admin"],rbacTestMode:"local-platform-admin",signedInAt:Date.now()}));
       sessionStorage.removeItem("c10playground_static_student_v1");
       adminPassword.value="";
       say("Admin sign-in successful. Opening Admin Workspace…","success");
