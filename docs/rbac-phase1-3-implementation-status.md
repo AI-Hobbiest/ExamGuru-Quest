@@ -74,4 +74,11 @@ This is deliberately a UI/workflow test harness, not secure authorization: brows
 - Platform Admin may appoint Institution Admin and grant all-branch scope. Each role remains a separate membership and must be selected explicitly as the active context when a request depends on that role.
 - Local RBAC test mode exposes a role switcher for Platform Admin, Institution Admin, Teacher, Parent, Student and Institution Viewer. The current demo identity is seeded with all institution roles so each UI persona can be exercised. Role assignments and demo records are in-memory only and are not real authorization.
 
-\n## Next step — role-based experience matrix (local preview)\n\n- Added a central Role Experience Matrix covering Platform Admin, Institution Admin, Teacher, Parent, Student and Institution Viewer.\n- Each persona has a defined workspace navigation preview, scope statement and capability matrix. Scoped access is explicitly distinguished from unrestricted access.\n- The matrix is a product/acceptance contract only. It does not hide or secure routes, and persona selection does not change authentication or authorization on other pages.\n- The next production-boundary work is to apply the matrix to authenticated route entry, navigation and action controls, then enforce every data operation in the Worker using server-derived institution, branch, assignment and linked-child scopes.\n- Added automated contract checks for all six roles, key navigation destinations and privilege boundaries.\n
+
+## Next step — role-based experience matrix (local preview)
+
+- Added a central Role Experience Matrix covering Platform Admin, Institution Admin, Teacher, Parent, Student and Institution Viewer.
+- Each persona has a defined workspace navigation preview, scope statement and capability matrix. Scoped access is explicitly distinguished from unrestricted access.
+- The matrix is a product/acceptance contract only. It does not hide or secure routes, and persona selection does not change authentication or authorization on other pages.
+- The next production-boundary work is to apply the matrix to authenticated route entry, navigation and action controls, then enforce every data operation in the Worker using server-derived institution, branch, assignment and linked-child scopes.
+- Added automated contract checks for all six roles, key navigation destinations and privilege boundaries.
