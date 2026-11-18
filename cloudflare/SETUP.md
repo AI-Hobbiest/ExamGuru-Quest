@@ -127,3 +127,16 @@ npx wrangler d1 execute c10-playground --remote --file=./migrations/0005_academi
 ```
 
 Migration 0005 is a one-time schema change because it adds `teacher_assignments.department_id`. Do not rerun it after that column exists. M3 adds the department model and constraints but does not itself deploy new Worker routes or expose department administration in the public portal.
+
+
+## M4 institutional operations (when explicitly approved)
+
+M4 adds authenticated Worker routes for institution branches, class sections, teacher assignments, student enrolments, parent/guardian links, and delegated branch administrators. The portal workspace is available at `/institution-operations.html` after central Worker sign-in.
+
+After a fresh D1 backup and after migrations 0003, 0004 and 0005 have been successfully applied, apply migration 0006:
+
+```sh
+npx wrangler d1 execute examguru-quest --remote --file=./migrations/0006_m4_branch_operations.sql
+```
+
+Then deploy the Worker from `cloudflare/` using the configured D1 binding. Migration 0006 is additive and creates delegated branch-admin appointments plus operational integrity triggers. School Admin memberships can manage institution-wide or explicitly scoped branches; delegated branch admins are limited to their appointed branch. Parent/guardian links are restricted to School Admin. Never run this migration or deploy the Worker without an approved backup and explicit production rollout approval.
