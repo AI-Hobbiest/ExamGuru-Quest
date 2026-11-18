@@ -86,6 +86,16 @@
     createClass:entry=>request("/api/admin/classes",{method:"POST",body:entry}),
     updateClass:(id,entry)=>request("/api/admin/classes/"+encodeURIComponent(id),{method:"PATCH",body:entry}),
     progressReport:(classId,subjectId)=>request("/api/admin/reports/progress?"+new URLSearchParams({classId:classId||"",subjectId:subjectId||""})),
-    leaderboard:(classId,subjectId)=>request("/api/admin/reports/leaderboard?"+new URLSearchParams({classId:classId||"",subjectId:subjectId||""}))
+    leaderboard:(classId,subjectId)=>request("/api/admin/reports/leaderboard?"+new URLSearchParams({classId:classId||"",subjectId:subjectId||""})),
+    identityV2:()=>request("/api/v2/auth/me"),
+    selectInstitutionContext:context=>request("/api/v2/auth/context",{method:"POST",body:context}),
+    departments:()=>request("/api/v2/departments"),
+    createDepartment:entry=>request("/api/v2/departments",{method:"POST",body:entry}),
+    updateDepartment:(id,entry)=>request("/api/v2/departments/"+encodeURIComponent(id),{method:"PATCH",body:entry}),
+    setDepartmentSubjects:(id,subjectIds)=>request("/api/v2/departments/"+encodeURIComponent(id)+"/subjects",{method:"POST",body:{subjectIds}}),
+    setDepartmentClasses:(id,classIds)=>request("/api/v2/departments/"+encodeURIComponent(id)+"/classes",{method:"POST",body:{classIds}}),
+    addDepartmentTeacher:(id,entry)=>request("/api/v2/departments/"+encodeURIComponent(id)+"/members",{method:"POST",body:entry}),
+    appointDepartmentHead:(id,entry)=>request("/api/v2/departments/"+encodeURIComponent(id)+"/heads",{method:"POST",body:entry}),
+    endDepartmentHead:(id,entry)=>request("/api/v2/department-heads/"+encodeURIComponent(id),{method:"PATCH",body:entry})
   });
 })();

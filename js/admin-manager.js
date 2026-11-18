@@ -143,7 +143,7 @@
   }
   function initTabs(){
     document.querySelectorAll(".admin-tab-button").forEach(item=>item.addEventListener("click",()=>setTab(item.dataset.tab)));
-    const validTabs=new Set(["overview","banks","cbse-review","classes","knowledge","students","leaderboard","access","operations","exam-papers"]);
+    const validTabs=new Set(["overview","banks","cbse-review","departments","classes","knowledge","students","leaderboard","access","operations","exam-papers"]);
     const syncTabFromHash=()=>{const hash=typeof location!=="undefined"?location.hash:"";const name=hash.replace(/^#tab-/,"");if(validTabs.has(name))setTab(name);};
     if(typeof window.addEventListener==="function")window.addEventListener("hashchange",syncTabFromHash);
     syncTabFromHash();
