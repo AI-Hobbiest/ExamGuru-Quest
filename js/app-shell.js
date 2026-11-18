@@ -77,7 +77,10 @@
     {label:"Leaderboards",group:"People & insights",icon:"🏆",href:"./admin.html#tab-leaderboard",page:"admin.html",hash:"#tab-leaderboard",auth:"admin"},
     {label:"Admin access",group:"System",icon:"🔐",href:"./admin.html#tab-access",page:"admin.html",hash:"#tab-access",auth:"admin"},
     {label:"Institution Operations",group:"System",icon:"🏢",href:"./institution-operations.html",page:"institution-operations.html",auth:"admin"},
-    {label:"Institution Operations",group:"Institution",icon:"🏢",href:"./institution-operations.html",page:"institution-operations.html",auth:"institution"},
+    {label:"Institution Operations",group:"Institution",icon:"🏢",href:"./institution-operations.html",page:"institution-operations.html",auth:"institution",institutionRoles:["school_admin"]},
+    {label:"Teaching assignments",group:"Teaching",icon:"🧑‍🏫",href:"./assigned-test.html",page:"assigned-test.html",auth:"institution",institutionRoles:["teacher"]},
+    {label:"Assigned exam papers",group:"Teaching",icon:"📝",href:"./assigned-paper.html",page:"assigned-paper.html",auth:"institution",institutionRoles:["teacher"]},
+    {label:"Institution Operations (read only)",group:"Institution",icon:"👁️",href:"./institution-operations.html",page:"institution-operations.html",auth:"institution",institutionRoles:["institution_viewer"]},
     {label:"Operations",group:"System",icon:"⚙️",href:"./admin.html#tab-operations",page:"admin.html",hash:"#tab-operations",auth:"admin"}
   ];
   function node(tag,className,text){const element=document.createElement(tag);if(className)element.className=className;if(text!==undefined)element.textContent=text;return element;}
@@ -93,7 +96,16 @@
   async function authState(){
     try{
       const admin=JSON.parse(sessionStorage.getItem("examguru_mvp_admin_session_v1")||"null");
-      if(admin&&admin.role==="admin"&&admin.username==="Jayaprakashganathe@gmail.com")return {role:"admin",username:admin.username};
+      if(admin&&admin.role==="admin"&&admin.username==="Jayaprakashganathe@gmail.com"){
+        if(admin.rbacTestMode==="local-platform-admin"){
+          const preview=sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin";
+          if(preview==="platform_admin")return {role:"admin",username:admin.username,localTestMode:true};
+          if(["school_admin","teacher","institution_viewer"].includes(preview))return {role:"institution",institutionRole:preview,institutionId:"TEST-INSTITUTION-001",membershipId:"TEST-INSTITUTION-001",username:admin.username,localTestMode:true};
+          if(preview==="parent")return {role:"parent",username:admin.username,displayName:"Local Parent Preview",localTestMode:true};
+          if(preview==="student")return {role:"student",username:admin.username,classId:"",localTestMode:true};
+        }
+        return {role:"admin",username:admin.username};
+      }
     }catch(_){}
     if(window.C10Api&&window.C10Api.isConfigured&&window.C10Api.isConfigured()&&window.C10Api.isAuthenticated()){
       try{
@@ -186,6 +198,7 @@
     document.body.classList.add("c10-shell-ready");
     applyTheme(readThemePreference(),false);
     const current=getLocation(),auth=await authState();
+    if(auth.localTestMode&&current.file==="admin.html"&&auth.role!=="admin"){location.replace(auth.role==="institution"?"./institution-operations.html":auth.role==="parent"?"./parent.html":"./dashboard.html");return;}
     const isClatStudent=auth.role==="student"&&String(auth.classId||"").toUpperCase()==="CLAT";
     const clatExperience=current.file==="clat.html"||current.file==="clat-login.html"||isClatStudent;
     if(isClatStudent)applyClatAttribution();
@@ -202,6 +215,7 @@
     const list=node("nav","c10-nav-list");list.setAttribute("aria-label","Learning and account");
     const visibleLinks=links.filter(item=>{
       if(item.auth!==auth.role)return false;
+      if(item.institutionRoles&&!item.institutionRoles.includes(auth.institutionRole))return false;
       if(isClatStudent&&!["CLAT UG 2027","Dashboard","Assessment Test","Study Library","My Learning","FAQ & Guide"].includes(item.label))return false;
       if(item.subject&&subjectConfig&&!subjectConfig.subjects.includes(item.subject))return false;
       if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return false;
