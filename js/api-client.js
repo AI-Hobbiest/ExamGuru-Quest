@@ -96,6 +96,22 @@
     setDepartmentClasses:(id,classIds)=>request("/api/v2/departments/"+encodeURIComponent(id)+"/classes",{method:"POST",body:{classIds}}),
     addDepartmentTeacher:(id,entry)=>request("/api/v2/departments/"+encodeURIComponent(id)+"/members",{method:"POST",body:entry}),
     appointDepartmentHead:(id,entry)=>request("/api/v2/departments/"+encodeURIComponent(id)+"/heads",{method:"POST",body:entry}),
-    endDepartmentHead:(id,entry)=>request("/api/v2/department-heads/"+encodeURIComponent(id),{method:"PATCH",body:entry})
+    endDepartmentHead:(id,entry)=>request("/api/v2/department-heads/"+encodeURIComponent(id),{method:"PATCH",body:entry}),
+    branches:()=>request("/api/v2/branches"),
+    createBranch:entry=>request("/api/v2/branches",{method:"POST",body:entry}),
+    updateBranch:(id,entry)=>request("/api/v2/branches/"+encodeURIComponent(id),{method:"PATCH",body:entry}),
+    institutionClasses:()=>request("/api/v2/classes"),
+    createInstitutionClass:entry=>request("/api/v2/classes",{method:"POST",body:entry}),
+    teacherAssignments:()=>request("/api/v2/teacher-assignments"),
+    createTeacherAssignment:entry=>request("/api/v2/teacher-assignments",{method:"POST",body:entry}),
+    updateTeacherAssignment:(id,entry)=>request("/api/v2/teacher-assignments/"+encodeURIComponent(id),{method:"PATCH",body:entry}),
+    enrollments:()=>request("/api/v2/enrollments"),
+    createEnrollment:entry=>request("/api/v2/enrollments",{method:"POST",body:entry}),
+    updateEnrollment:(id,entry)=>request("/api/v2/enrollments/"+encodeURIComponent(id),{method:"PATCH",body:entry}),
+    parentLinks:()=>request("/api/v2/parent-links"),
+    createParentLink:entry=>request("/api/v2/parent-links",{method:"POST",body:entry}),
+    updateParentLink:(id,entry)=>request("/api/v2/parent-links/"+encodeURIComponent(id),{method:"PATCH",body:entry}),
+    branchAdmins:()=>request("/api/v2/branch-admins"),
+    appointBranchAdmin:entry=>request("/api/v2/branch-admins",{method:"POST",body:entry})
   });
 })();
