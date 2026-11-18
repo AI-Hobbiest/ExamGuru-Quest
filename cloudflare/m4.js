@@ -63,11 +63,11 @@ async function classes(request,env,who,method,c,classId){
  if(!/^[A-Za-z0-9_-]{1,20}$/.test(gradeId)||! /^[A-Z0-9_-]{1,12}$/.test(section)||!/^20\d{2}(-\d{2})?$/.test(year))return fail(request,env,400,"Provide a valid grade, section and academic year.");
  const [branch,grade]=await Promise.all([env.DB.prepare("SELECT 1 FROM branches WHERE institution_id=? AND branch_id=? AND status='active'").bind(c.institutionId,branchId).first(),env.DB.prepare("SELECT 1 FROM classes WHERE class_id=? AND active=1").bind(gradeId).first()]);
  if(!branch||!grade)return fail(request,env,400,"Choose an active branch and grade.");
- const classId=id(),now=iso();
- try{await env.DB.prepare("INSERT INTO institution_classes(institution_class_id,institution_id,branch_id,grade_id,section_code,academic_year,status,created_at,updated_at) VALUES(?,?,?,?,?,?,'active',?,?)").bind(classId,c.institutionId,branchId,gradeId,section,year,now,now).run();}
+ const newClassId=id(),now=iso();
+ try{await env.DB.prepare("INSERT INTO institution_classes(institution_class_id,institution_id,branch_id,grade_id,section_code,academic_year,status,created_at,updated_at) VALUES(?,?,?,?,?,?,'active',?,?)").bind(newClassId,c.institutionId,branchId,gradeId,section,year,now,now).run();}
  catch(_){return fail(request,env,409,"That class section already exists for this branch and academic year.");}
- await audit(env,who,c,"class-section-created","institution_class",classId,branchId,{gradeId,sectionCode:section,academicYear:year});
- return ok(request,env,{classId,branchId,gradeId,sectionCode:section,academicYear:year},201);
+ await audit(env,who,c,"class-section-created","institution_class",newClassId,branchId,{gradeId,sectionCode:section,academicYear:year});
+ return ok(request,env,{classId:newClassId,branchId,gradeId,sectionCode:section,academicYear:year},201);
 }
 async function assignments(request,env,who,method,c,assignmentId){
  if(method==="GET"){
