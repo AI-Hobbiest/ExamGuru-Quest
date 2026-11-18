@@ -50,8 +50,8 @@ const seed={
   ...seed.memberships,
   {membershipId:"m-school-secondary",userId:"teacher",institutionId:"i1",role:"school_admin",status:"active",allBranches:true}
  ]});
- assert.equal((await authorize(multiRoleRepos,{userId:"teacher"},"class.manage",{institutionId:"i1",branchId:"b1"})).reason,"institution-membership-context-required");
- assert.equal((await authorize(multiRoleRepos,{userId:"teacher"},"class.manage",{institutionId:"i1",branchId:"b1",membershipId:"m-school-secondary"})).allowed,true);
+ assert.equal((await authorize(multiRoleRepos,{userId:"teacher"},"institution.read",{institutionId:"i1",branchId:"b1"})).reason,"institution-membership-context-required");
+ assert.equal((await authorize(multiRoleRepos,{userId:"teacher"},"institution.read",{institutionId:"i1",branchId:"b1",membershipId:"m-school-secondary"})).allowed,true);
  assert.equal((await authorize(multiRoleRepos,{userId:"teacher"},"assessment.create",{institutionId:"i1",branchId:"b1",institutionClassId:"c6a",subjectId:"science",membershipId:"m-teacher"})).allowed,true);
  const staticRepo=createStaticPrototypeRepositories(async()=>({schemaVersion:1,kind:"examguru-rbac-prototype-snapshot",...seed}));
  assert.equal(staticRepo.assurance,"prototype-only-read-only");
