@@ -37,8 +37,10 @@ async function branches(request,env,who,method,c){
  const b=await read(request),name=String(b.name||"").trim(),code=String(b.code||"").trim().toUpperCase();
  if(!safe(name,120)||!/^[A-Z0-9_-]{2,20}$/.test(code))return fail(request,env,400,"Enter a branch name and a 2–20 character code.");
  const now=iso(),branchId=id();
- try{await env.DB.prepare("INSERT INTO branches(branch_id,institution_id,name,code,status,created_at,updated_at) VALUES(?,?,?,?,'active',?,?)").bind(branchId,c.institutionId,name,code,now,now).run();}
- catch(_){return fail(request,env,409,"Branch code already exists.");}
+ try{
+  await env.DB.prepare("INSERT INTO branches(branch_id,institution_id,name,code,status,created_at,updated_at) VALUES(?,?,?,?,'active',?,?)").bind(branchId,c.institutionId,name,code,now,now).run();
+  if(Number(c.membership.all_branches)!==1)await env.DB.prepare("INSERT OR IGNORE INTO membership_branch_scopes(membership_id,institution_id,branch_id,created_at) VALUES(?,?,?,?)").bind(c.membership.membership_id,c.institutionId,branchId,now).run();
+ }catch(_){return fail(request,env,409,"Branch code already exists or its access scope could not be created.");}
  await audit(env,who,c,"branch-created","branch",branchId,branchId,{code});
  return ok(request,env,{branch:{branchId,name,code,status:"active"}},201);
 }
