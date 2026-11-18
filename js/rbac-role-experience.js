@@ -12,10 +12,10 @@ const capabilities=[
  ["Create / configure institutions",["yes","no","no","no","no","no"]],
  ["Assign institution roles",["yes","scope","no","no","no","no"]],
  ["Manage branches and classes",["yes","scope","no","no","no","no"]],
- ["Manage teacher assignments and enrolments",["yes","scope","scope","no","no","no"]],
+ ["Manage teacher assignments and enrolments",["yes","scope","no","no","no","no"]],\n ["View assigned class rosters",["yes","scope","scope","no","no","scope"]],
  ["View learner progress",["yes","scope","scope","scope","own","scope"]],
  ["Create / assign assessments",["yes","scope","scope","linked","no","no"]],
- ["Take practice and examinations",["yes","yes","yes","no","own","no"]],
+ ["Take practice and examinations",["no","no","no","no","own","no"]],
  ["Edit question-bank content / publish",["yes","no","no","no","no","no"]],
  ["View institution operational records",["yes","scope","assigned","no","no","scope"]]
 ];
