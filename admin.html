@@ -56,6 +56,7 @@
       <button class="admin-tab-button" data-tab="students" type="button"><span class="admin-tab-icon">👩‍🎓</span>Students &amp; reports</button>
       <button class="admin-tab-button" data-tab="leaderboard" type="button"><span class="admin-tab-icon">🏆</span>Leaderboards</button>
       <button class="admin-tab-button" data-tab="access" type="button"><span class="admin-tab-icon">🔐</span>Admin access</button>
+      <button class="admin-tab-button" data-tab="institution-operations" type="button"><span class="admin-tab-icon">🏢</span>Institution Operations</button>
       <button class="admin-tab-button" data-tab="operations" type="button"><span class="admin-tab-icon">🛠️</span>Operations</button>
     </nav>
     <div class="admin-content">
@@ -432,6 +433,16 @@
           <div class="admin-feature"><strong>Add another admin</strong><p>Grant repository access to that person's own GitHub account with the least permissions they need. Remove their access in GitHub when no longer required. Do not share your personal GitHub password.</p><p><a href="https://github.com/AI-Hobbiest/C10-Playground/settings" target="_blank" rel="noopener noreferrer">Open repository settings →</a></p></div>
         </div>
         <div class="admin-notice"><strong>Student passwords:</strong> only salted hashes are committed in <code>data/student-accounts.json</code>. Because the file is public and verification happens in the browser, this is not a secure login system. Use unique classroom-only passwords, never reuse passwords, and migrate to a server-side verifier before using accounts for protected data.</div>
+      </section>
+
+      <section class="admin-panel eg-surface" id="tab-institution-operations">
+        <h2>Institution Operations</h2>
+        <p class="admin-muted">Manage your institution’s branches, class sections, teacher assignments, student enrolments, parent / guardian links and delegated branch administrators.</p>
+        <div class="admin-feature">
+          <strong>M4 Operations Workspace</strong>
+          <p>Open the dedicated workspace to manage operational records under your selected institution and branch permissions.</p>
+          <p><a class="admin-btn" href="./institution-operations.html">Open Institution Operations →</a></p>
+        </div>
       </section>
 
       <section class="admin-panel eg-surface" id="tab-operations">
