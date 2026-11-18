@@ -28,6 +28,46 @@ function renderRoleAssignments(){
  switcher.value=demo.activeRole;
 }
 
+function applyLocalPersonaAccess(){
+ const role=demo.activeRole;
+ const sections=Array.from(document.querySelectorAll("main.wrap > section.panel"));
+ const byTitle=title=>sections.find(s=>s.querySelector("h2")?.textContent.trim()===title);
+ const rolePanel=$( "roleManagementPanel" );
+ const branch=byTitle("Branches"),classes=byTitle("Class sections"),assignments=byTitle("Teacher assignments");
+ const enrolments=byTitle("Student enrolments"),parents=byTitle("Parent / guardian links"),delegates=byTitle("Delegated branch administrators");
+ const banner=$( "m4RoleAccessNote" )||document.createElement("div");
+ banner.id="m4RoleAccessNote";banner.className="status";
+ banner.style.cssText="background:#eef5ff;color:#28466f;border:1px solid #c8d9f0";
+ const note={
+  platform_admin:"Platform Admin preview: full demo operations are available in this local-only workspace.",
+  school_admin:"Institution Admin preview: institution-scoped setup and role delegation are available. Platform role grants remain unavailable.",
+  teacher:"Teacher preview: read-only teaching workspace. Management actions and unrelated institution records are hidden in this local preview.",
+  parent:"Parent preview: this role has no access to Institution Operations. Use the Family Dashboard for linked-child information.",
+  student:"Student preview: this role has no access to Institution Operations. Use the learner dashboard and practice tools.",
+  institution_viewer:"Institution Viewer preview: read-only institution view. All create, assign and role-management controls are disabled."
+ }[role]||"Role preview";
+ banner.textContent=note;
+ const statusHost=$( "m4Status" );if(statusHost&&statusHost.parentElement)statusHost.insertAdjacentElement("afterend",banner);
+ const hide=(el,value)=>{if(el)el.hidden=value;};
+ const setControls=(section,enabled)=>{if(!section)return;section.querySelectorAll("input,select,textarea,button").forEach(el=>{el.disabled=!enabled;});};
+ hide(rolePanel,["teacher","parent","student","institution_viewer"].includes(role));
+ hide(branch,["teacher","parent","student"].includes(role));
+ hide(classes,["parent","student"].includes(role));
+ hide(assignments,["parent","student"].includes(role));
+ hide(enrolments,["teacher","parent","student","institution_viewer"].includes(role));
+ hide(parents,["teacher","parent","student","institution_viewer"].includes(role));
+ hide(delegates,["teacher","parent","student","institution_viewer"].includes(role));
+ const canManage=["platform_admin","school_admin"].includes(role);
+ [branch,classes,assignments,enrolments,parents,delegates].forEach(s=>setControls(s,canManage));
+ if(role==="teacher"){setControls(classes,false);setControls(assignments,false);}
+ if(role==="institution_viewer"){[branch,classes,assignments,enrolments,parents,delegates].forEach(s=>setControls(s,false));}
+ const assignButton=$( "assignInstitutionRole" );
+ if(assignButton)assignButton.disabled=!canManage;
+ const roleSelect=$( "institutionRole" );
+ if(roleSelect){
+  Array.from(roleSelect.options).forEach(o=>{if(o.value==="school_admin")o.disabled=role!=="platform_admin";});
+ }
+}
 function renderDemo(){
  list("branchList",demo.branches,x=>x.name+" · "+x.code+" · "+x.branchId+" · "+x.status);
  list("classList",demo.classes,x=>x.gradeLabel+" "+x.sectionCode+" · "+x.academicYear+" · "+x.branchId+" · "+x.classId);
@@ -43,12 +83,11 @@ function initLocalPlatformAdminTest(){
  const banner=document.createElement("div");banner.className="status";banner.style.cssText="background:#fff4d8;color:#684900;border:1px solid #e7c76a";
  banner.textContent="LOCAL RBAC TEST MODE — signed in as the mapped Platform Admin. Demo records exist only in this browser tab and are discarded on refresh. This is not production authentication or a real institution.";
  $("m4Status").replaceWith(banner);banner.id="m4Status";
- renderRoleAssignments();
- $("activeRole").addEventListener("change",()=>{demo.activeRole=$("activeRole").value;state.identity.context.role=demo.activeRole;status("Test persona switched to "+(demo.activeRole==="platform_admin"?"Platform Admin":institutionRoleLabels[demo.activeRole])+". This changes the local UI test context only.");});
+ try{const saved=sessionStorage.getItem("examguru_rbac_test_role_v1");if(["platform_admin","school_admin","teacher","parent","student","institution_viewer"].includes(saved))demo.activeRole=saved;}catch(_){}\n renderRoleAssignments();applyLocalPersonaAccess();\n $("activeRole").addEventListener("change",()=>{demo.activeRole=$("activeRole").value;state.identity.context.role=demo.activeRole;try{sessionStorage.setItem("examguru_rbac_test_role_v1",demo.activeRole);}catch(_){}applyLocalPersonaAccess();status("Test persona switched to "+(demo.activeRole==="platform_admin"?"Platform Admin":institutionRoleLabels[demo.activeRole])+". Local preview only; this is not an authenticated role change.");});
  $("assignInstitutionRole").addEventListener("click",()=>{
   const actor=demo.activeRole,target=$("roleUser").value.trim(),role=$("institutionRole").value;
   if(!target) return status("Enter an account username or email.",true);
-  if(actor!=="platform_admin"&&actor!=="school_admin")return status("Only Platform Admin or Institution Admin can assign institution roles in this test.",true);
+  if(actor!=="platform_admin"&&actor!=="school_admin")return status("Only Platform Admin or Institution Admin can assign institution roles in this test.",true);\n  if(actor==="school_admin"&&role==="school_admin")return status("Only Platform Admin can appoint another Institution Admin.",true);
   if(demo.roleAssignments.some(a=>a.username.toLowerCase()===target.toLowerCase()&&a.role===role&&a.status==="active"))return status("That account already has this active role in Demo Academy.",true);
   demo.roleAssignments.push({username:target,role,status:"active"});
   renderRoleAssignments();status((actor==="platform_admin"?"Platform Admin":"Institution Admin")+" assigned "+institutionRoleLabels[role]+" to "+target+". Local demo only.");
