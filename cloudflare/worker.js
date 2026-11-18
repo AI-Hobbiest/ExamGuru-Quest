@@ -14,6 +14,13 @@ const randomToken = (length=32) => base64url(randomBytes(length));
 const uid = () => crypto.randomUUID();
 const sha256 = async value => hex(new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(String(value)))));
 const allowedAdmins = env => new Set(String(env.ADMIN_GITHUB_USERS||"").split(",").map(x=>x.trim().replace(/^@/,"").toLowerCase()).filter(Boolean));
+const platformAdminLogins = env => new Set(String(env.PLATFORM_ADMIN_GITHUB_USERS||"").split(",").map(x=>x.trim().replace(/^@/,"").toLowerCase()).filter(Boolean));
+const platformAdminAllowed = (env,login) => platformAdminLogins(env).has(String(login||"").trim().replace(/^@/,"").toLowerCase());
+async function hasPlatformAdminGrant(env,who) {
+  if(!who||who.role!=="admin"||!who.github_login||!platformAdminAllowed(env,who.github_login))return false;
+  const grant=await env.DB.prepare("SELECT 1 AS ok FROM platform_roles WHERE user_id=? AND role='platform_admin' AND revoked_at IS NULL").bind(who.user_id).first();
+  return !!grant;
+}
 const frontendOrigin = env => String(env.FRONTEND_ORIGIN||"https://ai-hobbiest.github.io").replace(/\/+$/,"");
 const adminUrl = env => String(env.FRONTEND_ADMIN_URL||"https://ai-hobbiest.github.io/ExamGuru-Quest/admin.html");
 const apiPublicUrl = env => String(env.API_PUBLIC_URL||"").replace(/\/+$/,"");
@@ -203,6 +210,11 @@ async function exchangeGithubCode(request,env) {
     .bind(userId,username,row.github_login,now,now).run();
   const admin=await env.DB.prepare("SELECT * FROM users WHERE github_login=?").bind(row.github_login).first();
   if(!admin)return fail(request,env,500,"Unable to create admin session.");
+  if(platformAdminAllowed(env,row.github_login)) {
+    await env.DB.prepare("INSERT INTO platform_roles(user_id,role,granted_by,granted_at,revoked_at) VALUES(?,'platform_admin',?, ?, NULL) ON CONFLICT(user_id,role) DO UPDATE SET granted_at=excluded.granted_at,revoked_at=NULL")
+      .bind(admin.id,admin.id,now).run();
+    await writeAudit(env,admin.id,"platform-role-granted","platform_admin",{provider:"github",bootstrap:"configured-github-allowlist"});
+  }
   const session=await createSession(env,admin.id);
   await writeAudit(env,admin.id,"admin-login",row.github_login,{provider:"github"});
   return json(request,env,{ok:true,...session,user:{id:admin.id,username:admin.github_login,githubLogin:admin.github_login,role:"admin",mustChangePassword:false}});
@@ -291,7 +303,7 @@ async function v2SelectContext(request,env,who) {
 async function v2CreateInvitation(request,env,who) {
   // M2 provisioning is deliberately restricted to the existing allow-listed
   // platform-admin identity. Scoped School Admin delegation is a later policy slice.
-  if(who.role!=="admin"||!adminAllowed(env,who.github_login))return fail(request,env,403,"Platform administrator approval is required to issue invitations in M2.");
+  if(!(await hasPlatformAdminGrant(env,who)))return fail(request,env,403,"Active Platform Admin grant is required to issue invitations in M2.");
   const body=await readJson(request),institutionId=String(body.institutionId||""),targetUserId=String(body.targetUserId||""),role=String(body.role||"");
   const allowedRoles=new Set(["school_admin","teacher","parent","student","institution_viewer"]);
   const institution=await env.DB.prepare("SELECT institution_id FROM institutions WHERE institution_id=? AND status='active'").bind(institutionId).first();
@@ -445,7 +457,7 @@ async function v2DepartmentContext(request,env,who) {
   return {institutionId:membership.institution_id,membership};
 }
 async function v2DepartmentAdmin(request,env,who,ctx) {
-  if(ctx.membership.role!=="school_admin"&&!(who.role==="admin"&&adminAllowed(env,who.github_login)))return fail(request,env,403,"School Admin permission is required to manage academic departments.");
+  if(ctx.membership.role!=="school_admin"&&!(await hasPlatformAdminGrant(env,who)))return fail(request,env,403,"School Admin or Platform Admin permission is required to manage academic departments.");
   return null;
 }
 function validDepartmentText(value,max=80){return typeof value==="string"&&value.trim().length>0&&value.trim().length<=max&&!/[<>]/.test(value);}
@@ -453,7 +465,7 @@ async function v2Departments(request,env,who,method) {
   const ctx=await v2DepartmentContext(request,env,who);if(ctx.error)return ctx.error;
   const institutionId=ctx.institutionId;
   if(method==="GET"){
-    const isAdmin=ctx.membership.role==="school_admin"||(who.role==="admin"&&adminAllowed(env,who.github_login));
+    const isAdmin=ctx.membership.role==="school_admin"||(await hasPlatformAdminGrant(env,who));
     const rows=await env.DB.prepare(isAdmin
       ?"SELECT d.department_id AS departmentId,d.name,d.code,d.status,d.parent_department_id AS parentDepartmentId,d.created_at AS createdAt,d.updated_at AS updatedAt FROM departments d WHERE d.institution_id=? ORDER BY d.name"
       :"SELECT DISTINCT d.department_id AS departmentId,d.name,d.code,d.status,d.parent_department_id AS parentDepartmentId,d.created_at AS createdAt,d.updated_at AS updatedAt FROM departments d JOIN department_memberships dm ON dm.department_id=d.department_id AND dm.institution_id=d.institution_id AND dm.status='active' JOIN institution_memberships im ON im.membership_id=dm.institution_membership_id AND im.user_id=? AND im.status='active' WHERE d.institution_id=? AND d.status='active' ORDER BY d.name")
@@ -603,7 +615,7 @@ export default {
       if(path==="/api/student/account-link"&&method==="POST")return await studentAccountLink(request,env,who);
       if(path==="/api/student/account-return"&&method==="POST")return await studentAccountReturn(request,env,who);
 
-      if(who.role!=="admin"||!adminAllowed(env,who.github_login))return fail(request,env,403,"Authorised GitHub administrator required.");
+      if(!(await hasPlatformAdminGrant(env,who)))return fail(request,env,403,"Active Platform Admin grant required.");
       if(path==="/api/admin/classes"&&method==="GET")return await adminListClasses(request,env);
       if(path==="/api/admin/classes"&&method==="POST")return await adminWriteClass(request,env,who);
       const classMatch=path.match(/^\/api\/admin\/classes\/([A-Za-z0-9_-]+)$/);
