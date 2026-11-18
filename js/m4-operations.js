@@ -9,7 +9,25 @@ function isLocalPlatformAdminTest(){
   return !!(s&&s.role==="admin"&&String(s.username||"").toLowerCase()==="jayaprakashganathe@gmail.com"&&s.rbacTestMode==="local-platform-admin");
  }catch(_){return false;}
 }
-const demo={branches:[],classes:[],assignments:[],enrollments:[],parentLinks:[],branchAdmins:[]};
+const currentTestUser="Jayaprakashganathe@gmail.com";
+const institutionRoleLabels={school_admin:"Institution Admin",teacher:"Teacher",parent:"Parent",student:"Student",institution_viewer:"Institution Viewer"};
+const demo={branches:[],classes:[],assignments:[],enrollments:[],parentLinks:[],branchAdmins:[],roleAssignments:[
+ {username:currentTestUser,role:"school_admin",status:"active"},
+ {username:currentTestUser,role:"teacher",status:"active"},
+ {username:currentTestUser,role:"parent",status:"active"},
+ {username:currentTestUser,role:"student",status:"active"},
+ {username:currentTestUser,role:"institution_viewer",status:"active"}
+],activeRole:"platform_admin"};
+function renderRoleAssignments(){
+ const host=$("roleAssignmentList");host.replaceChildren();
+ demo.roleAssignments.forEach((a,index)=>{const d=document.createElement("div");d.className="item";d.textContent=a.username+" · "+(institutionRoleLabels[a.role]||a.role)+" · "+a.status;host.append(d);});
+ const switcher=$("activeRole");switcher.replaceChildren();
+ const own=demo.roleAssignments.filter(a=>a.username.toLowerCase()===currentTestUser.toLowerCase()&&a.status==="active");
+ const options=[{value:"platform_admin",label:"Platform Admin (platform scope)"},...own.map(a=>({value:a.role,label:institutionRoleLabels[a.role]}))];
+ options.forEach(x=>{const o=document.createElement("option");o.value=x.value;o.textContent=x.label;switcher.append(o);});
+ switcher.value=demo.activeRole;
+}
+
 function renderDemo(){
  list("branchList",demo.branches,x=>x.name+" · "+x.code+" · "+x.branchId+" · "+x.status);
  list("classList",demo.classes,x=>x.gradeLabel+" "+x.sectionCode+" · "+x.academicYear+" · "+x.branchId+" · "+x.classId);
@@ -25,6 +43,16 @@ function initLocalPlatformAdminTest(){
  const banner=document.createElement("div");banner.className="status";banner.style.cssText="background:#fff4d8;color:#684900;border:1px solid #e7c76a";
  banner.textContent="LOCAL RBAC TEST MODE — signed in as the mapped Platform Admin. Demo records exist only in this browser tab and are discarded on refresh. This is not production authentication or a real institution.";
  $("m4Status").replaceWith(banner);banner.id="m4Status";
+ renderRoleAssignments();
+ $("activeRole").addEventListener("change",()=>{demo.activeRole=$("activeRole").value;state.identity.context.role=demo.activeRole;status("Test persona switched to "+(demo.activeRole==="platform_admin"?"Platform Admin":institutionRoleLabels[demo.activeRole])+". This changes the local UI test context only.");});
+ $("assignInstitutionRole").addEventListener("click",()=>{
+  const actor=demo.activeRole,target=$("roleUser").value.trim(),role=$("institutionRole").value;
+  if(!target) return status("Enter an account username or email.",true);
+  if(actor!=="platform_admin"&&actor!=="school_admin")return status("Only Platform Admin or Institution Admin can assign institution roles in this test.",true);
+  if(demo.roleAssignments.some(a=>a.username.toLowerCase()===target.toLowerCase()&&a.role===role&&a.status==="active"))return status("That account already has this active role in Demo Academy.",true);
+  demo.roleAssignments.push({username:target,role,status:"active"});
+  renderRoleAssignments();status((actor==="platform_admin"?"Platform Admin":"Institution Admin")+" assigned "+institutionRoleLabels[role]+" to "+target+". Local demo only.");
+ });
  const add=(id,fn)=>$(id).addEventListener("click",()=>{try{fn();renderDemo();status("Demo action completed. Changes are temporary and not saved to a server.");}catch(e){status(e.message||"Demo action failed.",true);}});
  add("m4Refresh",renderDemo);
  add("createBranch",()=>{if(!$("branchName").value.trim()||!$("branchCode").value.trim())throw Error("Enter a branch name and code.");demo.branches.push({name:$("branchName").value.trim(),code:$("branchCode").value.trim(),branchId:"DEMO-BR-"+(demo.branches.length+1),status:"active"});});
