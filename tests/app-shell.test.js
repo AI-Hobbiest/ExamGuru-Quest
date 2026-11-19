@@ -56,10 +56,11 @@ assert.ok(nav.includes('institutionRole:membership.role')&&nav.includes('label:"
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"')&&nav.includes('group:"Assessment tools"'),"admin navigation exposes Exam Paper Studio in a grouped submenu");
 assert.ok(nav.includes('label:"CBSE question review"')&&nav.includes('href:"./admin.html#tab-cbse-review"')&&nav.includes('hash:"#tab-cbse-review"'),"Admin sidebar exposes the CBSE review section as a real tab route");
 assert.ok(nav.includes('label:"Departments & HOD"')&&nav.includes('href:"./admin.html#tab-departments"')&&nav.includes('hash:"#tab-departments"'),"Admin sidebar exposes the department management section as a real tab route");
-for(const tab of ["overview","banks","cbse-review","departments","classes","exam-papers","knowledge","students","leaderboard","access","institution-operations","operations"]){
+for(const tab of ["overview","banks","cbse-review","departments","classes","exam-papers","knowledge","students","leaderboard","access","operations"]){
   assert.ok(nav.includes('href:"./admin.html#tab-'+tab+'"'),"Admin sidebar route exists for "+tab);
   assert.ok(adminManager.includes('"'+tab+'"'),"Admin tab controller recognises "+tab);
 }
+assert.ok(nav.includes('label:"Institution Operations"')&&nav.includes('href:"./institution-operations.html"'),"Admin sidebar opens the dedicated Institution Operations page");
 assert.ok(adminManager.includes('location.hash=nextHash')&&adminManager.includes('hash.match(/^#tab-([a-z0-9-]+)$/i)')&&adminManager.includes('activePanel.scrollIntoView'),"Admin section navigation supports direct links, browser history and visible section scrolling");
 assert.ok(adminManager.includes('setAttribute("aria-selected",String(active))')&&adminManager.includes('setAttribute("aria-hidden",String(!active))'),"Admin tab state is exposed accessibly to assistive technology");
 assert.ok(institutionPage.includes('./css/institution-operations.css')&&institutionPage.includes('id="createBranch"')&&institutionPage.includes('id="appointBranchAdmin"'),"Institution Operations loads the new responsive UI while preserving operation controls");
