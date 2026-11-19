@@ -1,7 +1,7 @@
 /* Browser-local IAM directory for RBAC demonstration. Not authentication or a secure identity provider. */
 (()=>{"use strict";
 const KEY="examguru_iam_local_v1",ADMIN="Jayaprakashganathe@gmail.com",INST="TEST-INSTITUTION-001";
-function read(){try{const v=JSON.parse(localStorage.getItem(KEY)||"null");if(v&&v.schemaVersion===1)return v;}catch(_){}return null;}
+function read(){try{const v=JSON.parse(localStorage.getItem(KEY)||"null");if(v&&v.schemaVersion===1){let changed=false;(v.users||[]).forEach(u=>(u.roles||[]).forEach(r=>{if(r.institutionId&&!r.membershipId){r.membershipId=memberId(u.userId,r.role);changed=true;}}));if(changed)localStorage.setItem(KEY,JSON.stringify(v));return v;}}catch(_){}return null;}
 function memberId(userId,role){return "MEM-"+String(userId).replace(/[^A-Z0-9]/gi,"").slice(-12).toUpperCase()+"-"+String(role).toUpperCase();}
 function seed(){const userId="USR-PLATFORM-001";return {schemaVersion:1,users:[{userId,username:ADMIN,displayName:"Platform Administrator",status:"active",roles:[{role:"platform_admin",institutionId:null},...["school_admin","teacher","parent","student","institution_viewer"].map(role=>({role,institutionId:INST,membershipId:memberId(userId,role)}))]}],institutions:[{institutionId:INST,name:"Demo Academy (local test)",status:"active"}]};}
 let state=read()||seed();
