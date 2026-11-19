@@ -126,3 +126,14 @@ No application runtime files or student data were changed to produce this invent
 - `tests/assessment-manager.test.js` now seeds a legacy assignment and verifies migration, record preservation, global cross-session visibility and reload persistence.
 - GitHub Actions run 44609277109 passed the syntax and assessment/Paper Studio test step, including the expanded migration test. At the time of this update, final Playwright browser checks were still in progress.
 - This is an integration slice only. Local storage remains the active persistence adapter; no Cloudflare adapter, production authorization or deployment has been activated.
+
+
+## M5.1–M5.3 implementation slice — provider-neutral services
+
+- Added `js/lms-application-services.js` as a dependency-injected application boundary for academic learner context, curriculum lookup, shared/institution content access and assessment lifecycle delegation.
+- Extended repository contracts with optional Curriculum and Content interfaces. The original Identity, Institution and Academic contracts remain mandatory and unchanged for existing adapters.
+- Extended the deterministic in-memory adapter with curriculum/shared-bank/institution-copy fixtures. Institution copies require explicit tenant ownership and platform-source provenance; the source bank is cloned and never mutated.
+- Assessment service operations delegate to the existing `C10AssessmentManager`; they do not duplicate scoring, timing, randomization, attempt-limit or frozen-paper logic.
+- Added `tests/lms-application-services.test.js` and a dedicated quiz-quality workflow gate for the new boundary.
+- This slice is deliberately provider-neutral and testable without browser storage or Cloudflare. The existing page engines remain the compatibility-facing runtime; no wholesale page migration or new production content repository is claimed.
+- Local learner persistence and the assessment manager remain browser-local. No sync adapter, D1, Worker, API base or deployment setting was changed.
