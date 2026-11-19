@@ -45,6 +45,8 @@ assert.ok(practice.includes("<span>MCQs in practice bank</span>")&&quizEngineSou
 assert.ok(!examPracticeScript.includes("approved pool records")&&!examPracticeScript.includes("typeSummary")&&!examPracticeScript.includes("bank.questions.length.toLocaleString()"),"student exam setup does not reveal full question-bank inventory");
 assert.ok(parentPage.includes("Progress reports"),"parent workspace explains report availability");
 assert.ok(pageAccess.includes('session.role==="parent"')&&pageAccess.includes('"./parent.html"'),"student-only routes redirect parent accounts to family workspace");
+assert.ok(pageAccess.includes("isStudentPreview")&&pageAccess.includes('sessionStorage.getItem("examguru_rbac_test_role_v1")==="student"'),"Admin Student Preview is recognised as a scoped local preview session");
+assert.ok(pageAccess.includes('window.C10StudyViewerRole="student"')&&pageAccess.includes('if(isStudentPreview){if(class10Route'),"Student Preview bypasses static-account verification on student routes without weakening normal sign-in checks");
 
 
 assert.ok(nav.includes('href:"./dashboard.html"'));
