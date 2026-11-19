@@ -212,6 +212,11 @@ jobs:
           cp js/parent-dashboard.js _site/js/parent-dashboard.js
           cp js/report-print.js _site/js/report-print.js
           cp js/app-shell.js _site/js/app-shell.js
+          test -s _site/user-management.html
+          test -s _site/js/iam-local-store.js
+          test -s _site/js/iam-user-management.js
+          grep -q 'js/iam-local-store.js' _site/user-management.html
+          grep -q 'js/iam-user-management.js' _site/user-management.html
           cp js/gamification.js _site/js/gamification.js
           cp js/dashboard-manager.js _site/js/dashboard-manager.js
           cp js/quiz-engine.js _site/js/quiz-engine.js
