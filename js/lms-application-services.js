@@ -13,7 +13,7 @@
     const repositories = contracts.assertRepositories(opts.repositories);
     const curriculum = opts.repositories.curriculum || null;
     const content = opts.repositories.content || null;
-    const manager = opts.assessmentManager || globalThis.C10AssessmentManager || null;
+    const manager = opts.assessmentService || opts.assessmentManager || globalThis.C10AssessmentService || globalThis.C10AssessmentManager || null;
 
     const academic = Object.freeze({
       async getLearnerContext(userId, membershipId) {
