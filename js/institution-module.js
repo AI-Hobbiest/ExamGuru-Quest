@@ -37,7 +37,7 @@ if(moduleName==="academics"){
  $("createGrade").addEventListener("click",()=>act(()=>db.createGrade($("gradeName").value,$("gradeCode").value)));
  $("createSubject").addEventListener("click",()=>act(()=>db.createSubject($("subjectName").value,$("subjectCode").value)));
  $("classType").addEventListener("change",()=>{$("gradeField").hidden=$("classType").value==="cohort";});
- $("createClass").addEventListener("click",()=>act(()=>db.createClass({name:$("className").value,branchId:$("classBranch").value,gradeId:$("classType").value==="grade"?$("classGrade").value:null,subjectIds:Array.from($("classSubjects").selectedOptions).map(o=>o.value),classType:$("classType").value,academicYear:$("classYear").value})));
+ $("createClass").addEventListener("click",()=>act(()=>db.createClass({name:$("className").value,branchId:$("classBranch").value,gradeId:$("classType").value==="grade"?$("classGrade").value:null,subjectIds:Array.from($("classSubjects").selectedOptions).map(o=>o.value),classType:$("classType").value,academicYear:$("classYear").value,contentClassId:$("classContentProfile").value||null})));
 }
 if(moduleName==="departments"){
  $("createDepartment").addEventListener("click",()=>act(()=>db.createDepartment($("departmentName").value,$("departmentCode").value)));
