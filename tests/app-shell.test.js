@@ -273,7 +273,8 @@ assert.ok(nav.includes("student_pending")&&nav.includes("Student access is not r
 assert.ok(nav.includes('label:"Institution Admin · "+i.name+" (preview)"')&&nav.includes("examguru_active_institution_v1"),"Platform Admin can preview Institution Admin workspace separately for each institution");
 assert.ok(iamPage.includes("iamDownloadCsv")&&iamPage.includes("iamDownloadXlsx")&&iamPage.includes("iamBulkFile")&&iamPage.includes("ExamGuru Direct Learning"),"User Management provides CSV/XLSX templates and a direct-learning institution");
 assert.ok(iamStore.includes("institutionType")&&iamStore.includes("direct")&&iamStore.includes("entrance")&&iamStore.includes("coaching"),"Institution directory supports school, direct, entrance and coaching tenant categories");
-assert.ok(institutionData.includes("createClass")&&institutionData.includes("classType")&&institutionData.includes("cohort")&&institutionData.includes("createDepartment")&&institutionData.includes("appointHod"),"Institution academic data supports local cohorts, departments and HOD appointments");
+assert.ok(institutionData.includes("createClass")&&institutionData.includes("classType")&&institutionData.includes("cohort")&&institutionData.includes("contentClassId")&&institutionData.includes("createDepartment")&&institutionData.includes("appointHod"),"Institution academic data supports local cohorts, explicit content mapping, departments and HOD appointments");
+assert.ok(nav.includes("contentClassId||result.user.classId")&&nav.includes("Institution curriculum not mapped"),"Student routing uses an explicit content profile and warns when the institution has not mapped one");
 for(const file of ["institution-branches.html","institution-academics.html","institution-departments.html","institution-assignments.html","institution-enrolments.html"]){
   assert.ok(fs.existsSync(file),"Dedicated institution module exists: "+file);
 }
