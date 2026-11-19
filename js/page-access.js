@@ -9,10 +9,14 @@
   const isAdminSession=()=>{
     try{const s=JSON.parse(sessionStorage.getItem("examguru_mvp_admin_session_v1")||"null");return !!(s&&s.role==="admin"&&s.username==="Jayaprakashganathe@gmail.com")||!!sessionStorage.getItem("c10playground_api_session");}catch(_){return false;}
   };
+  const isStudentPreview=(()=>{try{const admin=JSON.parse(sessionStorage.getItem("examguru_mvp_admin_session_v1")||"null");return !!(admin&&admin.role==="admin"&&admin.username==="Jayaprakashganathe@gmail.com"&&admin.rbacTestMode==="local-platform-admin"&&sessionStorage.getItem("examguru_rbac_test_role_v1")==="student");}catch(_){return false;}})();
   let session=null;try{session=JSON.parse(sessionStorage.getItem(key)||"null");}catch(_){}
+  if(isStudentPreview){const classId=sessionStorage.getItem("examguru_preview_content_class_v1")||"10";session={username:"Local Student Preview",role:"student",studentId:"local-student-preview",classId};}
   if(page==="study.html"){
+    if(isStudentPreview){window.C10StudyViewerRole="student";window.C10StudyAccessReady=Promise.resolve();return;}
     if(isAdminSession()){window.C10StudyViewerRole="admin";return;}
-    if(!session||typeof session.username!=="string"){location.replace(signInTarget);return;}
+    if(isStudentPreview){if(class10Route&&String(session.classId||"")!=="10"){location.replace("./dashboard.html");return;}return;}
+  if(!session||typeof session.username!=="string"){location.replace(signInTarget);return;}
     if(!window.C10StudentAuth||!window.C10StudentAuth.restoreSession){location.replace(signInTarget);return;}
     window.C10StudyAccessReady=window.C10StudentAuth.restoreSession().then(async account=>{
       if(!account){location.replace(signInTarget);return;}
