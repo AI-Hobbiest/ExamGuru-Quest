@@ -296,13 +296,13 @@
         const role=auth.localTestMode?selected.key:selected.role==="admin"?"platform_admin":selected.institutionRole;
         const target=role==="platform_admin"?"./admin.html#tab-overview":role==="school_admin"||role==="institution_viewer"?"./institution-operations.html":role==="teacher"?"./assigned-test.html":role==="parent"?"./parent.html":"./dashboard.html";location.href=target;
       });
-      mobileBar.appendChild(switcher);
+      mobileBar._workspaceSwitcher=switcher;
     }
     const themeToggle=node("button","c10-theme-toggle",document.body.classList.contains("eg-theme-dark")?"☀":"☾");
     themeToggle.id="c10ThemeToggle";themeToggle.type="button";
     updateThemeButton(themeToggle,document.body.classList.contains("eg-theme-dark"));
     themeToggle.addEventListener("click",()=>applyTheme(document.body.classList.contains("eg-theme-dark")?"light":"dark"));
-    mobileBar.append(toggle,mobileBrand,mobileCopy,themeToggle);
+    mobileBar.append(toggle,mobileBrand,mobileCopy);if(mobileBar._workspaceSwitcher)mobileBar.appendChild(mobileBar._workspaceSwitcher);mobileBar.append(themeToggle);
     if(auth.role!=="guest"){
       const logout=node("button","c10-header-signout","↪ Sign out");
       logout.id="c10HeaderSignout";logout.type="button";logout.setAttribute("aria-label","Sign out of ExamGuru");
