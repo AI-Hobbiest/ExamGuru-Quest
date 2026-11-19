@@ -14,6 +14,7 @@ const catalog={classes:[]};
 function asSelect(id,placeholder){const el=$(id);if(!el||el.tagName==="SELECT")return el;const select=document.createElement("select");select.id=id;select.className=el.className;select.setAttribute("aria-label",el.getAttribute("aria-label")||placeholder);el.replaceWith(select);return select;}
 function fill(id,rows,placeholder,valueFn,labelFn){const el=$(id);if(!el)return;const old=el.value;el.replaceChildren();const first=document.createElement("option");first.value="";first.textContent=placeholder;el.append(first);(rows||[]).forEach(row=>{const o=document.createElement("option");o.value=valueFn(row);o.textContent=labelFn(row);el.append(o);});if((rows||[]).some(x=>String(valueFn(x))===String(old)))el.value=old;}
 function activeUsers(role){return (window.ExamGuruLocalIAM?.users()||[]).filter(u=>(u.roles||[]).some(r=>r.role===role&&r.institutionId==="TEST-INSTITUTION-001"));}
+function membershipId(user,role){return (user.roles||[]).find(r=>r.role===role&&r.institutionId==="TEST-INSTITUTION-001")?.membershipId||"";}
 async function loadCatalog(){try{const res=await fetch("./data/classes.json",{cache:"no-store"});if(res.ok){const data=await res.json();catalog.classes=(data.classes||[]).filter(x=>x.active!==false);}}catch(_){} }
 function refreshSelectors(){
  const ids=["classBranch","gradeId","teacherMembership","assignmentClass","assignmentSubject","studentMembership","enrollmentClass","parentMembership","linkedStudentMembership","adminBranch","adminMembership"];
@@ -26,11 +27,11 @@ function refreshSelectors(){
  const subjects=(grade?.subjects||[]).map(id=>({id,label:id.replace(/-/g," ").replace(/\\b\\w/g,s=>s.toUpperCase())}));fill("assignmentSubject",subjects,"Choose subject",x=>x.id,x=>x.label);
  if(!$("assignmentClass").dataset.subjectBound){$("assignmentClass").addEventListener("change",()=>{const chosen=classes.find(x=>x.classId===$("assignmentClass").value);const item=catalog.classes.find(x=>String(x.classId)===String(chosen?.gradeId));const available=(item?.subjects||[]).map(id=>({id,label:id.replace(/-/g," ").replace(/\\b\\w/g,s=>s.toUpperCase())}));fill("assignmentSubject",available,"Choose subject",x=>x.id,x=>x.label);});$("assignmentClass").dataset.subjectBound="1";}
  const teachers=activeUsers("teacher"),students=activeUsers("student"),parents=activeUsers("parent"),admins=activeUsers("school_admin");
- fill("teacherMembership",teachers,"Choose teacher",x=>x.userId,x=>x.displayName+" · "+x.userId);
- fill("studentMembership",students,"Choose student",x=>x.userId,x=>x.displayName+" · "+x.userId);
- fill("linkedStudentMembership",students,"Choose student",x=>x.userId,x=>x.displayName+" · "+x.userId);
- fill("parentMembership",parents,"Choose parent",x=>x.userId,x=>x.displayName+" · "+x.userId);
- fill("adminMembership",admins,"Choose Institution Admin",x=>x.userId,x=>x.displayName+" · "+x.userId);
+ fill("teacherMembership",teachers,"Choose teacher",x=>membershipId(x,"teacher"),x=>x.displayName+" · "+membershipId(x,"teacher"));
+ fill("studentMembership",students,"Choose student",x=>membershipId(x,"student"),x=>x.displayName+" · "+membershipId(x,"student"));
+ fill("linkedStudentMembership",students,"Choose student",x=>membershipId(x,"student"),x=>x.displayName+" · "+membershipId(x,"student"));
+ fill("parentMembership",parents,"Choose parent",x=>membershipId(x,"parent"),x=>x.displayName+" · "+membershipId(x,"parent"));
+ fill("adminMembership",admins,"Choose Institution Admin",x=>membershipId(x,"school_admin"),x=>x.displayName+" · "+membershipId(x,"school_admin"));
  fill("adminBranch",demo.branches,"Choose branch",x=>x.branchId,x=>x.name+" · "+x.branchId);
  const users=window.ExamGuruLocalIAM?.users()||[];fill("roleUser",users,"Choose existing user",x=>x.username,x=>x.displayName+" · "+x.username);
 }
