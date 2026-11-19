@@ -121,3 +121,6 @@
 .department-hod-list .admin-btn{flex:0 0 auto}
 #tab-departments .admin-rule{width:100%;border:0;border-top:1px solid var(--c10-line);margin:8px 0}
 @media(max-width:620px){.department-tools{padding:12px}.department-hod-list>.admin-list-item{align-items:flex-start;flex-direction:column}}
+
+/* Hash-addressable Admin sections sit clear of the persistent app header. */
+.admin-panel[id^="tab-"]{scroll-margin-top:84px}
