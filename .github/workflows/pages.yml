@@ -159,6 +159,7 @@ jobs:
           cp assigned-test.html _site/assigned-test.html
           cp assigned-paper.html _site/assigned-paper.html
           cp institution-operations.html _site/institution-operations.html
+          cp user-management.html _site/user-management.html
           cp rbac-role-matrix.html _site/rbac-role-matrix.html
           cp .nojekyll _site/.nojekyll
           mkdir -p _site/js _site/data _site/css _site/data/contracts/v1 _site/data/clat
@@ -201,6 +202,8 @@ jobs:
           cp js/api-config.js _site/js/api-config.js
           cp js/api-client.js _site/js/api-client.js
           cp js/m4-operations.js _site/js/m4-operations.js
+          cp js/iam-local-store.js _site/js/iam-local-store.js
+          cp js/iam-user-management.js _site/js/iam-user-management.js
           cp js/profile-manager.js _site/js/profile-manager.js
           cp js/admin-manager.js _site/js/admin-manager.js
           cp js/cbse-mcq-review.js _site/js/cbse-mcq-review.js
