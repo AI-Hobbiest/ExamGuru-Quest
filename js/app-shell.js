@@ -77,13 +77,15 @@
     {label:"Knowledge base",group:"Workspace",icon:"📚",href:"./admin.html#tab-knowledge",page:"admin.html",hash:"#tab-knowledge",auth:"admin"},
     {label:"Students & reports",group:"People & insights",icon:"👩‍🎓",href:"./admin.html#tab-students",page:"admin.html",hash:"#tab-students",auth:"admin"},
     {label:"Leaderboards",group:"People & insights",icon:"🏆",href:"./admin.html#tab-leaderboard",page:"admin.html",hash:"#tab-leaderboard",auth:"admin"},
+    {label:"User Management",group:"System",icon:"👥",href:"./user-management.html",page:"user-management.html",auth:"admin"},
     {label:"Admin access",group:"System",icon:"🔐",href:"./admin.html#tab-access",page:"admin.html",hash:"#tab-access",auth:"admin"},
     {label:"Institution Operations",group:"System",icon:"🏢",href:"./institution-operations.html",page:"institution-operations.html",auth:"admin"},
     {label:"Institution Operations",group:"Institution",icon:"🏢",href:"./institution-operations.html",page:"institution-operations.html",auth:"institution",institutionRoles:["school_admin"]},
+    {label:"User Management",group:"Institution",icon:"👥",href:"./user-management.html",page:"user-management.html",auth:"institution",institutionRoles:["school_admin"]},
     {label:"Teaching assignments",group:"Teaching",icon:"🧑‍🏫",href:"./assigned-test.html",page:"assigned-test.html",auth:"institution",institutionRoles:["teacher"]},
     {label:"Assigned exam papers",group:"Teaching",icon:"📝",href:"./assigned-paper.html",page:"assigned-paper.html",auth:"institution",institutionRoles:["teacher"]},
     {label:"Institution Operations (read only)",group:"Institution",icon:"👁️",href:"./institution-operations.html",page:"institution-operations.html",auth:"institution",institutionRoles:["institution_viewer"]},
-    {label:"Operations",group:"System",icon:"⚙️",href:"./admin.html#tab-operations",page:"admin.html",hash:"#tab-operations",auth:"admin"}
+    {label:"Release & maintenance",group:"System",icon:"⚙️",href:"./admin.html#tab-operations",page:"admin.html",hash:"#tab-operations",auth:"admin"}
   ];
   function node(tag,className,text){const element=document.createElement(tag);if(className)element.className=className;if(text!==undefined)element.textContent=text;return element;}
   function getLocation(){const last=location.pathname.split("/").filter(Boolean).pop()||"index.html";const file=last.includes(".")?last:"index.html";const params=new URLSearchParams(location.search);return {file,subject:params.get("subject")||"",hash:location.hash||""};}
@@ -274,6 +276,17 @@
     mobileLogo.src="./assets/examguru-saraswati.svg";mobileLogo.alt="";mobileLogo.width=32;mobileLogo.height=32;mobileBrand.appendChild(mobileLogo);
     const mobileCopy=node("div","c10-topbar-copy");
     mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",clatExperience?"AI-Enthusiast · CLAT UG 2027":auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":auth.role==="parent"?"Parent":"Class "+String(auth.classId||"not assigned"))));
+    if(auth.localTestMode){
+      const switcher=node("select","c10-role-switcher");switcher.id="c10RoleSwitcher";switcher.setAttribute("aria-label","Switch active workspace");
+      const labels={platform_admin:"Platform Admin",school_admin:"Institution Admin",teacher:"Teacher",parent:"Parent",student:"Student",institution_viewer:"Institution Viewer"};
+      let roles=["platform_admin","school_admin","teacher","parent","student","institution_viewer"];
+      try{const directory=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null");const u=(directory?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(auth.username||"").toLowerCase());if(u?.roles?.length)roles=[...new Set(u.roles.map(x=>x.role))];}catch(_){}
+      if(!roles.includes("platform_admin"))roles.unshift("platform_admin");
+      roles.forEach(role=>{const option=node("option","",labels[role]||role);option.value=role;switcher.append(option);});
+      const currentRole=sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin";switcher.value=roles.includes(currentRole)?currentRole:"platform_admin";
+      switcher.addEventListener("change",()=>{const role=switcher.value;try{sessionStorage.setItem("examguru_rbac_test_role_v1",role);}catch(_){}const target=role==="platform_admin"?"./admin.html#tab-overview":role==="school_admin"||role==="institution_viewer"?"./institution-operations.html":role==="teacher"?"./assigned-test.html":role==="parent"?"./parent.html":"./dashboard.html";location.href=target;});
+      mobileBar.appendChild(switcher);
+    }
     const themeToggle=node("button","c10-theme-toggle",document.body.classList.contains("eg-theme-dark")?"☀":"☾");
     themeToggle.id="c10ThemeToggle";themeToggle.type="button";
     updateThemeButton(themeToggle,document.body.classList.contains("eg-theme-dark"));
