@@ -119,11 +119,16 @@
           try{const v2=await window.C10Api.identityV2();identity=v2.identity||{};memberships=identity.memberships||[];platformRoles=identity.platformRoles||identity.platform_roles||[];}catch(_){}
           const eligible=memberships.filter(m=>["school_admin","teacher","institution_viewer"].includes(m.role));
           const active=eligible.find(m=>m.membershipId===identity.context?.membershipId&&m.institutionId===identity.context?.institutionId);
-          const workspaces=[];
-          if(result.user.role==="admin"||platformRoles.includes("platform_admin"))workspaces.push({key:"platform_admin",role:"admin",label:"Platform Admin"});
+          const platformAllowed=result.user.role==="admin"||platformRoles.includes("platform_admin");
+          const workspaces=[];if(platformAllowed)workspaces.push({key:"platform_admin",role:"admin",label:"Platform Admin"});
           eligible.forEach(m=>workspaces.push({key:"institution:"+m.membershipId,role:"institution",institutionRole:m.role,institutionId:m.institutionId,membershipId:m.membershipId,label:(m.institutionName||m.institutionId)+" · "+m.role}));
-          if(result.user.role==="admin"||platformRoles.includes("platform_admin"))return {role:"admin",username:identity.user?.displayName||identity.user?.username||result.user.githubLogin||result.user.username||"",availableWorkspaces:workspaces};
-          if(active||eligible[0]){const membership=active||eligible[0];return {role:"institution",institutionRole:membership.role,institutionId:membership.institutionId,membershipId:membership.membershipId,username:identity.user?.displayName||identity.user?.username||result.user.username||"",availableWorkspaces:workspaces};}
+          const requested=sessionStorage.getItem("examguru_active_workspace_v1");
+          const requestedMembership=requested?.startsWith("institution:")?eligible.find(m=>"institution:"+m.membershipId===requested):null;
+          if(requested==="platform_admin"&&platformAllowed)return {role:"admin",username:identity.user?.displayName||identity.user?.username||result.user.githubLogin||result.user.username||"",availableWorkspaces:workspaces};
+          const membership=requestedMembership||active;
+          if(membership)return {role:"institution",institutionRole:membership.role,institutionId:membership.institutionId,membershipId:membership.membershipId,username:identity.user?.displayName||identity.user?.username||result.user.username||"",availableWorkspaces:workspaces};
+          if(platformAllowed)return {role:"admin",username:identity.user?.displayName||identity.user?.username||result.user.githubLogin||result.user.username||"",availableWorkspaces:workspaces};
+          if(eligible[0]){const membership=eligible[0];return {role:"institution",institutionRole:membership.role,institutionId:membership.institutionId,membershipId:membership.membershipId,username:identity.user?.displayName||identity.user?.username||result.user.username||"",availableWorkspaces:workspaces};}
           if(result.user.role==="student")return {role:"student",username:result.user.username||"",classId:String(result.user.classId||"")};
           if(result.user.role==="parent")return {role:"parent",username:result.user.username||"",displayName:result.user.displayName||result.user.username||""};
         }
@@ -204,6 +209,7 @@
     applyTheme(readThemePreference(),false);
     const current=getLocation(),auth=await authState();
     if(auth.localTestMode&&current.file==="admin.html"&&auth.role!=="admin"){location.replace(auth.role==="institution"?"./institution-operations.html":auth.role==="parent"?"./parent.html":"./dashboard.html");return;}
+    if(current.file==="user-management.html"&&!(auth.role==="admin"||(auth.role==="institution"&&auth.institutionRole==="school_admin"))){location.replace(auth.role==="institution"?"./assigned-test.html":auth.role==="parent"?"./parent.html":"./dashboard.html");return;}
     const isClatStudent=auth.role==="student"&&String(auth.classId||"").toUpperCase()==="CLAT";
     const clatExperience=current.file==="clat.html"||current.file==="clat-login.html"||isClatStudent;
     if(isClatStudent)applyClatAttribution();
@@ -282,11 +288,11 @@
     if(auth.localTestMode||workspaceOptions.length>1){
       const switcher=node("select","c10-role-switcher");switcher.id="c10RoleSwitcher";switcher.setAttribute("aria-label","Switch active workspace");
       workspaceOptions.forEach(w=>{const option=node("option","",w.label);option.value=w.key;switcher.append(option);});
-      const currentKey=auth.localTestMode?(sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin"):auth.role==="admin"?"platform_admin":"institution:"+String(auth.membershipId||"");
+      const currentKey=auth.localTestMode?(sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin"):(sessionStorage.getItem("examguru_active_workspace_v1")||(auth.role==="admin"?"platform_admin":"institution:"+String(auth.membershipId||"")));
       switcher.value=workspaceOptions.some(w=>w.key===currentKey)?currentKey:(workspaceOptions[0]?.key||"");
       switcher.addEventListener("change",async()=>{const selected=workspaceOptions.find(w=>w.key===switcher.value);if(!selected)return;
         if(auth.localTestMode){try{sessionStorage.setItem("examguru_rbac_test_role_v1",selected.key);}catch(_){}}
-        else if(selected.membershipId&&window.C10Api?.selectInstitutionContext){try{await window.C10Api.selectInstitutionContext({institutionId:selected.institutionId,membershipId:selected.membershipId,branchId:null});}catch(e){return;}}
+        else {try{sessionStorage.setItem("examguru_active_workspace_v1",selected.key);if(selected.membershipId&&window.C10Api?.selectInstitutionContext)await window.C10Api.selectInstitutionContext({institutionId:selected.institutionId,membershipId:selected.membershipId,branchId:null});}catch(e){return;}}
         const role=auth.localTestMode?selected.key:selected.role==="admin"?"platform_admin":selected.institutionRole;
         const target=role==="platform_admin"?"./admin.html#tab-overview":role==="school_admin"||role==="institution_viewer"?"./institution-operations.html":role==="teacher"?"./assigned-test.html":role==="parent"?"./parent.html":"./dashboard.html";location.href=target;
       });
