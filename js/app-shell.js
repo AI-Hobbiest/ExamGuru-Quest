@@ -124,7 +124,7 @@
           eligible.forEach(m=>workspaces.push({key:"institution:"+m.membershipId,role:"institution",institutionRole:m.role,institutionId:m.institutionId,membershipId:m.membershipId,label:(m.institutionName||m.institutionId)+" · "+m.role}));
           const requested=sessionStorage.getItem("examguru_active_workspace_v1");
           const requestedMembership=requested?.startsWith("institution:")?eligible.find(m=>"institution:"+m.membershipId===requested):null;
-          if(requested==="platform_admin"&&platformAllowed)return {role:"admin",username:identity.user?.displayName||identity.user?.username||result.user.githubLogin||result.user.username||"",availableWorkspaces:workspaces};
+          if((requested==="platform_admin"||!requested)&&platformAllowed)return {role:"admin",username:identity.user?.displayName||identity.user?.username||result.user.githubLogin||result.user.username||"",availableWorkspaces:workspaces};
           const membership=requestedMembership||active;
           if(membership)return {role:"institution",institutionRole:membership.role,institutionId:membership.institutionId,membershipId:membership.membershipId,username:identity.user?.displayName||identity.user?.username||result.user.username||"",availableWorkspaces:workspaces};
           if(platformAllowed)return {role:"admin",username:identity.user?.displayName||identity.user?.username||result.user.githubLogin||result.user.username||"",availableWorkspaces:workspaces};
