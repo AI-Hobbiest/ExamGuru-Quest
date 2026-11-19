@@ -116,3 +116,13 @@ At the time of this audit snapshot:
 6. Keep Cloudflare adapter work contract-only until a separate, approved activation milestone.
 
 No application runtime files or student data were changed to produce this inventory.
+
+## M5 runtime integration update — assessment persistence
+
+- `js/assessment-manager.js` now uses `C10Storage.createLocalStore` with the global `assessment-assignments/all` record. An explicit empty student scope keeps assignments shared between Parent/Teacher and Student views.
+- The legacy `eg_assessment_assignments_v1` key remains the migration source and the public `C10AssessmentManager.key` compatibility value. The one-way migration removes the old key only after the versioned record is successfully persisted.
+- Assignment records, frozen question/paper snapshots, attempts, IDs and the manager's public methods remain unchanged.
+- `exam-practice.html` now loads `storage.js` before `assessment-manager.js`. The assigned-test, assigned-paper and dashboard pages already load the storage boundary before the manager.
+- `tests/assessment-manager.test.js` now seeds a legacy assignment and verifies migration, record preservation, global cross-session visibility and reload persistence.
+- GitHub Actions run 44609277109 passed the syntax and assessment/Paper Studio test step, including the expanded migration test. At the time of this update, final Playwright browser checks were still in progress.
+- This is an integration slice only. Local storage remains the active persistence adapter; no Cloudflare adapter, production authorization or deployment has been activated.
