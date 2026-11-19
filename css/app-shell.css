@@ -134,3 +134,10 @@ body.c10-shell-ready{padding-top:64px}
 /* Disabled entrance-exam entries are informational only until their paper libraries are released. */
 .c10-sidebar .c10-nav-link.is-disabled{color:#85899e!important;cursor:not-allowed;opacity:.9;background:transparent!important;border-color:transparent!important}
 .c10-nav-link-status{margin-left:auto;padding:3px 6px;border-radius:999px;background:#eeedf4;color:#777b91;font-size:.61rem;font-weight:850;line-height:1.2;white-space:nowrap}
+
+/* Local RBAC workspace selector, visible only during the browser-only test phase. */
+.c10-role-switcher{flex:none;max-width:190px;min-width:150px;min-height:38px;padding:7px 30px 7px 11px;border:1px solid rgba(64,59,140,.2);border-radius:11px;background:rgba(255,255,255,.82);color:#403b8c;font:inherit;font-size:.78rem;font-weight:800;cursor:pointer}
+.c10-role-switcher:focus-visible{outline:2px solid #796bc3;outline-offset:2px}
+body.eg-theme-dark.c10-shell-ready .c10-role-switcher{background:#354D61;color:#E8EEF4;border-color:#526578}
+@media(max-width:700px){.c10-role-switcher{max-width:145px;min-width:112px;padding:6px 22px 6px 8px;font-size:.7rem}}
+@media(max-width:380px){.c10-role-switcher{max-width:120px;min-width:100px}}
