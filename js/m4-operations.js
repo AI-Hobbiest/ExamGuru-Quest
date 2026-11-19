@@ -24,6 +24,7 @@ function refreshSelectors(){
  fill("enrollmentClass",classes,"Choose class section",x=>x.classId,x=>x.gradeLabel+" "+x.sectionCode+" · "+x.classId);
  const selected=classes.find(x=>x.classId===$("assignmentClass").value)||classes[0];const grade=catalog.classes.find(x=>String(x.classId)===String(selected?.gradeId));
  const subjects=(grade?.subjects||[]).map(id=>({id,label:id.replace(/-/g," ").replace(/\\b\\w/g,s=>s.toUpperCase())}));fill("assignmentSubject",subjects,"Choose subject",x=>x.id,x=>x.label);
+ if(!$("assignmentClass").dataset.subjectBound){$("assignmentClass").addEventListener("change",()=>{const chosen=classes.find(x=>x.classId===$("assignmentClass").value);const item=catalog.classes.find(x=>String(x.classId)===String(chosen?.gradeId));const available=(item?.subjects||[]).map(id=>({id,label:id.replace(/-/g," ").replace(/\\b\\w/g,s=>s.toUpperCase())}));fill("assignmentSubject",available,"Choose subject",x=>x.id,x=>x.label);});$("assignmentClass").dataset.subjectBound="1";}
  const teachers=activeUsers("teacher"),students=activeUsers("student"),parents=activeUsers("parent"),admins=activeUsers("school_admin");
  fill("teacherMembership",teachers,"Choose teacher",x=>x.userId,x=>x.displayName+" · "+x.userId);
  fill("studentMembership",students,"Choose student",x=>x.userId,x=>x.displayName+" · "+x.userId);
