@@ -15,6 +15,7 @@ ctx.globalThis=ctx;vm.createContext(ctx);
 vm.runInContext(fs.readFileSync("js/storage.js","utf8"),ctx);
 vm.runInContext(fs.readFileSync("js/assessment-manager.js","utf8"),ctx);
 const manager=ctx.window.C10AssessmentManager;
+assert.equal(ctx.window.C10AssessmentService,manager,"the application service and legacy manager names share one lifecycle implementation");
 assert.equal(manager.key,"eg_assessment_assignments_v1","legacy public key remains available for compatibility");
 assert.equal(manager.get("legacy-preserved").title,"Existing assigned test","legacy assignments migrate without changing their record shape");
 assert.equal(manager.listForStudent("student-legacy").length,1,"legacy assignments remain visible to their student");
