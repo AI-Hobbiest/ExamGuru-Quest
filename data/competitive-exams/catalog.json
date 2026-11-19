@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "kind": "examguru-competitive-exam-catalog",
+  "exams": [
+    {
+      "examId": "CLAT",
+      "name": "CLAT UG",
+      "category": "law",
+      "bankPath": "data/clat/",
+      "status": "active"
+    },
+    {
+      "examId": "JEE_MAIN",
+      "name": "JEE Main",
+      "category": "national",
+      "bankPath": "",
+      "status": "planned"
+    },
+    {
+      "examId": "JEE_ADVANCED",
+      "name": "JEE Advanced",
+      "category": "national",
+      "bankPath": "",
+      "status": "planned"
+    },
+    {
+      "examId": "NEET_UG",
+      "name": "NEET UG",
+      "category": "national",
+      "bankPath": "",
+      "status": "planned"
+    },
+    {
+      "examId": "CUET_UG",
+      "name": "CUET UG",
+      "category": "national",
+      "bankPath": "",
+      "status": "planned"
+    },
+    {
+      "examId": "NDA",
+      "name": "NDA (10+2)",
+      "category": "defence",
+      "bankPath": "",
+      "status": "planned"
+    },
+    {
+      "examId": "IPMAT",
+      "name": "IPMAT",
+      "category": "management",
+      "bankPath": "",
+      "status": "planned"
+    }
+  ]
+}

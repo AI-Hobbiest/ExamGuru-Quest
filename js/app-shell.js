@@ -55,17 +55,18 @@
     {label:"Hindi",group:"Subjects",icon:"📝",href:"./practice.html?subject=hindi",page:"practice.html",subject:"hindi",auth:"student"},
 
     {label:"Study Library",group:"Learning Hub",icon:"📖",href:"./study.html",page:"study.html",auth:"student"},
+    {label:"Institution content",group:"Learning Hub",icon:"🏢",href:"./institution-learning.html",page:"institution-learning.html",auth:"student",institutionOnly:true},
     {label:"My Learning",group:"Learning Hub",icon:"🧠",href:"./learning.html",page:"learning.html",auth:"student"},
 
     {label:"Assessment Test",group:"Assessments",icon:"📋",href:"./dashboard.html#assigned-tests",page:"dashboard.html",hash:"#assigned-tests",clatHref:"./clat.html#library",clatPage:"clat.html",clatHash:"#library",auth:"student"},
     {label:"Exam Paper Practice",icon:"📝",href:"./exam-practice.html",page:"exam-practice.html",classIds:["6","10"],auth:"student"},
     {label:"CBSE Previous Year Papers",group:"Assessments",icon:"📚",href:"./pyq-library.html",page:"pyq-library.html",classIds:["10"],auth:"student"},
-    {label:"CLAT UG 2027",group:"Entrance Exams",icon:"⚖️",href:"./clat.html#library",page:"clat.html",clatHref:"./clat.html#library",clatPage:"clat.html",clatHash:"#library",classIds:["CLAT"],auth:"student"},
-    {label:"JEE Main & Advanced",group:"Entrance Exams",icon:"📐",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
+    {label:"CLAT UG 2027",group:"Entrance Exams",icon:"⚖️",href:"./clat.html#library",page:"clat.html",clatHref:"./clat.html#library",clatPage:"clat.html",clatHash:"#library",classIds:["CLAT"],entitlement:"competitiveExams:CLAT",auth:"student"},
+    {label:"JEE Main & Advanced",group:"Entrance Exams",icon:"📐",disabled:true,status:"Coming soon",classIds:["10"],entitlement:"competitiveExams:JEE_MAIN",auth:"student"},
     {label:"NEET UG",group:"Entrance Exams",icon:"🧬",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
-    {label:"CUET UG",group:"Entrance Exams",icon:"🎓",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
-    {label:"NDA (10+2)",group:"Entrance Exams",icon:"🛡️",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
-    {label:"IPMAT",group:"Entrance Exams",icon:"📊",disabled:true,status:"Coming soon",classIds:["10"],auth:"student"},
+    {label:"CUET UG",group:"Entrance Exams",icon:"🎓",disabled:true,status:"Coming soon",classIds:["10"],entitlement:"competitiveExams:CUET_UG",auth:"student"},
+    {label:"NDA (10+2)",group:"Entrance Exams",icon:"🛡️",disabled:true,status:"Coming soon",classIds:["10"],entitlement:"competitiveExams:NDA",auth:"student"},
+    {label:"IPMAT",group:"Entrance Exams",icon:"📊",disabled:true,status:"Coming soon",classIds:["10"],entitlement:"competitiveExams:IPMAT",auth:"student"},
     {label:"My profile",group:"My Account",icon:"👤",href:"./profile.html#profile",page:"profile.html",hash:"#profile",auth:"student"},
     {label:"Test history",group:"My Account",icon:"📈",href:"./profile.html#history",page:"profile.html",hash:"#history",auth:"student"},
     {label:"Levels & rewards",group:"My Account",icon:"🏆",href:"./dashboard.html#rewards",page:"dashboard.html",hash:"#rewards",auth:"student"},
@@ -74,16 +75,18 @@
 
     {label:"Overview",group:"Workspace",icon:"🏠",href:"./admin.html#tab-overview",page:"admin.html",hash:"#tab-overview",auth:"admin"},
     {label:"Question banks",group:"Workspace",icon:"🧩",href:"./admin.html#tab-banks",page:"admin.html",hash:"#tab-banks",auth:"admin"},
-    {label:"CBSE question review",group:"Workspace",icon:"📄",href:"./admin.html#tab-cbse-review",page:"admin.html",hash:"#tab-cbse-review",auth:"admin"},
+    {label:"CBSE question review",group:"Assessments & authoring",icon:"📄",href:"./admin.html#tab-cbse-review",page:"admin.html",hash:"#tab-cbse-review",auth:"admin"},
     
     {label:"Platform curriculum catalogue",group:"Workspace",icon:"🏫",href:"./admin.html#tab-classes",page:"admin.html",hash:"#tab-classes",auth:"admin"},
-    {label:"Exam Paper Studio",group:"Assessment tools",icon:"📝",href:"./admin.html#tab-exam-papers",page:"admin.html",hash:"#tab-exam-papers",auth:"admin"},
+    {label:"Exam Paper Studio",group:"Assessments & authoring",icon:"📝",href:"./admin.html#tab-exam-papers",page:"admin.html",hash:"#tab-exam-papers",auth:"admin"},
     {label:"Knowledge base",group:"Workspace",icon:"📚",href:"./admin.html#tab-knowledge",page:"admin.html",hash:"#tab-knowledge",auth:"admin"},
     {label:"Students & reports",group:"People & insights",icon:"👩‍🎓",href:"./admin.html#tab-students",page:"admin.html",hash:"#tab-students",auth:"admin"},
     {label:"Leaderboards",group:"People & insights",icon:"🏆",href:"./admin.html#tab-leaderboard",page:"admin.html",hash:"#tab-leaderboard",auth:"admin"},
-    {label:"User Management",group:"System",icon:"👥",href:"./user-management.html",page:"user-management.html",auth:"admin"},
+    {label:"User Management",group:"Institutions",icon:"👥",href:"./user-management.html",page:"user-management.html",auth:"admin"},
     {label:"Admin access",group:"System",icon:"🔐",href:"./admin.html#tab-access",page:"admin.html",hash:"#tab-access",auth:"admin"},
-    {label:"Institution Operations",group:"System",icon:"🏢",href:"./institution-operations.html",page:"institution-operations.html",auth:"admin"},
+    {label:"Institution Operations",group:"Institutions",icon:"🏢",href:"./institution-operations.html",page:"institution-operations.html",auth:"admin"},
+    {label:"Competitive Exams",group:"Workspace",icon:"⚖️",href:"./competitive-exams-admin.html",page:"competitive-exams-admin.html",auth:"admin"},
+    {label:"Institution entitlements",group:"Institutions",icon:"🎟️",href:"./platform-entitlements.html",page:"platform-entitlements.html",auth:"admin"},
     {label:"Operations overview",group:"Institution",icon:"🏢",href:"./institution-operations.html",page:"institution-operations.html",auth:"institution",institutionRoles:["school_admin"]},
     {label:"Branches & campuses",group:"Institution setup",icon:"🏫",href:"./institution-branches.html",page:"institution-branches.html",auth:"institution",institutionRoles:["school_admin"]},
     {label:"Academic structure",group:"Institution setup",icon:"📚",href:"./institution-academics.html",page:"institution-academics.html",auth:"institution",institutionRoles:["school_admin"]},
@@ -91,10 +94,12 @@
     {label:"Teaching assignments",group:"Academic administration",icon:"🧑‍🏫",href:"./institution-assignments.html",page:"institution-assignments.html",auth:"institution",institutionRoles:["school_admin"]},
     {label:"Student enrolments",group:"People & enrolments",icon:"🎓",href:"./institution-enrolments.html",page:"institution-enrolments.html",auth:"institution",institutionRoles:["school_admin"]},
     {label:"User Management",group:"Institution",icon:"👥",href:"./user-management.html",page:"user-management.html",auth:"institution",institutionRoles:["school_admin"]},
-    {label:"Teaching assignments",group:"Teaching",icon:"🧑‍🏫",href:"./assigned-test.html",page:"assigned-test.html",auth:"institution",institutionRoles:["teacher"]},
+    {label:"Institution content",group:"Institution",icon:"📥",href:"./institution-content.html",page:"institution-content.html",auth:"institution",institutionRoles:["school_admin"]},
+    {label:"Competitive Exams",group:"Institution",icon:"⚖️",href:"./institution-competitive-exams.html",page:"institution-competitive-exams.html",auth:"institution",institutionRoles:["school_admin"]},
+    {label:"My teaching workspace",group:"Teaching",icon:"🧑‍🏫",href:"./teacher-workspace.html",page:"teacher-workspace.html",auth:"institution",institutionRoles:["teacher"]},
     {label:"Assigned exam papers",group:"Teaching",icon:"📝",href:"./assigned-paper.html",page:"assigned-paper.html",auth:"institution",institutionRoles:["teacher"]},
     {label:"Institution overview (read only)",group:"Institution",icon:"👁️",href:"./institution-operations.html",page:"institution-operations.html",auth:"institution",institutionRoles:["institution_viewer"]},
-    {label:"Release & maintenance",group:"System",icon:"⚙️",href:"./admin.html#tab-operations",page:"admin.html",hash:"#tab-operations",auth:"admin"}
+    {label:"Release & maintenance",group:"Platform operations",icon:"⚙️",href:"./admin.html#tab-operations",page:"admin.html",hash:"#tab-operations",auth:"admin"}
   ];
   function node(tag,className,text){const element=document.createElement(tag);if(className)element.className=className;if(text!==undefined)element.textContent=text;return element;}
   function getLocation(){const last=location.pathname.split("/").filter(Boolean).pop()||"index.html";const file=last.includes(".")?last:"index.html";const params=new URLSearchParams(location.search);return {file,subject:params.get("subject")||"",hash:location.hash||""};}
@@ -114,8 +119,8 @@
           const preview=sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin";
           if(preview==="platform_admin")return {role:"admin",username:admin.username,localTestMode:true};
           if(["school_admin","teacher","institution_viewer"].includes(preview)){let membership=null;try{const directory=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null"),user=(directory?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(admin.username||"").toLowerCase());membership=(user?.roles||[]).find(r=>r.role===preview&&r.institutionId&&r.institutionId===(sessionStorage.getItem("examguru_active_institution_v1")||"TEST-INSTITUTION-001"));}catch(_){}const institutionId=sessionStorage.getItem("examguru_active_institution_v1")||membership?.institutionId||"TEST-INSTITUTION-001";try{sessionStorage.setItem("examguru_active_institution_v1",institutionId);}catch(_){}return {role:"institution",institutionRole:preview,institutionId,membershipId:membership?.membershipId||("LOCAL-PREVIEW-"+institutionId),username:admin.username,localTestMode:true};}
-          if(preview==="parent")return {role:"parent",username:admin.username,displayName:"Local Parent Preview",localTestMode:true};
-          if(preview==="student"){let studentRole=null;try{const directory=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null"),user=(directory?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(admin.username||"").toLowerCase());studentRole=(user?.roles||[]).find(r=>r.role==="student"&&r.institutionId==="TEST-INSTITUTION-001");}catch(_){}return studentRole?.classId?{role:"student",username:"Local Student Preview",classId:String(studentRole.contentClassId||studentRole.classId),localTestMode:true}:{role:"student_pending",username:admin.username,localTestMode:true};}
+          if(preview==="parent"){let membership=null;try{const directory=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null"),user=(directory?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(admin.username||"").toLowerCase());membership=(user?.roles||[]).find(r=>r.role==="parent"&&r.institutionId===(sessionStorage.getItem("examguru_active_institution_v1")||"TEST-INSTITUTION-001"));}catch(_){}return {role:"parent",username:admin.username,displayName:"Local Parent Preview",membershipId:membership?.membershipId||"LOCAL-PARENT-PREVIEW",institutionId:membership?.institutionId||"TEST-INSTITUTION-001",localTestMode:true};}
+          if(preview==="student"){let studentRole=null;try{const directory=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null"),user=(directory?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(admin.username||"").toLowerCase());studentRole=(user?.roles||[]).find(r=>r.role==="student"&&r.institutionId==="TEST-INSTITUTION-001");}catch(_){}const previewClass=sessionStorage.getItem("examguru_preview_content_class_v1")||"10";return studentRole?.classId?{role:"student",username:"Local Student Preview",classId:previewClass,institutionId:"TEST-INSTITUTION-001",curriculumEnabled:true,localTestMode:true}:{role:"student_pending",username:admin.username,localTestMode:true};}
         }
         return {role:"admin",username:admin.username};
       }
@@ -240,9 +245,12 @@
     const list=node("nav","c10-nav-list");list.setAttribute("aria-label","Learning and account");
     const visibleLinks=links.filter(item=>{
       if(item.auth!==auth.role)return false;
+      if(item.institutionOnly&&!auth.institutionId)return false;
       if(item.institutionRoles&&!item.institutionRoles.includes(auth.institutionRole))return false;
       if(isClatStudent&&!["CLAT UG 2027","Dashboard","Assessment Test","Study Library","My Learning","FAQ & Guide"].includes(item.label))return false;
       if(item.subject&&subjectConfig&&!subjectConfig.subjects.includes(item.subject))return false;
+      if(auth.role==="student"&&auth.institutionId&&item.entitlement){const parts=item.entitlement.split(":");if(!window.ExamGuruLocalIAM?.hasEntitlement(auth.institutionId,parts[0],parts[1]))return false;}
+      if(auth.role==="student"&&auth.institutionId&&!auth.curriculumEnabled&&["Subjects","Learning Hub"].includes(item.group))return false;
       if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return false;
       return true;
     });
@@ -298,18 +306,18 @@
     const mobileCopy=node("div","c10-topbar-copy");
     mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",auth.localTestMode?"Local role preview · "+(auth.role==="admin"?"Platform Admin":auth.role==="institution"?(auth.institutionRole||"Institution Admin").replace(/_/g," "):auth.role):clatExperience?"AI-Enthusiast · CLAT UG 2027":auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":auth.role==="parent"?"Parent":"Class "+String(auth.classId||"not assigned"))));
     const localRoles=auth.localTestMode?(()=>{try{const directory=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null");const u=(directory?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(auth.username||"").toLowerCase());const roles=[...new Set((u?.roles||[]).filter(x=>x.role!=="student"||x.classId).map(x=>x.role))];return roles.length?roles:["platform_admin","school_admin","teacher","parent","institution_viewer"];}catch(_){return ["platform_admin","school_admin","teacher","parent","student","institution_viewer"];}})():[];
-    const workspaceOptions=auth.localTestMode?[{key:"platform_admin",role:"admin",label:"Platform Admin"},...(()=>{try{const d=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null"),u=(d?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(auth.username||"").toLowerCase()),roles=(u?.roles||[]).filter(r=>r.role!=="platform_admin"&&(r.role!=="student"||r.classId)).map(r=>({key:r.role+"@"+(r.institutionId||""),role:["school_admin","institution_viewer","teacher"].includes(r.role)?"institution":r.role,institutionRole:r.role,institutionId:r.institutionId,label:({school_admin:"Institution Admin",teacher:"Teacher",parent:"Parent",student:"Student",institution_viewer:"Institution Viewer"})[r.role]||r.role}));const known=new Set(roles.filter(x=>x.institutionId).map(x=>x.institutionId));(d?.institutions||[]).filter(i=>i.status==="active"&&!known.has(i.institutionId)).forEach(i=>roles.push({key:"school_admin@"+i.institutionId,role:"institution",institutionRole:"school_admin",institutionId:i.institutionId,label:"Institution Admin · "+i.name+" (preview)"}));return roles;}catch(_){return [];}})()]:(auth.availableWorkspaces||[]);
+    const workspaceOptions=auth.localTestMode?[{key:"platform_admin",role:"admin",label:"Platform Admin"},...(()=>{try{const d=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null"),u=(d?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(auth.username||"").toLowerCase()),roles=(u?.roles||[]).filter(r=>r.role!=="platform_admin"&&(r.role!=="student"||r.classId)).map(r=>({key:r.role+"@"+(r.institutionId||""),role:["school_admin","institution_viewer","teacher"].includes(r.role)?"institution":r.role,institutionRole:r.role,institutionId:r.institutionId,label:({school_admin:"Institution Admin",teacher:"Teacher",parent:"Parent",student:"Student",institution_viewer:"Institution Viewer"})[r.role]||r.role}));const known=new Set(roles.filter(x=>x.institutionId).map(x=>x.institutionId));(d?.institutions||[]).filter(i=>i.status==="active"&&!known.has(i.institutionId)).forEach(i=>roles.push({key:"school_admin@"+i.institutionId,role:"institution",institutionRole:"school_admin",institutionId:i.institutionId,label:"Institution Admin · "+i.name+" (preview)"}));if(roles.some(x=>x.key.startsWith("student@"))){const idx=roles.findIndex(x=>x.key.startsWith("student@"));roles.splice(idx,1,...["3","6","10","CLAT"].map(cls=>({key:"student@"+cls,role:"student",institutionRole:"student",institutionId:"TEST-INSTITUTION-001",label:"Student · "+(cls==="CLAT"?"CLAT UG 2027":"Class "+cls),contentClassId:cls})));}return roles;}catch(_){return [];}})()]:(auth.availableWorkspaces||[]);
     if(auth.localTestMode||workspaceOptions.length>1){
       const switcher=node("select","c10-role-switcher");switcher.id="c10RoleSwitcher";switcher.setAttribute("aria-label","Switch active workspace");
       workspaceOptions.forEach(w=>{const option=node("option","",w.label);option.value=w.key;switcher.append(option);});
-      const localRole=sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin",localInstitution=sessionStorage.getItem("examguru_active_institution_v1")||"TEST-INSTITUTION-001";const currentKey=auth.localTestMode?(localRole==="platform_admin"?"platform_admin":localRole+"@"+localInstitution):(sessionStorage.getItem("examguru_active_workspace_v1")||(auth.role==="admin"?"platform_admin":"institution:"+String(auth.membershipId||"")));
+      const localRole=sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin",localInstitution=sessionStorage.getItem("examguru_active_institution_v1")||"TEST-INSTITUTION-001",previewClass=sessionStorage.getItem("examguru_preview_content_class_v1")||"10";const currentKey=auth.localTestMode?(localRole==="platform_admin"?"platform_admin":localRole==="student"?"student@"+previewClass:localRole+"@"+localInstitution):(sessionStorage.getItem("examguru_active_workspace_v1")||(auth.role==="admin"?"platform_admin":"institution:"+String(auth.membershipId||"")));
       switcher.value=workspaceOptions.some(w=>w.key===currentKey)?currentKey:(workspaceOptions[0]?.key||"");
       switcher.addEventListener("change",async()=>{const selected=workspaceOptions.find(w=>w.key===switcher.value);if(!selected)return;
-        if(auth.localTestMode){try{const role=selected.institutionRole||selected.key;sessionStorage.setItem("examguru_rbac_test_role_v1",role);if(selected.institutionId)sessionStorage.setItem("examguru_active_institution_v1",selected.institutionId);}catch(_){}}
+        if(auth.localTestMode){try{const role=selected.institutionRole||selected.key;sessionStorage.setItem("examguru_rbac_test_role_v1",role);if(selected.institutionId)sessionStorage.setItem("examguru_active_institution_v1",selected.institutionId);if(selected.contentClassId)sessionStorage.setItem("examguru_preview_content_class_v1",selected.contentClassId);}catch(_){}}
         else {try{sessionStorage.setItem("examguru_active_workspace_v1",selected.key);sessionStorage.setItem("examguru_active_role_v1",selected.institutionRole||"platform_admin");if(selected.institutionId)sessionStorage.setItem("examguru_active_institution_v1",selected.institutionId);if(selected.membershipId&&window.C10Api?.selectInstitutionContext)await window.C10Api.selectInstitutionContext({institutionId:selected.institutionId,membershipId:selected.membershipId,branchId:null});}catch(e){return;}}
         const role=auth.localTestMode?(selected.institutionRole||selected.key):selected.role==="admin"?"platform_admin":selected.institutionRole;
         if(auth.localTestMode&&selected.institutionId){try{sessionStorage.setItem("examguru_active_institution_v1",selected.institutionId);}catch(_){}}
-        const target=role==="platform_admin"?"./admin.html#tab-overview":role==="school_admin"||role==="institution_viewer"?"./institution-operations.html":role==="teacher"?"./assigned-test.html":role==="parent"?"./parent.html":"./dashboard.html";location.href=target;
+        const target=role==="platform_admin"?"./admin.html#tab-overview":role==="school_admin"||role==="institution_viewer"?"./institution-operations.html":role==="teacher"?"./teacher-workspace.html":role==="parent"?"./parent.html":"./dashboard.html";location.href=target;
       });
       mobileBar._workspaceSwitcher=switcher;
     }

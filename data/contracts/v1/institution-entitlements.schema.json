@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExamGuru Institution Entitlements v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "institutionId",
+    "curriculum",
+    "competitiveExams"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "kind": {
+      "const": "institution-entitlements"
+    },
+    "institutionId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "curriculum": {
+      "type": "object",
+      "required": [
+        "enabled",
+        "classIds"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "classIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "competitiveExams": {
+      "type": "object",
+      "required": [
+        "enabled",
+        "examIds"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "examIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "grantedBy": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

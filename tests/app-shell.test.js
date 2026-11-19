@@ -53,7 +53,7 @@ assert.ok(nav.includes('auth:"guest"'),"guest navigation is separated from stude
 assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
 assert.ok(nav.includes('auth:"institution"')&&nav.includes('identityV2()')&&nav.includes('role:"institution"'),"institution memberships resolve into a separate navigation role without conflating them with platform Admin");
 assert.ok(nav.includes('institutionRole:membership.role')&&nav.includes('label:"Institution Operations"'),"institution members receive the Institution Operations navigation entry");
-assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"')&&nav.includes('group:"Assessment tools"'),"admin navigation exposes Exam Paper Studio in a grouped submenu");
+assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"')&&nav.includes('group:"Assessments & authoring"'),"admin navigation exposes Exam Paper Studio in a grouped submenu");
 assert.ok(nav.includes('label:"CBSE question review"')&&nav.includes('href:"./admin.html#tab-cbse-review"')&&nav.includes('hash:"#tab-cbse-review"'),"Admin sidebar exposes the CBSE review section as a real tab route");
 assert.ok(institutionPage.includes("./institution-departments.html")&&nav.includes('href:"./institution-departments.html"'),"Departments & HOD is routed through the Institution Operations module, not the platform Admin tabs");
 for(const tab of ["overview","banks","cbse-review","classes","exam-papers","knowledge","students","leaderboard","access","operations"]){

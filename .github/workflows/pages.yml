@@ -123,7 +123,7 @@ jobs:
           node tests/exam-paper-renderer.test.js
           node tests/assessment-manager.test.js
           node tests/assessment-analytics.test.js
-          for file in js/clat-engine.js js/clat-practice.js js/clat-dashboard-model.js js/clat-dashboard.js js/report-print.js js/app-shell.js js/m4-operations.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js js/pyq-library.js js/cbse-mcq-review.js; do node --check "$file"; done
+          for file in js/clat-engine.js js/clat-practice.js js/clat-dashboard-model.js js/clat-dashboard.js js/report-print.js js/app-shell.js js/m4-operations.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/institution-content-store.js js/institution-content.js js/platform-entitlements.js js/competitive-exams-admin.js js/teacher-workspace.js js/institution-competitive-exams.js js/institution-learning.js js/exam-paper-studio.js js/exam-paper-self-study.js js/pyq-library.js js/cbse-mcq-review.js; do node --check "$file"; done
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
           node tests/learning-model.test.js
@@ -131,6 +131,7 @@ jobs:
           node tests/canonical-url.test.js
           node tests/stage-a-integration.test.js
           node tests/app-shell.test.js
+          node tests/institution-addons.test.js
           node tests/report-print.test.js
           node tests/parent-experience.test.js
           node tests/cbse-mcq-review.test.js
@@ -165,9 +166,15 @@ jobs:
           cp institution-assignments.html _site/institution-assignments.html
           cp institution-enrolments.html _site/institution-enrolments.html
           cp user-management.html _site/user-management.html
+          cp platform-entitlements.html _site/platform-entitlements.html
+          cp competitive-exams-admin.html _site/competitive-exams-admin.html
+          cp institution-content.html _site/institution-content.html
+          cp institution-competitive-exams.html _site/institution-competitive-exams.html
+          cp institution-learning.html _site/institution-learning.html
+          cp teacher-workspace.html _site/teacher-workspace.html
           cp rbac-role-matrix.html _site/rbac-role-matrix.html
           cp .nojekyll _site/.nojekyll
-          mkdir -p _site/js _site/data _site/css _site/data/contracts/v1 _site/data/clat
+          mkdir -p _site/js _site/data _site/css _site/data/contracts/v1 _site/data/clat _site/data/competitive-exams
           cp css/branding.css _site/css/branding.css
           cp css/theme-roles.css _site/css/theme-roles.css
           cp css/theme-roles-v2.css _site/css/theme-roles-v2.css
@@ -211,6 +218,13 @@ jobs:
           cp js/institution-data-store.js _site/js/institution-data-store.js
           cp js/institution-module.js _site/js/institution-module.js
           cp js/iam-user-management.js _site/js/iam-user-management.js
+          cp js/platform-entitlements.js _site/js/platform-entitlements.js
+          cp js/competitive-exams-admin.js _site/js/competitive-exams-admin.js
+          cp js/institution-content-store.js _site/js/institution-content-store.js
+          cp js/institution-content.js _site/js/institution-content.js
+          cp js/teacher-workspace.js _site/js/teacher-workspace.js
+          cp js/institution-competitive-exams.js _site/js/institution-competitive-exams.js
+          cp js/institution-learning.js _site/js/institution-learning.js
           cp js/profile-manager.js _site/js/profile-manager.js
           cp js/admin-manager.js _site/js/admin-manager.js
           cp js/cbse-mcq-review.js _site/js/cbse-mcq-review.js
@@ -353,6 +367,7 @@ jobs:
           console.log('Merged four Social Science override files: 22 topic sets; deployed total: ' + total + '.');
           NODE
           cp data/contracts/v1/* _site/data/contracts/v1/
+          cp data/competitive-exams/catalog.json _site/data/competitive-exams/catalog.json
           if [ -d assets ]; then cp -R assets _site/assets; fi
           if [ -d knowledge ]; then cp -R knowledge _site/knowledge; fi
           mkdir -p _site/science-payload

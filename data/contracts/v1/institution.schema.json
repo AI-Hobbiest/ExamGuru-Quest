@@ -52,6 +52,67 @@
     "updatedAt": {
       "type": "string",
       "format": "date-time"
+    },
+    "institutionType": {
+      "type": "string",
+      "enum": [
+        "school",
+        "college",
+        "coaching_centre",
+        "competitive_exam_provider",
+        "direct",
+        "other"
+      ]
+    },
+    "entitlements": {
+      "type": "object",
+      "required": [
+        "curriculum",
+        "competitiveExams"
+      ],
+      "properties": {
+        "curriculum": {
+          "type": "object",
+          "required": [
+            "enabled",
+            "classIds"
+          ],
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "classIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "competitiveExams": {
+          "type": "object",
+          "required": [
+            "enabled",
+            "examIds"
+          ],
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "examIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false
