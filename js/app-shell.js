@@ -217,6 +217,8 @@
     document.body.classList.add("c10-shell-ready");
     applyTheme(readThemePreference(),false);
     const current=getLocation(),auth=await authState();
+    if(!auth.localTestMode&&auth.role==="institution"){try{sessionStorage.setItem("examguru_active_role_v1",auth.institutionRole||"institution_viewer");sessionStorage.setItem("examguru_active_institution_v1",auth.institutionId||"");}catch(_){}}
+    if(!auth.localTestMode&&auth.role==="admin"){try{sessionStorage.setItem("examguru_active_role_v1","platform_admin");}catch(_){}}
     if(auth.localTestMode&&current.file==="admin.html"&&auth.role!=="admin"){location.replace(auth.role==="institution"?"./institution-operations.html":auth.role==="parent"?"./parent.html":"./dashboard.html");return;}
     if(auth.role==="student_pending"){try{sessionStorage.setItem("examguru_student_access_notice_v1","Student access is not ready: this account has no class or learning cohort assigned. Ask the Institution Admin to assign an existing class/cohort, then sign in again.");sessionStorage.setItem("examguru_rbac_test_role_v1","platform_admin");}catch(_){}location.replace("./admin.html#tab-overview");return;}
     if(current.file.startsWith("institution-")&&current.file!=="institution-operations.html"&&!(auth.role==="institution"&&auth.institutionRole==="school_admin")){location.replace(auth.role==="institution"?"./assigned-test.html":auth.role==="parent"?"./parent.html":"./dashboard.html");return;}
@@ -303,7 +305,7 @@
       switcher.value=workspaceOptions.some(w=>w.key===currentKey)?currentKey:(workspaceOptions[0]?.key||"");
       switcher.addEventListener("change",async()=>{const selected=workspaceOptions.find(w=>w.key===switcher.value);if(!selected)return;
         if(auth.localTestMode){try{sessionStorage.setItem("examguru_rbac_test_role_v1",selected.key);}catch(_){}}
-        else {try{sessionStorage.setItem("examguru_active_workspace_v1",selected.key);if(selected.membershipId&&window.C10Api?.selectInstitutionContext)await window.C10Api.selectInstitutionContext({institutionId:selected.institutionId,membershipId:selected.membershipId,branchId:null});}catch(e){return;}}
+        else {try{sessionStorage.setItem("examguru_active_workspace_v1",selected.key);sessionStorage.setItem("examguru_active_role_v1",selected.institutionRole||"platform_admin");if(selected.institutionId)sessionStorage.setItem("examguru_active_institution_v1",selected.institutionId);if(selected.membershipId&&window.C10Api?.selectInstitutionContext)await window.C10Api.selectInstitutionContext({institutionId:selected.institutionId,membershipId:selected.membershipId,branchId:null});}catch(e){return;}}
         const role=auth.localTestMode?selected.key:selected.role==="admin"?"platform_admin":selected.institutionRole;
         if(auth.localTestMode&&selected.institutionId){try{sessionStorage.setItem("examguru_active_institution_v1",selected.institutionId);}catch(_){}}
         const target=role==="platform_admin"?"./admin.html#tab-overview":role==="school_admin"||role==="institution_viewer"?"./institution-operations.html":role==="teacher"?"./assigned-test.html":role==="parent"?"./parent.html":"./dashboard.html";location.href=target;
