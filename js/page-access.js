@@ -16,6 +16,10 @@
     if(isStudentPreview){window.C10StudyViewerRole="student";window.C10StudyAccessReady=Promise.resolve();return;}
     if(isAdminSession()){window.C10StudyViewerRole="admin";return;}
     if(isStudentPreview){if(class10Route&&String(session.classId||"")!=="10"){location.replace("./dashboard.html");return;}return;}
+  if(isStudentPreview){
+    if(class10Route&&String(session.classId||"")!=="10"){location.replace("./dashboard.html");return;}
+    return;
+  }
   if(!session||typeof session.username!=="string"){location.replace(signInTarget);return;}
     if(!window.C10StudentAuth||!window.C10StudentAuth.restoreSession){location.replace(signInTarget);return;}
     window.C10StudyAccessReady=window.C10StudentAuth.restoreSession().then(async account=>{
