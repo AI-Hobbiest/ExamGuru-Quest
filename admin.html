@@ -4,22 +4,44 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#211b48">
-<meta name="description" content="Local authoring and reporting workspace for C10 Playground.">
-<title>Admin Workspace | C10 Playground</title>
+<meta name="description" content="ExamGuru LMS platform administration, learning content, assessments, people and institution operations.">
+<title>LMS Administration | ExamGuru Quest</title>
 <script>try{const s=JSON.parse(sessionStorage.getItem("examguru_mvp_admin_session_v1")||"null");if((!s||s.role!=="admin"||s.username!=="Jayaprakashganathe@gmail.com")&&!sessionStorage.getItem("c10playground_api_session")&&!location.hash.includes("auth_code="))location.replace("./index.html?admin=login-required");}catch(_){location.replace("./index.html?admin=login-required");}</script>
 <link rel="stylesheet" href="./css/branding.css?v=controls1">
 <link rel="stylesheet" href="./css/app-shell.css?v=20261106-persistent-topbar-v1">
 <link rel="stylesheet" href="./css/admin.css">
 <link rel="stylesheet" href="./css/question-media.css">
 <link rel="stylesheet" href="./css/theme-roles-v2.css?v=quest3">
+<style>
+.eg-lms-admin-hero{background:linear-gradient(118deg,#ece8fa 0%,#f7f6fc 54%,#e7f4ea 100%)!important;color:#252b46!important;border:1px solid #ddd8ee;box-shadow:0 13px 32px rgba(45,46,91,.09)!important}
+.eg-lms-admin-hero h1{color:#25285a!important}.eg-lms-admin-hero p{color:#626b84!important}.eg-lms-admin-hero .admin-kicker{color:#5a4f98!important}
+.eg-lms-admin-hero .admin-hero-actions{display:flex;flex-wrap:wrap;gap:10px}.eg-lms-admin-hero .admin-btn.secondary{background:#fff;color:#403b8c;border:1px solid #dcd7ee}
+.lms-admin-welcome{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}.lms-admin-welcome h2{font-size:1.5rem;margin:4px 0 5px;color:#292e55}.lms-admin-welcome p{margin:0;max-width:700px}
+.lms-admin-status{display:flex;align-items:center;gap:8px;white-space:nowrap;border:1px solid #d9e8dc;background:#f1faf3;color:#37664a;border-radius:999px;padding:8px 12px;font-size:.75rem;font-weight:800}
+.lms-status-dot{width:8px;height:8px;border-radius:50%;background:#69ad7c;box-shadow:0 0 0 4px #dff0e3}
+.lms-admin-metrics{margin:0 0 25px}.lms-admin-section-heading{display:flex;align-items:end;justify-content:space-between;margin:4px 0 13px}.lms-admin-section-heading h3{font-size:1.05rem;margin:0 0 3px;color:#292e55}.lms-admin-section-heading p{font-size:.78rem;margin:0;color:var(--c10-muted)}
+.lms-admin-launch-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.lms-admin-launch-card{display:flex;align-items:center;gap:12px;min-width:0;padding:16px;border:1px solid #e0e4ef;border-radius:16px;background:linear-gradient(145deg,#fff,#faf9fe);text-decoration:none!important;color:#292e55!important;box-shadow:0 5px 16px rgba(39,45,82,.035);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
+.lms-admin-launch-card:hover{transform:translateY(-2px);border-color:#bdb4df;box-shadow:0 9px 22px rgba(39,45,82,.08)}
+.lms-admin-card-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:13px;background:#efecfa;font-size:1.3rem}
+.lms-admin-launch-card:nth-child(3n+2) .lms-admin-card-icon{background:#eaf6ee}.lms-admin-launch-card:nth-child(3n) .lms-admin-card-icon{background:#fff5df}
+.lms-admin-card-copy{display:grid;gap:4px;min-width:0}.lms-admin-card-copy strong{font-size:.87rem;line-height:1.25}.lms-admin-card-copy small{font-size:.72rem;line-height:1.4;color:#737b91}
+.lms-admin-arrow{margin-left:auto;align-self:center;color:#8177b5;font-size:1.05rem}
+.lms-admin-footnote{margin-top:18px;padding:13px 15px;border:1px solid #e4e3ee;border-radius:13px;background:#f8f7fc;color:#697188;font-size:.78rem;line-height:1.55}
+@media(max-width:850px){.lms-admin-launch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.lms-admin-welcome{display:grid}.lms-admin-launch-grid{grid-template-columns:1fr}.lms-admin-status{justify-self:start}.eg-lms-admin-hero .admin-hero-actions{align-items:stretch}.eg-lms-admin-hero .admin-btn{flex:1;justify-content:center}}
+</style>
 </head>
 <body class="c10-theme-admin">
-<header class="admin-hero">
-  <div class="admin-kicker">C10 Playground · Content operations</div>
-  <h1>Admin Workspace</h1>
-  <p>Manage question banks, diagrams, class catalogue, learning resources and imported student reports. Prepare clean data packages for authorised GitHub publication.</p>
+<header class="admin-hero eg-lms-admin-hero">
+  <div class="admin-kicker">ExamGuru Quest · Platform control centre</div>
+  <h1>LMS Administration</h1>
+  <p>One place to manage the learning platform — curriculum, study resources, assessments, learners, institutions and platform operations.</p>
   <div class="brand-signature">Conceptualised by <strong>JP Ganathe</strong></div>
-  <div class="admin-actions admin-hero-actions"><a class="admin-btn" href="#tab-exam-papers">📝 Open Exam Paper Studio</a></div>
+  <div class="admin-actions admin-hero-actions">
+    <a class="admin-btn" href="#tab-overview">⌂ Administration overview</a>
+    <a class="admin-btn secondary" href="./institution-operations.html">🏢 Institution operations</a>
+  </div>
 </header>
 <main class="admin-wrap">
   <div class="admin-notice">
@@ -61,16 +83,32 @@
     </nav>
     <div class="admin-content">
       <section class="admin-panel active eg-surface" id="tab-overview">
-        <h2>Workspace overview</h2>
-        <p class="admin-muted">Use this workbench to prepare, validate and export content. Publishing is a separate, authorised GitHub action.</p>
-        <div class="admin-feature-list">
-          <div class="admin-feature"><strong>Question and image management</strong><p>Edit a subject bank, chapters, options, answers, explanations and optional image metadata. Download image assets individually and upload them to their referenced paths.</p></div>
-          <div class="admin-feature"><strong>Class catalogue</strong><p>Add, rename, disable or remove classes from the catalogue, then export the JSON used by the profile page.</p></div>
-          <div class="admin-feature"><strong>Knowledge resources</strong><p>Maintain a resource manifest for books, notes, question-bank PDFs and image-reference PDFs. Download and publish files separately.</p></div>
-          <div class="admin-feature"><strong>Student reports</strong><p>Import student backup JSON files supplied by students. View profiles and progress, edit an imported profile snapshot, and export reports or revised backups.</p></div>
+        <div class="lms-admin-welcome">
+          <div><div class="admin-kicker">Platform overview</div><h2>Welcome to ExamGuru</h2><p class="admin-muted">Choose an area to manage. The platform is organised around the complete learning lifecycle — not just question authoring.</p></div>
+          <div class="lms-admin-status"><span class="lms-status-dot"></span><span>Platform administration</span></div>
         </div>
-        <div class="admin-notice"><strong>Current account approach:</strong> student password hashes live in <code>data/student-accounts.json</code>. This file is public in the repository, so usernames and password hashes are visible and can be attacked offline. Use classroom-only passwords that students never reuse elsewhere. Central account creation and password resets are managed directly by the account service below. No student account JSON is published to GitHub.</div>
-        <div id="overviewStatus" class="admin-status" role="status">Loading class catalogue and resource manifest…</div>
+        <div class="admin-grid lms-admin-metrics" aria-label="Platform snapshot">
+          <div class="admin-stat eg-surface"><strong id="statQuestions">—</strong><span>Questions across published banks</span></div>
+          <div class="admin-stat eg-surface"><strong id="statClasses">—</strong><span>Curriculum classes</span></div>
+          <div class="admin-stat eg-surface"><strong id="statStudents">0</strong><span>Student backups in this session</span></div>
+        </div>
+        <div class="lms-admin-section-heading"><div><h3>Platform management</h3><p>Core administration and content operations</p></div></div>
+        <div class="lms-admin-launch-grid">
+          <a class="lms-admin-launch-card" href="#tab-classes"><span class="lms-admin-card-icon">🏫</span><span class="lms-admin-card-copy"><strong>Curriculum catalogue</strong><small>Classes, subjects and curriculum structure</small></span><span class="lms-admin-arrow">↗</span></a>
+          <a class="lms-admin-launch-card" href="#tab-banks"><span class="lms-admin-card-icon">🧩</span><span class="lms-admin-card-copy"><strong>Question banks</strong><small>MCQs, question quality, chapters and assets</small></span><span class="lms-admin-arrow">↗</span></a>
+          <a class="lms-admin-launch-card" href="#tab-knowledge"><span class="lms-admin-card-icon">📚</span><span class="lms-admin-card-copy"><strong>Study Library &amp; resources</strong><small>Notes, reference material and learning resources</small></span><span class="lms-admin-arrow">↗</span></a>
+          <a class="lms-admin-launch-card" href="./competitive-exams-admin.html"><span class="lms-admin-card-icon">⚖️</span><span class="lms-admin-card-copy"><strong>Competitive exams</strong><small>CLAT and future entrance-exam programmes</small></span><span class="lms-admin-arrow">↗</span></a>
+          <a class="lms-admin-launch-card" href="#tab-exam-papers"><span class="lms-admin-card-icon">📝</span><span class="lms-admin-card-copy"><strong>Exam Paper Studio</strong><small>Blueprints, paper creation and validation</small></span><span class="lms-admin-arrow">↗</span></a>
+          <a class="lms-admin-launch-card" href="#tab-cbse-review"><span class="lms-admin-card-icon">📄</span><span class="lms-admin-card-copy"><strong>CBSE paper review</strong><small>Source verification and question approval</small></span><span class="lms-admin-arrow">↗</span></a>
+          <a class="lms-admin-launch-card" href="#tab-students"><span class="lms-admin-card-icon">🎓</span><span class="lms-admin-card-copy"><strong>Learners &amp; reports</strong><small>Accounts, student profiles and progress reports</small></span><span class="lms-admin-arrow">↗</span></a>
+          <a class="lms-admin-launch-card" href="./user-management.html"><span class="lms-admin-card-icon">👥</span><span class="lms-admin-card-copy"><strong>User &amp; role management</strong><small>Platform users, roles and access assignments</small></span><span class="lms-admin-arrow">↗</span></a>
+          <a class="lms-admin-launch-card" href="./institution-operations.html"><span class="lms-admin-card-icon">🏢</span><span class="lms-admin-card-copy"><strong>Institution operations</strong><small>Schools, branches, classes and academic teams</small></span><span class="lms-admin-arrow">↗</span></a>
+          <a class="lms-admin-launch-card" href="./platform-entitlements.html"><span class="lms-admin-card-icon">🎟️</span><span class="lms-admin-card-copy"><strong>Institution entitlements</strong><small>Feature access and institution subscriptions</small></span><span class="lms-admin-arrow">↗</span></a>
+          <a class="lms-admin-launch-card" href="#tab-leaderboard"><span class="lms-admin-card-icon">🏆</span><span class="lms-admin-card-copy"><strong>Performance insights</strong><small>Leaderboards and imported learning analytics</small></span><span class="lms-admin-arrow">↗</span></a>
+          <a class="lms-admin-launch-card" href="#tab-operations"><span class="lms-admin-card-icon">⚙️</span><span class="lms-admin-card-copy"><strong>Platform operations</strong><small>Release checks, maintenance and publishing workflow</small></span><span class="lms-admin-arrow">↗</span></a>
+        </div>
+        <div class="lms-admin-footnote"><strong>Current architecture:</strong> ExamGuru is still using local/browser storage for several workflows. Cloud database and centralised services remain a later stage; this administration hub is designed to grow with that migration.</div>
+        <div id="overviewStatus" class="admin-status" role="status">Loading curriculum catalogue and resource manifest…</div>
       </section>
 
       <section class="admin-panel eg-surface" id="tab-banks">
