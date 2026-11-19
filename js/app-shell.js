@@ -103,7 +103,7 @@
     try{
       if(window.C10StudentAuth&&window.C10StudentAuth.currentUser)return window.C10StudentAuth.currentUser();
       const value=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");
-      return value&&typeof value.username==="string"?{...value,username:value.username,role:value.role==="parent"?"parent":"student",classId:String(value.classId||"")}:null;
+      return value&&typeof value.username==="string"?{...value,username:value.username,role:value.role==="parent"?"parent":"student",classId:String(value.contentClassId||value.classId||"")}:null;
     }catch(_){return null;}
   }
   async function authState(){
@@ -138,7 +138,7 @@
           if(membership)return {role:"institution",institutionRole:membership.role,institutionId:membership.institutionId,membershipId:membership.membershipId,username:identity.user?.displayName||identity.user?.username||result.user.username||"",availableWorkspaces:workspaces};
           if(platformAllowed)return {role:"admin",username:identity.user?.displayName||identity.user?.username||result.user.githubLogin||result.user.username||"",availableWorkspaces:workspaces};
           if(eligible[0]){const membership=eligible[0];return {role:"institution",institutionRole:membership.role,institutionId:membership.institutionId,membershipId:membership.membershipId,username:identity.user?.displayName||identity.user?.username||result.user.username||"",availableWorkspaces:workspaces};}
-          if(result.user.role==="student")return {role:"student",username:result.user.username||"",classId:String(result.user.classId||"")};
+          if(result.user.role==="student")return {role:"student",username:result.user.username||"",classId:String(result.user.contentClassId||result.user.classId||"")};
           if(result.user.role==="parent")return {role:"parent",username:result.user.username||"",displayName:result.user.displayName||result.user.username||""};
         }
       }catch(_){}
