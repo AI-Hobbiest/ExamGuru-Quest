@@ -1,10 +1,28 @@
 "use strict";
 const assert=require("node:assert/strict"),fs=require("node:fs"),vm=require("node:vm");
 const store=new Map();
-const ctx={window:{},localStorage:{getItem:key=>store.has(key)?store.get(key):null,setItem:(key,value)=>store.set(key,String(value))},Math,Date,Array,String,Number,Set,Map,TypeError,Error};
+const legacyAssignment={
+ assignmentId:"legacy-preserved",assessmentId:"legacy-assessment",kind:"assigned-assessment",
+ studentId:"student-legacy",studentName:"Legacy learner",parentId:"parent-legacy",
+ classId:"6",subjectId:"science",subjectTitle:"Science",title:"Existing assigned test",
+ status:"assigned",createdAt:"2026-01-01T00:00:00.000Z",questionCount:1,
+ questionSnapshot:[{questionId:"legacy-q1",prompt:"Legacy question",options:[{optionId:"a",text:"A"},{optionId:"b",text:"B"}],correctOptionId:"a"}],
+ attempts:[],activeAttemptId:null
+};
+store.set("eg_assessment_assignments_v1",JSON.stringify([legacyAssignment]));
+const ctx={window:{},localStorage:{getItem:key=>store.has(key)?store.get(key):null,setItem:(key,value)=>store.set(key,String(value)),removeItem:key=>store.delete(key)},Math,Date,Array,String,Number,Set,Map,TypeError,Error,JSON,Uint8Array};
 ctx.globalThis=ctx;vm.createContext(ctx);
+vm.runInContext(fs.readFileSync("js/storage.js","utf8"),ctx);
 vm.runInContext(fs.readFileSync("js/assessment-manager.js","utf8"),ctx);
 const manager=ctx.window.C10AssessmentManager;
+assert.equal(manager.key,"eg_assessment_assignments_v1","legacy public key remains available for compatibility");
+assert.equal(manager.get("legacy-preserved").title,"Existing assigned test","legacy assignments migrate without changing their record shape");
+assert.equal(manager.listForStudent("student-legacy").length,1,"legacy assignments remain visible to their student");
+assert.equal(store.has("eg_assessment_assignments_v1"),false,"legacy key is retired only after successful versioned persistence");
+const migratedEnvelope=JSON.parse(store.get("c10playground:store:v1:assessment-assignments:all"));
+assert.equal(migratedEnvelope.kind,"assessment-assignments");
+assert.equal(migratedEnvelope.data[0].assignmentId,"legacy-preserved");
+
 assert.equal(manager.bankPath("6","science"),"./data/class-6-science.json");
 assert.equal(manager.bankPath("10","science"),"./data/science.json");
 assert.throws(()=>manager.bankPath("5","science"),/Classes 3, 6 and 10/);
@@ -134,4 +152,13 @@ assert.equal(offlineEvaluated.attempts[0].completionMode,"handwritten-offline");
 assert.equal(offlineEvaluated.attempts[0].manualScore,8);
 
 
-console.log("Assessment manager tests passed: MCQ and full-paper assignments, frozen snapshots, student scoping, attempt limits, auto-score and manual evaluation.");
+// A fresh page context must read the migrated global assignments, regardless of student session scope.
+const reloadCtx={window:{},localStorage:{getItem:key=>store.has(key)?store.get(key):null,setItem:(key,value)=>store.set(key,String(value)),removeItem:key=>store.delete(key)},Math,Date,Array,String,Number,Set,Map,TypeError,Error,JSON,Uint8Array};
+reloadCtx.globalThis=reloadCtx;vm.createContext(reloadCtx);
+vm.runInContext(fs.readFileSync("js/storage.js","utf8"),reloadCtx);
+vm.runInContext(fs.readFileSync("js/assessment-manager.js","utf8"),reloadCtx);
+assert.equal(reloadCtx.window.C10AssessmentManager.listForStudent("student-legacy").length,1,
+ "migrated assignments remain available after a full page reload");
+assert.equal(reloadCtx.window.C10AssessmentManager.listForStudent("student-1").length,1,
+ "global assignment storage remains shared between parent and student sessions");
+console.log("Assessment manager tests passed: legacy migration, cross-session persistence, MCQ and full-paper assignments, frozen snapshots, student scoping, attempt limits, auto-score and manual evaluation.");
