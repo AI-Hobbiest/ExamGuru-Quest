@@ -47,11 +47,7 @@ const persistDemo=()=>{try{localStorage.setItem(LOCAL_KEY,JSON.stringify({...dem
 function renderRoleAssignments(){
  const host=$("roleAssignmentList");host.replaceChildren();
  const directory=window.ExamGuruLocalIAM?.getState();const assignments=(directory?.users||[]).flatMap(u=>(u.roles||[]).filter(r=>r.institutionId==="TEST-INSTITUTION-001").map(r=>({username:u.username,role:r.role,status:u.status})));(assignments.length?assignments:demo.roleAssignments).forEach(a=>{const d=document.createElement("div");d.className="item";d.textContent=a.username+" · "+(institutionRoleLabels[a.role]||a.role)+" · "+a.status;host.append(d);});
- const switcher=$("activeRole");switcher.replaceChildren();
- const own=(window.ExamGuruLocalIAM?.findUser("USR-PLATFORM-001")?.roles||demo.roleAssignments.filter(a=>a.username.toLowerCase()===currentTestUser.toLowerCase()&&a.status==="active").map(a=>({role:a.role}))).filter(a=>a.role!=="platform_admin");
- const options=[{value:"platform_admin",label:"Platform Admin (platform scope)"},...own.map(a=>({value:a.role,label:institutionRoleLabels[a.role]||a.role}))];
- options.forEach(x=>{const o=document.createElement("option");o.value=x.value;o.textContent=x.label;switcher.append(o);});
- switcher.value=demo.activeRole;
+
 }
 
 function applyLocalPersonaAccess(){
@@ -117,7 +113,7 @@ function initLocalPlatformAdminTest(){
  $("m4Status").replaceWith(banner);banner.id="m4Status";
  try{const saved=sessionStorage.getItem("examguru_rbac_test_role_v1");if(["platform_admin","school_admin","teacher","parent","student","institution_viewer"].includes(saved))demo.activeRole=saved;}catch(_){}
  renderRoleAssignments();applyLocalPersonaAccess();refreshSelectors();
- $("activeRole").addEventListener("change",()=>{demo.activeRole=$("activeRole").value;state.identity.context.role=demo.activeRole;persistDemo();try{sessionStorage.setItem("examguru_rbac_test_role_v1",demo.activeRole);}catch(_){}const target=demo.activeRole==="platform_admin"?"./admin.html#tab-overview":demo.activeRole==="school_admin"||demo.activeRole==="institution_viewer"?"./institution-operations.html":demo.activeRole==="teacher"?"./assigned-test.html":demo.activeRole==="parent"?"./parent.html":"./dashboard.html";location.href=target;});
+
  $("assignInstitutionRole").addEventListener("click",()=>{
   const actor=demo.activeRole,target=$("roleUser").value.trim(),role=$("institutionRole").value;
   if(!target) return status("Enter an account username or email.",true);
