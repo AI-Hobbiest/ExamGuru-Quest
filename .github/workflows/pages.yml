@@ -159,6 +159,11 @@ jobs:
           cp assigned-test.html _site/assigned-test.html
           cp assigned-paper.html _site/assigned-paper.html
           cp institution-operations.html _site/institution-operations.html
+          cp institution-branches.html _site/institution-branches.html
+          cp institution-academics.html _site/institution-academics.html
+          cp institution-departments.html _site/institution-departments.html
+          cp institution-assignments.html _site/institution-assignments.html
+          cp institution-enrolments.html _site/institution-enrolments.html
           cp user-management.html _site/user-management.html
           cp rbac-role-matrix.html _site/rbac-role-matrix.html
           cp .nojekyll _site/.nojekyll
@@ -203,6 +208,8 @@ jobs:
           cp js/api-client.js _site/js/api-client.js
           cp js/m4-operations.js _site/js/m4-operations.js
           cp js/iam-local-store.js _site/js/iam-local-store.js
+          cp js/institution-data-store.js _site/js/institution-data-store.js
+          cp js/institution-module.js _site/js/institution-module.js
           cp js/iam-user-management.js _site/js/iam-user-management.js
           cp js/profile-manager.js _site/js/profile-manager.js
           cp js/admin-manager.js _site/js/admin-manager.js
@@ -213,10 +220,19 @@ jobs:
           cp js/report-print.js _site/js/report-print.js
           cp js/app-shell.js _site/js/app-shell.js
           test -s _site/user-management.html
+          test -s _site/institution-branches.html
+          test -s _site/institution-academics.html
+          test -s _site/institution-departments.html
+          test -s _site/institution-assignments.html
+          test -s _site/institution-enrolments.html
+          test -s _site/js/institution-data-store.js
+          test -s _site/js/institution-module.js
           test -s _site/js/iam-local-store.js
           test -s _site/js/iam-user-management.js
           grep -q 'js/iam-local-store.js' _site/user-management.html
           grep -q 'js/iam-user-management.js' _site/user-management.html
+          grep -q 'institution-data-store.js' _site/institution-academics.html
+          grep -q 'institution-module.js' _site/institution-departments.html
           cp js/gamification.js _site/js/gamification.js
           cp js/dashboard-manager.js _site/js/dashboard-manager.js
           cp js/quiz-engine.js _site/js/quiz-engine.js
