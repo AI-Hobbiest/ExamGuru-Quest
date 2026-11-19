@@ -262,7 +262,7 @@ assert.ok(branchesPage.includes('id="branchName"')&&academicsPage.includes('id="
 assert.ok(departmentsPage.includes('id="appointHod"')&&assignmentsPage.includes('id="assignTeacher"')&&enrolmentsPage.includes('id="enrolStudent"'),"Departments/HOD, teaching assignments and enrolments each have their own module");
 assert.ok(institutionModule.includes("db.createGrade")&&institutionModule.includes("db.createSubject")&&institutionModule.includes("db.createClass")&&institutionModule.includes("db.appointHod"),"Institution modules create academic structures and HOD assignments through tenant-owned records");
 assert.ok(institutionData.includes("examguru_institution_data_v1")&&institutionData.includes("institutions[id]")&&!institutionData.includes("data/classes.json"),"Institution academic structures are stored per institution and do not inherit the platform class catalogue");
-assert.ok(iamStore.includes("membershipId:memberId")&&iamStore.includes("memberId(u.userId,r.role)")&&iamStore.includes("Math.random")&&iamStore.includes("Student account not created")&&iamStore.includes("existing institution"),"Local IAM enforces institution membership and class/cohort requirements for new accounts");
+assert.ok(iamStore.includes("membershipId:memberId")&&iamStore.includes("memberId(u.userId,r.role,r.institutionId)")&&iamStore.includes("Math.random")&&iamStore.includes("Student account not created")&&iamStore.includes("existing institution"),"Local IAM enforces institution membership and class/cohort requirements for new accounts");
 assert.ok(institutionCss.includes("body.eg-theme-dark .io-hero")&&css.includes(".c10-role-switcher"),"Institution workspace and global role switcher follow shared day/night themes");
 new Function(iamStore);
 new Function(iamManager);
