@@ -5,6 +5,9 @@ const branding=fs.readFileSync("css/branding.css","utf8");
 const roleTheme=fs.readFileSync("css/theme-roles-v2.css","utf8");
 const softSpectrum=fs.readFileSync("css/theme-soft-spectrum.css","utf8");
 const nav=fs.readFileSync("js/app-shell.js","utf8");
+const adminManager=fs.readFileSync("js/admin-manager.js","utf8");
+const institutionPage=fs.readFileSync("institution-operations.html","utf8");
+const institutionCss=fs.readFileSync("css/institution-operations.css","utf8");
 const studentAuth=fs.readFileSync("js/student-auth.js","utf8");
 const css=fs.readFileSync("css/app-shell.css","utf8");
 const dashboard=fs.readFileSync("dashboard.html","utf8");
@@ -51,6 +54,16 @@ assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
 assert.ok(nav.includes('auth:"institution"')&&nav.includes('identityV2()')&&nav.includes('role:"institution"'),"institution memberships resolve into a separate navigation role without conflating them with platform Admin");
 assert.ok(nav.includes('institutionRole:membership.role')&&nav.includes('label:"Institution Operations"'),"institution members receive the Institution Operations navigation entry");
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"')&&nav.includes('group:"Assessment tools"'),"admin navigation exposes Exam Paper Studio in a grouped submenu");
+assert.ok(nav.includes('label:"CBSE question review"')&&nav.includes('href:"./admin.html#tab-cbse-review"')&&nav.includes('hash:"#tab-cbse-review"'),"Admin sidebar exposes the CBSE review section as a real tab route");
+assert.ok(nav.includes('label:"Departments & HOD"')&&nav.includes('href:"./admin.html#tab-departments"')&&nav.includes('hash:"#tab-departments"'),"Admin sidebar exposes the department management section as a real tab route");
+for(const tab of ["overview","banks","cbse-review","departments","classes","exam-papers","knowledge","students","leaderboard","access","institution-operations","operations"]){
+  assert.ok(nav.includes('href:"./admin.html#tab-'+tab+'"'),"Admin sidebar route exists for "+tab);
+  assert.ok(adminManager.includes('"'+tab+'"'),"Admin tab controller recognises "+tab);
+}
+assert.ok(adminManager.includes('location.hash=nextHash')&&adminManager.includes('hash.match(/^#tab-([a-z0-9-]+)$/i)')&&adminManager.includes('activePanel.scrollIntoView'),"Admin section navigation supports direct links, browser history and visible section scrolling");
+assert.ok(adminManager.includes('setAttribute("aria-selected",String(active))')&&adminManager.includes('setAttribute("aria-hidden",String(!active))'),"Admin tab state is exposed accessibly to assistive technology");
+assert.ok(institutionPage.includes('./css/institution-operations.css')&&institutionPage.includes('id="createBranch"')&&institutionPage.includes('id="appointBranchAdmin"'),"Institution Operations loads the new responsive UI while preserving operation controls");
+assert.ok(institutionCss.includes('box-sizing:border-box')&&institutionCss.includes('min-width:0')&&institutionCss.includes('@media(max-width:700px)'),"Institution Operations styles prevent input overflow and adapt to mobile widths");
 assert.ok(nav.includes('auth:"parent"')&&nav.includes('href:"./parent.html"')&&nav.includes('group:"Family"'),"parent navigation is isolated to the Family submenu");
 assert.ok(nav.includes('label:"Exam Paper Practice"')&&nav.includes('href:"./exam-practice.html"'),"Class 10 students can open full-paper self-study practice");
 assert.ok(nav.includes('classIds:["6","10"]')&&nav.includes('if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return false;'),
