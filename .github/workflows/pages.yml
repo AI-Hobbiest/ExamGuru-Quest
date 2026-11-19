@@ -167,6 +167,7 @@ jobs:
           cp css/theme-roles-v2.css _site/css/theme-roles-v2.css
           cp css/theme-soft-spectrum.css _site/css/theme-soft-spectrum.css
           cp css/app-shell.css _site/css/app-shell.css
+          cp css/institution-operations.css _site/css/institution-operations.css
           cp css/admin.css _site/css/admin.css
           cp css/question-media.css _site/css/question-media.css
           cp js/storage.js _site/js/storage.js
@@ -460,13 +461,14 @@ jobs:
           for (const asset of ['nephron-filtration.svg','alveolus-gas-exchange.svg','parallel-circuit-6-3.svg','parallel-circuit-4-12.svg','hypermetropia-correction.svg','prism-dispersion-spectrum.svg']) {
             if (!fs.existsSync('_site/assets/exam-papers/science/'+asset)) throw new Error('Science exam diagram is missing from deployment: '+asset);
           }
-          for (const file of ['institution-operations.html','rbac-role-matrix.html','js/m4-operations.js']) {
+          for (const file of ['institution-operations.html','rbac-role-matrix.html','js/m4-operations.js','css/institution-operations.css']) {
             if (!fs.existsSync('_site/'+file)) throw new Error('Institution/RBAC page dependency was not packaged: '+file);
           }
           const institutionPage=fs.readFileSync('_site/institution-operations.html','utf8');
           if (!institutionPage.includes('./js/m4-operations.js') || !institutionPage.includes('./js/app-shell.js')) throw new Error('Institution Operations page is missing its operations controller or shared navigation shell.');
+          if (!institutionPage.includes('./css/institution-operations.css')) throw new Error('Institution Operations page is missing its responsive workspace stylesheet.');
           const admin=fs.readFileSync('_site/admin.html','utf8');
-          for (const required of ['data-tab="banks"','data-tab="classes"','data-tab="knowledge"','data-tab="students"','data-tab="leaderboard"','data-tab="access"','data-tab="operations"']) {
+          for (const required of ['data-tab="banks"','data-tab="cbse-review"','data-tab="departments"','data-tab="classes"','data-tab="knowledge"','data-tab="students"','data-tab="leaderboard"','data-tab="access"','data-tab="operations"','data-tab="exam-papers"','data-tab="institution-operations"']) {
             if (!admin.includes(required)) throw new Error('Admin workspace section missing: '+required);
           }
           if (!admin.includes('./js/admin-manager.js') || !admin.includes('./css/admin.css')) throw new Error('Admin workspace scripts/styles missing.');
