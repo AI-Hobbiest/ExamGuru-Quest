@@ -1,5 +1,5 @@
 (()=>{"use strict";
-const $=id=>document.getElementById(id),state={identity:null};
+const $=id=>document.getElementById(id),state={identity:null},LOCAL_KEY="examguru_m4_local_v1";
 const status=(m,error=false)=>{$("m4Status").textContent=m;$("m4Status").className="status"+(error?" error":"");};
 const list=(id,rows,format)=>{const host=$(id);host.replaceChildren();(rows||[]).forEach(r=>{const d=document.createElement("div");d.className="item";d.textContent=format(r);host.append(d);});if(!rows?.length){const d=document.createElement("div");d.className="item muted";d.textContent="No records yet.";host.append(d);}};
 const run=async fn=>{try{status("Working…");await fn();status("Saved.");}catch(e){status(e.message||"Operation failed.",true);}};
@@ -10,6 +10,29 @@ function isLocalPlatformAdminTest(){
  }catch(_){return false;}
 }
 const currentTestUser="Jayaprakashganathe@gmail.com";
+const catalog={classes:[]};
+function asSelect(id,placeholder){const el=$(id);if(!el||el.tagName==="SELECT")return el;const select=document.createElement("select");select.id=id;select.className=el.className;select.setAttribute("aria-label",el.getAttribute("aria-label")||placeholder);el.replaceWith(select);return select;}
+function fill(id,rows,placeholder,valueFn,labelFn){const el=$(id);if(!el)return;const old=el.value;el.replaceChildren();const first=document.createElement("option");first.value="";first.textContent=placeholder;el.append(first);(rows||[]).forEach(row=>{const o=document.createElement("option");o.value=valueFn(row);o.textContent=labelFn(row);el.append(o);});if((rows||[]).some(x=>String(valueFn(x))===String(old)))el.value=old;}
+function activeUsers(role){return (window.ExamGuruLocalIAM?.users()||[]).filter(u=>(u.roles||[]).some(r=>r.role===role&&r.institutionId==="TEST-INSTITUTION-001"));}
+async function loadCatalog(){try{const res=await fetch("./data/classes.json",{cache:"no-store"});if(res.ok){const data=await res.json();catalog.classes=(data.classes||[]).filter(x=>x.active!==false);}}catch(_){} }
+function refreshSelectors(){
+ const ids=["classBranch","gradeId","teacherMembership","assignmentClass","assignmentSubject","studentMembership","enrollmentClass","parentMembership","linkedStudentMembership","adminBranch","adminMembership"];
+ ids.forEach(id=>asSelect(id,id));asSelect("roleUser","Existing user");
+ fill("classBranch",demo.branches,"Choose branch",x=>x.branchId,x=>x.name+" · "+x.branchId);
+ fill("gradeId",catalog.classes,"Choose grade",x=>x.classId,x=>x.label||("Class "+x.classId));
+ const classes=demo.classes;fill("assignmentClass",classes,"Choose class section",x=>x.classId,x=>x.gradeLabel+" "+x.sectionCode+" · "+x.classId);
+ fill("enrollmentClass",classes,"Choose class section",x=>x.classId,x=>x.gradeLabel+" "+x.sectionCode+" · "+x.classId);
+ const selected=classes.find(x=>x.classId===$("assignmentClass").value)||classes[0];const grade=catalog.classes.find(x=>String(x.classId)===String(selected?.gradeId));
+ const subjects=(grade?.subjects||[]).map(id=>({id,label:id.replace(/-/g," ").replace(/\\b\\w/g,s=>s.toUpperCase())}));fill("assignmentSubject",subjects,"Choose subject",x=>x.id,x=>x.label);
+ const teachers=activeUsers("teacher"),students=activeUsers("student"),parents=activeUsers("parent"),admins=activeUsers("school_admin");
+ fill("teacherMembership",teachers,"Choose teacher",x=>x.userId,x=>x.displayName+" · "+x.userId);
+ fill("studentMembership",students,"Choose student",x=>x.userId,x=>x.displayName+" · "+x.userId);
+ fill("linkedStudentMembership",students,"Choose student",x=>x.userId,x=>x.displayName+" · "+x.userId);
+ fill("parentMembership",parents,"Choose parent",x=>x.userId,x=>x.displayName+" · "+x.userId);
+ fill("adminMembership",admins,"Choose Institution Admin",x=>x.userId,x=>x.displayName+" · "+x.userId);
+ fill("adminBranch",demo.branches,"Choose branch",x=>x.branchId,x=>x.name+" · "+x.branchId);
+ const users=window.ExamGuruLocalIAM?.users()||[];fill("roleUser",users,"Choose existing user",x=>x.username,x=>x.displayName+" · "+x.username);
+}
 const institutionRoleLabels={school_admin:"Institution Admin",teacher:"Teacher",parent:"Parent",student:"Student",institution_viewer:"Institution Viewer"};
 const demo={branches:[],classes:[],assignments:[],enrollments:[],parentLinks:[],branchAdmins:[],roleAssignments:[
  {username:currentTestUser,role:"school_admin",status:"active"},
@@ -18,12 +41,14 @@ const demo={branches:[],classes:[],assignments:[],enrollments:[],parentLinks:[],
  {username:currentTestUser,role:"student",status:"active"},
  {username:currentTestUser,role:"institution_viewer",status:"active"}
 ],activeRole:"platform_admin"};
+try{const saved=JSON.parse(localStorage.getItem(LOCAL_KEY)||"null");if(saved&&saved.schemaVersion===1)Object.assign(demo,saved);}catch(_){}
+const persistDemo=()=>{try{localStorage.setItem(LOCAL_KEY,JSON.stringify({...demo,schemaVersion:1}));return true;}catch(_){return false;}};
 function renderRoleAssignments(){
  const host=$("roleAssignmentList");host.replaceChildren();
- demo.roleAssignments.forEach((a,index)=>{const d=document.createElement("div");d.className="item";d.textContent=a.username+" · "+(institutionRoleLabels[a.role]||a.role)+" · "+a.status;host.append(d);});
+ const directory=window.ExamGuruLocalIAM?.getState();const assignments=(directory?.users||[]).flatMap(u=>(u.roles||[]).filter(r=>r.institutionId==="TEST-INSTITUTION-001").map(r=>({username:u.username,role:r.role,status:u.status})));(assignments.length?assignments:demo.roleAssignments).forEach(a=>{const d=document.createElement("div");d.className="item";d.textContent=a.username+" · "+(institutionRoleLabels[a.role]||a.role)+" · "+a.status;host.append(d);});
  const switcher=$("activeRole");switcher.replaceChildren();
- const own=demo.roleAssignments.filter(a=>a.username.toLowerCase()===currentTestUser.toLowerCase()&&a.status==="active");
- const options=[{value:"platform_admin",label:"Platform Admin (platform scope)"},...own.map(a=>({value:a.role,label:institutionRoleLabels[a.role]}))];
+ const own=(window.ExamGuruLocalIAM?.findUser("USR-PLATFORM-001")?.roles||demo.roleAssignments.filter(a=>a.username.toLowerCase()===currentTestUser.toLowerCase()&&a.status==="active").map(a=>({role:a.role}))).filter(a=>a.role!=="platform_admin");
+ const options=[{value:"platform_admin",label:"Platform Admin (platform scope)"},...own.map(a=>({value:a.role,label:institutionRoleLabels[a.role]||a.role}))];
  options.forEach(x=>{const o=document.createElement("option");o.value=x.value;o.textContent=x.label;switcher.append(o);});
  switcher.value=demo.activeRole;
 }
@@ -80,16 +105,17 @@ function renderDemo(){
  list("enrollmentList",demo.enrollments,x=>"student "+x.studentMembershipId+" · class "+x.classId+" · "+x.academicYear+" · "+x.status);
  list("parentLinkList",demo.parentLinks,x=>x.relationship+" · parent "+x.parentMembershipId+" → student "+x.studentMembershipId+" · "+x.status);
  list("branchAdminList",demo.branchAdmins,x=>x.username+" · "+x.branchId+" · "+x.status);
+ refreshSelectors();
 }
 function initLocalPlatformAdminTest(){
  state.identity={user:{username:"Jayaprakashganathe@gmail.com"},platformRoles:["platform_admin"],memberships:[{membershipId:"TEST-INSTITUTION-001",institutionId:"TEST-INSTITUTION-001",institutionName:"Demo Academy (test only)",role:"school_admin"}],context:{membershipId:"TEST-INSTITUTION-001"}};
  const select=$("m4Membership");select.replaceChildren();
  const o=document.createElement("option");o.value="TEST-INSTITUTION-001";o.textContent="Demo Academy (test only) · school_admin";select.append(o);
  const banner=document.createElement("div");banner.className="status";banner.style.cssText="background:#fff4d8;color:#684900;border:1px solid #e7c76a";
- banner.textContent="LOCAL RBAC TEST MODE — signed in as the mapped Platform Admin. Demo records exist only in this browser tab and are discarded on refresh. This is not production authentication or a real institution.";
+ banner.textContent="LOCAL RBAC TEST MODE — signed in as the mapped Platform Admin. Demo records and test directory entries persist in this browser only. They are not production authentication and are not shared across browsers or devices.";
  $("m4Status").replaceWith(banner);banner.id="m4Status";
  try{const saved=sessionStorage.getItem("examguru_rbac_test_role_v1");if(["platform_admin","school_admin","teacher","parent","student","institution_viewer"].includes(saved))demo.activeRole=saved;}catch(_){}
- renderRoleAssignments();applyLocalPersonaAccess();
+ renderRoleAssignments();applyLocalPersonaAccess();refreshSelectors();
  $("activeRole").addEventListener("change",()=>{demo.activeRole=$("activeRole").value;state.identity.context.role=demo.activeRole;try{sessionStorage.setItem("examguru_rbac_test_role_v1",demo.activeRole);}catch(_){}applyLocalPersonaAccess();status("Test persona switched to "+(demo.activeRole==="platform_admin"?"Platform Admin":institutionRoleLabels[demo.activeRole])+". Local preview only; this is not an authenticated role change.");});
  $("assignInstitutionRole").addEventListener("click",()=>{
   const actor=demo.activeRole,target=$("roleUser").value.trim(),role=$("institutionRole").value;
@@ -97,10 +123,9 @@ function initLocalPlatformAdminTest(){
   if(actor!=="platform_admin"&&actor!=="school_admin")return status("Only Platform Admin or Institution Admin can assign institution roles in this test.",true);
   if(actor==="school_admin"&&role==="school_admin")return status("Only Platform Admin can appoint another Institution Admin.",true);
   if(demo.roleAssignments.some(a=>a.username.toLowerCase()===target.toLowerCase()&&a.role===role&&a.status==="active"))return status("That account already has this active role in Demo Academy.",true);
-  demo.roleAssignments.push({username:target,role,status:"active"});
-  renderRoleAssignments();status((actor==="platform_admin"?"Platform Admin":"Institution Admin")+" assigned "+institutionRoleLabels[role]+" to "+target+". Local demo only.");
+  const user=(window.ExamGuruLocalIAM?.users()||[]).find(u=>u.username.toLowerCase()===target.toLowerCase());if(!user)throw Error("Choose a user already created in User Management.");window.ExamGuruLocalIAM.assignRole(user.userId,role,"TEST-INSTITUTION-001");demo.roleAssignments.push({username:target,role,status:"active"});persistDemo();renderRoleAssignments();refreshSelectors();status((actor==="platform_admin"?"Platform Admin":"Institution Admin")+" assigned "+institutionRoleLabels[role]+" to "+target+". Saved in this browser only.");
  });
- const add=(id,fn)=>$(id).addEventListener("click",()=>{try{fn();renderDemo();status("Demo action completed. Changes are temporary and not saved to a server.");}catch(e){status(e.message||"Demo action failed.",true);}});
+ const add=(id,fn)=>$(id).addEventListener("click",()=>{try{fn();persistDemo();renderDemo();refreshSelectors();status("Demo action saved in this browser. It is not uploaded to a server.");}catch(e){status(e.message||"Demo action failed.",true);}});
  add("m4Refresh",renderDemo);
  add("createBranch",()=>{if(!$("branchName").value.trim()||!$("branchCode").value.trim())throw Error("Enter a branch name and code.");demo.branches.push({name:$("branchName").value.trim(),code:$("branchCode").value.trim(),branchId:"DEMO-BR-"+(demo.branches.length+1),status:"active"});});
  add("createClass",()=>{if(!$("classBranch").value.trim()||!$("gradeId").value.trim()||!$("sectionCode").value.trim())throw Error("Enter branch, grade and section.");demo.classes.push({branchId:$("classBranch").value.trim(),gradeLabel:"Grade "+$("gradeId").value.trim(),sectionCode:$("sectionCode").value.trim(),academicYear:$("academicYear").value.trim(),classId:"DEMO-CLASS-"+(demo.classes.length+1)});});
@@ -112,7 +137,7 @@ function initLocalPlatformAdminTest(){
  renderDemo();
 }
 async function load(){
- if(isLocalPlatformAdminTest()){initLocalPlatformAdminTest();return;}
+ if(isLocalPlatformAdminTest()){await loadCatalog();initLocalPlatformAdminTest();return;}
  if(!window.C10Api?.isAuthenticated())throw Error("Sign in with the central account service first.");
  const data=await C10Api.identityV2();state.identity=data.identity;
  const select=$("m4Membership");select.replaceChildren();
