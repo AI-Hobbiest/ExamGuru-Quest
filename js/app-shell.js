@@ -157,6 +157,7 @@
     return {role:"student",username:student.username,classId:String(student.classId||"")};
   }
   async function configuredSubjects(classId){
+    if(/^(CLS|COHORT)-/i.test(String(classId||"")))return {configured:true,subjects:[],label:"Institution curriculum not mapped"};
     try{
       const response=await fetch("./data/classes.json",{cache:"no-store"});
       if(!response.ok)return null;
@@ -332,6 +333,7 @@
     }
     const scrim=node("button","c10-nav-scrim");scrim.type="button";scrim.setAttribute("aria-label","Close navigation menu");scrim.addEventListener("click",closeMenu);
     document.body.prepend(sidebar);document.body.prepend(mobileBar);document.body.prepend(scrim);document.body.classList.add("c10-shell-ready");
+    if(auth.role==="student"&&subjectConfig?.configured&&!subjectConfig.subjects.length&&current.file==="dashboard.html"){const banner=node("div","c10-access-notice","Your institution has assigned a class/cohort, but it has not yet mapped a platform learning-content profile. Ask your Institution Admin to complete the mapping in Academic Structure.");banner.setAttribute("role","status");banner.style.cssText="position:relative;margin:18px auto;width:min(900px,calc(100% - 28px));padding:14px 18px;border:1px solid #d5a54a;border-radius:12px;background:#fff4d8;color:#654600;font-weight:700";document.body.appendChild(banner);}
     try{const notice=sessionStorage.getItem("examguru_student_access_notice_v1");if(notice&&current.file==="admin.html"){const banner=node("div","c10-access-notice",notice);banner.setAttribute("role","status");banner.style.cssText="position:fixed;z-index:10020;top:76px;left:50%;transform:translateX(-50%);width:min(760px,calc(100% - 28px));padding:14px 18px;border:1px solid #d5a54a;border-radius:12px;background:#fff4d8;color:#654600;box-shadow:0 10px 30px rgba(0,0,0,.14);font-weight:700";document.body.appendChild(banner);sessionStorage.removeItem("examguru_student_access_notice_v1");}}catch(_){}
 
     if(subjectConfig)applyConfiguredSubjectVisibility(subjectConfig);
