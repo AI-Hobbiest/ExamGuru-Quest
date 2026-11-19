@@ -251,13 +251,13 @@ assert.ok(nav.includes('current.file==="user-management.html"'),"User Management
 assert.ok(admin.includes("Release &amp; maintenance")&&!admin.includes("Institution operations (M4)</strong>"),"Release operations are separated from Institution Operations and Exam Paper Studio");
 assert.ok(iamStore.includes("examguru_iam_local_v1")&&iamStore.includes("localStorage")&&iamStore.includes("createUser")&&iamStore.includes("assignRole"),"Local IAM directory persists user identities and role assignments in the browser");
 assert.ok(iamManager.includes("iam.createUser")&&iamManager.includes("iam.assignRole")&&iamManager.includes("iam.setStatus")&&iamManager.includes("iamInitialRole"),"IAM UI supports one-step local user creation with an initial role, role assignment and account status changes");
-assert.ok(iamPage.includes("./js/iam-local-store.js")&&iamPage.includes("./js/iam-user-management.js"),"User Management page loads the local IAM directory and UI");
+assert.ok(iamPage.includes("./js/iam-local-store.js")&&iamPage.includes("./js/iam-user-management.js")&&iamPage.includes('value="platform_admin"'),"User Management page loads local IAM and exposes both platform and institution roles");
 for(const id of ["roleUser","classBranch","gradeId","teacherMembership","assignmentClass","assignmentSubject","studentMembership","enrollmentClass","parentMembership","linkedStudentMembership","adminBranch","adminMembership"]){
   assert.ok(new RegExp('<select id="'+id+'"').test(institutionPage),"Institution Operations uses a select for "+id);
   assert.ok(!new RegExp('<input[^>]*id="'+id+'"').test(institutionPage),"Institution Operations does not expose free text for "+id);
 }
-assert.ok(m4Operations.includes("examguru_m4_local_v1")&&m4Operations.includes("persistDemo")&&m4Operations.includes("data/classes.json")&&m4Operations.includes("gradeId:String(grade.classId)"),"M4 operations data persists locally and binds grade/subject options to the class catalogue");
-assert.ok(iamStore.includes("membershipId:memberId")&&iamStore.includes("memberId(u.userId,r.role)"),"Local IAM role assignments receive stable membership IDs for record selectors");
+assert.ok(m4Operations.includes("examguru_m4_local_v1")&&m4Operations.includes("persistDemo")&&m4Operations.includes("data/classes.json")&&m4Operations.includes("gradeId:String(grade.classId)")&&m4Operations.includes('membershipId(x,"student")'),"M4 operations data persists locally and binds class, subject and student membership selectors to existing records");
+assert.ok(iamStore.includes("membershipId:memberId")&&iamStore.includes("memberId(u.userId,r.role)")&&iamStore.includes("Math.random"),"Local IAM role assignments receive stable membership IDs and unique local user IDs");
 assert.ok(institutionCss.includes("body.eg-theme-dark .io-hero")&&css.includes(".c10-role-switcher"),"Institution workspace and global role switcher follow shared day/night themes");
 new Function(iamStore);
 new Function(iamManager);
