@@ -14,7 +14,7 @@
 <main class="wrap io-wrap">
   <section class="hero io-hero">
     <nav class="io-breadcrumbs" aria-label="Breadcrumb">
-      <a href="./admin.html#tab-overview">Admin Workspace</a>
+      <a href="./user-management.html">User Management</a>
       <span aria-hidden="true">/</span>
       <a href="./rbac-role-matrix.html">Role Experience Matrix</a>
     </nav>
@@ -67,8 +67,8 @@
       <div><h2>Class sections</h2><p>Set up a grade and section within an existing branch and academic year.</p></div>
     </div>
     <div class="grid">
-      <div class="field"><label for="classBranch">Branch ID</label><input id="classBranch" type="text" placeholder="Select or enter branch ID"></div>
-      <div class="field"><label for="gradeId">Grade ID · existing grade catalogue</label><input id="gradeId" type="text" placeholder="e.g. 6"></div>
+      <div class="field"><label for="classBranch">Branch</label><input id="classBranch" type="text" placeholder="Choose an existing branch"></div>
+      <div class="field"><label for="gradeId">Grade</label><input id="gradeId" type="text" placeholder="Choose an existing grade"></div>
       <div class="field"><label for="sectionCode">Section</label><input id="sectionCode" type="text" placeholder="e.g. A"></div>
       <div class="field"><label for="academicYear">Academic year</label><input id="academicYear" type="text" placeholder="2026-27"></div>
     </div>
@@ -82,9 +82,9 @@
       <div><h2>Teacher assignments</h2><p>Connect a teacher membership to a class and subject.</p></div>
     </div>
     <div class="grid">
-      <div class="field"><label for="teacherMembership">Teacher membership ID</label><input id="teacherMembership" type="text" placeholder="Teacher membership ID"></div>
-      <div class="field"><label for="assignmentClass">Class ID</label><input id="assignmentClass" type="text" placeholder="Class section ID"></div>
-      <div class="field"><label for="assignmentSubject">Subject ID</label><input id="assignmentSubject" type="text" placeholder="e.g. mathematics"></div>
+      <div class="field"><label for="teacherMembership">Teacher</label><input id="teacherMembership" type="text" placeholder="Choose an existing teacher"></div>
+      <div class="field"><label for="assignmentClass">Class section</label><input id="assignmentClass" type="text" placeholder="Choose an existing class section"></div>
+      <div class="field"><label for="assignmentSubject">Subject</label><input id="assignmentSubject" type="text" placeholder="Choose a subject available to this class"></div>
     </div>
     <div class="io-actions"><button class="btn" id="assignTeacher" type="button">＋ Assign teacher</button></div>
     <div id="assignmentList" class="list" aria-live="polite"></div>
@@ -96,8 +96,8 @@
       <div><h2>Student enrolments</h2><p>Enrol a student membership into a class for the selected academic year.</p></div>
     </div>
     <div class="grid">
-      <div class="field"><label for="studentMembership">Student membership ID</label><input id="studentMembership" type="text" placeholder="Student membership ID"></div>
-      <div class="field"><label for="enrollmentClass">Class ID</label><input id="enrollmentClass" type="text" placeholder="Class section ID"></div>
+      <div class="field"><label for="studentMembership">Student</label><input id="studentMembership" type="text" placeholder="Choose an existing student"></div>
+      <div class="field"><label for="enrollmentClass">Class section</label><input id="enrollmentClass" type="text" placeholder="Choose an existing class section"></div>
       <div class="field"><label for="enrollmentYear">Academic year</label><input id="enrollmentYear" type="text" placeholder="2026-27"></div>
     </div>
     <div class="io-actions"><button class="btn" id="enrollStudent" type="button">＋ Enrol student</button></div>
@@ -110,8 +110,8 @@
       <div><h2>Parent / guardian links</h2><p>Visible and manageable by School Admin only. Link a parent membership to a student membership.</p></div>
     </div>
     <div class="grid">
-      <div class="field"><label for="parentMembership">Parent membership ID</label><input id="parentMembership" type="text" placeholder="Parent membership ID"></div>
-      <div class="field"><label for="linkedStudentMembership">Student membership ID</label><input id="linkedStudentMembership" type="text" placeholder="Student membership ID"></div>
+      <div class="field"><label for="parentMembership">Parent / guardian</label><input id="parentMembership" type="text" placeholder="Choose an existing parent"></div>
+      <div class="field"><label for="linkedStudentMembership">Student</label><input id="linkedStudentMembership" type="text" placeholder="Choose an existing student"></div>
       <div class="field"><label for="relationship">Relationship</label><input id="relationship" type="text" value="parent/guardian" maxlength="60"></div>
     </div>
     <div class="io-actions"><button class="btn" id="linkParent" type="button">＋ Create guardian link</button></div>
@@ -124,7 +124,7 @@
       <div><h2>Delegated branch administrators</h2><p>School Admin can appoint an active teacher or institution-viewer membership to administer one branch.</p></div>
     </div>
     <div class="grid">
-      <div class="field"><label for="adminBranch">Branch ID</label><input id="adminBranch" type="text" placeholder="Branch ID"></div>
+      <div class="field"><label for="adminBranch">Branch</label><input id="adminBranch" type="text" placeholder="Choose an existing branch"></div>
       <div class="field"><label for="adminMembership">Membership ID</label><input id="adminMembership" type="text" placeholder="Membership ID"></div>
     </div>
     <div class="io-actions"><button class="btn" id="appointBranchAdmin" type="button">＋ Appoint branch administrator</button></div>
@@ -133,7 +133,8 @@
 </main>
 <script src="./js/api-config.js"></script>
 <script src="./js/api-client.js"></script>
-<script src="./js/m4-operations.js"></script>
+<script src="./js/iam-local-store.js?v=20261119-iam-v1"></script>
+<script src="./js/m4-operations.js?v=20261119-iam-v1"></script>
 <script src="./js/app-shell.js?v=20261119-institution-ops-shell-v2"></script>
 </body>
 </html>
