@@ -55,8 +55,8 @@ assert.ok(nav.includes('auth:"institution"')&&nav.includes('identityV2()')&&nav.
 assert.ok(nav.includes('institutionRole:membership.role')&&nav.includes('label:"Institution Operations"'),"institution members receive the Institution Operations navigation entry");
 assert.ok(nav.includes('label:"Exam Paper Studio"')&&nav.includes('href:"./admin.html#tab-exam-papers"')&&nav.includes('group:"Assessment tools"'),"admin navigation exposes Exam Paper Studio in a grouped submenu");
 assert.ok(nav.includes('label:"CBSE question review"')&&nav.includes('href:"./admin.html#tab-cbse-review"')&&nav.includes('hash:"#tab-cbse-review"'),"Admin sidebar exposes the CBSE review section as a real tab route");
-assert.ok(nav.includes('label:"Departments & HOD"')&&nav.includes('href:"./admin.html#tab-departments"')&&nav.includes('hash:"#tab-departments"'),"Admin sidebar exposes the department management section as a real tab route");
-for(const tab of ["overview","banks","cbse-review","departments","classes","exam-papers","knowledge","students","leaderboard","access","operations"]){
+assert.ok(institutionPage.includes("./institution-departments.html")&&nav.includes('href:"./institution-departments.html"'),"Departments & HOD is routed through the Institution Operations module, not the platform Admin tabs");
+for(const tab of ["overview","banks","cbse-review","classes","exam-papers","knowledge","students","leaderboard","access","operations"]){
   assert.ok(nav.includes('href:"./admin.html#tab-'+tab+'"'),"Admin sidebar route exists for "+tab);
   assert.ok(adminManager.includes('"'+tab+'"'),"Admin tab controller recognises "+tab);
 }
