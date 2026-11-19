@@ -31,6 +31,10 @@ Integrate the existing ExamGuru experiences behind consistent LMS application bo
 - Existing local profile, attempt ledger, answer records, XP/learning state, import/export and backup compatibility.
 - Existing static GitHub Pages portal and all current public routes.
 
+## Baseline evidence
+
+The M5.0 route, contract, persistence, RBAC-truth and CI inventory is recorded in [M5 baseline compatibility audit](./m5-baseline-compatibility-audit.md). The audit explicitly records which repository contracts exist today and which architecture responsibilities are still not implemented as executable interfaces. Runtime integration must follow the call-site mapping described there.
+
 ## Work packages
 
 ### M5.0 — Baseline inventory and compatibility map
