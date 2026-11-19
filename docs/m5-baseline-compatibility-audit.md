@@ -137,3 +137,7 @@ No application runtime files or student data were changed to produce this invent
 - Added `tests/lms-application-services.test.js` and a dedicated quiz-quality workflow gate for the new boundary.
 - This slice is deliberately provider-neutral and testable without browser storage or Cloudflare. The existing page engines remain the compatibility-facing runtime; no wholesale page migration or new production content repository is claimed.
 - Local learner persistence and the assessment manager remain browser-local. No sync adapter, D1, Worker, API base or deployment setting was changed.
+
+- The shared assessment lifecycle is now exposed as `C10AssessmentService`; `C10AssessmentManager` remains an identical compatibility alias. Parent assessment composition, assigned MCQ/paper attempts, assigned-test dashboard, learner dashboard and self-study paper flows now call the service name while preserving the underlying manager implementation and record formats.
+- Institution Content Studio now loads `C10Storage` before its local content adapter. Its existing `examguru_institution_content_v1` key is retained as a one-way migration source; the versioned `institution-content/all` envelope preserves the complete tenant map and current public store API.
+- Added a migration/CRUD regression fixture for institution content, including tenant selection, draft creation, publishing and preservation of the legacy bank.
