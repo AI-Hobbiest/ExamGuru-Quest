@@ -270,6 +270,8 @@ new Function(institutionModule);
 new Function(institutionData);
 
 assert.ok(nav.includes("student_pending")&&nav.includes("Student access is not ready")&&nav.includes("Exit preview"),"Unassigned Student role is blocked with an explicit class/cohort requirement and a clear exit-preview action");
+assert.ok(nav.includes('const isPreviewSession=auth.localTestMode&&auth.role!=="admin"')&&nav.includes('isPreviewSession?"↩ Exit preview":"↪ Sign out"'),"Platform Admin sees Sign out while non-admin local role previews retain Exit preview");
+assert.ok(nav.includes("if(isPreviewSession){")&&nav.includes('sessionStorage.removeItem("examguru_mvp_admin_session_v1")')&&nav.includes('location.replace(clatExperience?"./clat-login.html":"./index.html")'),"Admin sign-out clears the admin/API session and returns to the shared login page instead of merely exiting preview");
 assert.ok(nav.includes('label:"Institution Admin · "+i.name+" (preview)"')&&nav.includes("examguru_active_institution_v1"),"Platform Admin can preview Institution Admin workspace separately for each institution");
 assert.ok(iamPage.includes("iamDownloadCsv")&&iamPage.includes("iamDownloadXlsx")&&iamPage.includes("iamBulkFile")&&iamPage.includes("ExamGuru Direct Learning"),"User Management provides CSV/XLSX templates and a direct-learning institution");
 assert.ok(iamStore.includes("institutionType")&&iamStore.includes("direct")&&iamStore.includes("entrance")&&iamStore.includes("coaching"),"Institution directory supports school, direct, entrance and coaching tenant categories");
