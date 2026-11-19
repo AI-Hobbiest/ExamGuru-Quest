@@ -113,7 +113,7 @@
         if(admin.rbacTestMode==="local-platform-admin"){
           const preview=sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin";
           if(preview==="platform_admin")return {role:"admin",username:admin.username,localTestMode:true};
-          if(["school_admin","teacher","institution_viewer"].includes(preview))return {role:"institution",institutionRole:preview,institutionId:"TEST-INSTITUTION-001",membershipId:"TEST-INSTITUTION-001",username:admin.username,localTestMode:true};
+          if(["school_admin","teacher","institution_viewer"].includes(preview)){let membership=null;try{const directory=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null"),user=(directory?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(admin.username||"").toLowerCase());membership=(user?.roles||[]).find(r=>r.role===preview&&r.institutionId);}catch(_){}const institutionId=membership?.institutionId||"TEST-INSTITUTION-001";try{sessionStorage.setItem("examguru_active_institution_v1",institutionId);}catch(_){}return {role:"institution",institutionRole:preview,institutionId,membershipId:membership?.membershipId||"TEST-INSTITUTION-001",username:admin.username,localTestMode:true};}
           if(preview==="parent")return {role:"parent",username:admin.username,displayName:"Local Parent Preview",localTestMode:true};
           if(preview==="student"){let studentRole=null;try{const directory=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null"),user=(directory?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(admin.username||"").toLowerCase());studentRole=(user?.roles||[]).find(r=>r.role==="student"&&r.institutionId==="TEST-INSTITUTION-001");}catch(_){}return studentRole?.classId?{role:"student",username:"Local Student Preview",classId:String(studentRole.classId),localTestMode:true}:{role:"student_pending",username:admin.username,localTestMode:true};}
         }
@@ -330,6 +330,8 @@
     }
     const scrim=node("button","c10-nav-scrim");scrim.type="button";scrim.setAttribute("aria-label","Close navigation menu");scrim.addEventListener("click",closeMenu);
     document.body.prepend(sidebar);document.body.prepend(mobileBar);document.body.prepend(scrim);document.body.classList.add("c10-shell-ready");
+    try{const notice=sessionStorage.getItem("examguru_student_access_notice_v1");if(notice&&current.file==="admin.html"){const banner=node("div","c10-access-notice",notice);banner.setAttribute("role","status");banner.style.cssText="position:fixed;z-index:10020;top:76px;left:50%;transform:translateX(-50%);width:min(760px,calc(100% - 28px));padding:14px 18px;border:1px solid #d5a54a;border-radius:12px;background:#fff4d8;color:#654600;box-shadow:0 10px 30px rgba(0,0,0,.14);font-weight:700";document.body.appendChild(banner);sessionStorage.removeItem("examguru_student_access_notice_v1");}}catch(_){}
+
     if(subjectConfig)applyConfiguredSubjectVisibility(subjectConfig);
     window.addEventListener("keydown",event=>{if(event.key==="Escape")closeMenu();});
     window.addEventListener("hashchange",()=>{if(sidebar.classList.contains("open"))closeMenu();applySectionFocus();});
