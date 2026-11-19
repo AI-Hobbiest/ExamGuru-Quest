@@ -21,7 +21,7 @@ function refresh(){
  showList("branchList",s.branches,x=>x.name+" · "+x.code+" · "+x.branchId);
  showList("gradeList",s.grades,x=>x.name+" · "+x.code+" · "+x.gradeId);
  showList("subjectList",s.subjects,x=>x.name+" · "+x.code+" · "+x.subjectId);
- showList("classList",s.classes,x=>x.name+" · "+x.classType+" · "+x.classId+" · "+(x.academicYear||""));
+ showList("classList",s.classes,x=>x.name+" · "+x.classType+" · "+x.classId+" · "+(x.academicYear||"")+" · Content profile: "+(x.contentClassId||"not mapped"));
  showList("departmentList",s.departments,x=>x.name+" · "+x.code+" · HOD: "+(x.hodMembershipId||"Not appointed"));
  showList("departmentMembers",db.departments().find(x=>x.departmentId===$("departmentSelect")?.value)?.memberIds?.map(id=>({id,hod:id===db.departments().find(x=>x.departmentId===$("departmentSelect").value)?.hodMembershipId}))||[],x=>x.id+(x.hod?" · HOD":""));
  showList("assignmentList",s.assignments,x=>x.teacherMembershipId+" → "+x.classId+" · "+x.subjectId);
