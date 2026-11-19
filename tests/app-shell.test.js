@@ -240,3 +240,24 @@ assert.ok(pyqScript.includes("Open PDF")&&pyqScript.includes("Download PDF")&&py
 assert.ok(pyqScript.includes("paperDownloadError")&&pyqScript.includes("Open official CBSE ZIP package")&&pyqScript.includes("!(withheld||[]).length"),"temporary extraction failures keep a source ZIP fallback but never bypass rights-review withholding");
 assert.ok(accessScript.includes('page==="pyq-library.html"')&&accessScript.includes('class10Route&&String(session.classId||"")!=="10"'),"PYQ library route is restricted to Class 10 students");
 new Function(pyqScript);
+
+const iamStore=fs.readFileSync("js/iam-local-store.js","utf8");
+const iamManager=fs.readFileSync("js/iam-user-management.js","utf8");
+const iamPage=fs.readFileSync("user-management.html","utf8");
+const m4Operations=fs.readFileSync("js/m4-operations.js","utf8");
+assert.ok(nav.includes('label:"User Management"')&&nav.includes('href:"./user-management.html"'),"Platform and Institution Admin navigation exposes the IAM module");
+assert.ok(nav.includes("c10RoleSwitcher")&&nav.includes("examguru_rbac_test_role_v1")&&nav.includes("examguru_active_workspace_v1"),"Multi-role users can switch workspaces from the persistent shared top bar");
+assert.ok(nav.includes('current.file==="user-management.html"'),"User Management route is guarded to Platform Admin and Institution Admin");
+assert.ok(admin.includes("Release &amp; maintenance")&&!admin.includes("Institution operations (M4)</strong>"),"Release operations are separated from Institution Operations and Exam Paper Studio");
+assert.ok(iamStore.includes("examguru_iam_local_v1")&&iamStore.includes("localStorage")&&iamStore.includes("createUser")&&iamStore.includes("assignRole"),"Local IAM directory persists user identities and role assignments in the browser");
+assert.ok(iamManager.includes("iam.createUser")&&iamManager.includes("iam.assignRole")&&iamManager.includes("iam.setStatus"),"IAM UI supports user creation, role assignment and account status changes");
+assert.ok(iamPage.includes("./js/iam-local-store.js")&&iamPage.includes("./js/iam-user-management.js"),"User Management page loads the local IAM directory and UI");
+for(const id of ["roleUser","classBranch","gradeId","teacherMembership","assignmentClass","assignmentSubject","studentMembership","enrollmentClass","parentMembership","linkedStudentMembership","adminBranch","adminMembership"]){
+  assert.ok(new RegExp('<select id="'+id+'"').test(institutionPage),"Institution Operations uses a select for "+id);
+  assert.ok(!new RegExp('<input[^>]*id="'+id+'"').test(institutionPage),"Institution Operations does not expose free text for "+id);
+}
+assert.ok(m4Operations.includes("examguru_m4_local_v1")&&m4Operations.includes("persistDemo")&&m4Operations.includes("data/classes.json"),"M4 operations data persists locally and binds grade/subject options to the class catalogue");
+assert.ok(institutionCss.includes("body.eg-theme-dark .io-hero")&&css.includes(".c10-role-switcher"),"Institution workspace and global role switcher follow shared day/night themes");
+new Function(iamStore);
+new Function(iamManager);
+new Function(m4Operations);
