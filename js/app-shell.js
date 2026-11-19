@@ -301,7 +301,7 @@
     if(auth.localTestMode||workspaceOptions.length>1){
       const switcher=node("select","c10-role-switcher");switcher.id="c10RoleSwitcher";switcher.setAttribute("aria-label","Switch active workspace");
       workspaceOptions.forEach(w=>{const option=node("option","",w.label);option.value=w.key;switcher.append(option);});
-      const localRole=sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin",localInstitution=sessionStorage.getItem("examguru_active_institution_v1")||"TEST-INSTITUTION-001";const currentKey=auth.localTestMode?(localRole==="school_admin"?"school_admin@"+localInstitution:localRole):(sessionStorage.getItem("examguru_active_workspace_v1")||(auth.role==="admin"?"platform_admin":"institution:"+String(auth.membershipId||"")));
+      const localRole=sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin",localInstitution=sessionStorage.getItem("examguru_active_institution_v1")||"TEST-INSTITUTION-001";const currentKey=auth.localTestMode?(localRole==="platform_admin"?"platform_admin":localRole+"@"+localInstitution):(sessionStorage.getItem("examguru_active_workspace_v1")||(auth.role==="admin"?"platform_admin":"institution:"+String(auth.membershipId||"")));
       switcher.value=workspaceOptions.some(w=>w.key===currentKey)?currentKey:(workspaceOptions[0]?.key||"");
       switcher.addEventListener("change",async()=>{const selected=workspaceOptions.find(w=>w.key===switcher.value);if(!selected)return;
         if(auth.localTestMode){try{const role=selected.institutionRole||selected.key;sessionStorage.setItem("examguru_rbac_test_role_v1",role);if(selected.institutionId)sessionStorage.setItem("examguru_active_institution_v1",selected.institutionId);}catch(_){}}
