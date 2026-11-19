@@ -449,8 +449,11 @@
       row.status = "completed"; row.activeAttemptId = null; row.updatedAt = attempt.submittedAt;
     });
   }
-  window.C10AssessmentManager = Object.freeze({
+  const assessmentService = Object.freeze({
     key: KEY, bankPath, buildQuestionPool, selectQuestions, createMcqAssignment, createPaperAssignment,
     listForStudent, listForParent, analyticsAttemptsForStudent, get, start, submit, startPaper, submitPaper, recordPaperEvaluation
   });
+  // New application-facing name; keep the old global as a compatibility alias.
+  window.C10AssessmentService = assessmentService;
+  window.C10AssessmentManager = assessmentService;
 })();
