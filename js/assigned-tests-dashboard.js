@@ -2,7 +2,7 @@
 (() => {
   "use strict";
   const root=document.getElementById("assignedTestList");
-  if(!root||!window.C10AssessmentManager||!window.C10StudentAuth)return;
+  if(!root||!window.C10AssessmentService||!window.C10StudentAuth)return;
   const esc=value=>String(value==null?"":value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   async function render(){
     const student=await window.C10StudentAuth.restoreSession();
@@ -17,7 +17,7 @@
       const link=document.createElement("a");link.className="btn";link.href="./exam-practice.html?delivery=latest";link.textContent="Start prepared paper";
       card.append(title,meta,state,link);root.appendChild(card);
     }
-    const rows=window.C10AssessmentManager.listForStudent(student.studentId);
+    const rows=window.C10AssessmentService.listForStudent(student.studentId);
     if(!rows.length&&!prepared){root.textContent="No tests have been assigned yet. Your Parent/Teacher can create a test from your recent study topics.";return;}
     rows.forEach(item=>{
       const card=document.createElement("article");card.className="assigned-test-card";
