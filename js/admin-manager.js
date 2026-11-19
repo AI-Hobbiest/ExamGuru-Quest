@@ -158,7 +158,7 @@
     if(options.scroll&&activePanel)activePanel.scrollIntoView({block:"start",behavior:"auto"});
     if(name==="leaderboard")renderLeaderboard();
     if(name==="students")renderStudents();
-    document.documentElement.dataset.adminTab=name;
+    if(document.documentElement&&document.documentElement.dataset)document.documentElement.dataset.adminTab=name;
   }
   function initTabs(){
     const buttons=Array.from(document.querySelectorAll(".admin-tab-button"));
