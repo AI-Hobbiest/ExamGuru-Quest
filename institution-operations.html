@@ -39,7 +39,7 @@
       <div><h2>People &amp; role assignments</h2><p>Assign institution-scoped roles. Platform roles remain separate and cannot be granted from this workspace.</p></div>
     </div>
     <div class="grid">
-      <div class="field"><label for="roleUser">Account username / email</label><input id="roleUser" type="text" autocomplete="off" value="Jayaprakashganathe@gmail.com" maxlength="160" placeholder="name@example.com"></div>
+      <div class="field"><label for="roleUser">Account username / email</label><select id="roleUser"></select></div>
       <div class="field"><label for="institutionRole">Institution role to add</label><select id="institutionRole"><option value="school_admin">Institution Admin</option><option value="teacher">Teacher</option><option value="parent">Parent</option><option value="student">Student</option><option value="institution_viewer">Institution Viewer</option></select></div>
     </div>
     <div class="io-actions"><button class="btn" id="assignInstitutionRole" type="button">＋ Assign institution role</button></div>
@@ -67,8 +67,8 @@
       <div><h2>Class sections</h2><p>Set up a grade and section within an existing branch and academic year.</p></div>
     </div>
     <div class="grid">
-      <div class="field"><label for="classBranch">Branch</label><input id="classBranch" type="text" placeholder="Choose an existing branch"></div>
-      <div class="field"><label for="gradeId">Grade</label><input id="gradeId" type="text" placeholder="Choose an existing grade"></div>
+      <div class="field"><label for="classBranch">Branch</label><select id="classBranch"></select></div>
+      <div class="field"><label for="gradeId">Grade</label><select id="gradeId"></select></div>
       <div class="field"><label for="sectionCode">Section</label><input id="sectionCode" type="text" placeholder="e.g. A"></div>
       <div class="field"><label for="academicYear">Academic year</label><input id="academicYear" type="text" placeholder="2026-27"></div>
     </div>
@@ -82,9 +82,9 @@
       <div><h2>Teacher assignments</h2><p>Connect a teacher membership to a class and subject.</p></div>
     </div>
     <div class="grid">
-      <div class="field"><label for="teacherMembership">Teacher</label><input id="teacherMembership" type="text" placeholder="Choose an existing teacher"></div>
-      <div class="field"><label for="assignmentClass">Class section</label><input id="assignmentClass" type="text" placeholder="Choose an existing class section"></div>
-      <div class="field"><label for="assignmentSubject">Subject</label><input id="assignmentSubject" type="text" placeholder="Choose a subject available to this class"></div>
+      <div class="field"><label for="teacherMembership">Teacher</label><select id="teacherMembership"></select></div>
+      <div class="field"><label for="assignmentClass">Class section</label><select id="assignmentClass"></select></div>
+      <div class="field"><label for="assignmentSubject">Subject</label><select id="assignmentSubject"></select></div>
     </div>
     <div class="io-actions"><button class="btn" id="assignTeacher" type="button">＋ Assign teacher</button></div>
     <div id="assignmentList" class="list" aria-live="polite"></div>
@@ -96,8 +96,8 @@
       <div><h2>Student enrolments</h2><p>Enrol a student membership into a class for the selected academic year.</p></div>
     </div>
     <div class="grid">
-      <div class="field"><label for="studentMembership">Student</label><input id="studentMembership" type="text" placeholder="Choose an existing student"></div>
-      <div class="field"><label for="enrollmentClass">Class section</label><input id="enrollmentClass" type="text" placeholder="Choose an existing class section"></div>
+      <div class="field"><label for="studentMembership">Student</label><select id="studentMembership"></select></div>
+      <div class="field"><label for="enrollmentClass">Class section</label><select id="enrollmentClass"></select></div>
       <div class="field"><label for="enrollmentYear">Academic year</label><input id="enrollmentYear" type="text" placeholder="2026-27"></div>
     </div>
     <div class="io-actions"><button class="btn" id="enrollStudent" type="button">＋ Enrol student</button></div>
@@ -110,8 +110,8 @@
       <div><h2>Parent / guardian links</h2><p>Visible and manageable by School Admin only. Link a parent membership to a student membership.</p></div>
     </div>
     <div class="grid">
-      <div class="field"><label for="parentMembership">Parent / guardian</label><input id="parentMembership" type="text" placeholder="Choose an existing parent"></div>
-      <div class="field"><label for="linkedStudentMembership">Student</label><input id="linkedStudentMembership" type="text" placeholder="Choose an existing student"></div>
+      <div class="field"><label for="parentMembership">Parent / guardian</label><select id="parentMembership"></select></div>
+      <div class="field"><label for="linkedStudentMembership">Student</label><select id="linkedStudentMembership"></select></div>
       <div class="field"><label for="relationship">Relationship</label><input id="relationship" type="text" value="parent/guardian" maxlength="60"></div>
     </div>
     <div class="io-actions"><button class="btn" id="linkParent" type="button">＋ Create guardian link</button></div>
@@ -124,8 +124,8 @@
       <div><h2>Delegated branch administrators</h2><p>School Admin can appoint an active teacher or institution-viewer membership to administer one branch.</p></div>
     </div>
     <div class="grid">
-      <div class="field"><label for="adminBranch">Branch</label><input id="adminBranch" type="text" placeholder="Choose an existing branch"></div>
-      <div class="field"><label for="adminMembership">Membership ID</label><input id="adminMembership" type="text" placeholder="Membership ID"></div>
+      <div class="field"><label for="adminBranch">Branch</label><select id="adminBranch"></select></div>
+      <div class="field"><label for="adminMembership">Membership ID</label><select id="adminMembership"></select></div>
     </div>
     <div class="io-actions"><button class="btn" id="appointBranchAdmin" type="button">＋ Appoint branch administrator</button></div>
     <div id="branchAdminList" class="list" aria-live="polite"></div>
