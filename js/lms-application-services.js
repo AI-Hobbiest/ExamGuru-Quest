@@ -90,24 +90,23 @@
       }
     });
 
+    const callAssessment = (name, args) => {
+      if (!manager || typeof manager[name] !== "function") throw new Error("Assessment operation is unavailable: " + name);
+      return manager[name](...(args || []));
+    };
     const assessmentService = Object.freeze({
       available: !!manager,
-      _manager: manager,
-      _call(name, args) {
-        if (!manager || typeof manager[name] !== "function") throw new Error("Assessment operation is unavailable: " + name);
-        return manager[name](...(args || []));
-      },
-      listForStudent(id) { return this._call("listForStudent", [id]); },
-      listForParent(id, studentId) { return this._call("listForParent", [id, studentId]); },
-      get(id) { return this._call("get", [id]); },
-      createMcqAssignment(args) { return this._call("createMcqAssignment", [clone(args)]); },
-      createPaperAssignment(args) { return this._call("createPaperAssignment", [clone(args)]); },
-      start(id, studentId) { return this._call("start", [id, studentId]); },
-      submit(id, studentId, answers) { return this._call("submit", [id, studentId, clone(answers)]); },
-      startPaper(id, studentId) { return this._call("startPaper", [id, studentId]); },
-      submitPaper(id, studentId, answers) { return this._call("submitPaper", [id, studentId, clone(answers)]); },
-      recordPaperEvaluation(id, parentId, score, feedback) { return this._call("recordPaperEvaluation", [id, parentId, score, feedback]); },
-      analyticsAttemptsForStudent(id) { return this._call("analyticsAttemptsForStudent", [id]); }
+      listForStudent: id => callAssessment("listForStudent", [id]),
+      listForParent: (id, studentId) => callAssessment("listForParent", [id, studentId]),
+      get: id => callAssessment("get", [id]),
+      createMcqAssignment: args => callAssessment("createMcqAssignment", [clone(args)]),
+      createPaperAssignment: args => callAssessment("createPaperAssignment", [clone(args)]),
+      start: (id, studentId) => callAssessment("start", [id, studentId]),
+      submit: (id, studentId, answers) => callAssessment("submit", [id, studentId, clone(answers)]),
+      startPaper: (id, studentId) => callAssessment("startPaper", [id, studentId]),
+      submitPaper: (id, studentId, answers) => callAssessment("submitPaper", [id, studentId, clone(answers)]),
+      recordPaperEvaluation: (id, parentId, score, feedback) => callAssessment("recordPaperEvaluation", [id, parentId, score, feedback]),
+      analyticsAttemptsForStudent: id => callAssessment("analyticsAttemptsForStudent", [id])
     });
     return Object.freeze({ academic, curriculum: curriculumService, content: contentService, assessments: assessmentService });
   }
