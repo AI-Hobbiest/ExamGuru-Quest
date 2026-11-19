@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check assessment and Paper Studio workflow script syntax
-        run: for file in js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/exam-paper-studio.js js/exam-paper-self-study.js js/app-shell.js; do node --check "$file"; done
+        run: for file in js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/dashboard-manager.js js/exam-paper-studio.js js/exam-paper-self-study.js js/lms-application-services.js js/app-shell.js; do node --check "$file"; done
       - name: Validate M5.1–M5.3 LMS application services and compatibility boundary
         run: node --check js/lms-application-services.js && node --check js/domain/repository-contracts.js && node --check js/adapters/memory-repositories.js && node tests/lms-application-services.test.js
       - name: Validate audited Science paper blueprint, generation and rendering
