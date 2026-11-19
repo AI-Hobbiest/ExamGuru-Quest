@@ -1,6 +1,10 @@
 /* Responsive, session-aware navigation for ExamGuru Quest. */
 (() => {
   "use strict";
+  /* Cache-bust shared shell CSS so workspace-switcher styles reach every portal page. */
+  const shellCss=document.querySelector('link[href*="css/app-shell.css"]');
+  if(shellCss)shellCss.href="./css/app-shell.css?v=20261119-iam-v1";
+  else{const shellLink=document.createElement("link");shellLink.rel="stylesheet";shellLink.href="./css/app-shell.css?v=20261119-iam-v1";document.head.appendChild(shellLink);}
   /* Load the shared Quest 2.0 light theme after legacy/page-local styles. */
   const softThemeId="c10SoftSpectrumTheme";
   if(!document.getElementById(softThemeId)){
