@@ -114,15 +114,16 @@
     if(window.C10Api&&window.C10Api.isConfigured&&window.C10Api.isConfigured()&&window.C10Api.isAuthenticated()){
       try{
         const result=await window.C10Api.currentUser();
-        if(result&&result.user&&result.user.role==="admin")return {role:"admin",username:result.user.githubLogin||result.user.username||""};
         if(result&&result.user){
-          try{
-            const v2=await window.C10Api.identityV2(),identity=v2.identity||{},memberships=identity.memberships||[];
-            const active=memberships.find(m=>m.membershipId===identity.context?.membershipId&&m.institutionId===identity.context?.institutionId);
-            const eligible=memberships.filter(m=>["school_admin","teacher","institution_viewer"].includes(m.role));
-            const membership=active&&["school_admin","teacher","institution_viewer"].includes(active.role)?active:eligible[0];
-            if(membership)return {role:"institution",institutionRole:membership.role,institutionId:membership.institutionId,membershipId:membership.membershipId,username:identity.user?.displayName||identity.user?.username||result.user.username||""};
-          }catch(_){}
+          let identity={},memberships=[],platformRoles=[];
+          try{const v2=await window.C10Api.identityV2();identity=v2.identity||{};memberships=identity.memberships||[];platformRoles=identity.platformRoles||identity.platform_roles||[];}catch(_){}
+          const eligible=memberships.filter(m=>["school_admin","teacher","institution_viewer"].includes(m.role));
+          const active=eligible.find(m=>m.membershipId===identity.context?.membershipId&&m.institutionId===identity.context?.institutionId);
+          const workspaces=[];
+          if(result.user.role==="admin"||platformRoles.includes("platform_admin"))workspaces.push({key:"platform_admin",role:"admin",label:"Platform Admin"});
+          eligible.forEach(m=>workspaces.push({key:"institution:"+m.membershipId,role:"institution",institutionRole:m.role,institutionId:m.institutionId,membershipId:m.membershipId,label:(m.institutionName||m.institutionId)+" · "+m.role}));
+          if(result.user.role==="admin"||platformRoles.includes("platform_admin"))return {role:"admin",username:identity.user?.displayName||identity.user?.username||result.user.githubLogin||result.user.username||"",availableWorkspaces:workspaces};
+          if(active||eligible[0]){const membership=active||eligible[0];return {role:"institution",institutionRole:membership.role,institutionId:membership.institutionId,membershipId:membership.membershipId,username:identity.user?.displayName||identity.user?.username||result.user.username||"",availableWorkspaces:workspaces};}
           if(result.user.role==="student")return {role:"student",username:result.user.username||"",classId:String(result.user.classId||"")};
           if(result.user.role==="parent")return {role:"parent",username:result.user.username||"",displayName:result.user.displayName||result.user.username||""};
         }
@@ -276,15 +277,19 @@
     mobileLogo.src="./assets/examguru-saraswati.svg";mobileLogo.alt="";mobileLogo.width=32;mobileLogo.height=32;mobileBrand.appendChild(mobileLogo);
     const mobileCopy=node("div","c10-topbar-copy");
     mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",clatExperience?"AI-Enthusiast · CLAT UG 2027":auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":auth.role==="parent"?"Parent":"Class "+String(auth.classId||"not assigned"))));
-    if(auth.localTestMode){
+    const localRoles=auth.localTestMode?(()=>{try{const directory=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null");const u=(directory?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(auth.username||"").toLowerCase());return [...new Set((u?.roles||[]).map(x=>x.role))];}catch(_){return [];}})():[];
+    const workspaceOptions=auth.localTestMode?[{key:"platform_admin",role:"admin",label:"Platform Admin"},...localRoles.filter(r=>r!=="platform_admin").map(role=>({key:role,role:role==="school_admin"||role==="institution_viewer"||role==="teacher"?"institution":role,institutionRole:role,label:({school_admin:"Institution Admin",teacher:"Teacher",parent:"Parent",student:"Student",institution_viewer:"Institution Viewer"})[role]||role}))]:(auth.availableWorkspaces||[]);
+    if(auth.localTestMode||workspaceOptions.length>1){
       const switcher=node("select","c10-role-switcher");switcher.id="c10RoleSwitcher";switcher.setAttribute("aria-label","Switch active workspace");
-      const labels={platform_admin:"Platform Admin",school_admin:"Institution Admin",teacher:"Teacher",parent:"Parent",student:"Student",institution_viewer:"Institution Viewer"};
-      let roles=["platform_admin","school_admin","teacher","parent","student","institution_viewer"];
-      try{const directory=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null");const u=(directory?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(auth.username||"").toLowerCase());if(u?.roles?.length)roles=[...new Set(u.roles.map(x=>x.role))];}catch(_){}
-      if(!roles.includes("platform_admin"))roles.unshift("platform_admin");
-      roles.forEach(role=>{const option=node("option","",labels[role]||role);option.value=role;switcher.append(option);});
-      const currentRole=sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin";switcher.value=roles.includes(currentRole)?currentRole:"platform_admin";
-      switcher.addEventListener("change",()=>{const role=switcher.value;try{sessionStorage.setItem("examguru_rbac_test_role_v1",role);}catch(_){}const target=role==="platform_admin"?"./admin.html#tab-overview":role==="school_admin"||role==="institution_viewer"?"./institution-operations.html":role==="teacher"?"./assigned-test.html":role==="parent"?"./parent.html":"./dashboard.html";location.href=target;});
+      workspaceOptions.forEach(w=>{const option=node("option","",w.label);option.value=w.key;switcher.append(option);});
+      const currentKey=auth.localTestMode?(sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin"):auth.role==="admin"?"platform_admin":"institution:"+String(auth.membershipId||"");
+      switcher.value=workspaceOptions.some(w=>w.key===currentKey)?currentKey:(workspaceOptions[0]?.key||"");
+      switcher.addEventListener("change",async()=>{const selected=workspaceOptions.find(w=>w.key===switcher.value);if(!selected)return;
+        if(auth.localTestMode){try{sessionStorage.setItem("examguru_rbac_test_role_v1",selected.key);}catch(_){}}
+        else if(selected.membershipId&&window.C10Api?.selectInstitutionContext){try{await window.C10Api.selectInstitutionContext({institutionId:selected.institutionId,membershipId:selected.membershipId,branchId:null});}catch(e){return;}}
+        const role=auth.localTestMode?selected.key:selected.role==="admin"?"platform_admin":selected.institutionRole;
+        const target=role==="platform_admin"?"./admin.html#tab-overview":role==="school_admin"||role==="institution_viewer"?"./institution-operations.html":role==="teacher"?"./assigned-test.html":role==="parent"?"./parent.html":"./dashboard.html";location.href=target;
+      });
       mobileBar.appendChild(switcher);
     }
     const themeToggle=node("button","c10-theme-toggle",document.body.classList.contains("eg-theme-dark")?"☀":"☾");
