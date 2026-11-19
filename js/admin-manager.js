@@ -129,23 +129,50 @@
     renderBankTargetSummary();
   }
 
-  function setTab(name){
-    const protectedTabs=new Set(["banks","cbse-review","classes","knowledge","students","leaderboard","operations","exam-papers","institution-operations"]);
+  function setTab(name,options={}){
+    const validTabs=new Set(["overview","banks","cbse-review","departments","classes","knowledge","students","leaderboard","access","operations","exam-papers","institution-operations"]);
+    if(!validTabs.has(name))name="overview";
+    const protectedTabs=new Set(["banks","cbse-review","classes","knowledge","students","leaderboard","operations","exam-papers","institution-operations","departments"]);
     const apiReady=!!(window.C10Api&&window.C10Api.isConfigured());
     if(apiReady&&protectedTabs.has(name)&&!isAdminAuthenticated()){
       setAccountStatus("This section is locked. Sign in with an approved GitHub administrator to continue.","error");
       name="access";
     }
-    document.querySelectorAll(".admin-tab-button").forEach(item=>item.classList.toggle("active",item.dataset.tab===name));
-    document.querySelectorAll(".admin-panel").forEach(item=>item.classList.toggle("active",item.id==="tab-"+name));
+    document.querySelectorAll(".admin-tab-button").forEach(item=>{
+      const active=item.dataset.tab===name;
+      item.classList.toggle("active",active);
+      item.setAttribute("aria-selected",String(active));
+      item.tabIndex=active?0:-1;
+    });
+    let activePanel=null;
+    document.querySelectorAll(".admin-panel[id^='tab-']").forEach(item=>{
+      const active=item.id==="tab-"+name;
+      item.classList.toggle("active",active);
+      item.setAttribute("aria-hidden",String(!active));
+      if(active)activePanel=item;
+    });
+    if(options.updateHash&&typeof location!=="undefined"){
+      const nextHash="#tab-"+name;
+      if(location.hash!==nextHash)location.hash=nextHash;
+    }
+    if(options.scroll&&activePanel)activePanel.scrollIntoView({block:"start",behavior:"auto"});
     if(name==="leaderboard")renderLeaderboard();
     if(name==="students")renderStudents();
+    document.documentElement.dataset.adminTab=name;
   }
   function initTabs(){
-    document.querySelectorAll(".admin-tab-button").forEach(item=>item.addEventListener("click",()=>setTab(item.dataset.tab)));
+    const buttons=Array.from(document.querySelectorAll(".admin-tab-button"));
+    buttons.forEach(item=>item.addEventListener("click",()=>setTab(item.dataset.tab,{updateHash:true,scroll:true})));
     const validTabs=new Set(["overview","banks","cbse-review","departments","classes","knowledge","students","leaderboard","access","operations","exam-papers","institution-operations"]);
-    const syncTabFromHash=()=>{const hash=typeof location!=="undefined"?location.hash:"";const name=hash.replace(/^#tab-/,"");if(validTabs.has(name))setTab(name);};
-    if(typeof window.addEventListener==="function")window.addEventListener("hashchange",syncTabFromHash);
+    const syncTabFromHash=()=>{
+      const match=typeof location!=="undefined"?location.hash.match(/^#tab-([a-z0-9-]+)$/i):null;
+      const name=match&&validTabs.has(match[1])?match[1]:"overview";
+      setTab(name,{scroll:!!match});
+    };
+    if(typeof window.addEventListener==="function"){
+      window.addEventListener("hashchange",syncTabFromHash);
+      window.addEventListener("popstate",syncTabFromHash);
+    }
     syncTabFromHash();
   }
 
