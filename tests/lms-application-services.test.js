@@ -35,7 +35,7 @@ const services = require("../js/lms-application-services.js");
   assert.equal((await app.content.listInstitutionContent("i1")).length,1);
   assert.deepEqual(app.assessments.start("a1","u1"),{id:"a1",student:"u1"});
   assert.deepEqual(app.assessments.submit("a1","u1",{q1:"b"}),{id:"a1",student:"u1",answers:{q1:"b"}});
-  assert.throws(()=>app.content.createInstitutionCopy({institutionId:"",sourceBankId:"shared-science-v3"}),/institution ID/);
+  await assert.rejects(()=>app.content.createInstitutionCopy({institutionId:"",sourceBankId:"shared-science-v3"}),/institution ID/);
   await assert.rejects(()=>app.content.createInstitutionCopy({institutionId:"i1",sourceBankId:"missing"}),/not found/);
   console.log("M5.1–M5.3 application-service tests passed: academic context, curriculum lookup, shared-to-institution copy provenance and immutability, and assessment lifecycle delegation.");
 })().catch(error=>{console.error(error);process.exitCode=1;});
