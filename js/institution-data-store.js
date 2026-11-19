@@ -10,7 +10,7 @@ function unique(list,field,value,message){if(list.some(x=>String(x[field]).toLow
 const api={key:KEY,currentInstitutionId:currentId,
  setInstitution(id){if(!iam()?.findInstitution(id))throw Error("Choose an existing institution.");try{sessionStorage.setItem("examguru_active_institution_v1",id);}catch(_){}return id;},
  getInstitution(){return iam()?.findInstitution(currentId())||null;},
- getState(){return JSON.parse(JSON.stringify(record()));},
+ getState(){return JSON.parse(JSON.stringify(record()));},getStateFor(id){return JSON.parse(JSON.stringify(record(id)));},
  branches(){return record().branches.map(x=>({...x}));},grades(){return record().grades.map(x=>({...x}));},subjects(){return record().subjects.map(x=>({...x}));},classes(){return record().classes.map(x=>({...x}));},departments(){return record().departments.map(x=>({...x}));},
  createBranch(name,code){const n=String(name||"").trim(),c=String(code||"").trim().toUpperCase();if(!n||!c)throw Error("Enter a branch name and code.");unique(record().branches,"code",c,"Branch code already exists.");const x={branchId:id("BR"),name:n,code:c,status:"active"};record().branches.push(x);if(!persist())throw Error("Browser storage unavailable.");return x;},
  createGrade(name,code){const n=String(name||"").trim(),c=String(code||"").trim().toUpperCase();if(!n||!c)throw Error("Enter a grade name and code.");unique(record().grades,"code",c,"Grade code already exists.");const x={gradeId:id("GR"),name:n,code:c,status:"active"};record().grades.push(x);if(!persist())throw Error("Browser storage unavailable.");return x;},
