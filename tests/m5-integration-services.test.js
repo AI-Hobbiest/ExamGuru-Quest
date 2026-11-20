@@ -51,8 +51,9 @@ assert.throws(()=>api.toCsv({}),/learning report/);
  assert.equal(childReport.totals.attemptCount,1);
  assert.match(await service.exportStudentCsv({userId:"parent-1"},{studentId:"child-1"}),/science/);
  assert.match(await service.exportStudentJson({userId:"parent-1"},{studentId:"child-1"}),/"examguru-learning-report"/);
+ const readsBeforeDenied=reads;
  await assert.rejects(()=>service.readStudentReport({userId:"parent-1"},{studentId:"other-child"}),/not available/);
- assert.equal(reads,2,"denied scopes never reach the local data reader");
+ assert.equal(reads,readsBeforeDenied,"denied scopes never reach the local data reader");
 
  const experience={roles:{teacher:{nav:[["Practice","./practice.html"]]},parent:{nav:[["Parent","./parent.html"]]}}};
  const academic={isDepartmentHead:(appointments,departmentId,classId,at)=>{
