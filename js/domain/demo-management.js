@@ -8,10 +8,10 @@
   const AUDIT_ACTIONS=Object.freeze(["demo.created","demo.extended","demo.reset","demo.revoked"]);
   const fail=(message,code)=>{const error=new Error(message);error.code=code;throw error;};
   function createDemoManagementService(options){
-    const opts=options||{},repo=opts.repository,audit=opts.auditRepository;
+    const opts=options||{},repo=opts.repository,audit=opts.auditRepository,templates=opts.templateRepository;
     if(!repo||!["create","get","list","update","resetData"].every(k=>typeof repo[k]==="function"))throw new TypeError("A demo repository implementing create, get, list, update and resetData is required.");
     if(!audit||typeof audit.append!=="function")throw new TypeError("An append-only audit repository is required.");
-    if(typeof opts.authorize!=="function")throw new TypeError("A server-side Platform Admin authorization function is required.");
+    if(typeof opts.authorize!=="function")throw new TypeError("A server-side Platform Admin authorization function is required.");\n    if(!templates||typeof templates.get!=="function")throw new TypeError("A pre-created demo persona template repository is required.");
     const now=typeof opts.now==="function"?opts.now:()=>new Date();
     const makeId=typeof opts.makeId==="function"?opts.makeId:()=> "DEMO-"+Date.now().toString(36).toUpperCase()+"-"+Math.random().toString(36).slice(2,8).toUpperCase();
     const maxDuration=Number.isInteger(opts.maxDurationDays)?opts.maxDurationDays:14;
@@ -55,7 +55,7 @@
         displayName:text(data.displayName)|| (kind==="persona"?"Persona demo":"On-demand demo"),
         roles:selectedRoles,tenantType:"isolated_demo",tenantId:"DEMO-TENANT-"+makeId(),
         status:"active",createdAt:createdAt.toISOString(),expiresAt:expiresAt.toISOString(),
-        durationDays:days,sessionVersion:1,dataProfile:text(data.dataProfile)||"standard_sample",
+        durationDays:days,sessionVersion:1,dataProfile:text(kind==="persona"?(template.dataProfile||"standard_sample"):(data.dataProfile||"standard_sample")),\n        templateVersion:kind==="persona"?String(template.version||"1"):null,
         createdBy:text(actor&&actor.userId),lastResetAt:null,revokedAt:null};
       await repo.create(clone(record));
       await writeAudit(actor,"demo.created",record,{kind,roles:selectedRoles,durationDays:days});
