@@ -511,13 +511,13 @@ jobs:
           for (const file of [
             'institution-operations.html','institution-branches.html','institution-academics.html',
             'institution-departments.html','institution-assignments.html','institution-enrolments.html',
-            'user-management.html','rbac-role-matrix.html','js/institution-module.js',
-            'js/institution-data-store.js','js/iam-local-store.js','css/institution-operations.css'
+            'user-management.html','rbac-role-matrix.html','js/institution-module.js','js/institution-dashboard.js',
+            'css/institution-dashboard.css','js/institution-data-store.js','js/iam-local-store.js','css/institution-operations.css'
           ]) {
             if (!fs.existsSync('_site/'+file)) throw new Error('Institution/RBAC page dependency was not packaged: '+file);
           }
           const institutionPage=fs.readFileSync('_site/institution-operations.html','utf8');
-          if (!institutionPage.includes('./js/institution-module.js') || !institutionPage.includes('./js/app-shell.js')) throw new Error('Institution Operations hub is missing its institution module controller or shared navigation shell.');
+          if (!institutionPage.includes('./js/institution-dashboard.js') || !institutionPage.includes('./js/app-shell.js') || !institutionPage.includes('./css/institution-dashboard.css')) throw new Error('Institution dashboard is missing its dashboard controller, stylesheet or shared navigation shell.');
           if (!institutionPage.includes('./css/institution-operations.css')) throw new Error('Institution Operations hub is missing its responsive workspace stylesheet.');
           const institutionModules=[
             ['institution-branches.html','Branches & campuses'],
