@@ -36,4 +36,22 @@ assert.equal(val("pulseAssignments"),"1","HOD sees only assignments within depar
 assert.equal(out.get("dashWorkspaces").hidden,true,"HOD cannot see institution-wide administration links");
 const noScope={...state,departments:state.departments.map(d=>({...d,classIds:[]}))};
 const denied=run(auth,noScope,users);assert.equal(denied.get("institutionDashboard").hidden,true,"HOD without explicit class scope fails closed");assert.equal(denied.get("dashGuestGate").hidden,false);
+
+/* Exercise the actual local department store: two HODs are allowed, a third is rejected,
+   and an HOD's teacher membership can still be assigned to a class in another department. */
+const local={};const localUsers=[1,2,3].map(n=>({userId:"t"+n,status:"active",roles:[{role:"teacher",institutionId:"INST-X",membershipId:"tm"+n,primaryDepartmentId:null}]}));
+const fakeIAM={institutionId:"INST-X",allUsers:()=>localUsers,findInstitution:id=>id==="INST-X"?{institutionId:id}:null,saveUser:u=>{const i=localUsers.findIndex(x=>x.userId===u.userId);if(i>=0)localUsers[i]=u;return u;}};
+const storeContext={window:{ExamGuruLocalIAM:fakeIAM},localStorage:{getItem:k=>local[k]||null,setItem:(k,v)=>{local[k]=v;}},sessionStorage:{getItem:()=>null,setItem:()=>{}},Date,Math,Error};
+vm.createContext(storeContext);vm.runInContext(data,storeContext);
+const store=storeContext.window.ExamGuruInstitutionData;
+const dept=store.createDepartment("Science","SCI"),other=store.createDepartment("Mathematics","MATH");
+localUsers.forEach((u,i)=>{u.roles[0].primaryDepartmentId=dept.departmentId;store.addDepartmentMember(dept.departmentId,"tm"+(i+1));});
+store.appointHod(dept.departmentId,"tm1");store.appointHod(dept.departmentId,"tm2");
+assert.throws(()=>store.appointHod(dept.departmentId,"tm3"),/maximum of two active HODs/,"A third HOD cannot be appointed");
+assert.equal(store.departments().find(x=>x.departmentId===dept.departmentId).hodMembershipIds.length,2);
+const branch=store.createBranch("Main","MAIN"),grade=store.createGrade("Class 9","G9"),subject=store.createSubject("Mathematics","MATH");
+const cls=store.createClass({name:"Class 9A",branchId:branch.branchId,gradeId:grade.gradeId,subjectIds:[subject.subjectId]});
+assert.doesNotThrow(()=>store.assignTeacher({teacherMembershipId:"tm1",classId:cls.classId,subjectId:subject.subjectId}),"An HOD can teach a class outside their primary department");
+assert.equal(store.departments().find(x=>x.departmentId===other.departmentId).memberIds.length,0,"Cross-department teaching does not change primary department membership");
+
 console.log("HOD workspace tests passed: appointment-derived access, department membership and class scope isolation, and fail-closed empty scope.");
