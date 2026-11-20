@@ -25,6 +25,6 @@ const wrongTenant=run({role:"institution",institutionRole:"institution_viewer",i
 const wrongRole=run({role:"student",institutionId:"INST-1"});assert.equal(wrongRole.elements.get("institutionDashboard").hidden,true,"non-institution role must fail closed");
 for(const path of ["institution-branches.html","institution-academics.html","institution-departments.html","institution-assignments.html","institution-enrolments.html","user-management.html","institution-content.html","institution-competitive-exams.html"])assert.ok(html.includes("./"+path),"dashboard link retained: "+path);
 assert.ok(html.includes('id="institutionDashboard" hidden')&&html.includes('id="dashGuestGate"'));
-assert.ok(html.includes("./js/institution-dashboard.js?v=20261120-dashboard-v2")&&css.includes(".io-dash-guest"));
+assert.ok(html.includes("./js/institution-dashboard.js?v=20261120-hod-v1")&&css.includes(".io-dash-guest"));
 assert.ok(css.includes("@media(max-width:600px)")&&css.includes("eg-theme-dark"));
 console.log("Institution dashboard security regression passed: guest denied, no guest metrics populated, authenticated tenant membership required, viewer/admin gating preserved.");
