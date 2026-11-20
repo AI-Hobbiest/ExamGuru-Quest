@@ -37,7 +37,7 @@ Independent Learner is a virtual/direct tenant, not a school. It has no school b
 - Does not write to localStorage, sessionStorage, static JSON files or the sync outbox.
 - Produces deterministic identity/membership IDs so repeated projections are idempotent.
 
-This bridge is a migration/read-model boundary only. It does not replace current login or change the production app's runtime flow. Current accounts remain authenticated through the existing local-first mechanism until a separate backend cutover is approved and tested.
+The bridge and additive session context are migration/read-model compatibility only. The existing static login continues unchanged. As an additive compatibility field, `C10StudentAuth.currentUser()` and the login/restore account view now expose the stable Independent Learner `institutionId`, `institutionType` and deterministic `membershipId` for current student and parent sessions. Existing session objects are enriched when read; no re-login or session rewrite is required. These browser fields are context hints only and are never trusted as server authorization. Current accounts remain authenticated through the existing local-first mechanism until a separate backend cutover is approved and tested.
 
 ## Learning context and tenant scope
 
