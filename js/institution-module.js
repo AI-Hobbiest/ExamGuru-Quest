@@ -24,8 +24,8 @@ function refresh(){
  showList("gradeList",s.grades,x=>x.name+" · "+x.code+" · "+x.gradeId);
  showList("subjectList",s.subjects,x=>x.name+" · "+x.code+" · "+x.subjectId);
  showList("classList",s.classes,x=>x.name+" · "+x.classType+" · "+x.classId+" · "+(x.academicYear||"")+" · Content profile: "+(x.contentClassId||"not mapped"));
- showList("departmentList",s.departments,x=>x.name+" · "+x.code+" · Classes in HOD scope: "+(x.classIds||[]).length+" · HODs: "+([...new Set([...(x.hodMembershipIds||[]),...(x.hodMembershipId?[x.hodMembershipId]:[])])].length)+"/2");
- showList("departmentMembers",db.departments().find(x=>x.departmentId===$("departmentSelect")?.value)?.memberIds?.map(id=>({id,hod:[...(db.departments().find(x=>x.departmentId===$("departmentSelect").value)?.hodMembershipIds||[]),...(db.departments().find(x=>x.departmentId===$("departmentSelect").value)?.hodMembershipId?[db.departments().find(x=>x.departmentId===$("departmentSelect").value).hodMembershipId]:[])].includes(id)}))||[],x=>x.id+(x.hod?" · HOD":""));
+ showList("departmentList",s.departments,x=>{const hods=[...new Set([...(x.hodMembershipIds||[]),...(x.hodMembershipId?[x.hodMembershipId]:[])])];return x.name+" · "+x.code+" · Classes in HOD scope: "+(x.classIds||[]).length+" · HOD appointments: "+(hods.length?hods.map((mid,i)=>(i===0?"Primary HOD":"Backup HOD")+" ("+mid+")").join(" | "):"None")+" · "+hods.length+"/2";});
+ const selectedDept=db.departments().find(x=>x.departmentId===$("departmentSelect")?.value),orderedHods=[...new Set([...(selectedDept?.hodMembershipIds||[]),...(selectedDept?.hodMembershipId?[selectedDept.hodMembershipId]:[])])];showList("departmentMembers",(selectedDept?.memberIds||[]).map(id=>({id,hodIndex:orderedHods.indexOf(id)})),x=>x.id+(x.hodIndex===0?" · Primary HOD":x.hodIndex===1?" · Backup HOD":" · Teacher"));
  showList("assignmentList",s.assignments,x=>x.teacherMembershipId+" → "+x.classId+" · "+x.subjectId);
  showList("enrolmentList",s.enrolments,x=>x.studentMembershipId+" → "+x.classId+" · "+x.academicYear);
  showList("guardianList",s.guardianLinks,x=>x.parentMembershipId+" → "+x.studentMembershipId+" · "+x.relationship);
