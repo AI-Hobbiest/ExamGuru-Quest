@@ -223,6 +223,8 @@
     document.body.classList.add("c10-shell-ready");
     applyTheme(readThemePreference(),false);
     const current=getLocation(),auth=await authState();
+    window.ExamGuruAuthState=auth;
+    window.dispatchEvent(new CustomEvent("examguru-auth-state-ready",{detail:auth}));
     if(!auth.localTestMode&&auth.role==="institution"){try{sessionStorage.setItem("examguru_active_role_v1",auth.institutionRole||"institution_viewer");sessionStorage.setItem("examguru_active_institution_v1",auth.institutionId||"");}catch(_){}}
     if(!auth.localTestMode&&auth.role==="admin"){try{sessionStorage.setItem("examguru_active_role_v1","platform_admin");}catch(_){}}
     if(auth.localTestMode&&current.file==="admin.html"&&auth.role!=="admin"){location.replace(auth.role==="institution"?"./institution-operations.html":auth.role==="parent"?"./parent.html":"./dashboard.html");return;}
