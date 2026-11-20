@@ -22,6 +22,8 @@ jobs:
         run: node --check js/lms-application-services.js && node --check js/domain/repository-contracts.js && node --check js/adapters/memory-repositories.js && node tests/lms-application-services.test.js && node tests/institution-content-store.test.js
       - name: Validate M5.4–M5.6 learning records, role policy and adapter readiness
         run: node --check js/m5-integration-services.js && node tests/m5-integration-services.test.js
+      - name: Validate M7 demo lifecycle, role restrictions and session invalidation
+        run: node --check js/domain/demo-management.js && node tests/demo-management.test.js
       - name: Validate Independent Learner migration compatibility
         run: node --check js/iam-local-store.js && node --check js/student-auth.js && node --check js/domain/legacy-independent-learner-adapter.js && node tests/legacy-independent-learner-adapter.test.js && node tests/independent-learner-runtime-compat.test.js && node tests/independent-learner-authorization.test.js
       - name: Validate audited Science paper blueprint, generation and rendering
