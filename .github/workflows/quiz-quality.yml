@@ -2,7 +2,7 @@ name: ExamGuru Quest quiz quality checks
 
 on:
   push:
-    branches: [main, m5/backward-compatible-integration]
+    branches: [main, m5/backward-compatible-integration, productisation/m6-security-foundation]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -17,11 +17,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check assessment and Paper Studio workflow script syntax
-        run: for file in js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/dashboard-manager.js js/exam-paper-studio.js js/exam-paper-self-study.js js/lms-application-services.js js/institution-content-store.js js/iam-local-store.js js/institution-data-store.js js/institution-module.js js/institution-dashboard.js js/app-shell.js; do node --check "$file"; done
+        run: for file in js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/dashboard-manager.js js/exam-paper-studio.js js/exam-paper-self-study.js js/lms-application-services.js js/institution-content-store.js js/iam-local-store.js js/institution-data-store.js js/institution-module.js js/institution-dashboard.js js/app-shell.js js/student-auth.js js/domain/legacy-independent-learner-adapter.js; do node --check "$file"; done
       - name: Validate M5.1–M5.3 LMS application services and compatibility boundary
         run: node --check js/lms-application-services.js && node --check js/domain/repository-contracts.js && node --check js/adapters/memory-repositories.js && node tests/lms-application-services.test.js && node tests/institution-content-store.test.js
       - name: Validate M5.4–M5.6 learning records, role policy and adapter readiness
         run: node --check js/m5-integration-services.js && node tests/m5-integration-services.test.js
+      - name: Validate Independent Learner migration compatibility
+        run: node --check js/iam-local-store.js && node --check js/student-auth.js && node --check js/domain/legacy-independent-learner-adapter.js && node tests/legacy-independent-learner-adapter.test.js && node tests/independent-learner-runtime-compat.test.js && node tests/independent-learner-authorization.test.js
       - name: Validate audited Science paper blueprint, generation and rendering
         run: node tests/assessment-manager.test.js && node tests/exam-paper-generator.test.js && node tests/mathematics-blueprints.test.js && node tests/mathematics-question-bank.test.js && node tests/mathematics-mcq-integration.test.js && node tests/exam-paper-renderer.test.js && node tests/exam-paper-release.test.js
       - name: Build shared Science bank from the maintained source
