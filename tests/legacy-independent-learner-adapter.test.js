@@ -43,4 +43,6 @@ assert.equal(JSON.stringify(family), beforeFamily, "projection must not mutate f
 const again = adapter.project({ studentDatabase: students, familyDatabase: family });
 assert.deepEqual(result.memberships.map(x => x.membershipId), again.memberships.map(x => x.membershipId), "IDs must be stable across runs");
 assert.throws(() => adapter.project({ studentDatabase: {}, familyDatabase: family }), /Invalid legacy/);
+const ambiguousFamily = { ...family, parents: [{ parentId: "parent-duplicate", username: "learner-a", active: true }] };
+assert.throws(() => adapter.project({ studentDatabase: students, familyDatabase: ambiguousFamily }), /Duplicate or missing legacy learner username/);
 console.log("Legacy Independent Learner projection: all checks passed.");
