@@ -11,7 +11,7 @@ const repository={
  async update(record){records.set(record.demoId,JSON.parse(JSON.stringify(record)));},
  async resetData(demoId,tenantId){resets.push({demoId,tenantId});}
 };
-const templates={async get(id){return id==="school-admin"?{templateId:id,status:"active",version:3,roles:["school_admin","institution_viewer"],dataProfile:"school_sample"}:catalogue.get(id);}};
+const templates={async get(id){return catalogue.get(id);}};
 const service=api.createDemoManagementService({
  repository,auditRepository:{async append(event){events.push(event);}},
  templateRepository:templates,
@@ -21,10 +21,10 @@ const service=api.createDemoManagementService({
 });
 const admin={userId:"platform-1",role:"platform_admin"};
 (async()=>{
- const persona=await service.create(admin,{kind:"persona",templateId:"school-admin",durationDays:7,displayName:"School Admin Preview"});
- assert.deepEqual(persona.roles,["institution_viewer","school_admin"]);
+ const persona=await service.create(admin,{kind:"persona",templateId:"institution-admin",durationDays:7,displayName:"School Admin Preview"});
+ assert.deepEqual(persona.roles,["school_admin"]);
  assert.equal(persona.expiresAt,"2026-11-27T12:00:00.000Z");
- assert.equal(persona.templateVersion,"3");
+ assert.equal(persona.templateVersion,"1");
  assert.equal(persona.dataProfile,"school_sample");
  assert.ok(persona.tenantId.startsWith("DEMO-TENANT-"));
  assert.equal((await service.authorizeDemoSession({demoId:persona.demoId,sessionVersion:1})).allowed,true);
