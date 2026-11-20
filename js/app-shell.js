@@ -97,8 +97,8 @@
     {label:"User Management",group:"Institution",icon:"👥",href:"./user-management.html",page:"user-management.html",auth:"institution",institutionRoles:["school_admin"]},
     {label:"Institution content",group:"Institution",icon:"📥",href:"./institution-content.html",page:"institution-content.html",auth:"institution",institutionRoles:["school_admin"]},
     {label:"Competitive Exams",group:"Institution",icon:"⚖️",href:"./institution-competitive-exams.html",page:"institution-competitive-exams.html",auth:"institution",institutionRoles:["school_admin"]},
-    {label:"My teaching workspace",group:"Teaching",icon:"🧑‍🏫",href:"./teacher-workspace.html",page:"teacher-workspace.html",auth:"institution",institutionRoles:["teacher"]},
-    {label:"Assigned exam papers",group:"Teaching",icon:"📝",href:"./assigned-paper.html",page:"assigned-paper.html",auth:"institution",institutionRoles:["teacher"]},
+    {label:"My teaching workspace",group:"Teaching",icon:"🧑‍🏫",href:"./teacher-workspace.html",page:"teacher-workspace.html",auth:"institution",institutionRoles:["teacher","hod"]},
+    {label:"Assigned exam papers",group:"Teaching",icon:"📝",href:"./assigned-paper.html",page:"assigned-paper.html",auth:"institution",institutionRoles:["teacher","hod"]},
     {label:"Institution overview (read only)",group:"Institution",icon:"👁️",href:"./institution-operations.html",page:"institution-operations.html",auth:"institution",institutionRoles:["institution_viewer"]},
     {label:"Release & maintenance",group:"Platform operations",icon:"⚙️",href:"./admin.html#tab-operations",page:"admin.html",hash:"#tab-operations",auth:"admin"}
   ];
