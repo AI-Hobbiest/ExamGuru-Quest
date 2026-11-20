@@ -45,6 +45,8 @@ Baseline: `main` at `09c26d2fe4a296949b73980f7b7d75a8a068a2f6`
 
 ### M6.2 — Content protection design
 - Inventory all public banks, answer keys, exam blueprints, CLAT material, curriculum and visual assets.
+- Add a copyright notice for original ExamGuru material and a provenance/IP policy for third-party and AI-assisted content.
+- Require source, licence, attribution, review and release classification for each content family.
 - Classify content as public practice content, institution-restricted content or master authoring source.
 - Define an API delivery contract for protected content.
 - Keep master authoring sources out of public build output before claiming content protection.
