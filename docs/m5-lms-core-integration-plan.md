@@ -135,3 +135,35 @@ A CI pass is necessary but not sufficient: compare bank inventories and key rout
 ## Completion definition
 
 M5 is complete only when the existing LMS journeys remain operational, the shared application boundaries are in place without parallel/duplicate systems, the local adapter is the sole active persistence path, all mandatory regression and negative authorization tests pass, the compatibility comparison shows no unexplained changes, and cloud activation remains safely deferred.
+
+
+## M5.4–M5.6 implementation update
+
+### M5.4 — Learning records and reporting
+
+- Added `js/m5-integration-services.js` with a common learning report read model across attempts, answer records, mistakes, bookmarks, topic mastery and per-bank progress.
+- Added a local reader that reads the existing `test-attempt-ledger`, `subject-progress` and `learning-library` versioned stores without renaming keys or changing record formats. The caller supplies the active class bank catalogue, so CBSE, SOF and other supported bank IDs are not hard-coded into a reduced legacy-subject list.
+- Attempts are filtered to the active profile when a profile ID is supplied. Answer-ledger counts take precedence for an attempt when ledger rows exist; legacy attempt counters are retained when no answer rows exist. The report includes all encountered subject and bank IDs.
+- Added scoped report and CSV/JSON export service methods. The service calls an injected authorization policy before reading any records; denied scopes never reach the data reader. No records are uploaded.
+- Existing profile backup/import/export implementation and v1 backup schema remain unchanged. Existing old/new backup regression fixtures remain mandatory.
+
+### M5.5 — Role-aware experience and policy alignment
+
+- Added a policy facade for the six experience roles: Platform Admin, Institution Admin (`school_admin`), Teacher, Parent, Student and Institution Viewer.
+- Platform Admin is resolved from the separate platform-role collection; institution roles remain memberships. HOD is represented only as an effective-dated department appointment overlay on a Teacher membership, not as a seventh global login role.
+- Navigation is descriptive UX only. `authorizeAction` delegates to an injected server authorization provider and denies every protected action when that provider is absent. A browser role preview cannot grant permissions.
+- Existing M1/M3 positive and negative scope suites remain release gates, including cross-institution, branch, teacher assignment, parent-child and effective-dated HOD cases.
+
+### M5.6 — Adapter and migration readiness (cloud deferred)
+
+- Added a tested local record adapter over the existing `C10Storage` boundary with explicit get/list/upsert operations, stable kind/record IDs, monotonically increasing record versions, optimistic version checks and idempotent replay handling.
+- Listing requires explicit record IDs; it does not scan or export unrelated browser storage. The existing C10Storage outbox remains local and opt-in sync remains unconfigured.
+- Added a future cloud-adapter contract validator. It checks the required record methods and documents the server-derived tenant, idempotency key, expected-version and conflict-response requirements. It does not instantiate, configure or call a Cloudflare adapter.
+- Future rollout requirements: stable IDs must be minted once and preserved across retries; every write must carry an idempotency key; optimistic concurrency must reject stale expected versions rather than last-write-wins; retryable network/5xx failures use bounded exponential backoff with jitter and remain in the outbox; authorization failures are not retried; conflicts are surfaced for explicit reconciliation; backups remain portable and exportable before migration; restore is dry-run validated before commit; user consent and a recoverable rollback point are required before any cloud cutover.
+- No D1 schema, Worker route, API base, secret, cloud sync configuration or data migration was changed.
+
+### M5.4–M5.6 validation
+
+- Dedicated regression: `tests/m5-integration-services.test.js`.
+- The quiz-quality workflow now runs syntax validation and this test as an explicit M5.4–M5.6 gate.
+- These additions provide provider-neutral services and contract/readiness coverage. They do not claim that server-authoritative institutional RBAC, cloud persistence or UI-wide reporting cutover is live while the API remains unconfigured.
