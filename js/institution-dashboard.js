@@ -9,7 +9,7 @@ function members(role,institutionId){return (iam.allUsers()||[]).filter(u=>u&&u.
 function check(el,done){if(!el)return;el.classList.toggle("is-complete",!!done);const s=el.querySelector(".io-dash-check-state");if(s)s.textContent=done?"✓ Complete":"Start";if(done)el.setAttribute("aria-label",(el.querySelector("strong")?.textContent||"Setup item")+" — complete");}
 function deny(){if(main)main.hidden=true;if(guest)guest.hidden=false;}
 function render(auth){
- const allowed=auth&&auth.role==="institution"&&["school_admin","institution_viewer"].includes(auth.institutionRole)&&auth.institutionId&&auth.membershipId;
+ const allowed=auth&&auth.role==="institution"&&["school_admin","hod","institution_viewer"].includes(auth.institutionRole)&&auth.institutionId&&auth.membershipId;
  if(!allowed){deny();return;}
  try{
   if(!iam||!db)throw Error("Institution services could not be loaded. Refresh the page and try again.");
@@ -19,6 +19,23 @@ function render(auth){
   if(!institution)throw Error("Your institution membership could not be verified. Sign in again.");
   if(db.currentInstitutionId()!==institutionId)db.setInstitution(institutionId);
   const state=db.getState(),admin=auth.institutionRole==="school_admin";
+  if(auth.institutionRole==="hod"){
+   const departments=(state.departments||[]).filter(d=>(auth.departmentIds||[]).includes(d.departmentId)||d.hodRoleMembershipId===auth.membershipId||d.hodMembershipId===auth.teacherMembershipId);
+   if(!departments.length)throw Error("No department is assigned to this HOD membership. Ask the Institution Admin to verify the appointment.");
+   const teacherIds=new Set(departments.flatMap(d=>d.memberIds||[]));
+   const assignments=(state.assignments||[]).filter(a=>a.status!=="inactive"&&teacherIds.has(a.teacherMembershipId));
+   const classIds=new Set(assignments.map(a=>a.classId)),subjectIds=new Set(assignments.map(a=>a.subjectId));
+   const classes=(state.classes||[]).filter(c=>c.status!=="inactive"&&classIds.has(c.classId));
+   const enrolments=(state.enrolments||[]).filter(e=>e.status!=="inactive"&&classIds.has(e.classId));
+   const studentIds=new Set(enrolments.map(e=>e.studentMembershipId));
+   const scopedStudents=(iam.allUsers()||[]).filter(u=>u.status!=="inactive"&&(u.roles||[]).some(r=>r.role==="student"&&r.institutionId===institutionId&&studentIds.has(r.membershipId))).length;
+   set("dashWelcome","Department workspace");set("dashInstitutionSubtitle",departments.map(d=>d.name).join(" · "));set("dashRole","Head of Department · Scoped access");
+   [["metricStudents",scopedStudents],["metricTeachers",teacherIds.size],["metricClasses",classes.length],["metricBranches",0],["metricSubjects",subjectIds.size],["metricDepartments",departments.length],["pulseAssignments",assignments.length],["pulseEnrolments",enrolments.length],["contentPublished",0]].forEach(([id,v])=>metric(id,v));
+   set("metricStudentsNote","Students in department-assigned classes");set("metricTeachersNote","Department members only");set("linkBranches","Not available to HOD");set("linkAcademic",classes.length+" assigned classes");set("linkDepartments",departments.length+" department(s)");set("linkUsers",teacherIds.size+" department teachers");set("linkEnrolments",enrolments.length+" scoped enrolments");set("linkAssignments",assignments.length+" department assignments");set("linkContent","Not available to HOD");set("linkExams","Not available to HOD");
+   set("pulseTitle","Your department at a glance");set("pulseCopy","This view includes only your appointed department membership and its assigned classes. Institution-wide records and other departments are excluded.");
+   ["dashHeroActions","setupChecklist","dashWorkspaces","dashContentLink","dashExamLink"].forEach(id=>{if($(id))$(id).hidden=true;});
+   if(guest)guest.hidden=true;if(main)main.hidden=false;if(error)error.hidden=true;set("dashDataStatus","Department scope · browser-local data");return;
+  }
   const branches=activeCount(state.branches),grades=activeCount(state.grades),subjects=activeCount(state.subjects),classes=activeCount(state.classes),departments=activeCount(state.departments),assignments=activeCount(state.assignments),enrolments=activeCount(state.enrolments),students=members("student",institutionId).length,teachers=members("teacher",institutionId).length;
   let resources={banks:[],papers:[]};try{if(content&&content.currentInstitutionId()===institutionId)resources=content.list();}catch(_){}
   const allResources=[...(resources.banks||[]),...(resources.papers||[])],published=allResources.filter(x=>x.status==="published").length,drafts=allResources.filter(x=>x.status==="draft").length;
