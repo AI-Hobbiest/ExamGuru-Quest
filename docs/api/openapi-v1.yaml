@@ -1,0 +1,350 @@
+openapi: 3.1.0
+info:
+  title: ExamGuru Platform API
+  version: 1.0.0
+  description: |
+    Provider-neutral API contract for authenticated ExamGuru operations.
+    This is a design contract only; it does not indicate that a production API
+    is deployed. All tenant and platform authorization is enforced server-side.
+servers:
+  - url: https://api.example.invalid
+    description: Placeholder only; no provider or production endpoint is selected.
+tags:
+  - name: Identity
+  - name: Institutions
+  - name: Memberships
+  - name: Content
+  - name: Demos
+  - name: Platform
+  - name: Audit
+paths:
+  /health:
+    get:
+      operationId: getHealth
+      security: []
+      tags: [Platform]
+      responses:
+        "200":
+          description: Service health without sensitive deployment details.
+  /api/v1/auth/me:
+    get:
+      operationId: getCurrentIdentity
+      tags: [Identity]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Authenticated identity and permitted memberships.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/IdentityContext"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /api/v1/auth/context:
+    post:
+      operationId: selectActiveContext
+      tags: [Identity]
+      security:
+        - bearerAuth: []
+      description: |
+        Selects a navigation context only. The server must independently
+        authorize every subsequent resource request; context selection is
+        never itself an authorization grant.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContextSelection"
+      responses:
+        "200":
+          description: Validated active context.
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /api/v1/auth/sessions/current:
+    delete:
+      operationId: revokeCurrentSession
+      tags: [Identity]
+      security:
+        - bearerAuth: []
+      responses:
+        "204":
+          description: Current session revoked.
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /api/v1/institutions:
+    get:
+      operationId: listMyInstitutions
+      tags: [Institutions]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Institutions the caller is authorized to discover.
+    post:
+      operationId: createInstitution
+      tags: [Institutions]
+      security:
+        - bearerAuth: []
+      description: Platform Admin only. Creates an institution and initial lifecycle record.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InstitutionCreate"
+      responses:
+        "201":
+          description: Institution created.
+        "403":
+          $ref: "#/components/responses/Forbidden"
+  /api/v1/institutions/{institutionId}/memberships:
+    parameters:
+      - $ref: "#/components/parameters/InstitutionId"
+    get:
+      operationId: listInstitutionMemberships
+      tags: [Memberships]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Memberships visible to the authorized caller.
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+    post:
+      operationId: createInstitutionMembership
+      tags: [Memberships]
+      security:
+        - bearerAuth: []
+      description: |
+        Creates or invites a membership only when the actor has the required
+        institution-scoped administration grant. Role and branch scope are
+        validated against policy; the client cannot grant itself privileges.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MembershipCreate"
+      responses:
+        "201":
+          description: Membership created or invitation issued.
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /api/v1/content/banks/{bankId}:
+    parameters:
+      - name: bankId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      operationId: getAuthorizedQuestionBank
+      tags: [Content]
+      security:
+        - bearerAuth: []
+      description: |
+        Returns only the released content subset the caller is entitled to use.
+        Master authoring banks, answer keys and restricted blueprints must not
+        be included unless the caller has an explicit server-side grant.
+      responses:
+        "200":
+          description: Authorized released bank content.
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /api/v1/platform/demos:
+    get:
+      operationId: listDemoEnvironments
+      tags: [Demos]
+      security:
+        - bearerAuth: []
+      description: Platform Admin only.
+      responses:
+        "200":
+          description: Demo environments and expiry status.
+        "403":
+          $ref: "#/components/responses/Forbidden"
+    post:
+      operationId: createDemoEnvironment
+      tags: [Demos]
+      security:
+        - bearerAuth: []
+      description: |
+        Platform Admin only. Creates a time-limited isolated demo environment.
+        Allowed durations are policy-controlled (initial defaults 1, 3, 7 or
+        14 days). Expiry is stored and enforced by the server.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DemoCreate"
+      responses:
+        "201":
+          description: Demo environment created.
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "422":
+          $ref: "#/components/responses/InvalidRequest"
+  /api/v1/platform/demos/{demoId}/revoke:
+    parameters:
+      - name: demoId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      operationId: revokeDemoEnvironment
+      tags: [Demos]
+      security:
+        - bearerAuth: []
+      description: Platform Admin only; invalidates all demo sessions.
+      responses:
+        "204":
+          description: Demo access revoked.
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /api/v1/platform/audit-events:
+    get:
+      operationId: listPlatformAuditEvents
+      tags: [Audit]
+      security:
+        - bearerAuth: []
+      description: Platform Admin only. Append-only events; sensitive credentials and tokens are never recorded.
+      parameters:
+        - name: cursor
+          in: query
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 50
+      responses:
+        "200":
+          description: Paginated audit events.
+        "403":
+          $ref: "#/components/responses/Forbidden"
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: opaque session token
+  parameters:
+    InstitutionId:
+      name: institutionId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    Unauthorized:
+      description: Missing, invalid, expired or revoked session.
+    Forbidden:
+      description: Authenticated actor lacks the required permission or scope.
+    NotFound:
+      description: Resource does not exist or is outside the caller's authorized visibility.
+    InvalidRequest:
+      description: Request failed schema or business-policy validation.
+  schemas:
+    IdentityContext:
+      type: object
+      required: [user, platformRoles, memberships]
+      properties:
+        user:
+          type: object
+          required: [userId, status]
+          properties:
+            userId: { type: string }
+            displayName: { type: string }
+            status: { type: string, enum: [active, suspended, disabled] }
+        platformRoles:
+          type: array
+          items: { type: string, enum: [platform_admin] }
+        memberships:
+          type: array
+          items:
+            type: object
+            required: [membershipId, institutionId, role, status]
+            properties:
+              membershipId: { type: string }
+              institutionId: { type: string }
+              role:
+                type: string
+                enum: [school_admin, hod, teacher, parent, student, institution_viewer]
+              status: { type: string, enum: [active, suspended, revoked] }
+              branchIds:
+                type: array
+                items: { type: string }
+              allBranches: { type: boolean, default: false }
+        activeContext:
+          oneOf:
+            - type: "null"
+            - $ref: "#/components/schemas/ContextSelection"
+    ContextSelection:
+      type: object
+      required: [institutionId, membershipId]
+      properties:
+        institutionId: { type: string }
+        membershipId: { type: string }
+        branchId:
+          type: [string, "null"]
+    InstitutionCreate:
+      type: object
+      required: [name, institutionType]
+      properties:
+        name: { type: string, minLength: 2, maxLength: 160 }
+        institutionType: { type: string, enum: [school, coaching, direct, other] }
+    MembershipCreate:
+      type: object
+      required: [userId, role]
+      properties:
+        userId: { type: string }
+        role:
+          type: string
+          enum: [school_admin, hod, teacher, parent, student, institution_viewer]
+        branchIds:
+          type: array
+          uniqueItems: true
+          items: { type: string }
+        allBranches: { type: boolean, default: false }
+        departmentIds:
+          type: array
+          uniqueItems: true
+          items: { type: string }
+    DemoCreate:
+      type: object
+      required: [label, roles, durationDays, package]
+      properties:
+        label: { type: string, minLength: 2, maxLength: 100 }
+        roles:
+          type: array
+          minItems: 1
+          uniqueItems: true
+          items:
+            type: string
+            enum: [institution_admin, hod, teacher, parent, student, institution_viewer]
+        durationDays:
+          type: integer
+          enum: [1, 3, 7, 14]
+        package:
+          type: string
+          enum: [school_management, teaching_learning, management_view, complete_institution]
+        isolatedSampleData: { type: boolean, const: true }
