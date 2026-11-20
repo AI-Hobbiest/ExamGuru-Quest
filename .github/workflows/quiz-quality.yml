@@ -23,7 +23,7 @@ jobs:
       - name: Validate M5.4–M5.6 learning records, role policy and adapter readiness
         run: node --check js/m5-integration-services.js && node tests/m5-integration-services.test.js
       - name: Validate Independent Learner migration compatibility
-        run: node --check js/iam-local-store.js && node --check js/student-auth.js && node --check js/domain/legacy-independent-learner-adapter.js && node tests/legacy-independent-learner-adapter.test.js && node tests/independent-learner-runtime-compat.test.js
+        run: node --check js/iam-local-store.js && node --check js/student-auth.js && node --check js/domain/legacy-independent-learner-adapter.js && node tests/legacy-independent-learner-adapter.test.js && node tests/independent-learner-runtime-compat.test.js && node tests/independent-learner-authorization.test.js
       - name: Validate audited Science paper blueprint, generation and rendering
         run: node tests/assessment-manager.test.js && node tests/exam-paper-generator.test.js && node tests/mathematics-blueprints.test.js && node tests/mathematics-question-bank.test.js && node tests/mathematics-mcq-integration.test.js && node tests/exam-paper-renderer.test.js && node tests/exam-paper-release.test.js
       - name: Build shared Science bank from the maintained source
