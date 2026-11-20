@@ -36,6 +36,8 @@ assert.equal(report.totals.attemptCount,3);
 assert.equal(report.totals.answeredCount,4);
 assert.ok(report.bankIds.includes("class-6-math-sof"),"SOF bank provenance is retained");
 assert.ok(report.bankIds.includes("class-6-social-science"),"progress-only supported banks are not omitted");
+assert.equal(report.totals.progressAnsweredCount,0);
+assert.equal(report.totals.progressMissedCount,0);
 assert.match(api.toCsv(report),/mathematics-sof/);
 assert.throws(()=>api.toCsv({}),/learning report/);
 
@@ -48,6 +50,7 @@ assert.throws(()=>api.toCsv({}),/learning report/);
  const childReport=await service.readStudentReport({userId:"parent-1"},{studentId:"child-1"});
  assert.equal(childReport.totals.attemptCount,1);
  assert.match(await service.exportStudentCsv({userId:"parent-1"},{studentId:"child-1"}),/science/);
+ assert.match(await service.exportStudentJson({userId:"parent-1"},{studentId:"child-1"}),/"examguru-learning-report"/);
  await assert.rejects(()=>service.readStudentReport({userId:"parent-1"},{studentId:"other-child"}),/not available/);
  assert.equal(reads,2,"denied scopes never reach the local data reader");
 
@@ -56,13 +59,15 @@ assert.throws(()=>api.toCsv({}),/learning report/);
   const row=appointments[0];return row.status==="active"&&row.departmentId===departmentId&&(!row.effectiveFrom||row.effectiveFrom<=at)&&(!row.effectiveTo||row.effectiveTo>at)&&(row.scopeAllDepartmentClasses===true||row.classIds.includes(classId));
  }};
  const policy=api.createRoleExperiencePolicy({experience,academicOrganisation:academic});
+ assert.deepEqual(api.ROLE_KEYS,["platform_admin","school_admin","teacher","parent","student","institution_viewer"]);
  const memberships=[{membershipId:"tm1",institutionId:"i1",role:"teacher",status:"active"},{membershipId:"pm1",institutionId:"i1",role:"parent",status:"active"},{membershipId:"inactive",role:"student",status:"disabled"}];
  const roles=policy.describeMemberships(memberships,[
   {appointmentId:"hod1",departmentMembershipId:"tm1",departmentId:"d1",classIds:["c1","c2"],status:"active",effectiveFrom:"2026-01-01T00:00:00.000Z",effectiveTo:"2027-01-01T00:00:00.000Z"},
   {appointmentId:"expired",departmentMembershipId:"tm1",departmentId:"d2",classIds:["c1"],status:"active",effectiveTo:"2026-01-01T00:00:00.000Z"}
  ],"2026-11-20T00:00:00.000Z",[{role:"platform_admin",revokedAt:null}]);
  assert.deepEqual(roles.map(x=>x.role),["platform_admin","teacher","hod","parent"]);
- assert.equal(roles[1].scope,"effective-dated-appointment");
+ assert.equal(roles[2].scope,"effective-dated-appointment");
+ assert.deepEqual(roles[2].classIds,["c1","c2"]);
  assert.deepEqual(policy.navigation("hod"),[["Practice","./practice.html"]]);
  assert.equal((await policy.authorizeAction({userId:"u"},"assessment.assign",{institutionId:"i1"})).allowed,false,
   "local role preview cannot grant protected operations");
