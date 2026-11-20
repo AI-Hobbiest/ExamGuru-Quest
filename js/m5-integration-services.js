@@ -109,6 +109,43 @@
     return [columns.join(","),...report.bySubject.map(row=>columns.map(key=>cell(row[key])).join(","))].join("\r\n");
   }
 
+  function createLocalLearningRecordsReader(options) {
+    const opts=options||{}, storage=opts.storage||globalThis.C10Storage;
+    if(!storage || typeof storage.createLocalStore!=="function") throw new TypeError("C10Storage is required.");
+    const banks=rows(opts.banks);
+    if(!banks.length) throw new TypeError("The active class bank catalogue is required.");
+    return async function loadLocalRecords(scope) {
+      const requested=scope||{}, profileId=text(requested.profileId||opts.profileId);
+      const attempts=[], answerRecords=[], progress=[];
+      for(const bank of banks) {
+        if(!bank || !bank.id || !bank.subjectId) continue;
+        const ledger=storage.createLocalStore({kind:"test-attempt-ledger",recordId:String(bank.id),
+          defaults:()=>({attempts:[],activeAttempt:null,answerRecords:[]}),
+          validate:value=>!!value&&Array.isArray(value.attempts)&&Array.isArray(value.answerRecords)&&
+            (value.activeAttempt===null||typeof value.activeAttempt==="object")}).load();
+        const visible=(ledger.attempts||[]).filter(row=>!profileId || !row.profileId || row.profileId===profileId);
+        const ids=new Set(visible.map(row=>text(row.attemptId)));
+        visible.forEach(row=>attempts.push({...clone(row),subjectId:row.subjectId||bank.subjectId,
+          subjectTitle:row.subjectTitle||bank.title,questionBankId:bank.id}));
+        (ledger.answerRecords||[]).filter(row=>ids.has(text(row.attemptId))).forEach(row=>
+          answerRecords.push({...clone(row),subjectId:row.subjectId||bank.subjectId,questionBankId:bank.id}));
+        const p=storage.createLocalStore({kind:"subject-progress",recordId:String(bank.id),
+          defaults:()=>({missed:[],answered:0,correct:0,attempts:[]}),
+          validate:value=>!!value&&Array.isArray(value.missed)&&Number.isFinite(value.answered)&&
+            Number.isFinite(value.correct)&&Array.isArray(value.attempts)}).load();
+        progress.push({subjectId:bank.subjectId,bankId:bank.id,answered:number(p.answered),correct:number(p.correct),missedCount:rows(p.missed).length});
+      }
+      const library=storage.createLocalStore({kind:"learning-library",recordId:"class-"+text(requested.classId||opts.classId||"10"),
+        defaults:()=>({schemaVersion:1,kind:"learning-library",mistakes:[],bookmarks:[],responses:[]}),
+        validate:value=>!!value&&value.schemaVersion===1&&value.kind==="learning-library"&&
+          Array.isArray(value.mistakes)&&Array.isArray(value.bookmarks)&&Array.isArray(value.responses)}).load();
+      const learning=opts.learningModel||globalThis.C10LearningModel;
+      const mastery=learning&&typeof learning.summarizeTopics==="function"?learning.summarizeTopics(library):[];
+      return {studentId:text(requested.studentId),attempts,answerRecords,mistakes:clone(library.mistakes),
+        bookmarks:clone(library.bookmarks),mastery:clone(mastery),progress,generatedAt:new Date().toISOString()};
+    };
+  }
+
   function createLearningRecordsService(options) {
     const opts=options||{};
     if(typeof opts.loadRecords!=="function") throw new TypeError("A local learning-record reader is required.");
@@ -125,7 +162,8 @@
       const records=await opts.loadRecords(clone(requested));
       return buildLearningReport({...records,studentId:requested.studentId});
     }
-    return Object.freeze({readStudentReport:read,exportStudentCsv:async(actor,scope)=>toCsv(await read(actor,scope))});
+    return Object.freeze({readStudentReport:read,exportStudentCsv:async(actor,scope)=>toCsv(await read(actor,scope)),
+      exportStudentJson:async(actor,scope)=>JSON.stringify(await read(actor,scope),null,2)});
   }
 
   const ROLE_KEYS=Object.freeze(["platform_admin","school_admin","teacher","parent","student","institution_viewer"]);
@@ -134,8 +172,11 @@
     const experience=opts.experience || globalThis.ExamGuruRoleExperience;
     const academic=opts.academicOrganisation || globalThis.ExamGuruAcademicOrganisation;
     const serverAuthorize=opts.serverAuthorize;
-    function describeMemberships(memberships, appointments, at) {
+    function describeMemberships(memberships, appointments, at, platformRoles) {
       const time=at || new Date().toISOString(), result=[];
+      for(const role of rows(platformRoles)) if(role && role.role==="platform_admin" && !role.revokedAt) {
+        result.push({role:"platform_admin",membershipId:null,institutionId:null,scope:"platform-role"});
+      }
       for(const membership of rows(memberships)) {
         if(!membership || membership.status!=="active" || !ROLE_KEYS.includes(membership.role)) continue;
         result.push({role:membership.role,membershipId:membership.membershipId||null,institutionId:membership.institutionId||null,scope:"membership"});
@@ -220,7 +261,7 @@
       note:"Contract validation only. Do not configure or activate cloud sync in M5."});
   }
 
-  const api=Object.freeze({buildLearningReport,toCsv,createLearningRecordsService,
+  const api=Object.freeze({buildLearningReport,toCsv,createLocalLearningRecordsReader,createLearningRecordsService,
     createRoleExperiencePolicy,assertRecordAdapter,createLocalRecordAdapter,assertFutureCloudAdapter,
     ADAPTER_METHODS,ROLE_KEYS});
   globalThis.ExamGuruM5Integration=api;
