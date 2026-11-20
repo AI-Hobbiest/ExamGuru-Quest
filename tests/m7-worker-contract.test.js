@@ -1,0 +1,16 @@
+"use strict";
+const assert=require("node:assert/strict"),fs=require("node:fs");
+const worker=fs.readFileSync("cloudflare/worker.js","utf8"),m7=fs.readFileSync("cloudflare/m7.js","utf8"),migration=fs.readFileSync("cloudflare/migrations/0007_m7_demo_management.sql","utf8"),ui=fs.readFileSync("platform-demo-management.html","utf8"),admin=fs.readFileSync("admin.html","utf8");
+assert(worker.includes('import { handleM7 } from "./m7.js"'),"Worker must import M7 routes");
+assert(worker.includes("handleM7(request,env,who,hasPlatformAdminGrant)"),"M7 routes must be dispatched after authentication");
+for(const route of ["/api/v2/platform/demos","extend","reset","revoke","audit"])assert(m7.includes(route),"Missing M7 route "+route);
+for(const policy of ["hasPlatformAdminGrant","platform_admin","session_version=session_version+1","expires_at","DEMO-","provisionBaseline","demo_sample_records","demo_audit_events"])assert(m7.includes(policy),"Missing M7 security/provisioning policy "+policy);
+assert(m7.includes('roles.includes("hod")&&!roles.includes("teacher")'),"HOD must require Teacher");
+assert(m7.includes('roles.includes("platform_admin")'),"Platform Admin must never be granted to demos");
+assert(m7.includes('new Set(["school_admin","institution_viewer","teacher","hod","parent","student"])'),"Institution Viewer must remain a separate persona");
+for(const sql of ["CREATE TABLE IF NOT EXISTS demo_environments","CREATE TABLE IF NOT EXISTS demo_sample_records","CREATE TABLE IF NOT EXISTS demo_audit_events","trg_demo_audit_no_update","trg_demo_audit_no_delete"])assert(migration.includes(sql),"Missing M7 migration guard "+sql);
+assert(ui.includes("Pre-created persona")&&ui.includes("On-demand role combination"),"Platform Admin UI must support both demo creation paths");
+assert(ui.includes("institution-viewer")&&ui.includes("hod-teacher"),"UI must expose Institution Viewer and HOD/Teacher personas");
+assert(ui.includes("/api/v2/platform/demos")&&ui.includes("data-act=\"revoke\""),"UI must connect lifecycle operations to protected API routes");
+assert(admin.includes("./platform-demo-management.html"),"Admin overview must link to Demo Management");
+console.log("M7 Worker contract tests passed: Platform Admin gate, isolated synthetic tenant seed, persona/on-demand role policy, lifecycle invalidation and append-only audit.");

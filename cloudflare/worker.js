@@ -1,4 +1,5 @@
 import { handleM4 } from "./m4.js";
+import { handleM7 } from "./m7.js";
 const SUBJECTS = new Set(["science","mathematics","english","social-science","hindi","science-sof","mathematics-sof","english-sof"]);
 const PASSWORD_ITERATIONS = 210000;
 const SESSION_HOURS = 8;
@@ -595,6 +596,7 @@ export default {
 
 
       const auth=await requireAuth(request,env);if(auth.error)return auth.error;const who=auth.who;
+      const m7Response=await handleM7(request,env,who,hasPlatformAdminGrant);if(m7Response)return m7Response;
       const m4Response=await handleM4(request,env,who);if(m4Response)return m4Response;
       if(path==="/api/v2/auth/me"&&method==="GET")return await v2Identity(request,env,who);
       if(path==="/api/v2/auth/context"&&method==="POST")return await v2SelectContext(request,env,who);

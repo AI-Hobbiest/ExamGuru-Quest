@@ -197,6 +197,54 @@ paths:
           $ref: "#/components/responses/Forbidden"
         "422":
           $ref: "#/components/responses/InvalidRequest"
+  /api/v2/platform/demos/{demoId}/extend:
+    parameters:
+      - name: demoId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      operationId: extendDemoEnvironment
+      tags: [Demos]
+      security:
+        - bearerAuth: []
+      description: Platform Admin only. Extension is capped at 14 days remaining lifetime and invalidates previous demo sessions.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DemoExtend"
+      responses:
+        "200":
+          description: Demo expiry extended and session version rotated.
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "422":
+          $ref: "#/components/responses/InvalidRequest"
+  /api/v2/platform/demos/{demoId}/reset:
+    parameters:
+      - name: demoId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      operationId: resetDemoEnvironment
+      tags: [Demos]
+      security:
+        - bearerAuth: []
+      description: Platform Admin only. Restores synthetic sample data to the persona baseline and invalidates previous demo sessions.
+      responses:
+        "204":
+          description: Demo sample data reset.
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
   /api/v2/platform/demos/{demoId}/revoke:
     parameters:
       - name: demoId
@@ -337,32 +385,34 @@ components:
           items: { type: string }
         allBranches: { type: boolean, default: false }
     DemoCreate:
+      oneOf:
+        - $ref: "#/components/schemas/PersonaDemoCreate"
+        - $ref: "#/components/schemas/OnDemandDemoCreate"
+    PersonaDemoCreate:
       type: object
-      required: [label, roles, durationDays, package]
+      required: [kind, templateId]
       properties:
-        label: { type: string, minLength: 2, maxLength: 100 }
+        kind: { type: string, const: persona }
+        templateId: { type: string, minLength: 1 }
+        displayName: { type: string, maxLength: 100 }
+        durationDays: { type: integer, enum: [1, 3, 7, 14], default: 7 }
+    OnDemandDemoCreate:
+      type: object
+      required: [kind, roles]
+      properties:
+        kind: { type: string, const: on_demand }
+        displayName: { type: string, maxLength: 100 }
         roles:
-          description: Demo personas. The hod persona is implemented as a teacher membership plus a separately scoped primary/backup department-head appointment; it is not a standalone login role.
           type: array
           minItems: 1
           uniqueItems: true
           items:
             type: string
             enum: [school_admin, hod, teacher, parent, student, institution_viewer]
-        durationDays:
-          type: integer
-          enum: [1, 3, 7, 14]
-        package:
-          type: string
-          enum: [school_management, teaching_learning, management_view, complete_institution]
-        isolatedSampleData: { type: boolean, const: true }
-        departmentHeadAppointments:
-          type: array
-          description: Optional demo HOD overlays. Each appointment is attached to a teacher persona and department; maximum one primary and one backup appointment per department.
-          items:
-            type: object
-            required: [teacherPersonaId, departmentId, appointmentType]
-            properties:
-              teacherPersonaId: { type: string }
-              departmentId: { type: string }
-              appointmentType: { type: string, enum: [primary, backup] }
+        dataProfile: { type: string, enum: [standard_sample, school_sample, department_sample, teaching_sample] }
+        durationDays: { type: integer, enum: [1, 3, 7, 14], default: 7 }
+    DemoExtend:
+      type: object
+      required: [additionalDays]
+      properties:
+        additionalDays: { type: integer, enum: [1, 3, 7, 14] }
