@@ -93,9 +93,9 @@
     for (const [subjectId, ids] of bankIds) ensure(subjectId).bankIds = Array.from(ids).sort();
     const bySubject = Array.from(subjects.values()).sort((a,b)=>a.subjectId.localeCompare(b.subjectId));
     const total = bySubject.reduce((acc,row)=>{
-      for (const key of ["attemptCount","submittedCount","timedOutCount","questionCount","answeredCount","correctCount","skippedCount","scoreTotal","maxScoreTotal","mistakeCount","bookmarkCount","masteryCount"]) acc[key]+=row[key];
+      for (const key of ["attemptCount","submittedCount","timedOutCount","questionCount","answeredCount","correctCount","skippedCount","scoreTotal","maxScoreTotal","mistakeCount","bookmarkCount","masteryCount","progressAnsweredCount","progressCorrectCount","progressMissedCount"]) acc[key]+=row[key];
       return acc;
-    },{attemptCount:0,submittedCount:0,timedOutCount:0,questionCount:0,answeredCount:0,correctCount:0,skippedCount:0,scoreTotal:0,maxScoreTotal:0,mistakeCount:0,bookmarkCount:0,masteryCount:0});
+    },{attemptCount:0,submittedCount:0,timedOutCount:0,questionCount:0,answeredCount:0,correctCount:0,skippedCount:0,scoreTotal:0,maxScoreTotal:0,mistakeCount:0,bookmarkCount:0,masteryCount:0,progressAnsweredCount:0,progressCorrectCount:0,progressMissedCount:0});
     return {
       schemaVersion:1, kind:"examguru-learning-report", generatedAt:data.generatedAt || new Date().toISOString(),
       studentId:text(data.studentId), bySubject, totals:total,
@@ -107,7 +107,7 @@
     if (!report || report.kind !== "examguru-learning-report" || !Array.isArray(report.bySubject)) {
       throw new TypeError("A learning report is required for CSV export.");
     }
-    const columns=["subjectId","attemptCount","submittedCount","timedOutCount","questionCount","answeredCount","correctCount","skippedCount","scoreTotal","maxScoreTotal","mistakeCount","bookmarkCount","masteryCount","bankIds"];
+    const columns=["subjectId","attemptCount","submittedCount","timedOutCount","questionCount","answeredCount","correctCount","skippedCount","scoreTotal","maxScoreTotal","mistakeCount","bookmarkCount","masteryCount","progressAnsweredCount","progressCorrectCount","progressMissedCount","bankIds"];
     const cell=value=>'"'+text(Array.isArray(value)?value.join(";"):value).replace(/"/g,'""')+'"';
     return [columns.join(","),...report.bySubject.map(row=>columns.map(key=>cell(row[key])).join(","))].join("\r\n");
   }
