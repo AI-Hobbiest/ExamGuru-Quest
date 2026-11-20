@@ -9,7 +9,9 @@ function refresh(){
  fill("classBranch",branches,"Choose branch",x=>x.branchId,x=>x.name+" · "+x.code);
  fill("classGrade",grades,"Choose institution grade",x=>x.gradeId,x=>x.name+" · "+x.code);
  fill("classSubjects",subjects,"",x=>x.subjectId,x=>x.name+" · "+x.code);
- fill("departmentSelect",db.departments(),"Choose department",x=>x.departmentId,x=>x.name);\n fill("departmentClasses",classes.filter(x=>x.status==="active"),"",x=>x.classId,x=>x.name+" · "+x.classId);\n const selectedDepartment=db.departments().find(x=>x.departmentId===$( "departmentSelect")?.value);Array.from($( "departmentClasses")?.options||[]).forEach(o=>o.selected=!!selectedDepartment?.classIds?.includes(o.value));
+ fill("departmentSelect",db.departments(),"Choose department",x=>x.departmentId,x=>x.name);
+ fill("departmentClasses",classes.filter(x=>x.status==="active"),"",x=>x.classId,x=>x.name+" · "+x.classId);
+ const selectedDepartment=db.departments().find(x=>x.departmentId===$( "departmentSelect")?.value);Array.from($( "departmentClasses")?.options||[]).forEach(o=>o.selected=!!selectedDepartment?.classIds?.includes(o.value));
  fill("teacherSelect",members("teacher"),"Choose teacher membership",x=>x.membership.membershipId,x=>x.user.displayName+" · "+x.membership.membershipId);
  fill("teacherSelect",members("teacher"),"Choose teacher membership",x=>x.membership.membershipId,x=>x.user.displayName+" · "+x.membership.membershipId);
  fill("studentSelect",members("student"),"Choose student membership",x=>x.membership.membershipId,x=>x.user.displayName+" · "+x.membership.membershipId);
@@ -42,7 +44,8 @@ if(moduleName==="academics"){
 if(moduleName==="departments"){
  $("createDepartment").addEventListener("click",()=>act(()=>db.createDepartment($("departmentName").value,$("departmentCode").value)));
  $("addDepartmentMember").addEventListener("click",()=>act(()=>db.addDepartmentMember($("departmentSelect").value,$("teacherSelect").value)));
- $("appointHod").addEventListener("click",()=>act(()=>db.appointHod($("departmentSelect").value,$("teacherSelect").value)));\n $("saveDepartmentClasses").addEventListener("click",()=>act(()=>db.setDepartmentClasses($("departmentSelect").value,Array.from($("departmentClasses").selectedOptions).map(o=>o.value))));
+ $("appointHod").addEventListener("click",()=>act(()=>db.appointHod($("departmentSelect").value,$("teacherSelect").value)));
+ $("saveDepartmentClasses").addEventListener("click",()=>act(()=>db.setDepartmentClasses($("departmentSelect").value,Array.from($("departmentClasses").selectedOptions).map(o=>o.value))));
  $("departmentSelect").addEventListener("change",refresh);
 }
 if(moduleName==="assignments"){
