@@ -49,6 +49,17 @@ Baseline: `main` at `09c26d2fe4a296949b73980f7b7d75a8a068a2f6`
 - Add contract tests for deny-by-default behavior and cross-tenant isolation.
 - Keep provider-specific adapters isolated from domain/application code.
 
+### M6.1 — Independent Learner continuity (completed in this branch)
+- Formalize the reserved `INST-DIRECT-001` tenant as **Independent Learner** without changing its stable ID.
+- Keep existing students and parents on their current static login and session flow.
+- Add tenant/membership context to the account view returned by the existing auth module; enrich old sessions when read, without forcing re-login.
+- Add a deterministic, read-only projection from legacy student/family JSON to direct-tenant users, memberships and parent-child links.
+- Preserve Class 3, 6, 10 and CLAT access in the direct tenant.
+- Do not modify legacy account JSON, student IDs, parent IDs, local-storage keys, attempts, answers, profiles, backups or outbox records.
+- Add CI regression tests for projection determinism, secret-field exclusion, legacy IAM preservation and old-session compatibility.
+
+**Exit:** current login and student/parent experience remain unchanged; the direct-tenant mapping is additive and rollback-safe.
+
 ### M6.4 — Local prototype safety
 - Label local account management and role preview as prototype-only.
 - Ensure demo/test accounts are clearly separated from real user records.
