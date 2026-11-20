@@ -185,6 +185,7 @@ jobs:
           cp css/theme-soft-spectrum.css _site/css/theme-soft-spectrum.css
           cp css/app-shell.css _site/css/app-shell.css
           cp css/institution-operations.css _site/css/institution-operations.css
+          cp css/institution-dashboard.css _site/css/institution-dashboard.css
           cp css/admin.css _site/css/admin.css
           cp css/question-media.css _site/css/question-media.css
           cp js/storage.js _site/js/storage.js
@@ -221,6 +222,7 @@ jobs:
           cp js/iam-local-store.js _site/js/iam-local-store.js
           cp js/institution-data-store.js _site/js/institution-data-store.js
           cp js/institution-module.js _site/js/institution-module.js
+          cp js/institution-dashboard.js _site/js/institution-dashboard.js
           cp js/iam-user-management.js _site/js/iam-user-management.js
           cp js/platform-entitlements.js _site/js/platform-entitlements.js
           cp js/competitive-exams-admin.js _site/js/competitive-exams-admin.js
