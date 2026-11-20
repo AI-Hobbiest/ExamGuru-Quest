@@ -87,3 +87,10 @@ Existing CI focuses heavily on content and functional regression; automated secu
 - [ ] No Cloudflare-specific setup is required for M6.
 - [ ] Existing Pages and LMS regression workflows remain unchanged and passing.
 - [ ] No production deployment or destructive repository visibility change is made without a separate release decision.
+
+
+## Independent Learner continuity update (M6.1)
+
+The local IAM store already reserved `INST-DIRECT-001` as a virtual direct-learning institution. M6 formalizes this as **Independent Learner** while retaining the ID and legacy display-name alias. The existing static student/parent authentication remains unchanged; current session account views gain additive tenant context only. A read-only projection adapter maps active legacy student and parent accounts and valid parent-child links to deterministic Independent Learner memberships. It excludes password hashes, salts and credentials, and does not mutate either published account JSON file or local learning records.
+
+The direct tenant retains Class 3, Class 6, Class 10 and CLAT cohort entitlements. The compatibility bridge is not a production authentication or authorization boundary. The public static account files remain a known critical exposure until a trusted backend and private account store are deployed.
