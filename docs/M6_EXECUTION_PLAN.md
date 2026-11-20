@@ -34,6 +34,15 @@ Baseline: `main` at `09c26d2fe4a296949b73980f7b7d75a8a068a2f6`
 
 **Constraint:** minification/obfuscation is deterrence only; it is not a confidentiality boundary.
 
+### M6.1b — Private source / public release separation design
+- Keep the current public Pages repository and URL intact during preparation.
+- Define a separate private source repository and public release repository topology.
+- Define reproducible builds, artifact inventory, source-map exclusion, release hashes and rollback.
+- Require staging validation for existing learner journeys, old URLs, PWA/offline cache and local backup compatibility.
+- Defer repository split and Pages cutover until a separate reviewed approval; never flip the current live repository private.
+
+**Exit:** a zero-interruption source/release cutover plan exists; no current deployment setting is changed.
+
 ### M6.2 — Content protection design
 - Inventory all public banks, answer keys, exam blueprints, CLAT material, curriculum and visual assets.
 - Classify content as public practice content, institution-restricted content or master authoring source.
