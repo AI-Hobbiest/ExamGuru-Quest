@@ -2,7 +2,7 @@
 const assert=require("node:assert/strict"),fs=require("node:fs");
 const worker=fs.readFileSync("cloudflare/worker.js","utf8"),m7=fs.readFileSync("cloudflare/m7.js","utf8"),migration=fs.readFileSync("cloudflare/migrations/0007_m7_demo_management.sql","utf8"),ui=fs.readFileSync("platform-demo-management.html","utf8"),admin=fs.readFileSync("admin.html","utf8");
 assert(worker.includes('import { handleM7 } from "./m7.js"'),"Worker must import M7 routes");
-assert(worker.includes("handleM7(request,env,who,hasPlatformAdminGrant)"),"M7 routes must be dispatched after authentication");
+assert(worker.includes("handleM7(request,env,who,hasPlatformAdminGrant,json,fail)"),"M7 routes must be dispatched after authentication");
 for(const route of ["/api/v2/platform/demos","extend","reset","revoke","audit"])assert(m7.includes(route),"Missing M7 route "+route);
 for(const policy of ["hasPlatformAdminGrant","platform_admin","session_version=session_version+1","expires_at","DEMO-","provisionBaseline","demo_sample_records","demo_audit_events"])assert(m7.includes(policy),"Missing M7 security/provisioning policy "+policy);
 assert(m7.includes('roles.includes("hod")&&!roles.includes("teacher")'),"HOD must require Teacher");
