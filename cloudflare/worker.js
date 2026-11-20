@@ -596,7 +596,7 @@ export default {
 
 
       const auth=await requireAuth(request,env);if(auth.error)return auth.error;const who=auth.who;
-      const m7Response=await handleM7(request,env,who,hasPlatformAdminGrant);if(m7Response)return m7Response;
+      const m7Response=await handleM7(request,env,who,hasPlatformAdminGrant,json,fail);if(m7Response)return m7Response;
       const m4Response=await handleM4(request,env,who);if(m4Response)return m4Response;
       if(path==="/api/v2/auth/me"&&method==="GET")return await v2Identity(request,env,who);
       if(path==="/api/v2/auth/context"&&method==="POST")return await v2SelectContext(request,env,who);
