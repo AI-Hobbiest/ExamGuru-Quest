@@ -1,6 +1,7 @@
 "use strict";
 const assert=require("node:assert/strict");
 const api=require("../js/domain/demo-management.js");
+const catalogue=require("../js/domain/demo-persona-catalog.js").createDemoPersonaCatalog(require("../data/demo-persona-templates.json"));
 let clock=new Date("2026-11-20T12:00:00.000Z"),sequence=0,reads=0,resets=[];
 const records=new Map(),events=[];
 const repository={
