@@ -4,7 +4,7 @@ const source=fs.readFileSync("js/institution-dashboard.js","utf8");
 const html=fs.readFileSync("institution-operations.html","utf8");
 const css=fs.readFileSync("css/institution-dashboard.css","utf8");
 function run(role){
- const ids=["dashError","io-dash-setup","dashWelcome","dashInstitutionSubtitle","dashRole","dashHeroActions","dashDataStatus","metricStudents","metricTeachers","metricClasses","metricBranches","metricSubjects","metricDepartments","metricStudentsNote","metricTeachersNote","linkBranches","linkAcademic","linkDepartments","linkUsers","linkEnrolments","linkAssignments","linkContent","linkExams","pulseAssignments","pulseEnrolments","contentPublished","contentCopy","addonTitle","addonCopy","setupPercent","setupProgressBar","pulseTitle","pulseCopy","setupChecklist","dashWorkspaces","dashRefresh"];
+ const ids=["dashError","io-dash-setup","dashWelcome","dashInstitutionSubtitle","dashRole","dashHeroActions","dashContentLink","dashExamLink","dashDataStatus","metricStudents","metricTeachers","metricClasses","metricBranches","metricSubjects","metricDepartments","metricStudentsNote","metricTeachersNote","linkBranches","linkAcademic","linkDepartments","linkUsers","linkEnrolments","linkAssignments","linkContent","linkExams","pulseAssignments","pulseEnrolments","contentPublished","contentCopy","addonTitle","addonCopy","setupPercent","setupProgressBar","pulseTitle","pulseCopy","setupChecklist","dashWorkspaces","dashRefresh"];
  const elements=new Map(ids.map(id=>[id,{id,textContent:"",hidden:false,style:{},classList:{toggle(){}},setAttribute(){},addEventListener(){}}]));
  const checks=Array.from({length:5},()=>({classList:{toggle(){}},querySelector(){return {textContent:""}},setAttribute(){}}));
  elements.get("io-dash-setup").innerHTML="";
@@ -37,7 +37,7 @@ function run(role){
  assert.equal(val("linkExams"),"1 programmes enabled");
  assert.equal(elements.get("dashError").hidden,true);
  if(role==="school_admin"){assert.equal(elements.get("dashHeroActions").hidden,false);assert.equal(elements.get("setupChecklist").hidden,false);assert.equal(elements.get("dashWorkspaces").hidden,false);}
- else {assert.equal(elements.get("dashHeroActions").hidden,true);assert.equal(elements.get("setupChecklist").hidden,true);assert.equal(elements.get("dashWorkspaces").hidden,true);assert.ok(elements.get("io-dash-setup").innerHTML.includes("read-only access"));}
+ else {assert.equal(elements.get("dashHeroActions").hidden,true);assert.equal(elements.get("setupChecklist").hidden,true);assert.equal(elements.get("dashWorkspaces").hidden,true);assert.equal(elements.get("dashContentLink").hidden,true);assert.equal(elements.get("dashExamLink").hidden,true);assert.ok(elements.get("io-dash-setup").innerHTML.includes("read-only access"));}
 }
 run("school_admin");run("institution_viewer");
 for(const path of ["institution-branches.html","institution-academics.html","institution-departments.html","institution-assignments.html","institution-enrolments.html","user-management.html","institution-content.html","institution-competitive-exams.html"])assert.ok(html.includes("./"+path),"dashboard link retained: "+path);
