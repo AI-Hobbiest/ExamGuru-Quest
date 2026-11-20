@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check assessment and Paper Studio workflow script syntax
-        run: for file in js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/dashboard-manager.js js/exam-paper-studio.js js/exam-paper-self-study.js js/lms-application-services.js js/institution-content-store.js js/app-shell.js; do node --check "$file"; done
+        run: for file in js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/dashboard-manager.js js/exam-paper-studio.js js/exam-paper-self-study.js js/lms-application-services.js js/institution-content-store.js js/iam-local-store.js js/institution-data-store.js js/institution-module.js js/institution-dashboard.js js/app-shell.js; do node --check "$file"; done
       - name: Validate M5.1–M5.3 LMS application services and compatibility boundary
         run: node --check js/lms-application-services.js && node --check js/domain/repository-contracts.js && node --check js/adapters/memory-repositories.js && node tests/lms-application-services.test.js && node tests/institution-content-store.test.js
       - name: Validate M5.4–M5.6 learning records, role policy and adapter readiness
@@ -71,7 +71,7 @@ jobs:
       - name: Validate responsive portal and dashboard shell
         run: node tests/app-shell.test.js
       - name: Validate institution admin dashboard metrics and role views
-        run: node --check js/institution-dashboard.js && node tests/institution-dashboard.test.js
+        run: node --check js/institution-dashboard.js && node tests/institution-dashboard.test.js && node tests/institution-hod-workspace.test.js
       - name: Install Playwright Chromium for Mathematics browser QA
         run: npm install --no-save playwright@1.64.1 && npx playwright install --with-deps chromium
       - name: Validate five-paper all-format repeat protection
