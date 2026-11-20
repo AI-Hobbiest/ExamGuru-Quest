@@ -2,7 +2,7 @@ name: ExamGuru Quest quiz quality checks
 
 on:
   push:
-    branches: [main]
+    branches: [main, m5/backward-compatible-integration]
   pull_request:
     branches: [main]
   workflow_dispatch:
