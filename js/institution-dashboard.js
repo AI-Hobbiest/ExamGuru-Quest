@@ -20,7 +20,7 @@ function render(auth){
   if(db.currentInstitutionId()!==institutionId)db.setInstitution(institutionId);
   const state=db.getState(),admin=auth.institutionRole==="school_admin";
   if(auth.institutionRole==="hod"){
-   const departments=(state.departments||[]).filter(d=>(auth.departmentIds||[]).includes(d.departmentId)||d.hodRoleMembershipId===auth.membershipId||d.hodMembershipId===auth.teacherMembershipId);
+   const departments=(state.departments||[]).filter(d=>(auth.departmentIds||[]).includes(d.departmentId)||d.hodRoleMembershipId===auth.membershipId||(d.hodMembershipId===auth.teacherMembershipId||(d.hodMembershipIds||[]).includes(auth.teacherMembershipId)));
    if(!departments.length)throw Error("No department is assigned to this HOD membership. Ask the Institution Admin to verify the appointment.");
    const teacherIds=new Set(departments.flatMap(d=>d.memberIds||[])),classIds=new Set(departments.flatMap(d=>d.classIds||[]));
    if(!classIds.size)throw Error("Your department has no class scope configured yet. Ask the Institution Admin to assign the HOD class scope.");
