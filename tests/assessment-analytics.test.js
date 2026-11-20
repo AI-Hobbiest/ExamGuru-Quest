@@ -7,12 +7,14 @@ const context={
   window:{},
   localStorage:{
     getItem:key=>store.has(key)?store.get(key):null,
-    setItem:(key,value)=>store.set(key,String(value))
+    setItem:(key,value)=>store.set(key,String(value)),
+    removeItem:key=>store.delete(key)
   },
-  Math,Date,Array,String,Number,Set,Map,TypeError,Error,Object,JSON
+  Math,Date,Array,String,Number,Set,Map,TypeError,Error,Object,JSON,Uint8Array
 };
 context.globalThis=context;
 vm.createContext(context);
+vm.runInContext(fs.readFileSync("js/storage.js","utf8"),context);
 vm.runInContext(fs.readFileSync("js/assessment-manager.js","utf8"),context);
 const manager=context.window.C10AssessmentManager;
 
