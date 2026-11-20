@@ -6,9 +6,15 @@ const iam=fs.readFileSync("js/iam-local-store.js","utf8");
 const data=fs.readFileSync("js/institution-data-store.js","utf8");
 assert.match(iam,/assignRole\(userId,role,institutionId/);
 assert.doesNotMatch(iam,/role:"hod"/,"HOD must not be stored as a global IAM role");
-assert.match(data,/hodMembershipId=membershipId/,"HOD appointment remains attached to teacher membership");
-assert.match(shell,/hodMembershipId===membership\.membershipId/,"local workspace derives HOD access from appointment");
+assert.match(data,/hodMembershipIds=\[\.\.\.assigned,membershipId\]/,"HOD appointments are stored against teacher memberships");
+assert.match(data,/assigned.length>=2/,"A third HOD appointment is rejected");
+assert.match(data,/primaryDepartmentId!==departmentId/,"HOD appointment must match the teacher primary department");
+assert.match(iam,/primaryDepartmentId/,"Teacher memberships require a primary department");
+assert.match(iam,/role==="teacher".*primaryDepartmentId/s,"HOD is implemented as a Teacher membership with an additional department appointment");
+assert.match(shell,/hodMembershipIds\|\|\[\]/,"local workspace derives HOD access from either of the two department appointments");
+assert.match(shell,/institutionRoles:\["teacher","hod"\]/,"HODs retain teaching navigation when they also teach");
 assert.match(shell,/current\.file!=="institution-operations\.html"&&\!\(auth\.role==="institution"&&auth\.institutionRole==="school_admin"\)/,"HOD cannot enter institution setup pages");
+assert.match(dashboard,/institution_viewer/,"Institution Viewer remains an authorised institution-wide read-only role");
 function run(auth,state,users){
  const ids=["institutionDashboard","dashGuestGate","dashError","dashWelcome","dashInstitutionSubtitle","dashRole","dashHeroActions","dashContentLink","dashExamLink","dashDataStatus","metricStudents","metricTeachers","metricClasses","metricBranches","metricSubjects","metricDepartments","metricStudentsNote","metricTeachersNote","linkBranches","linkAcademic","linkDepartments","linkUsers","linkEnrolments","linkAssignments","linkContent","linkExams","pulseAssignments","pulseEnrolments","contentPublished","contentCopy","addonTitle","addonCopy","setupPercent","setupProgressBar","pulseTitle","pulseCopy","setupChecklist","dashWorkspaces"];
  const elements=new Map(ids.map(id=>[id,{id,textContent:"",hidden:id==="institutionDashboard",style:{},classList:{toggle(){}},setAttribute(){},addEventListener(){}}]));
