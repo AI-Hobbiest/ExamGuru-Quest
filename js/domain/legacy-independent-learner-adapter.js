@@ -44,8 +44,8 @@
       if (!active(row)) continue;
       const legacyId = String(row.studentId || ("student-" + safe(row.username)));
       const username = String(row.username || "").trim().toLowerCase();
-      if (!username || usernames.has("student:" + username)) throw new TypeError("Duplicate or missing legacy student username.");
-      usernames.add("student:" + username);
+      if (!username || usernames.has(username)) throw new TypeError("Duplicate or missing legacy learner username across student/parent accounts.");
+      usernames.add(username);
       const userId = "LEGACY-STUDENT-" + safe(legacyId).toUpperCase();
       const membershipId = stableMembershipId("student", legacyId);
       users.push({ userId, username, displayName: String(row.displayName || row.username), status: "active", legacyIdentity: { kind: "student", id: legacyId } });
@@ -61,8 +61,8 @@
       if (!active(row)) continue;
       const legacyId = String(row.parentId || ("parent-" + safe(row.username)));
       const username = String(row.username || "").trim().toLowerCase();
-      if (!username || usernames.has("parent:" + username)) throw new TypeError("Duplicate or missing legacy parent username.");
-      usernames.add("parent:" + username);
+      if (!username || usernames.has(username)) throw new TypeError("Duplicate or missing legacy learner username across student/parent accounts.");
+      usernames.add(username);
       const userId = "LEGACY-PARENT-" + safe(legacyId).toUpperCase();
       const membershipId = stableMembershipId("parent", legacyId);
       users.push({ userId, username, displayName: String(row.displayName || row.username), status: "active", legacyIdentity: { kind: "parent", id: legacyId } });
