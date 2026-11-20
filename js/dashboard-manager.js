@@ -56,8 +56,8 @@
       const student=window.C10StudentAuth&&window.C10StudentAuth.currentUser
         ?window.C10StudentAuth.currentUser():null;
       if(student&&student.role==="student"&&student.studentId&&
-         window.C10AssessmentManager&&window.C10AssessmentManager.analyticsAttemptsForStudent){
-        result.push(...window.C10AssessmentManager.analyticsAttemptsForStudent(student.studentId));
+         window.C10AssessmentService&&window.C10AssessmentService.analyticsAttemptsForStudent){
+        result.push(...window.C10AssessmentService.analyticsAttemptsForStudent(student.studentId));
       }
     }catch(_){}
     return result.sort((a,b)=>String(a.submittedAt||a.startedAt).localeCompare(String(b.submittedAt||b.startedAt)));

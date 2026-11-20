@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/repository-record.schema.json",
+  "title": "ExamGuru Versioned Repository Record v1",
+  "type": "object",
+  "required": ["schemaVersion", "kind", "recordId", "version", "updatedAt", "data"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "kind": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "recordId": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "version": { "type": "integer", "minimum": 1 },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "data": { "type": "object" }
+  },
+  "additionalProperties": false,
+  "$comment": "Client writes carry an idempotency key and optional expectedVersion in the command envelope, not in the stored record. The server derives tenant and actor scope from authenticated credentials; tenantId is intentionally not a client-controlled record property."
+}

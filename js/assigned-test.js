@@ -97,7 +97,7 @@
     clearInterval(timer);
     const submittedAnswers = collectAnswers();
     try {
-      const completed = window.C10AssessmentManager.submit(assignment.assignmentId, student.studentId, submittedAnswers);
+      const completed = window.C10AssessmentService.submit(assignment.assignmentId, student.studentId, submittedAnswers);
       try { localStorage.removeItem(draftKey); } catch (_) {}
       assignment = completed;
       $("testAttempt").hidden = true;
@@ -116,7 +116,7 @@
     try {
       student = await window.C10StudentAuth.restoreSession();
       if (!student || student.role !== "student") { location.replace("./index.html"); return; }
-      assignment = window.C10AssessmentManager.get(assignmentId);
+      assignment = window.C10AssessmentService.get(assignmentId);
       if (!assignment || assignment.studentId !== student.studentId) {
         showStatus("This assigned test is not available to the signed-in student.", "error");
         return;
@@ -150,7 +150,7 @@
   }
   $("startAssignedTest").addEventListener("click", () => {
     try {
-      assignment = window.C10AssessmentManager.start(assignmentId, student.studentId);
+      assignment = window.C10AssessmentService.start(assignmentId, student.studentId);
       render();
       startTimer();
       showStatus("Test started. You can change your answers until you submit.");

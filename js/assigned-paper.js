@@ -11,7 +11,7 @@
     try{
       student=await window.C10StudentAuth.restoreSession();
       if(!student||student.role!=="student"){location.replace("./index.html");return;}
-      assignment=window.C10AssessmentManager.get(id);
+      assignment=window.C10AssessmentService.get(id);
       if(!assignment||assignment.kind!=="paper-assessment"||assignment.studentId!==student.studentId)throw new Error("This paper is not assigned to the signed-in student.");
       const paper=assignment.paperSnapshot;
       const registryResponse=await fetch("./data/exam-papers/profile-registry.json",{cache:"no-store"});

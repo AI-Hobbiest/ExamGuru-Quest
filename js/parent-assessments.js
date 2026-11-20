@@ -9,7 +9,7 @@
   let parent=null, children=[];
   function assignedPanel(child){
     const section=node("section","detail-section parent-assigned-tests");section.appendChild(node("h3","","Assigned tests & examinations"));
-    const items=window.C10AssessmentManager.listForParent(parent.parentId,child.studentId);
+    const items=window.C10AssessmentService.listForParent(parent.parentId,child.studentId);
     if(!items.length){section.appendChild(node("div","detail-empty","No tests assigned to this child on this browser yet."));return section;}
     const list=node("div","assignment-list");
     items.forEach(item=>{
@@ -30,7 +30,7 @@
         if(!allowed)form.append(node("p","assignment-help","The student must submit the online attempt before manual evaluation."));
         save.addEventListener("click",()=>{
           try{
-            const updated=window.C10AssessmentManager.recordPaperEvaluation(item.assignmentId,parent.parentId,score.value,feedback.value);
+            const updated=window.C10AssessmentService.recordPaperEvaluation(item.assignmentId,parent.parentId,score.value,feedback.value);
             const replacement=assignedPanel(child);section.replaceWith(replacement);
             const message=node("p","assignment-status-note","Result recorded: "+updated.attempts.slice(-1)[0].manualScore+"/"+updated.totalMarks+" marks.");
             replacement.appendChild(message);
@@ -127,7 +127,7 @@
     async function loadBank(preselected){
       bank=null;topics.textContent="Loading topics…";status.textContent="Loading "+(SUBJECTS[subject.value]||subject.value)+" question bank…";
       try{
-        const response=await fetch(window.C10AssessmentManager.bankPath(child.classId,subject.value),{cache:"no-store"});
+        const response=await fetch(window.C10AssessmentService.bankPath(child.classId,subject.value),{cache:"no-store"});
         if(!response.ok)throw new Error("This question bank is not published for the selected class.");
         const value=await response.json();if(!Array.isArray(value))throw new Error("The selected question bank uses an unsupported format.");
         bank=value;drawTopics(preselected);
@@ -150,11 +150,11 @@
         const selected=[...topics.querySelectorAll('input[type="checkbox"]:checked')].map(x=>x.value);
         if(!selected.length)throw new Error("Select at least one chapter or topic.");
         const amount=Math.max(1,Math.min(50,Number(count.value)||10));
-        const pool=window.C10AssessmentManager.buildQuestionPool(bank,selected,difficulty.value);
-        const questions=window.C10AssessmentManager.selectQuestions(pool,amount);
+        const pool=window.C10AssessmentService.buildQuestionPool(bank,selected,difficulty.value);
+        const questions=window.C10AssessmentService.selectQuestions(pool,amount);
         if(questions.length<amount)throw new Error("Only "+questions.length+" valid MCQs match this selection. Reduce the question count or broaden the topics.");
         const deadline=due.value?new Date(due.value).toISOString():null;
-        const created=window.C10AssessmentManager.createMcqAssignment({
+        const created=window.C10AssessmentService.createMcqAssignment({
           studentId:child.studentId,studentName:child.displayName||child.username,parentId:parent.parentId,
           createdBy:parent.username,classId:child.classId,subjectId:subject.value,subjectTitle:SUBJECTS[subject.value]||subject.value,
           title:title.value.trim()||((SUBJECTS[subject.value]||subject.value)+" · Custom MCQ Test"),
@@ -270,7 +270,7 @@
           questionIds:paper.questions.map(question=>question.questionId),mcqQuestionIds:paper.questions.filter(q=>q.type==="mcq").map(q=>String(q.questionId)),fingerprint}].slice(-50);
         writeHistory(rows,nextHistory[nextHistory.length-1]);
         try{
-          assignment=window.C10AssessmentManager.createPaperAssignment({
+          assignment=window.C10AssessmentService.createPaperAssignment({
             studentId:child.studentId,studentName:child.displayName||child.username,
             parentId:parent.parentId,createdBy:parent.username,
             title:paper.title,subjectId:profile.subjectId,subjectTitle:profile.subjectTitle||blueprint.subjectTitle||profile.subjectId,

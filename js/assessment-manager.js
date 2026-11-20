@@ -7,13 +7,33 @@
   const clone = value => value == null ? value : JSON.parse(JSON.stringify(value));
   const now = () => new Date().toISOString();
   const makeId = prefix => prefix + "-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 10);
+  if (!window.C10Storage || typeof window.C10Storage.createLocalStore !== "function") {
+    throw new Error("C10Storage must load before the assessment manager.");
+  }
+  const assignmentStore = window.C10Storage.createLocalStore({
+    kind: "assessment-assignments",
+    recordId: "all",
+    studentId: "",
+    defaults: () => [],
+    validate: Array.isArray,
+    legacyKey: KEY
+  });
   function readAll() {
-    try { const rows = JSON.parse(localStorage.getItem(KEY) || "[]"); return Array.isArray(rows) ? rows : []; }
-    catch (_) { return []; }
+    try {
+      const rows = assignmentStore.load();
+      return Array.isArray(rows) ? rows : [];
+    } catch (_) { return []; }
   }
   function writeAll(rows) {
-    try { localStorage.setItem(KEY, JSON.stringify(rows)); return true; }
-    catch (_) { throw new Error("This browser could not save the assessment. Check site storage and retry."); }
+    try {
+      const result = assignmentStore.save(rows);
+      if (!result || result.persisted !== true) {
+        throw new Error("Local persistence was unavailable.");
+      }
+      return true;
+    } catch (_) {
+      throw new Error("This browser could not save the assessment. Check site storage and retry.");
+    }
   }
   function bankPath(classId, subjectId) {
     const cls = String(classId || "");
@@ -429,8 +449,11 @@
       row.status = "completed"; row.activeAttemptId = null; row.updatedAt = attempt.submittedAt;
     });
   }
-  window.C10AssessmentManager = Object.freeze({
+  const assessmentService = Object.freeze({
     key: KEY, bankPath, buildQuestionPool, selectQuestions, createMcqAssignment, createPaperAssignment,
     listForStudent, listForParent, analyticsAttemptsForStudent, get, start, submit, startPaper, submitPaper, recordPaperEvaluation
   });
+  // New application-facing name; keep the old global as a compatibility alias.
+  window.C10AssessmentService = assessmentService;
+  window.C10AssessmentManager = assessmentService;
 })();

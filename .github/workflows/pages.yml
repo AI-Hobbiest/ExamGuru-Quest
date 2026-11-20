@@ -123,7 +123,7 @@ jobs:
           node tests/exam-paper-renderer.test.js
           node tests/assessment-manager.test.js
           node tests/assessment-analytics.test.js
-          for file in js/clat-engine.js js/clat-practice.js js/clat-dashboard-model.js js/clat-dashboard.js js/report-print.js js/app-shell.js js/m4-operations.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/institution-content-store.js js/institution-content.js js/platform-entitlements.js js/competitive-exams-admin.js js/teacher-workspace.js js/institution-competitive-exams.js js/institution-learning.js js/exam-paper-studio.js js/exam-paper-self-study.js js/pyq-library.js js/cbse-mcq-review.js; do node --check "$file"; done
+          for file in js/clat-engine.js js/clat-practice.js js/clat-dashboard-model.js js/clat-dashboard.js js/report-print.js js/app-shell.js js/m4-operations.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/institution-content-store.js js/lms-application-services.js js/m5-integration-services.js js/institution-content.js js/platform-entitlements.js js/competitive-exams-admin.js js/teacher-workspace.js js/institution-competitive-exams.js js/institution-learning.js js/exam-paper-studio.js js/exam-paper-self-study.js js/pyq-library.js js/cbse-mcq-review.js; do node --check "$file"; done
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
           node tests/learning-model.test.js
@@ -135,6 +135,9 @@ jobs:
           node tests/report-print.test.js
           node tests/parent-experience.test.js
           node tests/cbse-mcq-review.test.js
+          node tests/lms-application-services.test.js
+          node tests/institution-content-store.test.js
+          node tests/m5-integration-services.test.js
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:
@@ -221,6 +224,8 @@ jobs:
           cp js/platform-entitlements.js _site/js/platform-entitlements.js
           cp js/competitive-exams-admin.js _site/js/competitive-exams-admin.js
           cp js/institution-content-store.js _site/js/institution-content-store.js
+          cp js/lms-application-services.js _site/js/lms-application-services.js
+          cp js/m5-integration-services.js _site/js/m5-integration-services.js
           cp js/institution-content.js _site/js/institution-content.js
           cp js/teacher-workspace.js _site/js/teacher-workspace.js
           cp js/institution-competitive-exams.js _site/js/institution-competitive-exams.js
@@ -240,6 +245,8 @@ jobs:
           test -s _site/institution-assignments.html
           test -s _site/institution-enrolments.html
           test -s _site/js/institution-data-store.js
+          test -s _site/js/lms-application-services.js
+          test -s _site/js/m5-integration-services.js
           test -s _site/js/institution-module.js
           test -s _site/js/iam-local-store.js
           test -s _site/js/iam-user-management.js
@@ -655,7 +662,7 @@ jobs:
           const sequence=['./js/storage.js','./js/question-bank.js','./js/olympiad-blueprints.js','./js/session-model.js','./js/learning-model.js','./js/quiz-engine.js'].map(src=>practice.indexOf(src));
           if (sequence.some(index=>index<0) || !sequence.every((index,i)=>i===0||sequence[i-1]<index)) throw new Error('Practice dependencies are missing or out of order.');
           if (!practice.includes('data-mode="olympiad"') || !practice.includes('data-mode="adaptive"') || !practice.includes('data-mode="bookmarks"') || !practice.includes('id="difficultyFilter"') || !practice.includes('id="bookmarkQuestionBtn"') || !practice.includes('id="sectionResults"') || !practice.includes('id="navigatorSectionSummary"')) throw new Error('Practice page is missing an exam or intelligent-learning control.');
-          for (const file of ['question-bank.schema.json','question-bank-import.schema.json','student-profile.schema.json','answer-record.schema.json','test-attempt.schema.json','local-store-envelope.schema.json','backup.schema.json']) {
+          for (const file of ['question-bank.schema.json','question-bank-import.schema.json','student-profile.schema.json','answer-record.schema.json','test-attempt.schema.json','local-store-envelope.schema.json','backup.schema.json','repository-record.schema.json']) {
             const schema=JSON.parse(fs.readFileSync('_site/data/contracts/v1/'+file,'utf8'));
             if (!schema.$schema || !schema.title) throw new Error('Invalid contract metadata: '+file);
           }
