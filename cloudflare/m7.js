@@ -1,5 +1,5 @@
 const DURATION_DAYS = new Set([1,3,7,14]);
-const DATA_PROFILES = new Set(["standard_sample","school_sample","department_sample","teaching_sample"]);
+const DATA_PROFILES = new Set(["standard_sample","school_sample","department_sample","teaching_sample","parent_sample","student_sample"]);
 const PERSONAS = {
   "institution-admin": {roles:["school_admin"],dataProfile:"school_sample",version:1},
   "institution-viewer": {roles:["institution_viewer"],dataProfile:"school_sample",version:1},
