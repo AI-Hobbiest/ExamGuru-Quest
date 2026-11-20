@@ -40,7 +40,7 @@ const denied=run(auth,noScope,users);assert.equal(denied.get("institutionDashboa
 /* Exercise the actual local department store: two HODs are allowed, a third is rejected,
    and an HOD's teacher membership can still be assigned to a class in another department. */
 const local={};const localUsers=[1,2,3].map(n=>({userId:"t"+n,status:"active",roles:[{role:"teacher",institutionId:"INST-X",membershipId:"tm"+n,primaryDepartmentId:null}]}));
-const fakeIAM={institutionId:"INST-X",allUsers:()=>localUsers,findInstitution:id=>id==="INST-X"?{institutionId:id}:null,saveUser:u=>{const i=localUsers.findIndex(x=>x.userId===u.userId);if(i>=0)localUsers[i]=u;return u;}};
+const fakeIAM={institutionId:"INST-X",allUsers:()=>localUsers,findUser:()=>null,findInstitution:id=>id==="INST-X"?{institutionId:id}:null,saveUser:u=>{const i=localUsers.findIndex(x=>x.userId===u.userId);if(i>=0)localUsers[i]=u;return u;}};
 const storeContext={window:{ExamGuruLocalIAM:fakeIAM},localStorage:{getItem:k=>local[k]||null,setItem:(k,v)=>{local[k]=v;}},sessionStorage:{getItem:()=>null,setItem:()=>{}},Date,Math,Error};
 vm.createContext(storeContext);vm.runInContext(data,storeContext);
 const store=storeContext.window.ExamGuruInstitutionData;
