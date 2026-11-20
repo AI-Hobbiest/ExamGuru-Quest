@@ -330,7 +330,7 @@ components:
         userId: { type: string }
         role:
           type: string
-          enum: [school_admin, hod, teacher, parent, student, institution_viewer]
+          enum: [school_admin, teacher, parent, student, institution_viewer]
         branchIds:
           type: array
           uniqueItems: true
@@ -342,12 +342,13 @@ components:
       properties:
         label: { type: string, minLength: 2, maxLength: 100 }
         roles:
+          description: Demo personas. The hod persona is implemented as a teacher membership plus a separately scoped primary/backup department-head appointment; it is not a standalone login role.
           type: array
           minItems: 1
           uniqueItems: true
           items:
             type: string
-            enum: [institution_admin, hod, teacher, parent, student, institution_viewer]
+            enum: [school_admin, hod, teacher, parent, student, institution_viewer]
         durationDays:
           type: integer
           enum: [1, 3, 7, 14]
