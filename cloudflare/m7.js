@@ -11,8 +11,8 @@ const PERSONAS = {
 const nowIso=()=>new Date().toISOString();
 const id=()=>crypto.randomUUID();
 const safeText=(v,max)=>typeof v==="string"&&v.trim().length>0&&v.trim().length<=max&&!/[<>]/.test(v);
-const json=(request,env,payload,status=200)=>new Response(JSON.stringify(payload),{status,headers:{"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store","X-Content-Type-Options":"nosniff","Referrer-Policy":"no-referrer"}});
-const fail=(request,env,status,message)=>json(request,env,{ok:false,error:message},status);
+const localJson=(request,env,payload,status=200)=>new Response(JSON.stringify(payload),{status,headers:{"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store","X-Content-Type-Options":"nosniff","Referrer-Policy":"no-referrer"}});
+const localFail=(request,env,status,message)=>localJson(request,env,{ok:false,error:message},status);
 async function audit(env,demoId,actor,action,details={}) {
   await env.DB.prepare("INSERT INTO demo_audit_events(event_id,demo_id,actor_user_id,action,details_json,created_at) VALUES(?,?,?,?,?,?)")
     .bind(id(),demoId,actor,action,JSON.stringify(details),nowIso()).run();
@@ -48,7 +48,8 @@ async function expireIfNeeded(env,row) {
   }
   return row;
 }
-export async function handleM7(request,env,who,hasPlatformAdminGrant) {
+export async function handleM7(request,env,who,hasPlatformAdminGrant,respond,deny) {
+  const json=respond||localJson, fail=deny||localFail;
   const path=new URL(request.url).pathname,method=request.method.toUpperCase();
   if(!path.startsWith("/api/v2/platform/demos"))return null;
   if(!env.DB)return fail(request,env,503,"D1 database binding is not configured.");
