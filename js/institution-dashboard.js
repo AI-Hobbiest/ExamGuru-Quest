@@ -22,10 +22,9 @@ function render(auth){
   if(auth.institutionRole==="hod"){
    const departments=(state.departments||[]).filter(d=>(auth.departmentIds||[]).includes(d.departmentId)||d.hodRoleMembershipId===auth.membershipId||d.hodMembershipId===auth.teacherMembershipId);
    if(!departments.length)throw Error("No department is assigned to this HOD membership. Ask the Institution Admin to verify the appointment.");
-   const teacherIds=new Set(departments.flatMap(d=>d.memberIds||[])),departmentSubjectIds=new Set(departments.flatMap(d=>d.subjectIds||[]));
-   if(!departmentSubjectIds.size)throw Error("Your department has no subjects assigned yet. Ask the Institution Admin to configure its subject scope.");
-   const assignments=(state.assignments||[]).filter(a=>a.status!=="inactive"&&teacherIds.has(a.teacherMembershipId)&&departmentSubjectIds.has(a.subjectId));
-   const classIds=new Set(assignments.map(a=>a.classId)),subjectIds=new Set(assignments.map(a=>a.subjectId));
+   const teacherIds=new Set(departments.flatMap(d=>d.memberIds||[])),classIds=new Set(departments.flatMap(d=>d.classIds||[]));
+   if(!classIds.size)throw Error("Your department has no class scope configured yet. Ask the Institution Admin to assign the HOD class scope.");
+   const assignments=(state.assignments||[]).filter(a=>a.status!=="inactive"&&teacherIds.has(a.teacherMembershipId)&&classIds.has(a.classId)),subjectIds=new Set(assignments.map(a=>a.subjectId));
    const classes=(state.classes||[]).filter(c=>c.status!=="inactive"&&classIds.has(c.classId));
    const enrolments=(state.enrolments||[]).filter(e=>e.status!=="inactive"&&classIds.has(e.classId));
    const studentIds=new Set(enrolments.map(e=>e.studentMembershipId));
