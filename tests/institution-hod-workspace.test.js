@@ -1,0 +1,33 @@
+"use strict";
+const assert=require("node:assert/strict"),fs=require("node:fs"),vm=require("node:vm");
+const dashboard=fs.readFileSync("js/institution-dashboard.js","utf8");
+const shell=fs.readFileSync("js/app-shell.js","utf8");
+const iam=fs.readFileSync("js/iam-local-store.js","utf8");
+const data=fs.readFileSync("js/institution-data-store.js","utf8");
+assert.match(iam,/assignRole\(userId,role,institutionId/);
+assert.doesNotMatch(iam,/role:"hod"/,"HOD must not be stored as a global IAM role");
+assert.match(data,/hodMembershipId=membershipId/,"HOD appointment remains attached to teacher membership");
+assert.match(shell,/hodMembershipId===membership\.membershipId/,"local workspace derives HOD access from appointment");
+assert.match(shell,/current\.file!=="institution-operations\.html"&&\!\(auth\.role==="institution"&&auth\.institutionRole==="school_admin"\)/,"HOD cannot enter institution setup pages");
+function run(auth,state,users){
+ const ids=["institutionDashboard","dashGuestGate","dashError","dashWelcome","dashInstitutionSubtitle","dashRole","dashHeroActions","dashContentLink","dashExamLink","dashDataStatus","metricStudents","metricTeachers","metricClasses","metricBranches","metricSubjects","metricDepartments","metricStudentsNote","metricTeachersNote","linkBranches","linkAcademic","linkDepartments","linkUsers","linkEnrolments","linkAssignments","linkContent","linkExams","pulseAssignments","pulseEnrolments","contentPublished","contentCopy","addonTitle","addonCopy","setupPercent","setupProgressBar","pulseTitle","pulseCopy","setupChecklist","dashWorkspaces"];
+ const elements=new Map(ids.map(id=>[id,{id,textContent:"",hidden:id==="institutionDashboard",style:{},classList:{toggle(){}},setAttribute(){},addEventListener(){}}]));
+ const checks=Array.from({length:5},()=>({classList:{toggle(){}},querySelector(){return {textContent:""}},setAttribute(){}}));
+ const doc={getElementById:id=>elements.get(id)||null,querySelectorAll:()=>checks,querySelector:()=>null};
+ const listeners={};const context={document:doc,window:{addEventListener:(n,fn)=>listeners[n]=fn,ExamGuruLocalIAM:{allUsers:()=>users,findInstitution:id=>id==="INST-1"?{name:"Academy",institutionType:"school"}:null,getEntitlements:()=>({})},ExamGuruInstitutionData:{currentInstitutionId:()=>"INST-1",setInstitution:id=>id,getState:()=>state}},console};
+ vm.createContext(context);vm.runInContext(dashboard,context);listeners["examguru-auth-state-ready"]({detail:auth});return elements;
+}
+const state={branches:[],grades:[],subjects:[{subjectId:"sci"}],classes:[{classId:"class-6",status:"active"},{classId:"class-10",status:"active"}],departments:[{departmentId:"science",name:"Science",memberIds:["teacher-1"],classIds:["class-6"],hodMembershipId:"teacher-mem-1",status:"active"},{departmentId:"maths",name:"Maths",memberIds:["teacher-2"],classIds:["class-10"],hodMembershipId:"teacher-mem-2",status:"active"}],assignments:[{teacherMembershipId:"teacher-1",classId:"class-6",subjectId:"sci",status:"active"},{teacherMembershipId:"teacher-2",classId:"class-10",subjectId:"math",status:"active"}],enrolments:[{studentMembershipId:"student-1",classId:"class-6",status:"active"},{studentMembershipId:"student-2",classId:"class-10",status:"active"}]};
+const users=[{userId:"t1",status:"active",roles:[{role:"teacher",institutionId:"INST-1",membershipId:"teacher-mem-1"}]},{userId:"t2",status:"active",roles:[{role:"teacher",institutionId:"INST-1",membershipId:"teacher-mem-2"}]},{userId:"s1",status:"active",roles:[{role:"student",institutionId:"INST-1",membershipId:"student-1"}]},{userId:"s2",status:"active",roles:[{role:"student",institutionId:"INST-1",membershipId:"student-2"}]}];
+const auth={role:"institution",institutionRole:"hod",institutionId:"INST-1",membershipId:"teacher-mem-1",teacherMembershipId:"teacher-mem-1",departmentIds:["science"]};
+const out=run(auth,state,users),val=id=>out.get(id).textContent;
+assert.equal(out.get("institutionDashboard").hidden,false);
+assert.equal(val("dashRole"),"Head of Department · Scoped access");
+assert.equal(val("metricStudents"),"1","HOD sees only students in the department's assigned class scope");
+assert.equal(val("metricTeachers"),"1","HOD sees only department members");
+assert.equal(val("metricClasses"),"1","HOD sees only assigned department classes");
+assert.equal(val("pulseAssignments"),"1","HOD sees only assignments within department classes");
+assert.equal(out.get("dashWorkspaces").hidden,true,"HOD cannot see institution-wide administration links");
+const noScope={...state,departments:state.departments.map(d=>({...d,classIds:[]}))};
+const denied=run(auth,noScope,users);assert.equal(denied.get("institutionDashboard").hidden,true,"HOD without explicit class scope fails closed");assert.equal(denied.get("dashGuestGate").hidden,false);
+console.log("HOD workspace tests passed: appointment-derived access, department membership and class scope isolation, and fail-closed empty scope.");
