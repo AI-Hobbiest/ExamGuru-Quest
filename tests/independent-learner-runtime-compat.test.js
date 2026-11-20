@@ -32,6 +32,8 @@ assert.equal(iam.directInstitutionId, "INST-DIRECT-001");
 assert.equal(iam.findInstitution("INST-DIRECT-001").name, "Independent Learner");
 assert.equal(iam.findInstitution("INST-DIRECT-001").legacyName, "ExamGuru Direct Learning");
 assert.ok(iam.getEntitlements("INST-DIRECT-001").curriculum.classIds.includes("CLAT"));
+assert.equal(iam.getEntitlements("INST-DIRECT-001").competitiveExams.enabled, true);
+assert.ok(iam.getEntitlements("INST-DIRECT-001").competitiveExams.examIds.includes("CLAT"));
 assert.equal(iam.findInstitution("SCHOOL-EXISTING-01").name, "Existing School");
 assert.equal(iam.findUser("USR-EXISTING-01").username, "legacy-admin");
 assert.equal(migrated.users.length, 1);
