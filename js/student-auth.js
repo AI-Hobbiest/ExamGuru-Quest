@@ -4,7 +4,9 @@
 (() => {
   "use strict";
   const STUDENT_FILE="./data/student-accounts.json", FAMILY_FILE="./data/family-access.json";
-  const SESSION_KEY="c10playground_static_student_v1", DEFAULT_ITERATIONS=600000;
+  const SESSION_KEY="c10playground_static_student_v1", DEFAULT_ITERATIONS=600000, INDEPENDENT_INSTITUTION_ID="INST-DIRECT-001";
+  const safeId=value=>String(value||"").trim().toLowerCase().replace(/[^a-z0-9_-]+/g,"-").replace(/^-+|-+$/g,"");
+  function independentContext(role,id){return {institutionId:INDEPENDENT_INSTITUTION_ID,institutionType:"direct",membershipId:"MEM-INDEPENDENT-"+String(role).toUpperCase()+"-"+safeId(id).toUpperCase()};}
   function decodeBase64(value){const binary=atob(String(value||""));return Uint8Array.from(binary,c=>c.charCodeAt(0));}
   function encodeBase64(bytes){let binary="";for(const byte of bytes)binary+=String.fromCharCode(byte);return btoa(binary);}
   function equalHash(a,b){if(typeof a!=="string"||typeof b!=="string"||a.length!==b.length)return false;let mismatch=0;for(let i=0;i<a.length;i++)mismatch|=a.charCodeAt(i)^b.charCodeAt(i);return mismatch===0;}
@@ -32,16 +34,16 @@
     return encodeBase64(new Uint8Array(bits));
   }
   function publicView(row,role){
-    if(role==="parent")return {username:row.username,role:"parent",parentId:String(row.parentId),displayName:String(row.displayName||row.username)};
-    return {username:row.username,role:"student",studentId:stableStudentId(row),classId:String(row.classId||""),displayName:String(row.displayName||row.username)};
+    if(role==="parent"){const parentId=String(row.parentId);return {username:row.username,role:"parent",parentId,displayName:String(row.displayName||row.username),...independentContext("parent",parentId)};}
+    const studentId=stableStudentId(row);return {username:row.username,role:"student",studentId,classId:String(row.classId||""),displayName:String(row.displayName||row.username),...independentContext("student",studentId)};
   }
   function readSession(){
     try{
       const value=JSON.parse(sessionStorage.getItem(SESSION_KEY)||"null");
       if(!value||typeof value.username!=="string")return null;
       return value.role==="parent"
-        ?{username:value.username,role:"parent",parentId:String(value.parentId||""),displayName:String(value.displayName||value.username)}
-        :{username:value.username,role:"student",studentId:String(value.studentId||stableStudentId(value)),classId:String(value.classId||""),displayName:String(value.displayName||value.username)};
+        ?{username:value.username,role:"parent",parentId:String(value.parentId||""),displayName:String(value.displayName||value.username),...independentContext("parent",String(value.parentId||""))}
+        :{username:value.username,role:"student",studentId:String(value.studentId||stableStudentId(value)),classId:String(value.classId||""),displayName:String(value.displayName||value.username),...independentContext("student",String(value.studentId||stableStudentId(value)))};
     }catch(_){return null;}
   }
   async function login(usernameInput,password){
