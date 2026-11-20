@@ -44,7 +44,7 @@ The bridge and additive session context are migration/read-model compatibility o
 - Direct learners have no school branch. Their membership uses an all-branches scope, while their class/cohort is retained separately as a learning context.
 - The existing global class catalogue remains the source of grade/cohort identifiers for now.
 - Class/subject entitlements are not used to remove or hide any existing content in the current deployment.
-- Future protected APIs must resolve the learner's verified membership and learning context on the server; browser-provided institution IDs or class IDs are never proof of access.
+- Future protected APIs must resolve the learner's verified membership and learning context on the server; browser-provided institution IDs or class IDs are never proof of access. Direct learners do not require a school branch. Their server-side policy is tenant-scoped, with student self-record access and parent access limited to explicitly linked children; they cannot administer the Independent Learner tenant.
 
 ## Future seamless migration sequence
 
