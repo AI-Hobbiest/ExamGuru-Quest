@@ -49,6 +49,9 @@ localUsers.forEach((u,i)=>{u.roles[0].primaryDepartmentId=dept.departmentId;stor
 store.appointHod(dept.departmentId,"tm1");store.appointHod(dept.departmentId,"tm2");
 assert.throws(()=>store.appointHod(dept.departmentId,"tm3"),/maximum of two active HODs/,"A third HOD cannot be appointed");
 assert.equal(store.departments().find(x=>x.departmentId===dept.departmentId).hodMembershipIds.length,2);
+assert.equal(store.departments().find(x=>x.departmentId===dept.departmentId).hodMembershipIds[0],"tm1","The first appointment is the Primary HOD");
+assert.equal(store.departments().find(x=>x.departmentId===dept.departmentId).hodMembershipIds[1],"tm2","The second appointment is the Backup HOD");
+assert.match(fs.readFileSync("js/institution-module.js","utf8"),/i===0\?"Primary HOD":"Backup HOD"/,"Department UI labels appointments as Primary and Backup");
 const branch=store.createBranch("Main","MAIN"),grade=store.createGrade("Class 9","G9"),subject=store.createSubject("Mathematics","MATH");
 const cls=store.createClass({name:"Class 9A",branchId:branch.branchId,gradeId:grade.gradeId,subjectIds:[subject.subjectId]});
 assert.doesNotThrow(()=>store.assignTeacher({teacherMembershipId:"tm1",classId:cls.classId,subjectId:subject.subjectId}),"An HOD can teach a class outside their primary department");
