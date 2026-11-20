@@ -242,8 +242,8 @@
     const brand=node("div","c10-brand");const mark=node("div","c10-brand-mark");const logo=node("img");logo.src="./assets/examguru-saraswati.svg";logo.alt="";logo.width=38;logo.height=38;mark.appendChild(logo);brand.appendChild(mark);
     const brandCopy=node("div","c10-brand-copy");brandCopy.append(node("div","c10-brand-title","ExamGuru Quest"),node("div","c10-brand-sub",clatExperience?"AI-Enthusiast":"Learn · Practise · Level up"));brand.appendChild(brandCopy);sidebarTop.appendChild(brand);
     const identity=node("div","c10-user-card");
-    identity.append(node("div","c10-user-name",auth.localTestMode&&auth.role==="institution"?"Local preview · "+(auth.institutionRole||"Institution Admin").replace(/_/g," "):auth.role==="guest"?"Welcome, learner":(auth.username||"Student")));
-    identity.append(node("div","c10-user-class",auth.role==="admin"?"Administrator":auth.role==="student"?(String(auth.classId||"").toUpperCase()==="CLAT"?"CLAT UG 2027":"Class "+String(auth.classId||"not assigned")):auth.role==="parent"?"Parent / Guardian":auth.role==="institution"?(auth.institutionRole||"Institution member").replace(/_/g," "):"Sign in to begin"));
+    identity.append(node("div","c10-user-name",auth.localTestMode&&auth.role==="institution"?"Local preview · "+(auth.institutionRole==="hod"?"Head of Department":(auth.institutionRole||"Institution Admin").replace(/_/g," ")):auth.role==="guest"?"Welcome, learner":(auth.username||"Student")));
+    identity.append(node("div","c10-user-class",auth.role==="admin"?"Administrator":auth.role==="student"?(String(auth.classId||"").toUpperCase()==="CLAT"?"CLAT UG 2027":"Class "+String(auth.classId||"not assigned")):auth.role==="parent"?"Parent / Guardian":auth.role==="institution"?(auth.institutionRole==="hod"?"Head of Department":(auth.institutionRole||"Institution member").replace(/_/g," ")):"Sign in to begin"));
     sidebarTop.appendChild(identity);sidebar.appendChild(sidebarTop);
     const list=node("nav","c10-nav-list");list.setAttribute("aria-label","Learning and account");
     const visibleLinks=links.filter(item=>{
