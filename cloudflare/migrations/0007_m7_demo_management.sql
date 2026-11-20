@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS demo_environments (
   template_version INTEGER,
   display_name TEXT NOT NULL,
   roles_json TEXT NOT NULL,
-  data_profile TEXT NOT NULL CHECK(data_profile IN ('standard_sample','school_sample','department_sample','teaching_sample')),
+  data_profile TEXT NOT NULL CHECK(data_profile IN ('standard_sample','school_sample','department_sample','teaching_sample','parent_sample','student_sample')),
   status TEXT NOT NULL CHECK(status IN ('active','expired','revoked')),
   created_by_user_id TEXT NOT NULL,
   created_at TEXT NOT NULL,
