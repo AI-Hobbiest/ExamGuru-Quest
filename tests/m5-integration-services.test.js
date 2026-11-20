@@ -60,8 +60,8 @@ assert.throws(()=>api.toCsv({}),/learning report/);
  const roles=policy.describeMemberships(memberships,[
   {appointmentId:"hod1",departmentMembershipId:"tm1",departmentId:"d1",classIds:["c1","c2"],status:"active",effectiveFrom:"2026-01-01T00:00:00.000Z",effectiveTo:"2027-01-01T00:00:00.000Z"},
   {appointmentId:"expired",departmentMembershipId:"tm1",departmentId:"d2",classIds:["c1"],status:"active",effectiveTo:"2026-01-01T00:00:00.000Z"}
- ],"2026-11-20T00:00:00.000Z");
- assert.deepEqual(roles.map(x=>x.role),["teacher","hod","parent"]);
+ ],"2026-11-20T00:00:00.000Z",[{role:"platform_admin",revokedAt:null}]);
+ assert.deepEqual(roles.map(x=>x.role),["platform_admin","teacher","hod","parent"]);
  assert.equal(roles[1].scope,"effective-dated-appointment");
  assert.deepEqual(policy.navigation("hod"),[["Practice","./practice.html"]]);
  assert.equal((await policy.authorizeAction({userId:"u"},"assessment.assign",{institutionId:"i1"})).allowed,false,
@@ -78,6 +78,26 @@ assert.throws(()=>api.toCsv({}),/learning report/);
  storageContext.globalThis=storageContext;vm.createContext(storageContext);
  vm.runInContext(fs.readFileSync("js/storage.js","utf8"),storageContext);
  const local=api.createLocalRecordAdapter(storageContext.window.C10Storage);
+ const localStorageApi=storageContext.window.C10Storage;
+ localStorageApi.createLocalStore({kind:"test-attempt-ledger",recordId:"class-6-science",defaults:()=>({attempts:[],activeAttempt:null,answerRecords:[]}),validate:value=>Array.isArray(value.attempts)}).save({
+  attempts:[{attemptId:"local-a1",profileId:"profile-1",subjectId:"science",status:"submitted",questionCount:2,score:1,maxScore:2,source:{sourceId:"class-6-science"}}],
+  activeAttempt:null,answerRecords:[{attemptId:"local-a1",questionId:"q1",status:"answered",isCorrect:true}]
+ });
+ localStorageApi.createLocalStore({kind:"subject-progress",recordId:"class-6-science",defaults:()=>({missed:[],answered:0,correct:0,attempts:[]}),validate:value=>Array.isArray(value.missed)}).save({missed:["q2"],answered:2,correct:1,attempts:[]});
+ localStorageApi.createLocalStore({kind:"learning-library",recordId:"class-6",defaults:()=>({schemaVersion:1,kind:"learning-library",mistakes:[],bookmarks:[],responses:[]}),validate:value=>value.kind==="learning-library"}).save({
+  schemaVersion:1,kind:"learning-library",mistakes:[{questionKey:"q2",question:"Question 2",subjectId:"science",status:"open"}],
+  bookmarks:[{questionKey:"q3",question:"Question 3",subjectId:"science"}],responses:[]
+ });
+ const readLocal=api.createLocalLearningRecordsReader({storage:localStorageApi,classId:"6",profileId:"profile-1",
+  banks:[{id:"class-6-science",subjectId:"science",title:"Science"},{id:"class-6-mathematics-sof",subjectId:"mathematics-sof",title:"Mathematics SOF"}]});
+ const localRecords=await readLocal({studentId:"student-1",classId:"6",profileId:"profile-1"});
+ assert.equal(localRecords.attempts.length,1,"reader includes the profile's existing attempt ledger");
+ assert.equal(localRecords.answerRecords.length,1);
+ assert.equal(localRecords.mistakes.length,1);
+ assert.equal(localRecords.bookmarks.length,1);
+ assert.equal(localRecords.progress.length,2,"reader walks every active-class bank including SOF banks");
+ assert.equal(localRecords.progress[1].bankId,"class-6-mathematics-sof");
+
  const first=await local.upsertRecord({kind:"attempt",recordId:"a1",idempotencyKey:"request-1",expectedVersion:0,data:{score:9}});
  assert.equal(first.record.version,1);
  const replay=await local.upsertRecord({kind:"attempt",recordId:"a1",idempotencyKey:"request-1",expectedVersion:0,data:{score:1}});
