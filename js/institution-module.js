@@ -24,7 +24,7 @@ function refresh(){
  showList("gradeList",s.grades,x=>x.name+" · "+x.code+" · "+x.gradeId);
  showList("subjectList",s.subjects,x=>x.name+" · "+x.code+" · "+x.subjectId);
  showList("classList",s.classes,x=>x.name+" · "+x.classType+" · "+x.classId+" · "+(x.academicYear||"")+" · Content profile: "+(x.contentClassId||"not mapped"));
- showList("departmentList",s.departments,x=>x.name+" · "+x.code+" · Classes in HOD scope: "+(x.classIds||[]).length+" · HOD: "+(x.hodMembershipId||"Not appointed"));
+ showList("departmentList",s.departments,x=>x.name+" · "+x.code+" · Classes in HOD scope: "+(x.classIds||[]).length+" · HODs: "+([...new Set([...(x.hodMembershipIds||[]),...(x.hodMembershipId?[x.hodMembershipId]:[])])].length)+"/2");
  showList("departmentMembers",db.departments().find(x=>x.departmentId===$("departmentSelect")?.value)?.memberIds?.map(id=>({id,hod:[...(db.departments().find(x=>x.departmentId===$("departmentSelect").value)?.hodMembershipIds||[]),...(db.departments().find(x=>x.departmentId===$("departmentSelect").value)?.hodMembershipId?[db.departments().find(x=>x.departmentId===$("departmentSelect").value).hodMembershipId]:[])].includes(id)}))||[],x=>x.id+(x.hod?" · HOD":""));
  showList("assignmentList",s.assignments,x=>x.teacherMembershipId+" → "+x.classId+" · "+x.subjectId);
  showList("enrolmentList",s.enrolments,x=>x.studentMembershipId+" → "+x.classId+" · "+x.academicYear);
