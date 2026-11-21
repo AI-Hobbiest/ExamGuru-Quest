@@ -1424,8 +1424,8 @@
               "type": "KEY_DIAGRAM",
               "title": "Human heart — chambers and double circulation",
               "summary": "Trace blood through the right atrium and ventricle to the lungs, then through the left atrium and ventricle to the body. The two sides keep oxygen-poor and oxygen-rich blood separate.",
-              "asset": null,
-              "alt": "Human heart cross-section showing chambers, valves and major blood vessels.",
+              "asset": "assets/study-library/science/human-heart.svg",
+              "alt": "NCERT-aligned sectional heart diagram: right chambers on the viewer's left in blue, left chambers on the viewer's right in red, major vessels and blood-flow arrows.",
               "labels": [
                 "Right atrium",
                 "Right ventricle",
@@ -1452,31 +1452,28 @@
                 [
                   "Learning note",
                   "Follow the arrows and compare the two pathways."
+                ],
+                [
+                  "NCERT figure",
+                  "Figure 5.10, printed page 92."
                 ]
               ],
               "source": "NCERT Class X Science — Life Processes",
-              "illustrationType": "Externally hosted Wikimedia Commons illustration; candidate replacement pending side-by-side comparison with the NCERT heart figure.",
-              "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Diagram_of_the_human_heart.svg",
-              "imageCredit": {
-                "author": "Wapcaplet; rendering modification by Yaddah",
-                "source": "https://commons.wikimedia.org/wiki/File:Diagram_of_the_human_heart.svg",
-                "license": "CC BY-SA 3.0 and GFDL 1.2+",
-                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-                "fileSizeBytes": 24111,
-                "storageImpactBytes": 0,
-                "changes": "None"
-              },
+              "illustrationType": "Original ExamGuru redraw aligned to NCERT Figure 5.10; not copied from the textbook.",
               "visualAudit": {
-                "status": "withheld_unverified",
+                "status": "candidate_redraw_pending_visual_acceptance",
                 "edition": "Reprint 2026–27",
                 "sourceBook": "NCERT Class X Science",
                 "chapter": "Life Processes",
                 "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc105.pdf",
-                "sourcePage": null,
-                "sourceFigure": null,
+                "sourcePage": 92,
+                "sourceFigure": "Figure 5.10",
                 "fidelityThresholdPercent": 90,
-                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
-              }
+                "note": "NCERT figure structure and labels used as the reference. Candidate redraw requires final side-by-side visual acceptance before it can be marked 90%+."
+              },
+              "sourceFigure": "Figure 5.10",
+              "sourcePage": 92,
+              "sourceEdition": "Reprint 2026–27"
             },
             {
               "type": "KEY_DIAGRAM",
@@ -1533,6 +1530,57 @@
                 "sourceFigure": null,
                 "fidelityThresholdPercent": 90,
                 "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
+            },
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Activity 5.3 — Action of saliva on starch",
+              "summary": "Compare two test tubes containing 1 mL of 1% starch solution. Add 1 mL saliva to tube A only, leave both undisturbed for 20–30 minutes, then add dilute iodine to both. Tube A does not turn blue-black because saliva breaks down starch; tube B turns blue-black because starch remains.",
+              "asset": "assets/study-library/science/activity-5-3-saliva-starch.svg",
+              "alt": "Two test tubes for NCERT Activity 5.3: tube A receives saliva and remains brown after iodine; tube B receives no saliva and turns blue-black.",
+              "labels": [
+                "Test tube A",
+                "Test tube B",
+                "1 mL starch solution (1%)",
+                "1 mL saliva added to A",
+                "20–30 minutes",
+                "Dilute iodine",
+                "No blue-black colour in A",
+                "Blue-black colour in B"
+              ],
+              "facts": [
+                [
+                  "NCERT location",
+                  "Class 10 Science, Chapter 5 — Life Processes, Activity 5.3, printed page 85."
+                ],
+                [
+                  "Procedure",
+                  "Put 1 mL of 1% starch solution in each of two test tubes A and B. Add 1 mL saliva to A only. Leave both undisturbed for 20–30 minutes, then add a few drops of dilute iodine."
+                ],
+                [
+                  "Observation",
+                  "Tube B changes to blue-black because starch is present. Tube A does not show the blue-black starch test because salivary amylase breaks starch down."
+                ],
+                [
+                  "Status",
+                  "This is an ExamGuru explanatory illustration based on the written NCERT activity; NCERT does not print a separate apparatus figure for Activity 5.3."
+                ]
+              ],
+              "source": "NCERT Class X Science — Life Processes, Activity 5.3",
+              "sourcePage": 85,
+              "sourceEdition": "Reprint 2026–27",
+              "relatedFigure": "Figure 5.6 (same printed page; separate illustration)",
+              "illustrationType": "Original explanatory illustration based strictly on the NCERT activity steps; not a printed NCERT figure.",
+              "visualAudit": {
+                "status": "source_checked_explanatory_diagram",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Life Processes",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc105.pdf",
+                "sourcePage": 85,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "No separate Activity 5.3 apparatus figure is printed in NCERT. This is a clearly identified instructional diagram built from the activity text, not a claim of reproducing NCERT artwork."
               }
             }
           ],
@@ -1694,11 +1742,18 @@
               "title": "Human brain — major regions",
               "summary": "The brain is the main coordinating centre of the nervous system. The cerebrum is associated with thinking, memory and voluntary actions; the cerebellum coordinates posture and balance; the medulla controls several involuntary activities.",
               "asset": "assets/study-library/science/human-brain.svg",
-              "alt": "Original labelled schematic identifying cerebrum, cerebellum, medulla and spinal cord.",
+              "alt": "NCERT-aligned sagittal side-section of the human brain inside the cranium, labelled with fore-brain, mid-brain, hind-brain and the principal structures.",
               "labels": [
+                "Cranium (skull)",
                 "Cerebrum",
-                "Cerebellum",
+                "Fore-Brain",
+                "Mid-brain",
+                "Hypothalamus",
+                "Pituitary gland",
+                "Hind-brain",
+                "Pons",
                 "Medulla",
+                "Cerebellum",
                 "Spinal cord"
               ],
               "facts": [
@@ -1716,18 +1771,21 @@
                 ]
               ],
               "source": "NCERT Class X Science — Control and Coordination",
-              "illustrationType": "ExamGuru supplementary concept schematic based on the NCERT topic; not verified as a 90%+ reproduction of a specific NCERT textbook figure.",
+              "illustrationType": "Original ExamGuru redraw aligned to NCERT Figure 6.3; not copied from the textbook.",
               "visualAudit": {
-                "status": "withheld_unverified",
+                "status": "candidate_redraw_pending_visual_acceptance",
                 "edition": "Reprint 2026–27",
                 "sourceBook": "NCERT Class X Science",
                 "chapter": "Control and Coordination",
                 "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc106.pdf",
-                "sourcePage": null,
-                "sourceFigure": null,
+                "sourcePage": 104,
+                "sourceFigure": "Figure 6.3",
                 "fidelityThresholdPercent": 90,
-                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
-              }
+                "note": "NCERT sagittal layout, major regions and label positions used as the reference. Candidate redraw requires final side-by-side visual acceptance before it can be marked 90%+."
+              },
+              "sourceFigure": "Figure 6.3",
+              "sourcePage": 104,
+              "sourceEdition": "Reprint 2026–27"
             },
             {
               "type": "KEY_DIAGRAM",
