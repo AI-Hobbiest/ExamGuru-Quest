@@ -201,10 +201,12 @@ export async function handleM7DemoSession(request,env,session,respond,deny){
   const rows=await env.DB.prepare("SELECT record_type AS type,record_key AS id,payload_json AS payload FROM demo_sample_records WHERE demo_id=? AND generation=? ORDER BY record_type,record_key").bind(session.demoId,session.resetGeneration).all();
   const records=(rows.results||[]).map(x=>({...x,payload:JSON.parse(x.payload)})),roles=new Set(session.roles||[]);
   let visible=records;
-  if(roles.has("student")&&!roles.has("school_admin")&&!roles.has("teacher")&&!roles.has("hod")){
-    visible=records.filter(x=>(x.type==="student"&&x.id==="student-001")||(x.type==="student-attempt"&&x.payload.studentId==="student-001")||(x.type==="topic-mastery"&&x.payload.studentId==="student-001")||x.type==="study-resource"||x.type==="class"&&x.id==="class-6"||x.type==="subject"&&x.id==="science");
-  } else if(roles.has("parent")&&!roles.has("school_admin")&&!roles.has("teacher")&&!roles.has("hod")){
-    visible=records.filter(x=>x.type==="parent"&&x.id==="parent-001"||(x.type==="parent-link"&&x.payload.studentId==="student-001")||(x.type==="student"&&x.id==="student-001")||(x.type==="student-attempt"&&x.payload.studentId==="student-001")||(x.type==="topic-mastery"&&x.payload.studentId==="student-001")||x.type==="class"&&x.id==="class-6"||x.type==="subject"&&x.id==="science");
+  if((roles.has("student")||roles.has("parent"))&&!roles.has("school_admin")&&!roles.has("teacher")&&!roles.has("hod")){
+    visible=records.filter(x=>{
+      if(roles.has("student")&&((x.type==="student"&&x.id==="student-001")||(x.type==="student-attempt"&&x.payload.studentId==="student-001")||(x.type==="topic-mastery"&&x.payload.studentId==="student-001")||x.type==="study-resource"||x.type==="class"&&x.id==="class-6"||x.type==="subject"&&x.id==="science"))return true;
+      if(roles.has("parent")&&((x.type==="parent"&&x.id==="parent-001")||(x.type==="parent-link"&&x.payload.studentId==="student-001")||(x.type==="student"&&x.id==="student-001")||(x.type==="student-attempt"&&x.payload.studentId==="student-001")||(x.type==="topic-mastery"&&x.payload.studentId==="student-001")||x.type==="class"&&x.id==="class-6"||x.type==="subject"&&x.id==="science"))return true;
+      return false;
+    });
   } else if(roles.has("institution_viewer")&&!roles.has("school_admin")&&!roles.has("teacher")&&!roles.has("hod")){
     visible=records.filter(x=>["institution","branch","class","subject","sample-assessment"].includes(x.type));
   } else if(roles.has("teacher")||roles.has("hod")){
