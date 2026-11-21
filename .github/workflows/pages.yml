@@ -1,4 +1,5 @@
 name: Deploy ExamGuru Quest to GitHub Pages
+# Content-only commits also publish the latest static study-library catalogue.
 
 on:
   push:
