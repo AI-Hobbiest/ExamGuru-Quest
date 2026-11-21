@@ -215,6 +215,8 @@ jobs:
           cp js/study-model.js _site/js/study-model.js
           cp js/study-library.js _site/js/study-library.js
           cp js/chapter-reference-hub.js _site/js/chapter-reference-hub.js
+          test -s _site/js/chapter-reference-hub.js
+          test -s _site/css/chapter-reference-hub.css
           cp js/profile-model.js _site/js/profile-model.js
           cp js/student-auth.js _site/js/student-auth.js
           cp js/login-page.js _site/js/login-page.js
