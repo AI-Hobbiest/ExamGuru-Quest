@@ -62,7 +62,7 @@ const page=fs.readFileSync("study.html","utf8"),script=fs.readFileSync("js/chapt
 assert.ok(page.includes('id="chapterReferenceHub"')&&page.includes("chapter-reference-hub.js"));
 assert.ok(page.includes("chapter-reference-hub.css"));
 assert.ok(script.includes('img.loading="lazy"')&&script.includes("chapter-reference.json"));
-assert.ok(script.includes('["verified_ncert_match","verified_reusable_match"]')&&script.includes("Visual temporarily withheld"),"unverified visuals must remain hidden until explicitly approved");
+assert.ok(script.includes('if(item.asset||item.assetUrl)')&&script.includes("Supplementary visual — shown for learning"),"supplementary visuals must remain visible with a clear NCERT verification disclaimer");
 assert.ok(script.includes('viewerClass!=="10"'),"Class 10 reference hub must not appear for other classes");
 assert.ok(script.includes("Connecting to the Class 10 reference catalogue"),"Reference hub must expose its initialization state");
 const deployWorkflow=fs.readFileSync(".github/workflows/pages.yml","utf8");
