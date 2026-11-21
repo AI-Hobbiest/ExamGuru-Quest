@@ -49,7 +49,7 @@ assert.ok(pageAccess.includes("isStudentPreview")&&pageAccess.includes('sessionS
 assert.ok(pageAccess.includes("if(isStudentPreview){")&&pageAccess.includes("window.C10ProfilePreviewMode=true")&&pageAccess.includes("explicit Student role preview"),"Platform Admin Student Preview bypasses student-account restore on every student-facing page, including Profile");
 assert.ok(nav.includes('if(preview==="student"){const previewClass=sessionStorage.getItem("examguru_preview_content_class_v1")||"10";return {role:"student"'),"Student Preview works without requiring a pre-existing IAM student enrolment");
 assert.ok(admin.includes("<title>LMS Administration | ExamGuru Quest</title>")&&admin.includes("lms-admin-launch-grid")&&!admin.includes("Open Exam Paper Studio</a>"),"Admin login landing is a full LMS administration dashboard, not a single Exam Studio launch page");
-assert.ok(pageAccess.includes('window.C10StudyViewerRole="student"')&&pageAccess.includes('if(isStudentPreview){if(class10Route'),"Student Preview bypasses static-account verification on student routes without weakening normal sign-in checks");
+assert.ok(pageAccess.includes('window.C10StudyViewerRole="student"')&&pageAccess.includes('if(page==="study.html"&&isAdminSession())')&&pageAccess.includes("window.C10ProfilePreviewMode=true"),"Student Preview is scoped to the active admin session and bypasses student login across student routes");
 
 
 assert.ok(nav.includes('href:"./dashboard.html"'));
