@@ -613,7 +613,9 @@
                 "Motor neuron carries response",
                 "Effector (muscle/gland) produces action"
               ],
-              "examTip": "A reflex action is rapid and automatic; the brain is informed but the spinal cord coordinates many reflexes."
+              "examTip": "A reflex action is rapid and automatic; the brain is informed but the spinal cord coordinates many reflexes.",
+              "asset": "assets/exam-papers/science/reflex-arc.svg",
+              "alt": "Reflex arc from receptor through sensory neuron and spinal cord to motor neuron and effector."
             },
             {
               "type": "KEY_RESULT",
@@ -653,7 +655,9 @@
                 "Uterus supports implantation and development",
                 "Placenta enables exchange between maternal and foetal blood without direct mixing"
               ],
-              "examTip": "Be able to distinguish fertilisation, implantation and gestation."
+              "examTip": "Be able to distinguish fertilisation, implantation and gestation.",
+              "asset": "assets/exam-papers/science/reproductive-system-reference.svg",
+              "alt": "Simplified reference schematic of male and female reproductive structures."
             },
             {
               "type": "KEY_RESULT",
@@ -709,7 +713,9 @@
                   "Recessive allele",
                   "Expressed only when both alleles are recessive"
                 ]
-              ]
+              ],
+              "asset": "assets/exam-papers/science/mendel-monohybrid-cross.svg",
+              "alt": "Punnett square for Tt crossed with Tt showing TT, Tt, Tt and tt."
             },
             {
               "type": "KEY_RESULT",
@@ -744,7 +750,9 @@
                   "Decomposer",
                   "Breaks down dead organic matter"
                 ]
-              ]
+              ],
+              "asset": "assets/exam-papers/science/food-chain-energy-flow.svg",
+              "alt": "Food chain from grass to grasshopper to frog to snake, with decomposers."
             },
             {
               "type": "KEY_RESULT",
@@ -861,6 +869,18 @@
           "chapterKey": "magnetic-effects-of-electric-current",
           "chapterTitle": "Magnetic Effects of Electric Current",
           "items": [
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Magnetic field of a solenoid",
+              "asset": "assets/exam-papers/science/magnetic-field-solenoid.svg",
+              "alt": "Schematic magnetic field lines of a current-carrying solenoid.",
+              "labels": [
+                "Current-carrying coil",
+                "Nearly parallel field lines inside the solenoid",
+                "Field outside resembles that of a bar magnet",
+                "Polarity depends on current direction"
+              ]
+            },
             {
               "type": "KEY_DIAGRAM",
               "title": "Series and parallel circuit reference",
