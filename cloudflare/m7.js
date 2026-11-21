@@ -160,7 +160,7 @@ export async function handleM7Login(request,env,respond,deny){
  if(!env.DB)return fail(request,env,503,"Demo service is not configured.");
  const body=await request.json().catch(()=>null),username=String(body&&body.username||"").trim().toLowerCase(),password=String(body&&body.password||"");
  if(!/^[a-z0-9_]{8,40}$/.test(username)||password.length<12||password.length>128)return fail(request,env,400,"Enter the demo username and password.");
- const key=await sha256(username),limit=await env.DB.prepare("SELECT failures,locked_until FROM demo_login_limits WHERE username_hash=?").bind(key).first();
+ const key=await sha256(username),limit=await env.DB.prepare("SELECT failures,window_started_at,locked_until FROM demo_login_limits WHERE username_hash=?").bind(key).first();
  if(limit&&limit.locked_until&&limit.locked_until>nowIso())return fail(request,env,429,"Too many demo sign-in attempts. Try again later.");
  const row=await env.DB.prepare("SELECT a.account_id,a.demo_id,a.username,a.password_salt,a.password_hash,a.roles_json,a.status account_status,d.status demo_status,d.expires_at,d.session_version,d.tenant_id FROM demo_accounts a JOIN demo_environments d ON d.demo_id=a.demo_id WHERE a.username=?").bind(username).first();
  const candidate=row?await hashPassword(password,row.password_salt):await hashPassword(password,"AAAAAAAAAAAAAAAAAAAAAA");
@@ -175,7 +175,7 @@ export async function handleM7Login(request,env,respond,deny){
  const token=randomSecret(32),tokenHash=await sha256(token),createdAt=nowIso(),expiry=new Date(Math.min(Date.now()+8*3600*1000,new Date(row.expires_at).getTime())).toISOString();
  await env.DB.prepare("INSERT INTO demo_sessions(session_id,token_hash,account_id,demo_id,session_version,expires_at,created_at,last_seen_at) VALUES(?,?,?,?,?,?,?,?)")
   .bind(id(),tokenHash,row.account_id,row.demo_id,Number(row.session_version),expiry,createdAt,createdAt).run();
- return json(request,env,{ok:true,token,expiresAt:expiry,redirectPath:"/demo-preview"});
+ return json(request,env,{ok:true,token,expiresAt:expiry,redirectPath:"/demo-preview.html"});
 }
 
 export async function identifyM7DemoSession(request,env){
