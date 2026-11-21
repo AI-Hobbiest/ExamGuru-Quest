@@ -123,11 +123,12 @@ jobs:
           node tests/exam-paper-renderer.test.js
           node tests/assessment-manager.test.js
           node tests/assessment-analytics.test.js
-          for file in js/clat-engine.js js/clat-practice.js js/clat-dashboard-model.js js/clat-dashboard.js js/report-print.js js/app-shell.js js/m4-operations.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/institution-content-store.js js/lms-application-services.js js/m5-integration-services.js js/institution-content.js js/institution-dashboard.js js/platform-entitlements.js js/competitive-exams-admin.js js/teacher-workspace.js js/institution-competitive-exams.js js/institution-learning.js js/exam-paper-studio.js js/exam-paper-self-study.js js/pyq-library.js js/cbse-mcq-review.js; do node --check "$file"; done
+          for file in js/clat-engine.js js/clat-practice.js js/clat-dashboard-model.js js/clat-dashboard.js js/report-print.js js/app-shell.js js/m4-operations.js js/profile-manager.js js/parent-dashboard.js js/assessment-manager.js js/parent-assessments.js js/assigned-test.js js/assigned-paper.js js/assigned-tests-dashboard.js js/institution-content-store.js js/lms-application-services.js js/m5-integration-services.js js/institution-content.js js/institution-dashboard.js js/platform-entitlements.js js/competitive-exams-admin.js js/teacher-workspace.js js/institution-competitive-exams.js js/institution-learning.js js/exam-paper-studio.js js/exam-paper-self-study.js js/pyq-library.js js/cbse-mcq-review.js js/chapter-reference-hub.js; do node --check "$file"; done
           node tests/session-model.test.js
           node tests/quiz-engine.test.js
           node tests/learning-model.test.js
           node tests/study-model.test.js
+          node tests/chapter-reference-hub.test.js
           node tests/canonical-url.test.js
           node tests/stage-a-integration.test.js
           node tests/app-shell.test.js
