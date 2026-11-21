@@ -18,12 +18,12 @@ function render(){
   const head=el("div","crh-card-head");
   const kind=el("span","crh-kind",item.type.replaceAll("_"," "));
   head.append(kind);card.append(head,el("h3","",item.title));
-  if(item.summary)card.append(el("p","crh-summary",item.summary));
+  if(item.summary){if(item.type==="THEOREM_PROOF")card.append(el("p","crh-note","Core statement / result"));card.append(el("p","crh-summary",item.summary));}
   if(item.formula)card.append(el("div","crh-formula",item.formula));
   if(item.equation)card.append(el("div","crh-equation",item.equation));
   if(item.condition)card.append(el("p","crh-note","Condition: "+item.condition));
   if(item.observation)card.append(el("p","crh-note","Observation: "+item.observation));
-  if(item.steps?.length){const list=el("ol","crh-steps");item.steps.forEach(step=>list.append(el("li","",step)));card.append(list);}
+  if(item.steps?.length){if(item.type==="THEOREM_PROOF")card.append(el("h4","crh-subheading","Proof / derivation"));const list=el("ol","crh-steps");item.steps.forEach(step=>list.append(el("li","",step)));card.append(list);}
   if(item.facts?.length){const list=el("dl","crh-facts");item.facts.forEach(pair=>{list.append(el("dt","",pair[0]),el("dd","",pair[1]));});card.append(list);}
   if(item.asset){const figure=el("figure","crh-figure");const img=document.createElement("img");img.src="./"+item.asset;img.alt=item.alt||item.title;img.loading="lazy";img.decoding="async";figure.append(img);if(item.alt)figure.append(el("figcaption","",item.alt));card.append(figure);}
   if(item.labels?.length){const labels=el("ul","crh-labels");item.labels.forEach(label=>labels.append(el("li","",label)));card.append(labels);}
