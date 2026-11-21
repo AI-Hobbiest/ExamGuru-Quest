@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "chapter-reference-manifest",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "classId": "10",
   "subjects": [
     {
@@ -26,22 +26,6 @@
                 "Uniqueness follows from Euclid's lemma: if a prime divides a product, it divides at least one factor."
               ],
               "examTip": "Use prime factorisation to find HCF and LCM; show the factor tree or division steps."
-            },
-            {
-              "type": "KEY_RESULT",
-              "title": "Euclid's Division Lemma",
-              "summary": "For positive integers a and b, there exist unique integers q and r such that a = bq + r, where 0 ≤ r < b.",
-              "steps": [
-                "Identify the dividend a and divisor b.",
-                "Write a = bq + r.",
-                "Check that the remainder is non-negative and smaller than the divisor."
-              ]
-            },
-            {
-              "type": "FORMULA_IDENTITY",
-              "title": "HCF–LCM relationship",
-              "formula": "HCF(a, b) × LCM(a, b) = a × b",
-              "summary": "For two positive integers, the product of their HCF and LCM equals the product of the integers."
             },
             {
               "type": "KEY_RESULT",
@@ -72,46 +56,12 @@
                 "Use prime divisibility to show p divides a, then p divides b.",
                 "This contradicts gcd(a,b)=1."
               ]
-            },
-            {
-              "type": "KEY_RESULT",
-              "title": "Terminating decimal test",
-              "summary": "For a rational number p/q in lowest terms, its decimal expansion terminates exactly when q has no prime factors other than 2 and 5.",
-              "facts": [
-                [
-                  "Terminating",
-                  "q = 2ᵐ5ⁿ for non-negative integers m,n"
-                ],
-                [
-                  "Non-terminating recurring",
-                  "q contains a prime factor other than 2 or 5"
-                ],
-                [
-                  "Important",
-                  "Reduce p/q to lowest terms before applying the test"
-                ]
-              ]
-            },
-            {
-              "type": "KEY_RESULT",
-              "title": "Euclid algorithm reminder",
-              "summary": "Repeated division reduces the divisor-remainder pair until the remainder is zero; the last non-zero remainder is the HCF.",
-              "facts": [
-                [
-                  "Step 1",
-                  "Divide the larger integer by the smaller"
-                ],
-                [
-                  "Step 2",
-                  "Replace the pair by divisor and remainder"
-                ],
-                [
-                  "Step 3",
-                  "Repeat until remainder is zero"
-                ]
-              ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh01",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh01.pdf"
         },
         {
           "subject": "mathematics",
@@ -130,12 +80,6 @@
                 "Equate x-coefficients and constant terms to obtain the relationships."
               ],
               "examTip": "State the degree and leading coefficient before applying the relationships."
-            },
-            {
-              "type": "FORMULA_IDENTITY",
-              "title": "Division algorithm for polynomials",
-              "formula": "p(x) = g(x)q(x) + r(x), where r(x) = 0 or degree r(x) < degree g(x)",
-              "summary": "Dividend = Divisor × Quotient + Remainder."
             },
             {
               "type": "KEY_RESULT",
@@ -207,7 +151,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh02",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh02.pdf"
         },
         {
           "subject": "mathematics",
@@ -226,12 +174,6 @@
               ],
               "asset": "assets/math/linear-system-intersection.svg",
               "alt": "Graph of two intersecting linear equations."
-            },
-            {
-              "type": "FORMULA_IDENTITY",
-              "title": "Cross-multiplication method",
-              "formula": "x/(b₁c₂ − b₂c₁) = y/(c₁a₂ − c₂a₁) = 1/(a₁b₂ − a₂b₁)",
-              "summary": "Use when the denominator conditions are satisfied."
             },
             {
               "type": "KEY_RESULT",
@@ -297,7 +239,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh03",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh03.pdf"
         },
         {
           "subject": "mathematics",
@@ -305,19 +251,6 @@
           "chapterKey": "quadratic-equations",
           "chapterTitle": "Quadratic Equations",
           "items": [
-            {
-              "type": "THEOREM_PROOF",
-              "title": "Quadratic formula",
-              "formula": "x = [−b ± √(b² − 4ac)] / 2a",
-              "summary": "Solution of ax² + bx + c = 0, a ≠ 0.",
-              "steps": [
-                "Divide the equation by a.",
-                "Move the constant term to the right.",
-                "Complete the square by adding b²/(4a²) to both sides.",
-                "Take square roots and isolate x to obtain the quadratic formula."
-              ],
-              "examTip": "The discriminant D = b² − 4ac determines the nature of roots."
-            },
             {
               "type": "FORMULA_IDENTITY",
               "title": "Nature of roots",
@@ -342,12 +275,6 @@
                   "Constant term"
                 ]
               ]
-            },
-            {
-              "type": "FORMULA_IDENTITY",
-              "title": "Quadratic formula",
-              "formula": "x = (−b ± √(b²−4ac))/(2a)",
-              "summary": "For ax²+bx+c=0, a≠0."
             },
             {
               "type": "KEY_RESULT",
@@ -379,7 +306,11 @@
                 "Solve and interpret each root with units/context."
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh04",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh04.pdf"
         },
         {
           "subject": "mathematics",
@@ -453,7 +384,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh05",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh05.pdf"
         },
         {
           "subject": "mathematics",
@@ -473,20 +408,6 @@
               ],
               "asset": "assets/math/triangle-bpt.svg",
               "alt": "Triangle with a line parallel to its base."
-            },
-            {
-              "type": "THEOREM_PROOF",
-              "title": "Pythagoras theorem",
-              "summary": "In a right-angled triangle, the square of the hypotenuse equals the sum of the squares of the other two sides.",
-              "steps": [
-                "Let ∠B = 90° in ΔABC.",
-                "Draw BD perpendicular to AC.",
-                "Use similarity of the smaller triangles with the original triangle.",
-                "Obtain AB² = AD·AC and BC² = DC·AC.",
-                "Add: AB² + BC² = AC(AD+DC) = AC²."
-              ],
-              "asset": "assets/math/right-triangle.svg",
-              "alt": "Right-angled triangle illustrating Pythagoras theorem."
             },
             {
               "type": "KEY_RESULT",
@@ -552,7 +473,11 @@
                 "Use the converse proportionality result to conclude DE ∥ BC."
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh06",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh06.pdf"
         },
         {
           "subject": "mathematics",
@@ -571,14 +496,6 @@
               "title": "Section formula (internal division)",
               "formula": "P = ((mx₂ + nx₁)/(m+n), (my₂ + ny₁)/(m+n))",
               "summary": "If P divides AB in the ratio m:n."
-            },
-            {
-              "type": "FORMULA_IDENTITY",
-              "title": "Area of a triangle",
-              "formula": "Area = ½ |x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)|",
-              "summary": "If area is zero, the three points are collinear.",
-              "asset": "assets/math/coordinate-plane.svg",
-              "alt": "Coordinate plane with plotted points."
             },
             {
               "type": "FORMULA_IDENTITY",
@@ -647,7 +564,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh07",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh07.pdf"
         },
         {
           "subject": "mathematics",
@@ -716,7 +637,11 @@
                 "Do not assume the identity to be proved."
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh08",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh08.pdf"
         },
         {
           "subject": "mathematics",
@@ -794,7 +719,11 @@
               "formula": "tan θ = vertical height / horizontal distance",
               "summary": "Use when height and horizontal distance are the opposite and adjacent sides."
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh09",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh09.pdf"
         },
         {
           "subject": "mathematics",
@@ -890,7 +819,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh10",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh10.pdf"
         },
         {
           "subject": "mathematics",
@@ -954,7 +887,11 @@
                 "State the square unit in the final answer."
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh11",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh11.pdf"
         },
         {
           "subject": "mathematics",
@@ -980,12 +917,6 @@
               "summary": "For a combined solid, add the exposed surface areas only. For hollowing or melting, conserve volume.",
               "asset": "assets/math/solid-cylinder-hemisphere.svg",
               "alt": "Combined cylinder and hemisphere solid."
-            },
-            {
-              "type": "FORMULA_IDENTITY",
-              "title": "Frustum volume",
-              "formula": "V = (1/3)πh(R²+r²+Rr)",
-              "summary": "R and r are the radii of the parallel circular ends; h is perpendicular height."
             },
             {
               "type": "KEY_RESULT",
@@ -1039,7 +970,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh12",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh12.pdf"
         },
         {
           "subject": "mathematics",
@@ -1118,7 +1053,11 @@
                 "Check that the chosen class is not at an incorrectly interpreted boundary."
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh13",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh13.pdf"
         },
         {
           "subject": "mathematics",
@@ -1207,7 +1146,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Mathematics",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jemh14",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jemh14.pdf"
         }
       ]
     },
@@ -1450,7 +1393,11 @@
               "sourceEdition": "Reprint 2025–26",
               "relatedActivity": "Activity 5.3 (same page; starch and saliva experiment)"
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc01",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc01.pdf"
         },
         {
           "discipline": "Biology",
@@ -1649,7 +1596,11 @@
               "source": "NCERT Class X Science — Control and Coordination",
               "illustrationType": "ExamGuru original schematic based on NCERT topic"
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc02",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc02.pdf"
         },
         {
           "discipline": "Biology",
@@ -1779,7 +1730,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc03",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc03.pdf"
         },
         {
           "discipline": "Biology",
@@ -1896,7 +1851,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc04",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc04.pdf"
         },
         {
           "discipline": "Biology",
@@ -2013,7 +1972,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc05",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc05.pdf"
         }
       ]
     },
@@ -2109,7 +2072,11 @@
               "condition": "Hydrogen reduces copper oxide on heating.",
               "observation": "Black copper oxide changes to brown copper; hydrogen is oxidised."
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc01",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc01.pdf"
         },
         {
           "discipline": "Chemistry",
@@ -2204,7 +2171,11 @@
               "condition": "Controlled heating of gypsum.",
               "observation": "Plaster of Paris sets after mixing with water."
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc02",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc02.pdf"
         },
         {
           "discipline": "Chemistry",
@@ -2297,7 +2268,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc03",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc03.pdf"
         },
         {
           "discipline": "Chemistry",
@@ -2417,7 +2392,11 @@
               "condition": "Sodium reacts with ethanol.",
               "observation": "Hydrogen gas is evolved."
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc04",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc04.pdf"
         }
       ]
     },
@@ -2529,7 +2508,11 @@
               "summary": "P = 1/f",
               "facts": "Use focal length f in metres; power is measured in dioptres."
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc01",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc01.pdf"
         },
         {
           "discipline": "Physics",
@@ -2649,7 +2632,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc02",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc02.pdf"
         },
         {
           "discipline": "Physics",
@@ -2778,7 +2765,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc03",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc03.pdf"
         },
         {
           "discipline": "Physics",
@@ -2912,7 +2903,11 @@
                 ]
               ]
             }
-          ]
+          ],
+          "sourceBook": "NCERT Class X Science",
+          "sourceEdition": "Reprint 2026–27",
+          "sourceChapterCode": "jesc04",
+          "sourceUrl": "https://ncert.nic.in/textbook/pdf/jesc04.pdf"
         }
       ]
     }
@@ -2937,5 +2932,12 @@
   },
   "editorialNotes": [
     "New diagrams added in v1.2.0 are original ExamGuru schematic illustrations based on topics in the NCERT Class X Science textbook. They are not scans or reproductions of NCERT artwork. Topic coverage must be checked against the NCERT edition prescribed for the student's academic session."
-  ]
+  ],
+  "sourceStandard": {
+    "publisher": "NCERT",
+    "class": "X",
+    "edition": "Reprint 2026–27",
+    "language": "English",
+    "policy": "Use the current NCERT chapter PDF as the sole content and visual reference. Supplementary ExamGuru diagrams must be explicitly labelled as such and must not be presented as textbook figures unless checked against the exact source figure."
+  }
 }
