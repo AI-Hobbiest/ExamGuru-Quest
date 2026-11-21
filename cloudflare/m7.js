@@ -199,7 +199,18 @@ export async function handleM7DemoSession(request,env,session,respond,deny){
  if(path==="/api/demo/me"&&method==="GET")return json(request,env,{ok:true,user:{username:session.username,roles:session.roles},demo:{demoId:session.demoId,tenantId:session.tenantId,displayName:session.displayName,expiresAt:session.expiresAt}});
  if(path==="/api/demo/data"&&method==="GET"){
   const rows=await env.DB.prepare("SELECT record_type AS type,record_key AS id,payload_json AS payload FROM demo_sample_records WHERE demo_id=? AND generation=? ORDER BY record_type,record_key").bind(session.demoId,session.resetGeneration).all();
-  return json(request,env,{ok:true,readOnly:true,records:(rows.results||[]).map(x=>({...x,payload:JSON.parse(x.payload)}))});
+  const records=(rows.results||[]).map(x=>({...x,payload:JSON.parse(x.payload)})),roles=new Set(session.roles||[]);
+  let visible=records;
+  if(roles.has("student")&&!roles.has("school_admin")&&!roles.has("teacher")&&!roles.has("hod")){
+    visible=records.filter(x=>(x.type==="student"&&x.id==="student-001")||(x.type==="student-attempt"&&x.payload.studentId==="student-001")||(x.type==="topic-mastery"&&x.payload.studentId==="student-001")||x.type==="study-resource"||x.type==="class"&&x.id==="class-6"||x.type==="subject"&&x.id==="science");
+  } else if(roles.has("parent")&&!roles.has("school_admin")&&!roles.has("teacher")&&!roles.has("hod")){
+    visible=records.filter(x=>x.type==="parent"&&x.id==="parent-001"||(x.type==="parent-link"&&x.payload.studentId==="student-001")||(x.type==="student"&&x.id==="student-001")||(x.type==="student-attempt"&&x.payload.studentId==="student-001")||(x.type==="topic-mastery"&&x.payload.studentId==="student-001")||x.type==="class"&&x.id==="class-6"||x.type==="subject"&&x.id==="science");
+  } else if(roles.has("institution_viewer")&&!roles.has("school_admin")&&!roles.has("teacher")&&!roles.has("hod")){
+    visible=records.filter(x=>["institution","branch","class","subject","sample-assessment"].includes(x.type));
+  } else if(roles.has("teacher")||roles.has("hod")){
+    visible=records.filter(x=>["institution","branch","class","subject","teacher","teacher-assignment","department","hod-appointment","student","sample-assessment","student-attempt","topic-mastery","study-resource"].includes(x.type));
+  }
+  return json(request,env,{ok:true,readOnly:true,records:visible});
  }
  return fail(request,env,403,"Demo sessions are isolated to read-only demo preview endpoints.");
 }
