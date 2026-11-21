@@ -39,6 +39,7 @@ assert.ok(script.includes("await window.C10StudyAccessReady"),"Reference hub mus
 const access=fs.readFileSync("js/page-access.js","utf8");
 assert.ok(access.includes("C10StudyViewerClassId"),"Page access must publish the resolved viewer class");
 assert.ok(script.includes("window.C10StudyViewerClassId"),"Reference hub must use the resolved viewer class");
+assert.ok(!script.includes("if(window.C10StudyAccessReady)await window.C10StudyAccessReady;\n let viewerClass"),"Student catalogue loading must not block on the background session refresh");
 
 assert.ok(page.includes('id="visualLibraryTab"')&&page.includes('id="referencesHubTab"'),"Study Library must expose both top-level tabs");
 assert.ok(page.includes('data-study-tab="visualRevisionBoard"')&&page.includes('data-study-tab="chapterReferenceHub"'),"Study Library tabs must target their content sections");
