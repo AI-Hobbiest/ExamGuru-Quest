@@ -54,11 +54,11 @@ const activity=biology.chapters.find(c=>c.chapterKey==="life-processes").items.f
 assert.ok(activity&&activity.asset==="assets/study-library/science/activity-5-3-saliva-starch.svg"&&activity.sourcePage===85,"Activity 5.3 must be represented separately from Figure 5.6 on page 85");
 assert.ok(activity.facts.some(x=>String(x[1]).includes("NCERT does not print a separate apparatus figure")),"Activity 5.3 visual must be identified as an explanatory illustration, not an NCERT printed figure");
 assert.ok(biology.chapters.find(c=>c.chapterKey==="control-and-coordination").items.some(i=>i.title==="Neuron — structure and impulse direction"&&i.asset==="assets/study-library/science/neuron.svg"),"Control and Coordination must include a labelled neuron visual");
-for(const path of ["assets/study-library/science/human-heart.svg","assets/study-library/science/human-brain.svg","assets/study-library/science/activity-5-3-saliva-starch.svg","assets/study-library/science/neuron.svg"])
+for(const path of ["assets/study-library/science/human-heart.svg","assets/study-library/science/human-brain.svg","assets/study-library/science/activity-5-3-saliva-starch.svg","assets/study-library/science/neuron.svg"]){assert.ok(fs.existsSync(path),"missing local supplementary illustration "+path);}
 assert.ok(biology.chapters.flatMap(c=>c.items).filter(i=>i.illustrationType).every(i=>i.source&&i.alt),"illustrations must show source context and alt text");
-const visualItems=manifest.subjects.flatMap
-assert.equal(visualItems.length,25,
-assert.ok(visualItems.every(i=>i.visualAudit?.fidelityThresholdPercent===90&&i.visualAudit?.status!=="approved"),
+const visualItems=manifest.subjects.flatMap(s=>s.chapters.flatMap(c=>c.items.filter(i=>i.asset||i.assetUrl)));
+assert.equal(visualItems.length,25,"all previously referenced visuals plus the Activity 5.3 explanatory diagram must be included in the audit gate");
+assert.ok(visualItems.every(i=>i.visualAudit?.fidelityThresholdPercent===90&&i.visualAudit?.status!=="approved"),"no visual may be published as approved before its 90% NCERT fidelity and reuse audit passes");
 const physics=manifest.subjects.find(s=>s.id==="physics");
 assert.ok(physics.chapters.every(c=>c.items.some(i=>i.type==="FORMULA_IDENTITY"||i.type==="KEY_RESULT")));
 assert.ok(physics.chapters.every(c=>c.items.some(i=>i.asset||i.assetUrl)),"each Physics chapter should retain at least one visual reference");
