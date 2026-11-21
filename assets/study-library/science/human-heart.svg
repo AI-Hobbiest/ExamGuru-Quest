@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 760" role="img" aria-labelledby="t d">
+<title id="t">Figure 5.10 — Schematic sectional view of the human heart</title>
+<desc id="d">NCERT-aligned sectional heart diagram. The right side of the heart appears on the viewer's left in blue and the left side on the viewer's right in red. Arrows show blood flow. Labels match the NCERT figure.</desc>
+<defs>
+ <marker id="arrB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#263746"/></marker>
+ <style>
+ .lbl{font:20px Arial,sans-serif;fill:#202b36}.lead{fill:none;stroke:#263746;stroke-width:2}
+ .blue{fill:#b9d9ef;stroke:#273d50;stroke-width:5;stroke-linejoin:round}
+ .red{fill:#f2b1a5;stroke:#793b37;stroke-width:5;stroke-linejoin:round}
+ .vblue{fill:none;stroke:#3c84b9;stroke-width:30;stroke-linecap:round;stroke-linejoin:round}
+ .vred{fill:none;stroke:#c84b45;stroke-width:30;stroke-linecap:round;stroke-linejoin:round}
+ .flow{fill:none;stroke:#263746;stroke-width:3;marker-end:url(#arrB)}
+ </style>
+</defs>
+<rect width="980" height="760" fill="#fff"/>
+<text x="490" y="42" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#203b55">HUMAN HEART</text>
+<!-- major vessels -->
+<path class="vred" d="M545 245 C540 170 545 112 585 92 C630 68 670 93 670 140"/>
+<path class="vblue" d="M390 275 C365 220 360 145 385 95 C410 45 470 50 475 115"/>
+<path class="vblue" d="M365 330 C290 295 255 245 260 180"/>
+<path class="vblue" d="M380 470 C305 515 275 565 275 625"/>
+<path class="vblue" d="M470 255 C440 205 420 170 400 135"/>
+<path class="vred" d="M625 275 C690 230 735 195 765 155"/>
+<path class="vred" d="M630 320 C710 320 760 300 790 270"/>
+<!-- chambers -->
+<path class="blue" d="M365 270 C395 220 475 225 500 285 L495 365 C485 405 420 420 380 382 C350 355 345 305 365 270Z"/>
+<path class="blue" d="M390 390 C420 365 490 370 510 420 L515 575 C485 620 425 635 390 590 C360 545 355 445 390 390Z"/>
+<path class="red" d="M520 275 C545 225 635 225 665 270 C690 310 680 365 640 385 C600 405 545 390 520 355Z"/>
+<path class="red" d="M525 395 C555 360 650 370 675 415 C700 465 685 565 640 605 C600 635 540 620 520 575Z"/>
+<!-- septum -->
+<path d="M505 350 C500 405 505 485 525 590" fill="none" stroke="#713d3b" stroke-width="13" stroke-linecap="round"/>
+<!-- internal valves / flow arrows -->
+<path d="M450 300L450 360 M450 440L450 525 M595 300L595 350 M600 440L600 535" class="flow"/>
+<path d="M455 405L510 405" fill="none" stroke="#263746" stroke-width="3"/>
+<!-- labels left -->
+<g class="lbl">
+ <text x="35" y="118">Vena Cava</text><text x="35" y="142">from upper body</text>
+ <text x="35" y="270">Right atrium</text>
+ <text x="35" y="405">Vena Cava</text><text x="35" y="429">from lower body</text>
+ <text x="35" y="535">Right ventricle</text>
+ <text x="35" y="665">Septum</text><text x="35" y="689">(dividing wall)</text>
+</g>
+<g class="lead">
+ <path d="M200 125L365 135"/><path d="M175 275L365 305"/>
+ <path d="M205 420L380 485"/><path d="M220 540L410 515"/>
+ <path d="M180 670L510 500"/>
+</g>
+<!-- labels right -->
+<g class="lbl">
+ <text x="735" y="82">Aorta</text>
+ <text x="760" y="175">Pulmonary arteries</text>
+ <text x="760" y="235">Pulmonary veins</text>
+ <text x="760" y="325">Left atrium</text>
+ <text x="760" y="505">Left ventricle</text>
+</g>
+<g class="lead">
+ <path d="M720 88L650 110"/><path d="M755 180L690 225"/>
+ <path d="M755 240L675 295"/><path d="M750 325L660 325"/>
+ <path d="M750 505L670 505"/>
+</g>
+<text x="490" y="725" text-anchor="middle" font-family="Arial" font-size="16" fill="#526575">Figure 5.10 · Schematic sectional view of the human heart · NCERT Class X Science</text>
+</svg>
