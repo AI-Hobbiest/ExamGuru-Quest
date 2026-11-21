@@ -73,8 +73,8 @@
               "type": "KEY_RESULT",
               "title": "Number of zeroes",
               "summary": "The number of zeroes of a polynomial is at most its degree. A quadratic can have at most two real zeroes.",
-              "diagram": "assets/math/quadratic-zeros.svg",
-              "diagramAlt": "Graph showing zeroes of a quadratic polynomial."
+              "asset": "assets/math/quadratic-zeros.svg",
+              "alt": "Graph showing zeroes of a quadratic polynomial."
             }
           ]
         },
@@ -93,8 +93,8 @@
                 "No solution: a₁/a₂ = b₁/b₂ ≠ c₁/c₂; the lines are parallel.",
                 "Infinitely many solutions: a₁/a₂ = b₁/b₂ = c₁/c₂; the lines coincide."
               ],
-              "diagram": "assets/math/linear-system-intersection.svg",
-              "diagramAlt": "Graph of two intersecting linear equations."
+              "asset": "assets/math/linear-system-intersection.svg",
+              "alt": "Graph of two intersecting linear equations."
             },
             {
               "type": "FORMULA_IDENTITY",
@@ -174,8 +174,8 @@
                 "Similarly compare areas using the common altitude to AC.",
                 "Using the equal areas of triangles sharing base DE and parallel lines, obtain AD/DB = AE/EC."
               ],
-              "diagram": "assets/math/triangle-bpt.svg",
-              "diagramAlt": "Triangle with a line parallel to its base."
+              "asset": "assets/math/triangle-bpt.svg",
+              "alt": "Triangle with a line parallel to its base."
             },
             {
               "type": "THEOREM_PROOF",
@@ -188,8 +188,8 @@
                 "Obtain AB² = AD·AC and BC² = DC·AC.",
                 "Add: AB² + BC² = AC(AD+DC) = AC²."
               ],
-              "diagram": "assets/math/right-triangle.svg",
-              "diagramAlt": "Right-angled triangle illustrating Pythagoras theorem."
+              "asset": "assets/math/right-triangle.svg",
+              "alt": "Right-angled triangle illustrating Pythagoras theorem."
             },
             {
               "type": "KEY_RESULT",
@@ -221,8 +221,8 @@
               "title": "Area of a triangle",
               "formula": "Area = ½ |x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)|",
               "summary": "If area is zero, the three points are collinear.",
-              "diagram": "assets/math/coordinate-plane.svg",
-              "diagramAlt": "Coordinate plane with plotted points."
+              "asset": "assets/math/coordinate-plane.svg",
+              "alt": "Coordinate plane with plotted points."
             }
           ]
         },
@@ -263,8 +263,8 @@
               "type": "KEY_RESULT",
               "title": "Angle of elevation and depression",
               "summary": "Angle of elevation is measured upward from the horizontal; angle of depression is measured downward from the horizontal.",
-              "diagram": "assets/math/right-triangle.svg",
-              "diagramAlt": "Right triangle used to model height and distance."
+              "asset": "assets/math/right-triangle.svg",
+              "alt": "Right triangle used to model height and distance."
             },
             {
               "type": "FORMULA_IDENTITY",
@@ -297,8 +297,8 @@
                 "OA = OB (radii) and OP is common.",
                 "Right triangles OAP and OBP are congruent by RHS; hence PA = PB."
               ],
-              "diagram": "assets/math/circle-tangent.svg",
-              "diagramAlt": "Two equal tangents from an external point."
+              "asset": "assets/math/circle-tangent.svg",
+              "alt": "Two equal tangents from an external point."
             },
             {
               "type": "KEY_RESULT",
@@ -324,8 +324,8 @@
               "title": "Segment area",
               "formula": "Minor segment area = sector area − area of triangle",
               "summary": "For a major segment, subtract the minor segment from the area of the full circle.",
-              "diagram": "assets/math/circle-sector.svg",
-              "diagramAlt": "Circle sector and central angle."
+              "asset": "assets/math/circle-sector.svg",
+              "alt": "Circle sector and central angle."
             }
           ]
         },
@@ -351,8 +351,8 @@
               "type": "KEY_RESULT",
               "title": "Combined solids",
               "summary": "For a combined solid, add the exposed surface areas only. For hollowing or melting, conserve volume.",
-              "diagram": "assets/math/solid-cylinder-hemisphere.svg",
-              "diagramAlt": "Combined cylinder and hemisphere solid."
+              "asset": "assets/math/solid-cylinder-hemisphere.svg",
+              "alt": "Combined cylinder and hemisphere solid."
             }
           ]
         },
@@ -410,144 +410,10 @@
       ]
     },
     {
-      "id": "science",
-      "label": "Science",
-      "chapterCount": 13,
+      "id": "biology",
+      "label": "Biology",
+      "chapterCount": 5,
       "chapters": [
-        {
-          "discipline": "Chemistry",
-          "chapterKey": "chemical-reactions-and-equations",
-          "chapterTitle": "Chemical Reactions and Equations",
-          "items": [
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Combination: magnesium burning",
-              "equation": "2Mg(s) + O₂(g) → 2MgO(s)",
-              "condition": "Burn magnesium ribbon in air; bright white flame; white ash forms.",
-              "observation": "Magnesium oxide is a white powder."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Thermal decomposition of ferrous sulphate",
-              "equation": "2FeSO₄(s)  —heat→  Fe₂O₃(s) + SO₂(g) + SO₃(g)",
-              "condition": "Strong heating.",
-              "observation": "Green crystals change; brown residue and pungent gases form."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Displacement: iron and copper sulphate",
-              "equation": "Fe(s) + CuSO₄(aq) → FeSO₄(aq) + Cu(s)",
-              "condition": "Iron nail dipped in copper sulphate solution.",
-              "observation": "Blue solution turns green; reddish-brown copper deposits."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Precipitation: lead nitrate and potassium iodide",
-              "equation": "Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s)↓ + 2KNO₃(aq)",
-              "observation": "Yellow lead iodide precipitate forms."
-            }
-          ]
-        },
-        {
-          "discipline": "Chemistry",
-          "chapterKey": "acids-bases-and-salts",
-          "chapterTitle": "Acids, Bases and Salts",
-          "items": [
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Acid + metal",
-              "equation": "Zn(s) + 2HCl(aq) → ZnCl₂(aq) + H₂(g)↑",
-              "observation": "Hydrogen gas is evolved; test with a burning splint."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Neutralisation",
-              "equation": "HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l)",
-              "condition": "Acid reacts with base.",
-              "observation": "Salt and water are formed."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Acid + carbonate",
-              "equation": "Na₂CO₃(s) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + CO₂(g)↑",
-              "observation": "Carbon dioxide turns limewater milky."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Chlor-alkali process",
-              "equation": "2NaCl(aq) + 2H₂O(l) —electrolysis→ 2NaOH(aq) + Cl₂(g) + H₂(g)",
-              "condition": "Electrolysis of concentrated brine."
-            }
-          ]
-        },
-        {
-          "discipline": "Chemistry",
-          "chapterKey": "metals-and-non-metals",
-          "chapterTitle": "Metals and Non-metals",
-          "items": [
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Sodium with water",
-              "equation": "2Na(s) + 2H₂O(l) → 2NaOH(aq) + H₂(g)↑",
-              "observation": "Highly vigorous reaction; hydrogen is released."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Metal oxide reduction",
-              "equation": "CuO(s) + H₂(g) —heat→ Cu(s) + H₂O(l)",
-              "observation": "Black copper(II) oxide changes to brown copper."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Roasting of zinc sulphide",
-              "equation": "2ZnS(s) + 3O₂(g) —heat→ 2ZnO(s) + 2SO₂(g)",
-              "condition": "Sulphide ores are heated in excess air."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Calcination of zinc carbonate",
-              "equation": "ZnCO₃(s) —heat→ ZnO(s) + CO₂(g)",
-              "condition": "Carbonate ores are heated in limited or no air."
-            }
-          ]
-        },
-        {
-          "discipline": "Chemistry",
-          "chapterKey": "carbon-and-its-compounds",
-          "chapterTitle": "Carbon and its Compounds",
-          "items": [
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Combustion of methane",
-              "equation": "CH₄ + 2O₂ → CO₂ + 2H₂O + heat",
-              "observation": "Complete combustion in sufficient oxygen."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Ethanol oxidation",
-              "equation": "CH₃CH₂OH + 2[O] —alkaline KMnO₄/acidified K₂Cr₂O₇→ CH₃COOH + H₂O",
-              "condition": "Oxidising agent; controlled heating."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Addition reaction of ethene",
-              "equation": "CH₂=CH₂ + H₂ —Ni→ CH₃−CH₃",
-              "condition": "Hydrogenation in presence of nickel catalyst."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Esterification",
-              "equation": "CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O",
-              "condition": "Concentrated H₂SO₄; warm gently."
-            },
-            {
-              "type": "CHEMICAL_EQUATION",
-              "title": "Saponification",
-              "equation": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH",
-              "condition": "Alkaline hydrolysis of an ester."
-            }
-          ]
-        },
         {
           "discipline": "Biology",
           "chapterKey": "life-processes",
@@ -760,7 +626,155 @@
               "summary": "Ozone shields life from harmful UV radiation. Non-biodegradable pollutants can become more concentrated at higher trophic levels."
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "label": "Chemistry",
+      "chapterCount": 4,
+      "chapters": [
+        {
+          "discipline": "Chemistry",
+          "chapterKey": "chemical-reactions-and-equations",
+          "chapterTitle": "Chemical Reactions and Equations",
+          "items": [
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Combination: magnesium burning",
+              "equation": "2Mg(s) + O₂(g) → 2MgO(s)",
+              "condition": "Burn magnesium ribbon in air; bright white flame; white ash forms.",
+              "observation": "Magnesium oxide is a white powder."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Thermal decomposition of ferrous sulphate",
+              "equation": "2FeSO₄(s)  —heat→  Fe₂O₃(s) + SO₂(g) + SO₃(g)",
+              "condition": "Strong heating.",
+              "observation": "Green crystals change; brown residue and pungent gases form."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Displacement: iron and copper sulphate",
+              "equation": "Fe(s) + CuSO₄(aq) → FeSO₄(aq) + Cu(s)",
+              "condition": "Iron nail dipped in copper sulphate solution.",
+              "observation": "Blue solution turns green; reddish-brown copper deposits."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Precipitation: lead nitrate and potassium iodide",
+              "equation": "Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s)↓ + 2KNO₃(aq)",
+              "observation": "Yellow lead iodide precipitate forms."
+            }
+          ]
         },
+        {
+          "discipline": "Chemistry",
+          "chapterKey": "acids-bases-and-salts",
+          "chapterTitle": "Acids, Bases and Salts",
+          "items": [
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Acid + metal",
+              "equation": "Zn(s) + 2HCl(aq) → ZnCl₂(aq) + H₂(g)↑",
+              "observation": "Hydrogen gas is evolved; test with a burning splint."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Neutralisation",
+              "equation": "HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l)",
+              "condition": "Acid reacts with base.",
+              "observation": "Salt and water are formed."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Acid + carbonate",
+              "equation": "Na₂CO₃(s) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + CO₂(g)↑",
+              "observation": "Carbon dioxide turns limewater milky."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Chlor-alkali process",
+              "equation": "2NaCl(aq) + 2H₂O(l) —electrolysis→ 2NaOH(aq) + Cl₂(g) + H₂(g)",
+              "condition": "Electrolysis of concentrated brine."
+            }
+          ]
+        },
+        {
+          "discipline": "Chemistry",
+          "chapterKey": "metals-and-non-metals",
+          "chapterTitle": "Metals and Non-metals",
+          "items": [
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Sodium with water",
+              "equation": "2Na(s) + 2H₂O(l) → 2NaOH(aq) + H₂(g)↑",
+              "observation": "Highly vigorous reaction; hydrogen is released."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Metal oxide reduction",
+              "equation": "CuO(s) + H₂(g) —heat→ Cu(s) + H₂O(l)",
+              "observation": "Black copper(II) oxide changes to brown copper."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Roasting of zinc sulphide",
+              "equation": "2ZnS(s) + 3O₂(g) —heat→ 2ZnO(s) + 2SO₂(g)",
+              "condition": "Sulphide ores are heated in excess air."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Calcination of zinc carbonate",
+              "equation": "ZnCO₃(s) —heat→ ZnO(s) + CO₂(g)",
+              "condition": "Carbonate ores are heated in limited or no air."
+            }
+          ]
+        },
+        {
+          "discipline": "Chemistry",
+          "chapterKey": "carbon-and-its-compounds",
+          "chapterTitle": "Carbon and its Compounds",
+          "items": [
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Combustion of methane",
+              "equation": "CH₄ + 2O₂ → CO₂ + 2H₂O + heat",
+              "observation": "Complete combustion in sufficient oxygen."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Ethanol oxidation",
+              "equation": "CH₃CH₂OH + 2[O] —alkaline KMnO₄/acidified K₂Cr₂O₇→ CH₃COOH + H₂O",
+              "condition": "Oxidising agent; controlled heating."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Addition reaction of ethene",
+              "equation": "CH₂=CH₂ + H₂ —Ni→ CH₃−CH₃",
+              "condition": "Hydrogenation in presence of nickel catalyst."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Esterification",
+              "equation": "CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O",
+              "condition": "Concentrated H₂SO₄; warm gently."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Saponification",
+              "equation": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH",
+              "condition": "Alkaline hydrolysis of an ester."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "label": "Physics",
+      "chapterCount": 4,
+      "chapters": [
         {
           "discipline": "Physics",
           "chapterKey": "light-reflection-and-refraction",
