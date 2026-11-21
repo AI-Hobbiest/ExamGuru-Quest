@@ -13,8 +13,8 @@
   let session=null;try{session=JSON.parse(sessionStorage.getItem(key)||"null");}catch(_){}
   if(isStudentPreview){const classId=sessionStorage.getItem("examguru_preview_content_class_v1")||"10";session={username:"Local Student Preview",role:"student",studentId:"local-student-preview",classId};}
   if(page==="study.html"){
-    if(isStudentPreview){window.C10StudyViewerRole="student";window.C10StudyAccessReady=Promise.resolve();return;}
-    if(isAdminSession()){window.C10StudyViewerRole="admin";return;}
+    if(isStudentPreview){window.C10StudyViewerRole="student";window.C10StudyViewerClassId=String(session.classId||"");window.C10StudyAccessReady=Promise.resolve();return;}
+    if(isAdminSession()){window.C10StudyViewerRole="admin";window.C10StudyViewerClassId=new URLSearchParams(location.search).get("classId")||"10";return;}
     if(isStudentPreview){if(class10Route&&String(session.classId||"")!=="10"){location.replace("./dashboard.html");return;}return;}
   if(isStudentPreview){
     if(class10Route&&String(session.classId||"")!=="10"){location.replace("./dashboard.html");return;}
@@ -24,13 +24,13 @@
     if(!window.C10StudentAuth||!window.C10StudentAuth.restoreSession){location.replace(signInTarget);return;}
     window.C10StudyAccessReady=window.C10StudentAuth.restoreSession().then(async account=>{
       if(!account){location.replace(signInTarget);return;}
-      if(account.role==="student"){window.C10StudyViewerRole="student";return;}
+      if(account.role==="student"){window.C10StudyViewerRole="student";window.C10StudyViewerClassId=String(account.classId||"");return;}
       if(account.role==="parent"){
         const childId=new URLSearchParams(location.search).get("childId");
         const children=await window.C10StudentAuth.getLinkedChildren();
         const child=children.find(item=>String(item.studentId)===String(childId));
         if(!child){location.replace("./parent.html");return;}
-        window.C10StudyViewerRole="parent";window.C10StudyChildId=child.studentId;return;
+        window.C10StudyViewerRole="parent";window.C10StudyChildId=child.studentId;window.C10StudyViewerClassId=String(child.classId||"");return;
       }
       location.replace(signInTarget);
     }).catch(()=>location.replace(signInTarget));
