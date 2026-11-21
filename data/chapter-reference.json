@@ -875,6 +875,39 @@
               "title": "Electric power and heating",
               "formula": "P = VI = I²R = V²/R · H = I²Rt",
               "summary": "Power is in watts; electrical energy may be measured in joules or kilowatt-hours."
+            },
+            {
+              "type": "DERIVATION",
+              "title": "Equivalent resistance in series",
+              "summary": "The same current flows through each resistor in a series circuit.",
+              "steps": [
+                "Let the potential differences be V₁ and V₂ across R₁ and R₂.",
+                "Total potential difference V = V₁ + V₂.",
+                "By Ohm's law, IRₛ = IR₁ + IR₂.",
+                "Cancel I: Rₛ = R₁ + R₂. For more resistors, add all resistances."
+              ]
+            },
+            {
+              "type": "DERIVATION",
+              "title": "Equivalent resistance in parallel",
+              "summary": "The potential difference across each parallel branch is the same.",
+              "steps": [
+                "Let branch currents be I₁ and I₂; total current I = I₁ + I₂.",
+                "By Ohm's law, I = V/Rₚ, I₁ = V/R₁ and I₂ = V/R₂.",
+                "Substitute: V/Rₚ = V/R₁ + V/R₂.",
+                "Cancel V: 1/Rₚ = 1/R₁ + 1/R₂."
+              ]
+            },
+            {
+              "type": "DERIVATION",
+              "title": "Joule's law of heating",
+              "formula": "H = I²Rt",
+              "summary": "Electrical energy converted into heat in a resistor.",
+              "steps": [
+                "Electrical work done W = VQ.",
+                "Since Q = It, W = VIt.",
+                "Using Ohm's law V = IR, obtain H = I²Rt."
+              ]
             }
           ]
         },
