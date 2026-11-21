@@ -45,7 +45,7 @@ async function init(){
   try{const children=await window.C10StudentAuth.getLinkedChildren();const child=children.find(item=>String(item.studentId)===String(window.C10StudyChildId));viewerClass=String(child?.classId||"");}catch(_){viewerClass="";}
  }else if(window.C10StudyViewerRole==="admin"){viewerClass=viewerClass||"10";}
  else{const user=window.C10StudentAuth&&window.C10StudentAuth.currentUser?window.C10StudentAuth.currentUser():null;viewerClass=viewerClass||String(user?.classId||"");}
- if(viewerClass!=="10"){section.hidden=true;return;}
+ if(viewerClass!=="10"){section.hidden=true;const tab=$("referencesHubTab");if(tab)tab.hidden=true;return;}
  try{
   const response=await fetch("./data/chapter-reference.json",{cache:"no-store"});if(!response.ok)throw new Error("Reference catalogue unavailable.");
   manifest=await response.json();
