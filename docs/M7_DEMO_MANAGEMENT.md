@@ -67,6 +67,12 @@ The implementation is in the draft PR, but it is **not yet live**. Before produc
 
 No Cloud learner-data migration or sync is part of M7. No existing production student/parent login, Independent Learner context, school data, attempt records or storage keys are intentionally changed.
 
+## Existing public-repository credential exposure — release blocker
+
+The current public repository still contains the legacy student and family account JSON files used by the local-first login flow. They expose account identifiers/usernames and salted password hashes to anyone who can read the repository. The hashes are not plaintext passwords, but they permit offline password guessing; the browser-side verification can also be bypassed. Secret scanning does not classify these application credential records as conventional leaked API secrets.
+
+Therefore, **the overall LMS authentication/source-data posture is not production-secure yet**, even though the new M7 demo credentials use server-side hashes and the latest secret scan passed. Before a production security claim: migrate legacy student/parent authentication to the server-side account service, remove the public JSON account files from the served application, rotate affected passwords, and assess repository history for purge/credential-reset requirements. This remediation must preserve current learner progress and account continuity; do not simply delete the files before the server-side replacement is deployed.
+
 ## Security boundary
 
 The GitHub repository and GitHub Pages frontend are public. Source code is therefore visible and must not contain secrets. M7 protects server-side data and actions through Worker authorization, hashed credentials/tokens, isolated demo sessions and a strict read-only endpoint allowlist. Repository visibility is not a security boundary. Production secrets must remain in Cloudflare secret bindings; public source must be assumed inspectable.
