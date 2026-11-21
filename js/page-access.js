@@ -11,13 +11,22 @@
   };
   const isStudentPreview=(()=>{try{const admin=JSON.parse(sessionStorage.getItem("examguru_mvp_admin_session_v1")||"null");return !!(admin&&admin.role==="admin"&&admin.username==="Jayaprakashganathe@gmail.com"&&admin.rbacTestMode==="local-platform-admin"&&sessionStorage.getItem("examguru_rbac_test_role_v1")==="student");}catch(_){return false;}})();
   let session=null;try{session=JSON.parse(sessionStorage.getItem(key)||"null");}catch(_){}
-  if(isStudentPreview){const classId=sessionStorage.getItem("examguru_preview_content_class_v1")||"10";session={username:"Local Student Preview",role:"student",studentId:"local-student-preview",classId};}
-  if(page==="study.html"){
-    if(isStudentPreview){window.C10StudyViewerRole="student";window.C10StudyViewerClassId=String(session.classId||"");window.C10StudyAccessReady=Promise.resolve();return;}
-    if(isAdminSession()){window.C10StudyViewerRole="admin";window.C10StudyViewerClassId=new URLSearchParams(location.search).get("classId")||"10";return;}
-    if(isStudentPreview){if(class10Route&&String(session.classId||"")!=="10"){location.replace("./dashboard.html");return;}return;}
   if(isStudentPreview){
-    if(class10Route&&String(session.classId||"")!=="10"){location.replace("./dashboard.html");return;}
+    const classId=sessionStorage.getItem("examguru_preview_content_class_v1")||"10";
+    session={username:"Local Student Preview",role:"student",studentId:"local-student-preview",classId};
+    window.C10StudyViewerRole="student";
+    window.C10StudyViewerClassId=String(classId);
+    window.C10StudyAccessReady=Promise.resolve();
+    window.C10ProfilePreviewMode=true;
+    if(class10Route&&String(classId)!=="10"){location.replace("./dashboard.html");return;}
+    // Platform Admin's explicit Student role preview is already authenticated
+    // by the admin session. Do not demand a separate student account on any
+    // student-facing page, including My Profile / Test History.
+    return;
+  }
+  if(page==="study.html"&&isAdminSession()){
+    window.C10StudyViewerRole="admin";
+    window.C10StudyViewerClassId=new URLSearchParams(location.search).get("classId")||"10";
     return;
   }
   if(!session||typeof session.username!=="string"){location.replace(signInTarget);return;}
