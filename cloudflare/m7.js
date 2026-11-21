@@ -43,7 +43,16 @@ function seedRecords(demoId,generation,profile,createdAt) {
     ["student","student-001",{displayName:"Anaya Rao",classId:"class-6",synthetic:true}],
     ["student","student-002",{displayName:"Ishaan Mehta",classId:"class-10",synthetic:true}],
     ["parent","parent-001",{displayName:"Demo Guardian",linkedStudentIds:["student-001"],synthetic:true}],
-    ["sample-assessment","assessment-001",{title:"Science Progress Check",questionCount:10,synthetic:true}]
+    ["sample-assessment","assessment-001",{title:"Science Progress Check",questionCount:10,status:"published",synthetic:true}],
+    ["teacher-assignment","assignment-001",{teacherId:"teacher-001",classId:"class-6",subjectId:"science",synthetic:true}],
+    ["department","department-science",{name:"Science Department",synthetic:true}],
+    ["hod-appointment","hod-primary",{teacherId:"teacher-001",departmentId:"department-science",appointmentType:"primary",synthetic:true}],
+    ["parent-link","parent-student-001",{parentId:"parent-001",studentId:"student-001",relationship:"Parent",synthetic:true}],
+    ["student-attempt","attempt-001",{studentId:"student-001",assessmentId:"assessment-001",score:8,maxScore:10,completedAt:"2026-11-18T10:30:00.000Z",synthetic:true}],
+    ["student-attempt","attempt-002",{studentId:"student-002",assessmentId:"assessment-001",score:7,maxScore:10,completedAt:"2026-11-19T09:15:00.000Z",synthetic:true}],
+    ["topic-mastery","mastery-001",{studentId:"student-001",subjectId:"science",topic:"Materials Around Us",mastery:0.82,synthetic:true}],
+    ["topic-mastery","mastery-002",{studentId:"student-001",subjectId:"science",topic:"Separation of Substances",mastery:0.64,synthetic:true}],
+    ["study-resource","resource-001",{title:"Science — Quick Revision Cards",classId:"class-6",subjectId:"science",synthetic:true}]
   ];
   return rows.map(([type,key,payload])=>({demoId,generation,recordType:type,recordKey:key,payloadJson:JSON.stringify({...payload,dataProfile:profile}),createdAt}));
 }
