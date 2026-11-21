@@ -27,6 +27,16 @@ const biology=manifest.subjects.find(s=>s.id==="biology");
 assert.ok(biology.chapters.every(c=>c.items.some(i=>i.type==="KEY_DIAGRAM"||i.type==="KEY_RESULT")));
 assert.ok(biology.chapters.every(c=>c.items.some(i=>i.asset)),"each Biology chapter should include a visual asset");
 assert.ok(biology.chapters.find(c=>c.chapterKey==="life-processes").items.some(i=>i.title==="Human heart — chambers and double circulation"&&i.asset==="assets/study-library/science/human-heart.svg"),"Life Processes must include a labelled heart visual");
+const alimentary=biology.chapters.find(c=>c.chapterKey==="life-processes").items.find(i=>i.title==="Human alimentary canal — NCERT Figure 5.6");
+assert.ok(alimentary,"Life Processes must include NCERT Figure 5.6");
+assert.equal(alimentary.sourcePage,85,"alimentary canal figure must retain NCERT page reference");
+assert.equal(alimentary.sourceFigure,"Figure 5.6");
+assert.equal(alimentary.relatedActivity,"Activity 5.3 (same page; starch and saliva experiment)");
+assert.equal(alimentary.labels.length,13,"alimentary canal redraw must preserve all 13 textbook labels");
+assert.ok(fs.existsSync(alimentary.asset),"alimentary canal SVG must exist");
+const alimentarySvg=fs.readFileSync(alimentary.asset,"utf8");
+for(const label of ["Tongue","Mouth (Buccal cavity)","Oesophagus","Diaphragm","Gall bladder","Bile duct","Liver","Pancreas","Stomach","Small intestine","Large intestine","Appendix","Anus"])assert.ok(alimentarySvg.includes(label),"alimentary canal SVG missing label "+label);
+
 assert.ok(biology.chapters.find(c=>c.chapterKey==="control-and-coordination").items.some(i=>i.title==="Human brain — major regions"&&i.asset==="assets/study-library/science/human-brain.svg"),"Control and Coordination must include a labelled brain visual");
 assert.ok(biology.chapters.find(c=>c.chapterKey==="control-and-coordination").items.some(i=>i.title==="Neuron — structure and impulse direction"&&i.asset==="assets/study-library/science/neuron.svg"),"Control and Coordination must include a labelled neuron visual");
 for(const path of ["assets/study-library/science/human-heart.svg","assets/study-library/science/human-brain.svg","assets/study-library/science/neuron.svg"]){assert.ok(fs.existsSync(path),"missing original NCERT-aligned illustration "+path);}
@@ -55,4 +65,4 @@ assert.ok(page.includes('data-study-tab="visualRevisionBoard"')&&page.includes('
 assert.ok(/<section[^>]*id="chapterReferenceHub"[^>]*hidden/.test(page),"References Hub must start hidden behind its tab");
 assert.ok(fs.readFileSync("js/study-library.js","utf8").includes("initStudyLibraryTabs"),"Study Library tab navigation must be wired");
 new Function(script);
-console.log("Chapter Reference Hub checks passed: 14 Mathematics, 5 Biology, 4 Chemistry, 4 Physics chapters; original heart/brain/neuron visuals, source notes, SVG integrity, lazy loading and class gating.");
+console.log("Chapter Reference Hub checks passed: 14 Mathematics, 5 Biology, 4 Chemistry, 4 Physics chapters; original heart/brain/neuron/alimentary canal visuals, source notes, SVG integrity, lazy loading and class gating.");
