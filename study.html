@@ -88,6 +88,15 @@ body{margin:0;background:#f6f8fc;color:#252b46;font-family:Aptos,Inter,"Segoe UI
 .study-hero p{max-width:760px;margin:0;color:#626b84;line-height:1.6}
 .study-wrap{width:min(1120px,calc(100% - 32px));margin:22px auto 54px}
 .study-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-bottom:16px}
+.study-library-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 14px;padding:6px;border:1px solid #e0e4ef;border-radius:15px;background:#f1f3fa}
+.study-library-tab{flex:1 1 180px;min-height:46px;padding:10px 16px;border:1px solid transparent;border-radius:10px;background:transparent;color:#535d78;font:inherit;font-weight:850;cursor:pointer;transition:background .15s ease,color .15s ease,box-shadow .15s ease}
+.study-library-tab[aria-selected="true"]{background:#fff;border-color:#d9dcef;color:#403b8c;box-shadow:0 3px 10px rgba(39,45,82,.08)}
+.study-library-tab:focus-visible{outline:3px solid #8b83d8;outline-offset:2px}
+body.eg-theme-dark .study-library-tabs{background:#202a39;border-color:#465368}
+body.eg-theme-dark .study-library-tab{color:#d0dbe7}
+body.eg-theme-dark .study-library-tab[aria-selected="true"]{background:#344258;border-color:#65728a;color:#fff}
+.study-library-view[hidden]{display:none!important}
+
 .study-stat,.study-panel{background:#fff;border:1px solid #e0e4ef;border-radius:17px;box-shadow:0 7px 22px rgba(39,45,82,.04)}
 .study-stat{padding:14px 16px}.study-stat strong{display:block;font-size:1.5rem;color:#403b8c}.study-stat span{display:block;margin-top:4px;font-size:.78rem;color:#6c748b;font-weight:700}
 .study-panel{padding:17px}
@@ -128,11 +137,15 @@ body{margin:0;background:#f6f8fc;color:#252b46;font-family:Aptos,Inter,"Segoe UI
     <article class="study-stat eg-metric-card eg-surface"><strong id="studyCompleted">0</strong><span>Marked completed</span></article>
     <article class="study-stat eg-metric-card eg-surface"><strong id="studySaved">0</strong><span>Saved for later</span></article>
   </section>
-  <section class="vrb-board" id="visualRevisionBoard" aria-labelledby="vrbTitle">
+  <nav class="study-library-tabs" role="tablist" aria-label="Study Library sections">
+    <button class="study-library-tab" id="visualLibraryTab" type="button" role="tab" aria-selected="true" aria-controls="visualRevisionBoard" data-study-tab="visualRevisionBoard">Visual Library</button>
+    <button class="study-library-tab" id="referencesHubTab" type="button" role="tab" aria-selected="false" aria-controls="chapterReferenceHub" data-study-tab="chapterReferenceHub">References Hub</button>
+  </nav>
+  <section class="vrb-board study-library-view" id="visualRevisionBoard" aria-labelledby="vrbTitle">
     <div class="vrb-heading">
       <div>
         <div class="vrb-kicker">Quick exam reference · Visual learning</div>
-        <h2 class="vrb-title" id="vrbTitle">Visual Revision Board</h2>
+        <h2 class="vrb-title" id="vrbTitle">Visual Library</h2>
         <p class="vrb-intro">Chapter-wise concepts, comparisons, processes and exam reminders in one quick-reference board. Choose a subject and chapter, then search the cards.</p>
       </div>
       <span class="vrb-count" id="vrbCount">Loading revision cards…</span>
@@ -150,7 +163,7 @@ body{margin:0;background:#f6f8fc;color:#252b46;font-family:Aptos,Inter,"Segoe UI
     <p class="vrb-footer" id="vrbStatus" role="status">Revision content is served from the ExamGuru JSON catalogue. Image-based visual packs will be added in a later phase.</p>
   </section>
 
-  <section class="crh-section" id="chapterReferenceHub" aria-labelledby="crhTitle">
+  <section class="crh-section study-library-view" id="chapterReferenceHub" hidden aria-labelledby="crhTitle">
     <div class="crh-heading"><div><div class="crh-kicker">Class 10 · Chapter-wise reference</div><h2 id="crhTitle">Chapter Reference Hub</h2><p class="crh-intro">Key Biology diagrams, Mathematics theorems and proofs, Chemistry equations, and Physics formulae, laws and diagrams — organised by chapter.</p></div></div>
     <div class="crh-toolbar"><select id="crhSubject" aria-label="Reference subject"><option>Loading subjects…</option></select><select id="crhChapter" aria-label="Reference chapter"><option>Loading chapters…</option></select><select id="crhType" aria-label="Reference type"><option value="all">All reference types</option><option value="KEY_DIAGRAM">Key diagrams</option><option value="THEOREM_PROOF">Theorems &amp; proofs</option><option value="CHEMICAL_EQUATION">Chemical equations</option><option value="FORMULA_IDENTITY">Formulae &amp; identities</option><option value="DERIVATION">Derivations</option><option value="KEY_RESULT">Laws &amp; key results</option></select></div>
     <p class="crh-meta" id="crhChapterMeta">Select a subject and chapter.</p><h3 id="crhChapterTitle" style="margin:0 0 12px;font-size:1.05rem">Loading chapter references…</h3>
@@ -176,7 +189,7 @@ body{margin:0;background:#f6f8fc;color:#252b46;font-family:Aptos,Inter,"Segoe UI
 <script src="./js/page-access.js?v=20261119-student-preview-fix-v2"></script>
 <script src="./js/study-model.js"></script>
 <script src="./js/study-library.js?v=20261117-admin-preview-v1"></script>
-<script src="./js/chapter-reference-hub.js?v=1"></script>
+<script src="./js/chapter-reference-hub.js?v=20261121-access-race-fix-v2"></script>
 <script src="./js/app-shell.js?v=20261119-student-preview-lms-admin-v1"></script>
 </body>
 </html>
