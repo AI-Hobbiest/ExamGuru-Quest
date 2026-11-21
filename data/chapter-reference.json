@@ -1,0 +1,911 @@
+{
+  "schemaVersion": 1,
+  "kind": "chapter-reference-manifest",
+  "version": "1.0.0",
+  "classId": "10",
+  "subjects": [
+    {
+      "id": "mathematics",
+      "label": "Mathematics",
+      "chapterCount": 14,
+      "chapters": [
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "real-numbers",
+          "chapterTitle": "Real Numbers",
+          "items": [
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Fundamental Theorem of Arithmetic",
+              "summary": "Every composite number can be expressed as a product of primes, and this factorisation is unique apart from the order of factors.",
+              "steps": [
+                "Divide the number by the smallest prime that divides it.",
+                "Continue factoring each composite quotient until every factor is prime.",
+                "Arrange the prime factors in non-decreasing order.",
+                "Uniqueness follows from Euclid's lemma: if a prime divides a product, it divides at least one factor."
+              ],
+              "examTip": "Use prime factorisation to find HCF and LCM; show the factor tree or division steps."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Euclid's Division Lemma",
+              "summary": "For positive integers a and b, there exist unique integers q and r such that a = bq + r, where 0 ≤ r < b.",
+              "steps": [
+                "Identify the dividend a and divisor b.",
+                "Write a = bq + r.",
+                "Check that the remainder is non-negative and smaller than the divisor."
+              ]
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "HCF–LCM relationship",
+              "formula": "HCF(a, b) × LCM(a, b) = a × b",
+              "summary": "For two positive integers, the product of their HCF and LCM equals the product of the integers."
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "polynomials",
+          "chapterTitle": "Polynomials",
+          "items": [
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Relationship between zeroes and coefficients (quadratic)",
+              "summary": "For p(x) = ax² + bx + c, with zeroes α and β: α + β = −b/a and αβ = c/a.",
+              "steps": [
+                "Factorise p(x) as a(x − α)(x − β).",
+                "Expand: a[x² − (α + β)x + αβ].",
+                "Compare coefficients with ax² + bx + c.",
+                "Equate x-coefficients and constant terms to obtain the relationships."
+              ],
+              "examTip": "State the degree and leading coefficient before applying the relationships."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Division algorithm for polynomials",
+              "formula": "p(x) = g(x)q(x) + r(x), where r(x) = 0 or degree r(x) < degree g(x)",
+              "summary": "Dividend = Divisor × Quotient + Remainder."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Number of zeroes",
+              "summary": "The number of zeroes of a polynomial is at most its degree. A quadratic can have at most two real zeroes.",
+              "diagram": "assets/math/quadratic-zeros.svg",
+              "diagramAlt": "Graph showing zeroes of a quadratic polynomial."
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "pair-of-linear-equations-in-two-variables",
+          "chapterTitle": "Pair of Linear Equations in Two Variables",
+          "items": [
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Consistency conditions",
+              "summary": "For a₁x + b₁y + c₁ = 0 and a₂x + b₂y + c₂ = 0, the ratios determine the number of solutions.",
+              "steps": [
+                "Unique solution: a₁/a₂ ≠ b₁/b₂; the lines intersect.",
+                "No solution: a₁/a₂ = b₁/b₂ ≠ c₁/c₂; the lines are parallel.",
+                "Infinitely many solutions: a₁/a₂ = b₁/b₂ = c₁/c₂; the lines coincide."
+              ],
+              "diagram": "assets/math/linear-system-intersection.svg",
+              "diagramAlt": "Graph of two intersecting linear equations."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Cross-multiplication method",
+              "formula": "x/(b₁c₂ − b₂c₁) = y/(c₁a₂ − c₂a₁) = 1/(a₁b₂ − a₂b₁)",
+              "summary": "Use when the denominator conditions are satisfied."
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "quadratic-equations",
+          "chapterTitle": "Quadratic Equations",
+          "items": [
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Quadratic formula",
+              "formula": "x = [−b ± √(b² − 4ac)] / 2a",
+              "summary": "Solution of ax² + bx + c = 0, a ≠ 0.",
+              "steps": [
+                "Divide the equation by a.",
+                "Move the constant term to the right.",
+                "Complete the square by adding b²/(4a²) to both sides.",
+                "Take square roots and isolate x to obtain the quadratic formula."
+              ],
+              "examTip": "The discriminant D = b² − 4ac determines the nature of roots."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Nature of roots",
+              "formula": "D > 0: two distinct real roots · D = 0: equal real roots · D < 0: no real roots",
+              "summary": "Check the discriminant before solving when only the nature of roots is asked."
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "arithmetic-progressions",
+          "chapterTitle": "Arithmetic Progressions",
+          "items": [
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "nth term",
+              "formula": "aₙ = a + (n − 1)d",
+              "summary": "a is the first term, d is the common difference and n is the term number."
+            },
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Sum of first n terms",
+              "formula": "Sₙ = n/2 [2a + (n − 1)d] = n/2(a + l)",
+              "summary": "Pair the first and last terms to derive the AP sum.",
+              "steps": [
+                "Write Sₙ = a + (a+d) + … + l.",
+                "Reverse the order: Sₙ = l + (l−d) + … + a.",
+                "Add the two equations; each pair equals a + l.",
+                "Thus 2Sₙ = n(a+l), so Sₙ = n/2(a+l)."
+              ],
+              "examTip": "Use the first formula when d is known; use the second when the last term is known."
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "triangles",
+          "chapterTitle": "Triangles",
+          "items": [
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Basic Proportionality Theorem (Thales)",
+              "summary": "A line drawn parallel to one side of a triangle divides the other two sides in the same ratio.",
+              "steps": [
+                "In ΔABC, let D lie on AB and E on AC with DE ∥ BC.",
+                "Triangles ADE and BDE have equal altitude to AB, so their area ratio is AD:DB.",
+                "Similarly compare areas using the common altitude to AC.",
+                "Using the equal areas of triangles sharing base DE and parallel lines, obtain AD/DB = AE/EC."
+              ],
+              "diagram": "assets/math/triangle-bpt.svg",
+              "diagramAlt": "Triangle with a line parallel to its base."
+            },
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Pythagoras theorem",
+              "summary": "In a right-angled triangle, the square of the hypotenuse equals the sum of the squares of the other two sides.",
+              "steps": [
+                "Let ∠B = 90° in ΔABC.",
+                "Draw BD perpendicular to AC.",
+                "Use similarity of the smaller triangles with the original triangle.",
+                "Obtain AB² = AD·AC and BC² = DC·AC.",
+                "Add: AB² + BC² = AC(AD+DC) = AC²."
+              ],
+              "diagram": "assets/math/right-triangle.svg",
+              "diagramAlt": "Right-angled triangle illustrating Pythagoras theorem."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Similarity criteria",
+              "summary": "AAA (or AA), SSS and SAS similarity criteria. Corresponding sides of similar triangles are proportional."
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "coordinate-geometry",
+          "chapterTitle": "Coordinate Geometry",
+          "items": [
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Distance formula",
+              "formula": "AB = √[(x₂ − x₁)² + (y₂ − y₁)²]",
+              "summary": "Distance between A(x₁,y₁) and B(x₂,y₂)."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Section formula (internal division)",
+              "formula": "P = ((mx₂ + nx₁)/(m+n), (my₂ + ny₁)/(m+n))",
+              "summary": "If P divides AB in the ratio m:n."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Area of a triangle",
+              "formula": "Area = ½ |x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)|",
+              "summary": "If area is zero, the three points are collinear.",
+              "diagram": "assets/math/coordinate-plane.svg",
+              "diagramAlt": "Coordinate plane with plotted points."
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "introduction-to-trigonometry",
+          "chapterTitle": "Introduction to Trigonometry",
+          "items": [
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Trigonometric ratios",
+              "formula": "sin θ = P/H · cos θ = B/H · tan θ = P/B",
+              "summary": "P = perpendicular, B = base, H = hypotenuse in a right triangle."
+            },
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Fundamental identity",
+              "formula": "sin²θ + cos²θ = 1",
+              "summary": "Divide the Pythagorean relation P² + B² = H² by H².",
+              "steps": [
+                "Start with P² + B² = H².",
+                "Divide every term by H².",
+                "Recognise P/H = sin θ and B/H = cos θ.",
+                "Therefore sin²θ + cos²θ = 1."
+              ],
+              "examTip": "Also derive 1 + tan²θ = sec²θ and 1 + cot²θ = cosec²θ."
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "some-applications-of-trigonometry",
+          "chapterTitle": "Some Applications of Trigonometry",
+          "items": [
+            {
+              "type": "KEY_RESULT",
+              "title": "Angle of elevation and depression",
+              "summary": "Angle of elevation is measured upward from the horizontal; angle of depression is measured downward from the horizontal.",
+              "diagram": "assets/math/right-triangle.svg",
+              "diagramAlt": "Right triangle used to model height and distance."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Height and distance setup",
+              "formula": "tan θ = height / horizontal distance",
+              "summary": "Choose the right triangle, identify the angle, then select sin, cos or tan based on known and required sides.",
+              "steps": [
+                "Draw and label the horizontal line and vertical height.",
+                "Mark the angle of elevation/depression.",
+                "Identify opposite, adjacent and hypotenuse.",
+                "Apply the appropriate ratio and include units."
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "circles",
+          "chapterTitle": "Circles",
+          "items": [
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Tangents from an external point",
+              "summary": "The lengths of two tangents drawn from an external point to a circle are equal.",
+              "steps": [
+                "Let PA and PB be tangents from P, touching at A and B.",
+                "Join OA, OB and OP.",
+                "OA ⟂ PA and OB ⟂ PB (radius is perpendicular to tangent).",
+                "OA = OB (radii) and OP is common.",
+                "Right triangles OAP and OBP are congruent by RHS; hence PA = PB."
+              ],
+              "diagram": "assets/math/circle-tangent.svg",
+              "diagramAlt": "Two equal tangents from an external point."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Tangent–radius property",
+              "summary": "The tangent at any point of a circle is perpendicular to the radius through the point of contact."
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "areas-related-to-circles",
+          "chapterTitle": "Areas Related to Circles",
+          "items": [
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Circle and sector formulae",
+              "formula": "Circumference = 2πr · Area = πr² · Arc length = (θ/360°) × 2πr · Sector area = (θ/360°) × πr²",
+              "summary": "θ is the central angle in degrees."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Segment area",
+              "formula": "Minor segment area = sector area − area of triangle",
+              "summary": "For a major segment, subtract the minor segment from the area of the full circle.",
+              "diagram": "assets/math/circle-sector.svg",
+              "diagramAlt": "Circle sector and central angle."
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "surface-areas-and-volumes",
+          "chapterTitle": "Surface Areas and Volumes",
+          "items": [
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Cylinder",
+              "formula": "CSA = 2πrh · TSA = 2πr(h+r) · Volume = πr²h",
+              "summary": "r is radius and h is height."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Cone and sphere",
+              "formula": "Cone: CSA = πrl, V = ⅓πr²h · Sphere: SA = 4πr², V = ⁴⁄₃πr³",
+              "summary": "For a cone, l = √(r²+h²)."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Combined solids",
+              "summary": "For a combined solid, add the exposed surface areas only. For hollowing or melting, conserve volume.",
+              "diagram": "assets/math/solid-cylinder-hemisphere.svg",
+              "diagramAlt": "Combined cylinder and hemisphere solid."
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "statistics",
+          "chapterTitle": "Statistics",
+          "items": [
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Mean of grouped data",
+              "formula": "x̄ = Σfᵢxᵢ / Σfᵢ",
+              "summary": "xᵢ is class mark and fᵢ is frequency."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Median of grouped data",
+              "formula": "Median = l + [(N/2 − cf)/f] × h",
+              "summary": "l = lower boundary of median class; cf = cumulative frequency before it; f = its frequency; h = class width."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Mode of grouped data",
+              "formula": "Mode = l + [(f₁−f₀)/(2f₁−f₀−f₂)] × h",
+              "summary": "f₁ is modal-class frequency; f₀ previous class; f₂ succeeding class."
+            }
+          ]
+        },
+        {
+          "subject": "mathematics",
+          "discipline": "Mathematics",
+          "chapterKey": "probability",
+          "chapterTitle": "Probability",
+          "items": [
+            {
+              "type": "KEY_RESULT",
+              "title": "Classical probability",
+              "formula": "P(E) = Number of outcomes favourable to E / Total number of equally likely outcomes",
+              "summary": "0 ≤ P(E) ≤ 1."
+            },
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Complementary event",
+              "formula": "P(E) + P(not E) = 1",
+              "summary": "An event and its complement are mutually exclusive and together cover the entire sample space.",
+              "steps": [
+                "The sample space S is partitioned into E and Ē.",
+                "Therefore P(E) + P(Ē) = P(S).",
+                "Since P(S) = 1, P(Ē) = 1 − P(E)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "label": "Science",
+      "chapterCount": 13,
+      "chapters": [
+        {
+          "discipline": "Chemistry",
+          "chapterKey": "chemical-reactions-and-equations",
+          "chapterTitle": "Chemical Reactions and Equations",
+          "items": [
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Combination: magnesium burning",
+              "equation": "2Mg(s) + O₂(g) → 2MgO(s)",
+              "condition": "Burn magnesium ribbon in air; bright white flame; white ash forms.",
+              "observation": "Magnesium oxide is a white powder."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Thermal decomposition of ferrous sulphate",
+              "equation": "2FeSO₄(s)  —heat→  Fe₂O₃(s) + SO₂(g) + SO₃(g)",
+              "condition": "Strong heating.",
+              "observation": "Green crystals change; brown residue and pungent gases form."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Displacement: iron and copper sulphate",
+              "equation": "Fe(s) + CuSO₄(aq) → FeSO₄(aq) + Cu(s)",
+              "condition": "Iron nail dipped in copper sulphate solution.",
+              "observation": "Blue solution turns green; reddish-brown copper deposits."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Precipitation: lead nitrate and potassium iodide",
+              "equation": "Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s)↓ + 2KNO₃(aq)",
+              "observation": "Yellow lead iodide precipitate forms."
+            }
+          ]
+        },
+        {
+          "discipline": "Chemistry",
+          "chapterKey": "acids-bases-and-salts",
+          "chapterTitle": "Acids, Bases and Salts",
+          "items": [
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Acid + metal",
+              "equation": "Zn(s) + 2HCl(aq) → ZnCl₂(aq) + H₂(g)↑",
+              "observation": "Hydrogen gas is evolved; test with a burning splint."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Neutralisation",
+              "equation": "HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l)",
+              "condition": "Acid reacts with base.",
+              "observation": "Salt and water are formed."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Acid + carbonate",
+              "equation": "Na₂CO₃(s) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + CO₂(g)↑",
+              "observation": "Carbon dioxide turns limewater milky."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Chlor-alkali process",
+              "equation": "2NaCl(aq) + 2H₂O(l) —electrolysis→ 2NaOH(aq) + Cl₂(g) + H₂(g)",
+              "condition": "Electrolysis of concentrated brine."
+            }
+          ]
+        },
+        {
+          "discipline": "Chemistry",
+          "chapterKey": "metals-and-non-metals",
+          "chapterTitle": "Metals and Non-metals",
+          "items": [
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Sodium with water",
+              "equation": "2Na(s) + 2H₂O(l) → 2NaOH(aq) + H₂(g)↑",
+              "observation": "Highly vigorous reaction; hydrogen is released."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Metal oxide reduction",
+              "equation": "CuO(s) + H₂(g) —heat→ Cu(s) + H₂O(l)",
+              "observation": "Black copper(II) oxide changes to brown copper."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Roasting of zinc sulphide",
+              "equation": "2ZnS(s) + 3O₂(g) —heat→ 2ZnO(s) + 2SO₂(g)",
+              "condition": "Sulphide ores are heated in excess air."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Calcination of zinc carbonate",
+              "equation": "ZnCO₃(s) —heat→ ZnO(s) + CO₂(g)",
+              "condition": "Carbonate ores are heated in limited or no air."
+            }
+          ]
+        },
+        {
+          "discipline": "Chemistry",
+          "chapterKey": "carbon-and-its-compounds",
+          "chapterTitle": "Carbon and its Compounds",
+          "items": [
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Combustion of methane",
+              "equation": "CH₄ + 2O₂ → CO₂ + 2H₂O + heat",
+              "observation": "Complete combustion in sufficient oxygen."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Ethanol oxidation",
+              "equation": "CH₃CH₂OH + 2[O] —alkaline KMnO₄/acidified K₂Cr₂O₇→ CH₃COOH + H₂O",
+              "condition": "Oxidising agent; controlled heating."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Addition reaction of ethene",
+              "equation": "CH₂=CH₂ + H₂ —Ni→ CH₃−CH₃",
+              "condition": "Hydrogenation in presence of nickel catalyst."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Esterification",
+              "equation": "CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O",
+              "condition": "Concentrated H₂SO₄; warm gently."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Saponification",
+              "equation": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH",
+              "condition": "Alkaline hydrolysis of an ester."
+            }
+          ]
+        },
+        {
+          "discipline": "Biology",
+          "chapterKey": "life-processes",
+          "chapterTitle": "Life Processes",
+          "items": [
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Nephron – filtration and urine formation",
+              "asset": "assets/exam-papers/science/nephron-filtration.svg",
+              "alt": "Nephron diagram showing filtration and urine flow.",
+              "labels": [
+                "Glomerulus – filters blood under pressure",
+                "Bowman's capsule – collects filtrate",
+                "Renal tubule – selective reabsorption and secretion",
+                "Collecting duct – carries urine onward"
+              ],
+              "examTip": "Learn the direction of filtrate flow and distinguish filtration from selective reabsorption."
+            },
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Alveolus – gas exchange",
+              "asset": "assets/exam-papers/science/alveolus-gas-exchange.svg",
+              "alt": "Alveolus and surrounding blood capillaries.",
+              "labels": [
+                "Alveolar air space",
+                "Thin moist alveolar wall",
+                "Blood capillary network",
+                "Oxygen diffuses into blood; carbon dioxide diffuses into alveolus"
+              ]
+            },
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Double circulation",
+              "asset": "assets/exam-papers/science/double-circulation-schematic.svg",
+              "alt": "Schematic of pulmonary and systemic circulation.",
+              "labels": [
+                "Pulmonary circulation – heart to lungs and back",
+                "Systemic circulation – heart to body and back",
+                "Right side handles deoxygenated blood",
+                "Left side pumps oxygenated blood"
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Photosynthesis equation",
+              "formula": "6CO₂ + 6H₂O —sunlight/chlorophyll→ C₆H₁₂O₆ + 6O₂",
+              "summary": "Carbon dioxide and water are converted into glucose and oxygen using light energy."
+            }
+          ]
+        },
+        {
+          "discipline": "Biology",
+          "chapterKey": "control-and-coordination",
+          "chapterTitle": "Control and Coordination",
+          "items": [
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Reflex arc – pathway",
+              "labels": [
+                "Receptor detects stimulus",
+                "Sensory neuron carries impulse to spinal cord",
+                "Relay neuron processes the signal",
+                "Motor neuron carries response",
+                "Effector (muscle/gland) produces action"
+              ],
+              "examTip": "A reflex action is rapid and automatic; the brain is informed but the spinal cord coordinates many reflexes."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Plant hormone quick reference",
+              "facts": [
+                [
+                  "Auxin",
+                  "Cell elongation; phototropism"
+                ],
+                [
+                  "Gibberellin",
+                  "Stem growth and seed germination"
+                ],
+                [
+                  "Cytokinin",
+                  "Cell division"
+                ],
+                [
+                  "Abscisic acid",
+                  "Growth inhibition; wilting and dormancy"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "discipline": "Biology",
+          "chapterKey": "how-do-organisms-reproduce",
+          "chapterTitle": "How do Organisms Reproduce?",
+          "items": [
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Human reproductive system – key structures",
+              "labels": [
+                "Male: testes produce sperm; vas deferens transports sperm; urethra carries semen",
+                "Female: ovaries release ova; oviduct is the usual site of fertilisation",
+                "Uterus supports implantation and development",
+                "Placenta enables exchange between maternal and foetal blood without direct mixing"
+              ],
+              "examTip": "Be able to distinguish fertilisation, implantation and gestation."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Asexual reproduction methods",
+              "facts": [
+                [
+                  "Binary fission",
+                  "One cell divides into two; e.g. Amoeba"
+                ],
+                [
+                  "Budding",
+                  "A small outgrowth develops; e.g. Hydra"
+                ],
+                [
+                  "Fragmentation",
+                  "Body breaks into pieces that grow; e.g. Spirogyra"
+                ],
+                [
+                  "Spore formation",
+                  "Spores germinate under favourable conditions; e.g. Rhizopus"
+                ],
+                [
+                  "Vegetative propagation",
+                  "New plants arise from vegetative parts"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "discipline": "Biology",
+          "chapterKey": "heredity-and-evolution",
+          "chapterTitle": "Heredity",
+          "items": [
+            {
+              "type": "KEY_RESULT",
+              "title": "Monohybrid cross – Mendel",
+              "summary": "A cross between two heterozygous tall pea plants (Tt × Tt) gives genotypes TT, Tt, Tt and tt.",
+              "facts": [
+                [
+                  "Genotypic ratio",
+                  "1 TT : 2 Tt : 1 tt"
+                ],
+                [
+                  "Phenotypic ratio",
+                  "3 tall : 1 dwarf"
+                ],
+                [
+                  "Dominant allele",
+                  "Expressed in heterozygote"
+                ],
+                [
+                  "Recessive allele",
+                  "Expressed only when both alleles are recessive"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Sex determination in humans",
+              "summary": "Mother is XX; father is XY. The ovum always contributes X; sperm contributes X or Y. The sperm determines the chromosomal sex of the child."
+            }
+          ]
+        },
+        {
+          "discipline": "Biology",
+          "chapterKey": "our-environment",
+          "chapterTitle": "Our Environment",
+          "items": [
+            {
+              "type": "KEY_RESULT",
+              "title": "Energy flow in a food chain",
+              "summary": "Energy flows in one direction through trophic levels; only about 10% of energy is transferred to the next trophic level.",
+              "facts": [
+                [
+                  "Producer",
+                  "Captures solar energy"
+                ],
+                [
+                  "Primary consumer",
+                  "Feeds on producers"
+                ],
+                [
+                  "Secondary consumer",
+                  "Feeds on primary consumers"
+                ],
+                [
+                  "Decomposer",
+                  "Breaks down dead organic matter"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Ozone layer and biomagnification",
+              "summary": "Ozone shields life from harmful UV radiation. Non-biodegradable pollutants can become more concentrated at higher trophic levels."
+            }
+          ]
+        },
+        {
+          "discipline": "Physics",
+          "chapterKey": "light-reflection-and-refraction",
+          "chapterTitle": "Light: Reflection and Refraction",
+          "items": [
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Concave and convex lens ray diagrams",
+              "asset": "assets/exam-papers/science/eye-vision-ray-schematic.svg",
+              "alt": "Ray diagram schematic used for image formation reference.",
+              "labels": [
+                "Principal axis",
+                "Optical centre",
+                "Principal focus",
+                "Image position depends on object distance"
+              ],
+              "examTip": "Draw at least two standard rays and mark the image orientation and size."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Mirror and lens formulae",
+              "formula": "Mirror: 1/f = 1/v + 1/u · Lens: 1/f = 1/v − 1/u",
+              "summary": "Use the Cartesian sign convention consistently."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Magnification and power",
+              "formula": "Mirror: m = −v/u · Lens: m = v/u · P = 1/f (f in metres)",
+              "summary": "Power is measured in dioptres (D)."
+            }
+          ]
+        },
+        {
+          "discipline": "Physics",
+          "chapterKey": "the-human-eye-and-the-colourful-world",
+          "chapterTitle": "The Human Eye and the Colourful World",
+          "items": [
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Correction of hypermetropia",
+              "asset": "assets/exam-papers/science/hypermetropia-correction.svg",
+              "alt": "Convex lens correction of hypermetropia.",
+              "labels": [
+                "Eye lens",
+                "Retina",
+                "Image would form behind retina without correction",
+                "Convex lens converges rays so image forms on retina"
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Defects of vision",
+              "facts": [
+                [
+                  "Myopia",
+                  "Distant objects unclear; corrected using concave lens"
+                ],
+                [
+                  "Hypermetropia",
+                  "Nearby objects unclear; corrected using convex lens"
+                ],
+                [
+                  "Presbyopia",
+                  "Age-related loss of accommodation; bifocal/progressive correction may be used"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Scattering and dispersion",
+              "summary": "Shorter wavelengths scatter more strongly; white light disperses into its constituent colours through a prism.",
+              "asset": "assets/exam-papers/science/prism-dispersion.svg",
+              "alt": "Prism dispersing white light into a spectrum."
+            }
+          ]
+        },
+        {
+          "discipline": "Physics",
+          "chapterKey": "electricity",
+          "chapterTitle": "Electricity",
+          "items": [
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Ohm's law",
+              "formula": "V = IR",
+              "summary": "At constant temperature, current through a conductor is directly proportional to the potential difference across it."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Resistance combinations",
+              "formula": "Series: R = R₁ + R₂ + … · Parallel: 1/R = 1/R₁ + 1/R₂ + …",
+              "summary": "Series current is the same; parallel potential difference is the same.",
+              "asset": "assets/exam-papers/science/series-resistor-circuit.svg",
+              "alt": "Series resistor circuit."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Electric power and heating",
+              "formula": "P = VI = I²R = V²/R · H = I²Rt",
+              "summary": "Power is in watts; electrical energy may be measured in joules or kilowatt-hours."
+            }
+          ]
+        },
+        {
+          "discipline": "Physics",
+          "chapterKey": "magnetic-effects-of-electric-current",
+          "chapterTitle": "Magnetic Effects of Electric Current",
+          "items": [
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Series and parallel circuit reference",
+              "asset": "assets/exam-papers/science/parallel-circuit-4-12.svg",
+              "alt": "Parallel circuit diagram.",
+              "labels": [
+                "Cell/battery",
+                "Connecting wires",
+                "Parallel branches",
+                "Current divides between branches"
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Rules for magnetic fields",
+              "facts": [
+                [
+                  "Right-hand thumb rule",
+                  "Thumb points in current direction; curled fingers show magnetic field direction"
+                ],
+                [
+                  "Fleming's left-hand rule",
+                  "Forefinger: field; middle finger: current; thumb: force"
+                ],
+                [
+                  "Solenoid",
+                  "Field resembles that of a bar magnet; nearly uniform inside"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Domestic electric circuit safety",
+              "summary": "Live wire carries supply, neutral completes circuit, and earth wire provides a low-resistance path during leakage. Fuse/MCB protects against excess current."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "storagePolicy": {
+    "assets": "Reuse existing repository SVG assets; do not duplicate; no Base64; defer external storage.",
+    "formats": [
+      "SVG",
+      "JSON"
+    ]
+  }
+}
