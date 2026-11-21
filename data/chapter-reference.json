@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "chapter-reference-manifest",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "classId": "10",
   "subjects": [
     {
@@ -1403,6 +1403,52 @@
               ],
               "source": "NCERT Class X Science — Life Processes",
               "illustrationType": "ExamGuru original schematic based on NCERT topic"
+            },
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Human alimentary canal — NCERT Figure 5.6",
+              "summary": "Follow the alimentary canal from the mouth to the anus. The diagram identifies the digestive tract and associated organs/glands that help digestion. Use it alongside the textbook explanation of nutrition in human beings.",
+              "asset": "assets/study-library/science/human-alimentary-canal.svg",
+              "alt": "ExamGuru original redraw of NCERT Figure 5.6, with labels for tongue, mouth (buccal cavity), oesophagus, diaphragm, gall bladder, bile duct, liver, pancreas, stomach, small intestine, large intestine (colon), appendix and anus.",
+              "labels": [
+                "Tongue",
+                "Mouth (Buccal cavity)",
+                "Oesophagus",
+                "Diaphragm",
+                "Gall bladder (stores bile)",
+                "Bile duct",
+                "Liver",
+                "Pancreas",
+                "Stomach",
+                "Small intestine",
+                "Large intestine (Colon)",
+                "Appendix",
+                "Anus"
+              ],
+              "facts": [
+                [
+                  "NCERT location",
+                  "Class 10 Science, Chapter 5 — Life Processes, Figure 5.6, printed page 85 (Reprint 2025–26)."
+                ],
+                [
+                  "Related activity",
+                  "Activity 5.3 on the same page investigates the action of saliva on starch; it is not the alimentary canal figure."
+                ],
+                [
+                  "Learning task",
+                  "Trace the food pathway: mouth → oesophagus → stomach → small intestine → large intestine → anus."
+                ],
+                [
+                  "Associated organs",
+                  "Liver, gall bladder and pancreas contribute digestive secretions; they are not part of the food tube itself."
+                ]
+              ],
+              "source": "NCERT Class X Science, Chapter 5 — Life Processes, Figure 5.6, p. 85, Reprint 2025–26",
+              "illustrationType": "ExamGuru original educational redraw based on NCERT Figure 5.6; not the original NCERT artwork",
+              "sourceFigure": "Figure 5.6",
+              "sourcePage": 85,
+              "sourceEdition": "Reprint 2025–26",
+              "relatedActivity": "Activity 5.3 (same page; starch and saliva experiment)"
             }
           ]
         },
