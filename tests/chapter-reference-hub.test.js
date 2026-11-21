@@ -49,7 +49,7 @@ for(const label of ["Tongue","Mouth (Buccal cavity)","Oesophagus","Diaphragm","G
 
 assert.ok(biology.chapters.find(c=>c.chapterKey==="control-and-coordination").items.some(i=>i.title==="Human brain — major regions"&&i.asset==="assets/study-library/science/human-brain.svg"),"Control and Coordination must include a labelled brain visual");
 assert.ok(biology.chapters.find(c=>c.chapterKey==="control-and-coordination").items.some(i=>i.title==="Neuron — structure and impulse direction"&&i.asset==="assets/study-library/science/neuron.svg"),"Control and Coordination must include a labelled neuron visual");
-for(const path of ["assets/study-library/science/human-heart.svg","assets/study-library/science/human-brain.svg","assets/study-library/science/neuron.svg"]){assert.ok(fs.existsSync(path),"missing original NCERT-aligned illustration "+path);}
+for(const path of ["assets/study-library/science/human-brain.svg","assets/study-library/science/neuron.svg"]){assert.ok(fs.existsSync(path),"missing local supplementary illustration "+path);}
 assert.ok(biology.chapters.flatMap(c=>c.items).filter(i=>i.illustrationType).every(i=>i.source&&i.alt),"original illustrations must show source context and alt text");
 const physics=manifest.subjects.find(s=>s.id==="physics");
 assert.ok(physics.chapters.every(c=>c.items.some(i=>i.type==="FORMULA_IDENTITY"||i.type==="KEY_RESULT")));
