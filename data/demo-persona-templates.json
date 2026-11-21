@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "kind": "examguru-demo-persona-catalogue",
+  "catalogueVersion": "1.0.0",
+  "personas": [
+    {
+      "templateId": "institution-admin",
+      "version": 1,
+      "status": "active",
+      "displayName": "Institution Admin",
+      "description": "Institution setup and operational overview using synthetic records.",
+      "roles": ["school_admin"],
+      "dataProfile": "school_sample",
+      "modules": ["institution_overview", "academic_structure", "people_directory", "assignments", "content_overview"],
+      "restrictions": ["no_real_institution_data", "no_real_user_invites", "no_production_exports", "no_billing", "no_platform_settings"]
+    },
+    {
+      "templateId": "institution-viewer",
+      "version": 1,
+      "status": "active",
+      "displayName": "Institution Viewer",
+      "description": "Read-only management overview using synthetic records.",
+      "roles": ["institution_viewer"],
+      "dataProfile": "school_sample",
+      "modules": ["institution_overview", "academic_summary", "people_summary", "performance_summary"],
+      "restrictions": ["read_only", "no_user_management", "no_production_exports", "no_real_institution_data"]
+    },
+    {
+      "templateId": "teacher",
+      "version": 1,
+      "status": "active",
+      "displayName": "Teacher",
+      "description": "Assigned teaching workspace with synthetic classes and learners.",
+      "roles": ["teacher"],
+      "dataProfile": "teaching_sample",
+      "modules": ["teacher_workspace", "assigned_classes", "sample_assessments", "sample_learning_records"],
+      "restrictions": ["assigned_scope_only", "no_real_learner_data", "no_production_exports"]
+    },
+    {
+      "templateId": "hod-teacher",
+      "version": 1,
+      "status": "active",
+      "displayName": "HOD + Teacher",
+      "description": "Teacher membership with an additional department-scoped HOD appointment.",
+      "roles": ["teacher", "hod"],
+      "dataProfile": "department_sample",
+      "modules": ["teacher_workspace", "department_overview", "department_academic_summary"],
+      "restrictions": ["hod_is_teacher_overlay", "max_two_hod_appointments_per_department", "department_scope_only", "no_real_learner_data"]
+    },
+    {
+      "templateId": "parent",
+      "version": 1,
+      "status": "active",
+      "displayName": "Parent",
+      "description": "Family view with a synthetic linked learner.",
+      "roles": ["parent"],
+      "dataProfile": "parent_sample",
+      "modules": ["parent_dashboard", "assigned_tests", "sample_child_progress"],
+      "restrictions": ["linked_demo_child_only", "no_real_family_links", "no_production_exports"]
+    },
+    {
+      "templateId": "student",
+      "version": 1,
+      "status": "active",
+      "displayName": "Student",
+      "description": "Learner practice and progress view using synthetic attempts.",
+      "roles": ["student"],
+      "dataProfile": "student_sample",
+      "modules": ["student_dashboard", "practice", "study_library", "sample_progress"],
+      "restrictions": ["own_demo_profile_only", "no_real_learner_data", "no_production_exports"]
+    }
+  ]
+}

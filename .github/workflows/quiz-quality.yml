@@ -22,6 +22,8 @@ jobs:
         run: node --check js/lms-application-services.js && node --check js/domain/repository-contracts.js && node --check js/adapters/memory-repositories.js && node tests/lms-application-services.test.js && node tests/institution-content-store.test.js
       - name: Validate M5.4–M5.6 learning records, role policy and adapter readiness
         run: node --check js/m5-integration-services.js && node tests/m5-integration-services.test.js
+      - name: Validate M7 local-first demo management and persona lifecycle
+        run: node --check js/domain/demo-management.js && node --check js/domain/demo-persona-catalog.js && node tests/demo-management.test.js
       - name: Validate audited Science paper blueprint, generation and rendering
         run: node tests/assessment-manager.test.js && node tests/exam-paper-generator.test.js && node tests/mathematics-blueprints.test.js && node tests/mathematics-question-bank.test.js && node tests/mathematics-mcq-integration.test.js && node tests/exam-paper-renderer.test.js && node tests/exam-paper-release.test.js
       - name: Build shared Science bank from the maintained source
