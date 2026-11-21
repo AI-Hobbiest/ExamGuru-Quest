@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "chapter-reference-manifest",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "classId": "10",
   "subjects": [
     {
@@ -1366,6 +1366,43 @@
                   "Lactic acid + energy"
                 ]
               ]
+            },
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Human heart — chambers and double circulation",
+              "summary": "Trace blood through the right atrium and ventricle to the lungs, then through the left atrium and ventricle to the body. The two sides keep oxygen-poor and oxygen-rich blood separate.",
+              "asset": "assets/study-library/science/human-heart.svg",
+              "alt": "Original labelled schematic of the four heart chambers and major blood-flow pathways.",
+              "labels": [
+                "Right atrium",
+                "Right ventricle",
+                "Left atrium",
+                "Left ventricle",
+                "Vena cava",
+                "Aorta",
+                "Pulmonary artery",
+                "Pulmonary veins"
+              ],
+              "facts": [
+                [
+                  "Right side",
+                  "Receives oxygen-poor blood from the body and sends it to the lungs."
+                ],
+                [
+                  "Left side",
+                  "Receives oxygen-rich blood from the lungs and pumps it to the body."
+                ],
+                [
+                  "Double circulation",
+                  "Blood passes through the heart twice in one complete circuit."
+                ],
+                [
+                  "Learning note",
+                  "Follow the arrows and compare the two pathways."
+                ]
+              ],
+              "source": "NCERT Class X Science — Life Processes",
+              "illustrationType": "ExamGuru original schematic based on NCERT topic"
             }
           ]
         },
@@ -1505,6 +1542,66 @@
                   "Supports body growth"
                 ]
               ]
+            },
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Human brain — major regions",
+              "summary": "The brain is the main coordinating centre of the nervous system. The cerebrum is associated with thinking, memory and voluntary actions; the cerebellum coordinates posture and balance; the medulla controls several involuntary activities.",
+              "asset": "assets/study-library/science/human-brain.svg",
+              "alt": "Original labelled schematic identifying cerebrum, cerebellum, medulla and spinal cord.",
+              "labels": [
+                "Cerebrum",
+                "Cerebellum",
+                "Medulla",
+                "Spinal cord"
+              ],
+              "facts": [
+                [
+                  "Cerebrum",
+                  "Thinking, memory, sensory interpretation and voluntary actions."
+                ],
+                [
+                  "Cerebellum",
+                  "Coordination of muscular activity, posture and balance."
+                ],
+                [
+                  "Medulla",
+                  "Regulation of involuntary activities such as breathing and heartbeat."
+                ]
+              ],
+              "source": "NCERT Class X Science — Control and Coordination",
+              "illustrationType": "ExamGuru original schematic based on NCERT topic"
+            },
+            {
+              "type": "KEY_DIAGRAM",
+              "title": "Neuron — structure and impulse direction",
+              "summary": "A neuron receives information through dendrites, carries an impulse through the cell body and along the axon, and passes the signal onward through axon terminals.",
+              "asset": "assets/study-library/science/neuron.svg",
+              "alt": "Original labelled neuron schematic showing dendrites, cell body, nucleus, axon, myelin sheath and axon terminals.",
+              "labels": [
+                "Dendrites",
+                "Cell body",
+                "Nucleus",
+                "Axon",
+                "Myelin sheath",
+                "Axon terminals"
+              ],
+              "facts": [
+                [
+                  "Dendrites",
+                  "Receive information towards the cell body."
+                ],
+                [
+                  "Axon",
+                  "Carries the nerve impulse away from the cell body."
+                ],
+                [
+                  "Axon terminals",
+                  "Pass the signal to another neuron, muscle or gland."
+                ]
+              ],
+              "source": "NCERT Class X Science — Control and Coordination",
+              "illustrationType": "ExamGuru original schematic based on NCERT topic"
             }
           ]
         },
@@ -2791,5 +2888,8 @@
       "https://ciet.ncert.gov.in/science10"
     ],
     "reviewNote": "Legacy manifest items retained. Topics identified as rationalised/dropped in an edition must be checked against the student's school-year CBSE syllabus before exam use."
-  }
+  },
+  "editorialNotes": [
+    "New diagrams added in v1.2.0 are original ExamGuru schematic illustrations based on topics in the NCERT Class X Science textbook. They are not scans or reproductions of NCERT artwork. Topic coverage must be checked against the NCERT edition prescribed for the student's academic session."
+  ]
 }
