@@ -10,6 +10,19 @@ const PERSONAS = {
 };
 const nowIso=()=>new Date().toISOString();
 const id=()=>crypto.randomUUID();
+const randomBytes=n=>crypto.getRandomValues(new Uint8Array(n));
+const base64url=b=>btoa(String.fromCharCode(...b)).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/g,"");
+const randomSecret=(n=32)=>base64url(randomBytes(n));
+const sha256=async value=>Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(String(value)))),b=>b.toString(16).padStart(2,"0")).join("");
+const saltValue=()=>randomSecret(16);
+async function hashPassword(password,salt){
+ let encoded=salt.replace(/-/g,"+").replace(/_/g,"/");encoded+="=".repeat((4-encoded.length%4)%4);
+ const saltBytes=Uint8Array.from(atob(encoded),x=>x.charCodeAt(0));
+ const material=await crypto.subtle.importKey("raw",new TextEncoder().encode(password),"PBKDF2",false,["deriveBits"]);
+ return Array.from(new Uint8Array(await crypto.subtle.deriveBits({name:"PBKDF2",hash:"SHA-256",salt:saltBytes,iterations:210000},material,256)),b=>b.toString(16).padStart(2,"0")).join("");
+}
+function constantEqual(a,b){a=String(a||"");b=String(b||"");if(a.length!==b.length)return false;let diff=0;for(let i=0;i<a.length;i++)diff|=a.charCodeAt(i)^b.charCodeAt(i);return diff===0;}
+function temporaryPassword(){return randomSecret(24)+"A7";}
 const safeText=(v,max)=>typeof v==="string"&&v.trim().length>0&&v.trim().length<=max&&!/[<>]/.test(v);
 const localJson=(request,env,payload,status=200)=>new Response(JSON.stringify(payload),{status,headers:{"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store","X-Content-Type-Options":"nosniff","Referrer-Policy":"no-referrer"}});
 const localFail=(request,env,status,message)=>localJson(request,env,{ok:false,error:message},status);
@@ -84,13 +97,16 @@ export async function handleM7(request,env,who,hasPlatformAdminGrant,respond,den
       if(roles.includes("hod")&&!roles.includes("teacher"))return fail(request,env,400,"HOD is a Teacher responsibility and must include Teacher.");
       if(!DATA_PROFILES.has(profile))return fail(request,env,400,"Choose an approved synthetic sample-data profile.");
     }
-    const demoId=id(),tenantId="DEMO-"+id().replace(/-/g,"").slice(0,16).toUpperCase(),createdAt=nowIso(),expiresAt=new Date(Date.now()+duration*86400000).toISOString(),displayName=(body.displayName||"ExamGuru demo").trim();
+    const demoId=id(),tenantId="DEMO-TENANT-"+id().replace(/-/g,"").slice(0,16).toUpperCase(),createdAt=nowIso(),expiresAt=new Date(Date.now()+duration*86400000).toISOString(),displayName=(body.displayName||"ExamGuru demo").trim();
+    const demoUsername="demo_"+randomSecret(9).toLowerCase(),demoPassword=temporaryPassword(),accountId=id(),passwordSalt=saltValue(),passwordDigest=await hashPassword(demoPassword,passwordSalt);
     try {
       await env.DB.prepare("INSERT INTO demo_environments(demo_id,tenant_id,kind,template_id,template_version,display_name,roles_json,data_profile,status,created_by_user_id,created_at,expires_at,session_version,reset_generation,updated_at) VALUES(?,?,?,?,?,?,?,?,'active',?,?,?,1,1,?)")
         .bind(demoId,tenantId,body.kind,templateId,templateVersion,displayName,JSON.stringify(roles),profile,who.user_id,createdAt,expiresAt,createdAt).run();
+      await env.DB.prepare("INSERT INTO demo_accounts(account_id,demo_id,username,password_salt,password_hash,roles_json,status,created_at,updated_at) VALUES(?,?,?,?,?,?,'active',?,?)")
+        .bind(accountId,demoId,demoUsername,passwordSalt,passwordDigest,JSON.stringify(roles),createdAt,createdAt).run();
       const seeded=await provisionBaseline(env,demoId,1,profile);
-      await audit(env,demoId,who.user_id,"created",{kind:body.kind,templateId,roles,dataProfile:profile,durationDays:duration,seededRecordCount:seeded});
-      return json(request,env,{ok:true,demo:{demoId,tenantId,kind:body.kind,templateId,templateVersion,displayName,roles,dataProfile:profile,status:"active",createdAt,expiresAt,sessionVersion:1,resetGeneration:1,seededRecordCount:seeded}},201);
+      await audit(env,demoId,who.user_id,"created",{kind:body.kind,templateId,roles,dataProfile:profile,durationDays:duration,seededRecordCount:seeded,accountCount:1});
+      return json(request,env,{ok:true,demo:{demoId,tenantId,kind:body.kind,templateId,templateVersion,displayName,roles,dataProfile:profile,status:"active",createdAt,expiresAt,sessionVersion:1,resetGeneration:1,seededRecordCount:seeded},credentials:{username:demoUsername,password:demoPassword,loginPath:"/demo-login",previewPath:"/demo-preview",expiresAt}},201);
     } catch(_) { return fail(request,env,500,"Demo environment could not be provisioned. No access credentials were issued."); }
   }
   const match=path.match(/^\/api\/v2\/platform\/demos\/([A-Za-z0-9_-]+)(?:\/(extend|reset|revoke|audit))?$/);
@@ -113,7 +129,7 @@ export async function handleM7(request,env,who,hasPlatformAdminGrant,respond,den
     return json(request,env,{ok:true,demoId,expiresAt,sessionVersion:Number(state.session_version)+1});
   }
   if(action==="reset"&&method==="POST") {
-    if(state.status==="revoked")return fail(request,env,409,"A revoked demo cannot be reset.");
+    if(state.status!=="active"||state.expires_at<=nowIso())return fail(request,env,409,"Only an active, unexpired demo can be reset.");
     const generation=Number(state.reset_generation)+1,stamp=nowIso();
     await env.DB.prepare("UPDATE demo_environments SET reset_generation=?,last_reset_at=?,session_version=session_version+1,updated_at=? WHERE demo_id=? AND status<>'revoked'").bind(generation,stamp,stamp,demoId).run();
     const seeded=await provisionBaseline(env,demoId,generation,state.data_profile);
@@ -127,4 +143,52 @@ export async function handleM7(request,env,who,hasPlatformAdminGrant,respond,den
     return json(request,env,{ok:true,demoId,status:"revoked",sessionVersion:Number(state.session_version)+1});
   }
   return fail(request,env,405,"Unsupported demo operation.");
+}
+
+export async function handleM7Login(request,env,respond,deny){
+ const json=respond||localJson,fail=deny||localFail;
+ if(new URL(request.url).pathname!=="/api/demo/login"||request.method.toUpperCase()!=="POST")return null;
+ if(!env.DB)return fail(request,env,503,"Demo service is not configured.");
+ const body=await request.json().catch(()=>null),username=String(body&&body.username||"").trim().toLowerCase(),password=String(body&&body.password||"");
+ if(!/^[a-z0-9_]{8,40}$/.test(username)||password.length<12||password.length>128)return fail(request,env,400,"Enter the demo username and password.");
+ const key=await sha256(username),limit=await env.DB.prepare("SELECT failures,locked_until FROM demo_login_limits WHERE username_hash=?").bind(key).first();
+ if(limit&&limit.locked_until&&limit.locked_until>nowIso())return fail(request,env,429,"Too many demo sign-in attempts. Try again later.");
+ const row=await env.DB.prepare("SELECT a.account_id,a.demo_id,a.username,a.password_salt,a.password_hash,a.roles_json,a.status account_status,d.status demo_status,d.expires_at,d.session_version,d.tenant_id FROM demo_accounts a JOIN demo_environments d ON d.demo_id=a.demo_id WHERE a.username=?").bind(username).first();
+ const candidate=row?await hashPassword(password,row.password_salt):await hashPassword(password,"AAAAAAAAAAAAAAAAAAAAAA");
+ if(!row||row.account_status!=="active"||row.demo_status!=="active"||row.expires_at<=nowIso()||!constantEqual(candidate,row.password_hash)){
+  const failures=Number(limit&&limit.failures||0)+1,lockedUntil=failures>=8?new Date(Date.now()+15*60*1000).toISOString():null;
+  await env.DB.prepare("INSERT INTO demo_login_limits(username_hash,failures,window_started_at,locked_until) VALUES(?,?,?,?) ON CONFLICT(username_hash) DO UPDATE SET failures=excluded.failures,window_started_at=excluded.window_started_at,locked_until=excluded.locked_until")
+   .bind(key,failures,nowIso(),lockedUntil).run();
+  return fail(request,env,401,"Demo username or password is incorrect, or the demo has expired.");
+ }
+ await env.DB.prepare("DELETE FROM demo_login_limits WHERE username_hash=?").bind(key).run();
+ const token=randomSecret(32),tokenHash=await sha256(token),createdAt=nowIso(),expiry=new Date(Math.min(Date.now()+8*3600*1000,new Date(row.expires_at).getTime())).toISOString();
+ await env.DB.prepare("INSERT INTO demo_sessions(session_id,token_hash,account_id,demo_id,session_version,expires_at,created_at,last_seen_at) VALUES(?,?,?,?,?,?,?,?)")
+  .bind(id(),tokenHash,row.account_id,row.demo_id,Number(row.session_version),expiry,createdAt,createdAt).run();
+ return json(request,env,{ok:true,token,expiresAt:expiry,redirectPath:"/demo-preview"});
+}
+
+export async function identifyM7DemoSession(request,env){
+ const match=(request.headers.get("Authorization")||"").match(/^Bearer ([A-Za-z0-9_-]{30,100})$/);if(!match)return null;
+ const tokenHash=await sha256(match[1]);
+ const row=await env.DB.prepare("SELECT s.session_id,s.token_hash,s.expires_at session_expires,s.session_version,s.revoked_at,a.account_id,a.username,a.roles_json,a.status account_status,d.demo_id,d.tenant_id,d.status demo_status,d.expires_at demo_expires,d.session_version current_version,d.reset_generation,d.display_name FROM demo_sessions s JOIN demo_accounts a ON a.account_id=s.account_id AND a.demo_id=s.demo_id JOIN demo_environments d ON d.demo_id=s.demo_id WHERE s.token_hash=?").bind(tokenHash).first();
+ if(!row)return null;
+ const valid=!row.revoked_at&&row.account_status==="active"&&row.demo_status==="active"&&row.session_expires>nowIso()&&row.demo_expires>nowIso()&&Number(row.session_version)===Number(row.current_version);
+ if(!valid)return {recognized:true,valid:false,tokenHash,reason:row.revoked_at?"revoked":row.demo_status!=="active"?"inactive":"expired"};
+ await env.DB.prepare("UPDATE demo_sessions SET last_seen_at=? WHERE session_id=?").bind(nowIso(),row.session_id).run();
+ return {recognized:true,valid:true,tokenHash,sessionId:row.session_id,accountId:row.account_id,demoId:row.demo_id,tenantId:row.tenant_id,username:row.username,roles:JSON.parse(row.roles_json||"[]"),expiresAt:row.session_expires,displayName:row.display_name,resetGeneration:Number(row.reset_generation)};
+}
+
+export async function handleM7DemoSession(request,env,session,respond,deny){
+ const json=respond||localJson,fail=deny||localFail,path=new URL(request.url).pathname,method=request.method.toUpperCase();
+ if(path==="/api/demo/logout"&&method==="POST"){
+  await env.DB.prepare("UPDATE demo_sessions SET revoked_at=? WHERE session_id=?").bind(nowIso(),session.sessionId).run();
+  return json(request,env,{ok:true});
+ }
+ if(path==="/api/demo/me"&&method==="GET")return json(request,env,{ok:true,user:{username:session.username,roles:session.roles},demo:{demoId:session.demoId,tenantId:session.tenantId,displayName:session.displayName,expiresAt:session.expiresAt}});
+ if(path==="/api/demo/data"&&method==="GET"){
+  const rows=await env.DB.prepare("SELECT record_type AS type,record_key AS id,payload_json AS payload FROM demo_sample_records WHERE demo_id=? AND generation=? ORDER BY record_type,record_key").bind(session.demoId,session.resetGeneration).all();
+  return json(request,env,{ok:true,readOnly:true,records:(rows.results||[]).map(x=>({...x,payload:JSON.parse(x.payload)}))});
+ }
+ return fail(request,env,403,"Demo sessions are isolated to read-only demo preview endpoints.");
 }
