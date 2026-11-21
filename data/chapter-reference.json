@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "chapter-reference-manifest",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "classId": "10",
   "subjects": [
     {
@@ -1314,8 +1314,8 @@
               "type": "KEY_DIAGRAM",
               "title": "Human heart — chambers and double circulation",
               "summary": "Trace blood through the right atrium and ventricle to the lungs, then through the left atrium and ventricle to the body. The two sides keep oxygen-poor and oxygen-rich blood separate.",
-              "asset": "assets/study-library/science/human-heart.svg",
-              "alt": "Original labelled schematic of the four heart chambers and major blood-flow pathways.",
+              "asset": null,
+              "alt": "Human heart cross-section showing chambers, valves and major blood vessels.",
               "labels": [
                 "Right atrium",
                 "Right ventricle",
@@ -1345,7 +1345,17 @@
                 ]
               ],
               "source": "NCERT Class X Science — Life Processes",
-              "illustrationType": "ExamGuru supplementary concept schematic based on the NCERT topic; not verified as a 90%+ reproduction of a specific NCERT textbook figure."
+              "illustrationType": "Externally hosted Wikimedia Commons illustration; candidate replacement pending side-by-side comparison with the NCERT heart figure.",
+              "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Diagram_of_the_human_heart.svg",
+              "imageCredit": {
+                "author": "Wapcaplet; rendering modification by Yaddah",
+                "source": "https://commons.wikimedia.org/wiki/File:Diagram_of_the_human_heart.svg",
+                "license": "CC BY-SA 3.0 and GFDL 1.2+",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "fileSizeBytes": 24111,
+                "storageImpactBytes": 0,
+                "changes": "None"
+              }
             },
             {
               "type": "KEY_DIAGRAM",
