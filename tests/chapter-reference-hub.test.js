@@ -36,6 +36,10 @@ assert.ok(page.includes("chapter-reference-hub.css"));
 assert.ok(script.includes('img.loading="lazy"')&&script.includes("chapter-reference.json"));
 assert.ok(script.includes('viewerClass!=="10"'),"Class 10 reference hub must not appear for other classes");
 assert.ok(script.includes("await window.C10StudyAccessReady"),"Reference hub must wait for role/session restoration before class gating");
+const access=fs.readFileSync("js/page-access.js","utf8");
+assert.ok(access.includes("C10StudyViewerClassId"),"Page access must publish the resolved viewer class");
+assert.ok(script.includes("window.C10StudyViewerClassId"),"Reference hub must use the resolved viewer class");
+
 assert.ok(page.includes('id="visualLibraryTab"')&&page.includes('id="referencesHubTab"'),"Study Library must expose both top-level tabs");
 assert.ok(page.includes('data-study-tab="visualRevisionBoard"')&&page.includes('data-study-tab="chapterReferenceHub"'),"Study Library tabs must target their content sections");
 assert.ok(/<section[^>]*id="chapterReferenceHub"[^>]*hidden/.test(page),"References Hub must start hidden behind its tab");
