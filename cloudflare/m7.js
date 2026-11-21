@@ -91,7 +91,7 @@ export async function handleM7(request,env,who,hasPlatformAdminGrant,respond,den
     if(!body||!["persona","on_demand"].includes(body.kind))return fail(request,env,400,"Choose persona or on-demand demo creation.");
     const duration=body.durationDays===undefined?7:Number(body.durationDays);
     if(!DURATION_DAYS.has(duration))return fail(request,env,400,"Duration must be 1, 3, 7 or 14 days.");
-    if(body.displayName!==undefined&&!safeText(body.displayName,100))return fail(request,env,400,"Enter a valid demo display name.");
+    if(body.displayName!==undefined&&body.displayName!==""&&!safeText(body.displayName,100))return fail(request,env,400,"Enter a valid demo display name.");
     let roles=[],profile="standard_sample",templateId=null,templateVersion=null;
     if(body.kind==="persona") {
       templateId=String(body.templateId||"");
