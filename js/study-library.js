@@ -228,7 +228,18 @@
       $("vrbStatus").textContent=error.message||"Unable to load revision notes.";
     }
   }
+  function initStudyLibraryTabs(){
+    const tabs=[...document.querySelectorAll("[data-study-tab]")];
+    tabs.forEach(tab=>tab.addEventListener("click",()=>{
+      const target=tab.getAttribute("data-study-tab");
+      tabs.forEach(item=>item.setAttribute("aria-selected",String(item===tab)));
+      document.querySelectorAll(".study-library-view").forEach(section=>{
+        section.hidden=section.id!==target;
+      });
+    }));
+  }
   async function init(){
+    initStudyLibraryTabs();
     if(window.C10StudyAccessReady)await window.C10StudyAccessReady;
     classId=await readClass();readOnlyView=window.C10StudyViewerRole==="parent"||window.C10StudyViewerRole==="admin";progress=readOnlyView?empty():window.C10StudyModel.normalizeProgress(store.load());
     ["studySearch","studySubject","studyType","studyStatus"].forEach(id=>$(id).addEventListener(id==="studySearch"?"input":"change",renderResources));
