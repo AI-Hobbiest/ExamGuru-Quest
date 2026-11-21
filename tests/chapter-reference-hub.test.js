@@ -32,7 +32,7 @@ const chemistry=manifest.subjects.find(s=>s.id==="chemistry");
 assert.ok(chemistry.chapters.every(c=>c.items.some(i=>i.type==="CHEMICAL_EQUATION")));
 const biology=manifest.subjects.find(s=>s.id==="biology");
 assert.ok(biology.chapters.every(c=>c.items.some(i=>i.type==="KEY_DIAGRAM"||i.type==="KEY_RESULT")));
-assert.ok(biology.chapters.every(c=>c.items.some(i=>i.asset)),"each Biology chapter should include a visual asset");
+assert.ok(biology.chapters.every(c=>c.items.some(i=>i.asset||i.assetUrl)),"each Biology chapter should retain at least one visual reference or source candidate");
 const heart=biology.chapters.find(c=>c.chapterKey==="life-processes").items.find(i=>i.title==="Human heart — chambers and double circulation");
 assert.ok(heart&&heart.assetUrl==="https://upload.wikimedia.org/wikipedia/commons/f/fa/Diagram_of_the_human_heart.svg","Life Processes must use the externally hosted Wikimedia heart candidate");
 assert.equal(heart.imageCredit.fileSizeBytes,24111,"heart candidate size must be recorded");
@@ -50,15 +50,19 @@ for(const label of ["Tongue","Mouth (Buccal cavity)","Oesophagus","Diaphragm","G
 assert.ok(biology.chapters.find(c=>c.chapterKey==="control-and-coordination").items.some(i=>i.title==="Human brain — major regions"&&i.asset==="assets/study-library/science/human-brain.svg"),"Control and Coordination must include a labelled brain visual");
 assert.ok(biology.chapters.find(c=>c.chapterKey==="control-and-coordination").items.some(i=>i.title==="Neuron — structure and impulse direction"&&i.asset==="assets/study-library/science/neuron.svg"),"Control and Coordination must include a labelled neuron visual");
 for(const path of ["assets/study-library/science/human-brain.svg","assets/study-library/science/neuron.svg"]){assert.ok(fs.existsSync(path),"missing local supplementary illustration "+path);}
-assert.ok(biology.chapters.flatMap(c=>c.items).filter(i=>i.illustrationType).every(i=>i.source&&i.alt),"original illustrations must show source context and alt text");
+assert.ok(biology.chapters.flatMap(c=>c.items).filter(i=>i.illustrationType).every(i=>i.source&&i.alt),"illustrations must show source context and alt text");
+const visualItems=manifest.subjects.flatMap(s=>s.chapters.flatMap(c=>c.items.filter(i=>i.asset||i.assetUrl)));
+assert.equal(visualItems.length,24,"all previously referenced Class 10 visuals must be included in the audit gate");
+assert.ok(visualItems.every(i=>i.visualAudit?.status==="withheld_unverified"&&i.visualAudit.fidelityThresholdPercent===90),"no visual may be published before its 90% NCERT fidelity and reuse audit passes");
 const physics=manifest.subjects.find(s=>s.id==="physics");
 assert.ok(physics.chapters.every(c=>c.items.some(i=>i.type==="FORMULA_IDENTITY"||i.type==="KEY_RESULT")));
-assert.ok(physics.chapters.every(c=>c.items.some(i=>i.asset)),"each Physics chapter should include a visual asset");
+assert.ok(physics.chapters.every(c=>c.items.some(i=>i.asset||i.assetUrl)),"each Physics chapter should retain at least one visual reference");
 assert.ok(physics.chapters.find(c=>c.chapterKey==="electricity").items.some(i=>i.type==="DERIVATION"),"Physics must include derivations, not only formula lists");
 const page=fs.readFileSync("study.html","utf8"),script=fs.readFileSync("js/chapter-reference-hub.js","utf8");
 assert.ok(page.includes('id="chapterReferenceHub"')&&page.includes("chapter-reference-hub.js"));
 assert.ok(page.includes("chapter-reference-hub.css"));
 assert.ok(script.includes('img.loading="lazy"')&&script.includes("chapter-reference.json"));
+assert.ok(script.includes('["verified_ncert_match","verified_reusable_match"]')&&script.includes("Visual temporarily withheld"),"unverified visuals must remain hidden until explicitly approved");
 assert.ok(script.includes('viewerClass!=="10"'),"Class 10 reference hub must not appear for other classes");
 assert.ok(script.includes("Connecting to the Class 10 reference catalogue"),"Reference hub must expose its initialization state");
 const deployWorkflow=fs.readFileSync(".github/workflows/pages.yml","utf8");
@@ -75,4 +79,4 @@ assert.ok(page.includes('data-study-tab="visualRevisionBoard"')&&page.includes('
 assert.ok(/<section[^>]*id="chapterReferenceHub"[^>]*hidden/.test(page),"References Hub must start hidden behind its tab");
 assert.ok(fs.readFileSync("js/study-library.js","utf8").includes("initStudyLibraryTabs"),"Study Library tab navigation must be wired");
 new Function(script);
-console.log("Chapter Reference Hub checks passed: 14 Mathematics, 5 Biology, 4 Chemistry, 4 Physics chapters; original heart/brain/neuron/alimentary canal visuals, source notes, SVG integrity, lazy loading and class gating.");
+console.log("Chapter Reference Hub checks passed: 14 Mathematics, 5 Biology, 4 Chemistry, 4 Physics chapters; 24 visuals gated pending NCERT fidelity and reuse verification, source links, SVG integrity, lazy loading and class gating.");
