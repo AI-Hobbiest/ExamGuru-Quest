@@ -156,9 +156,10 @@ export async function handleM7Login(request,env,respond,deny){
  const row=await env.DB.prepare("SELECT a.account_id,a.demo_id,a.username,a.password_salt,a.password_hash,a.roles_json,a.status account_status,d.status demo_status,d.expires_at,d.session_version,d.tenant_id FROM demo_accounts a JOIN demo_environments d ON d.demo_id=a.demo_id WHERE a.username=?").bind(username).first();
  const candidate=row?await hashPassword(password,row.password_salt):await hashPassword(password,"AAAAAAAAAAAAAAAAAAAAAA");
  if(!row||row.account_status!=="active"||row.demo_status!=="active"||row.expires_at<=nowIso()||!constantEqual(candidate,row.password_hash)){
-  const failures=Number(limit&&limit.failures||0)+1,lockedUntil=failures>=8?new Date(Date.now()+15*60*1000).toISOString():null;
+  const withinWindow=!!(limit&&limit.window_started_at&&Date.now()-new Date(limit.window_started_at).getTime()<15*60*1000);
+  const failures=(withinWindow?Number(limit.failures||0):0)+1,windowStarted=withinWindow?limit.window_started_at:nowIso(),lockedUntil=failures>=8?new Date(Date.now()+15*60*1000).toISOString():null;
   await env.DB.prepare("INSERT INTO demo_login_limits(username_hash,failures,window_started_at,locked_until) VALUES(?,?,?,?) ON CONFLICT(username_hash) DO UPDATE SET failures=excluded.failures,window_started_at=excluded.window_started_at,locked_until=excluded.locked_until")
-   .bind(key,failures,nowIso(),lockedUntil).run();
+   .bind(key,failures,windowStarted,lockedUntil).run();
   return fail(request,env,401,"Demo username or password is incorrect, or the demo has expired.");
  }
  await env.DB.prepare("DELETE FROM demo_login_limits WHERE username_hash=?").bind(key).run();
