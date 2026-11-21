@@ -189,6 +189,7 @@ jobs:
           cp css/institution-dashboard.css _site/css/institution-dashboard.css
           cp css/admin.css _site/css/admin.css
           cp css/question-media.css _site/css/question-media.css
+          cp css/chapter-reference-hub.css _site/css/chapter-reference-hub.css
           cp js/storage.js _site/js/storage.js
           cp js/competency-tagger.js _site/js/competency-tagger.js
           cp js/question-bank.js _site/js/question-bank.js
@@ -213,6 +214,7 @@ jobs:
           cp js/learning-center.js _site/js/learning-center.js
           cp js/study-model.js _site/js/study-model.js
           cp js/study-library.js _site/js/study-library.js
+          cp js/chapter-reference-hub.js _site/js/chapter-reference-hub.js
           cp js/profile-model.js _site/js/profile-model.js
           cp js/student-auth.js _site/js/student-auth.js
           cp js/login-page.js _site/js/login-page.js
