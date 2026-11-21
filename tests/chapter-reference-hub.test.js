@@ -35,5 +35,10 @@ assert.ok(page.includes('id="chapterReferenceHub"')&&page.includes("chapter-refe
 assert.ok(page.includes("chapter-reference-hub.css"));
 assert.ok(script.includes('img.loading="lazy"')&&script.includes("chapter-reference.json"));
 assert.ok(script.includes('viewerClass!=="10"'),"Class 10 reference hub must not appear for other classes");
+assert.ok(script.includes("await window.C10StudyAccessReady"),"Reference hub must wait for role/session restoration before class gating");
+assert.ok(page.includes('id="visualLibraryTab"')&&page.includes('id="referencesHubTab"'),"Study Library must expose both top-level tabs");
+assert.ok(page.includes('data-study-tab="visualRevisionBoard"')&&page.includes('data-study-tab="chapterReferenceHub"'),"Study Library tabs must target their content sections");
+assert.ok(page.includes('id="chapterReferenceHub" aria-labelledby="crhTitle" hidden'),"References Hub must start hidden behind its tab");
+assert.ok(fs.readFileSync("js/study-library.js","utf8").includes("initStudyLibraryTabs"),"Study Library tab navigation must be wired");
 new Function(script);
 console.log("Chapter Reference Hub checks passed: 14 Mathematics, 5 Biology, 4 Chemistry, 4 Physics chapters; SVG integrity, subject-specific content, lazy loading and class gating.");
