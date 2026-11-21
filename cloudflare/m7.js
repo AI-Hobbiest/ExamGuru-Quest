@@ -98,7 +98,7 @@ export async function handleM7(request,env,who,hasPlatformAdminGrant,respond,den
       if(!DATA_PROFILES.has(profile))return fail(request,env,400,"Choose an approved synthetic sample-data profile.");
     }
     const demoId=id(),tenantId="DEMO-TENANT-"+id().replace(/-/g,"").slice(0,16).toUpperCase(),createdAt=nowIso(),expiresAt=new Date(Date.now()+duration*86400000).toISOString(),displayName=(body.displayName||"ExamGuru demo").trim();
-    const demoUsername="demo_"+randomSecret(9).toLowerCase(),demoPassword=temporaryPassword(),accountId=id(),passwordSalt=saltValue(),passwordDigest=await hashPassword(demoPassword,passwordSalt);
+    const demoUsername="demo_"+randomSecret(9).toLowerCase().replace(/[-_]/g,"a"),demoPassword=temporaryPassword(),accountId=id(),passwordSalt=saltValue(),passwordDigest=await hashPassword(demoPassword,passwordSalt);
     try {
       await env.DB.prepare("INSERT INTO demo_environments(demo_id,tenant_id,kind,template_id,template_version,display_name,roles_json,data_profile,status,created_by_user_id,created_at,expires_at,session_version,reset_generation,updated_at) VALUES(?,?,?,?,?,?,?,?,'active',?,?,?,1,1,?)")
         .bind(demoId,tenantId,body.kind,templateId,templateVersion,displayName,JSON.stringify(roles),profile,who.user_id,createdAt,expiresAt,createdAt).run();
