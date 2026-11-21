@@ -5,8 +5,8 @@ const PERSONAS = {
   "institution-viewer": {roles:["institution_viewer"],dataProfile:"school_sample",version:1},
   "teacher": {roles:["teacher"],dataProfile:"teaching_sample",version:1},
   "hod-teacher": {roles:["teacher","hod"],dataProfile:"department_sample",version:1},
-  "parent": {roles:["parent"],dataProfile:"standard_sample",version:1},
-  "student": {roles:["student"],dataProfile:"standard_sample",version:1}
+  "parent": {roles:["parent"],dataProfile:"parent_sample",version:1},
+  "student": {roles:["student"],dataProfile:"student_sample",version:1}
 };
 const nowIso=()=>new Date().toISOString();
 const id=()=>crypto.randomUUID();
@@ -169,6 +169,7 @@ export async function handleM7Login(request,env,respond,deny){
 }
 
 export async function identifyM7DemoSession(request,env){
+ if(!env.DB)return null;
  const match=(request.headers.get("Authorization")||"").match(/^Bearer ([A-Za-z0-9_-]{30,100})$/);if(!match)return null;
  const tokenHash=await sha256(match[1]);
  const row=await env.DB.prepare("SELECT s.session_id,s.token_hash,s.expires_at session_expires,s.session_version,s.revoked_at,a.account_id,a.username,a.roles_json,a.status account_status,d.demo_id,d.tenant_id,d.status demo_status,d.expires_at demo_expires,d.session_version current_version,d.reset_generation,d.display_name FROM demo_sessions s JOIN demo_accounts a ON a.account_id=s.account_id AND a.demo_id=s.demo_id JOIN demo_environments d ON d.demo_id=s.demo_id WHERE s.token_hash=?").bind(tokenHash).first();
