@@ -4,19 +4,35 @@ const fs=require("node:fs");
 const manifest=JSON.parse(fs.readFileSync("data/chapter-reference.json","utf8"));
 assert.equal(manifest.kind,"chapter-reference-manifest");
 assert.equal(manifest.classId,"10");
+assert.deepEqual(manifest.subjects.map(s=>s.id),["mathematics","biology","chemistry","physics"]);
+const expected={mathematics:14,biology:5,chemistry:4,physics:4};
+for(const [id,count] of Object.entries(expected)){
+ const subject=manifest.subjects.find(s=>s.id===id);
+ assert.ok(subject,"missing "+id);
+ assert.equal(subject.chapters.length,count,"chapter coverage for "+id);
+ assert.equal(new Set(subject.chapters.map(c=>c.chapterKey)).size,count,"duplicate chapter key in "+id);
+ for(const chapter of subject.chapters){
+  assert.ok(chapter.chapterTitle&&chapter.items.length>=1,chapter.chapterKey+" needs reference content");
+  for(const item of chapter.items){
+   assert.ok(item.title&&item.type,chapter.chapterKey+" has an invalid item");
+   if(item.asset)assert.ok(fs.existsSync(item.asset),"missing SVG/image asset "+item.asset);
+  }
+ }
+}
 const math=manifest.subjects.find(s=>s.id==="mathematics");
-const science=manifest.subjects.find(s=>s.id==="science");
-assert.equal(math.chapters.length,14,"all Class 10 Mathematics chapters must be represented");
-assert.equal(science.chapters.length,13,"all Class 10 Science syllabus chapters/topics must be represented");
-assert.equal(new Set(math.chapters.map(c=>c.chapterKey)).size,14);
-assert.equal(new Set(science.chapters.map(c=>c.chapterKey)).size,13);
-for(const ch of [...math.chapters,...science.chapters]){assert.ok(ch.chapterTitle&&ch.items.length>=1,ch.chapterKey+" needs references");for(const item of ch.items){assert.ok(item.title&&item.type);if(item.asset)assert.ok(fs.existsSync(item.asset),"missing asset "+item.asset);}}
 assert.ok(math.chapters.every(c=>c.items.some(i=>["THEOREM_PROOF","FORMULA_IDENTITY","KEY_RESULT"].includes(i.type))));
-for(const key of ["chemical-reactions-and-equations","acids-bases-and-salts","metals-and-non-metals","carbon-and-its-compounds"])assert.ok(science.chapters.find(c=>c.chapterKey===key).items.some(i=>i.type==="CHEMICAL_EQUATION"));
-for(const key of ["life-processes","control-and-coordination","how-do-organisms-reproduce","heredity-and-evolution","our-environment"])assert.ok(science.chapters.find(c=>c.chapterKey===key).items.some(i=>["KEY_DIAGRAM","KEY_RESULT"].includes(i.type)));
-for(const key of ["light-reflection-and-refraction","the-human-eye-and-the-colourful-world","electricity","magnetic-effects-of-electric-current"])assert.ok(science.chapters.find(c=>c.chapterKey===key).items.length>=2);
+const chemistry=manifest.subjects.find(s=>s.id==="chemistry");
+assert.ok(chemistry.chapters.every(c=>c.items.some(i=>i.type==="CHEMICAL_EQUATION")));
+const biology=manifest.subjects.find(s=>s.id==="biology");
+assert.ok(biology.chapters.every(c=>c.items.some(i=>i.type==="KEY_DIAGRAM"||i.type==="KEY_RESULT")));
+assert.ok(biology.chapters.every(c=>c.items.some(i=>i.asset)),"each Biology chapter should include a visual asset");
+const physics=manifest.subjects.find(s=>s.id==="physics");
+assert.ok(physics.chapters.every(c=>c.items.some(i=>i.type==="FORMULA_IDENTITY"||i.type==="KEY_RESULT")));
+assert.ok(physics.chapters.every(c=>c.items.some(i=>i.asset)),"each Physics chapter should include a visual asset");
 const page=fs.readFileSync("study.html","utf8"),script=fs.readFileSync("js/chapter-reference-hub.js","utf8");
 assert.ok(page.includes('id="chapterReferenceHub"')&&page.includes("chapter-reference-hub.js"));
-assert.ok(script.includes("loading=\"lazy\"")&&script.includes("chapter-reference.json"));
+assert.ok(page.includes("chapter-reference-hub.css"));
+assert.ok(script.includes('img.loading="lazy"')&&script.includes("chapter-reference.json"));
+assert.ok(script.includes('viewerClass!=="10"'),"Class 10 reference hub must not appear for other classes");
 new Function(script);
-console.log("Chapter Reference Hub checks passed: 14 Mathematics chapters, 13 Science chapters, required subject-specific content, existing SVG references, safe rendering and lazy loading.");
+console.log("Chapter Reference Hub checks passed: 14 Mathematics, 5 Biology, 4 Chemistry, 4 Physics chapters; SVG integrity, subject-specific content, lazy loading and class gating.");
