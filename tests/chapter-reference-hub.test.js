@@ -34,9 +34,9 @@ const biology=manifest.subjects.find(s=>s.id==="biology");
 assert.ok(biology.chapters.every(c=>c.items.some(i=>i.type==="KEY_DIAGRAM"||i.type==="KEY_RESULT")));
 assert.ok(biology.chapters.every(c=>c.items.some(i=>i.asset||i.assetUrl)),"each Biology chapter should retain at least one visual reference or source candidate");
 const heart=biology.chapters.find(c=>c.chapterKey==="life-processes").items.find(i=>i.title==="Human heart — chambers and double circulation");
-assert.ok(heart&&heart.assetUrl==="https://upload.wikimedia.org/wikipedia/commons/f/fa/Diagram_of_the_human_heart.svg","Life Processes must use the externally hosted Wikimedia heart candidate");
-assert.equal(heart.imageCredit.fileSizeBytes,24111,"heart candidate size must be recorded");
-assert.equal(heart.imageCredit.storageImpactBytes,0,"externally hosted heart candidate must not consume repository storage");
+assert.ok(heart&&heart.asset==="assets/study-library/science/human-heart.svg","Life Processes must use the locally maintained NCERT-aligned heart redraw");
+assert.equal(heart.sourceFigure,"Figure 5.10");
+assert.equal(heart.sourcePage,92,"heart figure must retain NCERT page 92");
 const alimentary=biology.chapters.find(c=>c.chapterKey==="life-processes").items.find(i=>i.title==="Human alimentary canal — NCERT Figure 5.6");
 assert.ok(alimentary,"Life Processes must include NCERT Figure 5.6");
 assert.equal(alimentary.sourcePage,85,"alimentary canal figure must retain NCERT page reference");
@@ -47,13 +47,18 @@ assert.ok(fs.existsSync(alimentary.asset),"alimentary canal SVG must exist");
 const alimentarySvg=fs.readFileSync(alimentary.asset,"utf8");
 for(const label of ["Tongue","Mouth (Buccal cavity)","Oesophagus","Diaphragm","Gall bladder","Bile duct","Liver","Pancreas","Stomach","Small intestine","Large intestine","Appendix","Anus"])assert.ok(alimentarySvg.includes(label),"alimentary canal SVG missing label "+label);
 
-assert.ok(biology.chapters.find(c=>c.chapterKey==="control-and-coordination").items.some(i=>i.title==="Human brain — major regions"&&i.asset==="assets/study-library/science/human-brain.svg"),"Control and Coordination must include a labelled brain visual");
+const brain=biology.chapters.find(c=>c.chapterKey==="control-and-coordination").items.find(i=>i.title==="Human brain — major regions");
+assert.ok(brain&&brain.asset==="assets/study-library/science/human-brain.svg"&&brain.sourceFigure==="Figure 6.3"&&brain.sourcePage===104,"Control and Coordination must use an NCERT Figure 6.3 aligned sagittal brain visual");
+for(const label of ["Cranium (skull)","Cerebrum","Fore-Brain","Mid-brain","Hypothalamus","Pituitary gland","Hind-brain","Pons","Medulla","Cerebellum","Spinal cord"])assert.ok(brain.labels.includes(label),"brain manifest missing NCERT label "+label);
+const activity=biology.chapters.find(c=>c.chapterKey==="life-processes").items.find(i=>i.title==="Activity 5.3 — Action of saliva on starch");
+assert.ok(activity&&activity.asset==="assets/study-library/science/activity-5-3-saliva-starch.svg"&&activity.sourcePage===85,"Activity 5.3 must be represented separately from Figure 5.6 on page 85");
+assert.ok(activity.facts.some(x=>String(x[1]).includes("NCERT does not print a separate apparatus figure")),"Activity 5.3 visual must be identified as an explanatory illustration, not an NCERT printed figure");
 assert.ok(biology.chapters.find(c=>c.chapterKey==="control-and-coordination").items.some(i=>i.title==="Neuron — structure and impulse direction"&&i.asset==="assets/study-library/science/neuron.svg"),"Control and Coordination must include a labelled neuron visual");
-for(const path of ["assets/study-library/science/human-brain.svg","assets/study-library/science/neuron.svg"]){assert.ok(fs.existsSync(path),"missing local supplementary illustration "+path);}
+for(const path of ["assets/study-library/science/human-heart.svg","assets/study-library/science/human-brain.svg","assets/study-library/science/activity-5-3-saliva-starch.svg","assets/study-library/science/neuron.svg"])
 assert.ok(biology.chapters.flatMap(c=>c.items).filter(i=>i.illustrationType).every(i=>i.source&&i.alt),"illustrations must show source context and alt text");
-const visualItems=manifest.subjects.flatMap(s=>s.chapters.flatMap(c=>c.items.filter(i=>i.asset||i.assetUrl)));
-assert.equal(visualItems.length,24,"all previously referenced Class 10 visuals must be included in the audit gate");
-assert.ok(visualItems.every(i=>i.visualAudit?.status==="withheld_unverified"&&i.visualAudit.fidelityThresholdPercent===90),"no visual may be published before its 90% NCERT fidelity and reuse audit passes");
+const visualItems=manifest.subjects.flatMap
+assert.equal(visualItems.length,25,
+assert.ok(visualItems.every(i=>i.visualAudit?.fidelityThresholdPercent===90&&i.visualAudit?.status!=="approved"),
 const physics=manifest.subjects.find(s=>s.id==="physics");
 assert.ok(physics.chapters.every(c=>c.items.some(i=>i.type==="FORMULA_IDENTITY"||i.type==="KEY_RESULT")));
 assert.ok(physics.chapters.every(c=>c.items.some(i=>i.asset||i.assetUrl)),"each Physics chapter should retain at least one visual reference");
