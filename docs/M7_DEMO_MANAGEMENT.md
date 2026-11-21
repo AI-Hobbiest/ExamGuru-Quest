@@ -1,6 +1,6 @@
 # M7 — Demo Management
 
-Status: **Implementation complete in draft PR; production activation gated**
+Status: **Core implementation in draft PR; ChatGPT Platform Manager plugin integration and production activation remain gated**
 Branch: `productisation/m7-demo-management-clean`
 PR: #86
 Dependency: M6 security foundation and controlled Cloudflare Worker/D1 deployment.
@@ -49,6 +49,10 @@ Provide repeatable, time-limited demonstrations without exposing real institutio
 - D1 schema includes demo metadata, synthetic records, account hashes, demo sessions, login lockout and append-only audit.
 - Expiry and session-version checks are performed server-side, not with browser timers.
 
+### Second Platform Manager interface
+
+The agreed second interface is a **private ChatGPT Platform Manager plugin**, alongside the in-product Platform Admin workspace. It must call the same secured demo-management API and enforce the same Platform Admin permissions. The REST endpoints are now available in the Worker source, but the plugin has not been created or connected: the Worker is not deployed and there is no verified, reachable MCP transport/authentication endpoint yet. Do not package a plugin against a guessed URL or an unverified authentication scheme. This remains an explicit M7 completion item.
+
 ## Production release gates
 
 The implementation is in the draft PR, but it is **not yet live**. Before production activation:
@@ -57,8 +61,9 @@ The implementation is in the draft PR, but it is **not yet live**. Before produc
 3. Set the Worker API URL in the public frontend configuration; keep OAuth secrets and all other secrets in Cloudflare Worker secrets, never in GitHub Pages or repository files.
 4. Deploy the Worker and verify Platform Admin grant bootstrap, CORS allowlist and D1 bindings.
 5. Run live integration tests for account creation/login, expiry, reset, extension, revoke, cross-demo isolation, normal API denial, lockout and audit.
-6. Verify no demo session can access production student, parent, institution, export, report, billing or platform-admin APIs.
-7. Only then enable external distribution of time-limited demo credentials.
+6. Build and connect the private ChatGPT Platform Manager plugin to the verified secured API transport; test that it uses the same Platform Admin grant and permissions.
+7. Verify no demo session can access production student, parent, institution, export, report, billing or platform-admin APIs.
+8. Only then enable external distribution of time-limited demo credentials.
 
 No Cloud learner-data migration or sync is part of M7. No existing production student/parent login, Independent Learner context, school data, attempt records or storage keys are intentionally changed.
 
