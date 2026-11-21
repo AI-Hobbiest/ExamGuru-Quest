@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "chapter-reference-manifest",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "classId": "10",
   "subjects": [
     {
@@ -42,6 +42,74 @@
               "title": "HCF–LCM relationship",
               "formula": "HCF(a, b) × LCM(a, b) = a × b",
               "summary": "For two positive integers, the product of their HCF and LCM equals the product of the integers."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Prime factorisation method",
+              "summary": "Express each composite integer as a product of primes; compare prime powers to obtain HCF and LCM.",
+              "facts": [
+                [
+                  "HCF",
+                  "Product of common prime factors with the smallest powers"
+                ],
+                [
+                  "LCM",
+                  "Product of all prime factors with the greatest powers"
+                ],
+                [
+                  "Check",
+                  "HCF divides each number; each number divides the LCM"
+                ]
+              ]
+            },
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Irrationality proof pattern",
+              "summary": "To prove a square root of a non-square integer is irrational, assume a reduced fraction and derive a contradiction.",
+              "steps": [
+                "Assume √p = a/b, where gcd(a,b)=1.",
+                "Square both sides: a² = p b².",
+                "Use prime divisibility to show p divides a, then p divides b.",
+                "This contradicts gcd(a,b)=1."
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Terminating decimal test",
+              "summary": "For a rational number p/q in lowest terms, its decimal expansion terminates exactly when q has no prime factors other than 2 and 5.",
+              "facts": [
+                [
+                  "Terminating",
+                  "q = 2ᵐ5ⁿ for non-negative integers m,n"
+                ],
+                [
+                  "Non-terminating recurring",
+                  "q contains a prime factor other than 2 or 5"
+                ],
+                [
+                  "Important",
+                  "Reduce p/q to lowest terms before applying the test"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Euclid algorithm reminder",
+              "summary": "Repeated division reduces the divisor-remainder pair until the remainder is zero; the last non-zero remainder is the HCF.",
+              "facts": [
+                [
+                  "Step 1",
+                  "Divide the larger integer by the smaller"
+                ],
+                [
+                  "Step 2",
+                  "Replace the pair by divisor and remainder"
+                ],
+                [
+                  "Step 3",
+                  "Repeat until remainder is zero"
+                ]
+              ]
             }
           ]
         },
@@ -75,6 +143,69 @@
               "summary": "The number of zeroes of a polynomial is at most its degree. A quadratic can have at most two real zeroes.",
               "asset": "assets/math/quadratic-zeros.svg",
               "alt": "Graph showing zeroes of a quadratic polynomial."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Geometrical meaning of zeroes",
+              "summary": "The real zeroes of a polynomial are the x-coordinates where its graph intersects or touches the x-axis.",
+              "facts": [
+                [
+                  "No intersection",
+                  "No real zero"
+                ],
+                [
+                  "Touches x-axis",
+                  "Repeated real zero may occur"
+                ],
+                [
+                  "Crosses twice",
+                  "Two distinct real zeroes for a quadratic"
+                ]
+              ]
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Quadratic polynomial factor form",
+              "formula": "p(x)=a(x−α)(x−β)",
+              "summary": "For a≠0, α and β are the zeroes of ax²+bx+c."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Zeroes and coefficients – sign check",
+              "summary": "For ax²+bx+c with zeroes α,β, the sum is −b/a and product is c/a.",
+              "facts": [
+                [
+                  "Sum",
+                  "α+β = −b/a"
+                ],
+                [
+                  "Product",
+                  "αβ = c/a"
+                ],
+                [
+                  "Reconstruction",
+                  "x² − (sum)x + product = 0 when leading coefficient is 1"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Graph and discriminant connection",
+              "summary": "A quadratic graph is a parabola; its real x-intercepts correspond to real roots.",
+              "facts": [
+                [
+                  "D>0",
+                  "Two distinct x-intercepts"
+                ],
+                [
+                  "D=0",
+                  "Touches x-axis at one repeated root"
+                ],
+                [
+                  "D<0",
+                  "No real x-intercepts"
+                ]
+              ]
             }
           ]
         },
@@ -101,6 +232,70 @@
               "title": "Cross-multiplication method",
               "formula": "x/(b₁c₂ − b₂c₁) = y/(c₁a₂ − c₂a₁) = 1/(a₁b₂ − a₂b₁)",
               "summary": "Use when the denominator conditions are satisfied."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Elimination method checklist",
+              "summary": "Eliminate one variable by making its coefficients equal or opposites, then solve the resulting single-variable equation.",
+              "facts": [
+                "Choose the variable with convenient coefficients.",
+                "Multiply one or both equations if needed.",
+                "Add or subtract to eliminate.",
+                "Substitute back and verify both equations."
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Substitution method checklist",
+              "summary": "Express one variable from one equation and substitute into the other.",
+              "facts": [
+                "Rearrange one equation to isolate x or y.",
+                "Substitute into the second equation.",
+                "Solve the resulting linear equation.",
+                "Back-substitute and verify."
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Consistency and number of solutions",
+              "summary": "For a₁x+b₁y+c₁=0 and a₂x+b₂y+c₂=0, compare coefficient ratios.",
+              "facts": [
+                [
+                  "Unique solution",
+                  "a₁/a₂ ≠ b₁/b₂"
+                ],
+                [
+                  "No solution",
+                  "a₁/a₂ = b₁/b₂ ≠ c₁/c₂"
+                ],
+                [
+                  "Infinitely many",
+                  "a₁/a₂ = b₁/b₂ = c₁/c₂"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Word-problem translation",
+              "summary": "Define variables before forming equations; use units and the stated relationship to create two independent linear equations.",
+              "facts": [
+                [
+                  "Numbers",
+                  "Sum/difference/product statements"
+                ],
+                [
+                  "Age",
+                  "Present age variables; adjust by years"
+                ],
+                [
+                  "Speed",
+                  "Distance = speed × time"
+                ],
+                [
+                  "Cost",
+                  "Quantity × unit price; form total"
+                ]
+              ]
             }
           ]
         },
@@ -128,6 +323,61 @@
               "title": "Nature of roots",
               "formula": "D > 0: two distinct real roots · D = 0: equal real roots · D < 0: no real roots",
               "summary": "Check the discriminant before solving when only the nature of roots is asked."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Standard form and coefficients",
+              "summary": "Write every quadratic as ax²+bx+c=0 with a≠0 before selecting a solution method.",
+              "facts": [
+                [
+                  "a",
+                  "Coefficient of x²; cannot be zero"
+                ],
+                [
+                  "b",
+                  "Coefficient of x"
+                ],
+                [
+                  "c",
+                  "Constant term"
+                ]
+              ]
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Quadratic formula",
+              "formula": "x = (−b ± √(b²−4ac))/(2a)",
+              "summary": "For ax²+bx+c=0, a≠0."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Discriminant decision table",
+              "summary": "The discriminant D=b²−4ac predicts the nature of the roots.",
+              "facts": [
+                [
+                  "D>0",
+                  "Two distinct real roots"
+                ],
+                [
+                  "D=0",
+                  "Two equal real roots"
+                ],
+                [
+                  "D<0",
+                  "No real roots"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Forming a quadratic from a situation",
+              "summary": "Translate the condition into an equation, simplify to standard form and reject roots that violate the context.",
+              "facts": [
+                "Define the unknown clearly.",
+                "Express the given condition algebraically.",
+                "Bring all terms to one side.",
+                "Solve and interpret each root with units/context."
+              ]
             }
           ]
         },
@@ -155,6 +405,53 @@
                 "Thus 2Sₙ = n(a+l), so Sₙ = n/2(a+l)."
               ],
               "examTip": "Use the first formula when d is known; use the second when the last term is known."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Common difference",
+              "formula": "d = a₂−a₁ = a₃−a₂ = …",
+              "summary": "A constant difference between consecutive terms defines an arithmetic progression."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "nth term",
+              "formula": "aₙ = a + (n−1)d",
+              "summary": "a is the first term; d is common difference."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Sum using first and last terms",
+              "formula": "Sₙ = n(a+l)/2",
+              "summary": "Use when the number of terms and last term are known."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Finding the number of terms",
+              "summary": "Substitute the known term into aₙ=a+(n−1)d and solve for n.",
+              "facts": [
+                "Keep the sign of d.",
+                "Check that n is a positive integer.",
+                "Verify by substituting back."
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "AP word-problem cues",
+              "summary": "Look for quantities increasing or decreasing by a fixed amount each step.",
+              "facts": [
+                [
+                  "Savings",
+                  "Equal weekly/monthly additions"
+                ],
+                [
+                  "Seating",
+                  "A fixed increase in seats per row"
+                ],
+                [
+                  "Patterns",
+                  "A constant difference between successive terms"
+                ]
+              ]
             }
           ]
         },
@@ -195,6 +492,65 @@
               "type": "KEY_RESULT",
               "title": "Similarity criteria",
               "summary": "AAA (or AA), SSS and SAS similarity criteria. Corresponding sides of similar triangles are proportional."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Similarity criteria",
+              "summary": "Two triangles are similar when corresponding angles and sides satisfy AA, SSS or SAS criteria.",
+              "facts": [
+                [
+                  "AA",
+                  "Two corresponding angles equal"
+                ],
+                [
+                  "SSS",
+                  "Three pairs of corresponding sides proportional"
+                ],
+                [
+                  "SAS",
+                  "Included angle equal and surrounding sides proportional"
+                ]
+              ]
+            },
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Basic Proportionality Theorem",
+              "summary": "A line parallel to one side of a triangle divides the other two sides in the same ratio.",
+              "steps": [
+                "In ΔABC, take D on AB and E on AC with DE ∥ BC.",
+                "By similarity, ΔADE ∼ ΔABC.",
+                "Corresponding sides are proportional.",
+                "Rearrange the proportion to obtain AD/DB = AE/EC."
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Corresponding-side discipline",
+              "summary": "When triangles are similar, write vertices in matching order before forming ratios.",
+              "facts": [
+                [
+                  "Scale factor",
+                  "Ratio of any pair of corresponding sides"
+                ],
+                [
+                  "Perimeters",
+                  "Ratio equals the similarity scale factor"
+                ],
+                [
+                  "Areas",
+                  "Ratio equals the square of the scale factor"
+                ]
+              ]
+            },
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Converse of BPT",
+              "summary": "If a line divides two sides of a triangle in the same ratio, it is parallel to the third side.",
+              "steps": [
+                "In ΔABC, let D lie on AB and E on AC.",
+                "Given AD/DB = AE/EC.",
+                "Use the converse proportionality result to conclude DE ∥ BC."
+              ]
             }
           ]
         },
@@ -223,6 +579,73 @@
               "summary": "If area is zero, the three points are collinear.",
               "asset": "assets/math/coordinate-plane.svg",
               "alt": "Coordinate plane with plotted points."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Midpoint formula",
+              "formula": "M = ((x₁+x₂)/2, (y₁+y₂)/2)",
+              "summary": "The midpoint divides a line segment in the ratio 1:1."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Coordinate signs",
+              "summary": "Use the ordered pair (x,y); horizontal movement changes x and vertical movement changes y.",
+              "facts": [
+                [
+                  "Quadrant I",
+                  "+x,+y"
+                ],
+                [
+                  "Quadrant II",
+                  "−x,+y"
+                ],
+                [
+                  "Quadrant III",
+                  "−x,−y"
+                ],
+                [
+                  "Quadrant IV",
+                  "+x,−y"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Section formula – ratio order",
+              "summary": "For internal division AP:PB=m:n, the coordinates are weighted by the opposite segment lengths.",
+              "facts": [
+                [
+                  "x-coordinate",
+                  "(mx₂+nx₁)/(m+n)"
+                ],
+                [
+                  "y-coordinate",
+                  "(my₂+ny₁)/(m+n)"
+                ],
+                [
+                  "Check",
+                  "For m=n, the result must be the midpoint"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Distance formula checks",
+              "summary": "The distance is non-negative and is unchanged if the endpoints are interchanged.",
+              "facts": [
+                [
+                  "Horizontal segment",
+                  "Distance = |x₂−x₁|"
+                ],
+                [
+                  "Vertical segment",
+                  "Distance = |y₂−y₁|"
+                ],
+                [
+                  "Coincident points",
+                  "Distance = 0"
+                ]
+              ]
             }
           ]
         },
@@ -250,6 +673,48 @@
                 "Therefore sin²θ + cos²θ = 1."
               ],
               "examTip": "Also derive 1 + tan²θ = sec²θ and 1 + cot²θ = cosec²θ."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Standard-angle values",
+              "summary": "Memorise sin, cos and tan at 0°, 30°, 45°, 60° and 90°; derive sec, cosec and cot by reciprocals.",
+              "facts": [
+                [
+                  "tan 90°",
+                  "Not defined"
+                ],
+                [
+                  "cot 0°",
+                  "Not defined"
+                ],
+                [
+                  "sec 90° and cosec 0°",
+                  "Not defined"
+                ]
+              ]
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Reciprocal identities",
+              "formula": "cosec θ=1/sin θ; sec θ=1/cos θ; cot θ=1/tan θ",
+              "summary": "Apply only where the denominator is non-zero."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Quotient identities",
+              "formula": "tan θ=sin θ/cos θ; cot θ=cos θ/sin θ",
+              "summary": "Useful for converting an expression into sine and cosine."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Identity-solving strategy",
+              "summary": "Convert all ratios to sine and cosine when simplifying a trigonometric identity.",
+              "facts": [
+                "Start with the more complicated side.",
+                "Use sin²θ+cos²θ=1.",
+                "Factor or take common denominators carefully.",
+                "Do not assume the identity to be proved."
+              ]
             }
           ]
         },
@@ -277,6 +742,57 @@
                 "Identify opposite, adjacent and hypotenuse.",
                 "Apply the appropriate ratio and include units."
               ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Height-and-distance diagram",
+              "summary": "Draw a right triangle before selecting a trigonometric ratio.",
+              "facts": [
+                [
+                  "Opposite",
+                  "Vertical height relative to the marked angle"
+                ],
+                [
+                  "Adjacent",
+                  "Horizontal distance relative to the marked angle"
+                ],
+                [
+                  "Hypotenuse",
+                  "Line of sight in the right triangle"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Elevation versus depression",
+              "summary": "Both angles are measured from a horizontal line; the angle of depression equals the corresponding angle of elevation when horizontals are parallel.",
+              "facts": [
+                [
+                  "Elevation",
+                  "Observer looks upward"
+                ],
+                [
+                  "Depression",
+                  "Observer looks downward"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Multi-step observation problems",
+              "summary": "When two observation points are involved, draw both sight lines and mark the shared height or baseline.",
+              "facts": [
+                "Define the unknown height/distance.",
+                "Use the nearer or simpler triangle first.",
+                "Substitute the intermediate distance into the second relation.",
+                "Keep units consistent."
+              ]
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Useful height relation",
+              "formula": "tan θ = vertical height / horizontal distance",
+              "summary": "Use when height and horizontal distance are the opposite and adjacent sides."
             }
           ]
         },
@@ -304,6 +820,75 @@
               "type": "KEY_RESULT",
               "title": "Tangent–radius property",
               "summary": "The tangent at any point of a circle is perpendicular to the radius through the point of contact."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Tangent facts",
+              "summary": "A tangent touches a circle at exactly one point and is perpendicular to the radius at that point.",
+              "facts": [
+                [
+                  "At contact",
+                  "Radius ⟂ tangent"
+                ],
+                [
+                  "From an external point",
+                  "Exactly two tangents can be drawn"
+                ],
+                [
+                  "From a point on circle",
+                  "Exactly one tangent"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Number of tangents",
+              "summary": "The number of tangents depends on the position of the point relative to the circle.",
+              "facts": [
+                [
+                  "Inside",
+                  "0"
+                ],
+                [
+                  "On the circle",
+                  "1"
+                ],
+                [
+                  "Outside",
+                  "2"
+                ]
+              ]
+            },
+            {
+              "type": "THEOREM_PROOF",
+              "title": "Equal tangents theorem",
+              "summary": "Tangents drawn from the same external point to a circle have equal lengths.",
+              "steps": [
+                "Let PA and PB touch the circle at A and B; join OA, OB and OP.",
+                "OA=OB (radii).",
+                "OA⊥PA and OB⊥PB.",
+                "OP is common; the right triangles are congruent by RHS.",
+                "Therefore PA=PB."
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Proof-writing cues",
+              "summary": "Name the radius, point of contact and right angle explicitly before applying congruence.",
+              "facts": [
+                [
+                  "Given",
+                  "Tangents from a common external point"
+                ],
+                [
+                  "Construction",
+                  "Join centre to both contact points and external point"
+                ],
+                [
+                  "Conclusion",
+                  "Equal tangent lengths"
+                ]
+              ]
             }
           ]
         },
@@ -326,6 +911,48 @@
               "summary": "For a major segment, subtract the minor segment from the area of the full circle.",
               "asset": "assets/math/circle-sector.svg",
               "alt": "Circle sector and central angle."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Arc length",
+              "formula": "l = (θ/360°) × 2πr",
+              "summary": "θ is the central angle in degrees."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Sector area",
+              "formula": "A = (θ/360°) × πr²",
+              "summary": "A sector is the corresponding fraction of the full circle."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Segment area strategy",
+              "summary": "Area of a segment is found by subtracting the triangle from the sector.",
+              "facts": [
+                [
+                  "Minor segment",
+                  "Minor sector − triangle"
+                ],
+                [
+                  "Major segment",
+                  "Circle area − minor segment"
+                ],
+                [
+                  "Semicircle",
+                  "Half of the circle area"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Composite plane figures",
+              "summary": "Split the diagram into familiar shapes and add or subtract their areas.",
+              "facts": [
+                "Mark radii, diameters and central angles.",
+                "Identify sectors, triangles and rectangles.",
+                "Avoid counting shared regions twice.",
+                "State the square unit in the final answer."
+              ]
             }
           ]
         },
@@ -353,6 +980,64 @@
               "summary": "For a combined solid, add the exposed surface areas only. For hollowing or melting, conserve volume.",
               "asset": "assets/math/solid-cylinder-hemisphere.svg",
               "alt": "Combined cylinder and hemisphere solid."
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Frustum volume",
+              "formula": "V = (1/3)πh(R²+r²+Rr)",
+              "summary": "R and r are the radii of the parallel circular ends; h is perpendicular height."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Surface-area selection",
+              "summary": "Choose curved, lateral or total surface area according to which faces are exposed.",
+              "facts": [
+                [
+                  "Cylinder",
+                  "CSA=2πrh; TSA=2πr(h+r)"
+                ],
+                [
+                  "Cone",
+                  "CSA=πrl; TSA=πr(l+r)"
+                ],
+                [
+                  "Sphere",
+                  "SA=4πr²"
+                ],
+                [
+                  "Hemisphere",
+                  "CSA=2πr²; TSA=3πr²"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Volume conservation",
+              "summary": "When a solid is melted and recast without loss, total volume remains unchanged.",
+              "facts": [
+                "Calculate original volume.",
+                "Equate it to the combined volume of new solids.",
+                "Solve for the unknown dimension or number of objects."
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Unit conversion",
+              "summary": "Convert all dimensions to the same unit before using area or volume formulae.",
+              "facts": [
+                [
+                  "Length",
+                  "1 cm = 10 mm"
+                ],
+                [
+                  "Area",
+                  "1 cm² = 100 mm²"
+                ],
+                [
+                  "Volume",
+                  "1 cm³ = 1000 mm³"
+                ]
+              ]
             }
           ]
         },
@@ -379,6 +1064,59 @@
               "title": "Mode of grouped data",
               "formula": "Mode = l + [(f₁−f₀)/(2f₁−f₀−f₂)] × h",
               "summary": "f₁ is modal-class frequency; f₀ previous class; f₂ succeeding class."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Class mark",
+              "summary": "The class mark xᵢ is the midpoint of a class interval: (upper limit + lower limit)/2.",
+              "facts": [
+                "Calculate each class mark once.",
+                "Use it as the representative value for that class.",
+                "Multiply by frequency for the direct mean method."
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Cumulative frequency",
+              "summary": "Cumulative frequency is the running total of frequencies up to a class.",
+              "facts": [
+                "Add frequencies from the first class downward.",
+                "The final cumulative frequency equals N.",
+                "Use the cumulative frequency column to locate the median class."
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Median-class identification",
+              "summary": "For grouped data, locate the first cumulative frequency greater than or equal to N/2.",
+              "facts": [
+                [
+                  "N",
+                  "Total frequency"
+                ],
+                [
+                  "cf",
+                  "Cumulative frequency before the median class"
+                ],
+                [
+                  "f",
+                  "Frequency of the median class"
+                ],
+                [
+                  "h",
+                  "Class width"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Mode-class identification",
+              "summary": "The modal class is the class interval with the highest frequency.",
+              "facts": [
+                "Identify the maximum frequency.",
+                "Use the preceding and succeeding class frequencies in the formula.",
+                "Check that the chosen class is not at an incorrectly interpreted boundary."
+              ]
             }
           ]
         },
@@ -403,6 +1141,70 @@
                 "The sample space S is partitioned into E and Ē.",
                 "Therefore P(E) + P(Ē) = P(S).",
                 "Since P(S) = 1, P(Ē) = 1 − P(E)."
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Probability scale",
+              "summary": "Probability lies between 0 and 1 inclusive.",
+              "facts": [
+                [
+                  "Impossible event",
+                  "P(E)=0"
+                ],
+                [
+                  "Sure event",
+                  "P(E)=1"
+                ],
+                [
+                  "Certain bounds",
+                  "0≤P(E)≤1"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Equally likely outcomes",
+              "summary": "Use the classical definition only when all elementary outcomes are equally likely.",
+              "facts": [
+                "List the sample space.",
+                "Count favourable outcomes.",
+                "Count total outcomes.",
+                "Reduce the resulting fraction if possible."
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Complement rule",
+              "summary": "The probability that an event does not occur is one minus the probability that it occurs.",
+              "facts": [
+                [
+                  "Formula",
+                  "P(not E)=1−P(E)"
+                ],
+                [
+                  "Use",
+                  "Often quicker when the opposite event is easier to count"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Common sample spaces",
+              "summary": "List outcomes systematically to avoid omissions.",
+              "facts": [
+                [
+                  "Coin",
+                  "H,T"
+                ],
+                [
+                  "Die",
+                  "1,2,3,4,5,6"
+                ],
+                [
+                  "Two coins",
+                  "HH, HT, TH, TT"
+                ]
               ]
             }
           ]
@@ -461,6 +1263,109 @@
               "title": "Photosynthesis equation",
               "formula": "6CO₂ + 6H₂O —sunlight/chlorophyll→ C₆H₁₂O₆ + 6O₂",
               "summary": "Carbon dioxide and water are converted into glucose and oxygen using light energy."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Nutrition comparison",
+              "summary": "Autotrophs prepare food; heterotrophs obtain organic food from other organisms.",
+              "facts": [
+                [
+                  "Photosynthesis",
+                  "CO₂ + water → glucose + oxygen (in presence of light and chlorophyll)"
+                ],
+                [
+                  "Stomata",
+                  "Gas exchange and water-vapour loss"
+                ],
+                [
+                  "Saprotrophic nutrition",
+                  "Digestion outside the body followed by absorption"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Human digestion pathway",
+              "summary": "Food moves through a sequence of organs where mechanical and chemical digestion occur.",
+              "facts": [
+                [
+                  "Mouth",
+                  "Salivary amylase begins starch digestion"
+                ],
+                [
+                  "Stomach",
+                  "Acidic medium; pepsin acts on proteins"
+                ],
+                [
+                  "Small intestine",
+                  "Bile emulsifies fats; pancreatic and intestinal enzymes complete digestion"
+                ],
+                [
+                  "Large intestine",
+                  "Water absorption"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Transport in humans",
+              "summary": "The circulatory system transports materials between organs and tissues.",
+              "facts": [
+                [
+                  "Arteries",
+                  "Carry blood away from heart; thick elastic walls"
+                ],
+                [
+                  "Veins",
+                  "Return blood to heart; valves help prevent backflow"
+                ],
+                [
+                  "Capillaries",
+                  "Thin walls allow exchange"
+                ],
+                [
+                  "Lymph",
+                  "Returns tissue fluid and transports absorbed fats"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Transport in plants",
+              "summary": "Xylem and phloem transport different materials.",
+              "facts": [
+                [
+                  "Xylem",
+                  "Water and minerals, mainly upward"
+                ],
+                [
+                  "Phloem",
+                  "Translocation of food; can occur in both directions"
+                ],
+                [
+                  "Transpiration",
+                  "Water loss from aerial plant parts, mainly leaves"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Respiration comparison",
+              "summary": "Aerobic respiration uses oxygen and releases more energy than anaerobic pathways.",
+              "facts": [
+                [
+                  "Aerobic",
+                  "Glucose + oxygen → carbon dioxide + water + energy"
+                ],
+                [
+                  "Yeast anaerobic",
+                  "Ethanol + carbon dioxide + energy"
+                ],
+                [
+                  "Muscle anaerobic",
+                  "Lactic acid + energy"
+                ]
+              ]
             }
           ]
         },
@@ -502,6 +1407,102 @@
                 [
                   "Abscisic acid",
                   "Growth inhibition; wilting and dormancy"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Neuron structure and direction",
+              "summary": "A neuron receives and transmits nerve impulses.",
+              "facts": [
+                [
+                  "Dendrites",
+                  "Receive information"
+                ],
+                [
+                  "Cell body",
+                  "Contains nucleus"
+                ],
+                [
+                  "Axon",
+                  "Carries impulse away from cell body"
+                ],
+                [
+                  "Nerve ending",
+                  "Passes signal across a synapse"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Reflex arc sequence",
+              "summary": "A reflex arc gives a rapid, automatic response to a stimulus.",
+              "facts": [
+                [
+                  "Receptor",
+                  "Detects stimulus"
+                ],
+                [
+                  "Sensory neuron",
+                  "Carries impulse to CNS"
+                ],
+                [
+                  "Relay neuron",
+                  "Connects neurons in spinal cord"
+                ],
+                [
+                  "Motor neuron",
+                  "Carries response"
+                ],
+                [
+                  "Effector",
+                  "Muscle or gland acts"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Plant-hormone comparison",
+              "summary": "Plant hormones coordinate growth and responses.",
+              "facts": [
+                [
+                  "Auxin",
+                  "Cell elongation and phototropism"
+                ],
+                [
+                  "Gibberellin",
+                  "Stem growth and seed germination"
+                ],
+                [
+                  "Cytokinin",
+                  "Cell division"
+                ],
+                [
+                  "Abscisic acid",
+                  "Growth inhibition and dormancy"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Endocrine feedback",
+              "summary": "Hormone release is often regulated by feedback to keep internal conditions within suitable limits.",
+              "facts": [
+                [
+                  "Insulin",
+                  "Lowers blood glucose"
+                ],
+                [
+                  "Adrenaline",
+                  "Prepares body for emergency response"
+                ],
+                [
+                  "Thyroxine",
+                  "Regulates metabolism; iodine needed for synthesis"
+                ],
+                [
+                  "Growth hormone",
+                  "Supports body growth"
                 ]
               ]
             }
@@ -550,6 +1551,90 @@
                   "New plants arise from vegetative parts"
                 ]
               ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Asexual versus sexual reproduction",
+              "summary": "Asexual reproduction generally involves one parent and no fusion of gametes; sexual reproduction involves gamete fusion.",
+              "facts": [
+                [
+                  "Asexual",
+                  "Usually genetically similar offspring"
+                ],
+                [
+                  "Sexual",
+                  "Combines genetic material from two gametes"
+                ],
+                [
+                  "Variation",
+                  "Meiosis and fertilisation contribute to variation"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Human male reproductive pathway",
+              "summary": "Sperm are produced in testes and transported through ducts.",
+              "facts": [
+                [
+                  "Testes",
+                  "Produce sperm and testosterone"
+                ],
+                [
+                  "Vas deferens",
+                  "Transports sperm"
+                ],
+                [
+                  "Seminal vesicles/prostate",
+                  "Add fluid to semen"
+                ],
+                [
+                  "Urethra",
+                  "Passage for semen"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Human female reproductive pathway",
+              "summary": "Ova are released from ovaries; fertilisation usually occurs in the oviduct.",
+              "facts": [
+                [
+                  "Ovary",
+                  "Produces ova and hormones"
+                ],
+                [
+                  "Oviduct",
+                  "Transports ovum; usual fertilisation site"
+                ],
+                [
+                  "Uterus",
+                  "Implantation and development"
+                ],
+                [
+                  "Placenta",
+                  "Exchange of materials between maternal and foetal blood"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Reproductive health essentials",
+              "summary": "Reproductive health includes informed choices, hygiene and prevention of sexually transmitted infections.",
+              "facts": [
+                [
+                  "Barrier methods",
+                  "Can reduce risk of STI transmission"
+                ],
+                [
+                  "Contraception",
+                  "Prevents or reduces likelihood of pregnancy"
+                ],
+                [
+                  "Medical advice",
+                  "Seek qualified care for concerns or suspected infection"
+                ]
+              ]
             }
           ]
         },
@@ -587,6 +1672,86 @@
               "type": "KEY_RESULT",
               "title": "Sex determination in humans",
               "summary": "Mother is XX; father is XY. The ovum always contributes X; sperm contributes X or Y. The sperm determines the chromosomal sex of the child."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Core heredity terms",
+              "summary": "Genes are units of inheritance; alleles are alternative forms of a gene.",
+              "facts": [
+                [
+                  "Genotype",
+                  "Allele combination"
+                ],
+                [
+                  "Phenotype",
+                  "Observable characteristic"
+                ],
+                [
+                  "Dominant allele",
+                  "Expressed in a heterozygote"
+                ],
+                [
+                  "Recessive allele",
+                  "Expressed when no dominant allele is present"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Monohybrid cross outcome",
+              "summary": "For Tt × Tt with complete dominance, the expected genotype ratio is 1:2:1 and phenotype ratio is 3:1.",
+              "facts": [
+                [
+                  "Gametes",
+                  "T and t from each parent"
+                ],
+                [
+                  "Genotypes",
+                  "TT, Tt, Tt, tt"
+                ],
+                [
+                  "Phenotypes",
+                  "Three dominant : one recessive"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Sex determination in humans",
+              "summary": "The ovum contributes X; sperm contributes X or Y.",
+              "facts": [
+                [
+                  "XX",
+                  "Typical female chromosomal pattern"
+                ],
+                [
+                  "XY",
+                  "Typical male chromosomal pattern"
+                ],
+                [
+                  "Probability",
+                  "Each conception has approximately equal chance of X- or Y-bearing sperm fertilisation"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Variation and inheritance",
+              "summary": "Variation arises through differences in genetic material and can influence survival and reproduction.",
+              "facts": [
+                [
+                  "Inherited variation",
+                  "Passed through genes"
+                ],
+                [
+                  "Acquired change",
+                  "Not generally inherited unless it changes reproductive-cell DNA"
+                ],
+                [
+                  "Population",
+                  "Evolutionary change is considered across generations"
+                ]
+              ]
             }
           ]
         },
@@ -624,6 +1789,86 @@
               "type": "KEY_RESULT",
               "title": "Ozone layer and biomagnification",
               "summary": "Ozone shields life from harmful UV radiation. Non-biodegradable pollutants can become more concentrated at higher trophic levels."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Food-chain organisation",
+              "summary": "A food chain represents feeding relationships and the transfer of matter and energy.",
+              "facts": [
+                [
+                  "Producer",
+                  "Makes organic food, usually using sunlight"
+                ],
+                [
+                  "Primary consumer",
+                  "Feeds on producers"
+                ],
+                [
+                  "Secondary consumer",
+                  "Feeds on primary consumers"
+                ],
+                [
+                  "Decomposer",
+                  "Breaks down dead organic matter"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Ten-percent law",
+              "summary": "Only about 10% of energy at one trophic level is transferred to the next; most is used or dissipated.",
+              "facts": [
+                [
+                  "Example",
+                  "1000 J → about 100 J → about 10 J"
+                ],
+                [
+                  "Consequence",
+                  "Food chains are usually short"
+                ],
+                [
+                  "Energy flow",
+                  "Unidirectional"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Biodegradable versus non-biodegradable",
+              "summary": "Biodegradable materials can be broken down by microorganisms; non-biodegradable materials persist longer.",
+              "facts": [
+                [
+                  "Biodegradable",
+                  "Many food scraps and paper products"
+                ],
+                [
+                  "Non-biodegradable",
+                  "Many plastics and persistent chemicals"
+                ],
+                [
+                  "Impact",
+                  "Accumulation can harm ecosystems"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Ozone and biomagnification",
+              "summary": "Ozone in the upper atmosphere absorbs harmful ultraviolet radiation; persistent pollutants can accumulate along food chains.",
+              "facts": [
+                [
+                  "Ozone depletion",
+                  "Raises UV exposure"
+                ],
+                [
+                  "Biomagnification",
+                  "Concentration rises at higher trophic levels"
+                ],
+                [
+                  "Prevention",
+                  "Reduce release of persistent pollutants"
+                ]
+              ]
             }
           ]
         }
@@ -665,6 +1910,61 @@
               "title": "Precipitation: lead nitrate and potassium iodide",
               "equation": "Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s)↓ + 2KNO₃(aq)",
               "observation": "Yellow lead iodide precipitate forms."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Balancing equations",
+              "summary": "A balanced chemical equation has the same number of atoms of each element on both sides.",
+              "facts": [
+                "Write correct formulae first.",
+                "Count atoms on reactant and product sides.",
+                "Adjust coefficients, never subscripts.",
+                "Recount all atoms and simplify coefficients."
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Reaction-type comparison",
+              "summary": "Classify a reaction by how reactants combine or rearrange.",
+              "facts": [
+                [
+                  "Combination",
+                  "Two or more reactants form one product"
+                ],
+                [
+                  "Decomposition",
+                  "One compound forms simpler substances"
+                ],
+                [
+                  "Displacement",
+                  "A more reactive element displaces a less reactive one"
+                ],
+                [
+                  "Double displacement",
+                  "Ions exchange between compounds"
+                ]
+              ]
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Thermal decomposition of calcium carbonate",
+              "equation": "CaCO₃(s) —heat→ CaO(s) + CO₂(g)",
+              "condition": "Heating limestone strongly.",
+              "observation": "Calcium oxide and carbon dioxide are formed."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Photochemical decomposition of silver chloride",
+              "equation": "2AgCl(s) —sunlight→ 2Ag(s) + Cl₂(g)",
+              "condition": "Exposure to sunlight.",
+              "observation": "White silver chloride turns grey."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Oxidation and reduction",
+              "equation": "CuO(s) + H₂(g) → Cu(s) + H₂O(l)",
+              "condition": "Hydrogen reduces copper oxide on heating.",
+              "observation": "Black copper oxide changes to brown copper; hydrogen is oxidised."
             }
           ]
         },
@@ -697,6 +1997,69 @@
               "title": "Chlor-alkali process",
               "equation": "2NaCl(aq) + 2H₂O(l) —electrolysis→ 2NaOH(aq) + Cl₂(g) + H₂(g)",
               "condition": "Electrolysis of concentrated brine."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Indicator colour guide",
+              "summary": "Indicators help distinguish acidic and basic solutions.",
+              "facts": [
+                [
+                  "Blue litmus",
+                  "Turns red in acid"
+                ],
+                [
+                  "Red litmus",
+                  "Turns blue in base"
+                ],
+                [
+                  "Phenolphthalein",
+                  "Colourless in acid; pink in base"
+                ],
+                [
+                  "Methyl orange",
+                  "Red in acid; yellow in base"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "pH scale interpretation",
+              "summary": "At 25°C, pH below 7 is acidic, 7 is neutral and above 7 is basic.",
+              "facts": [
+                [
+                  "Lower pH",
+                  "More acidic"
+                ],
+                [
+                  "Higher pH",
+                  "More basic"
+                ],
+                [
+                  "Universal indicator",
+                  "Approximate pH from colour"
+                ]
+              ]
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Metal oxide with acid",
+              "equation": "CuO(s) + 2HCl(aq) → CuCl₂(aq) + H₂O(l)",
+              "condition": "Basic metal oxide reacts with acid.",
+              "observation": "Salt and water are formed."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Baking soda on heating",
+              "equation": "2NaHCO₃(s) —heat→ Na₂CO₃(s) + CO₂(g) + H₂O(l)",
+              "condition": "Thermal decomposition.",
+              "observation": "Carbon dioxide and water vapour are released."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Gypsum to plaster of Paris",
+              "equation": "CaSO₄·2H₂O —heat→ CaSO₄·½H₂O + 1½H₂O",
+              "condition": "Controlled heating of gypsum.",
+              "observation": "Plaster of Paris sets after mixing with water."
             }
           ]
         },
@@ -728,6 +2091,68 @@
               "title": "Calcination of zinc carbonate",
               "equation": "ZnCO₃(s) —heat→ ZnO(s) + CO₂(g)",
               "condition": "Carbonate ores are heated in limited or no air."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Physical-property comparison",
+              "summary": "Metals and non-metals show contrasting typical physical properties; exceptions must be remembered.",
+              "facts": [
+                [
+                  "Metals",
+                  "Usually lustrous, malleable, ductile and good conductors"
+                ],
+                [
+                  "Non-metals",
+                  "Usually brittle (if solid) and poor conductors"
+                ],
+                [
+                  "Exceptions",
+                  "Graphite conducts electricity; mercury is liquid metal"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Reactivity series use",
+              "summary": "A more reactive metal can displace a less reactive metal from its salt solution.",
+              "facts": [
+                "Locate both metals in the series.",
+                "The higher metal is more reactive.",
+                "Predict displacement only if the free metal is more reactive."
+              ]
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Aluminium with iron(III) oxide",
+              "equation": "2Al(s) + Fe₂O₃(s) —heat→ Al₂O₃(s) + 2Fe(l)",
+              "condition": "Thermite reaction; highly exothermic.",
+              "observation": "Molten iron is produced."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Copper with silver nitrate",
+              "equation": "Cu(s) + 2AgNO₃(aq) → Cu(NO₃)₂(aq) + 2Ag(s)",
+              "condition": "Copper is more reactive than silver.",
+              "observation": "Silver deposits and the solution becomes blue."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Ionic compound properties",
+              "summary": "Ionic compounds contain oppositely charged ions held by electrostatic attraction.",
+              "facts": [
+                [
+                  "Melting point",
+                  "Usually high"
+                ],
+                [
+                  "Conductivity",
+                  "Conduct when molten or dissolved, not as solids"
+                ],
+                [
+                  "Solubility",
+                  "Often soluble in water; not universal"
+                ]
+              ]
             }
           ]
         },
@@ -765,6 +2190,89 @@
               "title": "Saponification",
               "equation": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH",
               "condition": "Alkaline hydrolysis of an ester."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Covalent bonding",
+              "summary": "Carbon usually forms covalent bonds by sharing electron pairs; four valence electrons allow four covalent bonds.",
+              "facts": [
+                [
+                  "Catenation",
+                  "Carbon bonds with itself to form chains and rings"
+                ],
+                [
+                  "Tetravalency",
+                  "Carbon forms four covalent bonds"
+                ],
+                [
+                  "Saturated",
+                  "Only single carbon-carbon bonds"
+                ],
+                [
+                  "Unsaturated",
+                  "At least one double or triple carbon-carbon bond"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Homologous series",
+              "summary": "A family of organic compounds has the same functional group and general formula; successive members differ by –CH₂–.",
+              "facts": [
+                [
+                  "Mass difference",
+                  "14 u between successive members"
+                ],
+                [
+                  "Chemical properties",
+                  "Similar due to same functional group"
+                ],
+                [
+                  "Physical properties",
+                  "Show gradual variation"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Functional-group recognition",
+              "summary": "Identify the functional group before naming or predicting reactions.",
+              "facts": [
+                [
+                  "Alcohol",
+                  "–OH"
+                ],
+                [
+                  "Aldehyde",
+                  "–CHO"
+                ],
+                [
+                  "Ketone",
+                  "–CO–"
+                ],
+                [
+                  "Carboxylic acid",
+                  "–COOH"
+                ],
+                [
+                  "Halogen",
+                  "–Cl, –Br, etc."
+                ]
+              ]
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Ethanoic acid with sodium carbonate",
+              "equation": "2CH₃COOH + Na₂CO₃ → 2CH₃COONa + H₂O + CO₂",
+              "condition": "Acid reacts with carbonate.",
+              "observation": "Effervescence due to carbon dioxide."
+            },
+            {
+              "type": "CHEMICAL_EQUATION",
+              "title": "Ethanol with sodium",
+              "equation": "2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂",
+              "condition": "Sodium reacts with ethanol.",
+              "observation": "Hydrogen gas is evolved."
             }
           ]
         }
@@ -804,6 +2312,79 @@
               "title": "Magnification and power",
               "formula": "Mirror: m = −v/u · Lens: m = v/u · P = 1/f (f in metres)",
               "summary": "Power is measured in dioptres (D)."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Spherical-mirror image cases",
+              "summary": "Image position and nature depend on object position relative to pole, focus and centre of curvature.",
+              "facts": [
+                [
+                  "Concave mirror",
+                  "Can form real/inverted or virtual/erect images"
+                ],
+                [
+                  "Convex mirror",
+                  "Always virtual, erect and diminished for a real object"
+                ],
+                [
+                  "Ray diagram",
+                  "Use principal rays and mark F and C"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Cartesian sign convention",
+              "summary": "Measure distances from pole or optical centre; direction of incident light is positive.",
+              "facts": [
+                [
+                  "Object distance",
+                  "Usually negative for a real object"
+                ],
+                [
+                  "Concave mirror focal length",
+                  "Negative"
+                ],
+                [
+                  "Convex lens focal length",
+                  "Positive"
+                ],
+                [
+                  "Convex mirror focal length",
+                  "Positive"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Refraction principles",
+              "summary": "Light changes direction when it passes obliquely between media because its speed changes.",
+              "facts": [
+                [
+                  "Rarer to denser",
+                  "Bends towards the normal"
+                ],
+                [
+                  "Denser to rarer",
+                  "Bends away from the normal"
+                ],
+                [
+                  "Normal incidence",
+                  "Direction unchanged"
+                ]
+              ]
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Refractive index",
+              "formula": "n = c/v",
+              "summary": "c is speed of light in vacuum; v is speed in the medium."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Lens power",
+              "summary": "P = 1/f",
+              "facts": "Use focal length f in metres; power is measured in dioptres."
             }
           ]
         },
@@ -848,6 +2429,82 @@
               "summary": "Shorter wavelengths scatter more strongly; white light disperses into its constituent colours through a prism.",
               "asset": "assets/exam-papers/science/prism-dispersion.svg",
               "alt": "Prism dispersing white light into a spectrum."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Accommodation",
+              "summary": "The eye lens changes curvature to focus near and distant objects on the retina.",
+              "facts": [
+                [
+                  "Ciliary muscles",
+                  "Change lens curvature"
+                ],
+                [
+                  "Near object",
+                  "Lens becomes thicker; focal length decreases"
+                ],
+                [
+                  "Distant object",
+                  "Lens becomes thinner; focal length increases"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Defects of vision",
+              "summary": "Common defects are corrected using lenses that shift the image onto the retina.",
+              "facts": [
+                [
+                  "Myopia",
+                  "Concave lens"
+                ],
+                [
+                  "Hypermetropia",
+                  "Convex lens"
+                ],
+                [
+                  "Presbyopia",
+                  "Age-related reduced accommodation; suitable corrective lenses"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Atmospheric effects",
+              "summary": "Scattering and refraction explain several everyday optical phenomena.",
+              "facts": [
+                [
+                  "Blue sky",
+                  "Shorter wavelengths scatter more strongly"
+                ],
+                [
+                  "Red sunrise/sunset",
+                  "Longer path removes much of the shorter-wavelength scattered light"
+                ],
+                [
+                  "Twinkling stars",
+                  "Atmospheric refraction varies"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Dispersion through a prism",
+              "summary": "White light separates into colours because different wavelengths refract by different amounts.",
+              "facts": [
+                [
+                  "Violet",
+                  "Deviates most"
+                ],
+                [
+                  "Red",
+                  "Deviates least"
+                ],
+                [
+                  "Spectrum",
+                  "VIBGYOR sequence"
+                ]
+              ]
             }
           ]
         },
@@ -908,6 +2565,75 @@
                 "Since Q = It, W = VIt.",
                 "Using Ohm's law V = IR, obtain H = I²Rt."
               ]
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Electric charge relation",
+              "formula": "Q = It",
+              "summary": "Q in coulombs, I in amperes and t in seconds."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Circuit measurement",
+              "summary": "An ammeter is connected in series; a voltmeter is connected in parallel across a component.",
+              "facts": [
+                [
+                  "Ammeter",
+                  "Very low resistance"
+                ],
+                [
+                  "Voltmeter",
+                  "Very high resistance"
+                ],
+                [
+                  "Conventional current",
+                  "From positive to negative terminal in the external circuit"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Resistance factors",
+              "summary": "Resistance depends on material, length, cross-sectional area and temperature.",
+              "facts": [
+                [
+                  "Length",
+                  "R ∝ l"
+                ],
+                [
+                  "Area",
+                  "R ∝ 1/A"
+                ],
+                [
+                  "Material",
+                  "Represented by resistivity ρ"
+                ],
+                [
+                  "Relation",
+                  "R=ρl/A"
+                ]
+              ]
+            },
+            {
+              "type": "FORMULA_IDENTITY",
+              "title": "Electrical energy",
+              "formula": "E = Pt = VIt",
+              "summary": "Energy may be expressed in joules or kilowatt-hours."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Commercial energy unit",
+              "summary": "One kilowatt-hour is the energy used by a 1 kW appliance operating for one hour.",
+              "facts": [
+                [
+                  "Conversion",
+                  "1 kWh = 3.6×10⁶ J"
+                ],
+                [
+                  "Meter reading",
+                  "Energy consumption is commonly billed in kWh"
+                ]
+              ]
             }
           ]
         },
@@ -962,6 +2688,86 @@
               "type": "KEY_RESULT",
               "title": "Domestic electric circuit safety",
               "summary": "Live wire carries supply, neutral completes circuit, and earth wire provides a low-resistance path during leakage. Fuse/MCB protects against excess current."
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Field around a straight conductor",
+              "summary": "Magnetic field lines form concentric circles around a current-carrying straight wire.",
+              "facts": [
+                [
+                  "Direction",
+                  "Right-hand thumb rule"
+                ],
+                [
+                  "Current increases",
+                  "Magnetic field strength increases"
+                ],
+                [
+                  "Distance increases",
+                  "Field strength decreases"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Electromagnet factors",
+              "summary": "The strength of a solenoid's magnetic field increases with current and number of turns per unit length.",
+              "facts": [
+                [
+                  "Core",
+                  "Soft iron strengthens the field"
+                ],
+                [
+                  "Current",
+                  "Larger current gives stronger field"
+                ],
+                [
+                  "Turns",
+                  "More turns per unit length gives stronger field"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Electric motor principle",
+              "summary": "A current-carrying conductor in a magnetic field experiences a force.",
+              "facts": [
+                [
+                  "Direction",
+                  "Fleming's left-hand rule"
+                ],
+                [
+                  "Split ring",
+                  "Reverses current every half-turn in a simple DC motor"
+                ],
+                [
+                  "Energy conversion",
+                  "Electrical to mechanical"
+                ]
+              ]
+            },
+            {
+              "type": "KEY_RESULT",
+              "title": "Domestic circuit safety",
+              "summary": "Live, neutral and earth wires have distinct roles; fuse or MCB interrupts excessive current.",
+              "facts": [
+                [
+                  "Fuse",
+                  "Connected in series in the live wire"
+                ],
+                [
+                  "Earth wire",
+                  "Safety path for leakage current"
+                ],
+                [
+                  "Overloading",
+                  "Too many/high-power appliances on one circuit"
+                ],
+                [
+                  "Short circuit",
+                  "Live and neutral come into direct contact"
+                ]
+              ]
             }
           ]
         }
@@ -974,5 +2780,16 @@
       "SVG",
       "JSON"
     ]
+  },
+  "updatedAt": "2026-11-21",
+  "contentNotes": {
+    "editionBasis": "Original study notes aligned to the NCERT Class X Mathematics (14 chapters) and Science (13 chapters) chapter structure. Check the current CBSE subject syllabus for examinable scope.",
+    "editorialPolicy": "Original concise explanations; no textbook pages or textbook passages reproduced. Chapter notes supplement, not replace, the prescribed textbook.",
+    "sourceLinks": [
+      "https://ncert.nic.in/textbook.php",
+      "https://ncert.nic.in/textbook.php?jemh1=10-14",
+      "https://ciet.ncert.gov.in/science10"
+    ],
+    "reviewNote": "Legacy manifest items retained. Topics identified as rationalised/dropped in an edition must be checked against the student's school-year CBSE syllabus before exam use."
   }
 }
