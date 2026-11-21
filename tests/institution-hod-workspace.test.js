@@ -8,6 +8,7 @@ assert.match(iam,/assignRole\(userId,role,institutionId/);
 assert.doesNotMatch(iam,/role:"hod"/,"HOD must not be stored as a global IAM role");
 assert.match(data,/hodMembershipId=membershipId/,"HOD appointment remains attached to teacher membership");
 assert.match(shell,/hodMembershipId===membership\.membershipId/,"local workspace derives HOD access from appointment");
+assert.match(shell,/ExamGuruInstitutionData\?\.getStateFor\(institutionId\)/,"local institution fixture is initialised before HOD appointment lookup");
 assert.match(shell,/current\.file!=="institution-operations\.html"&&\!\(auth\.role==="institution"&&auth\.institutionRole==="school_admin"\)/,"HOD cannot enter institution setup pages");
 function run(auth,state,users){
  const ids=["institutionDashboard","dashGuestGate","dashError","dashWelcome","dashInstitutionSubtitle","dashRole","dashHeroActions","dashContentLink","dashExamLink","dashDataStatus","metricStudents","metricTeachers","metricClasses","metricBranches","metricSubjects","metricDepartments","metricStudentsNote","metricTeachersNote","linkBranches","linkAcademic","linkDepartments","linkUsers","linkEnrolments","linkAssignments","linkContent","linkExams","pulseAssignments","pulseEnrolments","contentPublished","contentCopy","addonTitle","addonCopy","setupPercent","setupProgressBar","pulseTitle","pulseCopy","setupChecklist","dashWorkspaces"];
