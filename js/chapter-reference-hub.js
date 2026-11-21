@@ -30,7 +30,7 @@ function render(){
   if(item.asset||item.assetUrl){
    const figure=el("figure","crh-figure"),img=document.createElement("img");
    const assetPath=String(item.asset||"").startsWith("/")?String(item.asset).slice(1):String(item.asset||"");
-   const imageUrl=item.assetUrl||new URL("../"+assetPath,assetBase||location.href).href;
+   const imageUrl=item.assetUrl||new URL(assetPath,assetBase||location.href).href;
    img.src=imageUrl;img.alt=item.alt||item.title;img.loading="lazy";img.decoding="async";
    img.addEventListener("error",()=>{
     figure.classList.add("crh-image-error");
