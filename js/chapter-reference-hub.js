@@ -38,13 +38,21 @@ function populateChapters(){
 }
 async function init(){
  const section=$("chapterReferenceHub");if(!section)return;
- // page-access restores student/parent identity asynchronously; wait before class gating.
- if(window.C10StudyAccessReady)await window.C10StudyAccessReady;
+ // Student login already has a verified session snapshot. Do not block catalogue
+ // loading on the secondary profile/database refresh performed by page-access.js.
  let viewerClass=window.C10StudyViewerClassId||new URLSearchParams(location.search).get("classId")||"";
  if(window.C10StudyViewerRole==="parent"){
-  try{const children=await window.C10StudentAuth.getLinkedChildren();const child=children.find(item=>String(item.studentId)===String(window.C10StudyChildId));viewerClass=String(child?.classId||"");}catch(_){viewerClass="";}
+  try{
+   if(window.C10StudyAccessReady)await window.C10StudyAccessReady;
+   const children=await window.C10StudentAuth.getLinkedChildren();
+   const child=children.find(item=>String(item.studentId)===String(window.C10StudyChildId));
+   viewerClass=String(child?.classId||"");
+  }catch(_){viewerClass="";}
  }else if(window.C10StudyViewerRole==="admin"){viewerClass=viewerClass||"10";}
- else{const user=window.C10StudentAuth&&window.C10StudentAuth.currentUser?window.C10StudentAuth.currentUser():null;viewerClass=viewerClass||String(user?.classId||"");}
+ else{
+  const user=window.C10StudentAuth&&window.C10StudentAuth.currentUser?window.C10StudentAuth.currentUser():null;
+  viewerClass=viewerClass||String(user?.classId||"");
+ }
  viewerClass=String(viewerClass).trim().replace(/^class[ -]?/i,"");
  if(viewerClass!=="10"){
   section.hidden=true;const tab=$("referencesHubTab");if(tab)tab.hidden=true;
