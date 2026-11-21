@@ -6,6 +6,8 @@ assert(worker.includes("handleM7(request,env,who,hasPlatformAdminGrant,json,fail
 assert(worker.includes("identifyM7DemoSession(request,env)")&&m7.includes("Demo sessions are isolated"),"Demo sessions must be isolated before normal app authentication");
 for(const endpoint of ["/api/demo/login","/api/demo/me","/api/demo/data","/api/demo/logout"])assert(m7.includes(endpoint),"Missing demo session endpoint "+endpoint);
 assert(m7.includes("PBKDF2")&&m7.includes("210000")&&m7.includes("token_hash"),"Demo credentials and sessions must be hashed server-side");
+assert(m7.includes('x.payload.studentId==="student-001"')&&m7.includes('roles.has("institution_viewer")'),"Demo sample data must be role scoped on the server");
+assert(m7.includes('roles.has("teacher")||roles.has("hod")'),"Teacher and HOD demo roles must have a separate scoped preview");
 for(const route of ["/api/v2/platform/demos","extend","reset","revoke","audit"])assert(m7.includes(route),"Missing M7 route "+route);
 for(const policy of ["hasPlatformAdminGrant","platform_admin","session_version=session_version+1","expires_at","DEMO-","provisionBaseline","demo_sample_records","demo_audit_events"])assert(m7.includes(policy),"Missing M7 security/provisioning policy "+policy);
 assert(m7.includes('roles.includes("hod")&&!roles.includes("teacher")'),"HOD must require Teacher");
