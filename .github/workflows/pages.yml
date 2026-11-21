@@ -173,6 +173,10 @@ jobs:
           cp institution-enrolments.html _site/institution-enrolments.html
           cp user-management.html _site/user-management.html
           cp platform-entitlements.html _site/platform-entitlements.html
+          cp platform-demo-management.html _site/platform-demo-management.html
+          cp demo-local-preview.html _site/demo-local-preview.html
+          cp demo-login.html _site/demo-login.html
+          cp demo-preview.html _site/demo-preview.html
           cp competitive-exams-admin.html _site/competitive-exams-admin.html
           cp institution-content.html _site/institution-content.html
           cp institution-competitive-exams.html _site/institution-competitive-exams.html
@@ -181,6 +185,9 @@ jobs:
           cp rbac-role-matrix.html _site/rbac-role-matrix.html
           cp .nojekyll _site/.nojekyll
           mkdir -p _site/js _site/data _site/css _site/data/contracts/v1 _site/data/clat _site/data/competitive-exams
+          mkdir -p _site/js/domain
+          cp js/domain/demo-management.js _site/js/domain/demo-management.js
+          cp js/domain/demo-persona-catalog.js _site/js/domain/demo-persona-catalog.js
           cp css/branding.css _site/css/branding.css
           cp css/theme-roles.css _site/css/theme-roles.css
           cp css/theme-roles-v2.css _site/css/theme-roles-v2.css
@@ -248,6 +255,7 @@ jobs:
           cp js/report-print.js _site/js/report-print.js
           cp js/app-shell.js _site/js/app-shell.js
           test -s _site/user-management.html
+          for file in platform-demo-management.html demo-local-preview.html demo-login.html demo-preview.html js/domain/demo-management.js js/domain/demo-persona-catalog.js; do test -s "_site/$file" || { echo "::error::M7 deployment asset missing: $file"; exit 1; }; done
           test -s _site/institution-branches.html
           test -s _site/institution-academics.html
           test -s _site/institution-departments.html
