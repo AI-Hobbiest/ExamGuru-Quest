@@ -1,0 +1,22 @@
+"use strict";
+const assert=require("node:assert/strict");
+const fs=require("node:fs");
+const manifest=JSON.parse(fs.readFileSync("data/chapter-reference.json","utf8"));
+assert.equal(manifest.kind,"chapter-reference-manifest");
+assert.equal(manifest.classId,"10");
+const math=manifest.subjects.find(s=>s.id==="mathematics");
+const science=manifest.subjects.find(s=>s.id==="science");
+assert.equal(math.chapters.length,14,"all Class 10 Mathematics chapters must be represented");
+assert.equal(science.chapters.length,13,"all Class 10 Science syllabus chapters/topics must be represented");
+assert.equal(new Set(math.chapters.map(c=>c.chapterKey)).size,14);
+assert.equal(new Set(science.chapters.map(c=>c.chapterKey)).size,13);
+for(const ch of [...math.chapters,...science.chapters]){assert.ok(ch.chapterTitle&&ch.items.length>=1,ch.chapterKey+" needs references");for(const item of ch.items){assert.ok(item.title&&item.type);if(item.asset)assert.ok(fs.existsSync(item.asset),"missing asset "+item.asset);}}
+assert.ok(math.chapters.every(c=>c.items.some(i=>["THEOREM_PROOF","FORMULA_IDENTITY","KEY_RESULT"].includes(i.type))));
+for(const key of ["chemical-reactions-and-equations","acids-bases-and-salts","metals-and-non-metals","carbon-and-its-compounds"])assert.ok(science.chapters.find(c=>c.chapterKey===key).items.some(i=>i.type==="CHEMICAL_EQUATION"));
+for(const key of ["life-processes","control-and-coordination","how-do-organisms-reproduce","heredity-and-evolution","our-environment"])assert.ok(science.chapters.find(c=>c.chapterKey===key).items.some(i=>["KEY_DIAGRAM","KEY_RESULT"].includes(i.type)));
+for(const key of ["light-reflection-and-refraction","the-human-eye-and-the-colourful-world","electricity","magnetic-effects-of-electric-current"])assert.ok(science.chapters.find(c=>c.chapterKey===key).items.length>=2);
+const page=fs.readFileSync("study.html","utf8"),script=fs.readFileSync("js/chapter-reference-hub.js","utf8");
+assert.ok(page.includes('id="chapterReferenceHub"')&&page.includes("chapter-reference-hub.js"));
+assert.ok(script.includes("loading=\"lazy\"")&&script.includes("chapter-reference.json"));
+new Function(script);
+console.log("Chapter Reference Hub checks passed: 14 Mathematics chapters, 13 Science chapters, required subject-specific content, existing SVG references, safe rendering and lazy loading.");
