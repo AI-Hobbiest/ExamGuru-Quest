@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "chapter-reference-manifest",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "classId": "10",
   "subjects": [
     {
@@ -86,7 +86,18 @@
               "title": "Number of zeroes",
               "summary": "The number of zeroes of a polynomial is at most its degree. A quadratic can have at most two real zeroes.",
               "asset": "assets/math/quadratic-zeros.svg",
-              "alt": "Graph showing zeroes of a quadratic polynomial."
+              "alt": "Graph showing zeroes of a quadratic polynomial.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Mathematics",
+                "chapter": "Polynomials",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jemh102.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -173,7 +184,18 @@
                 "Infinitely many solutions: a₁/a₂ = b₁/b₂ = c₁/c₂; the lines coincide."
               ],
               "asset": "assets/math/linear-system-intersection.svg",
-              "alt": "Graph of two intersecting linear equations."
+              "alt": "Graph of two intersecting linear equations.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Mathematics",
+                "chapter": "Pair of Linear Equations in Two Variables",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jemh103.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -407,7 +429,18 @@
                 "Using the equal areas of triangles sharing base DE and parallel lines, obtain AD/DB = AE/EC."
               ],
               "asset": "assets/math/triangle-bpt.svg",
-              "alt": "Triangle with a line parallel to its base."
+              "alt": "Triangle with a line parallel to its base.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Mathematics",
+                "chapter": "Triangles",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jemh106.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -654,7 +687,18 @@
               "title": "Angle of elevation and depression",
               "summary": "Angle of elevation is measured upward from the horizontal; angle of depression is measured downward from the horizontal.",
               "asset": "assets/math/right-triangle.svg",
-              "alt": "Right triangle used to model height and distance."
+              "alt": "Right triangle used to model height and distance.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Mathematics",
+                "chapter": "Some Applications of Trigonometry",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jemh109.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "FORMULA_IDENTITY",
@@ -743,7 +787,18 @@
                 "Right triangles OAP and OBP are congruent by RHS; hence PA = PB."
               ],
               "asset": "assets/math/circle-tangent.svg",
-              "alt": "Two equal tangents from an external point."
+              "alt": "Two equal tangents from an external point.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Mathematics",
+                "chapter": "Circles",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jemh110.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -843,7 +898,18 @@
               "formula": "Minor segment area = sector area − area of triangle",
               "summary": "For a major segment, subtract the minor segment from the area of the full circle.",
               "asset": "assets/math/circle-sector.svg",
-              "alt": "Circle sector and central angle."
+              "alt": "Circle sector and central angle.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Mathematics",
+                "chapter": "Areas Related to Circles",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jemh111.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "FORMULA_IDENTITY",
@@ -916,7 +982,18 @@
               "title": "Combined solids",
               "summary": "For a combined solid, add the exposed surface areas only. For hollowing or melting, conserve volume.",
               "asset": "assets/math/solid-cylinder-hemisphere.svg",
-              "alt": "Combined cylinder and hemisphere solid."
+              "alt": "Combined cylinder and hemisphere solid.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Mathematics",
+                "chapter": "Surface Areas and Volumes",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jemh112.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -1175,7 +1252,18 @@
                 "Renal tubule – selective reabsorption and secretion",
                 "Collecting duct – carries urine onward"
               ],
-              "examTip": "Learn the direction of filtrate flow and distinguish filtration from selective reabsorption."
+              "examTip": "Learn the direction of filtrate flow and distinguish filtration from selective reabsorption.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Life Processes",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc105.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_DIAGRAM",
@@ -1187,7 +1275,18 @@
                 "Thin moist alveolar wall",
                 "Blood capillary network",
                 "Oxygen diffuses into blood; carbon dioxide diffuses into alveolus"
-              ]
+              ],
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Life Processes",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc105.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_DIAGRAM",
@@ -1199,7 +1298,18 @@
                 "Systemic circulation – heart to body and back",
                 "Right side handles deoxygenated blood",
                 "Left side pumps oxygenated blood"
-              ]
+              ],
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Life Processes",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc105.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -1355,6 +1465,17 @@
                 "fileSizeBytes": 24111,
                 "storageImpactBytes": 0,
                 "changes": "None"
+              },
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Life Processes",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc105.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
               }
             },
             {
@@ -1401,7 +1522,18 @@
               "sourceFigure": "Figure 5.6",
               "sourcePage": 85,
               "sourceEdition": "Reprint 2026–27",
-              "relatedActivity": "Activity 5.3 (same page; starch and saliva experiment)"
+              "relatedActivity": "Activity 5.3 (same page; starch and saliva experiment)",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Life Processes",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc105.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             }
           ],
           "sourceBook": "NCERT Class X Science",
@@ -1426,7 +1558,18 @@
               ],
               "examTip": "A reflex action is rapid and automatic; the brain is informed but the spinal cord coordinates many reflexes.",
               "asset": "assets/exam-papers/science/reflex-arc.svg",
-              "alt": "Reflex arc from receptor through sensory neuron and spinal cord to motor neuron and effector."
+              "alt": "Reflex arc from receptor through sensory neuron and spinal cord to motor neuron and effector.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Control and Coordination",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc106.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -1573,7 +1716,18 @@
                 ]
               ],
               "source": "NCERT Class X Science — Control and Coordination",
-              "illustrationType": "ExamGuru supplementary concept schematic based on the NCERT topic; not verified as a 90%+ reproduction of a specific NCERT textbook figure."
+              "illustrationType": "ExamGuru supplementary concept schematic based on the NCERT topic; not verified as a 90%+ reproduction of a specific NCERT textbook figure.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Control and Coordination",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc106.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_DIAGRAM",
@@ -1604,7 +1758,18 @@
                 ]
               ],
               "source": "NCERT Class X Science — Control and Coordination",
-              "illustrationType": "ExamGuru supplementary concept schematic based on the NCERT topic; not verified as a 90%+ reproduction of a specific NCERT textbook figure."
+              "illustrationType": "ExamGuru supplementary concept schematic based on the NCERT topic; not verified as a 90%+ reproduction of a specific NCERT textbook figure.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Control and Coordination",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc106.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             }
           ],
           "sourceBook": "NCERT Class X Science",
@@ -1628,7 +1793,18 @@
               ],
               "examTip": "Be able to distinguish fertilisation, implantation and gestation.",
               "asset": "assets/exam-papers/science/reproductive-system-reference.svg",
-              "alt": "Simplified reference schematic of male and female reproductive structures."
+              "alt": "Simplified reference schematic of male and female reproductive structures.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "How do Organisms Reproduce?",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc107.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -1774,7 +1950,18 @@
                 ]
               ],
               "asset": "assets/exam-papers/science/mendel-monohybrid-cross.svg",
-              "alt": "Punnett square for Tt crossed with Tt showing TT, Tt, Tt and tt."
+              "alt": "Punnett square for Tt crossed with Tt showing TT, Tt, Tt and tt.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Heredity",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc108.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -1895,7 +2082,18 @@
                 ]
               ],
               "asset": "assets/exam-papers/science/food-chain-energy-flow.svg",
-              "alt": "Food chain from grass to grasshopper to frog to snake, with decomposers."
+              "alt": "Food chain from grass to grasshopper to frog to snake, with decomposers.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Our Environment",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc113.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -2431,7 +2629,18 @@
                 "Principal focus",
                 "Image position depends on object distance"
               ],
-              "examTip": "Draw at least two standard rays and mark the image orientation and size."
+              "examTip": "Draw at least two standard rays and mark the image orientation and size.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Light: Reflection and Refraction",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc109.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "FORMULA_IDENTITY",
@@ -2539,7 +2748,18 @@
                 "Retina",
                 "Image would form behind retina without correction",
                 "Convex lens converges rays so image forms on retina"
-              ]
+              ],
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "The Human Eye and the Colourful World",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -2564,7 +2784,18 @@
               "title": "Scattering and dispersion",
               "summary": "Shorter wavelengths scatter more strongly; white light disperses into its constituent colours through a prism.",
               "asset": "assets/exam-papers/science/prism-dispersion.svg",
-              "alt": "Prism dispersing white light into a spectrum."
+              "alt": "Prism dispersing white light into a spectrum.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "The Human Eye and the Colourful World",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -2665,7 +2896,18 @@
               "formula": "Series: R = R₁ + R₂ + … · Parallel: 1/R = 1/R₁ + 1/R₂ + …",
               "summary": "Series current is the same; parallel potential difference is the same.",
               "asset": "assets/exam-papers/science/series-resistor-circuit.svg",
-              "alt": "Series resistor circuit."
+              "alt": "Series resistor circuit.",
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Electricity",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc111.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "FORMULA_IDENTITY",
@@ -2796,7 +3038,18 @@
                 "Nearly parallel field lines inside the solenoid",
                 "Field outside resembles that of a bar magnet",
                 "Polarity depends on current direction"
-              ]
+              ],
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Magnetic Effects of Electric Current",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_DIAGRAM",
@@ -2808,7 +3061,18 @@
                 "Connecting wires",
                 "Parallel branches",
                 "Current divides between branches"
-              ]
+              ],
+              "visualAudit": {
+                "status": "withheld_unverified",
+                "edition": "Reprint 2026–27",
+                "sourceBook": "NCERT Class X Science",
+                "chapter": "Magnetic Effects of Electric Current",
+                "sourceChapterUrl": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+                "sourcePage": null,
+                "sourceFigure": null,
+                "fidelityThresholdPercent": 90,
+                "note": "Not approved as an NCERT-faithful figure. Hidden in the student Reference Hub until a side-by-side check confirms at least 90% visual resemblance, exact labels and arrows, and a lawful reuse basis."
+              }
             },
             {
               "type": "KEY_RESULT",
@@ -2940,9 +3204,7 @@
     ],
     "reviewNote": "Legacy manifest items retained. Topics identified as rationalised/dropped in an edition must be checked against the student's school-year CBSE syllabus before exam use."
   },
-  "editorialNotes": [
-    "New diagrams added in v1.2.0 are original ExamGuru schematic illustrations based on topics in the NCERT Class X Science textbook. They are not scans or reproductions of NCERT artwork. Topic coverage must be checked against the NCERT edition prescribed for the student's academic session."
-  ],
+  "editorialNotes": "New diagrams added in v1.2.0 are original ExamGuru schematic illustrations based on topics in the NCERT Class X Science textbook. They are not scans or reproductions of NCERT artwork. Topic coverage must be checked against the NCERT edition prescribed for the student's academic session.\n\nVisual audit gate 1.4.0: all 24 previously referenced Study Library visuals are withheld from student display until each passes a source-specific NCERT fidelity and reuse-rights review. Official chapter PDF links remain available. No visual is represented as NCERT artwork solely because it depicts the same concept.",
   "sourceStandard": {
     "publisher": "NCERT",
     "class": "X",
