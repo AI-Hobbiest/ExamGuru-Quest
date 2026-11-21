@@ -61,7 +61,7 @@ assert.ok(physics.chapters.find(c=>c.chapterKey==="electricity").items.some(i=>i
 const page=fs.readFileSync("study.html","utf8"),script=fs.readFileSync("js/chapter-reference-hub.js","utf8");
 assert.ok(page.includes('id="chapterReferenceHub"')&&page.includes("chapter-reference-hub.js"));
 assert.ok(page.includes("chapter-reference-hub.css"));
-assert.ok(script.includes('img.loading="lazy"')&&script.includes("chapter-reference.json"));\nassert.ok(script.includes('new URL("../"+assetPath,assetBase||location.href).href')&&script.includes("Image could not be loaded"),"visual asset URLs must resolve from the deployed script base and expose a direct fallback when an image fails");
+assert.ok(script.includes('img.loading="lazy"')&&script.includes("chapter-reference.json"));\nassert.ok(script.includes('new URL(assetPath,assetBase||location.href).href')&&script.includes("Image could not be loaded"),"visual asset URLs must resolve from the deployed script base and expose a direct fallback when an image fails");
 assert.ok(script.includes('if(item.asset||item.assetUrl)')&&script.includes("Supplementary visual — shown for learning"),"supplementary visuals must remain visible with a clear NCERT verification disclaimer");
 assert.ok(script.includes('viewerClass!=="10"'),"Class 10 reference hub must not appear for other classes");
 assert.ok(script.includes("Connecting to the Class 10 reference catalogue"),"Reference hub must expose its initialization state");
