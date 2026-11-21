@@ -1,5 +1,5 @@
 import { handleM4 } from "./m4.js";
-import { handleM7 } from "./m7.js";
+import { handleM7, handleM7Login, identifyM7DemoSession, handleM7DemoSession } from "./m7.js";
 const SUBJECTS = new Set(["science","mathematics","english","social-science","hindi","science-sof","mathematics-sof","english-sof"]);
 const PASSWORD_ITERATIONS = 210000;
 const SESSION_HOURS = 8;
@@ -588,6 +588,13 @@ export default {
       if(path==="/api/auth/github/callback"&&method==="GET")return await githubCallback(request,env);
       if(path==="/api/auth/exchange"&&method==="POST")return await exchangeGithubCode(request,env);
       if(path==="/api/student/login"&&method==="POST")return await studentLogin(request,env);
+      if(path==="/api/demo/login"&&method==="POST")return await handleM7Login(request,env,json,fail);
+      const demoSession=await identifyM7DemoSession(request,env);
+      if(demoSession&&demoSession.recognized){
+        if(!demoSession.valid)return fail(request,env,401,"Demo session expired, revoked or invalidated. Sign in again if the demo is still active.");
+        return await handleM7DemoSession(request,env,demoSession,json,fail);
+      }
+      if(path.startsWith("/api/demo/"))return fail(request,env,401,"Valid demo session required.");
 
       if(path.startsWith("/api/v2/")&&!env.DB)return fail(request,env,503,"D1 database binding DB is not configured.");
       if(path==="/api/v2/invitations/accept"&&method==="POST"){
