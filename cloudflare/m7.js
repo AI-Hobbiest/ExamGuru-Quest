@@ -115,8 +115,8 @@ export async function handleM7(request,env,who,hasPlatformAdminGrant,respond,den
         .bind(accountId,demoId,demoUsername,passwordSalt,passwordDigest,JSON.stringify(roles),createdAt,createdAt).run();
       const seeded=await provisionBaseline(env,demoId,1,profile);
       await audit(env,demoId,who.user_id,"created",{kind:body.kind,templateId,roles,dataProfile:profile,durationDays:duration,seededRecordCount:seeded,accountCount:1});
-      return json(request,env,{ok:true,demo:{demoId,tenantId,kind:body.kind,templateId,templateVersion,displayName,roles,dataProfile:profile,status:"active",createdAt,expiresAt,sessionVersion:1,resetGeneration:1,seededRecordCount:seeded},credentials:{username:demoUsername,password:demoPassword,loginPath:"/demo-login",previewPath:"/demo-preview",expiresAt}},201);
-    } catch(_) { return fail(request,env,500,"Demo environment could not be provisioned. No access credentials were issued."); }
+      return json(request,env,{ok:true,demo:{demoId,tenantId,kind:body.kind,templateId,templateVersion,displayName,roles,dataProfile:profile,status:"active",createdAt,expiresAt,sessionVersion:1,resetGeneration:1,seededRecordCount:seeded},credentials:{username:demoUsername,password:demoPassword,loginPath:"/demo-login.html",previewPath:"/demo-preview.html",expiresAt}},201);
+    } catch(_) { try { await env.DB.prepare("DELETE FROM demo_environments WHERE demo_id=?").bind(demoId).run(); } catch(__) {} return fail(request,env,500,"Demo environment could not be provisioned. No access credentials were issued."); }
   }
   const match=path.match(/^\/api\/v2\/platform\/demos\/([A-Za-z0-9_-]+)(?:\/(extend|reset|revoke|audit))?$/);
   if(!match)return fail(request,env,404,"Demo resource not found.");
