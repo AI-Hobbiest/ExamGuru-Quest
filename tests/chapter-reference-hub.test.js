@@ -29,6 +29,7 @@ assert.ok(biology.chapters.every(c=>c.items.some(i=>i.asset)),"each Biology chap
 const physics=manifest.subjects.find(s=>s.id==="physics");
 assert.ok(physics.chapters.every(c=>c.items.some(i=>i.type==="FORMULA_IDENTITY"||i.type==="KEY_RESULT")));
 assert.ok(physics.chapters.every(c=>c.items.some(i=>i.asset)),"each Physics chapter should include a visual asset");
+assert.ok(physics.chapters.find(c=>c.chapterKey==="electricity").items.some(i=>i.type==="DERIVATION"),"Physics must include derivations, not only formula lists");
 const page=fs.readFileSync("study.html","utf8"),script=fs.readFileSync("js/chapter-reference-hub.js","utf8");
 assert.ok(page.includes('id="chapterReferenceHub"')&&page.includes("chapter-reference-hub.js"));
 assert.ok(page.includes("chapter-reference-hub.css"));
