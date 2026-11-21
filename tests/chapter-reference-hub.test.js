@@ -26,6 +26,11 @@ assert.ok(chemistry.chapters.every(c=>c.items.some(i=>i.type==="CHEMICAL_EQUATIO
 const biology=manifest.subjects.find(s=>s.id==="biology");
 assert.ok(biology.chapters.every(c=>c.items.some(i=>i.type==="KEY_DIAGRAM"||i.type==="KEY_RESULT")));
 assert.ok(biology.chapters.every(c=>c.items.some(i=>i.asset)),"each Biology chapter should include a visual asset");
+assert.ok(biology.chapters.find(c=>c.chapterKey==="life-processes").items.some(i=>i.title==="Human heart — chambers and double circulation"&&i.asset==="assets/study-library/science/human-heart.svg"),"Life Processes must include a labelled heart visual");
+assert.ok(biology.chapters.find(c=>c.chapterKey==="control-and-coordination").items.some(i=>i.title==="Human brain — major regions"&&i.asset==="assets/study-library/science/human-brain.svg"),"Control and Coordination must include a labelled brain visual");
+assert.ok(biology.chapters.find(c=>c.chapterKey==="control-and-coordination").items.some(i=>i.title==="Neuron — structure and impulse direction"&&i.asset==="assets/study-library/science/neuron.svg"),"Control and Coordination must include a labelled neuron visual");
+for(const path of ["assets/study-library/science/human-heart.svg","assets/study-library/science/human-brain.svg","assets/study-library/science/neuron.svg"]){assert.ok(fs.existsSync(path),"missing original NCERT-aligned illustration "+path);}
+assert.ok(biology.chapters.flatMap(c=>c.items).filter(i=>i.illustrationType).every(i=>i.source&&i.alt),"original illustrations must show source context and alt text");
 const physics=manifest.subjects.find(s=>s.id==="physics");
 assert.ok(physics.chapters.every(c=>c.items.some(i=>i.type==="FORMULA_IDENTITY"||i.type==="KEY_RESULT")));
 assert.ok(physics.chapters.every(c=>c.items.some(i=>i.asset)),"each Physics chapter should include a visual asset");
@@ -50,4 +55,4 @@ assert.ok(page.includes('data-study-tab="visualRevisionBoard"')&&page.includes('
 assert.ok(/<section[^>]*id="chapterReferenceHub"[^>]*hidden/.test(page),"References Hub must start hidden behind its tab");
 assert.ok(fs.readFileSync("js/study-library.js","utf8").includes("initStudyLibraryTabs"),"Study Library tab navigation must be wired");
 new Function(script);
-console.log("Chapter Reference Hub checks passed: 14 Mathematics, 5 Biology, 4 Chemistry, 4 Physics chapters; SVG integrity, subject-specific content, lazy loading and class gating.");
+console.log("Chapter Reference Hub checks passed: 14 Mathematics, 5 Biology, 4 Chemistry, 4 Physics chapters; original heart/brain/neuron visuals, source notes, SVG integrity, lazy loading and class gating.");
