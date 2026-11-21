@@ -13,6 +13,8 @@ for(const [id,count] of Object.entries(expected)){
  assert.equal(new Set(subject.chapters.map(c=>c.chapterKey)).size,count,"duplicate chapter key in "+id);
  for(const chapter of subject.chapters){
   assert.ok(chapter.chapterTitle&&chapter.items.length>=1,chapter.chapterKey+" needs reference content");
+  assert.equal(chapter.sourceEdition,"Reprint 2026–27",chapter.chapterKey+" must identify the audited NCERT edition");
+  assert.match(chapter.sourceUrl,/^https:\/\/ncert\.nic\.in\/textbook\/pdf\/(jemh|jesc)\d{2}\.pdf$/,chapter.chapterKey+" must link to its official NCERT chapter PDF");
   for(const item of chapter.items){
    assert.ok(item.title&&item.type,chapter.chapterKey+" has an invalid item");
    if(item.asset)assert.ok(fs.existsSync(item.asset),"missing SVG/image asset "+item.asset);
