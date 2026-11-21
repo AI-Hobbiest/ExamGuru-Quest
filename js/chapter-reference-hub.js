@@ -2,7 +2,7 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-let manifest=null,activeItems=[],activeChapter=null;
+let manifest=null,activeItems=[],activeChapter=null,assetBase=null;
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=String(text);return n;}
 function render(){
  const subject=$( "crhSubject" ).value, chapterKey=$( "crhChapter" ).value, type=$( "crhType" ).value;
@@ -27,7 +27,21 @@ function render(){
   if(item.steps?.length){if(item.type==="THEOREM_PROOF")card.append(el("h4","crh-subheading","Proof / derivation"));const list=el("ol","crh-steps");item.steps.forEach(step=>list.append(el("li","",step)));card.append(list);}
   if(item.facts?.length){const list=el("dl","crh-facts");item.facts.forEach(pair=>{list.append(el("dt","",pair[0]),el("dd","",pair[1]));});card.append(list);}
   const visualApproved=["verified_ncert_match","verified_reusable_match"].includes(item.visualAudit?.status);
-  if(item.asset||item.assetUrl){const figure=el("figure","crh-figure");const img=document.createElement("img");img.src=item.assetUrl||("./"+item.asset);img.alt=item.alt||item.title;img.loading="lazy";img.decoding="async";figure.append(img);if(item.alt)figure.append(el("figcaption","",item.alt));card.append(figure);}
+  if(item.asset||item.assetUrl){
+   const figure=el("figure","crh-figure"),img=document.createElement("img");
+   const assetPath=String(item.asset||"").startsWith("/")?String(item.asset).slice(1):String(item.asset||"");
+   const imageUrl=item.assetUrl||new URL("../"+assetPath,assetBase||location.href).href;
+   img.src=imageUrl;img.alt=item.alt||item.title;img.loading="lazy";img.decoding="async";
+   img.addEventListener("error",()=>{
+    figure.classList.add("crh-image-error");
+    if(!figure.querySelector(".crh-image-error-note")){
+     const note=el("p","crh-note crh-image-error-note","Image could not be loaded. Open the image directly to check its availability.");
+     const link=document.createElement("a");link.href=imageUrl;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Open image";
+     note.append(" ",link);figure.append(note);
+    }
+   },{once:true});
+   figure.append(img);if(item.alt)figure.append(el("figcaption","",item.alt));card.append(figure);
+  }
   if(item.labels?.length){const labels=el("ul","crh-labels");item.labels.forEach(label=>labels.append(el("li","",label)));card.append(labels);}
   if(item.asset||item.assetUrl){
    const auditNote=visualApproved?"Verified visual: "+(item.visualAudit.status==="verified_ncert_match"?"NCERT textbook figure match.":"reusable illustration matched to the NCERT figure."):"Supplementary visual — shown for learning, but not yet verified as a 90%+ match to the NCERT textbook figure. Use the linked NCERT chapter PDF for the exact textbook artwork.";
@@ -48,6 +62,8 @@ function populateChapters(){
 }
 async function init(){
  const section=$("chapterReferenceHub");if(!section)return;
+ const controllerScript=Array.from(document.scripts).find(script=>script.src.includes("chapter-reference-hub.js"));
+ assetBase=controllerScript?new URL("../",controllerScript.src):new URL("./",location.href);
  // Resolve class from the page's established session snapshot without waiting on
  // secondary account refreshes. This page is currently the Class 10 Study Library.
  let viewerClass=String(window.C10StudyViewerClassId||new URLSearchParams(location.search).get("classId")||"").trim().replace(/^class[ -]?/i,"");
