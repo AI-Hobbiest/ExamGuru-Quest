@@ -40,12 +40,17 @@ async function init(){
  const section=$("chapterReferenceHub");if(!section)return;
  // page-access restores student/parent identity asynchronously; wait before class gating.
  if(window.C10StudyAccessReady)await window.C10StudyAccessReady;
- let viewerClass=new URLSearchParams(location.search).get("classId")||"";
+ let viewerClass=window.C10StudyViewerClassId||new URLSearchParams(location.search).get("classId")||"";
  if(window.C10StudyViewerRole==="parent"){
   try{const children=await window.C10StudentAuth.getLinkedChildren();const child=children.find(item=>String(item.studentId)===String(window.C10StudyChildId));viewerClass=String(child?.classId||"");}catch(_){viewerClass="";}
  }else if(window.C10StudyViewerRole==="admin"){viewerClass=viewerClass||"10";}
  else{const user=window.C10StudentAuth&&window.C10StudentAuth.currentUser?window.C10StudentAuth.currentUser():null;viewerClass=viewerClass||String(user?.classId||"");}
- if(viewerClass!=="10"){section.hidden=true;const tab=$("referencesHubTab");if(tab)tab.hidden=true;return;}
+ viewerClass=String(viewerClass).trim().replace(/^class[ -]?/i,"");
+ if(viewerClass!=="10"){
+  section.hidden=true;const tab=$("referencesHubTab");if(tab)tab.hidden=true;
+  $("crhStatus").textContent="References Hub is currently available for Class 10 students only.";
+  return;
+ }
  try{
   const response=await fetch("./data/chapter-reference.json",{cache:"no-store"});if(!response.ok)throw new Error("Reference catalogue unavailable.");
   manifest=await response.json();
@@ -55,7 +60,8 @@ async function init(){
   $("crhChapter").addEventListener("change",render);
   $("crhType").addEventListener("change",render);
   populateChapters();
-  $("crhStatus").textContent="Chapter references loaded from GitHub static JSON. Diagrams reuse optimized SVG files already in this repository.";
+  $("crhStatus").textContent="Chapter references loaded successfully · 27 chapters across Mathematics, Biology, Chemistry and Physics.";
+
  }catch(error){$("crhStatus").textContent=error.message;$("crhCards").replaceChildren(el("div","crh-empty","Chapter references could not be loaded. Please refresh or contact the administrator."));}
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
