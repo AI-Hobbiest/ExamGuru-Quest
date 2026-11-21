@@ -18,6 +18,7 @@ for(const [id,count] of Object.entries(expected)){
   for(const item of chapter.items){
    assert.ok(item.title&&item.type,chapter.chapterKey+" has an invalid item");
    if(item.asset)assert.ok(fs.existsSync(item.asset),"missing SVG/image asset "+item.asset);
+   if(item.assetUrl)assert.match(item.assetUrl,/^https:\/\//,"external assets must use HTTPS");
   }
  }
 }
@@ -32,7 +33,10 @@ assert.ok(chemistry.chapters.every(c=>c.items.some(i=>i.type==="CHEMICAL_EQUATIO
 const biology=manifest.subjects.find(s=>s.id==="biology");
 assert.ok(biology.chapters.every(c=>c.items.some(i=>i.type==="KEY_DIAGRAM"||i.type==="KEY_RESULT")));
 assert.ok(biology.chapters.every(c=>c.items.some(i=>i.asset)),"each Biology chapter should include a visual asset");
-assert.ok(biology.chapters.find(c=>c.chapterKey==="life-processes").items.some(i=>i.title==="Human heart — chambers and double circulation"&&i.asset==="assets/study-library/science/human-heart.svg"),"Life Processes must include a labelled heart visual");
+const heart=biology.chapters.find(c=>c.chapterKey==="life-processes").items.find(i=>i.title==="Human heart — chambers and double circulation");
+assert.ok(heart&&heart.assetUrl==="https://upload.wikimedia.org/wikipedia/commons/f/fa/Diagram_of_the_human_heart.svg","Life Processes must use the externally hosted Wikimedia heart candidate");
+assert.equal(heart.imageCredit.fileSizeBytes,24111,"heart candidate size must be recorded");
+assert.equal(heart.imageCredit.storageImpactBytes,0,"externally hosted heart candidate must not consume repository storage");
 const alimentary=biology.chapters.find(c=>c.chapterKey==="life-processes").items.find(i=>i.title==="Human alimentary canal — NCERT Figure 5.6");
 assert.ok(alimentary,"Life Processes must include NCERT Figure 5.6");
 assert.equal(alimentary.sourcePage,85,"alimentary canal figure must retain NCERT page reference");
