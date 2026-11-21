@@ -21,6 +21,10 @@ for(const [id,count] of Object.entries(expected)){
   }
  }
 }
+const allMathItems=manifest.subjects.find(s=>s.id==="mathematics").chapters.flatMap(c=>c.items);
+for(const dropped of ["Euclid's Division Lemma","HCF–LCM relationship","Terminating decimal test","Euclid algorithm reminder","Division algorithm for polynomials","Cross-multiplication method","Quadratic formula","Pythagoras theorem","Area of a triangle","Frustum volume"]){
+ assert.ok(!allMathItems.some(i=>i.title===dropped),"out-of-book NCERT 2026-27 topic must not be published: "+dropped);
+}
 const math=manifest.subjects.find(s=>s.id==="mathematics");
 assert.ok(math.chapters.every(c=>c.items.some(i=>["THEOREM_PROOF","FORMULA_IDENTITY","KEY_RESULT"].includes(i.type))));
 const chemistry=manifest.subjects.find(s=>s.id==="chemistry");
