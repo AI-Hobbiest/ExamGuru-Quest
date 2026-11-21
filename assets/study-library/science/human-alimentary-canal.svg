@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 900" role="img" aria-labelledby="title desc">
+<title id="title">Human alimentary canal — NCERT Class 10 Science, Figure 5.6</title>
+<desc id="desc">Original ExamGuru redraw of the human alimentary canal, showing the mouth and tongue, oesophagus, diaphragm, liver, gall bladder, bile duct, pancreas, stomach, small intestine, large intestine, appendix and anus.</desc>
+<defs>
+ <style>
+ .body{fill:#f6eee7;stroke:#9a8174;stroke-width:4}.organ{stroke:#8b4c43;stroke-width:4;stroke-linejoin:round}
+ .label{font:22px Arial,sans-serif;fill:#263746}.small{font:17px Arial,sans-serif;fill:#536575}
+ .leader{fill:none;stroke:#526575;stroke-width:2.5}.tube{fill:none;stroke:#d75b42;stroke-width:18;stroke-linecap:round;stroke-linejoin:round}
+ </style>
+</defs>
+<rect width="1100" height="900" rx="24" fill="#fff"/>
+<text x="550" y="48" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#18324b">HUMAN ALIMENTARY CANAL</text>
+<!-- simplified torso and head silhouette -->
+<path class="body" d="M425 125 Q385 145 365 210 L330 330 Q315 390 360 425 L385 455 L395 735 Q400 785 445 800 L655 800 Q700 785 705 735 L715 455 L740 425 Q785 390 770 330 L735 210 Q715 145 675 125 Q620 105 590 135 L510 135 Q480 105 425 125Z"/>
+<path class="body" d="M475 85 Q475 35 550 35 Q625 35 625 85 L610 145 L490 145Z"/>
+<!-- mouth, tongue and oesophagus -->
+<path d="M515 105 Q550 88 585 105 Q560 125 530 119Z" fill="#c94f52" stroke="#853b42" stroke-width="3"/>
+<path d="M530 112 Q550 101 575 111" fill="none" stroke="#f6b1a8" stroke-width="7" stroke-linecap="round"/>
+<path class="tube" d="M550 125 C548 180 548 230 550 290 C552 330 565 350 570 390"/>
+<!-- diaphragm -->
+<path d="M405 410 Q550 455 695 410" fill="none" stroke="#8d9ca7" stroke-width="9"/>
+<!-- liver -->
+<path class="organ" fill="#9c563d" d="M410 455 Q440 405 520 425 Q555 435 575 465 Q565 515 515 535 Q455 545 410 510Z"/>
+<!-- gall bladder -->
+<path class="organ" fill="#6c9b67" d="M500 515 Q485 540 500 560 Q518 572 525 544 L520 515Z"/>
+<!-- bile duct -->
+<path d="M515 548 C540 565 548 585 560 605" fill="none" stroke="#6c9b67" stroke-width="8"/>
+<!-- stomach -->
+<path class="organ" fill="#e88b79" d="M590 425 C650 415 680 455 665 505 C655 550 610 575 580 550 C560 530 570 500 585 485 C600 465 570 445 590 425Z"/>
+<!-- pancreas -->
+<path class="organ" fill="#efc46f" d="M515 565 Q560 545 625 565 Q640 575 620 590 Q565 600 515 582Z"/>
+<!-- small intestine loops -->
+<path d="M475 600 C440 620 455 650 500 635 C550 615 590 625 615 650 C640 675 595 690 550 670 C500 650 465 680 485 710 C510 742 565 710 600 730 C630 750 590 770 545 750 C500 730 470 760 500 780" fill="none" stroke="#e27c6c" stroke-width="18" stroke-linecap="round"/>
+<!-- large intestine frame -->
+<path d="M450 610 C420 600 410 625 410 660 L410 730 Q410 770 450 775 L650 775 Q690 770 690 730 L690 660 Q690 625 660 610" fill="none" stroke="#cf665e" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M450 610 L450 590 Q450 575 470 575" fill="none" stroke="#cf665e" stroke-width="30" stroke-linecap="round"/>
+<!-- appendix and terminal rectum/anus -->
+<path d="M420 690 Q390 710 405 730 Q420 742 435 725" fill="none" stroke="#cf665e" stroke-width="18" stroke-linecap="round"/>
+<path d="M550 775 L550 835" stroke="#cf665e" stroke-width="22" stroke-linecap="round"/>
+<path d="M550 835 L550 850" stroke="#8b4c43" stroke-width="6"/>
+<!-- leader lines and labels -->
+<g class="leader">
+ <path d="M515 108 L310 108 L275 95"/><path d="M540 115 L310 150 L275 150"/>
+ <path d="M550 235 L300 235 L275 235"/>
+ <path d="M545 425 L300 425 L275 425"/>
+ <path d="M445 475 L270 475 L235 475"/>
+ <path d="M505 545 L270 545 L235 545"/>
+ <path d="M540 575 L270 595 L235 595"/>
+ <path d="M600 455 L790 455 L825 440"/>
+ <path d="M610 575 L790 575 L825 570"/>
+ <path d="M605 680 L790 680 L825 680"/>
+ <path d="M680 710 L790 735 L825 735"/>
+ <path d="M410 715 L270 735 L235 735"/>
+ <path d="M550 840 L790 840 L825 840"/>
+</g>
+<g class="label">
+ <text x="55" y="100">Tongue</text>
+ <text x="55" y="158">Mouth (Buccal cavity)</text>
+ <text x="55" y="243">Oesophagus</text>
+ <text x="55" y="433">Diaphragm</text>
+ <text x="55" y="483">Liver</text>
+ <text x="55" y="553">Gall bladder</text><text class="small" x="55" y="575">(stores bile)</text>
+ <text x="55" y="603">Bile duct</text>
+ <text x="835" y="448">Stomach</text>
+ <text x="835" y="578">Pancreas</text>
+ <text x="835" y="688">Small intestine</text>
+ <text x="835" y="744">Large intestine</text><text class="small" x="835" y="766">(Colon)</text>
+ <text x="55" y="743">Appendix</text>
+ <text x="835" y="848">Anus</text>
+</g>
+<text x="550" y="885" text-anchor="middle" class="small">ExamGuru original educational redraw · schematic, not to scale</text>
+</svg>
