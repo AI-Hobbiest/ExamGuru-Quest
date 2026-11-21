@@ -38,6 +38,8 @@ function populateChapters(){
 }
 async function init(){
  const section=$("chapterReferenceHub");if(!section)return;
+ // page-access restores student/parent identity asynchronously; wait before class gating.
+ if(window.C10StudyAccessReady)await window.C10StudyAccessReady;
  let viewerClass=new URLSearchParams(location.search).get("classId")||"";
  if(window.C10StudyViewerRole==="parent"){
   try{const children=await window.C10StudentAuth.getLinkedChildren();const child=children.find(item=>String(item.studentId)===String(window.C10StudyChildId));viewerClass=String(child?.classId||"");}catch(_){viewerClass="";}
