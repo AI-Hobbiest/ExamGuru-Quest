@@ -38,39 +38,42 @@ function populateChapters(){
 }
 async function init(){
  const section=$("chapterReferenceHub");if(!section)return;
- // Student login already has a verified session snapshot. Do not block catalogue
- // loading on the secondary profile/database refresh performed by page-access.js.
- let viewerClass=window.C10StudyViewerClassId||new URLSearchParams(location.search).get("classId")||"";
- if(window.C10StudyViewerRole==="parent"){
-  try{
-   if(window.C10StudyAccessReady)await window.C10StudyAccessReady;
-   const children=await window.C10StudentAuth.getLinkedChildren();
-   const child=children.find(item=>String(item.studentId)===String(window.C10StudyChildId));
-   viewerClass=String(child?.classId||"");
-  }catch(_){viewerClass="";}
- }else if(window.C10StudyViewerRole==="admin"){viewerClass=viewerClass||"10";}
- else{
+ // Resolve class from the page's established session snapshot without waiting on
+ // secondary account refreshes. This page is currently the Class 10 Study Library.
+ let viewerClass=String(window.C10StudyViewerClassId||new URLSearchParams(location.search).get("classId")||"").trim().replace(/^class[ -]?/i,"");
+ if(!viewerClass){
   const user=window.C10StudentAuth&&window.C10StudentAuth.currentUser?window.C10StudentAuth.currentUser():null;
-  viewerClass=viewerClass||String(user?.classId||"");
+  viewerClass=String(user?.classId||"10");
  }
- viewerClass=String(viewerClass).trim().replace(/^class[ -]?/i,"");
  if(viewerClass!=="10"){
   section.hidden=true;const tab=$("referencesHubTab");if(tab)tab.hidden=true;
   $("crhStatus").textContent="References Hub is currently available for Class 10 students only.";
   return;
  }
+ $("crhStatus").textContent="Connecting to the Class 10 reference catalogue…";
  try{
-  const response=await fetch("./data/chapter-reference.json",{cache:"no-store"});if(!response.ok)throw new Error("Reference catalogue unavailable.");
-  manifest=await response.json();
-  if(manifest.kind!=="chapter-reference-manifest"||manifest.classId!=="10"||!Array.isArray(manifest.subjects))throw new Error("Reference catalogue format is invalid.");
-  $("crhSubject").replaceChildren(...manifest.subjects.map(s=>{const o=document.createElement("option");o.value=s.id;o.textContent=s.label;return o;}));
-  $("crhSubject").addEventListener("change",populateChapters);
+  const response=await fetch("./data/chapter-reference.json",{cache:"no-store"});
+  if(!response.ok)throw new Error("Catalogue request failed (HTTP "+response.status+").");
+  const loaded=await response.json();
+  if(loaded.kind!=="chapter-reference-manifest"||String(loaded.classId)!=="10"||!Array.isArray(loaded.subjects)||!loaded.subjects.length)throw new Error("Reference catalogue format is invalid or empty.");
+  manifest=loaded;
+  const subjectSelect=$("crhSubject");
+  subjectSelect.replaceChildren(...manifest.subjects.map(subject=>{
+   const option=document.createElement("option");option.value=subject.id;option.textContent=subject.label;return option;
+  }));
+  subjectSelect.addEventListener("change",populateChapters);
   $("crhChapter").addEventListener("change",render);
   $("crhType").addEventListener("change",render);
   populateChapters();
-  $("crhStatus").textContent="Chapter references loaded successfully · 27 chapters across Mathematics, Biology, Chemistry and Physics.";
-
- }catch(error){$("crhStatus").textContent=error.message;$("crhCards").replaceChildren(el("div","crh-empty","Chapter references could not be loaded. Please refresh or contact the administrator."));}
+  $("crhStatus").textContent="Loaded "+manifest.subjects.length+" subjects and "+manifest.subjects.reduce((n,s)=>n+s.chapters.length,0)+" chapters.";
+ }catch(error){
+  $("crhStatus").textContent="Could not load references: "+(error&&error.message?error.message:String(error));
+  $("crhSubject").replaceChildren(el("option","","Catalogue unavailable"));
+  $("crhChapter").replaceChildren(el("option","","No chapters available"));
+  $("crhChapterTitle").textContent="Reference catalogue unavailable";
+  $("crhCards").replaceChildren(el("div","crh-empty","Please retry after checking your connection. The exact loading error is shown above."));
+  console.error("Chapter Reference Hub initialization failed:",error);
+ }
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();
