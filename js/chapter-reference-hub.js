@@ -26,11 +26,12 @@ function render(){
   if(item.observation)card.append(el("p","crh-note","Observation: "+item.observation));
   if(item.steps?.length){if(item.type==="THEOREM_PROOF")card.append(el("h4","crh-subheading","Proof / derivation"));const list=el("ol","crh-steps");item.steps.forEach(step=>list.append(el("li","",step)));card.append(list);}
   if(item.facts?.length){const list=el("dl","crh-facts");item.facts.forEach(pair=>{list.append(el("dt","",pair[0]),el("dd","",pair[1]));});card.append(list);}
-  if(item.asset){const figure=el("figure","crh-figure");const img=document.createElement("img");img.src="./"+item.asset;img.alt=item.alt||item.title;img.loading="lazy";img.decoding="async";figure.append(img);if(item.alt)figure.append(el("figcaption","",item.alt));card.append(figure);}
+  if(item.asset||item.assetUrl){const figure=el("figure","crh-figure");const img=document.createElement("img");img.src=item.assetUrl||("./"+item.asset);img.alt=item.alt||item.title;img.loading="lazy";img.decoding="async";figure.append(img);if(item.alt)figure.append(el("figcaption","",item.alt));card.append(figure);}
   if(item.labels?.length){const labels=el("ul","crh-labels");item.labels.forEach(label=>labels.append(el("li","",label)));card.append(labels);}
   if(item.illustrationType)card.append(el("p","crh-note",item.illustrationType));
   else if(item.asset)card.append(el("p","crh-note","Supplementary ExamGuru visual — not yet verified as a reproduction of the NCERT textbook figure."));
   if(item.source)card.append(el("p","crh-note","NCERT reference: "+item.source));
+  if(item.imageCredit){const credit=el("p","crh-note","Image: "+item.imageCredit.author+" · "+item.imageCredit.license+" · "+Math.round(item.imageCredit.fileSizeBytes/1024)+" KB external asset (0 KB added to repository)");const sourceLink=document.createElement("a");sourceLink.href=item.imageCredit.source;sourceLink.target="_blank";sourceLink.rel="noopener noreferrer";sourceLink.textContent="Source and licence";credit.append(" · ",sourceLink);card.append(credit);}
   if(activeChapter?.sourceUrl){const sourceLine=el("p","crh-note");sourceLine.append(document.createTextNode((activeChapter.sourceBook||"NCERT")+" · "+(activeChapter.sourceEdition||"")+" · "));const link=document.createElement("a");link.href=activeChapter.sourceUrl;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Open official chapter PDF";sourceLine.append(link);card.append(sourceLine);}
   if(item.examTip)card.append(el("p","crh-tip","Exam tip: "+item.examTip));
   $("crhCards").append(card);
