@@ -1,78 +1,67 @@
 # M7 — Demo Management
 
-Status: **Implementation in progress; production access gated**
-Working branch: `productisation/m7-demo-management-clean`
-Draft PR: #86
-Dependency: M6 security foundation and provider-neutral API contract
-Cloud DB policy: no learner-data migration or sync; the M7 D1 migration is limited to demo metadata, synthetic sample records and append-only demo audit.
+Status: **Implementation complete in draft PR; production activation gated**
+Branch: `productisation/m7-demo-management-clean`
+PR: #86
+Dependency: M6 security foundation and controlled Cloudflare Worker/D1 deployment.
 
 ## Goal
 
-Allow Platform Admins to demonstrate ExamGuru to prospective institutions and stakeholders without exposing real institutions, real learner records, credentials, restricted content or administrative powers.
+Provide repeatable, time-limited demonstrations without exposing real institutions, real learner records, production credentials or privileged administrative powers.
 
-Both creation paths are supported:
-1. **Pre-created personas:** Institution Admin, Institution Viewer, Teacher, HOD/Teacher, Parent and Student.
-2. **On-demand demos:** Platform Admin selects a permitted role combination and a synthetic data profile.
+## Creation paths
 
-## Approved policy
-
-- Default duration 7 days; allowed choices 1, 3, 7 and 14 days.
-- Every demo receives a unique reserved `DEMO-...` tenant identifier.
-- Synthetic sample records are provisioned into a demo-specific namespace; no production learner or institution records are copied.
-- Platform Admin is never a demo role.
+- Six pre-created personas: Institution Admin, Institution Viewer, Teacher, HOD + Teacher, Parent and Student.
+- On-demand role combinations using an approved synthetic sample profile.
+- Default duration: 7 days. Allowed durations: 1, 3, 7 and 14 days.
+- Every demo has a unique isolated `DEMO-TENANT-...` namespace.
 - HOD is an overlay on Teacher; HOD without Teacher is rejected.
-- Institution Viewer remains a separate read-only persona.
-- Existing HOD appointment policy is preserved: primary/backup model, max two active HODs per department, and cross-department teaching remains valid.
-- All management operations require a trusted server-side Platform Admin grant.
-- Expiry, reset, extension and revoke rotate the session version. Expired and revoked demos are not treated as active.
-- Audit events are append-only and exclude credentials, passwords and session tokens.
-- No demo login credentials or public links are issued by the current slice.
+- Platform Admin cannot be assigned to a demo. Institution Viewer remains a separate read-only role.
 
-## Implemented in PR #86
+## Implemented capabilities
 
-### M7.0 — Policy and persona catalogue
-- Versioned six-persona catalogue with role composition and synthetic sample-data profiles.
-- Role validation rejects Platform Admin and requires Teacher whenever HOD is selected.
-- Institution Viewer remains its own persona.
+### Platform Admin management
+- Dedicated management workspace linked from LMS Administration.
+- Create persona or on-demand demo.
+- List demos and inspect lifecycle audit.
+- Extend, reset synthetic data, or revoke a demo.
+- One-time credentials are returned only to the authenticated Platform Admin on creation and displayed in the management page for copying. The password is not persisted in plaintext or included in audit events.
 
-### M7.1 — Lifecycle domain service
-- Provider-neutral create/list/extend/reset/revoke service.
-- Default 7-day duration and strict 1/3/7/14-day choices.
-- Server-side expiry status and session-version invalidation contract.
-- Authorization callback fails closed; lifecycle events are audited.
+### Demo account security
+- Separate `demo_accounts` and `demo_sessions` tables; demo users are not inserted into production `users` or `auth_sessions`.
+- Random demo username and high-entropy temporary password.
+- Password stored as salted PBKDF2-HMAC-SHA256 hash (210,000 iterations).
+- Demo bearer tokens are random and only their SHA-256 hashes are stored.
+- Demo sign-in is limited by per-username failed-attempt lockout.
+- Demo session lifetime is at most eight hours and never exceeds the demo environment expiry.
+- Every request carrying a recognised demo session is intercepted before normal application authentication. Only `/api/demo/me`, `/api/demo/data` and `/api/demo/logout` are allowed; other application/API paths are denied.
+- Session is invalidated by expiry, revoke, reset or version mismatch. Logout revokes the session.
+- Demo preview is read-only and reads only the current generation of synthetic records for that demo ID.
 
-### M7.2 — Server-side management API foundation
-- Cloudflare Worker routes for create/list/extend/reset/revoke/audit.
-- Platform Admin grant is checked server-side for every management request.
-- D1 migration creates demo environment metadata, demo sample records and append-only audit tables.
-- Expiry is evaluated by the Worker; extend/reset/revoke rotate session versions.
-- The API is not yet issuing demo user sessions or integrating demo sessions into the learner application.
+### Synthetic data and audit
+- Synthetic baseline includes institution, branch, classes, subjects, teacher, learners, parent link and sample assessment.
+- Data records are namespaced by demo ID and reset generation.
+- Demo lifecycle events (create, extend, reset, revoke) are append-only.
+- Credentials, password hashes and session tokens are not written to audit details.
 
-### M7.3 — Synthetic sample data
-- Initial synthetic baseline records cover institution, branch, classes, subjects, teacher, students, parent and a sample assessment.
-- Each generation is isolated by demo ID and reset generation.
-- No production data is queried or copied.
-- This is a seed baseline, not yet a complete production-shaped dataset for every LMS module.
+### Server-side management
+- All management endpoints require an active Platform Admin grant checked by the Worker.
+- D1 schema includes demo metadata, synthetic records, account hashes, demo sessions, login lockout and append-only audit.
+- Expiry and session-version checks are performed server-side, not with browser timers.
 
-### M7.4 — Platform Admin interfaces
-- Dedicated Platform Admin workspace linked from LMS Administration.
-- Supports persona and on-demand creation, duration selection, listing, extend/reset/revoke and audit review.
-- Workspace calls the authenticated Worker API; it does not store admin secrets in browser code.
-- No user credentials or external demo URL are displayed.
+## Production release gates
 
-## Remaining hard release gates
+The implementation is in the draft PR, but it is **not yet live**. Before production activation:
+1. Review and merge the M6 security foundation and reconcile the M7 base/head.
+2. Apply the additive M7 D1 migration to the intended Cloudflare environment.
+3. Set the Worker API URL in the public frontend configuration; keep OAuth secrets and all other secrets in Cloudflare Worker secrets, never in GitHub Pages or repository files.
+4. Deploy the Worker and verify Platform Admin grant bootstrap, CORS allowlist and D1 bindings.
+5. Run live integration tests for account creation/login, expiry, reset, extension, revoke, cross-demo isolation, normal API denial, lockout and audit.
+6. Verify no demo session can access production student, parent, institution, export, report, billing or platform-admin APIs.
+7. Only then enable external distribution of time-limited demo credentials.
 
-1. Implement demo-account provisioning and secure demo login/session issuance.
-2. Enforce demo session expiry, revocation and session-version checks on every protected application request.
-3. Resolve demo tenant and role exclusively from server-side session state; never trust client-supplied tenant or role.
-4. Add an explicit demo route/resource allowlist and deny exports, backups, billing, global security changes, real institution creation/invitations and privileged actions.
-5. Expand synthetic data to the approved module coverage and prove zero production identifiers/references.
-6. Add cross-tenant, IDOR, privilege-escalation, expiry, revoke, reset, extension and export-denial integration tests.
-7. Reconcile against M6 after review, apply migration in a controlled environment, run full LMS regression and complete security review.
-8. Only after explicit approval, deploy Worker/API and issue time-limited demo access.
+No Cloud learner-data migration or sync is part of M7. No existing production student/parent login, Independent Learner context, school data, attempt records or storage keys are intentionally changed.
 
-## Acceptance and release boundary
+## Security boundary
 
-The current branch is an implementation increment, **not a production-ready demo service**. The admin management API and UI are present, but demo-user authentication and per-request application-session enforcement remain incomplete. Do not publish a demo link, create demo credentials, merge or deploy this feature yet.
-
-No current student/parent login, Independent Learner context, school records, learning records, attempt IDs, storage keys or production Pages routes are intentionally changed. Cloud learner-data migration, sync, paid infrastructure activation and production deployment remain deferred pending explicit approval.
+The GitHub repository and GitHub Pages frontend are public. Source code is therefore visible and must not contain secrets. M7 protects server-side data and actions through Worker authorization, hashed credentials/tokens, isolated demo sessions and a strict read-only endpoint allowlist. Repository visibility is not a security boundary. Production secrets must remain in Cloudflare secret bindings; public source must be assumed inspectable.
