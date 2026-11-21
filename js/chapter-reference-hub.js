@@ -2,11 +2,12 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-let manifest=null,activeItems=[];
+let manifest=null,activeItems=[],activeChapter=null;
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=String(text);return n;}
 function render(){
  const subject=$( "crhSubject" ).value, chapterKey=$( "crhChapter" ).value, type=$( "crhType" ).value;
  const group=manifest.subjects.find(s=>s.id===subject), chapter=group?.chapters.find(c=>c.chapterKey===chapterKey);
+ activeChapter=chapter||null;
  activeItems=chapter?.items||[];
  const shown=activeItems.filter(item=>type==="all"||item.type===type);
  $("crhChapterTitle").textContent=chapter?.chapterTitle||"Choose a chapter";
@@ -28,7 +29,9 @@ function render(){
   if(item.asset){const figure=el("figure","crh-figure");const img=document.createElement("img");img.src="./"+item.asset;img.alt=item.alt||item.title;img.loading="lazy";img.decoding="async";figure.append(img);if(item.alt)figure.append(el("figcaption","",item.alt));card.append(figure);}
   if(item.labels?.length){const labels=el("ul","crh-labels");item.labels.forEach(label=>labels.append(el("li","",label)));card.append(labels);}
   if(item.illustrationType)card.append(el("p","crh-note",item.illustrationType));
+  else if(item.asset)card.append(el("p","crh-note","Supplementary ExamGuru visual — not yet verified as a reproduction of the NCERT textbook figure."));
   if(item.source)card.append(el("p","crh-note","NCERT reference: "+item.source));
+  if(activeChapter?.sourceUrl){const sourceLine=el("p","crh-note");sourceLine.append(document.createTextNode((activeChapter.sourceBook||"NCERT")+" · "+(activeChapter.sourceEdition||"")+" · "));const link=document.createElement("a");link.href=activeChapter.sourceUrl;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Open official chapter PDF";sourceLine.append(link);card.append(sourceLine);}
   if(item.examTip)card.append(el("p","crh-tip","Exam tip: "+item.examTip));
   $("crhCards").append(card);
  });
