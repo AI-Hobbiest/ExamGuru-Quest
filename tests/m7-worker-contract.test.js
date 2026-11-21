@@ -3,7 +3,7 @@ const assert=require("node:assert/strict"),fs=require("node:fs");
 const worker=fs.readFileSync("cloudflare/worker.js","utf8"),m7=fs.readFileSync("cloudflare/m7.js","utf8"),migration=fs.readFileSync("cloudflare/migrations/0007_m7_demo_management.sql","utf8"),ui=fs.readFileSync("platform-demo-management.html","utf8"),admin=fs.readFileSync("admin.html","utf8"),login=fs.readFileSync("demo-login.html","utf8"),preview=fs.readFileSync("demo-preview.html","utf8");
 assert(worker.includes("handleM7Login")&&worker.includes("identifyM7DemoSession")&&worker.includes("handleM7DemoSession"),"Worker must import demo login and session enforcement routes");
 assert(worker.includes("handleM7(request,env,who,hasPlatformAdminGrant,json,fail)"),"M7 admin routes must be dispatched after authentication");
-assert(worker.includes("identifyM7DemoSession(request,env)")&&worker.includes("Demo sessions are isolated"),"Demo sessions must be isolated before normal app authentication");
+assert(worker.includes("identifyM7DemoSession(request,env)")&&m7.includes("Demo sessions are isolated"),"Demo sessions must be isolated before normal app authentication");
 for(const endpoint of ["/api/demo/login","/api/demo/me","/api/demo/data","/api/demo/logout"])assert(m7.includes(endpoint),"Missing demo session endpoint "+endpoint);
 assert(m7.includes("PBKDF2")&&m7.includes("210000")&&m7.includes("token_hash"),"Demo credentials and sessions must be hashed server-side");
 for(const route of ["/api/v2/platform/demos","extend","reset","revoke","audit"])assert(m7.includes(route),"Missing M7 route "+route);
