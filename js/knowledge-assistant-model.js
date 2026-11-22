@@ -1,8 +1,8 @@
 /* Browser-local, source-grounded student knowledge retrieval for ExamGuru Quest. */
 (() => {
   "use strict";
-  const norm=value=>String(value??"").toLowerCase().normalize("NFKD").replace(/[\\u0300-\\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim();
-  const words=value=>[...new Set(norm(value).split(/\\s+/).filter(word=>word.length>1))];
+  const norm=value=>String(value??"").toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim();
+  const words=value=>[...new Set(norm(value).split(/\s+/).filter(word=>word.length>1))];
   const flattenCard=(card,board,chapter)=>{
     const parts=[card.title,card.content,card.highlight,card.note,card.examTip,card.question,card.answer,card.revealLabel,
       ...(Array.isArray(card.steps)?card.steps:[]),
@@ -37,10 +37,10 @@
     if(!results.length)return {text:"I couldn't find a close match in the published learning material for your class. Try a chapter name, topic keyword, or subject. I won't guess beyond the available sources.",sources:[]};
     const best=results.slice(0,3);
     const lines=best.map((item,index)=>{
-      const snippet=item.summary||item.text.replace(/\\s+/g," ").slice(0,420);
-      return (index+1)+". **"+item.title+"** — "+snippet+(item.chapter?" ( "+item.chapter+" )":"");
+      const snippet=item.summary||item.text.replace(/\s+/g," ").slice(0,420);
+      return (index+1)+". "+item.title+" — "+snippet+(item.chapter?" ("+item.chapter+")":"");
     });
-    return {text:"I found these relevant parts of your learning library for “"+String(query).trim()+"”:\\n\\n"+lines.join("\\n\\n")+"\\n\\nOpen a source below to study the full material. You can ask a follow-up using the same topic.",sources:best.map(item=>({title:item.title,chapter:item.chapter,subject:item.subjectLabel||item.subject,path:item.path}))};
+    return {text:"I found these relevant parts of your learning library for “"+String(query).trim()+"”:\n\n"+lines.join("\n\n")+"\n\nOpen a source below to study the full material. You can ask a follow-up using the same topic.",sources:best.map(item=>({title:item.title,chapter:item.chapter,subject:item.subjectLabel||item.subject,path:item.path}))};
   }
   const api=Object.freeze({norm,words,buildIndex,search,answer});
   window.ExamGuruKnowledgeAssistantModel=api;
