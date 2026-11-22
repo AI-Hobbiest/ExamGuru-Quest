@@ -1,51 +1,63 @@
-/* Lightweight conversational search over published, class-scoped ExamGuru knowledge. */
+/* Universal role-aware conversational knowledge entry point. */
 (() => {
   "use strict";
   if(window.__examGuruKnowledgeAssistantLoaded)return;
   window.__examGuruKnowledgeAssistantLoaded=true;
   const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;};
-  const safeText=value=>String(value??"");
+  function addFallback(auth,message){
+    if(document.getElementById("egKnowledgeAssistantFallback"))return;
+    const link=el("a","eg-ka-fallback","Open Knowledge & Help");
+    link.id="egKnowledgeAssistantFallback";link.href=auth?.role==="student"?"./study.html":"./help.html";
+    link.setAttribute("aria-label","Open the traditional Knowledge and Help pages");
+    if(message)link.title=message;
+    document.body.appendChild(link);
+  }
   async function loadJson(path){
     const response=await fetch(path,{cache:"no-store"});
     if(!response.ok)throw new Error("Could not load "+path);
     return response.json();
   }
   function mount(auth){
-    if(!auth||auth.role!=="student"||document.getElementById("egKnowledgeAssistant"))return;
-    const classId=String(auth.classId||"");
-    if(!classId)return;
-    const launcher=el("button","eg-ka-launcher","✦ Ask your Study Library");
+    if(!auth||["guest","student_pending"].includes(auth.role)||document.getElementById("egKnowledgeAssistant"))return;
+    const model=window.ExamGuruKnowledgeAssistantModel;
+    const profile=model&&model.resolveProfile(auth);
+    if(!profile)return;
+    if(typeof fetch!=="function"||typeof Promise!=="function"||!document.createElement){
+      addFallback(auth,"Conversational search is not supported in this browser.");
+      return;
+    }
+    const launcher=el("button","eg-ka-launcher","✦ Ask ExamGuru");
     launcher.type="button";launcher.setAttribute("aria-expanded","false");launcher.setAttribute("aria-controls","egKnowledgeAssistant");
-    const panel=el("section","eg-ka-panel");panel.id="egKnowledgeAssistant";panel.hidden=true;panel.setAttribute("aria-label","Student Knowledge Assistant");
+    const panel=el("section","eg-ka-panel");panel.id="egKnowledgeAssistant";panel.hidden=true;panel.setAttribute("aria-label",profile.label+" conversational assistant");
     const header=el("div","eg-ka-header"),heading=el("div","eg-ka-heading");
-    heading.append(el("strong","","Study Assistant"),el("span","","Class "+classId+" · Published learning sources"));
+    heading.append(el("strong","","Ask ExamGuru"),el("span","",profile.label+" · "+(profile.classId?"Class "+profile.classId:profile.institutionId?"Institution workspace":"Platform workspace")));
     const close=el("button","eg-ka-close","×");close.type="button";close.setAttribute("aria-label","Close assistant");header.append(heading,close);
     const messages=el("div","eg-ka-messages");messages.setAttribute("aria-live","polite");
-    const welcome=el("article","eg-ka-message eg-ka-bot");welcome.textContent="Hi! Ask me about a chapter, concept, formula or revision topic. I search the published Study Library and Visual Revision Boards for your class and show the sources I used.";
-    messages.appendChild(welcome);
-    const form=el("form","eg-ka-form"),input=el("input","eg-ka-input");input.type="search";input.placeholder="Ask about a topic…";input.maxLength=240;input.setAttribute("aria-label","Ask a study question");input.required=true;
+    const welcome=el("article","eg-ka-message eg-ka-bot");welcome.textContent=profile.greeting;messages.appendChild(welcome);
+    const form=el("form","eg-ka-form"),input=el("input","eg-ka-input");input.type="search";input.placeholder="Ask ExamGuru…";input.maxLength=300;input.setAttribute("aria-label","Ask ExamGuru");input.required=true;
     const send=el("button","eg-ka-send","Ask");send.type="submit";form.append(input,send);
-    const status=el("p","eg-ka-status","Answers are grounded in published material. No question or student record is sent to an AI service.");
+    const status=el("p","eg-ka-status","Searching only published material available to this workspace. Actions that change records are not enabled in this GitHub-only phase.");
     panel.append(header,messages,form,status);document.body.append(launcher,panel);
-    let index=[],loading=true,lastQuery="";
+    let index=[],loading=true;
     const toggle=open=>{panel.hidden=!open;launcher.setAttribute("aria-expanded",String(open));if(open)input.focus();};
     launcher.addEventListener("click",()=>toggle(panel.hidden));close.addEventListener("click",()=>toggle(false));
     const addMessage=(text,kind)=>{const message=el("article","eg-ka-message "+(kind==="user"?"eg-ka-user":"eg-ka-bot"));message.textContent=text;messages.appendChild(message);messages.scrollTop=messages.scrollHeight;return message;};
     async function initialise(){
       try{
         const [visual,manifest]=await Promise.all([loadJson("./data/visual-revision.json"),loadJson("./data/knowledge-base.json")]);
-        index=window.ExamGuruKnowledgeAssistantModel.buildIndex(visual,manifest,classId);
-        loading=false;
-        status.textContent=index.length+" published learning entries indexed for Class "+classId+". Search stays in this browser.";
-      }catch(error){loading=false;status.textContent="The learning catalogue could not be loaded. Please refresh and try again.";addMessage("I couldn't load the published knowledge library just now. Please refresh the page and try again.","bot");}
+        index=model.buildIndex(visual,manifest,auth);loading=false;
+        status.textContent=index.length+" published entries available to the "+profile.label+" workspace. Search stays in this browser.";
+      }catch(error){
+        loading=false;status.textContent="The conversational catalogue is unavailable in this browser session.";
+        addMessage("I couldn't load the published knowledge catalogue. You can still use the traditional learning and help pages.","bot");
+        addFallback(auth,"Knowledge catalogue unavailable");
+      }
     }
     form.addEventListener("submit",event=>{
       event.preventDefault();const query=input.value.trim();if(!query)return;
-      addMessage(query,"user");input.value="";lastQuery=query;
-      if(loading){addMessage("The learning library is still loading. Please try again in a moment.","bot");return;}
-      const results=window.ExamGuruKnowledgeAssistantModel.search(index,query,5);
-      const response=window.ExamGuruKnowledgeAssistantModel.answer(results,query);
-      const message=addMessage(response.text,"bot");
+      addMessage(query,"user");input.value="";
+      if(loading){addMessage("The knowledge catalogue is still loading. Please try again in a moment.","bot");return;}
+      const results=model.search(index,query,5),response=model.answer(results,query,profile),message=addMessage(response.text,"bot");
       if(response.sources.length){
         const sources=el("div","eg-ka-sources");
         response.sources.forEach(source=>{
