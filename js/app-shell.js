@@ -1,6 +1,12 @@
 /* Responsive, session-aware navigation for ExamGuru Quest. */
 (() => {
   "use strict";
+  /* Resolve assistant assets beside this shell script, not against document.baseURI.
+     A page-level <base> element or nested route must not redirect these requests. */
+  const appShellScript=document.currentScript;
+  const assistantAssetBase=appShellScript&&appShellScript.src
+    ?new URL("../",appShellScript.src)
+    :new URL("./",location.href);
   /* Cache-bust shared shell CSS so workspace-switcher styles reach every portal page. */
   const shellCss=document.querySelector('link[href*="css/app-shell.css"]');
   if(shellCss)shellCss.href="./css/app-shell.css?v=20261122-m8-role-chat";
@@ -237,7 +243,7 @@
       const addCss=()=>{
         if(document.querySelector('link[data-eg-knowledge-assistant-css]'))return;
         const css=document.createElement("link");css.rel="stylesheet";css.dataset.egKnowledgeAssistantCss="true";
-        css.href=new URL("./css/knowledge-assistant.css?v=20261122-m8-loader-v3",document.baseURI).href;document.head.appendChild(css);
+        css.href=new URL("./css/knowledge-assistant.css?v=20261122-m8-loader-v4",assistantAssetBase).href;document.head.appendChild(css);
       };
       const loadScript=(id,path)=>{
         const existing=document.getElementById(id);
@@ -245,7 +251,7 @@
         if(existing)existing.remove();
         return new Promise((resolve,reject)=>{
           const script=document.createElement("script");script.id=id;script.async=false;
-          script.src=new URL(path,document.baseURI).href;
+          script.src=new URL(path,assistantAssetBase).href;
           script.onload=()=>{script.dataset.egLoaded="true";resolve(script);};
           script.onerror=()=>{script.remove();reject(new Error("Unable to load "+path));};
           document.head.appendChild(script);
@@ -253,9 +259,9 @@
       };
       try{
         addCss();
-        if(!window.ExamGuruKnowledgeAssistantModel)await loadScript("egKnowledgeAssistantModelScript","./js/knowledge-assistant-model.js?v=20261122-m8-loader-v3");
+        if(!window.ExamGuruKnowledgeAssistantModel){try{await loadScript("egKnowledgeAssistantModelScript","./js/knowledge-assistant-model.js?v=20261122-m8-loader-v4");}catch(error){fallback("model script loading",error);return;}}
         if(!window.ExamGuruKnowledgeAssistantModel)throw new Error("model API missing after script load");
-        if(!window.ExamGuruKnowledgeAssistant)await loadScript("egKnowledgeAssistantScript","./js/knowledge-assistant.js?v=20261122-m8-loader-v3");
+        if(!window.ExamGuruKnowledgeAssistant){try{await loadScript("egKnowledgeAssistantScript","./js/knowledge-assistant.js?v=20261122-m8-loader-v4");}catch(error){fallback("assistant script loading",error);return;}}
         if(!window.ExamGuruKnowledgeAssistant||typeof window.ExamGuruKnowledgeAssistant.mount!=="function")throw new Error("assistant mount API missing after script load");
         let mounted=false;
         try{mounted=window.ExamGuruKnowledgeAssistant.mount(auth);}catch(error){fallback("launcher initialisation",error);return;}
