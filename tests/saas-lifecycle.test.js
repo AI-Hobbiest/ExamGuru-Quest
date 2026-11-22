@@ -46,6 +46,10 @@ result=lifecycle.resolveEntitlements(plan,subscription,[grant("g-scoped","cbse.c
 assert.equal(result.features["cbse.curriculum"],true,"a class-scoped grant is not widened into a tenant-wide deny");
 assert.equal(result.scopedGrants.length,1,"scoped grants remain explicitly scoped");
 assert.equal(lifecycle.resolveEntitlements(plan,{...subscription,status:"suspended"},[],at).active,false);
+assert.equal(lifecycle.resolveEntitlements(plan,{...subscription,currentPeriodStart:"2026-11-20T00:00:00.000Z"},[],at).active,false,"future subscription period is not active early");
+assert.equal(lifecycle.resolveEntitlements(plan,{...subscription,currentPeriodEnd:"2026-11-10T00:00:00.000Z"},[],at).active,false,"expired subscription period is inactive");
+assert.equal(lifecycle.resolveEntitlements(plan,{...subscription,status:"trialing",trialEndsAt:"2026-11-10T00:00:00.000Z"},[],at).active,false,"expired trial is inactive");
+assert.equal(lifecycle.resolveEntitlements({...plan,version:2},subscription,[],at).active,false,"a subscription cannot silently drift to a different plan version");
 const legacyMapped=lifecycle.mapLegacyInstitutionEntitlements("tenant-001",{curriculum:{enabled:true,classIds:["6","10"]},competitiveExams:{enabled:true,examIds:["CLAT","JEE_MAIN"]}},at);
 assert.equal(legacyMapped.length,4,"legacy curriculum and exam add-ons map to explicit scoped migration grants");
 assert.ok(legacyMapped.every(g=>g.source==="migration"&&g.effect==="allow"&&g.tenantId==="tenant-001"));
