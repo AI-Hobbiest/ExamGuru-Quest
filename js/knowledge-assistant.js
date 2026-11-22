@@ -39,7 +39,7 @@
     }
     return docs;
   }
-  async function answerBankCount(query){
+  async function answerBankCount(query,auth){
     const model=window.ExamGuruKnowledgeAssistantModel,catalog=await readJson('data/classes.json');
     const sources=model.bankSources(catalog,query,auth);
     const loaded=await Promise.all(sources.map(async source=>{try{const bank=await readJson(source.path),items=bankQuestionItems(bank);return {...source,count:items.length,approved:bankApprovedCount(items),title:bank.title||''};}catch(_){return null;}}));
