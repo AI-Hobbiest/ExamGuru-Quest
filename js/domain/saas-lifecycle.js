@@ -30,6 +30,11 @@
       throw new Error("Invalid " + label + " transition: " + current + " -> " + next);
     }
   }
+  function assertCommand(command) {
+    if (!command || typeof command.idempotencyKey !== "string" || command.idempotencyKey.trim().length < 8) {
+      throw new TypeError("A stable idempotency key is required for every lifecycle command.");
+    }
+  }
   function assertExpectedVersion(record, expectedVersion) {
     if (!Number.isInteger(expectedVersion) || expectedVersion < 1 || record.version !== expectedVersion) {
       throw new Error("Version conflict: expected " + expectedVersion + ", current " + record.version);
@@ -113,6 +118,7 @@
       async getCurrentSubscription() { return clone(await repos.subscriptions.getCurrent()); },
       async getCurrentEntitlements(at) { return getCurrentEntitlements(at); },
       async transitionOnboarding(requestId, nextStatus, patch, command) {
+        assertCommand(command);
         const replay = command && command.idempotencyKey ? await repos.onboarding.getByIdempotencyKey(command.idempotencyKey) : null;
         if (replay) return clone(replay);
         const current = await repos.onboarding.getById(String(requestId));
@@ -129,6 +135,7 @@
         return clone(await repos.onboarding.save(next, { expectedVersion: current.version, idempotencyKey: command && command.idempotencyKey }));
       },
       async transitionSubscription(nextStatus, patch, command) {
+        assertCommand(command);
         const replay = command && command.idempotencyKey ? await repos.subscriptions.getByIdempotencyKey(command.idempotencyKey) : null;
         if (replay) return clone(replay);
         const current = await repos.subscriptions.getCurrent();
@@ -140,6 +147,7 @@
         return clone(await repos.subscriptions.save(next, { expectedVersion: current.version, idempotencyKey: command && command.idempotencyKey }));
       },
       async saveEntitlementGrant(grant, command) {
+        assertCommand(command);
         if (!grant || !grant.grantId) throw new TypeError("An entitlement grant ID is required.");
         const replay = command && command.idempotencyKey ? await repos.entitlements.getByIdempotencyKey(command.idempotencyKey) : null;
         if (replay) return clone(replay);
@@ -160,7 +168,7 @@
       }
     });
   }
-  const api = Object.freeze({ ONBOARDING_TRANSITIONS, SUBSCRIPTION_TRANSITIONS, assertTransition, assertExpectedVersion,
+  const api = Object.freeze({ ONBOARDING_TRANSITIONS, SUBSCRIPTION_TRANSITIONS, assertTransition, assertCommand, assertExpectedVersion,
     subscriptionAccess, resolveEntitlements, createSaasLifecycle });
   globalThis.ExamGuruSaasLifecycle = api;
   if (typeof module !== "undefined" && module.exports) module.exports = api;
