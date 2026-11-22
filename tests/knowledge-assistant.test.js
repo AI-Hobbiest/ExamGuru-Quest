@@ -56,7 +56,7 @@ assert.ok(shell.includes("assistantAssetBase"),"assistant assets must resolve fr
 assert.ok(!shell.includes("new URL(path,document.baseURI)"),"assistant assets must not depend on a page-level base URL");
 assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes("ExamGuruKnowledgeAssistant=Object.freeze"),"assistant must expose an explicit mount API for deterministic initialisation");
 assert.ok(fs.readFileSync("css/knowledge-assistant.css","utf8").includes(".eg-ka-panel"));
-const launcherRoutes=["admin.html","institution-operations.html","teacher-workspace.html","parent.html","dashboard.html","practice.html","study.html","help.html","user-management.html"];
+const launcherRoutes=["admin.html","institution-operations.html","teacher-workspace.html","parent.html","dashboard.html","practice.html","study.html","help.html","user-management.html","index.html","profile.html","learning.html","exam-practice.html","assigned-paper.html","assigned-test.html","clat.html","clat-dashboard.html","clat-login.html","competitive-exams-admin.html","institution-academics.html","institution-assignments.html","institution-branches.html","institution-competitive-exams.html","institution-content.html","institution-departments.html","institution-enrolments.html","institution-learning.html","platform-entitlements.html","pyq-library.html"];
 launcherRoutes.forEach(path=>{
   const html=fs.readFileSync(path,"utf8");
   assert.match(html,/app-shell\.js\?v=m8-loader-v5/,path+" must load the current assistant-aware app shell without stale browser cache");
