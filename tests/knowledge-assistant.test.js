@@ -18,6 +18,7 @@ const manifest={schemaVersion:1,kind:"knowledge-base-manifest",resources:[
  {resourceId:"draft",title:"Private draft",summary:"not published",path:"draft.pdf",status:"draft",classIds:["6"],audienceRoles:["student"]},
  {resourceId:"c10",title:"Class 10 notes",summary:"Class 10",path:"knowledge/c10.pdf",status:"published",classIds:["10"],audienceRoles:["student"]},
  {resourceId:"teacher-guide",title:"Teacher assessment guide",summary:"Assigned class assessment guidance",path:"knowledge/teacher.pdf",status:"published",audienceRoles:["teacher"]},
+ {resourceId:"teacher-class",title:"Class-specific teacher plan",summary:"Class-specific assessment",path:"knowledge/teacher-class.pdf",status:"published",audienceRoles:["teacher"],institutionId:"INST-1",classIds:["6"]},
  {resourceId:"hod-report",title:"Department workload guide",summary:"HOD workload and department reports",path:"knowledge/hod.pdf",status:"published",audienceRoles:["hod"],institutionId:"INST-1",departmentIds:["SCI"]},
  {resourceId:"viewer-report",title:"Institution report guide",summary:"Read-only institution report access",path:"knowledge/viewer.pdf",status:"published",audienceRoles:["institution_viewer"],institutionId:"INST-1"}
 ]};
@@ -30,12 +31,14 @@ assert.ok(model.search(studentIndex,"nutrition notes").some(item=>item.id==="c6-
 assert.equal(model.search(studentIndex,"photosynthesis").length,0,"other-class content must not leak into the class index");
 assert.equal(model.search(studentIndex,"teacher assessment").length,0,"teacher resources must not leak to students");
 const teacherIndex=model.buildIndex(visual,manifest,{role:"institution",institutionRole:"teacher",institutionId:"INST-1"});
-assert.equal(teacherIndex.length,1,"teacher receives only teacher-audience published resources");
+assert.equal(teacherIndex.length,1,"teacher receives general teacher-audience resources only when assignment scope is unavailable");
+assert.equal(model.buildIndex(visual,manifest,{role:"institution",institutionRole:"teacher",institutionId:"INST-1",assignedClassIds:["6"]}).length,2,"teacher receives class-scoped material only for assigned classes");
 assert.equal(teacherIndex[0].id,"teacher-guide");
 const hodIndex=model.buildIndex(visual,manifest,{role:"institution",institutionRole:"hod",institutionId:"INST-1",departmentIds:["SCI"]});
 assert.equal(hodIndex.length,1,"HOD receives only matching institution and department material");
 const otherHodIndex=model.buildIndex(visual,manifest,{role:"institution",institutionRole:"hod",institutionId:"INST-2",departmentIds:["SCI"]});
 assert.equal(otherHodIndex.length,0,"institution-scoped resources must not cross institution boundaries");
+assert.equal(model.buildIndex(visual,manifest,{role:"institution",institutionRole:"hod",institutionId:"INST-1"}).length,0,"department resources are hidden when department scope is unavailable");
 const viewerIndex=model.buildIndex(visual,manifest,{role:"institution",institutionRole:"institution_viewer",institutionId:"INST-1"});
 assert.equal(viewerIndex.length,1,"viewer can retrieve only explicitly viewer-audience content");
 const adminProfile=model.resolveProfile({role:"admin"});
