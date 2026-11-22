@@ -88,10 +88,10 @@ assert.ok(fs.readFileSync("js/app-shell.js","utf8").includes('window.__egKnowled
 assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes('window.__examGuruKnowledgeAssistantLoaded&&window.ExamGuruKnowledgeAssistant'),"a partial earlier load must not block API recovery");
 
 const assistantSource=fs.readFileSync("js/knowledge-assistant.js","utf8");
-assert.ok(assistantSource.includes('readJson("data/visual-revision.json")'),"assistant must retrieve the published Visual Revision catalogue from GitHub Pages");
-assert.ok(assistantSource.includes('readJson("data/knowledge-base.json")'),"assistant must retrieve the published Knowledge Base manifest from GitHub Pages");
-assert.ok(assistantSource.includes("model.bankSources(catalog,query)"),"question-bank discovery must be driven by the published class catalogue");
-assert.ok(assistantSource.includes("answerBankCount(query)"),"question-bank counts must use the generic multi-bank count path");
+assert.ok(assistantSource.includes("readJson('data/visual-revision.json')"),"assistant must retrieve the published Visual Revision catalogue from GitHub Pages");
+assert.ok(assistantSource.includes("readJson('data/knowledge-base.json')"),"assistant must retrieve the published Knowledge Base manifest from GitHub Pages");
+assert.ok(assistantSource.includes("model.bankSources(catalog,query||'',auth)"),"question-bank discovery must be driven by the published class catalogue");
+assert.ok(assistantSource.includes("answerBankCount(query,auth)"),"question-bank counts must use the generic multi-bank count path");
 assert.ok(assistantSource.includes("readJson('data/classes.json')"),"the assistant must load the published class and subject catalogue");
 assert.ok(assistantSource.includes("bankQuestionItems(bank)"),"question counts must support both chapter-grouped and flat exam-paper bank formats");
 assert.ok(assistantSource.includes("GitHub-hosted published files"),"assistant must disclose the GitHub-only retrieval boundary");
