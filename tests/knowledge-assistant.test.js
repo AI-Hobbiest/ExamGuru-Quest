@@ -24,17 +24,22 @@ assert.equal(m.classifyIntent("How many students we have for now?"),"student-cou
 assert.equal(m.classifyIntent("How many XP Points I have?"),"student-xp");
 assert.equal(m.classifyIntent("Do we have backup HOD for all departments?"),"hod-coverage");
 assert.equal(m.classifyIntent("How many classes assigned to me?"),"teacher-assignment-count");
+assert.equal(m.classifyIntent("How many classes do I teach?"),"teacher-assignment-count");
+assert.equal(m.classifyIntent("Have all departments got an appointed HOD?"),"hod-coverage");
+assert.equal(m.classifyIntent("Explain how much water remains in the jug."),"knowledge");
 assert.equal(m.classifyIntent("A 2 L jug is full. How much water remains?"),"knowledge","ordinary curriculum questions must stay in educational retrieval");
 assert.match(m.formatOperationalUnavailable("your XP total"),/won’t guess|won't guess/i);
 assert.match(m.answer([],"How can you help me",p).text,/content add-ons enabled for your institution/i);assert.equal(m.answer([],"hello",p).text.startsWith("Hello!"),true);
 const runtime=fs.readFileSync("js/knowledge-assistant.js","utf8");assert.ok(runtime.includes("ExamGuruInstitutionContent"));assert.ok(runtime.includes("getEntitlements"));
 assert.ok(runtime.includes("answerOperational"));
 assert.ok(runtime.includes("institutionState(auth)"));
-assert.ok(runtime.includes("C10Gamification.calculate(attempts)"));assert.ok(!/cloudflare|supabase|firebase/i.test(runtime));
+assert.ok(runtime.includes("C10Gamification.calculate(attempts)"));
+assert.ok(runtime.includes("I won’t guess."));
+assert.ok(!runtime.includes("String(err?.message||\"\""));assert.ok(!/cloudflare|supabase|firebase/i.test(runtime));
 
 const shell=fs.readFileSync("js/app-shell.js","utf8");
-assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v10"));
-assert.ok(shell.includes("knowledge-assistant.js?v=20261122-m8-loader-v10"));
-assert.ok(shell.includes("knowledge-assistant.css?v=20261122-m8-loader-v10"));
-for(const page of ["admin.html","index.html"])assert.ok(fs.readFileSync(page,"utf8").includes("app-shell.js?v=m8-loader-v9"));
+assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v11"));
+assert.ok(shell.includes("knowledge-assistant.js?v=20261122-m8-loader-v11"));
+assert.ok(shell.includes("knowledge-assistant.css?v=20261122-m8-loader-v11"));
+for(const page of ["admin.html","index.html"])assert.ok(fs.readFileSync(page,"utf8").includes("app-shell.js?v=m8-loader-v10"));
 console.log("M8 entitlement, tenant-scope and cache-busted assistant tests passed.");
