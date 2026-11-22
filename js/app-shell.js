@@ -243,7 +243,7 @@
       const addCss=()=>{
         if(document.querySelector('link[data-eg-knowledge-assistant-css]'))return;
         const css=document.createElement("link");css.rel="stylesheet";css.dataset.egKnowledgeAssistantCss="true";
-        css.href=new URL("./css/knowledge-assistant.css?v=20261122-m8-loader-v11",assistantAssetBase).href;document.head.appendChild(css);
+        css.href=new URL("./css/knowledge-assistant.css?v=20261122-m8-loader-v12",assistantAssetBase).href;document.head.appendChild(css);
       };
       const loadScript=(id,path)=>{
         const existing=document.getElementById(id);
