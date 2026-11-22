@@ -88,7 +88,10 @@ assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes('window._
 const assistantSource=fs.readFileSync("js/knowledge-assistant.js","utf8");
 assert.ok(assistantSource.includes('readJson("data/visual-revision.json")'),"assistant must retrieve the published Visual Revision catalogue from GitHub Pages");
 assert.ok(assistantSource.includes('readJson("data/knowledge-base.json")'),"assistant must retrieve the published Knowledge Base manifest from GitHub Pages");
-assert.ok(assistantSource.includes('readJson("data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json")'),"question-bank counts must come from the maintained GitHub repository source");
+assert.ok(assistantSource.includes("model.bankSources(catalog,query)"),"question-bank discovery must be driven by the published class catalogue");
+assert.ok(assistantSource.includes("answerBankCount(query)"),"question-bank counts must use the generic multi-bank count path");
+assert.ok(assistantSource.includes("readJson('data/classes.json')"),"the assistant must load the published class and subject catalogue");
+assert.ok(assistantSource.includes("bankQuestionItems(bank)"),"question counts must support both chapter-grouped and flat exam-paper bank formats");
 assert.ok(assistantSource.includes("GitHub-hosted published files"),"assistant must disclose the GitHub-only retrieval boundary");
 assert.ok(assistantSource.includes("NOT an authorization boundary")||assistantSource.includes("not available in this GitHub-only version"),"assistant must disclose that private institution and cross-user data are unavailable");
 assert.ok(!assistantSource.includes("C10Api"),"assistant must not depend on the external API client");
@@ -99,4 +102,6 @@ const worker=fs.readFileSync("cloudflare/worker.js","utf8");
 assert.ok(!worker.includes("async function assistantQuery"),"M8 must not add an Ask ExamGuru Worker endpoint");
 assert.ok(assistantSource.includes("fetch(asset(path)"),"published source files must be fetched directly from GitHub Pages");
 assert.ok(assistantSource.includes("model.search(index,query,5)"),"repository content must be searched through the role-aware retrieval model");
+assert.ok(assistantSource.includes("sourceType:'question-bank'"),"published question-bank content must be indexed for topic search");
+assert.ok(assistantSource.includes("loadIndex(auth,query)"),"retrieval must scope published bank loading to the user's query");
 console.log("M8 GitHub-only assistant tests passed: repository-backed retrieval, source links, no external API and no Cloudflare assistant endpoint.");
