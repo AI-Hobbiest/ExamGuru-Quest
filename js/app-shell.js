@@ -219,6 +219,45 @@
     const author=document.querySelector('meta[name="author"]');
     if(author)author.setAttribute("content","AI-Enthusiast");
   }
+  function loadKnowledgeAssistant(auth){
+    if(window.__egKnowledgeAssistantLoadPromise)return window.__egKnowledgeAssistantLoadPromise;
+    window.__egKnowledgeAssistantLoadPromise=(async()=>{
+      const fallback=(stage,error)=>{
+        if(document.getElementById("egKnowledgeAssistantFallback"))return;
+        const link=document.createElement("a");link.id="egKnowledgeAssistantFallback";link.className="eg-ka-fallback";
+        link.href=auth.role==="student"?"./study.html":"./help.html";
+        link.textContent="Open Knowledge & Help";link.title="Ask ExamGuru could not start: "+stage+(error&&error.message?" ("+error.message+")":"");
+        document.body.appendChild(link);
+      };
+      const addCss=()=>{
+        if(document.querySelector('link[data-eg-knowledge-assistant-css]'))return;
+        const css=document.createElement("link");css.rel="stylesheet";css.dataset.egKnowledgeAssistantCss="true";
+        css.href=new URL("./css/knowledge-assistant.css?v=20261122-m8-loader-v2",document.baseURI).href;document.head.appendChild(css);
+      };
+      const loadScript=(id,path)=>{
+        const existing=document.getElementById(id);
+        if(existing&&existing.dataset.egLoaded==="true")return Promise.resolve(existing);
+        if(existing)existing.remove();
+        return new Promise((resolve,reject)=>{
+          const script=document.createElement("script");script.id=id;script.async=false;
+          script.src=new URL(path,document.baseURI).href;
+          script.onload=()=>{script.dataset.egLoaded="true";resolve(script);};
+          script.onerror=()=>{script.remove();reject(new Error("Unable to load "+path));};
+          document.head.appendChild(script);
+        });
+      };
+      try{
+        addCss();
+        if(!window.ExamGuruKnowledgeAssistantModel)await loadScript("egKnowledgeAssistantModelScript","./js/knowledge-assistant-model.js?v=20261122-m8-loader-v2");
+        if(!window.ExamGuruKnowledgeAssistant)await loadScript("egKnowledgeAssistantScript","./js/knowledge-assistant.js?v=20261122-m8-loader-v2");
+        if(window.ExamGuruKnowledgeAssistant&&typeof window.ExamGuruKnowledgeAssistant.mount==="function"){
+          const mounted=window.ExamGuruKnowledgeAssistant.mount(auth);
+          if(!mounted&&!document.getElementById("egKnowledgeAssistant"))fallback("role profile or launcher initialisation");
+        }else fallback("assistant initialisation");
+      }catch(error){fallback("script loading",error);}
+    })().finally(()=>{window.__egKnowledgeAssistantLoadPromise=null;});
+    return window.__egKnowledgeAssistantLoadPromise;
+  }
   async function createNav(){
     if(document.getElementById("c10Sidebar"))return;
     /* Reserve the shell columns before auth/config reads to avoid first-paint overlap. */
@@ -227,13 +266,7 @@
     const current=getLocation(),auth=await authState();
     window.ExamGuruAuthState=auth;
     window.dispatchEvent(new CustomEvent("examguru-auth-state-ready",{detail:auth}));
-    if(!["guest","student_pending"].includes(auth.role)&&!document.getElementById("egKnowledgeAssistantModelScript")){
-      const assistantCss=document.createElement("link");assistantCss.rel="stylesheet";assistantCss.href="./css/knowledge-assistant.css?v=m8-role-chat-v2";document.head.appendChild(assistantCss);
-      const modelScript=document.createElement("script");modelScript.id="egKnowledgeAssistantModelScript";modelScript.src="./js/knowledge-assistant-model.js?v=m8-role-chat-v2";
-      modelScript.onload=()=>{const assistantScript=document.createElement("script");assistantScript.src="./js/knowledge-assistant.js?v=m8-role-chat-v2";assistantScript.onerror=()=>{const fallback=document.createElement("a");fallback.id="egKnowledgeAssistantFallback";fallback.className="eg-ka-fallback";fallback.href=auth.role==="student"?"./study.html":"./help.html";fallback.textContent="Open Knowledge & Help";document.body.appendChild(fallback);};document.body.appendChild(assistantScript);};
-      modelScript.onerror=()=>{const fallback=document.createElement("a");fallback.id="egKnowledgeAssistantFallback";fallback.className="eg-ka-fallback";fallback.href=auth.role==="student"?"./study.html":"./help.html";fallback.textContent="Open Knowledge & Help";document.body.appendChild(fallback);};
-      document.body.appendChild(modelScript);
-    }
+    if(!["guest","student_pending"].includes(auth.role))loadKnowledgeAssistant(auth);
     if(!auth.localTestMode&&auth.role==="institution"){try{sessionStorage.setItem("examguru_active_role_v1",auth.institutionRole||"institution_viewer");sessionStorage.setItem("examguru_active_institution_v1",auth.institutionId||"");}catch(_){}}
     if(!auth.localTestMode&&auth.role==="admin"){try{sessionStorage.setItem("examguru_active_role_v1","platform_admin");}catch(_){}}
     if(auth.localTestMode&&current.file==="admin.html"&&auth.role!=="admin"){location.replace(auth.role==="institution"?"./institution-operations.html":auth.role==="parent"?"./parent.html":"./dashboard.html");return;}
@@ -317,7 +350,7 @@
     const mobileCopy=node("div","c10-topbar-copy");
     mobileCopy.append(node("div","c10-mobile-title","ExamGuru Quest"),node("div","c10-mobile-sub",auth.localTestMode?"Local role preview · "+(auth.role==="admin"?"Platform Admin":auth.role==="institution"?(auth.institutionRole||"Institution Admin").replace(/_/g," "):auth.role):clatExperience?"AI-Enthusiast · CLAT UG 2027":auth.role==="guest"?"Sign in to continue":(auth.username||"Student")+" · "+(auth.role==="admin"?"Administrator":auth.role==="parent"?"Parent":"Class "+String(auth.classId||"not assigned"))));
     const localRoles=auth.localTestMode?(()=>{try{const directory=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null");const u=(directory?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(auth.username||"").toLowerCase());const roles=[...new Set((u?.roles||[]).filter(x=>x.role!=="student"||x.classId).map(x=>x.role))];return roles.length?roles:["platform_admin","school_admin","teacher","parent","institution_viewer"];}catch(_){return ["platform_admin","school_admin","teacher","parent","student","institution_viewer"];}})():[];
-    const workspaceOptions=auth.localTestMode?[{key:"platform_admin",role:"admin",label:"Platform Admin"},...(()=>{try{const d=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null"),u=(d?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(auth.username||"").toLowerCase()),roles=(u?.roles||[]).filter(r=>r.role!=="platform_admin"&&(r.role!=="student"||r.classId)).map(r=>({key:r.role+"@"+(r.institutionId||""),role:["school_admin","institution_viewer","teacher"].includes(r.role)?"institution":r.role,institutionRole:r.role,institutionId:r.institutionId,label:({school_admin:"Institution Admin",teacher:"Teacher",parent:"Parent",student:"Student",institution_viewer:"Institution Viewer"})[r.role]||r.role}));roles.filter(x=>x.institutionRole==="teacher").slice().forEach(x=>roles.push({key:"hod@"+x.institutionId,role:"institution",institutionRole:"hod",institutionId:x.institutionId,label:"HOD + Teacher · "+((d?.institutions||[]).find(i=>i.institutionId===x.institutionId)?.name||"Institution")+" (preview)"}));const known=new Set(roles.filter(x=>x.institutionId).map(x=>x.institutionId));(d?.institutions||[]).filter(i=>i.status==="active"&&!known.has(i.institutionId)).forEach(i=>roles.push({key:"school_admin@"+i.institutionId,role:"institution",institutionRole:"school_admin",institutionId:i.institutionId,label:"Institution Admin · "+i.name+" (preview)"}));if(roles.some(x=>x.key.startsWith("student@"))){const idx=roles.findIndex(x=>x.key.startsWith("student@"));roles.splice(idx,1,...["3","6","10","CLAT"].map(cls=>({key:"student@"+cls,role:"student",institutionRole:"student",institutionId:"TEST-INSTITUTION-001",label:"Student · "+(cls==="CLAT"?"CLAT UG 2027":"Class "+cls),contentClassId:cls})));}return roles;}catch(_){return [];}})()]:(auth.availableWorkspaces||[]);
+    const workspaceOptions=auth.localTestMode?[{key:"platform_admin",role:"admin",label:"Platform Admin"},...(()=>{try{const d=JSON.parse(localStorage.getItem("examguru_iam_local_v1")||"null"),u=(d?.users||[]).find(x=>String(x.username||"").toLowerCase()===String(auth.username||"").toLowerCase()),roles=(u?.roles||[]).filter(r=>r.role!=="platform_admin"&&(r.role!=="student"||r.classId)).map(r=>({key:r.role+"@"+(r.institutionId||""),role:["school_admin","institution_viewer","teacher"].includes(r.role)?"institution":r.role,institutionRole:r.role,institutionId:r.institutionId,label:({school_admin:"Institution Admin",teacher:"Teacher",parent:"Parent",student:"Student",institution_viewer:"Institution Viewer"})[r.role]||r.role}));roles.filter(x=>x.institutionRole==="teacher").slice().forEach(x=>roles.push({key:"hod@"+x.institutionId,role:"institution",institutionRole:"hod",institutionId:x.institutionId,label:"HOD + Teacher · "+((d?.institutions||[]).find(i=>i.institutionId===x.institutionId)?.name||"Institution")+" (preview)"}));const known=new Set(roles.filter(x=>x.institutionId).map(x=>x.institutionId));(d?.institutions||[]).filter(i=>i.status==="active"&&!known.has(i.institutionId)).forEach(i=>roles.push({key:"school_admin@"+i.institutionId,role:"institution",institutionRole:"school_admin",institutionId:i.institutionId,label:"Institution Admin · "+i.name+" (preview)"}));{const studentOptions=["3","6","10","CLAT"].map(cls=>({key:"student@"+cls,role:"student",institutionRole:"student",institutionId:"TEST-INSTITUTION-001",label:"Student · "+(cls==="CLAT"?"CLAT UG 2027":"Class "+cls),contentClassId:cls}));const idx=roles.findIndex(x=>x.key.startsWith("student@"));if(idx>=0)roles.splice(idx,1,...studentOptions);else roles.push(...studentOptions);}return roles;}catch(_){return [];}})()]:(auth.availableWorkspaces||[]);
     if(auth.localTestMode||workspaceOptions.length>1){
       const switcher=node("select","c10-role-switcher");switcher.id="c10RoleSwitcher";switcher.setAttribute("aria-label","Switch active workspace");
       workspaceOptions.forEach(w=>{const option=node("option","",w.label);option.value=w.key;switcher.append(option);});
