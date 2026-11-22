@@ -27,7 +27,10 @@ assert.equal(m.classifyIntent("How many classes assigned to me?"),"teacher-assig
 assert.equal(m.classifyIntent("A 2 L jug is full. How much water remains?"),"knowledge","ordinary curriculum questions must stay in educational retrieval");
 assert.match(m.formatOperationalUnavailable("your XP total"),/won’t guess|won't guess/i);
 assert.match(m.answer([],"How can you help me",p).text,/content add-ons enabled for your institution/i);assert.equal(m.answer([],"hello",p).text.startsWith("Hello!"),true);
-const runtime=fs.readFileSync("js/knowledge-assistant.js","utf8");assert.ok(runtime.includes("ExamGuruInstitutionContent"));assert.ok(runtime.includes("getEntitlements"));\nassert.ok(runtime.includes("answerOperational"));\nassert.ok(runtime.includes("institutionState(auth)"));\nassert.ok(runtime.includes("C10Gamification.calculate(attempts)"));assert.ok(!/cloudflare|supabase|firebase/i.test(runtime));
+const runtime=fs.readFileSync("js/knowledge-assistant.js","utf8");assert.ok(runtime.includes("ExamGuruInstitutionContent"));assert.ok(runtime.includes("getEntitlements"));
+assert.ok(runtime.includes("answerOperational"));
+assert.ok(runtime.includes("institutionState(auth)"));
+assert.ok(runtime.includes("C10Gamification.calculate(attempts)"));assert.ok(!/cloudflare|supabase|firebase/i.test(runtime));
 
 const shell=fs.readFileSync("js/app-shell.js","utf8");
 assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v10"));
