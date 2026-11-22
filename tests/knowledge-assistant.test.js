@@ -53,13 +53,14 @@ const shell=fs.readFileSync("js/app-shell.js","utf8");
 assert.ok(shell.includes('roles.push(...studentOptions)'),"local role preview must always offer student class options");
 assert.ok(shell.includes('loadKnowledgeAssistant(auth)'),"assistant loader must run independently of prior script element presence");
 assert.ok(shell.includes("assistantAssetBase"),"assistant assets must resolve from the shared app-shell location");
+assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v6")&&shell.includes("knowledge-assistant.js?v=20261122-m8-loader-v6")&&shell.includes("knowledge-assistant.css?v=20261122-m8-loader-v6"),"all assistant runtime assets use a new cache key when the floater implementation changes");
 assert.ok(!shell.includes("new URL(path,document.baseURI)"),"assistant assets must not depend on a page-level base URL");
 assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes("ExamGuruKnowledgeAssistant=Object.freeze"),"assistant must expose an explicit mount API for deterministic initialisation");
 assert.ok(fs.readFileSync("css/knowledge-assistant.css","utf8").includes(".eg-ka-panel"));
 const launcherRoutes=["admin.html","institution-operations.html","teacher-workspace.html","parent.html","dashboard.html","practice.html","study.html","help.html","user-management.html","index.html","profile.html","learning.html","exam-practice.html","assigned-paper.html","assigned-test.html","clat.html","clat-dashboard.html","clat-login.html","competitive-exams-admin.html","institution-academics.html","institution-assignments.html","institution-branches.html","institution-competitive-exams.html","institution-content.html","institution-departments.html","institution-enrolments.html","institution-learning.html","platform-entitlements.html","pyq-library.html"];
 launcherRoutes.forEach(path=>{
   const html=fs.readFileSync(path,"utf8");
-  assert.match(html,/app-shell\.js\?v=m8-loader-v5/,path+" must load the current assistant-aware app shell without stale browser cache");
+  assert.match(html,/app-shell\.js\?v=m8-loader-v6/,path+" must load the current assistant-aware app shell without stale browser cache");
 });
 console.log("M8 role-aware assistant tests passed: student class isolation, role audiences, institution/department filters, viewer scope, source links, empty results and fallback hooks.");
 // Launcher diagnostics remain visible on mobile and update an existing fallback rather than hiding the cause.
