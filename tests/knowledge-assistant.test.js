@@ -67,3 +67,12 @@ console.log("M8 role-aware assistant tests passed: student class isolation, role
 assert.ok(fs.readFileSync("js/app-shell.js","utf8").includes('link.textContent="Ask ExamGuru unavailable · "+stage'));
 assert.ok(fs.readFileSync("js/app-shell.js","utf8").includes('window.__egKnowledgeAssistantDiagnostic={stage,message:detail||null,role:auth.role||"unknown"}'));
 assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes('window.__examGuruKnowledgeAssistantLoaded&&window.ExamGuruKnowledgeAssistant'),"a partial earlier load must not block API recovery");
+
+const assistantSource=fs.readFileSync("js/knowledge-assistant.js","utf8");
+assert.ok(assistantSource.includes('request("/api/assistant/query"'),"assistant questions must go to the live authenticated API");
+assert.ok(assistantSource.includes("Live retrieval only"),"assistant must disclose live retrieval");
+assert.ok(!assistantSource.includes("data/knowledge-base.json"),"assistant must not build a browser-local knowledge catalogue");
+assert.ok(!assistantSource.includes("data/visual-revision.json"),"assistant must not cache visual revision cards for retrieval");
+assert.ok(!assistantSource.includes("localStorage"),"assistant must not persist retrieved platform or learner data in browser storage");
+assert.ok(assistantSource.includes("friendlyError"),"assistant must map service failures to user-facing messages");
+console.log("M8 live assistant tests passed: authenticated API retrieval, no local knowledge cache and actionable errors.");
