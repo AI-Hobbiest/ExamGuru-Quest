@@ -18,8 +18,16 @@ assert.equal(m.buildIndex(null,manifest,auth,ent).length,1);
 const local={institutionId:"INST-A",banks:[{bankId:"B1",name:"School Science",contentClassId:"6",subject:"Science",status:"published",questions:[{questionId:"Q1",prompt:"Cells are basic units",options:["life","rock"]}]},{bankId:"B2",name:"Draft",contentClassId:"6",status:"draft",questions:[{questionId:"Q2",prompt:"draft question"}]}],papers:[{paperId:"P1",title:"Unit test",contentClassId:"6",status:"published",questions:[{prompt:"Photosynthesis"}]}]};
 assert.equal(m.institutionDocs(local,auth).length,2);assert.equal(m.institutionDocs({...local,institutionId:"INST-B"},auth).length,0);assert.equal(m.institutionDocs(local,{...auth,contentClassId:"10"}).length,0);const teacher={role:"institution",institutionRole:"teacher",institutionId:"INST-A",assignedClassIds:["6"]};assert.equal(m.institutionDocs(local,teacher).length,2);assert.equal(m.institutionDocs(local,{...teacher,assignedClassIds:["10"]}).length,0);assert.equal(m.institutionDocs(local,{...teacher,assignedClassIds:[]}).length,0);assert.equal(m.bankSources(classes,"Science",teacher,ent,null).length,2);assert.equal(m.bankSources(classes,"Science",{...teacher,assignedClassIds:[]},ent,null).length,0);
 assert.equal(m.countBankQuestions([{questions:[{},{}]},{questions:[{}]}]),3);
+assert.equal(m.classifyIntent("How can u help me?"),"help");
+assert.equal(m.classifyIntent("How much MCQs we have in our bank?"),"bank-count");
+assert.equal(m.classifyIntent("How many students we have for now?"),"student-count");
+assert.equal(m.classifyIntent("How many XP Points I have?"),"student-xp");
+assert.equal(m.classifyIntent("Do we have backup HOD for all departments?"),"hod-coverage");
+assert.equal(m.classifyIntent("How many classes assigned to me?"),"teacher-assignment-count");
+assert.equal(m.classifyIntent("A 2 L jug is full. How much water remains?"),"knowledge","ordinary curriculum questions must stay in educational retrieval");
+assert.match(m.formatOperationalUnavailable("your XP total"),/won’t guess|won't guess/i);
 assert.match(m.answer([],"How can you help me",p).text,/content add-ons enabled for your institution/i);assert.equal(m.answer([],"hello",p).text.startsWith("Hello!"),true);
-const runtime=fs.readFileSync("js/knowledge-assistant.js","utf8");assert.ok(runtime.includes("ExamGuruInstitutionContent"));assert.ok(runtime.includes("getEntitlements"));assert.ok(!/cloudflare|supabase|firebase/i.test(runtime));
+const runtime=fs.readFileSync("js/knowledge-assistant.js","utf8");assert.ok(runtime.includes("ExamGuruInstitutionContent"));assert.ok(runtime.includes("getEntitlements"));\nassert.ok(runtime.includes("answerOperational"));\nassert.ok(runtime.includes("institutionState(auth)"));\nassert.ok(runtime.includes("C10Gamification.calculate(attempts)"));assert.ok(!/cloudflare|supabase|firebase/i.test(runtime));
 
 const shell=fs.readFileSync("js/app-shell.js","utf8");
 assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v9"));
