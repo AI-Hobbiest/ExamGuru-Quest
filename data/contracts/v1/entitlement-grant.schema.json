@@ -3,7 +3,7 @@
   "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/entitlement-grant.schema.json",
   "title": "ExamGuru Tenant Entitlement Grant v1",
   "type": "object",
-  "required": ["schemaVersion", "kind", "grantId", "tenantId", "key", "effect", "source", "status", "version", "createdAt", "updatedAt"],
+  "required": ["schemaVersion", "kind", "grantId", "tenantId", "key", "effect", "source", "status", "version", "idempotencyKey", "createdAt", "updatedAt"],
   "properties": {
     "schemaVersion": { "const": 1 },
     "kind": { "const": "tenant-entitlement-grant" },
@@ -30,6 +30,7 @@
     "revokedBy": { "type": ["string", "null"], "maxLength": 80 },
     "revokedAt": { "type": ["string", "null"], "format": "date-time" },
     "version": { "type": "integer", "minimum": 1 },
+    "idempotencyKey": { "type": "string", "minLength": 8, "maxLength": 160 },
     "createdAt": { "type": "string", "format": "date-time" },
     "updatedAt": { "type": "string", "format": "date-time" }
   },
