@@ -1,67 +1,42 @@
 # M8 — Role-aware Ask ExamGuru
 
 ## Product direction
+Ask ExamGuru is one shared conversational interface. Its retrieval scope is resolved from the active role, the institution's enabled content add-ons, and that institution's own published content. It must not assume every institution has the same classes, subjects, competitive exams or question banks.
 
-M8 replaces the traditional universal search entry point with one shared conversational interface: **Ask ExamGuru**. The same UI is mounted in every authenticated workspace, but the assistant profile and searchable knowledge are resolved from the active role. It is not a collection of separate role-specific chat applications.
+## GitHub-only development boundary
+GitHub Pages serves public platform catalogues and published platform banks. GitHub Actions validates and deploys. No Cloudflare, Supabase, Firebase, hosted LLM, external API or external database is used in this stage. The current institution-owned content adapter uses browser-local storage as a development-stage persistence implementation. It is intentionally behind the existing content-store interface and can be replaced by a cloud database adapter later without changing the assistant's retrieval policy.
 
-## GitHub-only delivery boundary
+Static GitHub files are public and browser role checks are not secure authorization. Do not put confidential student records, credentials, private institution data or authoritative permissions in public files. Browser-local institution content is not centrally shared across devices in this development stage.
 
-GitHub Pages serves the static application and versioned learning catalogues. GitHub Actions validates and deploys repository changes. Runtime retrieval and conversation state stay in the browser. No Cloudflare, Supabase, Firebase, hosted LLM, API secret, or external database is used.
+## Scope resolution
+1. Platform content add-ons: Curriculum classes are eligible only when the active institution has curriculum enabled and the class ID is present in its curriculum classIds. Competitive-exam packs are eligible only when competitiveExams.enabled is true and the exam ID is present in competitiveExams.examIds. A global platform catalogue describes available packages; it does not grant them to every institution.
+2. Institution-owned content: Read only the active institution's own content-store records. Include banks and test papers with status published; exclude drafts. The store's active institution ID must match the auth institution ID before its content is used.
+3. Role and assignment scope: Students are restricted to their mapped content class. Teachers and HODs are restricted to assigned classes when that assignment context is available. Parent, Institution Viewer and Institution Admin access remains within the active institution. Platform Admin can inspect platform-published content; institution-private content is not globally aggregated across tenants.
 
-This is not a secure multi-user server boundary. Browser-local role state can be modified by the user, and static GitHub-hosted files are public. Do not place confidential student records, private institutional data, payments, credentials or authoritative permissions in the public catalogue.
+## Retrieval behaviour
+- Ask ExamGuru uses the same content-store interface as institution learning. The assistant does not read the local-storage key directly.
+- Platform curriculum and competitive exam content is discovered through catalogues and published files. Missing or planned packages are not represented as available.
+- Published institution banks index prompts, options and explanations; published papers index their available titles and question prompts.
+- Count queries report platform bank counts and active-institution published bank content separately.
+- Student Visual Revision cards are limited to the student's entitled class.
+- Knowledge Base resources must be published and satisfy audience, class, institution and department metadata.
+- Search is deterministic, bounded, and source-linked. No-match answers explicitly state that the enabled published material did not contain a match.
+- Greeting/help intent is answered from the active role profile without requiring a knowledge search.
 
-## Role profiles and intended scopes
-
-| Active role | Intended assistant scope |
-|---|---|
-| Student | Active-class curriculum, Study Library, practice, revision and own learning guidance |
-| Parent / Guardian | Linked-child learning guidance, assigned tests and reports |
-| Teacher | Assigned classes/subjects, lesson resources, assessments and class performance |
-| HOD | Appointed department, teacher workload, department performance and approved cross-department teaching assignments |
-| Institution Admin | Institution operations, users, academic structure, content and institution reports |
-| Institution Viewer | Institution information and reports, read-only |
-| Platform Admin | Platform documentation, question banks, institutions, demo management and operational guidance |
-
-The assistant resolves the active role/workspace from the shared app-shell authentication context. A workspace switch causes the page/session to be reloaded with the new role context; the assistant must not reuse the previous workspace's retrieval index.
-
-## Retrieval and publication rules
-
-- Student Visual Revision Board cards are indexed only for the student's active class.
-- Knowledge Base manifest entries must have \`status: "published"\`.
-- Optional \`audienceRoles\` restricts a resource to explicitly listed roles. Resources with no audience list are general published resources.
-- Optional \`classIds\`, \`institutionId\` and \`departmentIds\` narrow retrieval scope when those dimensions are available in the active context.
-- HOD and Institution Viewer do not inherit Institution Admin scope.
-- Every result links to its published source. Empty matches are explicit; the assistant does not fabricate an answer.
-- Resource content is rendered as text, never executable HTML.
-- Conversation messages exist only in the current page session. No prompt, identity or learning record is sent to an AI service.
-
-## Fallback and browser support
-
-The chat uses standard browser capabilities (DOM, modern JavaScript, \`fetch\` and \`Promise\`) supported by current mainstream desktop and mobile browsers. Feature detection and script-load error handling provide a persistent **Knowledge & Help** link to the existing Study Library/help pages if the assistant cannot initialise or the catalogue cannot load. The traditional navigation and destination pages remain available; chat is the primary universal discovery entry, not a hard dependency for using the LMS.
-
-## GitHub-only security and capability limits
-
-The role profiles define the intended retrieval boundary for this static/local-first phase; they are not server-enforced authorization. Do not represent local role checks as secure RBAC. No private cross-user data or management writes are exposed through chat. Parent-child records, teacher assignment data, HOD departmental records, institutional reports and platform operations can only be surfaced when they are already available from a trusted source with the appropriate scope. Until a trusted backend is selected after M11, the assistant is limited to public/published knowledge and local guidance.
-
-The current Knowledge Base manifest is empty until content is published. Student Visual Revision Board cards can already be searched for the matching class. Other roles will see an empty-result response until role-tagged Knowledge Base resources are published.
-
-## Deferred capabilities
-
-A generative local model (for example, Transformers.js) is not enabled in this delivery. Retrieval-first search is the dependable baseline. A future local model may summarise retrieved passages but must never add unsupported facts or bypass source citations.
-
-Trusted management commands, secure role enforcement, private shared storage, parent/child record retrieval, cross-device synchronisation and institutional analytics require a trusted backend/persistence boundary. GitHub Pages and GitHub Actions do not provide an interactive authenticated application API. These capabilities remain deferred to the post-M11 infrastructure decision.
+## Storage migration seam
+The assistant consumes the ExamGuruInstitutionContent and ExamGuruLocalIAM APIs, not raw storage keys. The local adapter is a DEV-stage implementation. When cloud DB is approved, replace the persistence adapter behind these APIs and retain the same tenant, publication, entitlement and role-scope contracts.
 
 ## Acceptance gates
+1. No institution receives curriculum or exam content unless the corresponding add-on is enabled and the ID is granted.
+2. No cross-institution content is indexed.
+3. Draft institution banks and papers are excluded.
+4. Published institution banks and papers from the active institution are searchable.
+5. Student searches remain within the mapped content class.
+6. Teacher/HOD searches use assigned class scope where supplied.
+7. Platform Admin can inspect platform-published content without default aggregation of private institution content.
+8. No external runtime or service is introduced.
+9. Tests cover add-on filtering, tenant isolation, publication filtering, class isolation, competitive exam entitlement and help/greeting intent.
+10. GitHub Actions LMS-regression must pass before merge and deployment.
 
-1. One shared Ask ExamGuru interface is available to every authenticated supported role.
-2. The active role determines greeting, workspace label and intended retrieval profile.
-3. Student Visual Revision Board search is class-scoped.
-4. Published Knowledge Base resources respect role, class, institution and department metadata.
-5. HOD and Institution Viewer do not inherit Institution Admin permissions.
-6. Search is deterministic, bounded and browser-local.
-7. Every returned result links to its source; no-result responses do not fabricate content.
-8. Unsupported browser/script/catalogue cases retain a conventional Knowledge & Help fallback.
-9. Existing navigation and direct Study Library/help pages remain available.
-10. No external inference, analytics, API token or network write is used.
-11. Unit tests cover role profiles, class isolation, audience filtering, institution/department filtering, source links and empty results.
-12. GitHub Actions runs the M8 tests before merge/deployment.
+## Known static-hosting limitations
+GitHub Pages does not enforce server-side RBAC. The browser-local adapter is suitable for DEV validation only; it does not provide secure multi-user tenancy, central sharing or cross-device synchronisation. Those capabilities remain for the separately approved cloud DB stage.

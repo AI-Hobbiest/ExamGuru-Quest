@@ -1,71 +1,28 @@
-/* Provider-neutral, browser-local retrieval and role-scope policy. */
+/* Entitlement-driven Ask ExamGuru retrieval policy. */
 (() => {
-  "use strict";
-  const PROFILES=Object.freeze({
-    student:{label:"Student",title:"Your learning assistant",greeting:"Ask about your class curriculum, Study Library, practice, revision or your own learning progress.",audiences:["student"],capabilities:["curriculum","study_library","practice_guidance","own_progress"]},
-    parent:{label:"Parent / Guardian",title:"Family learning assistant",greeting:"Ask about linked-child learning guidance, assigned tests, progress reports and how to support revision.",audiences:["parent"],capabilities:["linked_child_guidance","assigned_tests","linked_child_reports"]},
-    teacher:{label:"Teacher",title:"Teaching assistant",greeting:"Ask about your assigned classes and subjects, lesson resources, assessments and class performance.",audiences:["teacher"],capabilities:["assigned_classes","assigned_subjects","lesson_resources","assessments","class_reports"]},
-    hod:{label:"Head of Department",title:"Department assistant",greeting:"Ask about your department, teacher workload, department performance and approved cross-department teaching assignments.",audiences:["hod"],capabilities:["department_scope","teacher_workload","department_reports","approved_cross_department_assignments"]},
-    school_admin:{label:"Institution Admin",title:"Institution operations assistant",greeting:"Ask about institution operations, users, academic structure, content and institution-level reports.",audiences:["school_admin"],capabilities:["institution_operations","users","academic_structure","institution_content","institution_reports"]},
-    institution_viewer:{label:"Institution Viewer",title:"Institution information assistant",greeting:"Ask about institution-level information and reports. This workspace is read-only.",audiences:["institution_viewer"],capabilities:["institution_information","institution_reports_read_only"]},
-    platform_admin:{label:"Platform Admin",title:"Platform operations assistant",greeting:"Ask about platform documentation, question banks, institutions, demo management and operational guidance.",audiences:["platform_admin"],capabilities:["platform_documentation","question_banks","institutions","demo_management","operations"]}
-  });
-  const norm=value=>String(value??"").toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim();
-  const words=value=>[...new Set(norm(value).split(/\s+/).filter(word=>word.length>1))];
-  function resolveProfile(auth){
-    if(!auth||typeof auth!=="object")return null;
-    let role=auth.role;
-    if(role==="institution")role=auth.institutionRole||"institution_viewer";
-    if(role==="admin")role="platform_admin";
-    return PROFILES[role]?{role,...PROFILES[role],classId:role==="student"?String(auth.classId||""):"",institutionId:String(auth.institutionId||""),departmentIds:Array.isArray(auth.departmentIds)?auth.departmentIds.map(String):[],classIds:Array.isArray(auth.assignedClassIds)?auth.assignedClassIds.map(String):Array.isArray(auth.teachingClassIds)?auth.teachingClassIds.map(String):[]}:null;
-  }
-  const flattenCard=(card,board,chapter)=>{
-    const parts=[card.title,card.content,card.highlight,card.note,card.examTip,card.question,card.answer,card.revealLabel,
-      ...(Array.isArray(card.steps)?card.steps:[]),
-      ...(Array.isArray(card.facts)?card.facts.flatMap(pair=>Array.isArray(pair)?pair:[]):[]),
-      ...["left","right"].flatMap(side=>{const item=card[side]||{};return [item.heading,item.content];}),
-      ...(Array.isArray(card.tags)?card.tags:[])].filter(Boolean);
-    return {id:String(card.id||card.title||chapter.chapterKey),title:String(card.title||chapter.title),text:parts.join(" "),subject:board.subject,subjectLabel:board.subjectLabel||board.subject,classId:String(board.classId),chapter:chapter.title,chapterLabel:chapter.chapterLabel||("Chapter "+chapter.chapterNo),sourceType:"revision-card",path:"./study.html#visualRevisionBoard",audienceRoles:["student"]};
-  };
-  function resourceAllowed(item,profile){
-    if(item.status!=="published")return false;
-    if(Array.isArray(item.audienceRoles)&&item.audienceRoles.length&&!item.audienceRoles.includes(profile.role))return false;
-    if(profile.role==="student"&&Array.isArray(item.classIds)&&item.classIds.length&&!item.classIds.map(String).includes(profile.classId))return false;
-    if(item.institutionId&&(!profile.institutionId||String(item.institutionId)!==profile.institutionId))return false;
-    if(Array.isArray(item.departmentIds)&&item.departmentIds.length&&(!profile.departmentIds.length||!item.departmentIds.some(id=>profile.departmentIds.includes(String(id)))))return false;
-    if(Array.isArray(item.classIds)&&item.classIds.length&&profile.role!=="student"&&(!profile.classIds.length||!item.classIds.some(id=>profile.classIds.includes(String(id)))))return false;
-    return true;
-  }
-  function buildIndex(visual,manifest,auth){
-    const profile=typeof auth==="string"?{role:"student",classId:auth,institutionId:"",departmentIds:[]}:resolveProfile(auth);
-    if(!profile)return [];
-    const docs=[];
-    if(profile.role==="student"&&visual&&visual.schemaVersion===1&&visual.kind==="visual-revision-manifest"&&Array.isArray(visual.boards)){
-      visual.boards.filter(board=>String(board.classId)===profile.classId).forEach(board=>(board.chapters||[]).forEach(chapter=>(chapter.cards||[]).forEach(card=>docs.push(flattenCard(card,board,chapter)))));
-    }
-    if(manifest&&manifest.schemaVersion===1&&manifest.kind==="knowledge-base-manifest"&&Array.isArray(manifest.resources)){
-      manifest.resources.filter(item=>resourceAllowed(item,profile)).forEach(item=>docs.push({id:item.resourceId,title:item.title,text:[item.title,item.summary,item.subject,item.chapter,item.content].filter(Boolean).join(" "),subject:item.subject||"",classId:profile.classId,chapter:item.chapter||"",sourceType:"published-resource",path:"./"+item.path,summary:item.summary||"",audienceRoles:item.audienceRoles||[]}));
-    }
-    return docs;
-  }
-  function search(index,query,limit=5){
-    const q=norm(query),tokens=words(query);
-    if(!q||!tokens.length)return [];
-    return index.map(doc=>{
-      const title=norm(doc.title),chapter=norm(doc.chapter),subject=norm(doc.subjectLabel||doc.subject),body=norm(doc.text);
-      let score=0;
-      tokens.forEach(token=>{if(title.includes(token))score+=5;if(chapter.includes(token))score+=4;if(subject.includes(token))score+=2;if(body.includes(token))score+=1;});
-      if(body.includes(q))score+=6;
-      return {...doc,score};
-    }).filter(item=>item.score>0).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title)).slice(0,Math.max(1,Math.min(10,limit)));
-  }
-  function answer(results,query,profile){
-    if(!results.length)return {text:"I couldn't find a close match in the published material available to this "+(profile?.label||"workspace")+". Try a topic, subject or resource title. I won't guess beyond the sources I can access.",sources:[]};
-    const best=results.slice(0,3);
-    const lines=best.map((item,index)=>{const snippet=item.summary||item.text.replace(/\s+/g," ").slice(0,420);return (index+1)+". "+item.title+" — "+snippet+(item.chapter?" ("+item.chapter+")":"");});
-    return {text:"I found these relevant sources for “"+String(query).trim()+"”:\n\n"+lines.join("\n\n")+"\n\nOpen a source below for the full material. You can continue with a follow-up question.",sources:best.map(item=>({title:item.title,chapter:item.chapter,subject:item.subjectLabel||item.subject,path:item.path}))};
-  }
-  const api=Object.freeze({PROFILES,norm,words,resolveProfile,buildIndex,search,answer});
-  window.ExamGuruKnowledgeAssistantModel=api;
-  if(typeof module!=="undefined"&&module.exports)module.exports=api;
+"use strict";
+const PROFILES={
+student:{label:"Student",greeting:"Ask about curriculum, Study Library, practice and revision enabled for your institution."},
+parent:{label:"Parent / Guardian",greeting:"Ask about learning resources and published content available to your family workspace."},
+teacher:{label:"Teacher",greeting:"Ask about assigned classes, subjects, resources and assessments."},
+hod:{label:"Head of Department",greeting:"Ask about your department's learning resources and assessments."},
+school_admin:{label:"Institution Admin",greeting:"Ask about enabled content, published banks and test papers."},
+institution_viewer:{label:"Institution Viewer",greeting:"Ask about institution-published learning content. This workspace is read-only."},
+platform_admin:{label:"Platform Admin",greeting:"Ask about platform content, published banks, add-ons and operational guidance."}
+};
+const norm=v=>String(v??"").toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim();
+const words=v=>[...new Set(norm(v).split(/\s+/).filter(x=>x.length>1))];
+function resolveProfile(a){if(!a||typeof a!=="object")return null;let role=a.role==="admin"?"platform_admin":a.role==="institution"?(a.institutionRole||"institution_viewer"):a.role;if(!PROFILES[role])return null;return {role,...PROFILES[role],institutionId:String(a.institutionId||""),classId:String(a.contentClassId||a.classId||""),departmentIds:(a.departmentIds||[]).map(String),classIds:(a.assignedClassIds||a.teachingClassIds||[]).map(String)};}
+function hasEntitlement(e,area,key){const x=e&&e[area];if(!x||!x.enabled)return false;const values=area==="curriculum"?(x.classIds||[]):(x.examIds||[]);return key==null||values.map(String).includes(String(key));}
+function resourceAllowed(x,p){if(x.status!=="published")return false;if(x.audienceRoles?.length&&!x.audienceRoles.includes(p.role))return false;if(x.institutionId&&String(x.institutionId)!==p.institutionId)return false;if(x.departmentIds?.length&&(!p.departmentIds.length||!x.departmentIds.some(v=>p.departmentIds.includes(String(v)))))return false;if(p.role==="student"&&x.classIds?.length&&!x.classIds.map(String).includes(p.classId))return false;if(["teacher","hod"].includes(p.role)&&x.classIds?.length&&(!p.classIds.length||!x.classIds.some(v=>p.classIds.includes(String(v)))))return false;return true;}
+function flattenCard(c,b,ch){const parts=[c.title,c.content,c.highlight,c.note,c.examTip,c.question,c.answer,c.revealLabel,...(c.steps||[]),...(c.tags||[])].filter(Boolean);return {id:String(c.id||c.title),title:String(c.title||ch.title),text:parts.join(" "),subject:b.subject,classId:String(b.classId),chapter:ch.title,sourceType:"revision-card",path:"./study.html#visualRevisionBoard"};}
+function buildIndex(visual,manifest,auth,entitlements){const p=typeof auth==="string"?{role:"student",classId:auth,institutionId:"",departmentIds:[],classIds:[]}:resolveProfile(auth);if(!p)return [];const docs=[];if(p.role==="student"&&hasEntitlement(entitlements,"curriculum",p.classId)&&visual?.kind==="visual-revision-manifest"&&Array.isArray(visual.boards))visual.boards.filter(b=>String(b.classId)===p.classId).forEach(b=>(b.chapters||[]).forEach(ch=>(ch.cards||[]).forEach(c=>docs.push(flattenCard(c,b,ch)))));if(manifest?.kind==="knowledge-base-manifest"&&Array.isArray(manifest.resources))manifest.resources.filter(x=>resourceAllowed(x,p)).filter(x=>!x.classIds?.length||x.classIds.some(id=>p.role==="platform_admin"||hasEntitlement(entitlements,"curriculum",id))).forEach(x=>docs.push({id:x.resourceId,title:x.title,text:[x.title,x.summary,x.subject,x.chapter,x.content].filter(Boolean).join(" "),subject:x.subject||"",chapter:x.chapter||"",sourceType:"published-resource",path:"./"+x.path,summary:x.summary||""}));return docs;}
+const SUBJECTS={mathematics:["mathematics","maths","math"],science:["science"],english:["english"],"social-science":["social science","social studies","sst"],hindi:["hindi"]};
+const CLASS10={mathematics:"data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",science:"data/exam-papers/question-banks/class-10-science-2026-27-v1.json",english:"data/exam-papers/question-banks/class-10-english-language-literature-2026-27-v1.json","social-science":"data/exam-papers/question-banks/class-10-social-science-2026-27-v1.json",hindi:"data/hindi.json"};
+function bankSources(catalog,query,auth,entitlements,examCatalog){const p=resolveProfile(auth)||{role:"platform_admin",classIds:[],classId:""},q=norm(query),m=q.match(/\b(?:class|grade)\s*(\d{1,2})\b/),requested=m?m[1]:"",sof=/\b(sof|olympiad|imo|ieo|nso|iso)\b/.test(q),regular=/\b(ncert|cbse|regular)\b/.test(q)&&!sof,subjects=Object.keys(SUBJECTS).filter(id=>SUBJECTS[id].some(a=>q.includes(norm(a)))),activeExams=(examCatalog?.exams||[]).filter(e=>e.status==="active"&&e.bankPath),queriedExams=activeExams.filter(e=>q&&(q.includes(norm(e.examId))||q.includes(norm(e.name))||words(query).some(w=>w.length>=3&&words(e.examId+" "+e.name).includes(w)))),examMatches=queriedExams.filter(e=>hasEntitlement(entitlements,"competitiveExams",e.examId)),out=[];if(queriedExams.length){return examMatches.map(e=>({classId:e.examId,classLabel:e.name,subjectId:e.examId,subjectLabel:e.name,bankType:"Competitive exam",path:e.bankPath,kind:"directory"}));}(catalog?.classes||[]).forEach(c=>{const id=String(c.classId);if(c.active===false||requested&&id!==requested||p.role==="student"&&id!==p.classId||["teacher","hod"].includes(p.role)&&!p.classIds.includes(id)||p.role!=="platform_admin"&&!hasEntitlement(entitlements,"curriculum",id))return;(c.subjects||[]).forEach(s=>{const sid=String(s),isSof=sid.endsWith("-sof"),base=sid.replace(/-sof$/,"");if(subjects.length&&!subjects.includes(base)||sof&&!isSof||regular&&isSof)return;const path=id==="10"?CLASS10[base]:"data/class-"+id+"-"+sid+".json";if(path&&!out.some(x=>x.path===path))out.push({classId:id,classLabel:c.label||"Class "+id,subjectId:base,subjectLabel:SUBJECTS[base]?.[0]||base,bankType:isSof?"SOF / Olympiad":"Curriculum",path});});});return out;}
+function institutionDocs(content,auth){const p=resolveProfile(auth);if(!p||!p.institutionId||!content||String(content.institutionId||"")!==p.institutionId)return [];const docs=[],allowed=id=>p.role==="student"?String(id)===p.classId:["teacher","hod"].includes(p.role)?p.classIds.includes(String(id)):true;(content.banks||[]).filter(b=>b.status==="published"&&allowed(b.contentClassId)).forEach(b=>(b.questions||[]).forEach((q,i)=>docs.push({id:String(q.questionId||q.id||b.bankId+"-"+i),title:String(q.prompt||q.question||b.name),text:[b.name,b.subject,b.contentClassId,q.prompt,q.question,q.explanation,q.answerKey?.explanation,...(q.options||[]).map(o=>typeof o==="string"?o:o.text)].filter(Boolean).join(" "),classId:String(b.contentClassId),subject:b.subject,sourceType:"institution-question-bank",path:"./institution-learning.html"})));(content.papers||[]).filter(x=>x.status==="published"&&allowed(x.contentClassId||x.classId)).forEach(x=>docs.push({id:x.paperId,title:x.title||x.name||"Institution test paper",text:[x.title,x.name,x.subject,x.description,...(x.questions||[]).map(q=>q.prompt||q.question)].filter(Boolean).join(" "),classId:String(x.contentClassId||x.classId||""),subject:x.subject,sourceType:"institution-test-paper",path:"./institution-learning.html"}));return docs;}
+function countBankQuestions(b){if(Array.isArray(b))return b.reduce((n,c)=>n+(Array.isArray(c?.questions)?c.questions.length:0),0);return Array.isArray(b?.questions)?b.questions.length:0;}
+function search(index,query,limit=5){const q=norm(query),ts=words(query);if(!q||!ts.length)return [];return index.map(d=>{const t=norm(d.title),c=norm(d.chapter),s=norm(d.subject),b=norm(d.text);let score=0;ts.forEach(x=>{if(t.includes(x))score+=5;if(c.includes(x))score+=4;if(s.includes(x))score+=2;if(b.includes(x))score++;});if(b.includes(q))score+=6;return {...d,score};}).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title)).slice(0,Math.max(1,Math.min(10,limit)));}
+function answer(results,query,p){const q=norm(query),help=/\b(how can (you|u) help( me)?|what can (you|u) do|how do i use (you|this)|help me get started|what are your capabilities)\b/.test(q),hello=/^(hi|hello|hey|good morning|good afternoon|good evening)$/.test(q);if(p&&(help||hello))return {text:(hello?"Hello! ":"")+p.greeting+" I use the content add-ons enabled for your institution and its own published content, filtered to your role and assigned learning scope. Try a class, subject, exam package, topic or question-bank count.",sources:[]};if(!results.length)return {text:"I couldn't find a close match in the published material enabled for this institution and role. Try a topic, subject, exam package or resource title.",sources:[]};const best=results.slice(0,3);return {text:"I found these relevant sources for “"+String(query).trim()+"”:\n\n"+best.map((x,i)=>(i+1)+". "+x.title+" — "+(x.summary||x.text.replace(/\s+/g," ").slice(0,420))+(x.chapter?" ("+x.chapter+")":"")).join("\n\n")+"\n\nOpen a source below for the full material.",sources:best.map(x=>({title:x.title,chapter:x.chapter,subject:x.subject,path:x.path}))};}
+const api={PROFILES,norm,words,resolveProfile,hasEntitlement,resourceAllowed,buildIndex,bankSources,institutionDocs,countBankQuestions,search,answer};window.ExamGuruKnowledgeAssistantModel=api;if(typeof module!=="undefined"&&module.exports)module.exports=api;
 })();
