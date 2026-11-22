@@ -710,16 +710,12 @@ jobs:
       - name: Test Admin Workspace data handling and safety boundaries
         run: node tests/admin-workspace.test.js && node tests/account-contract.test.js && node tests/static-accounts.test.js
       - name: Upload static site
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
-          # Artifacts from earlier attempts remain attached to the same workflow run.
-          # Include the attempt number so deploy-pages never sees duplicate names.
-          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
           timeout: 1200000
           reporting_interval: 15000
