@@ -1,16 +1,18 @@
 /* Universal role-aware conversational knowledge entry point. */
 (() => {
   "use strict";
-  if(window.__examGuruKnowledgeAssistantLoaded)return;
+  /* Recover from a prior partial execution: only skip when the public API exists. */
+  if(window.__examGuruKnowledgeAssistantLoaded&&window.ExamGuruKnowledgeAssistant)return;
   window.__examGuruKnowledgeAssistantLoaded=true;
   const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;};
   function addFallback(auth,message){
-    if(document.getElementById("egKnowledgeAssistantFallback"))return;
-    const link=el("a","eg-ka-fallback","Open Knowledge & Help");
-    link.id="egKnowledgeAssistantFallback";link.href=auth?.role==="student"?"./study.html":"./help.html";
-    link.setAttribute("aria-label","Open the traditional Knowledge and Help pages");
+    let link=document.getElementById("egKnowledgeAssistantFallback");
+    if(!link){link=el("a","eg-ka-fallback");link.id="egKnowledgeAssistantFallback";document.body.appendChild(link);}
+    link.href=auth?.role==="student"?"./study.html":"./help.html";
+    link.textContent="Ask ExamGuru unavailable · catalogue";
+    link.setAttribute("aria-label","Ask ExamGuru catalogue unavailable. Open the traditional Knowledge and Help pages.");
+    link.dataset.egAssistantFailure="catalogue";
     if(message)link.title=message;
-    document.body.appendChild(link);
   }
   async function loadJson(path){
     const response=await fetch(path,{cache:"no-store"});
