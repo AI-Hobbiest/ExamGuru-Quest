@@ -17,7 +17,7 @@
     let role=auth.role;
     if(role==="institution")role=auth.institutionRole||"institution_viewer";
     if(role==="admin")role="platform_admin";
-    return PROFILES[role]?{role,...PROFILES[role],classId:role==="student"?String(auth.classId||""):"",institutionId:String(auth.institutionId||""),departmentIds:Array.isArray(auth.departmentIds)?auth.departmentIds.map(String):[]}:null;
+    return PROFILES[role]?{role,...PROFILES[role],classId:role==="student"?String(auth.classId||""):"",institutionId:String(auth.institutionId||""),departmentIds:Array.isArray(auth.departmentIds)?auth.departmentIds.map(String):[],classIds:Array.isArray(auth.assignedClassIds)?auth.assignedClassIds.map(String):Array.isArray(auth.teachingClassIds)?auth.teachingClassIds.map(String):[]}:null;
   }
   const flattenCard=(card,board,chapter)=>{
     const parts=[card.title,card.content,card.highlight,card.note,card.examTip,card.question,card.answer,card.revealLabel,
@@ -31,8 +31,9 @@
     if(item.status!=="published")return false;
     if(Array.isArray(item.audienceRoles)&&item.audienceRoles.length&&!item.audienceRoles.includes(profile.role))return false;
     if(profile.role==="student"&&Array.isArray(item.classIds)&&item.classIds.length&&!item.classIds.map(String).includes(profile.classId))return false;
-    if(profile.institutionId&&item.institutionId&&String(item.institutionId)!==profile.institutionId)return false;
-    if(profile.departmentIds.length&&Array.isArray(item.departmentIds)&&item.departmentIds.length&&!item.departmentIds.some(id=>profile.departmentIds.includes(String(id))))return false;
+    if(item.institutionId&&(!profile.institutionId||String(item.institutionId)!==profile.institutionId))return false;
+    if(Array.isArray(item.departmentIds)&&item.departmentIds.length&&(!profile.departmentIds.length||!item.departmentIds.some(id=>profile.departmentIds.includes(String(id)))))return false;
+    if(Array.isArray(item.classIds)&&item.classIds.length&&profile.role!=="student"&&(!profile.classIds.length||!item.classIds.some(id=>profile.classIds.includes(String(id)))))return false;
     return true;
   }
   function buildIndex(visual,manifest,auth){
