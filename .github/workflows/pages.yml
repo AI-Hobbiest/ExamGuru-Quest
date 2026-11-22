@@ -148,6 +148,8 @@ jobs:
           enablement: true
       - name: Assemble website files
         run: |
+          set -euxo pipefail
+          echo 'Starting Pages asset assembly with command tracing enabled.'
           mkdir -p _site
           cp index.html _site/index.html
           cp clat-login.html _site/clat-login.html
