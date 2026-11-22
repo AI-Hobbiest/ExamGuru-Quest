@@ -227,10 +227,11 @@
     const current=getLocation(),auth=await authState();
     window.ExamGuruAuthState=auth;
     window.dispatchEvent(new CustomEvent("examguru-auth-state-ready",{detail:auth}));
-    if(auth.role==="student"&&!document.getElementById("egKnowledgeAssistantModelScript")){
-      const assistantCss=document.createElement("link");assistantCss.rel="stylesheet";assistantCss.href="./css/knowledge-assistant.css?v=m8-knowledge-v1";document.head.appendChild(assistantCss);
-      const modelScript=document.createElement("script");modelScript.id="egKnowledgeAssistantModelScript";modelScript.src="./js/knowledge-assistant-model.js?v=m8-knowledge-v1";
-      modelScript.onload=()=>{const assistantScript=document.createElement("script");assistantScript.src="./js/knowledge-assistant.js?v=m8-knowledge-v1";document.body.appendChild(assistantScript);};
+    if(!["guest","student_pending"].includes(auth.role)&&!document.getElementById("egKnowledgeAssistantModelScript")){
+      const assistantCss=document.createElement("link");assistantCss.rel="stylesheet";assistantCss.href="./css/knowledge-assistant.css?v=m8-role-chat-v2";document.head.appendChild(assistantCss);
+      const modelScript=document.createElement("script");modelScript.id="egKnowledgeAssistantModelScript";modelScript.src="./js/knowledge-assistant-model.js?v=m8-role-chat-v2";
+      modelScript.onload=()=>{const assistantScript=document.createElement("script");assistantScript.src="./js/knowledge-assistant.js?v=m8-role-chat-v2";assistantScript.onerror=()=>{const fallback=document.createElement("a");fallback.id="egKnowledgeAssistantFallback";fallback.className="eg-ka-fallback";fallback.href=auth.role==="student"?"./study.html":"./help.html";fallback.textContent="Open Knowledge & Help";document.body.appendChild(fallback);};document.body.appendChild(assistantScript);};
+      modelScript.onerror=()=>{const fallback=document.createElement("a");fallback.id="egKnowledgeAssistantFallback";fallback.className="eg-ka-fallback";fallback.href=auth.role==="student"?"./study.html":"./help.html";fallback.textContent="Open Knowledge & Help";document.body.appendChild(fallback);};
       document.body.appendChild(modelScript);
     }
     if(!auth.localTestMode&&auth.role==="institution"){try{sessionStorage.setItem("examguru_active_role_v1",auth.institutionRole||"institution_viewer");sessionStorage.setItem("examguru_active_institution_v1",auth.institutionId||"");}catch(_){}}
