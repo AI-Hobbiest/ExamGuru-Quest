@@ -35,9 +35,9 @@
   },
   "allOf": [
     { "if": { "properties": { "status": { "enum": ["trialing", "active", "past_due"] } }, "required": ["status"] },
-      "then": { "required": ["currentPeriodStart", "currentPeriodEnd"] } },
+      "then": { "required": ["currentPeriodStart", "currentPeriodEnd"], "properties": { "currentPeriodStart": { "type": "string" }, "currentPeriodEnd": { "type": "string" } } } },
     { "if": { "properties": { "status": { "const": "trialing" } }, "required": ["status"] },
-      "then": { "required": ["trialEndsAt"] } }
+      "then": { "required": ["trialEndsAt"], "properties": { "trialEndsAt": { "type": "string" } } } }
   ],
   "additionalProperties": false
 }
