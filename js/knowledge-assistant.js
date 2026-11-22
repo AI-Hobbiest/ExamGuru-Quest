@@ -63,11 +63,15 @@
   }
   async function answerQuestion(query,auth){
     const q=query.toLowerCase();
-    if(/\b(how many|count|total|number|inventory|available)\b/.test(q)&&/\b(question|questions|qbank|bank|banks)\b/.test(q))return answerBankCount(query);
-    const model=window.ExamGuruKnowledgeAssistantModel;\n    const profile=model.resolveProfile(auth);\n    if(profile&&(/\\b(how can (you|u) help( me)?|what can (you|u) do|how do i use (you|this)|help me get started|what are your capabilities)\\b/.test(q)||/^(hi|hello|hey|good morning|good afternoon|good evening)$/.test(q))){const response=model.answer([],query,profile);return {text:response.text,sources:[]};}\n    const index=await loadIndex(auth,query);
+    if(/\b(how many|count|total|number|inventory|available)\b/.test(q)&&/\b(question|questions|qbank|bank|banks)\b/.test(q))return answerBankCount(query,auth);
     const model=window.ExamGuruKnowledgeAssistantModel;
-    const results=model.search(index,query,5);
     const profile=model.resolveProfile(auth);
+    if(profile&&(/\b(how can (you|u) help( me)?|what can (you|u) do|how do i use (you|this)|help me get started|what are your capabilities)\b/.test(q)||/^(hi|hello|hey|good morning|good afternoon|good evening)$/.test(q))){
+      const response=model.answer([],query,profile);
+      return {text:response.text,sources:[]};
+    }
+    const index=await loadIndex(auth,query);
+    const results=model.search(index,query,5);
     const response=model.answer(results,query,profile);
     return {text:response.text,sources:response.sources.map(item=>({...item,path:item.path||''}))};
   }
