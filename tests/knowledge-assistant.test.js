@@ -53,6 +53,6 @@ assert.ok(fs.readFileSync("css/knowledge-assistant.css","utf8").includes(".eg-ka
 const launcherRoutes=["admin.html","institution-operations.html","teacher-workspace.html","parent.html","dashboard.html","practice.html","study.html","help.html","user-management.html"];
 launcherRoutes.forEach(path=>{
   const html=fs.readFileSync(path,"utf8");
-  assert.match(html,/app-shell\\.js\\?v=20261122-m8-assistant-launcher-v1/,path+" must load the current assistant-aware app shell without stale browser cache");
+  assert.match(html,/app-shell\.js\?v=20261122-m8-assistant-launcher-v1/,path+" must load the current assistant-aware app shell without stale browser cache");
 });
 console.log("M8 role-aware assistant tests passed: student class isolation, role audiences, institution/department filters, viewer scope, source links, empty results and fallback hooks.");
