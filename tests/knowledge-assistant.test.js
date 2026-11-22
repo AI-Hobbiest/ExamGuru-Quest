@@ -60,7 +60,7 @@ assert.ok(fs.readFileSync("css/knowledge-assistant.css","utf8").includes(".eg-ka
 const launcherRoutes=["admin.html","institution-operations.html","teacher-workspace.html","parent.html","dashboard.html","practice.html","study.html","help.html","user-management.html","index.html","profile.html","learning.html","exam-practice.html","assigned-paper.html","assigned-test.html","clat.html","clat-dashboard.html","clat-login.html","competitive-exams-admin.html","institution-academics.html","institution-assignments.html","institution-branches.html","institution-competitive-exams.html","institution-content.html","institution-departments.html","institution-enrolments.html","institution-learning.html","platform-entitlements.html","pyq-library.html"];
 launcherRoutes.forEach(path=>{
   const html=fs.readFileSync(path,"utf8");
-  assert.match(html,/app-shell\.js\?v=m8-loader-v6/,path+" must load the current assistant-aware app shell without stale browser cache");
+  assert.match(html,/app-shell\.js\?v=m8-loader-v7/,path+" must load the current assistant-aware app shell without stale browser cache");
 });
 console.log("M8 role-aware assistant tests passed: student class isolation, role audiences, institution/department filters, viewer scope, source links, empty results and fallback hooks.");
 // Launcher diagnostics remain visible on mobile and update an existing fallback rather than hiding the cause.
