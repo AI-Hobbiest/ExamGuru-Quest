@@ -53,7 +53,7 @@ const shell=fs.readFileSync("js/app-shell.js","utf8");
 assert.ok(shell.includes('roles.push(...studentOptions)'),"local role preview must always offer student class options");
 assert.ok(shell.includes('loadKnowledgeAssistant(auth)'),"assistant loader must run independently of prior script element presence");
 assert.ok(shell.includes("assistantAssetBase"),"assistant assets must resolve from the shared app-shell location");
-assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v6")&&shell.includes("knowledge-assistant.js?v=20261122-m8-loader-v6")&&shell.includes("knowledge-assistant.css?v=20261122-m8-loader-v6"),"all assistant runtime assets use a new cache key when the floater implementation changes");
+assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v7")&&shell.includes("knowledge-assistant.js?v=20261122-m8-loader-v7")&&shell.includes("knowledge-assistant.css?v=20261122-m8-loader-v7"),"all assistant runtime assets use a new cache key when the floater implementation changes");
 assert.ok(!shell.includes("new URL(path,document.baseURI)"),"assistant assets must not depend on a page-level base URL");
 assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes("ExamGuruKnowledgeAssistant=Object.freeze"),"assistant must expose an explicit mount API for deterministic initialisation");
 assert.ok(fs.readFileSync("css/knowledge-assistant.css","utf8").includes(".eg-ka-panel"));
