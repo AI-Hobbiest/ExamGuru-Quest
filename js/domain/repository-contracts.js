@@ -8,7 +8,11 @@
   });
   const OPTIONAL_METHODS = Object.freeze({
     curriculum: ["listCurriculumItems", "getCurriculumItem"],
-    content: ["listSharedBanks", "getSharedBank", "listInstitutionContent", "saveInstitutionCopy"]
+    content: ["listSharedBanks", "getSharedBank", "listInstitutionContent", "saveInstitutionCopy"],
+    catalog: ["listPlans", "getPlan"],
+    subscriptions: ["getCurrent", "save"],
+    entitlements: ["listCurrent", "save"],
+    onboarding: ["getById", "getByIdempotencyKey", "list", "save"]
   });
   function assertRepository(name, repository) {
     const required = METHODS[name] || OPTIONAL_METHODS[name];
