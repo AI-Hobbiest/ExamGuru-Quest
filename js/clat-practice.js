@@ -137,67 +137,77 @@ function loadResume(){
   tick=setInterval(()=>{attempt.remainingSeconds=Math.max(0,attempt.remainingSeconds-1);$("timer").textContent=engine.formatDuration(attempt.remainingSeconds);if(attempt.remainingSeconds%10===0)saveActive();if(attempt.remainingSeconds<=0)finish(true);},1000);return true;
  }catch(_){return false;}
 }
-async function init(){
- student=getStudent();if(!student){setStatus("Please sign in with a student account to access CLAT practice.");return;}
+async function loadModelBatch(path,batchNumber,firstPaperNumber,expectedCount){
+ const response=await fetch(path,{cache:"no-store"});
+ if(!response.ok)throw Error("batch unavailable");
+ const batch=await response.json();
+ if(batch.kind!=="clat-model-paper-batch"||batch.batchNumber!==batchNumber||!Array.isArray(batch.papers)||batch.papers.length!==expectedCount)throw Error("batch catalogue invalid");
+ const known=new Set(library.papers.map(item=>String(item.paperId))),within=new Set();
+ batch.papers.forEach((item,index)=>{
+  if(Number(item.paperNumber)!==firstPaperNumber+index||item.status!=="practice-pilot")throw Error("batch release metadata invalid");
+  if(!item.paperId||known.has(String(item.paperId))||within.has(String(item.paperId)))throw Error("duplicate paper identifier");
+  const check=engine.validatePaper(item,{strictCLAT:true});
+  if(!check.valid)throw Error("paper validation failed");
+  within.add(String(item.paperId));
+ });
+ return batch.papers;
+}
+async function loadActualPaperCatalogue(){
  try{
-  const response=await fetch("./data/clat/model-papers.json",{cache:"no-store"});if(!response.ok)throw Error("Model paper library returned HTTP "+response.status);
-  library=await response.json();if(library.kind!=="clat-model-paper-library"||!Array.isArray(library.papers))throw Error("CLAT model paper library is invalid.");
-  const batchResponse=await fetch("./data/clat/model-papers-batch-02.json",{cache:"no-store"});if(!batchResponse.ok)throw Error("CLAT practice batch 02 returned HTTP "+batchResponse.status);
-  const batch=await batchResponse.json();if(batch.kind!=="clat-model-paper-batch"||batch.batchNumber!==2||!Array.isArray(batch.papers)||batch.papers.length!==4)throw Error("CLAT practice batch 02 is invalid.");
-  const knownIds=new Set(library.papers.map(item=>item.paperId));
-  const batchIds=new Set();
-  batch.papers.forEach((item,index)=>{
-   if(Number(item.paperNumber)!==index+7||item.status!=="practice-pilot")throw Error("CLAT practice batch 02 has an unexpected paper or release status.");
-   if(knownIds.has(item.paperId)||batchIds.has(item.paperId))throw Error("Duplicate CLAT paper ID: "+item.paperId);
-   const check=engine.validatePaper(item,{strictCLAT:true});if(!check.valid)throw Error("Paper "+item.paperNumber+" failed strict validation: "+check.errors.slice(0,3).join(" "));
-   batchIds.add(item.paperId);
+  const response=await fetch("./data/clat/actual-papers.json",{cache:"no-store"});
+  if(!response.ok)throw Error("catalogue unavailable");
+  const catalog=await response.json();
+  if(catalog.kind!=="clat-actual-papers-catalog"||!Array.isArray(catalog.papers)||catalog.papers.length!==5)throw Error("catalogue invalid");
+  const years=catalog.papers.map(item=>Number(item.examYear));
+  if(![2022,2023,2024,2025,2026].every(year=>years.includes(year)))throw Error("catalogue incomplete");
+  catalog.papers.forEach(item=>{
+   if(!item.title||!item.examDate||!item.questionCount||!item.evaluatedOutOf||!/^https:\/\//.test(item.questionUrl)||!/^https:\/\//.test(item.answerKeyUrl)||!/^https:\/\//.test(item.sourceArchiveUrl))throw Error("paper record incomplete");
   });
-  library.papers.push(...batch.papers);
-  const batchThreeResponse=await fetch("./data/clat/model-papers-batch-03.json",{cache:"no-store"});
-  if(!batchThreeResponse.ok)throw Error("CLAT practice batch 03 returned HTTP "+batchThreeResponse.status);
-  const batchThree=await batchThreeResponse.json();
-  if(batchThree.kind!=="clat-model-paper-batch"||batchThree.batchNumber!==3||!Array.isArray(batchThree.papers)||batchThree.papers.length!==5)throw Error("CLAT practice batch 03 is invalid.");
-  const knownBatchThreeIds=new Set(library.papers.map(item=>item.paperId));
-  const batchThreeIds=new Set();
-  batchThree.papers.forEach((item,index)=>{
-   if(Number(item.paperNumber)!==index+11||item.status!=="practice-pilot")throw Error("CLAT practice batch 03 has an unexpected paper or release status.");
-   if(knownBatchThreeIds.has(item.paperId)||batchThreeIds.has(item.paperId))throw Error("Duplicate CLAT paper ID: "+item.paperId);
-   const check=engine.validatePaper(item,{strictCLAT:true});if(!check.valid)throw Error("Paper "+item.paperNumber+" failed strict validation: "+check.errors.slice(0,3).join(" "));
-   batchThreeIds.add(item.paperId);
+  renderActualPapers(catalog.papers);
+  $("actualPaperCount").textContent=String(catalog.papers.length);
+  $("pyqStatus").textContent="Five previous-year CLAT UG papers are available. Open a question paper and its final answer-key notice from the selected year.";
+ }catch(_){
+  $("actualPaperCount").textContent="0";
+  $("actualPaperList").replaceChildren(document.createTextNode("Previous-year papers are temporarily unavailable. Please try again later."));
+  $("pyqStatus").textContent="We couldn’t load the previous-year paper library. Please try again later.";
+ }
+}
+async function init(){
+ student=getStudent();
+ if(!student){setStatus("Please sign in with a student account to access CLAT practice.");return;}
+ let batchWarnings=[];
+ try{
+  const response=await fetch("./data/clat/model-papers.json",{cache:"no-store"});
+  if(!response.ok)throw Error("library unavailable");
+  library=await response.json();
+  if(library.kind!=="clat-model-paper-library"||!Array.isArray(library.papers))throw Error("library invalid");
+  const seen=new Set();
+  library.papers.forEach(item=>{
+   if(!item.paperId||seen.has(String(item.paperId)))throw Error("duplicate paper identifier");
+   const check=engine.validatePaper(item,{strictCLAT:true});
+   if(!check.valid)throw Error("paper validation failed");
+   seen.add(String(item.paperId));
   });
-  library.papers.push(...batchThree.papers);
-  const batchFourResponse=await fetch("./data/clat/model-papers-batch-04.json",{cache:"no-store"});
-  if(!batchFourResponse.ok)throw Error("CLAT practice batch 04 returned HTTP "+batchFourResponse.status);
-  const batchFour=await batchFourResponse.json();
-  if(batchFour.kind!=="clat-model-paper-batch"||batchFour.batchNumber!==4||!Array.isArray(batchFour.papers)||batchFour.papers.length!==5)throw Error("CLAT practice batch 04 is invalid.");
-  const knownBatchFourIds=new Set(library.papers.map(item=>item.paperId));
-  const batchFourIds=new Set();
-  batchFour.papers.forEach((item,index)=>{
-   if(Number(item.paperNumber)!==index+16||item.status!=="practice-pilot")throw Error("CLAT practice batch 04 has an unexpected paper or release status.");
-   if(knownBatchFourIds.has(item.paperId)||batchFourIds.has(item.paperId))throw Error("Duplicate CLAT paper ID: "+item.paperId);
-   const check=engine.validatePaper(item,{strictCLAT:true});if(!check.valid)throw Error("Paper "+item.paperNumber+" failed strict validation: "+check.errors.slice(0,3).join(" "));
-   batchFourIds.add(item.paperId);
-  });
-  library.papers.push(...batchFour.papers);
+  const batches=[
+   ["./data/clat/model-papers-batch-02.json",2,7,4],
+   ["./data/clat/model-papers-batch-03.json",3,11,5],
+   ["./data/clat/model-papers-batch-04.json",4,16,5]
+  ];
+  for(const [path,number,first,count] of batches){
+   try{const additions=await loadModelBatch(path,number,first,count);library.papers.push(...additions);}
+   catch(_){batchWarnings.push("One model-paper set is temporarily unavailable.");}
+  }
   renderLibrary();
   $("modelPaperCount").textContent=String(availablePapers().length);
-  try{
-   const pyqResponse=await fetch("./data/clat/actual-papers.json",{cache:"no-store"});
-   if(!pyqResponse.ok)throw Error("Actual-paper catalogue returned HTTP "+pyqResponse.status);
-   const pyqCatalog=await pyqResponse.json();
-   if(pyqCatalog.kind!=="clat-actual-papers-catalog"||!Array.isArray(pyqCatalog.papers)||pyqCatalog.papers.length!==5)throw Error("Actual-paper catalogue is invalid.");
-   const years=pyqCatalog.papers.map(item=>Number(item.examYear));
-   if(![2022,2023,2024,2025,2026].every(year=>years.includes(year)))throw Error("Actual-paper catalogue is missing one of the five latest completed CLAT editions.");
-   pyqCatalog.papers.forEach(item=>{
-    if(!item.title||!item.examDate||!item.questionCount||!item.evaluatedOutOf||!/^https:\/\//.test(item.questionUrl)||!/^https:\/\//.test(item.answerKeyUrl)||!/^https:\/\//.test(item.sourceArchiveUrl))throw Error("Actual-paper record is incomplete for CLAT "+item.examYear);
-   });
-   renderActualPapers(pyqCatalog.papers);
-   $("actualPaperCount").textContent=String(pyqCatalog.papers.length);
-   $("pyqStatus").textContent="Loaded five Consortium-issued UG papers. PDFs open in a new tab; external PDF attempts are not stored in the ExamGuru attempt history.";
-  }catch(pyqError){$("actualPaperCount").textContent="0";$("pyqStatus").textContent="Actual previous-year papers could not be loaded: "+pyqError.message;}
-  setStatus("Loaded "+availablePapers().length+" CLAT model papers, including "+availablePapers().filter(p=>p.questions.length===120).length+" full-length practice pilots.");
+  setStatus("Loaded "+availablePapers().length+" CLAT model papers. "+(batchWarnings.length?batchWarnings[0]:"Choose a paper to begin your timed practice."));
   loadResume();
- }catch(error){setStatus("Unable to load CLAT practice: "+error.message);}
+ }catch(_){
+  library={papers:[]};
+  $("paperList").replaceChildren(document.createTextNode("The model-paper library is temporarily unavailable. Please try again later."));
+  $("modelPaperCount").textContent="0";
+  setStatus("We couldn’t load the model-paper library. Please try again later.");
+ }
+ await loadActualPaperCatalogue();
 }
 $("previousBtn").addEventListener("click",()=>{index=Math.max(0,index-1);saveActive();renderQuestion();});
 $("nextBtn").addEventListener("click",()=>{if(index<paper.questions.length-1){index++;saveActive();renderQuestion();}else{saveActive();$("paletteSummary").textContent="Review your answers and flagged questions before submitting.";window.scrollTo({top:0,behavior:"smooth"});}});
