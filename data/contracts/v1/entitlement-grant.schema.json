@@ -7,7 +7,7 @@
   "properties": {
     "schemaVersion": { "const": 1 },
     "kind": { "const": "tenant-entitlement-grant" },
-    "grantId": { "type": "string", "minLength": 8, "maxLength": 100 },
+    "grantId": { "type": "string", "minLength": 8, "maxLength": 200 },
     "tenantId": { "type": "string", "minLength": 8, "maxLength": 80 },
     "key": { "type": "string", "pattern": "^[a-z][a-zA-Z0-9.]*$", "maxLength": 100 },
     "effect": { "enum": ["allow", "deny"] },
