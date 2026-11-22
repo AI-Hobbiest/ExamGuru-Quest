@@ -22,7 +22,7 @@
     if(/400|300 characters/i.test(message))return message;
     return "I couldn't complete that live request. Please try again; if it continues, share this question with the platform administrator.";
   }
-  function mount(auth){
+  function loadScriptOnce(id,src){\n    return new Promise((resolve,reject)=>{\n      const existing=document.getElementById(id);if(existing&&existing.dataset.egLoaded==="true"){resolve();return;}if(existing)existing.remove();\n      const script=document.createElement("script");script.id=id;script.async=false;script.src=src;script.onload=()=>{script.dataset.egLoaded="true";resolve();};script.onerror=()=>{script.remove();reject(new Error("Unable to load "+src));};document.head.appendChild(script);\n    });\n  }\n  async function ensureApiClient(){\n    if(window.C10Api)return;\n    const shell=document.querySelector("script[src*=\\\"app-shell.js\\\"]");\n    const base=new URL("../",shell?.src||location.href);\n    await loadScriptOnce("egAssistantApiConfig",new URL("./js/api-config.js",base).href);\n    await loadScriptOnce("egAssistantApiClient",new URL("./js/api-client.js",base).href);\n    if(!window.C10Api)throw new Error("Central API client did not initialise.");\n  }\n  function mount(auth){
     if(!auth||["guest","student_pending"].includes(auth.role)||document.getElementById("egKnowledgeAssistant"))return;
     const role=auth.role==="admin"?"platform_admin":(auth.institutionRole||auth.role||"");
     const label=ROLE_LABELS[role]||"ExamGuru";
