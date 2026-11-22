@@ -25,3 +25,6 @@ body.eg-theme-dark .eg-ka-form,body.eg-theme-dark .eg-ka-status{background:#293b
 body.eg-theme-dark .eg-ka-input{background:#344b60;border-color:#60758a;color:#f1f5f9}
 body.eg-theme-dark .eg-ka-source{color:#c8c0ff}
 body.eg-theme-dark .eg-ka-close{background:#354b61;color:#edf2f7;border-color:#60758a}
+.eg-ka-fallback{position:fixed;right:22px;bottom:22px;z-index:1200;display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border:1px solid #d9d7e9;border-radius:999px;background:#fff;color:#5147a5;font:inherit;font-size:.86rem;font-weight:850;text-decoration:none;box-shadow:0 9px 28px rgba(48,40,111,.18)}
+@media(max-width:520px){.eg-ka-fallback{right:14px;bottom:14px}}
+body.eg-theme-dark .eg-ka-fallback{background:#354b61;color:#e6e1ff;border-color:#60758a}
