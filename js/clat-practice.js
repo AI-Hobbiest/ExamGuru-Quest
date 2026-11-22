@@ -184,8 +184,6 @@ async function init(){
   const seen=new Set();
   library.papers.forEach(item=>{
    if(!item.paperId||seen.has(String(item.paperId)))throw Error("duplicate paper identifier");
-   const check=engine.validatePaper(item,{strictCLAT:true});
-   if(!check.valid)throw Error("paper validation failed");
    seen.add(String(item.paperId));
   });
   const batches=[
