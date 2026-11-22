@@ -3,7 +3,7 @@
   "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/institution-subscription.schema.json",
   "title": "ExamGuru Institution Subscription v1",
   "type": "object",
-  "required": ["schemaVersion", "kind", "subscriptionId", "tenantId", "planId", "planVersion", "status", "version", "createdAt", "updatedAt"],
+  "required": ["schemaVersion", "kind", "subscriptionId", "tenantId", "planId", "planVersion", "status", "version", "idempotencyKey", "createdAt", "updatedAt"],
   "properties": {
     "schemaVersion": { "const": 1 },
     "kind": { "const": "institution-subscription" },
