@@ -20,7 +20,7 @@ assert.equal(m.institutionDocs(local,auth).length,2);assert.equal(m.institutionD
 assert.equal(m.countBankQuestions([{questions:[{},{}]},{questions:[{}]}]),3);
 assert.equal(m.classifyIntent("How can u help me?"),"help");
 assert.equal(m.classifyIntent("How much MCQs we have in our bank?"),"bank-count");
-assert.equal(m.classifyIntent("How many students we have for now?"),"student-count");
+assert.equal(m.classifyIntent("How many students we have for now?"),"student-count");assert.equal(m.classifyIntent("Can I enrol 10 students in one go?"),"student-enrolment-guidance");assert.equal(m.classifyIntent("Do we have competitive exam add-ons?"),"competitive-entitlement");assert.equal(m.classifyIntent("Are CLAT practice papers included in our subscription?"),"competitive-entitlement");
 assert.equal(m.classifyIntent("How many XP Points I have?"),"student-xp");
 assert.equal(m.classifyIntent("Do we have backup HOD for all departments?"),"hod-coverage");
 assert.equal(m.classifyIntent("How many classes assigned to me?"),"teacher-assignment-count");
@@ -31,15 +31,15 @@ assert.equal(m.classifyIntent("A 2 L jug is full. How much water remains?"),"kno
 assert.match(m.formatOperationalUnavailable("your XP total"),/won’t guess|won't guess/i);
 assert.match(m.answer([],"How can you help me",p).text,/content add-ons enabled for your institution/i);assert.equal(m.answer([],"hello",p).text.startsWith("Hello!"),true);
 const runtime=fs.readFileSync("js/knowledge-assistant.js","utf8");assert.ok(runtime.includes("ExamGuruInstitutionContent"));assert.ok(runtime.includes("getEntitlements"));
-assert.ok(runtime.includes("answerOperational"));
+assert.ok(runtime.includes("answerOperational"));assert.ok(runtime.includes("Student Enrolments workspace supports enrolling an existing student membership"));assert.ok(runtime.includes("competitive-exam entitlement settings"));assert.ok(runtime.includes("catalogue availability does not mean it is included"));
 assert.ok(runtime.includes("institutionState(auth)"));
 assert.ok(runtime.includes("C10Gamification.calculate(attempts)"));
 assert.ok(runtime.includes("I won’t guess."));
 assert.ok(!runtime.includes("String(err?.message||\"\""));assert.ok(!/cloudflare|supabase|firebase/i.test(runtime));
 
 const shell=fs.readFileSync("js/app-shell.js","utf8");
-assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v11"));
-assert.ok(shell.includes("knowledge-assistant.js?v=20261122-m8-loader-v11"));
-assert.ok(shell.includes("knowledge-assistant.css?v=20261122-m8-loader-v11"));
+assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v12"));
+assert.ok(shell.includes("knowledge-assistant.js?v=20261122-m8-loader-v12"));
+assert.ok(shell.includes("knowledge-assistant.css?v=20261122-m8-loader-v12"));
 for(const page of ["admin.html","index.html"])assert.ok(fs.readFileSync(page,"utf8").includes("app-shell.js?v=m8-loader-v10"));
 console.log("M8 entitlement, tenant-scope and cache-busted assistant tests passed.");
