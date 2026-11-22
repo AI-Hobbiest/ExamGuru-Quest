@@ -61,6 +61,31 @@
         date(subscription.gracePeriodEndsAt) > now) return { active: true, reason: "grace-period" };
     return { active: false, reason: subscription.status || "inactive" };
   }
+  function mapLegacyInstitutionEntitlements(tenantId, legacy, at) {
+    const id = String(tenantId || "");
+    if (!id || !legacy || typeof legacy !== "object") return [];
+    const now = at || new Date().toISOString();
+    const mapped = [];
+    const add = (key, scope, suffix) => mapped.push({
+      schemaVersion: 1, kind: "tenant-entitlement-grant",
+      grantId: "legacy-" + suffix + "-" + id,
+      tenantId: id, key, effect: "allow", source: "migration", status: "active",
+      scope, version: 1, idempotencyKey: "legacy-entitlement-" + suffix + "-" + id,
+      reason: "Explicitly mapped from the existing institution-entitlements v1 record; not evidence of a paid subscription.",
+      createdAt: now, updatedAt: now
+    });
+    const curriculum = legacy.curriculum || {};
+    if (curriculum.enabled === true) {
+      (curriculum.classIds || []).map(String).filter(Boolean).forEach(classId =>
+        add("cbse.curriculum", { classIds: [classId] }, "curriculum-" + classId));
+    }
+    const exams = legacy.competitiveExams || {};
+    if (exams.enabled === true) {
+      (exams.examIds || []).map(String).filter(Boolean).forEach(examId =>
+        add("competitive.exams", { examIds: [examId] }, "exam-" + examId));
+    }
+    return mapped;
+  }
   function resolveEntitlements(plan, subscription, grants, at) {
     const now = at == null ? Date.now() : (typeof at === "number" ? at : Date.parse(at));
     if (!Number.isFinite(now)) throw new TypeError("A valid entitlement evaluation time is required.");
@@ -186,7 +211,7 @@
     });
   }
   const api = Object.freeze({ ONBOARDING_TRANSITIONS, SUBSCRIPTION_TRANSITIONS, assertTransition, assertCommand, assertExpectedVersion,
-    subscriptionAccess, resolveEntitlements, createSaasLifecycle });
+    subscriptionAccess, mapLegacyInstitutionEntitlements, resolveEntitlements, createSaasLifecycle });
   globalThis.ExamGuruSaasLifecycle = api;
   if (typeof module !== "undefined" && module.exports) module.exports = api;
 })();
