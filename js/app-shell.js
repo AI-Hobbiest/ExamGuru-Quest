@@ -227,6 +227,12 @@
     const current=getLocation(),auth=await authState();
     window.ExamGuruAuthState=auth;
     window.dispatchEvent(new CustomEvent("examguru-auth-state-ready",{detail:auth}));
+    if(auth.role==="student"&&!document.getElementById("egKnowledgeAssistantModelScript")){
+      const assistantCss=document.createElement("link");assistantCss.rel="stylesheet";assistantCss.href="./css/knowledge-assistant.css?v=m8-knowledge-v1";document.head.appendChild(assistantCss);
+      const modelScript=document.createElement("script");modelScript.id="egKnowledgeAssistantModelScript";modelScript.src="./js/knowledge-assistant-model.js?v=m8-knowledge-v1";
+      modelScript.onload=()=>{const assistantScript=document.createElement("script");assistantScript.src="./js/knowledge-assistant.js?v=m8-knowledge-v1";document.body.appendChild(assistantScript);};
+      document.body.appendChild(modelScript);
+    }
     if(!auth.localTestMode&&auth.role==="institution"){try{sessionStorage.setItem("examguru_active_role_v1",auth.institutionRole||"institution_viewer");sessionStorage.setItem("examguru_active_institution_v1",auth.institutionId||"");}catch(_){}}
     if(!auth.localTestMode&&auth.role==="admin"){try{sessionStorage.setItem("examguru_active_role_v1","platform_admin");}catch(_){}}
     if(auth.localTestMode&&current.file==="admin.html"&&auth.role!=="admin"){location.replace(auth.role==="institution"?"./institution-operations.html":auth.role==="parent"?"./parent.html":"./dashboard.html");return;}
