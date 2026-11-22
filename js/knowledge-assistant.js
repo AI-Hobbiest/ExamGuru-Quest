@@ -28,7 +28,7 @@
     if(!visual&&!manifest&&!catalog)throw new Error('No published GitHub knowledge files could be loaded.');
     const docs=model.buildIndex(visual,manifest,auth);
     if(catalog){
-      const sources=model.bankSources(catalog,query||'');
+      const sources=model.bankSources(catalog,query||'',auth);
       const loaded=await Promise.all(sources.map(async source=>{try{return {source,bank:await readJson(source.path)};}catch(_){return null;}}));
       loaded.filter(Boolean).forEach(({source,bank})=>bankQuestionItems(bank).forEach((question,index)=>{
         const prompt=question.prompt||question.question||question.text||'';
@@ -41,7 +41,7 @@
   }
   async function answerBankCount(query){
     const model=window.ExamGuruKnowledgeAssistantModel,catalog=await readJson('data/classes.json');
-    const sources=model.bankSources(catalog,query);
+    const sources=model.bankSources(catalog,query,auth);
     const loaded=await Promise.all(sources.map(async source=>{try{const bank=await readJson(source.path),items=bankQuestionItems(bank);return {...source,count:items.length,approved:bankApprovedCount(items),title:bank.title||''};}catch(_){return null;}}));
     const available=loaded.filter(Boolean);
     if(!available.length)return {text:'I could not find a published question bank matching that class or subject in the current repository catalogue. Try another class or subject.',sources:[]};
@@ -64,7 +64,7 @@
   async function answerQuestion(query,auth){
     const q=query.toLowerCase();
     if(/\b(how many|count|total|number|inventory|available)\b/.test(q)&&/\b(question|questions|qbank|bank|banks)\b/.test(q))return answerBankCount(query);
-    const index=await loadIndex(auth,query);
+    const model=window.ExamGuruKnowledgeAssistantModel;\n    const profile=model.resolveProfile(auth);\n    if(profile&&(/\\b(how can (you|u) help( me)?|what can (you|u) do|how do i use (you|this)|help me get started|what are your capabilities)\\b/.test(q)||/^(hi|hello|hey|good morning|good afternoon|good evening)$/.test(q))){const response=model.answer([],query,profile);return {text:response.text,sources:[]};}\n    const index=await loadIndex(auth,query);
     const model=window.ExamGuruKnowledgeAssistantModel;
     const results=model.search(index,query,5);
     const profile=model.resolveProfile(auth);
