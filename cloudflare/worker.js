@@ -573,29 +573,6 @@ async function v2EndDepartmentHead(request,env,who,appointmentId) {
   return json(request,env,{ok:true,appointmentId,status});
 }
 
-
-async function assistantQuery(request,env,who) {
-  if(!env.DB)return fail(request,env,503,"The live assistant service is not configured. The Cloudflare D1 database binding is unavailable.");
-  if(!(await hasPlatformAdminGrant(env,who)))return fail(request,env,403,"This live assistant query is not available to your current role or workspace.");
-  const body=await readJson(request),query=String(body.query||"").trim();
-  if(!query||query.length>300)return fail(request,env,400,"Enter a question of up to 300 characters.");
-  const q=query.toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
-  if(/\b(institution|institutions|schools|colleges)\b/.test(q)&&/\b(how many|count|total|number)\b/.test(q)){
-    const row=await env.DB.prepare("SELECT COUNT(*) total, SUM(CASE WHEN status='active' THEN 1 ELSE 0 END) active FROM institutions").first();
-    return json(request,env,{ok:true,answer:"There are "+Number(row?.total||0)+" institutions in the platform directory, of which "+Number(row?.active||0)+" are active.",sources:[{title:"Live institution directory",type:"platform-metadata"}],generatedAt:isoNow()});
-  }
-  if(/\b(question|questions|qbank|bank)\b/.test(q)&&/\b(how many|count|total|number)\b/.test(q)&&/\b(class 10|grade 10)\b/.test(q)&&/\b(math|mathematics)\b/.test(q)){
-    const source="https://raw.githubusercontent.com/AI-Hobbiest/ExamGuru-Quest/main/data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json";
-    let response,data;
-    try{response=await fetch(source,{cache:"no-store"});if(!response.ok)throw new Error("HTTP "+response.status);data=await response.json();}
-    catch(_){return fail(request,env,503,"The Class 10 Mathematics question-bank source is temporarily unavailable. Please retry shortly.");}
-    const questions=Array.isArray(data.questions)?data.questions:[];
-    const approved=questions.filter(item=>item.approvalStatus==="approved").length;
-    return json(request,env,{ok:true,answer:"The Class 10 Mathematics shared Standard & Basic pool contains "+questions.length+" questions; "+approved+" are marked approved. The bank's overall release status is "+String(data.questionPoolStatus||"not specified")+".",sources:[{title:data.title||"Class 10 Mathematics question bank",type:"question-bank",url:source}],generatedAt:isoNow(),metrics:{total:questions.length,approved,releaseStatus:data.questionPoolStatus||null}});
-  }
-  return fail(request,env,422,"I can answer live platform institution counts and the currently connected Class 10 Mathematics question-bank count. This question needs another live data connector or a more specific query.");
-}
-
 export default {
   async fetch(request,env) {
     const url=new URL(request.url),path=url.pathname,method=request.method.toUpperCase();
@@ -618,7 +595,6 @@ export default {
 
 
       const auth=await requireAuth(request,env);if(auth.error)return auth.error;const who=auth.who;
-      if(path==="/api/assistant/query"&&method==="POST")return await assistantQuery(request,env,who);
       const m4Response=await handleM4(request,env,who);if(m4Response)return m4Response;
       if(path==="/api/v2/auth/me"&&method==="GET")return await v2Identity(request,env,who);
       if(path==="/api/v2/auth/context"&&method==="POST")return await v2SelectContext(request,env,who);
