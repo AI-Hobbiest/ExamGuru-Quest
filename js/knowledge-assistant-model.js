@@ -60,6 +60,16 @@
     }).filter(item=>item.score>0).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title)).slice(0,Math.max(1,Math.min(10,limit)));
   }
   function answer(results,query,profile){
+    const normalized=norm(query);
+    const helpIntent=/\b(how can (you|u) help( me)?|what can (you|u) do|how do i use (you|this)|help me get started|what are your capabilities)\b/.test(normalized);
+    const greetingIntent=/^(hi|hello|hey|good morning|good afternoon|good evening)$/.test(normalized);
+    if(profile&&(helpIntent||greetingIntent)){
+      const intro=profile.greeting||"Ask about published ExamGuru learning resources and guidance.";
+      const scope=profile.role==="platform_admin"
+        ?" I can help locate published platform documentation, question-bank material and operational guidance in the public GitHub repository. I cannot access private institution records, user accounts, live management data or cross-user progress in this GitHub-only version."
+        :" I can search published resources available to this workspace. Private records and live account data are not available unless they are explicitly published in an accessible source.";
+      return {text:(greetingIntent?"Hello! ":"")+intro+scope+" Try asking about a specific topic, class, subject, question bank or published resource.",sources:[]};
+    }
     if(!results.length)return {text:"I couldn't find a close match in the published material available to this "+(profile?.label||"workspace")+". Try a topic, subject or resource title. I won't guess beyond the sources I can access.",sources:[]};
     const best=results.slice(0,3);
     const lines=best.map((item,index)=>{const snippet=item.summary||item.text.replace(/\s+/g," ").slice(0,420);return (index+1)+". "+item.title+" — "+snippet+(item.chapter?" ("+item.chapter+")":"");});
