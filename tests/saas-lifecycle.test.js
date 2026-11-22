@@ -14,11 +14,13 @@ assert.equal(subscriptionSchema.properties.kind.const,"institution-subscription"
 assert.equal(onboardingSchema.properties.kind.const,"tenant-onboarding-request");
 assert.equal(grantSchema.properties.kind.const,"tenant-entitlement-grant");
 assert.ok(subscriptionSchema.required.includes("tenantId")&&subscriptionSchema.required.includes("planVersion"));
-assert.ok(onboardingSchema.required.includes("idempotencyKey")===false,"idempotency is enforced on the lifecycle command and persisted by the service");
+assert.ok(onboardingSchema.required.includes("idempotencyKey"));
+assert.ok(subscriptionSchema.required.includes("idempotencyKey"));
+assert.ok(grantSchema.required.includes("idempotencyKey"));
 const tenant={institutionId:"tenant-001",status:"active"};
 const plan={schemaVersion:1,kind:"subscription-plan",planId:"school-standard",version:1,name:"School Standard",status:"active",features:["cbse.curriculum","assessment.assign","reports.export"],limits:{branches:3,learners:500,teachers:30},createdAt:"2026-11-01T00:00:00.000Z",updatedAt:"2026-11-01T00:00:00.000Z"};
-const subscription={schemaVersion:1,kind:"institution-subscription",subscriptionId:"sub-tenant-001",tenantId:"tenant-001",planId:plan.planId,planVersion:1,status:"active",version:1,currentPeriodStart:"2026-11-01T00:00:00.000Z",currentPeriodEnd:"2026-12-01T00:00:00.000Z",cancelAtPeriodEnd:false,createdAt:"2026-11-01T00:00:00.000Z",updatedAt:"2026-11-01T00:00:00.000Z"};
-const grant=(grantId,key,effect,extra={})=>({schemaVersion:1,kind:"tenant-entitlement-grant",grantId,tenantId:"tenant-001",key,effect,source:"platform_override",status:"active",version:1,createdAt:"2026-11-01T00:00:00.000Z",updatedAt:"2026-11-01T00:00:00.000Z",...extra});
+const subscription={schemaVersion:1,kind:"institution-subscription",subscriptionId:"sub-tenant-001",tenantId:"tenant-001",planId:plan.planId,planVersion:1,status:"active",version:1,idempotencyKey:"subscription-create-001",currentPeriodStart:"2026-11-01T00:00:00.000Z",currentPeriodEnd:"2026-12-01T00:00:00.000Z",cancelAtPeriodEnd:false,createdAt:"2026-11-01T00:00:00.000Z",updatedAt:"2026-11-01T00:00:00.000Z"};
+const grant=(grantId,key,effect,extra={})=>({schemaVersion:1,kind:"tenant-entitlement-grant",grantId,tenantId:"tenant-001",key,effect,source:"platform_override",status:"active",version:1,idempotencyKey:"grant-fixture-001",createdAt:"2026-11-01T00:00:00.000Z",updatedAt:"2026-11-01T00:00:00.000Z",...extra});
 const at="2026-11-15T00:00:00.000Z";
 let result=lifecycle.resolveEntitlements(plan,subscription,[],at);
 assert.equal(result.active,true);
