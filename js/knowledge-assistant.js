@@ -16,14 +16,38 @@
     if(!response.ok)throw new Error("Unable to load published GitHub file: "+path+" ("+response.status+")");
     return response.json();
   }
-  async function loadIndex(auth){
-    if(!window.ExamGuruKnowledgeAssistantModel)throw new Error("Knowledge retrieval model is unavailable.");
-    const [visual,manifest]=await Promise.all([
-      readJson("data/visual-revision.json").catch(()=>null),
-      readJson("data/knowledge-base.json").catch(()=>null)
-    ]);
-    if(!visual&&!manifest)throw new Error("No published GitHub knowledge files could be loaded.");
-    return window.ExamGuruKnowledgeAssistantModel.buildIndex(visual,manifest,auth);
+  function bankQuestionItems(bank){
+    if(Array.isArray(bank))return bank.flatMap(chapter=>(chapter.questions||[]).map(question=>({...question,chapterTitle:chapter.title||'',chapterNo:chapter.chapter_no||''})));
+    return Array.isArray(bank?.questions)?bank.questions:[];
+  }
+  function bankApprovedCount(items){return items.filter(item=>item.approvalStatus==='approved').length;}
+  async function loadIndex(auth,query){
+    if(!window.ExamGuruKnowledgeAssistantModel)throw new Error('Knowledge retrieval model is unavailable.');
+    const model=window.ExamGuruKnowledgeAssistantModel;
+    const [visual,manifest,catalog]=await Promise.all([readJson('data/visual-revision.json').catch(()=>null),readJson('data/knowledge-base.json').catch(()=>null),readJson('data/classes.json').catch(()=>null)]);
+    if(!visual&&!manifest&&!catalog)throw new Error('No published GitHub knowledge files could be loaded.');
+    const docs=model.buildIndex(visual,manifest,auth);
+    if(catalog){
+      const sources=model.bankSources(catalog,query||'');
+      const loaded=await Promise.all(sources.map(async source=>{try{return {source,bank:await readJson(source.path)};}catch(_){return null;}}));
+      loaded.filter(Boolean).forEach(({source,bank})=>bankQuestionItems(bank).forEach((question,index)=>{
+        const prompt=question.prompt||question.question||question.text||'';
+        const options=Array.isArray(question.options)?question.options.map(option=>typeof option==='string'?option:option.text||'').join(' '):'';
+        const explanation=question.answerKey?.explanation||question.explanation||'';
+        docs.push({id:String(question.questionId||question.id||source.path+'-'+index),title:String(prompt||question.chapterTitle||source.subjectLabel),text:[prompt,options,explanation,question.chapterTitle,question.chapterId,question.unitId,(question.topicTags||[]).join(' ')].filter(Boolean).join(' '),subject:source.subjectLabel,classId:source.classId,chapter:question.chapterTitle||question.chapterId||'',sourceType:'question-bank',path:source.path,bankType:source.bankType});
+      }));
+    }
+    return docs;
+  }
+  async function answerBankCount(query){
+    const model=window.ExamGuruKnowledgeAssistantModel,catalog=await readJson('data/classes.json');
+    const sources=model.bankSources(catalog,query);
+    const loaded=await Promise.all(sources.map(async source=>{try{const bank=await readJson(source.path),items=bankQuestionItems(bank);return {...source,count:items.length,approved:bankApprovedCount(items),title:bank.title||''};}catch(_){return null;}}));
+    const available=loaded.filter(Boolean);
+    if(!available.length)return {text:'I could not find a published question bank matching that class or subject in the current repository catalogue. Try another class or subject.',sources:[]};
+    const total=available.reduce((sum,item)=>sum+item.count,0);
+    const lines=available.map(item=>'- '+item.classLabel+' · '+item.subjectLabel+' · '+item.bankType+': '+item.count.toLocaleString()+' questions'+(item.approved?' ('+item.approved.toLocaleString()+' approved)':''));
+    return {text:'I found '+total.toLocaleString()+' questions across '+available.length+' published bank(s) matching your request:\n'+lines.join('\n')+'\n\nCounts are read directly from the current GitHub-hosted JSON files. SOF/Olympiad banks are listed separately from curriculum banks; Class 10 examination pools are counted as their own published banks.',sources:available.map(item=>({title:item.title||item.classLabel+' '+item.subjectLabel+' '+item.bankType,path:item.path}))};
   }
   function addFallback(message){
     let link=document.getElementById("egKnowledgeAssistantFallback");
@@ -39,18 +63,13 @@
   }
   async function answerQuestion(query,auth){
     const q=query.toLowerCase();
-    if(/\b(how many|count|total|number)\b/.test(q)&&/\b(question|questions|qbank|bank)\b/.test(q)&&/\b(class 10|grade 10)\b/.test(q)&&/\b(math|mathematics)\b/.test(q)){
-      const bank=await readJson("data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json");
-      const questions=Array.isArray(bank.questions)?bank.questions:[];
-      const approved=questions.filter(item=>item.approvalStatus==="approved").length;
-      return {text:"The GitHub-hosted Class 10 Mathematics Standard & Basic shared pool contains "+questions.length+" questions; "+approved+" are marked approved. Its current release status is "+String(bank.questionPoolStatus||"not specified")+". This is the published repository snapshot, not a live private database count.",sources:[{title:bank.title||"Class 10 Mathematics question bank",path:"data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json"}]};
-    }
-    const index=await loadIndex(auth);
+    if(/\\b(how many|count|total|number|inventory|available)\\b/.test(q)&&/\\b(question|questions|qbank|bank|banks)\\b/.test(q))return answerBankCount(query);
+    const index=await loadIndex(auth,query);
     const model=window.ExamGuruKnowledgeAssistantModel;
     const results=model.search(index,query,5);
     const profile=model.resolveProfile(auth);
     const response=model.answer(results,query,profile);
-    return {text:response.text,sources:response.sources.map(item=>({...item,path:item.path||""}))};
+    return {text:response.text,sources:response.sources.map(item=>({...item,path:item.path||''}))};
   }
   function mount(auth){
     if(!auth||["guest","student_pending"].includes(auth.role)||document.getElementById("egKnowledgeAssistant"))return;
