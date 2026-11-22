@@ -1,79 +1,53 @@
-# M8 — Role-bound Natural Language Assistant
+# M8 — Browser-local Assistant and Student Knowledge Search
 
-## Product boundary
+## M8 delivery boundary
 
-The assistant is a site-level ExamGuru Quest capability. Its entry point may be visible across authenticated workspaces, but the commands, data and results are restricted to the active authenticated role, institution, membership, department, branch, class and student context.
+M8 is implemented for the GitHub-only, local-first phase. GitHub Pages serves the static application and versioned learning catalogues. GitHub Actions validates and deploys repository changes. Runtime search and conversation state stay in the browser. No Cloudflare, Supabase, Firebase, hosted LLM, API secret, or external database is used.
 
-The assistant is not a new identity provider and does not create or grant permissions.
+This is not a secure multi-user server boundary. Browser-local role state can be modified by the user, and static GitHub-hosted account files are public. Do not use this phase for confidential student records, private institutional data, payments, or authoritative cross-device permissions.
+
+## Student Knowledge Assistant
+
+- A floating conversational search entry is mounted for authenticated student sessions only.
+- The active class scopes the index. The assistant indexes matching Visual Revision Board cards and published entries from \`data/knowledge-base.json\`.
+- Draft resources and resources for other classes are excluded.
+- Retrieval is deterministic and runs entirely in the browser. It ranks matches using title, chapter, subject and content terms.
+- Responses quote/condense only indexed source text and provide links back to the Study Library or published resource. Empty matches are explicit; the assistant does not invent an answer.
+- No prompt, student identity, answer history or learning record is sent to an AI service.
+- Conversation messages exist only in the current page session. Student data is not persisted by the assistant.
+- The current knowledge manifest is empty by design until administrators publish resources. Existing class-scoped Visual Revision Boards are searchable immediately.
 
 ## Architecture
 
-1. **Browser UI:** shared assistant panel integrated with the existing application shell.
-2. **Local model:** Transformers.js runs inference on the user's device. Model output is treated as untrusted input.
-3. **Intent contract:** model output must validate against a versioned, allowlisted command schema. No arbitrary URLs, SQL, JavaScript, function names or tool descriptions are accepted.
-4. **Command service:** validates the command and parameters, derives actor and active workspace from the authenticated session, and invokes only a registered service operation.
-5. **Authorization:** the server authenticates the actor and applies the existing provider-neutral authorization policy to the requested resource and operation. The model and browser role label are never authorization evidence.
-6. **Repository adapter:** the service reads/writes only through provider-neutral repository contracts. Storage provider selection remains independent of the assistant.
+1. GitHub Pages serves the app, the visual-revision catalogue and the knowledge-base manifest.
+2. The shared app shell identifies the current browser session and mounts the student assistant only for student workspaces.
+3. \`js/knowledge-assistant-model.js\` validates the catalogue shape at the boundary and builds a class-scoped, in-memory retrieval index.
+4. \`js/knowledge-assistant.js\` renders the conversation panel, retrieves matching sources and presents citations/links.
+5. The retrieval model is provider-neutral and isolated from future model or database adapters.
 
-## Role binding
+## Assistant boundaries by role
 
-- Platform Admin: platform-level operations explicitly registered for platform administration.
-- Institution Admin: operations restricted to the authenticated institution and its permitted branches.
-- HOD: operations restricted to appointed department scope; cross-department teaching assignments are shown only where the existing policy permits.
-- Teacher: assigned class/subject scope only.
-- Institution Viewer: read-only operations only, within granted institution scope.
-- Parent: linked children only.
-- Student: own learning data only.
-- Guest: no private data or management commands.
+- Student: class-scoped published learning content only.
+- Parent: no student assistant entry in this milestone; existing parent-linked Study Library views remain unchanged.
+- Teacher/HOD/Institution Admin/Institution Viewer: no management-command execution is exposed in M8's GitHub-only mode.
+- Platform Admin: existing deterministic Admin workspace remains the management interface.
+- Guest: no assistant entry and no private learning data.
 
-This is a command-catalogue design guide, not a replacement for the server's authoritative permission policy. Exact permission names and scope rules must be taken from the existing authorization module and backend route implementation; do not invent additional restrictions.
+## Deferred capabilities
 
-## Response quality and safe failure
+A generative local model (for example, a small Transformers.js model) is not enabled in this delivery. It would add significant model download, memory, CPU/WebGPU compatibility and answer-quality costs. Retrieval-first search is the dependable baseline; a local model may later rephrase retrieved passages, but must never add unsupported facts or bypass source citations.
 
-- Use structured model output with a strict schema and version.
-- Validate command identifier, parameter types, required fields, allowed enum values and bounds.
-- Ask a single clarification question when required parameters are missing or more than one supported intent matches.
-- Refuse unsupported requests without fabricating a capability.
-- Ground factual answers in returned service data. Do not generate counts, statuses, names or summaries unsupported by the response payload.
-- On empty results, say no matching records were returned.
-- On partial results, label the result partial and explain the known limitation.
-- On timeout, model-load failure, unsupported device runtime or API failure, show a clear error and offer the deterministic Command Centre.
-- Never claim a write succeeded until the service returns a successful result and, where appropriate, a read-after-write verification.
-- Confirm consequential writes before execution. Protect retryable writes with idempotency keys.
-- Never silently fall back from an unavailable server operation to browser-local mutation.
-
-## Model fallback
-
-1. Try WebGPU when supported.
-2. Use the Transformers.js WASM/CPU backend when available and within configured resource limits.
-3. If loading or inference fails, timeouts, or exceeds memory/runtime budget, disable AI for the current session and expose the deterministic Command Centre.
-4. A rules-based parser may handle only explicitly registered, unambiguous commands. It must not fabricate a successful interpretation.
-5. Do not call a hosted LLM as a hidden fallback. Prompts and model inference remain local.
-
-## Privacy and telemetry
-
-- Do not send prompt text or student records to an external inference provider.
-- Avoid logging raw prompts, passwords, tokens, student answers or personal data.
-- Operational diagnostics should use non-sensitive error codes and aggregate counters.
-- Model assets may be cached by the browser; provide versioned asset URLs and a model download/loading state.
-
-## Hosting boundary
-
-- GitHub Pages remains the static application host and can host versioned model assets subject to repository and bandwidth constraints.
-- The secured API is a separate portable service. GitHub Pages cannot execute server-side API code.
-- No Cloudflare services or Cloudflare-specific runtime dependencies are permitted.
-- Do not enable persistent management writes until a server-side authentication provider and a secure persistence adapter are configured and verified.
-- Cloud database adoption remains outside M8 and deferred until after M11.
+Trusted management commands, secure role enforcement, private shared storage, and cross-device synchronization require a trusted server/persistence boundary. GitHub Pages and GitHub Actions do not provide an interactive authenticated application API. These capabilities remain deferred to the post-M11 infrastructure decision.
 
 ## Acceptance gates
 
-1. Guest cannot access private assistant data.
-2. Every authenticated role sees only commands registered for its workspace; server-side authorization remains decisive.
-3. Switching workspace changes the assistant context and clears prior workspace-specific conversation context.
-4. Prompt injection, fake role claims and requests for arbitrary endpoints cannot bypass server authorization.
-5. Ambiguous, unsupported, malformed and low-confidence outputs never execute.
-6. Model download, WebGPU, WASM, CPU, memory and timeout failures all reach a usable non-AI fallback.
-7. API 401/403/404/409/429/5xx and network failures are handled distinctly without false success.
-8. Factual responses are grounded in service results and include clear empty/partial/error states.
-9. Consequential writes require confirmation and use idempotency protection.
-10. Tests cover every role and negative scope cases using the existing policy fixtures; no new permission rule is invented merely for the assistant.
+1. Only a student session mounts the assistant.
+2. Search index includes only Visual Revision Board content for the active class.
+3. Knowledge-base resources must be published and class-compatible.
+4. Search is deterministic, bounded and browser-local.
+5. Every returned result links to its source; no-result responses do not fabricate content.
+6. Assistant content is inserted as text, not executable HTML.
+7. No external inference, analytics, API token or network write is used.
+8. The existing Study Library, parent views, Admin workspace and navigation remain unaffected.
+9. Unit tests cover class isolation, publication filtering, retrieval ranking, source links and empty results.
+10. GitHub Actions runs the M8 tests before merge/deployment.
