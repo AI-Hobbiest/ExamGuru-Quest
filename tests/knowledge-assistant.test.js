@@ -53,17 +53,33 @@ const shell=fs.readFileSync("js/app-shell.js","utf8");
 assert.ok(shell.includes('roles.push(...studentOptions)'),"local role preview must always offer student class options");
 assert.ok(shell.includes('loadKnowledgeAssistant(auth)'),"assistant loader must run independently of prior script element presence");
 assert.ok(shell.includes("assistantAssetBase"),"assistant assets must resolve from the shared app-shell location");
-assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v6")&&shell.includes("knowledge-assistant.js?v=20261122-m8-loader-v6")&&shell.includes("knowledge-assistant.css?v=20261122-m8-loader-v6"),"all assistant runtime assets use a new cache key when the floater implementation changes");
+assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v7")&&shell.includes("knowledge-assistant.js?v=20261122-m8-loader-v7")&&shell.includes("knowledge-assistant.css?v=20261122-m8-loader-v7"),"all assistant runtime assets use a new cache key when the floater implementation changes");
 assert.ok(!shell.includes("new URL(path,document.baseURI)"),"assistant assets must not depend on a page-level base URL");
 assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes("ExamGuruKnowledgeAssistant=Object.freeze"),"assistant must expose an explicit mount API for deterministic initialisation");
 assert.ok(fs.readFileSync("css/knowledge-assistant.css","utf8").includes(".eg-ka-panel"));
 const launcherRoutes=["admin.html","institution-operations.html","teacher-workspace.html","parent.html","dashboard.html","practice.html","study.html","help.html","user-management.html","index.html","profile.html","learning.html","exam-practice.html","assigned-paper.html","assigned-test.html","clat.html","clat-dashboard.html","clat-login.html","competitive-exams-admin.html","institution-academics.html","institution-assignments.html","institution-branches.html","institution-competitive-exams.html","institution-content.html","institution-departments.html","institution-enrolments.html","institution-learning.html","platform-entitlements.html","pyq-library.html"];
 launcherRoutes.forEach(path=>{
   const html=fs.readFileSync(path,"utf8");
-  assert.match(html,/app-shell\.js\?v=m8-loader-v7/,path+" must load the current assistant-aware app shell without stale browser cache");
+  assert.match(html,/app-shell\.js\?v=m8-loader-v[78]/,path+" must load the current assistant-aware app shell without stale browser cache");
 });
 console.log("M8 role-aware assistant tests passed: student class isolation, role audiences, institution/department filters, viewer scope, source links, empty results and fallback hooks.");
 // Launcher diagnostics remain visible on mobile and update an existing fallback rather than hiding the cause.
 assert.ok(fs.readFileSync("js/app-shell.js","utf8").includes('link.textContent="Ask ExamGuru unavailable · "+stage'));
 assert.ok(fs.readFileSync("js/app-shell.js","utf8").includes('window.__egKnowledgeAssistantDiagnostic={stage,message:detail||null,role:auth.role||"unknown"}'));
 assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes('window.__examGuruKnowledgeAssistantLoaded&&window.ExamGuruKnowledgeAssistant'),"a partial earlier load must not block API recovery");
+
+const assistantSource=fs.readFileSync("js/knowledge-assistant.js","utf8");
+assert.ok(assistantSource.includes('readJson("data/visual-revision.json")'),"assistant must retrieve the published Visual Revision catalogue from GitHub Pages");
+assert.ok(assistantSource.includes('readJson("data/knowledge-base.json")'),"assistant must retrieve the published Knowledge Base manifest from GitHub Pages");
+assert.ok(assistantSource.includes('readJson("data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json")'),"question-bank counts must come from the maintained GitHub repository source");
+assert.ok(assistantSource.includes("GitHub-hosted published files"),"assistant must disclose the GitHub-only retrieval boundary");
+assert.ok(assistantSource.includes("NOT an authorization boundary")||assistantSource.includes("not available in this GitHub-only version"),"assistant must disclose that private institution and cross-user data are unavailable");
+assert.ok(!assistantSource.includes("C10Api"),"assistant must not depend on the external API client");
+assert.ok(!assistantSource.includes("/api/assistant/query"),"assistant must not call a server endpoint");
+assert.ok(!assistantSource.includes("localStorage"),"assistant must not persist retrieved platform or learner data in browser storage");
+assert.ok(assistantSource.includes("friendlyError")===false,"the old server-only error handler must not remain");
+const worker=fs.readFileSync("cloudflare/worker.js","utf8");
+assert.ok(!worker.includes("async function assistantQuery"),"M8 must not add an Ask ExamGuru Worker endpoint");
+assert.ok(assistantSource.includes("fetch(asset(path)"),"published source files must be fetched directly from GitHub Pages");
+assert.ok(assistantSource.includes("model.search(index,query,5)"),"repository content must be searched through the role-aware retrieval model");
+console.log("M8 GitHub-only assistant tests passed: repository-backed retrieval, source links, no external API and no Cloudflare assistant endpoint.");
