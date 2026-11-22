@@ -61,3 +61,7 @@ launcherRoutes.forEach(path=>{
   assert.match(html,/app-shell\.js\?v=20261122-m8-assistant-launcher-v1/,path+" must load the current assistant-aware app shell without stale browser cache");
 });
 console.log("M8 role-aware assistant tests passed: student class isolation, role audiences, institution/department filters, viewer scope, source links, empty results and fallback hooks.");
+// Launcher diagnostics remain visible on mobile and update an existing fallback rather than hiding the cause.
+assert.ok(fs.readFileSync("js/app-shell.js","utf8").includes('link.textContent="Ask ExamGuru unavailable · "+stage'));
+assert.ok(fs.readFileSync("js/app-shell.js","utf8").includes('window.__egKnowledgeAssistantDiagnostic={stage,message:detail||null,role:auth.role||"unknown"}'));
+assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes('window.__examGuruKnowledgeAssistantLoaded&&window.ExamGuruKnowledgeAssistant'),"a partial earlier load must not block API recovery");
