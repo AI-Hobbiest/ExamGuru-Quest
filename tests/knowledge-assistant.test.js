@@ -69,10 +69,15 @@ assert.ok(fs.readFileSync("js/app-shell.js","utf8").includes('window.__egKnowled
 assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes('window.__examGuruKnowledgeAssistantLoaded&&window.ExamGuruKnowledgeAssistant'),"a partial earlier load must not block API recovery");
 
 const assistantSource=fs.readFileSync("js/knowledge-assistant.js","utf8");
-assert.ok(assistantSource.includes('request("/api/assistant/query"'),"assistant questions must go to the live authenticated API");
-assert.ok(assistantSource.includes("Live retrieval only"),"assistant must disclose live retrieval");
-assert.ok(!assistantSource.includes("data/knowledge-base.json"),"assistant must not build a browser-local knowledge catalogue");
-assert.ok(!assistantSource.includes("data/visual-revision.json"),"assistant must not cache visual revision cards for retrieval");
+assert.ok(assistantSource.includes('readJson("data/visual-revision.json")'),"assistant must retrieve the published Visual Revision catalogue from GitHub Pages");
+assert.ok(assistantSource.includes('readJson("data/knowledge-base.json")'),"assistant must retrieve the published Knowledge Base manifest from GitHub Pages");
+assert.ok(assistantSource.includes('readJson("data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json")'),"question-bank counts must come from the maintained GitHub repository source");
+assert.ok(assistantSource.includes("GitHub-hosted published files"),"assistant must disclose the GitHub-only retrieval boundary");
+assert.ok(assistantSource.includes("NOT an authorization boundary")||assistantSource.includes("not available in this GitHub-only version"),"assistant must disclose that private institution and cross-user data are unavailable");
+assert.ok(!assistantSource.includes("C10Api"),"assistant must not depend on the external API client");
+assert.ok(!assistantSource.includes("/api/assistant/query"),"assistant must not call a server endpoint");
 assert.ok(!assistantSource.includes("localStorage"),"assistant must not persist retrieved platform or learner data in browser storage");
-assert.ok(assistantSource.includes("friendlyError"),"assistant must map service failures to user-facing messages");
-console.log("M8 live assistant tests passed: authenticated API retrieval, no local knowledge cache and actionable errors.");
+assert.ok(assistantSource.includes("friendlyError")===false,"the old server-only error handler must not remain");
+const worker=fs.readFileSync("cloudflare/worker.js","utf8");
+assert.ok(!worker.includes("async function assistantQuery"),"M8 must not add an Ask ExamGuru Worker endpoint");
+console.log("M8 GitHub-only assistant tests passed: repository-backed retrieval, source links, no external API and no Cloudflare assistant endpoint.");
