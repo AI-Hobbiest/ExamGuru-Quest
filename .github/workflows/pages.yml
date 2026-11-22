@@ -255,6 +255,14 @@ jobs:
           cp js/parent-dashboard.js _site/js/parent-dashboard.js
           cp js/report-print.js _site/js/report-print.js
           cp js/app-shell.js _site/js/app-shell.js
+          # Ask ExamGuru is loaded on demand by app-shell.js after role resolution.
+          # These runtime assets must be present in the published site, not just the repository.
+          cp js/knowledge-assistant.js _site/js/knowledge-assistant.js
+          cp js/knowledge-assistant-model.js _site/js/knowledge-assistant-model.js
+          cp css/knowledge-assistant.css _site/css/knowledge-assistant.css
+          test -s _site/js/knowledge-assistant.js
+          test -s _site/js/knowledge-assistant-model.js
+          test -s _site/css/knowledge-assistant.css
           test -s _site/user-management.html
           for file in platform-demo-management.html demo-local-preview.html demo-login.html demo-preview.html js/domain/demo-management.js js/domain/demo-persona-catalog.js; do test -s "_site/$file" || { echo "::error::M7 deployment asset missing: $file"; exit 1; }; done
           test -s _site/institution-branches.html
