@@ -59,6 +59,43 @@
       return {...doc,score};
     }).filter(item=>item.score>0).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title)).slice(0,Math.max(1,Math.min(10,limit)));
   }
+  const SUBJECT_ALIASES={
+    mathematics:["mathematics","maths","math"],
+    science:["science"],
+    english:["english"],
+    "social-science":["social science","social studies","sst"],
+    hindi:["hindi"]
+  };
+  function bankSources(classes,query){
+    const q=norm(query),classMatch=q.match(/\\bclass\\s*(3|6|7|8|9|10|11|12)\\b|\\bgrade\\s*(3|6|7|8|9|10|11|12)\\b/);
+    const requestedClass=classMatch?(classMatch[1]||classMatch[2]):"";
+    const sofOnly=/\\b(sof|olympiad|imo|ieo|nso|iso)\\b/.test(q);
+    const regularOnly=/\\b(ncert|cbse|regular)\\b/.test(q)&&!sofOnly;
+    const subjectIds=Object.keys(SUBJECT_ALIASES).filter(id=>SUBJECT_ALIASES[id].some(alias=>q.includes(norm(alias))));
+    const allClasses=Array.isArray(classes?.classes)?classes.classes:[];
+    const selected=allClasses.filter(item=>item.active!==false&&(!requestedClass||String(item.classId)===requestedClass));
+    const sources=[];
+    selected.forEach(item=>{
+      (item.subjects||[]).forEach(subjectId=>{
+        const isSof=String(subjectId).endsWith("-sof");
+        const base=String(subjectId).replace(/-sof$/,"");
+        if(subjectIds.length&&!subjectIds.includes(base))return;
+        if(sofOnly&&!isSof)return;
+        if(regularOnly&&isSof)return;
+        let path;
+        if(String(item.classId)==="10"){
+          const map={mathematics:"data/exam-papers/question-banks/class-10-mathematics-2026-27-v1.json",science:"data/exam-papers/question-banks/class-10-science-2026-27-v1.json",english:"data/exam-papers/question-banks/class-10-english-language-literature-2026-27-v1.json","social-science":"data/exam-papers/question-banks/class-10-social-science-2026-27-v1.json",hindi:"data/hindi.json"};
+          path=map[base];
+        }else path="data/class-"+item.classId+"-"+subjectId+".json";
+        if(path&&!sources.some(source=>source.path===path))sources.push({classId:String(item.classId),classLabel:item.label||("Class "+item.classId),subjectId:base,subjectLabel:SUBJECT_ALIASES[base]?.[0]||base,bankType:isSof?"SOF / Olympiad":"Curriculum",path});
+      });
+    });
+    return sources;
+  }
+  function countBankQuestions(bank){
+    if(Array.isArray(bank))return bank.reduce((sum,chapter)=>sum+(Array.isArray(chapter?.questions)?chapter.questions.length:0),0);
+    return Array.isArray(bank?.questions)?bank.questions.length:0;
+  }
   function answer(results,query,profile){
     const normalized=norm(query);
     const helpIntent=/\b(how can (you|u) help( me)?|what can (you|u) do|how do i use (you|this)|help me get started|what are your capabilities)\b/.test(normalized);
@@ -75,7 +112,7 @@
     const lines=best.map((item,index)=>{const snippet=item.summary||item.text.replace(/\s+/g," ").slice(0,420);return (index+1)+". "+item.title+" — "+snippet+(item.chapter?" ("+item.chapter+")":"");});
     return {text:"I found these relevant sources for “"+String(query).trim()+"”:\n\n"+lines.join("\n\n")+"\n\nOpen a source below for the full material. You can continue with a follow-up question.",sources:best.map(item=>({title:item.title,chapter:item.chapter,subject:item.subjectLabel||item.subject,path:item.path}))};
   }
-  const api=Object.freeze({PROFILES,norm,words,resolveProfile,buildIndex,search,answer});
+  const api=Object.freeze({PROFILES,norm,words,resolveProfile,buildIndex,search,answer,bankSources,countBankQuestions});
   window.ExamGuruKnowledgeAssistantModel=api;
   if(typeof module!=="undefined"&&module.exports)module.exports=api;
 })();
