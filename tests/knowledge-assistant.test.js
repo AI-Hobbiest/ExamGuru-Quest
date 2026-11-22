@@ -45,6 +45,18 @@ const adminProfile=model.resolveProfile({role:"admin"});
 assert.equal(adminProfile.role,"platform_admin");
 assert.equal(model.resolveProfile({role:"guest"}),null);
 assert.equal(model.search(studentIndex,"unrelated").length,0);
+const classCatalog={classes:[
+ {classId:"3",label:"Class 3",active:true,subjects:["mathematics","mathematics-sof","english"]},
+ {classId:"6",label:"Class 6",active:true,subjects:["science","mathematics","english","social-science","mathematics-sof","science-sof","english-sof"]},
+ {classId:"10",label:"Class 10",active:true,subjects:["science","mathematics","english","social-science","hindi"]}
+]};
+assert.deepEqual(model.bankSources(classCatalog,"How many questions in Class 6 Science").map(x=>x.bankType).sort(),["Curriculum","SOF / Olympiad"]);
+assert.equal(model.bankSources(classCatalog,"Class 3 Maths").length,2,"Class 3 Mathematics should include curriculum and SOF banks");
+assert.equal(model.bankSources(classCatalog,"Class 6 English SOF").length,1,"SOF filter should select only the Olympiad bank");
+assert.equal(model.bankSources(classCatalog,"Class 10").length,5,"Class 10 inventory should include its four exam-paper banks and Hindi source");
+assert.equal(model.bankSources(classCatalog,"Class 6 Science")[0].path,"data/class-6-science.json");
+assert.equal(model.countBankQuestions([{questions:[{id:1},{id:2}]},{questions:[{id:3}]}]),3);
+assert.equal(model.countBankQuestions({questions:[{id:1},{id:2}]}),2);
 const adminHelp=model.answer([],"How can u help me",adminProfile);
 assert.match(adminHelp.text,/platform documentation, question-bank material and operational guidance/i);
 assert.match(adminHelp.text,/cannot access private institution records/i);
