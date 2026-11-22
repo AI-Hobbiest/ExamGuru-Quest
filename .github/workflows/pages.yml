@@ -406,8 +406,30 @@ jobs:
           cp data/competitive-exams/catalog.json _site/data/competitive-exams/catalog.json
           if [ -d assets ]; then cp -R assets _site/assets; fi
           if [ -d knowledge ]; then cp -R knowledge _site/knowledge; fi
+          # Copy the split Science payload deterministically and fail with a useful
+          # diagnostic if the checkout or published payload is incomplete.
           mkdir -p _site/science-payload
-          cp science-payload/part-*.txt _site/science-payload/
+          shopt -s nullglob
+          science_parts=(science-payload/part-*.txt)
+          if [ "${#science_parts[@]}" -ne 17 ]; then
+            printf '::error::Expected 17 Science payload source parts; found %s.\n' "${#science_parts[@]}"
+            printf 'Available source files:\n'
+            find science-payload -maxdepth 1 -type f -print 2>/dev/null | sort || true
+            exit 1
+          fi
+          for source in "${science_parts[@]}"; do
+            if [ ! -s "$source" ]; then
+              echo "::error::Science payload source is missing or empty: $source"
+              exit 1
+            fi
+            cp -- "$source" _site/science-payload/
+          done
+          copied_parts=(_site/science-payload/part-*.txt)
+          if [ "${#copied_parts[@]}" -ne 17 ]; then
+            printf '::error::Expected 17 copied Science payload parts; found %s.\n' "${#copied_parts[@]}"
+            exit 1
+          fi
+          for target in "${copied_parts[@]}"; do test -s "$target" || { echo "::error::Copied Science payload is empty: $target"; exit 1; }; done
       - name: Validate Science module payload
         run: |
           node <<'NODE'
