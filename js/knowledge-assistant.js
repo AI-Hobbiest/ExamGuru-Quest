@@ -1,123 +1,22 @@
-/* GitHub-only Ask ExamGuru: retrieve published repository content in the browser.
-   Static files are public. Role filters improve relevance only; they are NOT an authorization boundary. */
+/* GitHub-only Ask ExamGuru. Entitlement and tenant scope are resolved at query time. */
 (() => {
-  "use strict";
-  if(window.__examGuruKnowledgeAssistantLoaded&&window.ExamGuruKnowledgeAssistant)return;
-  window.__examGuruKnowledgeAssistantLoaded=true;
-  const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;};
-  const ROLE_LABELS={admin:"Platform Admin",platform_admin:"Platform Admin",school_admin:"Institution Admin",teacher:"Teacher",hod:"HOD",institution_viewer:"Institution Viewer",parent:"Parent / Guardian",student:"Student"};
-  const script=document.currentScript;
-  const shell=document.querySelector('script[src*="app-shell.js"]');
-  const appBase=new URL("../",shell?.src||script?.src||location.href);
-  const asset=path=>new URL(path,appBase).href;
-  let indexPromise=null;
-  async function readJson(path){
-    const response=await fetch(asset(path),{cache:"no-cache",credentials:"same-origin"});
-    if(!response.ok)throw new Error("Unable to load published GitHub file: "+path+" ("+response.status+")");
-    return response.json();
-  }
-  function bankQuestionItems(bank){
-    if(Array.isArray(bank))return bank.flatMap(chapter=>(chapter.questions||[]).map(question=>({...question,chapterTitle:chapter.title||'',chapterNo:chapter.chapter_no||''})));
-    return Array.isArray(bank?.questions)?bank.questions:[];
-  }
-  function bankApprovedCount(items){return items.filter(item=>item.approvalStatus==='approved').length;}
-  async function loadIndex(auth,query){
-    if(!window.ExamGuruKnowledgeAssistantModel)throw new Error('Knowledge retrieval model is unavailable.');
-    const model=window.ExamGuruKnowledgeAssistantModel;
-    const [visual,manifest,catalog]=await Promise.all([readJson('data/visual-revision.json').catch(()=>null),readJson('data/knowledge-base.json').catch(()=>null),readJson('data/classes.json').catch(()=>null)]);
-    if(!visual&&!manifest&&!catalog)throw new Error('No published GitHub knowledge files could be loaded.');
-    const docs=model.buildIndex(visual,manifest,auth);
-    if(catalog){
-      const sources=model.bankSources(catalog,query||'',auth);
-      const loaded=await Promise.all(sources.map(async source=>{try{return {source,bank:await readJson(source.path)};}catch(_){return null;}}));
-      loaded.filter(Boolean).forEach(({source,bank})=>bankQuestionItems(bank).forEach((question,index)=>{
-        const prompt=question.prompt||question.question||question.text||'';
-        const options=Array.isArray(question.options)?question.options.map(option=>typeof option==='string'?option:option.text||'').join(' '):'';
-        const explanation=question.answerKey?.explanation||question.explanation||'';
-        docs.push({id:String(question.questionId||question.id||source.path+'-'+index),title:String(prompt||question.chapterTitle||source.subjectLabel),text:[prompt,options,explanation,question.chapterTitle,question.chapterId,question.unitId,(question.topicTags||[]).join(' ')].filter(Boolean).join(' '),subject:source.subjectLabel,classId:source.classId,chapter:question.chapterTitle||question.chapterId||'',sourceType:'question-bank',path:source.path,bankType:source.bankType});
-      }));
-    }
-    return docs;
-  }
-  async function answerBankCount(query,auth){
-    const model=window.ExamGuruKnowledgeAssistantModel,catalog=await readJson('data/classes.json');
-    const sources=model.bankSources(catalog,query,auth);
-    const loaded=await Promise.all(sources.map(async source=>{try{const bank=await readJson(source.path),items=bankQuestionItems(bank);return {...source,count:items.length,approved:bankApprovedCount(items),title:bank.title||''};}catch(_){return null;}}));
-    const available=loaded.filter(Boolean);
-    if(!available.length)return {text:'I could not find a published question bank matching that class or subject in the current repository catalogue. Try another class or subject.',sources:[]};
-    const total=available.reduce((sum,item)=>sum+item.count,0);
-    const lines=available.map(item=>'- '+item.classLabel+' · '+item.subjectLabel+' · '+item.bankType+': '+item.count.toLocaleString()+' questions'+(item.approved?' ('+item.approved.toLocaleString()+' approved)':''));
-    return {text:'I found '+total.toLocaleString()+' questions across '+available.length+' published bank(s) matching your request:\n'+lines.join('\n')+'\n\nCounts are read directly from the current GitHub-hosted JSON files. SOF/Olympiad banks are listed separately from curriculum banks; Class 10 examination pools are counted as their own published banks.',sources:available.map(item=>({title:item.title||item.classLabel+' '+item.subjectLabel+' '+item.bankType,path:item.path}))};
-  }
-  function addFallback(message){
-    let link=document.getElementById("egKnowledgeAssistantFallback");
-    if(!link){link=el("a","eg-ka-fallback");link.id="egKnowledgeAssistantFallback";document.body.appendChild(link);}
-    link.href="./help.html";link.textContent="Ask ExamGuru unavailable · help";
-    link.setAttribute("aria-label","Ask ExamGuru could not load GitHub-hosted knowledge. Open Help.");
-    link.dataset.egAssistantFailure="github-content";if(message)link.title=message;
-  }
-  function sourceHref(path){
-    if(!path)return null;
-    const url=new URL(path,appBase);
-    return url.origin===appBase.origin?url.href:null;
-  }
-  async function answerQuestion(query,auth){
-    const q=query.toLowerCase();
-    if(/\b(how many|count|total|number|inventory|available)\b/.test(q)&&/\b(question|questions|qbank|bank|banks)\b/.test(q))return answerBankCount(query,auth);
-    const model=window.ExamGuruKnowledgeAssistantModel;
-    const profile=model.resolveProfile(auth);
-    if(profile&&(/\b(how can (you|u) help( me)?|what can (you|u) do|how do i use (you|this)|help me get started|what are your capabilities)\b/.test(q)||/^(hi|hello|hey|good morning|good afternoon|good evening)$/.test(q))){
-      const response=model.answer([],query,profile);
-      return {text:response.text,sources:[]};
-    }
-    const index=await loadIndex(auth,query);
-    const results=model.search(index,query,5);
-    const response=model.answer(results,query,profile);
-    return {text:response.text,sources:response.sources.map(item=>({...item,path:item.path||''}))};
-  }
-  function mount(auth){
-    if(!auth||["guest","student_pending"].includes(auth.role)||document.getElementById("egKnowledgeAssistant"))return;
-    const role=auth.role==="admin"?"platform_admin":(auth.institutionRole||auth.role||"");
-    const label=ROLE_LABELS[role]||"ExamGuru";
-    const launcher=el("button","eg-ka-launcher","✦ Ask ExamGuru");
-    launcher.type="button";launcher.setAttribute("aria-expanded","false");launcher.setAttribute("aria-controls","egKnowledgeAssistant");
-    const panel=el("section","eg-ka-panel");panel.id="egKnowledgeAssistant";panel.hidden=true;panel.setAttribute("aria-label",label+" GitHub knowledge assistant");
-    const header=el("div","eg-ka-header"),heading=el("div","eg-ka-heading");
-    heading.append(el("strong","","Ask ExamGuru"),el("span","",label+" · GitHub knowledge"));
-    const close=el("button","eg-ka-close","×");close.type="button";close.setAttribute("aria-label","Close assistant");header.append(heading,close);
-    const messages=el("div","eg-ka-messages");messages.setAttribute("aria-live","polite");
-    const welcome=el("article","eg-ka-message eg-ka-bot");welcome.textContent="Ask about published curriculum, Study Library resources and question-bank material stored in the ExamGuru GitHub repository. I search the latest published files available to this site. Private institution records and cross-user progress are not available in this GitHub-only version.";messages.appendChild(welcome);
-    const form=el("form","eg-ka-form"),input=el("input","eg-ka-input");input.type="search";input.placeholder="Ask ExamGuru…";input.maxLength=300;input.setAttribute("aria-label","Ask ExamGuru");input.required=true;
-    const send=el("button","eg-ka-send","Ask");send.type="submit";form.append(input,send);
-    const status=el("p","eg-ka-status","GitHub-hosted published files · no external service.");
-    panel.append(header,messages,form,status);document.body.append(launcher,panel);
-    const toggle=open=>{panel.hidden=!open;launcher.setAttribute("aria-expanded",String(open));if(open)input.focus();};
-    launcher.addEventListener("click",()=>toggle(panel.hidden));close.addEventListener("click",()=>toggle(false));
-    const addMessage=(text,kind)=>{const message=el("article","eg-ka-message "+(kind==="user"?"eg-ka-user":"eg-ka-bot"));message.textContent=text;messages.appendChild(message);messages.scrollTop=messages.scrollHeight;return message;};
-    form.addEventListener("submit",async event=>{
-      event.preventDefault();const query=input.value.trim();if(!query)return;
-      addMessage(query,"user");input.value="";send.disabled=true;send.textContent="…";status.textContent="Searching published GitHub files…";
-      try{
-        const result=await answerQuestion(query,auth);
-        const message=addMessage(result.text,"bot");
-        if(Array.isArray(result.sources)&&result.sources.length){
-          const sources=el("div","eg-ka-sources");
-          result.sources.forEach(source=>{
-            const href=sourceHref(source.path);
-            const item=el(href?"a":"span","eg-ka-source",source.title||"Source");
-            if(href){item.href=href;item.target="_blank";item.rel="noopener noreferrer";}
-            sources.appendChild(item);
-          });
-          message.appendChild(sources);
-        }
-        status.textContent="Repository retrieval · "+new Date().toLocaleString();
-      }catch(error){
-        addMessage("I couldn't load the relevant published GitHub material. Please retry, or open the Knowledge & Help pages directly. "+String(error&&error.message||""),"bot");
-        status.textContent="GitHub file retrieval was not completed.";addFallback(String(error&&error.message||error));
-      }finally{send.disabled=false;send.textContent="Ask";messages.scrollTop=messages.scrollHeight;}
-    });
-  }
-  window.ExamGuruKnowledgeAssistant=Object.freeze({mount(auth){const before=!!document.getElementById("egKnowledgeAssistant");mount(auth);return before||!!document.getElementById("egKnowledgeAssistant");}});
-  window.addEventListener("examguru-auth-state-ready",event=>mount(event.detail||window.ExamGuruAuthState));
-  if(window.ExamGuruAuthState)mount(window.ExamGuruAuthState);
+"use strict";
+if(window.__examGuruKnowledgeAssistantLoaded&&window.ExamGuruKnowledgeAssistant)return;
+window.__examGuruKnowledgeAssistantLoaded=true;
+const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
+const ROLE_LABELS={admin:"Platform Admin",platform_admin:"Platform Admin",school_admin:"Institution Admin",teacher:"Teacher",hod:"HOD",institution_viewer:"Institution Viewer",parent:"Parent / Guardian",student:"Student"};
+const script=document.currentScript,shell=document.querySelector('script[src*="app-shell.js"]'),base=new URL("../",shell?.src||script?.src||location.href),asset=p=>new URL(p,base).href;
+async function readJson(path){const r=await fetch(asset(path),{cache:"no-cache",credentials:"same-origin"});if(!r.ok)throw Error("Unable to load published file: "+path+" ("+r.status+")");return r.json();}
+function items(bank){if(Array.isArray(bank))return bank.flatMap(c=>(c.questions||[]).map(q=>({...q,chapterTitle:c.title||"",chapterNo:c.chapter_no||""})));return Array.isArray(bank?.questions)?bank.questions:[];}
+function activeInstitution(auth){const id=String(auth?.institutionId||"");if(!id)return "";const store=window.ExamGuruInstitutionContent;if(!store||String(store.currentInstitutionId?.()||"")!==id)return "";return id;}
+function localContent(auth,id){if(!id)return null;try{const iam=window.ExamGuruLocalIAM;if(!iam?.findInstitution(id))return null;const listed=window.ExamGuruInstitutionContent?.list?.();return listed?{...listed,institutionId:id}:null;}catch(_){return null;}}
+async function context(auth){const model=window.ExamGuruKnowledgeAssistantModel;if(!model)throw Error("Knowledge retrieval model unavailable.");const profile=model.resolveProfile(auth);if(!profile)return {profile:null,entitlements:null,content:null};if(profile.role==="platform_admin")return {profile,entitlements:null,content:null};const id=activeInstitution(auth);if(!id)return {profile,entitlements:null,content:null};const entitlements=window.ExamGuruLocalIAM?.getEntitlements?.(id)||null;return {profile,entitlements,content:localContent(auth,id)};}
+async function sourceIndex(auth,query,ctx){const model=window.ExamGuruKnowledgeAssistantModel,[visual,manifest,classes,exams]=await Promise.all([readJson("data/visual-revision.json").catch(()=>null),readJson("data/knowledge-base.json").catch(()=>null),readJson("data/classes.json").catch(()=>null),readJson("data/competitive-exams/catalog.json").catch(()=>null)]);const docs=model.buildIndex(visual,manifest,auth,ctx.entitlements);docs.push(...model.institutionDocs(ctx.content,auth));if(classes){const sources=model.bankSources(classes,query,auth,ctx.entitlements,exams);const loaded=await Promise.all(sources.filter(s=>s.kind!=="directory").map(async s=>{try{return {source:s,bank:await readJson(s.path)};}catch(_){return null;}}));loaded.filter(Boolean).forEach(({source,bank})=>items(bank).forEach((q,i)=>{const prompt=q.prompt||q.question||q.text||"",options=Array.isArray(q.options)?q.options.map(o=>typeof o==="string"?o:o.text||"").join(" "):"";docs.push({id:String(q.questionId||q.id||source.path+"-"+i),title:String(prompt||q.chapterTitle||source.subjectLabel),text:[prompt,options,q.answerKey?.explanation||q.explanation,q.chapterTitle,q.chapterId,q.unitId,(q.topicTags||[]).join(" ")].filter(Boolean).join(" "),subject:source.subjectLabel,classId:source.classId,chapter:q.chapterTitle||q.chapterId||"",sourceType:"question-bank",path:source.path,bankType:source.bankType});}));}return docs;}
+async function answerBankCount(query,auth,ctx){const model=window.ExamGuruKnowledgeAssistantModel,classes=await readJson("data/classes.json"),exams=await readJson("data/competitive-exams/catalog.json").catch(()=>null),sources=model.bankSources(classes,query,auth,ctx.entitlements,exams).filter(s=>s.kind!=="directory"),loaded=await Promise.all(sources.map(async s=>{try{const b=await readJson(s.path),q=items(b);return {...s,count:q.length,approved:q.filter(x=>x.approvalStatus==="approved").length,title:b.title||""};}catch(_){return null;}})),available=loaded.filter(Boolean);const localDocs=model.institutionDocs(ctx.content,auth);const localBanks=new Set(localDocs.filter(x=>x.sourceType==="institution-question-bank").map(x=>x.id));if(!available.length&&!localBanks.size)return {text:"No published question banks were found in the content enabled for this institution and role.",sources:[]};const total=available.reduce((n,x)=>n+x.count,0)+localBanks.size;const lines=available.map(x=>"- "+x.classLabel+" · "+x.subjectLabel+" · "+x.bankType+": "+x.count.toLocaleString()+" questions"+(x.approved?" ("+x.approved.toLocaleString()+" approved)":""));if(localBanks.size)lines.push("- Institution-published banks: "+localBanks.size.toLocaleString()+" questions indexed");return {text:"I found "+total.toLocaleString()+" questions in the matching published banks:\n"+lines.join("\n")+"\n\nPlatform counts are read from GitHub-hosted JSON. Institution-owned content is read from this browser's active institution store and includes published records only.",sources:available.map(x=>({title:x.title||x.classLabel+" "+x.subjectLabel+" "+x.bankType,path:x.path})).concat(localBanks.size?[{title:"Institution-published question banks",path:"./institution-learning.html"}]:[])};}
+function sourceHref(path){if(!path)return null;const u=new URL(path,base);return u.origin===base.origin?u.href:null;}
+async function answerQuestion(query,auth){const ctx=await context(auth),model=window.ExamGuruKnowledgeAssistantModel,p=ctx.profile,q=query.toLowerCase();if(/\b(how many|count|total|number|inventory|available)\b/.test(q)&&/\b(question|questions|qbank|bank|banks)\b/.test(q))return answerBankCount(query,auth,ctx);const help=/\b(how can (you|u) help( me)?|what can (you|u) do|how do i use (you|this)|help me get started|what are your capabilities)\b/.test(q)||/^(hi|hello|hey|good morning|good afternoon|good evening)$/.test(q);if(help)return model.answer([],query,p);const index=await sourceIndex(auth,query,ctx),result=model.answer(model.search(index,query,5),query,p);return {...result,sources:result.sources.map(x=>({...x,path:x.path||""}))};}
+function addFallback(message){let a=document.getElementById("egKnowledgeAssistantFallback");if(!a){a=el("a","eg-ka-fallback");a.id="egKnowledgeAssistantFallback";document.body.appendChild(a);}a.href="./help.html";a.textContent="Ask ExamGuru unavailable · help";a.setAttribute("aria-label","Ask ExamGuru could not load knowledge. Open Help.");if(message)a.title=message;}
+function mount(auth){if(!auth||["guest","student_pending"].includes(auth.role)||document.getElementById("egKnowledgeAssistant"))return;const role=auth.role==="admin"?"platform_admin":(auth.institutionRole||auth.role||""),label=ROLE_LABELS[role]||"ExamGuru",launcher=el("button","eg-ka-launcher","✦ Ask ExamGuru");launcher.type="button";launcher.setAttribute("aria-expanded","false");launcher.setAttribute("aria-controls","egKnowledgeAssistant");const panel=el("section","eg-ka-panel");panel.id="egKnowledgeAssistant";panel.hidden=true;panel.setAttribute("aria-label",label+" knowledge assistant");const header=el("div","eg-ka-header"),heading=el("div","eg-ka-heading");heading.append(el("strong","","Ask ExamGuru"),el("span","",label+" · institution-aware knowledge"));const close=el("button","eg-ka-close","×");close.type="button";close.setAttribute("aria-label","Close assistant");header.append(heading,close);const messages=el("div","eg-ka-messages");messages.setAttribute("aria-live","polite");messages.appendChild(el("article","eg-ka-message eg-ka-bot","Ask about content add-ons enabled for your institution and its own published question banks and test papers. Results are filtered by your role and assigned learning scope. Institution content is currently stored in this browser for the development stage."));const form=el("form","eg-ka-form"),input=el("input","eg-ka-input");input.type="search";input.placeholder="Ask ExamGuru…";input.maxLength=300;input.setAttribute("aria-label","Ask ExamGuru");input.required=true;const send=el("button","eg-ka-send","Ask");send.type="submit";form.append(input,send);const status=el("p","eg-ka-status","GitHub-hosted platform files · active institution's local published content.");panel.append(header,messages,form,status);document.body.append(launcher,panel);const toggle=open=>{panel.hidden=!open;launcher.setAttribute("aria-expanded",String(open));if(open)input.focus();};launcher.addEventListener("click",()=>toggle(panel.hidden));close.addEventListener("click",()=>toggle(false));const add=(t,k)=>{const n=el("article","eg-ka-message "+(k==="user"?"eg-ka-user":"eg-ka-bot"),t);messages.appendChild(n);messages.scrollTop=messages.scrollHeight;return n;};form.addEventListener("submit",async e=>{e.preventDefault();const q=input.value.trim();if(!q)return;add(q,"user");input.value="";send.disabled=true;send.textContent="…";status.textContent="Checking enabled content and published sources…";try{const r=await answerQuestion(q,auth),msg=add(r.text,"bot");if(r.sources?.length){const box=el("div","eg-ka-sources");r.sources.forEach(s=>{const href=sourceHref(s.path),a=el(href?"a":"span","eg-ka-source",s.title||"Source");if(href){a.href=href;a.target="_blank";a.rel="noopener noreferrer";}box.appendChild(a);});msg.appendChild(box);}status.textContent="Institution-aware retrieval · "+new Date().toLocaleString();}catch(err){add("I couldn't load the relevant published material. Please retry or open the Knowledge & Help pages. "+String(err?.message||""),"bot");status.textContent="Knowledge retrieval was not completed.";addFallback(String(err?.message||err));}finally{send.disabled=false;send.textContent="Ask";messages.scrollTop=messages.scrollHeight;}});}
+window.ExamGuruKnowledgeAssistant=Object.freeze({mount(auth){const before=!!document.getElementById("egKnowledgeAssistant");mount(auth);return before||!!document.getElementById("egKnowledgeAssistant");}});
+window.addEventListener("examguru-auth-state-ready",e=>mount(e.detail||window.ExamGuruAuthState));if(window.ExamGuruAuthState)mount(window.ExamGuruAuthState);
 })();
