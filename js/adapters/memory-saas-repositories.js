@@ -20,6 +20,7 @@
       async getPlan(id, version) { return clone(plans.find(p => p.planId === id && Number(p.version) === Number(version)) || null); }
     });
     const scopedSubscription = Object.freeze({
+      async getByIdempotencyKey(key) { return clone(replay.get("subscription:"+key) || subscriptions.find(x=>x.idempotencyKey===key) || null); },
       async getCurrent() { return clone(subscriptions.filter(x => !["cancelled","expired"].includes(x.status)).sort((a,b)=>String(b.updatedAt).localeCompare(String(a.updatedAt)))[0] || null); },
       async save(record, command) {
         if (!record || record.tenantId !== tenantId) throw new Error("Cross-tenant subscription write denied.");
@@ -34,6 +35,7 @@
     });
     const scopedEntitlements = Object.freeze({
       async listCurrent() { return clone(grants); },
+      async getByIdempotencyKey(key) { return clone(replay.get("grant:"+key) || grants.find(x=>x.idempotencyKey===key) || null); },
       async save(record, command) {
         if (!record || record.tenantId !== tenantId) throw new Error("Cross-tenant entitlement write denied.");
         const key=command&&command.idempotencyKey;
