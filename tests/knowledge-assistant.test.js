@@ -80,4 +80,6 @@ assert.ok(!assistantSource.includes("localStorage"),"assistant must not persist 
 assert.ok(assistantSource.includes("friendlyError")===false,"the old server-only error handler must not remain");
 const worker=fs.readFileSync("cloudflare/worker.js","utf8");
 assert.ok(!worker.includes("async function assistantQuery"),"M8 must not add an Ask ExamGuru Worker endpoint");
+assert.ok(assistantSource.includes("fetch(asset(path)"),"published source files must be fetched directly from GitHub Pages");
+assert.ok(assistantSource.includes("model.search(index,query,5)"),"repository content must be searched through the role-aware retrieval model");
 console.log("M8 GitHub-only assistant tests passed: repository-backed retrieval, source links, no external API and no Cloudflare assistant endpoint.");
