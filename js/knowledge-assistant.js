@@ -16,8 +16,14 @@
   }
   async function loadJson(path){
     const response=await fetch(path,{cache:"no-store"});
-    if(!response.ok)throw new Error("Could not load "+path);
+    if(!response.ok)throw new Error("Could not load "+path+" (HTTP "+response.status+")");
     return response.json();
+  }
+  /* Visual revision cards are an optional source for the assistant. A blank or
+     not-yet-published visual catalogue must not disable the whole assistant. */
+  async function loadOptionalJson(path){
+    try{return await loadJson(path);}
+    catch(error){console.warn("[Ask ExamGuru] Optional catalogue unavailable:",path,error);return null;}
   }
   function mount(auth){
     if(!auth||["guest","student_pending"].includes(auth.role)||document.getElementById("egKnowledgeAssistant"))return;
@@ -38,7 +44,7 @@
     const welcome=el("article","eg-ka-message eg-ka-bot");welcome.textContent=profile.greeting;messages.appendChild(welcome);
     const form=el("form","eg-ka-form"),input=el("input","eg-ka-input");input.type="search";input.placeholder="Ask ExamGuru…";input.maxLength=300;input.setAttribute("aria-label","Ask ExamGuru");input.required=true;
     const send=el("button","eg-ka-send","Ask");send.type="submit";form.append(input,send);
-    const status=el("p","eg-ka-status","Searching only published material available to this workspace. Actions that change records are not enabled in this GitHub-only phase.");
+    const status=el("p","eg-ka-status","Searching published material available to this workspace. Actions that change records are not enabled in this GitHub-only phase.");
     panel.append(header,messages,form,status);document.body.append(launcher,panel);
     let index=[],loading=true;
     const toggle=open=>{panel.hidden=!open;launcher.setAttribute("aria-expanded",String(open));if(open)input.focus();};
@@ -46,9 +52,13 @@
     const addMessage=(text,kind)=>{const message=el("article","eg-ka-message "+(kind==="user"?"eg-ka-user":"eg-ka-bot"));message.textContent=text;messages.appendChild(message);messages.scrollTop=messages.scrollHeight;return message;};
     async function initialise(){
       try{
-        const [visual,manifest]=await Promise.all([loadJson("./data/visual-revision.json"),loadJson("./data/knowledge-base.json")]);
+        const [visual,manifest]=await Promise.all([
+          loadOptionalJson("./data/visual-revision.json"),
+          loadJson("./data/knowledge-base.json")
+        ]);
         index=model.buildIndex(visual,manifest,auth);loading=false;
         status.textContent=index.length+" published entries available to the "+profile.label+" workspace. Search stays in this browser.";
+        if(!index.length)addMessage("The assistant is ready, but no published knowledge entries are assigned to this workspace yet.","bot");
       }catch(error){
         loading=false;status.textContent="The conversational catalogue is unavailable in this browser session.";
         addMessage("I couldn't load the published knowledge catalogue. You can still use the traditional learning and help pages.","bot");
