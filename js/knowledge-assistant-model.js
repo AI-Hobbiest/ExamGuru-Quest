@@ -66,14 +66,15 @@
     "social-science":["social science","social studies","sst"],
     hindi:["hindi"]
   };
-  function bankSources(classes,query){
+  function bankSources(classes,query,auth){
     const q=norm(query),classMatch=q.match(/\bclass\s*(3|6|7|8|9|10|11|12)\b|\bgrade\s*(3|6|7|8|9|10|11|12)\b/);
     const requestedClass=classMatch?(classMatch[1]||classMatch[2]):"";
     const sofOnly=/\b(sof|olympiad|imo|ieo|nso|iso)\b/.test(q);
     const regularOnly=/\b(ncert|cbse|regular)\b/.test(q)&&!sofOnly;
     const subjectIds=Object.keys(SUBJECT_ALIASES).filter(id=>SUBJECT_ALIASES[id].some(alias=>q.includes(norm(alias))));
     const allClasses=Array.isArray(classes?.classes)?classes.classes:[];
-    const selected=allClasses.filter(item=>item.active!==false&&(!requestedClass||String(item.classId)===requestedClass));
+    const studentClass=auth?.role==="student"?String(auth.classId||""):"";
+    const selected=allClasses.filter(item=>item.active!==false&&(!requestedClass||String(item.classId)===requestedClass)&&(!studentClass||String(item.classId)===studentClass));
     const sources=[];
     selected.forEach(item=>{
       (item.subjects||[]).forEach(subjectId=>{
