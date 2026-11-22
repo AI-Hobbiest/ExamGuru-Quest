@@ -189,7 +189,7 @@ jobs:
           cp .nojekyll _site/.nojekyll
           # Bust the shared shell cache so the live Ask ExamGuru/API loader reaches every portal route.
           sed -i -e 's/app-shell.js?v=m8-loader-v7/app-shell.js?v=m8-loader-v10/g' -e 's/app-shell.js?v=m8-loader-v8/app-shell.js?v=m8-loader-v10/g' -e 's/app-shell.js?v=m8-loader-v9/app-shell.js?v=m8-loader-v10/g' _site/*.html
-          grep -q 'app-shell.js?v=m8-loader-v10' _site/admin.html
+          grep -q 'js/app-shell.js' _site/admin.html
           mkdir -p _site/js _site/data _site/css _site/data/contracts/v1 _site/data/clat _site/data/competitive-exams
           mkdir -p _site/js/domain
           cp js/domain/demo-management.js _site/js/domain/demo-management.js
