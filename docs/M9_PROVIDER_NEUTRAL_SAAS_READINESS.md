@@ -46,7 +46,8 @@ Prepare ExamGuru Quest for institution onboarding and SaaS operation while prese
 ### M9.4 — Repository and service boundaries
 
 - Add optional provider-neutral repositories for plans, subscriptions, entitlement grants and onboarding requests.
-- Add deterministic in-memory adapters for tests only.\n- Add idempotent initial subscription provisioning against a published plan version; plan changes remain pinned to explicit plan versions.
+- Add deterministic in-memory adapters for tests only.
+- Add idempotent initial subscription provisioning against a published plan version; plan changes remain pinned to explicit plan versions.
 - Add domain lifecycle/resolution services with no browser, network, payment-provider or database dependency.
 - Require idempotency keys for mutating lifecycle commands and expected versions for updates.
 - Keep the current local storage adapter and all student attempt/profile/backup contracts unchanged.
