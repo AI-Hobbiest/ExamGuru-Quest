@@ -55,6 +55,8 @@ assert.equal(model.bankSources(classCatalog,"Class 3 Maths").length,2,"Class 3 M
 assert.equal(model.bankSources(classCatalog,"Class 6 English SOF").length,1,"SOF filter should select only the Olympiad bank");
 assert.equal(model.bankSources(classCatalog,"Class 10").length,5,"Class 10 inventory should include its four exam-paper banks and Hindi source");
 assert.equal(model.bankSources(classCatalog,"Class 6 Science")[0].path,"data/class-6-science.json");
+assert.ok(model.bankSources(classCatalog,"Science",{role:"student",classId:"6"}).every(item=>item.classId==="6"),"student bank search must remain inside the active class");
+assert.ok(model.bankSources(classCatalog,"Science",{role:"platform_admin"}).some(item=>item.classId==="10"),"Platform Admin can inspect published banks across classes");
 assert.equal(model.countBankQuestions([{questions:[{id:1},{id:2}]},{questions:[{id:3}]}]),3);
 assert.equal(model.countBankQuestions({questions:[{id:1},{id:2}]}),2);
 const adminHelp=model.answer([],"How can u help me",adminProfile);
