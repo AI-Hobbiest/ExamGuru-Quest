@@ -49,16 +49,16 @@
     {label:"FAQ & Guide",icon:"❔",href:"./help.html#parent-guide",page:"help.html",auth:"parent"},
 
     {label:"Dashboard",icon:"🏡",href:"./dashboard.html",page:"dashboard.html",clatHref:"./clat-dashboard.html",clatPage:"clat-dashboard.html",clatHash:"",auth:"student"},
-    {label:"All subjects",group:"Subjects",icon:"📚",href:"./dashboard.html#subjects",page:"dashboard.html",hash:"#subjects",auth:"student"},
+    {label:"All MCQs",group:"MCQ Practice",icon:"📚",href:"./dashboard.html#subjects",page:"dashboard.html",hash:"#subjects",auth:"student"},
 
-    {label:"Science",group:"Subjects",icon:"🧪",href:"./practice.html?subject=science",page:"practice.html",subject:"science",auth:"student"},
-    {label:"Science - SOF",group:"Subjects",icon:"🏆",href:"./practice.html?subject=science-sof",page:"practice.html",subject:"science-sof",auth:"student"},
-    {label:"Mathematics",group:"Subjects",icon:"📐",href:"./practice.html?subject=mathematics",page:"practice.html",subject:"mathematics",auth:"student"},
-    {label:"Mathematics - SOF",group:"Subjects",icon:"🏆",href:"./practice.html?subject=mathematics-sof",page:"practice.html",subject:"mathematics-sof",auth:"student"},
-    {label:"English",group:"Subjects",icon:"📖",href:"./practice.html?subject=english",page:"practice.html",subject:"english",auth:"student"},
-    {label:"English - SOF",group:"Subjects",icon:"🏆",href:"./practice.html?subject=english-sof",page:"practice.html",subject:"english-sof",auth:"student"},
-    {label:"Social Science",group:"Subjects",icon:"🌍",href:"./practice.html?subject=social-science",page:"practice.html",subject:"social-science",auth:"student"},
-    {label:"Hindi",group:"Subjects",icon:"📝",href:"./practice.html?subject=hindi",page:"practice.html",subject:"hindi",auth:"student"},
+    {label:"Science",group:"MCQ Practice",icon:"🧪",href:"./practice.html?subject=science",page:"practice.html",subject:"science",auth:"student"},
+    {label:"Science - SOF",group:"MCQ Practice",icon:"🏆",href:"./practice.html?subject=science-sof",page:"practice.html",subject:"science-sof",auth:"student"},
+    {label:"Mathematics",group:"MCQ Practice",icon:"📐",href:"./practice.html?subject=mathematics",page:"practice.html",subject:"mathematics",auth:"student"},
+    {label:"Mathematics - SOF",group:"MCQ Practice",icon:"🏆",href:"./practice.html?subject=mathematics-sof",page:"practice.html",subject:"mathematics-sof",auth:"student"},
+    {label:"English",group:"MCQ Practice",icon:"📖",href:"./practice.html?subject=english",page:"practice.html",subject:"english",auth:"student"},
+    {label:"English - SOF",group:"MCQ Practice",icon:"🏆",href:"./practice.html?subject=english-sof",page:"practice.html",subject:"english-sof",auth:"student"},
+    {label:"Social Science",group:"MCQ Practice",icon:"🌍",href:"./practice.html?subject=social-science",page:"practice.html",subject:"social-science",auth:"student"},
+    {label:"Hindi",group:"MCQ Practice",icon:"📝",href:"./practice.html?subject=hindi",page:"practice.html",subject:"hindi",auth:"student"},
 
     {label:"Study Library",group:"Learning Hub",icon:"📖",href:"./study.html",page:"study.html",auth:"student"},
     {label:"Institution content",group:"Learning Hub",icon:"🏢",href:"./institution-learning.html",page:"institution-learning.html",auth:"student",institutionOnly:true},
@@ -243,7 +243,7 @@
       const addCss=()=>{
         if(document.querySelector('link[data-eg-knowledge-assistant-css]'))return;
         const css=document.createElement("link");css.rel="stylesheet";css.dataset.egKnowledgeAssistantCss="true";
-        css.href=new URL("./css/knowledge-assistant.css?v=20261122-m8-loader-v12",assistantAssetBase).href;document.head.appendChild(css);
+        css.href=new URL("./css/knowledge-assistant.css?v=20261122-m8-loader-v13",assistantAssetBase).href;document.head.appendChild(css);
       };
       const loadScript=(id,path)=>{
         const existing=document.getElementById(id);
@@ -259,9 +259,9 @@
       };
       try{
         addCss();
-        if(!window.ExamGuruKnowledgeAssistantModel){try{await loadScript("egKnowledgeAssistantModelScript","./js/knowledge-assistant-model.js?v=20261122-m8-loader-v12");}catch(error){fallback("model script loading",error);return;}}
+        if(!window.ExamGuruKnowledgeAssistantModel){try{await loadScript("egKnowledgeAssistantModelScript","./js/knowledge-assistant-model.js?v=20261122-m8-loader-v13");}catch(error){fallback("model script loading",error);return;}}
         if(!window.ExamGuruKnowledgeAssistantModel)throw new Error("model API missing after script load");
-        if(!window.ExamGuruKnowledgeAssistant){try{await loadScript("egKnowledgeAssistantScript","./js/knowledge-assistant.js?v=20261122-m8-loader-v12");}catch(error){fallback("assistant script loading",error);return;}}
+        if(!window.ExamGuruKnowledgeAssistant){try{await loadScript("egKnowledgeAssistantScript","./js/knowledge-assistant.js?v=20261122-m8-loader-v13");}catch(error){fallback("assistant script loading",error);return;}}
         if(!window.ExamGuruKnowledgeAssistant||typeof window.ExamGuruKnowledgeAssistant.mount!=="function")throw new Error("assistant mount API missing after script load");
         let mounted=false;
         try{mounted=window.ExamGuruKnowledgeAssistant.mount(auth);}catch(error){fallback("launcher initialisation",error);return;}
@@ -304,10 +304,10 @@
       if(item.auth!==auth.role)return false;
       if(item.institutionOnly&&!auth.institutionId)return false;
       if(item.institutionRoles&&!item.institutionRoles.includes(auth.institutionRole))return false;
-      if(isClatStudent&&!["CLAT UG 2027","Dashboard","Assessment Test","Study Library","My Learning","FAQ & Guide"].includes(item.label))return false;
+      if(isClatStudent&&!["CLAT UG 2027","Dashboard","Assessment Test","FAQ & Guide","My profile","Test history","Levels & rewards","Backup & restore"].includes(item.label))return false;
       if(item.subject&&subjectConfig&&!subjectConfig.subjects.includes(item.subject))return false;
       if(auth.role==="student"&&auth.institutionId&&item.entitlement){const parts=item.entitlement.split(":");if(!window.ExamGuruLocalIAM?.hasEntitlement(auth.institutionId,parts[0],parts[1]))return false;}
-      if(auth.role==="student"&&auth.institutionId&&!auth.curriculumEnabled&&["Subjects","Learning Hub"].includes(item.group))return false;
+      if(auth.role==="student"&&auth.institutionId&&!auth.curriculumEnabled&&["MCQ Practice","Learning Hub"].includes(item.group))return false;
       if(item.classIds&&!item.classIds.includes(String(auth.classId||"")))return false;
       return true;
     });

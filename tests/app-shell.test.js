@@ -53,6 +53,8 @@ assert.ok(pageAccess.includes('window.C10StudyViewerRole="student"')&&pageAccess
 
 
 assert.ok(nav.includes('href:"./dashboard.html"'));
+assert.ok(nav.includes('group:"MCQ Practice"')&&nav.includes('label:"All MCQs"'),"student question-bank navigation is labelled as MCQ Practice");
+assert.ok(nav.includes('["CLAT UG 2027","Dashboard","Assessment Test","FAQ & Guide","My profile","Test history","Levels & rewards","Backup & restore"]'),"CLAT student navigation excludes CBSE Study Library and My Learning links");
 assert.ok(nav.includes('href:"./dashboard.html#rewards"'));
 assert.ok(nav.includes('auth:"guest"'),"guest navigation is separated from student navigation");
 assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
@@ -110,7 +112,7 @@ assert.ok(nav.includes('href:"./profile.html#history"'));
 assert.ok(nav.includes('href:"./profile.html#backup"')&&nav.includes('group:"My Account"'));
 assert.ok(nav.includes('href:"./study.html"'),"student navigation exposes the Study Library");
 assert.ok(nav.includes('href:"./learning.html"'),"student navigation exposes the Learning Hub");
-assert.ok(nav.includes('href:"./practice.html?subject=science"')&&nav.includes('group:"Subjects"'),"Science menu opens the shared engine from the Subjects submenu");
+assert.ok(nav.includes('href:"./practice.html?subject=science"')&&nav.includes('group:"MCQ Practice"'),"Science menu opens the shared engine from the Subjects submenu");
 assert.ok(homepage.includes('id="studentLoginForm"'),"landing page is the student login screen");
 assert.ok(homepage.includes("JP Ganathe"),"the general ExamGuru login retains its original attribution");
 assert.ok(clatLogin.includes("AI-Enthusiast")&&!/JP Ganathe|Conceptualised by/i.test(clatLogin),"the dedicated CLAT login uses only AI-Enthusiast attribution");
@@ -118,7 +120,7 @@ assert.ok(clatLogin.includes('id="studentLoginForm"')&&clatLogin.includes("login
 assert.ok(clatPage.includes("AI-Enthusiast")&&!/JP Ganathe|Conceptualised by/i.test(clatPage),"the CLAT practice page contains no personal attribution");
 assert.ok(clatPage.includes('id="actual-papers"')&&clatPage.includes('id="model-papers"'),"CLAT actual and model paper sections have dedicated navigation anchors");
 assert.ok(clatPage.includes('id="actualPapersTab"')&&clatPage.includes('id="modelPapersTab"')&&clatPage.includes('role="tablist"')&&clatPage.includes('role="tabpanel"'),"CLAT paper libraries are presented as accessible tabs at the top of the page");
-assert.ok(clatPracticeScript.includes('const actual=which==="actual"')&&clatPracticeScript.includes('wireLibraryTab("actualPapersTab","actual")')&&clatPracticeScript.includes('wireLibraryTab("modelPapersTab","model")')&&clatPracticeScript.includes('$("modelPaperCount").textContent=String(availablePapers().length)')&&clatPracticeScript.includes('$("actualPaperCount").textContent=String(pyqCatalog.papers.length)'),"paper tabs switch libraries and display live paper counts");
+assert.ok(clatPracticeScript.includes('const actual=which==="actual"')&&clatPracticeScript.includes('wireLibraryTab("actualPapersTab","actual")')&&clatPracticeScript.includes('wireLibraryTab("modelPapersTab","model")')&&clatPracticeScript.includes('$("modelPaperCount").textContent=String(availablePapers().length)')&&clatPracticeScript.includes('$("actualPaperCount").textContent=String(catalog.papers.length)'),"paper tabs switch libraries and display live paper counts");
 assert.ok(clatPage.includes(".clat-pyq-open{color:#fff!important")&&clatPracticeScript.includes('paperLink.textContent="Open Question Paper (PDF)"')&&clatPracticeScript.includes('paperLink.className="clat-btn clat-pyq-open"'),"previous-year PDF action has a readable high-contrast label");
 assert.ok(nav.includes('current.file==="clat-login.html"')&&nav.includes('location.replace(clatExperience?"./clat-login.html":"./index.html")'),"CLAT guests and sign-outs remain within the separate CLAT entry route");
 assert.ok(nav.includes('clatExperience?"AI-Enthusiast":"Learn · Practise · Level up"')&&nav.includes('clatExperience?"AI-Enthusiast · CLAT UG 2027"'),"desktop and mobile CLAT navigation display the abstracted brand");
@@ -207,11 +209,11 @@ assert.ok(nav.includes('label:"CLAT UG 2027",group:"Entrance Exams"')&&nav.inclu
 assert.ok(!nav.includes('label:"Actual Papers",group:"CLAT EXAM"')&&!nav.includes('label:"Model Papers",group:"CLAT EXAM"'),"Actual and Model Papers are no longer separate sidebar entries");
 assert.ok(nav.includes('disabled:true,status:"Coming soon",classIds:["10"]'),"Class 10 entrance-exam items are disabled placeholders without sample-paper links");
 for(const exam of ["JEE Main & Advanced","NEET UG","CUET UG","NDA (10+2)","IPMAT"])assert.ok(nav.includes('label:"'+exam+'"'),"Class 10 Entrance Exams includes "+exam);
-assert.ok(nav.includes('isClatStudent&&!["CLAT UG 2027","Dashboard","Assessment Test","Study Library","My Learning","FAQ & Guide"]'),"CLAT students receive the original CLAT submenu plus Assessment, Study Pack and Learning Hub navigation");
+assert.ok(nav.includes('isClatStudent&&!["CLAT UG 2027","Dashboard","Assessment Test","FAQ & Guide","My profile","Test history","Levels & rewards","Backup & restore"].includes(item.label)'),"CLAT students receive the original CLAT submenu plus Assessment, Study Pack and Learning Hub navigation");
 assert.ok(nav.includes("applyClatAttribution")&&nav.includes("AI-Enthusiast"),"shared learning pages replace the personal attribution for CLAT students");
 assert.ok(css.includes(".c10-nav-link.is-disabled")&&css.includes(".c10-nav-link-status"),"Coming soon entrance-exam entries are visibly non-interactive");
 assert.ok(nav.includes('clatHref:"./clat-dashboard.html"')&&nav.includes('clatPage:"clat-dashboard.html"'),"CLAT students have a dedicated dashboard destination");
-assert.ok(nav.includes('["CLAT UG 2027","Dashboard","Assessment Test","Study Library","My Learning","FAQ & Guide"]'),"CLAT navigation exposes CLAT UG 2027, dashboard, assessment, study pack and learning hub");
+assert.ok(nav.includes('["CLAT UG 2027","Dashboard","Assessment Test","FAQ & Guide","My profile","Test history","Levels & rewards","Backup & restore"]'),"CLAT navigation exposes CLAT UG 2027, dashboard, assessment, study pack and learning hub");
 assert.ok(loginScript.includes("./clat-dashboard.html"),"CLAT sign-in and restored sessions land on the CLAT dashboard");
 assert.ok(loginScript.includes('String(result.account&&result.account.classId||"").toUpperCase()==="CLAT"?"./clat-dashboard.html":"./dashboard.html"'),"newly authenticated CLAT students land on the CLAT dashboard");
 assert.ok(accessScript.includes('page==="clat-dashboard.html"')&&accessScript.includes('toUpperCase()!=="CLAT"'),"CLAT dashboard route is restricted to verified CLAT students");
