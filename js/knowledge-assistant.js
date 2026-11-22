@@ -72,6 +72,7 @@
     });
     initialise();
   }
+  window.ExamGuruKnowledgeAssistant=Object.freeze({mount(auth){const before=!!document.getElementById("egKnowledgeAssistant");mount(auth);return before||!!document.getElementById("egKnowledgeAssistant");}});
   window.addEventListener("examguru-auth-state-ready",event=>mount(event.detail||window.ExamGuruAuthState));
   if(window.ExamGuruAuthState)mount(window.ExamGuruAuthState);
 })();

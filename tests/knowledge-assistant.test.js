@@ -49,6 +49,11 @@ assert.equal(model.answer([],"unknown").sources.length,0);
 assert.equal(model.answer(model.search(studentIndex,"carbohydrates"),"carbohydrates",model.resolveProfile(student)).sources[0].title,"Nutrients");
 assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes("Ask ExamGuru"));
 assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes("egKnowledgeAssistantFallback"));
+const shell=fs.readFileSync("js/app-shell.js","utf8");
+assert.ok(shell.includes('roles.push(...studentOptions)'),"local role preview must always offer student class options");
+assert.ok(shell.includes('loadKnowledgeAssistant(auth)'),"assistant loader must run independently of prior script element presence");
+assert.ok(shell.includes('new URL(path,document.baseURI)'),"assistant assets must resolve against the page base URL");
+assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes("ExamGuruKnowledgeAssistant=Object.freeze"),"assistant must expose an explicit mount API for deterministic initialisation");
 assert.ok(fs.readFileSync("css/knowledge-assistant.css","utf8").includes(".eg-ka-panel"));
 const launcherRoutes=["admin.html","institution-operations.html","teacher-workspace.html","parent.html","dashboard.html","practice.html","study.html","help.html","user-management.html"];
 launcherRoutes.forEach(path=>{
