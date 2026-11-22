@@ -24,7 +24,7 @@ These contracts are the platform's portable data model. They are provider-neutra
 | `institution.schema.json` | Tenant/institution identity contract |
 | `branch.schema.json` | Institution-owned campus/branch contract |
 | `institution-membership.schema.json` | Multi-institution role membership and branch scope |
-| `institution-entitlements.schema.json` | Class-wise curriculum and competitive-exam add-on entitlements |
+| `institution-entitlements.schema.json` | Legacy class-wise curriculum and competitive-exam add-on entitlements |\n| `subscription-plan.schema.json` | Versioned provider-neutral product plan, features, quotas and optional commercial terms |\n| `institution-subscription.schema.json` | Tenant subscription lifecycle, plan version, trial/period and opaque billing references |\n| `tenant-onboarding.schema.json` | Versioned institution onboarding request and provisioning lifecycle |\n| `entitlement-grant.schema.json` | Time-bounded tenant entitlement allow/deny grants and scoped overrides |
 | `institution-content-import.schema.json` | Validated institution-owned MCQ and test-paper import envelope |\n| `department.schema.json` | Institution-owned academic department |\n| `department-membership.schema.json` | A teacher's membership in one department |\n| `department-head-appointment.schema.json` | Effective-dated HOD appointment and class scope |
 
 ## Stable question identity
