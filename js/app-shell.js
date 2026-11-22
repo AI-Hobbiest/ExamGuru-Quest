@@ -223,16 +223,21 @@
     if(window.__egKnowledgeAssistantLoadPromise)return window.__egKnowledgeAssistantLoadPromise;
     window.__egKnowledgeAssistantLoadPromise=(async()=>{
       const fallback=(stage,error)=>{
-        if(document.getElementById("egKnowledgeAssistantFallback"))return;
-        const link=document.createElement("a");link.id="egKnowledgeAssistantFallback";link.className="eg-ka-fallback";
+        let link=document.getElementById("egKnowledgeAssistantFallback");
+        if(!link){link=document.createElement("a");link.id="egKnowledgeAssistantFallback";link.className="eg-ka-fallback";document.body.appendChild(link);}
+        const detail=error&&error.message?String(error.message).slice(0,140):"";
         link.href=auth.role==="student"?"./study.html":"./help.html";
-        link.textContent="Open Knowledge & Help";link.title="Ask ExamGuru could not start: "+stage+(error&&error.message?" ("+error.message+")":"");
-        document.body.appendChild(link);
+        link.textContent="Ask ExamGuru unavailable · "+stage;
+        link.title="Ask ExamGuru could not start at "+stage+(detail?" ("+detail+")":"");
+        link.setAttribute("aria-label",link.title+". Open Knowledge and Help.");
+        link.dataset.egAssistantFailure=stage;
+        window.__egKnowledgeAssistantDiagnostic={stage,message:detail||null,role:auth.role||"unknown"};
+        if(error&&window.console&&typeof console.error==="function")console.error("[ExamGuru] Ask ExamGuru failed at "+stage,error);
       };
       const addCss=()=>{
         if(document.querySelector('link[data-eg-knowledge-assistant-css]'))return;
         const css=document.createElement("link");css.rel="stylesheet";css.dataset.egKnowledgeAssistantCss="true";
-        css.href=new URL("./css/knowledge-assistant.css?v=20261122-m8-loader-v2",document.baseURI).href;document.head.appendChild(css);
+        css.href=new URL("./css/knowledge-assistant.css?v=20261122-m8-loader-v3",document.baseURI).href;document.head.appendChild(css);
       };
       const loadScript=(id,path)=>{
         const existing=document.getElementById(id);
@@ -248,12 +253,14 @@
       };
       try{
         addCss();
-        if(!window.ExamGuruKnowledgeAssistantModel)await loadScript("egKnowledgeAssistantModelScript","./js/knowledge-assistant-model.js?v=20261122-m8-loader-v2");
-        if(!window.ExamGuruKnowledgeAssistant)await loadScript("egKnowledgeAssistantScript","./js/knowledge-assistant.js?v=20261122-m8-loader-v2");
-        if(window.ExamGuruKnowledgeAssistant&&typeof window.ExamGuruKnowledgeAssistant.mount==="function"){
-          const mounted=window.ExamGuruKnowledgeAssistant.mount(auth);
-          if(!mounted&&!document.getElementById("egKnowledgeAssistant"))fallback("role profile or launcher initialisation");
-        }else fallback("assistant initialisation");
+        if(!window.ExamGuruKnowledgeAssistantModel)await loadScript("egKnowledgeAssistantModelScript","./js/knowledge-assistant-model.js?v=20261122-m8-loader-v3");
+        if(!window.ExamGuruKnowledgeAssistantModel)throw new Error("model API missing after script load");
+        if(!window.ExamGuruKnowledgeAssistant)await loadScript("egKnowledgeAssistantScript","./js/knowledge-assistant.js?v=20261122-m8-loader-v3");
+        if(!window.ExamGuruKnowledgeAssistant||typeof window.ExamGuruKnowledgeAssistant.mount!=="function")throw new Error("assistant mount API missing after script load");
+        let mounted=false;
+        try{mounted=window.ExamGuruKnowledgeAssistant.mount(auth);}catch(error){fallback("launcher initialisation",error);return;}
+        if(!mounted&&!document.getElementById("egKnowledgeAssistant"))fallback("role profile or launcher initialisation");
+        else{const link=document.getElementById("egKnowledgeAssistantFallback");if(link)link.remove();window.__egKnowledgeAssistantDiagnostic={stage:"mounted",role:auth.role||"unknown"};}
       }catch(error){fallback("script loading",error);}
     })().finally(()=>{window.__egKnowledgeAssistantLoadPromise=null;});
     return window.__egKnowledgeAssistantLoadPromise;
