@@ -53,6 +53,8 @@ assert.ok(pageAccess.includes('window.C10StudyViewerRole="student"')&&pageAccess
 
 
 assert.ok(nav.includes('href:"./dashboard.html"'));
+assert.ok(nav.includes('group:"MCQ Practice"')&&nav.includes('label:"All MCQs"'),"student question-bank navigation is labelled as MCQ Practice");
+assert.ok(nav.includes('["CLAT UG 2027","Dashboard","Assessment Test","FAQ & Guide","My profile","Test history","Levels & rewards","Backup & restore"]'),"CLAT student navigation excludes CBSE Study Library and My Learning links");
 assert.ok(nav.includes('href:"./dashboard.html#rewards"'));
 assert.ok(nav.includes('auth:"guest"'),"guest navigation is separated from student navigation");
 assert.ok(nav.includes('auth:"admin"'),"admin-only navigation is role gated");
