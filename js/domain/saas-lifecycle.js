@@ -116,6 +116,23 @@
     return Object.freeze({
       async listPlans(options) { return clone(await repos.catalog.listPlans(options || {})); },
       async getCurrentSubscription() { return clone(await repos.subscriptions.getCurrent()); },
+      async createSubscription(subscription, command) {
+        assertCommand(command);
+        const replay = await repos.subscriptions.getByIdempotencyKey(command.idempotencyKey);
+        if (replay) return clone(replay);
+        if (!subscription || !subscription.subscriptionId || !subscription.tenantId || !subscription.planId) {
+          throw new TypeError("A complete tenant subscription record is required.");
+        }
+        if (await repos.subscriptions.getCurrent()) throw new Error("Tenant already has a current subscription.");
+        const plan = await repos.catalog.getPlan(subscription.planId, subscription.planVersion);
+        if (!plan || plan.status !== "active") throw new Error("Only an active published plan version can be subscribed to.");
+        if (!["pending", "trialing", "active"].includes(subscription.status)) throw new Error("A new subscription must start as pending, trialing or active.");
+        if (subscription.status === "trialing" && !subscription.trialEndsAt) throw new Error("A trial end date is required for a trial subscription.");
+        const now = command.now || new Date().toISOString();
+        const next = { ...clone(subscription), version: 1, idempotencyKey: command.idempotencyKey,
+          createdAt: subscription.createdAt || now, updatedAt: now };
+        return clone(await repos.subscriptions.save(next, { expectedVersion: null, idempotencyKey: command.idempotencyKey }));
+      },
       async getCurrentEntitlements(at) { return getCurrentEntitlements(at); },
       async transitionOnboarding(requestId, nextStatus, patch, command) {
         assertCommand(command);
