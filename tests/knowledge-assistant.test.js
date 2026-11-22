@@ -20,4 +20,10 @@ assert.equal(m.institutionDocs(local,auth).length,2);assert.equal(m.institutionD
 assert.equal(m.countBankQuestions([{questions:[{},{}]},{questions:[{}]}]),3);
 assert.match(m.answer([],"How can you help me",p).text,/content add-ons enabled for your institution/i);assert.equal(m.answer([],"hello",p).text.startsWith("Hello!"),true);
 const runtime=fs.readFileSync("js/knowledge-assistant.js","utf8");assert.ok(runtime.includes("ExamGuruInstitutionContent"));assert.ok(runtime.includes("getEntitlements"));assert.ok(!/cloudflare|supabase|firebase/i.test(runtime));
-console.log("M8 entitlement and tenant-scoped assistant tests passed.");
+
+const shell=fs.readFileSync("js/app-shell.js","utf8");
+assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v9"));
+assert.ok(shell.includes("knowledge-assistant.js?v=20261122-m8-loader-v9"));
+assert.ok(shell.includes("knowledge-assistant.css?v=20261122-m8-loader-v9"));
+for(const page of ["admin.html","index.html"])assert.ok(fs.readFileSync(page,"utf8").includes("app-shell.js?v=m8-loader-v9"));
+console.log("M8 entitlement, tenant-scope and cache-busted assistant tests passed.");
