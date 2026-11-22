@@ -50,7 +50,7 @@ const classCatalog={classes:[
  {classId:"6",label:"Class 6",active:true,subjects:["science","mathematics","english","social-science","mathematics-sof","science-sof","english-sof"]},
  {classId:"10",label:"Class 10",active:true,subjects:["science","mathematics","english","social-science","hindi"]}
 ]};
-assert.deepEqual(model.bankSources(classCatalog,"How many questions in Class 6 Science").map(x=>x.bankType).sort(),["Curriculum","SOF / Olympiad"]);
+assert.equal(model.bankSources(classCatalog,"How many questions in Class 6 Science").map(x=>x.bankType).sort().join("|"),"Curriculum|SOF / Olympiad");
 assert.equal(model.bankSources(classCatalog,"Class 3 Maths").length,2,"Class 3 Mathematics should include curriculum and SOF banks");
 assert.equal(model.bankSources(classCatalog,"Class 6 English SOF").length,1,"SOF filter should select only the Olympiad bank");
 assert.equal(model.bankSources(classCatalog,"Class 10").length,5,"Class 10 inventory should include its four exam-paper banks and Hindi source");
