@@ -65,3 +65,8 @@ Trusted management commands, secure role enforcement, private shared storage, pa
 10. No external inference, analytics, API token or network write is used.
 11. Unit tests cover role profiles, class isolation, audience filtering, institution/department filtering, source links and empty results.
 12. GitHub Actions runs the M8 tests before merge/deployment.
+
+
+## Expanded published question-bank retrieval
+
+Ask ExamGuru reads the active class catalogue at `data/classes.json` and resolves the matching published question-bank files by class and subject. Question-count requests aggregate all matching banks, list curriculum and SOF/Olympiad banks separately, and support both chapter-grouped MCQ files and flat Exam Paper Studio pools. Topic searches index question prompts, options, explanations and chapter/topic metadata from the matching published bank files. Platform Admin can inspect the published catalogue across classes; student retrieval is constrained to the student's active class. Only files present in the GitHub repository are considered. A catalogue entry without a corresponding published file is omitted from results rather than guessed.
