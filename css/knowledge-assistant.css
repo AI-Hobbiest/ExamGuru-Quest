@@ -1,0 +1,30 @@
+/* Student Knowledge Assistant — compact floating conversational search. */
+.eg-ka-launcher{position:fixed;right:22px;bottom:22px;z-index:1200;border:0;border-radius:999px;padding:13px 18px;background:linear-gradient(110deg,#5147a5,#7669c8);color:#fff;font:inherit;font-size:.86rem;font-weight:850;box-shadow:0 9px 28px rgba(48,40,111,.25);cursor:pointer}
+.eg-ka-panel{position:fixed;right:22px;bottom:82px;z-index:1201;width:min(410px,calc(100vw - 28px));height:min(590px,calc(100dvh - 112px));display:flex;flex-direction:column;overflow:hidden;border:1px solid #dedcf0;border-radius:19px;background:#fff;color:#292d50;box-shadow:0 18px 55px rgba(35,31,78,.22)}
+.eg-ka-panel[hidden]{display:none}
+.eg-ka-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;background:linear-gradient(110deg,#eeeafa,#edf5ef);border-bottom:1px solid #e3e2ee}
+.eg-ka-heading{display:grid;gap:3px}.eg-ka-heading strong{font-size:.98rem}.eg-ka-heading span{font-size:.7rem;color:#666783}
+.eg-ka-close{width:34px;height:34px;border:1px solid #d9d7e9;border-radius:10px;background:#fff;color:#514a82;font-size:1.35rem;cursor:pointer}
+.eg-ka-messages{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:#fafaff}
+.eg-ka-message{max-width:94%;padding:11px 12px;border-radius:13px;font-size:.82rem;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere}
+.eg-ka-bot{align-self:flex-start;background:#f0eff9;border:1px solid #e4e1f2;color:#303254}
+.eg-ka-user{align-self:flex-end;background:#e8f3ec;border:1px solid #d8e9dd;color:#294d3c}
+.eg-ka-sources{display:grid;gap:6px;margin-top:10px;padding-top:9px;border-top:1px solid rgba(75,69,128,.15)}
+.eg-ka-source{color:#51479a;font-size:.75rem;font-weight:800;text-decoration:underline;text-underline-offset:2px}
+.eg-ka-form{display:flex;gap:8px;padding:11px 12px;border-top:1px solid #e7e5ef;background:#fff}
+.eg-ka-input{min-width:0;flex:1;border:1px solid #d9dbea;border-radius:11px;padding:11px 12px;font:inherit;font-size:.83rem;color:#292d50}
+.eg-ka-send{border:0;border-radius:11px;padding:0 15px;background:#5147a5;color:#fff;font:inherit;font-size:.82rem;font-weight:850;cursor:pointer}
+.eg-ka-status{margin:0;padding:0 14px 11px;background:#fff;color:#777990;font-size:.67rem;line-height:1.4}
+@media(max-width:520px){.eg-ka-launcher{right:14px;bottom:14px}.eg-ka-panel{right:8px;bottom:70px;width:calc(100vw - 16px);height:min(570px,calc(100dvh - 84px))}}
+body.eg-theme-dark .eg-ka-panel{background:#293b4c;color:#edf2f7;border-color:#53677a}
+body.eg-theme-dark .eg-ka-header{background:linear-gradient(110deg,#354b61,#344d49);border-color:#53677a}
+body.eg-theme-dark .eg-ka-messages{background:#263848}
+body.eg-theme-dark .eg-ka-bot{background:#35495d;border-color:#52687d;color:#edf2f7}
+body.eg-theme-dark .eg-ka-user{background:#315348;border-color:#456f5d;color:#edf7ef}
+body.eg-theme-dark .eg-ka-form,body.eg-theme-dark .eg-ka-status{background:#293b4c;border-color:#53677a;color:#c1ccd8}
+body.eg-theme-dark .eg-ka-input{background:#344b60;border-color:#60758a;color:#f1f5f9}
+body.eg-theme-dark .eg-ka-source{color:#c8c0ff}
+body.eg-theme-dark .eg-ka-close{background:#354b61;color:#edf2f7;border-color:#60758a}
+.eg-ka-fallback{position:fixed;right:22px;bottom:22px;z-index:1200;display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border:1px solid #d9d7e9;border-radius:999px;background:#fff;color:#5147a5;font:inherit;font-size:.86rem;font-weight:850;text-decoration:none;box-shadow:0 9px 28px rgba(48,40,111,.18)}
+@media(max-width:520px){.eg-ka-fallback{right:14px;bottom:14px}}
+body.eg-theme-dark .eg-ka-fallback{background:#354b61;color:#e6e1ff;border-color:#60758a}
