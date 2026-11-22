@@ -70,7 +70,7 @@
     Object.entries(plan.limits || {}).forEach(([key, value]) => { limits[key] = value; });
     const scopedGrants = [];
     (grants || []).filter(g => g && g.tenantId === subscription.tenantId && isGrantEffective(g, now))
-      .sort((a, b) => (a.source === "platform_override" ? 1 : 0) - (b.source === "platform_override" ? 1 : 0))
+      .sort((a, b) => (a.effect === "deny" ? 1 : 0) - (b.effect === "deny" ? 1 : 0))
       .forEach(grant => {
         const hasScope = grant.scope && Object.values(grant.scope).some(v => Array.isArray(v) && v.length);
         if (hasScope) { scopedGrants.push(clone(grant)); return; }
@@ -113,6 +113,8 @@
       async getCurrentSubscription() { return clone(await repos.subscriptions.getCurrent()); },
       async getCurrentEntitlements(at) { return getCurrentEntitlements(at); },
       async transitionOnboarding(requestId, nextStatus, patch, command) {
+        const replay = command && command.idempotencyKey ? await repos.onboarding.getByIdempotencyKey(command.idempotencyKey) : null;
+        if (replay) return clone(replay);
         const current = await repos.onboarding.getById(String(requestId));
         if (!current) throw new Error("Onboarding request not found.");
         assertExpectedVersion(current, command && command.expectedVersion);
@@ -120,13 +122,15 @@
         if (nextStatus === "provisioned" || nextStatus === "active") {
           const tenantId = String((patch && patch.tenantId) || current.tenantId || "");
           if (!tenantId) throw new Error("A trusted provisioning operation must assign the tenant ID.");
-          if (nextStatus === "active" && current.status !== "provisioned") throw new Error("A tenant must be provisioned before activation.");
+          if (nextStatus === "active" && !["provisioned", "suspended"].includes(current.status)) throw new Error("A tenant must be provisioned before activation.");
         }
         const next = { ...current, ...(patch || {}), status: nextStatus, version: current.version + 1,
           updatedAt: (command && command.now) || new Date().toISOString(), idempotencyKey: command && command.idempotencyKey };
         return clone(await repos.onboarding.save(next, { expectedVersion: current.version, idempotencyKey: command && command.idempotencyKey }));
       },
       async transitionSubscription(nextStatus, patch, command) {
+        const replay = command && command.idempotencyKey ? await repos.subscriptions.getByIdempotencyKey(command.idempotencyKey) : null;
+        if (replay) return clone(replay);
         const current = await repos.subscriptions.getCurrent();
         if (!current) throw new Error("Tenant subscription not found.");
         assertExpectedVersion(current, command && command.expectedVersion);
@@ -137,6 +141,8 @@
       },
       async saveEntitlementGrant(grant, command) {
         if (!grant || !grant.grantId) throw new TypeError("An entitlement grant ID is required.");
+        const replay = command && command.idempotencyKey ? await repos.entitlements.getByIdempotencyKey(command.idempotencyKey) : null;
+        if (replay) return clone(replay);
         const existing = (await repos.entitlements.listCurrent()).find(x => x.grantId === grant.grantId);
         if (existing) assertExpectedVersion(existing, command && command.expectedVersion);
         const next = { ...clone(grant), version: existing ? existing.version + 1 : 1,
