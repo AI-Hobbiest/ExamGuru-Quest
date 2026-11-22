@@ -3,7 +3,7 @@
   "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/tenant-onboarding.schema.json",
   "title": "ExamGuru Tenant Onboarding Request v1",
   "type": "object",
-  "required": ["schemaVersion", "kind", "requestId", "institutionType", "institutionName", "requestedSlug", "countryCode", "timezone", "status", "version", "createdAt", "updatedAt"],
+  "required": ["schemaVersion", "kind", "requestId", "institutionType", "institutionName", "requestedSlug", "countryCode", "timezone", "status", "version", "idempotencyKey", "createdAt", "updatedAt"],
   "properties": {
     "schemaVersion": { "const": 1 },
     "kind": { "const": "tenant-onboarding-request" },
