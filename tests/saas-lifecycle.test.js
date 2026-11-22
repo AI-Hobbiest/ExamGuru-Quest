@@ -47,10 +47,13 @@ assert.equal(lifecycle.resolveEntitlements(plan,{...subscription,status:"suspend
 assert.throws(()=>lifecycle.assertTransition("requested","active",lifecycle.ONBOARDING_TRANSITIONS,"onboarding"),/Invalid onboarding transition/);
 assert.throws(()=>lifecycle.assertTransition("active","trialing",lifecycle.SUBSCRIPTION_TRANSITIONS,"subscription"),/Invalid subscription transition/);
 assert.throws(()=>lifecycle.assertExpectedVersion({version:3},2),/Version conflict/);
-const repos=memory.createMemorySaasRepositories({institutions:[tenant],plans:[plan],subscriptions:[subscription],grants:[],onboardingRequests:[]},{tenantId:"tenant-001"});
+const otherSubscription={...subscription,subscriptionId:"sub-tenant-evil",tenantId:"tenant-evil",updatedAt:"2026-11-30T00:00:00.000Z"};
+const repos=memory.createMemorySaasRepositories({institutions:[tenant,{institutionId:"tenant-evil",status:"active"}],plans:[plan],subscriptions:[subscription,otherSubscription],grants:[grant("g-evil","root.access","allow",{tenantId:"tenant-evil"})],onboardingRequests:[]},{tenantId:"tenant-001"});
 const service=lifecycle.createSaasLifecycle(repos);
 (async()=>{
  assert.equal((await service.getCurrentEntitlements(at)).features["cbse.curriculum"],true);
+ assert.equal((await repos.subscriptions.getCurrent()).tenantId,"tenant-001","tenant-scoped repository reads must not return another tenant even when its record is newer");
+ assert.equal((await repos.entitlements.listCurrent()).some(x=>x.tenantId==="tenant-evil"),false,"tenant-scoped entitlement lists must exclude other tenants");
  const req={schemaVersion:1,kind:"tenant-onboarding-request",requestId:"onboard-001",institutionType:"school",institutionName:"Sample School",requestedSlug:"sample-school",countryCode:"AE",timezone:"Asia/Dubai",status:"requested"};
  const created=await service.createOnboardingRequest(req,{idempotencyKey:"onboard-command-001",now:at});
  const replay=await service.createOnboardingRequest({...req,institutionName:"Changed payload"},{idempotencyKey:"onboard-command-001",now:at});
@@ -65,7 +68,8 @@ const service=lifecycle.createSaasLifecycle(repos);
  const approvedReplay=await service.transitionOnboarding("onboard-001","approved",{}, {expectedVersion:2,idempotencyKey:"onboard-command-003",now:at});
  assert.equal(approvedReplay.version,3,"replaying a transition returns its original result without a version conflict");
  await assert.rejects(()=>service.transitionOnboarding("onboard-001","active",{}, {expectedVersion:3,idempotencyKey:"bad",now:at}),/Invalid onboarding transition/);
- await assert.rejects(()=>service.transitionSubscription("trialing",{}, {expectedVersion:1,now:at}),/Invalid subscription transition/);
+ await assert.rejects(()=>service.transitionSubscription("trialing",{}, {expectedVersion:1,idempotencyKey:"invalid-transition",now:at}),/Invalid subscription transition/);
+ await assert.rejects(()=>service.transitionSubscription("trialing",{}, {expectedVersion:1,now:at}),/idempotency key is required/);
  const pastDue=await service.transitionSubscription("past_due",{gracePeriodEndsAt:"2026-11-20T00:00:00.000Z"},{expectedVersion:1,idempotencyKey:"subscription-command-001",now:at});
  assert.equal(pastDue.version,2);
  const pastDueReplay=await service.transitionSubscription("past_due",{gracePeriodEndsAt:"2026-11-20T00:00:00.000Z"},{expectedVersion:1,idempotencyKey:"subscription-command-001",now:at});
