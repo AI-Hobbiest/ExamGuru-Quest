@@ -63,7 +63,7 @@
   }
   async function answerQuestion(query,auth){
     const q=query.toLowerCase();
-    if(/\\b(how many|count|total|number|inventory|available)\\b/.test(q)&&/\\b(question|questions|qbank|bank|banks)\\b/.test(q))return answerBankCount(query);
+    if(/\b(how many|count|total|number|inventory|available)\b/.test(q)&&/\b(question|questions|qbank|bank|banks)\b/.test(q))return answerBankCount(query);
     const index=await loadIndex(auth,query);
     const model=window.ExamGuruKnowledgeAssistantModel;
     const results=model.search(index,query,5);
