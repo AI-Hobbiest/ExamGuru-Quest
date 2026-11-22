@@ -44,6 +44,8 @@ jobs:
         run: node tests/study-model.test.js
       - name: Validate M8 browser-local student knowledge assistant
         run: node --check js/knowledge-assistant-model.js && node --check js/knowledge-assistant.js && node tests/knowledge-assistant.test.js
+      - name: Validate M9 provider-neutral SaaS lifecycle contracts
+        run: node --check js/domain/repository-contracts.js && node --check js/domain/saas-lifecycle.js && node --check js/adapters/memory-saas-repositories.js && node tests/saas-lifecycle.test.js
       - name: Validate Stage C backup compatibility and restore flow
         run: node tests/profile-model.test.js && node tests/profile-page.test.js
       - name: Validate NSO, IMO and IEO blueprints and section weighting
