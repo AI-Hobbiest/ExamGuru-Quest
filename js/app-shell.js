@@ -5,8 +5,8 @@
      A page-level <base> element or nested route must not redirect these requests. */
   const appShellScript=document.currentScript;
   const assistantAssetBase=appShellScript&&appShellScript.src
-    ?new URL(".",appShellScript.src)
-    :new URL("./js/",location.href);
+    ?new URL("../",appShellScript.src)
+    :new URL("./",location.href);
   /* Cache-bust shared shell CSS so workspace-switcher styles reach every portal page. */
   const shellCss=document.querySelector('link[href*="css/app-shell.css"]');
   if(shellCss)shellCss.href="./css/app-shell.css?v=20261122-m8-role-chat";
