@@ -14,19 +14,37 @@ const visual={schemaVersion:1,kind:"visual-revision-manifest",boards:[
  {classId:"10",subject:"science",chapters:[{chapterNo:1,chapterKey:"life",title:"Life Processes",cards:[{id:"life-1",title:"Photosynthesis",type:"concept",content:"Plants make food using sunlight."}]}]}
 ]};
 const manifest={schemaVersion:1,kind:"knowledge-base-manifest",resources:[
- {resourceId:"c6-notes",title:"Food notes",summary:"Class 6 nutrition notes",subject:"science",chapter:"Food",path:"knowledge/food.pdf",status:"published",classIds:["6"]},
- {resourceId:"draft",title:"Private draft",summary:"not published",path:"draft.pdf",status:"draft",classIds:["6"]},
- {resourceId:"c10",title:"Class 10 notes",summary:"Class 10",path:"knowledge/c10.pdf",status:"published",classIds:["10"]}
+ {resourceId:"c6-notes",title:"Food notes",summary:"Class 6 nutrition notes",subject:"science",chapter:"Food",path:"knowledge/food.pdf",status:"published",classIds:["6"],audienceRoles:["student"]},
+ {resourceId:"draft",title:"Private draft",summary:"not published",path:"draft.pdf",status:"draft",classIds:["6"],audienceRoles:["student"]},
+ {resourceId:"c10",title:"Class 10 notes",summary:"Class 10",path:"knowledge/c10.pdf",status:"published",classIds:["10"],audienceRoles:["student"]},
+ {resourceId:"teacher-guide",title:"Teacher assessment guide",summary:"Assigned class assessment guidance",path:"knowledge/teacher.pdf",status:"published",audienceRoles:["teacher"]},
+ {resourceId:"hod-report",title:"Department workload guide",summary:"HOD workload and department reports",path:"knowledge/hod.pdf",status:"published",audienceRoles:["hod"],institutionId:"INST-1",departmentIds:["SCI"]},
+ {resourceId:"viewer-report",title:"Institution report guide",summary:"Read-only institution report access",path:"knowledge/viewer.pdf",status:"published",audienceRoles:["institution_viewer"],institutionId:"INST-1"}
 ]};
-const index=model.buildIndex(visual,manifest,"6");
-assert.equal(index.length,3,"index includes only matching class cards and published resources");
-assert.ok(model.search(index,"carbohydrates energy").some(item=>item.id==="food-1"));
-assert.ok(model.search(index,"balanced diet").some(item=>item.id==="food-2"));
-assert.ok(model.search(index,"nutrition notes").some(item=>item.id==="c6-notes"));
-assert.equal(model.search(index,"photosynthesis").length,0,"other-class content must not leak into the class index");
-assert.equal(model.search(index,"unrelated").length,0);
+const student={role:"student",classId:"6"};
+const studentIndex=model.buildIndex(visual,manifest,student);
+assert.equal(studentIndex.length,3,"student index includes matching class cards and published class resources");
+assert.ok(model.search(studentIndex,"carbohydrates energy").some(item=>item.id==="food-1"));
+assert.ok(model.search(studentIndex,"balanced diet").some(item=>item.id==="food-2"));
+assert.ok(model.search(studentIndex,"nutrition notes").some(item=>item.id==="c6-notes"));
+assert.equal(model.search(studentIndex,"photosynthesis").length,0,"other-class content must not leak into the class index");
+assert.equal(model.search(studentIndex,"teacher assessment").length,0,"teacher resources must not leak to students");
+const teacherIndex=model.buildIndex(visual,manifest,{role:"institution",institutionRole:"teacher",institutionId:"INST-1"});
+assert.equal(teacherIndex.length,1,"teacher receives only teacher-audience published resources");
+assert.equal(teacherIndex[0].id,"teacher-guide");
+const hodIndex=model.buildIndex(visual,manifest,{role:"institution",institutionRole:"hod",institutionId:"INST-1",departmentIds:["SCI"]});
+assert.equal(hodIndex.length,1,"HOD receives only matching institution and department material");
+const otherHodIndex=model.buildIndex(visual,manifest,{role:"institution",institutionRole:"hod",institutionId:"INST-2",departmentIds:["SCI"]});
+assert.equal(otherHodIndex.length,0,"institution-scoped resources must not cross institution boundaries");
+const viewerIndex=model.buildIndex(visual,manifest,{role:"institution",institutionRole:"institution_viewer",institutionId:"INST-1"});
+assert.equal(viewerIndex.length,1,"viewer can retrieve only explicitly viewer-audience content");
+const adminProfile=model.resolveProfile({role:"admin"});
+assert.equal(adminProfile.role,"platform_admin");
+assert.equal(model.resolveProfile({role:"guest"}),null);
+assert.equal(model.search(studentIndex,"unrelated").length,0);
 assert.equal(model.answer([],"unknown").sources.length,0);
-assert.equal(model.answer(model.search(index,"carbohydrates"),"carbohydrates").sources[0].title,"Nutrients");
-assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes("examguru-auth-state-ready"));
+assert.equal(model.answer(model.search(studentIndex,"carbohydrates"),"carbohydrates",model.resolveProfile(student)).sources[0].title,"Nutrients");
+assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes("Ask ExamGuru"));
+assert.ok(fs.readFileSync("js/knowledge-assistant.js","utf8").includes("egKnowledgeAssistantFallback"));
 assert.ok(fs.readFileSync("css/knowledge-assistant.css","utf8").includes(".eg-ka-panel"));
-console.log("M8 Knowledge Assistant tests passed: class-scoped retrieval, publication filtering, ranking, source links and empty-result behavior.");
+console.log("M8 role-aware assistant tests passed: student class isolation, role audiences, institution/department filters, viewer scope, source links, empty results and fallback hooks.");
