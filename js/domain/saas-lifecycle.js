@@ -70,7 +70,7 @@
       schemaVersion: 1, kind: "tenant-entitlement-grant",
       grantId: "legacy-" + suffix + "-" + id,
       tenantId: id, key, effect: "allow", source: "migration", status: "active",
-      scope, version: 1, idempotencyKey: "legacy-entitlement-" + suffix + "-" + id,
+      scope, version: 1, idempotencyKey: "legacy-entitlement-" + suffix,
       reason: "Explicitly mapped from the existing institution-entitlements v1 record; not evidence of a paid subscription.",
       createdAt: now, updatedAt: now
     });
