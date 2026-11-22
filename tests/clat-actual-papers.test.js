@@ -23,5 +23,5 @@ assert.ok(html.includes('id="actualPaperList"')&&html.includes('id="pyqStatus"')
 assert.ok(controller.includes("./data/clat/actual-papers.json")&&controller.includes("renderActualPapers"),"CLAT practice controller does not load the actual-paper catalogue");
 assert.ok(controller.includes("async function loadModelBatch")&&controller.includes("async function loadActualPaperCatalogue"),"CLAT paper libraries must load independently");
 assert.ok(controller.includes("One model-paper set is temporarily unavailable.")&&controller.includes("We couldn’t load the previous-year paper library."),"CLAT loading failures must be isolated and user-friendly");
-assert.ok(!controller.includes("Actual previous-year papers could not be loaded:")&&!controller.includes("Unable to load CLAT practice: "+error.message),"raw loader errors must not be shown to students");
+assert.ok(!controller.includes("Actual previous-year papers could not be loaded:")&&!controller.includes("Unable to load CLAT practice: "),"raw loader errors must not be shown to students");
 console.log("CLAT actual PYQ catalogue passed: latest five completed editions, Consortium archive source links, final-key links and corrected evaluation totals (150/150, 150/149, 120/118, 120/113, 120/119).");
