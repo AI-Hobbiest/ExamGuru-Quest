@@ -10,8 +10,8 @@
     curriculum: ["listCurriculumItems", "getCurriculumItem"],
     content: ["listSharedBanks", "getSharedBank", "listInstitutionContent", "saveInstitutionCopy"],
     catalog: ["listPlans", "getPlan"],
-    subscriptions: ["getCurrent", "save"],
-    entitlements: ["listCurrent", "save"],
+    subscriptions: ["getCurrent", "getByIdempotencyKey", "save"],
+    entitlements: ["listCurrent", "getByIdempotencyKey", "save"],
     onboarding: ["getById", "getByIdempotencyKey", "list", "save"]
   });
   function assertRepository(name, repository) {
