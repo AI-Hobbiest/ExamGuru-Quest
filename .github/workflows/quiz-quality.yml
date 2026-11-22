@@ -42,6 +42,8 @@ jobs:
         run: python3 -m pip install --quiet pypdf && python3 -m py_compile scripts/extract_cbse_papers.py && python3 tests/test_cbse_extract.py && python3 -m py_compile scripts/extract_cbse_mcq_candidates.py && python3 tests/test_cbse_mcq_candidates.py
       - name: Validate Stage D Study Library model and rendering
         run: node tests/study-model.test.js
+      - name: Validate M8 browser-local student knowledge assistant
+        run: node --check js/knowledge-assistant-model.js && node --check js/knowledge-assistant.js && node tests/knowledge-assistant.test.js
       - name: Validate Stage C backup compatibility and restore flow
         run: node tests/profile-model.test.js && node tests/profile-page.test.js
       - name: Validate NSO, IMO and IEO blueprints and section weighting
