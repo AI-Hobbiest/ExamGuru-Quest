@@ -243,7 +243,7 @@
       const addCss=()=>{
         if(document.querySelector('link[data-eg-knowledge-assistant-css]'))return;
         const css=document.createElement("link");css.rel="stylesheet";css.dataset.egKnowledgeAssistantCss="true";
-        css.href=new URL("./css/knowledge-assistant.css?v=20261122-m8-loader-v12",assistantAssetBase).href;document.head.appendChild(css);
+        css.href=new URL("./css/knowledge-assistant.css?v=20261122-m8-loader-v13",assistantAssetBase).href;document.head.appendChild(css);
       };
       const loadScript=(id,path)=>{
         const existing=document.getElementById(id);
@@ -259,9 +259,9 @@
       };
       try{
         addCss();
-        if(!window.ExamGuruKnowledgeAssistantModel){try{await loadScript("egKnowledgeAssistantModelScript","./js/knowledge-assistant-model.js?v=20261122-m8-loader-v12");}catch(error){fallback("model script loading",error);return;}}
+        if(!window.ExamGuruKnowledgeAssistantModel){try{await loadScript("egKnowledgeAssistantModelScript","./js/knowledge-assistant-model.js?v=20261122-m8-loader-v13");}catch(error){fallback("model script loading",error);return;}}
         if(!window.ExamGuruKnowledgeAssistantModel)throw new Error("model API missing after script load");
-        if(!window.ExamGuruKnowledgeAssistant){try{await loadScript("egKnowledgeAssistantScript","./js/knowledge-assistant.js?v=20261122-m8-loader-v12");}catch(error){fallback("assistant script loading",error);return;}}
+        if(!window.ExamGuruKnowledgeAssistant){try{await loadScript("egKnowledgeAssistantScript","./js/knowledge-assistant.js?v=20261122-m8-loader-v13");}catch(error){fallback("assistant script loading",error);return;}}
         if(!window.ExamGuruKnowledgeAssistant||typeof window.ExamGuruKnowledgeAssistant.mount!=="function")throw new Error("assistant mount API missing after script load");
         let mounted=false;
         try{mounted=window.ExamGuruKnowledgeAssistant.mount(auth);}catch(error){fallback("launcher initialisation",error);return;}
