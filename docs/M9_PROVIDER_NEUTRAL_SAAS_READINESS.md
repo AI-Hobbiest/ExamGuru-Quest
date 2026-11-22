@@ -40,13 +40,13 @@ Prepare ExamGuru Quest for institution onboarding and SaaS operation while prese
 - Calculate effective access from the active plan snapshot plus explicit tenant grants/overrides.
 - Expired, revoked or not-yet-effective grants do not apply.
 - An explicit deny overrides a plan allow; limits use the most restrictive applicable value.
-- Preserve existing `institution-entitlements` data as a legacy input during migration. Do not silently rewrite it or infer paid access from it.
+- Preserve existing `institution-entitlements` data as a legacy input during migration. The explicit mapper emits tenant-scoped `source=migration` grants for each enabled class/exam; it does not infer paid access or rewrite the legacy record.
 - Server authorization must re-evaluate entitlements after authenticating the actor and resolving tenant scope. Client-side gating is UX only.
 
 ### M9.4 — Repository and service boundaries
 
 - Add optional provider-neutral repositories for plans, subscriptions, entitlement grants and onboarding requests.
-- Add deterministic in-memory adapters for tests only.
+- Add deterministic in-memory adapters for tests only.\n- Add idempotent initial subscription provisioning against a published plan version; plan changes remain pinned to explicit plan versions.
 - Add domain lifecycle/resolution services with no browser, network, payment-provider or database dependency.
 - Require idempotency keys for mutating lifecycle commands and expected versions for updates.
 - Keep the current local storage adapter and all student attempt/profile/backup contracts unchanged.
