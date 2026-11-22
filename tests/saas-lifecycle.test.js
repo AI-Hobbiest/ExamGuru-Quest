@@ -46,6 +46,12 @@ result=lifecycle.resolveEntitlements(plan,subscription,[grant("g-scoped","cbse.c
 assert.equal(result.features["cbse.curriculum"],true,"a class-scoped grant is not widened into a tenant-wide deny");
 assert.equal(result.scopedGrants.length,1,"scoped grants remain explicitly scoped");
 assert.equal(lifecycle.resolveEntitlements(plan,{...subscription,status:"suspended"},[],at).active,false);
+const legacyMapped=lifecycle.mapLegacyInstitutionEntitlements("tenant-001",{curriculum:{enabled:true,classIds:["6","10"]},competitiveExams:{enabled:true,examIds:["CLAT","JEE_MAIN"]}},at);
+assert.equal(legacyMapped.length,4,"legacy curriculum and exam add-ons map to explicit scoped migration grants");
+assert.ok(legacyMapped.every(g=>g.source==="migration"&&g.effect==="allow"&&g.tenantId==="tenant-001"));
+assert.deepEqual(legacyMapped[0].scope.classIds,["6"]);
+assert.ok(legacyMapped.every(g=>g.idempotencyKey.length>=8&&g.grantId.length<=200));
+assert.equal(lifecycle.mapLegacyInstitutionEntitlements("tenant-001",{curriculum:{enabled:false,classIds:["10"]},competitiveExams:{enabled:false,examIds:["CLAT"]}},at).length,0,"disabled legacy add-ons do not create grants");
 assert.throws(()=>lifecycle.assertTransition("requested","active",lifecycle.ONBOARDING_TRANSITIONS,"onboarding"),/Invalid onboarding transition/);
 assert.throws(()=>lifecycle.assertTransition("active","trialing",lifecycle.SUBSCRIPTION_TRANSITIONS,"subscription"),/Invalid subscription transition/);
 assert.throws(()=>lifecycle.assertExpectedVersion({version:3},2),/Version conflict/);
