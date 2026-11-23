@@ -38,7 +38,7 @@
   const ADMIN_PASSWORD_SHA256="c5c784554396ac628057cbad338efdf79fe7b1d797317728cf4b52d14af18ae2";
   // Synthetic-only staging account. Static authentication is bypassable and grants no server access.
   const DEMO_ADMIN_USERNAME="demo.admin";
-  const DEMO_ADMIN_PASSWORD_SHA256="f61a5727d3c3d3ee7437fe3e1bdf4d8fc9ea5a2deb367f43b7636488b58539ac";
+  const DEMO_ADMIN_PASSWORD_SHA256="d77e5918cf2e8b295e375ffa213681e6008f5e4b5c369e6a559c251a669d9775";
   async function sha256(text){
     const bytes=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(text));
     return Array.from(new Uint8Array(bytes),byte=>byte.toString(16).padStart(2,"0")).join("");
