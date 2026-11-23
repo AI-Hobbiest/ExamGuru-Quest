@@ -23,7 +23,8 @@ assert.equal(m.classifyIntent("How many subjects our institution we have?"),"sub
 assert.equal(m.classifyIntent("Do we have MCQs for Mathematics?"),"subject-availability");
 assert.equal(m.classifyIntent("How about English?"),"subject-availability");
 assert.equal(m.classifyIntent("How much MCQs we have in our bank?"),"bank-count");
-assert.equal(m.classifyIntent("How many students we have for now?"),"student-count");assert.equal(m.classifyIntent("Can I enrol 10 students in one go?"),"student-enrolment-guidance");assert.equal(m.classifyIntent("Do we have competitive exam add-ons?"),"competitive-entitlement");assert.equal(m.classifyIntent("Are CLAT practice papers included in our subscription?"),"competitive-entitlement");
+assert.equal(m.classifyIntent("How many students we have for now?"),"student-count");
+assert.equal(m.classifyIntent("Teachers?","student-count"),"teacher-count");assert.equal(m.classifyIntent("And staff?","student-count"),"teacher-count");assert.equal(m.classifyIntent("What about classes?","student-count"),"class-count");assert.equal(m.classifyIntent("Departments?","class-count"),"department-count");assert.equal(m.classifyIntent("Subjects?","department-count"),"subject-count");assert.equal(m.classifyIntent("Teachers?"),"knowledge","a fragment without conversational context must not invent an operational request");assert.equal(m.classifyIntent("Can I enrol 10 students in one go?"),"student-enrolment-guidance");assert.equal(m.classifyIntent("Do we have competitive exam add-ons?"),"competitive-entitlement");assert.equal(m.classifyIntent("Are CLAT practice papers included in our subscription?"),"competitive-entitlement");
 assert.equal(m.classifyIntent("How many XP Points I have?"),"student-xp");
 assert.equal(m.classifyIntent("Do we have backup HOD for all departments?"),"hod-coverage");
 assert.equal(m.classifyIntent("How many classes assigned to me?"),"teacher-assignment-count");
