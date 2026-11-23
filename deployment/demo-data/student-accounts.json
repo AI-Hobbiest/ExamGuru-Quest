@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "kind": "c10-student-accounts",
+  "kdf": "PBKDF2-SHA-256",
+  "defaultIterations": 600000,
+  "accounts": [
+    {"username":"demo.class3","studentId":"demo-student-class3","displayName":"Demo Class 3","classId":"3","salt":"2Rh4VE0/hJjzmL28+E6Xpw==","passwordHash":"pKiFbMTWsimkRAHdS3PRna7zsIylGvulJnpKgOjeofk=","iterations":600000,"active":true,"createdAt":"2026-11-23T00:00:00Z","updatedAt":"2026-11-23T00:00:00Z"},
+    {"username":"demo.class6","studentId":"demo-student-class6","displayName":"Demo Class 6","classId":"6","salt":"2uP6iWrVw0iwNKeXjDbNhg==","passwordHash":"ivUUIfp6kGZfss+X41h+xIESMI+Yj8NmmUVxX8+rUPA=","iterations":600000,"active":true,"createdAt":"2026-11-23T00:00:00Z","updatedAt":"2026-11-23T00:00:00Z"},
+    {"username":"demo.class10","studentId":"demo-student-class10","displayName":"Demo Class 10","classId":"10","salt":"FoSL6tXX3KyHZGGsSee+5g==","passwordHash":"uFvCwiFwyJP6qFMyyGfx+aCRI6rxOuogG/Bb+mijECA=","iterations":600000,"active":true,"createdAt":"2026-11-23T00:00:00Z","updatedAt":"2026-11-23T00:00:00Z"},
+    {"username":"demo.clat","studentId":"demo-student-clat","displayName":"Demo CLAT","classId":"CLAT","salt":"3uq1Fkp/jlrpZOrvERJp1A==","passwordHash":"2vxMNF27ZOaMZHP77uTlcoGeYW44Dfmo6ZdX+y8D8hY=","iterations":600000,"active":true,"createdAt":"2026-11-23T00:00:00Z","updatedAt":"2026-11-23T00:00:00Z"}
+  ]
+}
