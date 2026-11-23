@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/entitlement-grant.schema.json",
+  "title": "ExamGuru Tenant Entitlement Grant v1",
+  "type": "object",
+  "required": ["schemaVersion", "kind", "grantId", "tenantId", "key", "effect", "source", "status", "version", "idempotencyKey", "createdAt", "updatedAt"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "kind": { "const": "tenant-entitlement-grant" },
+    "grantId": { "type": "string", "minLength": 8, "maxLength": 200 },
+    "tenantId": { "type": "string", "minLength": 8, "maxLength": 80 },
+    "key": { "type": "string", "pattern": "^[a-z][a-zA-Z0-9.]*$", "maxLength": 100 },
+    "effect": { "enum": ["allow", "deny"] },
+    "source": { "enum": ["subscription_plan", "platform_override", "contract_override", "trial", "migration"] },
+    "status": { "enum": ["active", "revoked", "expired"] },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "branchIds": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "classIds": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "examIds": { "type": "array", "uniqueItems": true, "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "limit": { "type": ["integer", "null"], "minimum": 0 },
+    "effectiveFrom": { "type": ["string", "null"], "format": "date-time" },
+    "effectiveTo": { "type": ["string", "null"], "format": "date-time" },
+    "reason": { "type": ["string", "null"], "maxLength": 1000 },
+    "createdBy": { "type": ["string", "null"], "maxLength": 80 },
+    "revokedBy": { "type": ["string", "null"], "maxLength": 80 },
+    "revokedAt": { "type": ["string", "null"], "format": "date-time" },
+    "version": { "type": "integer", "minimum": 1 },
+    "idempotencyKey": { "type": "string", "minLength": 8, "maxLength": 160 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

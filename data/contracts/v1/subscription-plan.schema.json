@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/subscription-plan.schema.json",
+  "title": "ExamGuru Subscription Plan v1",
+  "type": "object",
+  "required": ["schemaVersion", "kind", "planId", "version", "name", "status", "features", "limits", "createdAt", "updatedAt"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "kind": { "const": "subscription-plan" },
+    "planId": { "type": "string", "minLength": 2, "maxLength": 80, "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "version": { "type": "integer", "minimum": 1 },
+    "name": { "type": "string", "minLength": 2, "maxLength": 120 },
+    "description": { "type": "string", "maxLength": 1000 },
+    "status": { "enum": ["draft", "active", "retired"] },
+    "audience": { "enum": ["school", "college", "coaching_centre", "competitive_exam_provider", "direct", "any"] },
+    "commercialTerms": {
+      "type": ["object", "null"],
+      "required": ["billingMode"],
+      "properties": {
+        "billingMode": { "enum": ["free", "paid", "quote"] },
+        "amountMinor": { "type": "integer", "minimum": 0 },
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "interval": { "enum": ["month", "year", "one_time"] }
+      },
+      "allOf": [
+        { "if": { "properties": { "billingMode": { "const": "paid" } }, "required": ["billingMode"] },
+          "then": { "required": ["amountMinor", "currency", "interval"] } }
+      ],
+      "additionalProperties": false
+    },
+    "features": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 2, "maxLength": 100 } },
+    "limits": {
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-z][a-zA-Z0-9.]*$" },
+      "additionalProperties": { "type": ["integer", "null"], "minimum": 0 }
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-hobbiest.github.io/ExamGuru-Quest/data/contracts/v1/institution-subscription.schema.json",
+  "title": "ExamGuru Institution Subscription v1",
+  "type": "object",
+  "required": ["schemaVersion", "kind", "subscriptionId", "tenantId", "planId", "planVersion", "status", "version", "idempotencyKey", "createdAt", "updatedAt"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "kind": { "const": "institution-subscription" },
+    "subscriptionId": { "type": "string", "minLength": 8, "maxLength": 100 },
+    "tenantId": { "type": "string", "minLength": 8, "maxLength": 80, "description": "Canonical institutionId; no second tenant identity is created." },
+    "planId": { "type": "string", "minLength": 2, "maxLength": 80 },
+    "planVersion": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["pending", "trialing", "active", "past_due", "suspended", "cancelled", "expired"] },
+    "version": { "type": "integer", "minimum": 1 },
+    "trialEndsAt": { "type": ["string", "null"], "format": "date-time" },
+    "currentPeriodStart": { "type": ["string", "null"], "format": "date-time" },
+    "currentPeriodEnd": { "type": ["string", "null"], "format": "date-time" },
+    "gracePeriodEndsAt": { "type": ["string", "null"], "format": "date-time" },
+    "cancelAtPeriodEnd": { "type": "boolean", "default": false },
+    "cancelledAt": { "type": ["string", "null"], "format": "date-time" },
+    "billingReference": {
+      "type": ["object", "null"],
+      "properties": {
+        "provider": { "type": "string", "maxLength": 60 },
+        "customerReference": { "type": "string", "maxLength": 200 },
+        "subscriptionReference": { "type": "string", "maxLength": 200 }
+      },
+      "additionalProperties": false,
+      "description": "Opaque provider references only. Never store payment credentials, tokens or secrets."
+    },
+    "idempotencyKey": { "type": "string", "minLength": 8, "maxLength": 160 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "allOf": [
+    { "if": { "properties": { "status": { "enum": ["trialing", "active", "past_due"] } }, "required": ["status"] },
+      "then": { "required": ["currentPeriodStart", "currentPeriodEnd"], "properties": { "currentPeriodStart": { "type": "string" }, "currentPeriodEnd": { "type": "string" } } } },
+    { "if": { "properties": { "status": { "const": "trialing" } }, "required": ["status"] },
+      "then": { "required": ["trialEndsAt"], "properties": { "trialEndsAt": { "type": "string" } } } }
+  ],
+  "additionalProperties": false
+}

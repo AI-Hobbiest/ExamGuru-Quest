@@ -131,6 +131,9 @@ jobs:
           node tests/stage-a-integration.test.js
           node tests/app-shell.test.js
           node tests/knowledge-assistant.test.js
+          node --check js/domain/saas-lifecycle.js
+          node --check js/adapters/memory-saas-repositories.js
+          node tests/saas-lifecycle.test.js
           node tests/institution-addons.test.js
           node --check js/institution-dashboard.js && node tests/institution-dashboard.test.js
           node tests/report-print.test.js
