@@ -34,8 +34,11 @@
     finally{submit.disabled=false;submit.innerHTML='Sign in to ExamGuru <span aria-hidden="true">→</span>';}
   });
   const ADMIN_USERNAME="Jayaprakashganathe@gmail.com";
-  // SHA-256 digest of the temporary MVP password; this is obfuscation, not secure auth.
+  // Legacy local MVP digest; the public-build sanitizer removes this identity and digest.
   const ADMIN_PASSWORD_SHA256="c5c784554396ac628057cbad338efdf79fe7b1d797317728cf4b52d14af18ae2";
+  // Synthetic-only staging account. Static authentication is bypassable and grants no server access.
+  const DEMO_ADMIN_USERNAME="demo.admin";
+  const DEMO_ADMIN_PASSWORD_SHA256="f61a5727d3c3d3ee7437fe3e1bdf4d8fc9ea5a2deb367f43b7636488b58539ac";
   async function sha256(text){
     const bytes=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(text));
     return Array.from(new Uint8Array(bytes),byte=>byte.toString(16).padStart(2,"0")).join("");
@@ -47,10 +50,11 @@
     try{
       const enteredUsername=adminUsername.value.trim().toLowerCase();
       const enteredHash=await sha256(adminPassword.value);
-      if(enteredUsername!==ADMIN_USERNAME.toLowerCase()||enteredHash!==ADMIN_PASSWORD_SHA256){
-        throw new Error("Admin username or password is incorrect.");
-      }
-      sessionStorage.setItem("examguru_mvp_admin_session_v1",JSON.stringify({username:ADMIN_USERNAME,role:"admin",platformRoles:["platform_admin"],rbacTestMode:"local-platform-admin",signedInAt:Date.now()}));
+      const isDemoAdmin=enteredUsername===DEMO_ADMIN_USERNAME&&enteredHash===DEMO_ADMIN_PASSWORD_SHA256;
+      const isLegacyAdmin=enteredUsername===ADMIN_USERNAME.toLowerCase()&&enteredHash===ADMIN_PASSWORD_SHA256;
+      if(!isDemoAdmin&&!isLegacyAdmin)throw new Error("Admin username or password is incorrect.");
+      const sessionUsername=isDemoAdmin?DEMO_ADMIN_USERNAME:ADMIN_USERNAME;
+      sessionStorage.setItem("examguru_mvp_admin_session_v1",JSON.stringify({username:sessionUsername,role:"admin",platformRoles:["platform_admin"],rbacTestMode:"local-platform-admin",signedInAt:Date.now(),demoAccount:isDemoAdmin}));
       sessionStorage.removeItem("c10playground_static_student_v1");
       adminPassword.value="";
       say("Admin sign-in successful. Opening LMS Administration…","success");
