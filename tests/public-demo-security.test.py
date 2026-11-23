@@ -32,7 +32,7 @@ for path in root.rglob("*"):
 login = (root / "js/login-page.js").read_text(encoding="utf-8")
 assert 'const ADMIN_PASSWORD_SHA256="";' in login
 assert 'const DEMO_ADMIN_USERNAME="demo.admin";' in login
-assert 'const DEMO_ADMIN_PASSWORD_SHA256="f61a5727d3c3d3ee7437fe3e1bdf4d8fc9ea5a2deb367f43b7636488b58539ac";' in login
+assert 'const DEMO_ADMIN_PASSWORD_SHA256="d77e5918cf2e8b295e375ffa213681e6008f5e4b5c369e6a559c251a669d9775";' in login
 admin_page = (root / "admin.html").read_text(encoding="utf-8")
 assert '"demo.admin"' in admin_page, "Synthetic staging admin is not authorised by the admin page gate."
 print("PASS: only synthetic accounts are published; local admin credential is disabled.")
