@@ -4,6 +4,8 @@ name: Deploy ExamGuru Quest to GitHub Pages
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
     inputs:
       refresh_cbse:
@@ -14,8 +16,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -23,9 +23,6 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,7 +36,7 @@ jobs:
           refresh=false
           if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
             if [ "${{ inputs.refresh_cbse }}" = "true" ]; then refresh=true; fi
-          else
+          elif [ "${GITHUB_EVENT_NAME}" = "push" ]; then
             before="${{ github.event.before }}"
             if [ -z "$before" ] || [[ "$before" =~ ^0+$ ]]; then
               refresh=true
@@ -142,10 +139,6 @@ jobs:
           node tests/lms-application-services.test.js
           node tests/institution-content-store.test.js
           node tests/m5-integration-services.test.js
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - name: Assemble website files
         run: |
           set -euxo pipefail
@@ -289,6 +282,8 @@ jobs:
           cp js/dashboard-manager.js _site/js/dashboard-manager.js
           cp js/quiz-engine.js _site/js/quiz-engine.js
           cp data/*.json _site/data/
+          # Replace all real account/relationship records with synthetic F&F demo identities.
+          python3 scripts/prepare_public_demo.py --site-root _site
           cp data/cbse-class10-pyq.json _site/data/cbse-class10-pyq.json
           # Reuse the separately prepared CBSE assets. Ordinary website changes never
           # download CBSE ZIPs, extract PDFs, or rebuild the review-only MCQ queue.
@@ -432,6 +427,8 @@ jobs:
             exit 1
           fi
           for target in "${copied_parts[@]}"; do test -s "$target" || { echo "::error::Copied Science payload is empty: $target"; exit 1; }; done
+      - name: Verify public demo security boundary
+        run: python3 tests/public-demo-security.test.py --site-root _site
       - name: Validate Science module payload
         run: |
           node <<'NODE'
@@ -744,15 +741,22 @@ jobs:
         run: node tests/gamification.test.js && node tests/app-shell.test.js && node tests/report-print.test.js
       - name: Test Admin Workspace data handling and safety boundaries
         run: node tests/admin-workspace.test.js && node tests/account-contract.test.js && node tests/static-accounts.test.js
-      - name: Upload static site
-        uses: actions/upload-pages-artifact@v4
-        with:
-          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
-          path: _site
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
-          timeout: 1200000
-          reporting_interval: 15000
+      - name: Publish static site to public staging repository
+        if: github.event_name != 'pull_request'
+        shell: bash
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${DEPLOY_TOKEN:-}" ]; then
+            echo "::error::DEPLOY_TOKEN secret is missing."
+            exit 1
+          fi
+          git -C _site init
+          git -C _site config user.name "ExamGuru Deployment"
+          git -C _site config user.email "examguru-deploy[bot]@users.noreply.github.com"
+          git -C _site add --all
+          git -C _site commit -m "Deploy ExamGuru Quest staging build ${GITHUB_SHA}"
+          git -C _site branch -M main
+          git -C _site remote add origin "https://x-access-token:${DEPLOY_TOKEN}@github.com/AI-Hobbiest/ExamGuru-Quest-Site.git"
+          git -C _site push --force origin main
