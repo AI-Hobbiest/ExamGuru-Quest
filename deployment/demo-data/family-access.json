@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "kind": "c10-family-access",
+  "kdf": "PBKDF2-SHA-256",
+  "defaultIterations": 600000,
+  "parents": [
+    {"parentId":"demo-parent-001","username":"demo.parent","displayName":"Demo Parent","salt":"K0U28g6Al9AtsKJiigo/SQ==","passwordHash":"5HbCj0rJzUWPtpyM+JkTcW8sK2xUaeUCkHfFKber4mc=","iterations":600000,"active":true,"createdAt":"2026-11-23T00:00:00Z","updatedAt":"2026-11-23T00:00:00Z"}
+  ],
+  "parentStudentLinks": [
+    {"parentId":"demo-parent-001","studentId":"demo-student-class3","relationship":"parent/guardian","active":true,"createdAt":"2026-11-23T00:00:00Z"},
+    {"parentId":"demo-parent-001","studentId":"demo-student-class6","relationship":"parent/guardian","active":true,"createdAt":"2026-11-23T00:00:00Z"}
+  ]
+}
