@@ -71,7 +71,7 @@
     </form>
     <div class="login-divider">ADMIN ACCESS</div>
     <form id="adminLoginForm" novalidate>
-      <div class="login-field"><label for="adminUsername">Admin username</label><input id="adminUsername" name="adminUsername" type="email" autocomplete="username" spellcheck="false" required placeholder="Admin email"></div>
+      <div class="login-field"><label for="adminUsername">Admin username</label><input id="adminUsername" name="adminUsername" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required placeholder="Admin username"></div>
       <div class="login-field"><label for="adminPassword">Admin password</label><input id="adminPassword" name="adminPassword" type="password" autocomplete="current-password" maxlength="256" required placeholder="Admin password"></div>
       <button class="github-admin" id="adminLoginSubmit" type="submit"><span aria-hidden="true">🔐</span><span>Sign in as administrator</span></button>
     </form>
@@ -91,7 +91,8 @@
   const adminPassword = document.getElementById("adminPassword");
   const ADMIN_ID = "Jayaprakashganathe@gmail.com";
   studentForm.addEventListener("submit", event => {
-    if (sharedUser.value.trim().toLowerCase() !== ADMIN_ID.toLowerCase()) return;
+    const enteredId = sharedUser.value.trim().toLowerCase();
+    if (enteredId !== ADMIN_ID.toLowerCase() && enteredId !== "demo.admin") return;
     event.preventDefault();
     event.stopImmediatePropagation();
     adminUser.value = sharedUser.value.trim();
