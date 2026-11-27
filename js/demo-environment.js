@@ -148,13 +148,13 @@
       env.classes = {class6:class6.classId,class10:class10.classId};
       const username = text(options.accountUsername);
       if (username && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(username) && !/^[a-z0-9._-]{3,32}$/i.test(username)) throw new Error("Enter a valid demo-account username using the normal account format.");
-      const adminUser = iam.createUser({username:username||("demo.admin."+suffix+"@examguru.demo"),displayName:"Ananya Menon",roles:[{role:"school_admin",institutionId:env.institutionId}],branchId:branch.branchId});
-      const hodUser = iam.createUser({username:"demo.hod."+suffix+"@examguru.demo",displayName:"Kavya Nair",roles:[{role:"teacher",institutionId:env.institutionId}],branchId:branch.branchId});
-      const teacherUser = iam.createUser({username:"demo.teacher."+suffix+"@examguru.demo",displayName:"Rohan Iyer",roles:[{role:"teacher",institutionId:env.institutionId}],branchId:branch.branchId});
-      const viewerUser = iam.createUser({username:"demo.viewer."+suffix+"@examguru.demo",displayName:"Arjun Menon",roles:[{role:"institution_viewer",institutionId:env.institutionId}],branchId:branch.branchId});
-      const student6 = iam.createUser({username:"demo.student6."+suffix+"@examguru.demo",displayName:"Aarav Sharma",roles:[{role:"student",institutionId:env.institutionId}],classId:class6.classId,branchId:branch.branchId,category:"school"});
-      const student10 = iam.createUser({username:"demo.student10."+suffix+"@examguru.demo",displayName:"Diya Nair",roles:[{role:"student",institutionId:env.institutionId}],classId:class10.classId,branchId:branch.branchId,category:"school"});
-      const parent = iam.createUser({username:"demo.parent."+suffix+"@examguru.demo",displayName:"Meera Sharma",roles:[{role:"parent",institutionId:env.institutionId}],branchId:branch.branchId});
+      const adminUser = iam.createUser({username:username||("demo.admin."+suffix+"@examguru.demo"),displayName:"Ananya Menon",roles:[{role:"school_admin",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId});
+      const hodUser = iam.createUser({username:"demo.hod."+suffix+"@examguru.demo",displayName:"Kavya Nair",roles:[{role:"teacher",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId});
+      const teacherUser = iam.createUser({username:"demo.teacher."+suffix+"@examguru.demo",displayName:"Rohan Iyer",roles:[{role:"teacher",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId});
+      const viewerUser = iam.createUser({username:"demo.viewer."+suffix+"@examguru.demo",displayName:"Arjun Menon",roles:[{role:"institution_viewer",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId});
+      const student6 = iam.createUser({username:"demo.student6."+suffix+"@examguru.demo",displayName:"Aarav Sharma",roles:[{role:"student",institutionId:env.institutionId,branchId:branch.branchId}],classId:class6.classId,branchId:branch.branchId,category:"school"});
+      const student10 = iam.createUser({username:"demo.student10."+suffix+"@examguru.demo",displayName:"Diya Nair",roles:[{role:"student",institutionId:env.institutionId,branchId:branch.branchId}],classId:class10.classId,branchId:branch.branchId,category:"school"});
+      const parent = iam.createUser({username:"demo.parent."+suffix+"@examguru.demo",displayName:"Meera Sharma",roles:[{role:"parent",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId});
       [adminUser,hodUser,teacherUser,viewerUser,student6,student10,parent].forEach(user=>env.userIds.push(user.userId));
       const hodMembership = hodUser.roles.find(role=>role.role==="teacher").membershipId;
       const teacherMembership = teacherUser.roles.find(role=>role.role==="teacher").membershipId;
@@ -216,6 +216,12 @@
     targets.forEach(removeEnvironment);
     const removed = new Set(targets.map(x=>x.environmentId));
     writeManifest(all.filter(x=>!removed.has(x.environmentId)));
+    try {
+      const demos=JSON.parse(localStorage.getItem("examguru_m7_local_demos_v1")||"[]"),removedDemoIds=new Set(demos.filter(x=>removed.has(x.environmentId)).map(x=>x.demoId));
+      localStorage.setItem("examguru_m7_local_demos_v1",JSON.stringify(demos.filter(x=>!removed.has(x.environmentId))));
+      const events=JSON.parse(localStorage.getItem("examguru_m7_local_demo_audit_v1")||"[]");
+      localStorage.setItem("examguru_m7_local_demo_audit_v1",JSON.stringify(events.filter(x=>!removedDemoIds.has(x.demoId))));
+    } catch (_) {}
     return {removed:targets.length};
   }
   function cleanupOnLogout() {
