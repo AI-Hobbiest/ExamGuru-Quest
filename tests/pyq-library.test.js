@@ -16,6 +16,7 @@ assert.ok(productionScript.includes("safeLocalPdf"),"production retains its exis
 assert.ok(workflow.includes("cp staging-overrides/pyq-library.html _site/pyq-library.html"));
 assert.ok(workflow.includes("cp staging-overrides/js/pyq-library.js _site/js/pyq-library.js"));
 assert.ok(workflow.includes("cp staging-overrides/js/cbse-mcq-review.js _site/js/cbse-mcq-review.js"));
+assert.ok(workflow.indexOf("cp staging-overrides/js/cbse-mcq-review.js _site/js/cbse-mcq-review.js")>workflow.indexOf("cp js/cbse-mcq-review.js _site/js/cbse-mcq-review.js"),"staging override must be applied after the standard production asset copy");
 assert.ok(stagingReview.includes("safeOfficialPackageUrl")&&!stagingReview.includes("cbse-papers/files/"),"staging educator review must link to official CBSE ZIP packages, not local PDFs");
 for(const row of catalogue.records){
  assert.ok(/^https:\/\/www\.cbse\.gov\.in\/cbsenew\/.+\.zip$/i.test(row.paperUrl),"question package must be an official CBSE ZIP: "+row.id);
