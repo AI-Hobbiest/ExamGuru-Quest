@@ -206,6 +206,10 @@ jobs:
           cp js/parent-assessments.js _site/js/parent-assessments.js
           cp js/exam-paper-self-study.js _site/js/exam-paper-self-study.js
           cp js/pyq-library.js _site/js/pyq-library.js
+          # Apply staging-only PYQ overrides; production keeps its existing in-portal PDF library.
+          cp staging-overrides/pyq-library.html _site/pyq-library.html
+          cp staging-overrides/js/pyq-library.js _site/js/pyq-library.js
+          cp staging-overrides/js/cbse-mcq-review.js _site/js/cbse-mcq-review.js
           cp js/clat-engine.js _site/js/clat-engine.js
           cp js/clat-dashboard-model.js _site/js/clat-dashboard-model.js
           cp js/clat-dashboard.js _site/js/clat-dashboard.js
