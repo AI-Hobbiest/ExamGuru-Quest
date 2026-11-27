@@ -5,6 +5,9 @@ const vm = require("node:vm");
 
 const source = fs.readFileSync("js/demo-environment.js", "utf8");
 const shell = fs.readFileSync("js/app-shell.js", "utf8");
+const iamSource = fs.readFileSync("js/iam-local-store.js", "utf8");
+const dataSource = fs.readFileSync("js/institution-data-store.js", "utf8");
+const contentSource = fs.readFileSync("js/institution-content-store.js", "utf8");
 const parentPage = fs.readFileSync("js/parent-dashboard.js", "utf8");
 const demoPage = fs.readFileSync("platform-demo-management.html", "utf8");
 const local = new Map(), session = new Map(), storeRows = new Map();
@@ -87,7 +90,7 @@ const storage = {
 const window = {ExamGuruLocalIAM:iam,ExamGuruInstitutionData:data,ExamGuruInstitutionContent:content,C10Storage:storage};
 const document = {readyState:"loading",addEventListener(){}};
 const location = {pathname:"/admin.html"};
-sessionStorage.setItem("examguru_mvp_admin_session_v1",JSON.stringify({role:"admin",username:"Jayaprakashganathe@gmail.com",rbacTestMode:"local-platform-admin"}));
+sessionStorage.setItem("examguru_mvp_admin_session_v1",JSON.stringify({role:"admin",username:"demo.admin",demoAccount:true,rbacTestMode:"local-platform-admin"}));
 vm.runInNewContext(source,{window,document,localStorage,sessionStorage,location,Date,Math,JSON,Set,Array,String,Number,Error});
 assert.ok(shell.includes("examguru_demo_preview_user_id")&&shell.includes("cleanupOnLogout"),"role previews and sign-out cleanup are connected to the shared shell");
 assert.ok(shell.includes("demo-student6@")&&shell.includes("demo-hod@")&&shell.includes("demo-viewer@"),"all institution demo roles are exposed in the workspace switcher");
@@ -95,6 +98,11 @@ assert.ok(parentPage.includes("examguru_demo_environments_v2"),"Parent preview u
 assert.ok(demoPage.includes("same username, institution, branch and student class-assignment checks"),"demo account creation explains standard account validation");
 const api=window.ExamGuruDemoEnvironment;
 assert.ok(api,"Demo environment service is registered");
+assert.equal(api.isPlatformAdmin(),true,"synthetic public demo administrator is recognized as Platform Admin");
+assert.ok(shell.includes('admin.username==="demo.admin"&&admin.demoAccount===true'),"shared shell recognizes the synthetic demo administrator");
+assert.ok(iamSource.includes('session.username==="demo.admin"&&session.demoAccount===true'),"IAM lifecycle accepts only the marked synthetic demo administrator");
+assert.ok(dataSource.includes('session.username==="demo.admin"&&session.demoAccount===true'),"academic-data cleanup accepts the marked synthetic demo administrator");
+assert.ok(contentSource.includes('session.username==="demo.admin"&&session.demoAccount===true'),"learning-content cleanup accepts the marked synthetic demo administrator");
 assert.throws(()=>api.create({source:"demo-account"}),error=>/standard account-creation rules/.test(error.message),"demo-account creation requires explicit account-rule confirmation");
 const created=api.create({source:"platform-admin",institutionName:"Northstar Academy · Demo",includeStudentActivity:true});
 assert.equal(created.counts.classes,2);
