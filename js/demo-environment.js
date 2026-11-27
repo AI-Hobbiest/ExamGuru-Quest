@@ -173,7 +173,6 @@
       const academics=data.createDepartment("Mathematics","MAT");
       data.addDepartmentMember(academics.departmentId,teacherMemberships[0]);
       data.setDepartmentClasses(academics.departmentId,classesByBranch.map(row=>row.class10.classId));
-      data.linkGuardian({parentMembershipId:parentMemberships[0],studentMembershipId:studentMemberships[0],relationship:"Parent/guardian"});
       const student6Index=0,student10Index=10;
       env.accounts = {
         institutionAdmin:{userId:adminUser.userId,username:adminUser.username,displayName:adminUser.displayName,membershipId:adminMembership,role:"school_admin"},
