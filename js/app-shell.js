@@ -122,7 +122,7 @@
   async function authState(){
     try{
       const admin=JSON.parse(sessionStorage.getItem("examguru_mvp_admin_session_v1")||"null");
-      if(admin&&admin.role==="admin"&&admin.username==="Jayaprakashganathe@gmail.com"){
+      if(admin&&admin.role==="admin"&&(admin.username==="Jayaprakashganathe@gmail.com"||(admin.username==="demo.admin"&&admin.demoAccount===true))){
         if(admin.rbacTestMode==="local-platform-admin"){
           const preview=sessionStorage.getItem("examguru_rbac_test_role_v1")||"platform_admin";
           if(preview==="platform_admin")return {role:"admin",username:admin.username,localTestMode:true};
