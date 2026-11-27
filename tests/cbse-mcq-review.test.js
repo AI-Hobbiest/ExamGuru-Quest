@@ -1,7 +1,7 @@
 "use strict";
 const assert=require("node:assert/strict");
 const fs=require("node:fs"),vm=require("node:vm");
-const context={window:{},document:{getElementById:()=>null},String,Array,Object,Number,RegExp,Set,Map,JSON};
+const context={window:{},document:{getElementById:()=>null},String,Array,Object,Number,RegExp,Set,Map,JSON,URL};
 context.globalThis=context;vm.createContext(context);
 vm.runInContext(fs.readFileSync("js/cbse-mcq-review.js","utf8"),context,{filename:"js/cbse-mcq-review.js"});
 const review=context.window.C10CbseReview;
