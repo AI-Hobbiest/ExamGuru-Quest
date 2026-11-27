@@ -20,7 +20,7 @@
   function isPlatformAdmin() {
     try {
       const session = JSON.parse(sessionStorage.getItem(ADMIN_KEY) || "null");
-      return !!session && session.role === "admin" && session.username === "Jayaprakashganathe@gmail.com" && session.rbacTestMode === "local-platform-admin";
+      return !!session && session.role === "admin" && (session.username === "Jayaprakashganathe@gmail.com" || (session.username === "demo.admin" && session.demoAccount === true)) && session.rbacTestMode === "local-platform-admin";
     } catch (_) { return false; }
   }
   function services() {
