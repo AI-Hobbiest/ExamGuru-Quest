@@ -18,12 +18,11 @@
   const norm=value=>String(value==null?"":value).normalize("NFKC").toLocaleLowerCase().replace(/[^\p{L}\p{N}]+/gu," ").trim();
   return norm(prompt)+"::"+(Array.isArray(options)?options.map(norm).filter(Boolean).sort().join("|"):"");
  }
- function safeManifestFile(file){
-  return !!file&&typeof file.path==="string"&&/^\.\//.test(file.path)&&
-   /^\.\/cbse-papers\/files\/[a-f0-9]{24}-[A-Za-z0-9._() -]+\.pdf$/i.test(file.path)&&
-   /^[a-f0-9]{64}$/i.test(String(file.sha256||""))&&Number(file.sizeBytes)>0;
+ function safeOfficialPackageUrl(url){
+  try{const parsed=new URL(url);return parsed.protocol==="https:"&&parsed.hostname==="www.cbse.gov.in"&&parsed.pathname.toLowerCase().startsWith("/cbsenew/")&&parsed.pathname.toLowerCase().endsWith(".zip");}
+  catch(_){return false;}
  }
- window.C10CbseReview=Object.freeze({bankSubjectFor,sourceBadge,candidateFingerprint,safeManifestFile});
+ window.C10CbseReview=Object.freeze({bankSubjectFor,sourceBadge,candidateFingerprint,safeOfficialPackageUrl});
  if(!$("cbseReviewStatus"))return;
  let queue=null,manifest=null,visibleCandidates=[],selectedCandidate=null,addedThisSession=new Set();
  const status=(message,tone="")=>{
@@ -37,12 +36,6 @@
  };
  function addOption(select,value,label){
   const option=document.createElement("option");option.value=value;option.textContent=label;select.appendChild(option);
- }
- function safeFileLink(container,file,label,page){
-  if(!safeManifestFile(file))return;
-  const a=node("a","admin-btn secondary",label);
-  a.href=file.path+(Number(page)>0?"#page="+Number(page):"");
-  a.target="_blank";a.rel="noopener noreferrer";container.appendChild(a);
  }
  function subjectLabel(subjectId){
   return ({"science":"Science","mathematics":"Mathematics","mathematics-basic":"Mathematics Basic",
@@ -129,8 +122,7 @@
   if(!record){container.appendChild(node("p","admin-muted","The official CBSE source package is not listed in the catalogue."));return;}
   const addPackage=(url,label)=>{
    try{
-    const parsed=new URL(url);
-    if(parsed.protocol!=="https:"||parsed.hostname!=="www.cbse.gov.in"||!parsed.pathname.toLowerCase().startsWith("/cbsenew/")||!parsed.pathname.toLowerCase().endsWith(".zip"))return false;
+    if(!safeOfficialPackageUrl(url))return false;
     const a=node("a","admin-btn secondary",label);a.href=url;a.target="_blank";a.rel="noopener noreferrer";container.appendChild(a);return true;
    }catch(_){return false;}
   };
