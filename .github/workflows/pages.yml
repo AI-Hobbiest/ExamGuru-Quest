@@ -209,7 +209,6 @@ jobs:
           # Apply staging-only PYQ overrides; production keeps its existing in-portal PDF library.
           cp staging-overrides/pyq-library.html _site/pyq-library.html
           cp staging-overrides/js/pyq-library.js _site/js/pyq-library.js
-          cp staging-overrides/js/cbse-mcq-review.js _site/js/cbse-mcq-review.js
           cp js/clat-engine.js _site/js/clat-engine.js
           cp js/clat-dashboard-model.js _site/js/clat-dashboard-model.js
           cp js/clat-dashboard.js _site/js/clat-dashboard.js
@@ -247,6 +246,7 @@ jobs:
           cp js/profile-manager.js _site/js/profile-manager.js
           cp js/admin-manager.js _site/js/admin-manager.js
           cp js/cbse-mcq-review.js _site/js/cbse-mcq-review.js
+          cp staging-overrides/js/cbse-mcq-review.js _site/js/cbse-mcq-review.js
           cp js/static-account-admin.js _site/js/static-account-admin.js
           cp js/family-access-admin.js _site/js/family-access-admin.js
           cp js/parent-dashboard.js _site/js/parent-dashboard.js
