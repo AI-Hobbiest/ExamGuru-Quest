@@ -193,6 +193,7 @@
     }
   }
   function cleanup(environmentId) {
+    if (!isPlatformAdmin()) throw new Error("Only Platform Admin can reset or remove a demo workspace.");
     const all = readManifest(), targets = environmentId ? all.filter(x=>x.environmentId===environmentId) : all;
     targets.forEach(removeEnvironment);
     const removed = new Set(targets.map(x=>x.environmentId));
