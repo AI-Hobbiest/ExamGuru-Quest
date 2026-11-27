@@ -21,7 +21,7 @@ const sessionStorage = {
 localStorage.setItem("examguru_m7_local_demos_v1",JSON.stringify([{demoId:"OLD-GENERIC-DEMO"}]));
 localStorage.setItem("examguru_m7_local_demo_audit_v1",JSON.stringify([{demoId:"OLD-GENERIC-DEMO",action:"created"}]));
 const clone = value => JSON.parse(JSON.stringify(value));
-const state = {institutions:[],users:[]};
+const state = {institutions:[{institutionId:"INST-CLIENT-01",name:"Client School",institutionType:"school",status:"active"}],users:[{userId:"USR-CLIENT-01",username:"client.admin@school.test",displayName:"Client Admin",status:"active",roles:[{role:"school_admin",institutionId:"INST-CLIENT-01",membershipId:"CLIENT-MEMBER-01"}]}]};
 const institutionData = {};
 let currentInstitution = "";
 let sequence = 0;
@@ -114,6 +114,8 @@ assert.equal(api.readManifest().length,0);
 assert.equal(localStorage.getItem("examguru_m7_local_demos_v1"),null,"all temporary demo account records are removed on Platform Admin sign-out");
 assert.equal(localStorage.getItem("examguru_m7_local_demo_audit_v1"),null,"temporary demo audit entries are removed on Platform Admin sign-out");
 assert.equal(state.institutions.some(x=>x.institutionId===created.institutionId),false,"demo institution is removed");
+assert.equal(state.institutions.some(x=>x.institutionId==="INST-CLIENT-01"),true,"real client institution is preserved");
 assert.equal(state.users.some(x=>created.userIds.includes(x.userId)),false,"only generated demo accounts are removed");
+assert.equal(state.users.some(x=>x.userId==="USR-CLIENT-01"),true,"real client accounts are preserved");
 assert.equal([...storeRows.keys()].some(key=>key.includes("DEMO-STUDENT6-")||key.includes("DEMO-STUDENT10-")),false,"demo learner exam and progress records are cleared");
 console.log("Demo environment tests passed: Platform Admin setup, demo-account confirmation, seven valid role profiles, scoped student exam activity and sign-out cleanup.");
