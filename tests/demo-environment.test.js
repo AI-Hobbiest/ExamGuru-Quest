@@ -106,7 +106,7 @@ assert.equal(created.accountRulesValidated,true);
 assert.equal(sessionStorage.getItem("examguru_rbac_test_role_v1"),"platform_admin","Platform Admin context is restored after publishing sample content");
 assert.equal(created.userIds.length,7,"all role accounts are created through the institution account service");
 assert.equal(api.previewOptions().length,7,"Institution Admin, HOD, Teacher, Viewer, Parent and two Student previews are available");
-assert.equal(data.getStateFor(created.institutionId).guardianLinks.length,1,"parent is linked to a demo learner");
+assert.equal(data.getStateFor(created.institutionId).guardianLinks.length,2,"parent is linked to both demo learners");
 assert.ok([...storeRows.keys()].some(key=>key.includes(created.accounts.student6.studentId)),"student exam activity is stored under the demo learner scope");
 const result=api.cleanupOnLogout();
 assert.equal(result.removed,1);
