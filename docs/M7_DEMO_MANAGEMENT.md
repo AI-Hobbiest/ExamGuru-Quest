@@ -1,9 +1,24 @@
 # M7 — Demo Management
 
-Status: **Core implementation in draft PR; ChatGPT Platform Manager plugin integration and production activation remain gated**
-Branch: `productisation/m7-demo-management-clean`
-PR: #86
-Dependency: M6 security foundation and controlled Cloudflare Worker/D1 deployment.
+Status: **Local-first demo data and role-preview workflow implemented; shared demo credentials and server-enforced isolation remain deferred**
+Current implementation: `feat/platform-demo-environment-wizard`
+Architecture: GitHub Pages + browser-local preview; no Cloudflare or database activation required for this demo workflow.
+
+
+## Institution demo wizard and sample-data factory
+
+The Platform Admin first-login wizard now offers a complete sample institution when no real institution has been configured in the current browser. It creates:
+
+- Institution Admin, HOD/Teacher, Teacher, Institution Viewer, Parent and two Student sample accounts.
+- Two classes (Class 6 and Class 10), five subjects, a campus, two departments, teacher assignments, student enrolments and a parent link.
+- Published sample institution content and completed student practice activity across both classes.
+- Role-specific previews exposed through the existing workspace switcher, including Parent and Student views.
+
+Platform Admin can create this workspace without a separate demo-account confirmation. The Platform Admin Demo Management module can also opt into the complete sample-data pack; this path requires confirmation that the generated profiles follow the normal username, institution, branch and student class-assignment rules. The factory uses the existing account and institution services rather than bypassing their validation.
+
+All generated records are isolated under a newly created demo institution and generated student scopes. Platform Admin sign-out removes only those demo-owned records and sample activity. Exiting an individual role preview returns to Platform Admin without deleting the shared demo workspace. Reset rebuilds the sample workspace; revoke and expiry remove its generated institution data.
+
+**Important:** these are browser-local role previews, not independently authenticated or shareable accounts. They are suitable for a guided presentation from the Platform Admin session, not for issuing external credentials or claiming server-enforced tenant security. Existing institution data, question banks and learner progress are not part of the cleanup scope.
 
 ## Goal
 
