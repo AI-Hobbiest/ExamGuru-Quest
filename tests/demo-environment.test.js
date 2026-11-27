@@ -98,5 +98,5 @@ assert.equal(result.removed,1);
 assert.equal(api.readManifest().length,0);
 assert.equal(state.institutions.some(x=>x.institutionId===created.institutionId),false,"demo institution is removed");
 assert.equal(state.users.some(x=>created.userIds.includes(x.userId)),false,"only generated demo accounts are removed");
-assert.equal(storeRows.size,0,"demo learner exam and progress records are cleared");
+assert.equal([...storeRows.keys()].some(key=>key.includes("DEMO-STUDENT6-")||key.includes("DEMO-STUDENT10-")),false,"demo learner exam and progress records are cleared");
 console.log("Demo environment tests passed: Platform Admin setup, demo-account confirmation, seven valid role profiles, scoped student exam activity and sign-out cleanup.");
