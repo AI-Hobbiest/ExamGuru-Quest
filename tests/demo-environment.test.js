@@ -63,7 +63,7 @@ const data = {
 function persistData(){localStorage.setItem(data.key,JSON.stringify({schemaVersion:1,institutions:clone(institutionData)}));}
 const content = {
   saveBank:()=>({bankId:"BANK-"+(++sequence)}),
-  publish:()=>true,
+  publish:()=>{if(sessionStorage.getItem("examguru_rbac_test_role_v1")!=="school_admin")throw Error("Institution Admin context required to publish demo content");return true;},
   savePapers:rows=>rows.map(row=>({...row}))
 };
 const storage = {
@@ -97,6 +97,7 @@ assert.equal(created.counts.students,2);
 assert.equal(created.counts.teachers,2);
 assert.equal(created.counts.studentAttempts,22);
 assert.equal(created.accountRulesValidated,true);
+assert.equal(sessionStorage.getItem("examguru_rbac_test_role_v1"),"platform_admin","Platform Admin context is restored after publishing sample content");
 assert.equal(created.userIds.length,7,"all role accounts are created through the institution account service");
 assert.equal(api.previewOptions().length,7,"Institution Admin, HOD, Teacher, Viewer, Parent and two Student previews are available");
 assert.equal(data.getStateFor(created.institutionId).guardianLinks.length,1,"parent is linked to a demo learner");
