@@ -30,7 +30,7 @@
   }
   function removeEnvironment(env) {
     if (!env) return;
-    const api = services();
+    const api = services(), errors = [];
     (env.stores || []).forEach(item => {
       try {
         api.storage.createLocalStore({
@@ -38,11 +38,16 @@
           defaults:item.kind === "test-attempt-ledger" ? () => ({attempts:[],activeAttempt:null,answerRecords:[]}) : () => ({missed:[],answered:0,correct:0,attempts:[]}),
           validate:() => true
         }).clear();
-      } catch (_) {}
+      } catch (error) { errors.push(error); }
     });
-    try { if (api.content && typeof api.content.removeDemoEnvironment === "function") api.content.removeDemoEnvironment(env.institutionId,env.environmentId); } catch (_) {}
-    try { if (api.data && typeof api.data.removeDemoEnvironment === "function") api.data.removeDemoEnvironment(env.institutionId,env.environmentId); } catch (_) {}
-    try { if (api.iam && typeof api.iam.removeDemoEnvironment === "function") api.iam.removeDemoEnvironment(env.institutionId,env.environmentId,env.userIds||[]); } catch (_) {}
+    try {
+      if (!api.content || typeof api.content.removeDemoEnvironment !== "function" || api.content.removeDemoEnvironment(env.institutionId,env.environmentId) === false) throw new Error("Demo learning content could not be cleared.");
+    } catch (error) { errors.push(error); }
+    try {
+      if (!api.data || typeof api.data.removeDemoEnvironment !== "function" || api.data.removeDemoEnvironment(env.institutionId,env.environmentId) === false) throw new Error("Demo institution data could not be cleared.");
+    } catch (error) { errors.push(error); }
+    if (errors.length) throw new Error("Some demo data could not be cleared. Your demo environment is still available for a retry. " + errors.map(error=>error.message).join(" "));
+    if (!api.iam || typeof api.iam.removeDemoEnvironment !== "function" || api.iam.removeDemoEnvironment(env.institutionId,env.environmentId,env.userIds||[]) === false) throw new Error("Demo accounts could not be cleared. Please retry sign-out.");
     try {
       const active = sessionStorage.getItem("examguru_active_institution_v1");
       if (active === env.institutionId) sessionStorage.removeItem("examguru_active_institution_v1");
@@ -194,13 +199,18 @@
   }
   function cleanup(environmentId) {
     if (!isPlatformAdmin()) throw new Error("Only Platform Admin can reset or remove a demo workspace.");
-    const all = readManifest(), targets = environmentId ? all.filter(x=>x.environmentId===environmentId) : all;
-    targets.forEach(removeEnvironment);
-    const removed = new Set(targets.map(x=>x.environmentId));
-    writeManifest(all.filter(x=>!removed.has(x.environmentId)));
+    let remaining = readManifest();
+    const targets = environmentId ? remaining.filter(x=>x.environmentId===environmentId) : remaining.slice();
+    const removedIds = new Set();
+    targets.forEach(env => {
+      removeEnvironment(env);
+      removedIds.add(env.environmentId);
+      remaining = remaining.filter(x=>x.environmentId!==env.environmentId);
+      writeManifest(remaining);
+    });
     try {
-      const demos=JSON.parse(localStorage.getItem("examguru_m7_local_demos_v1")||"[]"),removedDemoIds=new Set(demos.filter(x=>removed.has(x.environmentId)).map(x=>x.demoId));
-      localStorage.setItem("examguru_m7_local_demos_v1",JSON.stringify(demos.filter(x=>!removed.has(x.environmentId))));
+      const demos=JSON.parse(localStorage.getItem("examguru_m7_local_demos_v1")||"[]"),removedDemoIds=new Set(demos.filter(x=>removedIds.has(x.environmentId)).map(x=>x.demoId));
+      localStorage.setItem("examguru_m7_local_demos_v1",JSON.stringify(demos.filter(x=>!removedIds.has(x.environmentId))));
       const events=JSON.parse(localStorage.getItem("examguru_m7_local_demo_audit_v1")||"[]");
       localStorage.setItem("examguru_m7_local_demo_audit_v1",JSON.stringify(events.filter(x=>!removedDemoIds.has(x.demoId))));
     } catch (_) {}
