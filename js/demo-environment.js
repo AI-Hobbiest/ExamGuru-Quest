@@ -40,32 +40,9 @@
         }).clear();
       } catch (_) {}
     });
-    try {
-      const key = api.iam.key || "examguru_iam_local_v1";
-      const root = JSON.parse(localStorage.getItem(key) || "null");
-      if (root) {
-        root.institutions = (root.institutions || []).filter(row => row.institutionId !== env.institutionId);
-        const removeIds = new Set(env.userIds || []);
-        root.users = (root.users || []).filter(row => !removeIds.has(row.userId));
-        localStorage.setItem(key, JSON.stringify(root));
-      }
-    } catch (_) {}
-    try {
-      const key = api.data.key || "examguru_institution_data_v1";
-      const root = JSON.parse(localStorage.getItem(key) || "null");
-      if (root && root.institutions) { delete root.institutions[env.institutionId]; localStorage.setItem(key, JSON.stringify(root)); }
-    } catch (_) {}
-    try {
-      if (api.content && api.storage) {
-        const store = api.storage.createLocalStore({
-          kind:"institution-content", recordId:"all", studentId:"",
-          defaults:() => ({schemaVersion:1,institutions:{}}), validate:value => !!value && value.schemaVersion === 1 && !!value.institutions,
-          legacyKey:"examguru_institution_content_v1"
-        });
-        const root = store.load();
-        if (root.institutions && root.institutions[env.institutionId]) { delete root.institutions[env.institutionId]; store.save(root); }
-      }
-    } catch (_) {}
+    try { if (api.content && typeof api.content.removeDemoEnvironment === "function") api.content.removeDemoEnvironment(env.institutionId,env.environmentId); } catch (_) {}
+    try { if (api.data && typeof api.data.removeDemoEnvironment === "function") api.data.removeDemoEnvironment(env.institutionId,env.environmentId); } catch (_) {}
+    try { if (api.iam && typeof api.iam.removeDemoEnvironment === "function") api.iam.removeDemoEnvironment(env.institutionId,env.environmentId,env.userIds||[]); } catch (_) {}
     try {
       const active = sessionStorage.getItem("examguru_active_institution_v1");
       if (active === env.institutionId) sessionStorage.removeItem("examguru_active_institution_v1");
@@ -140,6 +117,7 @@
     try {
       const institution = iam.createInstitution({name:env.displayName,institutionType:"school"});
       env.institutionId = institution.institutionId;
+      iam.markDemoEnvironment(env.institutionId,env.environmentId);
       data.setInstitution(env.institutionId);
       const branch = data.createBranch("Main Campus","MAIN");
       const grade6 = data.createGrade("Class 6","G06"), grade10 = data.createGrade("Class 10","G10");
