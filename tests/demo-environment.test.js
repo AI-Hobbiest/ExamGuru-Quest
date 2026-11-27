@@ -119,7 +119,7 @@ assert.equal(created.userIds.length,117,"all staff, parent and 100 student accou
 assert.equal(created.accounts.students.length,100,"one hundred student profiles are created");
 assert.equal(created.accounts.branches.length,5,"five branch profiles are created");
 assert.equal(api.previewOptions().length,7,"Institution Admin, HOD, Teacher, Viewer, Parent and two Student previews are available");
-assert.equal(data.getStateFor(created.institutionId).guardianLinks.length,2,"parent is linked to both demo learners");
+assert.equal(data.getStateFor(created.institutionId).guardianLinks.length,100,"each demo learner is linked to a branch parent");
 assert.ok([...storeRows.keys()].some(key=>key.includes(created.accounts.student6.studentId)),"student exam activity is stored under the demo learner scope");
 const result=api.cleanupOnLogout();
 assert.equal(result.removed,1);
