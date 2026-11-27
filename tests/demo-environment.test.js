@@ -18,6 +18,8 @@ const sessionStorage = {
   setItem:(key,value)=>session.set(key,String(value)),
   removeItem:key=>session.delete(key)
 };
+localStorage.setItem("examguru_m7_local_demos_v1",JSON.stringify([{demoId:"OLD-GENERIC-DEMO"}]));
+localStorage.setItem("examguru_m7_local_demo_audit_v1",JSON.stringify([{demoId:"OLD-GENERIC-DEMO",action:"created"}]));
 const clone = value => JSON.parse(JSON.stringify(value));
 const state = {institutions:[],users:[]};
 const institutionData = {};
@@ -109,6 +111,8 @@ assert.ok([...storeRows.keys()].some(key=>key.includes(created.accounts.student6
 const result=api.cleanupOnLogout();
 assert.equal(result.removed,1);
 assert.equal(api.readManifest().length,0);
+assert.equal(localStorage.getItem("examguru_m7_local_demos_v1"),null,"all temporary demo account records are removed on Platform Admin sign-out");
+assert.equal(localStorage.getItem("examguru_m7_local_demo_audit_v1"),null,"temporary demo audit entries are removed on Platform Admin sign-out");
 assert.equal(state.institutions.some(x=>x.institutionId===created.institutionId),false,"demo institution is removed");
 assert.equal(state.users.some(x=>created.userIds.includes(x.userId)),false,"only generated demo accounts are removed");
 assert.equal([...storeRows.keys()].some(key=>key.includes("DEMO-STUDENT6-")||key.includes("DEMO-STUDENT10-")),false,"demo learner exam and progress records are cleared");
