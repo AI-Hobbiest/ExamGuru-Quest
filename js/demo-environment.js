@@ -135,6 +135,7 @@
     const api = services(), iam = api.iam, data = api.data, storage = api.storage;
     const suffix = Date.now().toString(36).toLowerCase() + Math.random().toString(36).slice(2,5);
     const previousInstitution = sessionStorage.getItem("examguru_active_institution_v1") || "";
+    const previousRole = sessionStorage.getItem("examguru_rbac_test_role_v1") || "platform_admin";
     const env = {environmentId:uid("DEMO"),institutionId:"",displayName:text(options.institutionName)||"Northstar Academy · Demo",createdAt:now(),cleanupOnLogout:true,userIds:[],studentIds:[],stores:[],accounts:{},classes:{},includeStudentActivity:options.includeStudentActivity !== false,source:options.source||"platform-admin"};
     try {
       const institution = iam.createInstitution({name:env.displayName,institutionType:"school"});
@@ -186,10 +187,12 @@
       env.studentIds = [env.accounts.student6.studentId,env.accounts.student10.studentId];
       if (api.content) {
         const questions6 = makeQuestions("DEMO6");
+        sessionStorage.setItem("examguru_rbac_test_role_v1","school_admin");
         const bank = api.content.saveBank({name:"Class 6 · Science · Demo Practice",contentClassId:"6",subject:"science",rows:questions6});
         api.content.publish("bank",bank.bankId);
         const paperRows = api.content.savePapers([{paperId:"DEMO-PAPER-"+suffix,title:"Class 6 Science · Sample Assessment",contentClassId:"6",subjectId:"science",subjectTitle:"Science",classId:"6",totalQuestions:questions6.length,totalMarks:questions6.length,durationMinutes:20,questions:questions6.map(q=>({questionId:q.questionId,question:q.question,options:q.options,answer:q.answer,explanation:q.explanation}))}]);
         if (paperRows[0]) api.content.publish("paper",paperRows[0].paperId);
+        sessionStorage.setItem("examguru_rbac_test_role_v1",previousRole);
       }
       if (env.includeStudentActivity) {
         env.stores.push(...seedStudentActivity(storage,env.accounts.student6.studentId,"6",suffix));
@@ -203,11 +206,11 @@
         counts:{branches:1,classes:2,subjects:5,departments:2,teachers:2,students:2,parents:1,assessments:api.content?2:0,studentAttempts:env.includeStudentActivity?22:0}
       };
       const all = readManifest(); all.push(record); writeManifest(all);
-      try { if (previousInstitution) sessionStorage.setItem("examguru_active_institution_v1",previousInstitution); else sessionStorage.removeItem("examguru_active_institution_v1"); } catch (_) {}
+      try { if (previousInstitution) sessionStorage.setItem("examguru_active_institution_v1",previousInstitution); else sessionStorage.removeItem("examguru_active_institution_v1"); sessionStorage.setItem("examguru_rbac_test_role_v1",previousRole); } catch (_) {}
       return clone(record);
     } catch (error) {
       removeEnvironment(env);
-      try { if (previousInstitution) sessionStorage.setItem("examguru_active_institution_v1",previousInstitution); else sessionStorage.removeItem("examguru_active_institution_v1"); } catch (_) {}
+      try { if (previousInstitution) sessionStorage.setItem("examguru_active_institution_v1",previousInstitution); else sessionStorage.removeItem("examguru_active_institution_v1"); sessionStorage.setItem("examguru_rbac_test_role_v1",previousRole); } catch (_) {}
       throw error;
     }
   }
