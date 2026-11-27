@@ -10,7 +10,7 @@ Architecture: GitHub Pages + browser-local preview; no Cloudflare or database ac
 The Platform Admin first-login wizard now offers a complete sample institution when no real institution has been configured in the current browser. It creates:
 
 - Institution Admin, HOD/Teacher, Teacher, Institution Viewer, Parent and two Student sample accounts.
-- Two classes (Class 6 and Class 10), five subjects, a campus, two departments, teacher assignments, student enrolments and a parent link.
+- Two classes (Class 6 and Class 10), five subjects, a campus, two departments, teacher assignments, student enrolments and guardian links for both demo learners.
 - Published sample institution content and completed student practice activity across both classes.
 - Role-specific previews exposed through the existing workspace switcher, including Parent and Student views.
 
