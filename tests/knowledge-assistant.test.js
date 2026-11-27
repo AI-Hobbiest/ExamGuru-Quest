@@ -50,5 +50,6 @@ const shell=fs.readFileSync("js/app-shell.js","utf8");
 assert.ok(shell.includes("knowledge-assistant-model.js?v=20261122-m8-loader-v13"));
 assert.ok(shell.includes("knowledge-assistant.js?v=20261122-m8-loader-v13"));
 assert.ok(shell.includes("knowledge-assistant.css?v=20261122-m8-loader-v13"));
-for(const page of ["admin.html","index.html"])assert.ok(fs.readFileSync(page,"utf8").includes("app-shell.js?v=20261122-m8-context-v11"));
+assert.ok(fs.readFileSync("admin.html","utf8").includes("app-shell.js?v=20261127-demo-env-v2"));
+assert.ok(fs.readFileSync("index.html","utf8").includes("app-shell.js?v=20261127-demo-env-v2"));
 console.log("M8 entitlement, tenant-scope and cache-busted assistant tests passed.");
