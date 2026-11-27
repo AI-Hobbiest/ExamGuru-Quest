@@ -237,18 +237,19 @@
     backdrop.innerHTML = '<section class="eg-demo-wizard" role="dialog" aria-modal="true" aria-labelledby="egDemoWizardTitle"><div class="kicker">✦ Platform Admin · Demo setup</div><h2 id="egDemoWizardTitle">Let’s make your first institution demo feel alive.</h2><p>Prepare a complete sample school with realistic academic structure, staff, learners, department leadership and sample assessments. You can explore each role from the workspace switcher.</p><div class="tiles"><div class="tile"><b>6 roles</b><span>Admin, HOD, Teacher, Viewer, Parent & Student</span></div><div class="tile"><b>2 classes</b><span>Class 6 and Class 10</span></div><div class="tile"><b>Ready to explore</b><span>Sample exams and learner activity</span></div></div><div class="field"><label for="egDemoInstitutionName">Institution name</label><input id="egDemoInstitutionName" type="text" maxlength="80" value="Northstar Academy · Demo"></div><label class="check"><input id="egDemoActivity" type="checkbox" checked><span><b>Include student exam activity</b><br><small>Show completed tests, scores and learning progress in the Student experience.</small></span></label><p><small>We’re creating temporary demo data for this Platform Admin session. It will be cleared when you sign out. No existing institution or learner data will be changed.</small></p><div id="egDemoWizardStatus" class="status" role="status">Ready when you are.</div><div class="actions"><button class="primary" id="egDemoCreate">Create demo workspace</button><button class="secondary" id="egDemoSkip">Not now</button></div></section>';
     document.body.appendChild(backdrop);
     const status = backdrop.querySelector("#egDemoWizardStatus"), createButton = backdrop.querySelector("#egDemoCreate");
-    backdrop.querySelector("#egDemoSkip").addEventListener("click",()=>{sessionStorage.setItem("examguru_demo_wizard_skipped_v2","1");backdrop.remove();});
+    let ready = false;
+    backdrop.querySelector("#egDemoSkip").addEventListener("click",()=>{if(ready){sessionStorage.removeItem("examguru_demo_wizard_skipped_v2");location.reload();return;}sessionStorage.setItem("examguru_demo_wizard_skipped_v2","1");backdrop.remove();});
     createButton.addEventListener("click",()=>{
+      if(ready){sessionStorage.removeItem("examguru_demo_wizard_skipped_v2");location.reload();return;}
       createButton.disabled = true; status.className = "status"; status.textContent = "Creating your demo data and preparing the role workspaces…";
       try {
         const result = create({source:"platform-admin",institutionName:backdrop.querySelector("#egDemoInstitutionName").value,includeStudentActivity:backdrop.querySelector("#egDemoActivity").checked});
         status.className = "status ok";
         status.textContent = "Your demo workspace is ready: 2 classes, 2 departments, 7 sample accounts and " + result.counts.studentAttempts + " completed student tests.";
+        ready = true;
         createButton.textContent = "Open demo workspaces";
         createButton.disabled = false;
-        createButton.onclick = () => { sessionStorage.removeItem("examguru_demo_wizard_skipped_v2"); location.reload(); };
         backdrop.querySelector("#egDemoSkip").textContent = "Continue to Platform Admin";
-        backdrop.querySelector("#egDemoSkip").onclick = () => { sessionStorage.removeItem("examguru_demo_wizard_skipped_v2"); location.reload(); };
       } catch (error) {
         createButton.disabled = false; status.className = "status error"; status.textContent = error.message || "We could not prepare the demo workspace. Please retry.";
       }
