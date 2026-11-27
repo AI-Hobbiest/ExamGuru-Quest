@@ -86,7 +86,7 @@ assert.ok(script.includes('chapter.chapterLabel||("Chapter "+chapter.chapterNo)'
 
 const pagesWorkflow=fs.readFileSync(".github/workflows/pages.yml","utf8");
 assert.ok(page.includes(".vrb-card::before")&&page.includes(".vrb-card::after"),"sticky revision notes must render a pushpin head and stem");
-assert.ok(pagesWorkflow.includes("ordinary website deployments will not download ZIPs")&&pagesWorkflow.includes("Manually dispatch this Pages workflow with refresh_cbse=true"),"ordinary website deploys must not fall back to CBSE PDF extraction");
+assert.ok(pagesWorkflow.includes("ordinary website deployments will not download ZIPs")&&pagesWorkflow.includes("PDF payload stays in the Actions cache")&&!pagesWorkflow.includes("restore_cbse_assets.py"),"ordinary website deploys must not publish or restore CBSE PDF payloads");
 console.log("Visual Revision pin and CBSE deployment-isolation checks passed.");
 
 const class10Boards=visual.boards.filter(board=>String(board.classId)==="10");
