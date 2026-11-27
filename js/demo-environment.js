@@ -136,7 +136,6 @@
       env.classes = {class6:class6.classId,class10:class10.classId,byBranch:classesByBranch.map(row=>({branchId:row.branch.branchId,class6:row.class6.classId,class10:row.class10.classId}))};
       const username = text(options.accountUsername);
       if (username && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(username) && !/^[a-z0-9._-]{3,32}$/i.test(username)) throw new Error("Enter a valid demo-account username using the normal account format.");
-      const adminUser = iam.createUser({username:username||("demo.admin."+suffix+"@examguru.demo"),displayName:"Ananya Menon",roles:[{role:"school_admin",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId});
       const hodUsers = [], teacherUsers = [], parentUsers = [], studentUsers = [];
       const adminUser = iam.createUser({username:username||("demo.admin."+suffix+"@examguru.demo"),displayName:"Ananya Menon",roles:[{role:"school_admin",institutionId:env.institutionId,branchId:branches[0].branchId}],branchId:branches[0].branchId});
       const viewerUser = iam.createUser({username:"demo.viewer."+suffix+"@examguru.demo",displayName:"Arjun Menon",roles:[{role:"institution_viewer",institutionId:env.institutionId}],branchId:branches[0].branchId});
