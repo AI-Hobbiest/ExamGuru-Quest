@@ -30,6 +30,8 @@ const iam = {
     const item={institutionId:"INST-DEMO-"+(++sequence),name,institutionType,status:"active"};
     state.institutions.push(item);persistIam();return item;
   },
+  markDemoEnvironment(institutionId,environmentId){const item=state.institutions.find(x=>x.institutionId===institutionId);item.demoEnvironmentId=environmentId;persistIam();return item;},
+  removeDemoEnvironment(institutionId,environmentId,userIds=[]){const item=state.institutions.find(x=>x.institutionId===institutionId);if(!item||item.demoEnvironmentId!==environmentId)return false;state.institutions=state.institutions.filter(x=>x.institutionId!==institutionId);const ids=new Set(userIds);state.users=state.users.filter(x=>!ids.has(x.userId));persistIam();return true;},
   createUser({username,displayName,roles,classId,branchId}) {
     const clean=String(username||"").trim().toLowerCase();
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean)&&!/^[a-z0-9._-]{3,32}$/i.test(clean))throw Error("Invalid username");
@@ -58,13 +60,15 @@ const data = {
   enrolStudent(args){institutionData[currentInstitution].enrolments.push(args);persistData();},
   assignTeacher(args){institutionData[currentInstitution].assignments.push(args);persistData();},
   linkGuardian(args){institutionData[currentInstitution].guardianLinks.push(args);persistData();},
-  getStateFor(id){return clone(institutionData[id]||{});}
+  getStateFor(id){return clone(institutionData[id]||{});},
+  removeDemoEnvironment(id,environmentId){if(state.institutions.find(x=>x.institutionId===id)?.demoEnvironmentId!==environmentId)return false;delete institutionData[id];persistData();return true;}
 };
 function persistData(){localStorage.setItem(data.key,JSON.stringify({schemaVersion:1,institutions:clone(institutionData)}));}
 const content = {
   saveBank:()=>({bankId:"BANK-"+(++sequence)}),
   publish:()=>{if(sessionStorage.getItem("examguru_rbac_test_role_v1")!=="school_admin")throw Error("Institution Admin context required to publish demo content");return true;},
-  savePapers:rows=>rows.map(row=>({...row}))
+  savePapers:rows=>rows.map(row=>({...row})),
+  removeDemoEnvironment:(id,environmentId)=>{if(state.institutions.find(x=>x.institutionId===id)?.demoEnvironmentId!==environmentId)return false;const store=storage.createLocalStore({kind:"institution-content",recordId:"all",studentId:"",defaults:()=>({schemaVersion:1,institutions:{}})});const root=store.load();delete root.institutions[id];store.save(root);return true;}
 };
 const storage = {
   createLocalStore(options) {
