@@ -209,10 +209,15 @@
       writeManifest(remaining);
     });
     try {
-      const demos=JSON.parse(localStorage.getItem("examguru_m7_local_demos_v1")||"[]"),removedDemoIds=new Set(demos.filter(x=>removedIds.has(x.environmentId)).map(x=>x.demoId));
-      localStorage.setItem("examguru_m7_local_demos_v1",JSON.stringify(demos.filter(x=>!removedIds.has(x.environmentId))));
-      const events=JSON.parse(localStorage.getItem("examguru_m7_local_demo_audit_v1")||"[]");
-      localStorage.setItem("examguru_m7_local_demo_audit_v1",JSON.stringify(events.filter(x=>!removedDemoIds.has(x.demoId))));
+      if (!environmentId) {
+        localStorage.removeItem("examguru_m7_local_demos_v1");
+        localStorage.removeItem("examguru_m7_local_demo_audit_v1");
+      } else {
+        const demos=JSON.parse(localStorage.getItem("examguru_m7_local_demos_v1")||"[]"),removedDemoIds=new Set(demos.filter(x=>removedIds.has(x.environmentId)).map(x=>x.demoId));
+        localStorage.setItem("examguru_m7_local_demos_v1",JSON.stringify(demos.filter(x=>!removedIds.has(x.environmentId))));
+        const events=JSON.parse(localStorage.getItem("examguru_m7_local_demo_audit_v1")||"[]");
+        localStorage.setItem("examguru_m7_local_demo_audit_v1",JSON.stringify(events.filter(x=>!removedDemoIds.has(x.demoId))));
+      }
     } catch (_) {}
     return {removed:targets.length};
   }
