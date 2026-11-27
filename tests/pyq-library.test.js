@@ -5,6 +5,7 @@ const script=fs.readFileSync("staging-overrides/js/pyq-library.js","utf8");
 const catalogue=JSON.parse(fs.readFileSync("data/cbse-class10-pyq.json","utf8"));
 const workflow=fs.readFileSync(".github/workflows/pages.yml","utf8");
 const productionScript=fs.readFileSync("js/pyq-library.js","utf8");
+const stagingReview=fs.readFileSync("staging-overrides/js/cbse-mcq-review.js","utf8");
 assert.equal(catalogue.kind,"cbse-class10-pyq-catalog");
 assert.equal(catalogue.records.length,42);
 assert.ok(script.includes('DATA_URL="./data/cbse-class10-pyq.json"'));
@@ -15,6 +16,7 @@ assert.ok(productionScript.includes("safeLocalPdf"),"production retains its exis
 assert.ok(workflow.includes("cp staging-overrides/pyq-library.html _site/pyq-library.html"));
 assert.ok(workflow.includes("cp staging-overrides/js/pyq-library.js _site/js/pyq-library.js"));
 assert.ok(workflow.includes("cp staging-overrides/js/cbse-mcq-review.js _site/js/cbse-mcq-review.js"));
+assert.ok(stagingReview.includes("safeOfficialPackageUrl")&&!stagingReview.includes("cbse-papers/files/"),"staging educator review must link to official CBSE ZIP packages, not local PDFs");
 for(const row of catalogue.records){
  assert.ok(/^https:\/\/www\.cbse\.gov\.in\/cbsenew\/.+\.zip$/i.test(row.paperUrl),"question package must be an official CBSE ZIP: "+row.id);
  if(row.markingSchemeUrl)assert.ok(/^https:\/\/www\.cbse\.gov\.in\/cbsenew\/.+\.zip$/i.test(row.markingSchemeUrl),"marking scheme must be an official CBSE ZIP: "+row.id);
