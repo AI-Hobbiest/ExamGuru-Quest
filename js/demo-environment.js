@@ -124,51 +124,70 @@
       env.institutionId = institution.institutionId;
       iam.markDemoEnvironment(env.institutionId,env.environmentId);
       data.setInstitution(env.institutionId);
-      const branch = data.createBranch("Main Campus","MAIN");
+      const branches = Array.from({length:5},(_,index)=>data.createBranch(["Main Campus","North Campus","South Campus","East Campus","West Campus"][index],["MAIN","NORTH","SOUTH","EAST","WEST"][index]));
       const grade6 = data.createGrade("Class 6","G06"), grade10 = data.createGrade("Class 10","G10");
       const subjects = ["Science","Mathematics","English","Social Science","Hindi"].map((name,index)=>data.createSubject(name,["SCI","MAT","ENG","SST","HIN"][index]));
-      const class6 = data.createClass({name:"Class 6 · A",branchId:branch.branchId,gradeId:grade6.gradeId,subjectIds:subjects.slice(0,4).map(x=>x.subjectId),academicYear:"2026–27",contentClassId:"6"});
-      const class10 = data.createClass({name:"Class 10 · A",branchId:branch.branchId,gradeId:grade10.gradeId,subjectIds:subjects.map(x=>x.subjectId),academicYear:"2026–27",contentClassId:"10"});
-      env.classes = {class6:class6.classId,class10:class10.classId};
+      const classesByBranch = branches.map((branch,index)=>({
+        branch,
+        class6:data.createClass({name:"Class 6 · "+String.fromCharCode(65+index),branchId:branch.branchId,gradeId:grade6.gradeId,subjectIds:subjects.slice(0,4).map(x=>x.subjectId),academicYear:"2026–27",contentClassId:"6"}),
+        class10:data.createClass({name:"Class 10 · "+String.fromCharCode(65+index),branchId:branch.branchId,gradeId:grade10.gradeId,subjectIds:subjects.map(x=>x.subjectId),academicYear:"2026–27",contentClassId:"10"})
+      }));
+      const class6 = classesByBranch[0].class6, class10 = classesByBranch[0].class10;
+      env.classes = {class6:class6.classId,class10:class10.classId,byBranch:classesByBranch.map(row=>({branchId:row.branch.branchId,class6:row.class6.classId,class10:row.class10.classId}))};
       const username = text(options.accountUsername);
       if (username && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(username) && !/^[a-z0-9._-]{3,32}$/i.test(username)) throw new Error("Enter a valid demo-account username using the normal account format.");
       const adminUser = iam.createUser({username:username||("demo.admin."+suffix+"@examguru.demo"),displayName:"Ananya Menon",roles:[{role:"school_admin",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId});
-      const hodUser = iam.createUser({username:"demo.hod."+suffix+"@examguru.demo",displayName:"Kavya Nair",roles:[{role:"teacher",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId});
-      const teacherUser = iam.createUser({username:"demo.teacher."+suffix+"@examguru.demo",displayName:"Rohan Iyer",roles:[{role:"teacher",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId});
-      const viewerUser = iam.createUser({username:"demo.viewer."+suffix+"@examguru.demo",displayName:"Arjun Menon",roles:[{role:"institution_viewer",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId});
-      const student6 = iam.createUser({username:"demo.student6."+suffix+"@examguru.demo",displayName:"Aarav Sharma",roles:[{role:"student",institutionId:env.institutionId,branchId:branch.branchId}],classId:class6.classId,branchId:branch.branchId,category:"school"});
-      const student10 = iam.createUser({username:"demo.student10."+suffix+"@examguru.demo",displayName:"Diya Nair",roles:[{role:"student",institutionId:env.institutionId,branchId:branch.branchId}],classId:class10.classId,branchId:branch.branchId,category:"school"});
-      const parent = iam.createUser({username:"demo.parent."+suffix+"@examguru.demo",displayName:"Meera Sharma",roles:[{role:"parent",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId});
-      [adminUser,hodUser,teacherUser,viewerUser,student6,student10,parent].forEach(user=>env.userIds.push(user.userId));
-      const hodMembership = hodUser.roles.find(role=>role.role==="teacher").membershipId;
-      const teacherMembership = teacherUser.roles.find(role=>role.role==="teacher").membershipId;
-      const adminMembership = adminUser.roles.find(role=>role.role==="school_admin").membershipId;
-      const student6Membership = student6.roles.find(role=>role.role==="student").membershipId;
-      const student10Membership = student10.roles.find(role=>role.role==="student").membershipId;
-      const parentMembership = parent.roles.find(role=>role.role==="parent").membershipId;
-      data.enrolStudent({studentMembershipId:student6Membership,classId:class6.classId,academicYear:"2026–27"});
-      data.enrolStudent({studentMembershipId:student10Membership,classId:class10.classId,academicYear:"2026–27"});
-      data.assignTeacher({teacherMembershipId:hodMembership,classId:class6.classId,subjectId:subjects[0].subjectId});
-      data.assignTeacher({teacherMembershipId:teacherMembership,classId:class10.classId,subjectId:subjects[1].subjectId});
-      const science = data.createDepartment("Science","SCI");
-      data.addDepartmentMember(science.departmentId,hodMembership);
-      data.setDepartmentClasses(science.departmentId,[class6.classId,class10.classId]);
-      data.appointHod(science.departmentId,hodMembership);
-      const academics = data.createDepartment("Mathematics","MAT");
-      data.addDepartmentMember(academics.departmentId,teacherMembership);
-      data.setDepartmentClasses(academics.departmentId,[class10.classId]);
-      data.linkGuardian({parentMembershipId:parentMembership,studentMembershipId:student6Membership,relationship:"Parent/guardian"});
-      data.linkGuardian({parentMembershipId:parentMembership,studentMembershipId:student10Membership,relationship:"Parent/guardian"});
+      const hodUsers = [], teacherUsers = [], parentUsers = [], studentUsers = [];
+      const adminUser = iam.createUser({username:username||("demo.admin."+suffix+"@examguru.demo"),displayName:"Ananya Menon",roles:[{role:"school_admin",institutionId:env.institutionId,branchId:branches[0].branchId}],branchId:branches[0].branchId});
+      const viewerUser = iam.createUser({username:"demo.viewer."+suffix+"@examguru.demo",displayName:"Arjun Menon",roles:[{role:"institution_viewer",institutionId:env.institutionId}],branchId:branches[0].branchId});
+      branches.forEach((branch,index)=>{
+        hodUsers.push(iam.createUser({username:"demo.hod"+(index+1)+"."+suffix+"@examguru.demo",displayName:["Kavya Nair","Meera Iyer","Riya Menon","Ananya Rao","Diya Shah"][index],roles:[{role:"teacher",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId}));
+        teacherUsers.push(iam.createUser({username:"demo.teacher"+(index+1)+"."+suffix+"@examguru.demo",displayName:["Rohan Iyer","Arjun Kumar","Vikram Das","Neha Patel","Ishita Roy"][index],roles:[{role:"teacher",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId}));
+        parentUsers.push(iam.createUser({username:"demo.parent"+(index+1)+"."+suffix+"@examguru.demo",displayName:["Meera Sharma","Sanjay Nair","Priya Menon","Rahul Rao","Kiran Shah"][index],roles:[{role:"parent",institutionId:env.institutionId,branchId:branch.branchId}],branchId:branch.branchId}));
+        for(let localIndex=0;localIndex<20;localIndex++){
+          const classId=localIndex<10?classesByBranch[index].class6.classId:classesByBranch[index].class10.classId;
+          const classLabel=localIndex<10?"6":"10";
+          const number=index*20+localIndex+1;
+          studentUsers.push(iam.createUser({username:"demo.student"+String(number).padStart(3,"0")+"."+suffix+"@examguru.demo",displayName:"Learner "+String(number).padStart(3,"0"),roles:[{role:"student",institutionId:env.institutionId,branchId:branch.branchId}],classId,branchId:branch.branchId,category:"school",contentClassId:classLabel}));
+        }
+      });
+      [adminUser,viewerUser,...hodUsers,...teacherUsers,...parentUsers,...studentUsers].forEach(user=>env.userIds.push(user.userId));
+      const adminMembership=adminUser.roles.find(role=>role.role==="school_admin").membershipId;
+      const hodMemberships=hodUsers.map(user=>user.roles.find(role=>role.role==="teacher").membershipId);
+      const teacherMemberships=teacherUsers.map(user=>user.roles.find(role=>role.role==="teacher").membershipId);
+      const parentMemberships=parentUsers.map(user=>user.roles.find(role=>role.role==="parent").membershipId);
+      const studentMemberships=studentUsers.map(user=>user.roles.find(role=>role.role==="student").membershipId);
+      studentUsers.forEach((student,index)=>{
+        const branchIndex=Math.floor(index/20),localIndex=index%20,classId=localIndex<10?classesByBranch[branchIndex].class6.classId:classesByBranch[branchIndex].class10.classId;
+        data.enrolStudent({studentMembershipId:studentMemberships[index],classId,academicYear:"2026–27"});
+        data.linkGuardian({parentMembershipId:parentMemberships[branchIndex],studentMembershipId:studentMemberships[index],relationship:"Parent/guardian"});
+      });
+      branches.forEach((branch,index)=>{
+        data.assignTeacher({teacherMembershipId:hodMemberships[index],classId:classesByBranch[index].class6.classId,subjectId:subjects[0].subjectId});
+        data.assignTeacher({teacherMembershipId:teacherMemberships[index],classId:classesByBranch[index].class10.classId,subjectId:subjects[1].subjectId});
+      });
+      const science=data.createDepartment("Science","SCI");
+      data.addDepartmentMember(science.departmentId,hodMemberships[0]);
+      data.setDepartmentClasses(science.departmentId,classesByBranch.map(row=>row.class6.classId));
+      data.appointHod(science.departmentId,hodMemberships[0]);
+      const academics=data.createDepartment("Mathematics","MAT");
+      data.addDepartmentMember(academics.departmentId,teacherMemberships[0]);
+      data.setDepartmentClasses(academics.departmentId,classesByBranch.map(row=>row.class10.classId));
+      data.linkGuardian({parentMembershipId:parentMemberships[0],studentMembershipId:studentMemberships[0],relationship:"Parent/guardian"});
+      const student6Index=0,student10Index=10;
       env.accounts = {
         institutionAdmin:{userId:adminUser.userId,username:adminUser.username,displayName:adminUser.displayName,membershipId:adminMembership,role:"school_admin"},
-        hod:{userId:hodUser.userId,username:hodUser.username,displayName:hodUser.displayName,membershipId:hodMembership,role:"teacher"},
-        teacher:{userId:teacherUser.userId,username:teacherUser.username,displayName:teacherUser.displayName,membershipId:teacherMembership,role:"teacher"},
+        hod:{userId:hodUsers[0].userId,username:hodUsers[0].username,displayName:hodUsers[0].displayName,membershipId:hodMemberships[0],role:"teacher"},
+        teacher:{userId:teacherUsers[0].userId,username:teacherUsers[0].username,displayName:teacherUsers[0].displayName,membershipId:teacherMemberships[0],role:"teacher"},
         institutionViewer:{userId:viewerUser.userId,username:viewerUser.username,displayName:viewerUser.displayName,membershipId:viewerUser.roles.find(role=>role.role==="institution_viewer").membershipId,role:"institution_viewer"},
-        parent:{userId:parent.userId,username:parent.username,displayName:parent.displayName,membershipId:parentMembership,role:"parent"},
-        student6:{userId:student6.userId,username:student6.username,displayName:student6.displayName,studentId:"DEMO-STUDENT6-"+suffix,classId:"6",membershipId:student6Membership,role:"student"},
-        student10:{userId:student10.userId,username:student10.username,displayName:student10.displayName,studentId:"DEMO-STUDENT10-"+suffix,classId:"10",membershipId:student10Membership,role:"student"}
+        parent:{userId:parentUsers[0].userId,username:parentUsers[0].username,displayName:parentUsers[0].displayName,membershipId:parentMemberships[0],role:"parent"},
+        student6:{userId:studentUsers[student6Index].userId,username:studentUsers[student6Index].username,displayName:studentUsers[student6Index].displayName,studentId:"DEMO-STUDENT6-"+suffix,classId:"6",membershipId:studentMemberships[student6Index],role:"student"},
+        student10:{userId:studentUsers[student10Index].userId,username:studentUsers[student10Index].username,displayName:studentUsers[student10Index].displayName,studentId:"DEMO-STUDENT10-"+suffix,classId:"10",membershipId:studentMemberships[student10Index],role:"student"},
+        students:studentUsers.map((user,index)=>({userId:user.userId,username:user.username,displayName:user.displayName,membershipId:studentMemberships[index],studentId:"DEMO-STUDENT-"+String(index+1).padStart(3,"0")+"-"+suffix,classId:index%20<10?"6":"10",branchId:branches[Math.floor(index/20)].branchId,role:"student"})),
+        branches:branches.map(branch=>({branchId:branch.branchId,name:branch.name,code:branch.code})),
+        parents:parentUsers.map((user,index)=>({userId:user.userId,username:user.username,displayName:user.displayName,membershipId:parentMemberships[index],branchId:branches[index].branchId,role:"parent"}))
       };
-      env.studentIds = [env.accounts.student6.studentId,env.accounts.student10.studentId];
+      env.studentIds=env.accounts.students.map(student=>student.studentId);
       if (api.content) {
         const questions6 = makeQuestions("DEMO6");
         sessionStorage.setItem("examguru_rbac_test_role_v1","school_admin");
@@ -179,15 +198,14 @@
         sessionStorage.setItem("examguru_rbac_test_role_v1",previousRole);
       }
       if (env.includeStudentActivity) {
-        env.stores.push(...seedStudentActivity(storage,env.accounts.student6.studentId,"6",suffix));
-        env.stores.push(...seedStudentActivity(storage,env.accounts.student10.studentId,"10",suffix));
+        env.accounts.students.forEach((student,index)=>env.stores.push(...seedStudentActivity(storage,student.studentId,student.classId,suffix+"-"+String(index+1))));
       }
       const record = {
         environmentId:env.environmentId,institutionId:env.institutionId,displayName:env.displayName,
         createdAt:env.createdAt,cleanupOnLogout:true,source:env.source,
         accountRulesValidated:true,includeStudentActivity:env.includeStudentActivity,
         userIds:env.userIds,studentIds:env.studentIds,stores:env.stores,accounts:env.accounts,classes:env.classes,
-        counts:{branches:1,classes:2,subjects:5,departments:2,teachers:2,students:2,parents:1,assessments:api.content?2:0,studentAttempts:env.includeStudentActivity?22:0}
+        counts:{branches:branches.length,classes:classesByBranch.length*2,subjects:5,departments:2,teachers:hodUsers.length+teacherUsers.length,students:studentUsers.length,parents:parentUsers.length,assessments:api.content?2:0,studentAttempts:env.includeStudentActivity?studentUsers.reduce((sum,student)=>sum+(student.roles.find(role=>role.role==="student")?.classId?String(student.roles.find(role=>role.role==="student").classId)===String(classesByBranch[0].class6.classId)?"0":"0":"0"),0)+env.stores.filter(item=>item.kind==="test-attempt-ledger").reduce((sum,item)=>sum+storage.createLocalStore({kind:item.kind,recordId:item.recordId,studentId:item.studentId,defaults:()=>({attempts:[]})}).load().attempts.length,0):0}
       };
       const all = readManifest(); all.push(record); writeManifest(all);
       try { if (previousInstitution) sessionStorage.setItem("examguru_active_institution_v1",previousInstitution); else sessionStorage.removeItem("examguru_active_institution_v1"); sessionStorage.setItem("examguru_rbac_test_role_v1",previousRole); } catch (_) {}
@@ -251,7 +269,7 @@
     style.textContent = ".eg-demo-wizard-backdrop{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;padding:20px;background:rgba(25,23,52,.54);backdrop-filter:blur(8px)}.eg-demo-wizard{width:min(700px,100%);max-height:92vh;overflow:auto;border:1px solid #e5e0f5;border-radius:26px;background:linear-gradient(145deg,#fff 0%,#fbfaff 62%,#f1f8f2 100%);box-shadow:0 30px 100px rgba(20,16,54,.28);padding:clamp(22px,4vw,36px);color:#29294c;font-family:Aptos,Inter,system-ui,sans-serif}.eg-demo-wizard .kicker{display:inline-flex;gap:8px;align-items:center;padding:7px 11px;border-radius:999px;background:#efedff;color:#5143ad;font-size:11px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}.eg-demo-wizard h2{font-size:clamp(26px,4vw,36px);line-height:1.08;letter-spacing:-.035em;margin:16px 0 10px;color:#27264f}.eg-demo-wizard p{color:#6d6b84;line-height:1.6}.eg-demo-wizard .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}.eg-demo-wizard .tile{padding:14px;border:1px solid #e5e1f0;border-radius:15px;background:#fff}.eg-demo-wizard .tile b{display:block;font-size:18px;color:#39336f}.eg-demo-wizard .tile span{display:block;font-size:12px;color:#77738c;margin-top:4px}.eg-demo-wizard .field{display:grid;gap:7px;margin:14px 0}.eg-demo-wizard label{font-size:13px;font-weight:750;color:#383653}.eg-demo-wizard input[type=text]{width:100%;box-sizing:border-box;border:1px solid #dcd7ec;border-radius:12px;padding:13px;font:inherit}.eg-demo-wizard .check{display:flex;align-items:flex-start;gap:10px;padding:13px;border:1px solid #e4e0ee;background:#fff;border-radius:13px;margin:12px 0}.eg-demo-wizard .check input{margin-top:3px;accent-color:#5c4cc2}.eg-demo-wizard .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.eg-demo-wizard button{border:0;border-radius:12px;padding:12px 17px;font:inherit;font-weight:800;cursor:pointer}.eg-demo-wizard .primary{background:#5143ad;color:#fff;box-shadow:0 8px 18px #5143ad2e}.eg-demo-wizard .secondary{background:#f0eef8;color:#5143ad}.eg-demo-wizard .status{padding:12px 14px;border-radius:12px;background:#f1f0fa;color:#49436f;font-size:13px;margin-top:12px}.eg-demo-wizard .status.ok{background:#eef8f0;color:#28623b}.eg-demo-wizard .status.error{background:#fff0f0;color:#982a36}@media(max-width:560px){.eg-demo-wizard .tiles{grid-template-columns:1fr}.eg-demo-wizard .actions button{width:100%}}";
     document.head.appendChild(style);
     const backdrop = document.createElement("div"); backdrop.className = "eg-demo-wizard-backdrop";
-    backdrop.innerHTML = '<section class="eg-demo-wizard" role="dialog" aria-modal="true" aria-labelledby="egDemoWizardTitle"><div class="kicker">✦ Platform Admin · Demo setup</div><h2 id="egDemoWizardTitle">Let’s make your first institution demo feel alive.</h2><p>Prepare a complete sample school with realistic academic structure, staff, learners, department leadership and sample assessments. You can explore each role from the workspace switcher. All roles are previewed from your Platform Admin session.</p><div class="tiles"><div class="tile"><b>6 roles</b><span>Admin, HOD, Teacher, Viewer, Parent & Student</span></div><div class="tile"><b>2 classes</b><span>Class 6 and Class 10</span></div><div class="tile"><b>Ready to explore</b><span>Sample exams and learner activity</span></div></div><div class="field"><label for="egDemoInstitutionName">Institution name</label><input id="egDemoInstitutionName" type="text" maxlength="80" value="Northstar Academy · Demo"></div><label class="check"><input id="egDemoActivity" type="checkbox" checked><span><b>Include student exam activity</b><br><small>Show completed tests, scores and learning progress in the Student experience.</small></span></label><p><small>We’re creating temporary demo data for this Platform Admin session. It will be cleared when you sign out. No existing institution or learner data will be changed.</small></p><div id="egDemoWizardStatus" class="status" role="status">Ready when you are.</div><div class="actions"><button class="primary" id="egDemoCreate">Create demo workspace</button><button class="secondary" id="egDemoSkip">Not now</button></div></section>';
+    backdrop.innerHTML = '<section class="eg-demo-wizard" role="dialog" aria-modal="true" aria-labelledby="egDemoWizardTitle"><div class="kicker">✦ Platform Admin · Demo setup</div><h2 id="egDemoWizardTitle">Let’s make your first institution demo feel alive.</h2><p>Prepare a complete sample school with realistic academic structure, staff, learners, department leadership and sample assessments. You can explore each role from the workspace switcher. All roles are previewed from your Platform Admin session.</p><div class="tiles"><div class="tile"><b>5 branches</b><span>One connected school network</span></div><div class="tile"><b>100 students</b><span>Across Class 6 and Class 10</span></div><div class="tile"><b>Role-based demo</b><span>Staff, parents and learner activity</span></div></div><div class="field"><label for="egDemoInstitutionName">Institution name</label><input id="egDemoInstitutionName" type="text" maxlength="80" value="Northstar Academy · Demo"></div><label class="check"><input id="egDemoActivity" type="checkbox" checked><span><b>Include student exam activity</b><br><small>Show completed tests, scores and learning progress in the Student experience.</small></span></label><p><small>We’re creating temporary demo data for this Platform Admin session. It will be cleared when you sign out. No existing institution or learner data will be changed.</small></p><div id="egDemoWizardStatus" class="status" role="status">Ready when you are.</div><div class="actions"><button class="primary" id="egDemoCreate">Create demo workspace</button><button class="secondary" id="egDemoSkip">Not now</button></div></section>';
     document.body.appendChild(backdrop);
     const status = backdrop.querySelector("#egDemoWizardStatus"), createButton = backdrop.querySelector("#egDemoCreate");
     let ready = false;
@@ -262,7 +280,7 @@
       try {
         const result = create({source:"platform-admin",institutionName:backdrop.querySelector("#egDemoInstitutionName").value,includeStudentActivity:backdrop.querySelector("#egDemoActivity").checked});
         status.className = "status ok";
-        status.textContent = "Your demo workspace is ready: 2 classes, 2 departments, 7 sample accounts and " + result.counts.studentAttempts + " completed student tests.";
+        status.textContent = "Your demo workspace is ready: "+result.counts.branches+" branches, "+result.counts.students+" students, "+result.counts.teachers+" teachers, "+result.counts.parents+" parents, "+result.counts.classes+" classes and "+result.counts.studentAttempts+" completed student tests.";
         ready = true;
         createButton.textContent = "Open demo workspaces";
         createButton.disabled = false;
