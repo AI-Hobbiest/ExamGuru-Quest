@@ -74,9 +74,8 @@ jobs:
           elif [ -s "$manifest" ] && [ -s "$queue" ]; then
             echo "Reusing cached CBSE PDF assets; skipping ZIP downloads and PDF parsing."
           else
-            echo "No CBSE review-data cache found; build the review metadata from official CBSE packages."
-            # This extraction is an educator-side content-curation step only.
-            # The PDF payload stays in the Actions cache and is never copied into _site.
+            echo "::error::No cached CBSE review data is available. Manually dispatch this Pages workflow with refresh_cbse=true; ordinary website deployments will not download ZIPs or extract PDFs."
+            exit 1
           fi
           if [ "$CBSE_REFRESH" = "true" ] || [ ! -s "$manifest" ] || [ ! -s "$queue" ]; then
             python3 -m pip install --quiet pypdf
