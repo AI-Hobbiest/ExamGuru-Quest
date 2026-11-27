@@ -89,7 +89,7 @@ assert.ok(parentPage.includes("examguru_demo_environments_v2"),"Parent preview u
 assert.ok(demoPage.includes("same username, institution, branch and student class-assignment checks"),"demo account creation explains standard account validation");
 const api=window.ExamGuruDemoEnvironment;
 assert.ok(api,"Demo environment service is registered");
-assert.throws(()=>api.create({source:"demo-account"}),/confirm the standard account-creation rules/,"demo-account creation requires explicit account-rule confirmation");
+assert.throws(()=>api.create({source:"demo-account"}),error=>/confirm the standard account-creation rules/.test(error.message),"demo-account creation requires explicit account-rule confirmation");
 const created=api.create({source:"platform-admin",institutionName:"Northstar Academy · Demo",includeStudentActivity:true});
 assert.equal(created.counts.classes,2);
 assert.equal(created.counts.departments,2);
