@@ -96,6 +96,7 @@ jobs:
           test -s "$queue"
       - name: Run quiz regression tests
         run: |
+          node tests/demo-environment.test.js
           node tests/clat-engine.test.js
           node tests/clat-pdf.test.js
           node tests/clat-dashboard.test.js
@@ -231,6 +232,7 @@ jobs:
           cp js/m4-operations.js _site/js/m4-operations.js
           cp js/iam-local-store.js _site/js/iam-local-store.js
           cp js/institution-data-store.js _site/js/institution-data-store.js
+          cp js/demo-environment.js _site/js/demo-environment.js
           cp js/institution-module.js _site/js/institution-module.js
           cp js/institution-dashboard.js _site/js/institution-dashboard.js
           cp js/iam-user-management.js _site/js/iam-user-management.js
@@ -268,6 +270,8 @@ jobs:
           test -s _site/institution-assignments.html
           test -s _site/institution-enrolments.html
           test -s _site/js/institution-data-store.js
+          test -s _site/js/demo-environment.js
+          grep -q "demo-environment.js" _site/admin.html
           test -s _site/js/lms-application-services.js
           test -s _site/js/m5-integration-services.js
           test -s _site/js/institution-module.js
