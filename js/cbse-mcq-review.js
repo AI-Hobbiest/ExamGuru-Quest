@@ -18,12 +18,11 @@
   const norm=value=>String(value==null?"":value).normalize("NFKC").toLocaleLowerCase().replace(/[^\p{L}\p{N}]+/gu," ").trim();
   return norm(prompt)+"::"+(Array.isArray(options)?options.map(norm).filter(Boolean).sort().join("|"):"");
  }
- function safeManifestFile(file){
-  return !!file&&typeof file.path==="string"&&/^\.\//.test(file.path)&&
-   /^\.\/cbse-papers\/files\/[a-f0-9]{24}-[A-Za-z0-9._() -]+\.pdf$/i.test(file.path)&&
-   /^[a-f0-9]{64}$/i.test(String(file.sha256||""))&&Number(file.sizeBytes)>0;
+ function safeOfficialPackageUrl(url){
+  try{const parsed=new URL(url);return parsed.protocol==="https:"&&parsed.hostname==="www.cbse.gov.in"&&parsed.pathname.toLowerCase().startsWith("/cbsenew/")&&parsed.pathname.toLowerCase().endsWith(".zip");}
+  catch(_){return false;}
  }
- window.C10CbseReview=Object.freeze({bankSubjectFor,sourceBadge,candidateFingerprint,safeManifestFile});
+ window.C10CbseReview=Object.freeze({bankSubjectFor,sourceBadge,candidateFingerprint,safeOfficialPackageUrl});
  if(!$("cbseReviewStatus"))return;
  let queue=null,manifest=null,visibleCandidates=[],selectedCandidate=null,addedThisSession=new Set();
  const status=(message,tone="")=>{
@@ -38,35 +37,29 @@
  function addOption(select,value,label){
   const option=document.createElement("option");option.value=value;option.textContent=label;select.appendChild(option);
  }
- function safeFileLink(container,file,label,page){
-  if(!safeManifestFile(file))return;
-  const a=node("a","admin-btn secondary",label);
-  a.href=file.path+(Number(page)>0?"#page="+Number(page):"");
-  a.target="_blank";a.rel="noopener noreferrer";container.appendChild(a);
- }
  function subjectLabel(subjectId){
   return ({"science":"Science","mathematics":"Mathematics","mathematics-basic":"Mathematics Basic",
    "mathematics-standard":"Mathematics Standard","social-science":"Social Science",
    "english":"English","hindi-a":"Hindi Course A","hindi-b":"Hindi Course B"})[subjectId]||subjectId;
  }
  async function loadQueue(){
-  status("Loading CBSE review queue and extracted PDF manifest…");
+  status("Loading CBSE review queue and official CBSE archive catalogue…");
   try{
    const responses=await Promise.all([
     fetch("./data/cbse-class10-mcq-review-queue.json",{cache:"no-store"}),
-    fetch("./data/cbse-class10-pyq-files.json",{cache:"no-store"})
+    fetch("./data/cbse-class10-pyq.json",{cache:"no-store"})
    ]);
-   if(responses.some(response=>!response.ok))throw new Error("The CBSE review queue or PDF manifest is not available in this deployment.");
+   if(responses.some(response=>!response.ok))throw new Error("The CBSE review queue or archive catalogue is not available in this deployment.");
    [queue,manifest]=await Promise.all(responses.map(response=>response.json()));
    if(queue.kind!=="cbse-class10-mcq-review-queue"||queue.classId!=="10"||!Array.isArray(queue.candidates)||
       queue.candidateCount!==queue.candidates.length)throw new Error("The CBSE review queue failed its format check.");
-   if(manifest.kind!=="cbse-class10-pyq-pdf-manifest"||manifest.classId!=="10"||!Array.isArray(manifest.records))
-    throw new Error("The CBSE PDF manifest failed its format check.");
+   if(manifest.kind!=="cbse-class10-pyq-catalog"||manifest.classId!=="10"||!Array.isArray(manifest.records))
+    throw new Error("The CBSE archive catalogue failed its format check.");
    populateYears();renderCandidatePicker();
    const total=queue.candidates.length,occurrences=Number(queue.sourceOccurrenceCount)||total;
    const skipped=queue.rejectedOrSkipped?Object.values(queue.rejectedOrSkipped).reduce((a,b)=>a+Number(b||0),0):0;
    text("cbseReviewSummary",total+" unique MCQ candidate(s) · "+occurrences+" paper occurrence(s) · "+skipped+" unreadable or skipped source file(s).");
-   status(total?"Review queue loaded. All candidates remain pending until manually verified.":"No four-option MCQ candidates were extracted from the eligible PDFs. The original PDF library remains available for manual review.","success");
+   status(total?"Review queue loaded. Open the official CBSE ZIP packages to verify each candidate; all remain pending until manually checked.":"No four-option MCQ candidates are available in this review queue.","success");
   }catch(error){
    queue=null;manifest=null;visibleCandidates=[];$("cbseReviewCandidate").replaceChildren();
    clearDetails();
@@ -125,19 +118,21 @@
   const container=$("cbseReviewSourceLinks");
   container.replaceChildren();
   const source=candidate.source||{};
-  const occurrences=Array.isArray(candidate.sourceOccurrences)?candidate.sourceOccurrences:[];
-  const occurrence=occurrences.find(item=>item.source&&item.source.paperId===source.paperId)||occurrences[0]||{};
   const record=manifest.records.find(item=>item.id===source.paperId);
-  if(!record)return;
-  const paper=(record.paperFiles||[]).find(file=>file.filename===occurrence.paperFile);
-  if(paper)safeFileLink(container,paper,"Open original CBSE question PDF",occurrence.pageNumber);
+  if(!record){container.appendChild(node("p","admin-muted","The official CBSE source package is not listed in the catalogue."));return;}
+  const addPackage=(url,label)=>{
+   try{
+    if(!safeOfficialPackageUrl(url))return false;
+    const a=node("a","admin-btn secondary",label);a.href=url;a.target="_blank";a.rel="noopener noreferrer";container.appendChild(a);return true;
+   }catch(_){return false;}
+  };
+  const paperAdded=addPackage(record.paperUrl,"Open official CBSE question-paper ZIP");
   const proposed=(candidate.proposedAnswers||[]).find(item=>item.markingSchemeFile);
-  const schemeRecord=manifest.records.find(item=>item.id===(proposed&&proposed.sourceOccurrence&&proposed.sourceOccurrence.paperId||source.paperId))||record;
-  const scheme=proposed
-   ?(schemeRecord.markingSchemeFiles||[]).find(file=>file.filename===proposed.markingSchemeFile)
-   :(schemeRecord.markingSchemeFiles||[])[0];
-  if(scheme)safeFileLink(container,scheme,"Open official marking scheme",proposed&&proposed.pageNumber);
-  if(!paper&&!scheme)container.appendChild(node("p","admin-muted","The PDF was withheld for rights review or is not present in the manifest."));
+  const schemeId=proposed&&proposed.sourceOccurrence&&proposed.sourceOccurrence.paperId||source.paperId;
+  const schemeRecord=manifest.records.find(item=>item.id===schemeId)||record;
+  const schemeAdded=addPackage(schemeRecord.markingSchemeUrl,"Open official CBSE marking-scheme ZIP");
+  if(!paperAdded&&!schemeAdded)container.appendChild(node("p","admin-muted","Official CBSE source package links are unavailable for this record."));
+  container.appendChild(node("p","admin-muted","CBSE hosts the original ZIP packages. Locate the paper and page noted above; ExamGuru does not mirror the PDFs."));
  }
  async function renderSelectedCandidate(){
   const candidate=visibleCandidates.find(item=>item.candidateId===$("cbseReviewCandidate").value);

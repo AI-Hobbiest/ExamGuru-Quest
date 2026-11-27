@@ -74,14 +74,8 @@ jobs:
           elif [ -s "$manifest" ] && [ -s "$queue" ]; then
             echo "Reusing cached CBSE PDF assets; skipping ZIP downloads and PDF parsing."
           else
-            echo "No CBSE output cache found; restoring the last published, checksum-verified assets."
-            python3 scripts/restore_cbse_assets.py \
-              --base-url "https://ai-hobbiest.github.io/ExamGuru-Quest/" \
-              --catalogue data/cbse-class10-pyq.json \
-              --output-dir "$output" || {
-                echo "::error::Previously published CBSE assets could not be restored. Manually dispatch this Pages workflow with refresh_cbse=true; ordinary website deployments will not download ZIPs, extract PDFs, or regenerate MCQ candidates."
-                exit 1
-              }
+            echo "::error::No cached CBSE review data is available. Manually dispatch this Pages workflow with refresh_cbse=true; ordinary website deployments will not download ZIPs or extract PDFs."
+            exit 1
           fi
           if [ "$CBSE_REFRESH" = "true" ] || [ ! -s "$manifest" ] || [ ! -s "$queue" ]; then
             python3 -m pip install --quiet pypdf
@@ -136,6 +130,7 @@ jobs:
           node tests/report-print.test.js
           node tests/parent-experience.test.js
           node tests/cbse-mcq-review.test.js
+          node tests/pyq-library.test.js
           node tests/lms-application-services.test.js
           node tests/institution-content-store.test.js
           node tests/m5-integration-services.test.js
@@ -287,8 +282,8 @@ jobs:
           cp data/cbse-class10-pyq.json _site/data/cbse-class10-pyq.json
           # Reuse the separately prepared CBSE assets. Ordinary website changes never
           # download CBSE ZIPs, extract PDFs, or rebuild the review-only MCQ queue.
-          mkdir -p _site/cbse-papers
-          cp -R .cache/cbse-pyq-output/cbse-papers/. _site/cbse-papers/
+          # Keep the compact catalogue, extracted-file manifest and educator review queue.
+          # Do not publish the extracted PDF payload; the PYQ page links to CBSE's official ZIP packages.
           cp .cache/cbse-pyq-output/data/cbse-class10-pyq-files.json _site/data/cbse-class10-pyq-files.json
           cp .cache/cbse-pyq-output/data/cbse-class10-mcq-review-queue.json _site/data/cbse-class10-mcq-review-queue.json
           cp -R data/exam-papers _site/data/exam-papers
@@ -670,23 +665,18 @@ jobs:
             if ((candidate.proposedAnswers||[]).some(answer=>answer.verificationStatus!=='unverified')) throw new Error('CBSE answer-key proposal was marked verified without review.');
           }
           const pyqIds=new Set();
-          if (!pyqPage.includes('./js/pyq-library.js') || !pyqScript.includes('safeLocalPdf') || pyqData.schemaVersion!==2 || pyqData.kind!=='cbse-class10-pyq-catalog' || pyqData.records.length!==42) throw new Error('Class 10 CBSE PYQ portal catalogue is incomplete.');
+          if (!pyqPage.includes('./js/pyq-library.js') || !pyqScript.includes('safeExternalLink') || pyqData.schemaVersion!==2 || pyqData.kind!=='cbse-class10-pyq-catalog' || pyqData.records.length!==42) throw new Error('Class 10 CBSE PYQ portal catalogue is incomplete.');
           if (pyqFiles.schemaVersion!==1 || pyqFiles.kind!=='cbse-class10-pyq-pdf-manifest' || pyqFiles.classId!=='10' || pyqFiles.records.length!==42) throw new Error('Extracted CBSE PDF manifest is incomplete.');
-          const crypto=require('crypto');
-          const pyqFileRecords=new Map(pyqFiles.records.map(row=>[row.id,row]));
-          let publishedPdfCount=0;
+          if (pyqFiles.schemaVersion!==1 || pyqFiles.kind!=='cbse-class10-pyq-pdf-manifest' || pyqFiles.classId!=='10' || pyqFiles.records.length!==42) throw new Error('CBSE extraction manifest is incomplete.');
           for (const row of pyqFiles.records) {
             for (const file of [...(row.paperFiles||[]),...(row.markingSchemeFiles||[])]) {
-              if (!file.unchanged || !/^\.\/cbse-papers\/files\/[a-f0-9]{24}-.+\.pdf$/i.test(file.path)) throw new Error('Unsafe or modified CBSE PDF manifest item: '+row.id);
-              const localPath='_site/'+file.path.replace(/^\.\//,'');
-              if (!fs.existsSync(localPath)) throw new Error('Extracted CBSE PDF is missing: '+localPath);
-              const digest=crypto.createHash('sha256').update(fs.readFileSync(localPath)).digest('hex');
-              if (digest!==file.sha256) throw new Error('Extracted CBSE PDF checksum mismatch: '+localPath);
-              publishedPdfCount++;
+              if (!file.unchanged || !/^\.\/cbse-papers\/files\/[a-f0-9]{24}-.+\.pdf$/i.test(file.path) ||
+                  !/^[a-f0-9]{64}$/i.test(String(file.sha256||'')) || !Number(file.sizeBytes)) {
+                throw new Error('Unsafe CBSE PDF metadata in extraction manifest: '+row.id);
+              }
             }
-            if (!(row.paperFiles||[]).length && !(row.paperWithheldFiles||[]).length && !row.paperDownloadError) throw new Error('CBSE question paper has neither a published PDF, a withheld rights-review record nor a recorded download failure: '+row.id);
           }
-          if (!publishedPdfCount && !pyqFiles.withheldPdfCount && !pyqFiles.failedPackageCount) throw new Error('No CBSE PDF files, rights-review records or recorded package failures were produced.');
+          if (fs.existsSync('_site/cbse-papers')) throw new Error('CBSE PDF payload must not be bundled into the published staging site.');
           if (pyqData.records.filter(item=>item.year==='2026'&&item.examType==='Second Board').length!==7) throw new Error('Class 10 CBSE PYQ catalogue is missing the seven 2026 Second Board records.');
           for (const item of pyqData.records) {
             if (pyqIds.has(item.id) || !pyqData.subjects.some(subject=>subject.id===item.subjectId)) throw new Error('Duplicate or unsupported CBSE PYQ record: '+item.id);
