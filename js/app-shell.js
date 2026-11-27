@@ -389,7 +389,7 @@
       logout.id="c10HeaderSignout";logout.type="button";logout.setAttribute("aria-label",isPreviewSession?"Exit role preview":"Sign out of ExamGuru");
       logout.addEventListener("click",async()=>{
         logout.disabled=true;
-        if(isPreviewSession){try{sessionStorage.setItem("examguru_rbac_test_role_v1","platform_admin");sessionStorage.removeItem("examguru_active_demo_workspace_v1");sessionStorage.removeItem("examguru_demo_preview_user_id");sessionStorage.removeItem("examguru_student_access_notice_v1");}catch(_){}location.replace("./admin.html#tab-overview");return;}
+        if(isPreviewSession){try{sessionStorage.setItem("examguru_rbac_test_role_v1","platform_admin");sessionStorage.removeItem("examguru_active_demo_workspace_v1");sessionStorage.removeItem("examguru_demo_preview_user_id");const student=JSON.parse(sessionStorage.getItem("c10playground_static_student_v1")||"null");if(student&&String(student.username||"").startsWith("demo.student"))sessionStorage.removeItem("c10playground_static_student_v1");sessionStorage.removeItem("examguru_student_access_notice_v1");}catch(_){}location.replace("./admin.html#tab-overview");return;}
         if(auth.localTestMode&&window.ExamGuruDemoEnvironment){try{window.ExamGuruDemoEnvironment.cleanupOnLogout();}catch(_){}}
         try{if(window.C10Api&&window.C10Api.isAuthenticated())await window.C10Api.logout();}catch(_){}
         if(window.C10StudentAuth&&window.C10StudentAuth.logout)window.C10StudentAuth.logout();
