@@ -158,6 +158,7 @@
       data.addDepartmentMember(academics.departmentId,teacherMembership);
       data.setDepartmentClasses(academics.departmentId,[class10.classId]);
       data.linkGuardian({parentMembershipId:parentMembership,studentMembershipId:student6Membership,relationship:"Parent/guardian"});
+      data.linkGuardian({parentMembershipId:parentMembership,studentMembershipId:student10Membership,relationship:"Parent/guardian"});
       env.accounts = {
         institutionAdmin:{userId:adminUser.userId,username:adminUser.username,displayName:adminUser.displayName,membershipId:adminMembership,role:"school_admin"},
         hod:{userId:hodUser.userId,username:hodUser.username,displayName:hodUser.displayName,membershipId:hodMembership,role:"teacher"},
