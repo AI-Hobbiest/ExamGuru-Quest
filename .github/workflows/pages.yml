@@ -670,7 +670,7 @@ jobs:
             if ((candidate.proposedAnswers||[]).some(answer=>answer.verificationStatus!=='unverified')) throw new Error('CBSE answer-key proposal was marked verified without review.');
           }
           const pyqIds=new Set();
-          if (!pyqPage.includes('./js/pyq-library.js') || !pyqScript.includes('safeLocalPdf') || pyqData.schemaVersion!==2 || pyqData.kind!=='cbse-class10-pyq-catalog' || pyqData.records.length!==42) throw new Error('Class 10 CBSE PYQ portal catalogue is incomplete.');
+          if (!pyqPage.includes('./js/pyq-library.js') || !pyqScript.includes('safeExternalLink') || pyqData.schemaVersion!==2 || pyqData.kind!=='cbse-class10-pyq-catalog' || pyqData.records.length!==42) throw new Error('Class 10 CBSE PYQ portal catalogue is incomplete.');
           if (pyqFiles.schemaVersion!==1 || pyqFiles.kind!=='cbse-class10-pyq-pdf-manifest' || pyqFiles.classId!=='10' || pyqFiles.records.length!==42) throw new Error('Extracted CBSE PDF manifest is incomplete.');
           if (pyqFiles.schemaVersion!==1 || pyqFiles.kind!=='cbse-class10-pyq-pdf-manifest' || pyqFiles.classId!=='10' || pyqFiles.records.length!==42) throw new Error('CBSE extraction manifest is incomplete.');
           for (const row of pyqFiles.records) {
