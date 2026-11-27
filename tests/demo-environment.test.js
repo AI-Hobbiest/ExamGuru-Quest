@@ -4,6 +4,9 @@ const fs = require("node:fs");
 const vm = require("node:vm");
 
 const source = fs.readFileSync("js/demo-environment.js", "utf8");
+const shell = fs.readFileSync("js/app-shell.js", "utf8");
+const parentPage = fs.readFileSync("js/parent-dashboard.js", "utf8");
+const demoPage = fs.readFileSync("platform-demo-management.html", "utf8");
 const local = new Map(), session = new Map(), storeRows = new Map();
 const localStorage = {
   getItem:key=>local.has(key)?local.get(key):null,
@@ -32,6 +35,7 @@ const iam = {
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean)&&!/^[a-z0-9._-]{3,32}$/i.test(clean))throw Error("Invalid username");
     if(state.users.some(x=>x.username===clean))throw Error("Duplicate username");
     const normalized=roles.map(r=>{
+      if(r.branchId&&!institutionData[currentInstitution]?.branches?.some(x=>x.branchId===r.branchId))throw Error("Account branch must belong to its institution");
       if(r.role==="student"&&(!classId||!institutionData[currentInstitution]?.classes?.some(x=>x.classId===classId)))throw Error("Student account needs an existing class");
       return {...r,membershipId:"MEM-"+(++sequence),classId:r.role==="student"?classId:null,branchId:branchId||null};
     });
@@ -79,6 +83,10 @@ const document = {readyState:"loading",addEventListener(){}};
 const location = {pathname:"/admin.html"};
 sessionStorage.setItem("examguru_mvp_admin_session_v1",JSON.stringify({role:"admin",username:"Jayaprakashganathe@gmail.com",rbacTestMode:"local-platform-admin"}));
 vm.runInNewContext(source,{window,document,localStorage,sessionStorage,location,Date,Math,JSON,Set,Array,String,Number,Error});
+assert.ok(shell.includes("examguru_demo_preview_user_id")&&shell.includes("cleanupOnLogout"),"role previews and sign-out cleanup are connected to the shared shell");
+assert.ok(shell.includes("demo-student6@")&&shell.includes("demo-hod@")&&shell.includes("demo-viewer@"),"all institution demo roles are exposed in the workspace switcher");
+assert.ok(parentPage.includes("examguru_demo_environments_v2"),"Parent preview uses its linked synthetic learners");
+assert.ok(demoPage.includes("same username, institution, branch and student class-assignment checks"),"demo account creation explains standard account validation");
 const api=window.ExamGuruDemoEnvironment;
 assert.ok(api,"Demo environment service is registered");
 assert.throws(()=>api.create({source:"demo-account"}),/confirm the standard account-creation rules/,"demo-account creation requires explicit account-rule confirmation");
