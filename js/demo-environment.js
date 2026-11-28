@@ -179,7 +179,7 @@
           data.assignTeacher({teacherMembershipId,classId:row[classKey].classId,subjectId:subjects[index].subjectId});
         });
       });
-      const student6Index=0,student10Index=10;
+      const student6Index=0,student10Index=20;
       env.accounts = {
         institutionAdmin:{userId:adminUser.userId,username:adminUser.username,displayName:adminUser.displayName,membershipId:adminMembership,role:"school_admin"},
         hod:{userId:hodUsers[0].userId,username:hodUsers[0].username,displayName:hodUsers[0].displayName,membershipId:hodMemberships[0],role:"teacher"},
@@ -190,7 +190,7 @@
         institutionViewer:{userId:viewerUser.userId,username:viewerUser.username,displayName:viewerUser.displayName,membershipId:viewerUser.roles.find(role=>role.role==="institution_viewer").membershipId,role:"institution_viewer"},
         parent:{userId:parentUsers[0].userId,username:parentUsers[0].username,displayName:parentUsers[0].displayName,membershipId:parentMemberships[0],role:"parent"},
         student6:{userId:studentUsers[student6Index].userId,username:studentUsers[student6Index].username,displayName:studentUsers[student6Index].displayName,studentId:"DEMO-STUDENT-001-"+suffix,classId:"6",membershipId:studentMemberships[student6Index],role:"student"},
-        student10:{userId:studentUsers[student10Index].userId,username:studentUsers[student10Index].username,displayName:studentUsers[student10Index].displayName,studentId:"DEMO-STUDENT-011-"+suffix,classId:"10",membershipId:studentMemberships[student10Index],role:"student"},
+        student10:{userId:studentUsers[student10Index].userId,username:studentUsers[student10Index].username,displayName:studentUsers[student10Index].displayName,studentId:"DEMO-STUDENT-021-"+suffix,classId:"10",membershipId:studentMemberships[student10Index],role:"student"},
         students:studentUsers.map((user,index)=>({userId:user.userId,username:user.username,displayName:user.displayName,membershipId:studentMemberships[index],studentId:"DEMO-STUDENT-"+String(index+1).padStart(3,"0")+"-"+suffix,classId:index%40<20?"6":"10",branchId:branches[Math.floor(index/40)].branchId,department:index%40<20?"Science":"Mathematics",role:"student"})),
         branches:branches.map(branch=>({branchId:branch.branchId,name:branch.name,code:branch.code})),
         parents:parentUsers.map((user,index)=>({userId:user.userId,username:user.username,displayName:user.displayName,membershipId:parentMemberships[index],branchId:branches[index].branchId,role:"parent"}))
